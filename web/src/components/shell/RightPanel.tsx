@@ -6,7 +6,8 @@ import SidePanel from "./SidePanel";
 import { useMorph } from "@/lib/use-morph";
 
 // Right panel: Ask (chat) only. Insight and detail live in the left Insight panel, which follows the
-// map selection. Starts folded into a slim rail; grows out of it on click or "]".
+// map selection. Starts folded into a floating button in the bottom-right corner; grows out of it on
+// click or "]".
 
 type Tab = "chat";
 const ICON: Record<Tab, ReactNode> = {
@@ -116,7 +117,9 @@ export default function RightPanel() {
   useEffect(() => {
     const root = document.documentElement;
     const area = asideRef.current?.parentElement?.clientHeight ?? window.innerHeight;
-    const ctrlBottom = parseFloat(getComputedStyle(root).getPropertyValue("--ctrl-bottom")) || 12;
+    // Folded, the Ask button owns the corner, so the controls sit just above it.
+    const ctrlBottom = open ? 4 : 76;
+    root.style.setProperty("--ctrl-bottom", `${ctrlBottom}px`);
     const ctrlTop = area - ctrlBottom - 150;
     const aside = asideRef.current;
     const top = aside ? parseFloat(getComputedStyle(aside).top) : 68;
@@ -126,11 +129,11 @@ export default function RightPanel() {
 
   return (
     <>
-      {/* Folded rail */}
+      {/* Folded: a floating Ask button */}
       <div
         ref={railRef}
         inert={open}
-        className={`glass absolute right-3 top-(--shell-top) z-30 flex w-[52px] flex-col items-center gap-1 rounded-lg p-1 transition-opacity duration-200 ${open ? "opacity-0" : "opacity-100"}`}
+        className={`absolute bottom-5 right-5 z-30 transition-[opacity,transform] duration-200 ${open ? "pointer-events-none scale-90 opacity-0" : "scale-100 opacity-100"}`}
         role="toolbar"
         aria-label="Open details panel"
       >
@@ -144,9 +147,10 @@ export default function RightPanel() {
             aria-controls="details-panel"
             aria-expanded={open}
             title={`${LABEL[t]} · ]`}
-            className="relative grid h-11 w-11 place-items-center rounded-md bg-return text-white shadow-md transition-[filter] duration-150 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-return"
+            className="flex h-14 items-center gap-2.5 rounded-full bg-return pl-5 pr-6 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.28),0_2px_6px_rgba(0,0,0,0.18)] ring-1 ring-white/20 transition-[filter,transform,box-shadow] duration-150 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_28px_rgba(0,0,0,0.32),0_3px_8px_rgba(0,0,0,0.2)] active:translate-y-0 active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-return"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>{ICON[t]}</svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>{ICON[t]}</svg>
+            {LABEL[t]}
           </button>
         ))}
       </div>

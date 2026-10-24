@@ -859,7 +859,7 @@ export default function MapView() {
         onClick={() => setThree(!three)}
         title={three ? "Back to a flat map" : "3D buildings (zoom to street level)"}
         className="glass absolute z-10 h-10 w-10 rounded-md text-[12px] font-bold text-fg-2 transition-colors hover:text-fg aria-pressed:bg-fg aria-pressed:text-bg"
-        style={{ right: "calc(var(--right-inset, 84px) + 10px)", bottom: "calc(var(--ctrl-bottom, 4px) + 172px)" }}
+        style={{ right: "calc(var(--right-inset, 84px) + 10px)", bottom: "calc(var(--ctrl-bottom, 4px) + 182px)" }}
       >
         3D
       </button>

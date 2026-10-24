@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:34 — Ask chat toggle is now a floating red pill button (icon +...
+- Teammate: Bruno
+- Agent: —
+- Did: Ask chat toggle is now a floating red pill button (icon + 'Ask') in the bottom-right corner; map controls lift above it while folded
+- Why: The old top-right rail icon was easy to miss; the action should read as a button
+- Where: web/src/components/shell/RightPanel.tsx, web/src/app/globals.css, web/src/components/map/MapView.tsx
+- Idea: —
+
 ### 2026-10-24 19:32 — Centered map filter bar on the viewport (fixed left-1/2) ...
 - Teammate: Bruno
 - Agent: —
