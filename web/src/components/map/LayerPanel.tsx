@@ -8,6 +8,7 @@ import type { CoverageRow } from "@/lib/queries";
 import { useUi } from "@/lib/ui-store";
 import { useMorph } from "@/lib/use-morph";
 import Timeline from "./Timeline";
+import ForecastControl from "./ForecastControl";
 import { useEffect, useId, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from "react";
 
 // Layer dock: a slim vertical rail of group buttons (rat signals, trash, shelter, works, buildings,
@@ -73,7 +74,7 @@ function CityBadges({ layer, coverage }: { layer: string; coverage: CoverageRow[
   );
 }
 
-type DockId = "rats" | "food" | "shelter" | "displace" | "context" | "period" | "view";
+type DockId = "rats" | "food" | "shelter" | "displace" | "context" | "forecast" | "period" | "view";
 
 /** One layer row: icon, name, one quiet meta line, switch. Whole row toggles. */
 function LayerRow({ icon, label, meta, checked, onToggle }: { icon: ReactNode; label: string; meta?: ReactNode; checked: boolean; onToggle: (v: boolean) => void }) {
@@ -98,6 +99,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   const flyRef = useRef<HTMLDivElement>(null);
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
   const timelineOpen = useUi((s) => s.timelineOpen);
+  const forecastOn = useMap((s) => s.layers.forecast);
   const setTimelineOpen = useUi((s) => s.setTimelineOpen);
   const whenLabel = span <= 8 ? "1 wk" : span <= 31 ? "1 mo" : span <= 92 ? "3 mo" : span <= 366 ? "1 yr" : span > 1000 ? "All" : `${Math.round(span / 30)} mo`;
 
@@ -116,6 +118,13 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
       id: "context", label: "Buildings & people",
       icon: <span aria-hidden className="flex h-5 w-6 overflow-hidden rounded-[3px]">{ERA_STOPS.map(([, c]) => <span key={c} className="flex-1" style={{ background: c }} />)}</span>,
       badge: (enabled.ctx_housing ? 1 : 0) + (enabled.ctx_buildings ? 1 : 0),
+    },
+    {
+      id: "forecast" as DockId, label: "Forecast",
+      icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="text-fg-2"><path d="M3 17l5-5 4 4 8-8" /><path d="M14 8h6v6" /></svg>
+      ),
+      badge: forecastOn ? 1 : 0,
     },
     { id: "view" as DockId, label: `Show as: ${MODES.find((m) => m.id === mode)?.label ?? mode}`, icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden className="text-fg-2"><path d="m12 2 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5" /><path d="m3 17 9 5 9-5" /></svg>
@@ -211,7 +220,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
         >
           <div className="overflow-y-auto p-3 [max-height:calc(100dvh-92px)]">
           <header className="mb-2 flex items-center justify-between gap-2">
-            <h2 className="text-[14px] font-bold text-fg">{current.id === "period" ? "Period" : current.id === "view" ? "How to show reports" : current.label}</h2>
+            <h2 className="text-[14px] font-bold text-fg">{current.id === "period" ? "Period" : current.id === "view" ? "How to show reports" : current.id === "forecast" ? "Forecast" : current.label}</h2>
             <div className="flex items-center gap-1">
               {GROUPS.some((g) => g.id === current.id) && (() => {
                 const ids = groupIds(current.id);
@@ -260,7 +269,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
               <LayerRow
                 icon={<span aria-hidden className="flex h-3 w-5 overflow-hidden rounded-[2px]">{ERA_STOPS.map(([, c]) => <span key={c} className="flex-1" style={{ background: c }} />)}</span>}
                 label="Buildings by year built"
-                meta={`${enabled.ctx_buildings && zoom < 15 ? "zoom in to see · " : ""}Boston parcels`}
+                meta={`${enabled.ctx_buildings && zoom < 15 ? "zoom in to see · " : ""}assessor parcels BOS CAM SOM`}
                 checked={!!enabled.ctx_buildings}
                 onToggle={(v) => onChange({ ...enabled, ctx_buildings: v })}
               />
@@ -284,6 +293,8 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
               })}
             </div>
           )}
+
+          {current.id === "forecast" && <ForecastControl embedded />}
 
           {current.id === "view" && (
             <div className="space-y-2">

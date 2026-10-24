@@ -2,6 +2,10 @@
 
 **Name:** Piper (Rat Audit Boston) · **Tagline:** "Follow the rats." · **Target:** 2:55 (under 3:00) · **Written:** 2026-10-24
 
+**Required motion-graphics instructions for Claude:** Read and follow [Motion graphics from scratch — Claude master prompt](motion-graphics-from-scratch-claude.md) before creating or revising original animated inserts, titles, diagrams, data graphics, or transitions. Include that document's **Master prompt** with this script when handing the work to Claude. Build those graphics from editable text, shapes, vector paths, and code; follow its composition, typography, timing, easing, choreography, deterministic rendering, and quality-check instructions.
+
+Use this script and any supplied shot plan for the approved copy, facts, shot order, durations, and output settings. Piper's supplied brand rules, privacy requirements, factual caveats, and the under-three-minute limit take precedence over the guide's generic defaults. The guide governs authored motion graphics; keep the real product captures and published evidence required by this script. Validate a short animation sample before rendering the full sequence.
+
 **Sources read (in this order):**
 1. `.kiro/specs/rat-audit/v2-spec.md` (screens, §6 rules, §V5 Prove, §V7 privacy test)
 2. `.kiro/specs/rat-audit/data-audit.md` (validated numbers, tested 2026-10-24)

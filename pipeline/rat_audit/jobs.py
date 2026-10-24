@@ -15,6 +15,8 @@ from . import db
 INGEST_SOURCES = [
     "t311",        # Boston 311 yearly 2023-2026 + new-system trash types
     "regional",    # Somerville 311, Cambridge sightings + smart boxes
+    "cambridge",   # Cambridge food, housing pests, parcels, permits, schools
+    "somerville",  # Somerville permits, MassGIS assessor parcels, schools
     "parcels",     # assessment FY25/FY26 (+ private owners)
     "food",        # food inspections, rodent violations
     "permits",     # demolitions, excavations, work zones
@@ -23,6 +25,7 @@ INGEST_SOURCES = [
     "weather",     # NOAA daily
     "events",      # licenses, Red Sox, move-out, holidays
     "context",     # tracts, Zillow, Airbnb, iNaturalist
+    "volume_regional",  # all-type 311 volume for Cambridge + Somerville
     "demographics",  # ACS by tract for all three cities (after context creates the tracts)
 ]
 # Live updates (see ingest/update_modes.py for the per-source list written to `sources.update_mode`):
@@ -30,7 +33,7 @@ INGEST_SOURCES = [
 #   DAILY  -> DAILY_SOURCES minus REFRESH_SOURCES: daily cron only
 #   STATIC -> everything else in INGEST_SOURCES: snapshots / closed years, re-run with a backfill
 REFRESH_SOURCES = ["t311", "regional", "enforcement"]
-DAILY_SOURCES = REFRESH_SOURCES + ["weather", "food", "permits"]
+DAILY_SOURCES = REFRESH_SOURCES + ["weather", "food", "permits", "volume_regional", "cambridge", "somerville"]  # cambridge/somerville skip their static layers when since is set
 
 
 def _run_source(name: str, since: str | None = None) -> dict:

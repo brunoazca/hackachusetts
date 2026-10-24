@@ -78,6 +78,118 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Guilherme found v1 ugly, inefficient, too AI-ish and short on color; wanted it on top of the current app
 - Where: web/src/**, docs/design/research/less-ai-ish.md, docs/design/README.md, docs/design/tokens/tokens.json
 - Idea: Map team palette (neutral/red/amber/emerald) to tokens instead of rewriting every component
+### 2026-10-24 15:46 — Permanent host redirect rat-ops.vercel.app -> piper-app.v...
+- Teammate: Bruno
+- Agent: —
+- Did: Permanent host redirect rat-ops.vercel.app -> piper-app.vercel.app (path + query kept)
+- Why: Old links land on the renamed Piper URL
+- Where: web/next.config.ts
+- Idea: —
+
+### 2026-10-24 15:41 — Removed Modal crons (daily, weekly_retrain); both stay as...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed Modal crons (daily, weekly_retrain); both stay as manual functions
+- Why: One-day hackathon: nothing should run on a schedule
+- Where: pipeline/modal_app.py, pipeline/README.md, docs/rat-audit/FORECAST_MAP.md
+- Idea: Needs a modal deploy to take effect
+
+### 2026-10-24 15:40 — Queued 2 more Kiro Crew campaigns after the NYC ones: exp...
+- Teammate: Bruno
+- Agent: —
+- Did: Queued 2 more Kiro Crew campaigns after the NYC ones: exposure layer (child care, seniors, hospitals, pantries, markets, outdoor dining, playgrounds, public housing near hotspots) and new forecast predictors (ISD violations, Problem Properties, Article 80, MBTA, building age, temperature/snow, canopy)
+- Why: Rank sites by who is affected; check if new data improves the forecast
+- Where: none
+- Idea: Exposure as an explainable tie-breaker; keep/drop each predictor by top-10% capture gain
+
+### 2026-10-24 15:40 — Cambridge + Somerville equivalents loaded: restaurants (2...
+- Teammate: Bruno
+- Agent: —
+- Did: Cambridge + Somerville equivalents loaded: restaurants (260 CAM), indoor pest (769 CAM housing violations, 574 SOM 311), parcels with year built (28,850 CAM, 18,997 SOM via MassGIS L3), vacant parcels, demolition/new-construction permits, schools, construction complaints, SOM weeds (4,523); fixed Cambridge address parser that published house numbers for 'Cambridge St' addresses
+- Why: Bruno: fetch all Boston-only layers that exist elsewhere
+- Where: pipeline/rat_audit/ingest/{cambridge,somerville,regional,update_modes}.py, pipeline/rat_audit/jobs.py, contracts/categories.json, web/src/components/{map/LayerPanel,inspector/ParcelCard}.tsx
+- Idea: Not available outside Boston: Big Belly, trash on vacant lot, code-enforcement tickets, rat bites (SOM), vacant lot/abandoned building (SOM)
+
+### 2026-10-24 15:39 — Queued 2 Kiro Crew campaigns on NYC data: outcomes after ...
+- Teammate: Bruno
+- Agent: —
+- Did: Queued 2 Kiro Crew campaigns on NYC data: outcomes after each follow-up + natural recovery curve; complaints vs inspected rat activity (under-reporting calibration)
+- Why: Use other-city data where Boston has no outcomes
+- Where: none
+- Idea: Uses: recommendation prior, Prove decay baseline, 'nobody asked' adjustment, forecast benchmark
+
+### 2026-10-24 15:38 — Loaded Cambridge equivalents of Boston-only layers: sanit...
+- Teammate: Bruno
+- Agent: —
+- Did: Loaded Cambridge equivalents of Boston-only layers: sanitary-inspection rodent violations (260 restaurants), housing-code pest cases (769 incidents), FY2026 property database (28,850 parcels + 394 vacant), demolition/new-construction permits (378), public schools (18), construction complaints (1,602 via cambridge-311 mapping)
+- Why: Cambridge map/model parity with Boston layers
+- Where: pipeline/rat_audit/ingest/cambridge.py, ingest/update_modes.py, jobs.py, ingest/README.md, contracts/categories.json, web/src/lib/categories.json
+- Idea: regional._cam_address cuts at ' Cambridge' and leaks house numbers for Cambridge St addresses (253 rows)
+
+### 2026-10-24 15:36 — Decided how to use other cities' rat data for a Boston-fo...
+- Teammate: Bruno
+- Agent: —
+- Did: Decided how to use other cities' rat data for a Boston-focused app: not raw training rows; use NYC inspection outcomes as a 'what works' prior and a natural-decay baseline, NYC complaint-vs-inspection to calibrate under-reporting, DC/Chicago as method benchmarks, Cambridge/Somerville for border effects
+- Why: Other cities differ in reporting systems; their value is outcomes and calibration
+- Where: none
+- Idea: Proposed Kiro campaign: NYC inspection outcomes after baiting / abatement / compliance with matched comparison and decay curve
+
+### 2026-10-24 15:35 — Forecast map: smoothed surface (25 m raster, nested level...
+- Teammate: Bruno
+- Agent: —
+- Did: Forecast map: smoothed surface (25 m raster, nested levels 1..5+, clipped to land via tracts) instead of hard 250 m squares; only 1+ expected reports shown; default period = next 4 weeks
+- Why: Squares looked blocky, spilled into the harbor/Charles, and weekly values rarely reach 1 report
+- Where: pipeline/rat_audit/model/surface.py, model/__init__.py, tests/test_model_surface.py, supabase/migrations/20261024500003_model_forecast_surface.sql, web ForecastLayer/ForecastControl/forecast.ts/MapView
+- Idea: Modal needs a redeploy so score() rebuilds surfaces after Monday's retrain
+
+### 2026-10-24 15:33 — Kiro Crew campaign 95a7dbd6 (new datasets) done and in th...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew campaign 95a7dbd6 (new datasets) done and in the knowledge library; verified top picks with the Socrata token; added ranked table to knowledge/15
+- Why: Fill data gaps for the Rat Audit
+- Where: knowledge/15_boston_rat_audit.md
+- Idea: Load first: ISD building violations full (17,493 rows w/ lat-long), Problem Properties list (scrape), Article 80 projects, NYC rodent inspections (3.1M with results = real outcome data to test what works)
+
+### 2026-10-24 15:30 — Scheduled hourly design critique of the site via Kiro Cre...
+- Teammate: Bruno
+- Agent: —
+- Did: Scheduled hourly design critique of the site via Kiro Crew HTTP API (cron b522c4f9, design-critique skill on localhost:3107); first report written
+- Why: catch UI regressions continuously during the hackathon
+- Where: docs/design-critique/
+- Idea: fix mobile layout + touch target sizes (top 2 findings)
+
+### 2026-10-24 15:29 — Audited Boston-only layers vs Cambridge/Somerville portal...
+- Teammate: Bruno
+- Agent: —
+- Did: Audited Boston-only layers vs Cambridge/Somerville portals; started two loaders: Cambridge (sanitary inspections, housing code violations, property DB with year built, demolition/new construction permits, schools, construction complaints) and Somerville (more 311 types, permits, MassGIS L3 parcels with year built, schools)
+- Why: Bruno: 'BOS only' layers — missing data or just not fetched? Fetch all
+- Where: pipeline/rat_audit/ingest/{cambridge,somerville}.py (in progress)
+- Idea: Not found anywhere outside Boston: Big Belly, trash on vacant lot, code enforcement tickets as such
+
+### 2026-10-24 15:28 — Renamed Vercel project rat-ops -> piper; added https://pi...
+- Teammate: Bruno
+- Agent: —
+- Did: Renamed Vercel project rat-ops -> piper; added https://piper-app.vercel.app (piper.vercel.app is owned by another account); rat-ops.vercel.app still serves
+- Why: Project's new name is Piper
+- Where: .github/workflows/deploy.yml, Vercel project settings
+- Idea: Buy a custom domain if we want a bare 'piper' URL
+
+### 2026-10-24 15:25 — Forecast on the map: map_forecast/cell_detail/forecast_ru...
+- Teammate: Bruno
+- Agent: —
+- Did: Forecast on the map: map_forecast/cell_detail/forecast_run RPCs (applied), draft ForecastLayer + ForecastControl + CellCard wired into MapView/InspectorPanel; integration doc
+- Why: Show the model in the app: blocks colored by expected reports (log scale), week picker, emerging outline, 'why here' card with actual vs model
+- Where: supabase/migrations/20261024500002_model_forecast_api.sql, web/src/lib/forecast.ts, web/src/components/map/ForecastLayer.tsx, ForecastControl.tsx, inspector/CellCard.tsx, MapView.tsx, InspectorPanel.tsx, docs/rat-audit/FORECAST_MAP.md
+- Idea: Next: past-week overlay toggle and /api/simulate what-if
+
+### 2026-10-24 15:20 — Forecast: new candidate feature groups (food rodent fails...
+- Teammate: Bruno
+- Agent: —
+- Did: Forecast: new candidate feature groups (food rodent fails, permits new/active, ACS tract, city lots, iNat, more ring signals, weather variants) + climatology temperature for forecast weeks
+- Why: Test more data for the rodent-report forecast; copied temperature for future weeks was 4.9F off vs 2.2F with climatology
+- Where: pipeline/rat_audit/model/features.py pipeline/tests/test_model_features.py
+- Idea: Promote only groups that beat CORE in the 26-week backtest
+
 ### 2026-10-24 15:17 — Started Kiro Crew campaign 'Rat Audit — new datasets to a...
 - Teammate: Bruno
 - Agent: —
