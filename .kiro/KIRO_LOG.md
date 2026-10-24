@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:59 — Merged the in-progress a11y branch (priority layer, inspe...
+- Teammate: Guilherme
+- Agent: Claude Code
+- Did: Merged the in-progress a11y branch (priority layer, inspect mode, block queue, grid-cell labels migration, video pipeline scripts) into main at Guilherme's request; priority layer registered in map-controls, off by default.
+- Why: Guilherme asked for everything on main
+- Where: web/src/components/map/{MapView,LayerPanel,MapLegend,PriorityLayer,BlockQueue}.tsx; web/src/lib/{map-store,map-controls,priority}.ts; supabase/migrations/20261024700001_grid_cell_labels.sql
+- Idea: tsc, eslint, 5 node tests and 137 tsx tests pass (region-solutions still needs SUPABASE env). Production build passes. The grid_cell_labels migration is NOT applied to the live database; the map opens tilted (three=true) now.
+
 ### 2026-10-24 18:54 — Motion graphic v2: no opening, one short headline per sce...
 - Teammate: Bruno
 - Agent: —
