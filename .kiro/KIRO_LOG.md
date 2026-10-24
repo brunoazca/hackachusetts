@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:03 — Added pure unit tests for the 250 m grid fallback
+- Teammate: Bruno
+- Agent: —
+- Did: Added pure unit tests for the 250 m grid fallback
+- Why: grid.py had no tests in the repo; Kiro run wrote them only in its workspace
+- Where: pipeline/tests/test_grid.py, pipeline/conftest.py
+- Idea: Run with: cd pipeline && uv run pytest
+
 ### 2026-10-24 14:02 — Compared proposed Spec v2 (Track/Analyze/Act/Predict/Prov...
 - Teammate: Bruno
 - Agent: —
