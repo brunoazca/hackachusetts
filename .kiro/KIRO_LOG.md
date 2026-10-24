@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:53 — Handoff to model section: ACS ablation, three-city model ...
+- Teammate: Bruno
+- Agent: —
+- Did: Handoff to model section: ACS ablation, three-city model on shared features (NaN not 0 for Boston-only signals), per-city capture metrics
+- Why: Bruno asked how much demographics affect the model and whether missing data hurts Cambridge/Somerville
+- Where: docs/rat-audit/prompts/model-update-1545.md
+- Idea: Current run uses no ACS features and a Boston-only grid; GBM top-10% capture 0.64 vs baseline 0.54
+
 ### 2026-10-24 15:52 — report_volume now covers Cambridge (13–18k requests/yr, b...
 - Teammate: Bruno
 - Agent: —
