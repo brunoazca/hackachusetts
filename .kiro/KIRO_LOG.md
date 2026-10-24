@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:04 — Map: zoomed-out data now aggregated server-side (map_inci...
+- Teammate: Bruno
+- Agent: —
+- Did: Map: zoomed-out data now aggregated server-side (map_incident_bins: category × ~12 px cell with n/n_open), so nothing is truncated; clusters and heatmaps sum counts; raw points from zoom 15
+- Why: Bruno: West End looked empty of evidence — it had 782 trash tickets + 404 out-early + 299 litter in 90 days, hidden by the 20k newest-rows cap across 51k city reports
+- Where: supabase/migrations/20261024300004_api_map_bins.sql, web/src/components/map/MapView.tsx, web/src/lib/queries.ts
+- Idea: none
+
 ### 2026-10-24 14:56 — Map: coverage fog (outside the 3 cities always; over any ...
 - Teammate: Bruno
 - Agent: —
