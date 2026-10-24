@@ -106,6 +106,11 @@ export default function FindingChart({ spec, id }: { spec: ChartSpec; id: string
 
   return (
     <figure className="mt-2" data-chart-type={spec.type}>
+      {/* "Charts speak first" (accessibility.md §8): the plain-language summary is visible above the
+          chart for everyone, not only read out from the SVG <desc>. */}
+      <figcaption id={`${id}-chart-summary`} className="mb-1 text-[11px] leading-4 text-fg-2">
+        {describeChart(spec)}
+      </figcaption>
       <svg
         viewBox={`0 0 ${W} ${H}`}
         className="h-auto w-full"
@@ -224,7 +229,7 @@ export default function FindingChart({ spec, id }: { spec: ChartSpec; id: string
       )}
 
       <details className="mt-1 text-xs text-neutral-600">
-        <summary className="cursor-pointer">Chart data</summary>
+        <summary className="cursor-pointer">Show data</summary>
         <table className="mt-1 w-full text-left">
           <caption className="sr-only">{describeChart(spec)}</caption>
           <thead>

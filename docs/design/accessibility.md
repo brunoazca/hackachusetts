@@ -77,9 +77,9 @@ What is wired in the app today, and where it lives. Paths are under `web/src`.
 | **Theme + contrast.** Night/Bone tokens meet AA; `prefers-contrast: more` and `prefers-reduced-transparency` swap to solid panels and stronger lines. Token contrast is gated in CI. | R9.1; 1.4.3, 1.4.11 | `styles/piper.css`; `scripts/check-design-tokens.py` |
 | **Single-key shortcuts never fire while typing.** `L` (list), `M` (motion), `T` (theme), `]` (panel). | 2.1.4 | guarded in `MapView.tsx`, `TopBar.tsx`, `shell/RightPanel.tsx` |
 | **Hyperlegible type.** Atkinson Hyperlegible Next + Mono, built for low vision. | §Non-negotiables | `app/layout.tsx` |
+| **Charts speak first.** Every finding chart leads with a visible plain-language summary (same text as the SVG `aria-label`/`<desc>`), then the chart, then a "Show data" table with `<caption>` and `scope="col"` headers (CI as a column). Status is shape + word, never color alone. | non-negotiable §8 | `components/insights/FindingChart.tsx` (`describeChart` → `<figcaption>` + `<desc>` + `<details><table>`); `PriceImpact.tsx`, `ForecastSummary.tsx`, `ActionSamples.tsx` carry their own tables |
 
 ### Still open (tracked, not yet shipped)
 
-- Charts: "summary sentence + Show data table" twin (non-negotiable §8) — Insights charts currently carry labels/sources; the table twin is pending.
 - `accessibility-check` Kiro hook (tasks.md §10) — manual 15-minute pass above is the interim gate.
 - 200% zoom / mobile sheet reflow (R9.4, task 3.12, P2).
