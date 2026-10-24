@@ -7,6 +7,7 @@ import { ERA_STOPS, HOUSING_RAMP } from "./ContextLayers";
 import type { CoverageRow } from "@/lib/queries";
 import { useUi } from "@/lib/ui-store";
 import { useMorph } from "@/lib/use-morph";
+import Timeline from "./Timeline";
 import { useEffect, useId, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from "react";
 
 // Layer dock: a slim vertical rail of group buttons (rat signals, trash, shelter, works, buildings,
@@ -143,7 +144,17 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   if (open && open !== lastId) setLastId(open);
   const shown = useMorph(!!open, flyRef, () => (lastId ? btnRefs.current[lastId] ?? null : null));
   const current = shown ? dock.find((d) => d.id === (open ?? lastId)) : undefined;
-  const setAll = (ids: string[], v: boolean) => onChange({ ...enabled, ...Object.fromEntries(ids.map((id) => [id, v])) });
+  const isCause = (id: string) => CATS[id]?.group !== "rats";
+  // Switching on a cause layer (trash, shelter, works) turns "Show likely causes" on, so it actually
+  // appears; switching off the last one turns it back off.
+  const apply = (next: Record<string, boolean>, changed: string[], v: boolean) => {
+    onChange(next);
+    if (changed.some(isCause)) {
+      if (v) onCausesChange(true);
+      else if (!Object.entries(next).some(([id, on]) => on && isCause(id) && CATS[id])) onCausesChange(false);
+    }
+  };
+  const setAll = (ids: string[], v: boolean) => apply({ ...enabled, ...Object.fromEntries(ids.map((id) => [id, v])) }, ids, v);
 
   return (
     <nav aria-label="Map layers" className="absolute left-3 top-[68px] z-20 flex items-start gap-2">
@@ -228,7 +239,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
                     label={CATS[id].label}
                     meta={<><span className={STRENGTH_STYLE[t.strength]}>{t.text}</span>{coverage.length > 0 && <> · <CityBadges layer={id} coverage={coverage} /></>}</>}
                     checked={!!enabled[id]}
-                    onToggle={(v) => onChange({ ...enabled, [id]: v })}
+                    onToggle={(v) => apply({ ...enabled, [id]: v }, [id], v)}
                   />
                 );
               })}
@@ -299,6 +310,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
           </div>
         </section>
       )}
+      <Timeline />
     </nav>
   );
 }

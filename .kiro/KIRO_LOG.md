@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:46 — Time window is now a compact 320px card that grows out of...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Time window is now a compact 320px card that grows out of the calendar button next to the dock (range in words, quick picks, short two-handle slider, exact From/To date inputs) instead of a full-width bar; switching on any cause layer (trash, shelter, works) turns 'Show likely causes' on automatically, and turning the last one off turns it off
+- Why: Guilherme: full-width slider felt wrong; cause layers should activate the causes view
+- Where: web/src/components/map/Timeline.tsx, web/src/components/map/LayerPanel.tsx, web/src/app/page.tsx
+- Idea: —
+
 ### 2026-10-24 15:39 — Panels now morph out of the button that opened them (clip...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
