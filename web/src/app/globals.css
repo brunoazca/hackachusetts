@@ -17,6 +17,8 @@
   .piper-switch:checked::after { transform: translateX(14px); background: var(--p-accent-fg); }
 }
 
+@keyframes piper-fly { from { opacity: 0; transform: translateX(-6px) scale(.98); } to { opacity: 1; transform: none; } }
+
 /* MapLibre controls follow the theme. */
 @layer base {
   .maplibregl-ctrl-group {

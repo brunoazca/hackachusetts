@@ -171,7 +171,7 @@ export default function MapView() {
     if (flyToTarget) mapRef.current?.flyTo({
       center: [flyToTarget.lon, flyToTarget.lat], zoom: flyToTarget.zoom, duration: 1200,
       // Land between the floating panels.
-      padding: { left: appMode === "act" ? 420 : 300, top: 80, right: 424, bottom: 24 },
+      padding: { left: appMode === "act" ? 420 : 80, top: 80, right: 424, bottom: 24 },
     });
   }, [flyToTarget, appMode]);
 

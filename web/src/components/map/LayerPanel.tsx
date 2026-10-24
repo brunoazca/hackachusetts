@@ -5,10 +5,11 @@ import { markerDataUrl } from "./icons";
 import { STRENGTH_STYLE, testedFor } from "./tested";
 import { ERA_STOPS, HOUSING_RAMP } from "./ContextLayers";
 import type { CoverageRow } from "@/lib/queries";
-import { useState } from "react";
-import { CollapseButton, CollapsedTab } from "@/components/shell/Collapse";
+import { useEffect, useId, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from "react";
 
-// Floating layer + date controls for the draft map.
+// Layer dock: a slim vertical rail of group buttons (rat signals, trash, shelter, works, buildings,
+// period, view). Each opens one flyout with that group's toggles, so the map keeps its width.
+// Keyboard: arrows move along the rail, Enter/Space opens, Esc closes and returns focus.
 
 const CATS = categories.incident_categories as Record<string, { label: string; color: string; group: string }>;
 const GROUPS: { id: string; label: string }[] = [
@@ -68,10 +69,8 @@ function CityBadges({ layer, coverage }: { layer: string; coverage: CoverageRow[
   if (!coverage.length) return null;
   const has = new Set(coverage.filter((c) => c.kind === "incident" && c.layer === layer).map((c) => c.city));
   return (
-    <span className="ml-1 inline-flex gap-0.5 align-middle" aria-label={`Data in: ${CITY_ABBR.filter(([c]) => has.has(c)).map(([, a]) => a).join(", ") || "none"}`}>
-      {CITY_ABBR.map(([c, a]) => (
-        <span key={c} className={`rounded px-1 text-[10px] font-semibold leading-4 ${has.has(c) ? "bg-neutral-800 text-white" : "bg-neutral-100 text-neutral-500 line-through"}`}>{a}</span>
-      ))}
+    <span className="font-mono" aria-label={`Data in: ${CITY_ABBR.filter(([c]) => has.has(c)).map(([, a]) => a).join(", ") || "none"}`}>
+      {CITY_ABBR.filter(([c]) => has.has(c)).map(([, a]) => a).join(" ") || "no data"}
     </span>
   );
 }
@@ -79,9 +78,25 @@ function CityBadges({ layer, coverage }: { layer: string; coverage: CoverageRow[
 function Ramp({ colors, label }: { colors: string[]; label: string }) {
   return (
     <div className="flex items-center gap-2">
-      <span aria-hidden className="h-2.5 w-16 shrink-0 rounded-full" style={{ background: `linear-gradient(to right, ${colors.join(", ")})` }} />
-      <span className="text-xs text-neutral-800">{label}</span>
+      <span aria-hidden className="h-2 w-14 shrink-0 rounded-full" style={{ background: `linear-gradient(to right, ${colors.join(", ")})` }} />
+      <span className="text-xs text-fg-2">{label}</span>
     </div>
+  );
+}
+
+type DockId = "rats" | "food" | "shelter" | "displace" | "context" | "period" | "view";
+
+/** One layer row: icon, name, one quiet meta line, switch. Whole row toggles. */
+function LayerRow({ icon, label, meta, checked, onToggle }: { icon: ReactNode; label: string; meta?: ReactNode; checked: boolean; onToggle: (v: boolean) => void }) {
+  return (
+    <label className="-mx-1.5 grid min-h-10 cursor-pointer grid-cols-[20px_minmax(0,1fr)_32px] items-center gap-2.5 rounded-sm px-1.5 py-1 transition-colors duration-150 hover:bg-card-hover">
+      {icon}
+      <span className="min-w-0">
+        <span className="block truncate text-[13px] font-medium leading-[18px] text-fg" title={label}>{label}</span>
+        {meta && <span className="block truncate text-[11px] leading-4 text-fg-3">{meta}</span>}
+      </span>
+      <input type="checkbox" role="switch" className="piper-switch" checked={checked} onChange={(e) => onToggle(e.target.checked)} aria-label={label} />
+    </label>
   );
 }
 
@@ -89,118 +104,186 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
   const explore = useMap((s) => s.depth) === "explore";
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState<DockId | null>(null);
+  const flyoutId = useId();
+  const btnRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const flyRef = useRef<HTMLDivElement>(null);
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
+  const periodLabel = PRESETS.find((p) => Math.abs(span - p.days) < 2)?.label.replace(" ", "") ?? `${span}d`;
 
-  const on = Object.values(enabled).filter(Boolean).length;
-  if (!open) return <CollapsedTab side="left" label="Layers" meta={`${on} on · ${count.toLocaleString()}`} onOpen={() => setOpen(true)} />;
+  const groupIds = (g: string) => Object.entries(CATS).filter(([id, c]) => c.group === g && (explore || SIMPLE_LAYERS.includes(id))).map(([id]) => id);
+  const onIn = (ids: string[]) => ids.filter((id) => enabled[id]).length;
+
+  const dock: { id: DockId; label: string; icon: ReactNode; badge?: number }[] = [
+    ...GROUPS.filter((g) => groupIds(g.id).length).map((g) => ({
+      id: g.id as DockId,
+      label: g.label,
+      // eslint-disable-next-line @next/next/no-img-element
+      icon: <img src={markerDataUrl(groupIds(g.id)[0])} alt="" aria-hidden className="h-6 w-6" />,
+      badge: onIn(groupIds(g.id)),
+    })),
+    {
+      id: "context", label: "Buildings & people",
+      icon: <span aria-hidden className="flex h-5 w-6 overflow-hidden rounded-[3px]">{ERA_STOPS.map(([, c]) => <span key={c} className="flex-1" style={{ background: c }} />)}</span>,
+      badge: (enabled.ctx_housing ? 1 : 0) + (enabled.ctx_buildings ? 1 : 0),
+    },
+    { id: "period", label: `Period: ${periodLabel}`, icon: <span className="font-mono text-[11px] font-semibold text-fg">{periodLabel}</span> },
+    ...(explore ? [{ id: "view" as DockId, label: `View: ${mode}`, icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden className="text-fg-2"><path d="m12 2 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5" /><path d="m3 17 9 5 9-5" /></svg>
+    ) }] : []),
+  ];
+
+  // Esc closes and returns focus to the dock button that opened the flyout.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { const o = open; setOpen(null); btnRefs.current[o]?.focus(); }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  const onDockKey = (e: ReactKeyboardEvent, i: number) => {
+    if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+    e.preventDefault();
+    const next = dock[(i + (e.key === "ArrowDown" ? 1 : dock.length - 1)) % dock.length];
+    btnRefs.current[next.id]?.focus();
+  };
+
+  const current = dock.find((d) => d.id === open);
+  const setAll = (ids: string[], v: boolean) => onChange({ ...enabled, ...Object.fromEntries(ids.map((id) => [id, v])) });
+
   return (
-    <div className="glass absolute left-3 top-[68px] z-20 max-h-[calc(100%-80px)] w-72 overflow-y-auto rounded-lg p-3 text-sm">
-      <div className="mb-2 flex items-center justify-between">
-        <h2 className="flex items-center gap-1 font-semibold"><CollapseButton onClick={() => setOpen(false)} label="Hide layers" dir="left" />Layers</h2>
-        <span className="text-xs text-neutral-700" aria-live="polite">
-          {loading ? "Loading…" : `${count.toLocaleString()} in view`}
+    <nav aria-label="Map layers" className="absolute left-3 top-[68px] z-20 flex items-start gap-2">
+      {/* Rail */}
+      <div className="glass flex w-[52px] flex-col items-center gap-1 rounded-lg p-1">
+        {dock.map((d, i) => (
+          <button
+            key={d.id}
+            ref={(el) => { btnRefs.current[d.id] = el; }}
+            type="button"
+            onClick={() => setOpen((o) => (o === d.id ? null : d.id))}
+            onKeyDown={(e) => onDockKey(e, i)}
+            aria-expanded={open === d.id}
+            aria-controls={open === d.id ? flyoutId : undefined}
+            aria-label={`${d.label}${d.badge ? `, ${d.badge} on` : ""}`}
+            title={d.label}
+            className="relative grid h-11 w-11 place-items-center rounded-md transition-[background-color,transform] duration-150 hover:bg-card-hover active:scale-95 aria-expanded:bg-card aria-expanded:ring-1 aria-expanded:ring-edge"
+          >
+            {d.icon}
+            {!!d.badge && (
+              <span aria-hidden className="absolute right-0.5 top-0.5 grid h-4 min-w-4 place-items-center rounded-full bg-fg px-1 font-mono text-[10px] font-semibold leading-none text-bg">{d.badge}</span>
+            )}
+          </button>
+        ))}
+        <span className="mt-0.5 border-t border-line pt-1 text-center font-mono text-[10px] leading-3 text-fg-3" aria-live="polite" title="Reports in view">
+          {loading ? "…" : count >= 1000 ? `${(count / 1000).toFixed(count >= 10000 ? 0 : 1)}k` : count}
         </span>
       </div>
 
-      {explore && <fieldset className="mb-3">
-        <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">View</legend>
-        <div className="flex gap-1">
-          {MODES.map((m) => (
-            <button
-              key={m.id}
-              type="button"
-              aria-pressed={mode === m.id}
-              onClick={() => onModeChange(m.id)}
-              className={`flex-1 rounded px-2 py-1 text-xs font-medium ${
-                mode === m.id ? "bg-neutral-900 text-white" : "bg-neutral-100 text-neutral-800 hover:bg-neutral-200"
-              }`}
-            >
-              {m.label}
-            </button>
-          ))}
-        </div>
-        {mode !== "points" && (
-          <div className="mt-2 space-y-1">
-            <Ramp colors={HEAT_RAMPS.rats} label="Rat reports (rat signals checked)" />
-            <Ramp colors={HEAT_RAMPS.evidence} label="Evidence (trash, shelter, displacement)" />
-          </div>
-        )}
-      </fieldset>}
+      {/* Flyout */}
+      {current && (
+        <section
+          id={flyoutId}
+          ref={flyRef}
+          aria-label={current.label}
+          className="glass w-72 origin-top-left animate-[piper-fly_160ms_var(--ease-out)_both] overflow-y-auto rounded-lg p-3 text-sm [max-height:calc(100dvh-92px)]"
+        >
+          <header className="mb-2 flex items-center justify-between gap-2">
+            <h2 className="text-[14px] font-bold text-fg">{current.id === "period" ? "Period" : current.id === "view" ? "View" : current.label}</h2>
+            <div className="flex items-center gap-1">
+              {GROUPS.some((g) => g.id === current.id) && (() => {
+                const ids = groupIds(current.id);
+                const all = onIn(ids) === ids.length;
+                return (
+                  <button type="button" onClick={() => setAll(ids, !all)} className="h-7 rounded-sm px-2 text-[12px] font-semibold text-fg-2 hover:bg-card-hover hover:text-fg">
+                    {all ? "None" : "All"}
+                  </button>
+                );
+              })()}
+              <button type="button" onClick={() => { setOpen(null); btnRefs.current[current.id]?.focus(); }} aria-label="Close" className="grid h-7 w-7 place-items-center rounded-sm text-fg-3 hover:bg-card-hover hover:text-fg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden><path d="M18 6 6 18M6 6l12 12" /></svg>
+              </button>
+            </div>
+          </header>
 
-      <fieldset className="mb-3">
-        <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Period</legend>
-        <div className="flex gap-1">
-          {PRESETS.map((p) => (
-            <button
-              key={p.label}
-              type="button"
-              aria-pressed={Math.abs(span - p.days) < 2}
-              onClick={() => setFilters({ since: daysAgo(p.days), until: iso(new Date()) })}
-              className={`flex-1 rounded px-2 py-1 text-xs font-medium ${
-                Math.abs(span - p.days) < 2 ? "bg-neutral-900 text-white" : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
-              }`}
-            >
-              {p.label}
-            </button>
-          ))}
-        </div>
-      </fieldset>
+          {GROUPS.some((g) => g.id === current.id) && (
+            <div>
+              {groupIds(current.id).map((id) => {
+                const t = testedFor(id);
+                return (
+                  <LayerRow
+                    key={id}
+                    // eslint-disable-next-line @next/next/no-img-element
+                    icon={<img src={markerDataUrl(id)} alt="" aria-hidden className="h-5 w-5" />}
+                    label={CATS[id].label}
+                    meta={<><span className={STRENGTH_STYLE[t.strength]}>{t.text}</span>{coverage.length > 0 && <> · <CityBadges layer={id} coverage={coverage} /></>}</>}
+                    checked={!!enabled[id]}
+                    onToggle={(v) => onChange({ ...enabled, [id]: v })}
+                  />
+                );
+              })}
+              <p className="mt-2 text-[11px] leading-4 text-fg-3">Faded icon = closed. Tested = block-level partial correlation with rodent reports.</p>
+            </div>
+          )}
 
-      {GROUPS.map((g) => {
-        const ids = Object.entries(CATS).filter(([id, c]) => c.group === g.id && (explore || SIMPLE_LAYERS.includes(id)));
-        if (!ids.length) return null;
-        return (
-          <fieldset key={g.id} className="mb-2">
-            <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">{g.label}</legend>
-            {ids.map(([id, c]) => (
-              <label key={id} className="flex cursor-pointer items-start gap-2 rounded px-1 py-0.5 hover:bg-neutral-50">
-                <input
-                  type="checkbox"
-                  checked={!!enabled[id]}
-                  onChange={(e) => onChange({ ...enabled, [id]: e.target.checked })}
-                  className="mt-1 accent-neutral-900"
-                />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={markerDataUrl(id)} alt="" aria-hidden className="mt-0.5 h-5 w-5 shrink-0" />
-                <span className="min-w-0">
-                  <span className="block truncate text-neutral-900">{c.label}</span>
-                  <CityBadges layer={id} coverage={coverage} />
-                  <span className={`block text-xs ${STRENGTH_STYLE[testedFor(id).strength]}`}>{testedFor(id).text}</span>
-                </span>
-              </label>
-            ))}
-          </fieldset>
-        );
-      })}
-      <fieldset className="mb-2">
-        <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Buildings &amp; people</legend>
-        <label className="flex cursor-pointer items-start gap-2 rounded px-1 py-0.5 hover:bg-neutral-50">
-          <input type="checkbox" checked={!!enabled.ctx_housing} onChange={(e) => onChange({ ...enabled, ctx_housing: e.target.checked })} className="mt-1 accent-neutral-900" />
-          <span aria-hidden className="mt-1 h-3 w-5 shrink-0 rounded-sm" style={{ background: `linear-gradient(to right, ${HOUSING_RAMP.join(", ")})` }} />
-          <span className="min-w-0">
-            <span className="block text-neutral-900">Old housing (% built before 1940)</span>
-            <span className="block text-xs text-neutral-700">per census tract · ACS 2024 · BOS CAM SOM</span>
-          </span>
-        </label>
-        <label className="flex cursor-pointer items-start gap-2 rounded px-1 py-0.5 hover:bg-neutral-50">
-          <input type="checkbox" checked={!!enabled.ctx_buildings} onChange={(e) => onChange({ ...enabled, ctx_buildings: e.target.checked })} className="mt-1 accent-neutral-900" />
-          <span aria-hidden className="mt-1 flex h-3 w-5 shrink-0 overflow-hidden rounded-sm">
-            {ERA_STOPS.map(([, c]) => <span key={c} className="flex-1" style={{ background: c }} />)}
-          </span>
-          <span className="min-w-0">
-            <span className="block text-neutral-900">Buildings by year built</span>
-            <span className="block text-xs text-neutral-700">
-              {enabled.ctx_buildings && zoom < 15 ? "zoom in to see buildings · " : ""}Boston parcels · {ERA_STOPS.map(([, , l]) => l).join(" / ")}
-            </span>
-          </span>
-        </label>
-      </fieldset>
+          {current.id === "context" && (
+            <div>
+              <LayerRow
+                icon={<span aria-hidden className="h-3 w-5 rounded-[2px]" style={{ background: `linear-gradient(to right, ${HOUSING_RAMP.join(", ")})` }} />}
+                label="Old housing (% before 1940)"
+                meta="per census tract · ACS 2024 · BOS CAM SOM"
+                checked={!!enabled.ctx_housing}
+                onToggle={(v) => onChange({ ...enabled, ctx_housing: v })}
+              />
+              <LayerRow
+                icon={<span aria-hidden className="flex h-3 w-5 overflow-hidden rounded-[2px]">{ERA_STOPS.map(([, c]) => <span key={c} className="flex-1" style={{ background: c }} />)}</span>}
+                label="Buildings by year built"
+                meta={`${enabled.ctx_buildings && zoom < 15 ? "zoom in to see · " : ""}Boston parcels`}
+                checked={!!enabled.ctx_buildings}
+                onToggle={(v) => onChange({ ...enabled, ctx_buildings: v })}
+              />
+              <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-fg-3">
+                {ERA_STOPS.map(([, c, l]) => <span key={l} className="flex items-center gap-1"><span className="h-2 w-2 rounded-[2px]" style={{ background: c }} />{l}</span>)}
+              </div>
+            </div>
+          )}
 
-      <p className="mt-2 text-xs text-neutral-700">
-        {explore ? "Each layer clusters on its own. " : "Simple view: rat signals and the drivers that showed an effect in our tests. Explore adds every other layer and the heatmaps. "}
-        Solid icon = open, faded = closed. Tested values: block-level partial correlation with rodent reports.
-      </p>
-    </div>
+          {current.id === "period" && (
+            <div role="radiogroup" aria-label="Period" className="grid grid-cols-5 gap-0.5 rounded-md border border-line bg-card p-0.5">
+              {PRESETS.map((p) => {
+                const on = Math.abs(span - p.days) < 2;
+                return (
+                  <button key={p.label} type="button" role="radio" aria-checked={on}
+                    onClick={() => setFilters({ since: daysAgo(p.days), until: iso(new Date()) })}
+                    className="h-8 rounded-sm text-[12px] font-medium text-fg-2 hover:text-fg aria-checked:bg-fg aria-checked:text-bg">
+                    {p.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {current.id === "view" && (
+            <div className="space-y-2">
+              <div role="radiogroup" aria-label="View" className="grid grid-cols-3 gap-0.5 rounded-md border border-line bg-card p-0.5">
+                {MODES.map((m) => (
+                  <button key={m.id} type="button" role="radio" aria-checked={mode === m.id} onClick={() => onModeChange(m.id)}
+                    className="h-8 rounded-sm text-[12px] font-medium text-fg-2 hover:text-fg aria-checked:bg-fg aria-checked:text-bg">
+                    {m.label}
+                  </button>
+                ))}
+              </div>
+              {mode !== "points" && (
+                <div className="space-y-1">
+                  <Ramp colors={HEAT_RAMPS.rats} label="Rat reports" />
+                  <Ramp colors={HEAT_RAMPS.evidence} label="Evidence (trash, shelter, works)" />
+                </div>
+              )}
+            </div>
+          )}
+        </section>
+      )}
+    </nav>
   );
 }

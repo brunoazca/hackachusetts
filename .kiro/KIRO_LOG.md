@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:11 — Replaced the big left Layers panel with a slim layer dock...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Replaced the big left Layers panel with a slim layer dock: 52px rail of group buttons (rats, trash, shelter, works, buildings, period, view) with on-count badges; one animated flyout per group with compact switch rows, All/None, Esc to close, arrow-key rail navigation, aria-expanded/controls; reduced-motion safe
+- Why: Guilherme found the left panel too big; wanted sleek, expandable, animated, accessible
+- Where: web/src/components/map/LayerPanel.tsx, web/src/app/globals.css, web/src/components/map/MapView.tsx
+- Idea: City coverage shown as quiet 'BOS SOM' text instead of badge pills
+
 ### 2026-10-24 15:05 — Design v2 'Transit' on feat/piper-ui (rebased on latest m...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
