@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:30 — Scheduled hourly design critique of the site via Kiro Cre...
+- Teammate: Bruno
+- Agent: —
+- Did: Scheduled hourly design critique of the site via Kiro Crew HTTP API (cron b522c4f9, design-critique skill on localhost:3107); first report written
+- Why: catch UI regressions continuously during the hackathon
+- Where: docs/design-critique/
+- Idea: fix mobile layout + touch target sizes (top 2 findings)
+
+### 2026-10-24 15:29 — Audited Boston-only layers vs Cambridge/Somerville portal...
+- Teammate: Bruno
+- Agent: —
+- Did: Audited Boston-only layers vs Cambridge/Somerville portals; started two loaders: Cambridge (sanitary inspections, housing code violations, property DB with year built, demolition/new construction permits, schools, construction complaints) and Somerville (more 311 types, permits, MassGIS L3 parcels with year built, schools)
+- Why: Bruno: 'BOS only' layers — missing data or just not fetched? Fetch all
+- Where: pipeline/rat_audit/ingest/{cambridge,somerville}.py (in progress)
+- Idea: Not found anywhere outside Boston: Big Belly, trash on vacant lot, code enforcement tickets as such
+
 ### 2026-10-24 15:28 — Renamed Vercel project rat-ops -> piper; added https://pi...
 - Teammate: Bruno
 - Agent: —
