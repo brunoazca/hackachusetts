@@ -4,9 +4,6 @@ import { useMap } from "@/lib/map-store";
 import { loadRanking, type RankingEntry } from "@/lib/insight";
 import PlaceText from "@/components/insights/regions/PlaceText";
 import type { RegionLocation } from "@/components/insights/regions/parse";
-import InsightsView from "@/components/insights/InsightsView";
-import HistoricalFindings from "@/components/insights/HistoricalFindings";
-import { useInsights } from "@/components/insights/useInsights";
 
 // Severity tiers on the score (reports in the last 12 weeks + expected in the next 4 + expected
 // returns). Hotspots run ~15-120, lone blocks mostly under 5.
@@ -68,7 +65,6 @@ export default function RankingList({ onLocate }: { onLocate: (loc: RegionLocati
         <h2 className="text-[15px] font-semibold text-fg">Where to act first</h2>
         <p className="text-small text-fg-3">Worst first. Tap one to see it on the map.</p>
       </header>
-      <Methodology />
       <ol className="space-y-2" aria-live="polite">
         {rows.map((r) => {
           const tier = tierOf(r.region?.severity ?? {});
@@ -95,18 +91,5 @@ export default function RankingList({ onLocate }: { onLocate: (loc: RegionLocati
         </li>
       </ol>
     </div>
-  );
-}
-
-function Methodology() {
-  const { state, retry } = useInsights();
-  const setLayers = useMap((s) => s.setLayers);
-  const setForecastWeek = useMap((s) => s.setForecastWeek);
-  const research = <HistoricalFindings onReviewPlaces={() => setLayers({ priority: true })} />;
-  return (
-    <details className="rounded-lg border border-edge">
-      <summary className="min-h-10 cursor-pointer p-3 text-small font-semibold text-fg">Methodology & city-wide evidence</summary>
-      <InsightsView state={state} onRetry={retry} research={research} onShowForecast={(w) => { setForecastWeek(w); setLayers({ forecast: true }); }} />
-    </details>
   );
 }

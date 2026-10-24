@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:24 — Removed the 'Methodology & city-wide evidence' collapsibl...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed the 'Methodology & city-wide evidence' collapsible from the ranking list
+- Why: Clutter under 'Where to act first'; the list should be just the ranked places
+- Where: web/src/components/insight/RankingList.tsx
+- Idea: —
+
 ### 2026-10-24 19:24 — Map: centered the bottom filter bar
 - Teammate: Bruno
 - Agent: —
