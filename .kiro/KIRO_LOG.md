@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:06 — Presentation audit of data, ML and AI per product flow (d...
+- Teammate: Bruno
+- Agent: —
+- Did: Presentation audit of data, ML and AI per product flow (docs/rat-audit/AUDIT.md); refit recurrence so 56 of 57 sites have recur_p; fixed stale cron wording in update_modes.py
+- Why: Presentation needs one honest map of what data/models/LLMs drive each flow and what is live vs branch-only
+- Where: docs/rat-audit/AUDIT.md, pipeline/rat_audit/ingest/update_modes.py
+- Idea: Gap table at the end lists what to merge or say out loud
+
 ### 2026-10-24 18:05 — Simplified priority-region insight cards
 - Teammate: Carol
 - Agent:

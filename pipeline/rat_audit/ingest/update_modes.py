@@ -1,7 +1,7 @@
 """Which sources get live updates. Single source of truth; db.upsert_source writes it to `sources`.
 
-live   = Refresh button (Modal `refresh`, jobs.REFRESH_SOURCES) + daily cron
-daily  = daily cron only (jobs.DAILY_SOURCES, Modal `daily`, 10:00 UTC)
+live   = Refresh button (Modal `refresh`, jobs.REFRESH_SOURCES) + manual `daily` run
+daily  = manual `daily` run only (jobs.DAILY_SOURCES, Modal `daily`; no cron for the hackathon)
 static = loaded once: a snapshot, or a closed historical year. Re-run with a backfill.
 """
 
@@ -17,7 +17,7 @@ UPDATE_MODES: dict[str, tuple[str, str]] = {
     "cambridge-rodent-sightings": ("live", "Cambridge publishes daily"),
     "cambridge-311": ("live", "Cambridge service requests: trash, dumping, dead animals; published daily"),
     "cambridge-smart-rat-boxes": ("live", "full reload each refresh; monthly catches for 2026"),
-    # ---- daily (cron only) ----
+    # ---- daily (manual `daily` run) ----
     "noaa-ghcnd-logan": ("daily", "NOAA posts with a ~4-day lag"),
     "boston-food-inspections": ("daily", "rodent-related violations; businesses with a new citation are rebuilt"),
     "boston-building-permits": ("daily", "demolition / excavation / new construction; display only"),
