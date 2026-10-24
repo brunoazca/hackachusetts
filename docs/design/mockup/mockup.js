@@ -281,7 +281,7 @@
       <div class="sec"><span class="eyebrow">Next 60 days</span><div class="prob" style="margin:6px 0"><i style="width:${s.p}%"></i></div><span class="t-small fg3">Model estimate · backtested</span></div>
       <div class="sec stack"><span class="eyebrow">Recommended</span>
         <div class="action escalate" data-action="violation"><span class="eyebrow">ISD · Code enforcement</span><b class="t-title">Issue a violation, not another visit</b>
-          <p class="because">Monitoring left repeats at 14.1% → 14.2%; violations cut them to 12.2%.</p>
+          <p class="because">Reports followed earlier closures. Nearby records warrant field review.</p>
           <p class="t-small fg3">Source: 311 closures, 2025</p>
           <div class="row actions"><button class="btn btn-primary" data-approve>Approve</button><button class="btn btn-secondary">Edit</button><button class="btn btn-ghost" data-reject>Reject</button></div></div>
         ${s.lot ? `<div class="action" data-action="lot"><span class="eyebrow">Parks · Vacant lot</span><b class="t-title">Clear and bait the lot next door</b><p class="because">A vacant parcel ${s.lot.d} m away; returns cluster on its side of the block.</p>
@@ -353,7 +353,7 @@
   function renderAsk(q) {
     body.innerHTML = "";
     const v = html(`<div class="stack" style="gap:16px;min-height:100%">
-      <div class="msg-user t-body">${q || "Where does monitoring keep failing?"}</div>
+      <div class="msg-user t-body">${q || "Which places have reports after closure?"}</div>
       <div class="msg-piper"><svg width="28" height="16" viewBox="14 10 86 46" style="color:var(--p-accent);flex:none;margin-top:4px" aria-hidden="true"><use href="#rat-mark"/></svg>
         <div class="stack" style="gap:10px">
           <details class="ticker"><summary>→ 4 steps · 1.2 s</summary>
@@ -373,33 +373,20 @@
 
   /* ---------------- Findings ---------------- */
   function findingCard(compact) {
-    const el = html(`<article class="${compact ? "" : "card "}finding" style="${compact ? "padding:0" : ""}">
-      <span class="eyebrow">Finding 01 · What worked</span>
-      <h3 class="t-headline font-display">Monitoring changes nothing. Violations do.</h3>
-      <p class="t-small fg2">Share of addresses with a new report within 60 days, before and after each closure type.</p>
-      <svg viewBox="0 0 320 140" role="img" aria-label="Monitoring: 14.1% before, 14.2% after. Violation: 15.3% before, 12.2% after."></svg>
-      <div class="row" style="flex-wrap:wrap"><span class="t-data">monitoring 14.1% → 14.2% · violation 15.3% → 12.2%</span><span class="strength moderate">moderate</span></div>
-      <p class="t-small fg3">Reports, not rats. Addresses differ in who reports; rates control for 311 volume.</p>
-      <div class="row" style="flex-wrap:wrap"><button class="chip chip-source">311 · 2025 closures</button><button class="btn btn-secondary btn-sm" data-show>Show on map</button></div>
+    return html(`<article class="${compact ? "" : "card "}finding" style="${compact ? "padding:0" : ""}">
+      <span class="eyebrow">Historical research snapshot · Responses</span>
+      <h3 class="t-headline font-display">These records do not establish which response works better.</h3>
+      <p class="t-small fg2">The matched analysis found no clear difference in reports after closure for citation or abatement compared with monitoring.</p>
+      <p class="t-data">Risk ratio 1.03 · 95% confidence interval 0.89–1.20</p>
+      <p class="t-small fg3">Observational comparison; not proof of equal effectiveness. Reports are not rat counts. Historical research as of October 24, 2026.</p>
+      <div class="row" style="flex-wrap:wrap"><button class="chip chip-source">Boston 311 · 2023–2026</button><button class="btn btn-secondary btn-sm" data-show>Show on map</button></div>
     </article>`);
-    const c = $("svg", el);
-    [0, 35, 70, 105].forEach((y) => svg("line", { x1: 0, x2: 320, y1: y + 10, y2: y + 10, stroke: "var(--p-line)", "stroke-dasharray": "2 4" }, c));
-    const bars = [["Monitoring", 14.1, 14.2, 30], ["Violation", 15.3, 12.2, 190]];
-    bars.forEach(([name, a, b, x]) => {
-      const hA = a * 6, hB = b * 6;
-      svg("rect", { x, y: 115 - hA, width: 36, height: hA, rx: 2, fill: "var(--p-fg-3)", opacity: .6 }, c);
-      svg("rect", { x: x + 42, y: 115 - hB, width: 36, height: hB, rx: 2, fill: name === "Violation" ? "var(--p-held)" : "var(--p-return)" }, c);
-      const t = svg("text", { x, y: 132, fill: "var(--p-fg-3)", "font-family": "var(--font-mono)", "font-size": 11 }, c); t.textContent = name.toLowerCase();
-      const v1 = svg("text", { x: x + 2, y: 110 - hA, fill: "var(--p-fg-2)", "font-family": "var(--font-mono)", "font-size": 10 }, c); v1.textContent = a;
-      const v2 = svg("text", { x: x + 44, y: 110 - hB, fill: "var(--p-fg)", "font-family": "var(--font-mono)", "font-size": 10 }, c); v2.textContent = b;
-    });
-    return el;
   }
   function renderFindings() {
     body.innerHTML = "";
     const v = html(`<div class="stack rise" style="gap:12px"></div>`);
     v.appendChild(findingCard(false));
-    v.appendChild(html(`<article class="card finding"><span class="eyebrow">Finding 06 · Weather</span><h3 class="t-headline font-display">Rain: no effect.</h3>
+    v.appendChild(html(`<article class="card finding"><span class="eyebrow">Finding 06 · Weather</span><h3 class="t-headline font-display">Rain: no association detected.</h3>
       <p class="t-small fg2">Weekly reports against rainfall, 2023–2026, controlling for season.</p><div class="row"><span class="t-data">no measurable link</span><span class="strength none">none</span></div>
       <p class="t-small fg3">Null results get the same card. Honesty is part of the style.</p></article>`));
     body.appendChild(v);
@@ -439,7 +426,7 @@
         <div class="field"><span class="eyebrow">Owner agency</span><span class="t-data">ISD · Code enforcement</span></div>
         <div class="field"><span class="eyebrow">Site</span><span class="t-data">Specimen ${String(s.rank).padStart(2, "0")} · ${s.reports} reports · ${s.back} came back</span></div>
         <div class="field"><span class="eyebrow">Follow-up</span><span class="t-data">Dec 23, 2026 (+60 days)</span></div>
-        <div class="field wide"><span class="eyebrow">Evidence</span><span class="t-data">Monitored ${s.monitored}× without change · violations cut repeats 15.3% → 12.2% · vacant lot 31 m</span></div>
+        <div class="field wide"><span class="eyebrow">Evidence</span><span class="t-data">${s.monitored} monitoring records · treatment effect not established · vacant lot 31 m</span></div>
         <div class="field wide"><label class="eyebrow" for="wo-note">Inspector note</label><textarea id="wo-note" rows="2" style="width:100%;margin-top:4px;border:1px solid var(--p-edge);border-radius:10px;background:var(--p-card);color:var(--p-fg);font:var(--t-body);padding:8px 10px"></textarea></div>
       </div>
       <div class="row" style="margin-top:20px"><button class="btn btn-primary">${icon.print.replace("<svg", '<svg width="18" height="18"')} Print</button><button class="btn btn-secondary">Copy text</button><button class="btn btn-ghost" data-close-sheet>Close</button></div>
@@ -482,7 +469,7 @@
       const sites = SITES.filter((s) => !q || (s.street + " " + s.zip).toLowerCase().includes(q)).slice(0, 5);
       list.innerHTML = `<div class="grp eyebrow">Sites</div>` +
         sites.map((s) => `<div class="opt" role="option" data-id="${s.id}"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="2.5" fill="var(--p-return)"/><circle cx="7" cy="7" r="5.5" fill="none" stroke="var(--p-return)"/></svg>${s.street}, ${s.zip}<span class="meta">${s.reports} reports · ${s.back} back</span></div>`).join("") +
-        `<div class="grp eyebrow">Ask Piper</div><div class="opt" role="option" data-ask="1"><svg width="22" height="12" viewBox="14 10 86 46" style="color:var(--p-accent)"><use href="#rat-mark"/></svg>Ask: ${input.value || "Where does monitoring keep failing?"}<span class="meta">↵</span></div>`;
+        `<div class="grp eyebrow">Ask Piper</div><div class="opt" role="option" data-ask="1"><svg width="22" height="12" viewBox="14 10 86 46" style="color:var(--p-accent)"><use href="#rat-mark"/></svg>Ask: ${input.value || "Which places have reports after closure?"}<span class="meta">↵</span></div>`;
       opts = $$(".opt", list); idx = Math.min(idx, opts.length - 1);
       opts.forEach((o, i) => { o.id = "opt" + i; o.setAttribute("aria-selected", String(i === idx)); o.addEventListener("click", () => run(o)); });
       input.setAttribute("aria-activedescendant", "opt" + idx);
@@ -594,7 +581,7 @@
     ["ui", "Atkinson Next · 14/20 · 500", "Approve · Edit · Reject · Lenses"],
     ["small", "Atkinson Next · 13/18 · 400", "Reports, not rats. Rates control for 311 volume."],
     ["eyebrow", "Atkinson Mono · 11/16 · 500 · +0.08em caps", "Specimen 03 · Normandy St · Obs. 16"],
-    ["data", "Atkinson Mono · 13/20 · tabular", "311:101006747135 · Oct 24, 2026 · 14.1% → 14.2%"],
+    ["data", "Atkinson Mono · 13/20 · tabular", "Boston 311 · Oct 24, 2026 · risk ratio 1.03"],
     ["data-lg", "Atkinson Mono · 20/24 · 500 · tabular", "1,284   407   58%"],
   ];
   $("#type-rows").innerHTML = TYPES.map(([k, spec, s]) => `<div class="type-row"><div class="stack" style="gap:2px"><b class="t-ui" style="font-weight:600">text-${k}</b><span class="t-data fg3">${spec}</span></div>

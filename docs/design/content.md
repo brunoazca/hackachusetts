@@ -43,9 +43,11 @@ the loudest blocks. So:
 | Say | Don't say |
 |---|---|
 | report | rat, sighting (as a count) |
-| came back / return | relapse, reinfestation |
-| chronic site | hotspot (for one address), problem property |
+| report after an earlier closure | rats came back, treatment failed |
+| repeat-report place | problem property |
 | expected reports | predicted rats |
 | residents | complainants, callers |
 | closure note | resolution |
 | draft work order | ticket, citation (it is never sent) |
+
+“Review suggested” is the queue heuristic, not a deadline. Use “nearby records” for spatial context and “no association detected” for a null result; neither establishes a cause or absence of an effect.

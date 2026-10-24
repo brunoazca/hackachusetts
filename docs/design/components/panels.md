@@ -43,9 +43,8 @@ right; caption `text-small` `fg-3`: "Model estimate · backtested" (or "Baseline
 ## Action card
 `card`, radius 14, padding 16, 1 px `line`.
 - Eyebrow: owner agency (`ISD · CODE ENFORCEMENT`).
-- Title `text-title`: "Issue a violation, not another visit".
-- Because: `text-small` `fg-2`: "Monitoring left repeats at 14.1% → 14.2%; violations
-  cut them to 12.2%." + source chips.
+- Title `text-title`: "Review nearby records before the next visit".
+- Because: `text-small` `fg-2`: "Reports followed earlier closures. Nearby records warrant field review." + source chips.
 - Actions row: **Approve** (primary md) · Edit (secondary md) · Reject (ghost md).
 - Approved state: border `held`, check + "Approved · follow up Dec 23" mono,
   "View work order". Rejected: collapsed to one line, `fg-3`, Undo.
@@ -58,11 +57,10 @@ owner name (logged)"`. After reveal: value + mono `revealed · logged 13:42`.
 
 ## Findings card (InsightsPanel)
 `card`, radius 14, padding 20, gap 12.
-Eyebrow (`FINDING 01 · WHAT WORKED`) · `text-headline` (*Monitoring changes
-nothing. Violations do.*) · one-sentence question `text-body` `fg-2` · chart 160 ·
-stat row mono (e.g. `14.1% → 14.2% · n = <count>`) + strength chip · caveat `text-small`
+Eyebrow (`FINDING 01 · WHAT WORKED`) · `text-headline` (*These records do not establish which response works better.*) · one-sentence question `text-body` `fg-2` · chart 160 ·
+stat row mono (e.g. `Risk ratio 1.03 · 95% CI 0.89–1.20`) + strength chip · caveat `text-small`
 `fg-3` · sources. Click "Show on map" sets lenses. Null findings same layout,
-headline e.g. *Rain: no effect.*
+headline e.g. *Rain: no association detected.*
 
 ## Ask (ChatPanel)
 - Replaces Dossier content (tab: Inspect · Ask · Findings at top of right panel,

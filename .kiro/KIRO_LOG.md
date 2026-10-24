@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:17 — Prepared requested product and submission changes for push
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Prepared requested product and submission changes for push
+- Why: User asked to publish the completed changes to the remote branch
+- Where: feat/piper-ui; web/src; README.md; docs/submission; docs/design; .kiro/steering/product.md
+- Idea: Preserve the existing UI branch history and push the selected changes with their verification record.
+
+### 2026-10-24 16:15 — Implemented requested items 1, 3, 4, 5 after syncing main
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Implemented requested items 1, 3, 4, 5 after syncing main
+- Why: Make the current product and submission match the available evidence
+- Where: web/src, web/.env.example, README.md, docs/submission, docs/design, .kiro/steering/product.md
+- Idea: Merged local main and fetched origin/main (b36bcc5), preserving concurrent UI work. Default Places to visit; review and nearby-record labels; matched-study caveats; completed README, description and honest Kiro write-up. Verified live queue, filtering, keyboard case selection, Insights and map labels. TypeScript, targeted lint, secret scan, overclaim scan and document checks passed. Full lint has 3 confirmed pre-existing React-effect errors plus generated-worker warnings. Production build blocked by environment font access then Turbopack port binding. Saved current screenshots; corrected editable video sources require re-rendering.
+
 ### 2026-10-24 16:12 — Reports at the same address fold into one numbered marker...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

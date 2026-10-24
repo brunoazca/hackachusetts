@@ -4,7 +4,7 @@ import LineRat from "@/components/brand/LineRat";
 // Placeholder styled with Piper tokens until the assistant track lands. Owned by its track;
 // replace freely, keep the export name.
 
-const STARTERS = ["Where does monitoring keep failing?", "What will rise next month?", "Compare Roxbury and Dorchester"];
+const STARTERS = ["Which places have reports after closure?", "What will rise next month?", "Compare Roxbury and Dorchester"];
 
 export default function ChatPanel() {
   return (

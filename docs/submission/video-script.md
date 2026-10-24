@@ -1,5 +1,7 @@
 # Piper — Rat Audit Boston · Final demo-video script
 
+> Production concept: some beats below depend on unfinished features. Use [demo-script.md](demo-script.md) for the implemented recording path. Do not present recommendations, approval/work orders, the assistant, or trial design as working features. Editable claims were corrected on October 24; existing video exports must be re-rendered before reuse.
+
 **Name:** Piper (Rat Audit Boston) · **Tagline:** "Follow the rats." · **Target:** 2:55 (under 3:00) · **Written:** 2026-10-24
 
 **Required motion-graphics instructions for Claude:** Read and follow [Motion graphics from scratch — Claude master prompt](motion-graphics-from-scratch-claude.md) before creating or revising original animated inserts, titles, diagrams, data graphics, or transitions. Include that document's **Master prompt** with this script when handing the work to Claude. Build those graphics from editable text, shapes, vector paths, and code; follow its composition, typography, timing, easing, choreography, deterministic rendering, and quality-check instructions.
@@ -24,11 +26,11 @@ Use this script and any supplied shot plan for the approved copy, facts, shot or
 | # | Beat | Time | Product on screen | Evidence woven in |
 |---|---|---|---|---|
 | 0 | Who is Piper | 0:00–0:12 | Wordmark sets over the pin collapse, then a transition into the real UI (map and queue) | Rings slice `?t=23.7` (3.6 s) |
-| 1 | Track | 0:12–0:42 | Site queue (Due first), map, Live badge; click the top Due site, the map flies | News wall (4 s), then Rings slice `?t=0&to=10.3` (10.3 s), then back to product |
+| 1 | Track | 0:12–0:42 | Site queue (Review suggested first), map, Live badge; click the top Review suggested site, the map flies | News wall (4 s), then Rings slice `?t=0&to=10.3` (10.3 s), then back to product |
 | 2 | Analyze | 0:42–1:15 | Case panel (5 s), Rings slice `?t=10.3&to=27.3` full screen (17 s), match-cut to the live pin (4 s), raw 311 rows and the source line (7 s) | The 311 rows are the citation |
 | 3 | Act | 1:15–1:40 | Recommendation with its "because" line; **Approve**; draft work order with check-again date | After Approve: parcel record (2 s), NYC card (5 s) |
 | 4 | Explore | 1:40–2:05 | Depth to Explore; one layer hover with its tested label; one Ask question | Signal table card (6 s) |
-| 5 | Predict + Prove | 2:05–2:20 | Due flag (4 s); Prove trial designer (7 s) | BRAP card (4 s) |
+| 5 | Predict + Prove | 2:05–2:20 | Review suggested flag (4 s); Prove trial designer (7 s) | BRAP card (4 s) |
 | 6 | Built with Kiro | 2:20–2:45 | Four clips: specs, a hook firing, civic-judge agent, MCP live | Counts card (6 s) |
 | — | Close | 2:45–2:55 | Map with the approved action (6 s); title card (4 s) | — |
 
@@ -40,31 +42,31 @@ Use this script and any supplied shot plan for the approved copy, facts, shot or
 
 - **Product:** none for the first 7 s. From 0:07, a 900 ms transition into the real app: `web/src/app/page.tsx` with `shell/TopBar.tsx`, `map/MapView.tsx`, `act/SiteQueue.tsx`. The wordmark is gone before the map appears.
 - **Evidence:** Rings slice `beat4-animation.html?t=23.7` (3.6 s). The exploded card collapses into one pin.
-- **On-screen text:** from the animation: "Normandy St · Dorchester 02121", "A block problem, not an address problem." Overlay in the edit, set over the collapse: wordmark **Piper** (Bodoni Moda Italic 500, brass on soot), then **Follow the rats.** (bone).
+- **On-screen text:** from the animation: "Normandy St · Dorchester 02121", "Review the block around each report." Overlay in the edit, set over the collapse: wordmark **Piper** (Bodoni Moda Italic 500, brass on soot), then **Follow the rats.** (bone).
 - **Voiceover:** "In the legend, the Piper led the rats out of Hamelin. Boston can't close its way out of rats. Piper follows them to their source, so the city can act."
 - **Why this beat:** it says who Piper is in one breath and plants the single pin we return to.
 
 ### Beat 1 — Track (0:12–0:42)
 
-- **Product (0:12–0:20):** `act/SiteQueue.tsx` with Due sites first, `map/MapView.tsx`, and the Live badge in `shell/TopBar.tsx`. If the data is seeded, the badge reads "seeded".
+- **Product (0:12–0:20):** `act/SiteQueue.tsx` with Review suggested sites first, `map/MapView.tsx`, and the Live badge in `shell/TopBar.tsx`. If the data is seeded, the badge reads "seeded".
 - **Evidence (0:20–0:24):** news wall. Use real published headlines from the outlets cited in `knowledge/15_boston_rat_audit.md` §2 and §5 (WGBH, Boston 25, City of Boston, Boston Globe). Screenshots only. Do not retype or edit a headline.
 - **Evidence (0:24–0:34.3):** Rings slice `beat4-animation.html?t=0&to=10.3`. It plays 5,321 counting up, "99%" closed cracking, "but 407 addresses came back", then the 46 / 237 / 14 strip (see footnote 4).
-- **Product (0:34.3–0:42):** click the Normandy St row in the queue (it must be the top Due site; see checklist). The map flies (900 ms) and the rings draw.
+- **Product (0:34.3–0:42):** click the Normandy St row in the queue (it must be the top Review suggested site; see checklist). The map flies (900 ms) and the rings draw.
 - **On-screen text:**
   - Caption, bottom left, once: **"Every count is a 311 report, not a rat."**
-  - Queue: "Due". Badge: "Live · updated …" or "seeded".
-  - Animation (as built): "5,321 rodent reports · 2026", "More than all of 2025.", "99%", "but 407 addresses came back", "a new report 30+ days after an earlier one", "Boston's chronic addresses · 5+ reports", "46", "237 of ~280 recorded actions were "monitoring"", "14", "Monitoring does not reduce recurrence. Escalation does."
+  - Queue: "Review suggested". Badge: "Live · updated …" or "seeded".
+  - Animation (as built): "5,321 rodent reports · 2026", "More than all of 2025.", "99%", "but 407 addresses came back", "a new report 30+ days after an earlier one", "Boston's chronic addresses · 5+ reports", "46", "237 of ~280 recorded actions were "monitoring"", "14", "The records do not establish which response works better."
 - **Voiceover:** "This is Piper. Every rodent report in Boston, live, ranked by the sites that keep coming back. Rats are in the news. This year Boston logged 5,321 rodent reports. Last year, almost every case was closed. Yet 407 addresses came back. The top site in the queue is due again."
 - **Why this beat:** it shows the product's front door and the paradox that justifies it.
 
 ### Beat 2 — Analyze (0:42–1:15)
 
-- **Product (0:42–0:47):** `inspector/SiteCase.tsx` on "Normandy St · Dorchester 02121": counts, Due tag, timeline.
+- **Product (0:42–0:47):** `inspector/SiteCase.tsx` on "Normandy St · Dorchester 02121": counts, Review suggested tag, timeline.
 - **Evidence (0:47–1:04):** Rings slice `beat4-animation.html?t=10.3&to=27.3`, full screen. 18 pins drop; the escalation ladder runs with a vermilion ring on every "reported again"; the vacant lot ignites with its nearby reports; the card collapses to one pin at centre frame.
 - **Product (1:04–1:08) — the match-cut:** cut on the final pin to the live map (`map/MapView.tsx`) with the Normandy St pin selected at the same spot on screen. Frame both so the pin does not move across the cut.
 - **Evidence (1:08–1:15):** scroll the case timeline in `inspector/SiteCase.tsx` (real dates, scrubbed closure notes), then hold 2 s on the source line ("Sources: Boston 311 (2024–2026, live) and code enforcement (live)" in `SiteCase.tsx`; "Source: …" with Live / Daily / Static in `inspector/InspectorPanel.tsx`). This is the visible citation.
-- **On-screen text:** "Normandy St · Dorchester 02121" and "one block · 2025-03 → 2026-06"; counter to **18**; ladder rows in order: monitoring (2025-03); clear overgrown foliage in rear (2025-08); citation for overgrown weeds (2025-08); code-enforcement violation (2025-08); ticket (2025-09); abatement order (2025-10); violation placed in for collections (2025-10); referred for trash issues (2025-11); violation to owners of the adjacent lot (2025-12); reported again (2026-01) and again (2026-06). Then "The real driver was next door.", "Illegal dumping ×6 · Dead animal ×4 · Improper trash ×3 · Poor conditions of property ×4 · Rodent activity at neighboring addresses ×4 · the adjacent vacant lot ×1", "A block problem, not an address problem."
-- **Voiceover:** "Normandy Street, Dorchester. One block. Eighteen reports, each closed in days. The city climbed its whole ladder: monitoring, citations, a ticket, an abatement order, collections. Each one came back. The real driver was next door, a vacant lot. A block problem, not an address problem. Same pin, live in Piper. These are the city's own records, cited on screen."
+- **On-screen text:** "Normandy St · Dorchester 02121" and "one block · 2025-03 → 2026-06"; counter to **18**; ladder rows in order: monitoring (2025-03); clear overgrown foliage in rear (2025-08); citation for overgrown weeds (2025-08); code-enforcement violation (2025-08); ticket (2025-09); abatement order (2025-10); violation placed in for collections (2025-10); referred for trash issues (2025-11); violation to owners of the adjacent lot (2025-12); reported again (2026-01) and again (2026-06). Then "Nearby records warrant a closer look.", "Illegal dumping ×6 · Dead animal ×4 · Improper trash ×3 · Poor conditions of property ×4 · Rodent activity at neighboring addresses ×4 · the adjacent vacant lot ×1", "Review the block around each report."
+- **Voiceover:** "Normandy Street, Dorchester. One block. Eighteen reports, each closed in days. The city climbed its whole ladder: monitoring, citations, a ticket, an abatement order, collections. Later reports followed earlier closures. A nearby vacant lot warrants a closer look. Review the block around each report. Same pin, live in Piper. These are the city's own records, cited on screen."
 - **Why this beat:** the true story makes the paradox concrete, and the match-cut proves the story lives in the product.
 
 ### Beat 3 — Act (1:15–1:40)
@@ -76,29 +78,29 @@ Use this script and any supplied shot plan for the approved copy, facts, shot or
   - Button: **Approve**.
   - Work order: **"Draft — for inspector use"**, **"Check again: <today + 60 days>"**.
   - Parcel card: **"RES LAND (Unusable)"**, "Source: Boston property assessment FY2026".
-  - Card (bone on soot): **"NYC cut rat sightings 20%+ with containerization. Boston has no measured result yet."**
-- **Voiceover:** "Piper suggests the next step and shows why: a block visit, and a notice to the lot's owner. The inspector decides, and clicks Approve. Piper drafts the work order and a check-again date. Nothing is sent on its own. New York measured its fix. Boston hasn't yet."
+  - Card (bone on soot): **"NYC cut rat sightings 20%+ with containerization. These records do not establish which response lasts."**
+- **Voiceover:** "Piper suggests the next step and shows why: a block visit, and a notice to the lot's owner. The inspector decides, and clicks Approve. Piper drafts the work order and a check-again date. Nothing is sent on its own. Field follow-up is needed to evaluate outcomes here."
 - **Why this beat:** the human decision is the scored moment; it gets the frame to itself.
 
 ### Beat 4 — Explore (1:40–2:05)
 
 - **Product (1:40–1:44):** the Depth control in `shell/TopBar.tsx` flips Simple → Explore. `map/LayerPanel.tsx` shows the groups **Rat signals, Food & trash, Shelter, Displacement**.
-- **Product (1:44–1:50):** hover exactly one layer. Its tested label comes from `map/tested.ts`. Target label: **"Demolitions: tested, no effect"** (needs a `demolition` entry in `tested.ts`; see open question 3). Fallback that exists today: **"Construction debris — no effect"**.
+- **Product (1:44–1:50):** hover exactly one layer. Its tested label comes from `map/tested.ts`. Target label: **"Demolitions: no post-work report spike detected"** (needs a `demolition` entry in `tested.ts`; see open question 3). Fallback that exists today: **"Construction debris — weak association, +0.05"**.
 - **Evidence (1:50–1:56):** signal table card, drawn as five labelled bars.
 - **Product (1:56–2:05):** dock Ask (`chat/ChatPanel.tsx`, **a 6-line stub today**; see open question 1). Type one question. The answer comes from tools, cites sources, and moves the map. Do not voice or caption numbers from the answer.
 - **On-screen text:**
-  - Signal card: "Warm months → more rats **+0.87** · Last year's reports here **+0.32** · Trash storage problems **+0.17** · Dead-animal + indoor-pest reports **+0.11 to +0.14** · Rain, snow, demolitions, restaurants **~0 — tested, no effect**"
+  - Signal card: "Warm months → more reports **+0.87** · Last year's reports here **+0.32** · Trash storage problems **+0.17** · Dead-animal + indoor-pest reports **+0.11 to +0.14** · Rain, snow, demolitions, restaurants **~0 — no association detected**"
   - Ask input, verbatim: **"Compare returns after citations vs monitoring in Dorchester since 2025"**
-- **Voiceover:** "Flip to Explore, and Piper becomes a full evidence map. We tested every layer. When one shows no effect, the legend says so. Heat and trash matter most, and rats return to the same blocks. And you can just ask. It answers from the data, cites it, and moves the map."
+- **Voiceover:** "Flip to Explore, and Piper becomes a full evidence map. We tested every layer. When no association is detected, the legend says so. Season and place history are associated with report patterns. And you can just ask. It answers from the data, cites it, and moves the map."
 - **Why this beat:** it shows technical depth and honest nulls, which buys trust in everything else.
 
 ### Beat 5 — Predict + Prove (2:05–2:20)
 
-- **Product (2:05–2:09):** the "Due" tag in `act/SiteQueue.tsx` ("Due = closed in the last 60 days at a site that has come back before").
+- **Product (2:05–2:09):** the "Review suggested" tag in `act/SiteQueue.tsx` ("Review suggested = closed in the last 60 days at a site that has come back before").
 - **Product (2:09–2:16):** Prove screen, trial designer (v2 §V5.1, **not built yet**). Matched pairs on the map; one site per pair gets containers.
 - **Evidence (2:16–2:20):** BRAP card.
-- **On-screen text:** "Due"; measure sentence **"Returns in 60 days, treatment vs comparison"**; card **"Boston's rodent plan: 20+ city departments. No published result."**
-- **Voiceover:** "Piper flags sites due to come back, and sets up a fair test: matched pairs, one gets sealed containers. Boston's rat plan has never published a measured result."
+- **On-screen text:** "Review suggested"; measure sentence **"Returns in 60 days, treatment vs comparison"**; card **"Boston's rodent plan: 20+ city departments. Field evaluation needed."**
+- **Voiceover:** "Piper flags places for review after earlier reports, and sets up a fair test: matched pairs, one gets sealed containers. These public records do not establish which response lasts."
 - **Why this beat:** it moves from fixing one block to proving what works citywide, the gap no one fills today.
 
 ### Beat 6 — Built with Kiro (2:20–2:45)
@@ -132,23 +134,23 @@ Use this script and any supplied shot plan for the approved copy, facts, shot or
 | S04 | 0:12 | 8 s | Product: `SiteQueue.tsx`, `MapView.tsx`, `TopBar.tsx` | "Every count is a 311 report, not a rat." |
 | S05 | 0:20 | 4 s | Cutaway: news-wall screenshots | Boston rats are in the news |
 | S06 | 0:24 | 10.3 s | `beat4-animation.html?t=0&to=10.3` | "but 407 addresses came back" |
-| S07 | 0:34.3 | 7.7 s | Product: click Normandy St row, map flies | "Due" on the top row |
+| S07 | 0:34.3 | 7.7 s | Product: click Normandy St row, map flies | "Review suggested" on the top row |
 | S08 | 0:42 | 5 s | Product: `SiteCase.tsx` | "Normandy St · Dorchester 02121" |
-| S09 | 0:47 | 17 s | `beat4-animation.html?t=10.3&to=27.3` | "The real driver was next door." |
+| S09 | 0:47 | 17 s | `beat4-animation.html?t=10.3&to=27.3` | "Nearby records warrant a closer look." |
 | S10 | 1:04 | 4 s | Product: live map, same pin, same spot (match-cut) | Same pin, live |
 | S11 | 1:08 | 7 s | Product: `SiteCase.tsx` timeline, hold on source line | "Sources: Boston 311 … live" |
 | S12 | 1:15 | 8 s | Product: recommendation + because line | "Joint block visit · notice to the vacant lot's owner" |
 | S13 | 1:23 | 3 s | Product: cursor clicks **Approve** | **Approve** |
 | S14 | 1:26 | 7 s | Product: work order rises, seal stamps | "Draft — for inspector use" |
 | S15 | 1:33 | 2 s | Product: `ParcelCard.tsx` | "RES LAND (Unusable)" |
-| S16 | 1:35 | 5 s | Cutaway card | "Boston has no measured result yet." |
+| S16 | 1:35 | 5 s | Cutaway card | "These records do not establish which response lasts." |
 | S17 | 1:40 | 4 s | Product: Depth → Explore, `LayerPanel.tsx` | The four layer groups |
-| S18 | 1:44 | 6 s | Product: hover one layer (`tested.ts`) | "tested, no effect" |
-| S19 | 1:50 | 6 s | Cutaway: signal table card | "Warm months → more rats +0.87" |
+| S18 | 1:44 | 6 s | Product: hover one layer (`tested.ts`) | "no association detected" |
+| S19 | 1:50 | 6 s | Cutaway: signal table card | "Warm months → more reports +0.87" |
 | S20 | 1:56 | 9 s | Product: Ask (`ChatPanel.tsx`), map moves | The question, then a cited source |
-| S21 | 2:05 | 4 s | Product: `SiteQueue.tsx` Due tag | "Due" |
+| S21 | 2:05 | 4 s | Product: `SiteQueue.tsx` Review suggested tag | "Review suggested" |
 | S22 | 2:09 | 7 s | Product: Prove trial designer | "Returns in 60 days, treatment vs comparison" |
-| S23 | 2:16 | 4 s | Cutaway: BRAP card | "No published result." |
+| S23 | 2:16 | 4 s | Cutaway: BRAP card | "Field evaluation needed." |
 | S24 | 2:20 | 5 s | Kiro: `.kiro/specs/rat-audit/` | `v2-spec.md` |
 | S25 | 2:25 | 5 s | Kiro: hook firing on save | `accessibility-check` |
 | S26 | 2:30 | 4 s | Kiro: `civic-judge.json` | Judge agent |
@@ -186,9 +188,9 @@ Counted on written words. "5,321" and "2025" count as one word each but take lon
 - [ ] One source citation is visible (S11 source line; S15 parcel source).
 - [ ] Live badge visible in product beats. If the data is seeded, it reads "seeded".
 - [ ] "Every count is a 311 report, not a rat." appears once (S04).
-- [ ] One "tested, no effect" label visible (S18).
+- [ ] One "no association detected" label visible (S18).
 - [ ] Brand art (wordmark, Line Rat, plague motifs) never over the real map. Only S01–S02 and S30.
-- [ ] Normandy St is the top Due site in the queue when S07 is recorded.
+- [ ] Normandy St is the top Review suggested site in the queue when S07 is recorded.
 - [ ] The match-cut (S09 → S10) keeps the pin at the same screen position.
 - [ ] Record the animation slices at 1920×1080 with the URLs above. Each stops on its own at `to`.
 - [ ] Piper UI (`feat/piper-ui`) merged to `main` and deployed before recording, so the product matches the brand.
@@ -221,7 +223,7 @@ Counted on written words. "5,321" and "2025" count as one word each but take lon
 
 1. Will Approve, the draft work order, Ask and the Prove trial designer be live on the deployed app before recording? (None are in `web/src` today; `ChatPanel.tsx` is a stub.)
 2. Should Normandy St show the Rule 2 recommendation (joint block visit and notice to the lot owner), even though Rule 1 matches first?
-3. Should we add a `demolition` entry ("tested, no effect", from `data-audit.md` §3) to `tested.ts` so the S18 hover reads "Demolitions: tested, no effect"?
+3. Should we add a `demolition` entry ("no association detected", from `data-audit.md` §3) to `tested.ts` so the S18 hover reads "Demolitions: no post-work report spike detected"?
 
 ---
 
@@ -243,19 +245,19 @@ Voice delivery: plain and unhurried, about 120–150 wpm, no hype words. Pause a
 | Audience | Hackachusetts 2026 Civic Action judges. They may score from the video alone |
 | Main takeaway | Boston closes 99% of rat cases but can't tell which fixes last. Piper shows why a block keeps coming back and lets an inspector approve the right next step |
 | User | An ISD rodent inspector |
-| Workflow | Open this week's queue → pick the top Due site → see why it keeps coming back → approve the next step → draft work order with a check-again date |
+| Workflow | Open this week's queue → pick the top Review suggested site → see why it keeps coming back → approve the next step → draft work order with a check-again date |
 | Target / hard limit | 2:55 / under 3:00 (this replaces the usual 90–120 s default, because the rules allow 3:00 and require the Kiro beat) |
 | Output | 1920×1080, landscape, MP4 (H.264 High, yuv420p), 60 fps, AAC 48 kHz |
 | Narration | Script only. A team member records the voiceover. Until then, use a silent pacing track with captions. Use a generated voice only if the team approves it, and label it provisional |
 | Brand | Piper "Hamelin" palette and type (title block above); motion tokens in `docs/design/foundations/motion.md` (branch `feat/piper-ui`) |
-| Required proof | Approve click; one source citation; Live or "seeded" badge; one "tested, no effect" label; block-level location only |
+| Required proof | Approve click; one source citation; Live or "seeded" badge; one "no association detected" label; block-level location only |
 
 ### 8.3 The story, in one line per part
 
 | Part | Content |
 |---|---|
 | Starting situation | The inspector has a queue of sites that keep coming back |
-| Action | Picks the top Due site and opens its case |
+| Action | Picks the top Review suggested site and opens its case |
 | Product response | Shows the 18-report timeline, the city's whole ladder, and the vacant lot next door |
 | Finished result | The inspector approves a block visit; Piper drafts the work order with a check-again date |
 | Why it matters | The city stops fixing the wrong parcel and can finally measure what works |
@@ -268,12 +270,12 @@ Do not use exploratory browsing as footage. Rehearse on the deployed app, write 
 
 | Check | What to confirm on Piper |
 |---|---|
-| Starting state | Top bar Mode = Act, Depth = Simple, Live badge showing "updated …" (or "seeded"). Normandy St · Dorchester 02121 is the top Due row in `act/SiteQueue.tsx` |
+| Starting state | Top bar Mode = Act, Depth = Simple, Live badge showing "updated …" (or "seeded"). Normandy St · Dorchester 02121 is the top Review suggested row in `act/SiteQueue.tsx` |
 | Loading states | Map tiles and the MapLibre worker loaded; queue rows filled; no "Loading…" in `LayerPanel.tsx` |
 | Controls used | Queue row; Depth segmented control (Simple / Explore); one layer row in `LayerPanel.tsx`; side-panel tab "Ask"; Approve button; Prove screen switch |
 | Result locations | Case panel (right, 420 px wide); map centre after `flyTo`; work order sheet; layer tested label; Ask answer and its citation |
 | Scroll containers | Side panel (`overflow-y-auto` in `shell/SidePanel.tsx`); layer panel (`overflow-y-auto`) |
-| Steps that can fail | Refresh returns 429 within 5 minutes (do not press Refresh on camera); map fly lands under a panel; Ask shows "not configured"; Normandy St is not the top Due site |
+| Steps that can fail | Refresh returns 429 within 5 minutes (do not press Refresh on camera); map fly lands under a panel; Ask shows "not configured"; Normandy St is not the top Review suggested site |
 | Screens not built yet | Approve, work order, seal, Ask, Prove, "seeded" badge (see open question 1) |
 
 **Unbuilt screens.** Record only what really works. If a screen is still missing on recording day, either record the Piper mockup (`docs/design/mockup/index.html` on `feat/piper-ui`, which has Approve, the work order, the seal and Ask, but not Prove) with a small "Prototype" tag in the corner of those shots, or cut the shot and re-time the beat. Never fake a success state. Editing may shorten waiting, but it must keep the order of cause and effect, and it must not suggest a speed that was not measured.

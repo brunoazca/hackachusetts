@@ -62,7 +62,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 const daysAgo = (n: number) => iso(new Date(today.getTime() - n * 86400000));
 
 export const useMap = create<MapState>((set) => ({
-  mode: "assess",
+  mode: "act",
   sites: [],
   setMode: (mode) => set({ mode }),
   setSites: (sites) => set({ sites }),

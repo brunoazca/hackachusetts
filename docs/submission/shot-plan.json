@@ -3,7 +3,7 @@
   "version": "2026-10-24 v3 (data-chain update)",
   "script": "docs/submission/video-script.md",
   "duration_s": 175,
-  "notes": "Starting values for this production. Times in seconds of edited video. Camera framing names a target; measure coordinates in rehearsal and add them as camera.*.box = [x, y, w, h] in source pixels. 'vo' lines carry their own start time; voiceover is a separate track from shots.",
+  "notes": "Production concept with unfinished features: use docs/submission/demo-script.md for the current-build recording path. Do not present approval, work orders, assistant, or trial design as shipped. Existing video exports need re-rendering after claim corrections. Starting values for this production. Times in seconds of edited video. Camera framing names a target; measure coordinates in rehearsal and add them as camera.*.box = [x, y, w, h] in source pixels. 'vo' lines carry their own start time; voiceover is a separate track from shots.",
   "output": {
     "width": 1920,
     "height": 1080,
@@ -118,7 +118,7 @@
       ],
       "on_screen_text": [
         "Normandy St · Dorchester 02121",
-        "A block problem, not an address problem.",
+        "Review the block around each report.",
         "Piper (overlay, Bodoni Moda Italic, brass)"
       ],
       "hold_duration": 2.0
@@ -187,7 +187,7 @@
       "viewer_takeaway": "One live list of the sites that keep coming back.",
       "source_scene": "app: SiteQueue, MapView, TopBar Live badge",
       "action": "Cursor fades in, resting on empty map right of the queue. No clicks.",
-      "focus_target": "the Due rows at the top of the queue and the Live badge",
+      "focus_target": "the Review suggested rows at the top of the queue and the Live badge",
       "camera_start": {
         "level": "context",
         "scale": 1.0
@@ -205,7 +205,7 @@
       ],
       "on_screen_text": [
         "Every count is a 311 report, not a rat. (label lane, 13.0–19.5)",
-        "Due",
+        "Review suggested",
         "Live · updated … (or seeded)"
       ],
       "hold_duration": 6.5
@@ -281,10 +281,10 @@
       "beat": 1,
       "start_time": 31.8,
       "end_time": 39.5,
-      "viewer_takeaway": "The inspector opens the top Due site.",
+      "viewer_takeaway": "The inspector opens the top Review suggested site.",
       "source_scene": "app: SiteQueue and MapView",
       "action": "Cut back to the app. Zoom in to the queue at 32.5. Cursor to the Normandy St row (500 ms), hover 350 ms, click at 34.5. Zoom out at 34.8 so the map fly (900 ms) and rings are visible.",
-      "focus_target": "the Normandy St row and its Due tag, then the map flying to it",
+      "focus_target": "the Normandy St row and its Review suggested tag, then the map flying to it",
       "camera_start": {
         "level": "working",
         "scale": 1.4,
@@ -310,7 +310,7 @@
         }
       ],
       "on_screen_text": [
-        "Due"
+        "Review suggested"
       ],
       "hold_duration": 3.0
     },
@@ -322,7 +322,7 @@
       "viewer_takeaway": "This is the site we are looking at.",
       "source_scene": "app: SiteCase in the side panel",
       "action": "Zoom to the case panel at 42.0.",
-      "focus_target": "the site name, counts and Due tag",
+      "focus_target": "the site name, counts and Review suggested tag",
       "camera_start": {
         "level": "context",
         "scale": 1.0
@@ -375,15 +375,15 @@
         },
         {
           "start": 53.9,
-          "text": "Each one came back."
+          "text": "Later reports followed earlier closures."
         },
         {
           "start": 55.7,
-          "text": "The real driver was next door, a vacant lot."
+          "text": "A nearby vacant lot warrants a closer look."
         },
         {
           "start": 59.5,
-          "text": "A block problem, not an address problem."
+          "text": "Review the block around each report."
         }
       ],
       "on_screen_text": [
@@ -654,11 +654,11 @@
       "narration": [
         {
           "start": 101.6,
-          "text": "We tested every layer. When one shows no effect, the legend says so."
+          "text": "We tested every layer. When no association is detected, the legend says so."
         }
       ],
       "on_screen_text": [
-        "Demolitions: tested, no effect (fallback: Construction debris — no effect)",
+        "Demolitions: no post-work report spike detected (fallback: Construction debris — weak association, +0.05)",
         "callout: We label what doesn't work"
       ],
       "hold_duration": 3.0
@@ -820,7 +820,7 @@
         },
         {
           "start": 138.4,
-          "text": "Then we count returns. Boston has published no measured result."
+          "text": "Then we count later reports. Field follow-up is needed to evaluate outcomes."
         }
       ],
       "on_screen_text": [

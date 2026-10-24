@@ -163,7 +163,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   useMorph(!!open, flyRef, () => (lastId ? btnRefs.current[lastId] ?? null : null));
   const current = dock.find((d) => d.id === (open ?? lastId));
   const isCause = (id: string) => CATS[id]?.group !== "rats";
-  // Switching on a cause layer (trash, shelter, works) turns "Show likely causes" on, so it actually
+  // Switching on a nearby-record layer (trash, shelter, works) turns "Show nearby records" on, so it actually
   // appears; switching off the last one turns it back off.
   const apply = (next: Record<string, boolean>, changed: string[], v: boolean) => {
     onChange(next);
@@ -321,7 +321,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
               </div>
               <LayerRow
                 icon={<span aria-hidden className="h-3 w-5 rounded-[2px]" style={{ background: `linear-gradient(to right, ${HEAT_RAMPS.evidence.join(", ")})` }} />}
-                label="Show likely causes"
+                label="Show nearby records"
                 meta="Trash, vacant lots, construction near reports"
                 checked={causes}
                 onToggle={onCausesChange}

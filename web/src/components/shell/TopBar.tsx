@@ -93,8 +93,8 @@ export default function TopBar() {
           label="View"
           value={mode}
           options={[
-            { id: "assess", label: "Map", hint: "See every report on the map" },
-            { id: "act", label: "Places to visit", hint: "Addresses where rats keep coming back" },
+            { id: "act", label: "Places to visit", hint: "Review places with repeat rodent reports" },
+            { id: "assess", label: "Map", hint: "Explore recorded reports on the map" },
           ]}
           onChange={(m) => { setMode(m); setPanel("inspector"); }}
         />

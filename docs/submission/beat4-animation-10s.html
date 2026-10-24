@@ -346,7 +346,7 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family
 
     <div class="reveal" id="reveal">
       <div class="eyebrow rise" id="rev0">within ~100 m · 2025 311 reports</div>
-      <h2 id="rev" data-words>The real driver was <em>next door.</em></h2>
+      <h2 id="rev" data-words>Nearby records warrant <em>a closer look.</em></h2>
     </div>
   </section>
 
@@ -373,7 +373,7 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family
     </svg>
     <div id="place7" class="rise">Normandy St · Dorchester 02121</div>
     <div id="cap">
-      <h2 id="cap1" data-words>A block problem, not an address problem.</h2>
+      <h2 id="cap1" data-words>Review the block around each report.</h2>
       <div class="tag rise" id="cap2"><i></i>Rat Audit Boston</div>
     </div>
   </section>
@@ -397,7 +397,7 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family
   <h2>Story summary</h2>
   <p>Boston logged 5,321 rodent reports in 2026, already more than all of 2025. 99% of cases are marked closed, yet 407 addresses got a new report 30 or more days after an earlier one.</p>
   <p>One block on Normandy St in Dorchester 02121 generated 18 separate rodent reports between 2025-03 and 2026-06. The city closed each case within days and the block was reported again. The 311 closure actions, in order: area inspector monitoring (2025-03); inspector asks landlord to clear overgrown foliage in rear (2025-08); citation issued for overgrown weeds (2025-08); violation issued by code enforcement (2025-08); ticket issued by code-enforcement officer (2025-09); inspector confirmed rodent activity and issued an abatement order (2025-10); violation issued and placed in for collections (2025-10); referred to code enforcement for trash issues (2025-11); violation issued to owners of the adjacent lot (2025-12); rodent activity reported again (2026-01) and again (2026-06).</p>
-  <p>The real driver was next door: a vacant lot classed RES LAND (Unusable), with 2025 311 reports within about 100 meters for illegal dumping (6), improper trash storage in barrels (3), dead animal pickup (4), poor conditions of property (4), rodent activity at neighboring addresses (4), and the adjacent vacant lot itself (1). A block problem, not an address problem. Rat Audit Boston.</p>
+  <p>Nearby context includes a vacant lot classed RES LAND (Unusable), with 2025 311 reports within about 100 meters for illegal dumping (6), improper trash storage in barrels (3), dead animal pickup (4), poor conditions of property (4), rodent activity at neighboring addresses (4), and the adjacent vacant lot itself (1). Review the block around each report. Rat Audit Boston.</p>
 </div>
 
 <script>
@@ -590,7 +590,7 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family
     at(T.rec + 0.22, () => { activateRow(11, true); cls('#step10b .chip', 'in'); ring(true); bump(); });
 
     // 6 — the reveal
-    at(T.s6, () => { cls('#ladder', 'out'); $('#s4').classList.add('wide'); announce('The real driver was next door: a vacant lot, RES LAND Unusable, with illegal dumping 6, dead animal pickups 4, improper trash 3 within about 100 meters.'); });
+    at(T.s6, () => { cls('#ladder', 'out'); $('#s4').classList.add('wide'); announce('Nearby context includes a vacant lot, RES LAND Unusable, with illegal dumping 6, dead animal pickups 4, improper trash 3 within about 100 meters.'); });
     at(T.s6 + 0.35, () => { $('#s4').classList.add('ignite'); $('#status').innerHTML = ''; });
     at(T.s6 + 0.4, () => cls('#rev0', 'in'));
     at(T.s6 + 0.45, () => cls('#rev', 'in'));
@@ -599,7 +599,7 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family
     at(T.s6 + 0.85, () => cls('#mk3', 'in'));
 
     // 7 — the reframe
-    at(T.s7, () => { collapse(); announce('A block problem, not an address problem. Rat Audit Boston.'); });
+    at(T.s7, () => { collapse(); announce('Review the block around each report. Rat Audit Boston.'); });
     at(T.s7 + 0.6, () => cls('#finalpin', 'glide'));
     at(T.s7 + 1.1, () => { cls('#ripple', 'go'); cls('#place7', 'in'); cls('#cap1', 'in'); });
     at(T.s7 + 1.5, () => cls('#cap2', 'in'));
