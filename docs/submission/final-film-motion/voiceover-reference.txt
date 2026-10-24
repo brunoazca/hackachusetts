@@ -1,0 +1,15 @@
+Piper — final film, narration over the three motion clips (reference only; no audio was produced here)
+Source: docs/submission/video-script-final.md, "Exact timeline and narration".
+
+01-opening.mp4 — film 0:00–0:14 (clip-local 0.000–14.000 s)
+  0:00–0:04  "A closed case. The same place reported again."
+  0:04–0:14  "Hamelin’s legend had a piper who led the rats away. We named ours Piper. For Boston, the way forward starts with evidence."
+
+02-context-bridge.mp4 — film 1:08–1:13 (clip-local 0.000–5.000 s)
+  1:08–1:13  "The useful question is what surrounds this repeated pattern."
+
+03-closing.mp4 — film 2:50–2:58 (clip-local 0.000–8.000 s)
+  2:50–2:58  "Piper. Follow the rats. Give Boston a clearer place to start."
+
+Read the lines naturally and let short lines finish early; the clips hold their settled compositions
+(opening from about 12.1 s, bridge from 2.1 s, closing from 4.0 s) so the voice never has to fill the picture.

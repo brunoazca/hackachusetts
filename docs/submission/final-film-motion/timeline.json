@@ -1,0 +1,782 @@
+{
+  "generated": "2026-10-24",
+  "film": {
+    "totalLength": "2:58",
+    "fps": 30,
+    "size": {
+      "w": 1920,
+      "h": 1080
+    }
+  },
+  "colors": {
+    "bg": "#111315",
+    "fg": "#F2F3F1",
+    "fg2": "#AEB5BC",
+    "line": "#2F353B",
+    "edge": "#68717A",
+    "coral": "#FF5A4E"
+  },
+  "type": {
+    "hook": 148,
+    "phrase": 112,
+    "phraseBridge": 100,
+    "support": 42,
+    "label": 38,
+    "small": 36,
+    "eyebrow": 30,
+    "illus": 30,
+    "tagline": 60,
+    "closingSupport": 40
+  },
+  "anchor": {
+    "x": 960,
+    "y": 560
+  },
+  "copy": {
+    "hook1": "Closed.",
+    "hook2": "Reported again.",
+    "legend": "A legend.",
+    "purpose": "A new purpose.",
+    "tagLegend": "THE LEGEND",
+    "tagBoston": "BOSTON",
+    "illustrative": "Illustrative sequence",
+    "lReport": "Report",
+    "lClosed": "Closed",
+    "lNew": "New report",
+    "support": "Evidence for the next inspection.",
+    "bridgeHead": "One place. More context.",
+    "onePlace": "One place",
+    "groups": [
+      "Reports",
+      "Responses",
+      "Nearby records"
+    ],
+    "tagline": "Follow the rats.",
+    "wordmark": "Piper"
+  },
+  "springs": {
+    "shapeSnap": {
+      "omega": 22,
+      "zeta": 0.72,
+      "settleSeconds": 0.497,
+      "overshootPercent": 3.84
+    },
+    "smallPop": {
+      "omega": 28,
+      "zeta": 0.68,
+      "settleSeconds": 0.388,
+      "overshootPercent": 5.43
+    },
+    "heavyResolve": {
+      "omega": 18,
+      "zeta": 0.86,
+      "settleSeconds": 0.522,
+      "overshootPercent": 0.5
+    },
+    "textSettle": {
+      "omega": 26,
+      "zeta": 1,
+      "settleSeconds": 0.385,
+      "overshootPercent": 0
+    },
+    "glide": {
+      "omega": 11,
+      "zeta": 0.92,
+      "settleSeconds": 0.803,
+      "overshootPercent": 0.06
+    }
+  },
+  "clips": [
+    {
+      "id": "opening",
+      "file": "exports/01-opening.mp4",
+      "insertAt": "0:00",
+      "durationSeconds": 14,
+      "frames": 420,
+      "fps": 30,
+      "frameRule": "frame f is rendered at t = f / 30; intervals are half-open [first, last + 1)",
+      "scenes": [
+        {
+          "name": "Closed",
+          "frames": [
+            0,
+            45
+          ],
+          "seconds": [
+            0,
+            1.5
+          ]
+        },
+        {
+          "name": "Reported again",
+          "frames": [
+            45,
+            114
+          ],
+          "seconds": [
+            1.5,
+            3.8
+          ]
+        },
+        {
+          "name": "Turn the line into the story",
+          "frames": [
+            114,
+            129
+          ],
+          "seconds": [
+            3.8,
+            4.3
+          ]
+        },
+        {
+          "name": "A legend",
+          "frames": [
+            129,
+            216
+          ],
+          "seconds": [
+            4.3,
+            7.2
+          ]
+        },
+        {
+          "name": "A new purpose",
+          "frames": [
+            216,
+            318
+          ],
+          "seconds": [
+            7.2,
+            10.6
+          ]
+        },
+        {
+          "name": "Piper",
+          "frames": [
+            318,
+            420
+          ],
+          "seconds": [
+            10.6,
+            14
+          ]
+        }
+      ],
+      "reducedMotionStills": [
+        36,
+        100,
+        100,
+        190,
+        290,
+        400
+      ],
+      "events": {
+        "line1": {
+          "frames": [
+            1,
+            9
+          ],
+          "seconds": [
+            0.0333,
+            0.3
+          ]
+        },
+        "closedPop": {
+          "frame": 8,
+          "seconds": 0.2667
+        },
+        "closedLabel": {
+          "frame": 10,
+          "seconds": 0.3333
+        },
+        "line2": {
+          "frames": [
+            45,
+            54
+          ],
+          "seconds": [
+            1.5,
+            1.8
+          ]
+        },
+        "reportPop": {
+          "frame": 53,
+          "seconds": 1.7667
+        },
+        "ringPop": {
+          "frame": 56,
+          "seconds": 1.8667
+        },
+        "newLabel": {
+          "frame": 60,
+          "seconds": 2
+        },
+        "h1Out": {
+          "frame": 45,
+          "seconds": 1.5
+        },
+        "h2In": {
+          "frame": 50,
+          "seconds": 1.6667
+        },
+        "dataOut": {
+          "frame": 114,
+          "seconds": 3.8
+        },
+        "anticipate": {
+          "frames": [
+            114,
+            116
+          ],
+          "seconds": [
+            3.8,
+            3.8667
+          ]
+        },
+        "toPipe": {
+          "frame": 116,
+          "seconds": 3.8667
+        },
+        "h2Out": {
+          "frame": 118,
+          "seconds": 3.9333
+        },
+        "legendTagIn": {
+          "frame": 120,
+          "seconds": 4
+        },
+        "h3In": {
+          "frame": 128,
+          "seconds": 4.2667
+        },
+        "townIn": {
+          "frame": 124,
+          "seconds": 4.1333
+        },
+        "townStagger": {
+          "frame": 3,
+          "seconds": 0.1
+        },
+        "townDur": {
+          "frame": 10,
+          "seconds": 0.3333
+        },
+        "holesIn": {
+          "frame": 134,
+          "seconds": 4.4667
+        },
+        "holeStagger": {
+          "frame": 3,
+          "seconds": 0.1
+        },
+        "ratsIn": {
+          "frame": 136,
+          "seconds": 4.5333
+        },
+        "ratStagger": {
+          "frame": 2,
+          "seconds": 0.0667
+        },
+        "ratDur": {
+          "frame": 10,
+          "seconds": 0.3333
+        },
+        "ratsTravel": {
+          "frame": 146,
+          "seconds": 4.8667
+        },
+        "camera": {
+          "frames": [
+            129,
+            168
+          ],
+          "seconds": [
+            4.3,
+            5.6
+          ]
+        },
+        "h3Out": {
+          "frame": 216,
+          "seconds": 7.2
+        },
+        "h4In": {
+          "frame": 223,
+          "seconds": 7.4333
+        },
+        "tagOut": {
+          "frame": 216,
+          "seconds": 7.2
+        },
+        "bostonIn": {
+          "frame": 222,
+          "seconds": 7.4
+        },
+        "ratsOut": {
+          "frame": 216,
+          "seconds": 7.2
+        },
+        "holesOut": {
+          "frame": 216,
+          "seconds": 7.2
+        },
+        "cameraBack": {
+          "frames": [
+            216,
+            236
+          ],
+          "seconds": [
+            7.2,
+            7.8667
+          ]
+        },
+        "morph": {
+          "frame": 222,
+          "seconds": 7.4
+        },
+        "gridExtra": {
+          "frames": [
+            236,
+            250
+          ],
+          "seconds": [
+            7.8667,
+            8.3333
+          ]
+        },
+        "pinIn": {
+          "frame": 238,
+          "seconds": 7.9333
+        },
+        "marksIn": {
+          "frame": 240,
+          "seconds": 8
+        },
+        "markStagger": {
+          "frame": 2,
+          "seconds": 0.0667
+        },
+        "tick": {
+          "frames": [
+            244,
+            254
+          ],
+          "seconds": [
+            8.1333,
+            8.4667
+          ]
+        },
+        "illusIn": {
+          "frame": 242,
+          "seconds": 8.0667
+        },
+        "exitAll": {
+          "frame": 318,
+          "seconds": 10.6
+        },
+        "gridOut": {
+          "frames": [
+            318,
+            330
+          ],
+          "seconds": [
+            10.6,
+            11
+          ]
+        },
+        "lineToPipe": {
+          "frame": 318,
+          "seconds": 10.6
+        },
+        "tail": {
+          "frames": [
+            332,
+            348
+          ],
+          "seconds": [
+            11.0667,
+            11.6
+          ]
+        },
+        "body": {
+          "frames": [
+            340,
+            358
+          ],
+          "seconds": [
+            11.3333,
+            11.9333
+          ]
+        },
+        "face": {
+          "frames": [
+            356,
+            362
+          ],
+          "seconds": [
+            11.8667,
+            12.0667
+          ]
+        },
+        "holes2": {
+          "frame": 342,
+          "seconds": 11.4
+        },
+        "wordmark": {
+          "frame": 336,
+          "seconds": 11.2
+        },
+        "support": {
+          "frame": 342,
+          "seconds": 11.4
+        }
+      },
+      "holds": [
+        {
+          "name": "Closed settled",
+          "fromFrame": 22,
+          "toFrame": 44,
+          "fromSeconds": 0.7333,
+          "toSeconds": 1.4667
+        },
+        {
+          "name": "Reported again settled",
+          "fromFrame": 72,
+          "toFrame": 113,
+          "fromSeconds": 2.4,
+          "toSeconds": 3.7667
+        },
+        {
+          "name": "Legend settled",
+          "fromFrame": 175,
+          "toFrame": 215,
+          "fromSeconds": 5.8333,
+          "toSeconds": 7.1667
+        },
+        {
+          "name": "New purpose settled",
+          "fromFrame": 254,
+          "toFrame": 317,
+          "fromSeconds": 8.4667,
+          "toSeconds": 10.5667
+        },
+        {
+          "name": "Brand card settled (text)",
+          "fromFrame": 354,
+          "toFrame": 419,
+          "fromSeconds": 11.8,
+          "toSeconds": 13.9667
+        },
+        {
+          "name": "Brand card settled (geometry)",
+          "fromFrame": 362,
+          "toFrame": 419,
+          "fromSeconds": 12.0667,
+          "toSeconds": 13.9667
+        }
+      ],
+      "narration": [
+        {
+          "film": "0:00–0:04",
+          "local": [
+            0,
+            4
+          ],
+          "text": "A closed case. The same place reported again."
+        },
+        {
+          "film": "0:04–0:14",
+          "local": [
+            4,
+            14
+          ],
+          "text": "Hamelin’s legend had a piper who led the rats away. We named ours Piper. For Boston, the way forward starts with evidence."
+        }
+      ]
+    },
+    {
+      "id": "bridge",
+      "file": "exports/02-context-bridge.mp4",
+      "insertAt": "1:08",
+      "durationSeconds": 5,
+      "frames": 150,
+      "fps": 30,
+      "frameRule": "frame f is rendered at t = f / 30; intervals are half-open [first, last + 1)",
+      "scenes": [
+        {
+          "name": "Keep the place",
+          "frames": [
+            0,
+            14
+          ],
+          "seconds": [
+            0,
+            0.4667
+          ]
+        },
+        {
+          "name": "Three kinds of evidence",
+          "frames": [
+            14,
+            36
+          ],
+          "seconds": [
+            0.4667,
+            1.2
+          ]
+        },
+        {
+          "name": "One organized view",
+          "frames": [
+            36,
+            63
+          ],
+          "seconds": [
+            1.2,
+            2.1
+          ]
+        },
+        {
+          "name": "Readable hold",
+          "frames": [
+            63,
+            150
+          ],
+          "seconds": [
+            2.1,
+            5
+          ]
+        }
+      ],
+      "reducedMotionStills": [
+        8,
+        8,
+        120,
+        120
+      ],
+      "events": {
+        "groupsIn": {
+          "frame": 14,
+          "seconds": 0.4667
+        },
+        "stagger": {
+          "frame": 2,
+          "seconds": 0.0667
+        },
+        "connectors": {
+          "frame": 20,
+          "seconds": 0.6667
+        },
+        "connDur": {
+          "frame": 14,
+          "seconds": 0.4667
+        },
+        "settle": {
+          "frame": 36,
+          "seconds": 1.2
+        },
+        "ring": {
+          "frames": [
+            24,
+            44
+          ],
+          "seconds": [
+            0.8,
+            1.4667
+          ]
+        },
+        "h1In": {
+          "frame": 40,
+          "seconds": 1.3333
+        }
+      },
+      "holds": [
+        {
+          "name": "Readable hold",
+          "fromFrame": 63,
+          "toFrame": 149,
+          "fromSeconds": 2.1,
+          "toSeconds": 4.9667
+        }
+      ],
+      "narration": [
+        {
+          "film": "1:08–1:13",
+          "local": [
+            0,
+            5
+          ],
+          "text": "The useful question is what surrounds this repeated pattern."
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "file": "exports/03-closing.mp4",
+      "insertAt": "2:50",
+      "durationSeconds": 8,
+      "frames": 240,
+      "fps": 30,
+      "frameRule": "frame f is rendered at t = f / 30; intervals are half-open [first, last + 1)",
+      "scenes": [
+        {
+          "name": "Continue the thread",
+          "frames": [
+            0,
+            17
+          ],
+          "seconds": [
+            0,
+            0.5667
+          ]
+        },
+        {
+          "name": "The line becomes the pipe",
+          "frames": [
+            17,
+            54
+          ],
+          "seconds": [
+            0.5667,
+            1.8
+          ]
+        },
+        {
+          "name": "The name and line",
+          "frames": [
+            54,
+            96
+          ],
+          "seconds": [
+            1.8,
+            3.2
+          ]
+        },
+        {
+          "name": "The purpose",
+          "frames": [
+            96,
+            120
+          ],
+          "seconds": [
+            3.2,
+            4
+          ]
+        },
+        {
+          "name": "Four seconds of stillness",
+          "frames": [
+            120,
+            240
+          ],
+          "seconds": [
+            4,
+            8
+          ]
+        }
+      ],
+      "reducedMotionStills": [
+        3,
+        200,
+        200,
+        200,
+        200
+      ],
+      "events": {
+        "extend": {
+          "frames": [
+            4,
+            20
+          ],
+          "seconds": [
+            0.1333,
+            0.6667
+          ]
+        },
+        "pinOut": {
+          "frames": [
+            6,
+            16
+          ],
+          "seconds": [
+            0.2,
+            0.5333
+          ]
+        },
+        "lineToPipe": {
+          "frame": 17,
+          "seconds": 0.5667
+        },
+        "tail": {
+          "frames": [
+            26,
+            48
+          ],
+          "seconds": [
+            0.8667,
+            1.6
+          ]
+        },
+        "body": {
+          "frames": [
+            36,
+            58
+          ],
+          "seconds": [
+            1.2,
+            1.9333
+          ]
+        },
+        "face": {
+          "frames": [
+            56,
+            62
+          ],
+          "seconds": [
+            1.8667,
+            2.0667
+          ]
+        },
+        "holes": {
+          "frame": 44,
+          "seconds": 1.4667
+        },
+        "holeStagger": {
+          "frame": 3,
+          "seconds": 0.1
+        },
+        "wordmark": {
+          "frame": 54,
+          "seconds": 1.8
+        },
+        "tagline": {
+          "frame": 64,
+          "seconds": 2.1333
+        },
+        "support": {
+          "frame": 96,
+          "seconds": 3.2
+        }
+      },
+      "holds": [
+        {
+          "name": "Pixel-still hold",
+          "fromFrame": 120,
+          "toFrame": 239,
+          "fromSeconds": 4,
+          "toSeconds": 7.9667
+        }
+      ],
+      "narration": [
+        {
+          "film": "2:50–2:58",
+          "local": [
+            0,
+            8
+          ],
+          "text": "Piper. Follow the rats. Give Boston a clearer place to start."
+        }
+      ]
+    }
+  ]
+}

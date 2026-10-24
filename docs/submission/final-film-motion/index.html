@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piper — final film motion clips</title>
+<meta name="description" content="Three editable motion clips for Piper's final film: a 14-second opening, a 5-second context bridge and an 8-second closing. Every frame is a pure function of time.">
+<link rel="stylesheet" href="film.css">
+</head>
+<body>
+
+<div id="viewport">
+  <div id="stage" role="img" aria-label="Piper film motion clip. Transcript in the notes below."></div>
+</div>
+
+<div id="controls" aria-label="Playback controls">
+  <span id="clipButtons" role="group" aria-label="Clip">
+    <button type="button" data-clip="opening" aria-pressed="false" aria-keyshortcuts="1">1 · Opening 14 s</button>
+    <button type="button" data-clip="bridge" aria-pressed="false" aria-keyshortcuts="2">2 · Bridge 5 s</button>
+    <button type="button" data-clip="closing" aria-pressed="false" aria-keyshortcuts="3">3 · Closing 8 s</button>
+  </span>
+  <button id="btnPlay" type="button" aria-keyshortcuts="Space">Play</button>
+  <button id="btnRestart" type="button" aria-keyshortcuts="Home">Restart</button>
+  <input id="scrub" type="range" min="0" max="14" step="0.0333333" value="0" aria-label="Scrub timeline (seconds)">
+  <span id="time" aria-live="off">00:00.000 · f 0 / 420</span>
+  <span id="info"></span>
+  <label><input id="rmToggle" type="checkbox"> Reduced motion (still scenes)</label>
+  <span><kbd>Space</kbd> play · <kbd>←</kbd><kbd>→</kbd> frame · <kbd>Shift</kbd>+arrow 1 s · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> clip</span>
+</div>
+
+<section id="notes" aria-label="Notes">
+  <h2>What these are</h2>
+  <p>Three silent 1920 × 1080, 30 fps clips cut into a 2:58 film: the opening at 0:00 (420 frames), the context bridge at 1:08 (150 frames) and the closing at 2:50 (240 frames). Motion is spring-driven (closed-form damped oscillator), every visible value is derived from the clip-local time, and the page exposes <code>window.piperMotion</code> (<code>ready</code>, <code>selectClip</code>, <code>seek</code>, <code>play</code>, <code>pause</code>, <code>restart</code>, <code>setReducedMotion</code>).</p>
+  <p>URL parameters: <code>?clip=opening|bridge|closing</code>, <code>&amp;t=4.2</code> loads paused at that time, <code>&amp;capture=1</code> renders the clean 1920 × 1080 frame with full motion regardless of the OS reduced-motion setting. Without <code>capture</code>, a reduced-motion preference shows the film as still scenes.</p>
+  <ul>
+    <li><strong>Opening.</strong> “Closed.” A report mark, a recorded closure on one line. “Reported again.” — a later report with a coral ring. The line turns into a piper's pipe before a storybook town; three rat silhouettes follow it (“A legend.”). The town becomes an abstract street grid and the pipe becomes the line that groups records around one place (“A new purpose.”). The line resolves into the pipe of the Piper logo. “Evidence for the next inspection.”</li>
+    <li><strong>Bridge.</strong> One place marker stays still. Reports, Responses and Nearby records connect to a ring around it. “One place. More context.”</li>
+    <li><strong>Closing.</strong> The place marker and a short line; the line becomes the logo pipe; “Piper”, “Follow the rats.”, “Evidence for the next inspection.” Pixel-still for the last four seconds.</li>
+  </ul>
+  <p>All diagrams are illustrative sequences: no real addresses, case identifiers, dates or statistics. The folklore passage is a labeled legend with decorative silhouettes.</p>
+</section>
+
+<script src="config.js"></script>
+<script src="motion.js"></script>
+<script src="brand.js"></script>
+<script src="clips/opening.js"></script>
+<script src="clips/bridge.js"></script>
+<script src="clips/closing.js"></script>
+<script src="film.js"></script>
+</body>
+</html>
