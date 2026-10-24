@@ -1,5 +1,6 @@
 import { supabase } from "@/lib/supabase";
 import type { SiteRow } from "@/lib/map-store";
+import { sourcesFor, type SiteEvidence, type SourceEvidence } from "@/lib/evidence";
 import type { FeatureCollection, FeatureCollection as AnyFC, Point } from "geojson";
 
 // Draft typed wrappers over the read-only RPCs (supabase/migrations/*_api_*.sql).
@@ -43,14 +44,16 @@ export type IncidentDetail = {
     address_block: string | null; zip: string | null; neighborhood: string | null; closure_note: string | null;
     action_tag: string | null; city: string; geo_precision: string;
   };
-  source: { id: string; name: string; url: string; retrieved_at: string; update_mode: "live" | "daily" | "static"; update_note: string | null };
+  source: SourceEvidence;
   same_address: { id: string; category: string; status: string; opened: string; closed: string | null; note: string | null }[];
 };
 
 export async function fetchIncidentDetail(id: string): Promise<IncidentDetail | null> {
   const { data, error } = await supabase.rpc("incident_detail", { incident_id: id });
   if (error) throw error;
-  return data as IncidentDetail | null;
+  const detail = data as IncidentDetail | null;
+  if (detail) detail.source = (await fetchSources([detail.source.id]))[0] ?? detail.source;
+  return detail;
 }
 
 export type LiveStatus = { updatedAt: string | null };
@@ -75,12 +78,58 @@ export type SiteDetail = {
   drivers_100m_12mo: Record<string, number>;
   adjacent_vacant_parcels: number;
   source_ids: string[];
+  evidence?: SiteEvidence;
+  report_sources?: SourceEvidence[];
+  /** Older deployments can still display records without claiming unsupported provenance. */
+  evidence_unavailable?: boolean;
 };
 
 export async function fetchSiteDetail(id: string): Promise<SiteDetail | null> {
-  const { data, error } = await supabase.rpc("site_detail", { site_id: id });
+  const [{ data, error }, evidenceResult] = await Promise.all([
+    supabase.rpc("site_detail", { site_id: id }),
+    supabase.rpc("site_evidence", { site_id: id }),
+  ]);
   if (error) throw error;
-  return data as SiteDetail | null;
+  if (!data) return null;
+  const detail = data as SiteDetail;
+  if (!evidenceResult.error && evidenceResult.data) {
+    detail.evidence = evidenceResult.data as SiteEvidence;
+    detail.report_sources = sourcesFor(detail.evidence.report_source_ids, detail.evidence.sources);
+    // Counts and citations come from the same spatial query and snapshot.
+    detail.drivers_100m_12mo = Object.fromEntries(detail.evidence.nearby.map((r) => [r.category, r.count]));
+    detail.adjacent_vacant_parcels = detail.evidence.vacant.count;
+  } else {
+    detail.evidence_unavailable = true;
+    // Never use site_detail's legacy, hard-coded Boston source_ids. Resolve actual records.
+    const ids = detail.reports.map((r) => r.id);
+    const sourceIds = new Set<string>();
+    for (let start = 0; start < ids.length; start += 100) {
+      const result = await supabase.from("incidents").select("source_id").in("id", ids.slice(start, start + 100));
+      if (result.error) { sourceIds.clear(); break; }
+      for (const row of result.data ?? []) sourceIds.add(row.source_id);
+    }
+    detail.report_sources = await fetchSources([...sourceIds]);
+  }
+  return detail;
+}
+
+/** A source's metadata retrieval and its last successful ingest are separate facts. */
+export async function fetchSources(ids: string[]): Promise<SourceEvidence[]> {
+  const unique = [...new Set(ids)];
+  if (!unique.length) return [];
+  const [metadata, runs] = await Promise.all([
+    supabase.from("sources").select("id,name,url,retrieved_at,update_mode,update_note").in("id", unique),
+    Promise.all(unique.map(async (id) => {
+      const { data } = await supabase.from("ingest_runs")
+        .select("finished_at,newest_record_at").eq("source_id", id).eq("ok", true)
+        .not("finished_at", "is", null).order("finished_at", { ascending: false }).limit(1).maybeSingle();
+      return { id, data };
+    })),
+  ]);
+  return sourcesFor(unique, (metadata.data ?? []) as SourceEvidence[]).map((s) => {
+    const run = runs.find((r) => r.id === s.id)?.data;
+    return { ...s, last_success_at: run?.finished_at ?? null, newest_record_at: run?.newest_record_at ?? null };
+  });
 }
 
 // ---- Coverage + context layers ----

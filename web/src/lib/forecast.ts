@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { formatDate } from "@/lib/dates";
 import type { FeatureCollection, Polygon } from "geojson";
 import type { BBox } from "@/lib/queries";
 
@@ -78,4 +79,4 @@ export const FORECAST_STOPS: [number, string][] = [
   [10, "#7f1010"],
 ];
 
-export const fmtWeek = (w: string) => new Date(w + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+export const fmtWeek = (w: string) => formatDate(w, { year: undefined });

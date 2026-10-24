@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:28 — Enabled the Playwright CLI browser + new skills in Kiro Crew
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Turned on the built-in browser (Playwright CLI 0.1.22 installed, Chromium downloaded, built-in browser toggle on) in Settings → Browser, and added skills
+- Why: Give Kiro agents a browser to drive/verify the live app, plus the new skills
+- Where: none (Kiro Crew settings)
+- Idea: Can now click-test the Piper UI headlessly before reporting, instead of puppeteer-core
+
 ### 2026-10-24 16:24 — Shipped Piper UI to main via PR #3 (clean branch without ...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
