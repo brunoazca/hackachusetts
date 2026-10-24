@@ -27,3 +27,12 @@ test("question context snapshots viewport and filters independently of later nav
   assert.match(prompt, /keep the camera in place/);
   assert.match(prompt, /search_incidents with that bbox/);
 });
+
+ test("local explanations explicitly separate viewport totals from radius evidence", () => {
+  const prompt = systemPrompt(null, "2026-10-24");
+  assert.match(prompt, /Visible map area/);
+  assert.match(prompt, /Nearby context — within N m/);
+  assert.match(prompt, /radius can extend beyond the visible map/);
+  assert.match(prompt, /Reports within N m/);
+  assert.match(prompt, /State differing date windows/);
+});

@@ -31,6 +31,16 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:20 — Distinguish viewport reports from surrounding evidence
+- Teammate: Carol
+- Agent:
+- Did: Require separate visible-area and nearby-radius sections, actual radius and date windows; radius fallback is labeled honestly.
+- Did: Expose query bbox and radius scope in tool results and warn that nearby counts are not viewport totals.
+- Why: Avoid presenting evidence within 500 m as if it all lies on the visible map.
+- Where: agent/prompt.ts, agent/tools/server.ts, agent/__tests__/viewport-context.test.ts
+- Validation: 26 tests passed, TypeScript and scoped ESLint passed.
+- Idea: none
+
 ### 2026-10-24 18:16 — Ground chat questions in the current viewport
 - Teammate: Carol
 - Agent:

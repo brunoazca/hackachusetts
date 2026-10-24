@@ -271,7 +271,7 @@ export function createServerTools({ data, now = () => new Date(), lookupPlace }:
           const shown = rows.slice(0, limit);
           return {
             data: {
-              filters: { categories: q.categories ?? ["rodent"], query: q.query ?? null, since, until: q.until ?? null, status: q.status ?? "all", near: q.near ?? null },
+              filters: { categories: q.categories ?? ["rodent"], query: q.query ?? null, since, until: q.until ?? null, status: q.status ?? "all", near: q.near ?? null, bbox: q.bbox ?? null },
               total,
               returned: shown.length,
               breakdowns_count: rows.length,
@@ -445,12 +445,13 @@ export function createServerTools({ data, now = () => new Date(), lookupPlace }:
           const placeCounts = Object.entries(countBy(nearPlaces, (p) => p.kind))
             .map(([kind, n]) => ({ kind, label: placeLabel(kind), n }))
             .sort((a, b) => b.n - a.n);
-          const caveats = ["Nearby does not mean causing: these are associations from the data."];
+          const caveats = ["Nearby does not mean causing: these are associations from the data.", "These counts cover the queried radius, which may extend beyond the visible map; they are not viewport totals."];
           const truncated = inc.total != null ? inc.total > inc.rows.length : inc.rows.length >= 2000;
           if (truncated) caveats.push(`Driver counts are partial: only the newest ${inc.rows.length} of ${inc.total ?? "an unknown number of"} reports in the bounding box were checked; the database or query row limit was reached.`);
           if (!incidents.length && !nearPlaces.length) caveats.push("No driver reports or places found within the radius.");
           return {
             data: {
+              spatial_scope: "radius",
               center: { lat: la, lon: lo }, radius_m: radius, since, until: until ?? null,
               site_id: site?.id ?? null,
               driver_reports: drivers,
