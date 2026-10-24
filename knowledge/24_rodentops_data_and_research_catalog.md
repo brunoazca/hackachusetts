@@ -1,6 +1,6 @@
 # RodentOps: usable data, public code and research
 
-Checked **October 24, 2026**. Companion to [government and public voices](19_rodentops_government_and_public_voices.md). This catalog expands the [earlier resource audit](sources/artifacts/rodent_resource_audit.json) and [public-code inventory](22_public_data_and_repositories.md); it does not imply every source is production-ready or appropriate to combine.
+Checked **October 24, 2026**. Companion to [government and public voices](25_rodentops_government_and_public_voices.md). This catalog expands the [earlier resource audit](sources/artifacts/rodent_resource_audit.json) and [public-code inventory](22_public_data_and_repositories.md); it does not imply every source is production-ready or appropriate to combine.
 
 ## 1. What to use first
 

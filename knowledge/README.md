@@ -28,7 +28,7 @@ Docs are grouped: **00–03 competition & event**, **10–19 strategy, evidence 
 | [16 — Creative rodent-control playbook](16_rodent_control_creative_playbook.md) | RodentOps plus seven alternatives, actual Boston/Cambridge rodent data, hearing captions and a small demo scope |
 | [17 — Hidden ledgers: five new concepts](17_hidden_ledgers_deep_concepts.md) | CurbCheck, Three Hours, 311 outcome layer, hearing ledger, town-meeting decoder; live-verified Boston sources and numbers from Oct 24 noon |
 | [18 — Build decision guide](18_idea_shortlist_and_build_recommendation.md) | Updated creative choices and three conservative fallback scopes |
-| [19 — RodentOps: government and public voices](19_rodentops_government_and_public_voices.md) | What the City actually says (Wu, ISD, BHA, summit captions), resident complaints with verification levels, existing-tool overlap and pitch/judging implications |
+| [25 — RodentOps: government and public voices](25_rodentops_government_and_public_voices.md) | What the City actually says (Wu, ISD, BHA, summit captions), resident complaints with verification levels, existing-tool overlap and pitch/judging implications |
 
 ### Data & verification
 

@@ -1,6 +1,6 @@
 # RodentOps and seven other tools for Boston's rat problem
 
-Research and original proposals: **October 24, 2026**. This extends the [creative atlas](14_creative_civic_opportunity_atlas.md). The team subsequently selected RodentOps; other concepts remain alternatives. These are not validated pest-control methods or promises of municipal adoption. For the latest expansion, read [government and public voices](19_rodentops_government_and_public_voices.md) and [data and research](24_rodentops_data_and_research_catalog.md).
+Research and original proposals: **October 24, 2026**. This extends the [creative atlas](14_creative_civic_opportunity_atlas.md). The team subsequently selected RodentOps; other concepts remain alternatives. These are not validated pest-control methods or promises of municipal adoption. For the latest expansion, read [government and public voices](25_rodentops_government_and_public_voices.md) and [data and research](24_rodentops_data_and_research_catalog.md).
 
 **Recommended tool: RodentOps. Help an environmental-services coordinator turn recurring rodent complaints into a reviewed inspection and follow-up plan.** Its central question is: *Which recurring problems need attention, what do we actually know, and what should the next inspection establish?*
 
