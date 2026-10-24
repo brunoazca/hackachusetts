@@ -7,6 +7,9 @@ import type { FeatureRef, SourceRef } from "./types";
 type ToolPart = Extract<UIMessage["parts"][number], { toolCallId: string }>;
 
 const RUNNING: Record<string, string> = {
+  get_insights: "Reading Insights and evidence",
+  map_set_view: "Changing map display",
+  map_filter_sites: "Filtering places to visit",
   geocode: "Finding the place",
   search_incidents: "Looking up reports",
   top_sites: "Ranking chronic sites",
@@ -38,6 +41,8 @@ const plural = (n: number, one: string, many = `${one}s`) => `${n.toLocaleString
 function doneLabel(name: string, input: Record<string, unknown>, r: Ok): string {
   const d = r.data ?? {};
   switch (name) {
+    case "get_insights":
+      return d.live_status === "ready" ? "Read Insights and sources" : d.live_status === "not_requested" ? "Read historical research and sources" : "Read historical research; live insights unavailable";
     case "geocode": {
       const m = (d.matches as { label: string }[] | undefined) ?? [];
       return d.found ? `Found ${m[0]?.label ?? String(input.query)}` : `No match for "${String(input.query)}"`;
@@ -130,7 +135,9 @@ export const STARTERS = [
   "Why do rats keep coming back on Normandy St?",
   "Which sites are due for follow-up?",
   "What is around the selected site?",
-  "Which city actions were followed by fewer repeat reports?",
+  "Show only open rodent reports from the last 30 days as a heatmap.",
+  "What do Insights say, and what are the limitations?",
+  "Show the latest forecast and explain it.",
 ];
 
 

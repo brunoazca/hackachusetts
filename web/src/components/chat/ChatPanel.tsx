@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, lastAssistantMessageIsCompleteWithToolCalls } from "ai";
+import { useUi } from "@/lib/ui-store";
 import { useMap } from "@/lib/map-store";
 import { buildMapContext } from "@/lib/agent/context";
 import { executeClientTool, isClientTool } from "@/lib/agent/tools/client";
@@ -40,6 +41,7 @@ export default function ChatPanel() {
     onToolCall({ toolCall }) {
       if (toolCall.dynamic || !isClientTool(toolCall.toolName)) return;
       const out = executeClientTool(toolCall.toolName, toolCall.input, useMap.getState());
+      if (out.ok && toolCall.toolName === "open_panel") useUi.getState().setRightOpen(true);
       // No await: avoids deadlocks with the automatic resend.
       if (out.ok) void addToolOutput({ tool: toolCall.toolName, toolCallId: toolCall.toolCallId, output: out });
       else void addToolOutput({ tool: toolCall.toolName, toolCallId: toolCall.toolCallId, state: "output-error", errorText: out.error });
@@ -68,7 +70,7 @@ export default function ChatPanel() {
     <div className="flex h-full flex-col">
       <div className="px-4 pt-4">
         <span className="eyebrow">Ask Piper</span>
-        <h2 className="mt-1 text-xl font-bold text-fg">Answers from the data, with sources.</h2>
+        <h2 className="mt-1 text-xl font-bold text-fg">Explore the map. Follow the evidence.</h2>
       </div>
       {/* Screen readers hear each finished answer once, not every streamed token (R9.2). */}
       <div aria-live="polite" className="sr-only">{announce}</div>
@@ -87,7 +89,7 @@ export default function ChatPanel() {
 
         {messages.length === 0 && status?.configured && (
           <div className="space-y-2">
-            <p className="text-sm text-fg-2">Ask about reports, chronic sites, what&apos;s nearby or what worked. Answers cite their sources and move the map.</p>
+            <p className="text-sm text-fg-2">Ask me to move the map, change any filter, compare reports or explain Insights. I use the current map settings and cite the evidence.</p>
             <ul aria-label="Suggested questions" className="space-y-1">
               {STARTERS.map((q) => (
                 <li key={q}>

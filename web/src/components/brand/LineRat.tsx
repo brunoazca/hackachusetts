@@ -1,4 +1,4 @@
-// The Piper mark: a rat in one continuous line whose tail becomes a pipe.
+// The Listener: an upright rat whose tail sweeps beneath it into a pipe.
 // Spec: docs/design/foundations/imagery.md — viewBox 14 10 86 46, pipe at y=50,
 // three holes at x=72/81/90 (r 2.1, stroke 1.5), tail+holes in accent only in lockups.
 
@@ -15,7 +15,7 @@ export default function LineRat({
   label,
   accentTail = false,
 }: Props) {
-  const strokeWidth = width >= 96 ? 1.7 : 2.2;
+  const hero = width >= 96;
 
   return (
     <svg
@@ -28,31 +28,32 @@ export default function LineRat({
       aria-hidden={label ? undefined : true}
       fill="none"
       stroke="currentColor"
-      strokeWidth={strokeWidth}
+      strokeWidth={hero ? 1.7 : 2.2}
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* One contour: rear paw, belly, forepaw, muzzle, ear, back, haunch. */}
-      <path
-        d="M58 42 H50
-           Q50.5 40 53 38
-           C47 39 43 38.5 39 37.5
-           L34 40 H29
-           Q30 38 32 36
-           C26 36 21 35 18 34
-           L29.5 29
-           Q32.5 25.5 36.5 24
-           C33.5 21.5 34.5 17.5 38 18
-           C42 18.5 42 22 39 24.5
-           C46 20 54 17.5 62 21
-           C70 24.5 74 34 67 40"
-      />
-      <circle cx={18} cy={34} r={1.3} fill="currentColor" stroke="none" />
-      <circle cx={31.5} cy={31.2} r={1.2} fill="currentColor" stroke="none" />
+      <g className="piper-rat">
+        <path
+          d="M46 43
+             Q35 45 28 40
+             C24 36 28 24 38 20
+             C35 16 38 12 42 14
+             C46 16 45 20 42 22
+             C48 18 54 21 61 24
+             C55 27 51 28 48 31
+             C45 34 45 37 49 37"
+        />
 
-      {/* Same endpoint and tangent as the haunch; horizontal at the pipe. */}
-      <g stroke={accentTail ? "var(--p-return)" : "currentColor"}>
-        <path d="M67 40 C63.5 43 57 44.5 57 47 C57 49 61 50 66 50 H97" />
+        {/* Round-capped points keep the eye and nose visible at small sizes. */}
+        <path className="piper-eye" d="M50.5 25 h0" strokeWidth={hero ? 2.6 : 3.4} />
+        <path className="piper-nose" d="M61 24 h0" strokeWidth={hero ? 2.8 : 3.6} />
+      </g>
+      <g stroke={accentTail ? "var(--p-accent)" : "currentColor"}>
+        <path
+          className="piper-tail"
+          d="M28 40 C20 42 19 46 28 48 C37 50 49 50 66 50 H97"
+          strokeWidth={hero ? 2.2 : 2.8}
+        />
         <circle cx={72} cy={50} r={2.1} strokeWidth={1.5} fill="var(--p-bg)" />
         <circle cx={81} cy={50} r={2.1} strokeWidth={1.5} fill="var(--p-bg)" />
         <circle cx={90} cy={50} r={2.1} strokeWidth={1.5} fill="var(--p-bg)" />

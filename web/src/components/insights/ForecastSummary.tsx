@@ -1,5 +1,7 @@
 import { fmtDate, fmtDateTime, fmtNumber, fmtPct } from "./format";
 import type { ForecastView, RiskBand, ScorePair } from "./types";
+import { compare, type Verdict } from "@/lib/forecast-comparison";
+export { compare } from "@/lib/forecast-comparison";
 
 export default function ForecastSummary({ forecast: f, onShowForecast }: {
   forecast: ForecastView; onShowForecast?: (week: string) => void;
@@ -58,16 +60,6 @@ export default function ForecastSummary({ forecast: f, onShowForecast }: {
 const BAND_LABEL: Record<RiskBand, string> = {
   low: "Low", elevated: "Elevated", high: "High", very_high: "Very high",
 };
-
-type Verdict = "better" | "worse" | "same" | null;
-
-// lowerIsBetter: MAE; otherwise higher is better (top-10% capture).
-export function compare(p: ScorePair, lowerIsBetter: boolean): Verdict {
-  if (p.model === null || p.baseline === null) return null;
-  const d = p.model - p.baseline;
-  if (Math.abs(d) < 1e-9) return "same";
-  return (lowerIsBetter ? d < 0 : d > 0) ? "better" : "worse";
-}
 
 const VERDICT_TEXT: Record<Exclude<Verdict, null>, string> = {
   better: "Better than baseline",

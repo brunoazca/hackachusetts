@@ -1,14 +1,11 @@
 "use client";
 import { create } from "zustand";
 import type { Polygon } from "geojson";
+import { activeCategories, CATEGORY_IDS, initialLayers, isNearbyCategory, type Bounds, type LayerId, type ViewMode } from "./map-controls";
+export type { LayerId } from "./map-controls";
 
 // Single source of truth for what the map shows. The UI and the agent's
 // client-side tools both call these actions, so the agent can "drive" the map.
-
-export type LayerId =
-  | "rodent" | "rats_other" | "food" | "shelter" | "displace"
-  | "restaurants" | "bigbelly" | "events" | "sites" | "forecast"
-  | "heatmap" | "tracts_svi" | "tracts_asthma" | "listings" | "prices";
 
 export type Selection =
   | { kind: "incident" | "place" | "event" | "site" | "cell" | "listing" | "tract"; id: string }
@@ -18,7 +15,7 @@ export type Selection =
 export type Filters = {
   since: string;          // ISO date
   until: string;          // ISO date
-  categories: string[];   // incident category ids (contracts/categories.json); [] = all in enabled layers
+  categories: string[];   // enabled incident category ids; setFilters({ categories: [] }) enables all
   status: "all" | "open" | "closed";
 };
 
@@ -37,16 +34,26 @@ export type SiteRow = {
 type MapState = {
   mode: Mode;
   sites: SiteRow[];
+  siteNeighborhood: string;
+  setSiteNeighborhood: (neighborhood: string) => void;
   setMode: (m: Mode) => void;
   setSites: (s: SiteRow[]) => void;
   view: View;
+  bounds: Bounds | null;
+  viewMode: ViewMode;
+  causes: boolean;
+  cellMetric: string | null;
+  setCellMetric: (metric: string | null) => void;
+  setBounds: (bounds: Bounds | null) => void;
+  setViewMode: (mode: ViewMode) => void;
+  setCauses: (on: boolean) => void;
   flyToTarget: (View & { nonce: number }) | null;
   layers: Record<LayerId, boolean>;
   filters: Filters;
   highlight: string[];             // ids of incidents/places/sites to emphasize
   selection: Selection;
   panel: "inspector" | "insights" | "chat";
-  forecastWeek: string | null;     // ISO week_start for the forecast layer
+  forecastWeek: string | null;     // ISO week_start or "4w"; null also means next four weeks
   flyTo: (v: Partial<View> & { lat: number; lon: number }) => void;
   setView: (v: View) => void;
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
@@ -64,24 +71,44 @@ const daysAgo = (n: number) => iso(new Date(today.getTime() - n * 86400000));
 export const useMap = create<MapState>((set) => ({
   mode: "act",
   sites: [],
+  siteNeighborhood: "",
+  setSiteNeighborhood: (siteNeighborhood) => set({ siteNeighborhood }),
   setMode: (mode) => set({ mode }),
   setSites: (sites) => set({ sites }),
   view: { lat: 42.32, lon: -71.08, zoom: 11.5 },
   flyToTarget: null,
-  layers: {
-    rodent: true, rats_other: false, food: false, shelter: false, displace: false,
-    restaurants: false, bigbelly: false, events: false, sites: true, forecast: false,
-    heatmap: false, tracts_svi: false, tracts_asthma: false, listings: false, prices: false,
-  },
-  filters: { since: daysAgo(90), until: iso(today), categories: [], status: "all" },
+  layers: initialLayers(),
+  bounds: null,
+  viewMode: "heat",
+  causes: false,
+  cellMetric: null,
+  setCellMetric: (cellMetric) => set({ cellMetric }),
+  setBounds: (bounds) => set({ bounds }),
+  setViewMode: (viewMode) => set({ viewMode }),
+  setCauses: (causes) => set({ causes }),
+  filters: { since: daysAgo(90), until: iso(today), categories: [...CATEGORY_IDS], status: "all" },
   highlight: [],
   selection: null,
   panel: "inspector",
   forecastWeek: null,
-  flyTo: (v) => set((s) => ({ flyToTarget: { zoom: s.view.zoom, ...v, nonce: Date.now() } })),
+  flyTo: (v) => set((s) => ({ view: { ...s.view, ...v }, bounds: null, flyToTarget: { zoom: s.view.zoom, ...v, nonce: Date.now() } })),
   setView: (view) => set({ view }),
-  setLayers: (patch) => set((s) => ({ layers: { ...s.layers, ...patch } })),
-  setFilters: (patch) => set((s) => ({ filters: { ...s.filters, ...patch } })),
+  setLayers: (patch) => set((s) => {
+    const layers = { ...s.layers, ...patch };
+    const nearbyOn = Object.entries(patch).some(([id, on]) => on && isNearbyCategory(id) && !s.layers[id as LayerId]);
+    return { layers, filters: { ...s.filters, categories: activeCategories(layers) },
+      causes: nearbyOn ? true : activeCategories(layers).some(isNearbyCategory) && s.causes };
+  }),
+  setFilters: (patch) => set((s) => {
+    const filters = { ...s.filters, ...patch };
+    if (filters.since > filters.until) throw new Error("Start date must be on or before end date.");
+    if (patch.categories == null) return { filters };
+    const wanted = patch.categories.length ? patch.categories : CATEGORY_IDS;
+    const layers = { ...s.layers };
+    for (const id of CATEGORY_IDS) layers[id] = wanted.includes(id);
+    return { filters: { ...filters, categories: activeCategories(layers) }, layers,
+      causes: wanted.some(isNearbyCategory) };
+  }),
   setHighlight: (highlight) => set({ highlight }),
   select: (selection) => set({ selection, panel: selection ? "inspector" : "inspector" }),
   setPanel: (panel) => set({ panel }),

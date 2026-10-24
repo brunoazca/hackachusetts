@@ -38,6 +38,42 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: MIT was searched as a report address; the chat must locate the campus and move the map
 - Where: web/src/lib/agent/geocoder.ts; data adapters; tools/server.ts; chat.ts; prompt.ts; geocoder tests
 - Idea: Use local place records then cached bounded Photon geocoding; geographic lookup is separate from incident evidence. Verified actual MIT query, map movement and nearby report. Adopt concurrently published regional Insights cards instead of duplicating them.
+### 2026-10-24 17:51 — Reviewed ready branches for the production deployment
+- Teammate: Carol
+- Agent:
+- Did: Integrated codex/insights-region-solutions, design/piper-logo and feat/steering-use-apps on codex/ready-branches-integration; preserved the new main chat controls (ca86060).
+- Why: Publish completed, compatible changes while concurrent work continues separately.
+- Where: Insights region cards, Piper logo, .kiro/KIRO_LOG.md; web/AGENTS.md remains empty.
+- Verification: Integrated agent/Insights suite: 135 passed, 19 skipped; additional current-severity regression passed; TypeScript and scoped lint passed; production build passed with font fallback warnings.
+- Held: a11y/map-twin-skip-motion has conflicts and references an absent PriorityLayer; analytics-core is still being worked on; old severity-ranking is superseded and carries analytics dependencies; chat-map-filters is superseded by the integrated main controls.
+- Idea: Keep all existing work-log entries; publish through the existing main -> Deploy web -> piper-app.vercel.app workflow. No database migrations were applied.
+### 2026-10-24 17:50 — Model report: merged the 'Why the model predicts what it ...
+- Teammate: Bruno
+- Agent: —
+- Did: Model report: merged the 'Why the model predicts what it does' section (importance, partial dependence, training-data table) into the template; page and artifact now on the current run
+- Why: Another session added interpretability to the page; keep it and use current data everywhere
+- Where: docs/rat-audit/model-report/template.html, index.html
+- Idea: —
+
+### 2026-10-24 17:48 — Model report: long backtest rerun on current model (Jan 2...
+- Teammate: Bruno
+- Agent: —
+- Did: Model report: long backtest rerun on current model (Jan 2024–Oct 2026): capture 65.3% vs 49.7%, MAE 0.0475 vs 0.0469
+- Why: Report numbers must match the model in production
+- Where: docs/rat-audit/model-report/README.md, index.html, data/bt_long.json
+- Idea: —
+
+### 2026-10-24 17:48 — Integrate all chat/map changes for the requested push
+- Teammate: Carol
+- Agent:
+- Did: Committed this chat's map controls and Insights work, integrated remote main eed900a, and connected its new 24 block-profile choices to the same map/chat state.
+- Did: Preserved the English-only policy, collapsed source disclosure and every log line from both histories; removed upstream conflict-marker artifacts without losing either entry.
+- Why: Carol requested commit and push of these changes and the earlier work from this chat.
+- Where: .kiro/KIRO_LOG.md; web/src/lib/agent/**; web/src/lib/{map-store,cell-context,cell-metrics}.ts; web/src/components/map/MapView.tsx.
+- Evidence: Integrated Agent/Insights suite 131 pass, 0 fail, 19 conditional skips; repository suite 5 pass. Build/TypeScript, scoped lint, secret scan and whitespace checks passed.
+- Evidence: Real-model browser turn selected People per km² in the original map, retained points plus heatmap, read Insights and answered in English with sources collapsed; no console errors. Screenshot: /private/tmp/piper-map-chat-integrated.jpg.
+- Decision: Publish the validated commits to origin/main under Carol's explicit request; keep Agent empty. Deployment status is separate from Git publication.
+- Idea: New map controls should reuse the shared state and tool catalog, so chat and manual controls stay synchronized.
 
 ### 2026-10-24 17:45 — Added per-site return chance as the third severity term (...
 - Teammate: Bruno
@@ -55,7 +91,53 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: docs/rat-audit/model-report/, pipeline/scripts/model_report.py
 - Idea: Long backtest being rerun on the current model; will update index.html and the long-test table
 
-<<<<<<< Updated upstream
+### 2026-10-24 17:45 — Published all completed work from this chat
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: After explicit user authorization, pushed codex/chat-map-filters (f8bb2fa) and codex/insights-region-solutions (c4eb6db, including caf9528); confirmed codex/insights-severity-ranking (5c2aed9) was already published.
+- Why: Make the chat filter integration, proposed-solution cards, work log and empty web/AGENTS.md available to the team.
+- Where: origin on github.com/brunoazca/hackachusetts; .kiro/KIRO_LOG.md
+- Verification: Git push succeeded; working tree was clean before this publication record.
+- Idea: These are separate feature branches; publishing does not merge them into main.
+
+### 2026-10-24 17:44 — Backfilled this chat's work log and emptied AGENTS.md
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: Recorded the three completed changes below retroactively; emptied web/AGENTS.md as requested.
+- Why: Keep the team work history complete and record future changes before ending each task.
+- Where: .kiro/KIRO_LOG.md; web/AGENTS.md
+- Idea: Log verification and publication status explicitly; do not present Codex work as Kiro usage.
+
+### 2026-10-24 17:44 — Backfill: model-proposed solutions in Insights cards
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: Read region_solution.py; added ranked region cards with stored AI/rules proposals, reasons, per-record actions, nearby evidence, historical statistics and provenance.
+- Why: Surface the existing region_solutions output without inventing an after-fix estimate.
+- Where: web/src/components/insights/regions/*; InsightsPanel.tsx; Sources.tsx; __tests__/region-solutions.test.tsx
+- Verification: 62 tests passed; TypeScript and scoped ESLint passed; read-only live check parsed five AI regions with 30 records each.
+- Publication: Local commit caf9528 on codex/insights-region-solutions; not pushed.
+- Idea: Historical action comparisons are observational, not measured intervention effects.
+
+### 2026-10-24 17:44 — Backfill: chat controls the map's actual filters
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: Shared dock category and display state with chat; added category tools, actual state context, and status filtering for points and aggregate counts.
+- Why: Natural-language commands must modify the same toggles shown in the map UI.
+- Where: web/src/lib/map-store.ts; map-filters.ts; agent/{context,prompt,types}.ts; agent/tools/client.ts; components/map/{MapView,LayerPanel}.tsx; agent/__tests__/*
+- Verification: 65 tests passed, seven skipped; TypeScript and scoped ESLint passed.
+- Publication: Local commit f8bb2fa on codex/chat-map-filters; push blocked by approval review, awaiting explicit branch publication authorization.
+- Idea: Keep unsupported visual actions honest; highlighting remains unsupported.
+
+### 2026-10-24 17:44 — Backfill: severity-ranked Insights UI
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: Implemented region action cards from insights-severity-ranking.md, with 5/10/20 controls, sources, map actions, defensive parsing and insights_summary fallback.
+- Why: Present where to act, supporting evidence and pending model fields without placeholder numbers.
+- Where: web/src/components/insights/{InsightsPanel,RegionCard}.tsx; load.ts; parse.ts
+- Verification: TypeScript, scoped ESLint and parser checks passed; live database verification failed due to connection at that time.
+- Publication: Commit 5c2aed9 pushed to origin/codex/insights-severity-ranking after explicit authorization; not merged here.
+- Idea: Keep fallback forecast-only ranking distinct from full observed-plus-forecast severity.
+
 ### 2026-10-24 17:40 — Make English the fixed chat response language
 - Teammate: Carol
 - Agent: Codex
@@ -63,7 +145,6 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Carol requested English always, with commit and push to the running application.
 - Where: web/src/lib/agent/prompt.ts
 - Idea: State the response language independently of the user's input language and do not expose policy explanations in replies.
-=======
 ### 2026-10-24 17:40 — Ran hourly design critique of Piper (/) at 1280x900 + 390...
 - Teammate: —
 - Agent: da-vinci
@@ -71,7 +152,6 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: scored civic accessibility criterion; keep a current read of the inspector UI
 - Where: docs/design-critique/latest.md
 - Idea: Collapse the two header icon-buttons into the row below ~420px so refresh/theme aren't clipped on a phone
->>>>>>> Stashed changes
 
 ### 2026-10-24 17:36 — Built the AI region solution job (region_solution.py + re...
 - Teammate: Bruno
@@ -111,6 +191,18 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Carol reported that the reference chips overwhelm the chat and requested a toggle, then authorized a push.
 - Where: web/src/components/chat/Message.tsx
 - Idea: Keep evidence accessible on demand while the answer stays readable.
+### 2026-10-24 17:43 — Connect chat to all map controls and Insights
+- Teammate: Carol
+- Agent:
+- Did: Shared the original map's real layers, dates/status, display, nearby records, forecast, neighborhood and viewport with chat; connected highlights and automatic panel visibility.
+- Did: Added get_insights using the panel's RPC/parser and historical sources; shared deterministic forecast comparisons to prevent inverted MAE claims.
+- Why: Carol requested chat control of the original map and access to Insights.
+- Where: web/src/lib/agent/**, web/src/lib/{map-controls,map-store,insights-history,forecast-comparison}.ts, map/chat/act/insights components, and this log.
+- Evidence: Agent/Insights tests 130 pass, 0 fail, 19 conditional skips; repository tests 5 pass. Scoped lint, production build/TypeScript, secret scanner and diff checks passed.
+- Evidence: Real-model local browser flow applied map filters, recognized a manual status change, read live Insights and correctly separated better hotspot ranking from worse count MAE. Screenshot: /private/tmp/piper-map-chat-verified.jpg.
+- Decision: Local worktree preview on port 3046; no push/deploy, credentials changed, migrations or shared database writes.
+- Decision: Keep Agent empty in this chat's log entries, as requested by Carol; record each substantive piece of work here.
+- Idea: Chat and visual controls should share one state; analytical verdicts should use the same calculations as the panel.
 
 ### 2026-10-24 17:25 — Adicionei a secao 5.4a na spec de Insights: agregar popul...
 - Teammate: Carol

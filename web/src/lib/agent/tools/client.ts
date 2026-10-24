@@ -1,23 +1,18 @@
 import { tool } from "ai";
 import { z } from "zod";
 import type { LayerId, Mode, Selection } from "../../map-store";
+import { CATEGORY_IDS, LAYER_IDS, LAYER_GROUPS, isNearbyCategory, type ViewMode } from "../../map-controls";
+import { CELL_METRICS } from "../../cell-metrics";
 
 // Client-side map tools (task 4.3). The route declares them without `execute`,
 // so the model's calls stream to the browser; ChatPanel runs them on the map
 // store through executeClientTool and sends the output back.
 
-export const LAYER_IDS = [
-  "rodent", "rats_other", "food", "shelter", "displace",
-  "restaurants", "bigbelly", "events", "sites", "forecast",
-  "heatmap", "tracts_svi", "tracts_asthma", "listings", "prices",
-] as const satisfies readonly LayerId[];
-// Compile-time check that LAYER_IDS lists every LayerId in map-store.ts.
-type _AllLayers = Exclude<LayerId, (typeof LAYER_IDS)[number]> extends never ? true : never;
-const _allLayers: _AllLayers = true;
-void _allLayers;
+export { LAYER_IDS } from "../../map-controls";
+const TOOL_LAYER_IDS = [...LAYER_IDS, ...Object.keys(LAYER_GROUPS), "heatmap"] as string[];
 
 const SELECT_KINDS = ["incident", "place", "event", "site", "cell", "listing", "tract"] as const;
-const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
+const isoDate = z.iso.date();
 
 export const clientTools = {
   app_set_mode: tool({
@@ -25,6 +20,10 @@ export const clientTools = {
     inputSchema: z.object({
       mode: z.enum(["assess", "act"]),
     }).strict(),
+  }),
+  map_filter_sites: tool({
+    description: "Filter Places to visit by neighborhood, matching the original queue filter. Use a neighborhood returned by a site lookup or the current map context. Empty string clears. Opens Act mode.",
+    inputSchema: z.object({ neighborhood: z.string().max(100) }).strict(),
   }),
   map_fly_to: tool({
     description: "Move the map to a point. Only use coordinates returned by a data tool (geocode, get_site, search_incidents…), never guessed ones.",
@@ -35,10 +34,10 @@ export const clientTools = {
     }),
   }),
   map_set_layers: tool({
-    description: "Turn map layers on or off.",
+    description: "Turn any original map category or context layer on/off. food/shelter/displace/rats/rats_other toggle groups; ctx_housing is old housing, ctx_buildings is buildings by age. heatmap toggles hot spots. Other settings are preserved.",
     inputSchema: z.object({
-      on: z.array(z.enum(LAYER_IDS)).optional(),
-      off: z.array(z.enum(LAYER_IDS)).optional(),
+      on: z.array(z.enum(TOOL_LAYER_IDS)).optional(),
+      off: z.array(z.enum(TOOL_LAYER_IDS)).optional(),
     }),
   }),
   map_set_filters: tool({
@@ -46,12 +45,20 @@ export const clientTools = {
     inputSchema: z.object({
       since: isoDate.optional(),
       until: isoDate.optional(),
-      categories: z.array(z.string()).optional().describe("Incident category ids; [] = all"),
+      categories: z.array(z.enum(CATEGORY_IDS)).optional().describe("Exact categories to show, replacing enabled incident layers; [] = all. Use map_set_layers to toggle individual layers or turn every category off."),
       status: z.enum(["all", "open", "closed"]).optional(),
     }),
   }),
+  map_set_view: tool({
+    description: "Change the original map display: points (each report), heat (hot spots), both; show/hide nearby records; choose a per-250m-block profile metric (building age or population context). block_metric null turns the profile off. These metrics are context, not evidence of causes.",
+    inputSchema: z.object({
+      mode: z.enum(["points", "heat", "both"]).optional(),
+      nearby_records: z.boolean().optional(),
+      block_metric: z.enum(CELL_METRICS.map(metric => metric.key)).nullable().optional(),
+    }).strict(),
+  }),
   map_highlight: tool({
-    description: "Emphasize features on the map by id (ids from tool results). Empty list clears.",
+    description: "Draw rings around loaded incidents and Act sites by id. Fly to a street-level zoom first for report ids. Features outside the current layers, period, status or viewport cannot be highlighted. Empty list clears.",
     inputSchema: z.object({ ids: z.array(z.string()).max(200) }),
   }),
   map_select: tool({
@@ -60,7 +67,7 @@ export const clientTools = {
   }),
   map_show_forecast: tool({
     description: "Show the forecast layer, optionally for a given week (ISO date of the week's Monday).",
-    inputSchema: z.object({ week_start: isoDate.optional() }),
+    inputSchema: z.object({ week_start: z.union([isoDate, z.literal("4w")]).optional() }),
   }),
   open_panel: tool({
     description: "Switch the side panel tab.",
@@ -74,6 +81,11 @@ export const CLIENT_TOOL_NAMES = Object.keys(clientTools) as ClientToolName[];
 /** The map-store actions the client tools need (a subset of useMap's state). */
 export type MapActions = {
   setMode: (mode: Mode) => void;
+  setSiteNeighborhood: (neighborhood: string) => void;
+  setViewMode: (mode: ViewMode) => void;
+  setCauses: (on: boolean) => void;
+  setCellMetric: (metric: string | null) => void;
+  filters?: { since: string; until: string };
   flyTo: (v: { lat: number; lon: number; zoom?: number }) => void;
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
   setFilters: (patch: Partial<{ since: string; until: string; categories: string[]; status: "all" | "open" | "closed" }>) => void;
@@ -101,34 +113,54 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
       map.setMode(mode);
       return { ok: true, done: `App view updated: ${mode}` };
     }
+    case "map_filter_sites": {
+      const { neighborhood } = v as { neighborhood: string };
+      map.setSiteNeighborhood(neighborhood);
+      map.setLayers({ sites: true });
+      map.setMode("act");
+      return { ok: true, done: neighborhood ? `Places filtered to ${neighborhood}` : "Showing all neighborhoods" };
+    }
     case "map_fly_to": {
       const { lat, lon, zoom } = v as { lat: number; lon: number; zoom?: number };
       map.flyTo(zoom == null ? { lat, lon } : { lat, lon, zoom });
       return { ok: true, done: `Moved the map to ${lat.toFixed(4)}, ${lon.toFixed(4)}` };
     }
     case "map_set_layers": {
-      const { on = [], off = [] } = v as { on?: LayerId[]; off?: LayerId[] };
+      const { on = [], off = [] } = v as { on?: string[]; off?: string[] };
       const patch: Partial<Record<LayerId, boolean>> = {};
-      for (const l of off) patch[l] = false;
-      for (const l of on) patch[l] = true;
-      map.setLayers(patch);
-      if ([...on, ...off].some(layer => layer !== "forecast")) {
-        return { ok: true, done: "Layer request recorded", rendered: false, caveat: "Only the forecast layer can currently be changed from chat. Use the map controls for the other requested layers; do not claim they changed." };
+      for (const [ids, value] of [[off, false], [on, true]] as const) {
+        for (const id of ids) {
+          if (id === "heatmap") { map.setViewMode(value ? "heat" : "points"); continue; }
+          const group = LAYER_GROUPS[id as keyof typeof LAYER_GROUPS];
+          for (const layer of group ?? [id as LayerId]) patch[layer] = value;
+        }
       }
+      map.setLayers(patch);
+      map.setMode(patch.sites === true ? "act" : "assess");
+      if (Object.entries(patch).some(([id, on]) => on && isNearbyCategory(id))) map.setCauses(true);
       return { ok: true, done: `Layers on: ${on.join(", ") || "—"}; off: ${off.join(", ") || "—"}` };
     }
     case "map_set_filters": {
+      const filters = v as { since?: string; until?: string };
+      const since = filters.since ?? map.filters?.since;
+      const until = filters.until ?? map.filters?.until;
+      if (since && until && since > until) return { ok: false, error: "Start date must be on or before end date." };
       map.setFilters(v);
-      const filters = v as { categories?: string[]; status?: string };
-      if (filters.categories != null || filters.status != null) {
-        return { ok: true, done: "Filter request recorded", rendered: false, caveat: "Category and status filters cannot currently be changed from chat. Any supplied date range was applied; do not claim the category or status filter changed." };
-      }
+      map.setMode("assess");
       return { ok: true, done: "Filters updated" };
+    }
+    case "map_set_view": {
+      const { mode, nearby_records, block_metric } = v as { mode?: ViewMode; nearby_records?: boolean; block_metric?: string | null };
+      map.setMode("assess");
+      if (mode) map.setViewMode(mode);
+      if (nearby_records != null) map.setCauses(nearby_records);
+      if (block_metric !== undefined) map.setCellMetric(block_metric);
+      return { ok: true, done: "Map display updated" };
     }
     case "map_highlight": {
       const { ids } = v as { ids: string[] };
       map.setHighlight(ids);
-      return { ok: true, done: "Highlight request recorded", rendered: false, caveat: "Visual highlighting is not available in the current map. Use the feature chips to inspect the reports; do not say they were highlighted." };
+      return { ok: true, done: ids.length ? "Highlighting matching loaded reports and sites" : "Highlights cleared", caveat: "Only loaded reports and visible Act sites matching the current map filters are highlighted. Zoom to street level for individual report ids." };
     }
     case "map_select": {
       const { kind, id } = v as { kind: (typeof SELECT_KINDS)[number]; id: string };
@@ -137,6 +169,7 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
     }
     case "map_show_forecast": {
       const { week_start } = v as { week_start?: string };
+      map.setMode("assess");
       map.setLayers({ forecast: true });
       map.setForecastWeek(week_start ?? null);
       return { ok: true, done: `Forecast layer on${week_start ? ` for week of ${week_start}` : ""}` };

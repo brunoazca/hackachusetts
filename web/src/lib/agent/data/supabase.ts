@@ -190,6 +190,11 @@ export function createSupabaseData(env: Env = process.env, now: () => Date = () 
   }
 
   return {
+    async insightsSummary() {
+      const { data, error } = await db.rpc("insights_summary", undefined, { get: true });
+      fail("insights_summary", error);
+      return data;
+    },
     async incidents(q: IncidentQuery) {
       let r = db.from("incidents").select(INCIDENT_COLS, { count: "exact" });
       if (q.categories?.length) r = r.in("category", q.categories);

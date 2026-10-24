@@ -2,6 +2,7 @@ import { convertToModelMessages, safeValidateUIMessages, stepCountIs, streamText
 import { parseMapContext } from "./context";
 import { systemPrompt } from "./prompt";
 import { providerStatus, getModel } from "./provider";
+import { createInsightsTools } from "./tools/insights";
 import { clientTools } from "./tools/client";
 import { createServerTools } from "./tools/server";
 import { createSupabaseData, supabaseConfigured } from "./data/supabase";
@@ -19,7 +20,7 @@ export type ChatDeps = {
 };
 
 export function createTools(data: AgentData | null, now?: () => Date) {
-  return { ...createServerTools({ data, now, lookupPlace }), ...clientTools };
+  return { ...createServerTools({ data, now, lookupPlace }), ...createInsightsTools(data), ...clientTools };
 }
 
 export function nyDate(d: Date): string {
