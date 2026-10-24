@@ -51,7 +51,7 @@ export default function LineRat({
       <circle cx={31.5} cy={31.2} r={1.2} fill="currentColor" stroke="none" />
 
       {/* Same endpoint and tangent as the haunch; horizontal at the pipe. */}
-      <g stroke={accentTail ? "var(--p-accent)" : "currentColor"}>
+      <g stroke={accentTail ? "var(--p-return)" : "currentColor"}>
         <path d="M67 40 C63.5 43 57 44.5 57 47 C57 49 61 50 66 50 H97" />
         <circle cx={72} cy={50} r={2.1} strokeWidth={1.5} fill="var(--p-bg)" />
         <circle cx={81} cy={50} r={2.1} strokeWidth={1.5} fill="var(--p-bg)" />

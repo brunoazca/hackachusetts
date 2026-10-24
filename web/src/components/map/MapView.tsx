@@ -1,6 +1,6 @@
 "use client";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Map, { Layer, NavigationControl, Source, type MapLayerMouseEvent, type MapRef } from "react-map-gl/maplibre";
 import type { FeatureCollection, Point } from "geojson";
 import { setWorkerUrl, type ExpressionSpecification, type HeatmapLayerSpecification } from "maplibre-gl";
@@ -12,7 +12,7 @@ import MapLegend from "./MapLegend";
 import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
-import { addCategoryIcons, iconId } from "./icons";
+import { addCategoryIcons } from "./icons";
 import { useTheme } from "@/lib/theme-store";
 import { rightInset, useUi } from "@/lib/ui-store";
 import { basemap, BASEMAP_STYLE_URL, themes, type ThemeName } from "@/lib/design-tokens";
@@ -64,6 +64,22 @@ const EMPTY: FC = { type: "FeatureCollection", features: [] };
 const POINTS_ZOOM = 15;
 const cellFor = (zoom: number) => (12 * 360) / (512 * 2 ** zoom);
 const N = ["coalesce", ["get", "n"], 1] as unknown as ExpressionSpecification;
+
+// Cluster bookkeeping: how many reports of each family a group holds, and its color from the winner.
+const FAMILIES = ["rats", "food", "shelter", "displace"] as const;
+const FAMILY_COLOR: Record<string, string> = Object.fromEntries(
+  FAMILIES.map((g) => [g, Object.values(CATS).find((c) => c.group === g)?.color ?? "#555"]),
+);
+const famSum = (g: string) => ["+", ["case", ["==", ["get", "group"], g], N, 0]];
+const CLUSTER_PROPS = { total: ["+", N], ...Object.fromEntries(FAMILIES.map((g) => [`f_${g}`, famSum(g)])) };
+const fam = (g: string) => ["coalesce", ["get", `f_${g}`], 0];
+const beats = (g: string) => ["all", ...FAMILIES.filter((o) => o !== g).map((o) => [">=", fam(g), fam(o)])];
+const CLUSTER_COLOR = [
+  "case",
+  ["has", "point_count"],
+  ["case", ...FAMILIES.slice(0, -1).flatMap((g) => [beats(g), FAMILY_COLOR[g]]), FAMILY_COLOR.displace],
+  ["match", ["get", "category"], ...Object.entries(CATS).flatMap(([id, c]) => [id, c.color]), "#555"],
+] as unknown as ExpressionSpecification;
 
 // Heatmap paint for one family of signals: transparent at zero density, then the family's ramp.
 // Each point weighs ~1500/n so a family with many reports (dead animals, trash) doesn't drown the
@@ -126,13 +142,38 @@ export default function MapView() {
     })),
   }), [sites]);
 
-  // Split one fetch into one collection per category (one clustered source each).
-  const byCategory = useMemo(() => {
-    const out: Record<string, FC> = {};
-    for (const c of cats) out[c] = { type: "FeatureCollection", features: [] };
-    for (const f of data.features) out[f.properties.category]?.features.push(f);
-    return out;
-  }, [data, cats]);
+  // Everything that should show as markers right now, tagged with its family for cluster colors.
+  // Causes join the markers when asked for, or once you reach street level.
+  const street = zoom >= 15;
+  const clusterFC = useMemo<FC>(() => {
+    const on = new Set(cats);
+    const keep = data.features.filter((f) => on.has(f.properties.category) && (CATS[f.properties.category]?.group === "rats" || causes || street));
+    // Reports at the very same spot (one address) would draw exactly on top of each other and look
+    // like one. Fold them into one marker with a count; tapping it opens the address with all of them.
+    const spots = new globalThis.Map<string, typeof keep>();
+    for (const f of keep) {
+      const [x, y] = f.geometry.coordinates;
+      const k = `${x.toFixed(5)},${y.toFixed(5)}`;
+      const arr = spots.get(k);
+      if (arr) arr.push(f); else spots.set(k, [f]);
+    }
+    const features: FC["features"] = [];
+    for (const group of spots.values()) {
+      const first = group[0];
+      if (group.length === 1) {
+        features.push({ ...first, properties: { ...first.properties, group: CATS[first.properties.category]?.group ?? "rats" } as IncidentProps });
+        continue;
+      }
+      const n = group.reduce((a, f) => a + (f.properties.n ?? 1), 0);
+      const n_open = group.reduce((a, f) => a + (f.properties.n_open ?? (f.properties.status === "open" ? 1 : 0)), 0);
+      const counts: Record<string, number> = {};
+      for (const f of group) counts[f.properties.category] = (counts[f.properties.category] ?? 0) + (f.properties.n ?? 1);
+      const category = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+      const pick = group.find((f) => f.properties.category === category && f.properties.id) ?? first;
+      features.push({ ...pick, properties: { ...pick.properties, category, n, n_open, spot: true, group: CATS[category]?.group ?? "rats" } as IncidentProps });
+    }
+    return { type: "FeatureCollection", features };
+  }, [data, cats, causes, street]);
 
   // Two heatmap families: rat signals vs. everything that explains them.
   const heat = useMemo(() => {
@@ -149,25 +190,32 @@ export default function MapView() {
   const total = useMemo(() => data.features.reduce((a, f) => a + (f.properties.n ?? 1), 0), [data]);
   const showHeat = viewMode !== "points";
   // In "Hot spots" mode, groups and markers still appear once you zoom to street level.
-  const showClusters = true;
   const markerMinZoom = viewMode === "heat" ? 14 : 0;
 
-  const load = useCallback(async () => {
+  // Fetch a padded box and reuse it: pans and small zooms that stay inside it need no request,
+  // so the map settles at once. A new request only goes out when the view leaves the box or the
+  // data's detail level changes (street points vs. one cell size per zoom step).
+  const fetched = useRef<{ key: string; box: BBox } | null>(null);
+  const load = useCallback(async (force = false) => {
     const map = mapRef.current;
     if (!map) return;
     const b = map.getBounds();
-    const bbox: BBox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
-    setBbox(bbox);
-    setZoom(map.getZoom());
+    const view: BBox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
+    const z = map.getZoom();
+    setZoom(z);
+    const key = z >= POINTS_ZOOM ? "pts" : `bins${Math.floor(z)}`;
+    const f = fetched.current;
+    if (!force && f && f.key === key && view[0] >= f.box[0] && view[1] >= f.box[1] && view[2] <= f.box[2] && view[3] <= f.box[3]) return;
+    const padX = (view[2] - view[0]) * 0.35, padY = (view[3] - view[1]) * 0.35;
+    const box: BBox = [view[0] - padX, view[1] - padY, view[2] + padX, view[3] + padY];
     const id = ++reqId.current;
-    if (cats.length === 0) { setData(EMPTY); return; }
+    if (cats.length === 0) { setData(EMPTY); fetched.current = null; return; }
     setLoading(true);
     try {
-      const z = map.getZoom();
-      const fc = z >= POINTS_ZOOM
-        ? await fetchIncidents(bbox, cats, filters.since, filters.until)
-        : await fetchIncidentBins(bbox, cats, filters.since, filters.until, cellFor(Math.floor(z)));
-      if (id === reqId.current) { setData(fc); setError(null); }
+      const fc = key === "pts"
+        ? await fetchIncidents(box, cats, filters.since, filters.until)
+        : await fetchIncidentBins(box, cats, filters.since, filters.until, cellFor(Math.floor(z)));
+      if (id === reqId.current) { setData(fc); setBbox(box); setError(null); fetched.current = { key, box }; }
     } catch (e) {
       if (id === reqId.current) setError(e instanceof Error ? e.message : String(e));
     } finally {
@@ -175,11 +223,12 @@ export default function MapView() {
     }
   }, [cats, filters.since, filters.until]);
 
-  useEffect(() => { load(); }, [load]);
+  // Layers or dates changed: the cached box no longer matches, fetch again.
+  useEffect(() => { load(true); }, [load]);
   const moveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const onMoveEnd = useCallback(() => {
     if (moveTimer.current) clearTimeout(moveTimer.current);
-    moveTimer.current = setTimeout(load, 300);
+    moveTimer.current = setTimeout(() => load(), 120);
   }, [load]);
 
   const onLoad = useCallback(async () => {
@@ -212,15 +261,58 @@ export default function MapView() {
   }, [theme, iconsReady]);
 
   const interactive = useMemo(
-    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
-    [cats, iconsReady, appMode, enabled.ctx_buildings, zoom, forecastOn],
+    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? ["all-clusters", "all-points"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
+    [iconsReady, appMode, enabled.ctx_buildings, zoom, forecastOn],
   );
+
+  // A tap on empty map flies there and opens the closest real report.
+  const pending = useRef<[number, number] | null>(null);
+  const nearest = useCallback((at: [number, number], withId: boolean) => {
+    const map = mapRef.current;
+    if (!map) return null;
+    const p = map.project(at);
+    let best: (typeof clusterFC.features)[number] | null = null, bestD = Infinity;
+    for (const f of clusterFC.features) {
+      if (withId && (!f.properties.id || ((f.properties.n ?? 1) > 1 && !f.properties.spot))) continue;
+      const q = map.project(f.geometry.coordinates as [number, number]);
+      const d = (q.x - p.x) ** 2 + (q.y - p.y) ** 2;
+      if (d < bestD) { bestD = d; best = f; }
+    }
+    return best;
+  }, [clusterFC]);
+
+  // Once the street-level points arrive after a fly-in, pick the closest one.
+  useEffect(() => {
+    const at = pending.current;
+    if (!at || zoom < POINTS_ZOOM) return;
+    const f = nearest(at, true);
+    if (!f) return;
+    pending.current = null;
+    select({ kind: "incident", id: String(f.properties.id) });
+  }, [clusterFC, zoom, nearest, select]);
 
   const onClick = useCallback((e: MapLayerMouseEvent) => {
     const f = e.features?.[0];
-    if (!f) return;
+    if (!f) {
+      const at: [number, number] = [e.lngLat.lng, e.lngLat.lat];
+      const near = nearest(at, true);
+      const map = mapRef.current;
+      if (near && (map?.getZoom() ?? 0) >= POINTS_ZOOM) {
+        select({ kind: "incident", id: String(near.properties.id) });
+        map?.easeTo({ center: near.geometry.coordinates as [number, number], duration: 500 });
+        return;
+      }
+      const target = (nearest(at, false)?.geometry.coordinates as [number, number] | undefined) ?? at;
+      pending.current = target;
+      map?.easeTo({ center: target, zoom: Math.max(POINTS_ZOOM + 1, map.getZoom()), duration: 700 });
+      return;
+    }
     if (f.layer.id === "forecast-hit") {
       select({ kind: "cell", id: String(f.properties?.id) });
+      return;
+    }
+    if (f.properties?.spot && f.properties?.id) {
+      select({ kind: "incident", id: String(f.properties.id) });
       return;
     }
     if (f.layer.id.endsWith("-clusters") || !f.properties?.id) {
@@ -236,7 +328,7 @@ export default function MapView() {
       return;
     }
     select({ kind: "incident", id: String(f.properties?.id) });
-  }, [select]);
+  }, [select, nearest]);
 
   const selectedId = selection && "id" in selection ? selection.id : "";
 
@@ -263,70 +355,61 @@ export default function MapView() {
         <Source id="heat-rats" type="geojson" data={heat.rats}>
           <Layer id="heat-rats" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.rats, 0.75, heat.nRats)} />
         </Source>
-        {iconsReady && cats.map((c) => {
-          const color = CATS[c]?.color ?? "#555";
-          // Rat signals always draw; causes draw when asked for, or once you are at street level.
-          const rat = CATS[c]?.group === "rats";
-          const minz = rat ? markerMinZoom : causes ? markerMinZoom : 15;
-          return (
-            <Fragment key={c}>
-              <Source
-                id={`src-${c}`} type="geojson" data={byCategory[c] ?? EMPTY}
-                cluster clusterMaxZoom={16} clusterRadius={45}
-                clusterProperties={{ total: ["+", N] }}
-              >
-                <Layer
-                  id={`${c}-clusters`}
-                  type="circle"
-                  minzoom={minz}
-                  layout={{ visibility: showClusters ? "visible" : "none" }}
-                  filter={["any", ["has", "point_count"], [">", N, 1]]}
-                  paint={{
-                    // Solid disc + soft halo in the same color: reads as "a group of these".
-                    "circle-color": color,
-                    "circle-opacity": 0.95,
-                    "circle-radius": ["step", ["coalesce", ["get", "total"], N], 12, 25, 15, 100, 19, 500, 24],
-                    "circle-stroke-color": color,
-                    "circle-stroke-width": 6,
-                    "circle-stroke-opacity": 0.25,
-                  }}
-                />
-                <Layer
-                  id={`${c}-cluster-count`}
-                  type="symbol"
-                  minzoom={minz}
-                  filter={["any", ["has", "point_count"], [">", N, 1]]}
-                  layout={{
-                    visibility: showClusters ? "visible" : "none",
-                    "text-field": ["to-string", ["coalesce", ["get", "total"], N]],
-                    "text-size": 13,
-                    "text-font": ["Noto Sans Bold"],
-                    "text-allow-overlap": true,
-                  }}
-                  paint={{ "text-color": "#ffffff", "text-halo-color": "rgba(0,0,0,0.35)", "text-halo-width": 1 }}
-                />
-                <Layer
-                  id={`${c}-selected`}
-                  type="circle"
-                  filter={["==", ["get", "id"], selectedId]}
-                  paint={{ "circle-radius": 19, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": T.fg, "circle-stroke-width": 2.5 }}
-                />
-                <Layer
-                  id={`${c}-points`}
-                  type="symbol"
-                  minzoom={minz}
-                  filter={["all", ["!", ["has", "point_count"]], ["==", N, 1]]}
-                  layout={{
-                    "icon-image": ["case", ["any", ["==", ["get", "status"], "open"], [">", ["coalesce", ["get", "n_open"], 0], 0]], iconId(c), iconId(c, true)],
-                    "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.75, 17, 1.1],
-                    "icon-allow-overlap": true,
-                  }}
-                  paint={{ "icon-opacity": 1 }}
-                />
-              </Source>
-            </Fragment>
-          );
-        })}
+        {iconsReady && (
+          // One clustered source for every visible kind, so groups never stack on top of each other.
+          // A group takes the color of whichever family (rats, food, shelter, works) it holds most of.
+          <Source
+            id="src-all" type="geojson" data={clusterFC}
+            cluster clusterMaxZoom={16} clusterRadius={50}
+            clusterProperties={CLUSTER_PROPS}
+          >
+            <Layer
+              id="all-clusters"
+              type="circle"
+              minzoom={markerMinZoom}
+              filter={["any", ["has", "point_count"], [">", N, 1]]}
+              paint={{
+                "circle-color": CLUSTER_COLOR,
+                "circle-opacity": 0.95,
+                "circle-radius": ["step", ["coalesce", ["get", "total"], N], 12, 25, 15, 100, 19, 500, 24],
+                "circle-stroke-color": CLUSTER_COLOR,
+                "circle-stroke-width": 6,
+                "circle-stroke-opacity": 0.25,
+              }}
+            />
+            <Layer
+              id="all-cluster-count"
+              type="symbol"
+              minzoom={markerMinZoom}
+              filter={["any", ["has", "point_count"], [">", N, 1]]}
+              layout={{
+                "text-field": ["to-string", ["coalesce", ["get", "total"], N]],
+                "text-size": 13,
+                "text-font": ["Noto Sans Bold"],
+                "text-allow-overlap": true,
+              }}
+              paint={{ "text-color": "#ffffff", "text-halo-color": "rgba(0,0,0,0.35)", "text-halo-width": 1 }}
+            />
+            <Layer
+              id="all-selected"
+              type="circle"
+              filter={["==", ["get", "id"], selectedId]}
+              paint={{ "circle-radius": 19, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": T.fg, "circle-stroke-width": 2.5 }}
+            />
+            <Layer
+              id="all-points"
+              type="symbol"
+              minzoom={markerMinZoom}
+              filter={["all", ["!", ["has", "point_count"]], ["==", N, 1]]}
+              layout={{
+                "icon-image": ["concat", "cat-", ["get", "category"], ["case", ["any", ["==", ["get", "status"], "open"], [">", ["coalesce", ["get", "n_open"], 0], 0]], "", "-closed"]],
+                "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.75, 17, 1.1],
+                "icon-allow-overlap": true,
+              }}
+              paint={{ "icon-opacity": 1 }}
+            />
+          </Source>
+        )}
         {appMode === "act" && (
           <Source id="sites" type="geojson" data={sitesFC}>
             <Layer

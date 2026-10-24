@@ -1,0 +1,1027 @@
+{
+  "title": "Piper — Rat Audit Boston demo",
+  "version": "2026-10-24 v3 (data-chain update)",
+  "script": "docs/submission/video-script.md",
+  "duration_s": 175,
+  "notes": "Starting values for this production. Times in seconds of edited video. Camera framing names a target; measure coordinates in rehearsal and add them as camera.*.box = [x, y, w, h] in source pixels. 'vo' lines carry their own start time; voiceover is a separate track from shots.",
+  "output": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "video": "H.264 High, yuv420p",
+    "audio": "AAC 48 kHz"
+  },
+  "capture": {
+    "viewport_css": [
+      1920,
+      1080
+    ],
+    "device_scale_factor": 2,
+    "source_px": [
+      3840,
+      2160
+    ],
+    "fps": 60
+  },
+  "motion": {
+    "camera_ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "camera_ease_frame": "6u^5 - 15u^4 + 10u^3",
+    "levels": {
+      "context": 1.0,
+      "working": [
+        1.3,
+        1.5
+      ],
+      "detail": [
+        1.6,
+        1.8
+      ]
+    },
+    "max_scale": 1.8,
+    "zoom_in_ms": 600,
+    "reframe_ms": 800,
+    "zoom_out_ms": 650,
+    "pre_click_settle_ms": 300,
+    "breathing_room": 0.1,
+    "caption_safe_bottom": 0.12,
+    "dead_zone": 0.65,
+    "motion_blur": false,
+    "cursor": {
+      "scale": 1.35,
+      "local_ms": 350,
+      "nearby_ms": 600,
+      "hover_ms": 350,
+      "click_pulse_ms": 160
+    },
+    "typing_cps": 11,
+    "reading_min_ms": {
+      "confirmation": 1000,
+      "short_result": 3000,
+      "dense_result": 5000
+    },
+    "captions": {
+      "max_lines": 2,
+      "cps": [
+        15,
+        17
+      ],
+      "font": "Atkinson Hyperlegible Next 34px",
+      "fg": "#EDE6DA",
+      "bg": "rgba(15,13,12,0.82)",
+      "position": "bottom-centre",
+      "max_width": 0.7
+    },
+    "callout": {
+      "color": "#C9A55C",
+      "outline_px": 2,
+      "radius_px": 8,
+      "font": "Atkinson Hyperlegible Next 26px",
+      "in_ms": 220,
+      "out_ms": 150
+    },
+    "transitions": {
+      "default": "cut",
+      "dissolve_ms": 400
+    }
+  },
+  "sources": {
+    "app": "https://rat-ops.vercel.app (or pnpm dev in web/, bound to 127.0.0.1)",
+    "anim_logo": "docs/submission/beat4-animation.html?t=23.7",
+    "anim_paradox": "docs/submission/beat4-animation.html?t=0&to=7.8",
+    "anim_reveal": "docs/submission/beat4-animation.html?t=10.3&to=27.3",
+    "mockup_fallback": "docs/design/mockup/index.html (branch feat/piper-ui; tag shots 'Prototype')"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "beat": 0,
+      "start_time": 0.0,
+      "end_time": 3.6,
+      "viewer_takeaway": "This is about one place.",
+      "source_scene": "anim_logo",
+      "action": "Play slice. Overlay the Piper wordmark at 0.8 s.",
+      "focus_target": "the single pin and the wordmark",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "hidden",
+      "narration": [
+        {
+          "start": 0.2,
+          "text": "In the legend, the Piper led the rats out of Hamelin."
+        }
+      ],
+      "on_screen_text": [
+        "Normandy St · Dorchester 02121",
+        "A block problem, not an address problem.",
+        "Piper (overlay, Bodoni Moda Italic, brass)"
+      ],
+      "hold_duration": 2.0
+    },
+    {
+      "id": "S02",
+      "beat": 0,
+      "start_time": 3.6,
+      "end_time": 7.0,
+      "viewer_takeaway": "Piper's promise.",
+      "source_scene": "freeze last frame of S01",
+      "action": "Tagline fades in under the wordmark.",
+      "focus_target": "wordmark and tagline",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "hidden",
+      "narration": [
+        {
+          "start": 4.7,
+          "text": "Boston can't close its way out of rats."
+        }
+      ],
+      "on_screen_text": [
+        "Follow the rats."
+      ],
+      "hold_duration": 2.2
+    },
+    {
+      "id": "S03",
+      "beat": 0,
+      "start_time": 7.0,
+      "end_time": 12.0,
+      "viewer_takeaway": "Piper is this app.",
+      "source_scene": "app: Act mode, Simple depth, queue and map",
+      "action": "400 ms dissolve from S02. Wordmark gone before the map appears.",
+      "focus_target": "queue and map together",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "hidden",
+      "narration": [
+        {
+          "start": 8.0,
+          "text": "Piper follows them to their source, so the city can act."
+        }
+      ],
+      "on_screen_text": [],
+      "hold_duration": 3.5
+    },
+    {
+      "id": "S04",
+      "beat": 1,
+      "start_time": 12.0,
+      "end_time": 20.0,
+      "viewer_takeaway": "One live list of the sites that keep coming back.",
+      "source_scene": "app: SiteQueue, MapView, TopBar Live badge",
+      "action": "Cursor fades in, resting on empty map right of the queue. No clicks.",
+      "focus_target": "the Due rows at the top of the queue and the Live badge",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "appear at rest point, still",
+      "narration": [
+        {
+          "start": 12.5,
+          "text": "This is Piper. Every rodent report in Boston, live, ranked by the sites that keep coming back."
+        }
+      ],
+      "on_screen_text": [
+        "Every count is a 311 report, not a rat. (label lane, 13.0–19.5)",
+        "Due",
+        "Live · updated … (or seeded)"
+      ],
+      "hold_duration": 6.5
+    },
+    {
+      "id": "S05",
+      "beat": 1,
+      "start_time": 20.0,
+      "end_time": 24.0,
+      "viewer_takeaway": "This is a known public problem.",
+      "source_scene": "card: news wall (screenshots of real headlines from the outlets cited in knowledge/15 §2 and §5)",
+      "action": "Static wall. No push-in.",
+      "focus_target": "the headlines",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [
+        {
+          "start": 20.1,
+          "text": "Rats are in the news."
+        },
+        {
+          "start": 22.2,
+          "text": "This year Boston logged 5,321 rodent reports."
+        }
+      ],
+      "on_screen_text": [
+        "real headlines, unedited"
+      ],
+      "hold_duration": 3.5
+    },
+    {
+      "id": "S06",
+      "beat": 1,
+      "start_time": 24.0,
+      "end_time": 31.8,
+      "viewer_takeaway": "Closed isn't fixed: 407 addresses came back.",
+      "source_scene": "anim_paradox",
+      "action": "Play slice; it stops at 7.8 s, before the 46 / 237 / 14 strip.",
+      "focus_target": "the count, the 99% stamp cracking, the 407 line",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [
+        {
+          "start": 27.0,
+          "text": "Last year, almost every case was closed."
+        },
+        {
+          "start": 29.9,
+          "text": "Yet 407 addresses came back."
+        }
+      ],
+      "on_screen_text": [
+        "as built in the animation (final)"
+      ],
+      "hold_duration": 2.0
+    },
+    {
+      "id": "S07",
+      "beat": 1,
+      "start_time": 31.8,
+      "end_time": 39.5,
+      "viewer_takeaway": "The inspector opens the top Due site.",
+      "source_scene": "app: SiteQueue and MapView",
+      "action": "Cut back to the app. Zoom in to the queue at 32.5. Cursor to the Normandy St row (500 ms), hover 350 ms, click at 34.5. Zoom out at 34.8 so the map fly (900 ms) and rings are visible.",
+      "focus_target": "the Normandy St row and its Due tag, then the map flying to it",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.4,
+        "target": "queue top rows",
+        "at": 32.5,
+        "ms": 600
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0,
+        "at": 34.8,
+        "ms": 650
+      },
+      "cursor_path": "rest → Normandy St row (eased, 500 ms) → hover 350 ms → click → drift to empty map (350 ms)",
+      "narration": [
+        {
+          "start": 33.0,
+          "text": "Which closed sites will return?"
+        },
+        {
+          "start": 35.4,
+          "text": "The top one in the queue is due again."
+        }
+      ],
+      "on_screen_text": [
+        "Due"
+      ],
+      "hold_duration": 3.0
+    },
+    {
+      "id": "S08",
+      "beat": 2,
+      "start_time": 39.5,
+      "end_time": 44.5,
+      "viewer_takeaway": "This is the site we are looking at.",
+      "source_scene": "app: SiteCase in the side panel",
+      "action": "Zoom to the case panel at 42.0.",
+      "focus_target": "the site name, counts and Due tag",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.4,
+        "target": "case panel",
+        "at": 39.5,
+        "ms": 650
+      },
+      "cursor_path": "hidden",
+      "narration": [
+        {
+          "start": 40.1,
+          "text": "Normandy Street, Dorchester. One block."
+        }
+      ],
+      "on_screen_text": [
+        "Normandy St · Dorchester 02121"
+      ],
+      "hold_duration": 3.5
+    },
+    {
+      "id": "S09",
+      "beat": 2,
+      "start_time": 44.5,
+      "end_time": 61.5,
+      "viewer_takeaway": "The city did everything; the cause was next door.",
+      "source_scene": "anim_reveal",
+      "action": "Play slice full screen; it stops at 27.3 s with one pin at centre frame.",
+      "focus_target": "18 pins, the ladder with rings, the vacant lot, the final pin",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [
+        {
+          "start": 44.7,
+          "text": "Eighteen reports, each closed in days."
+        },
+        {
+          "start": 48.1,
+          "text": "The city climbed its whole ladder: monitoring, citations, a ticket, an abatement order, collections."
+        },
+        {
+          "start": 53.9,
+          "text": "Each one came back."
+        },
+        {
+          "start": 55.7,
+          "text": "The real driver was next door, a vacant lot."
+        },
+        {
+          "start": 59.5,
+          "text": "A block problem, not an address problem."
+        }
+      ],
+      "on_screen_text": [
+        "as built in the animation (final)"
+      ],
+      "hold_duration": 1.8
+    },
+    {
+      "id": "S10",
+      "beat": 2,
+      "start_time": 61.5,
+      "end_time": 65.5,
+      "viewer_takeaway": "The story lives in the product.",
+      "source_scene": "app: MapView with the Normandy St pin selected",
+      "action": "Match-cut on the final pin. Frame so the live pin sits at the same screen point as the animation's pin.",
+      "focus_target": "the selected pin",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.3,
+        "target": "pin at frame centre (measure)"
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.3
+      },
+      "cursor_path": "hidden",
+      "narration": [
+        {
+          "start": 62.5,
+          "text": "Same pin, live in Piper."
+        }
+      ],
+      "on_screen_text": [],
+      "hold_duration": 3.0
+    },
+    {
+      "id": "S11",
+      "beat": 2,
+      "start_time": 65.5,
+      "end_time": 72.5,
+      "viewer_takeaway": "One site joins many city records, with a cited source.",
+      "source_scene": "app: SiteCase timeline, drivers within 100 m, source line",
+      "action": "Cut to the case panel. One scroll inside the panel (700 ms at 66.0) landing with the last timeline rows, the drivers within 100 m and the source line in view. Brass outline on drivers + source 68.5–72.5.",
+      "focus_target": "dated timeline rows, nearby trash tickets and vacant parcel, and the source line",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.5,
+        "target": "case panel"
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.5
+      },
+      "cursor_path": "hidden",
+      "narration": [
+        {
+          "start": 66.0,
+          "text": "One site now joins its reports, nearby tickets and past actions, all cited."
+        }
+      ],
+      "on_screen_text": [
+        "Sources: Boston 311 (2024–2026, live) and code enforcement (live).",
+        "callout: One site, many city records"
+      ],
+      "hold_duration": 3.5
+    },
+    {
+      "id": "S12",
+      "beat": 3,
+      "start_time": 72.5,
+      "end_time": 80.5,
+      "viewer_takeaway": "Piper suggests a step and says why.",
+      "source_scene": "app: recommendation in the case panel (Act flow, v2 §V3; or mockup, tagged Prototype)",
+      "action": "Scroll to the recommendation (600 ms at 72.5), settle 500 ms.",
+      "focus_target": "the recommendation, its because line and its sources",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.5,
+        "target": "case panel"
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.5
+      },
+      "cursor_path": "rest on empty map, still",
+      "narration": [
+        {
+          "start": 72.8,
+          "text": "Piper suggests the next step and shows why: a block visit, and a notice to the lot's owner."
+        }
+      ],
+      "on_screen_text": [
+        "Joint block visit · notice to the vacant lot's owner",
+        "Monitoring and citations were tried here. Reports came back each time. A vacant parcel is next door."
+      ],
+      "hold_duration": 5.0
+    },
+    {
+      "id": "S13",
+      "beat": 3,
+      "start_time": 80.5,
+      "end_time": 83.5,
+      "viewer_takeaway": "A human approves.",
+      "source_scene": "app: Approve button",
+      "action": "Small reframe (500 ms at 80.5) to include the Approve button and the work order landing area. Cursor to Approve (450 ms), hover 350 ms, click at 82.7 on the word 'Approve'. No camera move during the click.",
+      "focus_target": "the Approve button and the recommendation title above it",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.5
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.4,
+        "target": "recommendation + Approve + sheet landing zone",
+        "at": 80.5,
+        "ms": 500
+      },
+      "cursor_path": "rest → Approve (eased, 450 ms, arrive 82.1) → hover → click 82.7 with 160 ms pulse",
+      "narration": [
+        {
+          "start": 80.5,
+          "text": "The inspector decides, and clicks Approve."
+        }
+      ],
+      "on_screen_text": [
+        "Approve",
+        "callout: A human approves every action"
+      ],
+      "hold_duration": 0.8
+    },
+    {
+      "id": "S14",
+      "beat": 3,
+      "start_time": 83.5,
+      "end_time": 90.5,
+      "viewer_takeaway": "The work order is a draft with a date to check again.",
+      "source_scene": "app: work order sheet and seal",
+      "action": "Cursor moves away (400 ms). Camera still while the sheet lands and the seal stamps.",
+      "focus_target": "'Draft — for inspector use' and the check-again date",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.4
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.4
+      },
+      "cursor_path": "Approve → empty space (400 ms), then hidden",
+      "narration": [
+        {
+          "start": 83.6,
+          "text": "Piper drafts the work order and a check-again date. Nothing is sent on its own."
+        }
+      ],
+      "on_screen_text": [
+        "Draft — for inspector use",
+        "Check again: <today + 60 days>"
+      ],
+      "hold_duration": 5.0
+    },
+    {
+      "id": "S15",
+      "beat": 3,
+      "start_time": 90.5,
+      "end_time": 92.5,
+      "viewer_takeaway": "The lot next door is on the record.",
+      "source_scene": "app: ParcelCard for the vacant lot",
+      "action": "Cut. Static.",
+      "focus_target": "the land class",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.5,
+        "target": "parcel card"
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.5
+      },
+      "cursor_path": "hidden",
+      "narration": [],
+      "on_screen_text": [
+        "RES LAND (Unusable)",
+        "Source: Boston property assessment FY2026"
+      ],
+      "hold_duration": 2.0
+    },
+    {
+      "id": "S16",
+      "beat": 3,
+      "start_time": 92.5,
+      "end_time": 97.5,
+      "viewer_takeaway": "Why this block matters: schools nearby, money already spent.",
+      "source_scene": "card: impact",
+      "action": "Static card, bone on soot, two lines.",
+      "focus_target": "the card text",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [
+        {
+          "start": 92.8,
+          "text": "49% of schools sit near top rat blocks."
+        }
+      ],
+      "on_screen_text": [
+        "49% of schools sit near top rat blocks (35% for blocks overall)",
+        "$776K+ city pest-control spend, FY2026"
+      ],
+      "hold_duration": 5.0
+    },
+    {
+      "id": "S17",
+      "beat": 4,
+      "start_time": 97.5,
+      "end_time": 101.5,
+      "viewer_takeaway": "Piper looks ahead.",
+      "source_scene": "app: TopBar Mode → Assess, ForecastControl, ForecastLayer",
+      "action": "Cut to the app. Cursor to 'Assess' (600 ms), click at 98.4. Cursor to the 'Forecast: next 4 weeks' toggle (450 ms), click at 99.3. Blocks fill; dashed emerging outlines appear.",
+      "focus_target": "the forecast fill and the dashed emerging blocks",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "map → Assess segment (600 ms) → click → Forecast toggle (450 ms) → click → rest",
+      "narration": [
+        {
+          "start": 97.1,
+          "text": "Piper also looks ahead, block by block."
+        }
+      ],
+      "on_screen_text": [
+        "Forecast: next 4 weeks",
+        "Emerging: high forecast, few reports so far"
+      ],
+      "hold_duration": 2.0
+    },
+    {
+      "id": "S18",
+      "beat": 4,
+      "start_time": 101.5,
+      "end_time": 107.5,
+      "viewer_takeaway": "Every layer was tested, and nulls are labelled.",
+      "source_scene": "app: LayerPanel with tested.ts labels",
+      "action": "Zoom to the layer panel (600 ms at 101.5). Cursor to one layer row (450 ms). Brass outline on its tested label 104.0–107.0. Cursor slides to empty space.",
+      "focus_target": "one layer row and its tested label",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.5,
+        "target": "layer panel",
+        "at": 101.5,
+        "ms": 600
+      },
+      "cursor_path": "Explore → layer row (450 ms) → rest → empty space (350 ms)",
+      "narration": [
+        {
+          "start": 101.6,
+          "text": "We tested every layer. When one shows no effect, the legend says so."
+        }
+      ],
+      "on_screen_text": [
+        "Demolitions: tested, no effect (fallback: Construction debris — no effect)",
+        "callout: We label what doesn't work"
+      ],
+      "hold_duration": 3.0
+    },
+    {
+      "id": "S19",
+      "beat": 4,
+      "start_time": 107.5,
+      "end_time": 113.5,
+      "viewer_takeaway": "Heat says when; history says where; trash and pests warn early.",
+      "source_scene": "card: signals",
+      "action": "Static card, five labelled bars.",
+      "focus_target": "the +0.87 and +0.32 bars",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [
+        {
+          "start": 107.8,
+          "text": "Heat tells us when. History tells us where. Trash and pest reports rise first."
+        }
+      ],
+      "on_screen_text": [
+        "Warm months → more reports +0.87 (monthly)",
+        "Last year's reports here +0.32",
+        "Trash stored badly +0.18",
+        "Dead-animal reports +0.14",
+        "Indoor-pest reports +0.11",
+        "Heat says when. History says where."
+      ],
+      "hold_duration": 6.0
+    },
+    {
+      "id": "S20",
+      "beat": 4,
+      "start_time": 113.5,
+      "end_time": 122.5,
+      "viewer_takeaway": "The ghost hot spot: risk before the reports.",
+      "source_scene": "app: emerging block, CellCard",
+      "action": "Cut back to context. Cursor to one dashed block (600 ms), hover 350 ms, click at 115.2. Zoom to the block card (600 ms at 115.6), framed below its header. Brass outline on the 'Emerging hotspot' line 117.0–121.0.",
+      "focus_target": "the 'Emerging hotspot' line, its leading signals, 'Why: what pushes this block up', and the caveat",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.4,
+        "target": "CellCard below the header",
+        "at": 115.6,
+        "ms": 600
+      },
+      "cursor_path": "rest → dashed block (eased, 600 ms) → hover → click → hidden",
+      "narration": [
+        {
+          "start": 113.8,
+          "text": "So Piper can flag a hot spot before many reports arrive."
+        },
+        {
+          "start": 118.4,
+          "text": "It shows why, and calls it an estimate."
+        }
+      ],
+      "on_screen_text": [
+        "Emerging hotspot: high forecast but at most 1 rodent report in the last 12 weeks.",
+        "Model estimate, not a count of rats.",
+        "callout: Risk before the reports"
+      ],
+      "hold_duration": 5.0
+    },
+    {
+      "id": "S21",
+      "beat": 5,
+      "start_time": 122.5,
+      "end_time": 128.5,
+      "viewer_takeaway": "No response is proven to last.",
+      "source_scene": "card: matched test",
+      "action": "Static card.",
+      "focus_target": "risk ratio 1.03 and 'No clear difference'",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [
+        {
+          "start": 122.7,
+          "text": "Which fix lasts? In a matched test, enforcement and monitoring showed no clear difference."
+        }
+      ],
+      "on_screen_text": [
+        "Citation or abatement vs monitoring: risk ratio 1.03 (95% CI 0.89–1.20). No clear difference, in every year."
+      ],
+      "hold_duration": 6.0
+    },
+    {
+      "id": "S22",
+      "beat": 5,
+      "start_time": 128.5,
+      "end_time": 132.5,
+      "viewer_takeaway": "History predicts a return.",
+      "source_scene": "card: history, two bars",
+      "action": "Static card.",
+      "focus_target": "8–12% vs 56–75%",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [
+        {
+          "start": 128.6,
+          "text": "What predicts a return is the site's own history."
+        }
+      ],
+      "on_screen_text": [
+        "Return within 60 days",
+        "No prior reports 8–12%",
+        "5+ prior reports 56–75%"
+      ],
+      "hold_duration": 4.0
+    },
+    {
+      "id": "S23",
+      "beat": 5,
+      "start_time": 132.5,
+      "end_time": 142.5,
+      "viewer_takeaway": "Piper sets up the first fair test of what works.",
+      "source_scene": "app: Prove screen, trial designer (v2 §V5.1; not in the mockup — cut if not built)",
+      "action": "Cut. Two matched sites side by side. Static. Brass outline on the measure sentence 136.0–141.5.",
+      "focus_target": "the matched twins and the measure sentence",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "hidden",
+      "narration": [
+        {
+          "start": 132.6,
+          "text": "So Piper sets up matched twins: one gets the action, one is the comparison."
+        },
+        {
+          "start": 138.4,
+          "text": "Then we count returns. Boston has published no measured result."
+        }
+      ],
+      "on_screen_text": [
+        "Returns in 60 days, treatment vs comparison",
+        "callout: The first fair test of what works"
+      ],
+      "hold_duration": 6.0
+    },
+    {
+      "id": "S24",
+      "beat": 6,
+      "start_time": 142.5,
+      "end_time": 146.5,
+      "viewer_takeaway": "Built spec-first with Kiro.",
+      "source_scene": "Kiro: .kiro/specs/rat-audit/ tree with v2-spec.md open",
+      "action": "Static.",
+      "focus_target": "the five spec files",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.3,
+        "target": "file tree + editor"
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.3
+      },
+      "cursor_path": "real system cursor, still",
+      "narration": [
+        {
+          "start": 142.7,
+          "text": "We built Piper with Kiro, spec first."
+        }
+      ],
+      "on_screen_text": [],
+      "hold_duration": 3.5
+    },
+    {
+      "id": "S25",
+      "beat": 6,
+      "start_time": 146.5,
+      "end_time": 151.0,
+      "viewer_takeaway": "Hooks check work automatically.",
+      "source_scene": "Kiro: save a UI file; accessibility-check hook fires",
+      "action": "Save with the keyboard. Static.",
+      "focus_target": "the hook running and its result",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.3,
+        "target": "editor + hook output"
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.3
+      },
+      "cursor_path": "real system cursor, still",
+      "narration": [
+        {
+          "start": 146.7,
+          "text": "Hooks check accessibility and secrets on every save."
+        }
+      ],
+      "on_screen_text": [],
+      "hold_duration": 3.0
+    },
+    {
+      "id": "S26",
+      "beat": 6,
+      "start_time": 151.0,
+      "end_time": 155.0,
+      "viewer_takeaway": "A judge agent reviewed the build.",
+      "source_scene": "Kiro: .kiro/agents/civic-judge.json and its review output",
+      "action": "Static.",
+      "focus_target": "the agent file and one finding",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.3
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.3
+      },
+      "cursor_path": "real system cursor, still",
+      "narration": [
+        {
+          "start": 151.2,
+          "text": "A judge agent reviewed our own build."
+        }
+      ],
+      "on_screen_text": [],
+      "hold_duration": 3.0
+    },
+    {
+      "id": "S27",
+      "beat": 6,
+      "start_time": 155.0,
+      "end_time": 159.5,
+      "viewer_takeaway": "Boston's open data flows in through MCP.",
+      "source_scene": "Kiro: boston-opendata (OpenContext) tool call returning data.boston.gov rows",
+      "action": "Static.",
+      "focus_target": "the tool call and its result rows",
+      "camera_start": {
+        "level": "working",
+        "scale": 1.3
+      },
+      "camera_end": {
+        "level": "working",
+        "scale": 1.3
+      },
+      "cursor_path": "real system cursor, still",
+      "narration": [
+        {
+          "start": 155.2,
+          "text": "And Boston's open data comes in live through MCP."
+        }
+      ],
+      "on_screen_text": [],
+      "hold_duration": 3.5
+    },
+    {
+      "id": "S28",
+      "beat": 6,
+      "start_time": 159.5,
+      "end_time": 165.0,
+      "viewer_takeaway": "Real, countable Kiro use.",
+      "source_scene": "card: counts (Atkinson Mono on soot)",
+      "action": "Static. Silent.",
+      "focus_target": "the counts",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [],
+      "on_screen_text": [
+        "8 hooks · 6 agents · 7 steering files · 5 specs · 8 MCP servers · 148 logged work entries"
+      ],
+      "hold_duration": 5.5
+    },
+    {
+      "id": "S29",
+      "beat": "close",
+      "start_time": 165.0,
+      "end_time": 171.0,
+      "viewer_takeaway": "The task is finished.",
+      "source_scene": "app: map with Normandy St selected and the approved action in the panel",
+      "action": "Cut. Static. No brand art over the map.",
+      "focus_target": "the pin and the approved action",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "hidden",
+      "narration": [
+        {
+          "start": 165.6,
+          "text": "Piper. Boston closes cases. We help it close blocks."
+        }
+      ],
+      "on_screen_text": [],
+      "hold_duration": 6.0
+    },
+    {
+      "id": "S30",
+      "beat": "close",
+      "start_time": 171.0,
+      "end_time": 175.0,
+      "viewer_takeaway": "The name.",
+      "source_scene": "card: title",
+      "action": "Cut. Static. Silent.",
+      "focus_target": "title and tagline",
+      "camera_start": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "camera_end": {
+        "level": "context",
+        "scale": 1.0
+      },
+      "cursor_path": "none",
+      "narration": [],
+      "on_screen_text": [
+        "Piper — Rat Audit Boston (Bodoni Moda Italic, brass)",
+        "Follow the rats. (bone)"
+      ],
+      "hold_duration": 4.0
+    }
+  ],
+  "style_sample": {
+    "shots": [
+      "S07",
+      "S08"
+    ],
+    "start_time": 31.8,
+    "end_time": 44.5
+  }
+}

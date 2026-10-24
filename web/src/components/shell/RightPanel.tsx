@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { useMap } from "@/lib/map-store";
 import { rightInset, useUi } from "@/lib/ui-store";
 import SidePanel from "./SidePanel";
@@ -29,6 +29,25 @@ export default function RightPanel() {
   const btnRefs = useRef<Partial<Record<Tab, HTMLButtonElement | null>>>({});
   useMorph(open, asideRef, () => anchorRef.current ?? btnRefs.current.inspector ?? null);
 
+  // Fit the panel to its content (Ask always gets the full height). The height eases when content
+  // arrives or changes, so the card grows into place instead of sitting tall and empty.
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState<number | null>(null);
+  useLayoutEffect(() => {
+    const aside = asideRef.current, body = bodyRef.current;
+    if (!aside || !body) return;
+    const measure = () => {
+      const max = (aside.parentElement?.clientHeight ?? window.innerHeight) - 68 - 12;
+      const head = (aside.querySelector('[role="tablist"]')?.parentElement as HTMLElement | null)?.offsetHeight ?? 49;
+      setHeight(panel === "chat" ? max : Math.min(max, head + body.offsetHeight + 1));
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(body);
+    window.addEventListener("resize", measure);
+    return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
+  }, [panel]);
+
   // A new selection on the map opens the panel.
   useEffect(() => { if (selection) { anchorRef.current = btnRefs.current.inspector ?? null; setOpen(true); } }, [selection, setOpen]);
 
@@ -43,10 +62,16 @@ export default function RightPanel() {
     return () => window.removeEventListener("keydown", onKey);
   }, [setOpen]);
 
-  // Map controls follow the panel edge.
+  // Map controls move left only when the open panel actually reaches down to them;
+  // a short panel leaves them in the corner.
   useEffect(() => {
-    document.documentElement.style.setProperty("--right-inset", `${rightInset(open) + 8}px`);
-  }, [open]);
+    const root = document.documentElement;
+    const area = asideRef.current?.parentElement?.clientHeight ?? window.innerHeight;
+    const ctrlBottom = parseFloat(getComputedStyle(root).getPropertyValue("--ctrl-bottom")) || 12;
+    const ctrlTop = area - ctrlBottom - 150;
+    const covers = open && (height == null || 68 + height + 8 > ctrlTop);
+    root.style.setProperty("--right-inset", covers ? `${rightInset(true) + 8}px` : "12px");
+  }, [open, height]);
 
   const openTab = (t: Tab) => { anchorRef.current = btnRefs.current[t] ?? null; setPanel(t); setOpen(true); };
 
@@ -82,10 +107,11 @@ export default function RightPanel() {
           ref={asideRef}
           inert={!open}
           aria-label={`${LABEL[panel as Tab] ?? "Details"} panel`}
-          className="glass absolute bottom-3 right-3 top-[68px] z-[31] w-[380px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
+          style={{ height: height ?? undefined }}
+          className="glass absolute right-3 top-[68px] z-[31] max-h-[calc(100%-80px)] w-[380px] overflow-hidden rounded-lg transition-[height] duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,clip-path] motion-reduce:transition-none"
         >
           <div className="flex h-full flex-col">
-            <SidePanel onCollapse={() => setOpen(false)} />
+            <SidePanel onCollapse={() => setOpen(false)} bodyRef={bodyRef} />
           </div>
         </aside>
       )}

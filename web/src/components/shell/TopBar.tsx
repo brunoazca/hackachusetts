@@ -83,7 +83,7 @@ export default function TopBar() {
   return (
     <header className="pointer-events-none absolute inset-x-3 top-3 z-40 flex h-11 items-center gap-3">
       <div className="glass pointer-events-auto flex h-11 items-center gap-2.5 rounded-lg pl-3 pr-3">
-        <LineRat width={34} className="text-fg" />
+        <LineRat width={34} className="text-fg" accentTail />
         <h1 className="text-[18px] font-bold leading-none tracking-[-0.02em] text-fg">Piper<span className="text-return">.</span></h1>
         <span className="hidden text-[13px] text-fg-3 lg:inline">Rat reports in Boston, Cambridge &amp; Somerville</span>
       </div>

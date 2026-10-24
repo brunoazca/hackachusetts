@@ -14,6 +14,15 @@ Every feature for week t uses data from weeks < t only (no leakage):
   separate group so the backtest can test them with and without; the model keeps them
   only if they improve held-out error.
 
+Backtest of new data, Oct 24 (26 weeks; CORE = top-10% capture 0.643, MAE 0.0752). Promotion
+needs ≥ +0.5 pt capture and no worse MAE; nothing passed, so CORE is unchanged:
+city lots +0.45 pt (MAE worse), extra weather +0.23 (worse), ACS +0.14 (worse), permits +0.09
+(worse), iNaturalist −0.02, ring litter/dumping/overflow −0.14 (MAE better), food-inspection
+rodent fails −0.40, all together +0.09 (worse). Not tested: ce_dumping/ce_weeds/ce_dumpster
+(data only from 2026-04-25) and smart rat boxes (no rows). Leave-one-group-out: dropping rodent
+history, neighbours or season costs ~0.8–0.9 pt; dropping total 311 volume improves MAE 1.4%.
+Rows in `model_runs` where model = 'cell_week_poisson_gbm_ablation'.
+
 Cells come from `grid.load_or_build_cells` (Carol's `grid_cells`, else the 250 m fallback).
 Points map to cells by the same EPSG:26986 lattice, so ids match either way.
 """
@@ -28,7 +37,11 @@ from pyproj import Transformer
 
 from .grid import CELL_M, SRID_LL, SRID_M, load_or_build_cells
 
-START = date(2023, 1, 2)  # first Monday of the data
+START = date(2016, 1, 4)  # first Monday of the data (2016-2022 from incidents_archive)
+# Training rows (y) start after a one-year burn-in so every lag, incl. same week last year, is real.
+TRAIN_FROM = date(2017, 1, 2)
+# Weeks kept as lag inputs but never as training targets (y = NaN).
+SKIP_WEEKS: list[tuple[date, date]] = []
 _to_m = Transformer.from_crs(SRID_LL, SRID_M, always_xy=True)
 
 # 311 / code-enforcement categories used as leading signals (contracts/categories.json ids).
@@ -188,8 +201,13 @@ def _load_incidents(conn: psycopg.Connection, start: date, end: date) -> pd.Data
         from incidents
         where city = 'boston' and lon is not null and lat is not null
           and opened_at >= %s and opened_at < %s
+        union all
+        select category, opened_at, lon, lat
+        from incidents_archive
+        where city = 'boston' and lon is not null and lat is not null
+          and opened_at >= %s and opened_at < %s
         """,
-        (start, end),
+        (start, end, start, end),
     ).fetchall()
     df = pd.DataFrame(rows, columns=["category", "opened_at", "lon", "lat"])
     if df.empty:
@@ -478,6 +496,10 @@ def build_panel(
     ws = panel["week_start"]
     panel["move_out"] = ((ws.dt.month == 8) & (ws.dt.day >= 26) | (ws.dt.month == 9) & (ws.dt.day <= 7)).astype(float)
     panel["is_future"] = False
+    drop = ws < pd.Timestamp(TRAIN_FROM)
+    for a, b in SKIP_WEEKS:
+        drop |= (ws >= pd.Timestamp(a)) & (ws < pd.Timestamp(b))
+    panel.loc[drop, "y"] = np.nan
 
     # Future rows: copy the first-unobserved-week features to each forecast week.
     nxt = panel[panel["week_start"] == all_weeks[-1]]

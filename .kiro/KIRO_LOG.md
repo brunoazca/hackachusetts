@@ -31,6 +31,30 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:12 — Reports at the same address fold into one numbered marker...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Reports at the same address fold into one numbered marker that opens the address; map reuses a padded fetch box so pans and small zooms need no request (debounce 300->120ms); zoom controls stay in the corner unless the open panel reaches them; logo tail in Piper red
+- Why: Guilherme: 9 reports at an address showed as 1, slow map refresh, controls position, accented tail logo
+- Where: web/src/components/map/MapView.tsx, web/src/components/shell/{RightPanel,TopBar}.tsx, web/src/components/brand/LineRat.tsx, web/src/lib/queries.ts
+- Idea: Cache by detail level + padded bbox instead of refetching every moveend
+
+### 2026-10-24 16:04 — Tap on empty map now flies in and opens the closest repor...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Tap on empty map now flies in and opens the closest report; right panel sizes to its content and eases its height; all marker kinds share one clustered source so groups no longer stack (group color = family it holds most of)
+- Why: Guilherme: empty taps did nothing, panel too tall, stacked cluster logos
+- Where: web/src/components/map/MapView.tsx, web/src/components/shell/{RightPanel,SidePanel}.tsx
+- Idea: Per-category cluster sources overlap at the same spot; cluster once and color by majority
+
+### 2026-10-24 16:02 — Backtested 7 new data groups + combos + leave-one-group-o...
+- Teammate: Bruno
+- Agent: —
+- Did: Backtested 7 new data groups + combos + leave-one-group-out ablation and grouped permutation importance; wrote 33 ablation rows to model_runs (model cell_week_poisson_gbm_ablation, params.ablation acs/no_acs)
+- Why: Keep only data that measurably helps; answer which drivers matter most
+- Where: pipeline/rat_audit/model/features.py model_runs
+- Idea: Nothing beat the +0.5 pt bar; 3-city model needs grid_cells for CAM/SOM (Carol) — after freeze
+
 ### 2026-10-24 15:56 — Fixed the right panel never opening (morph hook now keeps...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
@@ -157,6 +181,30 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Rank sites by who is affected; check if new data improves the forecast
 - Where: none
 - Idea: Exposure as an explainable tie-breaker; keep/drop each predictor by top-10% capture gain
+
+### 2026-10-24 15:25 — Shift the data story from cost to connection
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Reframed the video around cross-source links: closed-but-returned sites, enforcement gaps, hidden hot spots, school exposure, action outcomes, and matched trials
+- Why: The $776K lower-bound cost is too small to carry the pitch
+- Where: none
+- Idea: Show one block gaining meaning as 311, closure notes, violations, property, weather, equity, and school data stack
+
+### 2026-10-24 15:23 — Final video data report
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Rebuilt the final data report with verified claims, live sources, joins, overlaps, null findings, limits, and video order
+- Why: Give the team one clean source for the demo video
+- Where: docs/submission/data-report.md
+- Idea: Lead with closed cases returning; end with the matched trial that proves what works
+
+### 2026-10-24 15:16 — Filled gaps in data-report.md: added problem numbers (532...
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Filled gaps in data-report.md: added problem numbers (5321 vs 5225, 407 returns, 46 repeat addresses), the matched-test 'what works' finding (RR 1.03, site history 8-12% vs 56-75%), three-city + schools + equity context
+- Why: User asked to check for missed important context data
+- Where: docs/submission/data-report.md
+- Idea: Flagged the $776K vs $783K cost conflict to resolve before recording
 
 ### 2026-10-24 15:40 — Cambridge + Somerville equivalents loaded: restaurants (2...
 - Teammate: Bruno

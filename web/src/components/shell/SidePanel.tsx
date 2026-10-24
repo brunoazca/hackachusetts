@@ -11,7 +11,7 @@ const TABS = [
   { id: "chat", label: "Ask" },
 ] as const;
 
-export default function SidePanel({ onCollapse }: { onCollapse?: () => void }) {
+export default function SidePanel({ onCollapse, bodyRef }: { onCollapse?: () => void; bodyRef?: React.Ref<HTMLDivElement> }) {
   const panel = useMap((s) => s.panel);
   const setPanel = useMap((s) => s.setPanel);
   return (
@@ -35,8 +35,11 @@ export default function SidePanel({ onCollapse }: { onCollapse?: () => void }) {
       <div className="min-h-0 flex-1 overflow-y-auto">
         {/* Chat stays mounted so the conversation survives tab switches. */}
         <div hidden={panel !== "chat"} className="h-full"><ChatPanel /></div>
-        {panel === "inspector" && <InspectorPanel />}
-        {panel === "insights" && <InsightsPanel />}
+        {/* Measured by RightPanel so the panel is only as tall as what it shows. */}
+        <div ref={bodyRef}>
+          {panel === "inspector" && <InspectorPanel />}
+          {panel === "insights" && <InsightsPanel />}
+        </div>
       </div>
     </>
   );
