@@ -12,6 +12,7 @@ import { formatDate } from "@/lib/dates";
 import ContextLayers from "./ContextLayers";
 import MapLegend from "./MapLegend";
 import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
+import PriorityLayer, { PRIORITY_LAYER_IDS } from "./PriorityLayer";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
 import FeatureList from "./FeatureList";
@@ -179,6 +180,7 @@ export default function MapView() {
   const rightOpen = useUi((s) => s.rightOpen);
   const T = themes[theme];
   const forecastOn = useMap((s) => s.layers.forecast);
+  const priorityOn = useMap((s) => s.layers.priority);
   const forecastWeek = useMap((s) => s.forecastWeek);
   const three = useMap((s) => s.three);
   const setThree = useMap((s) => s.setThree);
@@ -217,7 +219,13 @@ export default function MapView() {
   }), [sites]);
 
   // Where the selection sits on the map (set by a click or a fly-to), for the 100 m context ring.
-  const [focus, setFocus] = useState<[number, number] | null>(null);
+  const [clicked, setClicked] = useState<{ at: [number, number]; nonce: number } | null>(null);
+  const setFocus = useCallback((at: [number, number]) => setClicked({ at, nonce: Date.now() }), []);
+  const focus = useMemo<[number, number] | null>(() => {
+    if (!selection) return null;
+    if (clicked && (!flyToTarget || clicked.nonce >= flyToTarget.nonce)) return clicked.at;
+    return flyToTarget ? [flyToTarget.lon, flyToTarget.lat] : null;
+  }, [selection, clicked, flyToTarget]);
   const ring = useMemo(
     () => (focus && selection ? turfCircle(focus, 0.1, { units: "kilometers", steps: 48 }) : null),
     [focus, selection],
@@ -244,8 +252,9 @@ export default function MapView() {
   const street = zoom >= 15;
   const clusterFC = useMemo<FC>(() => {
     const on = new Set(cats);
-    const ref = Date.parse(filters.until) || Date.now();
+    const ref = Date.parse(filters.until);
     const ageOf = (p: IncidentProps) => {
+      if (!Number.isFinite(ref)) return undefined;
       const d = Date.parse(p.opened ?? p.newest ?? "");
       return Number.isFinite(d) ? Math.max(0, Math.round((ref - d) / 86400000)) : undefined;
     };
@@ -393,7 +402,6 @@ export default function MapView() {
 
   useEffect(() => {
     // In Act the queue covers the left of the map; offset so the target lands in the visible part.
-    if (flyToTarget) setFocus([flyToTarget.lon, flyToTarget.lat]);
     if (flyToTarget) mapRef.current?.flyTo({
       center: [flyToTarget.lon, flyToTarget.lat], zoom: flyToTarget.zoom, duration: 1200,
       // Land between the floating panels.
@@ -460,8 +468,8 @@ export default function MapView() {
   }, [selection, three, zoom, iconsReady, sites, clusterFC]);
 
   const interactive = useMemo(
-    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? ["all-clusters", "all-dots", "all-points", "chronic-hit"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
-    [iconsReady, appMode, enabled.ctx_buildings, zoom, forecastOn],
+    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? ["all-clusters", "all-dots", "all-points", "chronic-hit"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : []), ...(priorityOn ? PRIORITY_LAYER_IDS : [])],
+    [iconsReady, appMode, enabled.ctx_buildings, zoom, forecastOn, priorityOn],
   );
 
   // A tap on empty map flies there and opens the closest real report.
@@ -489,7 +497,7 @@ export default function MapView() {
     pending.current = null;
     setFocus(f.geometry.coordinates as [number, number]);
     select({ kind: "incident", id: String(f.properties.id) });
-  }, [clusterFC, zoom, nearest, select]);
+  }, [clusterFC, zoom, nearest, select, setFocus]);
 
   const onClick = useCallback((e: MapLayerMouseEvent) => {
     const f = e.features?.[0];
@@ -508,7 +516,7 @@ export default function MapView() {
       map?.easeTo({ center: target, zoom: Math.max(POINTS_ZOOM + 1, map.getZoom()), duration: 700 });
       return;
     }
-    if (f.layer.id === "forecast-hit") {
+    if (f.layer.id === "forecast-hit" || f.layer.id === "priority-hit") {
       select({ kind: "cell", id: String(f.properties?.id) });
       return;
     }
@@ -533,7 +541,7 @@ export default function MapView() {
     }
     setFocus(at);
     select({ kind: "incident", id: String(f.properties?.id) });
-  }, [select, nearest]);
+  }, [select, nearest, setFocus]);
 
   const selectedId = selection && "id" in selection ? selection.id : "";
 
@@ -555,6 +563,7 @@ export default function MapView() {
         <NavigationControl position="bottom-right" />
         <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} />
         <ForecastLayer visible={forecastOn} period={forecastWeek ?? "4w"} bbox={bbox} selectedId={selectedId} />
+        <PriorityLayer visible={priorityOn} selectedId={selectedId} T={T} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
           <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat && causes ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />
@@ -751,22 +760,31 @@ export default function MapView() {
       {/* Keyboard twin of the map (R2.11 / R9.1). In Act, the Places queue is already the list
           twin, so this only appears in Assess/Map mode. Reachable by Tab and by the "L" shortcut. */}
       {appMode !== "act" && listOpen && <FeatureList onClose={() => setListOpen(false)} />}
-      {appMode !== "act" && !listOpen && (
-        <button
-          type="button"
-          onClick={() => setListOpen(true)}
-          aria-label="Show features in view as a list"
-          title="Features in view, as a list · L"
-          className="glass absolute bottom-3 left-3 z-20 flex h-10 items-center gap-2 rounded-lg px-3 text-[13px] font-semibold text-fg transition-colors hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent"
+      {/* Bottom-left stack: the List button sits ABOVE the map key so the two can never overlap,
+          whatever the key's width. While the list panel is open (384 px wide, bottom-3 left-3) the
+          stack slides right of it and the button is hidden. */}
+      {appMode !== "act" && (
+        <div
+          className="absolute z-20 flex flex-col items-start gap-2 transition-[left,bottom] duration-300 ease-[var(--ease-spring)]"
+          style={{ left: listOpen ? 12 + 384 + 8 : 12, bottom: "calc(var(--ctrl-bottom, 4px) + 8px)" }}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden>
-            <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
-          </svg>
-          List
-        </button>
+          {!listOpen && (
+            <button
+              type="button"
+              onClick={() => setListOpen(true)}
+              aria-label="Show features in view as a list"
+              title="Features in view, as a list · L"
+              className="glass flex h-10 shrink-0 items-center gap-2 rounded-lg px-3 text-[13px] font-semibold text-fg transition-colors hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden>
+                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+              </svg>
+              List
+            </button>
+          )}
+          <MapLegend mode={viewMode} causes={causes} zoom={zoom} priority={priorityOn} />
+        </div>
       )}
-
-      {appMode !== "act" && <MapLegend mode={viewMode} causes={causes} zoom={zoom} />}
 
       {error && (
         <div role="alert" className="absolute bottom-4 left-4 rounded-md bg-red-50 px-3 py-2 text-sm font-medium text-red-900 shadow">
