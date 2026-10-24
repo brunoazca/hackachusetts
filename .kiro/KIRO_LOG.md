@@ -31,6 +31,158 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:13 — Checked how to run Research Lab campaigns programmaticall...
+- Teammate: Bruno
+- Agent: —
+- Did: Checked how to run Research Lab campaigns programmatically: no MCP server for auto-research, but Kiro Crew gateway (localhost:5476, token auth) exposes /api/apps/auto-research/campaigns (create, get, report, to-knowledge)
+- Why: Run the rat campaigns inside Kiro Crew without the UI
+- Where: none
+- Idea: Drive campaigns via the local API with a short-lived token from 'kirocrew token --ttl 2h'
+
+### 2026-10-24 12:11 — Saved 4 Kiro Crew Research Lab campaign prompts for the R...
+- Teammate: Bruno
+- Agent: —
+- Did: Saved 4 Kiro Crew Research Lab campaign prompts for the Rat Audit (block-level drivers, what worked, cost of rats, demo address)
+- Why: Run the remaining research inside Kiro Crew
+- Where: .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Run order: 4 (demo site) → 2 (closure notes) → 1 and 3 in parallel
+
+### 2026-10-24 12:08 — Renamed rat research doc to knowledge/09_boston_rat_audit...
+- Teammate: Bruno
+- Agent: —
+- Did: Renamed rat research doc to knowledge/09_boston_rat_audit.md (08 was already taken by the idea shortlist)
+- Why: Avoid clashing doc numbers
+- Where: knowledge/09_boston_rat_audit.md, knowledge/README.md
+- Idea: none
+
+### 2026-10-24 12:08 — Added knowledge/08_boston_rat_audit.md (all rat datasets ...
+- Teammate: Bruno
+- Agent: —
+- Did: Added knowledge/08_boston_rat_audit.md (all rat datasets with resource IDs, findings, impact, property-value evidence, product shape) + scripts in knowledge/sources/rats/
+- Why: Keep the lead idea's research in the repo for the team
+- Where: knowledge/08_boston_rat_audit.md, knowledge/README.md, knowledge/sources/rats/*.py
+- Idea: Airbnb: 212 of 267,731 reviews mention rats/mice (Bay Village 0.39%); Zillow vs rodent rate weak (ZHVI -0.18, ZORI +0.30): do not claim value loss
+
+### 2026-10-24 11:56 — Reframed Rats into Boston Rat Audit (all sources: 311 rod...
+- Teammate: Bruno
+- Agent: —
+- Did: Reframed Rats into Boston Rat Audit (all sources: 311 rodents/pests/dead animals, RentSmart, food inspections+licenses, trash 311+schedules+Big Belly+PW violations, assessment/owners, permits, vacant/abandoned, rainfall, parks, vulnerability, asthma, closure notes, OpenAlex)
+- Why: Team wants a full audit of rat drivers, not one hypothesis
+- Where: none (Data Atlas page)
+- Idea: ZIP-level 2025: rodent reports vs improper trash storage +0.78, housing pest violations +0.68, dumping +0.63, restaurants +0.41; rats follow trash more than restaurants
+
+### 2026-10-24 11:54 — Chose Rats as lead idea; validated: 5,321 rodent reports ...
+- Teammate: Bruno
+- Agent: —
+- Did: Chose Rats as lead idea; validated: 5,321 rodent reports in 2026 through Oct 23 (already > all 2025: 5,225); 46 addresses had 5+ reports in 2025, 407 came back 30+ days later; closure text records cause/action
+- Why: Make the rat idea actionable and check for an existing city program
+- Where: none
+- Idea: Plug into Boston Rodent Action Plan (BRAP, 2024, ISD-led, 10 agencies): chronic-site list + LLM-classified closure notes ('what worked') + 'closed but came back' metric
+
+### 2026-10-24 11:51 — Agreed Morning Dispatch is a feature, not a product; prop...
+- Teammate: Bruno
+- Agent: —
+- Did: Agreed Morning Dispatch is a feature, not a product; proposed making Problem Landlord Radar the product with rats/no-heat/fire as its evidence
+- Why: Product needs a non-obvious core a dashboard can't copy
+- Where: none
+- Idea: Core = resolving hidden portfolios (125 owner names -> 1 mailing address) + problems per unit; user = ISD / Office of Housing Stability / tenant unions
+
+### 2026-10-24 11:49 — Verified Problem Landlord Radar on real data: 913 owner n...
+- Teammate: Bruno
+- Agent: —
+- Did: Verified Problem Landlord Radar on real data: 913 owner names have tenant problems at 2+ parcels; property-assessment mailing address links 125 owner names to one address (128 parcels, 1,053 units, 63 with problems)
+- Why: Check the multi-building pattern actually exists before pitching
+- Where: none (Data Atlas page updated)
+- Idea: Rank by problems per unit (city 0.12): one hidden group at 0.13 (big, not bad), one at 1.43 (11x). Many top owners are nonprofit affordable housing; mailing address is often a property manager
+
+### 2026-10-24 11:45 — Turned the 'city risk dashboard + map + chat' idea into M...
+- Teammate: Bruno
+- Agent: —
+- Did: Turned the 'city risk dashboard + map + chat' idea into Morning Dispatch: daily crew work list, weather-triggered playbooks, bundled visits, silence flags, cited 'why' chat, supervisor approval, next-day loop
+- Why: Avoid an obvious super-app; keep it actionable
+- Where: none (Data Atlas page)
+- Idea: Demo: replay Jan 30 2022 dispatch vs where complaints actually came next 3 days
+
+### 2026-10-24 11:44 — Read team votes (liked: Rats, Dark Corners, Day After the...
+- Teammate: Bruno
+- Agent: —
+- Did: Read team votes (liked: Rats, Dark Corners, Day After the Storm; 14 disliked) and added 6 new ideas in that style: Cold Apartments, Problem Landlord Radar, Clean the Drains First, Clear the Snow Routes, Alarms Before Fires, One Visit per Block
+- Why: Likes favor field-crew triage of a visceral hazard with many causal datasets
+- Where: none (Data Atlas page)
+- Idea: Fire incidents (601,721 rows w/ address) + RentSmart owner join + 311 heat/catchbasin/abandoned cars are the new data hooks
+
+### 2026-10-24 11:39 — Made every idea actionable in the Data Atlas: each card n...
+- Teammate: Bruno
+- Agent: —
+- Did: Made every idea actionable in the Data Atlas: each card now names Who uses it and what they do Tomorrow; storm idea rebuilt as deep dive with real Jan 2022 blizzard example
+- Why: Audience must see they can use it tomorrow to fix a real problem
+- Where: none (Data Atlas page)
+- Idea: Pitch rule: every idea = named user + one concrete next-day action + real number
+
+### 2026-10-24 11:36 — Tested 'Day After the Storm' on the real Jan 29 2022 bliz...
+- Teammate: Bruno
+- Agent: —
+- Did: Tested 'Day After the Storm' on the real Jan 29 2022 blizzard (FEMA DR, Apr 2022): 4,341 snow 311 cases in 8 days, median 10.6 h to close; joined to 180 Climate Ready tracts
+- Why: Check if storm impact and equity gap are real before building
+- Where: none
+- Idea: Gap is modest citywide (most vulnerable third: 6.6 reports/1k, 11.6 h vs 6.9/1k, 10.5 h); a few tracts stand out, e.g. Roxbury 090600 median 39 h. MBTA 2022 alerts and past NWS alerts not available
+
+### 2026-10-24 11:29 — Added one-line short descriptions to the 6 deep-dive idea...
+- Teammate: Bruno
+- Agent: —
+- Did: Added one-line short descriptions to the 6 deep-dive idea cards in the Data Atlas
+- Why: Make each deep dive readable at a glance
+- Where: none (Data Atlas page)
+- Idea: none
+
+### 2026-10-24 11:27 — Added 6 deep-dive ideas to Data Atlas (Rats, Dark Corners...
+- Teammate: Bruno
+- Agent: —
+- Did: Added 6 deep-dive ideas to Data Atlas (Rats, Dark Corners, Sidewalks That Hurt, Move-In Mess, Shade Before Heat, Sharps Route) + 9 datasets
+- Why: Rat idea worked well; find more problems with many explaining datasets
+- Where: none (Data Atlas page)
+- Idea: Live 311: 1,012 of 4,497 streetlight outages open; 69% of 2,752 sidewalk repairs open; 280 move-in trash, 1,264 needle pickups
+
+### 2026-10-24 11:19 — Added team like/dislike voting to the Data Atlas ideas; l...
+- Teammate: Bruno
+- Agent: —
+- Did: Added team like/dislike voting to the Data Atlas ideas; liked float to top, disliked move to a bottom section; votes shared via artifact db
+- Why: Team needs to converge on one idea fast
+- Where: none (artifact: claude.ai/artifact/Ccw6n593reUG1MQjAawa2W)
+- Idea: Use the vote board to shortlist before 12:00 spec deadline
+
+### 2026-10-24 11:17 — Lab to Block check: starter OpenAlex top-500 is mostly bi...
+- Teammate: Bruno
+- Agent: —
+- Did: Lab to Block check: starter OpenAlex top-500 is mostly biomedical (only '15-minute city' fits); live OpenAlex search finds BU Boston-rat studies, Northeastern road-diet work
+- Why: Validate idea before building
+- Where: none
+- Idea: Use live OpenAlex search + 'Boston' filter, not the starter file
+
+### 2026-10-24 11:17 — Rat idea data check: 2025 311 has 5,225 Rodent Activity +...
+- Teammate: Bruno
+- Agent: —
+- Did: Rat idea data check: 2025 311 has 5,225 Rodent Activity + 1,900 Pest Infestation; food inspections 3,608 rodent/mice hits at 833 businesses since 2025; RentSmart 17,594 rodent rows with parcel+lat/long
+- Why: Validate 'Rats Follow the Restaurants' before building
+- Where: none
+- Idea: Add trash schedules, Big Belly, public works violations, demolition permits, rainfall as rat drivers
+
+### 2026-10-24 11:17 — Found live Boston 311 (CKAN 254adca6) has 75,498 rows Aug...
+- Teammate: Bruno
+- Agent: —
+- Did: Found live Boston 311 (CKAN 254adca6) has 75,498 rows Aug 2025-Oct 2026 WITH case_id, close_date, address, lat/long
+- Why: Starter 311 drops these; live table unlocks resolution time and maps
+- Where: none
+- Idea: Use live 311 via datastore_search_sql instead of the 5k starter for any 311 idea
+
+### 2026-10-24 11:17 — Built Civic Data Atlas overview page: 22 starter + 19 fet...
+- Teammate: Bruno
+- Agent: —
+- Did: Built Civic Data Atlas overview page: 22 starter + 19 fetchable public datasets in 8 clusters, 12 cross-cluster ideas
+- Why: Team needed one view of all data and integration ideas
+- Where: none (artifact: claude.ai/artifact/Ccw6n593reUG1MQjAawa2W)
+- Idea: Clusters: requests, housing, people/need, hazards, transit, streets, movement, campus/careers
+
 ### 2026-10-24 10:51 — Full repo review; shortlisted 5 build ideas, recommend Bl...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

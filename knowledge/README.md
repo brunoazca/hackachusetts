@@ -14,6 +14,7 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 | [04 — Recent Boston priorities](04_recent_boston_priorities_and_data_opportunities.md) | Mayor/agency statements connected to potential data workflows |
 | [06 — Deeper evidence and transcripts](06_deep_evidence_transcripts_and_city_priorities.md) | October 23 updates, timestamped recordings, municipal awards and existing products |
 | [07 — Actual dataset verification](07_civic_dataset_verification.md) | All 22 starter CSVs, missing fields, date ranges and tested join limitations |
+| [09 — Boston Rat Audit](09_boston_rat_audit.md) | Lead idea: every rat-related dataset, verified counts, drivers, impact, property-value evidence and product shape |
 | [03 — Previous winners and patterns](03_past_winners_and_patterns.md) | Comparable Kiro competition winners and carefully bounded lessons |
 
 ## Most consequential findings
