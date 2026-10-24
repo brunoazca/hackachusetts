@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:34 — Act panel: clicking a ranking card outlines every block o...
+- Teammate: Bruno
+- Agent: —
+- Did: Act panel: clicking a ranking card outlines every block of its region and draws each report inside unclustered, with same-address reports fanned out in a ring; renamed the Insight panel to Act
+- Why: Make it obvious which area a card means and show every report there, not group counts
+- Where: web/src/components/map/MapView.tsx, PriorityLayer.tsx, insight/InsightPanel.tsx, RankingList.tsx, lib/map-store.ts
+- Idea: Draw a selection ring on fanned-out icons (it can't follow icon-offset yet)
+
 ### 2026-10-24 19:34 — Ask chat toggle is now a floating red pill button (icon +...
 - Teammate: Bruno
 - Agent: —
