@@ -31,6 +31,30 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:45 — Ran a read-only Kiro monitor loop (~2h, 21 cycles) over w...
+- Teammate: Carol
+- Agent: —
+- Did: Ran a read-only Kiro monitor loop (~2h, 21 cycles) over worktrees analytics-core (A, 2.1-2.5/2.7), agent (B, 4.1-4.4/4.6), insights (C, 2.8); alerted only on real signals, wrote nothing during the run
+- Why: Watch ownership, contract compatibility, dependencies and conflicts across the three parallel fronts without touching their work
+- Where: none (read-only)
+- Idea: Merge order A to B to C after the insights_summary() RPC exists; none merged yet at close
+
+### 2026-10-24 15:45 — Decided front C needs a sequential order, not a parallel ...
+- Teammate: Carol
+- Agent: —
+- Did: Decided front C needs a sequential order, not a parallel split: commit then rebase on main (conflict only in InsightsPanel.tsx) then run 5 tests then merge after A; insights_summary() RPC is analytics-track, not C's to create
+- Why: Splitting C into two agents would only cause same-folder conflicts; the real cost was a stale base, which C then fixed by rebasing
+- Where: none
+- Idea: The integration blocker is the missing insights_summary() RPC, not C's speed
+
+### 2026-10-24 15:45 — Monitor flagged main moved under the three fronts: Spec v...
+- Teammate: Carol
+- Agent: —
+- Did: Monitor flagged main moved under the three fronts: Spec v2 merged (task scope widened 2.2/2.3/4.2/4.3), whole model/ built on main (analytics-track), deploy-on-push to main live, A-C contract shapes compatible
+- Why: These are integration risks that surface when A/B/C merge into the current main
+- Where: none (read-only)
+- Idea: A migration named _analytics_core does not match the CONTRACT glob *_analytics_*.sql — rename before merge
+
 ### 2026-10-24 14:41 — Umbrella campaign 947e85a6 finished; added its 13-track r...
 - Teammate: Carol
 - Agent: —
