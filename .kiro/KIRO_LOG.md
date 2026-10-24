@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:59 — Draft UI: live MapLibre map of all incident categories (c...
+- Teammate: Bruno
+- Agent: —
+- Did: Draft UI: live MapLibre map of all incident categories (clustered, colored, open vs closed), layer + period panel, click-to-inspect card (dates, scrubbed city note, same-address history, source + Live/Daily/Static), live badge + Refresh
+- Why: Bruno wanted to see the data on a map now; map track (Gui) can build on it
+- Where: web/src/components/{map,inspector,shell/TopBar}, web/src/lib/queries.ts, supabase/migrations/20261024300001_api_map_draft.sql, web/package.json
+- Idea: MapLibre 6 worker must be served from /public under Next 16 (postinstall copies it)
+
 ### 2026-10-24 13:44 — Added Supabase MCP (local scope, project rat-audit) and l...
 - Teammate: Bruno
 - Agent: —
