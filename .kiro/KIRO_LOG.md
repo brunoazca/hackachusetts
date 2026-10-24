@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:31 — Feature engineering: per-cell per-ISO-week panel (CORE va...
+- Teammate: Bruno
+- Agent: —
+- Did: Feature engineering: per-cell per-ISO-week panel (CORE validated signals + CANDIDATE group: rain, snow, demolitions, restaurants, Big Belly, events)
+- Why: Kiro task 5 ran 25 min without output; candidates kept separate so the backtest can test them with/without
+- Where: pipeline/rat_audit/model/features.py, pipeline/tests/test_model_features.py
+- Idea: 3442 cells x 199 weeks, 19336/19496 rodent reports mapped; build ~9 s
+
 ### 2026-10-24 14:31 — Fixed blank map in production (MapLibre worker 404: file ...
 - Teammate: Bruno
 - Agent: —
