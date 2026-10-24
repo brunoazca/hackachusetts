@@ -40,8 +40,10 @@ from .grid import CELL_M, SRID_LL, SRID_M, load_or_build_cells
 START = date(2016, 1, 4)  # first Monday of the data (2016-2022 from incidents_archive)
 # Training rows (y) start after a one-year burn-in so every lag, incl. same week last year, is real.
 TRAIN_FROM = date(2017, 1, 2)
-# Weeks kept as lag inputs but never as training targets (y = NaN).
-SKIP_WEEKS: list[tuple[date, date]] = []
+# Weeks kept as lag inputs but never as training targets (y = NaN): the pandemic shift (reports
+# jumped ~50% in 2020 as restaurants closed). Backtest 2026-04-20..10-12, top-10% capture:
+# 2023 start 0.643, 2017+ with pandemic 0.643, 2017+ without it 0.651 (MAE 0.0752 -> 0.0740).
+SKIP_WEEKS: list[tuple[date, date]] = [(date(2020, 3, 9), date(2021, 6, 28))]
 _to_m = Transformer.from_crs(SRID_LL, SRID_M, always_xy=True)
 
 # 311 / code-enforcement categories used as leading signals (contracts/categories.json ids).
@@ -111,12 +113,17 @@ for _k, (_, _v) in ACS.items():
 for _k in PLACE_KINDS:
     LABELS[f"place_{_k}"] = f"{_k.replace('_', ' ').capitalize()} sites in this cell"
 
-CORE = (
+# Code-enforcement tickets are kept as rows for the last 6 months only (ingest/enforcement.py), so
+# their features are 0 before 2026-04 and switch on inside the backtest window. Out of CORE:
+# backtest 2017+ without pandemic, MAE 0.0740 -> 0.0734, capture 0.651 -> 0.650.
+CE_FEATURES = [f"{k}_s{w}" for k in SIGNALS if k.startswith("ce_") for w in (4, 12)] + [
+    f"ring_{k}_s4" for k in RING_SIGNALS + RING_CANDIDATE if k.startswith("ce_")]
+CORE = [f for f in (
     ["rodent_l1", "rodent_m4", "rodent_m12", "rodent_ly", "ring_rodent_m4", "ring_rodent_m12"]
     + [f"{k}_s{w}" for k in SIGNALS for w in (4, 12)]
     + [f"ring_{k}_s4" for k in RING_SIGNALS]
     + ["vol_311_52", "parcels", "yr_built_med", "units", "woy_sin", "woy_cos", "move_out", "tmax_m4"]
-)
+) if f not in CE_FEATURES]
 # New-data groups, tested one at a time against CORE (see backtest results in the commit log).
 CANDIDATE_GROUPS = {
     "food": ["food_rodent_s12", "food_rodent_s52"],
@@ -125,6 +132,7 @@ CANDIDATE_GROUPS = {
     "city_lots": ["place_city_lot"],
     "inat": ["inat_rat_s52"],
     "ring_more": [f"ring_{k}_s4" for k in RING_CANDIDATE],
+    "code_enforcement": CE_FEATURES,
     "weather_more": ["precip_s4", "snow_s4", "precip_l1", "precip_s12", "heavy_rain_s4", "hot_days_s4",
                      "freeze_days_s12"],
 }

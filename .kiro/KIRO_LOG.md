@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:58 — Forecast trains 2017+ minus pandemic; ce_* out of CORE
+- Teammate: Bruno
+- Agent: —
+- Did: Forecast trains 2017+ minus pandemic; ce_* out of CORE
+- Why: backtest 26 wk (2026-04-20..10-12): capture 0.643->0.650, MAE 0.0752->0.0734; ce_* rows only exist since 2026-04
+- Where: pipeline/rat_audit/model/features.py pipeline/rat_audit/model/__init__.py
+- Idea: ce_* back via signal_volume monthly counts (2023+), lagged one full month
+
 ### 2026-10-24 16:38 — Hourly design critique of Piper (Rat Audit) / route; capt...
 - Teammate: —
 - Agent: da-vinci
