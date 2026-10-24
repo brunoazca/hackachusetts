@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:19 — Pull + merge da main: 17 commits remotos + 6 locais; conf...
+- Teammate: Carol
+- Agent: kirocrew (default)
+- Did: Pull + merge da main: 17 commits remotos + 6 locais; conflito so no KIRO_LOG.md resolvido mantendo os dois blocos (Carol em cima, Bruno/Gui abaixo). Merge 71c5bf2. Push pro main bloqueado por policy: humano roda git push origin main.
+- Why: Carol pediu commit e push da main
+- Where: .kiro/KIRO_LOG.md (merge)
+- Idea: none
+
 ### 2026-10-24 17:17 — Escrevi a spec completa da aba Insights (ranking por seve...
 - Teammate: Carol
 - Agent: kirocrew (default)
