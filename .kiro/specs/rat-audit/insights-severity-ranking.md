@@ -84,6 +84,7 @@ already in the database. Confirmed against the migrations and model code.
 | **Evidence** | `correlations` (tested block-level findings + caveat + `source_ids`), `base_rates` (return rates), `site_detail` (closure history, nearby drivers, vacant parcels) | `insights_summary`, `base_rates`, `site_detail` |
 | **Return chances** | `site_recurrence_logit` → `sites.summary.recur_p` (P(report returns within 60 days)); `base_rates` by prior-return bucket | `base_rates`, `sites.summary` |
 | **Sources** | `sources` (name, url, retrieved_at, update_mode) referenced by id everywhere | `insights_summary.sources` |
+| **Block profile** (demographics + building age) | `grid_cell_context.attrs` per cell: ACS income/poverty/renters/people of color/limited English/old housing, CDC asthma, Boston SVI shares, people/km² (area-weighted from overlapping tracts) + parcels, median year built, % built before 1900/1940, % from 1980, units, % owner-occupied, median value (assessor parcels in the cell). `source_ids` per cell. Migration `20261025100001_analytics_cell_context.sql` | `cell_context(cell_id)`, `map_cell_context()` |
 
 **What does NOT exist yet and must be built:**
 1. A **severity ranking** over the 250 m cells, past + future, edge-safe (§5.1, §5.5). — Carol (SQL over Bruno's `predictions`)
@@ -508,6 +509,8 @@ type InsightsRegion = {
     floor_reached: boolean;
     recur_p: number | null;     // chance reports return in 60 d if nothing changes
   } | null;
+  context: Record<string, number> | null; // grid_cell_context.attrs: demographics + building age.
+                                // Context only, shown collapsed ("Block profile"); never a driver or a cause.
   source_ids: string[];         // union of every source cited in the card
 };
 

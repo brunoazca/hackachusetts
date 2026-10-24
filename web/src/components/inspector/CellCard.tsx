@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { fetchCellDetail, fmtWeek, type CellDetail } from "@/lib/forecast";
+import { CELL_METRICS, fetchCellContext, fmtMetric, type CellContext } from "@/lib/cell-context";
 
-// Draft card for a forecast block: next 4 weeks, why (drivers), last 12 weeks actual vs expected.
+// Draft card for a forecast block: next 4 weeks, why (drivers), last 12 weeks actual vs expected,
+// and the block profile (demographics, building age), collapsed.
 // Owner: model track.
 
 const BAND = {
@@ -101,7 +103,46 @@ export default function CellCard({ id }: { id: string }) {
         </section>
       )}
 
+      <BlockProfile id={id} />
+
       <footer className="border-t border-neutral-100 pt-2 text-xs text-neutral-700">{d.caveat} Run {d.run_id}.</footer>
     </article>
+  );
+}
+
+/** Who lives in the block and how old its buildings are. Loaded on its own so a missing profile never hides the forecast. */
+function BlockProfile({ id }: { id: string }) {
+  const [got, setGot] = useState<{ id: string; c: CellContext | null } | null>(null);
+  useEffect(() => {
+    let live = true;
+    fetchCellContext(id).then((c) => live && setGot({ id, c })).catch(() => live && setGot({ id, c: null }));
+    return () => { live = false; };
+  }, [id]);
+  const c = got?.id === id ? got.c : undefined;
+  if (c === undefined) return null;
+  const rows = c ? CELL_METRICS.filter((m) => c.attrs[m.key] !== undefined) : [];
+  return (
+    <details className="rounded-md border border-neutral-100 p-2">
+      <summary className="cursor-pointer text-xs font-semibold uppercase tracking-wide text-neutral-700">Block profile: people & buildings</summary>
+      {rows.length ? (
+        <>
+          {(["Buildings", "People"] as const).map((g) => (
+            <dl key={g} className="mt-2 grid grid-cols-[1fr_auto] gap-x-3 gap-y-0.5">
+              <dt className="col-span-2 text-[11px] font-semibold text-neutral-600">{g}</dt>
+              {rows.filter((m) => m.group === g).map((m) => (
+                <div key={m.key} className="contents">
+                  <dt title={m.source}>{m.label}</dt>
+                  <dd className="text-right font-mono tabular-nums">{fmtMetric(m, c!.attrs[m.key])}</dd>
+                </div>
+              ))}
+            </dl>
+          ))}
+          <p className="mt-2 text-xs text-fg-3">
+            Census values are area-weighted from the tracts this block overlaps; buildings are assessor parcels inside it.
+            Context only, not a cause. Sources: {c!.sources.map((s, i) => <span key={s.id}>{i > 0 && ", "}<a className="underline" href={s.url} target="_blank" rel="noreferrer">{s.name}</a></span>)}.
+          </p>
+        </>
+      ) : <p className="mt-2 text-neutral-700">No census or parcel data for this block (mostly water or parkland).</p>}
+    </details>
   );
 }

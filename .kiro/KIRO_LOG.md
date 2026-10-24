@@ -31,6 +31,21 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:34 — Interpretability block on the forecast artifact (Actual tab)
+- Teammate: Bruno
+- Agent: —
+- Did: Interpretability block on the forecast artifact (Actual tab)
+- Why: grouped permutation importance, partial dependence, top driver in high-risk blocks, training-data ablation for risk-v1-20261024T210943
+- Where: https://claude.ai/artifact/Vpdih76TsA4aGW29JAzJjc#actual
+- Idea: top 2 factors are reporting propensity + housing density: consider normalising by vol_311 in the map copy
+
+### 2026-10-24 17:34 — Block profile per 250 m cell: demographics (ACS, CDC asth...
+- Teammate: Bruno
+- Agent: —
+- Did: Block profile per 250 m cell: demographics (ACS, CDC asthma, Boston SVI, density; area-weighted from tracts) + building age (median year built, % pre-1900/1940, % 1980+, units, owner-occupied, value) in new grid_cell_context table; optional 'Per 250 m block' choropleth (off by default) in Buildings & people; profile in the cell card
+- Why: Let people look for correlations between who lives in a block, how old its buildings are, and the rat forecast; feeds Insights region cards (context field)
+- Where: supabase/migrations/20261025100001_analytics_cell_context.sql, web/src/lib/cell-context.ts, web/src/components/map/{ContextLayers,LayerPanel,MapView}.tsx, web/src/components/inspector/CellCard.tsx, insights spec §3/§7.1
+- Idea: Next: test block-profile metrics as model features / partial correlations with expected reports
 ### 2026-10-24 17:25 — Adicionei a secao 5.4a na spec de Insights: agregar popul...
 - Teammate: Carol
 - Agent: kirocrew (default)
