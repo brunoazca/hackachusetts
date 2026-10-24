@@ -17,6 +17,7 @@ import PriorityLayer, { PRIORITY_LAYER_IDS } from "./PriorityLayer";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import InsightPanel from "@/components/insight/InsightPanel";
 import { cellAt } from "@/lib/insight";
+import { fetchRankedCells, weekKey } from "@/lib/priority";
 import FeatureList from "./FeatureList";
 import { addCategoryIcons } from "./icons";
 import { useTheme } from "@/lib/theme-store";
@@ -164,6 +165,7 @@ export default function MapView() {
   const causes = useMap((s) => s.causes);
   const setCauses = useMap((s) => s.setCauses);
   const highlight = useMap((s) => s.highlight);
+  const regionCells = useMap((s) => s.regionCells);
   const setFeaturesInView = useMap((s) => s.setFeaturesInView);
   // Block profile layer (no longer has a picker; stays off).
   const cellMetric = useMap((s) => s.cellMetric);
@@ -278,6 +280,24 @@ export default function MapView() {
   }, []);
   const onMouseLeave = useCallback(() => setHover(null), []);
 
+  // The open insight's region as cell boxes (same cached grid the priority layer draws).
+  const [regionLoaded, setRegionLoaded] = useState<{ cells: string[]; boxes: BBox[] } | null>(null);
+  const regionBoxes = useMemo(() => (regionLoaded?.cells === regionCells ? regionLoaded.boxes : []), [regionLoaded, regionCells]);
+  useEffect(() => {
+    if (!regionCells.length) return;
+    let live = true;
+    const want = new Set(regionCells);
+    fetchRankedCells(weekKey(forecastWeek)).then((fc) => {
+      if (!live) return;
+      setRegionLoaded({ cells: regionCells, boxes: fc.features.filter((f) => want.has(String(f.properties.id))).map((f) => {
+        const ring = f.geometry.coordinates[0] ?? [];
+        const xs = ring.map((c) => c[0]), ys = ring.map((c) => c[1]);
+        return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)] as BBox;
+      }) });
+    }).catch(() => {});
+    return () => { live = false; };
+  }, [regionCells, forecastWeek]);
+
   // Everything that should show as markers right now, tagged with its family for cluster colors.
   // Causes join the markers when asked for, or once you reach street level.
   const street = zoom >= 15;
@@ -294,14 +314,28 @@ export default function MapView() {
       .map((f) => ({ ...f, properties: { ...f.properties, age: ageOf(f.properties) } }));
     // Reports at the very same spot (one address) would draw exactly on top of each other and look
     // like one. Fold them into one marker with a count; tapping it opens the address with all of them.
+    // Single reports inside the open insight's region are never grouped: same-address reports fan
+    // out around their spot (icon offsets, so the ring keeps its size at any zoom).
+    const inRegion = (f: (typeof keep)[number]) => {
+      if ((f.properties.n ?? 1) > 1) return false;
+      const [x, y] = f.geometry.coordinates;
+      return regionBoxes.some((b) => x >= b[0] && x <= b[2] && y >= b[1] && y <= b[3]);
+    };
     const spots = new globalThis.Map<string, typeof keep>();
+    const fanned = new globalThis.Map<string, typeof keep>();
     for (const f of keep) {
       const [x, y] = f.geometry.coordinates;
       const k = `${x.toFixed(5)},${y.toFixed(5)}`;
+      if (inRegion(f)) { const arr = fanned.get(k); if (arr) arr.push(f); else fanned.set(k, [f]); continue; }
       const arr = spots.get(k);
       if (arr) arr.push(f); else spots.set(k, [f]);
     }
     const features: FC["features"] = [];
+    for (const group of fanned.values()) {
+      group.forEach((f, i) => {
+        features.push({ ...f, properties: { ...f.properties, group: CATS[f.properties.category]?.group ?? "rats", expand: true, fan: `${i}/${group.length}` } as IncidentProps });
+      });
+    }
     for (const group of spots.values()) {
       const first = group[0];
       if (group.length === 1) {
@@ -317,7 +351,7 @@ export default function MapView() {
       features.push({ ...pick, properties: { ...pick.properties, category, n, n_open, spot: true, group: CATS[category]?.group ?? "rats" } as IncidentProps });
     }
     return { type: "FeatureCollection", features };
-  }, [data, cats, causes, street, filters.until]);
+  }, [data, cats, causes, street, filters.until, regionBoxes]);
 
   // Keep the keyboard "features in view" list (FeatureList) in sync with what the map draws.
   // In Act we list the ranked sites; otherwise the single reports with a real id, nearest first.
@@ -363,8 +397,20 @@ export default function MapView() {
   }, []);
 
   // Rat reports and the records that explain them never share a group or a count.
-  const ratsFC = useMemo<FC>(() => ({ type: "FeatureCollection", features: clusterFC.features.filter((f) => f.properties.group === "rats") }), [clusterFC]);
-  const causesFC = useMemo<FC>(() => ({ type: "FeatureCollection", features: clusterFC.features.filter((f) => f.properties.group !== "rats") }), [clusterFC]);
+  // Reports in the open region skip both clustered sources and draw on their own (regionFC).
+  const ratsFC = useMemo<FC>(() => ({ type: "FeatureCollection", features: clusterFC.features.filter((f) => f.properties.group === "rats" && !f.properties.expand) }), [clusterFC]);
+  const causesFC = useMemo<FC>(() => ({ type: "FeatureCollection", features: clusterFC.features.filter((f) => f.properties.group !== "rats" && !f.properties.expand) }), [clusterFC]);
+  const regionFC = useMemo<FC>(() => ({ type: "FeatureCollection", features: clusterFC.features.filter((f) => f.properties.expand) }), [clusterFC]);
+  // Fan slot "i/n" -> icon offset on a ring sized so n icons sit side by side (n = 1 stays put).
+  const FAN_OFFSET = useMemo(() => {
+    const slots = [...new Set(regionFC.features.map((f) => f.properties.fan).filter((k): k is string => !!k && !k.endsWith("/1")))];
+    if (!slots.length) return ["literal", [0, 0]] as unknown as ExpressionSpecification;
+    return ["match", ["get", "fan"], ...slots.flatMap((k) => {
+      const [i, n] = k.split("/").map(Number);
+      const r = Math.max(22, (30 * n) / (2 * Math.PI)), a = (2 * Math.PI * i) / n - Math.PI / 2;
+      return [k, ["literal", [Math.round(r * Math.cos(a)), Math.round(r * Math.sin(a))]]];
+    }), ["literal", [0, 0]]] as unknown as ExpressionSpecification;
+  }, [regionFC]);
 
   // Two heatmap families: rat signals vs. everything that explains them.
   const heat = useMemo(() => {
@@ -500,7 +546,7 @@ export default function MapView() {
   }, [iconsReady, zoom]);
 
   const interactive = useMemo(
-    () => [...(appMode === "act" && enabled.sites ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(cellMetric ? ["ctx-cells"] : []), ...(iconsReady ? ["all-clusters", "all-dots", "all-points", "cause-clusters", "cause-dots", "cause-points", "chronic-hit"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : []), ...(priorityOn ? PRIORITY_LAYER_IDS : [])],
+    () => [...(appMode === "act" && enabled.sites ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(cellMetric ? ["ctx-cells"] : []), ...(iconsReady ? ["all-clusters", "all-dots", "all-points", "cause-clusters", "cause-dots", "cause-points", "region-points", "chronic-hit"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : []), ...(priorityOn ? PRIORITY_LAYER_IDS : [])],
     [iconsReady, appMode, enabled.sites, enabled.ctx_buildings, cellMetric, zoom, forecastOn, priorityOn],
   );
 
@@ -596,7 +642,7 @@ export default function MapView() {
         <NavigationControl position="bottom-right" />
         <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} cellMetric={cellMetric} />
         <ForecastLayer visible={forecastOn} period={forecastWeek ?? "4w"} bbox={bbox} selectedId={selectedId} />
-        <PriorityLayer visible={priorityOn} full={priorityFull} three={three} selectedId={selection?.kind === "cell" ? selectedId : ""} week={forecastWeek} T={T} />
+        <PriorityLayer visible={priorityOn} full={priorityFull} three={three} selectedId={selection?.kind === "cell" ? selectedId : ""} regionIds={regionCells} week={forecastWeek} T={T} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
           <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat && causes ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />
@@ -777,6 +823,23 @@ export default function MapView() {
               minzoom={14}
               filter={["all", SINGLE, OPEN, FRESH]}
               paint={{ "circle-radius": 6, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": CLUSTER_COLOR, "circle-stroke-width": 1.5, "circle-stroke-opacity": 0.4, "circle-pitch-alignment": "map", "circle-pitch-scale": "viewport" }}
+            />
+          </Source>
+        )}
+        {iconsReady && (
+          // The open insight's region: every report as its own glyph, at any zoom, above the groups.
+          <Source id="src-region" type="geojson" data={regionFC}>
+            <Layer
+              id="region-points"
+              type="symbol"
+              layout={{
+                "icon-image": ["concat", "cat-", ["get", "category"], ["case", OPEN, "", "-closed"]],
+                "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.7, 15, 0.85, 17, 1.15, 19, 1.5],
+                "icon-offset": FAN_OFFSET,
+                "icon-allow-overlap": true,
+                "symbol-sort-key": ["case", OPEN, 1, 0],
+              }}
+              paint={{ "icon-opacity": AGE_FADE }}
             />
           </Source>
         )}

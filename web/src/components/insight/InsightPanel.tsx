@@ -13,13 +13,14 @@ import EvidenceCard from "./EvidenceCard";
 // A selection on the map or in the panel changes what it shows:
 //   cell / drawn area -> that area's insight     rodent report -> report insight
 //   other report / place -> evidence insight     site / parcel / other -> the existing detail view
-// "All insights" (or Esc) clears the selection and returns to the ranking. Spec: insights-severity-ranking.md §12.
+// "Act" (or Esc) clears the selection and returns to the ranking. Spec: insights-severity-ranking.md §12.
 
 export default function InsightPanel() {
   const selection = useMap((s) => s.selection);
   const select = useMap((s) => s.select);
   const flyTo = useMap((s) => s.flyTo);
   const setHighlight = useMap((s) => s.setHighlight);
+  const setRegionCells = useMap((s) => s.setRegionCells);
   const resolvedCells = useMap((s) => s.resolvedCells);
   const toggleResolved = useMap((s) => s.toggleResolved);
   const target = useMemo(() => routeSelection(selection), [selection]);
@@ -28,10 +29,10 @@ export default function InsightPanel() {
   const [state, setState] = useState<{ key: string; insight?: Insight | null; error?: string }>({ key: "" });
 
   useEffect(() => {
-    if (target.kind === "ranking" || target.kind === "legacy") { setHighlight([]); return; }
+    if (target.kind === "ranking" || target.kind === "legacy") { setHighlight([]); setRegionCells([]); return; }
     const ctl = new AbortController();
     loadInsight(target, ctl.signal)
-      .then((insight) => { if (!ctl.signal.aborted) { setState({ key, insight }); setHighlight(highlightIds(insight)); } })
+      .then((insight) => { if (!ctl.signal.aborted) { setState({ key, insight }); setHighlight(highlightIds(insight)); setRegionCells(insight?.kind === "area" ? insight.cell_ids : []); } })
       .catch(() => { if (!ctl.signal.aborted) setState({ key, error: "Could not load this insight. Try again." }); });
     return () => ctl.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -64,15 +65,15 @@ export default function InsightPanel() {
   else if (current.insight.kind === "evidence") body = <EvidenceCard insight={current.insight as EvidenceInsight} />;
 
   return (
-    <aside aria-label="Insight" className="map-secondary-panel glass absolute bottom-3 left-3 top-(--shell-top) z-20 flex w-[380px] max-w-[calc(100%-24px)] flex-col overflow-hidden rounded-lg">
+    <aside aria-label="Act" className="map-secondary-panel glass absolute bottom-3 left-3 top-(--shell-top) z-20 flex w-[380px] max-w-[calc(100%-24px)] flex-col overflow-hidden rounded-lg">
       <div className="flex h-11 shrink-0 items-center gap-1 border-b border-line px-2">
         {selection ? (
-          <button type="button" onClick={() => select(null)} title="All insights · Esc"
+          <button type="button" onClick={() => select(null)} title="Back to Act · Esc"
             className="inline-flex h-8 items-center gap-1 rounded-md px-2 text-[13px] font-medium text-fg-2 hover:bg-card-hover hover:text-fg">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden><path d="m15 18-6-6 6-6" /></svg>
-            All insights
+            Act
           </button>
-        ) : <h2 className="px-2 text-[13px] font-semibold text-fg">Insight</h2>}
+        ) : <h2 className="px-2 text-[13px] font-semibold text-fg">Act</h2>}
         {selection?.kind === "cell" && (() => {
           const done = resolvedCells.includes(selection.id);
           return (

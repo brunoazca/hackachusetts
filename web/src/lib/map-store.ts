@@ -68,6 +68,7 @@ type MapState = {
   layers: Record<LayerId, boolean>;
   filters: Filters;
   highlight: string[];             // ids of incidents/places/sites to emphasize
+  regionCells: string[];           // 250 m cells of the open insight's region: outlined, reports in it fanned out
   selection: Selection;
   history: Selection[];            // previous selections, for Back in the Insight panel
   panel: "inspector" | "insights" | "chat";
@@ -79,6 +80,7 @@ type MapState = {
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
   setFilters: (patch: Partial<Filters>) => void;
   setHighlight: (ids: string[]) => void;
+  setRegionCells: (ids: string[]) => void;
   select: (s: Selection) => void;
   back: () => void;                // previous selection, or the ranking when there is none
   setPanel: (p: MapState["panel"]) => void;
@@ -121,6 +123,7 @@ export const useMap = create<MapState>((set) => ({
   setCauses: (causes) => set({ causes }),
   filters: { since: daysAgo(7), until: iso(today), categories: [...CATEGORY_IDS], status: "all" },
   highlight: [],
+  regionCells: [],
   selection: null,
   history: [],
   panel: "chat",
@@ -146,6 +149,7 @@ export const useMap = create<MapState>((set) => ({
       causes: wanted.some(isNearbyCategory) };
   }),
   setHighlight: (highlight) => set({ highlight }),
+  setRegionCells: (regionCells) => set({ regionCells }),
   select: (selection) => set((s) => ({
     selection,
     // Esc / clear empties the stack (back to the ranking); a new selection pushes the current one.

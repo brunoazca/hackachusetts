@@ -26,6 +26,7 @@ const PAGE = 20;
 export default function RankingList({ onLocate }: { onLocate: (loc: RegionLocation) => void }) {
   const select = useMap((s) => s.select);
   const flyTo = useMap((s) => s.flyTo);
+  const setRegionCells = useMap((s) => s.setRegionCells);
   const [rows, setRows] = useState<RankingEntry[]>([]);
   const [total, setTotal] = useState<number | null>(null);
   const [busy, setBusy] = useState(false);
@@ -56,6 +57,8 @@ export default function RankingList({ onLocate }: { onLocate: (loc: RegionLocati
   const open = (r: RankingEntry) => {
     const locs = r.locations ?? [];
     if (locs.length) flyTo({ lat: locs.reduce((s, l) => s + l.lat, 0) / locs.length, lon: locs.reduce((s, l) => s + l.lon, 0) / locs.length, zoom: r.cell_ids.length > 1 ? 15 : 16 });
+    // Light the whole region at once; the loaded insight confirms (or corrects) the cells.
+    setRegionCells(r.cell_ids?.length ? r.cell_ids : [r.id]);
     select({ kind: "cell", id: r.id });
   };
 

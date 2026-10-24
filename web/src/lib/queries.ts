@@ -18,6 +18,9 @@ export type IncidentProps = {
   newest?: string;
   /** Client-side: several reports folded into one marker at the same spot. */
   spot?: boolean;
+  /** Client-side: inside the open insight's region, drawn unclustered; `fan` is its "i/n" slot at a shared spot. */
+  expand?: boolean;
+  fan?: string;
   /** Client-side: family (rats, food, shelter, displace) for cluster colors. */
   group?: string;
   /** Client-side: days between the report (or the newest in a cell) and the end of the period. */

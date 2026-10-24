@@ -23,11 +23,12 @@ const ALERT_RED = "#8B0000";
  * `visible`: mark the top-20 blocks dark red with an alert badge, minus the ones marked resolved. `full`: also tint every block
  * by rank — the "Priority blocks" switch in the rail; off by default so the heatmap stays the hero.
  */
-export default function PriorityLayer({ visible, full, three, selectedId, week, T }: { visible: boolean; full: boolean; three: boolean; selectedId: string; week: string | null; T: DataColors }) {
-  // While a block is selected, it is the only strong thing on the grid: everything else steps back.
-  const IS_SEL = ["==", ["get", "id"], selectedId] as unknown as ExpressionSpecification;
+export default function PriorityLayer({ visible, full, three, selectedId, regionIds, week, T }: { visible: boolean; full: boolean; three: boolean; selectedId: string; regionIds: string[]; week: string | null; T: DataColors }) {
+  // While a block (or an insight's region) is selected, it is the only strong thing on the grid: everything else steps back.
+  const sel = [...new Set([selectedId, ...regionIds].filter(Boolean))];
+  const IS_SEL = ["in", ["get", "id"], ["literal", sel]] as unknown as ExpressionSpecification;
   const dim = (full: unknown, factor: number) =>
-    (selectedId ? ["case", IS_SEL, 1, ["*", full, factor]] : full) as unknown as ExpressionSpecification;
+    (sel.length ? ["case", IS_SEL, 1, ["*", full, factor]] : full) as unknown as ExpressionSpecification;
   const resolved = useMap((s) => s.resolvedCells);
   const ALERT = ["all", ["<=", ["get", "rank"], TOP_N], ["!", ["in", ["get", "id"], ["literal", resolved]]]] as unknown as ExpressionSpecification;
   const [loaded, setLoaded] = useState<{ week: string | null; fc: RankedFC } | null>(null);
@@ -52,7 +53,7 @@ export default function PriorityLayer({ visible, full, three, selectedId, week, 
         layout={{ visibility: fillVis }}
         paint={{
           "fill-color": T.returned,
-          "fill-opacity": selectedId
+          "fill-opacity": sel.length
             ? ["case", IS_SEL, 0.7, ["*", ["interpolate", ["linear"], ["get", "pct"], 0, 0.04, 0.6, 0.12, 0.9, 0.3, 1, 0.55], 0.35]]
             : ["interpolate", ["linear"], ["get", "pct"], 0, 0.04, 0.6, 0.12, 0.9, 0.3, 1, 0.55],
           "fill-antialias": false,
@@ -102,7 +103,14 @@ export default function PriorityLayer({ visible, full, three, selectedId, week, 
         filter={IS_SEL}
         paint={{ "fill-extrusion-color": T.returned, "fill-extrusion-height": 2, "fill-extrusion-base": 0, "fill-extrusion-opacity": 0.55 }}
       />
-      {/* Selected block: a soft halo under a heavy outline. */}
+      {/* Selected block or region: a light wash, a soft halo, a heavy outline. */}
+      <Layer
+        id="priority-selected-fill"
+        type="fill"
+        layout={{ visibility: vis }}
+        filter={IS_SEL}
+        paint={{ "fill-color": T.fg, "fill-opacity": 0.1 }}
+      />
       <Layer
         id="priority-selected-halo"
         type="line"
