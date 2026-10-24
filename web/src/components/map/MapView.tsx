@@ -16,7 +16,7 @@ import { addCategoryIcons, iconId } from "./icons";
 
 const STYLE = "https://tiles.openfreemap.org/styles/positron";
 // MapLibre 6's ESM worker can't be resolved by the Next bundler; serve it from /public (postinstall copies it).
-if (typeof window !== "undefined") setWorkerUrl("/maplibre-gl-worker.mjs");
+if (typeof window !== "undefined") setWorkerUrl("/maplibre-gl-worker.js");
 
 const CATS = categories.incident_categories as Record<string, { label: string; color: string; group: string }>;
 type FC = FeatureCollection<Point, IncidentProps>;
