@@ -24,6 +24,11 @@ result since launch. The product tells the inspector when to stop monitoring and
 escalate, and when the cause is next door. Sources: Kiro Crew campaigns `93c1ad29`,
 `d19b46b7`, `b6ba6312` (in the Kiro knowledge library and `knowledge/15_boston_rat_audit.md`).
 
+**Pitch:** Boston closes 99% of rat cases, but it can't tell which fixes last. Rat Audit
+tracks every report, explains why a site keeps coming back, helps the inspector pick the
+next step, predicts which sites are due to come back, and sets up the test that shows
+what works.
+
 ## Users
 
 - **Primary:** an ISD rodent inspector planning this week's visits.
@@ -33,8 +38,25 @@ escalate, and when the cause is next door. Sources: Kiro Crew campaigns `93c1ad2
 ## Goal
 
 From "where are the rat problems and why do they keep coming back?" to "I approved
-the next action for this site, with evidence, and I know when to check again" —
-on one live map, in minutes.
+the next action for this site, with evidence, I know when to check again, and the
+city can measure whether it worked" — on live data, in minutes.
+
+The loop is Track → Analyze → Act → Predict → Prove. In the product it is two
+top-level modes (R0): **Assess** (track, analyze, predict) and **Act** (decide,
+follow up, prove).
+
+## Definitions (one meaning each, used everywhere)
+
+| Term | Meaning |
+|---|---|
+| **Site** | Cluster of rodent reports 2024–2026: DBSCAN in EPSG:26986, eps 50 m, min 3 reports, so the vacant lot or the house next door falls in the same site. Same-day bulk loads (≥ 5 reports, same `address_key`, same date) count as 1. |
+| **Return** | A rodent report inside the site opened 1–60 days after an earlier report's `closed_at`. |
+| **Window** | 60 days, everywhere: returns, what worked, follow-up date, trial measure. |
+| **Action tag** | What the city recorded doing (closure classifier, design §4). Past actions only: "baiting" is a label, never a recommendation. |
+| **Cause tag** | What the note names as the source: trash, sewer, dumpster, debris, vegetation, construction, none. |
+| **Base return rate** | Citywide share of closures followed by a return, by the site's prior returns (0, 1, 2, 3+), with n and a 95% interval. |
+| **Due** | Site whose last closure is inside the window and whose base return rate is ≥ the Due threshold (25% placeholder; set after `base_rates` runs). |
+| **Closure speed** | Days from `opened_at` to `closed_at`. |
 
 ## Non-negotiables
 
@@ -44,6 +66,19 @@ on one live map, in minutes.
 - Privacy by default: owner names, staff names and full addresses are never in the public API or visible on screen by default. They appear blurred, and are revealed only when the user clicks the eye icon (fetched on demand, logged).
 - Accessible: keyboard operable, labelled controls, WCAG AA contrast, map has a list alternative.
 - English UI and materials.
+- Counts first: the UI shows reports, closures and returns. No composite score is shown to users.
+- Legal lane: recommendations are sanitation, exclusion, enforcement or referral. The system never recommends rodenticide or poison (MA rules, `knowledge/26_rodentops_expansion_round2.md` §B).
+- Every citywide "what worked" number shows n, a 95% interval and a selection-bias caveat (the city does not assign actions at random).
+- One cost figure with its date everywhere (resolve $776K in `data-audit.md` vs $783K in `pipeline/rat_audit/ingest/README.md` before the video).
+
+---
+
+## R0 App structure
+
+1. **P0** THE SYSTEM SHALL have two top-level modes: **Assess** (map, sites, findings, forecast, assistant: where it is, why it keeps coming back, what comes next) and **Act** (site queue, case, decision, work order, follow-ups, trials: what to do and did it work).
+2. **P0** Details (site case, report, place, cell, finding, work order, trial) SHALL open in side panels or popovers when the user interacts, not as more top-level tabs.
+3. **P0** A site selected in one mode SHALL stay selected when the user switches modes.
+4. The exact layout, panel placement and visual design are decided in the UI design pass (Gui) and are not fixed here. Requirements below say what must be reachable, not where it sits.
 
 ---
 
@@ -70,7 +105,7 @@ on one live map, in minutes.
 3. **P0** THE SYSTEM SHALL offer layer toggles grouped as Rat signals, Food (trash drivers, restaurants), Shelter (vacant lots, abandoned buildings, weeds), Displacement (demolitions), Protection (Big Belly), Events (move-out), Forecast, Context (vulnerability, listings).
 4. **P0** WHEN the user pans or zooms THE SYSTEM SHALL refetch the visible area for the active layers and filters within 1 second (debounced).
 5. **P0** THE SYSTEM SHALL filter by date range (30 days / 90 days / 1 year / all / custom) and status (open / closed / all).
-6. **P0** WHEN the user clicks any feature THE SYSTEM SHALL select it and open its detail in the Inspect panel.
+6. **P0** WHEN the user clicks any feature THE SYSTEM SHALL select it and open its detail (R0.2).
 7. **P1** THE SYSTEM SHALL show a timeline under the map: weekly rodent reports in view with event marks (Sept 1 move-out) and a temperature line; dragging sets the date window; Play animates week by week.
 8. **P1** THE SYSTEM SHALL show a heatmap mode for rodent reports.
 9. **P1** WHEN the user draws an area (radius or polygon) THE SYSTEM SHALL show area statistics.
@@ -79,40 +114,66 @@ on one live map, in minutes.
 12. **P0** THE SYSTEM SHALL show a legend for the active layers.
 
 13. **P1** THE SYSTEM SHALL show Boston, Cambridge and Somerville on one map with a city filter, and SHALL mark block-centroid points as approximate.
+14. **P1** THE SYSTEM SHALL offer a reporting-normalized layer: rodent reports per 100 total 311 reports per cell.
+15. **P0** WHEN a site is selected (map, queue, search or assistant) THE SYSTEM SHALL fly the map to it and highlight its reports and nearby drivers.
 
 ## R3 Inspect anything
 
 1. **P0** WHEN a report is selected THE SYSTEM SHALL show category, status, opened/closed dates, days to close, the closure note with its action tag, and other reports on the same block address.
-2. **P0** WHEN a chronic site is selected THE SYSTEM SHALL show the site audit card:
-   a. rank and score; b. timeline of reports with closure actions, marking reports that came back after a closure; c. drivers within 100 m (counts by type, clickable to highlight on the map); d. building facts and an adjacent-vacant-lot flag; e. probability of a new report within 60 days; f. what worked nearby; g. recommended actions with "because" evidence.
+2. **P0** WHEN a site is selected THE SYSTEM SHALL show the site case:
+   a. counts: reports, closures, returns, days since last closure, Due flag with its base return rate;
+   b. timeline of reports with closure actions, marking every closure followed by a return;
+   c. escalation ladder: the ordered action tags at the site with the returns between them;
+   d. median closure speed at the site next to the citywide median for the same action tag;
+   e. the last 5 closure notes (names scrubbed), each with action tag and cause tag;
+   f. drivers within 100 m: counts by type, including trash tickets in the last 12 months and schools, clickable to highlight on the map;
+   g. building facts and the adjacent-vacant flag (vacant parcel within 40 m);
+   h. probability of a return within 60 days (R6.5) next to the base return rate;
+   i. what worked nearby, with n, interval and the bias caveat;
+   j. recommended actions with "because" evidence (R3.9).
 3. **P1** WHEN a place is selected (restaurant, demolition, lot, bin, school) THE SYSTEM SHALL show its record and rodent reports within 100 m in the 90 days before and after.
 4. **P1** WHEN an event is selected THE SYSTEM SHALL show its record and trash/rodent reports nearby before and after.
 5. **P1** WHEN a forecast cell is selected THE SYSTEM SHALL show expected reports for the week, the risk band, the top drivers and past actuals.
 6. **P2** WHEN a tract or listing is selected THE SYSTEM SHALL show its context values with caveats.
 7. **P0** WHEN nothing is selected THE SYSTEM SHALL show this week's top 10 chronic sites.
 8. **P0** THE SYSTEM SHALL show the source for every fact in the panel.
-9. **P0** WHEN a chronic site has 2 or more recurrences and its last actions were monitoring, inspection or "noted" THE SYSTEM SHALL recommend escalation (citation or abatement order), because monitoring does not reduce recurrence and violations do (finding R5.2).
-10. **P0** WHEN a chronic site has an adjacent vacant parcel THE SYSTEM SHALL recommend action on that parcel (clearing, baiting, notice to that owner) as a block-level visit, not only at the reported address.
-11. **P1** WHEN a site's drivers are mostly trash storage or dumping THE SYSTEM SHALL recommend sealed containers, citing NYC containerization (311 rat sightings down >20% year over year; −55% in the Hamilton Heights pilot) and Boston's $500,000 participatory-budgeting container project.
+9. **P0** THE SYSTEM SHALL produce recommendations by these rules, first match wins, each with a "because" line and `source_ids`. Escalation is driven by the site's own history; the citywide "what worked" finding (R5.2) is shown as supporting context with its caveat.
+
+   | # | When | Recommend | Because |
+   |---|---|---|---|
+   | 1 | Monitoring, noted or inspection recorded ≥ 2 times at this site, with a return after each | An option not yet tried here: citation or abatement order | "Tried N times here; reports returned each time" + what worked citywide (monitoring 14.1% → 14.2%, violation 15.3% → 12.2%, with caveat) |
+   | 2 | Vacant parcel within 40 m | Joint block visit; notice to the lot's owner or managing agency; clearing | Adjacency + parcel record |
+   | 3 | Trash tickets or trash 311 are most of the nearby drivers | Container compliance visit; sealed containers | Tickets near site; NYC containerization (311 rat sightings down >20% year over year; −55% in the Hamilton Heights pilot) and Boston's $500,000 participatory-budgeting container project, cited as context |
+   | 4 | Cause tag = sewer in any recent note | Referral to BWSC for a catch-basin check | Note text |
+   | 5 | Otherwise | Inspect and record the cause | The open questions (R3.11) |
+
+10. **P0** THE SYSTEM SHALL NOT emit any recommendation outside sanitation, exclusion, enforcement or referral, and SHALL NOT recommend rodenticide or poison.
+11. **P1** THE SYSTEM SHALL list 2–3 "still unknown" checks for the site, drafted by AI from the notes and drivers, each editable and allowed to stay "unknown" (`knowledge/25_rodentops_government_and_public_voices.md` §5).
 
 12. **P1** WHEN a card shows an owner name, full address or raw closure note THE SYSTEM SHALL show it blurred with an eye icon; WHEN the user clicks the eye THE SYSTEM SHALL fetch the value from a non-public store via a server route, show it, and log the reveal (kind, id, time).
 13. **P1** THE SYSTEM SHALL let the inspector see the owner's other parcels (portfolio) after a reveal, with reports per unit across them.
-14. **P1** THE SYSTEM SHALL offer an equity view of the chronic-site ranking (rank within each neighborhood) and flag low-reporting tracts, with the caveat that 311 counts are reports, not rats.
+14. **P1** THE SYSTEM SHALL offer an equity view of the site ranking (rank within each neighborhood) and flag low-reporting tracts, with the caveat that 311 counts are reports, not rats.
+15. **P0** THE SYSTEM SHALL classify every rodent closure note with a cause tag (rules first, optional cached LLM pass for the rest) and report its coverage next to action-tag coverage.
+16. **P1** THE SYSTEM SHALL show expected reports for the current month at the site (site's yearly mean × the month's seasonal factor) next to the actual count.
 
-## R4 Human decision and work order
+## R4 Human decision and work order (Act)
 
-1. **P0** WHEN viewing a site's recommended actions THE SYSTEM SHALL let the inspector Approve, Edit or Reject each one.
+0. **P0** In Act THE SYSTEM SHALL show the site queue: Due sites first, then by returns in the last 12 months. Columns: reports, closures, returns, last action, days since last closure, Due. Filter by neighborhood.
+1. **P0** WHEN viewing a site's recommended actions THE SYSTEM SHALL let the inspector Approve, Edit or Reject each one. Reject SHALL require a reason.
 2. **P0** WHEN an action is approved THE SYSTEM SHALL record the decision (site, action, owner agency, note, follow-up date = today + 60 days) and show a printable work order.
 3. **P0** THE SYSTEM SHALL NOT send, submit or enforce anything; the work order says "Draft — for inspector use".
-4. **P1** WHEN a site with a past decision is opened THE SYSTEM SHALL show the decision and whether new reports arrived since.
+4. **P0** WHEN a site with a past decision is opened THE SYSTEM SHALL show the decision and whether reports came back since.
+5. **P1** THE SYSTEM SHALL show the address's trash pickup day on the work order.
+6. **P1** THE SYSTEM SHALL list follow-ups due: approved decisions whose check-again date is within 7 days or past, with returns since the decision.
 
 ## R5 Findings (correlations)
 
 1. **P0** THE SYSTEM SHALL show an Insights panel with findings, each with a plain headline, the question, method, statistic, a strength label (strong / moderate / weak / none), a small chart, a caveat and sources.
-2. **P0** THE SYSTEM SHALL include at least: trash storage vs rodent reports (311 and code enforcement); dead-animal and indoor-pest reports as leading signals; what worked (60-day repeat rate by city action); Sept 1 move-out (trash reports about 2× citywide and 4–5× in student ZIPs the week of Sept 1, 2023–2025: strong; rodent reports 1–4 weeks later: none); seasonality vs temperature. "What worked" is the lead finding (monitoring 14.1% → 14.2% repeat rate, violation 15.3% → 12.2%). Trash storage SHALL carry its block-level strength (weak, partial ρ ≈ +0.13 after controlling for reporting volume); the ZIP-level +0.78 is a reporting artifact and SHALL NOT be shown.
+2. **P0** THE SYSTEM SHALL include at least: trash storage vs rodent reports (311 and code enforcement); dead-animal and indoor-pest reports as leading signals; what worked (60-day repeat rate by city action); Sept 1 move-out (trash reports about 2× citywide and 4–5× in student ZIPs the week of Sept 1, 2023–2025: strong; rodent reports 1–4 weeks later: none); seasonality vs temperature. "What worked" is the lead finding (monitoring 14.1% → 14.2% repeat rate, violation 15.3% → 12.2%). Trash storage SHALL carry its block-level strength (weak, partial ρ ≈ +0.13 after controlling for reporting volume); the ZIP-level +0.78 is a reporting artifact and SHALL NOT be shown. "What worked" SHALL show n, a 95% interval per action tag and the selection-bias caveat.
 3. **P1** THE SYSTEM SHALL also include the tested results from `data-audit.md`, nulls included: demolitions (no spike; consistent with pre-demolition baiting), rain (none), trash day (none), restaurants and food licenses (none after controls), Big Belly (none), events and Red Sox games (none), building age × owner occupancy, and 311 under-reporting by tract (fewer reports per resident where more children, people of color and residents with disabilities live).
 4. **P0** THE SYSTEM SHALL control for reporting volume by using rates where possible and SHALL report weak or null results honestly.
 5. **P1** WHEN a finding is clicked THE SYSTEM SHALL set the map layers that illustrate it.
+7. **P1** THE SYSTEM SHALL show a BRAP practice card: share of closures by action tag in 2025 vs 2026 (monitoring 49% → 27%, abatement and baiting up) and the return rate by tag per year, each with n and interval.
 6. **P1** THE SYSTEM SHALL compare the three cities: reports per 1,000 residents over time, and what each city does differently (Somerville's Rodent Assistance Program, Cambridge's smart boxes and their catch trends near sightings), with caveats that each city's reporting system differs.
 
 ## R6 Prediction
@@ -121,31 +182,32 @@ on one live map, in minutes.
 2. **P0** THE SYSTEM SHALL backtest the forecast on the most recent 26 weeks against the baseline "mean of the last 4 weeks", and show both scores (MAE and share of reports captured by the top 10% of cells).
 3. **P0** THE SYSTEM SHALL show the model's top features in plain language and the top drivers for each cell.
 4. **P1** THE SYSTEM SHALL use temperature climatology (week-of-year mean) for future weeks. Live rain forecasts SHALL NOT be used (rain showed no effect).
-5. **P1** THE SYSTEM SHALL estimate, for each chronic site, the probability of a new report within 60 days after a closure.
+5. **P1** THE SYSTEM SHALL estimate, for each site, the probability of a return within 60 days after a closure, shown next to its base return rate.
 6. **P0** THE SYSTEM SHALL label forecasts as "expected reports", not rats, and SHALL state next to the layer whether it is the baseline or the backtested model.
 
-7. **P1** THE SYSTEM SHALL flag emerging hotspots: cells with high forecast risk but little recent history, with the leading signals that raised them.
+7. **P1** THE SYSTEM SHALL flag emerging hotspots: cells with high forecast risk but little recent history, with the leading signals that raised them; and early-warning cells: dead-animal and indoor-pest reports up over 12 weeks while rodent reports stayed ≤ 1.
 8. **P2** WHEN the inspector picks interventions for a cell or site THE SYSTEM SHALL return the model's expected change in reports over 4 weeks, labelled as a model estimate.
 9. **P0** THE SYSTEM SHALL run ingestion, analytics, training and scoring in a scheduled Python worker (Modal) that writes to the database, and SHALL re-score after every refresh.
+10. **P0** THE SYSTEM SHALL compute base return rates (by prior-returns bucket, with n and 95% interval) and flag Due sites. They are the explainable baseline the recurrence model (R6.5) must beat, and they drive the queue order (R4.0).
 
 ## R7 Price and cost impact
 
 1. **P1** THE SYSTEM SHALL show assessed-value change FY2025→FY2026 near chronic sites against matched parcels (same ZIP, land use, year-built bucket), labelled exploratory.
 2. **P1** THE SYSTEM SHALL show short-stay listing prices and rat-mention reviews near hot spots against elsewhere.
 3. **P1** THE SYSTEM SHALL show the ZIP-level home value / rent relationship and state that it is weak and confounded.
-4. **P0** THE SYSTEM SHALL show costs that can be counted: city pest-control payments (FY2026 ≈ $776K, BPS $611K), restaurant rodent citations (2025: 127 food businesses, 301 rodent/vermin violations, 37 at the most severe level), repeat inspections at chronic sites.
+4. **P0** THE SYSTEM SHALL show costs that can be counted: city pest-control payments (one figure with its date: FY2026 ≈ $776K or $783K, to be resolved; BPS $611K), restaurant rodent citations (2025: 127 food businesses, 301 rodent/vermin violations, 37 at the most severe level), repeat inspections at chronic sites.
 5. **P0** THE SYSTEM SHALL NOT claim that rats lower property values unless the data shows it, and SHALL show the caveat next to every price figure: no peer-reviewed study links rodents to home prices, and the "5–20% value loss" figures are industry marketing.
 6. **P1** THE SYSTEM SHALL show schools near rodent hot spots (49% of schools are in or next to a top-10% cell vs 35% of lived-in cells) next to BPS pest-control spending ($611K, FY2026), and SHALL NOT claim asthma or fire impacts (not supported, see `data-audit.md`).
 7. **P1** THE SYSTEM SHALL show the health context with its label: 18% of Boston brown rats sampled (59 of 328) carried *Leptospira*, and a Boston-area human case matched a local rat strain (Tufts, PLOS Neglected Tropical Diseases, 2025, peer-reviewed).
 
 ## R8 Assistant (agent chat)
 
-1. **P0** THE SYSTEM SHALL provide an "Ask" chat panel that answers from the live data through tools, never from model memory alone.
+1. **P0** THE SYSTEM SHALL provide an "Ask" assistant, reachable from both modes, that answers from the live data through tools, never from model memory alone.
 2. **P0** WHEN the assistant talks about a place, site or area THE SYSTEM SHALL move the map there and highlight or select the features it refers to.
 3. **P0** THE SYSTEM SHALL show the sources of every answer as clickable chips and referenced features as chips that select them on the map.
 4. **P0** THE SYSTEM SHALL show the tool steps compactly while it works (e.g., "Looked up 16 reports on Normandy St").
 5. **P0** THE SYSTEM SHALL send the current map selection and view with each message so "this site" and "here" work.
-6. **P1** THE SYSTEM SHALL answer forecast, findings, what-worked, price-impact, compare-areas and events questions.
+6. **P1** THE SYSTEM SHALL answer forecast, findings, what-worked, due-sites, trials, price-impact, compare-areas and events questions.
 7. **P0** WHEN asked to act THE SYSTEM SHALL draft (never send) a work order and point the user to the Approve step.
 8. **P0** THE SYSTEM SHALL refuse to reveal owner names or house numbers and SHALL say when the data cannot support an answer.
 9. **P0** IF no model provider is configured THEN THE SYSTEM SHALL show "assistant not configured" and the rest of the app SHALL work.
@@ -163,7 +225,13 @@ on one live map, in minutes.
 1. **P0** THE SYSTEM SHALL be deployed publicly on Vercel with free, unrestricted access for judges.
 2. **P0** THE SYSTEM SHALL keep secrets only in `.env.local` and Vercel env; the repository SHALL contain none.
 3. **P0** THE README SHALL explain how to run the app, the pipeline and the tests from a fresh clone.
-4. **P0** Tests: property-based tests (score bounded 0–100, ranking stable, every `source_id` resolves, no house number or owner name in any `public` schema column (they live only in `private`)), unit tests for the closure classifier (non-unknown ≥ 90% on 2025 and 2026 rodent notes; the rules in `knowledge/sources/scripts/closure_classifier_rules.py` measure 95.5% and 92.7%) and agent tools, one end-to-end happy path (open → select site → approve → work order).
+4. **P0** Tests: property-based tests (returns ≤ reports − 1 per site, ranking stable, every `source_id` resolves, no house number or owner name in any `public` schema column (they live only in `private`), no recommendation text mentions rodenticide or poison, every trial pair matches on its match keys and the seeded assignment is reproducible), unit tests for the closure classifier (non-unknown ≥ 90% on 2025 and 2026 rodent notes; the rules in `knowledge/sources/scripts/closure_classifier_rules.py` measure 95.5% and 92.7%) and agent tools, one end-to-end happy path (open → Act → select a Due site → case → approve → work order with check-again date; Reject without a reason is blocked).
+
+## R11 Prove (did it work)
+
+1. **P0** THE SYSTEM SHALL provide a trial designer: the coordinator picks N and an intervention; the system SHALL pick N pairs of sites matched on neighborhood, prior-return bucket and trash-ticket tercile, assign treatment / comparison at random with a stored seed, show them on the map, export CSV, and state the measure: returns within 60 days, treatment vs comparison.
+2. **P1** WHEN a trial is past its window THE SYSTEM SHALL show returns for treatment vs comparison with n and interval, labelled as the trial's result.
+3. **P1** THE SYSTEM SHALL list enforcement gaps: Due sites with 0 trash tickets within 100 m in the last 12 months.
 
 ## Out of scope
 
@@ -171,3 +239,5 @@ on one live map, in minutes.
 - Estimating rat populations.
 - Tenant data. Owner and staff names only behind the reveal (R3.9).
 - Cities beyond Boston, Cambridge and Somerville.
+- Recommending rodenticide or any pesticide application.
+- Running trials: the system designs and measures them; the city carries them out.
