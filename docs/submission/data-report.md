@@ -1,119 +1,188 @@
-# Data report — Rat Audit Boston (for the video)
+# Final data report — Rat Audit Boston
 
-One page of the real numbers, how the datasets link, and what overlaps mean.
-Every row below is checked against the committed snapshot in `data/civic/datasets/`
-(saved 2026-10-18) and the validation in `.kiro/specs/rat-audit/data-audit.md`
-(tested live 2026-10-24).
+**Cutoff:** October 24, 2026\
+**Purpose:** historical team research, data links, overlaps, and supported video claims. These are recorded research outputs, not a fresh rerun of every analysis. Current implementation is described in [description.md](description.md).
 
----
+## 1. The story in five numbers
 
-## 1. The data we use (demo-safe snapshot)
+| Number | Meaning | Video use |
+|---:|---|---|
+| **5,321** | Boston rodent reports during 2026, through October 23 | Already above all of 2025: **5,225** |
+| **99%** | Share of cases marked closed | Closing a case does not prove the place stayed fixed |
+| **407** | Addresses reported again 30+ days later | Repeat places are the core problem |
+| **46** | Addresses with at least five 2025 reports | A small set keeps returning |
+| **$776K** | FY2026 pest-control payments found by vendor-name matching | A lower-bound cost; **$611K** came from Boston Public Schools |
 
-22 datasets, all committed as static CSV. The 4 Boston city tables below are the
-demo path; the rest are context and campus/region layers.
+**Opening line:** Boston closes almost every rat report. Yet the same places keep coming back.
 
-| Dataset | What it is | Rows | Source |
-|---|---|---:|---|
-| boston-311 | 311 service requests | 5,000 | data.boston.gov |
-| permits | Approved building permits | 8,240 | data.boston.gov |
-| violations | Code / property violations | 2,018 | data.boston.gov |
-| neighborhoods | Per-neighborhood population + income | 24 | data.boston.gov |
-| numina | Street sensor counts | 245,555 | data.boston.gov |
-| vision-zero | Crash records | 44,986 | data.boston.gov |
-| bluebikes | Station-to-station rides | 63,063 | hubway-data |
-| cambridge-bikes | Citywide bike counts | 92,268 | data.cambridgema.gov |
-| cambridge-crashes | Police crash records | 17,230 | data.cambridgema.gov |
-| eco-totem | Broadway bike counter | 17,123 | data.cambridgema.gov |
-| fresh-pond | Fresh Pond usership | 8,784 | data.cambridgema.gov |
-| somerville-counts | Bike + pedestrian counts | 2,532 | data.somervillema.gov |
-| ej | Environmental justice block groups | 2,604 | mass.gov GIS |
-| colleges | Colleges + universities | 206 | mass.gov GIS |
-| mbta-stations | Rapid transit stations | 170 | mass.gov GIS |
-| mbta-alerts | Service alerts | 130 | mbta.com |
-| mbta-routes | Subway routes | 8 | mbta.com |
-| fema | MA disaster declarations | 415 | fema.gov |
-| scorecard | College Scorecard | 140 | scorecard.network |
-| ipeds | IPEDS institution directory | 144 | nces.ed.gov |
-| onet | O*NET occupations | 1,016 | onetcenter.org |
-| openalex-works | Campus research works, 2024 | 500 | openalex.org |
+## 2. What data the product actually uses
 
-**The 4 that drive the demo:** `boston-311`, `permits`, `violations`, `neighborhoods`.
+The live product reads Supabase. The pipeline refreshes public sources.
+The 22 committed civic CSVs support development and fallback seeding.
+They are not all rat signals.
 
----
-
-## 2. How they link (the join keys)
-
-The datasets connect on place. Three keys do all the work.
-
-```
-            ward  ──────────────┐
- boston-311 ───────────────► permits
-   │  zip_code                 │ zip / ward
-   │  ward                     │
-   │  neighborhood ─────► neighborhoods (24 rows: population, income, education)
-   │                            ▲
- violations ──── zip / ward ────┘
-```
-
-| Key | In which tables | What it joins |
+| Product data | Source | Job |
 |---|---|---|
-| ward | 311, permits, violations | city voting ward |
-| zip / zip_code | 311, permits, violations | ZIP area |
-| neighborhood | 311, neighborhoods | the 24 named neighborhoods |
+| Rodent reports, trash reports, closure notes | Boston 311, 2023–2026 and new system | Find repeated reports, recorded responses, and nearby context |
+| Trash and property tickets | Boston code enforcement | Show recorded trash violations; missing links do not prove an enforcement gap |
+| Building facts and ownership groups | Property Assessment and RentSmart | Explain building context and repeated properties |
+| Demolition and excavation permits | Boston building permits | Show nearby work as context; tests found no rat spike |
+| Temperature | NOAA Logan station | Model strong seasonal change |
+| Public schools | City school locations | Measure school exposure near hot spots |
+| Neighborhood and tract context | Boston estimates and Climate Ready SVI | Compare places and flag possible under-reporting |
+| Pest-control payments | Boston Checkbook | Show public cost |
+| Food inspections | Boston inspections | Count citations; not used as a rat predictor |
+| Somerville rat requests | Somerville 311 | Compare regional reporting |
+| Cambridge sightings and smart boxes | Cambridge Open Data | Compare sightings near rat boxes |
+| Source records | Each agency URL and fetch time | Individual report views link to sources; aggregate cards have less granular provenance |
 
-So one ward or ZIP ties a 311 complaint, a building permit, a code violation, and
-the neighborhood's people-and-income context into one place. That is the overlap
-the map shows.
+### Committed civic snapshot
 
----
+The repository also contains 22 verified CSVs saved October 18, 2026.
+The rat-relevant starter tables are:
 
-## 3. The main finding: what the data says about rats
+| Dataset | Rows | Useful fields | Role |
+|---|---:|---|---|
+| Boston 311 | 5,000 | date, topic, status, neighborhood, ZIP, ward | Demo fallback and trash-signal preview |
+| Permits | 8,240 | work type, dates, value, ZIP, ward | Construction context |
+| Violations | 2,018 | status, code, description, ZIP, ward | Enforcement context |
+| Neighborhoods | 24 | population, education, poverty | Area context |
 
-We tested dozens of possible rat drivers on live Boston data (19,466 rodent
-reports, grid of 1,319 lived-in cells). Two numbers carry the story.
+The full live analysis uses larger source pulls than these snapshots.
+For example, its time study uses **19,466 rodent reports**.
 
-| Signal | How strong | Read |
-|---|---:|---|
-| Warm months → more rats | **+0.87** | Strongest effect. Summer is rat season. |
-| Last year's reports here | **+0.32** | Rats come back to the same blocks. |
-| Trash storage problems (311 + code) | +0.17 | Real but smaller. |
-| Dead-animal + indoor-pest reports | +0.11 to +0.14 | Early warning before a hot spot. |
-| Rain, snow, demolitions, restaurants | ~0 | Honest nulls. We show these as "not a cause". |
+## 3. How the data connects
 
-One sentence for the video: **rats follow heat and trash, and they come back to
-the same place — so we forecast where, and a human picks the next action.**
+### Place links
 
----
+| Scale | Rule | What it connects |
+|---|---|---|
+| Address | Private normalized address key | Repeat reports at one property |
+| Current queue place | One normalized address with repeated reports | Reports and closures at that address; 50-meter clustering remains a planned analytics model |
+| Context ring | **100 meters** around each place | Nearby report categories; spatial proximity does not establish causation |
+| Vacant parcel | Within **40 meters** | Adjacent parcel context for field review |
+| Forecast cell | **250-meter** square | Weekly signals and four-week forecasts |
+| Area | Ward, ZIP, neighborhood, tract | Public context and comparisons |
 
-## 4. The overlaps that make a hot spot
+### Time links
 
-A block lights up when the layers stack. The map lets an inspector click one
-place and see all of it.
-
-```
-   trash 311  +  code violation  +  warm month  +  last-year rat report
-        └──────────────┴───────────────┴──────────────┘
-                        = a Due rat site
-```
-
-| Overlap | Why it matters |
+| Window | Meaning |
 |---|---|
-| 311 trash reports **and** code violations in the same ward | the place is both reported and cited |
-| Rat reports **and** low-income neighborhood | 311 counts are lower where vulnerable people live — we flag under-reporting, not fewer rats |
-| Forecast high **but** ≤ 1 report in 12 weeks | an *emerging* hot spot — act before it blows up |
+| **1–60 days** | A report after closure counts as a return |
+| Previous **12 weeks** | Recent trash, pest, and dead-animal records |
+| Previous year | Strong baseline for the same place |
+| Next **4 weeks** | Forecast shown by the product |
 
-Caveat we keep on screen: **a 311 count is a report, not a rat.** More reports can
-mean more people calling, not more rats.
+### Evidence links
 
----
+Source records carry attribution and ingestion metadata, and individual report views link to the source. Do not treat planned coordinate jitter or logged private-field reveal as verified protections across every current screen.
 
-## 5. What's real vs. what's live
+## 4. Main tested findings
 
-- **Demo path:** the committed CSVs above. Nothing breaks on stage.
-- **Live path:** the same tables refresh from data.boston.gov through read-only
-  calls; every number on screen cites its `sources` row (name, URL, time).
-- **Human in the loop:** the tool forecasts and recommends; a person approves the
-  next action. No civic action is automatic.
+Tests used 1,319 lived-in grid cells and controlled for report volume and address count.
+The values below are associations, not proof of cause.
 
-Sources: `data/civic/CATALOG.md`, each `data/civic/datasets/<name>/README.md`,
-and `.kiro/specs/rat-audit/data-audit.md`.
+| Finding | Result | Meaning |
+|---|---:|---|
+| Monthly temperature and reports | **r = +0.87**, 45 months | Warm months dominate the yearly pattern |
+| Last year's reports | **+0.32** predictive link | Place history is the strongest local baseline |
+| New-system improper trash storage | **+0.18** association | New-system periods overlap the outcome window; not proof of advance prediction |
+| Dead-animal reports | **+0.14** association | Weak historical association requiring out-of-time validation |
+| Student move-in trash | **+0.13** association | Exploratory seasonal context; overlapping periods |
+| Indoor pest reports | **+0.11** association | Weak relationship between report categories |
+| Overgrown weeds | **+0.10** association | Weak place-level association; overlapping periods |
+| Overflowing trash, trash out early, litter | **+0.09** each | Several weak signals can overlap |
+| Code-enforcement residential trash | **+0.17** adjusted current link; **+0.09** predictive | Inspector evidence supports the trash link |
+
+Monthly reports per day rise from **6.3 in February** to **22.3 in August**.
+
+**Video line:** Heat sets the season. Place history and trash show where to look.
+
+## 5. The key result: these records do not establish which response lasts
+
+Monitoring made up **49% of 2025 rodent closures**.
+A naive before-and-after view made stronger action look better.
+That view was confounded because repeat rates fall over time anyway.
+
+A matched study used **19,496 cases from 2023–2026**.
+It matched prior reports, neighborhood, and month.
+
+| Comparison | Result |
+|---|---:|
+| Citation or abatement versus monitoring | **Risk ratio 1.03** |
+| 95% confidence interval | **0.89–1.20** |
+| Verdict | No clear difference detected, including within each year; not proof of equivalence |
+
+Site history gave a much clearer split:
+
+| Prior site history | Return within 60 days |
+|---|---:|
+| No prior reports | **8–12%** |
+| Five or more prior reports | **56–75%** |
+
+This changes the product's job.
+It does not claim one action works.
+It helps a person review repeated reports and recorded responses. A matched field trial is a proposed next step, not a working feature.
+
+**Video line:** The biggest predictor is not the last response. It is the site's history.
+
+## 6. Important overlaps
+
+| Overlap | Finding | Product response |
+|---|---|---|
+| Repeat reports + little enforcement | 46 chronic addresses had only 14 linked violations | Review linked records; missing links are not proof of inaction |
+| High forecast + at most one recent report | New risk appears before many direct reports | Mark an emerging hot spot |
+| Trash signals + warm season + past reports | Weak signals stack at one place and time | Provide context for review, not an inspection deadline |
+| Schools + top hot spots | **66 of 134 schools (49%)** are in or beside top-10% cells; baseline is **35%** | Show school exposure, without claiming health harm |
+| Vulnerability + low 311 reporting | Report rates are lower in several vulnerable groups | Flag possible under-reporting, not fewer rats |
+| Somerville + Cambridge + Boston | Rats cross borders, but reporting systems differ | Compare trends with a clear caveat |
+
+## 7. Findings we should not overstate
+
+| Tested idea | Result | Video rule |
+|---|---|---|
+| Heavy rain | No association detected in tested windows | Do not call rain a driver |
+| Snow | No association detected in tested windows | Do not call snow a driver |
+| Demolition permits | No post-work spike | Show only as case context |
+| Red Sox home games | No association detected in tested windows | Leave out |
+| Holiday trash delays | No rodent-report association detected | Leave out |
+| Restaurants and food licenses | No predictive link | Use only for citations and context |
+| Big Belly bins | No association detected in tested analysis | Leave out |
+| Asthma | Negative adjusted link | Do not claim a health effect |
+| Fire incidents | No adjusted link | Leave out |
+| iNaturalist sightings | Weak agreement with 311 | Do not use as a core signal |
+
+## 8. Limits the video must state
+
+- Count **reports**, never rats.
+- A closed case is not a lasting fix.
+- More reports can mean easier reporting.
+- Correlation does not prove a cause.
+- Three cities use different reporting systems.
+- The **$776K** spend is a lower bound from vendor-name matching.
+- Recommendations and an approval/work-order flow remain unfinished.
+- The current interface supports review; it does not dispatch a civic action.
+
+## 9. Best video sequence
+
+1. Show **5,321 reports** and **99% closed**.
+2. Click one site that returned many times.
+3. Reveal its trash, ticket, season, and history overlap.
+4. Show **8–12% versus 56–75%** return risk.
+5. Show the **1.03** matched-study result.
+6. End on a reviewed place and its supporting records.
+7. Describe field follow-up and a matched trial as future work; do not stage them as shipped screens.
+
+## 10. Source map
+
+| Claim group | Main record |
+|---|---|
+| Product counts and pitch | `knowledge/15_boston_rat_audit.md` |
+| Tested signals and nulls | `.kiro/specs/rat-audit/data-audit.md` |
+| Product data flow | `.kiro/specs/rat-audit/design.md` |
+| Product rules | `.kiro/specs/rat-audit/requirements.md` |
+| Civic CSV list and row counts | `data/civic/CATALOG.md` |
+| Exact snapshot fields and URLs | `data/civic/datasets/<name>/README.md` |
+| Spend cross-check | `knowledge/19_rat_data_validation.md` |
+
+**Final closing line:** Piper brings scattered reports together for an inspector to review.

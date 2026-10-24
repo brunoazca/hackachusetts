@@ -5,10 +5,12 @@ inclusion: always
 # Product — Hackachusetts 2026 (Civic Action track)
 
 ## What we are building
-**Rat Audit Boston**: a live map of every rat-related signal in Boston. An ISD rodent
-inspector or the BRAP coordinator clicks anything to inspect it, sees what drives
-rats there, what the city already tried, and what is forecast next, then approves the
-next action. An assistant answers questions from the data and drives the map.
+**Piper (Rat Audit Boston)**: an evidence-review tool for repeated rodent reports.
+An inspector starts with Places to visit, opens an address, reviews reports after
+closure and recorded responses, and examines nearby records. The map and report
+forecast add context; they do not establish causes or treatment effectiveness.
+Recommendations, approval/work-order flow, assistant, and trial design remain
+planned until their complete paths work. Do not describe them as shipped.
 Spec: `.kiro/specs/rat-audit/`.
 
 ## Who it is for

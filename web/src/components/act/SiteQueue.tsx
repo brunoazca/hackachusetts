@@ -2,8 +2,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { useMap, type SiteRow } from "@/lib/map-store";
 import { fetchSiteQueue } from "@/lib/queries";
+import { CollapseButton, CollapsedTab } from "@/components/shell/Collapse";
 
-// Act mode: Due sites first, then by returns (R4.0). Draft: sites are repeat-report addresses
+// Act mode: review suggestions first, then by reports after closure (R4.0). Draft: repeat-report addresses
 // from the `site_queue` RPC until the analytics `sites` table (50 m clusters) lands.
 
 export default function SiteQueue() {
@@ -14,6 +15,7 @@ export default function SiteQueue() {
   const [rows, setRows] = useState<SiteRow[] | null>(null);
   const [hood, setHood] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
+  const [panelOpen, setPanelOpen] = useState(true);
 
   useEffect(() => {
     fetchSiteQueue(300)
@@ -35,19 +37,24 @@ export default function SiteQueue() {
     flyTo({ lat: r.lat, lon: r.lon, zoom: 16.5 });
   };
 
+  if (!panelOpen) return <CollapsedTab side="left" label="Places to visit" meta={`${due} flagged`} onOpen={() => setPanelOpen(true)} />;
   return (
-    <div className="absolute left-3 top-3 flex max-h-[calc(100%-1.5rem)] w-96 flex-col rounded-lg border border-neutral-200 bg-white/95 text-sm shadow-lg backdrop-blur">
+    <div className="glass absolute bottom-3 left-3 top-[68px] z-20 flex w-96 flex-col overflow-hidden rounded-lg text-sm">
       <div className="border-b border-neutral-200 p-3">
         <div className="flex items-baseline justify-between">
-          <h2 className="text-base font-semibold">Site queue</h2>
-          <span className="text-xs text-neutral-700">{due} due · {shown.length} shown</span>
+          <h2 className="flex items-center gap-1 text-base font-semibold"><CollapseButton onClick={() => setPanelOpen(false)} label="Hide places to visit" dir="left" />Places to visit</h2>
+          <span className="text-xs text-fg-3">{shown.length} shown</span>
         </div>
         <p className="mt-0.5 text-xs text-neutral-700">
-          Due = closed in the last 60 days at a site that has come back before. Then most returns.
+          Select a place to review its reports and recorded responses.
+        </p>
+        <p className="mt-1 text-xs text-fg-3">
+          Review suggested: closed in the last 60 days, with an earlier report after closure. A review flag, not an inspection deadline. Flagged places first, then most reports after closure.
         </p>
         <label className="mt-2 flex items-center gap-2 text-xs text-neutral-800">
           Neighborhood
           <select
+            aria-label="Neighborhood"
             value={hood}
             onChange={(e) => setHood(e.target.value)}
             className="min-w-0 flex-1 rounded border border-neutral-300 bg-white px-1.5 py-1 text-xs"
@@ -61,7 +68,7 @@ export default function SiteQueue() {
       {error && <p role="alert" className="p-3 text-red-800">Could not load the queue: {error}</p>}
       {!rows && !error && <p className="p-3 text-neutral-700">Loading sites…</p>}
 
-      <ol className="min-h-0 flex-1 overflow-y-auto" aria-label="Sites, most urgent first">
+      <ol className="min-h-0 flex-1 overflow-y-auto" aria-label="Places, review suggestions first">
         {shown.map((r, i) => {
           const active = selection?.kind === "site" && selection.id === r.id;
           return (
@@ -70,7 +77,7 @@ export default function SiteQueue() {
                 type="button"
                 onClick={() => open(r)}
                 aria-current={active ? "true" : undefined}
-                className={`grid w-full grid-cols-[1.5rem_1fr_auto] items-start gap-2 border-b border-neutral-100 px-3 py-2 text-left hover:bg-neutral-50 ${active ? "bg-amber-50" : ""}`}
+                className={`grid w-full grid-cols-[1.5rem_minmax(0,1fr)] items-start gap-2 border-b border-neutral-100 px-3 py-2 text-left hover:bg-neutral-50 ${active ? "bg-amber-50" : ""}`}
               >
                 <span className="pt-0.5 text-xs font-semibold text-neutral-600">{i + 1}</span>
                 <span className="min-w-0">
@@ -80,11 +87,11 @@ export default function SiteQueue() {
                   </span>
                   <span className="mt-0.5 flex gap-3 text-xs text-neutral-800">
                     <span><b>{r.reports}</b> reports</span>
-                    <span><b>{r.returns}</b> returns</span>
+                    <span title="Reports within 60 days after an earlier closure"><b>{r.returns}</b> after closure</span>
                     <span><b>{r.closures}</b> closures</span>
                   </span>
+                  {r.due && <span className="mt-1 inline-block rounded bg-return/15 px-1.5 py-0.5 text-xs font-semibold text-return">Review suggested</span>}
                 </span>
-                {r.due && <span className="rounded bg-red-700 px-1.5 py-0.5 text-xs font-semibold text-white">Due</span>}
               </button>
             </li>
           );

@@ -61,7 +61,7 @@ export default function CellCard({ id }: { id: string }) {
       {d.emerging?.kind === "emerging_hotspot" && (
         <p className="rounded-md bg-blue-50 p-2 text-blue-900">
           <b>Emerging hotspot:</b> high forecast but at most 1 rodent report in the last 12 weeks.
-          {d.emerging.signals.length > 0 && <> Leading signals: {d.emerging.signals.map((s) => `${s.label.toLowerCase()} (${s.last_12_weeks})`).join(", ")}.</>}
+          {d.emerging.signals.length > 0 && <> Related report signals: {d.emerging.signals.map((s) => `${s.label.toLowerCase()} (${s.last_12_weeks})`).join(", ")}.</>}
         </p>
       )}
       {d.emerging?.kind === "early_warning" && (
@@ -69,7 +69,8 @@ export default function CellCard({ id }: { id: string }) {
       )}
 
       <section>
-        <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Why: what pushes this block up</h3>
+        <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Factors associated with this forecast</h3>
+        <p className="mb-2 text-xs text-fg-3">Model associations do not identify causes or treatment effects.</p>
         {d.drivers.length ? (
           <ul className="space-y-1">
             {d.drivers.slice(0, 5).map((x) => (

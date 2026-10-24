@@ -6,7 +6,7 @@ import { fetchForecastRun, fmtWeek, SURFACE_STOPS, type ForecastRun } from "@/li
 // Forecast toggle + period picker + legend, top-right of the map. Owner: model track.
 // forecastWeek in the store holds the period: "4w" (total of the next 4 weeks) or a week_start.
 
-export default function ForecastControl() {
+export default function ForecastControl({ embedded = false }: { embedded?: boolean }) {
   const on = useMap((s) => s.layers.forecast);
   const setLayers = useMap((s) => s.setLayers);
   const period = useMap((s) => s.forecastWeek) ?? "4w";
@@ -18,10 +18,10 @@ export default function ForecastControl() {
   const grad = `linear-gradient(90deg, ${SURFACE_STOPS.map(([, c]) => c).join(", ")})`;
   const options: [string, string][] = run ? [["4w", "Next 4 weeks"], ...run.weeks.map((w): [string, string] => [w, fmtWeek(w)])] : [];
   return (
-    <div className="absolute right-3 top-3 w-64 rounded-lg bg-white/95 p-3 text-sm shadow-lg ring-1 ring-black/5">
+    <div className={embedded ? "text-sm" : "absolute right-3 top-3 w-64 rounded-lg bg-white/95 p-3 text-sm shadow-lg ring-1 ring-black/5"}>
       <label className="flex cursor-pointer items-center justify-between gap-2">
         <span className="font-semibold text-neutral-900">Rodent report forecast</span>
-        <input type="checkbox" checked={on} onChange={(e) => setLayers({ forecast: e.target.checked })} className="h-4 w-4" />
+        <input type="checkbox" role="switch" aria-label="Show rodent report forecast" checked={on} onChange={(e) => setLayers({ forecast: e.target.checked })} className="piper-switch" />
       </label>
       {on && run && (
         <div className="mt-2 space-y-2">

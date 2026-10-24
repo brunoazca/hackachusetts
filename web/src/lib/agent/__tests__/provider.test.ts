@@ -10,7 +10,7 @@ test("defaults to gateway and is not configured without a key", () => {
 });
 
 test("gateway with API key or Vercel OIDC token", () => {
-  assert.deepEqual(providerStatus({ AI_GATEWAY_API_KEY: "k" }), { configured: true, provider: "gateway", modelId: "anthropic/claude-sonnet-5.5" });
+  assert.deepEqual(providerStatus({ AI_GATEWAY_API_KEY: "k" }), { configured: true, provider: "gateway", modelId: "openai/gpt-4.1-mini" });
   assert.equal(providerStatus({ VERCEL_OIDC_TOKEN: "t" }).configured, true);
 });
 

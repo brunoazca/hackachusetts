@@ -34,14 +34,14 @@ export default function InspectorPanel() {
     return () => { live = false; };
   }, [id]);
 
-  if (selection?.kind === "site") return <SiteCase id={selection.id} />;
+  if (selection?.kind === "site") return <SiteCase key={selection.id} id={selection.id} />;
   if (selection?.kind === "cell") return <CellCard id={selection.id} />;
   if (selection?.kind === "place" && selection.id.startsWith("parcel:")) return <ParcelCard pid={selection.id.slice(7)} />;
   if (!id) {
     return (
       <div className="p-4 text-sm text-neutral-800">
-        <h2 className="mb-1 text-base font-semibold text-neutral-900">Inspect</h2>
-        <p>Click any point on the map to see the report, what the city did, and other reports at the same address.</p>
+        <h2 className="mb-1 text-base font-semibold text-neutral-900">Review a place</h2>
+        <p>Select a place from Places to visit to read its reports and recorded responses, or choose a report on the map.</p>
       </div>
     );
   }

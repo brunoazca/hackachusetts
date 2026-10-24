@@ -1,24 +1,60 @@
 @import "tailwindcss";
+/* Piper design tokens, themes, utilities. Spec: docs/design/README.md */
+@import "../styles/piper.css";
 
-/* Light UI only: panels are white, so text must stay dark even when the OS is in dark mode. */
-:root {
-  color-scheme: light;
-  --background: #ffffff;
-  --foreground: #111827;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* In a layer so Tailwind utilities (text-*, bg-*) can override it. */
-@layer base {
-  body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-geist-sans), system-ui, sans-serif;
+/* Switch (docs/design/components/controls.md): a native checkbox styled as a 32×18 track. */
+@layer components {
+  .piper-switch {
+    appearance: none; -webkit-appearance: none; flex: none; position: relative; cursor: pointer;
+    width: 32px; height: 18px; border-radius: 999px; background: var(--p-edge);
+    transition: background-color 140ms var(--ease-out);
   }
+  .piper-switch::after {
+    content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--p-fg); transition: transform 140ms var(--ease-out), background-color 140ms;
+  }
+  .piper-switch:checked { background: var(--p-accent); }
+  .piper-switch:checked::after { transform: translateX(14px); background: var(--p-accent-fg); }
+}
+
+/* Dual range (Timeline): transparent tracks stacked; only the thumbs take pointer input. */
+.piper-range { -webkit-appearance: none; appearance: none; background: transparent; pointer-events: none; margin: 0; }
+.piper-range::-webkit-slider-runnable-track { height: 32px; background: transparent; }
+.piper-range::-moz-range-track { height: 32px; background: transparent; }
+.piper-range::-webkit-slider-thumb {
+  -webkit-appearance: none; pointer-events: auto; cursor: grab; margin-top: 6px;
+  width: 20px; height: 20px; border-radius: 999px; background: var(--p-panel-solid);
+  border: 2px solid var(--p-fg); box-shadow: 0 1px 3px rgb(0 0 0 / .25);
+  transition: transform 140ms var(--ease-out);
+}
+.piper-range::-moz-range-thumb {
+  pointer-events: auto; cursor: grab; width: 16px; height: 16px; border-radius: 999px;
+  background: var(--p-panel-solid); border: 2px solid var(--p-fg);
+}
+.piper-range:active::-webkit-slider-thumb { cursor: grabbing; transform: scale(1.12); }
+.piper-range:focus-visible { outline: none; }
+.piper-range:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--p-fg); outline-offset: 3px; }
+.piper-range:focus-visible::-moz-range-thumb { outline: 2px solid var(--p-fg); outline-offset: 3px; }
+
+@keyframes piper-fly { from { opacity: 0; transform: translateX(-6px) scale(.98); } to { opacity: 1; transform: none; } }
+
+/* MapLibre controls follow the theme. */
+@layer base {
+  .maplibregl-ctrl-group {
+    background: var(--p-panel) !important;
+    backdrop-filter: blur(20px) saturate(1.15);
+    -webkit-backdrop-filter: blur(20px) saturate(1.15);
+    border: 1px solid var(--p-line);
+    border-radius: 12px !important;
+    box-shadow: var(--shadow-panel) !important;
+    overflow: hidden;
+  }
+  .maplibregl-ctrl-group button { width: 40px !important; height: 40px !important; }
+  .maplibregl-ctrl-group button + button { border-top: 1px solid var(--p-line) !important; }
+  [data-theme="night"] .maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: invert(0.92) sepia(0.15); }
+  /* Keep map controls in the clear area, left of the floating side panel. */
+  .maplibregl-ctrl-bottom-right { right: var(--right-inset, 84px) !important; bottom: var(--ctrl-bottom, 4px); transition: right 300ms var(--ease-spring), bottom 300ms var(--ease-spring); }
+  .maplibregl-ctrl-attrib { background: var(--p-panel) !important; color: var(--p-fg-3) !important; }
+  .maplibregl-ctrl-attrib a { color: var(--p-fg-2) !important; }
+  [data-theme="night"] .maplibregl-ctrl-attrib-button { filter: invert(0.9); }
 }

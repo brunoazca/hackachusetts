@@ -232,7 +232,10 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
           }
           const caveats: string[] = [];
           if (q.near && res.rows.length >= 1000) caveats.push("Radius search capped at the newest 1,000 reports in the area.");
-          if (total != null && total > rows.length) caveats.push(`Showing ${Math.min(rows.length, limit)} of ${total}.`);
+          if (total != null && total > rows.length) {
+            caveats.push(`Showing ${Math.min(rows.length, limit)} of ${total}.`);
+            caveats.push(`Category, status and action breakdowns cover only the ${rows.length} fetched reports, not all ${total} matches. For an exact status total, search with that status filter.`);
+          }
           if (!rows.length) caveats.push("No incidents match these filters.");
           const shown = rows.slice(0, limit);
           return {
@@ -240,6 +243,8 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
               filters: { categories: q.categories ?? ["rodent"], query: q.query ?? null, since, until: q.until ?? null, status: q.status ?? "all", near: q.near ?? null },
               total,
               returned: shown.length,
+              breakdowns_count: rows.length,
+              breakdowns_scope: "fetched_reports",
               by_category: countBy(rows, (r) => r.category),
               by_status: countBy(rows, (r) => r.status),
               by_action: countBy(rows.filter((r) => r.status === "closed"), (r) => r.action_tag),

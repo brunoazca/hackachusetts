@@ -1,55 +1,66 @@
-# Hackachusetts 2026 — Civic Action
+# Piper — Hackachusetts 2026
 
-One useful Massachusetts civic workflow: a resident finishes one concrete public
-service task end to end, with authoritative cited evidence, an accessible UI, and
-a clear human decision point before any action.
+Piper helps Boston rodent inspectors review places with repeated 311 reports, read recorded responses, and examine nearby records before deciding where to investigate. It counts **reports**, not rats, and does not infer that a closed case solved a problem.
 
-> Status: scaffolding. Stack and app code land under `src/` on day one.
+## Working product
 
-## What it is
-_<One sentence once the service is chosen — see `docs/submission/description.md`.>_
+The app opens in **Places to visit**. Choose an address to see its report timeline, closure notes, reports after earlier closures, and nearby records. Switch to **Map** to explore available Boston, Cambridge, and Somerville layers and the four-week Boston report forecast. The Insights panel presents a dated research snapshot, not a live treatment-effect estimate.
 
-## Run it
-_<Fill in from `.kiro/steering/tech.md` once the stack exists.>_
+“Review suggested” flags a recently closed place with a prior report after closure. It is a heuristic for human review, not an inspection deadline or a prediction that rats will return. The available records do not establish which treatment works better or whether a nearby parcel caused the reports.
+
+The Ask assistant, recommendations, approval/work-order flow, and trial designer are unfinished. No civic submission is sent by the current interface. The strongest completed workflow is **review a place and its evidence**; the prototype does not yet finish a resident service request end to end.
+
+## Run locally
+
+Use Node.js 24 and pnpm 11.22.0 (the version pinned in `web/package.json`).
+
 ```bash
-# install
-# dev
-# build
-# test
+cd web
+pnpm install --frozen-lockfile
+cp .env.example .env.local
+# Fill in the two NEXT_PUBLIC_SUPABASE_* values for the populated project.
+pnpm dev
 ```
 
-## How we used Kiro
-This project is spec-driven with Kiro. Real work lives in `/.kiro`:
-- `/.kiro/steering/` — always-on product, tech, and structure guidance.
-- `/.kiro/specs/rat-audit/` — requirements, design, tasks for RodentOps (the Boston rat audit tool).
-- `/.kiro/hooks/` — automated accessibility and demo-path checks on save.
-- `/.kiro/agents/civic-judge.json` — a judge-style reviewer agent.
-- `/.kiro/settings/mcp.json` + `/.kiro/mcp/` — MCP servers Kiro uses while building:
-  the **City of Boston's own [OpenContext](https://github.com/CityOfBoston/OpenContext)**
-  (data.boston.gov and MassGIS, through a small stdio bridge), SQL over our committed
-  data snapshots, live MBTA, AWS docs, and Playwright for UI checks.
-  Check them all with `python3 .kiro/scripts/check_mcp.py` (needs `python3`, `uv`, `node`).
-  Cambridge/Somerville need a free token in `.env.local` (copy `.env.example`);
-  all sources are listed in `knowledge/23_live_data_sources.md`.
+Open [localhost:3000](http://localhost:3000). The app needs a populated Supabase project with this repository's schema and RPCs. The existing team project is the quickest development path; obtain its public URL and anon key through the team's private channel. Committed CSVs are research/development inputs, **not an automatic offline fallback** for the web app. A fresh checkout without database configuration will not load the data views.
 
-Full write-up: `docs/submission/kiro-usage.md`.
+The frontend reads `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from `web/.env.local`. Only the public client key belongs there; never put a service-role key in a `NEXT_PUBLIC_` variable. Refresh is optional and additionally needs the server-only `MODAL_REFRESH_URL` and `RAT_AUDIT_WORKER_TOKEN`. Without those, the app can read existing data but cannot request a pipeline refresh.
 
-## Data & evidence
-Uses a committed, cited data snapshot (no live API on the demo path). Source and
-retrieval date are documented in-product and in the snapshot file.
+The Python ingestion/model worker has separate setup and credentials in [pipeline/README.md](pipeline/README.md). Source modes are defined in `pipeline/rat_audit/ingest/update_modes.py`: “live” means refreshable, while daily jobs currently run manually. Do not treat a source's update mode as proof of its latest successful ingestion.
 
-## Accessibility
-Keyboard operable, screen-reader labels, WCAG AA contrast — a scored requirement.
+## Checks
 
-## Repo layout
-See `/.kiro/steering/structure.md`.
+```bash
+cd web
+pnpm lint
+pnpm exec tsc --noEmit
+pnpm build
+```
 
-## Secrets & safety (public repo)
-- Secrets live only in `.env.local` (git-ignored; template `.env.example`). Share it through a private channel.
-- `python3 .kiro/scripts/scan_secrets.py` scans the repo; the `secret-scan` Kiro hook runs it on save.
-- Turn on the git pre-commit block once per clone: `git config core.hooksPath .githooks`.
-- `bash .kiro/audit/sync-audit-log.sh` writes `.kiro/audit/audit.log`, a **sanitized** excerpt of the Kiro Crew audit log (this repo only, no outputs, secrets redacted). It is git-ignored by `*.log`; to publish it, add `!.kiro/audit/audit.log` to `.gitignore`.
-- `python3 .kiro/scripts/check_submission_ready.py` checks artifacts plus secrets, MCP health and license in one go.
+Repository checks: `python3 .kiro/scripts/check_overclaims.py` and `python3 .kiro/scripts/scan_secrets.py`. The submission checker also contacts configured MCP services, so it is not an offline test. Build success is not a complete accessibility audit.
 
-## License
-MIT, see `LICENSE`. Datasets keep their own licenses (each `data/civic/datasets/*/README.md`).
+## Evidence and limitations
+
+- [Data report](docs/submission/data-report.md): historical findings, cutoffs, methods, and caveats.
+- [Data audit](.kiro/specs/rat-audit/data-audit.md): exploratory source tests and their results.
+- [Boston 311](https://data.boston.gov/dataset/311-service-requests): the main report/closure source.
+- [Boston Rodent Action Plan](https://www.boston.gov/departments/inspectional-services/boston-rodent-action-plan-brap): existing city work that Piper aims to support.
+
+Reporting frequency reflects reporting behavior as well as conditions. Missing linked enforcement records do not prove no enforcement happened. Nearby records supply context, not causes. Different municipal systems are not directly comparable. Forecasts estimate recorded reports, not infestations or treatment effects.
+
+## Kiro and submission
+
+The team used Kiro for specifications, data research, implementation, and review. The [Kiro write-up](docs/submission/kiro-usage.md) links concrete artifacts and distinguishes configured hooks from observed execution. The append-only [.kiro/KIRO_LOG.md](.kiro/KIRO_LOG.md) records who did each piece of work, including non-Kiro contributions.
+
+- [Project description](docs/submission/description.md)
+- [Current-build demo script](docs/submission/demo-script.md)
+- [Repository](https://github.com/brunoazca/hackachusetts)
+- [Deployment target](https://piper-app.vercel.app) configured by `.github/workflows/deploy.yml`; a local branch change does not update that deployment.
+
+Submission still needs a public video under three minutes. Accessibility features include a list alternative to map selection, labeled controls, focus styles, and reduced-motion support; full keyboard, screen-reader, contrast, and responsive audits remain outstanding.
+
+## Layout and license
+
+`web/`: Next.js app. `pipeline/`: Python ingestion and forecast worker. `supabase/`: database migrations. `data/civic/` and `knowledge/`: source snapshots and research. `.kiro/`: specs, steering, hooks, agents, and work log.
+
+MIT; see [LICENSE](LICENSE). Datasets retain their source licenses documented with each dataset.

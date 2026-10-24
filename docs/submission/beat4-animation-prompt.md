@@ -1,5 +1,7 @@
 # Beat 4 Animation Prompt (paste into Claude)
 
+> Production concept: some beats below depend on unfinished features. Use [demo-script.md](demo-script.md) for the implemented recording path. Do not present recommendations, approval/work orders, the assistant, or trial design as working features. Editable claims were corrected on October 24; existing video exports must be re-rendered before reuse.
+
 Paste everything inside the code fence below into Claude.
 
 ---
@@ -50,8 +52,8 @@ Citywide frame (use as opening context, large numbers):
 - 99% of cases are marked "closed."
 - Yet 407 addresses got a NEW report 30+ days after an earlier one.
 - Across Boston's 46 chronic addresses (5+ reports), 237 of ~280 recorded actions
-  were just "monitoring"; only 14 were violations. Monitoring does not reduce
-  recurrence — escalation does.
+  were just "monitoring"; only 14 were violations. The records do not establish
+  which response works better.
 
 The escalation ladder at THIS block, in order (each is a real 311 closure action):
 1. Area inspector monitoring (2025-03)
@@ -80,7 +82,7 @@ Rodent Activity at neighboring addresses ×4, and the adjacent vacant lot ×1.
 6. THE REVEAL → the camera/eye finally widens one parcel over: the vacant lot next
    door lights up as the true source, dumping and dead-animal markers around it.
    (the aha — "they were fixing the wrong parcel")
-7. THE REFRAME → text resolves: "A block problem, not an address problem." The
+7. THE REFRAME → text resolves: "Review the block around each report." The
    whole exploded card COLLAPSES smoothly back into a SINGLE map pin. (resolution,
    hands the baton to the live product)
 
@@ -121,7 +123,7 @@ Target ~32s total. Timings are a guide; tune for readability.
 - Scene 6 (25.0–29.0s): The frame widens by one parcel. The ADJACENT vacant lot
   ignites in red, labeled "Vacant lot · RES LAND (Unusable)." Small markers bloom
   around it: "Illegal dumping ×6", "Dead animal ×4", "Improper trash ×3". A line
-  connects them to the chronic spot. Text: "The real driver was next door."
+  connects them to the chronic spot. Text: "Nearby records warrant a closer look."
 - Scene 7 (29.0–32.0s): Everything eases together and COLLAPSES into a single map
   pin on a minimal map silhouette. Caption resolves: "A block problem, not an
   address problem." Then a quiet tagline line: "Rat Audit Boston." Hold on the pin.

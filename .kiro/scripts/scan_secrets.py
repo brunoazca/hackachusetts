@@ -24,6 +24,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 ENV_LOCAL = ROOT / ".env.local"
 
+# Exact public configuration values, not credentials. Keep unknown values in the
+# secret scan, including a credential accidentally pasted into one of these keys.
+PUBLIC_ENV_VALUES = {
+    "MODEL_PROVIDER": {"gateway", "anthropic", "bedrock"},
+    "MODEL_ID": {"openai/gpt-4.1-mini"},
+}
+
 # Files that may legitimately mention variable names with empty values.
 SKIP_FILES = {".env.local", "scan_secrets.py"}
 SKIP_SUFFIXES = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".zip", ".pdf", ".ico", ".mp4", ".mov"}
@@ -50,7 +57,10 @@ def env_local_values() -> list[str]:
     for line in ENV_LOCAL.read_text(errors="replace").splitlines():
         line = line.strip()
         if line and not line.startswith("#") and "=" in line:
-            v = line.split("=", 1)[1].strip().strip('"').strip("'")
+            key, v = line.split("=", 1)
+            v = v.strip().strip('"').strip("'")
+            if v in PUBLIC_ENV_VALUES.get(key.strip(), set()):
+                continue
             if len(v) >= 8:
                 vals.append(v)
     return vals

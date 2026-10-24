@@ -40,6 +40,19 @@ test("search_incidents radius cuts to the circle", async () => {
   assert.deepEqual(r.data.items.map((i: { id: string }) => i.id), ["fixture-inc-4"]);
 });
 
+test("search_incidents labels limited breakdowns instead of implying population counts", async () => {
+  const r = await call("search_incidents", { query: "Fixture St", since: "2026-01-01", limit: 1 });
+  assert.equal(r.data.total, 3);
+  assert.equal(r.data.returned, 1);
+  assert.equal(r.data.breakdowns_count, 1);
+  assert.equal(r.data.breakdowns_scope, "fetched_reports");
+  assert.equal(Object.values(r.data.by_status).reduce((n: number, value) => n + Number(value), 0), 1);
+  assert.ok(r.caveats.some((c: string) => c.includes("not all 3 matches")));
+  const open = await call("search_incidents", { query: "Fixture St", since: "2026-01-01", status: "open", limit: 1 });
+  const closed = await call("search_incidents", { query: "Fixture St", since: "2026-01-01", status: "closed", limit: 1 });
+  assert.equal(open.data.total + closed.data.total, r.data.total);
+});
+
 test("search_incidents defaults to the last 90 days", async () => {
   const r = await call("search_incidents", {});
   assert.equal(r.data.filters.since, "2026-07-26");

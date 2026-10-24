@@ -2,7 +2,20 @@
 
 This worktree owns tasks 4.1–4.6. Core tasks 4.1–4.4 and 4.6 are implemented with the validation limits below, including v2 `due_sites` and `app_set_mode`. Task 4.5 remains unimplemented P1 work; the whole Agent track is not being marked complete.
 
-## Scope audit before integration
+## Latest validation — October 24, 2026
+
+This section supersedes the earlier credential/blocker snapshot below.
+
+- Gateway default: `openai/gpt-4.1-mini`, verified with the configured API key and free credits. `MODEL_ID` still overrides it. Sonnet 5.5 returned HTTP 403 for that free-credit account.
+- A real browser conversation called `search_incidents`, streamed a Portuguese answer and rendered source links. For October 1–24, the answer was 658 rodent reports: 563 Boston, 54 Somerville, 41 Cambridge; 78 open and 580 closed. An independent query fetched all 658 unique IDs and matched the total. The corresponding Boston local-day window also counted 658 at validation time.
+- One recent report from each city was checked against its official public API: `311:101006765523`, `som311:1646106`, `camrod:23087338`. IDs, status and opening timestamps matched after local-to-UTC conversion. This is a source sample, not certification of every upstream record.
+- Search status/category/action breakdowns cover the fetched sample, not necessarily every match. The tool now labels that scope and the prompt requires separate status-filtered searches for exact population totals.
+- Shared-DB suite: 5 passes, 1 failure and 1 skip. The health check fails because `grid_cells` returns HTTP 500 / PostgreSQL `57014` (statement timeout), even for one ID. `what_worked` is skipped because `action_outcomes` is empty. Search, geocode/drivers, exact site histories, provisional Due IDs and unsaved drafts passed.
+- Combined-tree validation: 105 local tests passed, 19 environment/export-dependent checks skipped; 4 secret-scanner regression tests passed; production build, TypeScript, scoped ESLint and design-token checks passed. In the integrated Piper browser, the model made three searches and correctly answered 658 total, 78 open and 580 closed, matching the independent database counts.
+- Remote Piper UI is integrated with the working chat. Insights retains both the live panel and the remote historical research cards; historical cards appear when the live endpoint is unavailable or errors and remain explicitly labelled as snapshots.
+- No credentials, migrations or database writes are part of this change. Vercel still needs its own server-side Gateway credential; local `.env.local` is not deployed by Git.
+
+## Scope audit before integration (historical)
 
 Re-read `docs/rat-audit/TEAM.md`, `CONTRACT.md`, the rat-audit requirements/design/tasks,
 v2 proposal, data audit, repository steering, and this front's code/log. Carol also owns
@@ -78,7 +91,7 @@ The temporary verifier is `/tmp/rat-agent-a-readonly-check.mts`; no repository f
 ## Env (server)
 
 - `MODEL_PROVIDER`: `gateway` | `anthropic` | `bedrock`
-- `MODEL_ID`: optional. Defaults: `anthropic/claude-sonnet-5.5` (gateway), `claude-sonnet-5-5` (anthropic), `us.anthropic.claude-sonnet-5-5` (bedrock).
+- `MODEL_ID`: optional. Defaults: `openai/gpt-4.1-mini` (gateway), `claude-sonnet-5-5` (anthropic), `us.anthropic.claude-sonnet-5-5` (bedrock).
 - gateway: `AI_GATEWAY_API_KEY` locally. On Vercel, `VERCEL_OIDC_TOKEN` is injected.
 - anthropic: `ANTHROPIC_API_KEY`
 - bedrock: `AWS_REGION` plus either `AWS_ACCESS_KEY_ID` + `AWS_SECRET_ACCESS_KEY` or `AWS_BEARER_TOKEN_BEDROCK`
@@ -95,7 +108,7 @@ npx -y tsx@4.20.6 --env-file=.env.local --test src/lib/agent/__tests__/live.test
 
 The tests use `node:test`, so the shared `package.json` and the typecheck are unaffected. Integrator, optionally: add `"tsx": "4.20.6"` to devDependencies and the script `"test:agent": "tsx --test src/lib/agent/__tests__/*.test.ts"`.
 
-## Validation status (Oct 24, local main integration)
+## Earlier validation status (Oct 24, before live-model setup)
 
 | Check | Result |
 |---|---|
@@ -119,7 +132,7 @@ The suites contain 62 tests: 55 local passed; the 7 shared-database checks run s
 
 | Blocks | Change | Owner |
 |---|---|---|
-| Real-model chat | Put `MODEL_PROVIDER` + key (e.g. `AI_GATEWAY_API_KEY`) in the shared `.env.local` and in Vercel env | Carol / integrator |
+| Published chat | Local Gateway/model/data flow is validated; configure the server-side Gateway key in the Vercel project and validate the deployment | Carol / integrator |
 | `what_worked` | Fill `action_outcomes` (task 2.4); closure classifier (2.2) — the checked Normandy cases still have unknown action tags | Analytics (Carol, analytics-core) |
 | Base-rate Due semantics | Compute base_rates and sites.summary.due (task 2.19); A's published branch does not implement these flags. Current draft Due is provisional | Analytics |
 | Scored sites + recommendations in shared DB | Fill `sites` (task 2.3); Agent compatibility with A's current output is validated locally, but its v2 clustering/legal-lane work remains incomplete | Analytics |

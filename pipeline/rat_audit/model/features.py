@@ -14,6 +14,15 @@ Every feature for week t uses data from weeks < t only (no leakage):
   separate group so the backtest can test them with and without; the model keeps them
   only if they improve held-out error.
 
+Backtest of new data, Oct 24 (26 weeks; CORE = top-10% capture 0.643, MAE 0.0752). Promotion
+needs ≥ +0.5 pt capture and no worse MAE; nothing passed, so CORE is unchanged:
+city lots +0.45 pt (MAE worse), extra weather +0.23 (worse), ACS +0.14 (worse), permits +0.09
+(worse), iNaturalist −0.02, ring litter/dumping/overflow −0.14 (MAE better), food-inspection
+rodent fails −0.40, all together +0.09 (worse). Not tested: ce_dumping/ce_weeds/ce_dumpster
+(data only from 2026-04-25) and smart rat boxes (no rows). Leave-one-group-out: dropping rodent
+history, neighbours or season costs ~0.8–0.9 pt; dropping total 311 volume improves MAE 1.4%.
+Rows in `model_runs` where model = 'cell_week_poisson_gbm_ablation'.
+
 Cells come from `grid.load_or_build_cells` (Carol's `grid_cells`, else the 250 m fallback).
 Points map to cells by the same EPSG:26986 lattice, so ids match either way.
 """
