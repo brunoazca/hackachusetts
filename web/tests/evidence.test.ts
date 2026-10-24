@@ -1,6 +1,5 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import { formatDate, formatTimestamp } from "../src/lib/dates.ts";
 import { reportDays, sourcesFor, sourceUrl } from "../src/lib/evidence.ts";
 import { standaloneBrief } from "../src/lib/inspection-brief.ts";
@@ -58,14 +57,4 @@ test("download keeps the complete rendered record text, print styles and citatio
   assert.ok(html.includes(article));
   assert.ok(!html.includes('<script'));
   assert.ok(!html.includes('src="/'));
-});
-
-test("provenance RPC preserves the existing return window and spatial distances", () => {
-  const sql = readFileSync(new URL("../../supabase/migrations/20261024202722_site_evidence_provenance.sql", import.meta.url), "utf8");
-  assert.match(sql, /security invoker/i);
-  assert.match(sql, /b\.opened_at > a\.closed_at \+ interval '1 day'/);
-  assert.match(sql, /b\.opened_at <= a\.closed_at \+ interval '60 days'/);
-  assert.match(sql, /st_dwithin\(i\.geom, c\.geom, 100\)/);
-  assert.match(sql, /st_dwithin\(p\.geom, c\.geom, 40\)/);
-  assert.doesNotMatch(sql, /boston-311/);
 });

@@ -46,13 +46,21 @@ export type IncidentDetail = {
   };
   source: SourceEvidence;
   same_address: { id: string; category: string; status: string; opened: string; closed: string | null; note: string | null }[];
+  same_address_sources?: SourceEvidence[];
 };
 
 export async function fetchIncidentDetail(id: string): Promise<IncidentDetail | null> {
   const { data, error } = await supabase.rpc("incident_detail", { incident_id: id });
   if (error) throw error;
   const detail = data as IncidentDetail | null;
-  if (detail) detail.source = (await fetchSources([detail.source.id]))[0] ?? detail.source;
+  if (detail) {
+    const [primary, related] = await Promise.all([
+      fetchSources([detail.source.id]),
+      fetchReportSources(detail.same_address.map((r) => r.id)),
+    ]);
+    detail.source = primary[0] ?? detail.source;
+    detail.same_address_sources = related;
+  }
   return detail;
 }
 
@@ -101,16 +109,19 @@ export async function fetchSiteDetail(id: string): Promise<SiteDetail | null> {
   } else {
     detail.evidence_unavailable = true;
     // Never use site_detail's legacy, hard-coded Boston source_ids. Resolve actual records.
-    const ids = detail.reports.map((r) => r.id);
-    const sourceIds = new Set<string>();
-    for (let start = 0; start < ids.length; start += 100) {
-      const result = await supabase.from("incidents").select("source_id").in("id", ids.slice(start, start + 100));
-      if (result.error) { sourceIds.clear(); break; }
-      for (const row of result.data ?? []) sourceIds.add(row.source_id);
-    }
-    detail.report_sources = await fetchSources([...sourceIds]);
+    detail.report_sources = await fetchReportSources(detail.reports.map((r) => r.id));
   }
   return detail;
+}
+
+async function fetchReportSources(ids: string[]): Promise<SourceEvidence[]> {
+  const sourceIds = new Set<string>();
+  for (let start = 0; start < ids.length; start += 100) {
+    const result = await supabase.from("incidents").select("source_id").in("id", ids.slice(start, start + 100));
+    if (result.error) return [];
+    for (const row of result.data ?? []) sourceIds.add(row.source_id);
+  }
+  return fetchSources([...sourceIds]);
 }
 
 /** A source's metadata retrieval and its last successful ingest are separate facts. */

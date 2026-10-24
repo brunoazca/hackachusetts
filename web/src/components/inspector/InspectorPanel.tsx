@@ -76,6 +76,7 @@ export default function InspectorPanel() {
         <section>
           <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">What the city noted</h3>
           <p className="rounded-md bg-neutral-50 p-2 text-neutral-800">{i.closure_note}</p>
+          <SourceList sources={[detail.source]} />
         </section>
       )}
 
@@ -95,6 +96,7 @@ export default function InspectorPanel() {
               </li>
             ))}
           </ol>
+          <SourceList sources={detail.same_address_sources ?? []} unavailable={!detail.same_address_sources?.length} />
         </section>
       )}
 

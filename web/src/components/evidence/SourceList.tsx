@@ -5,7 +5,9 @@ export default function SourceList({ sources, unavailable = false }: { sources: 
   return (
     <div className="mt-2 text-[11px] leading-4 text-fg-3">
       {unavailable && <p role="status">Source attribution is unavailable for this section. Freshness is unknown.</p>}
-      {sources.length > 0 && <ul aria-label="Sources and freshness" className="space-y-2">
+      {sources.length > 0 && <details>
+        <summary className="cursor-pointer font-semibold text-fg-2">{sources.length} source{sources.length === 1 ? "" : "s"} · links and freshness</summary>
+        <ul aria-label="Sources and freshness" className="mt-2 space-y-2">
         {sources.map((s) => {
           const url = sourceUrl(s.url);
           return <li key={s.id}>
@@ -15,7 +17,8 @@ export default function SourceList({ sources, unavailable = false }: { sources: 
             {s.update_note && <span className="block">{s.update_note}</span>}
           </li>;
         })}
-      </ul>}
+        </ul>
+      </details>}
     </div>
   );
 }
