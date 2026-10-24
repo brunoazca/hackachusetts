@@ -207,6 +207,249 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: web/src/components/{map,shell}, web/src/lib/map-store.ts, .kiro/specs/rat-audit/{requirements,design}.md
 - Idea: none
 
+### 2026-10-24 15:17 — Prepare analytics branch handoff and check Spec v2 against main
+- Teammate: Carol
+- Agent:
+- Did: Prepared the existing analytics implementation, tests, README, unapplied migration and logs for commit and push only to feat/rat-audit-analytics-core; Carol also requested rebase onto fetched main f72541f.
+- Why: Let the other fronts use this partial delivery without merging or deploying main.
+- Where: pipeline/rat_audit/analytics/, supabase/migrations/20261024600001_analytics_core.sql, .kiro/KIRO_LOG.md.
+- Evidence: Main already contains baseline, gbm, backtest, features, recurrence, artifacts and explain; do not recreate or edit model code. Migration filename matches *_analytics_*.sql.
+- Spec v2 gaps: Task 2.2 has action_tag coverage reporting but remains below 90% on local real data and has no cause_tag. Task 2.3 remains address-key grouping plus composite score; no ST_ClusterDBSCAN 50 m/minpoints 3, v2 summary fields/rule order, or legal-lane filter. These tasks are not complete under v2.
+- Validation: Last analytics suite 108 passed / 2 skipped; SELECT-only local real-data checks 20 true / 4 coverage failures. Recheck the suite after rebase; shared Supabase validation is still blocked by permissions/HTTP 401.
+- Decision: Blank Agent fields in the 28 uncommitted entries, preserving their evidence and all committed history. Rebase and branch push are now authorized; database writes, migrations, main push and deploy remain out of scope.
+- Idea: Share this as a partial implementation, not as completed Spec v2 tasks.
+
+
+### 2026-10-24 15:08 — Analytics-core resumed; false success fixed and read-only evidence recorded
+- Teammate: Carol
+- Agent:
+- Did: Preserved existing dirty work on feat/rat-audit-analytics-core at 8814c1d; corrected partial findings/cost status, rejected invalid steps before DB access, and removed the claim that every counted case was closed.
+- Why: Incomplete analytics and invalid step selections previously returned success.
+- Where: pipeline/rat_audit/analytics/{__init__,__main__,costs}.py, tests/{test_runner,test_findings_costs,test_integration_db}.py, README.md, .kiro/KIRO_LOG.md.
+- Evidence: 108 unit/property/mock tests passed (16 added); 2 integration tests skipped because their fixtures apply migrations. New runner regression suite had 12 failures before the fixes.
+- Evidence: Existing local real-data PostGIS, forced read-only: validate.sql returned 20 true / 4 false. Classifier coverage 2023/24/25/26 = 86.08%/88.70%/89.51%/89.32%; 90% target still fails.
+- Evidence: SELECT-only reads and in-memory recomputation confirmed 2,412 grid IDs, 1,121 site scores/ranks/counts, and outcome rates against persisted results; Normandy best rank 28. Trash partial rho 0.269 (p=0.002); citation-minus-monitoring recurrence CI [-4.07,1.19] pp. Move-out checked only as persisted output; no DB-writing pipeline rerun.
+- Blocked: Shared MCP permission denied; REST GET HTTP 401 with existing public credentials; env loads but has no SUPABASE_DB_URL. Shared schema and prior grid/site-ID conflicts were not revalidated. Ingest prefix preservation and demo pin remain outside this front.
+- Decision: No shared writes, no migrations anywhere, no merge/push/deploy/commit; secret scan clean. Existing implementation retained; only one new repository file (test_runner.py), diagnostics/backup kept under /private/tmp/rat-analytics-codex.
+- Idea: Keep computation status separate from classifier quality; partial execution must remain visible to the caller.
+
+
+### 2026-10-24 14:52 — Pre-migration check (read-only): schema matches, but grid...
+- Teammate: Carol
+- Agent:
+- Did: Pre-migration check (read-only): schema matches, but grid conflict + site id mismatch found
+- Why: Bruno's model seeded 3,442 hull grid cells + 103,260 predictions (FK blocks cleanup); draft site_queue ids are left(address_key,16), analytics uses site_<key16>
+- Where: none
+- Idea: Do not run analytics grid/sites on shared until Bruno + Gui agree on grid cleanup and site id format
+
+### 2026-10-24 14:47 — Preview updated: shared-DB check section, validate.sql re...
+- Teammate: Carol
+- Agent:
+- Did: Preview updated: shared-DB check section, validate.sql results, current tests and D1
+- Why: Carol asked for the preview to show today's validation; failures (migration, 90% target) shown as fail, not hidden
+- Where: Artifact https://claude.ai/artifact/4hXr4BY1rvz8uoLXtUpub2
+- Idea: —
+
+### 2026-10-24 14:45 — Post-run check validate.sql for the integrator (read-only...
+- Teammate: Carol
+- Agent:
+- Did: Post-run check validate.sql for the integrator (read-only, 24 checks)
+- Why: Shared-DB validation needs a fixed script after the migration and run; tested on local real data: 20 pass, 4 fail (classifier 90% target)
+- Where: pipeline/rat_audit/analytics/validate.sql, pipeline/rat_audit/analytics/README.md
+- Idea: —
+
+### 2026-10-24 14:40 — Full pipeline on real public data in local PostGIS: 6/6 s...
+- Teammate: Carol
+- Agent:
+- Did: Full pipeline on real public data in local PostGIS: 6/6 steps ok, 4.9 s
+- Why: Shared DB has no write credentials and must not be written; same 19,263 closed rodent cases as shared DB
+- Where: none (local container rat-analytics-real)
+- Idea: —
+
+### 2026-10-24 14:40 — Tests: 92 unit/property pass + 2 skipped without DB; 2/2 ...
+- Teammate: Carol
+- Agent:
+- Did: Tests: 92 unit/property pass + 2 skipped without DB; 2/2 integration pass on disposable PostGIS
+- Why: Integration ran only with ANALYTICS_TEST_DB_URL on a throwaway container, never on Supabase
+- Where: pipeline/rat_audit/analytics/tests/
+- Idea: —
+
+### 2026-10-24 14:40 — Classifier on shared-DB notes: 2025 89.51%, 2026 89.32% t...
+- Teammate: Carol
+- Agent:
+- Did: Classifier on shared-DB notes: 2025 89.51%, 2026 89.32% tagged; 90% target NOT met
+- Why: Read 19,496 rows via PostgREST GET; ingest strips 'Case Noted.' so generic noted closures stay unknown
+- Where: pipeline/rat_audit/analytics/classify.py
+- Idea: Bruno: keep the closure prefix in t311.py; no forcing of contact-only notes into monitoring
+
+### 2026-10-24 14:40 — Migration 20261024600001_analytics_core NOT applied on sh...
+- Teammate: Carol
+- Agent:
+- Did: Migration 20261024600001_analytics_core NOT applied on shared DB
+- Why: grid_cells lacks col/row/land_frac/boundary_source, action_outcomes lacks 8 columns, analytics_runs missing; output tables are empty; migration history is empty
+- Where: supabase/migrations/20261024600001_analytics_core.sql
+- Idea: Integrator applies it, then runs python -m rat_audit.analytics
+
+### 2026-10-24 14:40 — Shared Supabase check (read-only via MCP): project rat-au...
+- Teammate: Carol
+- Agent:
+- Did: Shared Supabase check (read-only via MCP): project rat-audit vfizpwajekykmbcrport matches .env.local
+- Why: Validate inputs before analytics runs; no writes, no migrations applied
+- Where: none
+- Idea: Inputs present: 19,496 Boston rodent incidents, 180 SVI tracts, report_volume, signal_volume, 1,157 restaurants, 6,046 vacant parcels, 176,007 parcels, 58 spending rows, 4 move_out events
+
+### 2026-10-24 14:15 — Browser preview of the analytics front published (map, si...
+- Teammate: Carol
+- Agent:
+- Did: Browser preview of the analytics front published (map, site card, findings, costs, tests, deps)
+- Why: Carol asked for a demonstrable delivery with real data and open dependencies named per owner
+- Where: Artifact https://claude.ai/artifact/4hXr4BY1rvz8uoLXtUpub2
+- Idea: Tests: 94 pass with isolated PostGIS; classifier 89.5%/89.3% misses 90% until ingest keeps the closure prefix
+
+### 2026-10-24 14:15 — Costs: drop negated 'explicit' food comments ('no mice ob...
+- Teammate: Carol
+- Agent:
+- Did: Costs: drop negated 'explicit' food comments ('no mice observed'), 52 in 2025
+- Why: Real-data review found food.py's explicit flag counts negations; fixed in analytics, proposed for ingest
+- Where: pipeline/rat_audit/analytics/costs.py, tests/test_findings_costs.py
+- Idea: —
+
+### 2026-10-24 14:15 — run_all on real data: 6/6 steps ok in 4.9 s; 2,412 cells,...
+- Teammate: Carol
+- Agent:
+- Did: run_all on real data: 6/6 steps ok in 4.9 s; 2,412 cells, 1,121 sites
+- Why: End-to-end check of 2.1-2.5 and 2.7 on real inputs; Normandy St ranks 28, trash partial rho +0.27 (weak), move-out strong, what-worked none
+- Where: none
+- Idea: what-worked shows no clear citation vs monitoring difference on real data; demo script should say so
+
+### 2026-10-24 14:15 — Real data loaded locally: 221,745 incidents, 176,007 parc...
+- Teammate: Carol
+- Agent:
+- Did: Real data loaded locally: 221,745 incidents, 176,007 parcels, 180 tracts via the team's ingest
+- Why: Demo the analytics flow on real data without the shared DB
+- Where: none (local container rat-analytics-real)
+- Idea: —
+
+### 2026-10-24 14:07 — Real-data preview: loading public data into a local PostG...
+- Teammate: Carol
+- Agent:
+- Did: Real-data preview: loading public data into a local PostGIS with the team's ingest code
+- Why: No shared DB URL; the browser demo must still run analytics on real data, isolated
+- Where: none (scratchpad load_real.py, container rat-analytics-real)
+- Idea: Same ingest modules, only SUPABASE_DB_URL points at localhost
+
+### 2026-10-24 14:01 — Analytics README: run command, step dependencies, output ...
+- Teammate: Carol
+- Agent:
+- Did: Analytics README: run command, step dependencies, output formats
+- Why: Integrator runs analytics after the data load and needs the migration + formats
+- Where: pipeline/rat_audit/analytics/README.md
+- Idea: —
+
+### 2026-10-24 14:01 — What-worked on real data: monitoring 12.6% vs citation 11...
+- Teammate: Carol
+- Agent:
+- Did: What-worked on real data: monitoring 12.6% vs citation 11.2% repeat in 60 days, intervals overlap
+- Why: Escalation text now says when this data cannot separate the two; research before/after figures stay cited as observational
+- Where: pipeline/rat_audit/analytics/sites.py
+- Idea: —
+
+### 2026-10-24 14:01 — Sites/outcomes checked on real 311 rows 2023-2026 (public...
+- Teammate: Carol
+- Agent:
+- Did: Sites/outcomes checked on real 311 rows 2023-2026 (public API, no DB)
+- Why: 1,121 sites, scores 23.8-99.4; Normandy St 02121 = rank 28 (16 reports in 2025, 14 recurrences), not forced to the top
+- Where: none (scratchpad validation script)
+- Idea: Demo pin for Normandy St is a product/integrator call, not a ranking tweak
+
+### 2026-10-24 14:00 — Classifier checked on real 2025/2026 notes: 89.5% / 89.3%...
+- Teammate: Carol
+- Agent:
+- Did: Classifier checked on real 2025/2026 notes: 89.5% / 89.3% non-unknown (raw notes 97.6% / 96.2%)
+- Why: Ingest strips the 'Case Noted.' prefix that the research counted as monitoring; added rules only for explicit actions
+- Where: pipeline/rat_audit/analytics/classify.py
+- Idea: Remaining unknowns are mostly 'message left with constituent' (no action named); proposal: ingest keeps a closure_prefix flag
+
+### 2026-10-24 14:00 — Integration test: run_all twice on a disposable PostGIS f...
+- Teammate: Carol
+- Agent:
+- Did: Integration test: run_all twice on a disposable PostGIS from all migrations
+- Why: Checks idempotent outputs, recur_p kept, decision-linked site retired not deleted, missing inputs named
+- Where: pipeline/rat_audit/analytics/tests/test_integration_db.py
+- Idea: Set ANALYTICS_TEST_DB_URL to a throwaway PostGIS; test refuses Supabase URLs
+
+### 2026-10-24 13:56 — Analytics unit tests: 74 pass (classifier, score bounds, ...
+- Teammate: Carol
+- Agent:
+- Did: Analytics unit tests: 74 pass (classifier, score bounds, ties, windows, dedupe)
+- Why: Property tests (Hypothesis) for score 0-100 and order-independent ranking; fixtures are synthetic fx- ids
+- Where: pipeline/rat_audit/analytics/tests/
+- Idea: —
+
+### 2026-10-24 13:56 — run_all(conn) with step dependencies + analytics_core mig...
+- Teammate: Carol
+- Agent:
+- Did: run_all(conn) with step dependencies + analytics_core migration
+- Why: jobs.analytics() calls run_all; one failing step must not block independent ones
+- Where: pipeline/rat_audit/analytics/__init__.py, supabase/migrations/20261024600001_analytics_core.sql
+- Idea: —
+
+### 2026-10-24 13:56 — 2.7 counted costs in price_impact (Checkbook, food citati...
+- Teammate: Carol
+- Agent:
+- Did: 2.7 counted costs in price_impact (Checkbook, food citations, repeat cases)
+- Why: R7.4 asks for costs we can count; no report count is turned into visits or dollars
+- Where: pipeline/rat_audit/analytics/costs.py
+- Idea: —
+
+### 2026-10-24 13:56 — 2.5 findings: trash-storage-vs-rodent, what-worked, move-...
+- Teammate: Carol
+- Agent:
+- Did: 2.5 findings: trash-storage-vs-rodent, what-worked, move-out-spike
+- Why: Insights needs computed findings; titles come from the numbers, strength needs permutation p < 0.05
+- Where: pipeline/rat_audit/analytics/correlations.py
+- Idea: —
+
+### 2026-10-24 13:56 — 2.3 chronic sites: dedupe, recurrence, 0-100 score, drive...
+- Teammate: Carol
+- Agent:
+- Did: 2.3 chronic sites: dedupe, recurrence, 0-100 score, drivers, recommendations
+- Why: Site card needs ranked addresses with evidence; ranking is not tuned toward Normandy St
+- Where: pipeline/rat_audit/analytics/sites.py
+- Idea: summary.recur_* keys are kept on upsert for Bruno's recurrence model
+
+### 2026-10-24 13:56 — 2.4 action_outcomes with a 60-day observation window
+- Teammate: Carol
+- Agent:
+- Did: 2.4 action_outcomes with a 60-day observation window
+- Why: Cases closed under 60 days before the newest report are censored, never counted as success
+- Where: pipeline/rat_audit/analytics/outcomes.py
+- Idea: —
+
+### 2026-10-24 13:56 — 2.2 closure classifier ported with negations and conditio...
+- Teammate: Carol
+- Agent:
+- Did: 2.2 closure classifier ported with negations and conditional intent
+- Why: action_tag drives what-worked and escalation; 'no violation issued' must not count as a citation
+- Where: pipeline/rat_audit/analytics/classify.py
+- Idea: Ingest strips 'Case Noted.', so generic noted closures land in closed_no_action
+
+### 2026-10-24 13:56 — 2.1 grid_cells: 250 m EPSG:26986 grid clipped to Boston t...
+- Teammate: Carol
+- Agent:
+- Did: 2.1 grid_cells: 250 m EPSG:26986 grid clipped to Boston tracts
+- Why: Forecast and findings need a fixed cell unit; ids match the model lattice (g250_col_row)
+- Where: pipeline/rat_audit/analytics/grid.py
+- Idea: Boundary = union of climate-ready-boston-svi tracts; coastline cells keep land_frac
+
+### 2026-10-24 13:46 — Analytics core (2.1-2.5, 2.7): started in isolated worktree
+- Teammate: Carol
+- Agent:
+- Did: Analytics core (2.1-2.5, 2.7): started in isolated worktree
+- Why: Carol asked for grid, closure classifier, sites, outcomes, correlations and counted costs under pipeline/rat_audit/analytics/, tested in isolation
+- Where: pipeline/rat_audit/analytics/, supabase/migrations/*_analytics_core.sql (branch feat/rat-audit-analytics-core)
+- Idea: Shared DB URL not in .env.local; write tests run on a disposable local PostGIS container
+
 ### 2026-10-24 15:04 — Map: zoomed-out data now aggregated server-side (map_inci...
 - Teammate: Bruno
 - Agent: —
