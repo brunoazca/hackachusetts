@@ -95,6 +95,18 @@ LABELS: dict[str, str] = {
     "permit_active_m4": "Active demolition/construction permits, last 4 weeks (avg)",
     "permit_active_m12": "Active demolition/construction permits, last 12 weeks (avg)",
     "inat_rat_s52": "iNaturalist rat sightings, last year",
+    "missed_trash_s4": "Missed trash pickup reports, last 4 weeks",
+    "missed_trash_s12": "Missed trash pickup reports, last 12 weeks",
+    "sanitation_s4": "Sanitation reports, last 4 weeks",
+    "sanitation_s12": "Sanitation reports, last 12 weeks",
+    "dumpster_s4": "Dumpster reports, last 4 weeks",
+    "dumpster_s12": "Dumpster reports, last 12 weeks",
+    "construction_debris_s4": "Construction debris reports, last 4 weeks",
+    "construction_debris_s12": "Construction debris reports, last 12 weeks",
+    "abandoned_building_s4": "Abandoned building reports, last 4 weeks",
+    "abandoned_building_s12": "Abandoned building reports, last 12 weeks",
+    "vacant_lot_s4": "Vacant lot reports, last 4 weeks",
+    "vacant_lot_s12": "Vacant lot reports, last 12 weeks",
     "precip_l1": "Rain last week (inches)",
     "precip_s12": "Rain, last 12 weeks (inches)",
     "heavy_rain_s4": "Heavy-rain days (≥ 0.5 in), last 4 weeks",
@@ -133,6 +145,9 @@ CANDIDATE_GROUPS = {
     "inat": ["inat_rat_s52"],
     "ring_more": [f"ring_{k}_s4" for k in RING_CANDIDATE],
     "code_enforcement": CE_FEATURES,
+    # 311 types loaded 2016+ (incidents + incidents_archive) but not in CORE.
+    "more_311": [f"{k}_s{w}" for k in ("missed_trash", "sanitation", "dumpster", "construction_debris",
+                                        "abandoned_building", "vacant_lot") for w in (4, 12)],
     "weather_more": ["precip_s4", "snow_s4", "precip_l1", "precip_s12", "heavy_rain_s4", "hot_days_s4",
                      "freeze_days_s12"],
 }
@@ -454,6 +469,9 @@ def build_panel(
     feats["permit_active_m4"] = np.log1p(_window_sum(active, 1, 4) / 4)
     feats["permit_active_m12"] = np.log1p(_window_sum(active, 1, 12) / 12)
     feats["inat_rat_s52"] = np.log1p(_window_sum(_cum(mat("inat_rat")), 1, 52))
+    for k in ("missed_trash", "sanitation", "dumpster", "construction_debris", "abandoned_building", "vacant_lot"):
+        cm = _cum(mat(k))
+        feats[f"{k}_s4"], feats[f"{k}_s12"] = np.log1p(_window_sum(cm, 1, 4)), np.log1p(_window_sum(cm, 1, 12))
 
     # Week-level (same for every cell) features.
     wx = _weather(conn, all_weeks)

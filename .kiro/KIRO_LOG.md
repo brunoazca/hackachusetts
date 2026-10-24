@@ -31,6 +31,15 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:42 — Model audit report: README (method, results, calibration,...
+- Teammate: Bruno
+- Agent: —
+- Did: Model audit report: README (method, results, calibration, ablation table, recurrence, limitations), interactive index.html, template, rebuild script
+- Why: Turn the model artifact into a durable audit in the repo
+- Where: docs/rat-audit/model-report/, pipeline/scripts/model_report.py
+- Idea: Long backtest being rerun on the current model; will update index.html and the long-test table
+
+<<<<<<< Updated upstream
 ### 2026-10-24 17:40 — Make English the fixed chat response language
 - Teammate: Carol
 - Agent: Codex
@@ -38,6 +47,15 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Carol requested English always, with commit and push to the running application.
 - Where: web/src/lib/agent/prompt.ts
 - Idea: State the response language independently of the user's input language and do not expose policy explanations in replies.
+=======
+### 2026-10-24 17:40 — Ran hourly design critique of Piper (/) at 1280x900 + 390...
+- Teammate: —
+- Agent: da-vinci
+- Did: Ran hourly design critique of Piper (/) at 1280x900 + 390x844; measured contrast + target sizes from DOM
+- Why: scored civic accessibility criterion; keep a current read of the inspector UI
+- Where: docs/design-critique/latest.md
+- Idea: Collapse the two header icon-buttons into the row below ~420px so refresh/theme aren't clipped on a phone
+>>>>>>> Stashed changes
 
 ### 2026-10-24 17:36 — Built the AI region solution job (region_solution.py + re...
 - Teammate: Bruno

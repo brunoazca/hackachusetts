@@ -227,6 +227,62 @@ Non-unknown coverage: 95.5% (2025), 92.7% (2026). In 2026 the city's notes shift
 
 **Gap statement:** existing tools either map where rats are reported or monitor one property's traps. None gives an inspector, per address, which city action worked, the adjacent lot and block drivers, when to stop monitoring and escalate, and a measured result in one loop.
 
+### Outside reference: NYC inspection outcomes (Kiro Crew campaign `12680cba`, stopped after 4 of 8 cycles)
+
+NYC DOHMH Rodent Inspection, 2,362,980 events 2015–2026, 86,048 properties with a first failure for rat activity. Unlike Boston, these are inspector outcomes, not complaints.
+
+**Cumulative share that failed for rats again**, counting only failures observable for the full window:
+
+| Prior failures | 30 days | 60 days | 90 days | 180 days | 365 days |
+|---|---|---|---|---|---|
+| 0 | 12.1% | 31.2% | 37.7% | 44.0% | 50.5% |
+| 1 | 8.6% | 20.1% | 25.8% | 36.9% | 48.6% |
+| 2–4 | 12.3% | 29.9% | 38.2% | 51.9% | 64.7% |
+| 5+ | 17.8% | 39.9% | 50.8% | 70.2% | **82.6%** |
+
+- **History drives recurrence.** About half of first failures fail again within a year; 83% of chronic properties do.
+- **No follow-up beats time alone.** Matched on prior failures and gap, properties that got a treatment (bait, stoppage, cleanup) failed again *more* often, e.g. 2–4 prior failures and ≤ 60 days: treated 69.6% vs untreated 59.1%. Treatment goes where activity is worst (confounding by indication).
+- **More inspection does not bend the curve.** Rat Mitigation Zone ZIPs (proxy) got 2.3× the inspections (19.7 vs 8.5 per property) and recovered at the same rate (51.3% vs 50.5% at a year). Moderate evidence: zone membership is approximated by ZIP.
+- The Boston "40% → 18%" drop is not real recovery. It comes from which sites get revisited.
+
+**What the Boston app can say, labeled as NYC:** recurrence is high and predicted by a site's history; neither Boston complaints nor NYC inspections show any single action beating time. Use history to prioritize, and test actions with a proper comparison (the trial designer) instead of trusting before/after.
+
+### Exposure: who lives and works near rat hotspots (Kiro Crew campaign `0055b00f`)
+
+2025 Rodent Activity on ~250 m cells: 1,043 occupied cells, 124 in the top 10% (10+ reports). Ratio = sites within 100 m per top cell ÷ per other occupied cell.
+
+| Site type | Source | n | Over-representation near hotspots |
+|---|---|---|---|
+| Active food establishments | CKAN food inspections `4582bec6…` | 2,768 | **3.26×** |
+| Public schools | CKAN `6ceeff38…` | 134 | **2.58×** |
+| Licensed child care | MassGIS ArcGIS `Licensed_Child_Care_Programs` | 758 | **1.81×** |
+| Long-term care (senior / nursing) | MassGIS ArcGIS `Long_Term_Care_Residences` | 103 | 1.48× (small n) |
+| Colleges | CKAN `f59456d7…` | 60 | 0.99× |
+| Non-public schools | CKAN `fae7152d…` | 87 | 0.65× |
+| Hospitals | CKAN `9ce5935a…` | 28 | 0 of 28 near a hotspot |
+
+Also found: income-restricted housing (CKAN `bfdeffc7…`, 1,491 rows, senior-units flag) but only ZIP and neighborhood, so it needs geocoding. Not found as data: food pantries, farmers markets, outdoor dining.
+
+**Use:** a tie-breaker in the inspector queue (schools and child care weight 3, long-term care 2, hospitals and colleges 1; food excluded because it is already a driver). Exposure never outranks the site's own history. Pitch line: rat hotspots sit next to public schools 2.6× and child care 1.8× more often than other lived-in blocks.
+
+### New predictors for the forecast (Kiro Crew campaign `af332c28`)
+
+Same 26-week backtest restricted to rodent-active cells (1,069 cells, 2024–2025), so absolute values differ from the earlier table; the comparisons are what matter.
+
+| Model | Top-10% capture | Verdict |
+|---|---|---|
+| Baseline, mean of last 4 weeks | 0.299 | — |
+| History only | 0.317 | — |
+| Trash + dumping nearby (current best) | 0.360 | the big lever (+0.061) |
+| + weather (temp, rain, snow) | 0.360 (+0.000) | **drop**: same for every cell in a week, cannot re-rank cells |
+| + MBTA station distance | 0.365 (+0.005) | drop: redundant once ISD is in |
+| + **ISD building violations per cell** | **0.368 (+0.008)** | **keep**: positive on 5 of 5 seeds; fades at top 5% |
+| + Article 80 projects | +0.004 | drop |
+| Tree canopy | — | skipped (area rasters) |
+| Building age / units | — | blocked: property assessment has no coordinates; use RentSmart lat/long or SAM by parcel |
+
+**Ship:** trash + dumping lags plus ISD violations, expected top-10% capture ≈ 0.368.
+
 ## 5. Impact possibilities
 
 | Area | What rats cost | Evidence we have | Strength |
