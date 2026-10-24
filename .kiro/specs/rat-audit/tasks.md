@@ -23,13 +23,13 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 1.7 **P1** NOAA daily temperature → weather_daily; Sept 1 move-out → events. No rain/snow/licenses/games/holidays (null in data-audit.md). (R1.9)
 - [ ] 1.8 **P1** Tracts (SVI + asthma as context), Zillow, Inside Airbnb listings, iNaturalist. (R1.10)
 - [ ] 1.10 **P1** Regional: Somerville 311 rat types (block centroids), Cambridge rodent sightings + smart rat boxes; `city` on every row. (R1.13)
-- [ ] 1.11 **P1** Load owner names, mailing and full addresses, raw closure notes into `private.*`; scrub names from public `closure_note`. (R3.9)
+- [ ] 1.11 **P1** Load owner names, mailing and full addresses, raw closure notes into `private.*`; scrub names from public `closure_note`. (R3.12)
 - [ ] 1.9 **P0** `pipeline/ingest/README.md` with run commands.
 
 ## 2. Analytics + prediction track — `pipeline/rat_audit/{analytics,model}` (run on Modal), Insights UI
 - [ ] 2.1 **P0** grid_cells (250 m, clipped to Boston). (R6.1)
-- [ ] 2.2 **P0** Closure classifier → action_tag; coverage report; unit tests. (R3.1, R10.4)
-- [ ] 2.3 **P0** sites (score, recurrence, drivers, building, adjacent vacant, recommended); Normandy St rank check; property tests. (R3.2, R10.4)
+- [ ] 2.2 **P0** Closure classifier → action_tag: port `knowledge/sources/scripts/closure_classifier_rules.py` (tested 95.5% / 92.7% non-unknown on 2025 / 2026); `closed_no_action` tag is in categories.json; coverage report; unit tests ≥ 90%. (R3.1, R10.4)
+- [ ] 2.3 **P0** sites (score, recurrence, drivers, building, adjacent vacant, recommended incl. escalation / adjacent-lot / containers rules); Normandy St rank check (16 reports in 2025, 18 with 2026; adjacent "RES LAND (Unusable)" parcel); property tests. (R3.2, R3.9–R3.11, R10.4)
 - [ ] 2.4 **P0** action_outcomes ("what worked"). (R3.2f, R5.2)
 - [ ] 2.5 **P0** Correlations: trash-storage-vs-rodent, what-worked, move-out-spike. (R5.2, R5.4)
 - [ ] 2.6 **P0** cell_week_poisson_gbm: features, 26-week backtest vs baseline, model_runs + predictions (backtest + next 4 weeks), per-cell drivers. Ship the "mean of last 4 weeks" baseline first as a fallback, then the model. (R6.1–R6.3, R6.6)
@@ -37,7 +37,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 2.8 **P0** InsightsPanel: forecast summary, finding cards with charts + caveats, price & cost. (R5.1, R6.2, R7)
 - [ ] 2.9 **P1** Remaining findings from the tested results in `data-audit.md` / `knowledge/sources/rats/validation/*_results.txt` (demolition, rain, trash day, restaurants, Big Belly, events, under-reporting by tract, seasonality); recompute on the live DB only to refresh numbers. (R5.3)
 - [ ] 2.10 **P1** Temperature climatology for future weeks (NWS rain dropped). (R6.4)
-- [ ] 2.17 **P1** Equity view: rank within neighborhood + low-reporting tract flag in TopSites. (R3.11)
+- [ ] 2.17 **P1** Equity view: rank within neighborhood + low-reporting tract flag in TopSites. (R3.14)
 - [ ] 2.18 **P1** Schools-near-hot-spots impact card. (R7.6)
 - [ ] 2.15 **P1** Emerging hotspots flag + agent/map support. (R6.7)
 - [ ] 2.16 **P2** `simulate(conn, request)` in `rat_audit/model` + `/api/simulate` proxy + simulator UI in CellCard/SiteCard. (R6.8)
@@ -59,7 +59,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 3.10 **P1** Timeline scrubber with event marks + play; heatmap. (R2.7, R2.8)
 - [ ] 3.11 **P1** Area draw + area_stats; past decisions on site card. (R2.9, R4.4)
 - [ ] 3.13 **P1** City filter; approximate-location styling for block centroids; smart-box layer. (R2.13)
-- [ ] 3.14 **P1** `/api/reveal` route + `Reveal` component (blurred + eye icon) on owner, address and raw note; owner portfolio after reveal. (R3.9, R3.10)
+- [ ] 3.14 **P1** `/api/reveal` route + `Reveal` component (blurred + eye icon) on owner, address and raw note; owner portfolio after reveal. (R3.12, R3.13)
 - [ ] 3.12 **P2** Tract choropleths, listings layer, mobile bottom sheet. (R3.6, R9.4)
 
 ## 4. Agent track — `/api/chat`, `components/chat`, `lib/agent`
@@ -73,7 +73,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 ## 5. Integration, quality, submission — integrator + Kiro
 - [ ] 5.1 **P0** Merge tracks; resolve `package.json`; `pnpm build` green; push. 
 - [ ] 5.2 **P0** Vercel project (root `web/`), env vars, cron, model provider; public URL. (R10.1, R10.2)
-- [ ] 5.3 **P0** Re-run analytics on full data; verify demo path numbers. (R6, R5)
+- [ ] 5.3 **P0** Re-run analytics on full data; verify demo path numbers against the Kiro Crew campaign results: what worked (monitoring 14.1% → 14.2%, violation 15.3% → 12.2%), 46 chronic addresses with only 14 violations, trash storage block partial ρ ≈ +0.13, Normandy St 16/18 reports. (R6, R5)
 - [ ] 5.4 **P0** Playwright E2E happy path wired to the `demo-path-green` hook. (R10.4)
 - [ ] 5.5 **P0** README run instructions; `docs/submission/description.md`, `kiro-usage.md`, `demo-script.md`. (R10.3)
 - [ ] 5.6 **P0** Demo-to-requirement map (design §11) checked on the deployed URL.

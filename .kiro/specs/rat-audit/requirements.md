@@ -15,6 +15,15 @@ separate datasets. An inspector closing a case cannot see that the same block ha
 been "closed" 16 times, that the vacant lot next door is the likely source, or that
 reports are about to rise. Sources: `knowledge/15_boston_rat_audit.md`.
 
+The city's most common response does not work. Monitoring is the most frequent
+closure action (49% of 2025 rodent closures), and the share of addresses with a new
+report within 60 days does not change after it (14.1% → 14.2%). After a violation it
+drops (15.3% → 12.2%). At the 46 chronic addresses, about 237 of 280 actions were
+monitoring or "noted" and only 14 were violations. BRAP has published no measured
+result since launch. The product tells the inspector when to stop monitoring and
+escalate, and when the cause is next door. Sources: Kiro Crew campaigns `93c1ad29`,
+`d19b46b7`, `b6ba6312` (in the Kiro knowledge library and `knowledge/15_boston_rat_audit.md`).
+
 ## Users
 
 - **Primary:** an ISD rodent inspector planning this week's visits.
@@ -82,10 +91,13 @@ on one live map, in minutes.
 6. **P2** WHEN a tract or listing is selected THE SYSTEM SHALL show its context values with caveats.
 7. **P0** WHEN nothing is selected THE SYSTEM SHALL show this week's top 10 chronic sites.
 8. **P0** THE SYSTEM SHALL show the source for every fact in the panel.
+9. **P0** WHEN a chronic site has 2 or more recurrences and its last actions were monitoring, inspection or "noted" THE SYSTEM SHALL recommend escalation (citation or abatement order), because monitoring does not reduce recurrence and violations do (finding R5.2).
+10. **P0** WHEN a chronic site has an adjacent vacant parcel THE SYSTEM SHALL recommend action on that parcel (clearing, baiting, notice to that owner) as a block-level visit, not only at the reported address.
+11. **P1** WHEN a site's drivers are mostly trash storage or dumping THE SYSTEM SHALL recommend sealed containers, citing NYC containerization (311 rat sightings down >20% year over year; −55% in the Hamilton Heights pilot) and Boston's $500,000 participatory-budgeting container project.
 
-9. **P1** WHEN a card shows an owner name, full address or raw closure note THE SYSTEM SHALL show it blurred with an eye icon; WHEN the user clicks the eye THE SYSTEM SHALL fetch the value from a non-public store via a server route, show it, and log the reveal (kind, id, time).
-10. **P1** THE SYSTEM SHALL let the inspector see the owner's other parcels (portfolio) after a reveal, with reports per unit across them.
-11. **P1** THE SYSTEM SHALL offer an equity view of the chronic-site ranking (rank within each neighborhood) and flag low-reporting tracts, with the caveat that 311 counts are reports, not rats.
+12. **P1** WHEN a card shows an owner name, full address or raw closure note THE SYSTEM SHALL show it blurred with an eye icon; WHEN the user clicks the eye THE SYSTEM SHALL fetch the value from a non-public store via a server route, show it, and log the reveal (kind, id, time).
+13. **P1** THE SYSTEM SHALL let the inspector see the owner's other parcels (portfolio) after a reveal, with reports per unit across them.
+14. **P1** THE SYSTEM SHALL offer an equity view of the chronic-site ranking (rank within each neighborhood) and flag low-reporting tracts, with the caveat that 311 counts are reports, not rats.
 
 ## R4 Human decision and work order
 
@@ -97,7 +109,7 @@ on one live map, in minutes.
 ## R5 Findings (correlations)
 
 1. **P0** THE SYSTEM SHALL show an Insights panel with findings, each with a plain headline, the question, method, statistic, a strength label (strong / moderate / weak / none), a small chart, a caveat and sources.
-2. **P0** THE SYSTEM SHALL include at least: trash storage vs rodent reports (311 and code enforcement); dead-animal and indoor-pest reports as leading signals; what worked (60-day repeat rate by city action); Sept 1 move-out; seasonality vs temperature.
+2. **P0** THE SYSTEM SHALL include at least: trash storage vs rodent reports (311 and code enforcement); dead-animal and indoor-pest reports as leading signals; what worked (60-day repeat rate by city action); Sept 1 move-out (trash reports about 2× citywide and 4–5× in student ZIPs the week of Sept 1, 2023–2025: strong; rodent reports 1–4 weeks later: none); seasonality vs temperature. "What worked" is the lead finding (monitoring 14.1% → 14.2% repeat rate, violation 15.3% → 12.2%). Trash storage SHALL carry its block-level strength (weak, partial ρ ≈ +0.13 after controlling for reporting volume); the ZIP-level +0.78 is a reporting artifact and SHALL NOT be shown.
 3. **P1** THE SYSTEM SHALL also include the tested results from `data-audit.md`, nulls included: demolitions (no spike; consistent with pre-demolition baiting), rain (none), trash day (none), restaurants and food licenses (none after controls), Big Belly (none), events and Red Sox games (none), building age × owner occupancy, and 311 under-reporting by tract (fewer reports per resident where more children, people of color and residents with disabilities live).
 4. **P0** THE SYSTEM SHALL control for reporting volume by using rates where possible and SHALL report weak or null results honestly.
 5. **P1** WHEN a finding is clicked THE SYSTEM SHALL set the map layers that illustrate it.
@@ -121,9 +133,10 @@ on one live map, in minutes.
 1. **P1** THE SYSTEM SHALL show assessed-value change FY2025→FY2026 near chronic sites against matched parcels (same ZIP, land use, year-built bucket), labelled exploratory.
 2. **P1** THE SYSTEM SHALL show short-stay listing prices and rat-mention reviews near hot spots against elsewhere.
 3. **P1** THE SYSTEM SHALL show the ZIP-level home value / rent relationship and state that it is weak and confounded.
-4. **P0** THE SYSTEM SHALL show costs that can be counted: city pest-control payments (FY2026 ≈ $776K, BPS $611K), restaurant rodent citations, repeat inspections at chronic sites.
-5. **P0** THE SYSTEM SHALL NOT claim that rats lower property values unless the data shows it, and SHALL show the caveat next to every price figure.
+4. **P0** THE SYSTEM SHALL show costs that can be counted: city pest-control payments (FY2026 ≈ $776K, BPS $611K), restaurant rodent citations (2025: 127 food businesses, 301 rodent/vermin violations, 37 at the most severe level), repeat inspections at chronic sites.
+5. **P0** THE SYSTEM SHALL NOT claim that rats lower property values unless the data shows it, and SHALL show the caveat next to every price figure: no peer-reviewed study links rodents to home prices, and the "5–20% value loss" figures are industry marketing.
 6. **P1** THE SYSTEM SHALL show schools near rodent hot spots (49% of schools are in or next to a top-10% cell vs 35% of lived-in cells) next to BPS pest-control spending ($611K, FY2026), and SHALL NOT claim asthma or fire impacts (not supported, see `data-audit.md`).
+7. **P1** THE SYSTEM SHALL show the health context with its label: 18% of Boston brown rats sampled (59 of 328) carried *Leptospira*, and a Boston-area human case matched a local rat strain (Tufts, PLOS Neglected Tropical Diseases, 2025, peer-reviewed).
 
 ## R8 Assistant (agent chat)
 
@@ -150,7 +163,7 @@ on one live map, in minutes.
 1. **P0** THE SYSTEM SHALL be deployed publicly on Vercel with free, unrestricted access for judges.
 2. **P0** THE SYSTEM SHALL keep secrets only in `.env.local` and Vercel env; the repository SHALL contain none.
 3. **P0** THE README SHALL explain how to run the app, the pipeline and the tests from a fresh clone.
-4. **P0** Tests: property-based tests (score bounded 0–100, ranking stable, every `source_id` resolves, no house number or owner name in any `public` schema column (they live only in `private`)), unit tests for the closure classifier and agent tools, one end-to-end happy path (open → select site → approve → work order).
+4. **P0** Tests: property-based tests (score bounded 0–100, ranking stable, every `source_id` resolves, no house number or owner name in any `public` schema column (they live only in `private`)), unit tests for the closure classifier (non-unknown ≥ 90% on 2025 and 2026 rodent notes; the rules in `knowledge/sources/scripts/closure_classifier_rules.py` measure 95.5% and 92.7%) and agent tools, one end-to-end happy path (open → select site → approve → work order).
 
 ## Out of scope
 

@@ -167,7 +167,7 @@ Fire test (earlier, ZIP level, 25 ZIPs, 2023–24): `knowledge/sources/rats/fire
 | R1.10 / task 1.8 | Asthma and iNaturalist kept as context only, with caveats |
 | R2.3 | Displacement layer group without work zones; Context group without asthma |
 | R2.7 | Timeline event marks: move-out and temperature (no rain or games) |
-| R3.11 (new) | Equity view: rank within neighborhood + low-reporting tract flag; caveat that 311 counts are not rat counts |
+| R3.14 (new) | Equity view: rank within neighborhood + low-reporting tract flag; caveat that 311 counts are not rat counts |
 | R5.2 | Adds dead animal and indoor pest as leading signals |
 | R5.3 / task 2.9 | Findings use the tested results, including honest nulls; "asthma by tract" replaced by "311 under-reporting by tract" |
 | R6.4 / task 2.10 | Live NWS rain removed; future weeks use temperature climatology |

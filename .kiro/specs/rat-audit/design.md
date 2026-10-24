@@ -27,7 +27,7 @@ paths: `docs/rat-audit/CONTRACT.md`.
           │
  ┌──────── Next.js 16 on Vercel (web/) ─────────┐   /api/refresh → Modal /refresh (token server-side) [R1.4]
                                                     /api/simulate → Modal /simulate [R6.8]
-                                                    /api/reveal  → private schema (service role) [R3.9]
+                                                    /api/reveal  → private schema (service role) [R3.12]
  │ Map (MapLibre) · Inspect · Insights · Ask    │
  │ zustand map store  ◄── client tools ──┐      │
  │ /api/chat  (AI SDK streamText + server tools)│──► model provider (gateway|anthropic|bedrock)
@@ -47,7 +47,7 @@ tags: `contracts/categories.json` (single source; copied to `web/src/lib/categor
 Key rules:
 - Primary keys are stable strings (`311:<case_id>`, `food:<license>`, `permit:<id>`, `g250_<c>_<r>`) and equal the map feature ids, so the agent can highlight/select by id [R8.2].
 - `address_block` = street + ZIP; `address_key` = sha256(normalized full address) [R1.11].
-- Names and full addresses live in schema `private` (`parcel_owners`, `incident_details`, `reveal_log`), not exposed by PostgREST. `/api/reveal` (Vercel, service role) returns one value per click and writes `reveal_log`; the UI renders a blurred placeholder with an eye button until then [R3.9]. Public `closure_note` is scrubbed of personal names; the raw note is in `private.incident_details`.
+- Names and full addresses live in schema `private` (`parcel_owners`, `incident_details`, `reveal_log`), not exposed by PostgREST. `/api/reveal` (Vercel, service role) returns one value per click and writes `reveal_log`; the UI renders a blurred placeholder with an eye button until then [R3.12]. Public `closure_note` is scrubbed of personal names; the raw note is in `private.incident_details`.
 - Every row carries `source_id` → `sources` [R3.8] and spatial rows carry `city` (boston | cambridge | somerville) [R1.13].
 - Points returned by the API are snapped to ~20 m.
 
@@ -74,16 +74,24 @@ compute durations locally. Raw downloads cache to `.cache/raw/` (git-ignored).
 ## 4. Analytics (pipeline/analytics) [R3, R5, R7]
 
 - **Grid**: 250 m squares (EPSG:26986 Mass State Plane meters), clipped to Boston neighborhoods.
-- **Closure classifier** → `incidents.action_tag`: ordered regex rules over `closure_note`
-  (e.g. `abatement` → abatement_order; `collections` → collections; `ticket|citation|violation issued` → citation;
-  `monitor` → monitoring; `bait|exterminat` → baiting; `barrel` → barrels; `no (code )?violation` → no_violation;
-  `duplicate` → duplicate). Unmatched → `unknown`. Optional LLM pass for unknowns (cached).
+- **Closure classifier** → `incidents.action_tag`: the ordered, first-match-wins rules in
+  `knowledge/sources/scripts/closure_classifier_rules.py` (drafted by Kiro Crew campaign `d19b46b7`, aligned to
+  categories.json). Order: duplicate → collections → abatement_order → citation → warning → baiting → barrels →
+  cleanup → no_violation → referral → inspection → monitoring; empty note → `closed_no_action`; no match → `unknown`.
+  Future or conditional intent ("will bait as needed", "will issue violation if necessary") is monitoring, except
+  abatement and scheduled inspections. Measured non-unknown: 95.5% (2025), 92.7% (2026). Monitoring is 49% of 2025
+  closures and 27% of 2026, while abatement and baiting rose: show that shift as a finding. Optional LLM pass for unknowns (cached).
 - **Chronic sites** → `sites`: rodent incidents 2024–2026 grouped by `address_key`; drop same-day bulk loads
   (≥ 5 reports with identical `opened_at` date at one key count as 1). Recurrence = a report opened 1–60 days after a
   prior report's `closed_at`. Score = 100 × weighted percentile of (recurrences 0.5, reports 0.3, recency 0.2), clipped 0–100.
   `summary.drivers`: counts within 100 m over the site's active period by category/place kind with ids.
   `summary.building`: nearest parcel; `adjacent_vacant` if a vacant-land parcel lies within 40 m.
   `recommended`: rules from the driver→action table (knowledge/10_rat_signals_brainstorm.md §4) with `because` + source_ids.
+  Rules added from the research [R3.9–R3.11], evaluated first: (1) ≥ 2 recurrences and the last actions were
+  monitoring / inspection / "noted" → recommend citation or abatement order, because "monitoring 14.1% → 14.2%,
+  violation 15.3% → 12.2%" (what worked); (2) `adjacent_vacant` → joint block visit and action on the adjacent parcel;
+  (3) drivers dominated by trash storage or dumping → sealed containers, citing NYC containerization and Boston's
+  $500K participatory-budgeting container project.
 - **What worked** → `action_outcomes`: for each closed rodent case with an action tag, did the same `address_key`
   get a new report within 60 days? Rate + n + median days to next, by tag.
 - **Correlations** → `correlations` (one row each; method per `docs/rat-audit/CONTRACT.md` table). Cell-level rates use
@@ -185,7 +193,7 @@ Each message carries `{selection, bbox, filters}` from the store [R8.5].
 
 - **Property-based** (Hypothesis, Python): site score ∈ [0,100]; ranking deterministic for equal input; every `source_id`
   in every table resolves; no public column matches a house-number or owner-name pattern; recurrence count ≤ report count − 1.
-- **Unit**: closure classifier on labelled real notes (coverage ≥ 80% non-unknown); address normalizer; agent tools against live DB (vitest).
+- **Unit**: closure classifier on real 2025 and 2026 rodent notes (non-unknown ≥ 90% per year); address normalizer; agent tools against live DB (vitest).
 - **Fake-model route test**: AI SDK mock model drives a tool loop including a client tool call.
 - **E2E** (Playwright): open → map renders points → click top site → card shows timeline → Approve → work order visible.
 - Kiro hooks: `snapshot-citation-check` (sources resolve), `demo-path-green` (E2E), `accessibility-check`.
@@ -193,7 +201,7 @@ Each message carries `{selection, bbox, filters}` from the store [R8.5].
 ## 11. Demo path (under 3 minutes) → requirements
 
 1. Open: live map, "Live · updated 3 min ago", 90 days of rodent reports, chronic stars [R1.6, R2.1].
-2. Toggle trash + vacant lots; scrub the timeline to Sept 1 → move-out spike [R2.3, R2.7, R5.2].
+2. Toggle trash + vacant lots; scrub the timeline to Sept 1 → the **trash** spike (about 2× citywide, 4–5× in Allston, Mission Hill and Fenway, every year 2023–2025). Say plainly that rodent reports do not follow it 1–4 weeks later [R2.3, R2.7, R5.2].
 3. Ask: "Why do rats keep coming back on Normandy St?" → map flies, drivers light up, 16 closures listed with sources [R8.1–R8.4].
 4. Site card: timeline of escalating actions, adjacent vacant lot, recurrence probability, what worked nearby [R3.2].
 5. Approve "joint block visit + vacant-lot clearing" → work order, follow-up in 60 days [R4].

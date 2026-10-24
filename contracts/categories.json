@@ -316,6 +316,10 @@
       "label": "Duplicate / already open",
       "owner": "311"
     },
+    "closed_no_action": {
+      "label": "Closed with no note",
+      "owner": "\u2014"
+    },
     "unknown": {
       "label": "Unclassified",
       "owner": "\u2014"

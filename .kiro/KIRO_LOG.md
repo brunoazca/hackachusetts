@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:20 — Pushed pending spec edits (closure classifier rules, esca...
+- Teammate: Bruno
+- Agent: —
+- Did: Pushed pending spec edits (closure classifier rules, escalation/adjacent-lot/container recommendations, move-out trash spike, health context) and fixed duplicate R3.9–R3.11 numbering (privacy reveal, portfolio, equity view → R3.12–R3.14)
+- Why: Two spec passes had reused the same requirement numbers
+- Where: .kiro/specs/rat-audit/*, contracts/categories.json, web/src/lib/categories.json, knowledge/sources/scripts/closure_classifier_rules.py
+- Idea: —
+
+### 2026-10-24 13:19 — Applied research to the rat-audit spec: what-worked as le...
+- Teammate: Bruno
+- Agent: —
+- Did: Applied research to the rat-audit spec: what-worked as lead finding, trash finding labelled weak at block level, escalation / adjacent-lot / container recommendation rules (R3.9-R3.11), cost + health facts (R7), classifier rules file + closed_no_action tag + 90% test target, Sept 1 = trash spike not rodent spike; 6 Kiro Crew campaigns all in the knowledge library
+- Why: Research changed several P0 items
+- Where: .kiro/specs/rat-audit/{requirements,design,tasks}.md, contracts/categories.json, web/src/lib/categories.json, knowledge/sources/scripts/closure_classifier_rules.py, knowledge/15_boston_rat_audit.md, .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Classifier: monitoring 49% of 2025 closures -> 27% in 2026 as abatement/baiting rose; Sept 1 trash 2x citywide, 4-5x student ZIPs, rodent lag none
+
 ### 2026-10-24 13:17 — Data section: ingest helpers + Boston 311 loader (2023–20...
 - Teammate: Bruno
 - Agent: —
