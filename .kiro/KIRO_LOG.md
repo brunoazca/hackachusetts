@@ -46,6 +46,13 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Guilherme: everything on main, no local diff, one folder
 - Where: PR #3, PR #4, .git/info/exclude
 - Idea: Video assets need Git LFS or external storage, not the repo
+### 2026-10-24 16:26 — Kiro Crew pipeline: 3 new crewmates (Da Vinci design crit...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew pipeline: 3 new crewmates (Da Vinci design critic, Einstein research steward, Hopper build watcher) on crons; all 9 crewmates named + full descriptions; Research Lab reports exported to knowledge/research with follow-up queue
+- Why: move design, research and build checks onto Kiro Crew agents; keep every research report in the repo
+- Where: .kiro/agents/, .kiro/scripts/research_lab.py, knowledge/research/
+- Idea: Einstein turns each report's open questions into queued follow-up campaigns (depth<=2, 6/day)
 
 ### 2026-10-24 16:23 — Filled the three empty submission docs: description.md (j...
 - Teammate: Guilherme
@@ -54,6 +61,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: They were empty <fill-in> templates; description.md + kiro-usage.md are required artifacts and were a disqualification risk
 - Where: docs/submission/description.md, docs/submission/kiro-usage.md, docs/submission/demo-script.md
 - Idea: check_submission_ready.py now reports READY; overclaim + secret scans clean
+
+### 2026-10-24 16:22 — Stopped NYC outcomes campaign 12680cba after 4 cycles (ma...
+- Teammate: Bruno
+- Agent: —
+- Did: Stopped NYC outcomes campaign 12680cba after 4 cycles (main result in), exported to knowledge library; skipped NYC under-reporting campaign; exposure (0055b00f) and predictors queued at 6 cycles
+- Why: Time: scope freeze 16:30, submission 18:00
+- Where: knowledge/15_boston_rat_audit.md
+- Idea: NYC (2.36M inspections): ~50% of first failures recur within a year, 83% of chronic; treated properties fail more (confounding); RMZ 2.3x inspections, same recovery. History predicts, no action beats time
 
 ### 2026-10-24 16:19 — Ranked remaining product work by implementation difficulty
 - Teammate: Guilherme
