@@ -69,6 +69,7 @@ type MapState = {
   filters: Filters;
   highlight: string[];             // ids of incidents/places/sites to emphasize
   selection: Selection;
+  history: Selection[];            // previous selections, for Back in the Insight panel
   panel: "inspector" | "insights" | "chat";
   forecastWeek: string | null;     // ISO week_start or "4w"; null also means next four weeks
   three: boolean;                  // pitched camera + extruded buildings at street level
@@ -79,6 +80,7 @@ type MapState = {
   setFilters: (patch: Partial<Filters>) => void;
   setHighlight: (ids: string[]) => void;
   select: (s: Selection) => void;
+  back: () => void;                // previous selection, or the ranking when there is none
   setPanel: (p: MapState["panel"]) => void;
   setForecastWeek: (w: string | null) => void;
   setThree: (on: boolean) => void;
@@ -112,7 +114,8 @@ export const useMap = create<MapState>((set) => ({
   filters: { since: daysAgo(7), until: iso(today), categories: [...CATEGORY_IDS], status: "all" },
   highlight: [],
   selection: null,
-  panel: "inspector",
+  history: [],
+  panel: "chat",
   forecastWeek: null,
   three: true,                     // the map opens tilted; "3D" by the zoom controls flattens it
   selectionAt: null,
@@ -135,9 +138,18 @@ export const useMap = create<MapState>((set) => ({
       causes: wanted.some(isNearbyCategory) };
   }),
   setHighlight: (highlight) => set({ highlight }),
-  select: (selection) => set({ selection, panel: selection ? "inspector" : "inspector" }),
+  select: (selection) => set((s) => ({
+    selection,
+    // Esc / clear empties the stack (back to the ranking); a new selection pushes the current one.
+    history: selection == null ? [] : s.selection && !sameSelection(s.selection, selection) ? [...s.history, s.selection].slice(-20) : s.history,
+  })),
+  back: () => set((s) => ({ selection: s.history.at(-1) ?? null, history: s.history.slice(0, -1) })),
   setPanel: (panel) => set({ panel }),
   setForecastWeek: (forecastWeek) => set({ forecastWeek }),
   setThree: (three) => set({ three }),
   setSelectionAt: (selectionAt) => set({ selectionAt }),
 }));
+
+function sameSelection(a: NonNullable<Selection>, b: NonNullable<Selection>): boolean {
+  return a.kind === b.kind && ("id" in a && "id" in b ? a.id === b.id : a === b);
+}

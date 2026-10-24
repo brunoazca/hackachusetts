@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:15 — One Insight panel UI: left panel follows the map selectio...
+- Teammate: Bruno
+- Agent: —
+- Did: One Insight panel UI: left panel follows the map selection (ranking with infinite scroll → area / rodent report / evidence views, Back + Esc), chat-only right panel, filters moved to a bottom bar, top-bar mode selector removed; deleted Blocks list, Places to visit and the old Insights tab; paged insight_ranking RPC, evidence after-window fix, code-enforcement labels; checked in the browser
+- Why: Bruno asked to merge Inspect and Insights into one, drop Blocks and Places to visit, keep only the map with click behaviours, infinite scrolling, filters at the bottom
+- Where: web/src/components/insight/*, web/src/components/shell/{RightPanel,SidePanel,TopBar}.tsx, web/src/components/map/{MapView,LayerPanel,Timeline}.tsx, web/src/lib/{insight,map-store}.ts, web/src/app/api/insight-ai, supabase/migrations/20261024500009-10
+- Idea: A 90-day before/after comparison is misleading for items filed days ago; the RPC now returns after_days and the card says it is too recent to compare
+
 ### 2026-10-24 19:11 — Default date window is last week; fixed range slider so F...
 - Teammate: Bruno
 - Agent: —

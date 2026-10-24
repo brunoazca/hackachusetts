@@ -21,7 +21,10 @@ language sql immutable as $$
     when 'trash_storage' then 'improper trash storage 311' when 'dumping' then 'illegal dumping 311'
     when 'missed_trash' then 'missed trash pickup 311' when 'dumpster' then 'dumpster 311'
     when 'trash_early' then 'trash out early 311' when 'dead_animal' then 'dead animal 311'
-    when 'pest' then 'indoor pest 311' else replace(kind, '_', ' ') end
+    when 'pest' then 'indoor pest 311'
+    when 'ce_trash_storage' then 'code enforcement: trash storage' when 'ce_overfill' then 'code enforcement: overfilled bins'
+    when 'ce_dumping' then 'code enforcement: dumping' when 'ce_weeds' then 'code enforcement: overgrown lot'
+    else replace(kind, '_', ' ') end
 $$;
 
 -- Possible causes within 150 m of a point: places (any time) and 311 (the 90 days before `at`),
@@ -165,6 +168,7 @@ begin
     'rodent_before', case when t0 is null then null else
       (select count(*) from incidents r where r.category = 'rodent' and st_dwithin(r.geom, g, 150)
          and r.opened_at >= t0 - interval '90 days' and r.opened_at < t0) end,
+    'after_days', case when t0 is null then null else least(90, greatest(0, extract(day from now() - t0)::int)) end,
     'rodent_after', (select count(*) from incidents r where r.category = 'rodent' and st_dwithin(r.geom, g, 150)
          and r.opened_at >= coalesce(t0, now() - interval '12 months')
          and r.opened_at < coalesce(t0 + interval '90 days', now())),
@@ -195,19 +199,3 @@ language sql stable security definer set search_path = public as $$
   where c.city = 'boston' and st_intersects(c.geom, st_setsrid(st_geomfromgeojson(geojson::text), 4326)::geography)
 $$;
 grant execute on function area_insight_polygon to anon, authenticated;
-
--- The ranking shown when nothing is selected: ranked regions first (by region rank), then the worst
--- cells outside any region (by cell rank). `position` is the 1-based place in this list.
-create or replace function insight_ranking(lim int default 20) returns jsonb
-language sql stable security definer set search_path = public as $$
-  select coalesce(jsonb_agg(to_jsonb(u) || jsonb_build_object('position', n) order by n), '[]'::jsonb) from (
-    select u.*, row_number() over (order by grp, rank) n from (
-      select 'region' entry, region_id id, rank, 0 grp, cell_ids, action, lane, because, source, locations,
-             input->'region' region, computed_at from region_solutions
-      union all
-      select 'cell', cell_id, rank, 1, cell_ids, action, lane, because, source, locations,
-             input->'region', computed_at from cell_solutions
-    ) u order by grp, rank limit lim
-  ) u
-$$;
-grant execute on function insight_ranking to anon, authenticated;

@@ -76,7 +76,7 @@ export default function Timeline() {
       ref={boxRef}
       aria-label="Dates"
       inert={!open}
-      className="glass absolute left-[60px] top-0 w-[320px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
+      className="glass absolute bottom-[60px] left-0 w-[320px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
     >
       <div className="p-3">
         <header className="flex items-start justify-between gap-2">

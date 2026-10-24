@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import { useMap, type Mode } from "@/lib/map-store";
 import { restoreTheme, useTheme } from "@/lib/theme-store";
 import { restoreMotion, useA11y } from "@/lib/a11y-store";
 import PiperLogo from "@/components/brand/PiperLogo";
@@ -43,10 +42,6 @@ export function Segmented<T extends string>({ label, value, options, onChange }:
 }
 
 export default function TopBar() {
-  const mode = useMap((s) => s.mode);
-  const setMode = useMap((s) => s.setMode);
-  const setPanel = useMap((s) => s.setPanel);
-
   useEffect(() => {
     restoreTheme();
     restoreMotion();
@@ -74,17 +69,6 @@ export default function TopBar() {
         <span className="hidden text-[13px] text-fg-3 lg:inline">Rat reports in Boston, Cambridge &amp; Somerville</span>
       </div>
 
-      <div className="glass pointer-events-auto col-span-2 row-start-2 mx-auto flex h-11 shrink-0 items-center rounded-lg px-1">
-        <Segmented<Mode>
-          label="View"
-          value={mode}
-          options={[
-            { id: "act", label: "Places to visit", hint: "Review places with repeat rodent reports" },
-            { id: "assess", label: "Map", hint: "Explore recorded reports on the map" },
-          ]}
-          onChange={(m) => { setMode(m); setPanel("inspector"); }}
-        />
-      </div>
 
     </header>
   );

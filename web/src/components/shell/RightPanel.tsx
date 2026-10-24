@@ -5,17 +5,14 @@ import { useUi } from "@/lib/ui-store";
 import SidePanel from "./SidePanel";
 import { useMorph } from "@/lib/use-morph";
 
-// Right panel (Inspect / Insights / Ask). Starts folded into a slim rail so the map gets the room;
-// grows out of the rail icon you clicked (or the Inspect icon on a map selection, or "]"), and
-// shrinks back into it. The rail stays underneath as the anchor.
+// Right panel: Ask (chat) only. Insight and detail live in the left Insight panel, which follows the
+// map selection. Starts folded into a slim rail; grows out of it on click or "]".
 
-type Tab = "inspector" | "insights" | "chat";
+type Tab = "chat";
 const ICON: Record<Tab, ReactNode> = {
-  inspector: <path d="M12 2v4M12 18v4M2 12h4M18 12h4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" />,
-  insights: <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />,
   chat: <path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12Z" />,
 };
-const LABEL: Record<Tab, string> = { inspector: "Detail", insights: "Citywide", chat: "Ask" };
+const LABEL: Record<Tab, string> = { chat: "Ask" };
 
 // Inherited visibility can settle a few frames after a morph changes the parent.
 // Wait for the actual target, and cancel if the panel changes again in the meantime.
@@ -38,8 +35,7 @@ function focusWhenVisible(getTarget: () => HTMLElement | null) {
 export default function RightPanel() {
   const open = useUi((s) => s.rightOpen);
   const setOpen = useUi((s) => s.setRightOpen);
-  const selection = useMap((s) => s.selection);
-  const panel = useMap((s) => s.panel);
+  const panel = "chat" as const;
   const setPanel = useMap((s) => s.setPanel);
   const asideRef = useRef<HTMLElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
@@ -47,7 +43,7 @@ export default function RightPanel() {
   const returnFocusRef = useRef<HTMLElement | null>(null);
   const wasOpenRef = useRef(open);
   const btnRefs = useRef<Partial<Record<Tab, HTMLButtonElement | null>>>({});
-  useMorph(open, asideRef, () => anchorRef.current ?? btnRefs.current.inspector ?? null);
+  useMorph(open, asideRef, () => anchorRef.current ?? btnRefs.current.chat ?? null);
 
   // Fit the panel to its content (Ask always gets the full height). The height eases when content
   // arrives or changes, so the card grows into place instead of sitting tall and empty.
@@ -82,20 +78,6 @@ export default function RightPanel() {
     setOpen(true);
   }, [setPanel, setOpen]);
 
-  // A selection opens the panel. Keyboard/list users land directly on its controls.
-  useEffect(() => {
-    if (!selection) return;
-    anchorRef.current = btnRefs.current.inspector ?? null;
-    const trigger = document.activeElement;
-    let cancelFocus: (() => void) | undefined;
-    if (trigger instanceof HTMLElement && trigger.hasAttribute("data-site-trigger")) {
-      returnFocusRef.current = trigger;
-      if (useUi.getState().rightOpen) cancelFocus = focusPanel();
-    }
-    setOpen(true);
-    return cancelFocus;
-  }, [selection, setOpen, focusPanel]);
-
   // Focus only after React has removed inert and the morph has made the panel visible.
   // An event-time animation frame can run before that commit during a busy map render.
   useEffect(() => {
@@ -105,7 +87,7 @@ export default function RightPanel() {
     } else if (wasOpenRef.current) {
       wasOpenRef.current = false;
       return focusWhenVisible(() => returnFocusRef.current?.isConnected
-        ? returnFocusRef.current : anchorRef.current ?? btnRefs.current.inspector ?? null);
+        ? returnFocusRef.current : anchorRef.current ?? btnRefs.current.chat ?? null);
     }
     wasOpenRef.current = open;
   }, [open, focusPanel]);
@@ -118,7 +100,7 @@ export default function RightPanel() {
       if (!typing && !e.metaKey && !e.ctrlKey && !e.altKey && e.key === "]") {
         e.preventDefault();
         if (useUi.getState().rightOpen) closePanel();
-        else openTab(useMap.getState().panel as Tab);
+        else openTab("chat");
       }
       if (e.key === "Escape" && asideRef.current?.contains(document.activeElement)) {
         e.preventDefault();
@@ -165,7 +147,6 @@ export default function RightPanel() {
             className="relative grid h-11 w-11 place-items-center rounded-md text-fg-2 transition-colors duration-150 hover:bg-card-hover hover:text-fg"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>{ICON[t]}</svg>
-            {t === "inspector" && selection && <span aria-hidden className="absolute right-2 top-2 h-2 w-2 rounded-full bg-return ring-2 ring-[var(--p-panel-solid)]" />}
           </button>
         ))}
       </div>
@@ -176,7 +157,7 @@ export default function RightPanel() {
           id="details-panel"
           ref={asideRef}
           inert={!open}
-          aria-label={`${LABEL[panel as Tab] ?? "Details"} panel`}
+          aria-label="Ask panel"
           style={{ height: height ?? undefined }}
           className="glass absolute right-3 top-(--shell-top) z-[31] max-h-[calc(100%-var(--shell-top)-12px)] w-[380px] max-w-[calc(100%-24px)] overflow-hidden rounded-lg transition-[height] duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,clip-path] motion-reduce:transition-none"
         >

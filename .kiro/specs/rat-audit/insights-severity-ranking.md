@@ -747,3 +747,10 @@ top **100** regions; Modal `solutions` runs after every scoring and `insight_ai`
 Front logic (Bruno, local until the new UI lands): `web/src/lib/insight.ts` (`routeSelection`,
 `loadInsight`, `highlightIds`, `focusOf`, `generateAreaAi`), `map-store.history/back()`,
 `web/src/app/api/insight-ai/route.ts`, tests `web/tests/insight.test.ts`.
+
+**Built (Oct 24, rev. 3 UI):** left `components/insight/InsightPanel.tsx` (ranking with infinite scroll via
+`insight_ranking(lim, off)`, then Area / Report / Evidence views; Back + Esc), right panel = Ask only,
+layer + filter bar along the bottom (`LayerPanel`, `Timeline` open upward), top-bar mode selector removed.
+Deleted: Blocks list (`map/BlockQueue`), Places to visit (`act/SiteQueue`), the old Insights tab
+(`insights/InsightsPanel`, `regions/RegionSolutions`). "act" mode now renders the same map; the agent's
+`map_filter_sites` / `app_set_mode act` no longer show a queue (chat track to update).
