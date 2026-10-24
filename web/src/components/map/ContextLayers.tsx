@@ -3,6 +3,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Layer, Source } from "react-map-gl/maplibre";
 import type { Feature, FeatureCollection, MultiPolygon, Polygon } from "geojson";
 import { mask } from "@turf/turf";
+import { useTheme } from "@/lib/theme-store";
+import { themes } from "@/lib/design-tokens";
 import { fetchCityBoundaries, fetchParcels, fetchTracts, type BBox, type CoverageRow } from "@/lib/queries";
 
 // Context + coverage layers:
@@ -33,6 +35,7 @@ export default function ContextLayers({ cats, coverage, housing, buildings, bbox
   const [cities, setCities] = useState<FeatureCollection<Polygon | MultiPolygon>>(EMPTY as FeatureCollection<Polygon | MultiPolygon>);
   const [tracts, setTracts] = useState<FeatureCollection>(EMPTY);
   const [parcels, setParcels] = useState<FeatureCollection>(EMPTY);
+  const T = themes[useTheme((t) => t.theme)];
 
   useEffect(() => {
     fetchCityBoundaries().then((fc) => setCities(fc as FeatureCollection<Polygon | MultiPolygon>)).catch(() => {});
@@ -98,22 +101,22 @@ export default function ContextLayers({ cats, coverage, housing, buildings, bbox
 
       {outside && (
         <Source id="fog-outside" type="geojson" data={outside}>
-          <Layer id="fog-outside" type="fill" paint={{ "fill-color": "#6b7280", "fill-opacity": 0.38 }} />
+          <Layer id="fog-outside" type="fill" paint={{ "fill-color": T.bg, "fill-opacity": 0.72 }} />
         </Source>
       )}
       <Source id="fog-nodata" type="geojson" data={noData}>
-        <Layer id="fog-nodata" type="fill" paint={{ "fill-color": "#6b7280", "fill-opacity": 0.42 }} />
-        <Layer id="fog-nodata-line" type="line" paint={{ "line-color": "#374151", "line-width": 1.5, "line-dasharray": [3, 2] }} />
+        <Layer id="fog-nodata" type="fill" paint={{ "fill-color": T.bg, "fill-opacity": 0.7 }} />
+        <Layer id="fog-nodata-line" type="line" paint={{ "line-color": T.fg3, "line-width": 1, "line-dasharray": [2, 2] }} />
         <Layer
           id="fog-nodata-label"
           type="symbol"
           layout={{ "text-field": ["concat", "No data here for the layers you picked"], "text-size": 13, "text-font": ["Noto Sans Bold"], "symbol-placement": "point" }}
-          paint={{ "text-color": "#374151", "text-halo-color": "#ffffff", "text-halo-width": 1.5 }}
+          paint={{ "text-color": T.fg2, "text-halo-color": T.bg, "text-halo-width": 1.5 }}
         />
       </Source>
       {cities.features.length > 0 && (
         <Source id="city-outline" type="geojson" data={cities}>
-          <Layer id="city-outline" type="line" paint={{ "line-color": "#111827", "line-width": 1.5, "line-opacity": 0.55 }} />
+          <Layer id="city-outline" type="line" paint={{ "line-color": T.fg2, "line-width": 1.2, "line-opacity": 0.5 }} />
         </Source>
       )}
     </>

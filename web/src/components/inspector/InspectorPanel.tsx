@@ -34,7 +34,7 @@ export default function InspectorPanel() {
     return () => { live = false; };
   }, [id]);
 
-  if (selection?.kind === "site") return <SiteCase id={selection.id} />;
+  if (selection?.kind === "site") return <SiteCase key={selection.id} id={selection.id} />;
   if (selection?.kind === "cell") return <CellCard id={selection.id} />;
   if (selection?.kind === "place" && selection.id.startsWith("parcel:")) return <ParcelCard pid={selection.id.slice(7)} />;
   if (!id) {

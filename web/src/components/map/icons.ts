@@ -36,45 +36,54 @@ const GLYPH: Record<string, string> = {
 };
 const FALLBACK = PackageX;
 
-export const iconId = (category: string) => `cat-${category}`;
+export const iconId = (category: string, closed = false) => `cat-${category}${closed ? "-closed" : ""}`;
 
-/** Marker SVG: disc in the category color, white ring, white glyph. */
-export function markerSvg(category: string, size = 28): string {
+/**
+ * Map marker, 32-unit canvas with room for a soft shadow.
+ * Open report: solid disc in the category color, white glyph, white ring — reads as "active".
+ * Closed report: white disc, ring and glyph in the category color — same shape, clearly calmer.
+ * Shape + fill carry status, so it does not depend on color alone.
+ */
+export function markerSvg(category: string, size = 32, closed = false): string {
   const color = CATS[category]?.color ?? "#555";
+  const ink = closed ? color : "#ffffff";
   const glyph = (GLYPH[category] ?? FALLBACK)
-    .replace(/stroke="currentColor"/g, 'stroke="#ffffff"')
-    .replace(/width="24"/, 'width="16"')
-    .replace(/height="24"/, 'height="16"')
-    .replace("<svg", '<svg x="6" y="6"');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 28 28">
-    <circle cx="14" cy="14" r="12.5" fill="${color}" stroke="#ffffff" stroke-width="2"/>
+    .replace(/stroke="currentColor"/g, `stroke="${ink}"`)
+    .replace(/stroke-width="2"/g, 'stroke-width="2.25"')
+    .replace(/width="24"/, 'width="15"')
+    .replace(/height="24"/, 'height="15"')
+    .replace("<svg", '<svg x="8.5" y="7.5"');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 32 32">
+    <defs><filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.1" flood-color="#000" flood-opacity=".35"/></filter></defs>
+    <circle cx="16" cy="15" r="11" fill="${closed ? "#ffffff" : color}" stroke="${closed ? color : "#ffffff"}" stroke-width="${closed ? 2.25 : 2}" filter="url(#s)"/>
     ${glyph}
   </svg>`;
 }
 
-export const markerDataUrl = (category: string) =>
-  `data:image/svg+xml;charset=utf-8,${encodeURIComponent(markerSvg(category))}`;
+export const markerDataUrl = (category: string, closed = false) =>
+  `data:image/svg+xml;charset=utf-8,${encodeURIComponent(markerSvg(category, 32, closed))}`;
 
-/** Register every category icon on the map at 2x for crisp rendering. */
+/** Register both marker variants (open, closed) for every category at 2x for crisp rendering. */
 export async function addCategoryIcons(map: MlMap): Promise<void> {
-  const scale = 2;
+  const scale = 2, px = 32 * scale;
+  const jobs = Object.keys(CATS).flatMap((cat) => [false, true].map((closed) => ({ cat, closed })));
   await Promise.all(
-    Object.keys(CATS).map(
-      (cat) =>
+    jobs.map(
+      ({ cat, closed }) =>
         new Promise<void>((resolve) => {
-          const id = iconId(cat);
+          const id = iconId(cat, closed);
           if (map.hasImage(id)) return resolve();
-          const img = new Image(28 * scale, 28 * scale);
+          const img = new Image(px, px);
           img.onload = () => {
             const canvas = document.createElement("canvas");
-            canvas.width = canvas.height = 28 * scale;
+            canvas.width = canvas.height = px;
             const ctx = canvas.getContext("2d")!;
-            ctx.drawImage(img, 0, 0, 28 * scale, 28 * scale);
-            if (!map.hasImage(id)) map.addImage(id, ctx.getImageData(0, 0, 28 * scale, 28 * scale), { pixelRatio: scale });
+            ctx.drawImage(img, 0, 0, px, px);
+            if (!map.hasImage(id)) map.addImage(id, ctx.getImageData(0, 0, px, px), { pixelRatio: scale });
             resolve();
           };
           img.onerror = () => resolve();
-          img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(markerSvg(cat, 28 * scale))}`;
+          img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(markerSvg(cat, px, closed))}`;
         }),
     ),
   );

@@ -31,6 +31,21 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:12 — Reports at the same address fold into one numbered marker...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Reports at the same address fold into one numbered marker that opens the address; map reuses a padded fetch box so pans and small zooms need no request (debounce 300->120ms); zoom controls stay in the corner unless the open panel reaches them; logo tail in Piper red
+- Why: Guilherme: 9 reports at an address showed as 1, slow map refresh, controls position, accented tail logo
+- Where: web/src/components/map/MapView.tsx, web/src/components/shell/{RightPanel,TopBar}.tsx, web/src/components/brand/LineRat.tsx, web/src/lib/queries.ts
+- Idea: Cache by detail level + padded bbox instead of refetching every moveend
+
+### 2026-10-24 16:04 — Tap on empty map now flies in and opens the closest repor...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Tap on empty map now flies in and opens the closest report; right panel sizes to its content and eases its height; all marker kinds share one clustered source so groups no longer stack (group color = family it holds most of)
+- Why: Guilherme: empty taps did nothing, panel too tall, stacked cluster logos
+- Where: web/src/components/map/MapView.tsx, web/src/components/shell/{RightPanel,SidePanel}.tsx
+- Idea: Per-category cluster sources overlap at the same spot; cluster once and color by majority
 ### 2026-10-24 16:08 — Boston 311 history 2016-2022 (incidents_archive) + weathe...
 - Teammate: Bruno
 - Agent: —
@@ -47,6 +62,61 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: pipeline/rat_audit/model/features.py model_runs
 - Idea: Nothing beat the +0.5 pt bar; 3-city model needs grid_cells for CAM/SOM (Carol) — after freeze
 
+### 2026-10-24 15:56 — Fixed the right panel never opening (morph hook now keeps...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Fixed the right panel never opening (morph hook now keeps panels mounted and only toggles visibility + runs the animation; verified by driving the app with headless Chrome); heatmap edges no longer go gray; brought feat/piper-ui up to date with origin/main twice (forecast layer, CellCard, 3-city parcels, archive ingest) and moved the team's forecast control into the layer dock
+- Why: Guilherme: right panel disappearing; branch must track current origin
+- Where: web/src/lib/use-morph.ts, web/src/components/shell/RightPanel.tsx, web/src/components/map/{LayerPanel,Timeline,MapView,ForecastControl}.tsx, web/src/components/inspector/InspectorPanel.tsx
+- Idea: Use puppeteer-core with the local Chrome to click-test UI before reporting
+
+### 2026-10-24 15:46 — Time window is now a compact 320px card that grows out of...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Time window is now a compact 320px card that grows out of the calendar button next to the dock (range in words, quick picks, short two-handle slider, exact From/To date inputs) instead of a full-width bar; switching on any cause layer (trash, shelter, works) turns 'Show likely causes' on automatically, and turning the last one off turns it off
+- Why: Guilherme: full-width slider felt wrong; cause layers should activate the causes view
+- Where: web/src/components/map/Timeline.tsx, web/src/components/map/LayerPanel.tsx, web/src/app/page.tsx
+- Idea: —
+
+### 2026-10-24 15:39 — Panels now morph out of the button that opened them (clip...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Panels now morph out of the button that opened them (clip-path + translate via Web Animations, 280ms open / 200ms close, content fades after the box grows, instant under reduced motion): layer flyouts from dock icons, time window from the calendar button, right panel from its rail icon. Map made easier to read: hot spots show rat reports only and fade by street level where markers take over; causes (trash, vacant lots, works) off until 'Show likely causes'; plain view options with hints; always-on map key that changes with zoom
+- Why: Guilherme: wanted sleek morphing buttons-to-panels and a less confusing visualization
+- Where: web/src/lib/use-morph.ts, web/src/components/map/{LayerPanel,Timeline,MapView,MapLegend}.tsx, web/src/components/shell/RightPanel.tsx
+- Idea: One hook (useMorph) drives every open/close so motion stays consistent
+
+### 2026-10-24 15:29 — Merged latest main (Simple/Explore already removed upstre...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Merged latest main (Simple/Explore already removed upstream); plain-language top bar ('Updated 37 minutes ago' + refresh icon, 'Map' / 'Places to visit'); time window rebuilt as a timeline strip (Jan 2023 to today, two draggable handles, quick picks in words, range written out) that slides up only from a calendar 'When' button in the left dock; new map markers (solid = open, white = closed, soft shadow) and haloed clusters; fixed new Date() prerender error
+- Why: Guilherme: kill Simple/Explore, better timeline UX, better icons, LIVE pill too techy for normal people, timeline must not always show
+- Where: web/src/components/shell/TopBar.tsx, web/src/components/map/Timeline.tsx, web/src/components/map/LayerPanel.tsx, web/src/components/map/icons.ts, web/src/components/map/MapView.tsx, web/src/lib/ui-store.ts, web/src/app/*
+- Idea: Open vs closed shown by fill, not opacity
+
+### 2026-10-24 15:16 — Right panel now folds into a slim 52px rail (Inspect / In...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Right panel now folds into a slim 52px rail (Inspect / Insights / Ask icons, red dot when something is selected) and slides open on selection, rail click or ]; one 300ms transform, both states mounted with inert for a11y; map clear area and zoom controls glide with it; panel narrowed to 380px
+- Why: Guilherme: right panel took too much space; wanted fluid, sleek collapse/expand
+- Where: web/src/components/shell/RightPanel.tsx, web/src/lib/ui-store.ts, web/src/components/map/MapView.tsx, web/src/app/globals.css
+- Idea: Shared ui-store so map padding follows the panel
+
+### 2026-10-24 15:11 — Replaced the big left Layers panel with a slim layer dock...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Replaced the big left Layers panel with a slim layer dock: 52px rail of group buttons (rats, trash, shelter, works, buildings, period, view) with on-count badges; one animated flyout per group with compact switch rows, All/None, Esc to close, arrow-key rail navigation, aria-expanded/controls; reduced-motion safe
+- Why: Guilherme found the left panel too big; wanted sleek, expandable, animated, accessible
+- Where: web/src/components/map/LayerPanel.tsx, web/src/app/globals.css, web/src/components/map/MapView.tsx
+- Idea: City coverage shown as quiet 'BOS SOM' text instead of badge pills
+
+### 2026-10-24 15:05 — Design v2 'Transit' on feat/piper-ui (rebased on latest m...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Design v2 'Transit' on feat/piper-ui (rebased on latest main): researched AI-design tells (cream+serif+muted = 2026 tell), switched to MBTA-derived colors, dropped Bodoni, neutral surfaces, small radii, compact site panel (answer first, dot timeline, top 5, last 5, show all), collapsible Layers/Site queue/right panel, Tailwind palette mapped to Piper tokens so team components theme
+- Why: Guilherme found v1 ugly, inefficient, too AI-ish and short on color; wanted it on top of the current app
+- Where: web/src/**, docs/design/research/less-ai-ish.md, docs/design/README.md, docs/design/tokens/tokens.json
+- Idea: Map team palette (neutral/red/amber/emerald) to tokens instead of rewriting every component
 ### 2026-10-24 15:53 — Handoff to model section: ACS ablation, three-city model ...
 - Teammate: Bruno
 - Agent: —
@@ -118,6 +188,30 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Rank sites by who is affected; check if new data improves the forecast
 - Where: none
 - Idea: Exposure as an explainable tie-breaker; keep/drop each predictor by top-10% capture gain
+
+### 2026-10-24 15:25 — Shift the data story from cost to connection
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Reframed the video around cross-source links: closed-but-returned sites, enforcement gaps, hidden hot spots, school exposure, action outcomes, and matched trials
+- Why: The $776K lower-bound cost is too small to carry the pitch
+- Where: none
+- Idea: Show one block gaining meaning as 311, closure notes, violations, property, weather, equity, and school data stack
+
+### 2026-10-24 15:23 — Final video data report
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Rebuilt the final data report with verified claims, live sources, joins, overlaps, null findings, limits, and video order
+- Why: Give the team one clean source for the demo video
+- Where: docs/submission/data-report.md
+- Idea: Lead with closed cases returning; end with the matched trial that proves what works
+
+### 2026-10-24 15:16 — Filled gaps in data-report.md: added problem numbers (532...
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Filled gaps in data-report.md: added problem numbers (5321 vs 5225, 407 returns, 46 repeat addresses), the matched-test 'what works' finding (RR 1.03, site history 8-12% vs 56-75%), three-city + schools + equity context
+- Why: User asked to check for missed important context data
+- Where: docs/submission/data-report.md
+- Idea: Flagged the $776K vs $783K cost conflict to resolve before recording
 
 ### 2026-10-24 15:40 — Cambridge + Somerville equivalents loaded: restaurants (2...
 - Teammate: Bruno
@@ -254,6 +348,61 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Kiro tasks 9, 12, 14 done directly (Kiro paused, too slow). Live: run risk-v1-20261024T184358, 89k backtest + 13.7k forecast predictions (Oct 26-Nov 16), 133 emerging + 120 early-warning cells; grid_cells seeded with 3442 fallback cells because it was empty
 - Where: pipeline/rat_audit/model/__init__.py, explain.py, tests/test_model_explain.py
 - Idea: grid_cells seeding only runs while the table is empty; Carol can replace it
+### 2026-10-24 14:51 — Applied Piper design system to the web app on branch feat...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Applied Piper design system to the web app on branch feat/piper-ui (worktree hackachusetts-piper-ui): tokens+fonts wired, full-bleed map with floating glass panels, recolored OpenFreeMap basemap per theme, two-tone category icons, rings on Act sites, restyled TopBar/Lenses/Site queue/Inspect/Site case, styled Insights+Ask placeholders, Night/Bone toggle (T, ?theme=); dev server on 127.0.0.1:3100
+- Why: Guilherme wanted to see the design live; liked the blurred glass panels
+- Where: web/src/app/*, web/src/components/**, web/src/lib/theme-store.ts, web/src/styles/piper.css, docs/design/*
+- Idea: Design system v1.2.0: glass is the default panel again
+
+### 2026-10-24 14:41 — Design system v1.1.0 'cleaner': removed map glows, panel ...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Design system v1.1.0 'cleaner': removed map glows, panel blur/glass, big shadows, italic Bodoni, mono caps eyebrows, source chip rows; rings capped at 3; fewer map marks; fixed Bone theme text bug in subtrees; Bone screenshots reviewed
+- Why: Guilherme found v1.0 too AI-ish and wanted to see the light theme
+- Where: docs/design/**, web/src/styles/piper.css, web/src/lib/design-tokens.ts
+- Idea: Rule: no blur, no glow, no letter-spaced caps; flourish limited to one Bodoni line and the Tune
+
+### 2026-10-24 14:35 — Piper design standards v1.0.0 on branch feat/piper-design...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Piper design standards v1.0.0 on branch feat/piper-design-system: tokens.json source of truth + drift/contrast guard script, docs/design (foundations, components, patterns, content/equity, accessibility, governance), standalone HTML mockup (app at 1280x800, color, type, space, components, motion lab, Bone phone), Kiro steering for UI files
+- Why: Give the team one durable, checked reference before restyling the app; not imported into the build
+- Where: docs/design/**, scripts/check-design-tokens.py, .kiro/steering/design-system.md, web/src/styles/piper.css, web/src/lib/design-tokens.ts, docs/rat-audit/brand.md, docs/rat-audit/design-system.md
+- Idea: Contrast guard caught 3 low pairs (mink, Bone return, Bone edge) and fixed them; mockup deep links ?demo=site|approve|ask|findings|cmdk, ?theme=bone, ?static
+
+### 2026-10-24 14:08 — Piper design system: full spec (color semantics both them...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Piper design system: full spec (color semantics both themes, type scale, spacing/sizes, layout at 1280x800 + phone, motion catalog, MapLibre paint, charts, 22 components, flows, keyboard, voice, a11y ship gate) plus token files
+- Why: Give the team one source of truth to build the UI from
+- Where: docs/rat-audit/design-system.md, web/src/styles/piper.css, web/src/lib/design-tokens.ts
+- Idea: Map padding so flyTo never lands under a panel; work order always in Bone theme; Tune auto-stops after 8s
+
+### 2026-10-24 13:58 — Brand v3: Piper (Pied Piper), tagline 'Follow the rats.',...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Brand v3: Piper (Pied Piper), tagline 'Follow the rats.', Hamelin palette (soot, bone, brass, vermilion, Delft, oxblood), Bodoni Moda + Atkinson Next/Mono, Line Rat mark, Rings + Tune motifs, plague-doctor Easter egg
+- Why: Guilherme wanted the brand to openly evoke rats/plague but in a chic way
+- Where: docs/rat-audit/brand.md
+- Idea: Rule: plague aesthetic for the brand only, never for places (1900 SF Chinatown quarantine precedent)
+
+### 2026-10-24 13:53 — Brand v2: renamed to Undertow, tagline 'Closed isn't gone...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Brand v2: renamed to Undertow, tagline 'Closed isn't gone.', Low Tide palette (warm=observed, cool=forecast, CVD-safe), Newsreader + Atkinson Hyperlegible Next/Mono, Tidelines + Currents motifs, equity and WCAG 2.2 sections, references board
+- Why: Guilherme found v1 tagline vague and asked for more unique, sleeker, accessible and equity-aware design
+- Where: docs/rat-audit/brand.md
+- Idea: Listening-gap texture for under-reporting tracts; Two voices (resident words vs closure note); Day mode required for field use
+
+### 2026-10-24 13:47 — Defined brand + product design: name Ratio, Nocturne pale...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Defined brand + product design: name Ratio, Nocturne palette, Instrument Serif/Geist/Geist Mono, Echoes motif, key screens, demo moment
+- Why: Make the rat product feel refined and YC-chic, not gross or scrappy
+- Where: docs/rat-audit/brand.md
+- Idea: Echo rings = recurrence; Source Line to adjacent vacant lot; closed is grey not green; tagline: Stop closing cases. Start closing blocks.
 ### 2026-10-24 14:41 — Umbrella campaign 947e85a6 finished; added its 13-track r...
 - Teammate: Carol
 - Agent: —

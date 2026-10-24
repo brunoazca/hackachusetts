@@ -15,6 +15,10 @@ export type IncidentProps = {
   n?: number;
   n_open?: number;
   newest?: string;
+  /** Client-side: several reports folded into one marker at the same spot. */
+  spot?: boolean;
+  /** Client-side: family (rats, food, shelter, displace) for cluster colors. */
+  group?: string;
 };
 
 export type BBox = [minLon: number, minLat: number, maxLon: number, maxLat: number];

@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useMap, type SiteRow } from "@/lib/map-store";
 import { fetchSiteQueue } from "@/lib/queries";
+import { CollapseButton, CollapsedTab } from "@/components/shell/Collapse";
 
 // Act mode: Due sites first, then by returns (R4.0). Draft: sites are repeat-report addresses
 // from the `site_queue` RPC until the analytics `sites` table (50 m clusters) lands.
@@ -14,6 +15,7 @@ export default function SiteQueue() {
   const [rows, setRows] = useState<SiteRow[] | null>(null);
   const [hood, setHood] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
+  const [panelOpen, setPanelOpen] = useState(true);
 
   useEffect(() => {
     fetchSiteQueue(300)
@@ -35,11 +37,12 @@ export default function SiteQueue() {
     flyTo({ lat: r.lat, lon: r.lon, zoom: 16.5 });
   };
 
+  if (!panelOpen) return <CollapsedTab side="left" label="Site queue" meta={`${due} due`} onOpen={() => setPanelOpen(true)} />;
   return (
-    <div className="absolute left-3 top-3 flex max-h-[calc(100%-1.5rem)] w-96 flex-col rounded-lg border border-neutral-200 bg-white/95 text-sm shadow-lg backdrop-blur">
+    <div className="glass absolute bottom-3 left-3 top-[68px] z-20 flex w-96 flex-col overflow-hidden rounded-lg text-sm">
       <div className="border-b border-neutral-200 p-3">
         <div className="flex items-baseline justify-between">
-          <h2 className="text-base font-semibold">Site queue</h2>
+          <h2 className="flex items-center gap-1 text-base font-semibold"><CollapseButton onClick={() => setPanelOpen(false)} label="Hide site queue" dir="left" />Site queue</h2>
           <span className="text-xs text-neutral-700">{due} due · {shown.length} shown</span>
         </div>
         <p className="mt-0.5 text-xs text-neutral-700">
@@ -48,6 +51,7 @@ export default function SiteQueue() {
         <label className="mt-2 flex items-center gap-2 text-xs text-neutral-800">
           Neighborhood
           <select
+            aria-label="Neighborhood"
             value={hood}
             onChange={(e) => setHood(e.target.value)}
             className="min-w-0 flex-1 rounded border border-neutral-300 bg-white px-1.5 py-1 text-xs"
