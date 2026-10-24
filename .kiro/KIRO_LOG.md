@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:26 — Gave civic-judge (civic-snapshots + playwright MCP) and s...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Gave civic-judge (civic-snapshots + playwright MCP) and snapshot-validator (civic-snapshots MCP) access to MCP via includeMcpJson; audit of MCP docs/log coverage
+- Why: Custom agents only see MCP when granted; now they can recompute numbers and walk the demo
+- Where: .kiro/agents/civic-judge.json, .kiro/agents/snapshot-validator.json
+- Idea: none
+
 ### 2026-10-24 12:16 — Resolved KIRO_LOG merge conflict: kept both sides' entrie...
 - Teammate: Bruno
 - Agent: —
