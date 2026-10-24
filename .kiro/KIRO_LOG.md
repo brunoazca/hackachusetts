@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:49 — Current/Prediction selector at the top of the map; Predic...
+- Teammate: Bruno
+- Agent: —
+- Did: Current/Prediction selector at the top of the map; Prediction hides the red priority blocks and shows the forecast; forecast dropped from the bottom dock
+- Why: forecast should be a clear map mode, not a buried toggle
+- Where: web/src/components/map/MapView.tsx, web/src/components/map/LayerPanel.tsx
+- Idea: —
+
 ### 2026-10-24 19:44 — Chat-picked points never cluster: they draw as single ico...
 - Teammate: Bruno
 - Agent: —

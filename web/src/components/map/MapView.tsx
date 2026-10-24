@@ -192,8 +192,10 @@ export default function MapView() {
   // The ranked outlines always mirror the block list; the full tinted grid is the rail switch
   // (or Inspect mode, if the chat agent asks for it), and then the heatmap steps aside.
   const priorityFull = useMap((s) => s.layers.priority) || appMode === "inspect";
-  const priorityOn = appMode !== "act";
+  // Current shows the red priority blocks; Prediction swaps them for the forecast.
+  const priorityOn = appMode !== "act" && !forecastOn;
   const forecastWeek = useMap((s) => s.forecastWeek);
+  const setForecastWeek = useMap((s) => s.setForecastWeek);
   const three = useMap((s) => s.three);
   const setThree = useMap((s) => s.setThree);
   const sites = useMap((s) => s.sites);
@@ -933,6 +935,21 @@ export default function MapView() {
       </Map>
 
       {hover && <HoverCard hover={hover} />}
+
+      <div role="radiogroup" aria-label="Map shows" className="glass absolute left-1/2 top-3 z-10 flex -translate-x-1/2 gap-1 rounded-full p-1 text-[13px] font-semibold">
+        {([["Current", false], ["Prediction", true]] as const).map(([label, on]) => (
+          <button
+            key={label}
+            type="button"
+            role="radio"
+            aria-checked={forecastOn === on}
+            onClick={() => { setForecastWeek(null); setEnabled({ forecast: on }); }}
+            className="rounded-full px-4 py-1.5 text-fg-2 transition-colors hover:text-fg aria-checked:bg-fg aria-checked:text-bg"
+          >
+            {label}
+          </button>
+        ))}
+      </div>
 
       <button
         type="button"

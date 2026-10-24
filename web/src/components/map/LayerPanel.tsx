@@ -107,7 +107,6 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   const flyRef = useRef<HTMLDivElement>(null);
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
   const timelineOpen = useUi((s) => s.timelineOpen);
-  const forecastOn = useMap((s) => s.layers.forecast);
   const three = useMap((s) => s.three);
   const setThree = useMap((s) => s.setThree);
   const inspectMode = useMap((s) => s.mode === "inspect");
@@ -127,13 +126,6 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
       icon: <img src={markerDataUrl(groupIds(g.id)[0])} alt="" aria-hidden className="h-6 w-6" />,
       badge: onIn(groupIds(g.id)),
     })),
-    {
-      id: "forecast" as DockId, label: "Next: forecast",
-      icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="text-fg-2"><path d="M3 17l5-5 4 4 8-8" /><path d="M14 8h6v6" /></svg>
-      ),
-      badge: forecastOn ? 1 : 0,
-    },
     { id: "view" as DockId, label: `Show as: ${MODES.find((m) => m.id === mode)?.label ?? mode}`, icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden className="text-fg-2"><path d="m12 2 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5" /><path d="m3 17 9 5 9-5" /></svg>
     ) },
