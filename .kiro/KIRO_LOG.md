@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:27 — Realigned all Kiro automation to the real rat-audit tree:...
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Realigned all Kiro automation to the real rat-audit tree: added web/src + pipeline + supabase to 6 hook path-globs (were src/** only, would never fire on the Next.js app in web/); repointed rodent-honesty + no-auto-action agents from spec rodent-ops to rat-audit; overclaim scanner now defaults to web/src
+- Why: The guards and hooks were stale after the team renamed the spec and put the app in web/ - they would have silently never triggered
+- Where: .kiro/hooks/{accessibility-check,demo-path-green,log-all-work,overclaim-guard,secret-scan,sync-audit-log}.kiro.hook, .kiro/agents/{rodent-honesty,no-auto-action}.json, .kiro/scripts/check_overclaims.py
+- Idea: Dead automation is worse than none - a judge sees hooks that never ran; aligning paths makes every guard actually fire on the live app
+
 ### 2026-10-24 13:20 — Pushed pending spec edits (closure classifier rules, esca...
 - Teammate: Bruno
 - Agent: —

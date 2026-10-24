@@ -4,6 +4,9 @@
   "trigger": {
     "type": "fileEdited",
     "patterns": [
+      "web/src/**/*",
+      "pipeline/**/*",
+      "supabase/**/*",
       "src/**/*",
       ".kiro/specs/**/*",
       "docs/**/*",

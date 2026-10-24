@@ -14,7 +14,7 @@ Exit codes:
 
 Usage:
   python3 .kiro/scripts/check_overclaims.py [path ...]
-Defaults to scanning src/ when no path is given.
+Defaults to scanning web/src (then src) when no path is given.
 """
 import os
 import re
@@ -82,10 +82,10 @@ def iter_files(roots):
 
 
 def main(argv):
-    roots = argv[1:] or ["src"]
+    roots = argv[1:] or ["web/src", "src"]
     roots = [r for r in roots if os.path.exists(r)]
     if not roots:
-        print("overclaim-scan: nothing to scan (no src/ yet) — OK")
+        print("overclaim-scan: nothing to scan (no web/src or src yet) — OK")
         return 0
 
     total = 0

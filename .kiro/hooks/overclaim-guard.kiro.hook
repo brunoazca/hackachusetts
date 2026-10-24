@@ -3,7 +3,7 @@
   "description": "When a UI or content file is saved, scan it for phrasings the RodentOps knowledge base bans (reports stated as rats, closed=solved, infestation prediction, 'worst', auto-submit). Keeps the civic 'honest claims' rule enforced automatically.",
   "trigger": {
     "type": "fileEdited",
-    "patterns": ["src/**/*.tsx", "src/**/*.jsx", "src/**/*.ts", "src/**/*.js", "src/**/*.html", "src/**/*.vue", "src/**/*.md"]
+    "patterns": ["web/src/**/*.tsx", "web/src/**/*.jsx", "web/src/**/*.ts", "web/src/**/*.js", "web/src/**/*.html", "web/src/**/*.vue", "web/src/**/*.md", "src/**/*.tsx", "src/**/*.jsx", "src/**/*.ts", "src/**/*.js", "src/**/*.html", "src/**/*.vue", "src/**/*.md"]
   },
   "prompt": "A UI/content file was just saved. Run `python3 .kiro/scripts/check_overclaims.py <the saved file>` from the repo root. Report pass/fail in one line. If it flags candidates, list each with its line and the honest alternative, and confirm from context whether it is a real overclaim or a false positive — do not blindly rewrite. The honesty rules are in knowledge/15_boston_rat_audit.md and knowledge/16_rodent_control_creative_playbook.md: reports are not rats, closed is not solved, no infestation prediction, no 'worst' superlatives, nothing binding is automatic. Do not touch unrelated code. THEN log it: run `.kiro/klog.sh -t \"—\" -a \"overclaim-hook\" -d \"overclaim scan <pass/fail>\" -w \"keep claims honest for RodentOps\" -f \"<file>\" -i \"—\"` from the repo root.",
   "enabled": true

@@ -3,7 +3,7 @@
   "description": "After source changes, remind to verify the build and the demo happy-path E2E test still pass.",
   "trigger": {
     "type": "fileEdited",
-    "patterns": ["src/**/*"]
+    "patterns": ["web/src/**/*", "src/**/*"]
   },
   "prompt": "Source changed. Run the project's build/typecheck and the demo happy-path test (see .kiro/steering/tech.md commands). If anything fails, fix it before moving on — a broken demo path on submission day loses. Report pass/fail in one line with the command output summary. Do not expand scope beyond making it green. THEN log it: run `.kiro/klog.sh -t \"<teammate if known, else —>\" -a \"demo-path-hook\" -d \"build+demo test <pass/fail>\" -w \"keep demo path green\" -f \"<files or —>\" -i \"—\"` from the repo root.",
   "enabled": false

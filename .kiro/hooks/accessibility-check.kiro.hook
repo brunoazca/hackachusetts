@@ -3,7 +3,7 @@
   "description": "When a UI component file is saved, review it for the scored accessibility requirements before it drifts.",
   "trigger": {
     "type": "fileEdited",
-    "patterns": ["src/**/*.tsx", "src/**/*.jsx", "src/**/*.html", "src/**/*.vue"]
+    "patterns": ["web/src/**/*.tsx", "web/src/**/*.jsx", "web/src/**/*.html", "web/src/**/*.vue", "src/**/*.tsx", "src/**/*.jsx", "src/**/*.html", "src/**/*.vue"]
   },
   "prompt": "A UI file was just saved. Review ONLY that file against the accessibility requirements in .kiro/steering/product.md and the active spec: semantic HTML landmarks, a single h1, labels on every interactive control, visible and logical focus order, aria-describedby on error messages, and WCAG AA contrast. Report concrete fixes as a short checklist. Do not rewrite unrelated code. If the file is already compliant, say so in one line. THEN log it: run `.kiro/klog.sh -t \"<teammate if known, else —>\" -a \"accessibility-hook\" -d \"a11y review of <file>\" -w \"keep scored a11y green\" -f \"<file>\" -i \"—\"` from the repo root.",
   "enabled": true
