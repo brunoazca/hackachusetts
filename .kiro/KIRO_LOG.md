@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:40 — Cambridge + Somerville equivalents loaded: restaurants (2...
+- Teammate: Bruno
+- Agent: —
+- Did: Cambridge + Somerville equivalents loaded: restaurants (260 CAM), indoor pest (769 CAM housing violations, 574 SOM 311), parcels with year built (28,850 CAM, 18,997 SOM via MassGIS L3), vacant parcels, demolition/new-construction permits, schools, construction complaints, SOM weeds (4,523); fixed Cambridge address parser that published house numbers for 'Cambridge St' addresses
+- Why: Bruno: fetch all Boston-only layers that exist elsewhere
+- Where: pipeline/rat_audit/ingest/{cambridge,somerville,regional,update_modes}.py, pipeline/rat_audit/jobs.py, contracts/categories.json, web/src/components/{map/LayerPanel,inspector/ParcelCard}.tsx
+- Idea: Not available outside Boston: Big Belly, trash on vacant lot, code-enforcement tickets, rat bites (SOM), vacant lot/abandoned building (SOM)
+
 ### 2026-10-24 15:39 — Queued 2 Kiro Crew campaigns on NYC data: outcomes after ...
 - Teammate: Bruno
 - Agent: —
