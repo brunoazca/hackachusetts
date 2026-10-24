@@ -45,6 +45,12 @@
         "311": [
           "Pick up Dead Animal",
           "Dead Animal General"
+        ],
+        "cambridge-311": [
+          "Roadkill / Dead Animal"
+        ],
+        "somerville-311": [
+          "Dead animal"
         ]
       }
     },
@@ -56,6 +62,10 @@
         "311": [
           "Improper Storage of Trash (Barrels)",
           "Improper Trash Storage"
+        ],
+        "somerville-311": [
+          "Trash issues",
+          "Report extra trash"
         ]
       }
     },
@@ -66,6 +76,9 @@
       "sources": {
         "311": [
           "Trash Placed Out Early"
+        ],
+        "somerville-311": [
+          "Trash/recycling out too early or late"
         ]
       }
     },
@@ -78,6 +91,12 @@
           "Missed Trash/Recycling/Yard Waste/Bulk Item",
           "Missed Trash",
           "Missed Waste Pick-up"
+        ],
+        "cambridge-311": [
+          "Missed Trash Pickup"
+        ],
+        "somerville-311": [
+          "Missed trash pick up"
         ]
       }
     },
@@ -89,6 +108,13 @@
         "311": [
           "Illegal Dumping",
           "Illegal Dumping or Disposal"
+        ],
+        "cambridge-311": [
+          "Dumping in Storm Drain",
+          "Dumping"
+        ],
+        "somerville-311": [
+          "Abandoned Property or Illegal Dumping"
         ]
       }
     },
@@ -102,6 +128,13 @@
           "Litter",
           "Litter & Debris",
           "Park Litter & Debris"
+        ],
+        "cambridge-311": [
+          "Overflowing Public Trash/Recycling Receptacle"
+        ],
+        "somerville-311": [
+          "Sidewalk trash barrel report",
+          "Parks/Playground trash barrel report"
         ]
       }
     },
@@ -114,6 +147,9 @@
           "Overflowing or Un-kept Dumpster",
           "Overflowing Trash",
           "Park Overflowing Trash Can"
+        ],
+        "somerville-311": [
+          "Dumpsters"
         ]
       }
     },
@@ -386,11 +422,11 @@
     },
     "closed_no_action": {
       "label": "Closed with no note",
-      "owner": "—"
+      "owner": "\u2014"
     },
     "unknown": {
       "label": "Unclassified",
-      "owner": "—"
+      "owner": "\u2014"
     }
   },
   "cities": {

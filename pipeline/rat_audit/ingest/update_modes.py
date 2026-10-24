@@ -11,8 +11,9 @@ UPDATE_MODES: dict[str, tuple[str, str]] = {
     "boston-311-new": ("live", "new 311 system (Aug 2025–); same 14-day window"),
     "boston-311-volume": ("live", "all-type 311 volume; current year recomputed on every refresh"),
     "boston-code-enforcement": ("live", "tickets: last 6 months as points, 2023+ as monthly counts; no close dates published"),
-    "somerville-311": ("live", "Somerville publishes daily; points are census-block centroids"),
+    "somerville-311": ("live", "Somerville publishes daily; rodent + trash evidence; points are census-block centroids"),
     "cambridge-rodent-sightings": ("live", "Cambridge publishes daily"),
+    "cambridge-311": ("live", "Cambridge service requests: trash, dumping, dead animals; published daily"),
     "cambridge-smart-rat-boxes": ("live", "full reload each refresh; monthly catches for 2026"),
     # ---- daily (cron only) ----
     "noaa-ghcnd-logan": ("daily", "NOAA posts with a ~4-day lag"),
