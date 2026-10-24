@@ -8,6 +8,7 @@ import { buildMapContext } from "@/lib/agent/context";
 import { executeClientTool, isClientTool } from "@/lib/agent/tools/client";
 import { messageText, STARTERS } from "@/lib/agent/ui";
 import Message from "./Message";
+import { CollapseButton } from "@/components/shell/Collapse";
 import "./Markdown.css";
 
 // "Ask" panel (task 4.4). Streams from /api/chat, runs the map tools on the
@@ -15,7 +16,7 @@ import "./Markdown.css";
 
 type Status = { configured: boolean; data?: string; reason?: string } | null;
 
-export default function ChatPanel() {
+export default function ChatPanel({ onCollapse }: { onCollapse?: () => void }) {
   const [status, setStatus] = useState<Status>(null);
   const [input, setInput] = useState("");
   const [announce, setAnnounce] = useState("");
@@ -75,9 +76,9 @@ export default function ChatPanel() {
 
   return (
     <div className="flex h-full min-w-0 flex-col">
-      <div className="shrink-0 border-b border-line px-4 py-3">
-        <h2 className="text-title font-bold text-fg">Ask Piper</h2>
-        {messages.length === 0 && <p className="mt-1 text-small text-fg-3">Explore reports, compare places and move the map.</p>}
+      <div className="flex shrink-0 items-center justify-between border-b border-line py-2 pl-4 pr-3">
+        <h2 className="text-[15px] font-semibold text-fg">Ask Piper</h2>
+        {onCollapse && <CollapseButton onClick={onCollapse} label="Hide panel (])" dir="right" />}
       </div>
       {/* Screen readers hear each finished answer once, not every streamed token (R9.2). */}
       <div aria-live="polite" className="sr-only">{announce}</div>
@@ -96,7 +97,7 @@ export default function ChatPanel() {
 
         {messages.length === 0 && status?.configured && (
           <div className="space-y-2">
-            <p className="text-sm text-fg-2">Ask me to move the map, change any filter, compare reports or explain Insights. “Here” means the area visible when you send your question. I use its filters and cite the evidence.</p>
+            <p className="pb-1 text-sm text-fg-3">Ask about the area on screen. Answers cite their sources.</p>
             <ul aria-label="Suggested questions" className="space-y-1">
               {STARTERS.map((q) => (
                 <li key={q}>

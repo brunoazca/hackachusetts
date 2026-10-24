@@ -55,7 +55,7 @@ export default function RightPanel() {
     const measure = () => {
       const top = parseFloat(getComputedStyle(aside).top);
       const max = (aside.parentElement?.clientHeight ?? window.innerHeight) - top - 12;
-      const head = (aside.querySelector('[role="tablist"]')?.parentElement as HTMLElement | null)?.offsetHeight ?? 49;
+      const head = 49;
       setHeight(panel === "chat" ? max : Math.min(max, head + body.offsetHeight + 1));
     };
     measure();
@@ -66,7 +66,7 @@ export default function RightPanel() {
   }, [panel]);
 
   const focusPanel = useCallback(() => {
-    return focusWhenVisible(() => asideRef.current?.querySelector<HTMLButtonElement>('[role="tab"][aria-selected="true"]') ?? null);
+    return focusWhenVisible(() => asideRef.current?.querySelector<HTMLElement>("#chat-input") ?? null);
   }, []);
   const closePanel = useCallback(() => {
     setOpen(false);
@@ -144,9 +144,9 @@ export default function RightPanel() {
             aria-controls="details-panel"
             aria-expanded={open}
             title={`${LABEL[t]} · ]`}
-            className="relative grid h-11 w-11 place-items-center rounded-md text-fg-2 transition-colors duration-150 hover:bg-card-hover hover:text-fg"
+            className="relative grid h-11 w-11 place-items-center rounded-md bg-return text-white shadow-md transition-[filter] duration-150 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-return"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>{ICON[t]}</svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>{ICON[t]}</svg>
           </button>
         ))}
       </div>

@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:24 — Chat: red rail button, removed the 'Ask' header row, shor...
+- Teammate: Bruno
+- Agent: —
+- Did: Chat: red rail button, removed the 'Ask' header row, shorter intro text
+- Why: Chat entry point had no emphasis; header and intro were cluttered
+- Where: web/src/components/shell/RightPanel.tsx, SidePanel.tsx, web/src/components/chat/ChatPanel.tsx
+- Idea: —
+
 ### 2026-10-24 19:23 — On-demand AI live: Modal secret rat-audit-ai (AI_GATEWAY_...
 - Teammate: Bruno
 - Agent: —
