@@ -7,6 +7,7 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 | Document | Use it for |
 |---|---|
 | [Complete Civic source inventory](CIVIC_INVENTORY.md) | All 74 portal resources, full small datasets, large-source previews, five challenge kits, nested subsets and access gaps |
+| [13 — Hidden ledgers: five new concepts](13_hidden_ledgers_deep_concepts.md) | CurbCheck, Three Hours, 311 outcome layer, hearing ledger, town-meeting decoder; live-verified Boston sources and numbers from Oct 24 noon |
 | [12 — Creative rodent-control playbook](12_rodent_control_creative_playbook.md) | RodentOps plus seven alternatives, actual Boston/Cambridge rodent data, yesterday's hearing captions and a small demo scope |
 | [09 — Creative opportunity atlas](09_creative_civic_opportunity_atlas.md) | 15 ambitious concepts, small day-of demos, differentiation, users and measurable checks |
 | [10 — Public data and repositories](10_public_data_and_repositories.md) | Verified APIs/CSVs, 21 existing public repos, licenses, join recipes and a use for every starter dataset |
