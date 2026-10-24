@@ -31,6 +31,16 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:05 — Simplified priority-region insight cards
+- Teammate: Carol
+- Agent:
+- Did: Added a compact region header, two primary metrics and a plain-language action category with a three-line proposal preview.
+- Did: Moved full rationale, field checklist, technical metadata and caveats behind View analysis; kept map action visible.
+- Why: Make cards scannable without removing the underlying evidence or recommendations.
+- Where: web/src/components/insights/regions/RegionSolutionCard.tsx
+- Validation: ESLint and TypeScript passed.
+- Idea: none
+
 ### 2026-10-24 18:03 — Reviewed AI region cards and fixed 5 issues: treatment wo...
 - Teammate: Bruno
 - Agent: —
