@@ -8,6 +8,8 @@ import { buildMapContext } from "@/lib/agent/context";
 import { executeClientTool, isClientTool } from "@/lib/agent/tools/client";
 import { messageText, STARTERS } from "@/lib/agent/ui";
 import Message from "./Message";
+import { rankingFocusFallback } from "@/lib/agent/ranking-focus";
+import { focusRegions } from "@/lib/agent/tools/focus-regions";
 
 // "Ask" panel (task 4.4). Streams from /api/chat, runs the map tools on the
 // shared store, and sends the current map context with every request.
@@ -43,15 +45,23 @@ export default function ChatPanel() {
   const { messages, sendMessage, addToolOutput, status: chatStatus, error, regenerate, stop, clearError } = useChat({
     transport,
     sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithToolCalls,
-    onToolCall({ toolCall }) {
+    async onToolCall({ toolCall }) {
       if (toolCall.dynamic || !isClientTool(toolCall.toolName)) return;
-      const out = executeClientTool(toolCall.toolName, toolCall.input, useMap.getState());
-      if (out.ok && toolCall.toolName === "open_panel") useUi.getState().setRightOpen(true);
+      const out = toolCall.toolName === "map_focus_regions"
+        ? await focusRegions(toolCall.input)
+        : executeClientTool(toolCall.toolName, toolCall.input, useMap.getState());
+      if (out.ok && (toolCall.toolName === "open_panel" || toolCall.toolName === "map_select")) useUi.getState().setRightOpen(true);
       // No await: avoids deadlocks with the automatic resend.
       if (out.ok) void addToolOutput({ tool: toolCall.toolName, toolCallId: toolCall.toolCallId, output: out });
       else void addToolOutput({ tool: toolCall.toolName, toolCallId: toolCall.toolCallId, state: "output-error", errorText: out.error });
     },
     onFinish({ message }) {
+      const regions = rankingFocusFallback(message.parts);
+      if (regions) {
+        void focusRegions({ regions }).then(result => {
+          if (!result.ok) setAnnounce(`Could not highlight ranked regions: ${result.error}`);
+        });
+      }
       const text = messageText(message);
       if (text) setAnnounce(text);
     },

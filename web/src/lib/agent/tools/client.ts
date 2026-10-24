@@ -1,5 +1,6 @@
 import { tool } from "ai";
 import { z } from "zod";
+import type { RegionFocus } from "../../region-focus";
 import type { LayerId, Mode, Selection } from "../../map-store";
 import { CATEGORY_IDS, LAYER_IDS, LAYER_GROUPS, isNearbyCategory, type ViewMode } from "../../map-controls";
 import { CELL_METRICS } from "../../cell-metrics";
@@ -15,6 +16,10 @@ const SELECT_KINDS = ["incident", "place", "event", "site", "cell", "listing", "
 const isoDate = z.iso.date();
 
 export const clientTools = {
+  map_focus_regions: tool({
+    description: "Outline and number ranked regions, dim outside them, and fit all in view. Copy region_id, published rank and ALL cell_ids from rank_regions results. Replaces the previous temporary focus, preserving filters. Empty regions clears it.",
+    inputSchema: z.object({ regions: z.array(z.object({ region_id: z.string().min(1), rank: z.number().int().positive(), cell_ids: z.array(z.string().min(1)).min(1).max(100) })).max(20) }).strict(),
+  }),
   app_set_mode: tool({
     description: "Switch the app between Assess and Act. Keeps the selected site. All layers are already available; there is no separate depth mode.",
     inputSchema: z.object({
@@ -62,8 +67,15 @@ export const clientTools = {
     inputSchema: z.object({ ids: z.array(z.string()).max(200) }),
   }),
   map_select: tool({
-    description: "Select one feature by id and open it in the Inspect panel.",
-    inputSchema: z.object({ kind: z.enum(SELECT_KINDS), id: z.string().min(1) }),
+    description: "Select a real feature returned by a data tool and open its Inspect panel, using the same selection as a manual click. Include focus coordinates from that result to center the point at street level. Use this for requests to open a point or show the main point here, not just map_highlight. Never invent IDs or coordinates.",
+    inputSchema: z.object({
+      kind: z.enum(SELECT_KINDS), id: z.string().min(1),
+      focus: z.object({
+        lat: z.number().min(41.9).max(42.7),
+        lon: z.number().min(-71.5).max(-70.7),
+        zoom: z.number().min(10).max(19).optional(),
+      }).optional().describe("Coordinates returned by the lookup; default zoom 17. Omit only when coordinates are unavailable."),
+    }).strict(),
   }),
   map_show_forecast: tool({
     description: "Show the forecast layer, optionally for a given week (ISO date of the week's Monday).",
@@ -80,6 +92,8 @@ export const CLIENT_TOOL_NAMES = Object.keys(clientTools) as ClientToolName[];
 
 /** The map-store actions the client tools need (a subset of useMap's state). */
 export type MapActions = {
+  regionFocus?: RegionFocus | null;
+  setRegionFocus: (focus: RegionFocus | null) => void;
   setMode: (mode: Mode) => void;
   setSiteNeighborhood: (neighborhood: string) => void;
   setViewMode: (mode: ViewMode) => void;
@@ -108,6 +122,7 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
   if (!parsed.success) return { ok: false, error: `Invalid input: ${parsed.error.issues[0]?.message ?? "bad input"}` };
   const v = parsed.data as never;
   switch (name) {
+    case "map_focus_regions": return { ok: false, error: "Region boundaries require the asynchronous map handler." };
     case "app_set_mode": {
       const { mode } = v as { mode: Mode };
       map.setMode(mode);
@@ -122,6 +137,7 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
     }
     case "map_fly_to": {
       const { lat, lon, zoom } = v as { lat: number; lon: number; zoom?: number };
+      map.setRegionFocus(null);
       map.flyTo(zoom == null ? { lat, lon } : { lat, lon, zoom });
       return { ok: true, done: `Moved the map to ${lat.toFixed(4)}, ${lon.toFixed(4)}` };
     }
@@ -163,9 +179,12 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
       return { ok: true, done: ids.length ? "Highlighting matching loaded reports and sites" : "Highlights cleared", caveat: "Only loaded reports and visible Act sites matching the current map filters are highlighted. Zoom to street level for individual report ids." };
     }
     case "map_select": {
-      const { kind, id } = v as { kind: (typeof SELECT_KINDS)[number]; id: string };
+      const { kind, id, focus } = v as { kind: (typeof SELECT_KINDS)[number]; id: string; focus?: { lat: number; lon: number; zoom?: number } };
+      const rankedRegion = kind === "cell" && map.regionFocus?.labels.some(region => region.id === id);
+      if (!rankedRegion) map.setRegionFocus(null);
+      if (focus) map.flyTo({ ...focus, zoom: focus.zoom ?? 17 });
       map.select({ kind, id });
-      return { ok: true, done: `Selected ${kind} ${id}` };
+      return { ok: true, done: `Selected ${kind} ${id} for Inspect${focus ? " and centered the map" : ""}` };
     }
     case "map_show_forecast": {
       const { week_start } = v as { week_start?: string };

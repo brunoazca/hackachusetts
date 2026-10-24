@@ -244,3 +244,43 @@ test("selected draft IDs still resolve after active Analytics sites arrive", asy
   assert.equal(result!.provisional, true);
   assert.equal(result!.score, null);
 });
+
+test("region reads use GET insights_regions and coordinates from cell_detail", async t => {
+  const data = adapter(t, url => {
+    if (url.pathname.endsWith("/insights_regions")) {
+      assert.equal(url.searchParams.get("lim"), "201");
+      return json({ regions: [] });
+    }
+    assert.ok(url.pathname.endsWith("/cell_detail"));
+    assert.equal(url.searchParams.get("cell_id"), "g250_1_2");
+    return json({ cell: { id: "g250_1_2", lat: 42.35, lon: -71.08 } });
+  });
+  assert.deepEqual(await data.regionInsights(), { regions: [] });
+  assert.deepEqual(await data.regionLocation("g250_1_2"), { id: "g250_1_2", lat: 42.35, lon: -71.08 });
+});
+
+test("region fallback requires complete population coverage and never invents intervention benefit", async t => {
+  const data = adapter(t, url => {
+    if (url.pathname.endsWith("/insights_regions")) return json({ code: "PGRST202", message: "missing" }, 404);
+    if (url.pathname.endsWith("/region_solutions")) return json([{
+      region_id: "c1", forecast_run_id: "r1", rank: 1, cell_ids: ["c1", "c2"],
+      action: "Inspect", because: "Nearby evidence", lane: "inspect", source: "rules", computed_at: "2026-10-24",
+      input: { region: { region_id: "c1", neighborhood: "Back Bay", severity: { observed_12w: 10, expected_4w: 4, score: 14 } },
+        forecast: { model_run_id: "r1" }, source_ids: ["311"] },
+    }]);
+    assert.ok(url.pathname.endsWith("/cell_population"));
+    return json([{ cell_id: "c1", pop: 2500, tract_ids: ["t1"], source_id: "acs" }]);
+  });
+  const r = await data.regionInsights() as { origin: string; regions: { population: unknown; after_fix: unknown }[] };
+  assert.equal(r.origin, "region_solutions");
+  assert.equal(r.regions[0].population, null, "partial population is not the region total");
+  assert.equal(r.regions[0].after_fix, null);
+});
+
+test("region permission failures do not silently switch data sources", async t => {
+  const data = adapter(t, url => {
+    assert.ok(url.pathname.endsWith("/insights_regions"));
+    return json({ code: "42501", message: "permission denied" }, 403);
+  });
+  await assert.rejects(data.regionInsights(), /could not be read/);
+});

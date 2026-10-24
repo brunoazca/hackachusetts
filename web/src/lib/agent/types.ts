@@ -47,6 +47,7 @@ export type MapContext = {
   forecastPeriod?: string;
   siteNeighborhood?: string;
   blockMetric?: string | null;
+  focusedRegions?: { id: string; rank: number; position?: number }[];
   selection: { kind: string; id: string } | { kind: "area" } | null;
   view: { lat: number; lon: number; zoom: number } | null;
   /** Visible map bounds. null before load or while a requested flight is pending. */

@@ -1,3 +1,4 @@
+import { readRegions } from "./regions";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import type { SourceRef } from "../types";
 import {
@@ -190,6 +191,12 @@ export function createSupabaseData(env: Env = process.env, now: () => Date = () 
   }
 
   return {
+    async regionInsights() { return readRegions(db); },
+    async regionLocation(id) {
+      const { data, error } = await db.rpc("cell_detail", { cell_id: id }, { get: true });
+      if (error) throw new Error("Region coordinates are unavailable.");
+      return data?.cell ?? null;
+    },
     async insightsSummary() {
       const { data, error } = await db.rpc("insights_summary", undefined, { get: true });
       fail("insights_summary", error);

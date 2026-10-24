@@ -13,6 +13,8 @@ import type {
 
 export type MemoryTables = {
   insights?: unknown;
+  regions?: unknown;
+  regionLocations?: Record<string, unknown>;
   incidents?: IncidentRow[];
   places?: PlaceRow[];
   sites?: SiteRow[];
@@ -29,6 +31,8 @@ export function createMemoryData(t: MemoryTables): AgentData {
   const incidents = t.incidents ?? [];
   const sites = t.sites?.length ? t.sites : (t.draft_sites ?? []);
   return {
+    async regionInsights() { return t.regions ?? { regions: [] }; },
+    async regionLocation(id) { return t.regionLocations?.[id] ?? null; },
     async insightsSummary() { return t.insights ?? { correlations: [], price_impact: [], forecast: null }; },
     async incidents(q) {
       const rows = incidents

@@ -10,6 +10,7 @@ function fakeMap() {
   const calls: [string, unknown][] = [];
   const rec = (name: string) => (v: unknown) => { calls.push([name, v]); };
   const map: MapActions = {
+    setRegionFocus: rec("setRegionFocus"),
     setMode: rec("setMode"), setSiteNeighborhood: rec("setSiteNeighborhood"), setViewMode: rec("setViewMode"), setCauses: rec("setCauses"), setCellMetric: rec("setCellMetric"),
     flyTo: rec("flyTo"), setLayers: rec("setLayers"), setFilters: rec("setFilters"), setHighlight: rec("setHighlight"),
     select: rec("select"), setPanel: rec("setPanel"), setForecastWeek: rec("setForecastWeek"),
@@ -20,10 +21,10 @@ function fakeMap() {
 test("map_fly_to drives the store; coordinates outside the region are rejected", () => {
   const { map, calls } = fakeMap();
   assert.equal(executeClientTool("map_fly_to", { lat: 42.3051, lon: -71.0712, zoom: 16 }, map).ok, true);
-  assert.deepEqual(calls, [["flyTo", { lat: 42.3051, lon: -71.0712, zoom: 16 }]]);
+  assert.deepEqual(calls, [["setRegionFocus", null], ["flyTo", { lat: 42.3051, lon: -71.0712, zoom: 16 }]]);
   const bad = executeClientTool("map_fly_to", { lat: 40.7, lon: -74 }, map);
   assert.equal(bad.ok, false);
-  assert.equal(calls.length, 1);
+  assert.equal(calls.length, 2);
 });
 
 test("layers, highlight, select, forecast, panel, filters", () => {
@@ -39,6 +40,7 @@ test("layers, highlight, select, forecast, panel, filters", () => {
     ["setMode", "assess"],
     ["setCauses", true],
     ["setHighlight", ["a", "b"]],
+    ["setRegionFocus", null],
     ["select", { kind: "site", id: "s1" }],
     ["setMode", "assess"],
     ["setLayers", { forecast: true }],
@@ -191,5 +193,82 @@ test("Places neighborhood filter shares the queue state and opens Act", () => {
     assert.equal(useMap.getState().mode, "act");
     executeClientTool("map_set_filters", { status: "open" }, useMap.getState());
     assert.equal(useMap.getState().mode, "assess", "map commands expose the original map controls");
+  } finally { useMap.setState(before, true); }
+});
+
+test("select with focus centers a real point and opens the same Inspect state as a click", () => {
+  const before = useMap.getState();
+  try {
+    useMap.setState({ panel: "chat", selection: null });
+    const filters = useMap.getState().filters;
+    const result = executeClientTool("map_select", {
+      kind: "incident", id: "fixture-incident-1", focus: { lat: 42.35, lon: -71.08 },
+    }, useMap.getState());
+    assert.equal(result.ok, true);
+    assert.deepEqual(useMap.getState().selection, { kind: "incident", id: "fixture-incident-1" });
+    assert.equal(useMap.getState().panel, "inspector");
+    assert.equal(useMap.getState().flyToTarget?.lat, 42.35);
+    assert.equal(useMap.getState().flyToTarget?.lon, -71.08);
+    assert.equal(useMap.getState().flyToTarget?.zoom, 17);
+    assert.deepEqual(useMap.getState().filters, filters);
+    useMap.getState().select({ kind: "incident", id: "fixture-incident-1" });
+    assert.equal(useMap.getState().panel, "inspector");
+  } finally { useMap.setState(before); }
+});
+
+test("invalid point focus is rejected before moving or selecting", () => {
+  const { map, calls } = fakeMap();
+  assert.equal(executeClientTool("map_select", {
+    kind: "incident", id: "fixture-incident-1", focus: { lat: 0, lon: 0 },
+  }, map).ok, false);
+  assert.deepEqual(calls, []);
+});
+
+test("region focus survives exploration but clears on chat navigation or unrelated selection", () => {
+  const before = useMap.getState();
+  const focus = {
+    regions: { type: "FeatureCollection" as const, features: [] }, mask: null,
+    labels: [{ id: "ranked-cell", rank: 1, lon: -71.08, lat: 42.35 }],
+    bounds: [-71.09, 42.34, -71.07, 42.36] as [number, number, number, number],
+  };
+  try {
+    useMap.getState().setRegionFocus(focus);
+    const filters = useMap.getState().filters;
+    useMap.getState().setView({ lat: 42.35, lon: -71.08, zoom: 16 });
+    assert.equal(useMap.getState().regionFocus, focus, "manual exploration retains outlines");
+    executeClientTool("open_panel", { panel: "chat" }, useMap.getState());
+    executeClientTool("map_select", { kind: "cell", id: "ranked-cell", focus: { lat: 42.35, lon: -71.08 } }, useMap.getState());
+    assert.equal(useMap.getState().regionFocus, focus, "opening a ranked region retains context");
+    for (const target of [{ kind: "incident", id: "a" }, { kind: "cell", id: "other" }]) {
+      useMap.getState().setRegionFocus(focus);
+      executeClientTool("map_select", target, useMap.getState());
+      assert.equal(useMap.getState().regionFocus, null);
+    }
+    useMap.getState().setRegionFocus(focus);
+    const revision = useMap.getState().regionFocusRevision;
+    executeClientTool("map_fly_to", { lat: 42.3512, lon: -71.0767 }, useMap.getState());
+    assert.equal(useMap.getState().regionFocus, null);
+    assert.ok(useMap.getState().regionFocusRevision > revision, "navigation invalidates pending boundary loads");
+    assert.equal(useMap.getState().filters, filters);
+    const clearedRevision = useMap.getState().regionFocusRevision;
+    useMap.getState().setRegionFocus(null);
+    assert.ok(useMap.getState().regionFocusRevision > clearedRevision, "clear cancels loading even without a visible overlay");
+  } finally { useMap.setState(before, true); }
+});
+
+test("each question captures currently outlined regions, not historical ranking actions", () => {
+  const before = useMap.getState();
+  try {
+    useMap.getState().setRegionFocus({
+      regions: { type: "FeatureCollection", features: [] }, mask: null,
+      labels: [{ id: "r1", rank: 1, lat: 42.35, lon: -71.08 }],
+      bounds: [-71.09, 42.34, -71.07, 42.36],
+    });
+    const ranked = buildMapContext(useMap.getState());
+    assert.deepEqual(parseMapContext(ranked)?.focusedRegions, [{ id: "r1", rank: 1, position: 1 }]);
+    executeClientTool("map_fly_to", { lat: 42.3512, lon: -71.0767 }, useMap.getState());
+    const navigated = buildMapContext(useMap.getState());
+    assert.deepEqual(navigated.focusedRegions, []);
+    assert.deepEqual(ranked.focusedRegions, [{ id: "r1", rank: 1, position: 1 }], "prior question snapshot remains immutable");
   } finally { useMap.setState(before, true); }
 });

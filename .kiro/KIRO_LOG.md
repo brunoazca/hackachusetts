@@ -31,6 +31,110 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 — Final regression battery and authorized publication
+- Teammate: Carolina
+- Agent:
+- Did: Re-ran the agent/web test suites, TypeScript and scoped ESLint; replaced unsafe test executor casts. Reviewed and prepared all accumulated chat/ranking/map changes for commit and push to codex/ready-branches-integration, explicitly authorized including frontend.
+- Validation: Agent suite 102 passed, 7 live-environment tests skipped; web suite 5 passed. TypeScript, scoped lint and diff whitespace checks passed. Browser sequence passed: top 5 → Newbury (clears) → worst 5 (restores) → top 3 → best 5 numbered 1–5 → open first (Dorchester Inspect) → Clear highlight.
+- Where: Chat tools, map integration, regression tests, feature documentation and this log.
+- Idea: Preserve stable IDs/ranks internally and current result positions in UI. AGENTS.md remains empty. Publication targets the feature branch, not a merge into main.
+
+### 2026-10-24 — Number map results by displayed position
+- Teammate: Carolina
+- Agent:
+- Did: Map markers and accessible labels now use 1..N in result order. Chat context includes displayed position separately from published rank, so “open #1” targets the visible first region.
+- Why: Best-region results should match the numbered chat list instead of showing original severity ranks 27–23.
+- Where: RegionFocusLayer.tsx, agent/context.ts, types.ts, prompt.ts, README.md, client-tools.test.ts.
+- Idea: Keep stable IDs and original severity ranks internally; display result positions. Local only; no push.
+
+### 2026-10-24 — Support least-severe regions and correct “top5 best”
+- Teammate: Carolina
+- Agent:
+- Did: Added highest/lowest ordering to region rankings. Best in a severity conversation means lowest published severity, never an invented population filter. Preserves published ranks and rejects an unavailable truncated tail.
+- Why: “and the top5 best?” incorrectly requested population data and left the previous ranking on the map.
+- Where: agent/tools/regions.ts, agent/prompt.ts, agent/README.md, region-tools.test.ts.
+- Validation: 12 focused tests, TypeScript and ESLint passed. Repeated the exact failed phrase in the live conversation: ranks 27–23 replaced the three worst regions with five outlined least-severe published regions.
+- Idea: Best/worst needs an explicit metric and direction; published priority regions are not every area in the city. Local only; no push.
+
+### 2026-10-24 — Refresh map actions for repeated ranking requests
+- Teammate: Carolina
+- Agent:
+- Did: Added current outlined region IDs/ranks to every question's context; required fresh ranking/focus actions for repeated ranking requests and updated parameters.
+- Why: The assistant was repeating historical text after Newbury navigation without restoring the requested ranking on the map.
+- Where: agent/context.ts, agent/types.ts, agent/prompt.ts, agent/README.md, client-tools.test.ts.
+- Validation: 23 tests, TypeScript and ESLint passed. Live same-conversation top five → Newbury → worst five restored the outlines with fresh rank_regions and focus calls.
+- Idea: Historical tool acknowledgments must never substitute for current map state. Local only; no push.
+
+### 2026-10-24 19:18 — Fix missing outlines after ranked-region flights
+- Teammate: Carolina
+- Agent:
+- Did: Restored combined ranking focus when the model flies to each result individually. Preserved explicit clear/selection and cleanup on subsequent navigation.
+- Why: The previous cleanup guard treated individual flights as completed region visualization and skipped drawing boundaries.
+- Where: ChatPanel.tsx, agent/ranking-focus.ts, agent/__tests__/ranking-focus.test.ts, agent/README.md.
+- Validation: 22 tests, TypeScript and ESLint passed. Live localhost test reproduced five separate flights, confirmed all five outlines, then confirmed Newbury navigation removed outlines and clear pill.
+- Idea: Test both ranking display and subsequent cleanup as one sequence. Local only; no push.
+
+### 2026-10-24 — Clear ranked-region highlights on contextual navigation
+- Teammate: Carolina
+- Agent:
+- Did: Chat navigation clears the region overlay; opening a highlighted region preserves it. Manual pan/zoom preserves it. Clear and navigation invalidate pending geometry loads; ranking fallback no longer overrides explicit map actions.
+- Why: Old blue boundaries should not remain when asking to navigate to Newbury or open an unrelated point.
+- Where: web/src/lib/map-store.ts, web/src/lib/agent/tools/client.ts, web/src/lib/agent/tools/focus-regions.ts, web/src/components/chat/ChatPanel.tsx, agent prompt/README/tests.
+- Validation: 18 tests passed; TypeScript passed. Local changes only, no push.
+- Idea: Keep ranking context during exploration, clear it when navigation changes the subject.
+
+### 2026-10-24 19:08 — Visualize ranked regions together on the map
+- Teammate: Carol
+- Agent:
+- Did: Added map_focus_regions, real grid geometry outlines, numbered Inspect buttons, outside shading, grouped camera framing and Clear highlight.
+- Did: Automatically apply the final ranking focus after a chat answer so sequential model camera calls cannot leave only the last region visible.
+- Did: Read only requested grid_cells geometries instead of timing-out city-wide forecast queries; incomplete boundaries fail without replacing the previous focus.
+- Where: RegionFocusLayer.tsx, MapView.tsx, map-store.ts, region-focus.ts, chat tools/prompt/ChatPanel and README.
+- Validation: 21 existing/focus tests plus EWKB decoding regression passed; TypeScript and scoped ESLint passed. Real local chat rendered all five outlined numbered regions; screenshot /tmp/piper-ranked-regions.png.
+- Status: Local only, no commit or push. Existing queue RPC error was observed independently of this overlay.
+- Idea: Preserve filters while highlighting the ranking as a temporary map focus.
+
+### 2026-10-24 18:56 — Started local preview for chat testing
+- Teammate: Carol
+- Agent:
+- Did: Started this worktree at http://127.0.0.1:3052 using the existing project environment.
+- Validation: Home returned HTTP 200; chat status reports configured gateway and live data. Real conversation remains for interactive testing.
+- Status: Local preview only, no push; cleared Next-generated AGENTS.md per user preference.
+- Where: .kiro/KIRO_LOG.md
+- Idea: none
+
+### 2026-10-24 18:54 — Connect chat to ranked Insights regions
+- Teammate: Carol
+- Agent:
+- Did: Added rank_regions, explain_region and compare_regions with resident threshold filtering before top-N and stable published rank references.
+- Did: Connected read-only insights_regions with missing-RPC compatibility reads of region_solutions, complete cell_population totals and cell_detail coordinates.
+- Did: Documented five card fields, neighborhood comparison scope and rank-to-map selection; unavailable after-fix estimates remain null.
+- Why: Discuss and navigate ranked regions using the same published evidence as Insights.
+- Where: agent/tools/regions.ts, agent/data/regions.ts, data adapters/types, chat registry, prompt, UI step labels, tests, README and Insights specification.
+- Validation: 44 fixture/GET-mock tests passed; TypeScript and scoped ESLint passed. No live model/browser or database schema deployment performed.
+- Status: Local only, no commit or push; preserved pending point-selection and last-week-default edits.
+- Idea: Population reach and published intervention benefit are separate ranking dimensions, never an invented weighted severity score.
+
+### 2026-10-24 18:49 — Open a viewport point in Inspect from chat
+- Teammate: Carol
+- Agent:
+- Did: Extended map_select with validated optional focus coordinates and default street-level zoom; reuse manual-click selection and explicitly open the existing panel from chat.
+- Did: Documented viewport/filter lookup, honest candidate criteria, ambiguity and no-result handling; preserve explanatory viewport camera behavior.
+- Why: Asking for the main point here should select and inspect it, not only mention it.
+- Where: agent/tools/client.ts, agent/prompt.ts, agent/README.md, ChatPanel.tsx, client-tools and viewport-context tests.
+- Validation: 22 tests passed; scoped ESLint and TypeScript passed. Real-model browser flow and Bruno's new Inspect presentation remain unverified.
+- Status: Local only; no push. Preserved the pending last-week default change.
+- Idea: Keep Inspect presentation owned by the shared selection UI.
+
+### 2026-10-24 18:26 — Default map time window to last week
+- Teammate: Carol
+- Agent:
+- Did: Changed initial map filter from 90 to 7 days, matching the existing Last week preset.
+- Why: Start with recent reports.
+- Where: web/src/lib/map-store.ts
+- Status: Local change only; user explicitly requested no push.
+- Idea: none
+
 ### 2026-10-24 18:20 — Distinguish viewport reports from surrounding evidence
 - Teammate: Carol
 - Agent:

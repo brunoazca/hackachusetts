@@ -9,6 +9,7 @@ import { useMap } from "@/lib/map-store";
 import { filterIncidentStatus, type CategoryId } from "@/lib/map-controls";
 import { fetchCoverage, fetchIncidentBins, fetchIncidents, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
 import ContextLayers from "./ContextLayers";
+import RegionFocusLayer from "./RegionFocusLayer";
 import MapLegend from "./MapLegend";
 import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
@@ -315,6 +316,12 @@ export default function MapView() {
   }, [clusterFC, zoom, nearest, select]);
 
   const onClick = useCallback((e: MapLayerMouseEvent) => {
+    const region = mapRef.current?.getLayer("region-focus-hit")
+      ? mapRef.current.queryRenderedFeatures(e.point, { layers: ["region-focus-hit"] })[0] : undefined;
+    if (region?.properties?.region_id) {
+      select({ kind: "cell", id: String(region.properties.region_id) });
+      return;
+    }
     const f = e.features?.[0];
     if (!f) {
       const at: [number, number] = [e.lngLat.lng, e.lngLat.lat];
@@ -353,6 +360,20 @@ export default function MapView() {
     select({ kind: "incident", id: String(f.properties?.id) });
   }, [select, nearest]);
 
+  const regionFocus = useMap(s => s.regionFocus);
+  useEffect(() => {
+    if (!regionFocus) return;
+    const map = mapRef.current;
+    if (!map) return;
+    const [west, south, east, north] = regionFocus.bounds;
+    const width = map.getContainer().clientWidth;
+    const availableWidth = Math.max(120, width - 85 - Math.min(width * 0.5, rightInset(useUi.getState().rightOpen) + 24));
+    const availableHeight = Math.max(120, map.getContainer().clientHeight - 230);
+    const mercatorY = (lat: number) => Math.log(Math.tan(Math.PI / 4 + lat * Math.PI / 360));
+    const zoomX = Math.log2(availableWidth * 360 / (512 * (east - west)));
+    const zoomY = Math.log2(availableHeight * 2 * Math.PI / (512 * (mercatorY(north) - mercatorY(south))));
+    useMap.getState().flyTo({ lon: (west + east) / 2, lat: (south + north) / 2, zoom: Math.min(16, zoomX, zoomY) });
+  }, [regionFocus]);
   const selectedId = selection && "id" in selection ? selection.id : "";
 
   return (
@@ -459,8 +480,13 @@ export default function MapView() {
             />
           </Source>
         )}
+        <RegionFocusLayer />
       </Map>
 
+      {regionFocus && <div className="absolute bottom-16 left-20 z-10 flex items-center gap-3 rounded-full border border-line bg-panel-solid px-4 py-2 text-sm text-fg shadow-lg">
+        <span>{regionFocus.labels.length} priority regions</span>
+        <button type="button" onClick={() => useMap.getState().setRegionFocus(null)} className="min-h-9 whitespace-nowrap rounded-full px-2 underline focus-visible:outline-2 focus-visible:outline-accent">Clear highlight</button>
+      </div>}
       {appMode === "act" ? (
         <SiteQueue />
       ) : (

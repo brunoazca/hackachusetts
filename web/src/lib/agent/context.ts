@@ -18,6 +18,7 @@ type StoreLike = {
   forecastWeek?: string | null;
   siteNeighborhood?: string;
   cellMetric?: string | null;
+  regionFocus?: { labels: { id: string; rank: number }[] } | null;
 };
 
 export function buildMapContext(s: StoreLike): MapContext {
@@ -29,6 +30,7 @@ export function buildMapContext(s: StoreLike): MapContext {
     forecastPeriod: s.forecastWeek ?? "4w",
     siteNeighborhood: s.siteNeighborhood ?? "",
     blockMetric: s.cellMetric ?? null,
+    focusedRegions: s.regionFocus?.labels.map(({ id, rank }, index) => ({ id, rank, position: index + 1 })) ?? [],
     selection: sel == null ? null : sel.kind === "area" ? { kind: "area" } : { kind: sel.kind, id: sel.id ?? "" },
     view: { ...s.view },
     bbox: s.bounds ? [...s.bounds] : null,
@@ -45,6 +47,7 @@ export const mapContextSchema = z.object({
   forecastPeriod: z.string().max(10).optional(),
   siteNeighborhood: z.string().max(100).optional(),
   blockMetric: z.enum(CELL_METRICS.map(metric => metric.key)).nullable().optional(),
+  focusedRegions: z.array(z.object({ id: z.string().max(200), rank: z.number().int().positive(), position: z.number().int().positive().optional() })).max(20).optional(),
   selection: z.union([z.object({ kind: z.string().max(20), id: z.string().max(200) }), z.object({ kind: z.literal("area") }), z.null()]),
   view: z.object({ lat: num, lon: num, zoom: num }).nullable(),
   bbox: z.tuple([num, num, num, num]).nullable(),

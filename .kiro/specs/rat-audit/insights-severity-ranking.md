@@ -707,3 +707,23 @@ Step 1 is shippable **now** against existing data and is the demo-safe fallback.
 - Does the ranked region card **replace** the city-wide findings view, or sit above it
   with findings collapsed below? (spec assumes: replace as the lead, findings collapse
   into "Methodology & evidence")
+
+
+### Agent integration update — October 24, 2026
+
+Implemented `rank_regions`, `explain_region`, `compare_regions` in the chat tool
+registry. Stable published rank/ID supports follow-up references and cell selection.
+Population threshold filtering precedes top-N. Severity, resident reach and published
+intervention benefit are distinct ordering choices, not a synthetic weighted score.
+Neighborhood comparisons explicitly select each neighborhood's highest-ranked
+published region and do not claim whole-neighborhood totals.
+
+Until §7 RPC is installed, the adapter reads the same `region_solutions` as the
+current card. Population requires complete `cell_population` coverage (§5.4a);
+no after-fix value is fabricated from predicted returns. Missing estimates remain
+unavailable. Tools retain sources, query limits and freshness where supplied.
+The map outlines returned regions, dims the exterior and numbers results 1..N.
+Chat navigation clears stale outlines; repeated rankings and best/worst changes
+refresh them. Published ranks remain stable internally. See
+`web/src/lib/agent/README.md` for compatibility and validation limits.
+No database schema deployment is required.

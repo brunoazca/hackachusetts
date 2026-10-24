@@ -2,6 +2,59 @@
 
 This worktree owns tasks 4.1–4.6. Core tasks 4.1–4.4 and 4.6 are implemented with the validation limits below, including v2 `due_sites` and `app_set_mode`. Task 4.5 remains unimplemented P1 work; the whole Agent track is not being marked complete.
 
+## Ranked region chat tools — October 24, 2026 (local, not pushed)
+
+- `rank_regions({limit, neighborhood?, people_above?, sort_by})`: severity uses the
+  published rank; people sorts estimated residents; benefit sorts published
+  `after_fix.delta_4w`. No weighted severity × benefit score is invented. Threshold
+  is strict (more than), applied before top-N; published rank remains stable.
+- `explain_region({region_id | rank | neighborhood})`: returns problem, solution,
+  evidence, future and estimated residents with source IDs and available coordinates.
+- `compare_regions({left, right})`: same five fields side by side. Each selector is
+  exactly one ID, published rank or neighborhood. A neighborhood means its top
+  published region, not neighborhood totals. Unknown or identical selections fail.
+- “Take me to the worst region”: rank top one, enable forecast, then `map_select`
+  with kind `cell`, its returned ID and focus coordinates. Reuses existing Inspect.
+
+Live adapter first calls read-only `insights_regions(lim: 201, hood: null)`. Only a
+missing RPC triggers compatibility reads of `region_solutions`, matching the current
+card parser. Permission/connection errors never silently switch sources. Coordinates
+come from `cell_detail`; missing coordinates do not become invented targets.
+The compatibility ranking is capped at 201 and explicitly marked truncated at that
+boundary. Filters and comparisons apply to the loaded published regions, not all
+possible cells or live map filters.
+
+Resident totals use `cell_population` over distinct member cells, only with complete
+coverage and contributing tracts. Do not substitute the averaged demographics from
+`region_context`. Missing population makes that filter unavailable; partial coverage
+never passes the threshold. Residents are not guaranteed beneficiaries; overlapping
+regions cannot be summed. The existing solution model publishes no after-fix effect,
+so fallback `after_fix` stays null. Benefit ordering becomes available only when
+published estimates exist. No RPC/table migration or database write is included.
+
+Validation uses fixtures and mocked GET responses, not a live LLM/browser deployment.
+
+## Point selection from the current viewport — October 24, 2026
+
+“Which is the main point here?” is an action request: look up matching incidents
+using the question's captured bounds and date/category/status filters, explain the
+selection criterion, then call `map_select` with the returned kind, ID and `focus`
+coordinates. The tool centers the map (default zoom 17) and calls the same
+`select` action as a manual click. ChatPanel also opens the existing right panel.
+No Inspect layout is added or replaced: that presentation remains Bruno's work.
+
+Without a supported severity ranking, choose a review candidate from the returned
+matches (open first, then recent), explicitly not a “most severe” claim. Chronic-site
+queue rankings have a historical scope and must not be described as filtered
+incident rankings. Missing matches or coordinates must not produce invented points.
+An ambiguous “open that one” requires disambiguation. Explanatory “why here?”
+questions still preserve the camera; opening a point is an explicit exception.
+
+`map_select` without `focus` remains compatible with existing callers. Its success
+acknowledges selection, not a completed Inspect data fetch. Existing selection and
+panel components own loading/error states. Conversation remains mounted when the
+tab switches. This change is local only, pending coordination; no push authorized.
+
 ## Main integration for publication — October 24, 2026
 
 Carol requested commit and push of this chat's changes. The integration on remote main
@@ -248,3 +301,24 @@ edits, migration execution, shared DB writes, push or deployment were introduced
 - Provisional `get_site` timelines use exact report IDs from `site_detail`; Analytics timelines use `summary.timeline` IDs. Only legacy Analytics rows without that list retain the explicit street-block grouping caveat.
 - Populated v2 sites/recommendations and real action outcomes await the Analytics refresh. Provisional sites work now. Forecast rows exist, but P1 forecast tools are outside this front’s current implementation.
 - `closure_note` is never sent to the model until the name scrub (1.11) lands.
+
+
+### Temporary ranked-region map focus (local)
+
+After a top-N answer, `map_focus_regions` receives exactly the returned region IDs,
+published ranks and complete member-cell IDs. The browser reads only the requested `grid_cells` geometries, decodes PostGIS EWKB
+(SRID 4326), dissolves member cells per region,
+and draws numbered outlines plus an outside mask. Missing any member geometry fails
+without replacing the previous focus. No guessed rectangles or partial boundaries.
+The map fits all regions; clicking an outline or rank marker selects its anchor cell
+through existing Inspect. Clear highlight removes only the overlay, preserving dates,
+categories and status. The current camera is retained when clearing. Overlapping
+regions retain their own rank buttons. No shared schema changes or push.
+
+Region highlight lifecycle: manual pan/zoom and discussion retain the overlay. Chat navigation via map_fly_to clears it; map_select retains it only for a highlighted region ID. Another ranking replaces it, and Clear highlight removes it. Clears invalidate pending boundary loads. The automatic ranking fallback repairs individual fly-to calls within a ranking response by fitting all returned regions together. A successful explicit focus/clear or selection after that ranking takes precedence. A later navigation-only response has no ranking to restore.
+
+Each question includes focusedRegions (current outlined IDs and ranks; [] after clearing), separate from historical tool outputs. Repeated top/worst ranking requests must run rank_regions and map_focus_regions again; changed counts/filters trigger a fresh ranking. "Show those same regions again" may reuse known member IDs but must execute a new focus action. Past navigation is never proof of the current viewport or overlay.
+
+Ranking direction: rank_regions accepts order highest (default) or lowest for severity, people, and benefit. In a severity conversation, best means lowest published severity and never adds a population threshold. Least-severe results retain their published ranks and describe only the published priority-region set; a truncated severity set cannot answer its missing least-severe tail.
+
+Map marker numbers are result positions 1..N, including best/filtered rankings. focusedRegions carries position alongside stable ID and published rank; references such as “open #1” resolve the displayed position, not the citywide severity rank.

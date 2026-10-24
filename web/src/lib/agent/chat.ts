@@ -1,3 +1,4 @@
+import { createRegionTools } from "./tools/regions";
 import { convertToModelMessages, safeValidateUIMessages, stepCountIs, streamText, type LanguageModel } from "ai";
 import { parseMapContext } from "./context";
 import { systemPrompt } from "./prompt";
@@ -20,7 +21,7 @@ export type ChatDeps = {
 };
 
 export function createTools(data: AgentData | null, now?: () => Date) {
-  return { ...createServerTools({ data, now, lookupPlace }), ...createInsightsTools(data), ...clientTools };
+  return { ...createServerTools({ data, now, lookupPlace }), ...createInsightsTools(data), ...createRegionTools(data), ...clientTools };
 }
 
 export function nyDate(d: Date): string {

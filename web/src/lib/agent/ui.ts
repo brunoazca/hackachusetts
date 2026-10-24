@@ -7,6 +7,10 @@ import type { FeatureRef, SourceRef } from "./types";
 type ToolPart = Extract<UIMessage["parts"][number], { toolCallId: string }>;
 
 const RUNNING: Record<string, string> = {
+  map_focus_regions: "Showing ranked region boundaries",
+  rank_regions: "Ranking Insights regions",
+  explain_region: "Reading region evidence",
+  compare_regions: "Comparing regions",
   get_insights: "Reading Insights and evidence",
   map_set_view: "Changing map display",
   map_filter_sites: "Filtering places to visit",

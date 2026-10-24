@@ -1,4 +1,5 @@
 "use client";
+import type { RegionFocus } from "./region-focus";
 import { create } from "zustand";
 import type { Polygon } from "geojson";
 import { activeCategories, CATEGORY_IDS, initialLayers, isNearbyCategory, type Bounds, type LayerId, type ViewMode } from "./map-controls";
@@ -32,6 +33,9 @@ export type SiteRow = {
 };
 
 type MapState = {
+  regionFocus: RegionFocus | null;
+  regionFocusRevision: number;
+  setRegionFocus: (focus: RegionFocus | null) => void;
   mode: Mode;
   sites: SiteRow[];
   siteNeighborhood: string;
@@ -69,6 +73,9 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 const daysAgo = (n: number) => iso(new Date(today.getTime() - n * 86400000));
 
 export const useMap = create<MapState>((set) => ({
+  regionFocus: null,
+  regionFocusRevision: 0,
+  setRegionFocus: (regionFocus) => set(state => ({ regionFocus, regionFocusRevision: state.regionFocusRevision + 1 })),
   mode: "act",
   sites: [],
   siteNeighborhood: "",
@@ -86,7 +93,7 @@ export const useMap = create<MapState>((set) => ({
   setBounds: (bounds) => set({ bounds }),
   setViewMode: (viewMode) => set({ viewMode }),
   setCauses: (causes) => set({ causes }),
-  filters: { since: daysAgo(90), until: iso(today), categories: [...CATEGORY_IDS], status: "all" },
+  filters: { since: daysAgo(7), until: iso(today), categories: [...CATEGORY_IDS], status: "all" },
   highlight: [],
   selection: null,
   panel: "inspector",
