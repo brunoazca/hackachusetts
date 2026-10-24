@@ -8,6 +8,8 @@ import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { fetchCoverage, fetchIncidentBins, fetchIncidents, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
 import ContextLayers from "./ContextLayers";
+import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
+import ForecastControl from "./ForecastControl";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
 import { addCategoryIcons, iconId } from "./icons";
@@ -67,6 +69,8 @@ export default function MapView() {
   const reqId = useRef(0);
 
   const appMode = useMap((s) => s.mode);
+  const forecastOn = useMap((s) => s.layers.forecast);
+  const forecastWeek = useMap((s) => s.forecastWeek);
   const sites = useMap((s) => s.sites);
   const cats = useMemo(() => activeCategories(enabled), [enabled]);
   const viewMode: ViewMode = mode;
@@ -149,13 +153,17 @@ export default function MapView() {
   }, [flyToTarget, appMode]);
 
   const interactive = useMemo(
-    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : [])],
-    [cats, iconsReady, appMode, enabled.ctx_buildings, zoom],
+    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
+    [cats, iconsReady, appMode, enabled.ctx_buildings, zoom, forecastOn],
   );
 
   const onClick = useCallback((e: MapLayerMouseEvent) => {
     const f = e.features?.[0];
     if (!f) return;
+    if (f.layer.id === "forecast-fill") {
+      select({ kind: "cell", id: String(f.properties?.id) });
+      return;
+    }
     if (f.layer.id.endsWith("-clusters") || !f.properties?.id) {
       mapRef.current?.easeTo({ center: (f.geometry as Point).coordinates as [number, number], zoom: (mapRef.current?.getZoom() ?? 12) + 2 });
       return;
@@ -188,6 +196,7 @@ export default function MapView() {
       >
         <NavigationControl position="bottom-right" />
         <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} />
+        <ForecastLayer visible={forecastOn} week={forecastWeek} bbox={bbox} selectedId={selectedId} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
           <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />
@@ -275,6 +284,7 @@ export default function MapView() {
         )}
       </Map>
 
+      {appMode !== "act" && <ForecastControl />}
       {appMode === "act" ? (
         <SiteQueue />
       ) : (
