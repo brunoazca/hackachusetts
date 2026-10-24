@@ -1,10 +1,10 @@
-# NIGHTSHIFT and seven other ways to outthink Boston's rat problem
+# RodentOps and seven other tools for Boston's rat problem
 
 Research and original proposals: **October 24, 2026**. This extends the [creative atlas](09_creative_civic_opportunity_atlas.md). These are proposed products, not a selected project, validated pest-control methods, or promises of municipal adoption.
 
-**Our strongest rodent concept: NIGHTSHIFT. Turn one block into a playable overnight sanitation plan. Show where food remains accessible, let the user coordinate a few fixes, and explain exactly what those changes accomplish.** The memorable pitch: *Boston's rats have a supply chain. Help the block interrupt it.*
+**Recommended tool: RodentOps. Help an environmental-services coordinator turn recurring rodent complaints into a reviewed inspection and follow-up plan.** Its central question is: *Which recurring problems need attention, what do we actually know, and what should the next inspection establish?*
 
-The visual can be playful; the output should be useful to a housing manager, sanitation coordinator, or neighborhood group. Show observable conditions and operational tradeoffs. Do not manufacture a rat-population forecast.
+**Product constraint:** the user wants an operational tool. The earlier NIGHTSHIFT game/simulation framing is superseded. The main interface should be a work queue, case timeline and editable inspection packet. A map can support locating evidence. Observations, suggested actions and verified outcomes must remain distinct.
 
 ## 1. Why this is a timely civic problem
 
@@ -22,19 +22,23 @@ For scheduling, use the [official waste guidance](https://www.boston.gov/trash-a
 
 ## 2. Eight creative concepts
 
-### R1. NIGHTSHIFT — play one night from the rat's point of view
+### R1. RodentOps — turn repeated complaints into an actionable inspection brief
 
-**Experience:** a schematic block changes from afternoon to morning. Food-access opportunities appear as a restaurant closes, a bin overflows, a collection is missed, or a shared container remains open. The user gets three intervention cards: repair a lid, change a supported collection arrangement, coordinate a cleanup. A “remaining gaps” view shows which opportunities are still unresolved.
+**Primary user:** an environmental-services coordinator preparing a small inspection workload. A housing-maintenance coordinator with their own records is a possible later pilot user; we have not established demand from either.
 
-The creative twist is an adversarial walkthrough: *if this were the only fix, what remains accessible?* Animated paths are a teaching metaphor, not measured rat routes. Do not invent sewer connections, home ranges, or infestation probabilities from nearby complaints.
+**Experience:** filter real complaints by neighborhood and period; review suggested groups of nearby recurring reports; open a chronological evidence packet; add a staff observation; approve an inspection checklist, responsible role and follow-up date. Export a usable work brief. Evidence groups require review: nearby reports can describe different problems, and records from different systems may overlap.
 
-**Build today:** one clearly fictional block, 8–12 sites, a time slider, four possible actions and a small budget. Put actual Boston category counts in a separate evidence panel; mark every simulated site and cost. Export an action sheet with owner, dependency, evidence and follow-up date. A future partner can replace fixtures with a site walk and collection records.
+**Distinctive feature:** a persistent site timeline can connect several tickets to observations and documented interventions, while preserving each original case. A closed ticket followed by a later report becomes a question for review. It does not automatically mean the earlier intervention failed. The tool explicitly shows missing observations, unconfirmed ownership and incomplete follow-up.
 
-**Inputs:** real Boston waste/rodent categories; manually confirmed site conditions and collection windows; City prevention guidance. Actual pickup timestamps, bin inventories and conditions are **not** supplied by the starter kit. Expected pickup is not actual pickup.
+**Build today:** one neighborhood, a bounded snapshot of the full Boston source, three manually checked evidence groups and one staff-entered observation. Three screens: work queue, evidence timeline, inspection packet. Grouping and ranking rules must be visible and editable. Label demonstration notes and dates; do not present a historical snapshot as live work orders.
 
-**Useful AI:** convert a short site note into proposed structured observations, with the original text attached; explain why an action leaves another gap. A reviewer confirms observations. Code calculates intervals and chooses actions.
+**Inputs:** Boston case IDs, dates, categories, coordinates, status and closure reasons; staff-entered observations; reviewed City guidance. Condition photos, actual collection times, bin inventories, owner assignments and internal inspection findings require additional input. Public records alone cannot identify a root cause or determine which treatment will work.
 
-**Measure:** minutes needed to assemble a complete plan, unresolved dependencies correctly surfaced, and modeled exposed-food site-hours under explicit assumptions. No claim of rats prevented. **Best overall rodent direction: V1 + V2.**
+**Useful AI:** produce a cited case synopsis, extract proposed observations from staff notes, and draft questions for an inspection. Every assertion links to a record or note. Code handles dates, counts, duplicate IDs and transparent queue ordering. A coordinator reviews proposed links and actions.
+
+**Measure:** time and completeness of preparing a brief compared with reviewing the same records manually; factual support of each generated statement; correct handling of unresolved conditions. The hackathon can demonstrate a better preparation workflow. Reduced rat activity would require a subsequent field evaluation. **Recommended rodent direction: V1 + V2.**
+
+**Is it a good idea? Conditional yes.** The local problem, existing data and narrowly scoped output make it a credible Civic project. The largest product risk is duplicating capabilities already available to staff: the research establishes existing interventions and evaluation, but not a missing internal case-management feature. Validate the recurring-case workflow with an intended user before claiming adoption potential. If we cannot demonstrate a better inspection brief, a dashboard alone is a weak result. Predictive infestation mapping would require evidence we do not have.
 
 ### R2. BLOCKPACT — make neighboring fixes happen together
 
@@ -42,7 +46,7 @@ The creative twist is an adversarial walkthrough: *if this were the only fix, wh
 
 **Creative twist:** borrow the logic of a group purchase without payments: a proposed coordinated window becomes ready only when its required participants have accepted. The system exposes the missing participant or dependency rather than treating one completed ticket as a block-wide success. Do not imply that independent maintenance should wait for unanimous agreement.
 
-**Build today:** three fictional participants and one shared plan; manual accept/decline controls; printable coordination cards. No real outreach, automatic notifications or government integration. Integrate a tiny version into NIGHTSHIFT only after its core works.
+**Build today:** three fictional participants and one shared plan; manual accept/decline controls; printable coordination cards. No real outreach, automatic notifications or government integration. Add an ownership/dependency field to RodentOps only after its core works.
 
 **Inputs and proof:** hypothetical commitments and costs, verified responsibility descriptions, and an explicit unknown-owner state. Test that one completed action cannot falsely mark every dependent condition resolved. **V1 + V2.**
 
@@ -132,13 +136,11 @@ Keep three layers visibly distinct:
 
 1. **Observed:** source, jurisdiction, record ID, event time, retrieval time, category and any confirmed condition. Complaints remain reports; catches remain catches.
 2. **Proposed:** action, responsible role, estimated effort, prerequisites and the condition it intends to change. Costs and effectiveness assumptions remain labeled.
-3. **Scenario:** synthetic site geometry, exposure intervals and illustrative actions. Changing a scenario does not alter the original evidence.
+3. **Follow-up:** observation date, observed condition, reviewer and relation to earlier work. Administrative closure remains a separate field. Any synthetic demo notes are labeled and cannot overwrite source records.
 
-For NIGHTSHIFT, a defensible toy objective is:
+For RodentOps, order the review queue using declared criteria such as recent reports, recurrence in a chosen window and missing follow-up information. Display each contributing fact and allow manual reordering. Treat the ordering as a review aid, not an infestation-risk score. Fewer complaints do not establish less need.
 
-`exposed_food_site_hours = sum(duration of each site's confirmed-or-simulated exposed-food intervals)`
-
-Merge overlapping intervals **within a site** before summing. Keep unknown intervals unknown and report missing coverage. Compare action subsets that meet the same budget and ownership constraints. An exact search over four candidate actions is simple enough to explain and verify. The result optimizes the stated model, not real rat outcomes. One large dumpster and one small bin are not biologically equivalent; site-hours is an operational proxy, not food mass or pest risk.
+Deduplicate identical source IDs, retain provenance and review proposed site links. A later report must follow the earlier action date before it can be described as subsequent reporting. Missing action dates prevent that comparison. A missing public follow-up record does not prove no inspection happened. Unknown ownership stays unknown until confirmed.
 
 For RATLAB, aggregate complaints by a declared period and spatial unit; identify reused serials and distinguish deployment rows from devices. Proximity joins create associations, not proof that a trap served a particular complaint. Do not invent deployment dates, device uptime or a shared case key. Keep Boston and Cambridge separate. A prospective study would need repeated observations, operating dates, intervention records and comparison sites; this hackathon can design that study but cannot complete it.
 
@@ -160,19 +162,19 @@ These are reasoned product hypotheses, not private preferences or confirmed part
 
 ## 6. The version we could actually build today
 
-**Choose NIGHTSHIFT, with one small BLOCKPACT dependency.** Keep RATLAB as the alternative if the team prefers data analysis. Building all eight would weaken the demonstration.
+**Choose RodentOps, with explicit action/condition states from RATRECEIPT.** Keep RATLAB as the alternative if the team prefers data analysis. Building all eight would weaken the demonstration.
 
-Three screens are enough: **review the evidence → play through one night and choose actions → export the coordinated plan**. Use one real aggregate evidence panel and one conspicuously simulated block. Avoid accounts, payments, live sensors, citywide routing and a biological model.
+Three screens are enough: **review queue → case timeline → reviewed inspection packet**. Use real source records and clearly identified staff-note fixtures. The completed task is preparing a useful inspection brief. Government-system integration, autonomous dispatch and biological prediction are outside this prototype.
 
 Suggested work sequence:
 
-1. Confirm data/category definitions and write the scenario assumptions in Kiro.
-2. Build the timeline and four-action comparison with deterministic calculations.
-3. Add source-linked note extraction and a human-review step.
-4. Add one incomplete commitment and one unknown observation; make both visible.
-5. Check interval arithmetic, budget constraints and export accuracy, then polish keyboard use and record the completed flow.
+1. Confirm one target workflow, data definitions and acceptance criteria in Kiro.
+2. Load a bounded Boston snapshot; build filtering, reviewed grouping and the case timeline.
+3. Add source-linked summarization, inspection-question drafting and a human-review step.
+4. Add responsibility, missing-evidence and follow-up fields; export the approved packet.
+5. Check source attribution, duplicate IDs, date order and export completeness; compare task completion against manual review, then record the flow.
 
-**Judging fit:** Potential Value is the completed coordination task for a named user; Implementation is meaningful, documented Kiro work and a reproducible calculation; Quality and Design is the readable overnight story, source inspection, and graceful handling of missing information. None requires claiming proven rat reduction.
+**Judging fit:** Potential Value is a useful inspection-preparation task for a named user; Implementation is meaningful Kiro work, reliable record handling and grounded AI; Quality and Design is a clear workflow with inspectable sources and recoverable errors. Demonstrate those benefits before claiming a municipal impact.
 
 **Under-three-minute video:** approximately 20 seconds of problem/context, 90 seconds of the working flow, 25 seconds of actual Kiro evidence, 20 seconds of checks and limits, and 15 seconds of the proposed pilot. Include Kiro footage if it shows a meaningful spec, correction or check. Attribute this Codex research separately. Follow [the submission playbook](01_rules_judging_and_event_playbook.md): public repo with root `/.kiro`, working demo, English description, written Kiro account, maximum four members, public video under three minutes, and SundAI submission by 8 p.m. Eastern.
 

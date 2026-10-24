@@ -10,7 +10,7 @@ The strongest demo is a small, manipulable model of one of these gaps. Change an
 
 This broadens the earlier conservative shortlist. **BlockBrief remains the fallback with the fewest data dependencies. It is no longer the default recommendation when originality is the priority.**
 
-**Topic expansion:** [document 12](12_rodent_control_creative_playbook.md) adds eight rodent-control concepts. NIGHTSHIFT turns one block's overnight waste exposure into a playable coordination problem; other ideas address container geometry, repair evidence, observation gaps and intervention evaluation. Real Boston/Cambridge records and selected October 23 hearing captions support the research. The 15 concepts below remain the broader atlas.
+**Topic expansion:** [document 12](12_rodent_control_creative_playbook.md) adds eight rodent-control concepts. RodentOps turns recurring complaints into a reviewed inspection and follow-up brief; other ideas address container geometry, repair evidence, observation gaps and intervention evaluation. Real Boston/Cambridge records and selected October 23 hearing captions support the research. The 15 concepts below remain the broader atlas.
 
 ## First choices
 

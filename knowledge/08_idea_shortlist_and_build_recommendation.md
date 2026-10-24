@@ -12,7 +12,7 @@ Prepared October 24, 2026. This is a recommendation, **not a team decision or im
 | **ShiftFits** | A training option fails a person's schedule; one changed condition makes it feasible | Three real program schedules and a bounded travel assumption |
 | **OpenDoor** | Conflicting resource instructions become a reviewed, source-linked preparation card | One actual source conflict; UMass Boston pantry pages provide a candidate |
 | **CityHandshake** | A resident keeps one factual receipt through an uncertain agency handoff | Responsibility sources for three curated examples |
-| **NIGHTSHIFT — rodent-control option** | An overnight block scenario becomes a coordinated sanitation plan, with remaining gaps visible | One honestly labeled scenario, verified category counts and explicit collection assumptions; see [document 12](12_rodent_control_creative_playbook.md) |
+| **RodentOps — rodent-control tool** | Recurring reports become an evidence-linked inspection and follow-up brief | Three manually reviewed evidence groups and a demonstrably useful inspection packet; see [document 12](12_rodent_control_creative_playbook.md) |
 
 The [data/repository catalog](10_public_data_and_repositories.md) supplies concrete inputs; the [public-voices brief](11_public_voices_and_competitive_gaps.md) explains the reported problems and existing alternatives. These are research recommendations, not a team decision. Choose one concept and prove its hardest dependency in the first 20 minutes.
 
@@ -20,7 +20,7 @@ The [data/repository catalog](10_public_data_and_repositories.md) supplies concr
 
 The shared strategy is one person completing one useful task, with evidence they can inspect. The official categories are Potential Value, Implementation, and Quality and Design; no numerical weights were found. Meaningful Kiro use and a clear working demonstration matter across the shortlist.
 
-**Rodent-control update:** NIGHTSHIFT is our preferred creative option within this topic; RATLAB is its data-analysis alternative. The larger Boston 2026 source contains real Rodent Activity records, while Cambridge publishes separate trap/sighting datasets. This removes the starter extract's main limitation for descriptive rodent research. It does not establish rat counts, individual movement or intervention effects. Document 12 includes eight concepts, exact data probes and selected captions from the October 23 hearing. This remains a proposal for the team to select.
+**Rodent-control update:** RodentOps is our preferred operational tool within this topic; RATLAB is its data-analysis alternative. The user explicitly wants a tool, superseding the earlier game/simulation framing. Its workflow advantage still needs validation with an intended user. The larger Boston 2026 source contains real Rodent Activity records, while Cambridge publishes separate trap/sighting datasets. This removes the starter extract's main limitation for descriptive rodent research. It does not establish rat counts, individual movement or intervention effects. Document 12 includes eight concepts, exact data probes and selected captions from the October 23 hearing. This remains a proposal for the team to select.
 
 ## 1. BlockBrief — fallback with the strongest immediate data connection
 
