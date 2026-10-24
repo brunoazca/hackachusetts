@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:12 — Made AI region cards direct: imperative action ≤18 words,...
+- Teammate: Bruno
+- Agent: —
+- Did: Made AI region cards direct: imperative action ≤18 words, because ≤2 sentences/45 words with no severity recap, todo ≤14 words, ≤2 on-site checks; length guards in code; removed invented follow-up intervals; sewer-cause BWSC referral exempt from the vs-monitoring guard; rejection now lists allowed actions; 4 attempts
+- Why: Bruno saw the card in the UI and asked for more direct text
+- Where: pipeline/rat_audit/model/region_solution.py
+- Idea: Prompt examples leak: 're-check in 2 weeks' in an example was copied into every todo
+
 ### 2026-10-24 18:08 — Insights region cards get a 'People & buildings' section:...
 - Teammate: Bruno
 - Agent: —

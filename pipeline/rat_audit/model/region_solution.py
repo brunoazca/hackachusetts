@@ -412,7 +412,14 @@ How to decide:
 - Every number you write must be copied exactly from the input (e.g. "18%", "12 reports"). Do not compute new numbers. Do not mention names or full addresses; blocks are fine.
 - Plain English, short. "Expected reports", never "rats" counts.
 
-Answer by calling submit_solution: action = the solution in one sentence of at most 25 words, starting with a verb (no "Lane:" prefix, no forecast numbers); because = at most 3 sentences citing the evidence; cites = incident ids, cause kinds or statistic names used; records = one {incident_id, todo} per report in records_last_12_weeks (all of them), todo = one line on what to do with that report; unknowns = 1-3 checks to make on site."""
+Style: direct, like an order from a supervisor. Imperative verbs, no hedging filler, no restating the question. The card already shows the severity, forecast and returns, so do NOT repeat them.
+
+Answer by calling submit_solution:
+- action: at most 18 words, imperative, starts with a verb, names the place and the step (e.g. "Refer the F St catch basins to BWSC; cite repeat trash violations at W Fourth St.").
+- because: at most 2 sentences and 45 words. Sentence 1 = the cause that is specific here, with its number. Sentence 2 = the past-case evidence for the chosen step, with its numbers, ending with "(observational)" if intervals overlap. No severity or forecast numbers.
+- cites: incident ids, cause kinds or statistic names used.
+- records: one {incident_id, todo} per report in records_last_12_weeks (all of them); todo = at most 14 words, imperative, the next step for that report (e.g. "Cite owner for open trash containers at this address."). Do not invent follow-up dates or intervals.
+- unknowns: at most 2 checks, each at most 14 words, phrased as a question."""
 
 
 TOOL = {"type": "function", "function": {
@@ -443,6 +450,25 @@ FIXED_NUMBERS = {"40", "60", "90", "100", "150", "250"}  # spec constants: radii
 _NUM = re.compile(r"(?<![\w.])\d+(?:\.\d+)?%?")
 
 
+def _words(t) -> int:
+    return len(str(t).split())
+
+
+def _too_long(out: dict) -> list[str]:
+    errs = []
+    if _words(out.get("action", "")) > 22:
+        errs.append("action must be at most 18 words")
+    because = str(out.get("because", ""))
+    if _words(because) > 55 or len(re.findall(r"[.!?](?:\s|$)", because)) > 2:
+        errs.append("because must be at most 2 sentences and 45 words, without severity or forecast numbers")
+    if len(out.get("unknowns", [])) > 2 or any(_words(u) > 18 for u in out.get("unknowns", [])):
+        errs.append("unknowns: at most 2, each at most 14 words")
+    long_todo = [r.get("incident_id") for r in out.get("records", []) if _words(r.get("todo", "")) > 18]
+    if long_todo:
+        errs.append(f"todo must be at most 14 words for: {long_todo[:5]}")
+    return errs
+
+
 ACTION_WORDS = {
     "abatement_order": r"abatement", "citation": r"\bcit(?:e|es|ation|ations)\b", "warning": r"warning|notice",
     "barrels": r"barrels?|rat-resistant|sealed containers?", "cleanup": r"clean ?up", "referral": r"\brefer",
@@ -454,12 +480,15 @@ def _worse_than_monitoring(action: str, inp: dict) -> list[str]:
     tables = [t for k, t in inp["solution_statistics"].items() if k != "all Boston closed rodent cases"]
     tables = tables or list(inp["solution_statistics"].values())
     errs = []
+    sewer = any("sewer" in f for f in inp["region"].get("what_is_specific_here", []))
     for a, rx in ACTION_WORDS.items():
-        if not re.search(rx, action, re.I):
+        if not re.search(rx, action, re.I) or (a == "referral" and sewer):  # sewer cause -> BWSC is the rule (§5.2 #4)
             continue
         verdicts = [r["vs_monitoring"] for t in tables for r in t["by_action"] if r["action"] == _shown(a)]
         if verdicts and all(v.startswith("same or higher") for v in verdicts):
-            errs.append(f"'{_shown(a)}' did no better than monitoring in this region's situations; do not propose it")
+            ok = sorted({x for t in tables for x in t["proposable_actions_with_lower_return_than_monitoring"]} - {"none"})
+            errs.append(f"'{_shown(a)}' did no better than monitoring in this region's situations; do not mention it in "
+                        f"the action. Choose from: {ok or ['Inspect the property and record the cause']}")
     return errs
 
 
@@ -476,6 +505,7 @@ def check(out: dict, inp: dict, input_text: str) -> list[str]:
     if bad:
         errs.append(f"numbers not in the input: {bad[:8]}")
     errs += _worse_than_monitoring(str(out.get("action", "")), inp)
+    errs += _too_long(out)
     want = {r["incident_id"] for r in inp["records_last_12_weeks"]}
     got = {r.get("incident_id") for r in out.get("records", [])}
     if want - got:
@@ -487,7 +517,7 @@ def ask(inp: dict) -> tuple[dict | None, list[str]]:
     text = json.dumps(inp, default=str)
     msgs = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": text}]
     errs: list[str] = []
-    for _ in range(3):
+    for _ in range(4):
         try:
             out = _gateway(msgs)
         except Exception as e:  # network, quota, malformed tool call
