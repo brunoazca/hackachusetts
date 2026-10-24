@@ -64,15 +64,21 @@ export default function Message({ message }: { message: UIMessage }) {
       )}
       <DraftCards message={message} />
       {(sources.length > 0 || features.length > 0) && (
-        <details className="group/refs rounded-md border border-edge">
-          <summary className="flex min-h-10 cursor-pointer list-none items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-fg-2 hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden className="shrink-0 group-open/refs:rotate-90">
-              <path d="m9 18 6-6-6-6" />
+        <details className="group/refs pt-1">
+          <summary className="inline-flex min-h-10 max-w-full cursor-pointer list-none items-center gap-2.5 rounded-full border border-line bg-card px-3.5 py-2 text-xs font-medium text-fg-2 shadow-sm transition-colors hover:border-edge hover:bg-card-hover hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="shrink-0">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+              <path d="M14 2v6h6M8 13h8M8 17h5" />
             </svg>
-            <span className="group-open/refs:hidden">Show sources and records</span>
-            <span className="hidden group-open/refs:inline">Hide sources and records</span>
+            <span>Sources & records</span>
+            <span className="rounded-full bg-card-hover px-1.5 py-0.5 text-[10px] leading-none tabular-nums" aria-label={`${sources.length + features.length} references`}>
+              {sources.length + features.length}
+            </span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="shrink-0 transition-transform group-open/refs:rotate-180 motion-reduce:transition-none">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
           </summary>
-          <div className="space-y-3 border-t border-line p-3">
+          <div className="mt-2 space-y-3 rounded-xl border border-line bg-card p-3">
             <FeatureChips features={features} />
             <SourceChips sources={sources} />
           </div>

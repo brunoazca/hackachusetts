@@ -31,6 +31,15 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:00 — Refined chat sources disclosure
+- Teammate: Carol
+- Agent:
+- Did: Replaced the wide outlined sources button with a compact pill, document icon, reference count and rotating chevron.
+- Did: Kept native keyboard disclosure, theme colors and reduced-motion support; ESLint and TypeScript passed.
+- Why: Make sources easier to scan and visually lighter below chat answers.
+- Where: web/src/components/chat/Message.tsx
+- Idea: none
+
 ### 2026-10-24 17:54 — Verified landmark fix against integrated main and regiona...
 - Teammate: Carol
 - Agent: Codex
