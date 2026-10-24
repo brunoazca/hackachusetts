@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:02 — Compared proposed Spec v2 (Track/Analyze/Act/Predict/Prov...
+- Teammate: Bruno
+- Agent: —
+- Did: Compared proposed Spec v2 (Track/Analyze/Act/Predict/Prove) against v1 spec and current build state
+- Why: Decide whether to switch specs at 2 PM; v1 analytics, agent and model tasks are still at zero
+- Where: .kiro/specs/rat-audit/*
+- Idea: Adopt v2 with tweaks: make trial designer P0 (it's in the demo), keep a small Ask drawer as P1, cluster with ST_ClusterDBSCAN in SQL
+
 ### 2026-10-24 14:02 — Auto-sync: .kiro/scripts/autopush.sh commits and pushes e...
 - Teammate: Bruno
 - Agent: —
