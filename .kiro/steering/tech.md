@@ -35,12 +35,18 @@ inclusion: always
   stages and commits on `main`; a human always runs `git push origin main`.
   Do not ask the agent to retry the push — it will be refused every time.
 
-## Commands (fill in)
-- Install: _TBD_
-- Dev: _TBD_
-- Build: _TBD_
-- Test: _TBD_
-- Lint: _TBD_
+## Commands
+App (`web/`, pnpm):
+- Install: `cd web && pnpm install`
+- Dev: `cd web && pnpm dev` (Next.js dev server)
+- Build: `cd web && pnpm build` (Next.js production build — this is the demo-path gate)
+- Lint: `cd web && pnpm lint` (eslint)
+- Test: Playwright E2E happy-path — to be added (tasks.md 5.4); no test script yet.
+
+Pipeline (`pipeline/`, uv + Python 3.12):
+- Install: `cd pipeline && uv sync`
+- Run a loader / analytics locally: see `pipeline/README.md`
+- Worker (Modal): `pipeline/modal_app.py` — ingest, analytics, model, crons, `refresh`/`simulate`.
 
 ## Testing
 - Add a test when you add a feature or fix a bug.
