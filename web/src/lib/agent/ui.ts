@@ -128,9 +128,9 @@ export function messageText(m: UIMessage): string {
 
 export const STARTERS = [
   "Why do rats keep coming back on Normandy St?",
-  "Which sites are due for follow-up?",
-  "What is around the selected site?",
-  "Which city actions were followed by fewer repeat reports?",
+  "Which places need a recheck?",
+  "What is around this place?",
+  "Which city responses had fewer comebacks?",
 ];
 
 

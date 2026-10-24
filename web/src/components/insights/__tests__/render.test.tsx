@@ -202,7 +202,7 @@ test("CI bounds render as error bars, not as extra bars, and appear in the table
   const html = renderToStaticMarkup(<FindingCard finding={toFinding(pipelineWhatWorkedRow)} />);
   assert.equal(count(html, /<rect/g), 2);
   assert.match(html, /data-mark="ci"/);
-  assert.match(html, /with 95% confidence intervals/);
+  assert.match(html, /with likely ranges/);
   assert.match(html, /<td>15\.5 to 25<\/td>/);
   assert.doesNotMatch(html, /aria-label="Legend"/);
   assert.match(html, /More numbers/);

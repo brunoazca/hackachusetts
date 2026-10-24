@@ -68,7 +68,8 @@ export default function ChatPanel() {
     <div className="flex h-full flex-col">
       <div className="px-4 pt-4">
         <span className="eyebrow">Ask Piper</span>
-        <h2 className="mt-1 text-xl font-bold text-fg">Answers from the data, with sources.</h2>
+        <h2 className="mt-1 text-xl font-bold text-fg">Ask anything about rats in your area.</h2>
+        <p className="mt-0.5 text-[13px] text-fg-3">Every answer shows where it came from and moves the map.</p>
       </div>
       {/* Screen readers hear each finished answer once, not every streamed token (R9.2). */}
       <div aria-live="polite" className="sr-only">{announce}</div>
@@ -76,27 +77,28 @@ export default function ChatPanel() {
       <div role="log" aria-label="Conversation" className="min-h-0 flex-1 space-y-4 overflow-y-auto p-4">
         {status && !status.configured && (
           <p role="status" className="rounded-md border border-edge bg-card p-3 text-sm text-fg-2">
-            Assistant not configured. The map, Inspect and Insights still work.
+            Ask is turned off right now. The map, Inspect and Insights still work.
           </p>
         )}
         {status?.configured && status.data === "not_configured" && (
           <p role="status" className="rounded-md border border-accent bg-card p-3 text-sm text-fg">
-            Live data is not connected, so the assistant can&apos;t look anything up.
+            Ask can&apos;t reach the city data right now. Please try again later.
           </p>
         )}
 
         {messages.length === 0 && status?.configured && (
           <div className="space-y-2">
-            <p className="text-sm text-fg-2">Ask about reports, chronic sites, what&apos;s nearby or what worked. Answers cite their sources and move the map.</p>
-            <ul aria-label="Suggested questions" className="space-y-1">
+            <p className="text-eyebrow font-semibold uppercase tracking-wide text-fg-3">Try one of these</p>
+            <ul aria-label="Suggested questions" className="grid gap-1.5">
               {STARTERS.map((q) => (
                 <li key={q}>
                   <button
                     type="button"
                     onClick={() => send(q)}
-                    className="w-full rounded-md border border-edge px-3 py-2 text-left text-sm text-fg hover:bg-card focus-visible:outline-2 focus-visible:outline-accent"
+                    className="group flex w-full items-center justify-between gap-2 rounded-lg border border-line bg-card px-3 py-2.5 text-left text-sm text-fg transition-colors hover:border-edge hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent"
                   >
-                    {q}
+                    <span>{q}</span>
+                    <span aria-hidden className="text-fg-3 transition-transform group-hover:translate-x-0.5">→</span>
                   </button>
                 </li>
               ))}
@@ -110,7 +112,7 @@ export default function ChatPanel() {
 
         {error && (
           <div role="alert" className="rounded-md border border-return bg-card p-3 text-sm text-return">
-            <p>{error.message.includes("not_configured") ? "Assistant not configured." : "Something went wrong answering that."}</p>
+            <p>{error.message.includes("not_configured") ? "Ask is turned off right now." : "Something went wrong. Please try again."}</p>
             <div className="mt-2 flex gap-2">
               <button type="button" onClick={() => { clearError(); void regenerate(); }} className="rounded border border-return bg-card px-2 py-0.5 text-xs font-medium hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-return">
                 Retry
