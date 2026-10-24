@@ -9,7 +9,7 @@ import { useMorph } from "@/lib/use-morph";
 // Native inputs throughout, so keyboard and screen readers get it for free.
 
 const DAY = 86400000;
-const START = Date.UTC(2023, 0, 1);
+const START = Date.UTC(2016, 0, 1); // Boston 311 history (incidents_archive) starts in 2016
 // Module scope (evaluated once on the client), not during render.
 const NOW = new Date();
 const TODAY = Date.UTC(NOW.getUTCFullYear(), NOW.getUTCMonth(), NOW.getUTCDate());
@@ -67,7 +67,7 @@ export default function Timeline() {
   const activeQuick = hi === TOTAL ? QUICK.find((q) => (q.days ? TOTAL - lo === q.days : lo === 0))?.label : undefined;
   const pct = (i: number) => (i / TOTAL) * 100;
   const years: number[] = [];
-  for (let y = 2024; y <= NOW.getUTCFullYear(); y++) years.push(y);
+  for (let y = 2018; y <= NOW.getUTCFullYear(); y += 2) years.push(y); // every other year: ten labels don't fit 320px
   const close = () => { setOpen(false); document.getElementById("dock-when")?.focus(); };
 
   return (
