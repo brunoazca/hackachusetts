@@ -5,6 +5,6 @@
     "type": "fileEdited",
     "patterns": ["src/**/*"]
   },
-  "prompt": "Source changed. Run the project's build/typecheck and the demo happy-path test (see .kiro/steering/tech.md commands). If anything fails, fix it before moving on — a broken demo path on submission day loses. Report pass/fail in one line with the command output summary. Do not expand scope beyond making it green.",
+  "prompt": "Source changed. Run the project's build/typecheck and the demo happy-path test (see .kiro/steering/tech.md commands). If anything fails, fix it before moving on — a broken demo path on submission day loses. Report pass/fail in one line with the command output summary. Do not expand scope beyond making it green. THEN log it: run `.kiro/klog.sh -t \"<teammate if known, else —>\" -a \"demo-path-hook\" -d \"build+demo test <pass/fail>\" -w \"keep demo path green\" -f \"<files or —>\" -i \"—\"` from the repo root.",
   "enabled": false
 }
