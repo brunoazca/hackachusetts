@@ -39,6 +39,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: web/src/components/{map,insights,inspector,chat,shell}; web/src/lib/map-store.ts; .kiro/KIRO_LOG.md; README.md; web/README.md
 - Idea: tsc, eslint, 5 node tests and 136/137 tsx tests pass (region-solutions needs SUPABASE env, same as main). Production build passes. Still pending in the working folder: priority layer, inspect mode, grid-cell labels migration, video render.
 
+### 2026-10-24 18:43 — ML/AI motion graphic (80 s, See → Act → Predict): real-da...
+- Teammate: Bruno
+- Agent: —
+- Did: ML/AI motion graphic (80 s, See → Act → Predict): real-data maps and charts + JS simulation of the Piper UI; rendered to MP4 deterministically
+- Why: Presentation needs a short explainer of how Piper uses intelligence from today's map to action to forecast
+- Where: docs/submission/ml-ai-motion/
+- Idea: Act includes Boston matched comparison and Cambridge/Somerville program evidence, labelled descriptive
+
 ### 2026-10-24 18:41 — Kept rendered video out of git: ignore *.mp4/*.mov/clips/...
 - Teammate: Guilherme
 - Agent: Claude Code
