@@ -24,7 +24,8 @@ INGEST_SOURCES = [
     "events",      # licenses, Red Sox, move-out, holidays
     "context",     # tracts, Zillow, Airbnb, iNaturalist
 ]
-REFRESH_SOURCES = ["t311", "regional", "enforcement"]  # fast-moving sources for the daily/button refresh
+REFRESH_SOURCES = ["t311", "regional", "enforcement"]  # fast-moving sources for the Refresh button (~15 s)
+DAILY_SOURCES = REFRESH_SOURCES + ["weather", "food", "permits"]  # daily cron adds slower-moving ones
 
 
 def _run_source(name: str, since: str | None = None) -> dict:
@@ -44,9 +45,9 @@ def ingest(name: str, since: str | None = None) -> dict:
     return _run_source(name, since)
 
 
-def refresh() -> list[dict]:
+def refresh(sources: list[str] | None = None) -> list[dict]:
     """New rows from fast-moving sources (re-reads the last 14 days to catch closures)."""
-    return [_run_source(n, since="14d") for n in REFRESH_SOURCES]
+    return [_run_source(n, since="14d") for n in (sources or REFRESH_SOURCES)]
 
 
 def _call(module: str, fn: str, *args) -> dict:

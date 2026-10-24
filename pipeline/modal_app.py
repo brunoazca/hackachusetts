@@ -53,7 +53,7 @@ def analytics_and_score() -> dict:
 @app.function(schedule=modal.Cron("0 10 * * *"), timeout=3600)  # daily 6 AM Boston (10:00 UTC)
 def daily() -> dict:
     from rat_audit import jobs
-    return {"refresh": jobs.refresh(), "after": analytics_and_score.remote()}
+    return {"refresh": jobs.refresh(jobs.DAILY_SOURCES), "after": analytics_and_score.remote()}
 
 
 @app.function(schedule=modal.Cron("0 9 * * 1"), timeout=3600, cpu=4.0, memory=8192)  # weekly retrain, Monday
