@@ -31,6 +31,523 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:47 — Consolidate work logs across checkouts and branches
+- Teammate: Carol
+- Agent:
+- Did: Collected 56 missing historical entries from all 13 worktrees and local/remote branch logs (43 sources checked), preserving the original entries and authors.
+- Why: Carol requested all pending work logs be uploaded to Git.
+- Where: .kiro/KIRO_LOG.md
+- Evidence: Verified normalized entry coverage against all scanned sources; this commit contains logs only. Publication targets codex/ready-branches-integration, not main.
+- Idea: Future entries in other checkouts still need to be committed and consolidated; this is a snapshot, not automatic synchronization.
+
+### 2026-10-24 19:44 — Chat-picked points never cluster: they draw as single ico...
+- Teammate: Bruno
+- Agent: —
+- Did: Chat-picked points never cluster: they draw as single icons (fanned at shared addresses), even if filtered out
+- Why: when the chat selects reports they must be visible one by one, not folded into a group
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
+### 2026-10-24 19:42 — Region view: buildings step aside (3D off, footprints fad...
+- Teammate: Bruno
+- Agent: —
+- Did: Region view: buildings step aside (3D off, footprints faded, parcel dots hidden) while an insight region is open
+- Why: reports and evidence inside the highlight must read clearly
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
+### 2026-10-24 19:39 — Shortlist conversational use cases for the recording
+- Teammate: Carol
+- Agent:
+- Did: Prioritized three two-turn recording options: prepare a Back Bay inspection with year/status/category filters and add trash context; investigate a visible area and add nearby evidence; broaden a recent-report view and add building-age context.
+- Decision: Recommend the inspection preparation scenario for the 24-second slot because it visibly changes several original map controls, keeps conversational context and has a verified nonempty report query.
+- Evidence: Earlier read-only query returned 10 open rodent reports matching Back Bay for 2026-01-01 through 2026-10-24. This verifies the data slice, not the complete browser conversation or latency.
+- Why: Carol asked for the best use cases to record, emphasizing practical conversational usefulness rather than duplicating the Insights ranking.
+- Where: .kiro/KIRO_LOG.md; product code unchanged.
+- Idea: Use two short turns with one operational purpose; keep filter changes, real retrieval and source disclosure legible in the edit.
+
+### 2026-10-24 19:37 — Motion graphic v4: 5-step data timeline (Data, Evidence, ...
+- Teammate: Bruno
+- Agent: —
+- Did: Motion graphic v4: 5-step data timeline (Data, Evidence, Severity, Action, Prevention), 3D Boston map for evidence, severity equation + top regions, AI action from nearby evidence + past cases, forecast + emerging hotspots
+- Why: Presentation feedback: make the data-to-prevention flow explicit
+- Where: docs/submission/ml-ai-motion/
+- Idea: What-if on the top block raised expected reports (+0.28), so prevention shows forecast + early warning, not a simulated effect
+
+### 2026-10-24 19:35 — Priority blocks always load: map_forecast gets an explici...
+- Teammate: Bruno
+- Agent: —
+- Did: Priority blocks always load: map_forecast gets an explicit first week, layer retries on failure
+- Why: week=null made the RPC hit the statement timeout, so the red grid and top-block alerts vanished
+- Where: web/src/lib/forecast.ts, web/src/components/map/PriorityLayer.tsx
+- Idea: —
+
+### 2026-10-24 19:34 — Ask chat toggle is now a floating red pill button (icon +...
+- Teammate: Bruno
+- Agent: —
+- Did: Ask chat toggle is now a floating red pill button (icon + 'Ask') in the bottom-right corner; map controls lift above it while folded
+- Why: The old top-right rail icon was easy to miss; the action should read as a button
+- Where: web/src/components/shell/RightPanel.tsx, web/src/app/globals.css, web/src/components/map/MapView.tsx
+- Idea: —
+
+### 2026-10-24 19:34 — Act panel: clicking a ranking card outlines every block o...
+- Teammate: Bruno
+- Agent: —
+- Did: Act panel: clicking a ranking card outlines every block of its region and draws each report inside unclustered, with same-address reports fanned out in a ring; renamed the Insight panel to Act
+- Why: Make it obvious which area a card means and show every report there, not group counts
+- Where: web/src/components/map/MapView.tsx, PriorityLayer.tsx, insight/InsightPanel.tsx, RankingList.tsx, lib/map-store.ts
+- Idea: Draw a selection ring on fanned-out icons (it can't follow icon-offset yet)
+
+### 2026-10-24 19:32 — Replace the ranking demo with an inspection-specific map query
+- Teammate: Carol
+- Agent:
+- Did: Carol pointed out that top-five ranking duplicates Insights. Replaced that demo direction with a specific inspection query (this year's open rat complaints in Back Bay), followed by adding nearby trash complaints.
+- Evidence: Read-only incident queries for 2026-01-01 through 2026-10-24 returned 10 open rodent reports matching Back Bay and 8 matching Dorchester. No model calls or data writes; exact conversational/browser sequence still needs rehearsal.
+- Why: Demonstrate the chat's distinct usefulness: create and refine a custom geographic/date/status/category view through two natural messages.
+- Where: .kiro/KIRO_LOG.md; product code unchanged.
+- Idea: Keep the original map controls visible as date, status and category update, then show the follow-up adding context while retaining the chosen filters.
+
+### 2026-10-24 19:32 — Centered map filter bar on the viewport (fixed left-1/2) ...
+- Teammate: Bruno
+- Agent: —
+- Did: Centered map filter bar on the viewport (fixed left-1/2) instead of the map area
+- Why: user wants filters centered relative to the screen
+- Where: web/src/components/map/LayerPanel.tsx
+- Idea: —
+
+### 2026-10-24 19:30 — Priority map: top-20 blocks drawn dark red with an alert ...
+- Teammate: Bruno
+- Agent: —
+- Did: Priority map: top-20 blocks drawn dark red with an alert badge instead of rank numbers; 'Mark resolved' / 'Reopen' on a block's card clears its alert (saved per browser); map opens with Both, nearby records, priority blocks and 3D on
+- Why: Ranks on the map were noise; teams need to see what's still open and clear it when handled
+- Where: web/src/components/map/PriorityLayer.tsx, icons.ts, lib/map-store.ts, lib/map-controls.ts, components/insight/InsightPanel.tsx
+- Idea: Move resolved blocks to a shared Supabase table so the whole team sees them
+
+### 2026-10-24 19:29 — Insight cards: rat/category marker icons on nearby rodent...
+- Teammate: Bruno
+- Agent: —
+- Did: Insight cards: rat/category marker icons on nearby rodent reports and nearby-cause rows; shorter dates, street-only addresses, trimmed headings and stat labels
+- Why: Panels were text-heavy and rows wrapped
+- Where: web/src/components/insight/{EvidenceCard,RecordCard,shared}.tsx
+- Idea: —
+
+### 2026-10-24 19:29 — Include visible filter changes in the two-turn demo
+- Teammate: Carol
+- Agent:
+- Did: Refined the second proposed message to request the first-ranked place and only this year's rat reports, adding date/category controls to the conversational demo.
+- Decision: Keep the top-five question short; show the original map filter controls visibly changing during the follow-up, then finish at the selected place.
+- Why: Carol wants the 24-second chat segment to prove that the assistant operates map filters as well as navigating and retrieving evidence.
+- Where: .kiro/KIRO_LOG.md; product code unchanged.
+- Idea: Use one natural follow-up to demonstrate remembered ranking, camera movement and date/category filtering; rehearse the actual sequence before recording.
+
+### 2026-10-24 19:26 — Fit the conversational demo into Gui's 24-second chat slot
+- Teammate: Carol
+- Agent:
+- Did: Read Gui's supplied timing plan: chat runs 1:48–2:12, after forecast/model evaluation and before the inspection brief.
+- Decision: Keep two short turns: ask for five problem locations, then request the first-ranked location. Show real retrieval, the ranked answer and source disclosure, then map focus/Inspect; finish with a selected site for the brief.
+- Why: Demonstrate retrieval, ranking, citations, conversation context and map control within the existing video allocation without repeating the earlier ML segment.
+- Where: .kiro/KIRO_LOG.md; product code unchanged.
+- Idea: Treat 24 seconds as edited screen time, not a measured runtime promise; record real interactions and trim typing/idle waits while retaining visible retrieval and readable results.
+
+### 2026-10-24 19:22 — Prefer a top-five-to-first-place conversational demo
+- Teammate: Carol
+- Agent:
+- Did: Carol proposed asking for the five worst rat-report locations, then asking the chat to take her to the worst one. Selected this as the primary conversational demo direction.
+- Decision: Explain the ranking using actual queue priority and recorded evidence. Aim for an overview/list in the first turn, then focus and Inspect in the second; this exact camera sequence still needs rehearsal.
+- Why: Two natural messages demonstrate prioritization, retained context, map navigation and evidence review.
+- Where: .kiro/KIRO_LOG.md; product code unchanged.
+- Idea: A short follow-up should resolve the first-ranked site from the previous answer without requiring its name again.
+
+### 2026-10-24 19:19 — Make the chat demo conversational
+- Teammate: Carol
+- Agent:
+- Did: Replaced the proposed compound map command with a short place-based question and a natural follow-up about nearby trash reports.
+- Why: Carol clarified that the demo should reflect how someone actually uses a conversational assistant.
+- Where: .kiro/KIRO_LOG.md; product code unchanged.
+- Idea: Let the assistant choose the lookups and map actions; demonstrate retained location context across two short turns instead of asking the user to enumerate controls.
+
+### 2026-10-24 19:15 — Choose two multi-function chat scenes for the demo
+- Teammate: Carol
+- Agent:
+- Did: Reviewed current chat tools, map executors, Insights access and existing demo scripts; proposed five demo options and selected map investigation plus forecast/benchmark explanation as the strongest two-message sequence.
+- Decision: First message combines named-place navigation, dates/categories, points/heat, nearby records and highlights; second changes to a stored forecast week and explains model metrics and limits through Insights.
+- Evidence: These capabilities are in the current code; the exact proposed two-message recording sequence has not been rehearsed. Older demo scripts still describe the chat as unfinished and contain outdated planned flows.
+- Why: Carol requested at least five strong demonstration ideas and a maximum of two chat messages for the chosen use cases.
+- Where: .kiro/KIRO_LOG.md; product code unchanged.
+- Idea: Show a visible transition from reviewing reported incidents to reviewing a forecast, with sources and model limitations available on screen.
+
+### 2026-10-24 19:11 — Integrate reviewed chat fixes and token optimization for main
+- Teammate: Carol
+- Agent:
+- Did: Integrated this chat's provenance fixes, cleanup and token optimization onto main 158bb08; preserved all entries from both KIRO_LOG histories.
+- Evidence: Combined tree passed 142 targeted tests with 19 conditional skips, TypeScript, scoped ESLint and whitespace checks. Secret scan passed before commit.
+- Why: Carol requested a commit on main; this step does not request a remote push.
+- Where: web/src/lib/agent; web/src/lib/insights-history.ts; .kiro/KIRO_LOG.md.
+- Idea: none
+
+### 2026-10-24 19:10 — Reduce repeated chat input and measure token usage
+- Teammate: Carol
+- Agent:
+- Did: Removed duplicated prompt/tool instructions; suggest specific Insights topics and send repeated source metadata/caveats once to the model, preserving full UI output and all evidence.
+- Did: Kept all map tools and restored the original explicit language/geographic paragraphs after stronger compression weakened real-model behavior.
+- Evidence: Gateway input counts with the existing local gpt-4.1-mini override: fresh 4,873 → 4,480 (8.1%); synthetic Insights continuation 6,953 → 6,411 (7.8%). Cache/output differences prevent claiming the same percentage in bill savings; production Sonnet was not measured.
+- Evidence: 142 targeted tests passed, 19 conditional skips; TypeScript and scoped lint passed. Added evidence-preservation, failure/provenance and route stream/replay checks. README records real-model narrative limitations.
+- Why: Carol asked to optimize the chat's token spend while other sessions own new features.
+- Where: web/src/lib/agent/{prompt.ts,tools,README.md,__tests__}; .kiro/KIRO_LOG.md.
+- Idea: Preserve evidence and tested operational rules; measure the whole input, including tool schemas, instead of presenting prompt character savings as money saved.
+
+### 2026-10-24 18:55 — Fix reviewed chat provenance and remove unused data reads
+- Teammate: Carol
+- Agent:
+- Did: Read the supplied chat/Insights review and synced this worktree to main 3d2e4d8, preserving the pending Inspect log entry and other sessions' work.
+- Did: Historical sources now display their known snapshot date without fabricating a midnight retrieval timestamp; removed discarded subtype and unused analyticsCounts from agent readers/types.
+- Decision: Kept ForecastCellRow because InsightsPayload, parser and schema use it. No TSX, new features, prompt changes, model configuration, migrations or database writes.
+- Evidence: 145 local tests passed, 19 conditional skips. The six upstream region-render tests required fixture public env values; initial aggregate no-env import failure is documented in Agent README. Build/TypeScript and scoped lint passed.
+- Evidence: Public production chat GET configured=true/provider=gateway/data=live; one POST HTTP 200 called get_insights and finished without error events. Actual MODEL_ID remains unverified because Vercel team access is unavailable; no configuration changed.
+- Why: Carol requested the review's bug fixes and asked to leave new features to another session.
+- Where: web/src/lib/insights-history.ts; web/src/lib/agent/{types,ui,data,README.md,__tests__}; .kiro/KIRO_LOG.md.
+- Idea: A historical snapshot date is evidence; an unrecorded retrieval timestamp must not be invented to fill a missing label.
+
+### 2026-10-24 18:50 — Auditoria read-only do backend de chat+insights; escrevi ...
+- Teammate: Carol
+- Agent: kirocrew (default)
+- Did: Auditoria read-only do backend de chat+insights; escrevi o relatorio de handoff em docs/reviews/chat-insights-review-20261024.md
+- Why: Carol vai mandar pra outra sessao com privilegios de escrita/commit
+- Where: docs/reviews/chat-insights-review-20261024.md
+- Idea: Achei bug real: fonte historica em get_insights sem retrieved_at (UI mostra 'Retrieval time unavailable'); dead code: subtype, analyticsCounts, ForecastCellRow
+
+### 2026-10-24 18:29 — Shared analytics populated through plugin; spatial queries optimized
+- Teammate: Carol
+- Agent:
+- Did: Ran authorized analytics against real shared data through temporary Python/plugin transport; fixed repeated school-grid work and building proximity aggregation in impact.py.
+- Why: Unblock Insights and site evidence despite rejected direct DB authentication.
+- Where: pipeline/rat_audit/analytics/impact.py; pipeline/rat_audit/analytics/README.md; .kiro/KIRO_LOG.md; shared analytics tables.
+- Evidence: 3,586 grid cells; 19,263 classified cases; 2025/2026 coverage 90.52%/90.24%; 13 outcomes; four base rates; 1,073 sites, 228 due; Normandy rank 44. All active site JSON types and legal recommendations checked.
+- Evidence: Real anon Insights returns 14 findings, seven cost/impact rows and four forecast weeks. 26 schema/content checks passed; run-status check failed before the final impact retry. Run 11 succeeded explicitly for building-only resume, not an entire fresh pipeline.
+- Evidence: Runs 2/4/5/6/10/11 provide completed phases. Failed attempts remain recorded; transport paging, named bindings and COPY conversion required repairs. The first 29 site JSON summaries were double-encoded, repaired, and all 1,073 rows verified afterward. Batch writes were not globally atomic.
+- Evidence: Both optimized spatial queries passed on real data after original timeout failures. Latest tests: 141 unit/property/mock passed, 10 opt-in DB skipped, 37 existing warnings. Earlier five SQL fixtures/five disposable integration tests/build were not repeated; deployed browser flow not verified.
+- Evidence: Forecast transport writes prohibited. Three pre-refresh run fingerprints match exactly. Fourth run risk-v1-20261024T210943 grew 103,260 to 103,836 rows; total 413,040 to 413,616. Writer/cause unestablished; no blanket preservation claim. Migration-time snapshots previously matched.
+- Remaining: Missing ACS denominator and real unknown-question drafter (1,073 unavailable). Existing model_artifacts RLS/grants belong to data/model owner. Baseline migration history needs integrator reconciliation.
+- Decision: No additional migrations, main merge/push or deploy. Shared data changes can affect the published site now. Only scoped code/log changes go to the feature branch; temporary adapter stays outside repo. Env values private.
+- Idea: none.
+
+### 2026-10-24 18:05 — Clarify Inspect ownership and intended behavior
+- Teammate: Carol
+- Agent:
+- Did: Read TEAM, CONTRACT, requirements R0/R3/R4, design, tasks and panel guidance. Inspect belongs to Gui's Map + Inspector track; Carol supplies Analytics/Agent and Bruno supplies data/models.
+- Did: Identified Inspect as the selected feature's evidence/case dossier, with report history, returns, recorded actions, nearby context, sources and the specified human action-review flow.
+- Evidence: R3.7 specifies top 10 chronic sites when nothing is selected; the current InspectorPanel instead shows a Review a place instruction. This is one confirmed gap, not a full implementation audit.
+- Why: Carol asked who owns Inspect and what it should be according to the documentation.
+- Where: .kiro/KIRO_LOG.md; product code unchanged.
+- Idea: Separate documented acceptance requirements from implemented behavior; v2-spec is marked proposal and product steering keeps unfinished flows explicitly planned.
+
+### 2026-10-24 16:45 — Shared analytics migrations applied; Python refresh blocked by database authentication
+- Teammate: Carol
+- Agent:
+- Did: Applied Insights, core and v2 analytics migrations to rat-audit through the zebra connection; verified shared public RPCs and forecast preservation; updated current delivery status.
+- Why: Complete the authorized shared-schema work and distinguish deployed SQL from a still-pending Python refresh.
+- Where: Supabase rat-audit; pipeline/rat_audit/analytics/README.md; .kiro/KIRO_LOG.md.
+- Evidence: Canonical history versions 20261024194305 / 20261025000000 / 20261025000001 confirmed. Existing baseline history was empty; only our three entries were reconciled. Integrator must reconcile baseline history before a blanket migration push.
+- Evidence: Immediately before/after all migrations, exact row fingerprints matched for 206,520 predictions, 39 model runs and 2 artifacts. At 20:43 UTC predictions/artifacts still matched; model-run metadata fingerprint had subsequently changed with count still 39, cause unestablished and no analytics refresh run.
+- Evidence: Real anon Insights read returned risk-v1-20261024T185032 with four future weeks; legacy queue and supporting RPC reads passed. Synthetic anon trial design produced one pair/pending result inside rollback; confirmed zero residual test sites, trials and pairs.
+- Decision: Public demo trial writes were explicitly authorized after automatic review initially blocked them. Carol also authorized terminating exactly the three identified idle blockers (23669, 24666, 25481); no other sessions were terminated.
+- Blocked: SQL connection reaches the session pooler but rejects the supplied password. No Python step or analytics_runs row exists; shared findings/costs remain empty. Env values stayed private. Real AI adapter and missing regional inputs remain separate dependencies.
+- Evidence: User confirms database password. Standard dotenv parsing agrees; URI escaping bypassed with keyword parameters; both pooler ports reject authentication. Postgres login enabled, password unexpired; direct hostname fails DNS locally. No password reset performed; dashboard endpoint comparison pending.
+- Risk: Pre-existing model_artifacts RLS disabled with anon SELECT/INSERT, outside this front; data/model owner should review before main integration. No model permission change made.
+- Decision: Publish documentation on the feature branch; main merge/push and deployment remain later. Preserve all prior log entries and leave this Agent field empty.
+- Idea: Migration success, synthetic transaction checks and real analytics population are separate acceptance evidence.
+
+### 2026-10-24 16:19 — Analytics migrations and runtime validated locally; forecasts preserved
+- Teammate: Carol
+- Agent:
+- Did: Kept legacy queue/detail compatibility during v2 transition; fixed Wilson interval rounding at zero/all returns; expanded existing integration tests; built the frontend without source/dependency changes.
+- Why: Verify migration and refresh behavior before shared execution and eventual main integration.
+- Where: supabase/migrations/20261025000001_analytics_v2_loop.sql; pipeline/rat_audit/analytics/tests/test_integration_db.py; pipeline/rat_audit/analytics/README.md; .kiro/KIRO_LOG.md.
+- Evidence: 141 unit/property/mock tests passed; five native read-only SQL fixture tests passed separately. Ten opt-in database tests skipped in the default run, all executed separately; 37 pre-existing model/grid.py Shapely warnings.
+- Evidence: Five disposable PostGIS integration tests passed: all analytics migrations installed; P0 run twice; exact predictions/model_runs/model_artifacts preservation; referenced grid retained; legacy/v2 RPCs; seeded trial persistence/reproducibility/exclusions; pending and mature frozen-membership results; support RPCs and rejection validation. Synthetic data and admin role, not shared/public-role validation.
+- Evidence: Production build and TypeScript passed with existing dotenv in memory, no values printed/copied. Site recur_* keys survive identical membership and are invalidated after member changes, without modifying cell-week forecasts.
+- Decision: Carol authorized shared migrations and analytics, replacing the original read-only restriction; chose Supabase plugin reconnection. Main integration remains later. Publish only the feature branch now.
+- Blocked: Current connector exposes other projects, not rat-audit; CLI has no login and dotenv lacks SQL URL. Correct account/organization access and shared migration history/privileges still need verification. No shared migration/refresh, main push or deploy performed.
+- Idea: Keep synthetic persistence, real-input calculation evidence and live deployment validation separate.
+
+### 2026-10-24 16:06 — Analytics v2 rebased and validated for branch-only sharing
+- Teammate: Carol
+- Agent:
+- Did: Rebased analytics-core onto main 50ed4bf. The three rebase conflicts were only in this log; every entry from both histories was checked as preserved. Kept local backup codex/analytics-before-v2-rebase-c55ec44.
+- Why: Share the current implementation and Insights RPC with the other fronts without merging/deploying main.
+- Where: .kiro/KIRO_LOG.md; branch feat/rat-audit-analytics-core (implementation commit 06081aa).
+- Evidence: After rebase, 141 unit/property/mock tests passed; five native SELECT-only SQL tests passed separately. Two migration-application tests remain skipped. All analytics migrations and validate.sql parsed; migration versions unique; model subtree identical to main; secret scan including supplied env values clean; diff whitespace clean.
+- Decision: Publish only the feature branch using a lease against the previously observed remote head f410efe. Migration application, shared refresh, real LLM configuration and missing regional inputs remain explicit integration dependencies. No main merge/push, deploy or database write authorized by this publication.
+- Idea: Keep the migration and producer readiness distinct from a live, populated Insights panel.
+
+### 2026-10-24 16:04 — Analytics v2 producers and Insights RPC prepared; real reads separated from fixtures
+- Teammate: Carol
+- Agent:
+- Did: Implemented this front's v2 cluster/action/cause/outcome producers, Due/base rates, case/queue/trial/practice/follow-up SQL, dated findings, impact/regional calculations, equity context and cached AI-check interface. Added insights_summary from C's RPC_PROPOSAL.md, preserving its JSONB payload.
+- Why: Complete the analytics responsibilities in TEAM/tasks and provide the missing backend RPC for Insights task 2.8.
+- Where: pipeline/rat_audit/analytics/**; supabase/migrations/20261024194305_analytics_insights_rpc.sql, 20261025000000_analytics_core.sql, 20261025000001_analytics_v2_loop.sql; .kiro/KIRO_LOG.md.
+- Evidence: 141 unit/property/mock tests passed. Five separate native PostGIS SELECT tests passed (synthetic CTEs, including SQL/Python seeded trial agreement); two tests that install migrations deliberately skipped. SQL and PLpgSQL parsed; no migration or writing RPC executed.
+- Evidence: Local real public notes: non-unknown 2025 90.52%, 2026 90.24%, meeting the v2 gate; 2023 86.98% / 2024 89.39% remain below target. Cause assigned to all closures; named-cause share 8.88% / 13.90% in 2025/26. Contact-only remains unknown.
+- Evidence: Actual PostGIS clustering after virtual reclassification, read-only: 11,530 retained clustered reports, 1,073 sites, 228 Due. Matched 181 pairs, RR 0.964, bootstrap CI [0.782,1.209], no conclusive difference. Normandy main cluster 28 reports / 22 returns, rank 44, Due, vacant adjacency, demo pin. No DB persistence in this check.
+- Decision: Due threshold 50% from local base-rate table (0/1/2/3+ prior returns 40.01/41.51/47.17/84.93%); 25% flagged all buckets. Recalibrate on shared data. Keep historical cluster IDs for decisions/trials; never transfer approvals across cluster changes; no composite score.
+- Evidence: Insights SELECT on local persisted rows returned 3 findings, 3 costs, 10 resolving source citations; forecast null locally, forecast aggregation tested synthetically. P1 impact queries/calculations passed using real inputs plus virtual v2 sites with output persistence suppressed; not an end-to-end worker validation.
+- Blocked: Shared DB was not revalidated (prior MCP permission denial / HTTP 401, supplied env has no SQL URL). Regional data lacks Cambridge/Somerville incident months and smart-box follow-up; population vintages are not ACS. AI-check cache tested with fake model only, configured provider adapter missing. Migration installation, role execution, persistence and UI end-to-end remain untested.
+- Decision: Renumbered our legacy core migration from 20261024600001 to 20261025000000 because fetched main 50ed4bf uses the former version for incidents_archive; loop migration follows at 20261025000001. Contents of core schema logic preserved. Integrator must reconcile history if the old analytics version was already recorded; no history repair or migration applied here.
+- Decision: Automatic review rejected extra table SELECT grants for Insights as access expansion. Omitted them and kept the proposal's existing-permission approach; no workaround or new table grants for this RPC. All new log Agent fields remain empty. Branch-only publication is authorized; main merge/push and deploy remain prohibited.
+- Idea: Keep shared-data readiness, synthetic SQL checks and genuine source-data recomputation as separate evidence.
+
+### 2026-10-24 15:19 — Rebased analytics-core onto main; verified partial handoff
+- Teammate: Carol
+- Agent:
+- Did: Rebased the preserved analytics commit onto main f72541f. Resolved the only conflict in this log by keeping all main history and all analytics entries.
+- Why: Reuse the model already committed by Bruno and avoid collisions before sharing the feature branch.
+- Where: .kiro/KIRO_LOG.md, pipeline/rat_audit/analytics/README.md; model subtree unchanged relative to main.
+- Evidence: Post-rebase analytics suite 108 passed / 2 skipped; 37 pre-existing Shapely deprecation warnings from model/grid.py. Secret scan including supplied env values passed; diff whitespace check passed.
+- Evidence: Model modules baseline, gbm, backtest, features, recurrence, artifacts and explain are present from main; no model files were created or modified by this front. Migration name matches *_analytics_*.sql and its contents remain unapplied.
+- Decision: Branch-only sharing remains authorized. Spec v2 tasks 2.2 and 2.3 remain incomplete (90% coverage, cause_tag, 50 m DBSCAN and legal-lane); README lists the gaps. No main changes, shared-DB writes, migrations or deployment performed.
+- Idea: Integrators can use this branch as a dependency while analytics v2 work remains explicit.
+
+### 2026-10-24 15:17 — Prepare analytics branch handoff and check Spec v2 against main
+- Teammate: Carol
+- Agent:
+- Did: Prepared the existing analytics implementation, tests, README, unapplied migration and logs for commit and push only to feat/rat-audit-analytics-core; Carol also requested rebase onto fetched main f72541f.
+- Why: Let the other fronts use this partial delivery without merging or deploying main.
+- Where: pipeline/rat_audit/analytics/, supabase/migrations/20261024600001_analytics_core.sql, .kiro/KIRO_LOG.md.
+- Evidence: Main already contains baseline, gbm, backtest, features, recurrence, artifacts and explain; do not recreate or edit model code. Migration filename matches *_analytics_*.sql.
+- Spec v2 gaps: Task 2.2 has action_tag coverage reporting but remains below 90% on local real data and has no cause_tag. Task 2.3 remains address-key grouping plus composite score; no ST_ClusterDBSCAN 50 m/minpoints 3, v2 summary fields/rule order, or legal-lane filter. These tasks are not complete under v2.
+- Validation: Last analytics suite 108 passed / 2 skipped; SELECT-only local real-data checks 20 true / 4 coverage failures. Recheck the suite after rebase; shared Supabase validation is still blocked by permissions/HTTP 401.
+- Decision: Blank Agent fields in the 28 uncommitted entries, preserving their evidence and all committed history. Rebase and branch push are now authorized; database writes, migrations, main push and deploy remain out of scope.
+- Idea: Share this as a partial implementation, not as completed Spec v2 tasks.
+
+### 2026-10-24 15:08 — Analytics-core resumed; false success fixed and read-only evidence recorded
+- Teammate: Carol
+- Agent:
+- Did: Preserved existing dirty work on feat/rat-audit-analytics-core at 8814c1d; corrected partial findings/cost status, rejected invalid steps before DB access, and removed the claim that every counted case was closed.
+- Why: Incomplete analytics and invalid step selections previously returned success.
+- Where: pipeline/rat_audit/analytics/{__init__,__main__,costs}.py, tests/{test_runner,test_findings_costs,test_integration_db}.py, README.md, .kiro/KIRO_LOG.md.
+- Evidence: 108 unit/property/mock tests passed (16 added); 2 integration tests skipped because their fixtures apply migrations. New runner regression suite had 12 failures before the fixes.
+- Evidence: Existing local real-data PostGIS, forced read-only: validate.sql returned 20 true / 4 false. Classifier coverage 2023/24/25/26 = 86.08%/88.70%/89.51%/89.32%; 90% target still fails.
+- Evidence: SELECT-only reads and in-memory recomputation confirmed 2,412 grid IDs, 1,121 site scores/ranks/counts, and outcome rates against persisted results; Normandy best rank 28. Trash partial rho 0.269 (p=0.002); citation-minus-monitoring recurrence CI [-4.07,1.19] pp. Move-out checked only as persisted output; no DB-writing pipeline rerun.
+- Blocked: Shared MCP permission denied; REST GET HTTP 401 with existing public credentials; env loads but has no SUPABASE_DB_URL. Shared schema and prior grid/site-ID conflicts were not revalidated. Ingest prefix preservation and demo pin remain outside this front.
+- Decision: No shared writes, no migrations anywhere, no merge/push/deploy/commit; secret scan clean. Existing implementation retained; only one new repository file (test_runner.py), diagnostics/backup kept under /private/tmp/rat-analytics-codex.
+- Idea: Keep computation status separate from classifier quality; partial execution must remain visible to the caller.
+
+### 2026-10-24 14:52 — Pre-migration check (read-only): schema matches, but grid...
+- Teammate: Carol
+- Agent:
+- Did: Pre-migration check (read-only): schema matches, but grid conflict + site id mismatch found
+- Why: Bruno's model seeded 3,442 hull grid cells + 103,260 predictions (FK blocks cleanup); draft site_queue ids are left(address_key,16), analytics uses site_<key16>
+- Where: none
+- Idea: Do not run analytics grid/sites on shared until Bruno + Gui agree on grid cleanup and site id format
+
+### 2026-10-24 14:47 — Preview updated: shared-DB check section, validate.sql re...
+- Teammate: Carol
+- Agent:
+- Did: Preview updated: shared-DB check section, validate.sql results, current tests and D1
+- Why: Carol asked for the preview to show today's validation; failures (migration, 90% target) shown as fail, not hidden
+- Where: Artifact https://claude.ai/artifact/4hXr4BY1rvz8uoLXtUpub2
+- Idea: —
+
+### 2026-10-24 14:45 — Post-run check validate.sql for the integrator (read-only...
+- Teammate: Carol
+- Agent:
+- Did: Post-run check validate.sql for the integrator (read-only, 24 checks)
+- Why: Shared-DB validation needs a fixed script after the migration and run; tested on local real data: 20 pass, 4 fail (classifier 90% target)
+- Where: pipeline/rat_audit/analytics/validate.sql, pipeline/rat_audit/analytics/README.md
+- Idea: —
+
+### 2026-10-24 14:40 — Tests: 92 unit/property pass + 2 skipped without DB; 2/2 ...
+- Teammate: Carol
+- Agent:
+- Did: Tests: 92 unit/property pass + 2 skipped without DB; 2/2 integration pass on disposable PostGIS
+- Why: Integration ran only with ANALYTICS_TEST_DB_URL on a throwaway container, never on Supabase
+- Where: pipeline/rat_audit/analytics/tests/
+- Idea: —
+
+### 2026-10-24 14:40 — Shared Supabase check (read-only via MCP): project rat-au...
+- Teammate: Carol
+- Agent:
+- Did: Shared Supabase check (read-only via MCP): project rat-audit vfizpwajekykmbcrport matches .env.local
+- Why: Validate inputs before analytics runs; no writes, no migrations applied
+- Where: none
+- Idea: Inputs present: 19,496 Boston rodent incidents, 180 SVI tracts, report_volume, signal_volume, 1,157 restaurants, 6,046 vacant parcels, 176,007 parcels, 58 spending rows, 4 move_out events
+
+### 2026-10-24 14:40 — Migration 20261024600001_analytics_core NOT applied on sh...
+- Teammate: Carol
+- Agent:
+- Did: Migration 20261024600001_analytics_core NOT applied on shared DB
+- Why: grid_cells lacks col/row/land_frac/boundary_source, action_outcomes lacks 8 columns, analytics_runs missing; output tables are empty; migration history is empty
+- Where: supabase/migrations/20261024600001_analytics_core.sql
+- Idea: Integrator applies it, then runs python -m rat_audit.analytics
+
+### 2026-10-24 14:40 — Full pipeline on real public data in local PostGIS: 6/6 s...
+- Teammate: Carol
+- Agent:
+- Did: Full pipeline on real public data in local PostGIS: 6/6 steps ok, 4.9 s
+- Why: Shared DB has no write credentials and must not be written; same 19,263 closed rodent cases as shared DB
+- Where: none (local container rat-analytics-real)
+- Idea: —
+
+### 2026-10-24 14:40 — Classifier on shared-DB notes: 2025 89.51%, 2026 89.32% t...
+- Teammate: Carol
+- Agent:
+- Did: Classifier on shared-DB notes: 2025 89.51%, 2026 89.32% tagged; 90% target NOT met
+- Why: Read 19,496 rows via PostgREST GET; ingest strips 'Case Noted.' so generic noted closures stay unknown
+- Where: pipeline/rat_audit/analytics/classify.py
+- Idea: Bruno: keep the closure prefix in t311.py; no forcing of contact-only notes into monitoring
+
+### 2026-10-24 14:15 — run_all on real data: 6/6 steps ok in 4.9 s; 2,412 cells,...
+- Teammate: Carol
+- Agent:
+- Did: run_all on real data: 6/6 steps ok in 4.9 s; 2,412 cells, 1,121 sites
+- Why: End-to-end check of 2.1-2.5 and 2.7 on real inputs; Normandy St ranks 28, trash partial rho +0.27 (weak), move-out strong, what-worked none
+- Where: none
+- Idea: what-worked shows no clear citation vs monitoring difference on real data; demo script should say so
+
+### 2026-10-24 14:15 — Real data loaded locally: 221,745 incidents, 176,007 parc...
+- Teammate: Carol
+- Agent:
+- Did: Real data loaded locally: 221,745 incidents, 176,007 parcels, 180 tracts via the team's ingest
+- Why: Demo the analytics flow on real data without the shared DB
+- Where: none (local container rat-analytics-real)
+- Idea: —
+
+### 2026-10-24 14:15 — Costs: drop negated 'explicit' food comments ('no mice ob...
+- Teammate: Carol
+- Agent:
+- Did: Costs: drop negated 'explicit' food comments ('no mice observed'), 52 in 2025
+- Why: Real-data review found food.py's explicit flag counts negations; fixed in analytics, proposed for ingest
+- Where: pipeline/rat_audit/analytics/costs.py, tests/test_findings_costs.py
+- Idea: —
+
+### 2026-10-24 14:15 — Browser preview of the analytics front published (map, si...
+- Teammate: Carol
+- Agent:
+- Did: Browser preview of the analytics front published (map, site card, findings, costs, tests, deps)
+- Why: Carol asked for a demonstrable delivery with real data and open dependencies named per owner
+- Where: Artifact https://claude.ai/artifact/4hXr4BY1rvz8uoLXtUpub2
+- Idea: Tests: 94 pass with isolated PostGIS; classifier 89.5%/89.3% misses 90% until ingest keeps the closure prefix
+
+### 2026-10-24 14:07 — Real-data preview: loading public data into a local PostG...
+- Teammate: Carol
+- Agent:
+- Did: Real-data preview: loading public data into a local PostGIS with the team's ingest code
+- Why: No shared DB URL; the browser demo must still run analytics on real data, isolated
+- Where: none (scratchpad load_real.py, container rat-analytics-real)
+- Idea: Same ingest modules, only SUPABASE_DB_URL points at localhost
+
+### 2026-10-24 14:01 — What-worked on real data: monitoring 12.6% vs citation 11...
+- Teammate: Carol
+- Agent:
+- Did: What-worked on real data: monitoring 12.6% vs citation 11.2% repeat in 60 days, intervals overlap
+- Why: Escalation text now says when this data cannot separate the two; research before/after figures stay cited as observational
+- Where: pipeline/rat_audit/analytics/sites.py
+- Idea: —
+
+### 2026-10-24 14:01 — Sites/outcomes checked on real 311 rows 2023-2026 (public...
+- Teammate: Carol
+- Agent:
+- Did: Sites/outcomes checked on real 311 rows 2023-2026 (public API, no DB)
+- Why: 1,121 sites, scores 23.8-99.4; Normandy St 02121 = rank 28 (16 reports in 2025, 14 recurrences), not forced to the top
+- Where: none (scratchpad validation script)
+- Idea: Demo pin for Normandy St is a product/integrator call, not a ranking tweak
+
+### 2026-10-24 14:01 — Analytics README: run command, step dependencies, output ...
+- Teammate: Carol
+- Agent:
+- Did: Analytics README: run command, step dependencies, output formats
+- Why: Integrator runs analytics after the data load and needs the migration + formats
+- Where: pipeline/rat_audit/analytics/README.md
+- Idea: —
+
+### 2026-10-24 14:00 — Integration test: run_all twice on a disposable PostGIS f...
+- Teammate: Carol
+- Agent:
+- Did: Integration test: run_all twice on a disposable PostGIS from all migrations
+- Why: Checks idempotent outputs, recur_p kept, decision-linked site retired not deleted, missing inputs named
+- Where: pipeline/rat_audit/analytics/tests/test_integration_db.py
+- Idea: Set ANALYTICS_TEST_DB_URL to a throwaway PostGIS; test refuses Supabase URLs
+
+### 2026-10-24 14:00 — Classifier checked on real 2025/2026 notes: 89.5% / 89.3%...
+- Teammate: Carol
+- Agent:
+- Did: Classifier checked on real 2025/2026 notes: 89.5% / 89.3% non-unknown (raw notes 97.6% / 96.2%)
+- Why: Ingest strips the 'Case Noted.' prefix that the research counted as monitoring; added rules only for explicit actions
+- Where: pipeline/rat_audit/analytics/classify.py
+- Idea: Remaining unknowns are mostly 'message left with constituent' (no action named); proposal: ingest keeps a closure_prefix flag
+
+### 2026-10-24 13:56 — run_all(conn) with step dependencies + analytics_core mig...
+- Teammate: Carol
+- Agent:
+- Did: run_all(conn) with step dependencies + analytics_core migration
+- Why: jobs.analytics() calls run_all; one failing step must not block independent ones
+- Where: pipeline/rat_audit/analytics/__init__.py, supabase/migrations/20261024600001_analytics_core.sql
+- Idea: —
+
+### 2026-10-24 13:56 — Analytics unit tests: 74 pass (classifier, score bounds, ...
+- Teammate: Carol
+- Agent:
+- Did: Analytics unit tests: 74 pass (classifier, score bounds, ties, windows, dedupe)
+- Why: Property tests (Hypothesis) for score 0-100 and order-independent ranking; fixtures are synthetic fx- ids
+- Where: pipeline/rat_audit/analytics/tests/
+- Idea: —
+
+### 2026-10-24 13:56 — 2.7 counted costs in price_impact (Checkbook, food citati...
+- Teammate: Carol
+- Agent:
+- Did: 2.7 counted costs in price_impact (Checkbook, food citations, repeat cases)
+- Why: R7.4 asks for costs we can count; no report count is turned into visits or dollars
+- Where: pipeline/rat_audit/analytics/costs.py
+- Idea: —
+
+### 2026-10-24 13:56 — 2.5 findings: trash-storage-vs-rodent, what-worked, move-...
+- Teammate: Carol
+- Agent:
+- Did: 2.5 findings: trash-storage-vs-rodent, what-worked, move-out-spike
+- Why: Insights needs computed findings; titles come from the numbers, strength needs permutation p < 0.05
+- Where: pipeline/rat_audit/analytics/correlations.py
+- Idea: —
+
+### 2026-10-24 13:56 — 2.4 action_outcomes with a 60-day observation window
+- Teammate: Carol
+- Agent:
+- Did: 2.4 action_outcomes with a 60-day observation window
+- Why: Cases closed under 60 days before the newest report are censored, never counted as success
+- Where: pipeline/rat_audit/analytics/outcomes.py
+- Idea: —
+
+### 2026-10-24 13:56 — 2.3 chronic sites: dedupe, recurrence, 0-100 score, drive...
+- Teammate: Carol
+- Agent:
+- Did: 2.3 chronic sites: dedupe, recurrence, 0-100 score, drivers, recommendations
+- Why: Site card needs ranked addresses with evidence; ranking is not tuned toward Normandy St
+- Where: pipeline/rat_audit/analytics/sites.py
+- Idea: summary.recur_* keys are kept on upsert for Bruno's recurrence model
+
+### 2026-10-24 13:56 — 2.2 closure classifier ported with negations and conditio...
+- Teammate: Carol
+- Agent:
+- Did: 2.2 closure classifier ported with negations and conditional intent
+- Why: action_tag drives what-worked and escalation; 'no violation issued' must not count as a citation
+- Where: pipeline/rat_audit/analytics/classify.py
+- Idea: Ingest strips 'Case Noted.', so generic noted closures land in closed_no_action
+
+### 2026-10-24 13:56 — 2.1 grid_cells: 250 m EPSG:26986 grid clipped to Boston t...
+- Teammate: Carol
+- Agent:
+- Did: 2.1 grid_cells: 250 m EPSG:26986 grid clipped to Boston tracts
+- Why: Forecast and findings need a fixed cell unit; ids match the model lattice (g250_col_row)
+- Where: pipeline/rat_audit/analytics/grid.py
+- Idea: Boundary = union of climate-ready-boston-svi tracts; coastline cells keep land_frac
+
+### 2026-10-24 13:46 — Analytics core (2.1-2.5, 2.7): started in isolated worktree
+- Teammate: Carol
+- Agent:
+- Did: Analytics core (2.1-2.5, 2.7): started in isolated worktree
+- Why: Carol asked for grid, closure classifier, sites, outcomes, correlations and counted costs under pipeline/rat_audit/analytics/, tested in isolation
+- Where: pipeline/rat_audit/analytics/, supabase/migrations/*_analytics_core.sql (branch feat/rat-audit-analytics-core)
+- Idea: Shared DB URL not in .env.local; write tests run on a disposable local PostGIS container
+
 ### 2026-10-24 — Integrate region outlines with the new Insight architecture
 - Teammate: Carolina
 - Agent:
