@@ -20,7 +20,7 @@ import tempfile
 import urllib.parse
 import zipfile
 
-ROOT = pathlib.Path(__file__).resolve().parents[2]
+ROOT = pathlib.Path(__file__).resolve().parents[3]
 OUT = ROOT / 'data/civic/inventory'
 CACHE = pathlib.Path(tempfile.gettempdir()) / 'hackachusetts-civic-inventory'
 BASE = 'https://hackachusetts2026.vercel.app'

@@ -15,7 +15,7 @@ import urllib.parse
 
 from audit_public_resources import get, repo
 
-ROOT = pathlib.Path(__file__).resolve().parent
+ROOT = pathlib.Path(__file__).resolve().parents[1] / 'artifacts'
 DATASETS = ["78bs-b5ig", "uz4w-baz5"]
 REPOS = ["harvardinformatics/llm-workshop-smart-rat", "ishana-s/Invasive_Rats_Refuse"]
 

@@ -13,4 +13,4 @@ Every entry identifies its source, local path, access outcome, retrieval time, a
 
 **Limits:** “Full” refers to the named file or table, not an entire government website. New raw downloads are capped at 5 MiB. Large sources use bounded previews. Licensed, blocked, private, or non-exported sources are explicitly marked; their contents are not invented. General site navigation is indexed but not recursively mirrored. See the inventory guide for the access gaps and precise crawl boundary.
 
-Use [dataset verification](07_civic_dataset_verification.md) alongside this inventory before selecting joins, date ranges, or product claims. The source archive expands what we can inspect; it does not establish causal conclusions or production integrations.
+Use [dataset verification](21_civic_dataset_verification.md) alongside this inventory before selecting joins, date ranges, or product claims. The source archive expands what we can inspect; it does not establish causal conclusions or production integrations.

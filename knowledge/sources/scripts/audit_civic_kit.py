@@ -69,6 +69,6 @@ result = {
         '311_neighborhood_exact_name_unmatched_rows': dict(unmatched),
     },
 }
-target = pathlib.Path(__file__).with_name('civic_dataset_audit.json')
+target = pathlib.Path(__file__).resolve().parents[1] / 'artifacts' / 'civic_dataset_audit.json'
 target.write_text(json.dumps(result, indent=2) + '\n')
 print(f'Wrote {target.name}: {len(datasets)} datasets, {sum(d["rows"] for d in datasets):,} rows')

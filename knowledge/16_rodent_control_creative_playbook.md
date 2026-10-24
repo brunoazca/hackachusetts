@@ -1,6 +1,6 @@
 # RodentOps and seven other tools for Boston's rat problem
 
-Research and original proposals: **October 24, 2026**. This extends the [creative atlas](09_creative_civic_opportunity_atlas.md). These are proposed products, not a selected project, validated pest-control methods, or promises of municipal adoption.
+Research and original proposals: **October 24, 2026**. This extends the [creative atlas](14_creative_civic_opportunity_atlas.md). These are proposed products, not a selected project, validated pest-control methods, or promises of municipal adoption.
 
 **Recommended tool: RodentOps. Help an environmental-services coordinator turn recurring rodent complaints into a reviewed inspection and follow-up plan.** Its central question is: *Which recurring problems need attention, what do we actually know, and what should the next inspection establish?*
 
@@ -108,7 +108,7 @@ For scheduling, use the [official waste guidance](https://www.boston.gov/trash-a
 
 **Build today:** three curated cases with paraphrased, de-identified evidence and one synthetic follow-up. No automatic re-filing or public blame rankings. Show an unknown outcome explicitly.
 
-**Proof:** verify that a closure record never becomes “rats eliminated.” This is the rodent-specific extension of RepairLedger in document 09. **V1 + V2.**
+**Proof:** verify that a closure record never becomes “rats eliminated.” This is the rodent-specific extension of RepairLedger in document 14. **V1 + V2.**
 
 ## 3. Real data and code: what we actually checked
 
@@ -182,7 +182,7 @@ Suggested work sequence:
 
 - Opened official City materials, the primary research paper, the movement review, the October 23 local hearing report, public API metadata and repository text. Bounded API requests and workshop CSV parsing are preserved in the audit; no external repository code was executed.
 - The [official Boston City Council hearing recording](https://www.youtube.com/watch?v=Fn4cGj8xxBs) was identified through the report and its metadata verified: *City Services on October 23, 2026*, Boston City Council, 2:38:34. Selected caption windows were read; audio and the complete hearing were not independently reviewed. [Caption provenance](sources/rodent_hearing_caption_audit.json) records the track hashes and inspected intervals without copying the transcript.
-- TikTok and X searches did not produce an original rodent post verified in this pass. Do not claim a social-media consensus or convert a viral allegation into a business risk score. Existing qualitative Reddit evidence is in [document 11](11_public_voices_and_competitive_gaps.md).
+- TikTok and X searches did not produce an original rodent post verified in this pass. Do not claim a social-media consensus or convert a viral allegation into a business risk score. Existing qualitative Reddit evidence is in [document 11](13_public_voices_and_competitive_gaps.md).
 - No Boston sensor API, vendor API, reliable rat-population denominator, current bin inventory or actual collection timestamp feed was established. These are potential pilot inputs, not features already connected.
 
 ### Four inspected hearing passages

@@ -64,7 +64,7 @@ challenge; they are kept zipped to avoid duplicating files.
 ## Datasets (22 verified CSVs)
 
 The earlier count of 23 was a catalog discrepancy. The table and inspected full
-track ZIP contain 22 CSV datasets; see [the verification](../../knowledge/07_civic_dataset_verification.md).
+track ZIP contain 22 CSV datasets; see [the verification](../../knowledge/21_civic_dataset_verification.md).
 
 Row counts are rows in the saved `data.csv` (the live API call usually returns only ~100 rows).
 

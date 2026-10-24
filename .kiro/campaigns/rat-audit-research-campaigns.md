@@ -1,6 +1,6 @@
 # Rat Audit research campaigns (Kiro Crew Research Lab)
 
-Prompts to run in Kiro Crew → Research Lab → New Campaign. Context for all of them: `knowledge/09_boston_rat_audit.md`.
+Prompts to run in Kiro Crew → Research Lab → New Campaign. Context for all of them: `knowledge/15_boston_rat_audit.md`.
 
 Settings for all four: **Agent (adaptive)**, max cycles **20**, parallel workers **3**, **Run unattended** on.
 
@@ -14,7 +14,7 @@ Status: written 2026-10-24, not run yet. When a campaign finishes, export its re
 
 **Research question**
 
-Using Boston open data, test at the block level (about a 100 m grid) which factors are most associated with 311 "Rodent Activity" reports in 2025–2026. Start from `knowledge/09_boston_rat_audit.md`, where the ZIP-level result is improper trash storage +0.78 and restaurants +0.41. Query data.boston.gov with `datastore_search_sql`; the portal blocks `extract` and `coalesce`, so compute those locally. Save results and code under `knowledge/sources/rats/`.
+Using Boston open data, test at the block level (about a 100 m grid) which factors are most associated with 311 "Rodent Activity" reports in 2025–2026. Start from `knowledge/15_boston_rat_audit.md`, where the ZIP-level result is improper trash storage +0.78 and restaurants +0.41. Query data.boston.gov with `datastore_search_sql`; the portal blocks `extract` and `coalesce`, so compute those locally. Save results and code under `knowledge/sources/scripts/`.
 
 **Sub-questions**
 
@@ -26,7 +26,7 @@ Using Boston open data, test at the block level (about a 100 m grid) which facto
 
 **Definition of Done**
 
-A table of each factor's block-level association with rodent reports, with sample sizes and the controls used. A short paragraph per factor saying whether it holds. Code that reproduces it. Results added to section 4 of `knowledge/09_boston_rat_audit.md`.
+A table of each factor's block-level association with rodent reports, with sample sizes and the controls used. A short paragraph per factor saying whether it holds. Code that reproduces it. Results added to section 4 of `knowledge/15_boston_rat_audit.md`.
 
 ---
 
@@ -45,7 +45,7 @@ Classify the free-text `closure_reason` of every 2025 Boston 311 "Rodent Activit
 
 **Definition of Done**
 
-A CSV of case ID, action type and cause; a table of recurrence rate by action type, with counts; 3 real example addresses with timelines (no owner names). Added to `knowledge/09_boston_rat_audit.md`.
+A CSV of case ID, action type and cause; a table of recurrence rate by action type, with counts; 3 real example addresses with timelines (no owner names). Added to `knowledge/15_boston_rat_audit.md`.
 
 ---
 
@@ -65,7 +65,7 @@ Find defensible, sourced evidence of what rats cost in Boston and similar US cit
 
 **Definition of Done**
 
-A sourced list of findings, each labeled peer-reviewed, government or industry, with a link. 3–5 numbers we can safely say in a 3-minute pitch. Added as a new section in `knowledge/09_boston_rat_audit.md`.
+A sourced list of findings, each labeled peer-reviewed, government or industry, with a link. 3–5 numbers we can safely say in a 3-minute pitch. Added as a new section in `knowledge/15_boston_rat_audit.md`.
 
 ---
 
@@ -84,4 +84,4 @@ Find the single best real Boston address for a 3-minute Rat Audit demo. It shoul
 
 **Definition of Done**
 
-One recommended address, with a timeline, an evidence list and a suggested next action, ready to put on the demo screen. No owner or person names. Saved to `knowledge/sources/rats/demo_site.md`.
+One recommended address, with a timeline, an evidence list and a suggested next action, ready to put on the demo screen. No owner or person names. Saved to `knowledge/sources/scripts/demo_site.md`.

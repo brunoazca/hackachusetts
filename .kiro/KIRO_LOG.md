@@ -421,3 +421,11 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: We must prove our Kiro usage. A living log is the proof.
 - Where: `.kiro/KIRO_LOG.md`, `.kiro/steering/kiro-log.md`
 - Idea: Read this log at the end to fill `docs/submission/kiro-usage.md`.
+
+### 2026-10-24 12:30 — Reorganized the knowledge base (full renumber)
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Renumbered all knowledge docs into clean thematic groups (00–03 competition/event, 10–18 strategy/evidence/ideas, 20–23 data/verification); fixed the duplicate `09_` collision; split `knowledge/sources/` into `scripts/` (code) and `artifacts/` (JSON/CSV outputs); removed `__pycache__`; flattened `sources/rats/` into `sources/scripts/`. Updated every cross-reference (markdown links, bare "document NN" prose, script output paths) and the two README indexes. Patched script path depths (`parents[1→2]`, `parents[2→3]`) and redirected audit outputs into `artifacts/`.
+- Why: The KB felt chaotic — gapped/duplicate numbering and research code mixed with data outputs. Guilherme asked to organize and push.
+- Where: `knowledge/*.md` (13 renamed), `knowledge/README.md`, `knowledge/sources/README.md`, `knowledge/sources/scripts/*.py`, `data/civic/CATALOG.md`, `data/civic/inventory/README.md`, `README.md`, `.kiro/steering/mcp-tools.md`, `.kiro/campaigns/rat-audit-research-campaigns.md`
+- Idea: Audit JSONs under `sources/artifacts/` keep their original doc numbers as dated evidence; re-run a script to regenerate against current filenames.

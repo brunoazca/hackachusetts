@@ -1,6 +1,6 @@
 # Public data, code and integration paths
 
-Checked **October 24, 2026**. This expands the organizer's [22 inspected starter CSVs](07_civic_dataset_verification.md). “Verified” below means a bounded public request returned inspectable data or metadata. It does not mean an app was connected, the full dataset was ingested, code was executed, or operational accuracy was established.
+Checked **October 24, 2026**. This expands the organizer's [22 inspected starter CSVs](21_civic_dataset_verification.md). “Verified” below means a bounded public request returned inspectable data or metadata. It does not mean an app was connected, the full dataset was ingested, code was executed, or operational accuracy was established.
 
 Machine-readable evidence: [public-resource audit](sources/public_resource_audit.json), [reproducible probe script](sources/audit_public_resources.py), and [flat resource inventory](sources/public_resource_inventory.csv). Requests used no credentials, normal TLS and limited response sizes. Failed attempts remain in the audit so the next builder does not repeat them.
 
@@ -71,7 +71,7 @@ GitHub metadata was checked for **21 existing repositories**, plus one incorrect
 
 ## 3. All 22 starter datasets: a deeper use and the missing connection
 
-Idea IDs refer to the [creative atlas](09_creative_civic_opportunity_atlas.md). This matrix covers all files actually audited. The mirror's earlier “23 datasets” label was a counting discrepancy, not evidence of a missing 23rd file.
+Idea IDs refer to the [creative atlas](14_creative_civic_opportunity_atlas.md). This matrix covers all files actually audited. The mirror's earlier “23 datasets” label was a counting discrepancy, not evidence of a missing 23rd file.
 
 | Starter dataset | Beyond the obvious chart | Additional data/code | Join/interpretation limit |
 |---|---|---|---|

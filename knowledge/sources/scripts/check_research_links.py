@@ -20,7 +20,7 @@ parser.add_argument('--output', default='link_audit.json', help='Output JSON fil
 args = parser.parse_args()
 if pathlib.Path(args.output).name != args.output:
     parser.error('--output must be a filename, not a path')
-root = pathlib.Path(__file__).resolve().parents[1]
+root = pathlib.Path(__file__).resolve().parents[2]
 references = collections.defaultdict(set)
 paths = sorted({path for pattern in (args.patterns or ['*.md']) for path in root.glob(pattern)})
 for path in paths:
@@ -58,6 +58,6 @@ output = {
     'status_counts': dict(collections.Counter(r['http_status'] for r in results)),
     'results': results,
 }
-target = pathlib.Path(__file__).with_name(args.output)
+target = pathlib.Path(__file__).resolve().parents[1] / 'artifacts' / args.output
 target.write_text(json.dumps(output, indent=2) + '\n')
 print(json.dumps({'checked': len(results), 'status_counts': output['status_counts']}))

@@ -7,7 +7,7 @@ This is a research and preparation brief, not an organizer-issued rulebook. The 
 ## Read these three files in this order
 
 1. This file: eligibility, required artifacts, judging, deadlines, contradictions, and submission checklist.
-2. [Civic strategy and stakeholders](02_civic_strategy_stakeholders_and_ideas.md): actual challenge directions, sponsor incentives, candidate ideas, data, and differentiation.
+2. [Civic strategy and stakeholders](12_civic_strategy_stakeholders_and_ideas.md): actual challenge directions, sponsor incentives, candidate ideas, data, and differentiation.
 3. [Past winners and patterns](03_past_winners_and_patterns.md): verified comparable winners, evidence quality, and lessons that transfer.
 
 ## 1. The decisions that matter immediately

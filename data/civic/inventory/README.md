@@ -123,10 +123,10 @@ The legacy BLS Massachusetts URL redirected to the broader OEWS tables page in t
 From the repository root, use Python 3 and curl. Download the current page and its referenced JavaScript bundle, then parse the literal catalog without executing it:
 
 ```sh
-python3 knowledge/sources/inventory_civic_portal.py --bundle /path/to/portal.js --initial
-python3 knowledge/sources/inventory_civic_portal.py --socrata data/civic/inventory/socrata_entries.json
-python3 knowledge/sources/inventory_civic_portal.py --entries data/civic/inventory/ckan_entries.json --output-name ckan_requests
-python3 knowledge/sources/build_civic_inventory.py
+python3 knowledge/sources/scripts/inventory_civic_portal.py --bundle /path/to/portal.js --initial
+python3 knowledge/sources/scripts/inventory_civic_portal.py --socrata data/civic/inventory/socrata_entries.json
+python3 knowledge/sources/scripts/inventory_civic_portal.py --entries data/civic/inventory/ckan_entries.json --output-name ckan_requests
+python3 knowledge/sources/scripts/build_civic_inventory.py
 ```
 
 Other reviewed request lists end in `_entries.json`; pass the matching `--output-name` used by the builder. Requests use a temporary URL-keyed cache; delete only that task cache or call the helper with `refresh=True` for a new observation. Optional bundled `pypdf` and `openpyxl` add PDF page counts and worksheet previews. Browser and connected-Drive observations are separately dated evidence and are not silently regenerated. No downloaded code, macros, form submissions, or live database writes are executed.

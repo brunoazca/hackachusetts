@@ -137,7 +137,7 @@ If the team keeps rodents, the fusion section below shows how concepts 3 and 4 m
 
 **Why it is new.** Meeting-summary tools exist for private meetings and for legislative tracking at the state level. A place-indexed, timestamp-linked ledger of municipal hearings for residents does not, and the same pipeline works for every Massachusetts city and town that posts recordings (most do, under the Open Meeting Law culture).
 
-**Why it fits.** Accessibility (deaf and hard-of-hearing residents get hearings as text with place filters). Civic Action's "trusted information" theme. A dramatic demo: a 158-minute video collapses into a ledger in the time it takes to say it, and every line proves itself with one click. The team already has the caption-audit tooling and the four inspected windows in document 12.
+**Why it fits.** Accessibility (deaf and hard-of-hearing residents get hearings as text with place filters). Civic Action's "trusted information" theme. A dramatic demo: a 158-minute video collapses into a ledger in the time it takes to say it, and every line proves itself with one click. The team already has the caption-audit tooling and the four inspected windows in document 16.
 
 **Honesty boundaries.** Auto-captions contain errors; the link to the moment is the trust mechanism, and the reviewer step is not optional. No sentiment scores, no "promise broken" labels; just dated statements and what the record shows later.
 
@@ -157,7 +157,7 @@ If the team keeps rodents, the fusion section below shows how concepts 3 and 4 m
 
 ## If the team stays on rodents: make RodentOps unmistakable
 
-The current direction is RodentOps, an inspection-preparation tool for an environmental-services coordinator. It is credible but, as document 12 says, at risk of looking like an internal work queue the City may already have. Two fusions make it distinctive using only data verified today:
+The current direction is RodentOps, an inspection-preparation tool for an environmental-services coordinator. It is credible but, as document 16 says, at risk of looking like an internal work queue the City may already have. Two fusions make it distinctive using only data verified today:
 
 1. **Outcome states from the real closure notes (concept 3).** 4,111 of 5,236 closed rodent cases carry no outcome language; 508 say treated/abated; 360 duplicate; 122 no violation found. Put that on the queue: the coordinator's first screen is not "most complaints" but "closed without a stated outcome and re-reported within 30 days". That is a genuinely new signal, computed from public data, and it matches what the Council was told yesterday about baselines and follow-up.
 2. **Hearing context cards (concept 4).** Beside a Jamaica Plain cluster, the three things said about Jamaica Plain at yesterday's hearing, each deep-linked to the video second. The coordinator's packet then contains complaints, outcomes, and the public record in one place.
@@ -183,7 +183,7 @@ Those two additions cost a classifier and a caption parser, both of which alread
 | CurbCheck | A vision model extracts street, number range, date and hours from three photos of your own handwritten signs, and a fetch of the lookup page for that street parses into rows | Fall back to typed sign fields plus the lookup; the verification is still the product |
 | Three Hours | A ten-segment schematic route with responsibility classes and a working deadline function on the ordinance's worked examples | Drop geography; keep the schematic and the one-tap report typing |
 | What Actually Happened | The keyword classifier over 300 sampled closure notes agrees with a human on 90%+; one closing photo described sensibly | Drop photo reading; the outcome ledger alone is a result |
-| On the Record | Captions for the Oct 23 hearing download and segment; ten extracted claims link to the right seconds | Use the four windows already audited in document 12 as the fixture |
+| On the Record | Captions for the Oct 23 hearing download and segment; ten extracted claims link to the right seconds | Use the four windows already audited in document 16 as the fixture |
 | Warrant | One real warrant PDF (Hanover or Dedham) parses into articles with page numbers | Switch to a Boston docket hearing notice (concept 4's inputs) |
 
 All five keep the team's non-negotiables: committed snapshot on the demo path, in-product citations, a human decision before any action, keyboard and screen-reader operability, root `/.kiro` with real specs, tests and steering, English description, public video under three minutes, SundAI submission by 8:00 p.m.
@@ -202,6 +202,6 @@ Build **CurbCheck**. It is the only concept here that a judge understands from a
 - Fake/unofficial sign reports: public 311 tickets at 311.boston.gov (e.g. `/tickets/101006216186`, `/tickets/BCS-00238557`)
 - Election dates: Secretary of the Commonwealth voter information booklet; WBUR Oct 14, 2026 guide; NBC Boston guide.
 - Town meetings: Hanover (Nov 9), Dedham (Nov 16), Brewster (Nov 16), Fairhaven (Nov 17) town pages.
-- Council hearing recordings: boston.gov/city-council-tv; Oct 23 City Services hearing recording verified in document 12.
+- Council hearing recordings: boston.gov/city-council-tv; Oct 23 City Services hearing recording verified in document 16.
 - Open311 probe: `mayors24.cityofboston.gov/open311/v2/services.json` → 503.
 - RentSmart dataset (PDDL, last updated July 2024): https://data.boston.gov/dataset/rentsmart

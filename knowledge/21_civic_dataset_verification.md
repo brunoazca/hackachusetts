@@ -6,7 +6,7 @@ All 22 CSVs were downloaded and parsed locally. The machine-readable [audit](sou
 
 **This verifies the delivered files, not their completeness against the original databases or live API access.** No application database or ingestion pipeline has been provisioned. The public source links and the local snapshot should be separate parts of the data contract.
 
-**Later research:** [document 10](10_public_data_and_repositories.md) verifies additional public responses, including MBTA identifiers/relationships, Cambridge ramp geometry, Bluebikes feeds, MassGIS GEOID/polygons and fuller Boston schemas. Those findings expand what a project could obtain; they do not add the omitted columns to these starter CSVs.
+**Later research:** [document 10](22_public_data_and_repositories.md) verifies additional public responses, including MBTA identifiers/relationships, Cambridge ramp geometry, Bluebikes feeds, MassGIS GEOID/polygons and fuller Boston schemas. Those findings expand what a project could obtain; they do not add the omitted columns to these starter CSVs.
 
 ## 1. Decisions the audit changes
 
@@ -123,7 +123,7 @@ For a small demo, a versioned CSV/JSON extract plus a manifest is sufficient. Da
 Download the [Civic ZIP](https://hackachusetts2026.vercel.app/kits/tracks/civic.zip) to a local path, then run from the repository root:
 
 ```bash
-python3 knowledge/sources/audit_civic_kit.py /path/to/civic.zip
+python3 knowledge/sources/scripts/audit_civic_kit.py /path/to/civic.zip
 ```
 
 The script parses CSVs in memory and records source links without executing bundled scripts. It checks blank strings and lexical date ranges, not all numeric sentinel values, duplicate semantics, licenses, source completeness, timezone interpretation, or original-system correctness. Those checks should be selected for the actual use case.

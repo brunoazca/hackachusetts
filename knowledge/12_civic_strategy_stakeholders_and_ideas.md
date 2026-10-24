@@ -6,7 +6,7 @@ Research checked: **October 24, 2026**, Eastern. Read alongside the [rules playb
 
 Build **one useful Massachusetts civic workflow with authoritative evidence, accessible interaction, a clear human decision point, and demonstrable Kiro development**. Let a judge watch a person finish a task. A broad chatbot, a map without a next action, or an unsupported claim of citywide transformation will be harder to defend.
 
-**Updated after the deeper public-data and public-voices research:** consider **Last 100 Feet** (journey barriers and repair scenarios), **ShiftFits** (program/schedule feasibility), or **OpenDoor** (conflicting service instructions and preparation). See the [15-idea atlas](09_creative_civic_opportunity_atlas.md), [verified resource catalog](10_public_data_and_repositories.md), and [public criticism/competitive landscape](11_public_voices_and_competitive_gaps.md). A neighborhood evidence brief remains a conservative fallback. These are research-based recommendations, not organizer preferences or guaranteed competitive advantage.
+**Updated after the deeper public-data and public-voices research:** consider **Last 100 Feet** (journey barriers and repair scenarios), **ShiftFits** (program/schedule feasibility), or **OpenDoor** (conflicting service instructions and preparation). See the [15-idea atlas](14_creative_civic_opportunity_atlas.md), [verified resource catalog](22_public_data_and_repositories.md), and [public criticism/competitive landscape](13_public_voices_and_competitive_gaps.md). A neighborhood evidence brief remains a conservative fallback. These are research-based recommendations, not organizer preferences or guaranteed competitive advantage.
 
 The strongest direct signals are the published rubric's community value and accessibility requirements, meaningful Kiro usage, and the civic challenge materials. Sponsorship alone is weaker evidence of what an individual judge wants. [Official rules][S1]
 
@@ -87,7 +87,7 @@ Do not claim interviews, partnerships, endorsements, paid pilots, or measured im
 
 Boston's website exposes AI-assisted search. Its Emerging Technology portfolio includes translation, community engagement, transportation and city-data applications. The CityOfBoston GitHub organization hosts **OpenContext**, with an MIT license and documentation for connecting civic data to AI tooling. [S7][S15]
 
-**Freshness update, October 24:** a February 2 [WBZ interview](https://wbznewsradio.iheart.com/content/ai-beta-looks-to-simplify-boston-permitting-process/) described a City AI beta organized around applicants' tasks. On October 21, the City [launched Coastmix](https://www.boston.gov/news/city-boston-launches-coastmix) for coastal-resilience education and community design. These existing products raise the bar for a generic permit chatbot or flood-design interface. Current City leadership also includes CIO Shin-pei Tsay, announced August 13, and Economic Development Chief Emily Knight, with an announced October 19 start; see the [dated stakeholder update](04_recent_boston_priorities_and_data_opportunities.md#3-current-stakeholders-and-what-the-evidence-suggests).
+**Freshness update, October 24:** a February 2 [WBZ interview](https://wbznewsradio.iheart.com/content/ai-beta-looks-to-simplify-boston-permitting-process/) described a City AI beta organized around applicants' tasks. On October 21, the City [launched Coastmix](https://www.boston.gov/news/city-boston-launches-coastmix) for coastal-resilience education and community design. These existing products raise the bar for a generic permit chatbot or flood-design interface. Current City leadership also includes CIO Shin-pei Tsay, announced August 13, and Economic Development Chief Emily Knight, with an announced October 19 start; see the [dated stakeholder update](10_boston_priorities_and_opportunities.md#3-current-stakeholders-and-what-the-evidence-suggests).
 
 **Our implication:** a generic Boston chatbot is a weak differentiation claim. Pick a completion gap: resolving jurisdiction, assembling a checklist, making output accessible, comparing options, showing evidence freshness, or producing a staff-review packet. OpenContext may be an integration/reference; it is not proof that every needed dataset or write API is available.
 
@@ -111,7 +111,7 @@ Accessibility is in the judging rubric. The portal links a resource sheet contai
 
 ## 6. Candidate ideas and tradeoffs
 
-These earlier concepts remain useful foundations. The [expanded atlas](09_creative_civic_opportunity_atlas.md#how-the-earlier-ideas-evolve) maps each to more distinctive directions and supersedes their earlier ranking. They are original proposals informed by the sources, not official prompts or existing winners. Feasibility assumes a team that can already build a small web app; no numerical win probability is implied.
+These earlier concepts remain useful foundations. The [expanded atlas](14_creative_civic_opportunity_atlas.md#how-the-earlier-ideas-evolve) maps each to more distinctive directions and supersedes their earlier ranking. They are original proposals informed by the sources, not official prompts or existing winners. Feasibility assumes a team that can already build a small web app; no numerical win probability is implied.
 
 | Concept | Beneficiary and finished task | Potential strength | Main limitation | Build outlook |
 |---|---|---|---|---|
@@ -151,7 +151,7 @@ These earlier concepts remain useful foundations. The [expanded atlas](09_creati
 
 **Minimum flow:** choose service category and area → compare documented request volumes/statuses → inspect source rows and sampling limits → generate a plain-language brief for a staff reviewer.
 
-Use the portal's 311 snapshot and its published query. The displayed selected fields include opening date, category, department, status, neighborhood, ZIP and on-time flag. **They do not include closure time, precise location, free-text narrative, or a stable case identifier in that shown query.** Therefore the starter alone does not support reliable resolution-time analysis, text clustering, or exact duplicate detection. The subsequent [ZIP audit](07_civic_dataset_verification.md) confirmed these omissions and a 5,000-row October 8–18 extract. [S2]
+Use the portal's 311 snapshot and its published query. The displayed selected fields include opening date, category, department, status, neighborhood, ZIP and on-time flag. **They do not include closure time, precise location, free-text narrative, or a stable case identifier in that shown query.** Therefore the starter alone does not support reliable resolution-time analysis, text clustering, or exact duplicate detection. The subsequent [ZIP audit](21_civic_dataset_verification.md) confirmed these omissions and a 5,000-row October 8–18 extract. [S2]
 
 The page labels the saved 311 extract as 5,000 rows while its preview references a larger underlying case universe. Do not label the extract “all Boston complaints.” Request counts measure reporting, not unmet need. Neighborhood comparisons need denominators and compatible geography; demographic correlations are not evidence of an individual person's needs or of causal discrimination.
 
@@ -188,7 +188,7 @@ Prefer the concept for which the team can produce the strongest evidence today. 
 
 ## 8. Data and source inventory
 
-The [Civic portal][S2] advertises a **3.3 MB Civic starter ZIP** and 22 downloadable dataset previews. The catalog table below records the initial portal review. A subsequent [direct audit of all 22 CSVs](07_civic_dataset_verification.md) checked row counts, columns, missingness, dates and selected joins. Use that audit for observed file contents; catalog descriptions do not establish live database completeness. Saved tables are labeled October 18, 2026; each dataset has its own underlying vintage. Included fetch scripts were not executed.
+The [Civic portal][S2] advertises a **3.3 MB Civic starter ZIP** and 22 downloadable dataset previews. The catalog table below records the initial portal review. A subsequent [direct audit of all 22 CSVs](21_civic_dataset_verification.md) checked row counts, columns, missingness, dates and selected joins. Use that audit for observed file contents; catalog descriptions do not establish live database completeness. Saved tables are labeled October 18, 2026; each dataset has its own underlying vintage. Included fetch scripts were not executed.
 
 [Download the organizer-linked Civic starter ZIP](https://hackachusetts2026.vercel.app/kits/tracks/civic.zip).
 

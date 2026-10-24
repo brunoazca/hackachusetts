@@ -1,6 +1,6 @@
 # Hackachusetts preparation — Past winners, highlights, and transferable patterns
 
-Research checked: **October 24, 2026**, Eastern. Companion documents: [rules and judging](01_rules_judging_and_event_playbook.md) and [Civic strategy](02_civic_strategy_stakeholders_and_ideas.md).
+Research checked: **October 24, 2026**, Eastern. Companion documents: [rules and judging](01_rules_judging_and_event_playbook.md) and [Civic strategy](12_civic_strategy_stakeholders_and_ideas.md).
 
 ## 1. What this evidence can establish
 
@@ -96,13 +96,13 @@ The current challenge portal links a document titled for a **September 28, 2025 
 
 Boston's Emerging Technology page and OpenContext repository are useful references for an adoption-minded Civic project. **They are not listed here as hackathon winners.** They establish that existing public infrastructure should be understood before claiming novelty. [Boston portfolio][W14], [OpenContext][W15]
 
-The detailed competitive implications are in [the Civic strategy brief](02_civic_strategy_stakeholders_and_ideas.md). Present an improvement over an existing task flow, not the unsupported claim that no civic AI or service-navigation tools exist.
+The detailed competitive implications are in [the Civic strategy brief](12_civic_strategy_stakeholders_and_ideas.md). Present an improvement over an existing task flow, not the unsupported claim that no civic AI or service-navigation tools exist.
 
 ### Boston Innovation Expo 2026: City awards with direct Civic relevance
 
 Boston also published its own municipal award winners: **311 Help Center** (People’s Choice), **Mapping Disability Access in Boston** (Cross-Departmental Collaboration), **Lessons from BidBot** (Rising Innovation), and **New Algorithms for Old Mattresses** (Public Impact). These are City Expo awards, not Hackachusetts competition wins. [Official City award list](https://www.boston.gov/news/winners-innovation-expo-2026).
 
-The follow-up inspected the project posters, the short captioned award promo, and a research abstract describing BidBot’s randomized employee evaluation. See [the detailed findings and numerical-claim limits](06_deep_evidence_transcripts_and_city_priorities.md#4-what-boston-itself-recognized-four-actual-city-award-winners). The useful pattern is a specific public-service improvement with inspectable evidence. Awards alone still do not explain an individual judge’s reasoning.
+The follow-up inspected the project posters, the short captioned award promo, and a research abstract describing BidBot’s randomized employee evaluation. See [the detailed findings and numerical-claim limits](11_deep_evidence_and_city_priorities.md#4-what-boston-itself-recognized-four-actual-city-award-winners). The useful pattern is a specific public-service improvement with inspectable evidence. Awards alone still do not explain an individual judge’s reasoning.
 
 ## 7. Patterns worth adopting — and their limits
 

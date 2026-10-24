@@ -1,6 +1,6 @@
 # Beyond a civic chatbot: 15 buildable experiments
 
-Research and proposals: **October 24, 2026**. Read with the [resource catalog](10_public_data_and_repositories.md), [public voices and competing products](11_public_voices_and_competitive_gaps.md), and [official rubric](01_rules_judging_and_event_playbook.md). These are original product proposals, not official challenge requirements, secured partnerships, or predictions of winning.
+Research and proposals: **October 24, 2026**. Read with the [resource catalog](22_public_data_and_repositories.md), [public voices and competing products](13_public_voices_and_competitive_gaps.md), and [official rubric](01_rules_judging_and_event_playbook.md). These are original product proposals, not official challenge requirements, secured partnerships, or predictions of winning.
 
 ## The creative direction
 
@@ -10,7 +10,7 @@ The strongest demo is a small, manipulable model of one of these gaps. Change an
 
 This broadens the earlier conservative shortlist. **BlockBrief remains the fallback with the fewest data dependencies. It is no longer the default recommendation when originality is the priority.**
 
-**Topic expansion:** [document 12](12_rodent_control_creative_playbook.md) adds eight rodent-control concepts. RodentOps turns recurring complaints into a reviewed inspection and follow-up brief; other ideas address container geometry, repair evidence, observation gaps and intervention evaluation. Real Boston/Cambridge records and selected October 23 hearing captions support the research. The 15 concepts below remain the broader atlas.
+**Topic expansion:** [document 12](16_rodent_control_creative_playbook.md) adds eight rodent-control concepts. RodentOps turns recurring complaints into a reviewed inspection and follow-up brief; other ideas address container geometry, repair evidence, observation gaps and intervention evaluation. Real Boston/Cambridge records and selected October 23 hearing captions support the research. The 15 concepts below remain the broader atlas.
 
 ## First choices
 
@@ -32,7 +32,7 @@ Pick **one**. The larger vision is a possible follow-on pilot. The day-of demons
 
 **Build today:** one Cambridge corridor, approximately 12–20 manually checked segments, two destinations, one official alert and one explicitly simulated closure. Export a short verification/repair brief. A schematic graph is enough if a fully connected map would consume the day.
 
-**Building blocks:** [Cambridge ramp data](https://www.cambridgema.gov/gis/gisdatadictionary/dpw/dpw_pedestrianramps), MBTA facilities/alerts, campus points; [AccessMap Beyond the Curb](https://github.com/TaskarCenterAtUW/AccessMapBeyondTheCurb) and [Project Sidewalk](https://github.com/ProjectSidewalk/SidewalkWebpage) are precedents. The [catalog](10_public_data_and_repositories.md) records actual downloaded schemas. Add verified pedestrian connections; proximity alone is not connectivity.
+**Building blocks:** [Cambridge ramp data](https://www.cambridgema.gov/gis/gisdatadictionary/dpw/dpw_pedestrianramps), MBTA facilities/alerts, campus points; [AccessMap Beyond the Curb](https://github.com/TaskarCenterAtUW/AccessMapBeyondTheCurb) and [Project Sidewalk](https://github.com/ProjectSidewalk/SidewalkWebpage) are precedents. The [catalog](22_public_data_and_repositories.md) records actual downloaded schemas. Add verified pedestrian connections; proximity alone is not connectivity.
 
 **AI and proof:** extract relevant alert clauses and explain the broken chain with citations. Check graph results by hand, include an unknown segment, and test the keyboard journey. Proposed pilot owners: campus accessibility staff and a municipal accessibility team.
 

@@ -1,6 +1,6 @@
 # Deeper evidence: City priorities, recordings, awards, and existing products
 
-Checked **October 24, 2026, Eastern Time**. This expands [the current-priorities brief](04_recent_boston_priorities_and_data_opportunities.md) and [past winners](03_past_winners_and_patterns.md). Actual starter-file findings are in [the dataset audit](07_civic_dataset_verification.md).
+Checked **October 24, 2026, Eastern Time**. This expands [the current-priorities brief](10_boston_priorities_and_opportunities.md) and [past winners](03_past_winners_and_patterns.md). Actual starter-file findings are in [the dataset audit](21_civic_dataset_verification.md).
 
 ## 1. What changed after deeper research
 
@@ -12,7 +12,7 @@ The research now includes three captioned recordings, the City's 34-page Expo po
 
 ## 2. Freshest additions: October 23 and October 22
 
-These items supplement the October 19–21 announcements in document 04. “Latest” means the newest relevant material located in this targeted search, not an exhaustive inventory of every post.
+These items supplement the October 19–21 announcements in document 10. “Latest” means the newest relevant material located in this targeted search, not an exhaustive inventory of every post.
 
 | Date | Primary evidence and issue | Feasible connection | Boundary |
 |---|---|---|---|
@@ -28,7 +28,7 @@ These items supplement the October 19–21 announcements in document 04. “Late
 
 An [OpenTowns AI-generated summary/transcript listing][R7] exists for the October 23 rodent hearing. The initial pass could not reliably retrieve its full transcript or review the underlying recording. Its claims remain unverified by that summary alone. The [official notice][R2] establishes docket, sponsors and announced subject.
 
-**Subsequent October 24 research:** the [rodent playbook](12_rodent_control_creative_playbook.md#four-inspected-hearing-passages) identifies the official Boston City Council recording and four inspected caption windows: coordination/existing tools, baseline/comparison-site evaluation, resident concerns about overnight waste exposure, and contractor feasibility. This is selected caption review, not a complete hearing or independent audio transcription. The associated provenance audit records hashes and intervals. It does not verify every claim in the automated summary or establish the hearing's final decisions.
+**Subsequent October 24 research:** the [rodent playbook](16_rodent_control_creative_playbook.md#four-inspected-hearing-passages) identifies the official Boston City Council recording and four inspected caption windows: coordination/existing tools, baseline/comparison-site evaluation, resident concerns about overnight waste exposure, and contractor feasibility. This is selected caption review, not a complete hearing or independent audio transcription. The associated provenance audit records hashes and intervals. It does not verify every claim in the automated summary or establish the hearing's final decisions.
 
 This is still a useful product hypothesis: distinguish a case's administrative closure from a resident-confirmed resolution. The supplied CSV cannot establish the latter. A demo can show that limitation and prepare questions; it cannot diagnose municipal performance from a ten-day slice.
 

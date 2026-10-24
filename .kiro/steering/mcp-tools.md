@@ -13,7 +13,7 @@ Open Kiro at the repo root: server paths are relative to it.
 | `civic-snapshots` | SQL over the 22 committed CSVs in `data/civic/datasets/` (tables like `boston_311`, `vision_zero`). First stop for any number the demo shows. | Snapshot (2026-10-18), offline |
 | `boston-opendata` | City of Boston's own **OpenContext** MCP (CKAN plugin) on data.boston.gov: find datasets, schemas, run SQL on full tables | Live |
 | `massgis` | Same OpenContext code, ArcGIS plugin, on gis.data.mass.gov: EJ areas, flood zones, transit, campuses | Live |
-| `cambridge-opendata`, `somerville-opendata` | OpenContext Socrata plugin on data.cambridgema.gov / data.somervillema.gov. Needs `SOCRATA_APP_TOKEN` in `.env.local` (git-ignored); skipped without it. Sources and setup: `knowledge/live_data_sources.md` | Live |
+| `cambridge-opendata`, `somerville-opendata` | OpenContext Socrata plugin on data.cambridgema.gov / data.somervillema.gov. Needs `SOCRATA_APP_TOKEN` in `.env.local` (git-ignored); skipped without it. Sources and setup: `knowledge/23_live_data_sources.md` | Live |
 | `mbta` | MBTA V3: current alerts, routes, stops with wheelchair status, elevators/escalators | Live |
 | `aws-docs` | AWS documentation (Bedrock, Amplify, Lambda) when we deploy or call a model | Live |
 | `playwright` | Drive the running app: click through the demo path, accessibility snapshot, screenshots | Local |

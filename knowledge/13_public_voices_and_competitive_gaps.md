@@ -1,6 +1,6 @@
 # What people struggle with—and what already exists
 
-Checked **October 24, 2026**. This brief puts City priorities alongside public criticism, positive experiences, provider information and competing products. It informs the [15 proposed experiments](09_creative_civic_opportunity_atlas.md); it does not establish a representative opinion poll, a secret judging preference, or a partnership.
+Checked **October 24, 2026**. This brief puts City priorities alongside public criticism, positive experiences, provider information and competing products. It informs the [15 proposed experiments](14_creative_civic_opportunity_atlas.md); it does not establish a representative opinion poll, a secret judging preference, or a partnership.
 
 ## 1. The useful tension
 
@@ -10,7 +10,7 @@ City announcements emphasize accessible services, housing, transportation, resil
 
 ## 2. Dated institutional signals
 
-These extend the [October City-priorities brief](04_recent_boston_priorities_and_data_opportunities.md) and [transcript/source review](06_deep_evidence_transcripts_and_city_priorities.md). They are the most recent relevant items found in this research, not a claim to have exhaustively searched every channel.
+These extend the [October City-priorities brief](10_boston_priorities_and_opportunities.md) and [transcript/source review](11_deep_evidence_and_city_priorities.md). They are the most recent relevant items found in this research, not a claim to have exhaustively searched every channel.
 
 | Date and evidence | What it supports | Product implication—our inference |
 |---|---|---|
@@ -23,7 +23,7 @@ These extend the [October City-priorities brief](04_recent_boston_priorities_and
 | **Report dated Feb; published June 2026:** [Massachusetts youth employment report](https://www.mass.gov/doc/2026-barriers-to-employment-report/download) | State analysis discusses transport, caregiving, disability-related barriers and regional variation | ShiftFits can test an actual constraint rather than merely recommend an occupation. Reviewed PDF cover, executive summary and relevant sections; not a new October interview |
 | **Current Fall 2026 provider page:** [UMass Boston pantry](https://www.umb.edu/campus-life/current-students/u-access/food-pantry/) | Published hours and provider intake instructions are available | A resource can be discoverable while a student's schedule or an instruction conflict still prevents a useful visit |
 
-The Mayor's October 1 WBUR interview, October 19 schools speech, October 20 workforce announcement, digital-equity work, and current leadership changes remain in documents 04/06. Their access and transcript limitations still apply. Sponsor interests and confirmed event roles remain in document 02; the sources here do not add judges to the roster.
+The Mayor's October 1 WBUR interview, October 19 schools speech, October 20 workforce announcement, digital-equity work, and current leadership changes remain in documents 10/11. Their access and transcript limitations still apply. Sponsor interests and confirmed event roles remain in document 12; the sources here do not add judges to the roster.
 
 ## 3. Public voices: the claim, counterevidence, and a better product question
 
@@ -69,7 +69,7 @@ The Mayor's October 1 WBUR interview, October 19 schools speech, October 20 work
 
 **Product question:** did an action resolve the original issue, create a different obstacle, or require another owner? RepairLedger can make that visible. The starter's waste categories cannot establish rodent prevalence; no literal “rodent” rows were found in its audited keyword check.
 
-**October 24 follow-up:** [document 12](12_rodent_control_creative_playbook.md) adds the October 23 local hearing report and selected captions from the official recording. It also records the City's existing baseline/comparison-site work, preventing a misleading claim that evaluation is absent. The larger Boston 2026 source contains an exact Rodent Activity category; Cambridge offers separate smart-device and sighting data. These expand the evidence without turning self-selected reports into a population estimate.
+**October 24 follow-up:** [document 12](16_rodent_control_creative_playbook.md) adds the October 23 local hearing report and selected captions from the official recording. It also records the City's existing baseline/comparison-site work, preventing a misleading claim that evaluation is absent. The larger Boston 2026 source contains an exact Rodent Activity category; Cambridge offers separate smart-device and sighting data. These expand the evidence without turning self-selected reports into a population estimate.
 
 ### Campus support: conflicting information is a real demonstration fixture
 
@@ -102,7 +102,7 @@ Vendor descriptions establish advertised capabilities, not independently verifie
 | Provider-owned pantry operations | [UMass Boston / PantrySoft link](https://www.umb.edu/campus-life/current-students/u-access/food-pantry/) | Preparation before using the official system; do not replace stock, ordering or eligibility operations |
 | Accessible pedestrian/entrance mapping | [AccessMap](https://github.com/AccessMap/accessmap), [Beyond the Curb](https://github.com/TaskarCenterAtUW/AccessMapBeyondTheCurb), [Project Sidewalk](https://github.com/ProjectSidewalk/SidewalkWebpage) | Local evidence connections and repair counterfactuals; no claim of inventing accessible routing |
 | Street/coastal co-design | [Streetmix](https://github.com/streetmix/streetmix), [Coastmix](https://github.com/OETBoston/Coastmix) | Evidence-linked tradeoffs or preparedness dependencies, with proper attribution |
-| Boston youth-resource search | [existing City evidence in document 06](06_deep_evidence_transcripts_and_city_priorities.md) | Actual reachability, schedule fit and completion; another general youth-resource chatbot needs stronger differentiation |
+| Boston youth-resource search | [existing City evidence in document 06](11_deep_evidence_and_city_priorities.md) | Actual reachability, schedule fit and completion; another general youth-resource chatbot needs stronger differentiation |
 
 Curb Lab's announcement names Cambridge Systematics, Stamen Design, CurbIQ/Arcadis, UrbanismNext and the Open Mobility Foundation's SMART Curb Collaborative as external partners. These are **Curb Lab relationships**, not newly confirmed Hackachusetts sponsors, judges or accessible APIs. Their presence suggests a mature domain with existing work to understand.
 
@@ -134,7 +134,7 @@ The safest strategic bet is a demo that would still be useful if no sponsor or o
 | X / Twitter | Targeted Boston 311 and MBTA accessibility searches yielded sparse or irrelevant indexed material | No specific X post was accepted as verified evidence; no claim to comprehensive recent coverage |
 | Professional social posts | Indexed Michael Lawrence Evans profile material pointed toward OETBoston's repositories | Repository existence was checked directly. Undated indexed text was not treated as a newly dated policy announcement |
 | News interviews / testimony | Read GBH reporting and its attributed statements, plus institutional research and provider pages | Distinguish reported speech from a recording personally reviewed |
-| Earlier video/caption work | Document 06 retains timestamped caption reviews and their stated limits | This expansion does not reclassify an unreviewed recording as transcribed |
+| Earlier video/caption work | Document 11 retains timestamped caption reviews and their stated limits | This expansion does not reclassify an unreviewed recording as transcribed |
 
 A blocked channel is a research gap, not evidence that its users have no complaints. If the team later obtains a specific public video/post, preserve the URL, date, speaker/context, what was actually reviewed, and any conflicting evidence. Do not invent transcripts from summaries.
 

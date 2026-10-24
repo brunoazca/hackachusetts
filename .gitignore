@@ -30,3 +30,7 @@ coverage/
 
 # Kiro local settings (keep steering/specs/hooks/agents; ignore local locks)
 .kiro/settings/.kirocrew-cli-settings.lock
+
+# Python bytecode
+__pycache__/
+*.pyc

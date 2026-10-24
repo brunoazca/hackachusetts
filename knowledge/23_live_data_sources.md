@@ -43,6 +43,19 @@ of Boston DoIT), pinned to commit `5549481a`, through our stdio bridge
 - A Socrata **API key ID/secret** is a different, stronger credential (it acts
   as your account). We do not need it. Do not store it here.
 
+### Guards that keep secrets out of the public repo
+
+| Guard | What it does | Where |
+|---|---|---|
+| Secret scanner | Flags `.env.local` values and common credential formats in tracked files; never prints the value | `.kiro/scripts/scan_secrets.py` |
+| Kiro hook | Runs the scanner when code, docs, data or `.kiro/` change | `.kiro/hooks/secret-scan.kiro.hook` |
+| Git pre-commit | Blocks a commit with a finding or with `.env.local` staged. Enable once: `git config core.hooksPath .githooks` | `.githooks/pre-commit` |
+| Audit-log sanitizer | The raw Kiro Crew audit log covers the whole machine and can contain secrets; we publish only this repo's entries, no outputs, redacted | `.kiro/audit/sanitize_audit_log.py` (run by `sync-audit-log.sh`) |
+| Readiness check | Fails while any of the above is red | `.kiro/scripts/check_submission_ready.py` |
+
+Presigned S3 links from data.boston.gov contain `X-Amz-Credential=AKIA…`. That
+is a public key ID with an expiring signature, not a secret; the scanner skips it.
+
 ## Limits to remember
 
 - Live data is untrusted input and can change during the day. Label anything

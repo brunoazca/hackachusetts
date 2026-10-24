@@ -382,12 +382,12 @@ def main():
         '## Reproduce','',
         'From the repository root, use Python 3 and curl. Download the current page and its referenced JavaScript bundle, then parse the literal catalog without executing it:','',
         '```sh','python3 knowledge/sources/inventory_civic_portal.py --bundle /path/to/portal.js --initial',
-        'python3 knowledge/sources/inventory_civic_portal.py --socrata data/civic/inventory/socrata_entries.json',
-        'python3 knowledge/sources/inventory_civic_portal.py --entries data/civic/inventory/ckan_entries.json --output-name ckan_requests',
-        'python3 knowledge/sources/build_civic_inventory.py','```','',
+        'python3 knowledge/sources/scripts/inventory_civic_portal.py --socrata data/civic/inventory/socrata_entries.json',
+        'python3 knowledge/sources/scripts/inventory_civic_portal.py --entries data/civic/inventory/ckan_entries.json --output-name ckan_requests',
+        'python3 knowledge/sources/scripts/build_civic_inventory.py','```','',
         'Other reviewed request lists end in `_entries.json`; pass the matching `--output-name` used by the builder. Requests use a temporary URL-keyed cache; delete only that task cache or call the helper with `refresh=True` for a new observation. Optional bundled `pypdf` and `openpyxl` add PDF page counts and worksheet previews. Browser and connected-Drive observations are separately dated evidence and are not silently regenerated. No downloaded code, macros, form submissions, or live database writes are executed.','']
     (OUT/'README.md').write_text('\n'.join(guide))
-    knowledge=ROOT/'knowledge/CIVIC_INVENTORY.md'
+    knowledge=ROOT/'knowledge/20_civic_source_inventory.md'
     knowledge.write_text('# Civic knowledge base: complete source inventory\n\n'
         'Captured **October 24, 2026**. Start with the [inventory guide](../data/civic/inventory/README.md) or [searchable offline catalog](../data/civic/inventory/index.html).\n\n'
         f"- **74 Civic resources** cataloged with an access attempt for each, including all **22 full starter CSVs** ({stats['starter_rows']:,} rows).\n"
@@ -398,7 +398,7 @@ def main():
         '- Both supplementary Google Docs were read, their **40 distinct document links** enumerated (12 accessibility + 28 crash-background), and **11 tabs** across the linked crash-analysis spreadsheets captured fully or as previews.\n\n'
         'Every entry identifies its source, local path, access outcome, retrieval time, and whether the local content is full or sampled. The [manifest](../data/civic/inventory/manifest.json) and [file inventory](../data/civic/inventory/file_inventory.json) expose exact schemas, counts, hashes, PDF pages, and workbook tabs.\n\n'
         '**Limits:** “Full” refers to the named file or table, not an entire government website. New raw downloads are capped at 5 MiB. Large sources use bounded previews. Licensed, blocked, private, or non-exported sources are explicitly marked; their contents are not invented. General site navigation is indexed but not recursively mirrored. See the inventory guide for the access gaps and precise crawl boundary.\n\n'
-        'Use [dataset verification](07_civic_dataset_verification.md) alongside this inventory before selecting joins, date ranges, or product claims. The source archive expands what we can inspect; it does not establish causal conclusions or production integrations.\n')
+        'Use [dataset verification](21_civic_dataset_verification.md) alongside this inventory before selecting joins, date ranges, or product claims. The source archive expands what we can inspect; it does not establish causal conclusions or production integrations.\n')
     # All retained response files and manually captured connector files get a checksum register.
     checksums={str(p.relative_to(ROOT)):digest(p.read_bytes()) for directory in ['responses','downloads','metadata','previews'] for p in (OUT/directory).glob('*') if p.is_file()}
     save_json(OUT/'checksums.json',checksums)

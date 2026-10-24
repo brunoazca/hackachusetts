@@ -16,7 +16,7 @@ import pathlib
 import subprocess
 import tempfile
 
-ROOT = pathlib.Path(__file__).resolve().parent
+ROOT = pathlib.Path(__file__).resolve().parents[1] / 'artifacts'
 REPOS = [
     'CityOfBoston/OpenContext', 'OETBoston/Coastmix',
     'transitmatters/t-performance-dash', 'AccessMap/accessmap',

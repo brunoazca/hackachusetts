@@ -1,10 +1,10 @@
 # What we should build: creative choices and fallback scopes
 
-Prepared October 24, 2026. This is a recommendation, **not a team decision or implementation claim**. It synthesizes [the rules](01_rules_judging_and_event_playbook.md), [winner patterns](03_past_winners_and_patterns.md), [recent City evidence](06_deep_evidence_transcripts_and_city_priorities.md), and [dataset verification](07_civic_dataset_verification.md).
+Prepared October 24, 2026. This is a recommendation, **not a team decision or implementation claim**. It synthesizes [the rules](01_rules_judging_and_event_playbook.md), [winner patterns](03_past_winners_and_patterns.md), [recent City evidence](11_deep_evidence_and_city_priorities.md), and [dataset verification](21_civic_dataset_verification.md).
 
 ## Updated recommendation after the deeper research
 
-**For originality, start with Last 100 Feet, ShiftFits, or OpenDoor.** The [15-idea atlas](09_creative_civic_opportunity_atlas.md) supersedes this document's earlier default recommendation of BlockBrief. It adds real public-data/code connections and checks proposed novelty against existing products.
+**For originality, start with Last 100 Feet, ShiftFits, or OpenDoor.** The [15-idea atlas](14_creative_civic_opportunity_atlas.md) supersedes this document's earlier default recommendation of BlockBrief. It adds real public-data/code connections and checks proposed novelty against existing products.
 
 | Choose | Demonstrate | First dependency to prove |
 |---|---|---|
@@ -12,9 +12,9 @@ Prepared October 24, 2026. This is a recommendation, **not a team decision or im
 | **ShiftFits** | A training option fails a person's schedule; one changed condition makes it feasible | Three real program schedules and a bounded travel assumption |
 | **OpenDoor** | Conflicting resource instructions become a reviewed, source-linked preparation card | One actual source conflict; UMass Boston pantry pages provide a candidate |
 | **CityHandshake** | A resident keeps one factual receipt through an uncertain agency handoff | Responsibility sources for three curated examples |
-| **RodentOps — rodent-control tool** | Recurring reports become an evidence-linked inspection and follow-up brief | Three manually reviewed evidence groups and a demonstrably useful inspection packet; see [document 12](12_rodent_control_creative_playbook.md) |
+| **RodentOps — rodent-control tool** | Recurring reports become an evidence-linked inspection and follow-up brief | Three manually reviewed evidence groups and a demonstrably useful inspection packet; see [document 12](16_rodent_control_creative_playbook.md) |
 
-The [data/repository catalog](10_public_data_and_repositories.md) supplies concrete inputs; the [public-voices brief](11_public_voices_and_competitive_gaps.md) explains the reported problems and existing alternatives. These are research recommendations, not a team decision. Choose one concept and prove its hardest dependency in the first 20 minutes.
+The [data/repository catalog](22_public_data_and_repositories.md) supplies concrete inputs; the [public-voices brief](13_public_voices_and_competitive_gaps.md) explains the reported problems and existing alternatives. These are research recommendations, not a team decision. Choose one concept and prove its hardest dependency in the first 20 minutes.
 
 **BlockBrief remains the conservative fallback** for the strongest connection to already committed data. Notice to Action and MoveReady remain bounded alternatives below. Each can also become a component of a more distinctive concept.
 
@@ -68,7 +68,7 @@ The shared strategy is one person completing one useful task, with evidence they
 
 **Creative feature:** explain which input changed the checklist and why. Unsupported jurisdiction or uncertain applicability produces a useful official handoff.
 
-**Data:** a small, verified set of current official service pages linked in document 02. The supplied building-permit CSV is not a parking-permit database. Requirements and dates must be checked before they become executable rules.
+**Data:** a small, verified set of current official service pages linked in document 12. The supplied building-permit CSV is not a parking-permit database. Requirements and dates must be checked before they become executable rules.
 
 **AI role:** interpret the user's situation and explain the checklist. Keep date calculations and verified conditions in code.
 

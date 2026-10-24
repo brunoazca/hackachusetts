@@ -1,14 +1,14 @@
 # Boston's recent priorities → Civic project and data opportunities
 
-Research cutoff: **October 24, 2026, Eastern Time.** Prepared for Hackachusetts Civic Action. Read alongside the [event/rules playbook](01_rules_judging_and_event_playbook.md), [stakeholders and full dataset inventory](02_civic_strategy_stakeholders_and_ideas.md), and [past winners](03_past_winners_and_patterns.md).
+Research cutoff: **October 24, 2026, Eastern Time.** Prepared for Hackachusetts Civic Action. Read alongside the [event/rules playbook](01_rules_judging_and_event_playbook.md), [stakeholders and full dataset inventory](12_civic_strategy_stakeholders_and_ideas.md), and [past winners](03_past_winners_and_patterns.md).
 
 This brief connects public statements by Boston City Hall, agencies, community partners, and event stakeholders to feasible uses of the hackathon datasets. **Yes, this is a useful way to choose the project:** identify a documented problem, check whether the data can answer it, and demonstrate a useful next action. Public priorities are evidence of relevance, not proof of judges' private preferences or an endorsement.
 
-**Deeper follow-up:** [document 06](06_deep_evidence_transcripts_and_city_priorities.md) adds October 23 City statements, timestamped caption reviews, municipal award winners and existing-product checks. [Document 07](07_civic_dataset_verification.md) directly audits all 22 starter CSVs. The later [creative atlas](09_creative_civic_opportunity_atlas.md), [public-resource catalog](10_public_data_and_repositories.md), and [resident/competitive evidence](11_public_voices_and_competitive_gaps.md) broaden the options and supersede the earlier conservative ranking below.
+**Deeper follow-up:** [document 06](11_deep_evidence_and_city_priorities.md) adds October 23 City statements, timestamped caption reviews, municipal award winners and existing-product checks. [Document 07](21_civic_dataset_verification.md) directly audits all 22 starter CSVs. The later [creative atlas](14_creative_civic_opportunity_atlas.md), [public-resource catalog](22_public_data_and_repositories.md), and [resident/competitive evidence](13_public_voices_and_competitive_gaps.md) broaden the options and supersede the earlier conservative ranking below.
 
 ## 1. Decision first
 
-**Conservative fallback using only supplied data: a neighborhood service evidence-to-action workflow.** Use a defined 311 time window to help a resident organization or staff reviewer understand one service category, inspect the supporting records/aggregates, and prepare a sourced follow-up brief. The newer recommendation for originality is Last 100 Feet, ShiftFits or OpenDoor, after proving the required dependency. See [the updated decision guide](08_idea_shortlist_and_build_recommendation.md).
+**Conservative fallback using only supplied data: a neighborhood service evidence-to-action workflow.** Use a defined 311 time window to help a resident organization or staff reviewer understand one service category, inspect the supporting records/aggregates, and prepare a sourced follow-up brief. The newer recommendation for originality is Last 100 Feet, ShiftFits or OpenDoor, after proving the required dependency. See [the updated decision guide](18_idea_shortlist_and_build_recommendation.md).
 
 **Strong alternative: transit access to one essential destination.** A resident sees relevant disruptions and official next steps for reaching a campus, training provider, or civic service. This connects to recent transportation and workforce priorities. Choose it only if route/stop coverage and current feeds can be validated; the starter rail-route query is not an all-transit dataset.
 
@@ -37,7 +37,7 @@ This is a targeted research set, not a claim to have captured every social post 
 ### Interview/watch list, with verification limits
 
 1. **Start with the October 1 Wu interview:** [Boston Mayor Michelle Wu's strategy for AI][N7]. The page provides a 4:25 audio segment. This research reviewed its accompanying text, **not an audio transcript**; do not invent verbatim remarks or timestamps. The [October 2 Up Next episode][N16] also discusses the interview but is a 19:42 multi-topic episode, not 19:42 devoted entirely to Wu.
-2. **Read the October 19 State of the Schools speech:** [official transcript and embedded recording][N3]. The transcript is now published on the main City page, updated October 21. Earlier search snapshots still describe a future event; use the actual speech. It includes a call for community partners. The follow-up retrieved the recording’s auto-generated captions and checked selected passages against the official text; see [timestamped notes](06_deep_evidence_transcripts_and_city_priorities.md#b-state-of-the-schools--october-19-2026).
+2. **Read the October 19 State of the Schools speech:** [official transcript and embedded recording][N3]. The transcript is now published on the main City page, updated October 21. Earlier search snapshots still describe a future event; use the actual speech. It includes a call for community partners. The follow-up retrieved the recording’s auto-generated captions and checked selected passages against the official text; see [timestamped notes](11_deep_evidence_and_city_priorities.md#b-state-of-the-schools--october-19-2026).
 3. **Read the September 16 Chamber speech/Q&A reporting:** [WBUR][N8]. This captures a useful difference in emphasis: the administration's housing tools and the business community's workforce-retention concern. A proposed October 1 permitting redesign in that article is a planned date, not independent verification that the redesign launched.
 4. **Read the February 2 permitting interview:** [WBZ][N12]. Older, but strategically important: then-CIO Santiago Garces described a task-oriented AI beta built from permit history. Treat it as evidence of an existing approach, not proof of its current quality or completeness.
 5. **Read the April 7 Garces interview:** [StateScoop][N13]. He described making civic analysis accessible through reusable AI workflows. It is an interview about his goals and reported work, not a guarantee that every mentioned public endpoint is currently accessible. His role has since changed.
@@ -46,7 +46,7 @@ No standalone social-media post was treated as the sole basis for a product reco
 
 ## 3. Current stakeholders and what the evidence suggests
 
-The event's sponsor/partner categories are in [document 02](02_civic_strategy_stakeholders_and_ideas.md). The people below are relevant public stakeholders; this is **not a confirmed judging roster**.
+The event's sponsor/partner categories are in [document 02](12_civic_strategy_stakeholders_and_ideas.md). The people below are relevant public stakeholders; this is **not a confirmed judging roster**.
 
 | Person or organization | Role supported by the reviewed material | Likely useful proof in a demo — our inference |
 |---|---|---|
@@ -68,9 +68,9 @@ The event's sponsor/partner categories are in [document 02](02_civic_strategy_st
 
 ## 4. Problems connected to the available databases
 
-Dataset fields below come from the organizer-linked [Civic portal][D1], reviewed in the first research pass. Its starter ZIP is a snapshot, not proof of live access. See document 02 for all 22 datasets and their source links.
+Dataset fields below come from the organizer-linked [Civic portal][D1], reviewed in the first research pass. Its starter ZIP is a snapshot, not proof of live access. See document 12 for all 22 datasets and their source links.
 
-**Access update, later October 24 research:** the initial web/browser attempts below encountered access limits. Subsequent bounded public GETs successfully inspected Boston permit/violation schemas, MBTA facilities/stops/alerts, Bluebikes feeds, MassGIS geometry and other sources. See [document 10](10_public_data_and_repositories.md) and its audit for actual fields, failed queries and corrected requests. This establishes research access, not a production connection or a validated application join. No credentials or production database were created.
+**Access update, later October 24 research:** the initial web/browser attempts below encountered access limits. Subsequent bounded public GETs successfully inspected Boston permit/violation schemas, MBTA facilities/stops/alerts, Bluebikes feeds, MassGIS geometry and other sources. See [document 10](22_public_data_and_repositories.md) and its audit for actual fields, failed queries and corrected requests. This establishes research access, not a production connection or a validated application join. No credentials or production database were created.
 
 | Public problem | Supplied data that can help | Valid connection / useful output | Missing data or inference to avoid |
 |---|---|---|---|
@@ -155,7 +155,7 @@ Store a short paraphrase and link for news/interviews, not full copyrighted arti
 ### First 30 minutes of data validation
 
 1. Pick one user, one question and at most two operational datasets.
-2. Download the organizer's [Civic starter kit][D9] and inspect its actual files, schemas and metadata. This has now been completed for all 22 CSVs; use [the audit](07_civic_dataset_verification.md) and repeat relevant checks on the application’s chosen subset.
+2. Download the organizer's [Civic starter kit][D9] and inspect its actual files, schemas and metadata. This has now been completed for all 22 CSVs; use [the audit](21_civic_dataset_verification.md) and repeat relevant checks on the application’s chosen subset.
 3. Confirm row count, date range, missing values, category values, duplicate handling and geographic coverage. Preserve raw files and record source URLs.
 4. Try one bounded request against each required live API. Record response status, schema and retrieval time; don't quietly swap a snapshot into a “live” label.
 5. Verify one join with a small sample. Keep unmatched rows visible. Use a reviewed crosswalk when geographic boundaries differ.
@@ -204,7 +204,7 @@ This is proposed narration, not an actual impact claim. Replace it with the team
 - **D3/D4/D5:** MBTA alerts, filtered route query and official V3 reference — inspect current responses before use.
 - **D7:** FEMA declaration-history query — historical federal declarations, not real-time local warnings.
 - **D8:** [Garces' Boston data reference][D8] — author-maintained schema/migration notes; verify against actual source data.
-- **D9:** [Civic starter ZIP][D9] — downloaded and parsed in the follow-up; [verified file contents](07_civic_dataset_verification.md) are separate from live API access.
+- **D9:** [Civic starter ZIP][D9] — downloaded and parsed in the follow-up; [verified file contents](21_civic_dataset_verification.md) are separate from live API access.
 - Existing City code: [OpenContext](https://github.com/CityOfBoston/OpenContext) and [Coastmix](https://github.com/OETBoston/Coastmix). Review licenses and actual interfaces before reuse; neither implies unrestricted access to City systems.
 
 [N1]: https://www.boston.gov/news/city-boston-launches-coastmix
