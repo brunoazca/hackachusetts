@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:31 — Fixed blank map in production (MapLibre worker 404: file ...
+- Teammate: Bruno
+- Agent: —
+- Did: Fixed blank map in production (MapLibre worker 404: file was git-ignored, so Vercel never got it) — now tracked + copied on prebuild; Simple depth now shows all rat signals + every driver with a tested effect
+- Why: Bruno: map not appearing; Simple should include the other signals
+- Where: web/public/maplibre-gl-worker.mjs, web/package.json, web/.gitignore, web/src/components/map/LayerPanel.tsx
+- Idea: none
+
 ### 2026-10-24 14:27 — UI per new spec: Assess/Act modes + Simple/Explore depth ...
 - Teammate: Bruno
 - Agent: —

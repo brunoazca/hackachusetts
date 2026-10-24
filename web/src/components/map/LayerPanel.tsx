@@ -14,8 +14,12 @@ const GROUPS: { id: string; label: string }[] = [
   { id: "displace", label: "Displacement" },
 ];
 
-// Simple depth shows only the outcome and the signals that tested as predictive (R0.5).
-export const SIMPLE_LAYERS = ["rodent", "dead_animal", "pest", "trash_storage"];
+// Simple depth (R0.5): every rat signal, plus each driver that showed an effect in the block-level
+// tests (leading or weak). Drivers with no effect or not tested stay in Explore.
+export const SIMPLE_LAYERS = [
+  "rodent", "pest", "dead_animal", "bite", "rodent_program", "inat_rat",
+  "trash_storage", "trash_early", "litter", "dumpster", "move_in_trash", "ce_trash_storage", "weeds",
+];
 
 export function activeCategories(enabled: Record<string, boolean>) {
   return Object.keys(CATS).filter((id) => enabled[id]);
@@ -145,7 +149,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
         );
       })}
       <p className="mt-2 text-xs text-neutral-700">
-        {explore ? "Each layer clusters on its own. " : "Simple view: the outcome and the signals that tested as predictive. Switch to Explore for every layer. "}
+        {explore ? "Each layer clusters on its own. " : "Simple view: rat signals and the drivers that showed an effect in our tests. Explore adds every other layer and the heatmaps. "}
         Solid icon = open, faded = closed. Tested values: block-level partial correlation with rodent reports.
       </p>
     </div>
