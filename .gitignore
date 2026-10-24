@@ -44,3 +44,9 @@ pipeline/.venv/
 # Supabase CLI local cache
 supabase/.temp/
 .vercel
+
+# Rendered video stays out of git (GitHub rejects files over 100 MB; share via Drive)
+*.mp4
+*.mov
+docs/submission/video/clips/
+docs/submission/assets/

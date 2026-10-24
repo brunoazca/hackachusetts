@@ -7,4 +7,14 @@ if git diff --cached --name-only | grep -qx '.env.local'; then
   echo "Refusing to commit .env.local (secrets). Unstage it: git restore --staged .env.local"
   exit 1
 fi
+# Block blobs over 50 MB: GitHub rejects pushes with files over 100 MB and the repo must stay clonable.
+LIMIT=$((50*1024*1024))
+while IFS= read -r f; do
+  [ -n "$f" ] || continue
+  sz=$(git cat-file -s ":$f" 2>/dev/null || echo 0)
+  if [ "$sz" -gt "$LIMIT" ]; then
+    echo "Refusing to commit $f ($((sz/1048576)) MB). Video and large media go to Drive, not git. Unstage: git restore --staged -- \"$f\""
+    exit 1
+  fi
+done < <(git diff --cached --name-only --diff-filter=AM)
 exec python3 "$ROOT/.kiro/scripts/scan_secrets.py" --staged
