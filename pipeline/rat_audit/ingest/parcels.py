@@ -8,7 +8,8 @@ The assessment has no coordinates. Points come from, in order:
 5. the nearest same-parity house number on the same street + ZIP within 20 numbers.
 
 Vacant / unusable land parcels are also written to `places` (kind vacant_parcel, id vacant:<pid>).
-Public columns never hold owner names or house numbers; the full address goes to the private table.
+Public columns never hold owner names or house numbers; owner + full address go to the private table
+(mail_address is left null to save space; the reveal only needs owner + full_address).
 """
 from __future__ import annotations
 
@@ -185,9 +186,10 @@ def run(conn: psycopg.Connection, since: str | None = None) -> int:  # noqa: ARG
     exact, by_street = _sam_index()
 
     cols = ('"PID", "CM_ID", "GIS_ID", "ST_NUM", "ST_NUM2", "ST_NAME", "UNIT_NUM", "ZIP_CODE", "LU", "LU_DESC", "OWN_OCC", '
-            '"OWNER", "MAIL_ADDRESSEE", "MAIL_STREET_ADDRESS", "MAIL_CITY", "MAIL_STATE", "MAIL_ZIP_CODE", '
+            '"OWNER", '
             '"RES_UNITS", "TOTAL_VALUE", "YR_BUILT", "CITY"')
-    recs = [r for page in ckan_paged(FY26, cols, "TRUE") for r in page]
+    # Condo parking spaces (CP) are skipped: no rat signal, ~8.5k rows of DB budget.
+    recs = [r for page in ckan_paged(FY26, cols, "TRUE") for r in page if r["LU"] != "CP"]
 
     pts: dict[str, tuple] = {}
     how = {"polygon": 0, "rentsmart": 0, "sam": 0, "condo_main": 0, "nearest": 0}
@@ -233,9 +235,7 @@ def run(conn: psycopg.Connection, since: str | None = None) -> int:  # noqa: ARG
         ))
         num = "-".join(x for x in (r["ST_NUM"], r["ST_NUM2"]) if x)
         full = " ".join(x for x in (num, r["ST_NAME"], f"#{r['UNIT_NUM']}" if r["UNIT_NUM"] else None) if x)
-        mail = ", ".join(x for x in (r["MAIL_ADDRESSEE"], r["MAIL_STREET_ADDRESS"], r["MAIL_CITY"],
-                                     r["MAIL_STATE"], zip5(r["MAIL_ZIP_CODE"])) if x)
-        owners.append((pid, r["OWNER"], mail or None, f"{full}, {r['CITY'] or 'BOSTON'} MA {z or ''}".strip(), sid))
+        owners.append((pid, r["OWNER"], None, f"{full}, {r['CITY'] or 'BOSTON'} MA {z or ''}".strip(), sid))
         if r["LU_DESC"] in VACANT_DESC:
             vacant.append((
                 f"vacant:{pid}", sid, "vacant_parcel", r["LU_DESC"].title(), block, None, None,
