@@ -1,11 +1,10 @@
 "use client";
-import { useEffect, useId, useState } from "react";
+import { useId, useState } from "react";
 import { fmtDate, fmtDateTime, fmtNumber } from "../format";
 import Sources from "../Sources";
 import type { SourceRow } from "../types";
 import type { RegionLocation, RegionSolution } from "./parse";
 import PlaceText from "./PlaceText";
-import { fetchRegionPopulation, type RegionPopulation } from "@/lib/cell-context";
 
 const actionLabels = { sanitation: "Clean up & contain waste", exclusion: "Seal entry points", enforcement: "Follow up with property owners", referral: "Coordinate with city agencies", inspect: "Inspect & identify causes" };
 
@@ -21,7 +20,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(false);
   const input = r.input;
-  const people = useRegionPopulation(r.cell_ids);
+  const sev = input.region.severity;
   const weeks = Object.entries(input.forecast.next_4_weeks_expected_reports).sort(([a],[b]) => a.localeCompare(b));
   async function show() {
     setBusy(true); setError(false);
@@ -34,7 +33,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card-hover text-sm font-semibold tabular-nums text-fg" aria-label={`Priority ${r.rank}`}>{r.rank}</span>
       <div className="min-w-0">
         <h3 id={heading} className="text-lg font-semibold leading-tight text-fg">{input.region.neighborhood ?? "Boston"}</h3>
-        <p className="mt-0.5 text-xs text-fg-3">{r.cell_ids.length} blocks · priority region{people && people.pop > 0 && <> · <span title={`Census tract population split by area across these blocks. Sources: ${people.sources.map((s) => s.name).join("; ")}`}>~{fmtNumber(Math.round(people.pop / 100) * 100)} residents</span></>}</p>
+        <p className="mt-0.5 text-xs text-fg-3">{r.cell_ids.length} blocks · priority region{!!sev.residents && <> · <span title="Census tract population (ACS) split by area across these blocks">~{fmtNumber(sev.residents)} residents</span></>}</p>
       </div>
     </header>
     <dl className="my-4 grid grid-cols-2 gap-4 border-y border-line py-3">
@@ -61,7 +60,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
         <div className="space-y-2"><h4 className="font-medium text-fg">Recommended action</h4><p>{place(r.action)}</p></div>
         <div className="space-y-2"><h4 className="font-medium text-fg">Why this region</h4><p>{place(r.because)}</p></div>
         {r.unknowns.length > 0 && <div><h4 className="mb-2 font-medium text-fg">Check on site</h4><ul className="list-disc space-y-2 pl-4">{r.unknowns.map((u,i) => <li key={i}>{place(u)}</li>)}</ul></div>}
-        {input.region.severity.expected_returns_60d !== null && <p className="text-xs">Expected returns within 60 days: {number(input.region.severity.expected_returns_60d)} · severity total: {number(input.region.severity.score)}. Model estimate from active addresses.</p>}
+        {input.region.severity.expected_returns_60d !== null && <p className="text-xs">Expected returns within 60 days: {number(input.region.severity.expected_returns_60d)} · severity total: {number(sev.score)}{sev.people_weight !== null && sev.weighted_score !== null && <> × {fmtNumber(sev.people_weight)} residents weight = {number(sev.weighted_score)}, the ranking score</>}. Model estimate from active addresses; residents weight = 1 + log10(1 + residents / 1,000).</p>}
         <p className="text-xs text-fg-3">{r.caveat} Action comparisons are observational and subject to selection bias; a lower predicted return rate is not proof an intervention works.</p>
     <details><summary className="min-h-10 cursor-pointer py-2 text-sm font-medium text-fg">Forecast & possible causes</summary>
       <ul className="space-y-1">{weeks.map(([week,expected]) => <li key={week}>{fmtDate(week)}: {fmtNumber(expected)} expected reports</li>)}</ul>
@@ -84,14 +83,3 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
   </section>;
 }
 
-/** Residents in the region's blocks; null while loading or when unavailable (the line is then omitted). */
-function useRegionPopulation(cellIds: string[]) {
-  const key = cellIds.join(",");
-  const [got, setGot] = useState<{ key: string; p: RegionPopulation | null } | null>(null);
-  useEffect(() => {
-    let live = true;
-    fetchRegionPopulation(key.split(",")).then((p) => live && setGot({ key, p })).catch(() => live && setGot({ key, p: null }));
-    return () => { live = false; };
-  }, [key]);
-  return got?.key === key ? got.p : null;
-}

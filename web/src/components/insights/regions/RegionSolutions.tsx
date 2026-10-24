@@ -40,7 +40,7 @@ export default function RegionSolutions() {
   return <div className="space-y-4 p-4">
     <header><span className="eyebrow">Insights · proposed actions</span><h2 className="mt-1 text-title font-semibold text-fg">Where to act first</h2><p className="text-small text-fg-2">Ranked regions, with solutions grounded in past cases, nearby evidence and expected reports.</p></header>
     <label className="flex items-center justify-between text-small text-fg">Priority regions<select className="min-h-10 rounded-lg border border-edge bg-card px-3 text-fg" value={limit} onChange={e => setLimit(Number(e.target.value))}>{[5,10,20].map(n => <option key={n} value={n}>Top {n}</option>)}</select></label>
-    <p role="status" aria-live="polite" className="text-small text-fg-3">{data ? data.regions.length ? `${data.regions.length} regions · ranked by published severity` : "Proposed solutions are not available yet. Existing evidence is available below." : error ? "" : "Loading proposed solutions…"}</p>
+    <p role="status" aria-live="polite" className="text-small text-fg-3">{data ? data.regions.length ? `${data.regions.length} regions · ranked by severity, weighted by residents` : "Proposed solutions are not available yet. Existing evidence is available below." : error ? "" : "Loading proposed solutions…"}</p>
     {error && <p role="alert" className="text-small text-danger">{error}</p>}
     {(error || data?.regions.length === 0) && <button className="min-h-10 rounded-lg border border-edge px-3 text-fg" onClick={() => setAttempt(a => a+1)}>Check again</button>}
     {data?.sourcesUnavailable && <p className="text-xs text-fg-3">Source details could not be loaded. Source IDs remain available on each card.</p>}

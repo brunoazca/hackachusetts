@@ -21,7 +21,7 @@ const schema = z.object({
   source: z.enum(["ai", "rules"]), llm_model: text.nullable().catch(null), computed_at: text, caveat: text.catch("Model estimate, not a measured effect."),
   cites: strings, unknowns: strings, locations: z.array(location).catch([]), records: z.array(z.object({ incident_id: text, todo: text.transform(safe) })).catch([]),
   input: z.object({
-    region: z.object({ region_id: text, neighborhood: text.nullable().catch(null), severity: z.object({ observed_12w: count, expected_4w: count, expected_returns_60d: count, score: count }) }),
+    region: z.object({ region_id: text, neighborhood: text.nullable().catch(null), severity: z.object({ observed_12w: count, expected_4w: count, expected_returns_60d: count, score: count, residents: count, people_weight: count, weighted_score: count }) }),
     forecast: z.object({ model_run_id: text, next_4_weeks_expected_reports: z.record(text, z.number().finite().nonnegative()).catch({}),
       week_1_chance_of_any_report: percent, drivers: z.array(z.object({ label: text, contribution: z.number().finite() })).catch([]),
     }),

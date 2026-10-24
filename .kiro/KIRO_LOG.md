@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:05 — Region severity now weighted by residents: weighted_score...
+- Teammate: Bruno
+- Agent: —
+- Did: Region severity now weighted by residents: weighted_score = score × (1 + log10(1 + residents/1000)); ranking by weighted_score in region_solution.py; live region_solutions re-ranked in SQL with the same formula (no AI rerun); card shows ~N residents and the weight; spec §5.4a decision recorded
+- Why: Bruno chose to weight severity by people affected (overrides spec's no-composite rule)
+- Where: pipeline/rat_audit/model/region_solution.py, web/src/components/insights/regions/*, .kiro/specs/rat-audit/insights-severity-ranking.md
+- Idea: Effect is small (hot regions all 5-10k residents, weights 1.8-2.0); stronger weight if wanted. site_queue RPC times out for anon (~2.6 s), unrelated
+
 ### 2026-10-24 19:01 — Unified Insight backend: RPCs area_insight / area_insight...
 - Teammate: Bruno
 - Agent: —

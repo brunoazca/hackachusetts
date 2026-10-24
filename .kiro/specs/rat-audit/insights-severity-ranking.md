@@ -380,6 +380,16 @@ silently:
 Add to the region object (§7.1): `population: { pop: number; tract_ids: string[];
 reports_per_1k: number | null; source_ids: string[] } | null`.
 
+**Decision (Bruno, Oct 24) — supersedes "not folded into the severity score" above.**
+Residents *are* a weight on the region ranking: `weighted_score = score × (1 + log10(1 +
+residents / 1000))`, where `score` stays in reports (observed 12 w + expected 4 w + expected
+returns 60 d) and `residents` is Σ `cell_population.pop` over the region's cells. Log so a
+dense block cannot swamp the report counts (weight ≈ 1.3 at 1k, 2.0 at 9k, 2.3 at 20k).
+Stored in `input.region.severity.{residents, people_weight, weighted_score}`; regions are
+ranked by `weighted_score` (`region_solution.py`). The card shows "~N residents" and the
+weight in the analysis. No other demographic is used on the Insights cards; the full block
+profile (`grid_cell_context`) lives on the map only.
+
 ### 5.5 Grid cuts — keep hotspots whole (Carol, SQL)
 
 A fixed 250 m lattice splits a hotspot that sits on a cell corner into up to 4 cells.
