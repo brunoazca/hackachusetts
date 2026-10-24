@@ -31,6 +31,16 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:06 — Analytics v2 rebased and validated for branch-only sharing
+- Teammate: Carol
+- Agent:
+- Did: Rebased analytics-core onto main 50ed4bf. The three rebase conflicts were only in this log; every entry from both histories was checked as preserved. Kept local backup codex/analytics-before-v2-rebase-c55ec44.
+- Why: Share the current implementation and Insights RPC with the other fronts without merging/deploying main.
+- Where: .kiro/KIRO_LOG.md; branch feat/rat-audit-analytics-core (implementation commit 06081aa).
+- Evidence: After rebase, 141 unit/property/mock tests passed; five native SELECT-only SQL tests passed separately. Two migration-application tests remain skipped. All analytics migrations and validate.sql parsed; migration versions unique; model subtree identical to main; secret scan including supplied env values clean; diff whitespace clean.
+- Decision: Publish only the feature branch using a lease against the previously observed remote head f410efe. Migration application, shared refresh, real LLM configuration and missing regional inputs remain explicit integration dependencies. No main merge/push, deploy or database write authorized by this publication.
+- Idea: Keep the migration and producer readiness distinct from a live, populated Insights panel.
+
 ### 2026-10-24 16:04 — Analytics v2 producers and Insights RPC prepared; real reads separated from fixtures
 - Teammate: Carol
 - Agent:
