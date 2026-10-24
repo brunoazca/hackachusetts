@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:38 — Hourly design critique of Piper (Rat Audit) / route; capt...
+- Teammate: —
+- Agent: da-vinci
+- Did: Hourly design critique of Piper (Rat Audit) / route; captured desktop+phone, measured contrast and target sizes from the DOM
+- Why: scored accessibility is a civic judging criterion, so WCAG findings need measured facts not guesses
+- Where: docs/design-critique/2026-10-24-1637.md, docs/design-critique/latest.md
+- Idea: distinguish duplicate street rows (e.g. two 'E Springfield St, 02118') with a street number or date range so the worklist is scannable
+
 ### 2026-10-24 16:36 — Ran lint/types/build on web/: lint FAIL (3 errors, 1103 w...
 - Teammate: —
 - Agent: hopper
