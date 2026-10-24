@@ -38,4 +38,4 @@ Always say "expected reports", never "rats". Every view carries the caveat "Mode
 ## Notes
 
 - `grid_cells` was empty, so `score` seeded it with the same 250 m fallback grid (3,442 cells, ids `g250_<col>_<row>`). Carol can replace it; ids stay compatible.
-- Forecast refreshes with Modal: daily cron rescoring (10:00 UTC), retrain Mondays (09:00 UTC).
+- No scheduled runs. Rescore (also rebuilds the surface) with Modal `analytics_and_score`, retrain with `weekly_retrain`, both run by hand.

@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:41 — Removed Modal crons (daily, weekly_retrain); both stay as...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed Modal crons (daily, weekly_retrain); both stay as manual functions
+- Why: One-day hackathon: nothing should run on a schedule
+- Where: pipeline/modal_app.py, pipeline/README.md, docs/rat-audit/FORECAST_MAP.md
+- Idea: Needs a modal deploy to take effect
+
+### 2026-10-24 15:40 — Queued 2 more Kiro Crew campaigns after the NYC ones: exp...
+- Teammate: Bruno
+- Agent: —
+- Did: Queued 2 more Kiro Crew campaigns after the NYC ones: exposure layer (child care, seniors, hospitals, pantries, markets, outdoor dining, playgrounds, public housing near hotspots) and new forecast predictors (ISD violations, Problem Properties, Article 80, MBTA, building age, temperature/snow, canopy)
+- Why: Rank sites by who is affected; check if new data improves the forecast
+- Where: none
+- Idea: Exposure as an explainable tie-breaker; keep/drop each predictor by top-10% capture gain
+
 ### 2026-10-24 15:40 — Cambridge + Somerville equivalents loaded: restaurants (2...
 - Teammate: Bruno
 - Agent: —

@@ -13,7 +13,7 @@ The web app (Vercel) only reads Supabase; its Refresh button calls the Modal `re
 | `rat_audit/ingest/<source>.py` | One module per source, each exposing `run(conn, since=None) -> int` (rows upserted) |
 | `rat_audit/analytics/__init__.py` | `run_all(conn) -> dict` (grid, classifier, sites, outcomes, correlations, price impact) |
 | `rat_audit/model/__init__.py` | `train(conn)`, `score(conn)`, `simulate(conn, request)` |
-| `modal_app.py` | Modal functions, crons and web endpoints |
+| `modal_app.py` | Modal functions and web endpoints (no crons) |
 
 Modules that don't exist yet are skipped with `"not implemented yet"`, so the worker is always deployable.
 
@@ -26,7 +26,7 @@ set -a; . ../.env.local; set +a              # local runs read the same env
 uv run python -c "from rat_audit import jobs; print(jobs.ingest('t311'))"
 
 export MODAL_PROFILE=harvard
-uv run modal deploy modal_app.py             # deploy (crons + endpoints)
+uv run modal deploy modal_app.py             # deploy (functions + endpoints)
 uv run python -c "import modal; print(modal.Function.from_name('rat-audit','backfill').remote())"
 ```
 
@@ -37,8 +37,8 @@ Each source's mode is defined once in `rat_audit/ingest/update_modes.py` and wri
 
 | Mode | When it updates | Sources |
 |---|---|---|
-| **live** | Refresh button (Modal `refresh`, ~15 s) + daily cron | Boston 311 2026 + new system, 311 volume, code enforcement, Somerville 311, Cambridge rodent sightings, Cambridge smart rat boxes |
-| **daily** | Daily cron, 10:00 UTC | NOAA weather (~4-day lag), food inspections, building permits |
+| **live** | Refresh button (Modal `refresh`, ~15 s) | Boston 311 2026 + new system, 311 volume, code enforcement, Somerville 311, Cambridge rodent sightings, Cambridge smart rat boxes |
+| **daily** | Manual `daily` run (no cron) | NOAA weather (~4-day lag), food inspections, building permits |
 | **static** | Loaded once; re-run with `backfill` | Boston 311 2023–2025 (closed years), property assessment, SAM addresses, Big Belly, city lots, schools, colleges, Checkbook spending, tracts (SVI, TIGERweb, CDC asthma), Zillow, Inside Airbnb, iNaturalist, Marathon / move-out / Red Sox calendars |
 
 A new source without an entry in `update_modes.py` fails at `db.upsert_source` on purpose.
@@ -51,8 +51,8 @@ A new source without an entry in `update_modes.py` fails at `db.upsert_source` o
 | `ingest_source(name, since)` | manual / fan-out | one source |
 | `backfill` | manual | all sources in parallel |
 | `analytics_and_score` | after refresh, manual | findings + forecast scoring |
-| `daily` | cron 10:00 UTC | refresh fast sources → analytics + score |
-| `weekly_retrain` | cron Mon 09:00 UTC | retrain + backtest → `model_runs` |
+| `daily` | manual | refresh fast sources → analytics + score |
+| `weekly_retrain` | manual | retrain + backtest → `model_runs` |
 | `refresh` | POST endpoint, `Authorization: Bearer $RAT_AUDIT_WORKER_TOKEN` | fast refresh, then rescoring in background |
 | `simulate` | POST endpoint, same token | what-if: `{cell_id|site_id, interventions, weeks}` → expected change |
 
