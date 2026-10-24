@@ -15,14 +15,16 @@ separate datasets. An inspector closing a case cannot see that the same block ha
 been "closed" 16 times, that the vacant lot next door is the likely source, or that
 reports are about to rise. Sources: `knowledge/15_boston_rat_audit.md`.
 
-The city's most common response does not work. Monitoring is the most frequent
-closure action (49% of 2025 rodent closures), and the share of addresses with a new
-report within 60 days does not change after it (14.1% → 14.2%). After a violation it
-drops (15.3% → 12.2%). At the 46 chronic addresses, about 237 of 280 actions were
-monitoring or "noted" and only 14 were violations. BRAP has published no measured
-result since launch. The product tells the inspector when to stop monitoring and
-escalate, and when the cause is next door. Sources: Kiro Crew campaigns `93c1ad29`,
-`d19b46b7`, `b6ba6312` (in the Kiro knowledge library and `knowledge/15_boston_rat_audit.md`).
+Nobody can tell which response works. Monitoring is the most frequent closure action
+(49% of 2025 rodent closures). A naive before/after looked like violations work and
+monitoring does not, but a matched test (Kiro Crew campaign `4fb70394`, 19,496 cases
+2023–2026, matched on prior reports, neighborhood and month) found **no difference**:
+citation or abatement vs monitoring, Mantel-Haenszel risk ratio 1.03 (95% CI 0.89–1.20),
+null in every year. What drives a return is the site's history: 8–12% of sites with no
+prior reports come back within 60 days, 56–75% of sites with 5 or more. Repeat rates also
+fall over time on their own (40% → 18% after a second monitoring visit, with no
+enforcement), so a naive before/after makes any action look effective. BRAP has published
+no measured result. Sources: `knowledge/15_boston_rat_audit.md`.
 
 **Pitch:** Boston closes 99% of rat cases, but it can't tell which fixes last. Rat Audit
 tracks every report, explains why a site keeps coming back, helps the inspector pick the
@@ -143,7 +145,7 @@ follow up, prove).
 
    | # | When | Recommend | Because |
    |---|---|---|---|
-   | 1 | Monitoring, noted or inspection recorded ≥ 2 times at this site, with a return after each | An option not yet tried here: citation or abatement order | "Tried N times here; reports returned each time" + what worked citywide (monitoring 14.1% → 14.2%, violation 15.3% → 12.2%, with caveat) |
+   | 1 | Monitoring, noted or inspection recorded ≥ 2 times at this site, with a return after each | An option not yet tried here: citation or abatement order | "Tried N times here; reports returned each time" (citywide, matched test: no difference between enforcement and monitoring, RR 1.03; shown as "untested here, worth trying", not as proven) |
    | 2 | Vacant parcel within 40 m | Joint block visit; notice to the lot's owner or managing agency; clearing | Adjacency + parcel record |
    | 3 | Trash tickets or trash 311 are most of the nearby drivers | Container compliance visit; sealed containers | Tickets near site; NYC containerization (311 rat sightings down >20% year over year; −55% in the Hamilton Heights pilot) and Boston's $500,000 participatory-budgeting container project, cited as context |
    | 4 | Cause tag = sewer in any recent note | Referral to BWSC for a catch-basin check | Note text |
@@ -172,7 +174,7 @@ follow up, prove).
 ## R5 Findings (correlations)
 
 1. **P0** THE SYSTEM SHALL show an Insights panel with findings, each with a plain headline, the question, method, statistic, a strength label (strong / moderate / weak / none), a small chart, a caveat and sources.
-2. **P0** THE SYSTEM SHALL include at least: trash storage vs rodent reports (311 and code enforcement); dead-animal and indoor-pest reports as leading signals; what worked (60-day repeat rate by city action); Sept 1 move-out (trash reports about 2× citywide and 4–5× in student ZIPs the week of Sept 1, 2023–2025: strong; rodent reports 1–4 weeks later: none); seasonality vs temperature. "What worked" is the lead finding (monitoring 14.1% → 14.2% repeat rate, violation 15.3% → 12.2%). Trash storage SHALL carry its block-level strength (weak, partial ρ ≈ +0.13 after controlling for reporting volume); the ZIP-level +0.78 is a reporting artifact and SHALL NOT be shown. "What worked" SHALL show n, a 95% interval per action tag and the selection-bias caveat.
+2. **P0** THE SYSTEM SHALL include at least: trash storage vs rodent reports (311 and code enforcement); dead-animal and indoor-pest reports as leading signals; what worked (60-day repeat rate by city action); Sept 1 move-out (trash reports about 2× citywide and 4–5× in student ZIPs the week of Sept 1, 2023–2025: strong; rodent reports 1–4 weeks later: none); seasonality vs temperature. "What worked" SHALL show the matched comparison as its headline: no measurable difference between enforcement and monitoring once sites are matched on prior reports, neighborhood and month (RR 1.03, 95% CI 0.89–1.20). The naive before/after (15.3% → 12.2%) SHALL NOT be shown without that context. Trash storage SHALL carry its block-level strength (weak, partial ρ ≈ +0.13 after controlling for reporting volume); the ZIP-level +0.78 is a reporting artifact and SHALL NOT be shown. "What worked" SHALL show n, a 95% interval per action tag and the selection-bias caveat.
 3. **P1** THE SYSTEM SHALL also include the tested results from `data-audit.md`, nulls included: demolitions (no spike; consistent with pre-demolition baiting), rain (none), trash day (none), restaurants and food licenses (none after controls), Big Belly (none), events and Red Sox games (none), building age × owner occupancy, and 311 under-reporting by tract (fewer reports per resident where more children, people of color and residents with disabilities live).
 4. **P0** THE SYSTEM SHALL control for reporting volume by using rates where possible and SHALL report weak or null results honestly.
 5. **P1** WHEN a finding is clicked THE SYSTEM SHALL set the map layers that illustrate it.
@@ -182,7 +184,7 @@ follow up, prove).
 ## R6 Prediction
 
 1. **P0** THE SYSTEM SHALL forecast rodent reports per ~250 m grid cell for each of the next 4 weeks and show it as a map layer with risk bands. A "mean of the last 4 weeks" baseline ships first as a fallback; the trained model replaces it.
-2. **P0** THE SYSTEM SHALL backtest the forecast on the most recent 26 weeks against the baseline "mean of the last 4 weeks", and show both scores (MAE and share of reports captured by the top 10% of cells).
+2. **P0** THE SYSTEM SHALL backtest the forecast on the most recent 26 weeks against the baseline "mean of the last 4 weeks", and show both scores (MAE and share of reports captured by the top 10% of cells). Expected (Kiro Crew campaign `072d5a66`, 1,140 cells): top-10% capture baseline 0.229, static chronic map 0.232, lags-only model 0.225, model with trash-storage and illegal-dumping co-reports **0.257**; MAE is worse for every model (0.0527 vs 0.0447) because the panel is near zero. Rank cells by capture, keep the trash and dumping features, and say that MAE does not improve.
 3. **P0** THE SYSTEM SHALL show the model's top features in plain language and the top drivers for each cell.
 4. **P1** THE SYSTEM SHALL use temperature climatology (week-of-year mean) for future weeks. Live rain forecasts SHALL NOT be used (rain showed no effect).
 5. **P1** THE SYSTEM SHALL estimate, for each site, the probability of a return within 60 days after a closure, shown next to its base return rate.

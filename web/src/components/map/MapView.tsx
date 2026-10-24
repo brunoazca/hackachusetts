@@ -3,11 +3,11 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Map, { Layer, NavigationControl, Source, type MapLayerMouseEvent, type MapRef } from "react-map-gl/maplibre";
 import type { FeatureCollection, Point } from "geojson";
-import { setWorkerUrl } from "maplibre-gl";
+import { setWorkerUrl, type HeatmapLayerSpecification } from "maplibre-gl";
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { fetchIncidents, type BBox, type IncidentProps } from "@/lib/queries";
-import LayerPanel, { activeCategories } from "./LayerPanel";
+import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import { addCategoryIcons, iconId } from "./icons";
 
 // Draft map. Each category is its own clustered source, so a cluster only ever counts one kind
@@ -21,6 +21,23 @@ const CATS = categories.incident_categories as Record<string, { label: string; c
 type FC = FeatureCollection<Point, IncidentProps>;
 const EMPTY: FC = { type: "FeatureCollection", features: [] };
 
+// Heatmap paint for one family of signals: transparent at zero density, then the family's ramp.
+// Each point weighs ~1500/n so a family with many reports (dead animals, trash) doesn't drown the
+// other: the map shows where each family concentrates, not which family is bigger.
+function heatPaint(ramp: string[], opacity: number, n: number) {
+  const w = Math.min(1, Math.max(0.04, 1500 / Math.max(n, 1)));
+  return {
+    "heatmap-weight": ["*", w, ["case", ["==", ["get", "status"], "open"], 1, 0.7]],
+    "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 13, 1, 16, 2],
+    "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 10, 8, 13, 16, 16, 30],
+    "heatmap-color": [
+      "interpolate", ["linear"], ["heatmap-density"],
+      0, "rgba(0,0,0,0)", 0.12, ramp[0], 0.3, ramp[1], 0.55, ramp[2], 0.8, ramp[3], 1, ramp[4],
+    ],
+    "heatmap-opacity": ["interpolate", ["linear"], ["zoom"], 14, opacity, 16.5, 0.25],
+  } as unknown as HeatmapLayerSpecification["paint"];
+}
+
 export default function MapView() {
   const mapRef = useRef<MapRef>(null);
   const view = useMap((s) => s.view);
@@ -29,6 +46,7 @@ export default function MapView() {
   const select = useMap((s) => s.select);
   const selection = useMap((s) => s.selection);
   const [enabled, setEnabled] = useState<Record<string, boolean>>({ rodent: true });
+  const [mode, setMode] = useState<ViewMode>("points");
   const [data, setData] = useState<FC>(EMPTY);
   const [iconsReady, setIconsReady] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -44,6 +62,16 @@ export default function MapView() {
     for (const f of data.features) out[f.properties.category]?.features.push(f);
     return out;
   }, [data, cats]);
+
+  // Two heatmap families: rat signals vs. everything that explains them.
+  const heat = useMemo(() => {
+    const rats: FC = { type: "FeatureCollection", features: [] };
+    const evidence: FC = { type: "FeatureCollection", features: [] };
+    for (const f of data.features) (CATS[f.properties.category]?.group === "rats" ? rats : evidence).features.push(f);
+    return { rats, evidence };
+  }, [data]);
+  const showHeat = mode !== "points";
+  const showClusters = mode === "points" || mode === "both";
 
   const load = useCallback(async () => {
     const map = mapRef.current;
@@ -111,6 +139,13 @@ export default function MapView() {
         attributionControl={{ compact: true }}
       >
         <NavigationControl position="bottom-right" />
+        {/* Evidence first so the rat heatmap draws on top. */}
+        <Source id="heat-evidence" type="geojson" data={heat.evidence}>
+          <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.evidence.features.length)} />
+        </Source>
+        <Source id="heat-rats" type="geojson" data={heat.rats}>
+          <Layer id="heat-rats" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.rats, 0.7, heat.rats.features.length)} />
+        </Source>
         {iconsReady && cats.map((c) => {
           const color = CATS[c]?.color ?? "#555";
           return (
@@ -119,6 +154,7 @@ export default function MapView() {
                 <Layer
                   id={`${c}-clusters`}
                   type="circle"
+                  layout={{ visibility: showClusters ? "visible" : "none" }}
                   filter={["has", "point_count"]}
                   paint={{
                     "circle-color": color,
@@ -133,6 +169,7 @@ export default function MapView() {
                   type="symbol"
                   filter={["has", "point_count"]}
                   layout={{
+                    visibility: showClusters ? "visible" : "none",
                     "text-field": ["get", "point_count_abbreviated"],
                     "text-size": 13,
                     "text-font": ["Noto Sans Bold"],
@@ -149,6 +186,7 @@ export default function MapView() {
                 <Layer
                   id={`${c}-points`}
                   type="symbol"
+                  minzoom={showClusters ? 0 : 15}
                   filter={["!", ["has", "point_count"]]}
                   layout={{
                     "icon-image": iconId(c),
@@ -163,7 +201,7 @@ export default function MapView() {
         })}
       </Map>
 
-      <LayerPanel enabled={enabled} onChange={setEnabled} count={data.features.length} loading={loading} />
+      <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} count={data.features.length} loading={loading} />
 
       {error && (
         <div role="alert" className="absolute bottom-4 left-4 rounded-md bg-red-50 px-3 py-2 text-sm font-medium text-red-900 shadow">
