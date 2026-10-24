@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:54 — Motion graphic v2: no opening, one short headline per sce...
+- Teammate: Bruno
+- Agent: —
+- Did: Motion graphic v2: no opening, one short headline per scene, 63 s; copied to Downloads
+- Why: It will be cut into a bigger video; text per slide must be minimal
+- Where: docs/submission/ml-ai-motion/
+- Idea: —
+
 ### 2026-10-24 18:52 — Merged the finished accessibility and plain-language UI w...
 - Teammate: Guilherme
 - Agent: Claude Code
