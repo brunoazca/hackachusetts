@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Bounded HEAD checks of public URLs in knowledge/*.md; no credentials or bodies.
 
-Usage: python3 knowledge/sources/check_research_links.py
+Usage: python3 knowledge/sources/scripts/check_research_links.py
 Reachability is distinct from content verification. Some sites reject HEAD.
 """
 import argparse

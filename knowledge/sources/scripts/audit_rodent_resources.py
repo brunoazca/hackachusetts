@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Recheck public rodent data; retain schemas/aggregates, never complaint text.
 
-Run from the repository: python3 -B knowledge/sources/audit_rodent_resources.py
+Run from the repository: python3 -B knowledge/sources/scripts/audit_rodent_resources.py
 Uses the bounded, unauthenticated curl helper in audit_public_resources.py.
 Does not execute external code or treat administrative records as a census.
 """

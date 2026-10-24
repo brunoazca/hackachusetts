@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:35 — Re-verified after knowledge reorg: secret scan clean, 8/8...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Re-verified after knowledge reorg: secret scan clean, 8/8 MCP PASS, readiness green except app/docs; fixed stale usage paths in moved knowledge/sources/scripts
+- Why: Keep docs and scripts consistent after the renumber
+- Where: knowledge/sources/scripts/*.py
+- Idea: none
+
 ### 2026-10-24 12:31 — Added secret scanner + secret-scan Kiro hook + git pre-co...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Inspect an already downloaded Civic ZIP; never execute its included scripts.
 
-Usage: python3 knowledge/sources/audit_civic_kit.py /path/to/civic.zip
+Usage: python3 knowledge/sources/scripts/audit_civic_kit.py /path/to/civic.zip
 Writes civic_dataset_audit.json beside this script. Python standard library only.
 """
 import collections
