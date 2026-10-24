@@ -68,7 +68,10 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 3.16 **P0** TrialDesigner (N + intervention → pairs on map, CSV export, stated measure) + TrialResult. (R11.1, R11.2)
 - [ ] 3.17 **P1** PracticeCard, FollowUps, enforcement-gap list, unknowns editor, reporting-normalized layer, season-adjusted queue column. (R5.7, R4.6, R11.3, R3.11, R2.14, R4.7)
 - [ ] 3.6 **P0** TopBar: live badge + Refresh, search. (R1.6, R2.10)
-- [ ] 3.7 **P0** FeatureList keyboard alternative; a11y pass. (R2.11, R9.1, R9.2)
+- [x] 3.7 **P0** FeatureList keyboard alternative; a11y pass. (R2.11, R9.1, R9.2)
+  <!-- FeatureList (map twin, `L` key, selection sync): web/src/components/map/FeatureList.tsx + featuresInView in map-store.ts, wired in MapView.tsx.
+       Skip link + <main> landmark: web/src/app/page.tsx. In-app Reduce-motion toggle (+ `M` key, OS default): web/src/lib/a11y-store.ts, TopBar.tsx.
+       Reference: docs/design/accessibility.md §"Shipped". -->
 - [ ] 3.8 **P0** Forecast layer + CellCard. (R6.1, R3.5)
 - [ ] 3.9 **P1** Places + events layers; PlaceCard, EventCard. (R2.3, R3.3, R3.4)
 - [ ] 3.10 **P1** Timeline scrubber with event marks + play; heatmap. (R2.7, R2.8)

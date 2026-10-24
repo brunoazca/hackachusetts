@@ -223,8 +223,14 @@ follow up, prove).
 
 1. **P0** THE SYSTEM SHALL be operable by keyboard with visible focus, labelled controls and AA contrast.
 2. **P0** THE SYSTEM SHALL announce selection changes and streamed chat output via `aria-live`.
+5. **P0** THE SYSTEM SHALL provide a keyboard "features in view" list that mirrors the map, syncs selection both ways, and is reachable by Tab and the `L` key (the map twin). *(see R2.11; `components/map/FeatureList.tsx`)*
+6. **P0** THE SYSTEM SHALL expose a skip link to the map as the first focusable element and mark the map region as the `main` landmark. *(2.4.1; `app/page.tsx`)*
+7. **P0** THE SYSTEM SHALL honor `prefers-reduced-motion` AND offer an in-app Reduce-motion toggle that stops all non-essential animation. *(2.2.2/2.3.3; `lib/a11y-store.ts`, `styles/piper.css`)*
+8. **P0** Single-key shortcuts (`L`, `M`, `T`, `]`) SHALL NOT fire while the user is typing in a field. *(2.1.4)*
 3. **P1** THE SYSTEM SHALL render the first map view in under 3 seconds on a laptop and stay responsive with 20,000 points in view.
 4. **P0** THE SYSTEM SHALL work at 1280×800 (the demo resolution) and remain usable on a phone (map + bottom sheet).
+
+> Full standard, component checklist and test routine: `docs/design/accessibility.md` (WCAG 2.2 AA). Its "Shipped" table maps each clause to its file.
 
 ## R10 Deployment and evidence
 
