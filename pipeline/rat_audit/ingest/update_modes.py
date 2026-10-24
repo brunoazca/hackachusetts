@@ -26,6 +26,13 @@ UPDATE_MODES: dict[str, tuple[str, str]] = {
     "cambridge-building-permits": ("daily", "Cambridge demolition + new construction; display only"),
     "somerville-building-permits": ("daily", "Somerville demolition + new construction permits; display only"),
     # ---- static (loaded once) ----
+    "boston-311-2016": ("static", "closed year; model history only (incidents_archive)"),
+    "boston-311-2017": ("static", "closed year; model history only (incidents_archive)"),
+    "boston-311-2018": ("static", "closed year; model history only (incidents_archive)"),
+    "boston-311-2019": ("static", "closed year; model history only (incidents_archive)"),
+    "boston-311-2020": ("static", "closed year; model history only (incidents_archive)"),
+    "boston-311-2021": ("static", "closed year; model history only (incidents_archive)"),
+    "boston-311-2022": ("static", "closed year; model history only (incidents_archive)"),
     "boston-311-2023": ("static", "closed year"),
     "boston-311-2024": ("static", "closed year"),
     "boston-311-2025": ("static", "closed year; late closures picked up only by a backfill"),
