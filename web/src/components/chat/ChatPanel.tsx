@@ -8,6 +8,7 @@ import { buildMapContext } from "@/lib/agent/context";
 import { executeClientTool, isClientTool } from "@/lib/agent/tools/client";
 import { messageText, STARTERS } from "@/lib/agent/ui";
 import Message from "./Message";
+import "./Markdown.css";
 
 // "Ask" panel (task 4.4). Streams from /api/chat, runs the map tools on the
 // shared store, and sends the current map context with every request.
@@ -73,16 +74,15 @@ export default function ChatPanel() {
   };
 
   return (
-    <div className="flex h-full flex-col">
-      <div className="px-4 pt-4">
-        <span className="eyebrow">Ask Piper</span>
-        <h2 className="mt-1 text-xl font-bold text-fg">Ask anything about rats in your area.</h2>
-        <p className="mt-0.5 text-[13px] text-fg-3">Every answer shows where it came from and moves the map.</p>
+    <div className="flex h-full min-w-0 flex-col">
+      <div className="shrink-0 border-b border-line px-4 py-3">
+        <h2 className="text-title font-bold text-fg">Ask Piper</h2>
+        {messages.length === 0 && <p className="mt-1 text-small text-fg-3">Explore reports, compare places and move the map.</p>}
       </div>
       {/* Screen readers hear each finished answer once, not every streamed token (R9.2). */}
       <div aria-live="polite" className="sr-only">{announce}</div>
 
-      <div role="log" aria-label="Conversation" className="min-h-0 flex-1 space-y-4 overflow-y-auto p-4">
+      <div role="log" aria-label="Conversation" aria-live="off" className="min-h-0 min-w-0 flex-1 space-y-6 overflow-x-hidden overflow-y-auto p-4">
         {status && !status.configured && (
           <p role="status" className="rounded-md border border-edge bg-card p-3 text-sm text-fg-2">
             Ask is turned off right now. The map, Inspect and Insights still work.
@@ -106,7 +106,7 @@ export default function ChatPanel() {
                     className="group flex w-full items-center justify-between gap-2 rounded-lg border border-line bg-card px-3 py-2.5 text-left text-sm text-fg transition-colors hover:border-edge hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent"
                   >
                     <span>{q}</span>
-                    <span aria-hidden className="text-fg-3 transition-transform group-hover:translate-x-0.5">→</span>
+                    <span aria-hidden className="text-fg-3 transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none">→</span>
                   </button>
                 </li>
               ))}
@@ -136,7 +136,7 @@ export default function ChatPanel() {
 
       <form
         onSubmit={(e) => { e.preventDefault(); send(input); }}
-        className="flex items-end gap-2 border-t border-line p-3"
+        className="flex shrink-0 items-end gap-2 border-t border-line bg-panel-solid p-3"
       >
         <label htmlFor="chat-input" className="sr-only">Ask the assistant</label>
         <textarea
@@ -146,17 +146,17 @@ export default function ChatPanel() {
           disabled={disabled}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(input); }
+            if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); send(input); }
           }}
           placeholder={status === null ? "Connecting…" : disabled ? "Assistant not configured" : "Ask about this map…"}
-          className="min-h-[2.5rem] flex-1 resize-none rounded-md border border-edge px-3 py-2 text-sm placeholder:text-fg-3 focus-visible:outline-2 focus-visible:outline-accent disabled:bg-card"
+          className="min-h-12 min-w-0 flex-1 resize-none rounded-lg border border-edge bg-card px-3 py-2 text-sm text-fg placeholder:text-fg-3 focus-visible:outline-2 focus-visible:outline-accent disabled:opacity-50"
         />
         {busy ? (
-          <button type="button" onClick={() => void stop()} className="rounded-md border border-edge px-3 py-2 text-sm font-medium focus-visible:outline-2 focus-visible:outline-accent">
+          <button type="button" onClick={() => void stop()} className="min-h-10 shrink-0 rounded-md border border-edge bg-card px-3 py-2 text-sm font-medium text-fg hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent">
             Stop
           </button>
         ) : (
-          <button type="submit" disabled={disabled || !input.trim()} className="rounded-md bg-accent px-3 py-2 text-sm font-medium text-accent-fg disabled:bg-card-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+          <button type="submit" disabled={disabled || !input.trim()} className="min-h-10 shrink-0 rounded-md bg-accent px-3 py-2 text-sm font-medium text-accent-fg enabled:hover:bg-accent-hover disabled:bg-card-hover disabled:text-fg-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
             Send
           </button>
         )}

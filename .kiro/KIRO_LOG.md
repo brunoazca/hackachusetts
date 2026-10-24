@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:11 — Render Ask answers as safe Markdown; match the latest cha...
+- Teammate: Carol
+- Agent: Codex
+- Did: Render Ask answers as safe Markdown; match the latest chat theme and compact layout
+- Why: Tables and lists were shown as raw text and crowded the panel
+- Where: web/src/components/chat; web/package.json; web/pnpm-lock.yaml
+- Idea: Keep wide tables keyboard-scrollable inside each answer and sources collapsed; validate with mocked chat responses without sending map context to AI
+
 ### 2026-10-24 19:01 — Unified Insight backend: RPCs area_insight / area_insight...
 - Teammate: Bruno
 - Agent: —
