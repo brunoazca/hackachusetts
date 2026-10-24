@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:48 — Set up RodentOps-specific Kiro automation: rodent-honesty...
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Set up RodentOps-specific Kiro automation: rodent-honesty agent (3-layer rule), no-auto-action agent (human decision point), overclaim-guard hook + check_overclaims.py scanner; renamed spec folder civic-service->rodent-ops and fixed README + CATALOG refs
+- Why: Give the chosen idea its own honesty/safety guards without touching the data source (partner owns that)
+- Where: .kiro/agents/rodent-honesty.json, .kiro/agents/no-auto-action.json, .kiro/hooks/overclaim-guard.kiro.hook, .kiro/scripts/check_overclaims.py, README.md, data/civic/CATALOG.md, .kiro/specs/rodent-ops/ (renamed)
+- Idea: Overclaim scanner encodes the knowledge-base bans (reports!=rats, closed!=solved, no infestation prediction) as a deterministic pre-check so honesty is enforced on every save
+
+### 2026-10-24 12:45 — Confirmed the chosen idea is RodentOps (rat one); read kn...
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Confirmed the chosen idea is RodentOps (rat one); read knowledge docs 15, 16, 18
+- Why: Lock the project direction so spec + build can start
+- Where: none
+- Idea: RodentOps: recurring 311 rodent complaints -> reviewed inspection/follow-up brief; 3 screens: queue -> timeline -> packet
+
 ### 2026-10-24 12:37 — Pulled origin/main (Guilherme's secret-scan + knowledge r...
 - Teammate: Carol
 - Agent: kirocrew (default)

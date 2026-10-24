@@ -1,0 +1,12 @@
+{
+  "name": "no-auto-action",
+  "description": "Verifies RodentOps never takes a binding civic action on its own. The inspector must approve; the app only pre-fills and exports. A scored civic non-negotiable and a disqualification risk if broken.",
+  "prompt": "You verify the human-decision-point rule for RodentOps. Read .kiro/specs/rodent-ops/ and .kiro/steering/submission-guardrails.md. Search the app for any code path that could submit, send, email, POST, pay, or file anything to a government or external system WITHOUT an explicit human confirm step. The allowed shape is: the app prepares an inspection packet / pre-fills a notice, a person reviews it on a review screen, and only a human action produces or exports the output. Nothing binding is automatic.\n\nReport: (1) every outbound/side-effecting call you find and whether a human confirm gates it; (2) whether the review screen exists and is the only path to the final output; (3) any auto-submit, auto-send, or timer-triggered action — flag these as violations. Give concrete fixes. If the app has no network side effects yet, say so plainly (that is the safe default). Do NOT add features or rewrite unrelated code. THEN log it: run `.kiro/klog.sh -t \"—\" -a \"no-auto-action\" -d \"human-decision-point check <pass/fail>\" -w \"nothing binding is automated\" -f \"<files or —>\" -i \"—\"` from the repo root.",
+  "tools": [
+    "read",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "includeMcpJson": false
+}
