@@ -23,9 +23,9 @@ export const TESTED: Record<string, Tested> = {
 export const testedFor = (id: string): Tested => TESTED[id] ?? { strength: "not tested", text: "not tested" };
 
 export const STRENGTH_STYLE: Record<Tested["strength"], string> = {
-  outcome: "text-neutral-900",
-  leading: "text-emerald-800",
-  weak: "text-amber-800",
-  none: "text-neutral-700",
-  "not tested": "text-neutral-600",
+  outcome: "text-fg-2",
+  leading: "text-held",
+  weak: "text-fg-2",
+  none: "text-fg-3",
+  "not tested": "text-fg-3",
 };

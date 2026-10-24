@@ -36,21 +36,21 @@ export default function SiteQueue() {
   };
 
   return (
-    <div className="absolute left-3 top-3 flex max-h-[calc(100%-1.5rem)] w-96 flex-col rounded-lg border border-neutral-200 bg-white/95 text-sm shadow-lg backdrop-blur">
-      <div className="border-b border-neutral-200 p-3">
+    <div className="glass absolute bottom-3 left-3 top-[68px] z-20 flex w-96 flex-col overflow-hidden rounded-lg text-sm">
+      <div className="border-b border-line p-4">
         <div className="flex items-baseline justify-between">
-          <h2 className="text-base font-semibold">Site queue</h2>
-          <span className="text-xs text-neutral-700">{due} due · {shown.length} shown</span>
+          <h2 className="text-[18px] font-semibold leading-[26px]">Site queue</h2>
+          <span className="font-mono text-xs text-fg-3">{due} due · {shown.length} shown</span>
         </div>
-        <p className="mt-0.5 text-xs text-neutral-700">
+        <p className="mt-0.5 text-xs text-fg-2">
           Due = closed in the last 60 days at a site that has come back before. Then most returns.
         </p>
-        <label className="mt-2 flex items-center gap-2 text-xs text-neutral-800">
+        <label className="mt-2 flex items-center gap-2 text-xs text-fg-2">
           Neighborhood
           <select
             value={hood}
             onChange={(e) => setHood(e.target.value)}
-            className="min-w-0 flex-1 rounded border border-neutral-300 bg-white px-1.5 py-1 text-xs"
+            className="h-8 min-w-0 flex-1 rounded-sm border border-edge bg-card px-2 text-[13px] text-fg"
           >
             <option value="">All</option>
             {hoods.map((h) => <option key={h} value={h}>{h}</option>)}
@@ -58,8 +58,8 @@ export default function SiteQueue() {
         </label>
       </div>
 
-      {error && <p role="alert" className="p-3 text-red-800">Could not load the queue: {error}</p>}
-      {!rows && !error && <p className="p-3 text-neutral-700">Loading sites…</p>}
+      {error && <p role="alert" className="p-3 text-return">Could not load the queue: {error}</p>}
+      {!rows && !error && <p className="p-3 text-fg-2">Loading sites…</p>}
 
       <ol className="min-h-0 flex-1 overflow-y-auto" aria-label="Sites, most urgent first">
         {shown.map((r, i) => {
@@ -70,21 +70,21 @@ export default function SiteQueue() {
                 type="button"
                 onClick={() => open(r)}
                 aria-current={active ? "true" : undefined}
-                className={`grid w-full grid-cols-[1.5rem_1fr_auto] items-start gap-2 border-b border-neutral-100 px-3 py-2 text-left hover:bg-neutral-50 ${active ? "bg-amber-50" : ""}`}
+                className={`grid w-full grid-cols-[1.5rem_1fr_auto] items-start gap-2 border-b border-line px-4 py-2.5 text-left transition-colors duration-150 hover:bg-card-hover ${active ? "bg-card-hover" : ""}`}
               >
-                <span className="pt-0.5 text-xs font-semibold text-neutral-600">{i + 1}</span>
+                <span className="pt-0.5 font-mono text-[13px] text-fg-3">{String(i + 1).padStart(2, "0")}</span>
                 <span className="min-w-0">
-                  <span className="block truncate font-medium text-neutral-900">{r.address_block ?? "Unnamed block"}</span>
-                  <span className="block truncate text-xs text-neutral-700">
+                  <span className="block truncate font-medium text-fg">{r.address_block ?? "Unnamed block"}</span>
+                  <span className="block truncate text-xs text-fg-2">
                     {r.neighborhood ?? r.city} · last closed {r.days_since_close ?? "—"} d ago
                   </span>
-                  <span className="mt-0.5 flex gap-3 text-xs text-neutral-800">
-                    <span><b>{r.reports}</b> reports</span>
-                    <span><b>{r.returns}</b> returns</span>
-                    <span><b>{r.closures}</b> closures</span>
+                  <span className="mt-1 flex gap-3 font-mono text-xs text-fg-3">
+                    <span><b className="font-medium text-fg">{r.reports}</b> reports</span>
+                    <span><b className="font-medium text-return">{r.returns}</b> returns</span>
+                    <span><b className="font-medium text-fg">{r.closures}</b> closures</span>
                   </span>
                 </span>
-                {r.due && <span className="rounded bg-red-700 px-1.5 py-0.5 text-xs font-semibold text-white">Due</span>}
+                {r.due && <span className="rounded-full border border-return px-2 py-0.5 text-xs font-medium text-return">Due</span>}
               </button>
             </li>
           );

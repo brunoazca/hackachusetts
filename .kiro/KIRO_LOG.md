@@ -46,6 +46,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Kiro tasks 9, 12, 14 done directly (Kiro paused, too slow). Live: run risk-v1-20261024T184358, 89k backtest + 13.7k forecast predictions (Oct 26-Nov 16), 133 emerging + 120 early-warning cells; grid_cells seeded with 3442 fallback cells because it was empty
 - Where: pipeline/rat_audit/model/__init__.py, explain.py, tests/test_model_explain.py
 - Idea: grid_cells seeding only runs while the table is empty; Carol can replace it
+### 2026-10-24 14:51 — Applied Piper design system to the web app on branch feat...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Applied Piper design system to the web app on branch feat/piper-ui (worktree hackachusetts-piper-ui): tokens+fonts wired, full-bleed map with floating glass panels, recolored OpenFreeMap basemap per theme, two-tone category icons, rings on Act sites, restyled TopBar/Lenses/Site queue/Inspect/Site case, styled Insights+Ask placeholders, Night/Bone toggle (T, ?theme=); dev server on 127.0.0.1:3100
+- Why: Guilherme wanted to see the design live; liked the blurred glass panels
+- Where: web/src/app/*, web/src/components/**, web/src/lib/theme-store.ts, web/src/styles/piper.css, docs/design/*
+- Idea: Design system v1.2.0: glass is the default panel again
+
 ### 2026-10-24 14:41 — Design system v1.1.0 'cleaner': removed map glows, panel ...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

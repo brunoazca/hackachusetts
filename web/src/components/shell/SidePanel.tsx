@@ -15,18 +15,20 @@ export default function SidePanel() {
   const setPanel = useMap((s) => s.setPanel);
   return (
     <>
-      <div role="tablist" aria-label="Side panel" className="flex border-b border-neutral-200">
-        {TABS.map((t) => (
-          <button
-            key={t.id}
-            role="tab"
-            aria-selected={panel === t.id}
-            onClick={() => setPanel(t.id)}
-            className={`flex-1 px-3 py-2 text-sm font-medium ${panel === t.id ? "border-b-2 border-neutral-900 text-neutral-900" : "text-neutral-700 hover:text-neutral-900"}`}
-          >
-            {t.label}
-          </button>
-        ))}
+      <div className="px-4 pt-3">
+        <div role="tablist" aria-label="Side panel" className="inline-flex h-8 gap-0.5 rounded-md border border-line bg-card p-0.5">
+          {TABS.map((t) => (
+            <button
+              key={t.id}
+              role="tab"
+              aria-selected={panel === t.id}
+              onClick={() => setPanel(t.id)}
+              className="rounded-sm border border-transparent px-3 text-[13px] font-medium text-fg-2 transition-colors duration-150 hover:text-fg aria-selected:border-edge aria-selected:bg-bg aria-selected:text-fg"
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto">
         {/* Chat stays mounted so the conversation survives tab switches. */}

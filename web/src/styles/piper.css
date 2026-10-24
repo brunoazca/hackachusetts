@@ -255,12 +255,13 @@
   border: 1px solid var(--p-line);
   box-shadow: 0 1px 2px rgb(var(--p-shadow-rgb) / calc(0.25 * var(--p-shadow-a)));
 }
-/* Opt-in only (e.g. the TopBar over a busy map). Not the default. */
+/* Default floating panel over the map: frosted glass, hairline, small shadow. */
 @utility glass {
   background: var(--p-panel);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px) saturate(1.15);
+  -webkit-backdrop-filter: blur(20px) saturate(1.15);
   border: 1px solid var(--p-line);
+  box-shadow: var(--shadow-panel);
 }
 @utility eyebrow {
   font-family: var(--font-sans);

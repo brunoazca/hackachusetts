@@ -44,7 +44,7 @@ section.doc > header .t-headline { margin: 6px 0 8px; }
 section.doc > header p { color: var(--p-fg-2); }
 .grid { display: grid; gap: 12px; }
 .card { background: var(--p-card); border: 1px solid var(--p-line); border-radius: var(--r-lg); padding: 16px; }
-.panel { background: var(--p-panel-solid); border: 1px solid var(--p-line); border-radius: var(--r-lg); box-shadow: 0 1px 2px rgb(0 0 0 / .25); }
+.panel { background: var(--p-panel); backdrop-filter: blur(20px) saturate(1.15); -webkit-backdrop-filter: blur(20px) saturate(1.15); border: 1px solid var(--p-line); border-radius: var(--r-lg); box-shadow: 0 1px 2px rgb(0 0 0 / .25); }
 [data-theme="bone"] .panel { box-shadow: 0 1px 2px rgb(60 40 20 / .08); }
 .row { display: flex; align-items: center; gap: 8px; }
 .stack { display: flex; flex-direction: column; gap: 8px; }

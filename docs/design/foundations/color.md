@@ -117,7 +117,7 @@ borders, switch tracks, segment outlines) uses `edge`.
 | Body text | `fg` | `fg-2` for paragraphs |
 | Labels, meta | `fg-2` | `fg-3` for anything longer than a line |
 | Axis labels, captions, eyebrows | `fg-3` | `line` |
-| Panel over the map | `panel-solid` + 1 px `line` (utility `surface`) | blur, glow, big shadows |
+| Panel over the map | `glass` (`panel` + blur 20 + hairline) | glow, big shadows |
 | Card inside a panel | `card` | `panel` nested in `panel` |
 | Primary button | `accent` / `accent-fg` | `return` |
 | A site that came back | `return` | `danger` |

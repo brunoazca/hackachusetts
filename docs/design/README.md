@@ -1,4 +1,4 @@
-# Piper design standards (v1.1.0)
+# Piper design standards (v1.2.0)
 
 How Piper looks, moves, reads and behaves. Brand and naming:
 [`docs/rat-audit/brand.md`](../rat-audit/brand.md). See it applied:
@@ -88,6 +88,12 @@ Accessibility → truthful data → equity → clarity → brand flourish. A flo
 - [ ] `python3 scripts/check-design-tokens.py` prints `tokens OK`.
 
 ## Changelog
+
+- **1.2.0 — Oct 24, 2026.** Frosted glass is back as the default panel over the map
+  (Guilherme's call): `glass` = `panel` + blur 20 + saturate 1.15 + hairline + small
+  shadow. Everything else from 1.1.0 stays (no glow, no big shadows, upright Bodoni,
+  quiet labels). `surface` remains for places that are not over the map. First app
+  implementation on branch `feat/piper-ui`.
 
 - **1.1.0 — Oct 24, 2026. Cleaner.** Removed the effects that read as generated:
   map glows, glass blur on panels (solid surfaces + hairline + 1-2 px shadow;
