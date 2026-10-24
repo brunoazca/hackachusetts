@@ -6,6 +6,7 @@ import { STRENGTH_STYLE, testedFor } from "./tested";
 import { ERA_STOPS, HOUSING_RAMP } from "./ContextLayers";
 import type { CoverageRow } from "@/lib/queries";
 import { useUi } from "@/lib/ui-store";
+import { useMorph } from "@/lib/use-morph";
 import { useEffect, useId, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from "react";
 
 // Layer dock: a slim vertical rail of group buttons (rat signals, trash, shelter, works, buildings,
@@ -39,10 +40,10 @@ export const HEAT_RAMPS = {
   rats: ["#fee5d9", "#fcae91", "#fb6a4a", "#de2d26", "#a50f15"],
   evidence: ["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"],
 };
-const MODES: { id: ViewMode; label: string }[] = [
-  { id: "points", label: "Points" },
-  { id: "heat", label: "Heatmap" },
-  { id: "both", label: "Both" },
+const MODES: { id: ViewMode; label: string; hint: string }[] = [
+  { id: "heat", label: "Hot spots", hint: "Where reports cluster across the city" },
+  { id: "points", label: "Each report", hint: "One marker per report" },
+  { id: "both", label: "Both", hint: "Hot spots with markers on top" },
 ];
 
 type Props = {
@@ -50,6 +51,8 @@ type Props = {
   onChange: (next: Record<string, boolean>) => void;
   mode: ViewMode;
   onModeChange: (m: ViewMode) => void;
+  causes: boolean;
+  onCausesChange: (v: boolean) => void;
   count: number;
   loading: boolean;
   coverage: CoverageRow[];
@@ -69,15 +72,6 @@ function CityBadges({ layer, coverage }: { layer: string; coverage: CoverageRow[
   );
 }
 
-function Ramp({ colors, label }: { colors: string[]; label: string }) {
-  return (
-    <div className="flex items-center gap-2">
-      <span aria-hidden className="h-2 w-14 shrink-0 rounded-full" style={{ background: `linear-gradient(to right, ${colors.join(", ")})` }} />
-      <span className="text-xs text-fg-2">{label}</span>
-    </div>
-  );
-}
-
 type DockId = "rats" | "food" | "shelter" | "displace" | "context" | "period" | "view";
 
 /** One layer row: icon, name, one quiet meta line, switch. Whole row toggles. */
@@ -94,7 +88,7 @@ function LayerRow({ icon, label, meta, checked, onToggle }: { icon: ReactNode; l
   );
 }
 
-export default function LayerPanel({ enabled, onChange, mode, onModeChange, count, loading, coverage, zoom }: Props) {
+export default function LayerPanel({ enabled, onChange, mode, onModeChange, causes, onCausesChange, count, loading, coverage, zoom }: Props) {
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
   const [open, setOpen] = useState<DockId | null>(null);
@@ -144,7 +138,11 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
     btnRefs.current[next.id]?.focus();
   };
 
-  const current = dock.find((d) => d.id === open);
+  // Keep showing the last group while the flyout morphs closed.
+  const [lastId, setLastId] = useState<DockId | null>(open);
+  if (open && open !== lastId) setLastId(open);
+  const shown = useMorph(!!open, flyRef, () => (lastId ? btnRefs.current[lastId] ?? null : null));
+  const current = shown ? dock.find((d) => d.id === (open ?? lastId)) : undefined;
   const setAll = (ids: string[], v: boolean) => onChange({ ...enabled, ...Object.fromEntries(ids.map((id) => [id, v])) });
 
   return (
@@ -197,10 +195,11 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
           id={flyoutId}
           ref={flyRef}
           aria-label={current.label}
-          className="glass w-72 origin-top-left animate-[piper-fly_160ms_var(--ease-out)_both] overflow-y-auto rounded-lg p-3 text-sm [max-height:calc(100dvh-92px)]"
+          className="glass w-72 overflow-hidden rounded-lg text-sm will-change-[transform,clip-path]"
         >
+          <div className="overflow-y-auto p-3 [max-height:calc(100dvh-92px)]">
           <header className="mb-2 flex items-center justify-between gap-2">
-            <h2 className="text-[14px] font-bold text-fg">{current.id === "period" ? "Period" : current.id === "view" ? "View" : current.label}</h2>
+            <h2 className="text-[14px] font-bold text-fg">{current.id === "period" ? "Period" : current.id === "view" ? "How to show reports" : current.label}</h2>
             <div className="flex items-center gap-1">
               {GROUPS.some((g) => g.id === current.id) && (() => {
                 const ids = groupIds(current.id);
@@ -276,22 +275,28 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
 
           {current.id === "view" && (
             <div className="space-y-2">
-              <div role="radiogroup" aria-label="View" className="grid grid-cols-3 gap-0.5 rounded-md border border-line bg-card p-0.5">
+              <div role="radiogroup" aria-label="How to show reports" className="flex flex-col gap-1">
                 {MODES.map((m) => (
                   <button key={m.id} type="button" role="radio" aria-checked={mode === m.id} onClick={() => onModeChange(m.id)}
-                    className="h-8 rounded-sm text-[12px] font-medium text-fg-2 hover:text-fg aria-checked:bg-fg aria-checked:text-bg">
-                    {m.label}
+                    className="flex items-center gap-3 rounded-md border border-line px-3 py-2 text-left transition-colors duration-150 hover:bg-card-hover aria-checked:border-fg aria-checked:bg-card">
+                    <span aria-hidden className={`h-3.5 w-3.5 shrink-0 rounded-full border-2 ${mode === m.id ? "border-fg bg-fg shadow-[inset_0_0_0_2px_var(--p-panel-solid)]" : "border-edge"}`} />
+                    <span>
+                      <span className="block text-[13px] font-semibold text-fg">{m.label}</span>
+                      <span className="block text-[11px] text-fg-3">{m.hint}</span>
+                    </span>
                   </button>
                 ))}
               </div>
-              {mode !== "points" && (
-                <div className="space-y-1">
-                  <Ramp colors={HEAT_RAMPS.rats} label="Rat reports" />
-                  <Ramp colors={HEAT_RAMPS.evidence} label="Evidence (trash, shelter, works)" />
-                </div>
-              )}
+              <LayerRow
+                icon={<span aria-hidden className="h-3 w-5 rounded-[2px]" style={{ background: `linear-gradient(to right, ${HEAT_RAMPS.evidence.join(", ")})` }} />}
+                label="Show likely causes"
+                meta="Trash, vacant lots, construction near reports"
+                checked={causes}
+                onToggle={onCausesChange}
+              />
             </div>
           )}
+          </div>
         </section>
       )}
     </nav>

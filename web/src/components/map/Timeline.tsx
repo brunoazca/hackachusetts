@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useMap } from "@/lib/map-store";
 import { rightInset, useUi } from "@/lib/ui-store";
+import { useMorph } from "@/lib/use-morph";
 
 // Time window as a timeline, not a row of "7 d / 30 d" chips: a strip from Jan 2023 to today with a
 // draggable window (two handles), quick picks in plain words, and the range written out in full.
@@ -38,6 +39,8 @@ export default function Timeline() {
   const [lo, setLo] = useState(() => toIdx(filters.since));
   const [hi, setHi] = useState(() => toIdx(filters.until));
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const boxRef = useRef<HTMLElement>(null);
+  const shown = useMorph(open, boxRef, () => document.getElementById("dock-when"));
 
   // Keep in sync if someone else (the assistant, a finding) changes the window.
   const sinceIdx = toIdx(filters.since), untilIdx = toIdx(filters.until);
@@ -74,15 +77,17 @@ export default function Timeline() {
   const pct = (i: number) => (i / total) * 100;
   const span = hi - lo;
 
+  if (!shown) return null;
   return (
     <section
       id="timeline"
+      ref={boxRef}
       aria-label="Time window"
       inert={!open}
-      aria-hidden={!open}
-      className={`glass absolute bottom-3 z-20 rounded-lg px-4 pb-3 pt-2.5 transition-[right,transform,opacity] duration-300 ease-[var(--ease-spring)] ${open ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-[calc(100%+16px)] opacity-0"}`}
+      className="glass absolute bottom-3 z-20 rounded-lg transition-[right] duration-300 ease-[var(--ease-spring)] will-change-[transform,clip-path]"
       style={{ left: appMode === "act" ? 420 : 76, right: rightInset(rightOpen) }}
     >
+      <div className="px-4 pb-3 pt-2.5">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
         <p className="min-w-0 text-[14px] text-fg">
           <span className="text-fg-3">Showing </span>
@@ -140,6 +145,7 @@ export default function Timeline() {
           onChange={(e) => { const v = Math.max(Number(e.target.value), lo + 1); setHi(v); commit(lo, v); }}
           className="piper-range absolute inset-x-0 top-0 h-8 w-full"
         />
+      </div>
       </div>
     </section>
   );

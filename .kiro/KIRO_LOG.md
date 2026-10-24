@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:39 — Panels now morph out of the button that opened them (clip...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Panels now morph out of the button that opened them (clip-path + translate via Web Animations, 280ms open / 200ms close, content fades after the box grows, instant under reduced motion): layer flyouts from dock icons, time window from the calendar button, right panel from its rail icon. Map made easier to read: hot spots show rat reports only and fade by street level where markers take over; causes (trash, vacant lots, works) off until 'Show likely causes'; plain view options with hints; always-on map key that changes with zoom
+- Why: Guilherme: wanted sleek morphing buttons-to-panels and a less confusing visualization
+- Where: web/src/lib/use-morph.ts, web/src/components/map/{LayerPanel,Timeline,MapView,MapLegend}.tsx, web/src/components/shell/RightPanel.tsx
+- Idea: One hook (useMorph) drives every open/close so motion stays consistent
+
 ### 2026-10-24 15:29 — Merged latest main (Simple/Explore already removed upstre...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

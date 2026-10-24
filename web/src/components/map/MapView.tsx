@@ -8,6 +8,7 @@ import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { fetchCoverage, fetchIncidentBins, fetchIncidents, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
 import ContextLayers from "./ContextLayers";
+import MapLegend from "./MapLegend";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
 import { addCategoryIcons, iconId } from "./icons";
@@ -76,7 +77,8 @@ function heatPaint(ramp: string[], opacity: number, n: number) {
       "interpolate", ["linear"], ["heatmap-density"],
       0, "rgba(0,0,0,0)", 0.12, ramp[0], 0.3, ramp[1], 0.55, ramp[2], 0.8, ramp[3], 1, ramp[4],
     ],
-    "heatmap-opacity": ["interpolate", ["linear"], ["zoom"], 14, opacity, 16.5, 0.25],
+    // Hot spots are a city-scale view: they fade out by street level, where the real markers take over.
+    "heatmap-opacity": ["interpolate", ["linear"], ["zoom"], 12.5, opacity, 14.5, 0],
   } as unknown as HeatmapLayerSpecification["paint"];
 }
 
@@ -92,6 +94,8 @@ export default function MapView() {
     () => Object.fromEntries(Object.keys(CATS).map((c) => [c, true])),
   );
   const [mode, setMode] = useState<ViewMode>("heat");
+  // Causes (trash, vacant lots, works) are context for rats, not the headline: off until asked for.
+  const [causes, setCauses] = useState(false);
   const [coverage, setCoverage] = useState<CoverageRow[]>([]);
   const [bbox, setBbox] = useState<BBox | null>(null);
   const [zoom, setZoom] = useState(view.zoom);
@@ -140,7 +144,9 @@ export default function MapView() {
   }, [data]);
   const total = useMemo(() => data.features.reduce((a, f) => a + (f.properties.n ?? 1), 0), [data]);
   const showHeat = viewMode !== "points";
-  const showClusters = viewMode === "points" || viewMode === "both";
+  // In "Hot spots" mode, groups and markers still appear once you zoom to street level.
+  const showClusters = true;
+  const markerMinZoom = viewMode === "heat" ? 14 : 0;
 
   const load = useCallback(async () => {
     const map = mapRef.current;
@@ -243,13 +249,16 @@ export default function MapView() {
         <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
-          <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />
+          <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat && causes ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />
         </Source>
         <Source id="heat-rats" type="geojson" data={heat.rats}>
-          <Layer id="heat-rats" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.rats, 0.7, heat.nRats)} />
+          <Layer id="heat-rats" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.rats, 0.75, heat.nRats)} />
         </Source>
         {iconsReady && cats.map((c) => {
           const color = CATS[c]?.color ?? "#555";
+          // Rat signals always draw; causes draw when asked for, or once you are at street level.
+          const rat = CATS[c]?.group === "rats";
+          const minz = rat ? markerMinZoom : causes ? markerMinZoom : 15;
           return (
             <Fragment key={c}>
               <Source
@@ -260,6 +269,7 @@ export default function MapView() {
                 <Layer
                   id={`${c}-clusters`}
                   type="circle"
+                  minzoom={minz}
                   layout={{ visibility: showClusters ? "visible" : "none" }}
                   filter={["any", ["has", "point_count"], [">", N, 1]]}
                   paint={{
@@ -275,6 +285,7 @@ export default function MapView() {
                 <Layer
                   id={`${c}-cluster-count`}
                   type="symbol"
+                  minzoom={minz}
                   filter={["any", ["has", "point_count"], [">", N, 1]]}
                   layout={{
                     visibility: showClusters ? "visible" : "none",
@@ -294,7 +305,7 @@ export default function MapView() {
                 <Layer
                   id={`${c}-points`}
                   type="symbol"
-                  minzoom={showClusters ? 0 : 15}
+                  minzoom={minz}
                   filter={["all", ["!", ["has", "point_count"]], ["==", N, 1]]}
                   layout={{
                     "icon-image": ["case", ["any", ["==", ["get", "status"], "open"], [">", ["coalesce", ["get", "n_open"], 0], 0]], iconId(c), iconId(c, true)],
@@ -333,8 +344,10 @@ export default function MapView() {
       {appMode === "act" ? (
         <SiteQueue />
       ) : (
-        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} count={total} loading={loading} coverage={coverage} zoom={zoom} />
+        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} />
       )}
+
+      {appMode !== "act" && <MapLegend mode={viewMode} causes={causes} zoom={zoom} />}
 
       {error && (
         <div role="alert" className="absolute bottom-4 left-4 rounded-md bg-red-50 px-3 py-2 text-sm font-medium text-red-900 shadow">

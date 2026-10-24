@@ -3,10 +3,11 @@ import { useEffect, useRef, type ReactNode } from "react";
 import { useMap } from "@/lib/map-store";
 import { rightInset, useUi } from "@/lib/ui-store";
 import SidePanel from "./SidePanel";
+import { useMorph } from "@/lib/use-morph";
 
 // Right panel (Inspect / Insights / Ask). Starts folded into a slim rail so the map gets the room;
-// slides open on a map selection, a rail click, or "]". Both states stay mounted so the move is a
-// single transform; the hidden one is `inert` so keyboard and screen readers skip it.
+// grows out of the rail icon you clicked (or the Inspect icon on a map selection, or "]"), and
+// shrinks back into it. The rail stays underneath as the anchor.
 
 type Tab = "inspector" | "insights" | "chat";
 const ICON: Record<Tab, ReactNode> = {
@@ -24,9 +25,12 @@ export default function RightPanel() {
   const setPanel = useMap((s) => s.setPanel);
   const asideRef = useRef<HTMLElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
+  const anchorRef = useRef<HTMLButtonElement | null>(null);
+  const btnRefs = useRef<Partial<Record<Tab, HTMLButtonElement | null>>>({});
+  const shown = useMorph(open, asideRef, () => anchorRef.current ?? btnRefs.current.inspector ?? null);
 
   // A new selection on the map opens the panel.
-  useEffect(() => { if (selection) setOpen(true); }, [selection, setOpen]);
+  useEffect(() => { if (selection) { anchorRef.current = btnRefs.current.inspector ?? null; setOpen(true); } }, [selection, setOpen]);
 
   // "]" toggles; Esc folds it when focus is inside.
   useEffect(() => {
@@ -44,7 +48,7 @@ export default function RightPanel() {
     document.documentElement.style.setProperty("--right-inset", `${rightInset(open) + 8}px`);
   }, [open]);
 
-  const openTab = (t: Tab) => { setPanel(t); setOpen(true); };
+  const openTab = (t: Tab) => { anchorRef.current = btnRefs.current[t] ?? null; setPanel(t); setOpen(true); };
 
   return (
     <>
@@ -52,14 +56,14 @@ export default function RightPanel() {
       <div
         ref={railRef}
         inert={open}
-        aria-hidden={open}
-        className={`glass absolute right-3 top-[68px] z-30 flex w-[52px] flex-col items-center gap-1 rounded-lg p-1 transition-[opacity,transform] duration-300 ease-[var(--ease-spring)] ${open ? "pointer-events-none translate-x-2 opacity-0" : "opacity-100"}`}
+        className="glass absolute right-3 top-[68px] z-30 flex w-[52px] flex-col items-center gap-1 rounded-lg p-1"
         role="toolbar"
         aria-label="Open details panel"
       >
         {(Object.keys(ICON) as Tab[]).map((t) => (
           <button
             key={t}
+            ref={(el) => { btnRefs.current[t] = el; }}
             type="button"
             onClick={() => openTab(t)}
             aria-label={`Open ${LABEL[t]}`}
@@ -73,14 +77,18 @@ export default function RightPanel() {
       </div>
 
       {/* Panel */}
-      <aside
-        ref={asideRef}
-        inert={!open}
-        aria-label={`${LABEL[panel as Tab] ?? "Details"} panel`}
-        className={`glass absolute bottom-3 right-3 top-[68px] z-30 flex w-[380px] flex-col overflow-hidden rounded-lg transition-[transform,opacity] duration-300 ease-[var(--ease-spring)] will-change-transform ${open ? "translate-x-0 opacity-100" : "pointer-events-none translate-x-[calc(100%+16px)] opacity-0"}`}
-      >
-        <SidePanel onCollapse={() => setOpen(false)} />
-      </aside>
+      {shown && (
+        <aside
+          ref={asideRef}
+          inert={!open}
+          aria-label={`${LABEL[panel as Tab] ?? "Details"} panel`}
+          className="glass absolute bottom-3 right-3 top-[68px] z-[31] w-[380px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
+        >
+          <div className="flex h-full flex-col">
+            <SidePanel onCollapse={() => setOpen(false)} />
+          </div>
+        </aside>
+      )}
     </>
   );
 }
