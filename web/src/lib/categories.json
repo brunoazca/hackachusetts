@@ -289,6 +289,10 @@
       "label": "Public school",
       "group": "impact"
     },
+    "college": {
+      "label": "College / university",
+      "group": "impact"
+    },
     "park": {
       "label": "Park feature",
       "group": "shelter"

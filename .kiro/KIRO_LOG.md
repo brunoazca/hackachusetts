@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:34 — All loaders done: parcels 184,552 (100% coords via Parcel...
+- Teammate: Bruno
+- Agent: —
+- Did: All loaders done: parcels 184,552 (100% coords via Parcels25), 1,157 restaurants, 1,460 permits, Big Belly 542, city lots 1,340, schools 134, colleges 60; listings slimmed to 518 (all rat-review listings + 10% sample); tracts simplified
+- Why: Data section complete except full enforcement aggregate
+- Where: pipeline/rat_audit/ingest/*.py, contracts/categories.json
+- Idea: listings is a sample: weight non-rat rows x10 for rates
+
 ### 2026-10-24 13:33 — Fixed truncated 311 volume (CKAN caps SQL at 32k rows): c...
 - Teammate: Bruno
 - Agent: —
