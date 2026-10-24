@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:42 — Region view: buildings step aside (3D off, footprints fad...
+- Teammate: Bruno
+- Agent: —
+- Did: Region view: buildings step aside (3D off, footprints faded, parcel dots hidden) while an insight region is open
+- Why: reports and evidence inside the highlight must read clearly
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
 ### 2026-10-24 19:37 — Motion graphic v4: 5-step data timeline (Data, Evidence, ...
 - Teammate: Bruno
 - Agent: —

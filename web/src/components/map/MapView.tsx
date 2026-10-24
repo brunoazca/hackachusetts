@@ -528,6 +528,21 @@ export default function MapView() {
     map.easeTo({ pitch: three ? 35 : 0, bearing: three ? -18 : 0, duration: 900 });
   }, [three, iconsReady]);
 
+  // Inside an insight's region the reports and evidence are the point: buildings (3D and footprints) get out of the way.
+  const inRegionView = regionCells.length > 0;
+  useEffect(() => {
+    const map = mapRef.current?.getMap();
+    if (!map || !iconsReady) return;
+    if (map.getLayer(THREE_LAYER)) map.setLayoutProperty(THREE_LAYER, "visibility", three && !inRegionView ? "visible" : "none");
+    for (const l of map.getStyle().layers ?? []) {
+      if (l.id === THREE_LAYER || !/building/.test(l.id)) continue;
+      try {
+        if (l.type === "fill") map.setPaintProperty(l.id, "fill-opacity", inRegionView ? 0.15 : undefined);
+        else if (l.type === "fill-extrusion") map.setLayoutProperty(l.id, "visibility", inRegionView ? "none" : "visible");
+      } catch { /* layer lacks prop */ }
+    }
+  }, [inRegionView, three, iconsReady]);
+
   // Fresh reports pulse: a ring that grows and fades, 1.5 s per beat, only at marker zooms.
   useEffect(() => {
     const map = mapRef.current?.getMap();
@@ -640,7 +655,7 @@ export default function MapView() {
         attributionControl={{ compact: true }}
       >
         <NavigationControl position="bottom-right" />
-        <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} cellMetric={cellMetric} />
+        <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings && !regionCells.length} bbox={bbox} zoom={zoom} cellMetric={cellMetric} />
         <ForecastLayer visible={forecastOn} period={forecastWeek ?? "4w"} bbox={bbox} selectedId={selectedId} />
         <PriorityLayer visible={priorityOn} full={priorityFull} three={three} selectedId={selection?.kind === "cell" ? selectedId : ""} regionIds={regionCells} week={forecastWeek} T={T} />
         {/* Evidence first so the rat heatmap draws on top. */}
