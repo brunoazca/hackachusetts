@@ -160,7 +160,7 @@ export default function MapView() {
   const onClick = useCallback((e: MapLayerMouseEvent) => {
     const f = e.features?.[0];
     if (!f) return;
-    if (f.layer.id === "forecast-fill") {
+    if (f.layer.id === "forecast-hit") {
       select({ kind: "cell", id: String(f.properties?.id) });
       return;
     }
@@ -196,7 +196,7 @@ export default function MapView() {
       >
         <NavigationControl position="bottom-right" />
         <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} />
-        <ForecastLayer visible={forecastOn} week={forecastWeek} bbox={bbox} selectedId={selectedId} />
+        <ForecastLayer visible={forecastOn} period={forecastWeek ?? "4w"} bbox={bbox} selectedId={selectedId} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
           <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />

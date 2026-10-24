@@ -40,12 +40,29 @@ export async function fetchForecastRun(): Promise<ForecastRun | null> {
   return data as ForecastRun | null;
 }
 
-export async function fetchForecast(bbox: BBox, week: string | null): Promise<FeatureCollection<Polygon, ForecastCellProps>> {
+export async function fetchForecast(bbox: BBox, week: string | null, minExpected = 0.01): Promise<FeatureCollection<Polygon, ForecastCellProps>> {
   const [min_lon, min_lat, max_lon, max_lat] = bbox;
-  const { data, error } = await supabase.rpc("map_forecast", { min_lon, min_lat, max_lon, max_lat, week });
+  const { data, error } = await supabase.rpc("map_forecast", { min_lon, min_lat, max_lon, max_lat, week, min_expected: minExpected });
   if (error) throw error;
   return data as FeatureCollection<Polygon, ForecastCellProps>;
 }
+
+/** Smoothed surface: nested land areas where expected reports ≥ level. period = "4w" or a forecast week. */
+export async function fetchForecastSurface(period: string): Promise<FeatureCollection> {
+  const { data, error } = await supabase.rpc("forecast_surface", { period });
+  if (error) throw error;
+  return data as FeatureCollection;
+}
+
+// Surface colors by level (expected reports in the chosen period). Starts at 1: lower values are not drawn.
+export const SURFACE_STOPS: [number, string][] = [
+  [1, "#fcd34d"],
+  [1.5, "#f59e0b"],
+  [2, "#ea580c"],
+  [3, "#c2410c"],
+  [4, "#b91c1c"],
+  [5, "#7f1d1d"],
+];
 
 export async function fetchCellDetail(cellId: string): Promise<CellDetail> {
   const { data, error } = await supabase.rpc("cell_detail", { cell_id: cellId });

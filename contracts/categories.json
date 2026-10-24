@@ -24,6 +24,11 @@
       "sources": {
         "311": [
           "Pest Infestation - Residential"
+        ],
+        "somerville-311": [
+          "Mice",
+          "Bedbugs",
+          "Tenant complaint or inspection request"
         ]
       }
     },
@@ -161,6 +166,9 @@
         "311": [
           "Unsanitary Conditions - Establishment",
           "Unsanitary Conditions - Food"
+        ],
+        "somerville-311": [
+          "Restaurant violation"
         ]
       }
     },
@@ -192,6 +200,9 @@
         "311": [
           "Overgrown Weeds On Property",
           "Overgrown Weeds"
+        ],
+        "somerville-311": [
+          "Overgrowth or encroachment on private property"
         ]
       }
     },
@@ -202,6 +213,13 @@
       "sources": {
         "311": [
           "Construction Debris"
+        ],
+        "somerville-311": [
+          "Construction Noise Report",
+          "Building permit violation/illegal construction"
+        ],
+        "cambridge-311": [
+          "Construction Complaint"
         ]
       }
     },
