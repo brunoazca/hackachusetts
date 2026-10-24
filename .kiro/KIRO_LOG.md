@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:28 — Renamed Vercel project rat-ops -> piper; added https://pi...
+- Teammate: Bruno
+- Agent: —
+- Did: Renamed Vercel project rat-ops -> piper; added https://piper-app.vercel.app (piper.vercel.app is owned by another account); rat-ops.vercel.app still serves
+- Why: Project's new name is Piper
+- Where: .github/workflows/deploy.yml, Vercel project settings
+- Idea: Buy a custom domain if we want a bare 'piper' URL
+
 ### 2026-10-24 15:25 — Forecast on the map: map_forecast/cell_detail/forecast_ru...
 - Teammate: Bruno
 - Agent: —
