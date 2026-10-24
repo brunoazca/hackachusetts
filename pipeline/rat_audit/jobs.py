@@ -23,6 +23,7 @@ INGEST_SOURCES = [
     "weather",     # NOAA daily
     "events",      # licenses, Red Sox, move-out, holidays
     "context",     # tracts, Zillow, Airbnb, iNaturalist
+    "demographics",  # ACS by tract for all three cities (after context creates the tracts)
 ]
 # Live updates (see ingest/update_modes.py for the per-source list written to `sources.update_mode`):
 #   LIVE   -> REFRESH_SOURCES: Refresh button (Modal `refresh`, ~15 s) and the daily cron

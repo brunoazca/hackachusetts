@@ -33,6 +33,7 @@ UPDATE_MODES: dict[str, tuple[str, str]] = {
     "climate-ready-boston-svi": ("static", "2010 tracts"),
     "census-tigerweb-2020": ("static", "2020 tracts and population"),
     "cdc-places": ("static", "2023 release"),
+    "census-reporter-acs": ("static", "ACS 5-year by tract, all three cities (income, renters, poverty, race, language, housing age)"),
     "zillow-zhvi": ("static", "monthly series; snapshot of Oct 24"),
     "zillow-zori": ("static", "monthly series; snapshot of Oct 24"),
     "inside-airbnb-boston": ("static", "snapshot 2026-09-19"),
