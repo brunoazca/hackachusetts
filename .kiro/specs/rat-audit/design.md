@@ -100,10 +100,11 @@ compute durations locally. Raw downloads cache to `.cache/raw/` (git-ignored).
   site (and for privacy), not as the site. Return = a report in the site opened 1–60 days after an earlier report's
   `closed_at`. No composite score: the UI shows counts; ordering is Due first, then returns in the last 12 months.
   `summary`: counts (reports, closures, returns, days since last closure); `ladder` (ordered action tags with returns
-  between them); `speed` (site median closure days vs citywide median for the same tag); `notes` (last 5, scrubbed, with
+  between them); `speed` (site median closure days vs citywide median for the same tag, plus `same_day_share` = share closed on the opening day); `notes` (last 5, scrubbed, with
   both tags); `drivers` (counts within 100 m over the site's active period by category / place kind with ids, incl. trash
   tickets last 12 months and schools); `building` (nearest parcel); `adjacent_vacant` (vacant-land parcel within 40 m);
-  `due`, `base_rate`, `recur_p`; `expected_month` (yearly mean × month seasonal factor) [R3.16].
+  `due`, `base_rate`, `recur_p`; `expected_month` (yearly mean × month seasonal factor) [R3.16];
+  `season_adj` = reports in the last 90 days ÷ expected for those months (seasonal factors from citywide monthly counts) [R4.7].
   `recommended`: the five rules in R3.9, first match wins, each with `because` + source_ids. A final filter drops any
   text outside sanitation / exclusion / enforcement / referral or mentioning rodenticide or poison [R3.10].
   `unknowns` [R3.11, P1]: 2–3 open checks drafted by the LLM from notes + drivers, cached, editable in the UI.
@@ -193,6 +194,9 @@ Layout [R0]: top bar (name, live badge + Refresh, search, mode switch **Assess /
 (site case, report / place / cell details, findings, forecast summary, work order, trial designer, assistant) opens in
 side panels or popovers on interaction, never as more top-level tabs. Selection is shared across modes. Panel placement,
 sizes and visual design are decided in the UI design pass (Gui); the component list below is what must exist, not where it sits.
+Depth [R0.5]: store flag `depth: "simple" | "explore"`. Simple hides the layer control, filters, timeline, heatmap and
+area draw and keeps queue → case → approve; Explore shows them all. Layer toggles read their tested result from
+`correlations` (keyed by layer id; fallback "not tested") [R2.16].
 Map store (`web/src/lib/map-store.ts`): `flyTo, setLayers, setFilters, setHighlight, select, setPanel, setForecastWeek`.
 
 | Component | Responsibility | Reqs |
@@ -219,8 +223,9 @@ always show the map (call map tools); cite `source_ids`; "reports" not "rats"; c
 numbers; recommend, never decide; never recommend rodenticide or poison; say when data can't answer; concise.
 
 Server tools: `geocode, search_incidents, top_sites, due_sites, get_site, nearby_drivers, what_worked, get_findings, forecast,
-price_impact, events_near, compare_areas, draft_work_order, get_trial`. Client tools (executed in the browser on the map store):
-`map_fly_to, map_set_layers, map_set_filters, map_highlight, map_select, map_show_forecast, open_panel`.
+price_impact, events_near, compare_areas, draft_work_order, get_trial, base_rates, area_stats`. Client tools (executed in the browser on the map store):
+`map_fly_to, map_set_layers, map_set_filters, map_highlight, map_select, map_show_forecast, open_panel, app_set_mode`
+(mode Assess / Act and depth Simple / Explore) [R8.11].
 Each message carries `{selection, bbox, filters}` from the store [R8.5].
 
 ## 9. Error handling

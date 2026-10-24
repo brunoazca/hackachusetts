@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:19 — Added the remaining v2 summary ideas to the spec
+- Teammate: Bruno
+- Agent: —
+- Did: Added the remaining v2 summary ideas to the spec
+- Why: Friend's v2 summary had items not yet merged
+- Where: .kiro/specs/rat-audit/{requirements,design,tasks}.md
+- Idea: Simple/Explore depth toggle (R0.5); tested-result label per layer (R2.16); same-day closure share; season-adjusted queue (R4.7); agent base_rates/area_stats/app_set_mode (R8.11); build order Simple loop → Prove → Explore
+
 ### 2026-10-24 14:18 — Map: one clustered source per category (clusters wear the...
 - Teammate: Bruno
 - Agent: —

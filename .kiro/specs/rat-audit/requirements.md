@@ -79,6 +79,7 @@ follow up, prove).
 2. **P0** Details (site case, report, place, cell, finding, work order, trial) SHALL open in side panels or popovers when the user interacts, not as more top-level tabs.
 3. **P0** A site selected in one mode SHALL stay selected when the user switches modes.
 4. The exact layout, panel placement and visual design are decided in the UI design pass (Gui) and are not fixed here. Requirements below say what must be reachable, not where it sits.
+5. **P0** THE SYSTEM SHALL offer two depths. **Simple** (default): the loop queue → case → approve with only the controls it needs. **Explore** (one toggle): every layer, filter, timeline, heatmap, area stats and the full assistant. The landing view (Act queue or Assess map) is decided in the UI pass; the Act queue tells the demo story fastest.
 
 ---
 
@@ -116,6 +117,7 @@ follow up, prove).
 13. **P1** THE SYSTEM SHALL show Boston, Cambridge and Somerville on one map with a city filter, and SHALL mark block-centroid points as approximate.
 14. **P1** THE SYSTEM SHALL offer a reporting-normalized layer: rodent reports per 100 total 311 reports per cell.
 15. **P0** WHEN a site is selected (map, queue, search or assistant) THE SYSTEM SHALL fly the map to it and highlight its reports and nearby drivers.
+16. **P1** THE SYSTEM SHALL show, for every driver layer, its tested result next to the toggle or in the legend: strength label and effect size with a link to the finding (e.g. "Demolitions: no effect, ×1.01"; "Trash storage: weak, ρ ≈ +0.13"), from `correlations` / `data-audit.md`. A layer without a test says "not tested".
 
 ## R3 Inspect anything
 
@@ -124,7 +126,7 @@ follow up, prove).
    a. counts: reports, closures, returns, days since last closure, Due flag with its base return rate;
    b. timeline of reports with closure actions, marking every closure followed by a return;
    c. escalation ladder: the ordered action tags at the site with the returns between them;
-   d. median closure speed at the site next to the citywide median for the same action tag;
+   d. median closure speed at the site next to the citywide median for the same action tag, and the share of cases closed the same day they opened, labelled "possible closure without a visit" (a signal, not proof);
    e. the last 5 closure notes (names scrubbed), each with action tag and cause tag;
    f. drivers within 100 m: counts by type, including trash tickets in the last 12 months and schools, clickable to highlight on the map;
    g. building facts and the adjacent-vacant flag (vacant parcel within 40 m);
@@ -165,6 +167,7 @@ follow up, prove).
 4. **P0** WHEN a site with a past decision is opened THE SYSTEM SHALL show the decision and whether reports came back since.
 5. **P1** THE SYSTEM SHALL show the address's trash pickup day on the work order.
 6. **P1** THE SYSTEM SHALL list follow-ups due: approved decisions whose check-again date is within 7 days or past, with returns since the decision.
+7. **P1** THE SYSTEM SHALL show season-adjusted reports in the queue (reports in the last 90 days ÷ expected for those months), so 5 reports in February rank above 5 in August.
 
 ## R5 Findings (correlations)
 
@@ -207,11 +210,12 @@ follow up, prove).
 3. **P0** THE SYSTEM SHALL show the sources of every answer as clickable chips and referenced features as chips that select them on the map.
 4. **P0** THE SYSTEM SHALL show the tool steps compactly while it works (e.g., "Looked up 16 reports on Normandy St").
 5. **P0** THE SYSTEM SHALL send the current map selection and view with each message so "this site" and "here" work.
-6. **P1** THE SYSTEM SHALL answer forecast, findings, what-worked, due-sites, trials, price-impact, compare-areas and events questions.
+6. **P1** THE SYSTEM SHALL answer forecast, findings, what-worked, due-sites, base-rate, area, trials, price-impact, compare-areas and events questions.
 7. **P0** WHEN asked to act THE SYSTEM SHALL draft (never send) a work order and point the user to the Approve step.
 8. **P0** THE SYSTEM SHALL refuse to reveal owner names or house numbers and SHALL say when the data cannot support an answer.
 9. **P0** IF no model provider is configured THEN THE SYSTEM SHALL show "assistant not configured" and the rest of the app SHALL work.
 10. **P1** THE SYSTEM SHALL offer starter questions.
+11. **P1** THE SYSTEM SHALL let the assistant switch mode (Assess / Act) and depth (Simple / Explore) when the answer needs it, e.g. turning on Explore to show a layer.
 
 ## R9 Accessibility and quality
 
