@@ -92,13 +92,54 @@ Spearman correlation between rodent reports and each factor ([rats_zip.py](sourc
 | Construction Debris | +0.16 |
 | Missed Trash pickup | +0.14 |
 
-**Headline: rats follow the trash more than the restaurants.** Improper trash storage tracks rodent reports almost as closely as indoor pest reports do. Missed city pickups barely do, which points to resident and owner behavior more than to city service failures.
-
 ZIPs with the most rodent reports per 1,000 property records: **02134 Allston (66.8), 02120 Mission Hill (63.7), 02113 North End (49.1), 02121 Dorchester/Roxbury (39.3), 02119 Roxbury (35.8), 02118 South End (33.6)**. The North End has the highest improper-trash rate (420 per 1,000).
 
-### What the city did ("what worked")
+> **Correction from the block-level test below:** most of these ZIP correlations come from reporting volume. Blocks that report a lot report everything. Do not use "+0.78" in the pitch.
 
-The 311 `closure_reason` field records the action, for example "Violation issued for overflow trash, unpermitted dumpster", "The rat resistant barrels are part of a pilot program from the ISD", "Area inspector is monitoring", "Violation for overgrown weeds issued to the property owner". An LLM can classify these into cause and action, then compare report counts in the 60 days after each action type. This is where AI adds real value.
+### Drivers at block level (Kiro Crew campaign `e241ffc6`, 2025)
+
+Grid of about 100 m: 8,913 blocks, 2,337 with a rodent report. "Net" is the partial Spearman after controlling for total 311 volume on the block. Housing density was tested and is not a confound.
+
+| Factor | Blocks | ZIP ρ | Block ρ (raw) | Block ρ (net of volume) | Verdict |
+|---|---|---|---|---|---|
+| Improper trash storage | 3,474 | +0.78 | +0.36 | **+0.13** | Holds; strongest remaining driver |
+| Illegal dumping | 1,847 | +0.63 | +0.26 | +0.10 | Holds, weaker |
+| Missed pickup | 3,954 | +0.14 | +0.19 | +0.05 | Near noise |
+| Restaurant rodent citations | 477 | +0.41 | +0.12 | +0.03 | **No**: the ZIP signal was commercial clustering |
+| Demolition / new construction (300 m, ±90 days, 561 permits) | — | — | after/before ratio 1.02 (247 up, 196 down) | — | Small local bump |
+| Big Belly sealed bins (1,060 near vs 5,621 volume-matched blocks) | — | — | 1.81 vs 1.97 rodent reports per 100 reports | — | About 8% lower; weak, observational |
+| Heavy rain, week after (12 heavy vs 250 dry days) | — | — | ratio 1.03; lag correlation ≈ 0 for 0–7 days | — | No effect |
+
+**Revised headline:** no single factor explains rats at block level. Improper trash storage and dumping are the only levers that survive the controls. That makes the case for an audit per site instead of one citywide rule.
+
+### What the city did ("what worked") (Kiro Crew campaign `93c1ad29`, 2025)
+
+Closure notes classified into action types:
+
+| Action in closure note | Cases |
+|---|---|
+| Generic "case noted", no action named | 2,048 |
+| Monitoring | 1,750 |
+| Violation issued | 352 |
+| Baiting | 272 |
+| Rat-resistant barrels | 29 |
+
+Causes named in the notes: trash 216, sewer 88, dumpster 52, debris 41, overgrown vegetation 40, construction 26.
+
+Share of addresses with a new report within 60 days, before vs after the action:
+
+| Action | Before | After |
+|---|---|---|
+| Violation issued | 15.3% | **12.2%** |
+| Monitoring | 14.1% | 14.2% (no change) |
+| Baiting | — | about 2 points lower |
+| Rat-resistant barrels | — | rose, but only 29 cases |
+
+**At the 46 chronic addresses (5+ reports), 237 of about 280 recorded actions were monitoring or "noted". Only 14 violations were issued across all 46.** Examples: one Back Bay address had 13 reports and monitoring all year, never escalated. The demo site in Dorchester escalated to violations but recurred because of the vacant lot next door ([demo_site.md](sources/rats/demo_site.md)).
+
+**Pitch line:** monitoring is the city's most common response and it does not reduce recurrence. Violations do. The audit tells the inspector when to stop monitoring and escalate, and when the cause is next door.
+
+Observational: the before/after comparison does not control for why inspectors chose each action.
 
 ### Owners
 
