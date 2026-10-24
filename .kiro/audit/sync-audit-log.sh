@@ -1,23 +1,21 @@
 #!/usr/bin/env bash
-# Sync the Kiro Crew audit log (every tool call, HMAC-protected) into the repo
-# so our proof of Kiro usage travels with the code to GitHub / teammates.
+# Sync a SAFE excerpt of the Kiro Crew audit log into the repo, so proof of
+# Kiro usage travels with the code to GitHub / teammates.
 #
-# The live audit log lives OUTSIDE the repo at ~/.kiro/crew/audit.log and is
-# personal to each machine. This copies the current state into
-# .kiro/audit/audit.log. Run it any time, or let the hook run it after work.
+# The raw log (~/.kiro/crew/audit.log) covers every tool call on this machine,
+# including other projects, full outputs and any secret that ever appeared in a
+# command. This repo is PUBLIC, so we never copy it raw: the sanitizer keeps only
+# this repo's entries, drops outputs, and redacts secrets and home paths. Then the
+# secret scanner double-checks the result.
 #
 #   bash .kiro/audit/sync-audit-log.sh
 set -euo pipefail
 
-SRC="$HOME/.kiro/crew/audit.log"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-DEST="$REPO_ROOT/.kiro/audit/audit.log"
+python3 "$REPO_ROOT/.kiro/audit/sanitize_audit_log.py"
 
-if [[ ! -f "$SRC" ]]; then
-  echo "No audit log at $SRC — nothing to sync."
-  exit 0
+if ! python3 "$REPO_ROOT/.kiro/scripts/scan_secrets.py" >/dev/null; then
+  rm -f "$REPO_ROOT/.kiro/audit/audit.log"
+  echo "Secret scan flagged the sanitized audit log; removed it. Do not commit an audit log until fixed."
+  exit 1
 fi
-
-mkdir -p "$(dirname "$DEST")"
-cp "$SRC" "$DEST"
-echo "Synced audit log: $(wc -l < "$DEST" | tr -d ' ') entries -> .kiro/audit/audit.log"

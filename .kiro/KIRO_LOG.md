@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:31 — Added secret scanner + secret-scan Kiro hook + git pre-co...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Added secret scanner + secret-scan Kiro hook + git pre-commit block; made audit-log sync publish a sanitized repo-only excerpt (raw log had other projects, home paths and the Socrata token); readiness now checks secrets, MCP health, LICENSE; added MIT LICENSE; docs updated
+- Why: Repo is public; raw audit sync would have leaked secrets
+- Where: .kiro/scripts/scan_secrets.py, .kiro/hooks/secret-scan.kiro.hook, .githooks/pre-commit, .kiro/audit/*, .kiro/scripts/check_submission_ready.py, .kiro/scripts/check_mcp.py, LICENSE, README.md, .kiro/steering/tech.md, knowledge/23_live_data_sources.md
+- Idea: Teammates: git config core.hooksPath .githooks
+
 ### 2026-10-24 12:26 — Gave civic-judge (civic-snapshots + playwright MCP) and s...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
@@ -66,25 +74,25 @@ If the agent does not know the teammate's name, it asks before logging.
 ### 2026-10-24 12:08 — Renamed rat research doc to knowledge/09_boston_rat_audit...
 - Teammate: Bruno
 - Agent: —
-- Did: Renamed rat research doc to knowledge/09_boston_rat_audit.md (08 was already taken by the idea shortlist)
+- Did: Renamed rat research doc to knowledge/15_boston_rat_audit.md (08 was already taken by the idea shortlist)
 - Why: Avoid clashing doc numbers
-- Where: knowledge/09_boston_rat_audit.md, knowledge/README.md
+- Where: knowledge/15_boston_rat_audit.md, knowledge/README.md
 - Idea: none
 
 ### 2026-10-24 12:08 — Added knowledge/08_boston_rat_audit.md (all rat datasets ...
 - Teammate: Bruno
 - Agent: —
-- Did: Added knowledge/08_boston_rat_audit.md (all rat datasets with resource IDs, findings, impact, property-value evidence, product shape) + scripts in knowledge/sources/rats/
+- Did: Added knowledge/08_boston_rat_audit.md (all rat datasets with resource IDs, findings, impact, property-value evidence, product shape) + scripts in knowledge/sources/scripts/
 - Why: Keep the lead idea's research in the repo for the team
-- Where: knowledge/08_boston_rat_audit.md, knowledge/README.md, knowledge/sources/rats/*.py
+- Where: knowledge/08_boston_rat_audit.md, knowledge/README.md, knowledge/sources/scripts/*.py
 - Idea: Airbnb: 212 of 267,731 reviews mention rats/mice (Bay Village 0.39%); Zillow vs rodent rate weak (ZHVI -0.18, ZORI +0.30): do not claim value loss
 
 ### 2026-10-24 12:16 — Turned on Cambridge + Somerville OpenContext servers with...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
-- Did: Turned on Cambridge + Somerville OpenContext servers with Socrata token in git-ignored .env.local; bridge reads .env.local; check_mcp SKIPs token servers when unset; added .env.example + knowledge/live_data_sources.md; 8/8 PASS
+- Did: Turned on Cambridge + Somerville OpenContext servers with Socrata token in git-ignored .env.local; bridge reads .env.local; check_mcp SKIPs token servers when unset; added .env.example + knowledge/23_live_data_sources.md; 8/8 PASS
 - Why: All live civic sources ready, secrets kept out of git
-- Where: .kiro/mcp/opencontext_stdio.py, .kiro/scripts/check_mcp.py, .kiro/settings/mcp.json, .kiro/steering/mcp-tools.md, .env.example, knowledge/live_data_sources.md, README.md
+- Where: .kiro/mcp/opencontext_stdio.py, .kiro/scripts/check_mcp.py, .kiro/settings/mcp.json, .kiro/steering/mcp-tools.md, .env.example, knowledge/23_live_data_sources.md, README.md
 - Idea: Share .env.local only via private channel
 
 ### 2026-10-24 11:58 — Finished MCP setup: env-var expansion in OpenContext brid...
@@ -116,7 +124,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Agent: Claude Code (research/ideation; not Kiro build activity)
 - Did: Wrote knowledge/13: five new concepts (CurbCheck, Three Hours, 311 outcome layer, On the Record, Warrant) with live-verified sources
 - Why: User asked for 100% new, best-for-this-hackathon ideas regardless of complexity
-- Where: knowledge/13_hidden_ledgers_deep_concepts.md, knowledge/README.md
+- Where: knowledge/17_hidden_ledgers_deep_concepts.md, knowledge/README.md
 - Idea: Recommend CurbCheck: photo of a paper no-parking sign -> City Street Occupancy Permit lookup -> verified/no-match/ambiguous card; Parking Enforcement is the #1 2026 311 type (52,623)
 
 ### 2026-10-24 11:54 — Chose Rats as lead idea; validated: 5,321 rodent reports ...
@@ -140,7 +148,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Agent: Codex (research; not Kiro build activity)
 - Did: Reframed rodent concept as an operational inspection tool
 - Why: User wants a practical tool; assess its value and workflow risks candidly
-- Where: knowledge/12_rodent_control_creative_playbook.md; knowledge/README.md; knowledge/08_idea_shortlist_and_build_recommendation.md; knowledge/09_creative_civic_opportunity_atlas.md
+- Where: knowledge/16_rodent_control_creative_playbook.md; knowledge/README.md; knowledge/18_idea_shortlist_and_build_recommendation.md; knowledge/14_creative_civic_opportunity_atlas.md
 - Idea: RodentOps: recurring complaints to a reviewed inspection brief, with separate action and outcome evidence
 
 ### 2026-10-24 11:49 — Verified Problem Landlord Radar on real data: 913 owner n...
@@ -172,7 +180,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Agent: Codex (research; not Kiro build activity)
 - Did: Researched eight creative rodent-control concepts and verified source data
 - Why: Ground the rodent idea in current City priorities, usable records and a feasible demo
-- Where: knowledge/12_rodent_control_creative_playbook.md; knowledge indexes and briefs; knowledge/sources/rodent*; knowledge/sources/audit_rodent_resources.py
+- Where: knowledge/16_rodent_control_creative_playbook.md; knowledge indexes and briefs; knowledge/sources/rodent*; knowledge/sources/scripts/audit_rodent_resources.py
 - Idea: NIGHTSHIFT: coordinate one block of overnight waste exposure; RATLAB is the data-analysis alternative
 
 ### 2026-10-24 11:39 — Made every idea actionable in the Data Atlas: each card n...
@@ -324,7 +332,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Agent: Codex (research; not Kiro build activity)
 - Did: Recommended three scoped Civic MVPs; team choice remains open
 - Why: Connect creativity to the rubric and verified available data
-- Where: knowledge/08_idea_shortlist_and_build_recommendation.md
+- Where: knowledge/18_idea_shortlist_and_build_recommendation.md
 - Idea: Prefer BlockBrief for waste-service evidence briefs; Notice to Action for accessible public notices; MoveReady for a narrow preparation flow
 
 ### 2026-10-24 10:31 — Made pure-talk ideas/brainstorm loggable

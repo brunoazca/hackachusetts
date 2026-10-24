@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Git pre-commit hook: block commits that contain secrets.
+# Enable once per clone:  git config core.hooksPath .githooks
+set -euo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+if git diff --cached --name-only | grep -qx '.env.local'; then
+  echo "Refusing to commit .env.local (secrets). Unstage it: git restore --staged .env.local"
+  exit 1
+fi
+exec python3 "$ROOT/.kiro/scripts/scan_secrets.py" --staged

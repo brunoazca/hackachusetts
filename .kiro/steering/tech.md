@@ -19,6 +19,9 @@ inclusion: always
 - Prefer a committed static data snapshot over a live API for the demo. Cite its source.
 - Accessibility is a scored requirement: semantic HTML, labels, focus order, contrast.
 - No secrets in the repo. Use `.env.local`, keep it git-ignored, document required vars.
+  The repo is PUBLIC: run `python3 .kiro/scripts/scan_secrets.py` before committing
+  (the `secret-scan` hook and `.githooks/pre-commit` do it for you). Never print a
+  secret in chat, a commit, a log entry, or the demo video.
 - Small, reviewable commits. The commit history is evidence of real work.
 - We work directly on `main`. No feature branches, no pull requests — this is a
   one-day hackathon. Commit small and push straight to `main`.

@@ -102,7 +102,7 @@ def main() -> int:
     for name in wanted:
         var = NEEDS_ENV.get(name)
         if var and not _has_env(var):
-            print(f"SKIP  {name:16} {var} not set (see knowledge/live_data_sources.md)")
+            print(f"SKIP  {name:16} {var} not set (see knowledge/23_live_data_sources.md)")
             continue
         ok, detail = check(name, servers[name])
         failed += not ok

@@ -30,7 +30,7 @@ This project is spec-driven with Kiro. Real work lives in `/.kiro`:
   data snapshots, live MBTA, AWS docs, and Playwright for UI checks.
   Check them all with `python3 .kiro/scripts/check_mcp.py` (needs `python3`, `uv`, `node`).
   Cambridge/Somerville need a free token in `.env.local` (copy `.env.example`);
-  all sources are listed in `knowledge/live_data_sources.md`.
+  all sources are listed in `knowledge/23_live_data_sources.md`.
 
 Full write-up: `docs/submission/kiro-usage.md`.
 
@@ -44,5 +44,12 @@ Keyboard operable, screen-reader labels, WCAG AA contrast — a scored requireme
 ## Repo layout
 See `/.kiro/steering/structure.md`.
 
+## Secrets & safety (public repo)
+- Secrets live only in `.env.local` (git-ignored; template `.env.example`). Share it through a private channel.
+- `python3 .kiro/scripts/scan_secrets.py` scans the repo; the `secret-scan` Kiro hook runs it on save.
+- Turn on the git pre-commit block once per clone: `git config core.hooksPath .githooks`.
+- `bash .kiro/audit/sync-audit-log.sh` writes `.kiro/audit/audit.log`, a **sanitized** excerpt of the Kiro Crew audit log (this repo only, no outputs, secrets redacted). It is git-ignored by `*.log`; to publish it, add `!.kiro/audit/audit.log` to `.gitignore`.
+- `python3 .kiro/scripts/check_submission_ready.py` checks artifacts plus secrets, MCP health and license in one go.
+
 ## License
-_<Choose one (MIT is simple and judge-friendly).>_
+MIT, see `LICENSE`. Datasets keep their own licenses (each `data/civic/datasets/*/README.md`).

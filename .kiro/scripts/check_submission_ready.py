@@ -11,6 +11,7 @@ Required artifacts (from .kiro/steering/submission-guardrails.md):
   3. English project description (docs/submission/description.md), filled.
   4. Demo video script (docs/submission/demo-script.md), present.
   5. Kiro usage write-up (docs/submission/kiro-usage.md), filled.
+Safety checks (public repo): secret scan clean, MCP servers answer, LICENSE present.
 
 "Filled" = the file exists and has no unfilled <angle-bracket> placeholders left
 in it. Prints a READY / NOT READY summary with the missing items.
@@ -43,6 +44,15 @@ def src_has_code() -> bool:
     return any(p.suffix in exts for p in src.rglob("*") if p.is_file())
 
 
+def _run(script: str) -> bool:
+    import subprocess
+    try:
+        return subprocess.run([sys.executable, str(REPO / ".kiro/scripts" / script)], cwd=REPO,
+                              capture_output=True, timeout=300).returncode == 0
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+
+
 def check() -> list[tuple[bool, str]]:
     """Return (ok, label) for each required artifact."""
     results: list[tuple[bool, str]] = []
@@ -50,6 +60,15 @@ def check() -> list[tuple[bool, str]]:
     kiro = REPO / ".kiro"
     results.append((kiro.is_dir() and any(kiro.iterdir()),
                     "root /.kiro directory with real work"))
+
+    results.append((_run("scan_secrets.py"),
+                    "no secrets in the public repo (scan_secrets.py clean)"))
+
+    results.append((_run("check_mcp.py"),
+                    "Kiro MCP servers answer (check_mcp.py: PASS or SKIP)"))
+
+    results.append(((REPO / "LICENSE").is_file(),
+                    "LICENSE file present"))
 
     results.append((src_has_code(),
                     "working project (app code under src/)"))
