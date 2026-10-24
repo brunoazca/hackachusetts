@@ -23,7 +23,8 @@ html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
 .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 .blue { color: var(--model); } .red { color: var(--actual); } .green { color: var(--held); }
 canvas { position: absolute; }
-.chip { position: absolute; padding: 12px 22px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--card); font: 500 28px var(--sans); white-space: nowrap; }
+.chip { position: absolute; display: flex; align-items: center; gap: 12px; padding: 12px 22px 12px 18px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--card); font: 500 28px var(--sans); white-space: nowrap; }
+.chip .ic { display: flex; color: var(--fg2); } .chip .ck { color: var(--model); font-weight: 700; }
 .panel { position: absolute; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
 .lbl { font: 600 22px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg3); }
 .bar { position: absolute; height: 18px; border-radius: 9px; background: var(--model); }
@@ -40,11 +41,24 @@ canvas { position: absolute; }
 <div id="stage">
   <div id="journey"><span class="s" data-k="see">See</span><i></i><span class="s" data-k="act">Act</span><i></i><span class="s" data-k="predict">Predict</span></div>
 
+  <!-- Section intro -->
+  <section class="scene" id="s0">
+    <div id="s0t" style="position:absolute;left:0;right:0;top:330px;text-align:center;font:italic 500 120px var(--display)">Data, from start to finish</div>
+    <svg id="s0p" width="1200" height="160" viewBox="0 0 1200 160" style="position:absolute;left:360px;top:560px;overflow:visible">
+      <line id="s0line" x1="150" y1="50" x2="1050" y2="50" stroke="#2F353B" stroke-width="4" stroke-linecap="round"/>
+      <line id="s0fill" x1="150" y1="50" x2="150" y2="50" stroke="#6FA0FF" stroke-width="4" stroke-linecap="round"/>
+      <g id="s0dots"></g>
+      <g class="s0n" data-i="0"><circle cx="150" cy="50" r="16" fill="#111315" stroke="#F2F3F1" stroke-width="4"/><text x="150" y="122" text-anchor="middle" fill="#F2F3F1" font-size="40" font-weight="600" font-family="Atkinson Hyperlegible Next">See</text></g>
+      <g class="s0n" data-i="1"><circle cx="600" cy="50" r="16" fill="#111315" stroke="#F2F3F1" stroke-width="4"/><text x="600" y="122" text-anchor="middle" fill="#F2F3F1" font-size="40" font-weight="600" font-family="Atkinson Hyperlegible Next">Act</text></g>
+      <g class="s0n" data-i="2"><circle cx="1050" cy="50" r="16" fill="#111315" stroke="#F2F3F1" stroke-width="4"/><text x="1050" y="122" text-anchor="middle" fill="#F2F3F1" font-size="40" font-weight="600" font-family="Atkinson Hyperlegible Next">Predict</text></g>
+    </svg>
+  </section>
+
   <!-- Data -->
   <section class="scene" id="s2">
     <h1 class="h">What predicts rodent reports?</h1>
     <div id="s2chips"></div>
-    <div class="num" id="s2n" style="position:absolute;left:120px;bottom:90px;font-size:30px;color:var(--fg2)"><span style="color:var(--fg);font-size:44px">43</span> datasets tested</div>
+    <div class="num" id="s2n" style="position:absolute;left:0;right:0;text-align:center;font-size:30px;color:var(--fg2)"><span style="color:var(--fg);font-size:44px">43</span> datasets tested</div>
   </section>
 
   <!-- SEE -->
@@ -64,7 +78,7 @@ canvas { position: absolute; }
   <!-- ACT: other cities -->
   <section class="scene" id="s5">
     <h1 class="h">Learning from our neighbours</h1>
-    <div id="s5cols" style="position:absolute;left:120px;right:120px;top:300px;display:grid;grid-template-columns:1fr 1fr;gap:120px"></div>
+    <div id="s5cols" style="position:absolute;left:160px;right:160px;top:360px;display:grid;grid-template-columns:1fr 1fr;gap:140px"></div>
   </section>
 
   <!-- ACT: per site + region solution -->
@@ -84,16 +98,13 @@ canvas { position: absolute; }
   <!-- PREDICT: three maps -->
   <section class="scene" id="s8">
     <h1 class="h">Where the model looked</h1>
-    <div style="position:absolute;left:120px;top:240px;right:120px;display:flex;justify-content:space-between;align-items:baseline">
-      <div class="num" id="s8week" style="font-size:30px;color:var(--fg2)"></div>
-      <div id="s8cap" style="font-size:30px;color:var(--fg2)"></div>
-    </div>
-    <div class="lbl" style="position:absolute;left:120px;top:320px">Actual</div>
-    <div class="lbl" style="position:absolute;left:688px;top:320px">Model</div>
-    <div class="lbl" style="position:absolute;left:1256px;top:320px">Both</div>
-    <canvas id="s8a" width="544" height="600" style="left:120px;top:360px"></canvas>
-    <canvas id="s8b" width="544" height="600" style="left:688px;top:360px"></canvas>
-    <canvas id="s8c" width="544" height="600" style="left:1256px;top:360px"></canvas>
+    <svg id="s8tl" width="1680" height="100" viewBox="0 0 1680 100" style="position:absolute;left:120px;top:214px;overflow:visible"></svg>
+    <div class="lbl" style="position:absolute;left:120px;top:350px">Actual</div>
+    <div class="lbl" style="position:absolute;left:688px;top:350px">Model</div>
+    <div class="lbl" style="position:absolute;left:1256px;top:350px">Both</div>
+    <canvas id="s8a" width="544" height="580" style="left:120px;top:390px"></canvas>
+    <canvas id="s8b" width="544" height="580" style="left:688px;top:390px"></canvas>
+    <canvas id="s8c" width="544" height="580" style="left:1256px;top:390px"></canvas>
   </section>
 
   <!-- PREDICT: 146 weeks -->
@@ -165,20 +176,41 @@ function drawGrid(ctx, w, h, fill) { const { s, xy } = gridGeom(w, h); ctx.clear
 const S = []; let at = 0;
 function scene(id, dur, stage, draw, fade = 0.45) { S.push({ el: $(id), a: at, b: at + dur, stage, draw, fade }); at += dur; }
 
+/* Section intro: data from start to finish, See → Act → Predict */
+const s0nodes = [...document.querySelectorAll(".s0n")];
+scene("s0", 3.8, null, lt => {
+  pop($("s0t"), out(seg(lt, 0.1, 0.8)), 24);
+  const g = ease(seg(lt, 0.9, 2.6)), x = 150 + 900 * g;
+  $("s0fill").setAttribute("x2", x);
+  s0nodes.forEach((n, i) => { const on = seg(lt, 0.9 + i * 0.85, 1.25 + i * 0.85); n.style.opacity = 0.25 + 0.75 * on;
+    n.querySelector("circle").setAttribute("fill", on > 0.5 ? "#6FA0FF" : "#111315"); n.querySelector("circle").setAttribute("stroke", on > 0.5 ? "#6FA0FF" : "#F2F3F1"); });
+  // data points flowing along the path
+  let dots = ""; for (let k = 0; k < 14; k++) { const u = ((lt * 0.55 + k / 14) % 1), dx = 150 + 900 * u;
+    if (dx <= x) dots += `<circle cx="${dx}" cy="50" r="5" fill="#DCE8FF" opacity="${0.35 + 0.5 * Math.sin(u * Math.PI)}"/>`; }
+  $("s0dots").innerHTML = dots;
+});
+
 /* Data */
 const KEPT = ["Past rodent reports", "Dead animals", "Indoor pests", "Trash storage", "Move-in trash", "Litter", "Temperature", "Season"];
 const DROP = ["Rain", "Snow", "Restaurants", "Red Sox games", "Demolitions", "Big Belly bins", "Permits", "Demographics", "Food inspections", "City lots"];
 const CHIPS = [...KEPT.map(t => ({ t, k: 1 })), ...DROP.map(t => ({ t, k: 0 }))].sort((a, b) => ((a.t.length * 7919) % 13) - ((b.t.length * 7919) % 13));
-CHIPS.forEach(c => { const el = document.createElement("div"); el.className = "chip"; el.textContent = c.t; $("s2chips").appendChild(el); c.el = el; });
-function layoutChips() { let x = 120, y = 280;
-  CHIPS.forEach(c => { const w = c.el.offsetWidth + (c.k ? 36 : 0); if (x + w > 1800) { x = 120; y += 92; } c.el.style.left = x + "px"; c.el.style.top = y + "px"; x += w + 20; }); }
+CHIPS.forEach(c => { const el = document.createElement("div"); el.className = "chip";
+  el.innerHTML = `<span class="ic">${D.icons[c.t] || ""}</span><span class="tx">${c.t}</span>${c.k ? `<span class="ck" style="opacity:0">✓</span>` : ""}`;
+  $("s2chips").appendChild(el); c.el = el; c.ic = el.querySelector(".ic"); c.ck = el.querySelector(".ck"); c.tx = el.querySelector(".tx"); });
+function layoutChips() {  // rows packed left to right, then the whole block centered on the stage
+  const rows = [[]]; let x = 0;
+  CHIPS.forEach(c => { const w = c.el.offsetWidth; if (x + w > 1560 && rows.at(-1).length) { rows.push([]); x = 0; } rows.at(-1).push([c, x]); x += w + 20; });
+  const top = 540 - (rows.length * 92) / 2 + 20;
+  rows.forEach((row, i) => { const last = row.at(-1), rw = last[1] + last[0].el.offsetWidth, x0 = (1920 - rw) / 2;
+    row.forEach(([c, cx]) => { c.el.style.left = x0 + cx + "px"; c.el.style.top = top + i * 92 + "px"; }); });
+  $("s2n").style.top = top + rows.length * 92 + 40 + "px"; }
 scene("s2", 5.6, null, lt => {
   CHIPS.forEach((c, i) => {
     const p = out(seg(lt, 0.3 + i * 0.05, 0.8 + i * 0.05)); pop(c.el, p, 16);
     const v = seg(lt, 1.9 + i * 0.06, 2.3 + i * 0.06) > 0.5;
     if (c.k) { c.el.style.borderColor = v ? "#6FA0FF" : "#2F353B"; c.el.style.background = v ? "rgba(111,160,255,.16)" : "#1F2327";
-      c.el.innerHTML = (v ? `<span style="color:#6FA0FF;margin-right:8px">✓</span>` : "") + c.t; }
-    else { c.el.style.opacity = p * (v ? 0.35 : 1); c.el.style.textDecoration = v ? "line-through" : "none"; c.el.style.color = v ? "#8A929A" : "#F2F3F1"; }
+      c.ck.style.opacity = v ? 1 : 0; c.ic.style.color = v ? "#6FA0FF" : "#AEB5BC"; }
+    else { c.el.style.opacity = p * (v ? 0.55 : 1); c.tx.style.textDecoration = v ? "line-through" : "none"; c.el.style.color = v ? "#8A929A" : "#F2F3F1"; c.ic.style.color = v ? "#68717A" : "#AEB5BC"; }
   });
   $("s2n").style.opacity = seg(lt, 3.4, 4.0);
 });
@@ -186,7 +218,8 @@ scene("s2", 5.6, null, lt => {
 /* SEE */
 scene("s3", 5.6, "see", lt => {
   const ctx = $("s3c").getContext("2d"), W = 1100, H = 880, sweep = seg(lt, 0.2, 2.2) * (NR + 6);
-  const { s, xy } = gridGeom(W, H); ctx.clearRect(0, 0, W, H);
+  const { s, xy } = gridGeom(W, H); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, W, H);
+  const k = 1 + 0.08 * ease(seg(lt, 1.8, 5.6)); ctx.setTransform(k, 0, 0, k, W / 2 * (1 - k), H / 2 * (1 - k));
   for (const [c, r] of G) { if ((R1 - r) > sweep) continue; const [x, y] = xy(c, r); const a = NOW.get(key(c, r)) || 0;
     ctx.fillStyle = (a && redFor(a, 6)) || "#1B1F23"; ctx.fillRect(x + 0.4, y + 0.4, s - 0.8, s - 0.8); }
   $("s3leg").style.opacity = seg(lt, 1.6, 2.2);
@@ -199,7 +232,9 @@ $("s4call").innerHTML = `<div style="display:flex;gap:40px;align-items:flex-end"
     <div><div class="num" style="font-size:110px;line-height:1;color:var(--fg2)">${Math.round(M.mon * 100)}%</div><div style="font-size:26px;color:var(--fg2);margin-top:8px">monitoring</div></div></div>
   <div style="font-size:30px;margin-top:34px;font-weight:600">No clear difference</div>
   <div class="note" style="margin-top:14px">Matched · ${M.pairs} pairs</div>`;
-scene("s4", 6.4, "act", lt => {
+// Removed from the cut: no single clear takeaway for the viewer (kept for reference).
+const unused = (..._) => {};
+unused("s4", 6.4, "act", lt => {
   const ctx = $("s4c").getContext("2d"), W = 1000, H = 600, L = 270, rowH = 86; ctx.clearRect(0, 0, W, H);
   ctx.font = "500 22px 'Atkinson Hyperlegible Next'"; ctx.fillStyle = "#8A929A"; ctx.textAlign = "left"; ctx.fillText("Came back within 60 days", L, 24);
   BA.forEach(([name, n, pct], i) => {
@@ -215,16 +250,16 @@ scene("s4", 6.4, "act", lt => {
 const CT = D.act.cities, nearX = CT.nearAfter / CT.nearBefore, otherX = CT.otherAfter / CT.otherBefore;
 $("s5cols").innerHTML = `
   <div><div class="lbl">Cambridge · smart rat boxes</div>
-    <div style="font-size:26px;color:var(--fg2);margin-top:26px">Rodent sightings after a box</div>
+    <div style="font-size:32px;color:var(--fg2);margin-top:30px">Rodent sightings after a box</div>
     <div style="display:grid;grid-template-columns:auto 1fr;gap:18px 22px;align-items:center;margin-top:22px">
-      <span style="font-size:28px">Near box</span><div style="display:flex;align-items:center;gap:16px"><div class="s5b" data-w="${nearX / 1.8}" style="height:34px;border-radius:6px;background:#3DBE7A;width:0"></div><span class="num" style="font-size:34px">×${nearX.toFixed(2)}</span></div>
-      <span style="font-size:28px">Elsewhere</span><div style="display:flex;align-items:center;gap:16px"><div class="s5b" data-w="${otherX / 1.8}" style="height:34px;border-radius:6px;background:#68717A;width:0"></div><span class="num" style="font-size:34px">×${otherX.toFixed(2)}</span></div>
+      <span style="font-size:34px">Near box</span><div style="display:flex;align-items:center;gap:18px"><div class="s5b" data-w="${nearX / 1.8}" style="height:48px;border-radius:8px;background:#3DBE7A;width:0"></div><span class="num" style="font-size:44px">×${nearX.toFixed(2)}</span></div>
+      <span style="font-size:34px">Elsewhere</span><div style="display:flex;align-items:center;gap:18px"><div class="s5b" data-w="${otherX / 1.8}" style="height:48px;border-radius:8px;background:#68717A;width:0"></div><span class="num" style="font-size:44px">×${otherX.toFixed(2)}</span></div>
     </div>
     <div class="note" style="margin-top:22px">Descriptive</div></div>
   <div><div class="lbl">Somerville · Rodent Assistance Program</div>
-    <div class="num" style="font-size:150px;line-height:1.05;margin-top:24px">${CT.somervilleProgram}</div>
-    <div style="font-size:28px;color:var(--fg2)">requests in 12 months</div></div>`;
-scene("s5", 5.6, "act", lt => {
+    <div class="num" style="font-size:200px;line-height:1;margin-top:20px">${CT.somervilleProgram}</div>
+    <div style="font-size:34px;color:var(--fg2);margin-top:8px">requests in 12 months</div></div>`;
+scene("s5", 5.0, "act", lt => {
   [...$("s5cols").children].forEach((el, i) => pop(el, out(seg(lt, 0.3 + i * 0.5, 0.9 + i * 0.5))));
   document.querySelectorAll(".s5b").forEach((b, i) => { b.style.width = (60 * +b.dataset.w * out(seg(lt, 0.9 + i * 0.25, 1.7 + i * 0.25))) + "%"; });
 });
@@ -283,13 +318,20 @@ const WK = D.btWeeks, NW = WK.length, WEEKLY = D.weekly, LASTW = WEEKLY.slice(-N
 const topSets = WK.map((_, wi) => new Set([...BT.entries()].sort((a, b) => b[1].g[wi] - a[1].g[wi]).slice(0, TOPN).map(e => e[0])));
 scene("s8", 7.2, "predict", lt => {
   const wi = clamp(Math.floor((lt - 0.8) / 0.4), 0, NW - 1), top = topSets[wi], outline = seg(lt, 1.4, 2.0);
-  $("s8week").textContent = fmtW(WK[wi]);
-  $("s8cap").innerHTML = `Top 10% of blocks: <b class="num" style="color:var(--fg)">${Math.round(LASTW[wi][4] * 100)}%</b> of reports`;
-  $("s8cap").style.opacity = seg(lt, 1.6, 2.2);
-  const get = (c, r) => BT.get(key(c, r)), W = 544, H = 600;
+  // timeline: one bar per week (height = share of that week's reports in the model's top 10%), playhead moves along it
+  const pos = clamp((lt - 0.8) / 0.4, 0, NW - 1), TW = 1680, x0 = 40, x1 = TW - 40, X = i => x0 + (x1 - x0) * i / (NW - 1);
+  let tl = `<line x1="${x0}" y1="62" x2="${x1}" y2="62" stroke="#2F353B" stroke-width="2"/>`;
+  WK.forEach((w, i) => { const h = 44 * LASTW[i][4], past = i <= wi;
+    tl += `<rect x="${X(i) - 14}" y="${62 - h}" width="28" height="${h}" rx="3" fill="${past ? "#6FA0FF" : "#2A2F34"}" opacity="${i === wi ? 1 : past ? 0.55 : 1}"/>`;
+    const d = new Date(w + "T12:00:00"); if (i === 0 || d.getDate() <= 7) tl += `<text x="${X(i)}" y="92" text-anchor="middle" fill="#8A929A" font-size="20" font-family="Atkinson Hyperlegible Mono">${d.toLocaleDateString("en-US", { month: "short" })}</text>`; });
+  const px = X(pos);
+  tl += `<line x1="${px}" y1="4" x2="${px}" y2="70" stroke="#F2F3F1" stroke-width="2"/><circle cx="${px}" cy="62" r="8" fill="#F2F3F1"/>
+    <text x="${clamp(px, 120, TW - 120)}" y="-4" text-anchor="middle" fill="#F2F3F1" font-size="26" font-family="Atkinson Hyperlegible Next" font-weight="600">${Math.round(LASTW[wi][4] * 100)}% in top 10%</text>`;
+  $("s8tl").innerHTML = tl; $("s8tl").style.opacity = seg(lt, 0.3, 0.9);
+  const get = (c, r) => BT.get(key(c, r)), W = 544, H = 580;
   const a = $("s8a").getContext("2d"), b = $("s8b").getContext("2d"), cc = $("s8c").getContext("2d");
   const ga = drawGrid(a, W, H, (c, r) => { const d = get(c, r); return d && redFor(d.y[wi]); });
-  if (outline > 0) { a.strokeStyle = `rgba(242,243,241,${0.85 * outline})`; a.lineWidth = 1.4;
+  if (outline > 0) { a.strokeStyle = `rgba(242,243,241,${0.4 * outline})`; a.lineWidth = 1;
     for (const k of top) { const [x, y] = ga.xy(Math.floor(k / 100000), k % 100000); a.strokeRect(x + 0.7, y + 0.7, ga.s - 1.4, ga.s - 1.4); } }
   drawGrid(b, W, H, (c, r) => { const d = get(c, r); return d && blueFor(d.g[wi], 0.05); });
   const gc = drawGrid(cc, W, H, (c, r) => { const d = get(c, r); return d && blueFor(d.g[wi], 0.05); });
@@ -378,11 +420,12 @@ const ORDER = ["see", "act", "predict"];
 function render(t) {
   let stage = null, jv = 0;
   for (const s of S) {
-    const fadeIn = s.a === 0 ? 1 : seg(t, s.a - s.fade / 2, s.a + s.fade / 2);
-    const vis = Math.min(fadeIn, 1 - seg(t, s.b - s.fade / 2, s.b + s.fade / 2));
+    // dip: the outgoing scene fades out before the boundary, the incoming one fades in after it (never overlapping)
+    const fadeIn = s.a === 0 ? 1 : seg(t, s.a, s.a + 0.35);
+    const vis = s === S[S.length - 1] ? fadeIn : Math.min(fadeIn, 1 - seg(t, s.b - 0.3, s.b));
     s.el.style.opacity = vis;
     if (vis > 0) s.draw(t - s.a);
-    if (s.stage && t >= s.a - 0.2 && t < s.b) { stage = s.stage; jv = Math.max(jv, vis); }
+    if (s.stage && t >= s.a && t < s.b) { stage = s.stage; jv = Math.max(jv, 1); }
   }
   const j = $("journey"); j.style.opacity = jv;
   if (stage) j.querySelectorAll(".s").forEach(el => { const k = ORDER.indexOf(el.dataset.k), c = ORDER.indexOf(stage); el.className = "s" + (k === c ? " on" : k < c ? " done" : ""); });

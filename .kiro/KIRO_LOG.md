@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:08 — Motion graphic v3: section intro, dataset icons, timeline...
+- Teammate: Bruno
+- Agent: —
+- Did: Motion graphic v3: section intro, dataset icons, timeline in the backtest maps, dip transitions, removed unclear 'What worked?' slide; reviewed in 3 passes (contact sheets + MP4 frames)
+- Why: Feedback: fewer words, clear goal per slide, timeline instead of a changing date
+- Where: docs/submission/ml-ai-motion/
+- Idea: —
+
 ### 2026-10-24 19:05 — Region severity now weighted by residents: weighted_score...
 - Teammate: Bruno
 - Agent: —
