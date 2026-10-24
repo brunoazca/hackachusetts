@@ -1,0 +1,53 @@
+{
+  "name": "Ratos e desvalorização de imóveis em Boston",
+  "question": "Investigue se maior atividade de roedores está associada a preços menores ou à desvalorização de casas, apartamentos e prédios residenciais próximos em Boston, e se existe evidência de que os roedores causam essa perda de valor. Diferencie imóveis mais baratos em um dado momento de queda ou menor valorização ao longo do tempo. A hipótese deve poder ser confirmada, refutada ou permanecer inconclusiva. Combine revisão de estudos primários com análise reproduzível de dados públicos locais, priorizando imóveis individuais e sua vizinhança quando os dados permitirem. Contexto do projeto Hackachusetts: knowledge/15_boston_rat_audit.md, especialmente seções 4, 6 e 8; código exploratório em knowledge/sources/scripts/rats_zip.py e rats_econ.py. A análise anterior por ZIP reportou associações fracas com Zillow e não demonstrou desvalorização; os insumos não estão no repositório e o tratamento de empates no ranking precisa ser corrigido. Não trate os números anteriores como resultado validado.",
+  "sub_questions": [
+    "O que estudos acadêmicos primários e avaliações governamentais mostram sobre roedores, infestações e preços de venda ou aluguéis? Procure Boston primeiro e outras cidades como comparação identificada. Para cada estudo, registre local, período, amostra, medida de exposição, desfecho, desenho, controles, tamanho do efeito e limitações. Separe evidência específica de roedores de estudos genéricos sobre sujeira, amenidades ou pragas. Alegações de marketing imobiliário não comprovam efeito.",
+    "Quais dados públicos de Boston permitem relacionar denúncias de roedores, fiscalizações ou reincidência a transações imobiliárias, avaliações fiscais anuais e aluguéis? Audite cobertura, campos, datas, paginação, geocodificação, identificadores de parcela e duplicações. Busque transações efetivas e dados municipais/estaduais de imóveis; use índices Zillow por ZIP apenas como análise agregada complementar. Não confunda valor fiscal, preço anunciado, preço vendido e aluguel.",
+    "Como medir a exposição sem chamar denúncias de censo de ratos? Construa medidas separadas de atividade no próprio imóvel e nas proximidades, denúncias únicas e persistência. Use janelas anteriores à venda ou à avaliação (por exemplo, 6 e 12 meses) e compare raios de 100, 300 e 500 metros apenas como parâmetros analíticos. Normalize por imóveis ou unidades quando defensável, examine volume geral de denúncias ao 311 e documente locais com dados ausentes.",
+    "A associação aparece em uma análise descritiva reproduzível, incluindo a reprodução crítica da comparação anterior com ZHVI e ZORI? Alinhe períodos, geografia e denominadores; trate corretamente empates em Spearman e correlação indefinida para variáveis constantes. Informe amostra, dados ausentes, incerteza e sensibilidade a outliers. Não selecione só bairros ou resultados que favoreçam a hipótese.",
+    "Quando houver dados adequados, a associação persiste em modelos hedônicos ou comparação de imóveis semelhantes após considerar localização, área, idade, tipo e condição do prédio, unidades, tendência temporal do mercado, densidade, renda e intensidade de registro de denúncias? Estime preço por unidade de área somente com unidades consistentes. Explique variáveis ausentes, correlação espacial, seleção da amostra e possíveis fatores comuns que geram tanto denúncias quanto preços menores.",
+    "Existe evidência longitudinal de queda ou menor valorização após aumento de denúncias, ou recuperação após redução/intervenção documentada? Avalie vendas repetidas, painel de avaliações e estudos de evento ou diferenças-em-diferenças somente se datas, grupo comparável, pré-tendências e tamanho amostral sustentarem o desenho. Evite causalidade reversa e exposição medida depois da transação. Se isso não for identificável, explique exatamente por quê.",
+    "Há evidência de efeito nos imóveis vizinhos, além do imóvel com denúncia? Compare distâncias e tipos residenciais sem inferir que um endereço está infestado. Se estimável, relate efeitos absolutos e percentuais com intervalo de incerteza; se não, entregue os dados adicionais e o desenho mínimo necessário para responder.",
+    "Qual conclusão podemos defender no projeto? Classifique separadamente evidência de associação em Boston, evidência causal e evidência transferível de outras cidades como forte, moderada, fraca ou insuficiente. Entregue frases utilizáveis no pitch, alegações que devem ser evitadas e uma conclusão explícita mesmo se não houver evidência de desvalorização."
+  ],
+  "sources": [
+    "Contexto local: knowledge/15_boston_rat_audit.md e knowledge/sources/scripts/rats_zip.py; rats_econ.py",
+    "Boston Analyze Boston CKAN: https://data.boston.gov/dataset/311-service-requests — tabelas anuais, incluindo 2025 9d7c2214-4709-478a-a2e8-fb2020a5bb94 e 2026 1a0b420d-99f1-4887-9851-990b2a5a6e17; verificar anos anteriores disponíveis",
+    "Boston Property Assessment: https://data.boston.gov/dataset/property-assessment — FY2026 ee73430d-96c0-423e-ad21-c4cfb54c8961 e anos comparáveis",
+    "Boston RentSmart: https://data.boston.gov/dataset/rentsmart — dc615ff7-2ff3-416a-922b-f0f334f085d0; verificar atualização e sobreposição com 311",
+    "Fontes públicas oficiais municipais, Massachusetts/MassGIS e registros de transações imobiliárias acessíveis; U.S. Census para controles disponíveis",
+    "Zillow Research: https://www.zillow.com/research/data/ — ZHVI e ZORI por ZIP, com metodologias e período de referência",
+    "Artigos científicos originais, working papers acadêmicos identificados como tais, repositórios institucionais e avaliações governamentais; web e ferramentas conectadas para localizar fontes primárias"
+  ],
+  "scope_constraints": [
+    {
+      "q": "Local e período",
+      "a": "Boston é a análise principal. Use uma janela plurianual compatível com os dados, preferencialmente 2019–2026, excluindo períodos futuros e identificando anos parciais. Cambridge e outras cidades servem como comparação separada, nunca como dados de Boston. Separe residências unifamiliares, condomínios e multifamiliares quando possível."
+    },
+    {
+      "q": "Método e interpretação",
+      "a": "Registre decisões de filtros, janelas, controles e métricas antes de comparar resultados. Denúncias são proxies sujeitos a viés; fechamento não prova resolução. Preço menor não prova desvalorização; correlação não prova causa. Preserve resultados nulos e contraditórios. Não invente percentual de perda de valor. Use estatística estabelecida com tratamento correto de empates, amostras pequenas e dependência espacial."
+    },
+    {
+      "q": "Dados e reprodução",
+      "a": "O starter boston-311 de 5.000 linhas não tem os campos nem registros de roedores necessários. Use as tabelas anuais completas ou subconjuntos com filtros explícitos; não use a tabela nova como se cobrisse roedores. Salve consultas, URLs, horários de coleta, filtros, contagens, hashes, scripts e instruções. Documente restrições reais de acesso e não substitua dados indisponíveis por números inventados."
+    },
+    {
+      "q": "Artefatos e integração",
+      "a": "Mantenha FINDINGS.md e os cartões de evidência no diretório nativo da campanha. Salve também um relatório novo em knowledge/19_rodents_and_property_values.md, análises em knowledge/sources/scripts/rodents_property_values/ e agregados/manifests em knowledge/sources/artifacts/rodents_property_values/. Use relatório principal em inglês e um resumo executivo em português. Preserve arquivos existentes e outras campanhas; sem commits, pushes, deploys ou mensagens a terceiros. Não exporte nomes de proprietários, contatos ou avaliações de endereços individuais para o relatório público."
+    },
+    {
+      "q": "Escopo de execução",
+      "a": "Pesquisa pública, leitura dos arquivos do projeto e escrita dos artefatos desta campanha. Não criar contas, comprar dados ou iniciar assinaturas. Não alterar configurações globais, credenciais, infraestrutura ou código do produto. Registre lacunas de acesso e prossiga com alternativas públicas."
+    }
+  ],
+  "success_criteria": "Relatório com resposta explícita à hipótese, tabela de estudos e fontes primárias, inventário dos dados locais realmente obtidos e pelo menos uma análise reproduzível quando viável. Cada estimativa deve informar desfecho, amostra, período, escala geográfica, controles e incerteza. Separar diferença de nível de preços, mudança temporal e causalidade. Se os dados não permitirem estimar desvalorização ou efeito nos vizinhos, concluir evidência insuficiente com justificativa e plano mínimo de dados, sem forçar um resultado. Entregar arquivos citados no escopo e um resumo em português com 3–5 conclusões defensáveis para o projeto.",
+  "execution_mode": "agent",
+  "max_cycles": 20,
+  "parallel_workers": 3,
+  "idle_secs": 5,
+  "auto_approve": true,
+  "max_subquestions_per_round": 3,
+  "reserve_fraction": 0.2
+}

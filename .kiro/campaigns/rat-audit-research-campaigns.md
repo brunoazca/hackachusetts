@@ -85,3 +85,98 @@ Find the single best real Boston address for a 3-minute Rat Audit demo. It shoul
 **Definition of Done**
 
 One recommended address, with a timeline, an evidence list and a suggested next action, ready to put on the demo screen. No owner or person names. Saved to `knowledge/sources/scripts/demo_site.md`.
+
+---
+
+## Campaign 5: Rats and property values in Boston
+
+Registered and started in **Kiro Crew Research Lab** on October 24, 2026, 12:51 PM Eastern.
+Native campaign ID: **`c3c9bd8f`**. Status: **complete** (6 cycles).
+
+- Question: do higher rodent-report rates predict lower nearby residential prices, subsequent depreciation, or slower appreciation, and is any relationship causal?
+- Compare actual sale prices, rents and assessed values separately; distinguish price levels from changes over time.
+- Review primary studies and run reproducible Boston analyses where data permits, with property characteristics, location, market trends and reporting bias considered.
+- Recheck the earlier ZIP correlations, including the ranking implementation's treatment of ties. Null or insufficient evidence is a valid result.
+- Settings: Agent (adaptive), maximum 20 cycles, 3 parallel workers, unattended.
+- Exact brief and settings: [rodents-property-values.json](rodents-property-values.json).
+- Launch receipt: [rodents-property-values-run.json](rodents-property-values-run.json).
+- Full report, scripts and data stay in the Kiro Crew campaign directory (`~/.kiro/crew/workspace/research/c3c9bd8f/`: `FINDINGS.md`, `reports/`, `scripts/`, `data/`), not in the repo.
+
+**Results**
+
+**Answer: no.** Higher rodent-report activity is not associated with lower residential value or weaker appreciation in Boston, and there is no evidence of causal devaluation.
+
+| Claim | Evidence | Verdict |
+|---|---|---|
+| Lower price level in rat-heavy areas | ZIP Spearman ρ = −0.047 (p = 0.82, n = 25), residential median FY2026 value | Refuted at ZIP scale |
+| Devaluation over time | ZIP FY2025 → FY2026 appreciation ρ = −0.112 (not significant) | Not supported |
+| Rodent parcels worth less | Parcels with a rodent/pest record are +39.4% higher overall; +5–14% within land-use type, never negative | Refuted (positive, type-driven) |
+| Rodents cause value loss | No primary study found; the confound runs the opposite way | Insufficient |
+
+- The earlier ρ = −0.18 (ZHVI) came from a tie-handling bug in `rats_zip.py` / `rats_econ.py`. Do not cite it.
+- Pitch instead what can be counted: closed-but-not-resolved cases, per-block recurrence, tenant and restaurant costs, repeat inspector visits.
+
+---
+
+## Campaign 6: Rats vs residential property value (parcel-matched test)
+
+Native campaign ID: **`0651afa1`** (launched 12:51 PM from a Kiro Crew chat, 14-cycle loop). Status: **complete**. Same question as Campaign 5, run independently with a different method; full findings and scripts in `~/.kiro/crew/workspace/research/0651afa1/`.
+
+**Results** (confidence: high for "no devaluation")
+
+- Method: 1,258 chronic-rodent parcels (≥2 RentSmart "Rodent Activity" rows since 2025) vs controls in the same ZIP, building type and year built ±15 years with zero rodent reports (895 matched). Outcome: % change in assessed value FY2025 → FY2026.
+- Citywide, rodent parcels rose +2.39% vs +2.01% for controls (+0.38 points).
+- Within the same ZIP and building type the gap is **+0.00 points**, and 51% of rodent parcels beat their controls. No ZIP underperforms meaningfully (−0.09 to +1.02 points across 22 ZIPs).
+- Rats are reported most in dense, central, high-demand neighborhoods whose values rise fastest; they co-locate, neither causes the other.
+- The "10–20% off" figures are UK insurance and estate-agent marketing, not studies.
+- Defensible cost to pitch instead: 3,455 rodent restaurant violations since 2025.
+
+---
+
+## Campaign 7: Three-city rat platform, 13 research tracks (R01–R13)
+
+Native campaign ID: **`947e85a6`**, launched 1:18 PM. Status: **complete** (all 13 tracks answered). One umbrella campaign because Research Lab allows one active campaign at a time: 5 parallel researchers (the app's cap), up to 45 cycles. It replaced the single-track R01 run `11f2fa7f` (stopped after 2 cycles; its findings were reused).
+
+- Config: [rat-platform/umbrella.json](rat-platform/umbrella.json). Launch receipts: [rat-platform/runs.json](rat-platform/runs.json).
+- Guidance sent mid-run: [guidance-01](rat-platform/guidance-01.txt) (reuse the team's data research in `docs/rat-audit/` and `.kiro/specs/rat-audit/`; prioritize R09, R10, R12, R13 and Cambridge/Somerville replication) and [guidance-02](rat-platform/guidance-02.txt) (write nothing into the repo).
+- Reports, scripts and data stay in `~/.kiro/crew/workspace/research/947e85a6/`.
+
+| Track | Question |
+|---|---|
+| R01 | Every rat signal in Boston, Cambridge and Somerville |
+| R02 | One shared record format across the three cities |
+| R03 | Common map units and denominators |
+| R04 | Where interventions are recorded in each city |
+| R05 | What has worked in rat control, locally and elsewhere |
+| R06 | What drives rat reports at block level |
+| R07 | Reporting bias: complaints are not rats |
+| R08 | Can rat hotspots be forecast better than "last month stays hot"? |
+| R09 | Who acts on rats in each city, and what they decide |
+| R10 | Legal levers: what actions each city can take |
+| R11 | The cost of rats we can defend |
+| R12 | Privacy, licensing and ethics guardrails |
+| R13 | Existing products and our gap |
+
+**Results**
+
+The platform is feasible and the gap is real: all three cities publish usable rat signals, they fit one schema, and no existing product unifies them with rate ranking, forecasting, what-worked evidence and a human-approved action tied to a legal lever. Build Boston first, then Cambridge, and treat Somerville as complaint-only at block-group level. Ship a transparent persistence + season ranker before any ML model.
+
+| Track | Answer |
+|---|---|
+| R01 Inventory | All three cities have live rat data. Somerville has one source (311 `4pyi-uqq6`, block GEOID). Only Cambridge has physical trap catches (~528 SMART boxes). Only Boston has parcel/owner links and `closure_reason` text. |
+| R02 Schema | A 14-field record validated on a 1,459-row live three-city sample; dedupe removed 2.7%. Boston "Pick up Dead Animal" must not count as rats. Reconcile with the team's Supabase schema and `CONTRACT.md`; it does not replace them. |
+| R03 Geography | Use 2020 census block groups (Somerville's block code truncates to them). The Census API now requires a key; TIGERweb and MassGIS work without one. Denominator: housing units (B25001) plus total 311 volume. |
+| R04 Interventions | Boston: only ~12% of 10,403 closed rodent cases record a concrete action (2026: baiting 396, barrels 104, referred 99, violation 44). Classifier ~76–80% accurate; misses "abatement". Cambridge SMART boxes are the only physical intervention record; Somerville bait-box visits are not public. |
+| R05 What worked | Strong proof only for NYC proactive inspection + abatement (active rat signs −54% over 21 months, CDC MMWR). Reactive poison alone works poorly; sanitation is the lever. None of the three cities has evaluated its own actions. |
+| R06 Drivers | Trash is the lever in all three cities; restaurants are not. Cambridge replication: dead-animal, missed-trash and construction sit only ~0.10–0.14 above a pothole placebo. Somerville's 2019 trap study agrees. |
+| R07 Reporting bias | Complaints are a biased proxy: in Cambridge, trap catches and sightings correlate only ρ ≈ 0.22. Rank by rate, blend in physical signals, flag low-reporting areas. |
+| R08 Forecasting | Hotspots persist: Boston ZIP month-to-month rank ρ ≈ 0.77 (0.58 spring, 0.92 summer). Any model must beat that baseline on a time-split backtest. |
+| R09 Users | Boston: ISD Environmental Sanitation + the 10-agency BRAP group, which says it wants a proactive, data-driven model. Cambridge: DPW + contractor + SMART boxes. Somerville: 311 Rodent Control Assistance Program (1,936 visits, 538 properties in 2023). |
+| R10 Legal levers | State: 105 CMR 410.550 (owner extermination duty) and 410.560 (refuse). Boston: Site Cleanliness Ordinance ($1,000/day after the 3rd offense), rat-resistant containers ordinance, pre-demolition baiting. Cambridge: dumpster licensing ($300/day). Somerville: trash tickets, permit controls. |
+| R11 Cost | Pitch-safe: 5,321 Boston rodent reports in 2026; 3,455 rodent/mice restaurant violations at 819 restaurants since Jan 2025; ~$776K FY26 pest spend ($611K in schools); rats are a documented leptospirosis vector in Boston. |
+| R12 Privacy and licensing | Boston PDDL (free reuse), Somerville ODbL (attribution + share-alike). Cambridge rodent datasets have no license: display with attribution only; redistribution needs City confirmation. |
+| R13 Existing products | Existing tools are single-city complaint maps (NYC is the most advanced, with no forecast or cross-city view) or per-property trap vendors. None does the cross-city, rate-ranked, action-linked workflow. |
+
+**Do not claim:** reports equal rats; rats lower property values; rats cause asthma; a human leptospirosis case count or any tenant/tourism dollar figure; that any local action reduced rats; closed equals solved.
+
+**Open questions:** does any Boston action reduce repeat reports (needs the "abatement" fix first); is low reporting low rats or under-measurement (calibrate against Cambridge catches); can a cell-week model beat ρ ≈ 0.77; will Cambridge grant redistribution rights.

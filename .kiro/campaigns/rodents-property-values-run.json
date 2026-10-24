@@ -1,0 +1,10 @@
+{
+  "campaign_id": "c3c9bd8f",
+  "name": "Ratos e desvalorização de imóveis em Boston",
+  "created_or_verified_at_utc": "2026-10-24T16:51:53.497374+00:00",
+  "status": "running",
+  "dashboard_url": "http://localhost:5476/auto-research",
+  "configuration": ".kiro/campaigns/rodents-property-values.json",
+  "engine": "Kiro Crew Research Lab",
+  "verified_at_utc": "2026-10-24T16:51:53.508258+00:00"
+}

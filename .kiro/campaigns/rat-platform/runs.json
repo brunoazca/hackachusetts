@@ -1,0 +1,17 @@
+{
+  "R01": {
+    "campaign_id": "11f2fa7f",
+    "config": "R01-three-city-rat-data-inventory.json",
+    "status_at_launch": "running",
+    "launched_at_utc": "2026-10-24T17:12:18+00:00",
+    "status_later": "stopped (folded into umbrella)"
+  },
+  "umbrella": {
+    "campaign_id": "947e85a6",
+    "config": "umbrella.json",
+    "status_at_launch": "running",
+    "parallel_workers": 5,
+    "max_cycles": 45,
+    "launched_at_utc": "2026-10-24T17:17:52+00:00"
+  }
+}

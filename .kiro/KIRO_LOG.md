@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:41 — Umbrella campaign 947e85a6 finished; added its 13-track r...
+- Teammate: Carol
+- Agent: —
+- Did: Umbrella campaign 947e85a6 finished; added its 13-track results (R01-R13) to rat-audit-research-campaigns.md; replaced home-directory paths in campaign configs with repo-relative ones; committed the research record
+- Why: Keep every campaign's results in one file and keep personal paths out of the public repo
+- Where: .kiro/campaigns/rat-audit-research-campaigns.md, .kiro/campaigns/rat-platform/, .kiro/campaigns/rodents-property-values*.json, .kiro/KIRO_LOG.md
+- Idea: Build Boston-first, ship a persistence+season ranker before ML; Cambridge rodent data needs redistribution permission
+
 ### 2026-10-24 14:37 — Baseline (mean of last 4 weeks), Poisson GBM, 26-week rol...
 - Teammate: Bruno
 - Agent: —
@@ -255,6 +263,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: .kiro/scripts/check_submission_ready.py
 - Idea: The checker is now an honest 8PM safety net: it goes green only when description.md and kiro-usage.md lose their placeholders
 
+### 2026-10-24 13:29 — Made rat-audit-research-campaigns.md the single home for ...
+- Teammate: Carol
+- Agent: —
+- Did: Made rat-audit-research-campaigns.md the single home for campaign results (added results for c3c9bd8f, 0651afa1 and the running umbrella 947e85a6); moved campaign reports, scripts and raw data out of the repo into their Kiro Crew campaign directories; told 947e85a6 to stop writing into the repo
+- Why: Campaign outputs were scattering files (incl. 7 MB of raw data and per-complaint addresses) across the public repo
+- Where: .kiro/campaigns/rat-audit-research-campaigns.md, .kiro/campaigns/rat-platform/guidance-02.txt
+- Idea: —
+
 ### 2026-10-24 13:27 — Realigned all Kiro automation to the real rat-audit tree:...
 - Teammate: Guilherme
 - Agent: kirocrew
@@ -319,6 +335,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: pipeline/rat_audit/ingest/common.py
 - Idea: VACUUM FULL brought DB 465→300 MB; free tier is tight — consider Supabase Pro
 
+### 2026-10-24 13:21 — Sent guidance to umbrella campaign 947e85a6: reuse the te...
+- Teammate: Carol
+- Agent: —
+- Did: Sent guidance to umbrella campaign 947e85a6: reuse the team's data research (data-research.md, data-audit.md, validation results), skip what Boston already answered, prioritize R09/R10/R12/R13 and Cambridge/Somerville replication
+- Why: Avoid redoing research the team finished; focus cycles on real gaps
+- Where: .kiro/campaigns/rat-platform/guidance-01.txt
+- Idea: —
+
 ### 2026-10-24 13:20 — Pushed pending spec edits (closure classifier rules, esca...
 - Teammate: Bruno
 - Agent: —
@@ -334,6 +358,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Research changed several P0 items
 - Where: .kiro/specs/rat-audit/{requirements,design,tasks}.md, contracts/categories.json, web/src/lib/categories.json, knowledge/sources/scripts/closure_classifier_rules.py, knowledge/15_boston_rat_audit.md, .kiro/campaigns/rat-audit-research-campaigns.md
 - Idea: Classifier: monitoring 49% of 2025 closures -> 27% in 2026 as abatement/baiting rose; Sept 1 trash 2x citywide, 4-5x student ZIPs, rodent lag none
+
+### 2026-10-24 13:18 — Stopped R01 (11f2fa7f) and launched one umbrella Research...
+- Teammate: Carol
+- Agent: —
+- Did: Stopped R01 (11f2fa7f) and launched one umbrella Research Lab campaign 947e85a6 with all 13 tracks (R01-R13) as sub-questions, 5 parallel researchers, 45 cycles; pulled origin/main (rat-audit stack) and merged KIRO_LOG newest-first
+- Why: Research Lab allows one active campaign at a time; 5 researchers is the app's cap
+- Where: .kiro/campaigns/rat-platform/build_umbrella.py, umbrella.json, runs.json, .kiro/KIRO_LOG.md
+- Idea: Per-track reports land in knowledge/research/R##_*.md
 
 ### 2026-10-24 13:17 — Data section: ingest helpers + Boston 311 loader (2023–20...
 - Teammate: Bruno
@@ -359,6 +391,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: .kiro/specs/rat-audit/{data-audit,requirements,tasks,design}.md, docs/rat-audit/data-research.md
 - Idea: Spec now matches evidence: trash + housing + season; honest nulls; equity view
 
+### 2026-10-24 13:14 — Wrote 13 Research Lab campaign configs (R01-R13) for the ...
+- Teammate: Carol
+- Agent: —
+- Did: Wrote 13 Research Lab campaign configs (R01-R13) for the three-city rat platform; created and started R01 (11f2fa7f). R02-R13 blocked: Research Lab allows one active campaign at a time
+- Why: Carol asked for one Research Lab campaign per research topic
+- Where: .kiro/campaigns/rat-platform/
+- Idea: Queue the rest sequentially; fewer cycles each so they finish before the 8 PM deadline
+
 ### 2026-10-24 13:13 — Modal worker deployed (rat-audit on harvard workspace): b...
 - Teammate: Bruno
 - Agent: —
@@ -381,6 +421,22 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: team divided the four CONTRACT tracks before building
 - Where: docs/rat-audit/TEAM.md
 - Idea: Bruno loads 311 first; Carol+Gui parallel after; model+insights last
+
+### 2026-10-24 13:11 — Finished research campaign 0651afa1 (rats vs property val...
+- Teammate: Carol
+- Agent: kirocrew (default)
+- Did: Finished research campaign 0651afa1 (rats vs property value). Ran a live parcel-level test on Boston assessment + RentSmart data; wrote FINDINGS.md.
+- Why: Answer the question Carol asked and give a pitch-safe verdict
+- Where: research/0651afa1/FINDINGS.md, knowledge/sources/rats/rats_value.py, knowledge/sources/rats/rats_value_byzip.py
+- Idea: VERDICT: no link between rats and lower home value in Boston. Within ZIP+type+year the rodent-vs-control value-change gap is zero (median +0.00 pts, 51% beat controls). The citywide +0.38pt edge was pure confounding (rats cluster in dense high-demand areas). Do NOT claim devaluation; the 10-20% figures are UK marketing. Defensible cost = 3,455 rodent restaurant violations since 2025, not property prices.
+
+### 2026-10-24 13:07 — Planned the research needed for a Boston+Cambridge+Somerv...
+- Teammate: Carol
+- Agent: —
+- Did: Planned the research needed for a Boston+Cambridge+Somerville rat platform (control, prediction, action): 13 research tracks in 5 groups, prioritized for today
+- Why: Carol wants one three-city rat platform for government and asked what research it needs
+- Where: none
+- Idea: Biggest gaps: Somerville rat data unknown, no shared schema across cities, prediction must beat a 'last month's hotspots' baseline and correct for reporting bias
 
 ### 2026-10-24 13:06 — Moved SOCRATA_APP_TOKEN from .env into .env.local (the fi...
 - Teammate: Bruno Azca
@@ -446,6 +502,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: none
 - Idea: Schedule via GitHub Actions cron (free) or Modal (cron + on-demand what-if endpoint); Vercel only calls the chat LLM API
 
+### 2026-10-24 12:53 — Campanha c3c9bd8f registrada e iniciada pela API do Kiro ...
+- Teammate: Carol
+- Agent: Kiro Crew Research Lab (executor da campanha)
+- Did: Campanha c3c9bd8f registrada e iniciada pela API do Kiro Research Lab; status running confirmado; ate 20 ciclos e 3 pesquisadores.
+- Why: Investigar a associacao entre atividade de roedores e valor dos imoveis, distinguindo precos menores, desvalorizacao e causalidade.
+- Where: .kiro/campaigns/rodents-property-values.json; .kiro/campaigns/rodents-property-values-run.json; .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Comparar vendas, alugueis e valores fiscais; revisar estudos primarios e controlar localizacao, caracteristicas dos imoveis e vies de denuncias. Resultados ainda pendentes.
+
 ### 2026-10-24 12:52 — Wrote full initial spec for Rat Audit (requirements EARS,...
 - Teammate: Bruno
 - Agent: —
@@ -461,6 +525,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Save the idea-specific Kiro automation; ready for human push
 - Where: .kiro/agents/*, .kiro/hooks/overclaim-guard.kiro.hook, .kiro/scripts/check_overclaims.py, .kiro/specs/rodent-ops/*, README.md, data/civic/CATALOG.md
 - Idea: none
+
+### 2026-10-24 12:51 — Launched research campaign 0651afa1: rats vs property value
+- Teammate: Carol
+- Agent: kirocrew (default)
+- Did: Launched research campaign 0651afa1 — is rat activity linked to lower residential property value in Boston? Armed a 14-cycle loop.
+- Why: Carol asked to investigate whether neighborhoods with more rats have devalued homes/buildings
+- Where: research/0651afa1/brief.md, status.json
+- Idea: Starting point: the audit already found rho -0.18 (home value) and +0.30 (rent), both weak and confounded, with no peer-reviewed study. The campaign goes to block/parcel level and digs into the literature.
 
 ### 2026-10-24 12:48 — Set up RodentOps-specific Kiro automation: rodent-honesty...
 - Teammate: Guilherme
