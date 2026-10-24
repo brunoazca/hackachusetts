@@ -2,7 +2,6 @@
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { markerDataUrl } from "./icons";
-import { STRENGTH_STYLE, testedFor } from "./tested";
 import { ERA_STOPS, HOUSING_RAMP } from "./ContextLayers";
 import { CELL_METRICS, CELL_RAMPS, metricFor } from "@/lib/cell-context";
 import type { CoverageRow } from "@/lib/queries";
@@ -293,21 +292,18 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
           )}
           {GROUPS.some((g) => g.id === current.id) && (
             <div>
-              {groupIds(current.id).map((id) => {
-                const t = testedFor(id);
-                return (
-                  <LayerRow
-                    key={id}
-                    // eslint-disable-next-line @next/next/no-img-element
-                    icon={<img src={markerDataUrl(id)} alt="" aria-hidden className="h-5 w-5" />}
-                    label={CATS[id].label}
-                    meta={<><span className={STRENGTH_STYLE[t.strength]}>{t.text}</span>{coverage.length > 0 && <> · <CityBadges layer={id} coverage={coverage} /></>}</>}
-                    checked={!!enabled[id]}
-                    onToggle={(v) => apply({ ...enabled, [id]: v }, [id], v)}
-                  />
-                );
-              })}
-              <p className="mt-2 text-[11px] leading-4 text-fg-3">Faded icon = closed. Tested = block-level partial correlation with rodent reports.</p>
+              {groupIds(current.id).map((id) => (
+                <LayerRow
+                  key={id}
+                  // eslint-disable-next-line @next/next/no-img-element
+                  icon={<img src={markerDataUrl(id)} alt="" aria-hidden className="h-5 w-5" />}
+                  label={CATS[id].label}
+                  meta={coverage.length > 0 ? <CityBadges layer={id} coverage={coverage} /> : undefined}
+                  checked={!!enabled[id]}
+                  onToggle={(v) => apply({ ...enabled, [id]: v }, [id], v)}
+                />
+              ))}
+              <p className="mt-2 text-[11px] leading-4 text-fg-3">Faded icon = closed.</p>
             </div>
           )}
 

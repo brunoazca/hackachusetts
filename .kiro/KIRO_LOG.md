@@ -40,6 +40,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: agent/prompt.ts, agent/tools/server.ts, agent/__tests__/viewport-context.test.ts
 - Validation: 26 tests passed, TypeScript and scoped ESLint passed.
 - Idea: none
+### 2026-10-24 18:25 — Removed hardcoded 'tested' association labels from layer ...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed hardcoded 'tested' association labels from layer panel toggles; deleted web/src/components/map/tested.ts; marked task 3.18 dropped
+- Why: Labels were hand-copied audit numbers, not output of the current ML model, and several tested layers showed 'not tested'
+- Where: web/src/components/map/LayerPanel.tsx, .kiro/specs/rat-audit/tasks.md
+- Idea: Use the model's feature importance to decide which evidence layers to drop (e.g. missed trash, unsanitary conditions)
+
 ### 2026-10-24 18:20 — Clickable places in AI region cards: region_solutions.loc...
 - Teammate: Bruno
 - Agent: —

@@ -58,7 +58,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 
 ## 3. Map + inspector track — `web/src/components/{map,inspector,act}`, TopBar, `*_api_*.sql`
 - [ ] 3.0 **P0** Two top-level modes Assess / Act in the TopBar + Simple / Explore depth toggle (Simple default); details in side panels or popovers; selection shared across modes. Layout, landing view and visual design: Gui's UI pass decides. (R0)
-- [ ] 3.18 **P1** Tested-result label on every driver layer toggle / legend, from `correlations`; "not tested" fallback. (R2.16)
+- [x] ~~3.18 **P1** Tested-result label on every driver layer toggle / legend, from `correlations`; "not tested" fallback. (R2.16)~~ Dropped Oct 24: hardcoded copies of the audit numbers, not the ML model; removed from the layer panel.
 - [ ] 3.1 **P0** RPCs: map_incidents, map_sites, incident_detail, site_detail; typed wrappers in `web/src/lib/queries.ts`. (R2, R3)
 - [ ] 3.2 **P0** MapView: basemap, clustered rodent layer (open/closed/recurred), sites layer, click→select, highlight, flyTo, bbox refetch. (R2.1, R2.2, R2.4, R2.6)
 - [ ] 3.3 **P0** Layer control + legend + date/status filters; other incident categories. (R2.3, R2.5, R2.12)
