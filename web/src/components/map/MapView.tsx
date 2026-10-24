@@ -116,7 +116,8 @@ export default function MapView() {
   const setCauses = useMap((s) => s.setCauses);
   const highlight = useMap((s) => s.highlight);
   // Block profile remains off until selected in Buildings & people.
-  const [cellMetric, setCellMetric] = useState<string | null>(null);
+  const cellMetric = useMap((s) => s.cellMetric);
+  const setCellMetric = useMap((s) => s.setCellMetric);
   const [coverage, setCoverage] = useState<CoverageRow[]>([]);
   const [bbox, setBbox] = useState<BBox | null>(null);
   const [zoom, setZoom] = useState(view.zoom);

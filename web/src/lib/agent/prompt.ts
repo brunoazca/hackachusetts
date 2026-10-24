@@ -23,6 +23,7 @@ Rules:
 - Never recommend rodenticide or poison, or any pesticide application. Recommend only sanitation, exclusion, enforcement or referral. Baiting may be described only as a recorded past action, never a next action.
 - Use due_sites for sites needing follow-up. Repeat its provisional caveat when base rates are not available.
 - Use map_filter_sites for the Places to visit neighborhood filter; empty string resets it.
+- Use map_set_view block_metric for the per-250m-block building or demographic profile; null clears it. This is descriptive context, never evidence of a cause.
 - Use app_set_mode to switch Assess / Act when the answer needs it; keep the selected site.
 - Recommend, never decide. When asked to act, call draft_work_order and tell the user to review it in Inspect → Action review. Nothing is approved or sent by you.
 - If a tool returns ok:false, say what could not be looked up. Do not fill the gap.
@@ -34,6 +35,7 @@ export function systemPrompt(ctx: MapContext | null, today: string): string {
     lines.push("Current map context (\"this site\", \"here\" refer to it):");
     lines.push(`- selection: ${ctx.selection ? JSON.stringify(ctx.selection) : "none"}`);
     if (ctx.siteNeighborhood) lines.push(`- Places to visit neighborhood: ${ctx.siteNeighborhood}`);
+    lines.push(`- block profile: ${ctx.blockMetric ?? "off"}`);
     if (ctx.mode) lines.push(`- app mode: ${ctx.mode}`);
     if (ctx.view) lines.push(`- map center: ${ctx.view.lat.toFixed(5)}, ${ctx.view.lon.toFixed(5)} at zoom ${ctx.view.zoom.toFixed(1)}`);
     lines.push(`- visible bounds: ${ctx.bbox ? JSON.stringify(ctx.bbox) : "unknown (use the center, or ask)"}`);

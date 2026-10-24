@@ -46,6 +46,7 @@ export type MapContext = {
   nearbyRecords?: boolean;
   forecastPeriod?: string;
   siteNeighborhood?: string;
+  blockMetric?: string | null;
   selection: { kind: string; id: string } | { kind: "area" } | null;
   view: { lat: number; lon: number; zoom: number } | null;
   /** Visible map bounds. null before load or while a requested flight is pending. */

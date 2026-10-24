@@ -4,12 +4,13 @@ import { executeClientTool, type MapActions } from "../tools/client";
 import { buildMapContext, parseMapContext } from "../context";
 import { CATEGORY_IDS, activeCategories, LAYER_GROUPS, filterIncidentStatus } from "../../map-controls";
 import { useMap } from "../../map-store";
+import { CELL_METRICS } from "../../cell-metrics";
 
 function fakeMap() {
   const calls: [string, unknown][] = [];
   const rec = (name: string) => (v: unknown) => { calls.push([name, v]); };
   const map: MapActions = {
-    setMode: rec("setMode"), setSiteNeighborhood: rec("setSiteNeighborhood"), setViewMode: rec("setViewMode"), setCauses: rec("setCauses"),
+    setMode: rec("setMode"), setSiteNeighborhood: rec("setSiteNeighborhood"), setViewMode: rec("setViewMode"), setCauses: rec("setCauses"), setCellMetric: rec("setCellMetric"),
     flyTo: rec("flyTo"), setLayers: rec("setLayers"), setFilters: rec("setFilters"), setHighlight: rec("setHighlight"),
     select: rec("select"), setPanel: rec("setPanel"), setForecastWeek: rec("setForecastWeek"),
   };
@@ -131,6 +132,27 @@ test("invalid dates, reversed partial ranges and unknown categories cannot parti
     assert.equal(executeClientTool("map_set_filters", input, useMap.getState()).ok, false);
     assert.equal(useMap.getState(), before);
   }
+});
+
+test("all upstream block-profile choices share map state and round-trip through chat context", () => {
+  const before = useMap.getState();
+  try {
+    for (const metric of CELL_METRICS) {
+      assert.equal(executeClientTool("map_set_view", { block_metric: metric.key }, useMap.getState()).ok, true);
+      assert.equal(useMap.getState().cellMetric, metric.key);
+      const context = buildMapContext(useMap.getState());
+      assert.equal(context.blockMetric, metric.key);
+      assert.deepEqual(parseMapContext(context), context);
+    }
+    useMap.getState().setCellMetric("pop_per_km2");
+    executeClientTool("map_set_view", { mode: "points" }, useMap.getState());
+    assert.equal(buildMapContext(useMap.getState()).blockMetric, "pop_per_km2", "unrelated display changes preserve the manual block choice");
+    const current = useMap.getState();
+    assert.equal(executeClientTool("map_set_view", { block_metric: "invented", mode: "heat" }, current).ok, false);
+    assert.equal(useMap.getState(), current);
+    executeClientTool("map_set_view", { block_metric: null }, current);
+    assert.equal(buildMapContext(useMap.getState()).blockMetric, null);
+  } finally { useMap.setState(before, true); }
 });
 
 test("status filters preserve exact aggregate weights and individual reports without mutating fetched data", () => {

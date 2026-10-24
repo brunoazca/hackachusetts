@@ -2,6 +2,23 @@
 
 This worktree owns tasks 4.1–4.6. Core tasks 4.1–4.4 and 4.6 are implemented with the validation limits below, including v2 `due_sites` and `app_set_mode`. Task 4.5 remains unimplemented P1 work; the whole Agent track is not being marked complete.
 
+## Main integration for publication — October 24, 2026
+
+Carol requested commit and push of this chat's changes. The integration on remote main
+`eed900a` preserves the newer English-only response policy, collapsed source/record
+disclosure and per-block profile. All 24 block-profile choices now share map/chat state
+through `map_set_view.block_metric`; null clears it and omitted values preserve the
+manual choice. Metric metadata is shared without importing browser data access into tools.
+
+The integrated Agent/Insights suite passed **131 tests**, with 19 conditional skips and
+zero failures; five repository tests also passed. Scoped lint, production build/TypeScript,
+secret scanning and whitespace checks passed. A real-model browser turn selected
+People per km² in the original controls, retained points plus heatmap, read live Insights,
+answered in English and left sources collapsed; no console errors were captured.
+All log content from both histories was preserved, including both sides of conflict
+markers that had already reached upstream. This validates the integrated local build;
+production deployment status must be checked separately from Git publication.
+
 ## Shared map controls and Insights — October 24, 2026
 
 This local follow-up on `3599998` supersedes the older map-control limitations below.

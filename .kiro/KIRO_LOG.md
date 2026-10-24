@@ -31,6 +31,18 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:48 — Integrate all chat/map changes for the requested push
+- Teammate: Carol
+- Agent:
+- Did: Committed this chat's map controls and Insights work, integrated remote main eed900a, and connected its new 24 block-profile choices to the same map/chat state.
+- Did: Preserved the English-only policy, collapsed source disclosure and every log line from both histories; removed upstream conflict-marker artifacts without losing either entry.
+- Why: Carol requested commit and push of these changes and the earlier work from this chat.
+- Where: .kiro/KIRO_LOG.md; web/src/lib/agent/**; web/src/lib/{map-store,cell-context,cell-metrics}.ts; web/src/components/map/MapView.tsx.
+- Evidence: Integrated Agent/Insights suite 131 pass, 0 fail, 19 conditional skips; repository suite 5 pass. Build/TypeScript, scoped lint, secret scan and whitespace checks passed.
+- Evidence: Real-model browser turn selected People per km² in the original map, retained points plus heatmap, read Insights and answered in English with sources collapsed; no console errors. Screenshot: /private/tmp/piper-map-chat-integrated.jpg.
+- Decision: Publish the validated commits to origin/main under Carol's explicit request; keep Agent empty. Deployment status is separate from Git publication.
+- Idea: New map controls should reuse the shared state and tool catalog, so chat and manual controls stay synchronized.
+
 ### 2026-10-24 17:45 — Added per-site return chance as the third severity term (...
 - Teammate: Bruno
 - Agent: —

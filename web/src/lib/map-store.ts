@@ -42,6 +42,8 @@ type MapState = {
   bounds: Bounds | null;
   viewMode: ViewMode;
   causes: boolean;
+  cellMetric: string | null;
+  setCellMetric: (metric: string | null) => void;
   setBounds: (bounds: Bounds | null) => void;
   setViewMode: (mode: ViewMode) => void;
   setCauses: (on: boolean) => void;
@@ -79,6 +81,8 @@ export const useMap = create<MapState>((set) => ({
   bounds: null,
   viewMode: "heat",
   causes: false,
+  cellMetric: null,
+  setCellMetric: (cellMetric) => set({ cellMetric }),
   setBounds: (bounds) => set({ bounds }),
   setViewMode: (viewMode) => set({ viewMode }),
   setCauses: (causes) => set({ causes }),

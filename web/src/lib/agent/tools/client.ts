@@ -2,6 +2,7 @@ import { tool } from "ai";
 import { z } from "zod";
 import type { LayerId, Mode, Selection } from "../../map-store";
 import { CATEGORY_IDS, LAYER_IDS, LAYER_GROUPS, isNearbyCategory, type ViewMode } from "../../map-controls";
+import { CELL_METRICS } from "../../cell-metrics";
 
 // Client-side map tools (task 4.3). The route declares them without `execute`,
 // so the model's calls stream to the browser; ChatPanel runs them on the map
@@ -49,8 +50,12 @@ export const clientTools = {
     }),
   }),
   map_set_view: tool({
-    description: "Change the original map display: points (each report), heat (hot spots), both, and show/hide nearby records (trash, shelter and displacement).",
-    inputSchema: z.object({ mode: z.enum(["points", "heat", "both"]).optional(), nearby_records: z.boolean().optional() }).strict(),
+    description: "Change the original map display: points (each report), heat (hot spots), both; show/hide nearby records; choose a per-250m-block profile metric (building age or population context). block_metric null turns the profile off. These metrics are context, not evidence of causes.",
+    inputSchema: z.object({
+      mode: z.enum(["points", "heat", "both"]).optional(),
+      nearby_records: z.boolean().optional(),
+      block_metric: z.enum(CELL_METRICS.map(metric => metric.key)).nullable().optional(),
+    }).strict(),
   }),
   map_highlight: tool({
     description: "Draw rings around loaded incidents and Act sites by id. Fly to a street-level zoom first for report ids. Features outside the current layers, period, status or viewport cannot be highlighted. Empty list clears.",
@@ -79,6 +84,7 @@ export type MapActions = {
   setSiteNeighborhood: (neighborhood: string) => void;
   setViewMode: (mode: ViewMode) => void;
   setCauses: (on: boolean) => void;
+  setCellMetric: (metric: string | null) => void;
   filters?: { since: string; until: string };
   flyTo: (v: { lat: number; lon: number; zoom?: number }) => void;
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
@@ -144,10 +150,11 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
       return { ok: true, done: "Filters updated" };
     }
     case "map_set_view": {
-      const { mode, nearby_records } = v as { mode?: ViewMode; nearby_records?: boolean };
+      const { mode, nearby_records, block_metric } = v as { mode?: ViewMode; nearby_records?: boolean; block_metric?: string | null };
       map.setMode("assess");
       if (mode) map.setViewMode(mode);
       if (nearby_records != null) map.setCauses(nearby_records);
+      if (block_metric !== undefined) map.setCellMetric(block_metric);
       return { ok: true, done: "Map display updated" };
     }
     case "map_highlight": {
