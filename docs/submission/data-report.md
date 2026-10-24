@@ -1,6 +1,6 @@
 # Final data report — Rat Audit Boston
 
-**Cutoff:** October 24, 2026  
+**Cutoff:** October 24, 2026\
 **Purpose:** historical team research, data links, overlaps, and supported video claims. These are recorded research outputs, not a fresh rerun of every analysis. Current implementation is described in [description.md](description.md).
 
 ## 1. The story in five numbers
