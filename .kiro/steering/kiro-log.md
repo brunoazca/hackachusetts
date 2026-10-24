@@ -11,13 +11,19 @@ After you do real work in this repo — add code, change a file, make a
 decision, or raise a good idea — add ONE entry to `.kiro/KIRO_LOG.md`.
 
 **Do this on your own, without being asked.** If this turn changed a file,
-made a decision, or raised an idea, logging is PART of the task — not a
-separate request. Log it before you end your turn. The user should never
-have to ask you to log.
+made a decision, OR raised an idea in pure talk (a brainstorm, a direction,
+a "what if"), logging is PART of the task — not a separate request. Log it
+before you end your turn. The user should never have to ask you to log.
+
+**Ideas count as work.** A chat with no file change still gets an entry when
+real thinking happened: an idea, a plan, a decision, a trade-off weighed, a
+scope call. Put the thought in `Did:` and `Idea:`, and set `Where: none`.
+Do NOT wait for code — the strongest parts of our Kiro story are the ideas.
 
 - Add the new entry at the TOP of the `## Log` section.
 - Never delete or rewrite old entries. Only add.
-- Skip tiny no-op turns (pure reading, a question with no change).
+- Skip ONLY true no-ops: pure reading, a status check, a yes/no with no
+  thinking behind it. When in doubt, log it.
 - Keep each line short and true.
 
 ## Entry format
