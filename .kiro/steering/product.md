@@ -5,14 +5,15 @@ inclusion: always
 # Product — Hackachusetts 2026 (Civic Action track)
 
 ## What we are building
-One useful Massachusetts civic workflow. A resident finishes a real task,
-end to end, with authoritative evidence, accessible interaction, and a clear
-human decision point. Not a broad chatbot. Not a map with no next action.
+**Rat Audit Boston**: a live map of every rat-related signal in Boston. An ISD rodent
+inspector or the BRAP coordinator clicks anything to inspect it, sees what drives
+rats there, what the city already tried, and what is forecast next, then approves the
+next action. An assistant answers questions from the data and drives the map.
+Spec: `.kiro/specs/rat-audit/`.
 
 ## Who it is for
-A Massachusetts resident completing one concrete public service (e.g.
-preparing a Boston moving-truck parking application), or a civic worker using
-a neighborhood service analysis view over the provided 311 snapshot.
+ISD rodent inspectors and the Boston Rodent Action Plan coordinator (primary);
+residents and councillors (read-only).
 
 ## Non-negotiables (from the rules)
 - Public GitHub repo with a root `/.kiro` directory holding real work.

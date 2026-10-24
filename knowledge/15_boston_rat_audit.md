@@ -149,12 +149,28 @@ Grouping property assessment by owner mailing address shows hidden portfolios. O
 
 | Area | What rats cost | Evidence we have | Strength |
 |---|---|---|---|
-| **Health** | Rodent allergens trigger asthma. Rats carry leptospirosis and other pathogens; BU researchers found influenza A and *S. aureus* in Boston rats | 3 rat bites in 311 (2025); CDC PLACES asthma by tract; OpenAlex studies | Medium: link by tract, not causal |
+| **Health** | Leptospirosis, rodent allergens (asthma), bites | **18% of Boston brown rats (59 of 328, 17 areas) carried *Leptospira***, and a Boston-area human case was genetically near-identical to a local rat strain (Tufts, PLOS NTD, 2025, peer-reviewed). BU studies found influenza A and *S. aureus* in Boston rats. 3 rat bites in 311 (2025) | Strong (peer-reviewed) |
 | **Tenants** | Infestations in homes, repeat complaints, health and stress | 6,788 RentSmart pest-infestation rows; 407 addresses with recurrence | Strong |
-| **Restaurants** | Failed inspections, closures, lost business | 3,608 rodent/mice mentions in inspections since 2025, at 833 businesses | Strong |
+| **Restaurants** | Failed inspections, lost business | **127 food businesses got 301 rodent/vermin violations in 2025, 37 at the most severe level** (food inspections, violation codes). The broader text search (3,608 mentions at 833 businesses since 2025) also matches comments like "no mice observed", so use 127 in the pitch | Strong (government data) |
 | **Tourism and short stays** | Guests leaving early, bad reviews | Inside Airbnb: 212 of 267,731 reviews mention rats/mice/rodents (0.08%). Highest in Bay Village 0.39%, Chinatown 0.24%, Back Bay and Mission Hill 0.15%. Example (Back Bay, Feb 2024): a guest "had to end my stay 5 nights early because a mouse walked…" | Real but small |
 | **City operations** | Inspector visits that do not stop recurrence; 10 agencies acting separately | 99% closed vs 407 recurring addresses | Strong |
 | **Property values** | Stigma at sale, disclosure | See section 6. No reliable price signal in public data | Weak |
+
+### Cost of rats: what we can say (Kiro Crew campaign `b6ba6312`)
+
+| Claim | Label | Source |
+|---|---|---|
+| 18% of Boston brown rats carry *Leptospira*; a local human case matched a rat strain | peer-reviewed | [Boston Globe on the Tufts study](https://www.bostonglobe.com/2025/06/20/metro/rats-boston-disease-leptospirosis-tufts/), [PubMed 40233129](https://pubmed.ncbi.nlm.nih.gov/40233129/) |
+| The same authors warn extermination can spread strains as rats relocate; they recommend sanitation over eradication | peer-reviewed | [AAU summary](https://www.aau.edu/newsroom/urban-rats-spread-deadly-bacteria-they-migrate-study) |
+| 127 Boston food businesses, 301 rodent/vermin violations in 2025 (37 most severe) | government data | food inspections `4582bec6-2b4f-4f9e-bc55-cbaa73117f4c` |
+| BRAP spans 20+ city departments; the one published dollar figure is a $500,000 participatory-budgeting rat-prevention project (rodent-proof containers and sensors for 665 Boston Housing Authority units in Brighton) | government | [Rat summit news](https://www.boston.gov/news/city-boston-host-second-ever-national-urban-rat-summit), [Participatory budgeting page](https://www.boston.gov/departments/participatory-budgeting/rat-prevention-initiatives-dense-residential-areas) |
+| Boston hosted the 2nd National Urban Rat Summit, Sept 23–24, 2026 | government | [City of Boston](https://www.boston.gov/news/city-boston-host-second-ever-national-urban-rat-summit) |
+| **Boston has published no measured reduction** in rodent complaints or population since BRAP launched | government (absence) | [BRAP page](https://www.boston.gov/departments/inspectional-services/boston-rodent-action-plan) |
+| NYC: 311 rat sightings fell 12 straight months, >20% year over year, credited to trash containerization; 55% drop in the Hamilton Heights pilot zone; $877,000 to rat-proof ~600,000 tree beds | government | [DSNY](https://www.nyc.gov/site/dsny/news/25-039/nyc-rats-fleeing-an-incredible-12-straight-months-), [pilot report](https://a860-gpp.nyc.gov/downloads/t435gh62m?locale=en), [Mayor's office](https://www.nyc.gov/mayors-office/news/2025/06/mayor-adams-launches-new-teams-fight-rats-city-s-new-phase-war-rats) |
+| Chicago: a 2026 Inspector General audit found the reactive, complaint-driven program "unlikely to achieve long-term control" | government | [AP](https://apnews.com/article/chicago-rat-control-audit-complaints-root-causes-c2e1e14891b705480deb38e561d18ca0) |
+| "Rats cut home value 5–20%" | **industry/marketing only**; no peer-reviewed rodent hedonic study exists. Nearest peer-reviewed work is on tree pests (2–5% discounts), not transferable | [Thrasher (industry)](https://thrasherpestcontrol.com/how-pest-issues-affect-real-estate/), [USFS tree-pest study](https://www.fs.usda.gov/psw/publications/documents/psw_gtr229/psw_gtr229_154.pdf) |
+
+**Pitch order:** health (18% leptospirosis), food safety (127 businesses), our finding (monitoring doesn't cut recurrence, violations do), proof a fix exists (NYC −20%, −55% in a pilot), and the gap: Boston has no published measure of results. The audit gives BRAP that measure. Say plainly that the home-value claim is not supported.
 
 ## 6. Do rats lower property values?
 

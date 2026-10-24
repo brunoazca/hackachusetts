@@ -7,16 +7,19 @@ inclusion: always
 > Update this once the stack is chosen. Defaults below favor a fast, judge-friendly
 > web demo. Change freely — this file steers Kiro on every task.
 
-## Stack (fill in on day one)
-- Language/runtime: _TBD (e.g. TypeScript + Node)_
-- Framework: _TBD (e.g. Next.js / Vite + React)_
-- Styling/UI: _TBD (e.g. Tailwind + shadcn/ui)_
-- Data: _TBD (static snapshot JSON for the demo is fine and faster to defend)_
-- Deploy: _TBD (a public URL helps; a video is required)_
+## Stack (decided Oct 24)
+- Language/runtime: TypeScript (Node 24) for the app; Python 3.12 via `uv` for the data pipeline.
+- Framework: Next.js 16 App Router in `web/` (read `web/node_modules/next/dist/docs/` before Next-specific code).
+- Map: MapLibre GL via `react-map-gl/maplibre`, OpenFreeMap basemap.
+- Styling/UI: Tailwind 4; recharts for small charts.
+- Data: **live** Supabase Postgres + PostGIS (project `rat-audit`). The browser reads through read-only RPCs; writes only via service role (pipeline, `/api/refresh`) and the `decisions` insert.
+- Agent: Vercel AI SDK v7; `MODEL_PROVIDER` = gateway | anthropic | bedrock.
+- Deploy: Vercel, root directory `web/`, daily cron for `/api/refresh`.
+- Spec: `.kiro/specs/rat-audit/`. Track ownership: `docs/rat-audit/CONTRACT.md`.
 
 ## Rules for every change
 - Keep the demo path working at all times. A broken build on submission day loses.
-- Prefer a committed static data snapshot over a live API for the demo. Cite its source.
+- Live data from Supabase on the demo path. Every fact cites a `sources` row (name, URL, retrieved time).
 - Accessibility is a scored requirement: semantic HTML, labels, focus order, contrast.
 - No secrets in the repo. Use `.env.local`, keep it git-ignored, document required vars.
   The repo is PUBLIC: run `python3 .kiro/scripts/scan_secrets.py` before committing

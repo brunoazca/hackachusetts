@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:52 — Wrote full initial spec for Rat Audit (requirements EARS,...
+- Teammate: Bruno
+- Agent: —
+- Did: Wrote full initial spec for Rat Audit (requirements EARS, design, tasks) + steering update
+- Why: Bruno asked for the complete initial spec before building; adds Cambridge + Somerville scope
+- Where: .kiro/specs/rat-audit/, .kiro/steering/{tech,product}.md, contracts/categories.json, supabase/migrations/20261024000003_city_column.sql
+- Idea: Somerville 311 has 8,770 Rats + 3,760 Rodent Assistance Program requests (block centroids); Cambridge 5,188 sightings + 528 smart rat boxes with monthly catches — three-city comparison finding
+
+### 2026-10-24 12:48 — Kiro Crew campaign b6ba6312 (cost of rats) done; all 4 ca...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew campaign b6ba6312 (cost of rats) done; all 4 campaign reports exported to Kiro knowledge library; cost section added to knowledge/15
+- Why: Defensible impact numbers for the pitch
+- Where: knowledge/15_boston_rat_audit.md, .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Safe numbers: 18% of Boston rats carry Leptospira (Tufts, peer-reviewed); 127 food businesses / 301 rodent violations 2025; NYC containerization -20% (pilot -55%); Boston has published no measured BRAP result; home-value loss claim is marketing only
+
 ### 2026-10-24 12:45 — Paused build: stopped the 4 parallel build agents to plan...
 - Teammate: Bruno
 - Agent: —
