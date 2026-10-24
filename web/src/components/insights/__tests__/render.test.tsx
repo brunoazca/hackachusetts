@@ -106,11 +106,15 @@ test("forecast summary compares model to baseline explicitly", () => {
   assert.match(html, /data-score="Top-10% capture"[\s\S]*?data-verdict="worse">Worse than baseline/);
   assert.match(html, />38%</);
   assert.match(html, />42%</);
-  assert.match(html, /Expected 311 rodent <em>reports<\/em> per 250 m cell, not a count of rats/);
-  assert.match(html, /3\.2 expected reports/);
+  assert.match(html, /Expected 311 rodent <em>reports<\/em> citywide/);
+  assert.match(html, /Per 250 m cell, not a count of rats/);
+  assert.match(html, />3\.2<\/span>/);
+  assert.match(html, /Fixtureville/);
   assert.match(html, /Drivers: Trash storage reports \(\+0\.8\)/);
-  assert.match(html, /Oct 26, 2026[\s\S]*Nov 2, 2026/);
-  assert.match(html, />60 of 900</);
+  assert.match(html, /Week of Oct 26, 2026[\s\S]*Week of Nov 2, 2026/);
+  assert.match(html, /aria-pressed="true"[^>]*aria-label="Week of Oct 26, 2026"/);
+  assert.match(html, />56 of 900</);
+  assert.match(html, /−4 pts/);
   // "rats" only appears in the disclaimer.
   assert.equal(count(html, /\brats?\b/gi), 1);
 });
