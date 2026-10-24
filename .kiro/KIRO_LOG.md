@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:26 — Added model_artifacts table (migration 20261024500001) an...
+- Teammate: Bruno
+- Agent: --
+- Did: Added model_artifacts table (migration 20261024500001) and applied to Supabase
+- Why: Modal has no shared disk; trained models must persist in DB to reload for scoring
+- Where: supabase/migrations/20261024500001_model_artifacts.sql
+- Idea: pickle/joblib model blob stored per model_run_id
+
 ### 2026-10-24 13:25 — Boston 311 backfill in Supabase (221,745 rows 2023–2026; ...
 - Teammate: Bruno
 - Agent: —
