@@ -10,6 +10,8 @@ UPDATE_MODES: dict[str, tuple[str, str]] = {
     "boston-311-2026": ("live", "Analyze Boston updates daily; refresh re-reads the last 14 days to catch closures"),
     "boston-311-new": ("live", "new 311 system (Aug 2025–); same 14-day window"),
     "boston-311-volume": ("live", "all-type 311 volume; current year recomputed on every refresh"),
+    "cambridge-311-volume": ("daily", "all-request volume per ~100 m bin per month (who-reports control)"),
+    "somerville-311-volume": ("daily", "all-request volume per census block per month, at block centroids"),
     "boston-code-enforcement": ("live", "tickets: last 6 months as points, 2023+ as monthly counts; no close dates published"),
     "somerville-311": ("live", "Somerville publishes daily; rodent + trash evidence; points are census-block centroids"),
     "cambridge-rodent-sightings": ("live", "Cambridge publishes daily"),
