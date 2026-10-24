@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:20 — Forecast: new candidate feature groups (food rodent fails...
+- Teammate: Bruno
+- Agent: —
+- Did: Forecast: new candidate feature groups (food rodent fails, permits new/active, ACS tract, city lots, iNat, more ring signals, weather variants) + climatology temperature for forecast weeks
+- Why: Test more data for the rodent-report forecast; copied temperature for future weeks was 4.9F off vs 2.2F with climatology
+- Where: pipeline/rat_audit/model/features.py pipeline/tests/test_model_features.py
+- Idea: Promote only groups that beat CORE in the 26-week backtest
+
 ### 2026-10-24 15:17 — Started Kiro Crew campaign 'Rat Audit — new datasets to a...
 - Teammate: Bruno
 - Agent: —
