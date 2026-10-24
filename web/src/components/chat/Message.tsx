@@ -29,16 +29,16 @@ function DraftCards({ message }: { message: UIMessage }) {
   const select = useMap((s) => s.select);
   const drafts = workOrderDrafts(message);
   return drafts.map((d) => (
-    <div key={`${d.site_id}:${d.action_label}`} className="rounded-md border border-amber-300 bg-amber-50 p-2 text-xs text-amber-950">
-      <p className="font-medium">Draft work order — not approved</p>
+    <div key={`${d.site_id}:${d.action_label}`} className="rounded-lg border border-line bg-amber-50 p-2.5 text-xs text-fg">
+      <p className="flex items-center gap-1.5 font-semibold"><span aria-hidden className="h-1.5 w-1.5 rounded-full bg-warn" />Suggested work order · needs your OK</p>
       <p>{d.action_label} · {d.owner}{d.address_block ? ` · ${d.address_block}` : ""}</p>
-      <p>Follow-up {d.follow_up_on}</p>
+      <p className="text-fg-3">Check again on {d.follow_up_on}</p>
       <button
         type="button"
         onClick={() => select({ kind: "site", id: d.site_id })}
-        className="mt-1 rounded border border-amber-400 bg-white px-2 py-0.5 font-medium hover:bg-amber-100 focus-visible:outline-2 focus-visible:outline-amber-900"
+        className="mt-1.5 rounded-md bg-fg px-2.5 py-1 font-semibold text-bg hover:opacity-85 focus-visible:outline-2 focus-visible:outline-accent"
       >
-        Review in Inspect
+        Review this place
       </button>
     </div>
   ));

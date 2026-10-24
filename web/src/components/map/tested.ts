@@ -6,21 +6,21 @@
 export type Tested = { strength: "outcome" | "leading" | "weak" | "none" | "not tested"; text: string };
 
 export const TESTED: Record<string, Tested> = {
-  rodent: { strength: "outcome", text: "the outcome we track" },
-  dead_animal: { strength: "weak", text: "weak association, +0.14" },
-  pest: { strength: "weak", text: "weak association, +0.11" },
-  trash_storage: { strength: "weak", text: "association, +0.18 (overlapping periods)" },
-  move_in_trash: { strength: "weak", text: "weak association, +0.13" },
-  weeds: { strength: "weak", text: "weak association, +0.10" },
-  trash_early: { strength: "weak", text: "weak association, +0.09" },
-  litter: { strength: "weak", text: "weak association, +0.09" },
-  dumpster: { strength: "weak", text: "weak association, +0.09" },
-  ce_trash_storage: { strength: "weak", text: "weak association, +0.09" },
-  construction_debris: { strength: "weak", text: "weak association, +0.05" },
-  inat_rat: { strength: "not tested", text: "community observations; reporting bias unknown" },
+  rodent: { strength: "outcome", text: "what we track" },
+  dead_animal: { strength: "weak", text: "small link to rodent reports" },
+  pest: { strength: "weak", text: "small link to rodent reports" },
+  trash_storage: { strength: "weak", text: "some link to rodent reports" },
+  move_in_trash: { strength: "weak", text: "small link to rodent reports" },
+  weeds: { strength: "weak", text: "small link to rodent reports" },
+  trash_early: { strength: "weak", text: "very small link to rodent reports" },
+  litter: { strength: "weak", text: "very small link to rodent reports" },
+  dumpster: { strength: "weak", text: "very small link to rodent reports" },
+  ce_trash_storage: { strength: "weak", text: "very small link to rodent reports" },
+  construction_debris: { strength: "weak", text: "very small link to rodent reports" },
+  inat_rat: { strength: "not tested", text: "sightings shared by people; not checked" },
 };
 
-export const testedFor = (id: string): Tested => TESTED[id] ?? { strength: "not tested", text: "not tested" };
+export const testedFor = (id: string): Tested => TESTED[id] ?? { strength: "not tested", text: "not checked yet" };
 
 export const STRENGTH_STYLE: Record<Tested["strength"], string> = {
   outcome: "text-neutral-900",

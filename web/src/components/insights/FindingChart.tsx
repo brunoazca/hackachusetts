@@ -12,9 +12,9 @@ const PW = W - M.l - M.r, PH = H - M.t - M.b;
 // Categorical slots 1–3 of the dataviz reference palette (validated light + dark, all pairs).
 // Series past 3 fold to neutral and rely on the legend + table.
 const SERIES = [
-  { stroke: "stroke-[#2a78d6] dark:stroke-[#3987e5]", fill: "fill-[#2a78d6] dark:fill-[#3987e5]", swatch: "bg-[#2a78d6] dark:bg-[#3987e5]" },
-  { stroke: "stroke-[#eb6834] dark:stroke-[#d95926]", fill: "fill-[#eb6834] dark:fill-[#d95926]", swatch: "bg-[#eb6834] dark:bg-[#d95926]" },
-  { stroke: "stroke-[#1baf7a] dark:stroke-[#199e70]", fill: "fill-[#1baf7a] dark:fill-[#199e70]", swatch: "bg-[#1baf7a] dark:bg-[#199e70]" },
+  { stroke: "stroke-forecast", fill: "fill-forecast", swatch: "bg-forecast" },
+  { stroke: "stroke-warn", fill: "fill-warn", swatch: "bg-warn" },
+  { stroke: "stroke-held", fill: "fill-held", swatch: "bg-held" },
 ];
 const OTHER = { stroke: "stroke-neutral-400", fill: "fill-neutral-400", swatch: "bg-neutral-400" };
 const color = (i: number) => SERIES[i] ?? OTHER;
@@ -80,7 +80,7 @@ export function describeChart(spec: ChartSpec): string {
   const n = spec.series.reduce((k, s) => k + s.points.length, 0);
   const names = spec.series.map((s) => s.name).join(", ");
   const axes = [spec.xLabel && `x: ${spec.xLabel}`, spec.yLabel && `y: ${spec.yLabel}`].filter(Boolean).join("; ");
-  const ci = spec.ci ? ", with 95% confidence intervals" : "";
+  const ci = spec.ci ? ", with likely ranges" : "";
   return `${TYPE_NAME[spec.type]} with ${spec.series.length} series (${names}), ${n} points${ci}${axes ? `; ${axes}` : ""}.`;
 }
 
@@ -150,7 +150,7 @@ export default function FindingChart({ spec, id }: { spec: ChartSpec; id: string
         {showZero && (
           <g data-mark="event-zero">
             <line x1={x.at(0)} x2={x.at(0)} y1={M.t} y2={M.t + PH} className="stroke-neutral-500" strokeDasharray="3 3" strokeWidth={1} />
-            <text x={x.at(0) + 3} y={M.t + 8} className="fill-neutral-600 text-[9px]">event</text>
+            <text x={x.at(0) + 3} y={M.t + 8} className="fill-neutral-600 text-[9px]">start</text>
           </g>
         )}
 
@@ -209,7 +209,7 @@ export default function FindingChart({ spec, id }: { spec: ChartSpec; id: string
                   <line x1={cx} x2={cx} y1={y.at(lo)} y2={y.at(hi)} />
                   <line x1={cx - 3} x2={cx + 3} y1={y.at(lo)} y2={y.at(lo)} />
                   <line x1={cx - 3} x2={cx + 3} y1={y.at(hi)} y2={y.at(hi)} />
-                  <title>{`95% CI ${fmtNumber(lo)} to ${fmtNumber(hi)}`}</title>
+                  <title>{`Likely range ${fmtNumber(lo)} to ${fmtNumber(hi)}`}</title>
                 </g>
               );
             })}
@@ -237,7 +237,7 @@ export default function FindingChart({ spec, id }: { spec: ChartSpec; id: string
               {nSeries >= 2 && <th scope="col" className="font-medium">Series</th>}
               <th scope="col" className="font-medium">{spec.xLabel || "x"}</th>
               <th scope="col" className="font-medium">{spec.yLabel || "y"}</th>
-              {spec.ci && <th scope="col" className="font-medium">95% CI</th>}
+              {spec.ci && <th scope="col" className="font-medium">Likely range</th>}
             </tr>
           </thead>
           <tbody>
