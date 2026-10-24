@@ -20,6 +20,10 @@ inclusion: always
 - Accessibility is a scored requirement: semantic HTML, labels, focus order, contrast.
 - No secrets in the repo. Use `.env.local`, keep it git-ignored, document required vars.
 - Small, reviewable commits. The commit history is evidence of real work.
+- We work directly on `main`. No feature branches, no pull requests — this is a
+  one-day hackathon. Commit small and push straight to `main`.
+  (Note: the Kiro agent cannot push to `main` itself; it prepares the commit on
+  `main` and a human runs `git push origin main`.)
 
 ## Commands (fill in)
 - Install: _TBD_
