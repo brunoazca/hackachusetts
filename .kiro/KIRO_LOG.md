@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:19 — Set VERCEL_TOKEN repo secret; GitHub Actions deploy-on-pu...
+- Teammate: Bruno
+- Agent: —
+- Did: Set VERCEL_TOKEN repo secret; GitHub Actions deploy-on-push to rat-ops verified green
+- Why: Every push to main touching web/ now redeploys https://rat-ops.vercel.app
+- Where: .github/workflows/deploy.yml
+- Idea: —
+
 ### 2026-10-24 14:19 — Added the remaining v2 summary ideas to the spec
 - Teammate: Bruno
 - Agent: —
