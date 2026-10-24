@@ -28,6 +28,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 10:04 — Pushed self-logging rule + historian agent
+- Teammate: Guilherme
+- Agent: default
+- Did: Pushed self-logging rule + historian agent
+- Why: team gets auto-logging on pull
+- Where: .kiro/steering/kiro-log.md, .kiro/agents/kiro-historian.json
+- Idea: run kiro-historian at the end to write kiro-usage.md
+
 ### 2026-10-24 10:00 — Scaffolded full .kiro structure, submission docs, and ver...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
