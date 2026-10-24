@@ -16,13 +16,6 @@ const GROUPS: { id: string; label: string }[] = [
   { id: "displace", label: "Displacement" },
 ];
 
-// Simple depth (R0.5): every rat signal, plus each driver that showed an effect in the block-level
-// tests (leading or weak). Drivers with no effect or not tested stay in Explore.
-export const SIMPLE_LAYERS = [
-  "rodent", "pest", "dead_animal", "bite", "rodent_program", "inat_rat",
-  "trash_storage", "trash_early", "litter", "dumpster", "move_in_trash", "ce_trash_storage", "weeds",
-];
-
 export function activeCategories(enabled: Record<string, boolean>) {
   return Object.keys(CATS).filter((id) => enabled[id]);
 }
@@ -86,7 +79,6 @@ function Ramp({ colors, label }: { colors: string[]; label: string }) {
 export default function LayerPanel({ enabled, onChange, mode, onModeChange, count, loading, coverage, zoom }: Props) {
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
-  const explore = useMap((s) => s.depth) === "explore";
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
 
   return (
@@ -98,7 +90,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
         </span>
       </div>
 
-      {explore && <fieldset className="mb-3">
+      <fieldset className="mb-3">
         <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">View</legend>
         <div className="flex gap-1">
           {MODES.map((m) => (
@@ -121,7 +113,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
             <Ramp colors={HEAT_RAMPS.evidence} label="Evidence (trash, shelter, displacement)" />
           </div>
         )}
-      </fieldset>}
+      </fieldset>
 
       <fieldset className="mb-3">
         <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Period</legend>
@@ -143,7 +135,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
       </fieldset>
 
       {GROUPS.map((g) => {
-        const ids = Object.entries(CATS).filter(([id, c]) => c.group === g.id && (explore || SIMPLE_LAYERS.includes(id)));
+        const ids = Object.entries(CATS).filter(([id, c]) => c.group === g.id);
         if (!ids.length) return null;
         return (
           <fieldset key={g.id} className="mb-2">
@@ -193,7 +185,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
       </fieldset>
 
       <p className="mt-2 text-xs text-neutral-700">
-        {explore ? "Each layer clusters on its own. " : "Simple view: rat signals and the drivers that showed an effect in our tests. Explore adds every other layer and the heatmaps. "}
+        Each layer clusters on its own.{" "}
         Solid icon = open, faded = closed. Tested values: block-level partial correlation with rodent reports.
       </p>
     </div>

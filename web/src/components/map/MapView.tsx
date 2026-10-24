@@ -8,7 +8,7 @@ import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { fetchCoverage, fetchIncidentBins, fetchIncidents, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
 import ContextLayers from "./ContextLayers";
-import LayerPanel, { activeCategories, HEAT_RAMPS, SIMPLE_LAYERS, type ViewMode } from "./LayerPanel";
+import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
 import { addCategoryIcons, iconId } from "./icons";
 
@@ -51,8 +51,11 @@ export default function MapView() {
   const flyToTarget = useMap((s) => s.flyToTarget);
   const select = useMap((s) => s.select);
   const selection = useMap((s) => s.selection);
-  const [enabled, setEnabled] = useState<Record<string, boolean>>({ rodent: true });
-  const [mode, setMode] = useState<ViewMode>("points");
+  // All data by default: every incident layer on, shown as heatmaps (icons appear from zoom 15).
+  const [enabled, setEnabled] = useState<Record<string, boolean>>(
+    () => Object.fromEntries(Object.keys(CATS).map((c) => [c, true])),
+  );
+  const [mode, setMode] = useState<ViewMode>("heat");
   const [coverage, setCoverage] = useState<CoverageRow[]>([]);
   const [bbox, setBbox] = useState<BBox | null>(null);
   const [zoom, setZoom] = useState(view.zoom);
@@ -64,14 +67,9 @@ export default function MapView() {
   const reqId = useRef(0);
 
   const appMode = useMap((s) => s.mode);
-  const explore = useMap((s) => s.depth) === "explore";
   const sites = useMap((s) => s.sites);
-  // Simple depth: only the outcome + tested-predictive layers, points only (heatmap is an Explore tool).
-  const cats = useMemo(
-    () => activeCategories(enabled).filter((c) => explore || SIMPLE_LAYERS.includes(c)),
-    [enabled, explore],
-  );
-  const viewMode: ViewMode = explore ? mode : "points";
+  const cats = useMemo(() => activeCategories(enabled), [enabled]);
+  const viewMode: ViewMode = mode;
   const sitesFC = useMemo(() => ({
     type: "FeatureCollection" as const,
     features: sites.map((r, i) => ({

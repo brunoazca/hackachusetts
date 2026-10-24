@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { fetchLiveStatus } from "@/lib/queries";
-import { useMap, type Depth, type Mode } from "@/lib/map-store";
+import { useMap, type Mode } from "@/lib/map-store";
 
 // Draft top bar: name + live-data badge + Refresh (Vercel /api/refresh -> Modal worker).
 
@@ -38,8 +38,6 @@ function Segmented<T extends string>({ label, value, options, onChange }: {
 export default function TopBar() {
   const mode = useMap((s) => s.mode);
   const setMode = useMap((s) => s.setMode);
-  const depth = useMap((s) => s.depth);
-  const setDepth = useMap((s) => s.setDepth);
   const setPanel = useMap((s) => s.setPanel);
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -77,12 +75,6 @@ export default function TopBar() {
         value={mode}
         options={[{ id: "assess", label: "Assess" }, { id: "act", label: "Act" }]}
         onChange={(m) => { setMode(m); setPanel("inspector"); }}
-      />
-      <Segmented<Depth>
-        label="Depth"
-        value={depth}
-        options={[{ id: "simple", label: "Simple" }, { id: "explore", label: "Explore" }]}
-        onChange={setDepth}
       />
       <div className="ml-auto flex items-center gap-2 text-sm">
         <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-emerald-800">

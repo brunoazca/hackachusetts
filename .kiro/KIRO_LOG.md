@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:16 — Removed Simple/Explore: all layers on by default, heatmap...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed Simple/Explore: all layers on by default, heatmap view, icons from zoom 15; spec R0.5 updated
+- Why: Bruno: remove the distinction, all data by default
+- Where: web/src/components/{map,shell}, web/src/lib/map-store.ts, .kiro/specs/rat-audit/{requirements,design}.md
+- Idea: none
+
 ### 2026-10-24 15:04 — Map: zoomed-out data now aggregated server-side (map_inci...
 - Teammate: Bruno
 - Agent: —
