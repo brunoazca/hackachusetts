@@ -96,7 +96,7 @@ Row counts are rows in the saved `data.csv` (the live API call usually returns o
 Full column lists and the exact direct-request URL for each dataset are in that
 dataset's `README.md`.
 
-## Most relevant datasets (wire into the `rodent-ops` spec)
+## Most relevant datasets (wire into the `rat-audit` spec)
 
 - **permits** — Boston approved building permits (worktype, valuation, dates,
   status, zip, ward). The closest structured analogue to a permit workflow.

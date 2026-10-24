@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:16 — Merged concurrent team research and preserved completed r...
+- Teammate: Guilherme
+- Agent: Codex (research integration; not Kiro build activity)
+- Did: Merged concurrent team research and preserved completed rat-audit spec
+- Why: Publish the evidence expansion without losing upstream work or overstating observational results
+- Where: knowledge/15_*, knowledge/19_rat_data_validation.md, knowledge/24_*, knowledge/README.md, README.md, data/civic/CATALOG.md, .kiro/specs/
+- Idea: Keep campaign numbers with provenance; distinguish associations, temporal overlap and actual forecast validation; use the completed rat-audit spec
+
 ### 2026-10-24 13:12 — Expanded RodentOps evidence: public data, complaints and ...
 - Teammate: Guilherme
 - Agent: Codex (research; not Kiro build activity)
@@ -38,6 +46,78 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Make the selected tool more useful with verified sources and realistic limits
 - Where: knowledge/19_*, knowledge/24_*, knowledge/15_*, knowledge/16_*, knowledge/README.md, knowledge/sources/
 - Idea: Prioritize sourced case reconstruction, missing inspection questions and reviewed follow-up; sensor coverage and bin feasibility are later extensions
+
+### 2026-10-24 13:11 — Wrote docs/rat-audit/TEAM.md: Bruno=data+models, Carol=an...
+- Teammate: Bruno Azca
+- Agent: kirocrew (Spec agent)
+- Did: Wrote docs/rat-audit/TEAM.md: Bruno=data+models, Carol=analytics+agent, Gui=map+inspector UI, Kiro=integration. Recorded build-order dependency chain
+- Why: team divided the four CONTRACT tracks before building
+- Where: docs/rat-audit/TEAM.md
+- Idea: Bruno loads 311 first; Carol+Gui parallel after; model+insights last
+
+### 2026-10-24 13:06 — Moved SOCRATA_APP_TOKEN from .env into .env.local (the fi...
+- Teammate: Bruno Azca
+- Agent: kirocrew (Spec agent)
+- Did: Moved SOCRATA_APP_TOKEN from .env into .env.local (the file the OpenContext MCP bridge and pipeline actually read); verified all 8 MCP servers PASS incl cambridge/somerville
+- Why: token was in the wrong env file so regional live data was unreachable
+- Where: .env.local
+- Idea: Rotate the Socrata token since it was pasted in chat; consider deleting stray .env
+
+### 2026-10-24 13:05 — Privacy-by-reveal: names/full addresses in private schema...
+- Teammate: Bruno
+- Agent: —
+- Did: Privacy-by-reveal: names/full addresses in private schema, blurred with eye icon, fetched via /api/reveal and logged; imported spec into Kiro Crew Spec Builder
+- Why: Bruno wants names visible in the demo on demand, not by default; spec reviewed by the Kiro Crew spec agent
+- Where: supabase/migrations/20261024000004_private_reveal.sql, .kiro/specs/rat-audit/*, docs/rat-audit/CONTRACT.md
+- Idea: Owner portfolio view after reveal; validation shows rain/demolitions/events/restaurants/Big Belly are null predictors
+
+### 2026-10-24 13:05 — Tested all 43 rat datasets on live data (grid, time, trac...
+- Teammate: Bruno
+- Agent: —
+- Did: Tested all 43 rat datasets on live data (grid, time, tract); verdicts on the board; report + scripts; design.md model features updated; data-validation.md added to the spec
+- Why: Keep only data that really predicts or explains rodent reports
+- Where: knowledge/19_rat_data_validation.md, knowledge/sources/rats/validation/, .kiro/specs/rat-audit/data-validation.md, .kiro/specs/rat-audit/design.md
+- Idea: Trash and housing signals predict rats; restaurants, rain and demolitions don't; 311 under-counts vulnerable tracts
+
+### 2026-10-24 13:03 — Reverted the rat-audit scope cut: removed Demo-minimum SC...
+- Teammate: Bruno Azca
+- Agent: kirocrew (Spec agent)
+- Did: Reverted the rat-audit scope cut: removed Demo-minimum SCOPE FREEZE block, restored forecast R6/task 2.6 to P0. Kept the three accuracy fixes (2026 number 5,321, baseline-first forecast labelling, CSV demo-data fallback in R1.1)
+- Why: Team has many credits and people; full P0 is back on with parallel tracks
+- Where: .kiro/specs/rat-audit/requirements.md, .kiro/specs/rat-audit/tasks.md
+- Idea: Build the full P0 across the 4 tracks in CONTRACT.md in parallel rather than cutting
+
+### 2026-10-24 13:02 — Scope-froze rat-audit spec: added Demo-minimum P0 block (...
+- Teammate: Bruno Azca
+- Agent: kirocrew (Spec agent)
+- Did: Scope-froze rat-audit spec: added Demo-minimum P0 block (DM.1–DM.7) to tasks.md, demoted GBM forecast R6/task 2.6 to P1 with last-4-week baseline as P0, fixed demo number to 2026 (5,321), added CSV demo-data fallback to R1.1
+- Why: 3h to 8PM deadline; full P0 was multi-day and unbuilt (pipeline empty, no RPCs/components beyond stubs)
+- Where: .kiro/specs/rat-audit/requirements.md, .kiro/specs/rat-audit/tasks.md
+- Idea: Ship a tiny working map+site+approve demo over a broken full build; label data honestly as seeded vs live
+
+### 2026-10-24 13:01 — Reviewed .kiro/specs/rat-audit against the 4 campaign res...
+- Teammate: Bruno
+- Agent: —
+- Did: Reviewed .kiro/specs/rat-audit against the 4 campaign results; started 2 new Kiro Crew campaigns: closure-note classifier rules (task 2.2) and Sept 1 move-out/events spike (R5.2 P0 finding, unverified)
+- Why: Research changes several P0 items in the spec
+- Where: none
+- Idea: Spec impacts: R5.2 trash finding is weak at block level (+0.13); lead with what-worked; classifier needs a 'no stated action' tag, 80% coverage target unrealistic; rain input (R6.4) adds nothing; recommendation rules should escalate after repeat monitoring and flag adjacent vacant lots
+
+### 2026-10-24 12:54 — Decided where the forecast model runs: batch Python writi...
+- Teammate: Bruno
+- Agent: —
+- Did: Decided where the forecast model runs: batch Python writing predictions to Supabase
+- Why: Supabase cannot run Python; the model is batch, not real-time
+- Where: none
+- Idea: Schedule via GitHub Actions cron (free) or Modal (cron + on-demand what-if endpoint); Vercel only calls the chat LLM API
+
+### 2026-10-24 12:52 — Wrote full initial spec for Rat Audit (requirements EARS,...
+- Teammate: Bruno
+- Agent: —
+- Did: Wrote full initial spec for Rat Audit (requirements EARS, design, tasks) + steering update
+- Why: Bruno asked for the complete initial spec before building; adds Cambridge + Somerville scope
+- Where: .kiro/specs/rat-audit/, .kiro/steering/{tech,product}.md, contracts/categories.json, supabase/migrations/20261024000003_city_column.sql
+- Idea: Somerville 311 has 8,770 Rats + 3,760 Rodent Assistance Program requests (block centroids); Cambridge 5,188 sightings + 528 smart rat boxes with monthly catches — three-city comparison finding
 
 ### 2026-10-24 12:48 — Set up RodentOps-specific Kiro automation: rodent-honesty...
 - Teammate: Guilherme
@@ -47,6 +127,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: .kiro/agents/rodent-honesty.json, .kiro/agents/no-auto-action.json, .kiro/hooks/overclaim-guard.kiro.hook, .kiro/scripts/check_overclaims.py, README.md, data/civic/CATALOG.md, .kiro/specs/rodent-ops/ (renamed)
 - Idea: Overclaim scanner encodes the knowledge-base bans (reports!=rats, closed!=solved, no infestation prediction) as a deterministic pre-check so honesty is enforced on every save
 
+### 2026-10-24 12:48 — Kiro Crew campaign b6ba6312 (cost of rats) done; all 4 ca...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew campaign b6ba6312 (cost of rats) done; all 4 campaign reports exported to Kiro knowledge library; cost section added to knowledge/15
+- Why: Defensible impact numbers for the pitch
+- Where: knowledge/15_boston_rat_audit.md, .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Safe numbers: 18% of Boston rats carry Leptospira (Tufts, peer-reviewed); 127 food businesses / 301 rodent violations 2025; NYC containerization -20% (pilot -55%); Boston has published no measured BRAP result; home-value loss claim is marketing only
+
 ### 2026-10-24 12:45 — Confirmed the chosen idea is RodentOps (rat one); read kn...
 - Teammate: Guilherme
 - Agent: kirocrew
@@ -55,6 +143,101 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: none
 - Idea: RodentOps: recurring 311 rodent complaints -> reviewed inspection/follow-up brief; 3 screens: queue -> timeline -> packet
 
+### 2026-10-24 12:45 — Paused build: stopped the 4 parallel build agents to plan...
+- Teammate: Bruno
+- Agent: —
+- Did: Paused build: stopped the 4 parallel build agents to plan more
+- Why: Bruno asked to plan further before building
+- Where: none
+- Idea: Next: settle correlations, prediction design, scope priorities and demo story before restarting tracks
+
+### 2026-10-24 12:44 — Kiro Crew campaigns 93c1ad29 (what worked) and e241ffc6 (...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew campaigns 93c1ad29 (what worked) and e241ffc6 (block drivers) done; results added to knowledge/09 and the Data Atlas card
+- Why: Integrate research results
+- Where: knowledge/09_boston_rat_audit.md
+- Idea: Monitoring (1,750 cases) does not cut recurrence (14.1->14.2%), violations do (15.3->12.2%); chronic sites get 237/280 monitoring, 14 violations. Block level: ZIP +0.78 was reporting artifact; trash +0.13, dumping +0.10, restaurants +0.03, rain none, Big Belly ~8% lower
+
+### 2026-10-24 12:43 — Scaffolded Rat Audit: Supabase project + PostGIS schema, ...
+- Teammate: Bruno
+- Agent: —
+- Did: Scaffolded Rat Audit: Supabase project + PostGIS schema, Next.js app shell, build contract
+- Why: Foundation so four parallel build tracks (data, analytics, map, agent) can work without colliding
+- Where: supabase/migrations/, contracts/categories.json, web/, docs/build/CONTRACT.md
+- Idea: Correlation list + cell-week Poisson forecast + site recurrence model; price impact as exploratory; events layer
+
+### 2026-10-24 12:42 — Tested electrical fires vs rodent reports by ZIP (2023–24...
+- Teammate: Bruno
+- Agent: —
+- Did: Tested electrical fires vs rodent reports by ZIP (2023–24 and 2026): no link after controlling for fire-call volume
+- Why: Check whether fires are a defensible rat impact
+- Where: knowledge/sources/rats/fire_pull.py, knowledge/sources/rats/fire_rats.py, knowledge/10_rat_signals_brainstorm.md
+- Idea: Drop fires from the pitch; fire data has no cause or coordinates
+
+### 2026-10-24 12:35 — Revised Rat Audit plan: map-first app with integrated age...
+- Teammate: Bruno
+- Agent: —
+- Did: Revised Rat Audit plan: map-first app with integrated agent chat
+- Why: Bruno asked for an interactive map of all rat-related problems, clickable incidents, deep inspection and an agent chat
+- Where: none
+- Idea: MapLibre+deck.gl layers over a full 2024-2026 snapshot; Claude agent whose tools query the data and drive the map (fly to, filter, highlight); Next.js on Vercel for the chat route
+
+### 2026-10-24 12:29 — Drafted implementation plan for Rat Audit (inspector tool)
+- Teammate: Bruno
+- Agent: —
+- Did: Drafted implementation plan for Rat Audit (inspector tool)
+- Why: Turn the rat research (docs 09/10, demo_site) into a buildable 7-hour plan
+- Where: none
+- Idea: Static snapshot from offline Python pipeline + React inspector UI; closure-note classification precomputed; block-level masking; 4 parallel workstreams against a shared snapshot schema
+
+### 2026-10-24 12:27 — Published an editable Rat Audit Data Plan board (43 datas...
+- Teammate: Bruno
+- Agent: —
+- Did: Published an editable Rat Audit Data Plan board (43 datasets by tier, status, driver group)
+- Why: Let the team see and change what data we retrieve
+- Where: claude.ai/artifact/6bCS5853Lo3fcDvkGqqXid
+- Idea: Board edits save to a shared store, so the plan can be read back and turned into retrieval scripts
+
+### 2026-10-24 12:26 — Kiro Crew campaign 2b8f7f81 finished: demo site = Normand...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew campaign 2b8f7f81 finished: demo site = Normandy St block, Dorchester 02121 (18 rodent reports 2025-26, full escalation failed, adjacent vacant lot); saved to knowledge/sources/rats/demo_site.md; campaign 2 (93c1ad29) started
+- Why: Demo needs one real chronic site
+- Where: knowledge/sources/rats/demo_site.md
+- Idea: Pitch line: 'the city did everything right at the address; the problem is the lot next door' -> treat blocks, not addresses. Use block, not house number, in public demo
+
+### 2026-10-24 12:22 — Dropped the COVID 2020 test from the rat brainstorm; limi...
+- Teammate: Bruno
+- Agent: —
+- Did: Dropped the COVID 2020 test from the rat brainstorm; limited 311 history to 2023–2026
+- Why: Team wants signals that lead to action now, not historical one-offs
+- Where: knowledge/10_rat_signals_brainstorm.md
+- Idea: Only use predictors the city can act on this year
+
+### 2026-10-24 12:18 — Queued remaining Rat Audit campaigns in Kiro Crew Researc...
+- Teammate: Bruno
+- Agent: —
+- Did: Queued remaining Rat Audit campaigns in Kiro Crew Research Lab: 'what actually worked' (closure notes), 'block-level drivers', 'the cost of rats'; each starts when the previous finishes
+- Why: Run all research campaigns inside Kiro Crew
+- Where: .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Reports saved as they finish, then copied into knowledge/09_boston_rat_audit.md
+
+### 2026-10-24 12:17 — Brainstormed rat causes, impacts and actions; checked whi...
+- Teammate: Bruno
+- Agent: —
+- Did: Brainstormed rat causes, impacts and actions; checked which datasets exist on Analyze Boston; pulled city pest-control spending
+- Why: Decide what data to retrieve next for the Rat Audit
+- Where: knowledge/10_rat_signals_brainstorm.md, knowledge/README.md
+- Idea: Rats move when something changes: food, shelter, displacement. Forecast 'rat weather' from rain, demolitions, move-out week and events
+
+### 2026-10-24 12:16 — Started Kiro Crew Research Lab campaign 2b8f7f81 'Rat Aud...
+- Teammate: Bruno
+- Agent: —
+- Did: Started Kiro Crew Research Lab campaign 2b8f7f81 'Rat Audit — pick the demo address' via the local API (agent mode, 10 cycles, 3 workers, unattended)
+- Why: Run the rat research inside Kiro Crew
+- Where: .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Research Lab allows one active campaign at a time; run 2, 1, 3 after this one
 ### 2026-10-24 12:37 — Pulled origin/main (Guilherme's secret-scan + knowledge r...
 - Teammate: Carol
 - Agent: kirocrew (default)

@@ -34,3 +34,6 @@ coverage/
 # Python bytecode
 __pycache__/
 *.pyc
+# local caches
+.cache/
+pipeline/.venv/

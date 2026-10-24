@@ -1,0 +1,318 @@
+{
+  "_doc": "Shared category map. The pipeline maps source types to these ids; the map styles them; the agent tools filter by them.",
+  "incident_categories": {
+    "rodent": {
+      "label": "Rodent activity",
+      "group": "rats",
+      "color": "#d7263d",
+      "sources": {
+        "311": [
+          "Rodent Activity"
+        ],
+        "somerville-311": [
+          "Rats"
+        ],
+        "cambridge-rodent-sightings": [
+          "*"
+        ]
+      }
+    },
+    "pest": {
+      "label": "Indoor pest infestation",
+      "group": "rats",
+      "color": "#f46036",
+      "sources": {
+        "311": [
+          "Pest Infestation - Residential"
+        ]
+      }
+    },
+    "bite": {
+      "label": "Rat bite",
+      "group": "rats",
+      "color": "#7b0828",
+      "sources": {
+        "311": [
+          "Rat Bite"
+        ]
+      }
+    },
+    "dead_animal": {
+      "label": "Dead animal pickup",
+      "group": "rats",
+      "color": "#8d6a9f",
+      "sources": {
+        "311": [
+          "Pick up Dead Animal"
+        ]
+      }
+    },
+    "trash_storage": {
+      "label": "Improper trash storage",
+      "group": "food",
+      "color": "#e2a03f",
+      "sources": {
+        "311": [
+          "Improper Storage of Trash (Barrels)",
+          "Improper Trash Storage"
+        ]
+      }
+    },
+    "trash_early": {
+      "label": "Trash placed out early",
+      "group": "food",
+      "color": "#f0c808",
+      "sources": {
+        "311": [
+          "Trash Placed Out Early"
+        ]
+      }
+    },
+    "missed_trash": {
+      "label": "Missed trash pickup",
+      "group": "food",
+      "color": "#c9a227",
+      "sources": {
+        "311": [
+          "Missed Trash/Recycling/Yard Waste/Bulk Item",
+          "Missed Trash"
+        ]
+      }
+    },
+    "dumping": {
+      "label": "Illegal dumping",
+      "group": "food",
+      "color": "#b5651d",
+      "sources": {
+        "311": [
+          "Illegal Dumping"
+        ]
+      }
+    },
+    "litter": {
+      "label": "Litter / litter basket",
+      "group": "food",
+      "color": "#d4a373",
+      "sources": {
+        "311": [
+          "Empty Litter Basket",
+          "Litter"
+        ]
+      }
+    },
+    "dumpster": {
+      "label": "Overflowing dumpster/trash",
+      "group": "food",
+      "color": "#a0522d",
+      "sources": {
+        "311": [
+          "Overflowing or Un-kept Dumpster",
+          "Overflowing Trash"
+        ]
+      }
+    },
+    "sanitation": {
+      "label": "Unsanitary conditions",
+      "group": "food",
+      "color": "#9c6644",
+      "sources": {
+        "311": [
+          "Unsanitary Conditions - Establishment",
+          "Unsanitary Conditions - Food"
+        ]
+      }
+    },
+    "vacant_lot": {
+      "label": "Trash on vacant lot",
+      "group": "shelter",
+      "color": "#2a9d8f",
+      "sources": {
+        "311": [
+          "Trash on Vacant Lot"
+        ]
+      }
+    },
+    "abandoned_building": {
+      "label": "Abandoned building",
+      "group": "shelter",
+      "color": "#264653",
+      "sources": {
+        "311": [
+          "Abandoned Building"
+        ]
+      }
+    },
+    "weeds": {
+      "label": "Overgrown weeds",
+      "group": "shelter",
+      "color": "#52b788",
+      "sources": {
+        "311": [
+          "Overgrown Weeds On Property"
+        ]
+      }
+    },
+    "construction_debris": {
+      "label": "Construction debris",
+      "group": "displace",
+      "color": "#6c757d",
+      "sources": {
+        "311": [
+          "Construction Debris"
+        ]
+      }
+    },
+    "rodent_program": {
+      "label": "Rodent assistance program request",
+      "group": "rats",
+      "color": "#b8336a",
+      "sources": {
+        "somerville-311": [
+          "Rodent Assistance Program request",
+          "Rodent Assistance Program inquiry",
+          "School Rodent Control "
+        ]
+      }
+    }
+  },
+  "place_kinds": {
+    "restaurant": {
+      "label": "Restaurant with rodent violation",
+      "group": "food"
+    },
+    "demolition": {
+      "label": "Demolition permit",
+      "group": "displace"
+    },
+    "excavation": {
+      "label": "Excavation / street dig",
+      "group": "displace"
+    },
+    "work_zone": {
+      "label": "Public Works work zone",
+      "group": "displace"
+    },
+    "bigbelly": {
+      "label": "Big Belly sealed bin",
+      "group": "protect"
+    },
+    "vacant_parcel": {
+      "label": "Vacant / unusable land parcel",
+      "group": "shelter"
+    },
+    "city_lot": {
+      "label": "City-owned lot",
+      "group": "shelter"
+    },
+    "school": {
+      "label": "Public school",
+      "group": "impact"
+    },
+    "park": {
+      "label": "Park feature",
+      "group": "shelter"
+    },
+    "market": {
+      "label": "Market (e.g. Haymarket)",
+      "group": "food"
+    },
+    "smart_box": {
+      "label": "Smart rat box (Cambridge)",
+      "group": "protect"
+    }
+  },
+  "event_kinds": {
+    "entertainment": {
+      "label": "Licensed entertainment event"
+    },
+    "one_day_alcohol": {
+      "label": "One-day alcohol license event"
+    },
+    "sports": {
+      "label": "Fenway / TD Garden game"
+    },
+    "move_out": {
+      "label": "Student move-out (Sept 1)"
+    },
+    "holiday": {
+      "label": "Holiday pickup delay"
+    },
+    "rain": {
+      "label": "Heavy rain day (>= 1 in)"
+    },
+    "snow": {
+      "label": "Snow day"
+    },
+    "heat": {
+      "label": "Heat day"
+    },
+    "market_day": {
+      "label": "Market day"
+    }
+  },
+  "actions": {
+    "monitoring": {
+      "label": "Inspector monitoring",
+      "owner": "ISD"
+    },
+    "inspection": {
+      "label": "Inspection / investigation",
+      "owner": "ISD"
+    },
+    "baiting": {
+      "label": "Baiting / extermination",
+      "owner": "ISD"
+    },
+    "warning": {
+      "label": "Warning / notice to owner",
+      "owner": "ISD"
+    },
+    "citation": {
+      "label": "Citation / ticket / violation",
+      "owner": "ISD / Code Enforcement"
+    },
+    "abatement_order": {
+      "label": "Abatement order",
+      "owner": "ISD"
+    },
+    "collections": {
+      "label": "Fine sent to collections",
+      "owner": "ISD"
+    },
+    "referral": {
+      "label": "Referred to another department",
+      "owner": "varies"
+    },
+    "cleanup": {
+      "label": "Cleanup / trash removed",
+      "owner": "Public Works"
+    },
+    "barrels": {
+      "label": "Rat-resistant barrels",
+      "owner": "ISD / Public Works"
+    },
+    "no_violation": {
+      "label": "No violation found",
+      "owner": "ISD"
+    },
+    "duplicate": {
+      "label": "Duplicate / already open",
+      "owner": "311"
+    },
+    "unknown": {
+      "label": "Unclassified",
+      "owner": "\u2014"
+    }
+  },
+  "cities": {
+    "boston": {
+      "label": "Boston"
+    },
+    "cambridge": {
+      "label": "Cambridge"
+    },
+    "somerville": {
+      "label": "Somerville"
+    }
+  }
+}

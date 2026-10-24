@@ -1,0 +1,39 @@
+Daily rodent reports 2023-01-01..2026-10-22: 19466, mean 14.0/day
+
+RAIN (Logan Airport daily precipitation)
+  days 1-7 after >=1.0 in rain                         events  37  observed/expected 1.008  (random same-month days: 1.007, one-sided p=0.488)
+  days 8-14 after >=1.0 in rain                        events  37  observed/expected 0.988  (random same-month days: 1.004, one-sided p=0.784)
+  days 1-7 after 0.5-1.0 in rain                       events  61  observed/expected 0.999  (random same-month days: 1.004, one-sided p=0.600)
+  weekly residual vs same-week rain r=-0.03, vs previous-week rain r=-0.02 (197 weeks)
+
+TEMPERATURE / SEASON
+  monthly reports/day vs mean daily high: r=+0.87 (45 months)
+  vs previous month's high: r=+0.82
+  reports/day by calendar month: 1:7.2  2:6.3  3:9.4  4:11.5  5:14.4  6:18.2  7:20.6  8:22.3  9:20.0  10:14.5  11:10.6  12:8.3
+  day-level: residual vs temp anomaly (same month), next 3 days: r=+0.08
+  winter (Jan-Feb mean high) vs Apr-Jun reports: 2023: 43.5F -> 1075; 2024: 40.3F -> 1209; 2025: 36.0F -> 1400; 2026: 34.7F -> 1668  (only 4 winters: not testable)
+
+SNOW
+  days 7-21 after >=4 in snowfall (melt)               events   6  observed/expected 0.950  (random same-month days: 0.919, one-sided p=0.318)
+
+DEMOLITIONS (reports within 200 m, 90 days before vs after; roof permits as control)
+  demolitions          sites  396  before   863  after   875  after/before 1.01
+  roof permits         sites 2053  before  4289  after  5282  after/before 1.23
+  difference-in-differences ratio: 0.82  (1.00 = no demolition effect)
+  mean change per site: demolition +0.03, roof +0.48; 95% CI of difference [-0.80, -0.12]
+
+SEPT 1 MOVE-OUT (student ZIPs 02134 02135 02215 02115 02120 vs rest)
+  2023: student ZIPs Jul 66 Aug 91 Sep 77 (Sep/Jul 1.17) | rest Jul 384 Aug 370 Sep 306 (Sep/Jul 0.80)
+  2024: student ZIPs Jul 120 Aug 150 Sep 133 (Sep/Jul 1.11) | rest Jul 524 Aug 534 Sep 455 (Sep/Jul 0.87)
+  2025: student ZIPs Jul 148 Aug 146 Sep 147 (Sep/Jul 0.99) | rest Jul 544 Aug 634 Sep 517 (Sep/Jul 0.95)
+  2023: 3 weeks after Sept 1 / 3 weeks before: student 0.84, rest 0.97
+  2024: 3 weeks after Sept 1 / 3 weeks before: student 1.01, rest 0.96
+  2025: 3 weeks after Sept 1 / 3 weeks before: student 0.95, rest 0.86
+
+FENWAY HOME GAMES (reports within 1 km of Fenway Park, Apr-Sep)
+  days 732; Fenway-area reports 564 (4.3% of city)
+  share of city reports in Fenway area: after busy home week (>=5 games prior 7d) 4.01% vs quiet week (<=1) 4.12%
+
+HOLIDAY WEEKS (Boston delays pickup one day after weekday holidays)
+  rodent: holiday day to +13 days                      events  28  observed/expected 0.981  (random same-month days: 1.013, one-sided p=0.928)
+  improper-trash reports in holiday week vs same weekday/month mean: 1.099
