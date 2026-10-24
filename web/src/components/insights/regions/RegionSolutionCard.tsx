@@ -24,6 +24,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap }: 
   return <section aria-labelledby={heading} className="space-y-4 rounded-xl border border-edge bg-card p-4 text-small text-fg-2">
     <header><p className="eyebrow">Priority region · {r.cell_ids.length} blocks</p><h3 id={heading} className="mt-1 text-lg font-semibold text-fg">Rank {r.rank} · {input.region.neighborhood ?? "Boston"}</h3><p className="break-all text-xs text-fg-3">{r.region_id}</p></header>
     <div className="grid grid-cols-2 gap-3"><div><strong className="block text-2xl text-fg">{number(input.region.severity.observed_12w)}</strong>reports · last 12 weeks</div><div><strong className="block text-2xl text-fg">{number(input.region.severity.expected_4w)}</strong>expected · next 4 weeks</div></div>
+    {input.region.severity.expected_returns_60d !== null && <p>Expected returns within 60 days: <strong className="text-fg">{number(input.region.severity.expected_returns_60d)}</strong> · severity total: {number(input.region.severity.score)}. Model estimate from active addresses.</p>}
     <div className="space-y-2 rounded-lg border border-accent p-3">
       <p className="text-xs font-semibold uppercase text-accent">Proposed solution · {r.source === "ai" ? "AI" : "Rules"} · {r.lane}</p>
       <h4 className="font-semibold text-fg">{r.action}</h4><p>{r.because}</p>
