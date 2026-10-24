@@ -238,8 +238,8 @@ def upsert_incidents(conn: psycopg.Connection, rows: list[tuple]) -> int:
                    case when lat is not null then st_setsrid(st_makepoint(lon, lat), 4326)::geography end
             from _inc
             on conflict (id) do update set {upd}, geom = excluded.geom
-            where (incidents.status, incidents.closed_at, incidents.closure_note, incidents.category, incidents.lat)
-                  is distinct from (excluded.status, excluded.closed_at, excluded.closure_note, excluded.category, excluded.lat)"""
+            where ({', '.join('incidents.' + c for c in INCIDENT_COLS if c != 'id')})
+                  is distinct from ({', '.join('excluded.' + c for c in INCIDENT_COLS if c != 'id')})"""
     )
     conn.execute("drop table if exists _inc")
     return len(rows)
