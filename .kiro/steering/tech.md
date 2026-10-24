@@ -24,6 +24,10 @@ inclusion: always
   one-day hackathon. Commit small and push straight to `main`.
   (Note: the Kiro agent cannot push to `main` itself; it prepares the commit on
   `main` and a human runs `git push origin main`.)
+- The Kiro agent is BLOCKED by a safety policy from pushing to `main` (and any
+  protected branch). This cannot be turned off by a file or setting. The agent
+  stages and commits on `main`; a human always runs `git push origin main`.
+  Do not ask the agent to retry the push — it will be refused every time.
 
 ## Commands (fill in)
 - Install: _TBD_
