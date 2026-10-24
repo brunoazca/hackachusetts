@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:08 — Insights region cards get a 'People & buildings' section:...
+- Teammate: Bruno
+- Agent: —
+- Did: Insights region cards get a 'People & buildings' section: region_context(cell_ids) RPC aggregates grid_cell_context over the region's cells (counts summed, rest averaged) next to the city-median block, with older/newer and higher/lower notes
+- Why: Let BRAP/ISD readers see if a priority region's demographics or building age differ from the typical block — a place to look for correlations
+- Where: supabase/migrations/20261025100002_analytics_region_context.sql, web/src/components/insights/regions/RegionProfile.tsx, RegionSolutionCard.tsx, web/src/lib/cell-context.ts
+- Idea: Next: quantify which profile values separate top regions from the rest
+
+### 2026-10-24 18:07 — Time window slider now starts 2016; migration so map/bins...
+- Teammate: Bruno
+- Agent: —
+- Did: Time window slider now starts 2016; migration so map/bins/detail RPCs also read incidents_archive (Boston 311 2016-2022)
+- Why: user asked to expand time window now that pre-2023 history is loaded
+- Where: web/src/components/map/Timeline.tsx, supabase/migrations/20261025200001_map_reads_archive.sql
+- Idea: migration not yet applied to prod — awaiting approval
+
 ### 2026-10-24 18:06 — Presentation audit of data, ML and AI per product flow (d...
 - Teammate: Bruno
 - Agent: —

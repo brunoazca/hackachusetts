@@ -66,3 +66,19 @@ export async function fetchCellContext(cellId: string): Promise<CellContext | nu
   if (error) throw error;
   return data as CellContext | null;
 }
+
+export type RegionContext = {
+  n_cells: number;
+  attrs: CellContextAttrs;
+  /** Median over every Boston grid cell, for "higher / lower than the typical block". */
+  city_median: CellContextAttrs;
+  computed_at: string | null;
+  sources: { id: string; name: string; url: string }[];
+};
+
+/** Profile of a set of cells (an Insights region): counts summed, everything else averaged. */
+export async function fetchRegionContext(cellIds: string[]): Promise<RegionContext> {
+  const { data, error } = await supabase.rpc("region_context", { cell_ids: cellIds });
+  if (error) throw error;
+  return data as RegionContext;
+}

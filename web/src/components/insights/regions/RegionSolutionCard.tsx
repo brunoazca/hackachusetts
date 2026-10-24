@@ -4,6 +4,7 @@ import { fmtDate, fmtDateTime, fmtNumber } from "../format";
 import Sources from "../Sources";
 import type { SourceRow } from "../types";
 import type { RegionSolution } from "./parse";
+import RegionProfile from "./RegionProfile";
 
 const actionLabels = { sanitation: "Clean up & contain waste", exclusion: "Seal entry points", enforcement: "Follow up with property owners", referral: "Coordinate with city agencies", inspect: "Inspect & identify causes" };
 
@@ -63,6 +64,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap }: 
       <p className="mt-3 font-semibold text-fg">Model drivers</p>{input.forecast.drivers.length ? <ul>{input.forecast.drivers.map((d,i) => <li key={i}>{d.label}: {d.contribution > 0 ? "+" : ""}{fmtNumber(d.contribution)} expected reports</li>)}</ul> : <p>Drivers not available.</p>}
       <p className="mt-3 font-semibold text-fg">Nearby evidence</p>{input.possible_causes_within_150m.length ? <ul className="space-y-2">{input.possible_causes_within_150m.map((c,i) => <li key={i}>{c.label}: {number(c.count)} · nearest {number(c.nearest_m)} m<Sources ids={c.source_ids} details={sources}/></li>)}</ul> : <p>Nearby causes not available.</p>}
     </details>
+    <RegionProfile cellIds={r.cell_ids} />
     <details><summary className="min-h-10 cursor-pointer py-2 text-sm font-medium text-fg">Records · what to do next</summary>
       {!r.records.length && <p>Record-level recommendations pending.</p>}
       <ul className="space-y-3">{r.records.slice(0, all ? undefined : 10).map(record => <li key={record.incident_id} className="border-l-2 border-edge pl-3"><p className="font-semibold text-fg">{record.block ?? "Block unavailable"} · {record.status}</p><p>{fmtDate(record.opened)} · City action: {record.city_did}</p><p className="mt-1">Next: {record.todo}</p>{record.model?.confident && <p className="text-xs text-fg-3">Per-record model ({record.model.best_action}): {record.model.return_if_best ?? "unavailable"} predicted return within 60 days, versus {record.model.return_if_monitoring ?? "unavailable"} under monitoring. This compares the record model’s best action, which may differ from the region proposal.</p>}<p className="break-all text-xs text-fg-3">Record: {record.incident_id}</p></li>)}</ul>
