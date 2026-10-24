@@ -47,6 +47,45 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: pipeline/rat_audit/model/__init__.py, explain.py, tests/test_model_explain.py
 - Idea: grid_cells seeding only runs while the table is empty; Carol can replace it
 
+### 2026-10-24 14:35 — Piper design standards v1.0.0 on branch feat/piper-design...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Piper design standards v1.0.0 on branch feat/piper-design-system: tokens.json source of truth + drift/contrast guard script, docs/design (foundations, components, patterns, content/equity, accessibility, governance), standalone HTML mockup (app at 1280x800, color, type, space, components, motion lab, Bone phone), Kiro steering for UI files
+- Why: Give the team one durable, checked reference before restyling the app; not imported into the build
+- Where: docs/design/**, scripts/check-design-tokens.py, .kiro/steering/design-system.md, web/src/styles/piper.css, web/src/lib/design-tokens.ts, docs/rat-audit/brand.md, docs/rat-audit/design-system.md
+- Idea: Contrast guard caught 3 low pairs (mink, Bone return, Bone edge) and fixed them; mockup deep links ?demo=site|approve|ask|findings|cmdk, ?theme=bone, ?static
+
+### 2026-10-24 14:08 — Piper design system: full spec (color semantics both them...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Piper design system: full spec (color semantics both themes, type scale, spacing/sizes, layout at 1280x800 + phone, motion catalog, MapLibre paint, charts, 22 components, flows, keyboard, voice, a11y ship gate) plus token files
+- Why: Give the team one source of truth to build the UI from
+- Where: docs/rat-audit/design-system.md, web/src/styles/piper.css, web/src/lib/design-tokens.ts
+- Idea: Map padding so flyTo never lands under a panel; work order always in Bone theme; Tune auto-stops after 8s
+
+### 2026-10-24 13:58 — Brand v3: Piper (Pied Piper), tagline 'Follow the rats.',...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Brand v3: Piper (Pied Piper), tagline 'Follow the rats.', Hamelin palette (soot, bone, brass, vermilion, Delft, oxblood), Bodoni Moda + Atkinson Next/Mono, Line Rat mark, Rings + Tune motifs, plague-doctor Easter egg
+- Why: Guilherme wanted the brand to openly evoke rats/plague but in a chic way
+- Where: docs/rat-audit/brand.md
+- Idea: Rule: plague aesthetic for the brand only, never for places (1900 SF Chinatown quarantine precedent)
+
+### 2026-10-24 13:53 — Brand v2: renamed to Undertow, tagline 'Closed isn't gone...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Brand v2: renamed to Undertow, tagline 'Closed isn't gone.', Low Tide palette (warm=observed, cool=forecast, CVD-safe), Newsreader + Atkinson Hyperlegible Next/Mono, Tidelines + Currents motifs, equity and WCAG 2.2 sections, references board
+- Why: Guilherme found v1 tagline vague and asked for more unique, sleeker, accessible and equity-aware design
+- Where: docs/rat-audit/brand.md
+- Idea: Listening-gap texture for under-reporting tracts; Two voices (resident words vs closure note); Day mode required for field use
+
+### 2026-10-24 13:47 — Defined brand + product design: name Ratio, Nocturne pale...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Defined brand + product design: name Ratio, Nocturne palette, Instrument Serif/Geist/Geist Mono, Echoes motif, key screens, demo moment
+- Why: Make the rat product feel refined and YC-chic, not gross or scrappy
+- Where: docs/rat-audit/brand.md
+- Idea: Echo rings = recurrence; Source Line to adjacent vacant lot; closed is grey not green; tagline: Stop closing cases. Start closing blocks.
 ### 2026-10-24 14:41 — Umbrella campaign 947e85a6 finished; added its 13-track r...
 - Teammate: Carol
 - Agent: —
