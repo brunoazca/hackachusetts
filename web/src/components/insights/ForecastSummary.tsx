@@ -153,7 +153,8 @@ export default function ForecastSummary({ forecast: f, onShowForecast }: { forec
   };
   const openCell = (c: ForecastView["topCells"][number]) => {
     setForecastWeek(c.weekStart);
-    setLayers({ forecast: true });
+    // The priority grid numbers blocks the same way this list does; the smoothed surface would hide it.
+    setLayers({ priority: true, forecast: false });
     select({ kind: "cell", id: c.cellId });
     setPanel("inspector");
   };

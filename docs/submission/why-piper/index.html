@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Piper — 10 s motion graphic</title>
+<meta name="description" content="A 10-second motion graphic explaining why Piper exists: a closed rodent case does not establish that the reported condition was resolved.">
+<link rel="stylesheet" href="film.css">
+</head>
+<body>
+
+<div id="viewport">
+  <div id="stage" role="img" aria-label="Why Piper: a 10-second motion graphic. Transcript below.">
+
+    <!-- Diagram geometry (SVG). Every element exists once; film.js derives its state from the current time. -->
+    <svg class="diagram" viewBox="0 0 1920 1080" aria-hidden="true">
+      <!-- Result container: expands from the shared timeline (the shared shape), keeping the records as the focal anchor -->
+      <rect id="panel" x="660" y="480" width="1020" height="400" rx="8" fill="var(--p-surface)" stroke="var(--p-edge)" stroke-width="2.5"/>
+      <!-- Shared timeline. Drawn as the connecting line; later travels into the logo pipe. -->
+      <rect id="axis2" x="0" y="0" width="100" height="10" fill="var(--p-edge)"/>
+
+      <!-- Nearby records: adjacent context, no addresses -->
+      <g id="N1" class="strip near"><rect width="220" height="44" rx="6" fill="var(--p-surface)" stroke="var(--p-edge)" stroke-width="2.5"/><rect x="14" y="12" width="20" height="20" rx="4" fill="none" stroke="var(--p-edge)" stroke-width="2.5"/><line x1="52" y1="22" x2="190" y2="22" stroke="var(--p-line)" stroke-width="3" stroke-linecap="round"/></g>
+      <g id="N2" class="strip near"><rect width="220" height="44" rx="6" fill="var(--p-surface)" stroke="var(--p-edge)" stroke-width="2.5"/><rect x="14" y="12" width="20" height="20" rx="4" fill="none" stroke="var(--p-edge)" stroke-width="2.5"/><line x1="52" y1="22" x2="170" y2="22" stroke="var(--p-line)" stroke-width="3" stroke-linecap="round"/></g>
+      <g id="N3" class="strip near"><rect width="220" height="44" rx="6" fill="var(--p-surface)" stroke="var(--p-edge)" stroke-width="2.5"/><rect x="14" y="12" width="20" height="20" rx="4" fill="none" stroke="var(--p-edge)" stroke-width="2.5"/><line x1="52" y1="22" x2="180" y2="22" stroke="var(--p-line)" stroke-width="3" stroke-linecap="round"/></g>
+
+      <!-- Marks. Dot = report. Hollow = recorded closed case. Coral ring = another report at the same place after a closure. -->
+      <rect id="P" x="-18" y="-18" width="36" height="36" rx="6" fill="var(--p-bg)" stroke="var(--p-fg)" stroke-width="3"/>
+      <circle id="D1" r="11" fill="var(--p-fg)"/>
+      <circle id="H"  r="11" fill="var(--p-bg)" stroke="var(--p-fg)" stroke-width="3"/>
+      <circle id="D2" r="11" fill="var(--p-fg)"/>
+      <circle id="r2" r="21" fill="none" stroke="var(--p-return)" stroke-width="2.5"/>
+    </svg>
+
+    <!-- Text layer. Designed line breaks are fixed; nothing wraps. -->
+    <p class="txt ctx" id="ctx">Boston · Rodent reports</p>
+    <h1 class="txt headline" id="h1">Reports can <span class="accent">return</span>.</h1>
+    <h1 class="txt headline" id="h2">Piper brings it together.</h1>
+    <p class="txt sub" id="sub">Evidence for the next inspection.</p>
+    <p class="txt sub" id="staticMsg">A closed rodent case does not establish that the reported condition was resolved. Piper brings repeated reports, recorded responses, and nearby records together so Boston inspectors can decide where to investigate.</p>
+    <p class="txt illus" id="illus">Illustrative sequence</p>
+
+    <p class="txt label quiet" id="lPlace" data-anchor="center">One place</p>
+    <p class="txt label" id="lRep1" data-anchor="center">Report received</p>
+    <p class="txt label" id="lClosed" data-anchor="center">Case closed</p>
+    <p class="txt label" id="lRep2" data-anchor="center">New report</p>
+    <p class="txt label" id="lNearby" data-anchor="left">Nearby records</p>
+
+    <!-- Logo lockup: the existing Piper lockup (LineRat geometry + Fraunces italic wordmark), rebuilt outside React. -->
+    <span class="lockup" id="logo" aria-hidden="true">
+      <svg viewBox="14 10 86 46">
+        <g class="piper-rat">
+          <path id="ratBody" d="M46 43 Q35 45 28 40 C24 36 28 24 38 20 C35 16 38 12 42 14 C46 16 45 20 42 22 C48 18 54 21 61 24 C55 27 51 28 48 31 C45 34 45 37 49 37"/>
+          <path id="ratEye" class="piper-eye" d="M50.5 25 h0"/>
+          <path id="ratNose" class="piper-nose" d="M61 24 h0"/>
+        </g>
+        <g class="accent-group">
+          <path id="tail" class="piper-tail" d="M28 40 C20 42 19 46 28 48 C37 50 49 50 66 50 H97"/>
+          <circle id="hole1" class="hole-1" cx="72" cy="50" r="2.1"/>
+          <circle id="hole2" class="hole-2" cx="81" cy="50" r="2.1"/>
+          <circle id="hole3" class="hole-3" cx="90" cy="50" r="2.1"/>
+        </g>
+      </svg>
+      <span class="wordmark" id="wordmark">Piper</span>
+    </span>
+    <p class="txt tagline" id="tagline" data-anchor="center">Follow the rats.</p>
+    <p class="txt descriptor" id="descriptor" data-anchor="center">Rodent report intelligence for Boston.</p>
+  </div>
+</div>
+
+<div id="controls" aria-label="Playback controls">
+  <button id="btnPlay" type="button" aria-keyshortcuts="Space">Play</button>
+  <button id="btnRestart" type="button" aria-keyshortcuts="Home">Restart</button>
+  <input id="scrub" type="range" min="0" max="10" step="0.033333" value="0" aria-label="Scrub timeline (seconds)">
+  <span id="time" aria-live="off">00:00.00 · f 0</span>
+  <label><input id="rmToggle" type="checkbox"> Reduced motion</label>
+  <a id="staticLink" href="?static=1">Static summary</a>
+  <span><kbd>Space</kbd> play · <kbd>←</kbd><kbd>→</kbd> frame · <kbd>Shift</kbd>+arrow 1 s</span>
+</div>
+
+<section id="transcript" aria-label="Transcript">
+  <h2>Transcript (silent film, 10 s)</h2>
+  <ol>
+    <li><strong>0–1.0 s · Reports can return.</strong> Context: Boston · Rodent reports. Three records sit apart: “Report received”, “Case closed”, and a “New report” after the closure (coral ring).</li>
+    <li><strong>1.0–2.4 s.</strong> The three records travel into one line, in order.</li>
+    <li><strong>2.4–3.2 s.</strong> A timeline connects them; a place marker labeled “One place” anchors its start. The closure stays visible between the two reports.</li>
+    <li><strong>3.2–5.0 s.</strong> Hold: one place, three records, read in order.</li>
+    <li><strong>5.0–7.4 s · Piper brings it together.</strong> The timeline opens into a place review; nearby records settle beneath it as context. “Evidence for the next inspection.”</li>
+    <li><strong>7.4–10 s · Piper.</strong> The timeline becomes the pipe of the Piper logo. “Follow the rats.” Rodent report intelligence for Boston.</li>
+  </ol>
+  <p>All diagrams are an illustrative sequence: no real addresses, case identifiers, dates or statistics. Piper organizes evidence; the inspector decides.</p>
+</section>
+
+<script src="film.js"></script>
+</body>
+</html>

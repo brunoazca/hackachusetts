@@ -20,6 +20,9 @@ export type ForecastCellProps = {
   p_any: number;
   band: "low" | "elevated" | "high" | "very_high";
   emerging: "emerging_hotspot" | "early_warning" | null;
+  /** From migration 20261024700001: street block and neighborhood of the cell (null on older DBs). */
+  label?: string | null;
+  neighborhood?: string | null;
 };
 
 export type Driver = { feature: string; label: string; contribution: number; value: number | null };

@@ -15,7 +15,7 @@ const ICON: Record<Tab, ReactNode> = {
   insights: <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />,
   chat: <path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12Z" />,
 };
-const LABEL: Record<Tab, string> = { inspector: "Inspect", insights: "Insights", chat: "Ask" };
+const LABEL: Record<Tab, string> = { inspector: "Detail", insights: "Citywide", chat: "Ask" };
 
 // Inherited visibility can settle a few frames after a morph changes the parent.
 // Wait for the actual target, and cancel if the panel changes again in the meantime.

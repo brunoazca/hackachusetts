@@ -21,7 +21,8 @@ export type Filters = {
 
 export type View = { lat: number; lon: number; zoom: number };
 
-export type Mode = "assess" | "act";
+/** assess = Map; act = Places to visit; inspect = every block ranked by expected reports. */
+export type Mode = "assess" | "act" | "inspect";
 
 /** Sites currently listed in the Act queue, so the map can draw and fly to them. */
 export type SiteRow = {
@@ -71,6 +72,7 @@ type MapState = {
   panel: "inspector" | "insights" | "chat";
   forecastWeek: string | null;     // ISO week_start or "4w"; null also means next four weeks
   three: boolean;                  // pitched camera + extruded buildings at street level
+  selectionAt: [number, number] | null; // [lon, lat] of the current selection once the map knows it
   flyTo: (v: Partial<View> & { lat: number; lon: number }) => void;
   setView: (v: View) => void;
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
@@ -80,6 +82,7 @@ type MapState = {
   setPanel: (p: MapState["panel"]) => void;
   setForecastWeek: (w: string | null) => void;
   setThree: (on: boolean) => void;
+  setSelectionAt: (at: [number, number] | null) => void;
 };
 
 const today = new Date();
@@ -87,7 +90,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 const daysAgo = (n: number) => iso(new Date(today.getTime() - n * 86400000));
 
 export const useMap = create<MapState>((set) => ({
-  mode: "act",
+  mode: "assess",
   sites: [],
   siteNeighborhood: "",
   setSiteNeighborhood: (siteNeighborhood) => set({ siteNeighborhood }),
@@ -111,7 +114,8 @@ export const useMap = create<MapState>((set) => ({
   selection: null,
   panel: "inspector",
   forecastWeek: null,
-  three: false,
+  three: true,                     // the map opens tilted; "3D" by the zoom controls flattens it
+  selectionAt: null,
   flyTo: (v) => set((s) => ({ view: { ...s.view, ...v }, bounds: null, flyToTarget: { zoom: s.view.zoom, ...v, nonce: Date.now() } })),
   setView: (view) => set({ view }),
   setLayers: (patch) => set((s) => {
@@ -135,4 +139,5 @@ export const useMap = create<MapState>((set) => ({
   setPanel: (panel) => set({ panel }),
   setForecastWeek: (forecastWeek) => set({ forecastWeek }),
   setThree: (three) => set({ three }),
+  setSelectionAt: (selectionAt) => set({ selectionAt }),
 }));

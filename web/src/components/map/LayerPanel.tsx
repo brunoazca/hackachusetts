@@ -60,6 +60,8 @@ type Props = {
   zoom: number;
   cellMetric: string | null;
   onCellMetricChange: (key: string | null) => void;
+  /** Tells the parent when a flyout is open, so panels in the same spot can step aside. */
+  onOpenChange?: (open: boolean) => void;
 };
 
 const CITY_ABBR: [string, string][] = [["boston", "BOS"], ["cambridge", "CAM"], ["somerville", "SOM"]];
@@ -136,7 +138,7 @@ function BlockProfile({ metric, onChange }: { metric: string | null; onChange: (
   );
 }
 
-export default function LayerPanel({ enabled, onChange, mode, onModeChange, causes, onCausesChange, count, loading, coverage, zoom, cellMetric, onCellMetricChange }: Props) {
+export default function LayerPanel({ enabled, onChange, mode, onModeChange, causes, onCausesChange, count, loading, coverage, zoom, cellMetric, onCellMetricChange, onOpenChange }: Props) {
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
   const [open, setOpen] = useState<DockId | null>(null);
@@ -146,6 +148,11 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
   const timelineOpen = useUi((s) => s.timelineOpen);
   const forecastOn = useMap((s) => s.layers.forecast);
+  const three = useMap((s) => s.three);
+  const setThree = useMap((s) => s.setThree);
+  const inspectMode = useMap((s) => s.mode === "inspect");
+  const priorityOn = useMap((s) => s.layers.priority) || inspectMode;
+  const setLayers = useMap((s) => s.setLayers);
   const setTimelineOpen = useUi((s) => s.setTimelineOpen);
   const whenLabel = span <= 8 ? "1 wk" : span <= 31 ? "1 mo" : span <= 92 ? "3 mo" : span <= 366 ? "1 yr" : span > 1000 ? "All" : `${Math.round(span / 30)} mo`;
 
@@ -166,7 +173,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
       badge: (enabled.ctx_housing ? 1 : 0) + (enabled.ctx_buildings ? 1 : 0) + (cellMetric ? 1 : 0),
     },
     {
-      id: "forecast" as DockId, label: "Forecast",
+      id: "forecast" as DockId, label: "Next: forecast",
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="text-fg-2"><path d="M3 17l5-5 4 4 8-8" /><path d="M14 8h6v6" /></svg>
       ),
@@ -176,6 +183,8 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden className="text-fg-2"><path d="m12 2 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5" /><path d="m3 17 9 5 9-5" /></svg>
     ) },
   ];
+
+  useEffect(() => { onOpenChange?.(!!open); }, [open, onOpenChange]);
 
   // Esc closes and returns focus to the dock button that opened the flyout.
   useEffect(() => {
@@ -241,8 +250,8 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
           onClick={() => { setOpen(null); setTimelineOpen((v) => !v); }}
           aria-expanded={timelineOpen}
           aria-controls="timeline"
-          aria-label={`Time window: ${whenLabel}`}
-          title="Time window"
+          aria-label={`So far: reports from the ${whenLabel === "All" ? "whole record" : `last ${whenLabel}`}`}
+          title="Dates"
           className="grid h-11 w-11 place-items-center rounded-md text-fg-2 transition-[background-color,transform] duration-150 hover:bg-card-hover hover:text-fg active:scale-95 aria-expanded:bg-card aria-expanded:text-fg aria-expanded:ring-1 aria-expanded:ring-edge"
         >
           <span className="flex flex-col items-center leading-none">
@@ -266,7 +275,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
         >
           <div className="overflow-y-auto p-3 [max-height:calc(100dvh-92px)]">
           <header className="mb-2 flex items-center justify-between gap-2">
-            <h2 className="text-[14px] font-bold text-fg">{current.id === "period" ? "Period" : current.id === "view" ? "How to show reports" : current.id === "forecast" ? "Forecast" : current.label}</h2>
+            <h2 className="text-[14px] font-bold text-fg">{current.id === "period" ? "So far: which reports" : current.id === "view" ? "How to show reports" : current.id === "forecast" ? "Next: where reports are likely" : current.label}</h2>
             <div className="flex items-center gap-1">
               {GROUPS.some((g) => g.id === current.id) && (() => {
                 const ids = groupIds(current.id);
@@ -331,7 +340,10 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
           )}
 
           {current.id === "period" && (
-            <div role="radiogroup" aria-label="Period" className="grid grid-cols-5 gap-0.5 rounded-md border border-line bg-card p-0.5">
+            <p className="mb-2 text-[11px] leading-4 text-fg-3">Reports already filed, back to this long ago. What the model expects is under <b className="font-semibold text-fg-2">Next</b> (the forecast button).</p>
+          )}
+          {current.id === "period" && (
+            <div role="radiogroup" aria-label="So far: period" className="grid grid-cols-5 gap-0.5 rounded-md border border-line bg-card p-0.5">
               {PRESETS.map((p) => {
                 const on = Math.abs(span - p.days) < 2;
                 return (
@@ -364,9 +376,23 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
               <LayerRow
                 icon={<span aria-hidden className="h-3 w-5 rounded-[2px]" style={{ background: `linear-gradient(to right, ${HEAT_RAMPS.evidence.join(", ")})` }} />}
                 label="Show nearby records"
-                meta="Trash, vacant lots, construction near reports"
+                meta="Trash, empty lots and building work near reports"
                 checked={causes}
                 onToggle={onCausesChange}
+              />
+              <LayerRow
+                icon={<span aria-hidden className="grid h-4 w-5 grid-cols-3 gap-px overflow-hidden rounded-[2px]">{[0.9, 0.5, 0.2, 0.3, 0.7, 0.1].map((o, i) => <span key={i} className="bg-return" style={{ opacity: o }} />)}</span>}
+                label="Priority blocks"
+                meta={inspectMode ? "Always on in Inspect blocks · tap one to learn more" : "Each block ranked across the city · tap one to learn more"}
+                checked={priorityOn}
+                onToggle={(v) => setLayers({ priority: v })}
+              />
+              <LayerRow
+                icon={<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden className="text-fg-2"><path d="M4 9l8-5 8 5v8l-8 5-8-5V9Z" /><path d="M4 9l8 5 8-5M12 14v8" /></svg>}
+                label="3D buildings"
+                meta={`${zoom < 14 ? "zoom in to see · " : ""}tilted view, building heights from OpenStreetMap`}
+                checked={three}
+                onToggle={setThree}
               />
             </div>
           )}

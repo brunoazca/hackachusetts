@@ -16,9 +16,9 @@ const isoDate = z.iso.date();
 
 export const clientTools = {
   app_set_mode: tool({
-    description: "Switch the app between Assess and Act. Keeps the selected site. All layers are already available; there is no separate depth mode.",
+    description: "Switch the app between Assess (the map), Act (places to visit) and Inspect (every block ranked by expected reports; tap one for detail). Keeps the selected site. All layers are already available; there is no separate depth mode.",
     inputSchema: z.object({
-      mode: z.enum(["assess", "act"]),
+      mode: z.enum(["assess", "act", "inspect"]),
     }).strict(),
   }),
   map_filter_sites: tool({

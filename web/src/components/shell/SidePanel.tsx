@@ -6,8 +6,8 @@ import ChatPanel from "@/components/chat/ChatPanel";
 import { CollapseButton } from "./Collapse";
 
 const TABS = [
-  { id: "inspector", label: "Inspect" },
-  { id: "insights", label: "Insights" },
+  { id: "inspector", label: "Detail" },
+  { id: "insights", label: "Citywide" },
   { id: "chat", label: "Ask" },
 ] as const;
 

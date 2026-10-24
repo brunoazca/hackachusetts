@@ -6,7 +6,7 @@ import { CELL_METRICS } from "../cell-metrics";
 // server-side validation. Bounds are the actual viewport, never the padded fetch box.
 
 type StoreLike = {
-  mode?: "assess" | "act";
+  mode?: "assess" | "act" | "inspect";
   selection: { kind: string; id?: string } | null;
   view: { lat: number; lon: number; zoom: number };
   filters: { since: string; until: string; categories: string[]; status: string };

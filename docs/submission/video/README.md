@@ -13,12 +13,14 @@ Rendered from `docs/submission/shot-plan.json` (timings, narration) and `docs/su
 
 | Shots | Source | Notes |
 |---|---|---|
-| S01, S02, S06, S09 | `beat4-animation.html` slices (`?t=23.7`, `?t=0&to=7.8`, `?t=10.3&to=27.3`) | Captured in real time through CDP screencast at 1920×1080 (about 21 fps, resampled to 60). Camera 1.0×, static, as the brief requires. |
-| S03, S04, S17, S18, S20 | The deployed app, `https://piper-app.vercel.app` (the URL the brief lists redirects here) | Headless Chrome with software WebGL, 1920×1080 CSS px at `deviceScaleFactor: 2`, so the 1.4–1.5× crops come from 3840×2160 source pixels. Act mode queue with the Live badge (S03/S04), Assess mode with the forecast toggle (S17), the layer panel's tested label "Construction debris · no effect" (S18), and a real **Emerging hotspot** block card in Charlestown (S20). |
+| S01–S02 | The Piper intro from `docs/design/mockup/` (the one-line rat mark draws itself, "Piper" sets, "Follow the rats."), captured full-frame at 1920×1080 with everything else on the page hidden | Replaces the plan's "wordmark over the pin collapse". The pin collapse still pays off at the end of S09. 400 ms dissolve into the app at 7.0 s. |
+| S06, S09 | `beat4-animation.html` slices (`?t=0&to=7.8`, `?t=10.3&to=27.3`) | Captured in real time through CDP screencast at 1920×1080 (about 21 fps, resampled to 60). Camera 1.0×, static, as the brief requires. |
+| S03, S04 | The deployed app, `https://piper-app.vercel.app`, **after** it switched to the Piper UI: "Places to visit" queue, "Review suggested" flags, "Latest import N minutes ago" badge | Headless Chrome with software WebGL at `deviceScaleFactor: 2`. |
+| S17, S18, S20 | The deployed app **before** the Piper UI landed (light theme) | Assess mode with the forecast toggle (S17), the layer panel's tested label "Construction debris · no effect" (S18), a real **Emerging hotspot** block card in Charlestown (S20). The new UI moved these controls into an icon rail; they need a new rehearsal and capture (`capture/capture-app.mjs` has the old selectors). |
 | S07, S08, S10, S11, S12, S13, S14, S29 | The Piper mockup (`docs/design/mockup/`, now on `main`), tagged **Prototype** on screen | The deployed app has no Normandy St case in its queue (it is address-level and Normandy St is not Due in the 60-day window) and no Approve, work order or Prove screens. The mockup has the flow. Its illustrative copy for Normandy St was replaced with the approved facts from the script (18 reports, the ladder, the vacant lot classed RES LAND (Unusable), the Rule 2 recommendation and because line, the source line, the draft work order with check-again Dec 23, 2026). Other sites' illustrative counts were hidden. The exact change is `capture/mockup-prototype.patch`. |
 | S16, S19, S21, S22, S28, S30 | Cards rendered by `edit/cards.py` | Hamelin palette from the script header. Bodoni (Bodoni 72, the installed stand-in for Bodoni Moda) only on S30 and the S01–S02 wordmark. |
-| S05 | Slate | The 22 headline screenshots are in Drive / Hackachusetts / NewsPrints, not in the repo. Drop the news wall over this 4 s slate. |
-| S24–S27 | Slates | The Kiro recordings are in Drive / Hackachusetts, not in the repo. Candidates per slate are named on screen. |
+| S05 | News wall built from 10 of the 22 headline screenshots in Drive / Hackachusetts / NewsPrints (Huntington News, Axios, Boston Herald, CBS News, The Boston Globe, Boston 25 ×2, Wicked Local, NBC Boston ×2) | Unedited screenshots, 2 columns × 5, staggered in over 1.5 s, then static. No push-in. |
+| S24–S27 | The Kiro recordings from Drive / Hackachusetts, 4K, centre crop at 1.3×, real system cursor as recorded | S24 Spec Builder (specs tree, spec chat); S25 Kiro Crew task runner, research DAG; S26 Task Runner with approval gates ("prediction models for Rat Audit Boston"); S27 Research Lab (sourced queries against data.boston.gov). No recording shows a hook firing or the civic-judge agent, so **the S25 and S26 narration lines were changed to match the footage** (see below). |
 
 ## Shots cut or changed (per §8.4: never fake a success state)
 
@@ -27,6 +29,15 @@ Rendered from `docs/submission/shot-plan.json` (timings, narration) and `docs/su
 - **S17 (Assess + forecast fill)**: the map renders through software WebGL at a few frames per second in headless Chrome, so the screencast was too choppy to use. The shot is a before still and an after still joined by a 400 ms dissolve, with the cursor path rebuilt from the event log. Same for the mockup's Approve sheet (S13 → S14 is a cut to the opened sheet).
 - **S07**: the mockup's own select animation (fly-to and rings) captured smoothly and is used as recorded.
 - **Counts card (S28)**: `KIRO_LOG.md` had 159 `###` entries at render time (the shot plan said 148). Agents: 6.
+
+## Narration lines changed to match real footage (voice not recorded yet)
+
+| Shot | Shot plan | In this render |
+|---|---|---|
+| S25 | Hooks check accessibility and secrets on every save. | A crew of agents ran the research tasks, step by step. |
+| S26 | A judge agent reviewed our own build. | Approval gates held each step until a person checked it. |
+
+Both appear in the burned-in captions and in `piper-demo.en.srt`. Revert them in `edit/edit.py` (`OVERRIDE`) if the team records a hook firing and the judge agent instead.
 
 ## Limits to state in the delivery note
 

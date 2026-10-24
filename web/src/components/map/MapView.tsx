@@ -2,19 +2,22 @@
 import "maplibre-gl/dist/maplibre-gl.css";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Map, { Layer, NavigationControl, Source, type MapLayerMouseEvent, type MapRef } from "react-map-gl/maplibre";
-import type { FeatureCollection, Point } from "geojson";
+import type { FeatureCollection, Point, Polygon } from "geojson";
 import { setWorkerUrl, type ExpressionSpecification, type HeatmapLayerSpecification } from "maplibre-gl";
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { filterIncidentStatus, type CategoryId } from "@/lib/map-controls";
 import { fetchCoverage, fetchIncidentBins, fetchIncidents, fetchSiteQueue, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
 import { circle as turfCircle } from "@turf/turf";
+import { fetchCellDetail } from "@/lib/forecast";
 import { formatDate } from "@/lib/dates";
 import ContextLayers from "./ContextLayers";
 import MapLegend from "./MapLegend";
 import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
+import PriorityLayer, { PRIORITY_LAYER_IDS } from "./PriorityLayer";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
+import BlockQueue from "./BlockQueue";
 import FeatureList from "./FeatureList";
 import { addCategoryIcons } from "./icons";
 import { useTheme } from "@/lib/theme-store";
@@ -31,11 +34,10 @@ const STYLE = BASEMAP_STYLE_URL;
 type MlMapLike = NonNullable<ReturnType<MapRef["getMap"]>>;
 
 // 3D: the basemap's building footprints carry OSM heights, so at street level we can extrude them and
-// pitch the camera. The building under the selected report/site is tinted (feature-state "hit").
+// pitch the camera. (No per-building highlight: tile building ids repeat, so a feature-state on one id
+// would light up buildings all over the city. The selected block is shown as a raised slab instead.)
 const THREE_LAYER = "piper-3d";
-const extrusionColor = (theme: ThemeName) => [
-  "case", ["boolean", ["feature-state", "hit"], false], themes[theme].returned, basemap[theme].building,
-] as unknown as ExpressionSpecification;
+const extrusionColor = (theme: ThemeName) => basemap[theme].building;
 function addThreeLayer(map: MlMapLike, theme: ThemeName) {
   if (map.getLayer(THREE_LAYER) || !map.getSource("openmaptiles")) return;
   map.addLayer({
@@ -100,7 +102,7 @@ const SINGLE = ["all", ["!", ["has", "point_count"]], ["==", N, 1]] as unknown a
 // Below this zoom a single report is a plain dot; from here on (raw points) it wears its category glyph.
 const GLYPH_ZOOM = 15;
 // Older reports fade a little so the newest ones read first. Never below half, so nothing disappears.
-const AGE_FADE = ["interpolate", ["linear"], ["coalesce", ["get", "age"], 0], 0, 1, 14, 1, 90, 0.75, 365, 0.5] as unknown as ExpressionSpecification;
+const AGE_FADE = ["interpolate", ["linear"], ["coalesce", ["get", "age"], 0], 0, 1, 14, 1, 90, 0.85, 365, 0.7] as unknown as ExpressionSpecification;
 // Reports from the last week pulse once every 1.5 s.
 const FRESH = ["<=", ["coalesce", ["get", "age"], 999], 7] as unknown as ExpressionSpecification;
 // Chronic places: one ring per return (up to 4), fading outward — the design spec's "came back" mark.
@@ -178,6 +180,7 @@ export default function MapView() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [listOpen, setListOpen] = useState(false);
+  const [flyoutOpen, setFlyoutOpen] = useState(false);
   const reqId = useRef(0);
 
   const appMode = useMap((s) => s.mode);
@@ -185,11 +188,17 @@ export default function MapView() {
   const rightOpen = useUi((s) => s.rightOpen);
   const T = themes[theme];
   const forecastOn = useMap((s) => s.layers.forecast);
+  // The ranked outlines always mirror the block list; the full tinted grid is the rail switch
+  // (or Inspect mode, if the chat agent asks for it), and then the heatmap steps aside.
+  const priorityFull = useMap((s) => s.layers.priority) || appMode === "inspect";
+  const priorityOn = appMode !== "act";
   const forecastWeek = useMap((s) => s.forecastWeek);
   const three = useMap((s) => s.three);
   const setThree = useMap((s) => s.setThree);
   const sites = useMap((s) => s.sites);
   const setSites = useMap((s) => s.setSites);
+  const flyTo = useMap((s) => s.flyTo);
+  const setSelectionAt = useMap((s) => s.setSelectionAt);
   // The chronic-place rings need the queue even when the Act panel has never loaded it.
   useEffect(() => {
     if (useMap.getState().sites.length) return;
@@ -230,14 +239,33 @@ export default function MapView() {
     if (clicked && (!flyToTarget || clicked.nonce >= flyToTarget.nonce)) return clicked.at;
     return flyToTarget ? [flyToTarget.lon, flyToTarget.lat] : null;
   }, [selection, clicked, flyToTarget]);
+  // Cards read the selection's coordinates from the store (a report's detail has none of its own).
+  useEffect(() => { setSelectionAt(focus); }, [focus, setSelectionAt]);
+  // A block picked from the Insights list (not tapped on the map): bring the map to it.
+  useEffect(() => {
+    if (selection?.kind !== "cell") return;
+    if (clicked && Date.now() - clicked.nonce < 1500) return;
+    const map = mapRef.current;
+    if (!map) return;
+    let live = true;
+    fetchCellDetail(selection.id).then((d) => {
+      if (!live || !d.cell) return;
+      flyTo({ lat: d.cell.lat, lon: d.cell.lon, zoom: Math.max(15.5, map.getZoom()) });
+    }).catch(() => {});
+    return () => { live = false; };
+  }, [selection, clicked, flyTo]);
+  // For a report or place: the 100 m ring the drivers panel counts within. For a block: the block
+  // itself (a 160 m radius covers the 250 m square), drawn by the grid, so only the dimming applies.
+  const isBlock = selection?.kind === "cell";
   const ring = useMemo(
-    () => (focus && selection ? turfCircle(focus, 0.1, { units: "kilometers", steps: 48 }) : null),
-    [focus, selection],
+    () => (focus && selection ? turfCircle(focus, isBlock ? 0.16 : 0.1, { units: "kilometers", steps: 48 }) : null),
+    [focus, selection, isBlock],
   );
-  // Inside the ring everything stays; outside, markers step back so the neighbourhood reads.
+  const ringVisible = !!ring && !isBlock;
+  // Inside the ring everything stays; outside, markers step back so the selection reads.
   const inRing = useMemo(
-    () => (ring && zoom >= 14.5 ? ["case", ["within", ring.geometry], 1, 0.3] : 1) as unknown as ExpressionSpecification,
-    [ring, zoom],
+    () => (ring && zoom >= (isBlock ? 13 : 14.5) ? ["case", ["within", ring.geometry], 1, 0.3] : 1) as unknown as ExpressionSpecification,
+    [ring, zoom, isBlock],
   );
 
   // Hover card: one feature under the pointer, keyed by id so moving within the same marker is free.
@@ -335,6 +363,10 @@ export default function MapView() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  // Rat reports and the records that explain them never share a group or a count.
+  const ratsFC = useMemo<FC>(() => ({ type: "FeatureCollection", features: clusterFC.features.filter((f) => f.properties.group === "rats") }), [clusterFC]);
+  const causesFC = useMemo<FC>(() => ({ type: "FeatureCollection", features: clusterFC.features.filter((f) => f.properties.group !== "rats") }), [clusterFC]);
+
   // Two heatmap families: rat signals vs. everything that explains them.
   const heat = useMemo(() => {
     const rats: FC = { type: "FeatureCollection", features: [] };
@@ -348,7 +380,7 @@ export default function MapView() {
     return { rats, evidence, nRats, nEvidence };
   }, [data]);
   const total = useMemo(() => data.features.reduce((a, f) => a + (f.properties.n ?? 1), 0), [data]);
-  const showHeat = viewMode !== "points";
+  const showHeat = viewMode !== "points" && !priorityFull;
   // In "Hot spots" mode, groups and markers still appear once you zoom to street level.
   const markerMinZoom = viewMode === "heat" ? 14 : 0;
 
@@ -468,29 +500,9 @@ export default function MapView() {
     return () => cancelAnimationFrame(raf);
   }, [iconsReady, zoom]);
 
-  // In 3D, tint the building under the selected report or site.
-  const hit = useRef<string | number | null>(null);
-  useEffect(() => {
-    const map = mapRef.current?.getMap();
-    if (!map || !iconsReady || !map.getLayer(THREE_LAYER)) return;
-    const state = (id: string | number, on: boolean) => map.setFeatureState({ source: "openmaptiles", sourceLayer: "building", id }, { hit: on });
-    if (hit.current != null) { state(hit.current, false); hit.current = null; }
-    if (!three || !selection || !("id" in selection)) return;
-    const coords = selection.kind === "site"
-      ? (() => { const r = sites.find((x) => x.id === selection.id); return r ? [r.lon, r.lat] : null; })()
-      : selection.kind === "incident"
-        ? clusterFC.features.find((f) => f.properties.id === selection.id)?.geometry.coordinates ?? null
-        : null;
-    if (!coords) return;
-    const f = map.queryRenderedFeatures(map.project(coords as [number, number]), { layers: [THREE_LAYER] })[0];
-    if (!f || f.id == null) return;
-    state(f.id, true);
-    hit.current = f.id;
-  }, [selection, three, zoom, iconsReady, sites, clusterFC]);
-
   const interactive = useMemo(
-    () => [...(appMode === "act" && enabled.sites ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(cellMetric ? ["ctx-cells"] : []), ...(iconsReady ? ["all-clusters", "all-dots", "all-points", "chronic-hit"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
-    [iconsReady, appMode, enabled.sites, enabled.ctx_buildings, cellMetric, zoom, forecastOn],
+    () => [...(appMode === "act" && enabled.sites ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(cellMetric ? ["ctx-cells"] : []), ...(iconsReady ? ["all-clusters", "all-dots", "all-points", "cause-clusters", "cause-dots", "cause-points", "chronic-hit"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : []), ...(priorityOn ? PRIORITY_LAYER_IDS : [])],
+    [iconsReady, appMode, enabled.sites, enabled.ctx_buildings, cellMetric, zoom, forecastOn, priorityOn],
   );
 
   // A tap on empty map flies there and opens the closest real report.
@@ -537,7 +549,15 @@ export default function MapView() {
       map?.easeTo({ center: target, zoom: Math.max(POINTS_ZOOM + 1, map.getZoom()), duration: 700 });
       return;
     }
-    if (f.layer.id === "forecast-hit" || f.layer.id === "ctx-cells") {
+    if (f.layer.id === "forecast-hit" || f.layer.id === "priority-hit" || f.layer.id === "ctx-cells") {
+      const g = f.geometry as Polygon;
+      const ringCoords = g.coordinates?.[0] ?? [];
+      if (ringCoords.length) {
+        const n = ringCoords.length;
+        const c: [number, number] = [ringCoords.reduce((a, p) => a + p[0], 0) / n, ringCoords.reduce((a, p) => a + p[1], 0) / n];
+        setFocus(c);
+        mapRef.current?.easeTo({ center: c, zoom: Math.max(mapRef.current.getZoom(), 15.5), duration: 700 });
+      }
       select({ kind: "cell", id: String(f.properties?.id) });
       return;
     }
@@ -570,7 +590,7 @@ export default function MapView() {
     <div className="absolute inset-0">
       <Map
         ref={mapRef}
-        initialViewState={{ latitude: view.lat, longitude: view.lon, zoom: view.zoom }}
+        initialViewState={{ latitude: view.lat, longitude: view.lon, zoom: view.zoom, pitch: useMap.getState().three ? 52 : 0, bearing: useMap.getState().three ? -18 : 0 }}
         mapStyle={STYLE}
         onLoad={onLoad}
         onMove={syncViewport}
@@ -586,6 +606,7 @@ export default function MapView() {
         <NavigationControl position="bottom-right" />
         <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} cellMetric={cellMetric} />
         <ForecastLayer visible={forecastOn} period={forecastWeek ?? "4w"} bbox={bbox} selectedId={selectedId} />
+        <PriorityLayer visible={priorityOn} full={priorityFull} three={three} selectedId={selection?.kind === "cell" ? selectedId : ""} week={forecastWeek} T={T} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
           <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat && causes ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />
@@ -597,10 +618,87 @@ export default function MapView() {
           <Layer id="chat-highlight" type="circle" paint={{ "circle-radius": 23, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": T.fg, "circle-stroke-width": 4 }} />
         </Source>
         {iconsReady && (
-          // One clustered source for every visible kind, so groups never stack on top of each other.
-          // A group takes the color of whichever family (rats, food, shelter, works) it holds most of.
+          // Evidence (trash, shelter, works): its own clustered source, hollow and quieter, under the rat
+          // markers, so a count on the map is always "rat reports" or "records", never a mix of both.
           <Source
-            id="src-all" type="geojson" data={clusterFC}
+            id="src-causes" type="geojson" data={causesFC}
+            cluster clusterMaxZoom={16} clusterRadius={40}
+            clusterProperties={CLUSTER_PROPS}
+          >
+            <Layer
+              id="cause-clusters"
+              type="circle"
+              minzoom={markerMinZoom}
+              filter={GROUPED}
+              paint={{
+                "circle-color": CLUSTER_COLOR,
+                "circle-opacity": ["*", 0.08, inRing],
+                "circle-radius": ["interpolate", ["linear"], ["sqrt", TOTAL], 1.4, 8, 3.2, 10, 10, 14, 32, 17],
+                "circle-stroke-color": CLUSTER_COLOR,
+                "circle-stroke-width": 1.25,
+                "circle-stroke-opacity": ["*", 0.8, inRing],
+                "circle-pitch-alignment": "map",
+                "circle-pitch-scale": "viewport",
+              }}
+            />
+            <Layer
+              id="cause-cluster-count"
+              type="symbol"
+              minzoom={markerMinZoom}
+              filter={GROUPED}
+              layout={{
+                "text-field": COUNT_LABEL,
+                "text-size": ["interpolate", ["linear"], ["sqrt", TOTAL], 1.4, 10, 10, 12],
+                "text-font": ["Noto Sans Regular"],
+                "text-allow-overlap": false,
+                "text-padding": 0,
+                "symbol-sort-key": ["-", 0, TOTAL],
+              }}
+              paint={{ "text-color": T.fg2, "text-halo-color": T.bg, "text-halo-width": 1.1 }}
+            />
+            <Layer
+              id="cause-selected"
+              type="circle"
+              filter={["==", ["get", "id"], selectedId]}
+              paint={{ "circle-radius": 15, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": T.fg, "circle-stroke-width": 2 }}
+            />
+            <Layer
+              id="cause-dots"
+              type="circle"
+              minzoom={markerMinZoom}
+              maxzoom={GLYPH_ZOOM}
+              filter={SINGLE}
+              layout={{ "circle-sort-key": ["case", OPEN, 2, 1] }}
+              paint={{
+                "circle-radius": ["interpolate", ["linear"], ["zoom"], 13, 2.5, 16, 4.5],
+                "circle-color": CLUSTER_COLOR,
+                "circle-opacity": ["case", OPEN, ["*", 0.8, AGE_FADE, inRing], 0],
+                "circle-stroke-color": CLUSTER_COLOR,
+                "circle-stroke-width": 1,
+                "circle-stroke-opacity": ["*", 0.7, AGE_FADE, inRing],
+                "circle-pitch-alignment": "map",
+                "circle-pitch-scale": "viewport",
+              }}
+            />
+            <Layer
+              id="cause-points"
+              type="symbol"
+              minzoom={GLYPH_ZOOM}
+              filter={SINGLE}
+              layout={{
+                "icon-image": ["concat", "cat-", ["get", "category"], ["case", OPEN, "", "-closed"]],
+                "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.75, 17, 1, 19, 1.3],
+                "icon-allow-overlap": true,
+                "symbol-sort-key": ["case", OPEN, 1, 0],
+              }}
+              paint={{ "icon-opacity": ["*", AGE_FADE, inRing] }}
+            />
+          </Source>
+        )}
+        {iconsReady && (
+          // Rat reports: one clustered source. A group takes the color of the rat family it holds most of.
+          <Source
+            id="src-all" type="geojson" data={ratsFC}
             cluster clusterMaxZoom={16} clusterRadius={50}
             clusterProperties={CLUSTER_PROPS}
           >
@@ -676,7 +774,7 @@ export default function MapView() {
               filter={SINGLE}
               layout={{
                 "icon-image": ["concat", "cat-", ["get", "category"], ["case", OPEN, "", "-closed"]],
-                "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.8, 18, 1.1],
+                "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.85, 17, 1.15, 19, 1.5],
                 "icon-allow-overlap": true,
                 "symbol-sort-key": ["case", OPEN, 1, 0],
               }}
@@ -721,7 +819,7 @@ export default function MapView() {
           />
         </Source>
         {/* 100 m context ring around the selection: the radius the drivers panel counts within. */}
-        {ring && (
+        {ringVisible && ring && (
           <Source id="ctx-ring" type="geojson" data={ring}>
             <Layer id="ctx-ring-fill" type="fill" minzoom={14.5} paint={{ "fill-color": T.fg, "fill-opacity": 0.05 }} />
             <Layer id="ctx-ring-line" type="line" minzoom={14.5} paint={{ "line-color": T.fg, "line-width": 1.2, "line-opacity": 0.8, "line-dasharray": [3, 3] }} />
@@ -776,10 +874,15 @@ export default function MapView() {
         3D
       </button>
 
+      {/* One map: the layer rail, then the ranked block list beside it. The old recheck queue only
+          appears if the chat agent switches to Act. */}
       {appMode === "act" ? (
         <SiteQueue />
       ) : (
-        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} cellMetric={cellMetric} onCellMetricChange={setCellMetric} />
+        <>
+          <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} cellMetric={cellMetric} onCellMetricChange={setCellMetric} onOpenChange={setFlyoutOpen} />
+          <BlockQueue hidden={flyoutOpen} />
+        </>
       )}
 
       {/* Keyboard twin of the map (R2.11 / R9.1). In Act, the Places queue is already the list
@@ -807,7 +910,7 @@ export default function MapView() {
               List
             </button>
           )}
-          <MapLegend mode={viewMode} causes={causes} zoom={zoom} />
+          <MapLegend mode={viewMode} causes={causes} zoom={zoom} priority={priorityFull} />
         </div>
       )}
 
@@ -830,7 +933,12 @@ function HoverCard({ hover }: { hover: { x: number; y: number; layer: string; p:
   const { layer, p } = hover;
   const num = (k: string) => (typeof p[k] === "number" ? (p[k] as number) : Number(p[k]) || 0);
   let eyebrow = "", title = "", meta = "";
-  if (layer === "sites" || layer === "chronic-hit") {
+  if (layer === "priority-hit") {
+    eyebrow = `Priority block · #${num("rank")} of the city`;
+    title = String(p.label ?? p.neighborhood ?? "Block");
+    const band = typeof p.band === "string" ? p.band.replace("_", " ") : null;
+    meta = [p.label && p.neighborhood ? String(p.neighborhood) : null, `${num("expected").toFixed(1)} reports expected`, band, p.emerging ? "emerging" : null].filter(Boolean).join(" · ");
+  } else if (layer === "sites" || layer === "chronic-hit") {
     eyebrow = "Place to visit";
     title = String(p.address_block ?? p.neighborhood ?? "Chronic address");
     meta = `${num("reports")} report days · ${num("returns")} return days${p.due ? " · review suggested" : ""}`;

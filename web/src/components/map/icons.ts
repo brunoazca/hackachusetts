@@ -39,23 +39,26 @@ const FALLBACK = PackageX;
 export const iconId = (category: string, closed = false) => `cat-${category}${closed ? "-closed" : ""}`;
 
 /**
- * Map marker, 32-unit canvas with room for a soft shadow.
- * Open report: solid disc in the category color, white glyph, white ring — reads as "active".
- * Closed report: white disc, ring and glyph in the category color — same shape, clearly calmer.
- * Shape + fill carry status, so it does not depend on color alone.
+ * Map marker, 32-unit canvas (the disc is 22 px; the margin keeps the ring from clipping).
+ * Open report: solid disc in the category color, white glyph, a faint dark edge so it separates
+ * from a light ground. Closed report: hollow ring in the category color over a tinted interior,
+ * glyph in the category color — same shape, clearly quieter, and it works on both themes without
+ * a white disc or a baked drop shadow. Shape + fill carry status, so it does not depend on color alone.
  */
 export function markerSvg(category: string, size = 32, closed = false): string {
   const color = CATS[category]?.color ?? "#555";
   const ink = closed ? color : "#ffffff";
   const glyph = (GLYPH[category] ?? FALLBACK)
     .replace(/stroke="currentColor"/g, `stroke="${ink}"`)
-    .replace(/stroke-width="2"/g, 'stroke-width="2.25"')
-    .replace(/width="24"/, 'width="15"')
-    .replace(/height="24"/, 'height="15"')
-    .replace("<svg", '<svg x="8.5" y="7.5"');
+    .replace(/stroke-width="2"/g, closed ? 'stroke-width="2"' : 'stroke-width="2.25"')
+    .replace(/width="24"/, 'width="14"')
+    .replace(/height="24"/, 'height="14"')
+    .replace("<svg", '<svg x="9" y="9"');
+  const disc = closed
+    ? `<circle cx="16" cy="16" r="10.25" fill="${color}" fill-opacity=".28" stroke="${color}" stroke-width="2.25"/>`
+    : `<circle cx="16" cy="16" r="11" fill="${color}" stroke="rgba(0,0,0,.35)" stroke-width="1"/>`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 32 32">
-    <defs><filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.1" flood-color="#000" flood-opacity=".35"/></filter></defs>
-    <circle cx="16" cy="15" r="11" fill="${closed ? "#ffffff" : color}" stroke="${closed ? color : "#ffffff"}" stroke-width="${closed ? 2.25 : 2}" filter="url(#s)"/>
+    ${disc}
     ${glyph}
   </svg>`;
 }

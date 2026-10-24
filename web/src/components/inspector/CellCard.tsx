@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchCellDetail, fmtWeek, type CellDetail } from "@/lib/forecast";
 import { CELL_METRICS, fetchCellContext, fmtMetric, type CellContext } from "@/lib/cell-context";
 import { BandPill, Eyebrow, Meter, Ring, Skeleton } from "@/components/ui/bits";
+import { CameBackHere, SoFarHere } from "./HereSections";
 
 // Forecast block card: the number first, then the next weeks, why (drivers), how the model did here,
 // and the block profile (demographics, building age), collapsed.
@@ -47,7 +48,7 @@ export default function CellCard({ id }: { id: string }) {
   return (
     <article className="space-y-4 p-4 text-sm" aria-live="polite" data-cell={id}>
       <header>
-        <Eyebrow>Block forecast</Eyebrow>
+        <Eyebrow><span className="text-forecast">Next</span> · block forecast</Eyebrow>
         <h2 className="mt-0.5 text-title font-bold text-fg">{d.cell?.neighborhood ?? "Boston"}</h2>
       </header>
 
@@ -93,6 +94,13 @@ export default function CellCard({ id }: { id: string }) {
           <span aria-hidden className="mt-1 h-2 w-2 flex-none rounded-full bg-warn" />
           <span><b className="text-fg">Early warning.</b> Dead-animal and indoor-pest reports are rising here.</span>
         </p>
+      )}
+
+      {d.cell && (
+        <div className="space-y-3 border-y border-line py-3">
+          <SoFarHere lon={d.cell.lon} lat={d.cell.lat} />
+          <CameBackHere lon={d.cell.lon} lat={d.cell.lat} />
+        </div>
       )}
 
       <section>
