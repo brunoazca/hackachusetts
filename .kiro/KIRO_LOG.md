@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:10 — Modal: deployed + retrained risk-v1-20261024T210943 and s...
+- Teammate: Bruno
+- Agent: —
+- Did: Modal: deployed + retrained risk-v1-20261024T210943 and scored next 4 weeks
+- Why: new history config live: capture 0.650 vs baseline 0.543, MAE 0.0734 (baseline 0.0713)
+- Where: pipeline/modal_app.py
+- Idea: —
+
 ### 2026-10-24 17:02 — Three-city experiment (rat_audit/model/cities.py): shared...
 - Teammate: Bruno
 - Agent: —
