@@ -24,30 +24,30 @@ Part of the [Piper design standards](../README.md). Values: [`tokens.json`](../t
 
 | Name | Hex | Notes |
 |---|---|---|
-| soot | `#0F0D0C` | warm black |
-| velvet | `#171412` | panel base |
-| walnut | `#211D1A` | card |
-| walnut-2 | `#2A2521` | hover on card |
-| seam | `#302A25` | hairline (decorative only) |
-| edge | `#6A5F55` | control borders (3.1:1 on soot) |
-| ink-water | `#121416` | map water |
-| bone | `#EDE6DA` | text / open dots / light bg |
-| bone-2 | `#F5F0E6` | light panel |
-| bone-3 | `#FBF8F2` | light card |
-| ash | `#B5ACA0` | secondary text |
-| mink | `#968878` | tertiary text, closed dots |
-| brass | `#C9A55C` | brand, primary action |
-| brass-hi | `#D8B872` | hover |
-| brass-lo | `#B08E47` | pressed |
-| vermilion | `#F0643C` | came back |
-| delft | `#8FAEE0` | forecast |
-| verdigris | `#6FA594` | held / what worked |
+| soot | `#111315` | warm black |
+| velvet | `#181B1E` | panel base |
+| walnut | `#1F2327` | card |
+| walnut-2 | `#282D32` | hover on card |
+| seam | `#2F353B` | hairline (decorative only) |
+| edge | `#68717A` | control borders (3.1:1 on soot) |
+| ink-water | `#0D1A26` | map water |
+| bone | `#F2F3F1` | text / open dots / light bg |
+| bone-2 | `#FAFAF9` | light panel |
+| bone-3 | `#FFFFFF` | light card |
+| ash | `#AEB5BC` | secondary text |
+| mink | `#8A929A` | tertiary text, closed dots |
+| brass | `#F2F3F1` | brand, primary action |
+| brass-hi | `#FFFFFF` | hover |
+| brass-lo | `#C9CED3` | pressed |
+| vermilion | `#FF5A4E` | came back |
+| delft | `#6FA0FF` | forecast |
+| verdigris | `#3DBE7A` | held / what worked |
 | oxblood | `#7A1E2C` | seal, stamps |
 | error | `#FF7A6B` | system errors (night) |
 
-Deep variants for Bone theme: brass-deep `#7E5A1A`, vermilion-deep `#A8381A`,
-delft-deep `#2C4F8C`, verdigris-deep `#2F6B5A`, error-deep `#B3261E`,
-fg-2 `#4F463E`, fg-3 `#6B6056`, line `#D8CFC1`, edge `#857868`.
+Deep variants for Bone theme: brass-deep `#111315`, vermilion-deep `#C8241A`,
+delft-deep `#003DA5`, verdigris-deep `#00733A`, error-deep `#B3261E`,
+fg-2 `#4A4F55`, fg-3 `#646A71`, line `#DCDDD9`, edge `#82878D`.
 
 ### Semantic tokens
 
@@ -57,23 +57,23 @@ fg-2 `#4F463E`, fg-3 `#6B6056`, line `#D8CFC1`, edge `#857868`.
 | `panel` | velvet @ 82% + blur | bone-2 @ 88% + blur | floating panels |
 | `panel-solid` | velvet | bone-2 | panels under `prefers-contrast: more` / `prefers-reduced-transparency` |
 | `card` | walnut | bone-3 | cards inside panels |
-| `card-hover` | walnut-2 | `#F1EADF` | |
-| `line` | seam | `#D8CFC1` | dividers |
-| `edge` | edge | `#857868` | input / switch / secondary-button borders |
+| `card-hover` | walnut-2 | `#EEEFEC` | |
+| `line` | seam | `#DCDDD9` | dividers |
+| `edge` | edge | `#82878D` | input / switch / secondary-button borders |
 | `fg` | bone | soot | primary text |
-| `fg-2` | ash | `#4F463E` | secondary text |
-| `fg-3` | mink | `#6B6056` | tertiary text, captions, axis labels |
+| `fg-2` | ash | `#4A4F55` | secondary text |
+| `fg-3` | mink | `#646A71` | tertiary text, captions, axis labels |
 | `accent` | brass | brass-deep | brand, links, focus ring |
 | `accent-fg` | soot | bone | text on accent |
-| `accent-hover` | brass-hi | `#6B4C15` | |
-| `accent-press` | brass-lo | `#5A3F11` | |
+| `accent-hover` | brass-hi | `#2A2E33` | |
+| `accent-press` | brass-lo | `#3A3F45` | |
 | `return` | vermilion | vermilion-deep | came back, escalate |
 | `forecast` | delft | delft-deep | model output |
 | `held` | verdigris | verdigris-deep | stayed closed, what worked |
 | `seal` | oxblood | oxblood | stamps |
 | `danger` | error | error-deep | errors only, never data |
 | `scrim` | soot @ 48% | soot @ 24% | behind ⌘K and work order |
-| `water` | ink-water | `#DCD8CF` | map water |
+| `water` | ink-water | `#C9DDF0` | map water |
 
 ### Data encoding (color + shape, always both)
 

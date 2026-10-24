@@ -103,7 +103,7 @@ Accessibility → truthful data → equity → clarity → brand flourish. A flo
   Fewer map marks. Fixed a theme bug: a themed subtree now sets its own text color.
 
 - **1.0.0 — Oct 24, 2026.** First release. Hamelin palette; the contrast guard
-  raised `mink` to `#968878`, Bone `return` to `#A8381A` and Bone `edge` to
-  `#857868` after three pairs measured under target. Bodoni Moda + Atkinson
+  raised `mink` to `#8A929A`, Bone `return` to `#C8241A` and Bone `edge` to
+  `#82878D` after three pairs measured under target. Bodoni Moda + Atkinson
   Hyperlegible Next/Mono, 22 components, motion catalog, map spec, equity and
   accessibility rules, mockup.

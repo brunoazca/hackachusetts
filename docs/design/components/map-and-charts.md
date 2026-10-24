@@ -18,16 +18,16 @@ type. Values:
 
 | Layer group | Night | Bone |
 |---|---|---|
-| background / land | `#0F0D0C` | `#EDE6DA` |
-| water | `#121416` | `#DCD8CF` |
+| background / land | `#111315` | `#F2F3F1` |
+| water | `#0D1A26` | `#C9DDF0` |
 | parks / green | `#13120F` (no green) | `#E4DFD3` |
-| buildings (z ≥ 15) | `#171412`, outline `#211D1A` | `#E2DACD` |
+| buildings (z ≥ 15) | `#181B1E`, outline `#1F2327` | `#E2DACD` |
 | roads minor | `#1C1916`, width ×1 | `#DDD4C6` |
-| roads major | `#2A2521` | `#D2C8B8` |
+| roads major | `#282D32` | `#D2C8B8` |
 | rail / transit | `#241F1B`, dashed | `#CFC5B5` |
-| boundaries | `#302A25` | `#C9BFAF` |
-| labels: places | Atkinson 12, `#968878`, halo `#0F0D0C` 1.2 | `#6B6056`, halo `#EDE6DA` |
-| labels: streets | Atkinson 11, `#6A5F55` | `#857A6E` |
+| boundaries | `#2F353B` | `#C9BFAF` |
+| labels: places | Atkinson 12, `#8A929A`, halo `#111315` 1.2 | `#646A71`, halo `#F2F3F1` |
+| labels: streets | Atkinson 11, `#68717A` | `#857A6E` |
 | POI labels | hidden | hidden |
 
 The basemap is deliberately colorless so data owns the color. Glyphs: use the
