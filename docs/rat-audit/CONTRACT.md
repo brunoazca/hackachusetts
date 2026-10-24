@@ -45,7 +45,8 @@ decisions, ingest_runs) and `20261024000002_analysis_schema.sql` (correlations,
 grid_cells, model_runs, predictions, price_impact). Category ids: `contracts/categories.json`.
 
 Rules:
-- Every row has a `source_id` that exists in `sources` (name, url, retrieved_at).
+- Every row has a `source_id` that exists in `sources` (name, url, retrieved_at, **update_mode** live|daily|static,
+  update_note). Show the mode next to each layer and in source chips; list in `pipeline/README.md`.
 - **Privacy:** no owner names, no staff names, no house numbers in any `public` schema column.
   Those go to schema `private` (`parcel_owners`, `incident_details`) and reach the UI only via
   `/api/reveal` when the user clicks the eye icon (blurred until then, every reveal logged).

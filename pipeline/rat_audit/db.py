@@ -13,11 +13,17 @@ def connect() -> psycopg.Connection:
 
 
 def upsert_source(conn: psycopg.Connection, id: str, name: str, url: str, notes: str | None = None) -> None:
+    """Register a source. Its live/daily/static mode comes from ingest/update_modes.py (required)."""
+    from .ingest.update_modes import mode_for
+
+    mode, mode_note = mode_for(id)
     conn.execute(
-        """insert into sources (id, name, url, retrieved_at, notes) values (%s, %s, %s, now(), %s)
+        """insert into sources (id, name, url, retrieved_at, notes, update_mode, update_note)
+           values (%s, %s, %s, now(), %s, %s, %s)
            on conflict (id) do update set name = excluded.name, url = excluded.url,
-             retrieved_at = excluded.retrieved_at, notes = coalesce(excluded.notes, sources.notes)""",
-        (id, name, url, notes),
+             retrieved_at = excluded.retrieved_at, notes = coalesce(excluded.notes, sources.notes),
+             update_mode = excluded.update_mode, update_note = excluded.update_note""",
+        (id, name, url, notes, mode, mode_note),
     )
 
 

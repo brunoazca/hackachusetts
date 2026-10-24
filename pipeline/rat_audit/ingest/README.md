@@ -127,8 +127,8 @@ FY2024 is incomplete, not a drop.
 - Assessment FY2026 `ee73430d-96c0-423e-ad21-c4cfb54c8961` (184,552 PIDs, condo units included) + FY2025 `6b7e460e-33f6-4e61-80bc-1bef2e73ac54` (`TOTAL_VALUE` joined on PID → `value_fy25`).
 - `parcels`: pid, address_block (street + ZIP, no number), zip, land_use (`LU_DESC`), yr_built, own_occ, units (`RES_UNITS`; null for R1/R2/R3/CD, filled with 1/2/3/1), value_fy25, value_fy26, lat/lon.
 - Coordinates (the assessment has none), first hit wins: (1) shoelace centroid of the Parcels25 polygon from the city GIS MapServer `gisportal.boston.gov/arcgis/rest/services/Parcels/Parcels25/MapServer/0` (98.5k polygons, `MAP_PAR_ID` = PID, assessment `GIS_ID` maps condo units to their lot); (2) RentSmart property table `f6b5aee9-…` (`rs_prop_pid`); (3) SAM address points `fee8ee07-…` matched on number + street + ZIP (suffixes normalised, AVE→AV, TER→TE, …); (4) condo main point via `CM_ID`; (5) nearest same-parity number on the street within 20.
-- Coverage: 184,520 / 184,552 = 100.0% (184,495 polygon, 25 SAM). Polygon centroid vs RentSmart point: median 10 m, p90 28 m.
-- Owner, mailing address and full address → `private.parcel_owners` only.
+- Coverage: 175,975 / 176,007 = 100.0% after dropping CP (before: 184,520 / 184,552; 184,495 polygon, 25 SAM). Polygon centroid vs RentSmart point: median 10 m, p90 28 m.
+- Owner and full address → `private.parcel_owners` only. `mail_address` is left null to save space. Condo parking (`LU = CP`, 8,545 rows) is skipped.
 - Vacant land → `places` kind `vacant_parcel` (id `vacant:<pid>`), `LU_DESC` in RES LAND (Unusable) / RESIDENTIAL LAND / RES LAND (Secondary) / COMMERCIAL LAND / COM LAND (Unusable|Secondary) / INDUSTRIAL LAND / IND LAND (Secondary|Unusable). Parking lots, ancillary and underwater land excluded. 6,046 rows, 6,038 located.
 - Re-runs write only rows that changed (`_changed`), so the 100 MB tables don't double with dead tuples. No dates, so `since` is ignored.
 - Caveat: the centroid of an irregular lot can fall outside it. Condo units share their building's point.
