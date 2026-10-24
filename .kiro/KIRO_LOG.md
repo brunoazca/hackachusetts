@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:02 — Three-city experiment (rat_audit/model/cities.py): shared...
+- Teammate: Bruno
+- Agent: —
+- Did: Three-city experiment (rat_audit/model/cities.py): shared-feature panel for Boston/Cambridge/Somerville, NaN for signals a city lacks, in-memory grids; backtested own-city vs pooled vs +ACS, per-city capture to model_runs (cell_week_poisson_gbm_cities). Deployed the 2017+/no-pandemic/no-ce model to Modal and started retrain+score.
+- Why: Per-city capture vs baseline; deploy the best Boston model
+- Where: pipeline/rat_audit/model/cities.py pipeline/tests/test_model_cities.py model_runs
+- Idea: Pooled model wins for Cambridge (+10.5 pt vs baseline) and Somerville; Boston keeps its own model. Serving CAM/SOM needs grid_cells for those cities (Carol).
+
+### 2026-10-24 17:01 — Exposure (0055b00f) and predictors (af332c28) campaigns d...
+- Teammate: Bruno
+- Agent: —
+- Did: Exposure (0055b00f) and predictors (af332c28) campaigns done, in Kiro library; added to knowledge/15 and spec (R4.0b exposure tie-breaker P1, R6.2 feature verdicts)
+- Why: Rank by who is affected; decide forecast features
+- Where: .kiro/specs/rat-audit/requirements.md, knowledge/15_boston_rat_audit.md
+- Idea: Hotspots near food 3.26x, public schools 2.58x, child care 1.81x, long-term care 1.48x, hospitals 0. Forecast: keep trash+dumping + ISD violations (0.360->0.368); drop weather, MBTA, Article 80
+
 ### 2026-10-24 16:58 — Forecast trains 2017+ minus pandemic; ce_* out of CORE
 - Teammate: Bruno
 - Agent: —
