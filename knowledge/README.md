@@ -4,7 +4,7 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 
 ## Read in this order
 
-Docs are grouped: **00–03 competition & event**, **10–19 strategy, evidence & ideas**, **20–24 data & verification**.
+Docs are grouped: **00–03 competition & event**, **10–19 strategy, evidence & ideas**, **20–25 data & supporting research**.
 
 ### Competition & event
 
@@ -38,13 +38,13 @@ Docs are grouped: **00–03 competition & event**, **10–19 strategy, evidence 
 | [21 — Dataset verification](21_civic_dataset_verification.md) | All 22 starter CSVs, missing fields, date ranges and tested join limitations |
 | [22 — Public data and repositories](22_public_data_and_repositories.md) | Verified APIs/CSVs, 21 existing public repos, licenses, join recipes and a use for every starter dataset |
 | [23 — Live data sources](23_live_data_sources.md) | The live Socrata/API sources and how Kiro reaches them (MCP setup) |
-| [24 — RodentOps: data and research catalog](24_rodentops_data_and_research_catalog.md) | The RodentOps-scoped dataset subset with resource IDs, academic/public-health research (OpenAlex, CDC PLACES, Vancouver complaint study), prioritized data gaps and next steps; pairs with document 19 |
+| [24 — RodentOps: data and research catalog](24_rodentops_data_and_research_catalog.md) | The RodentOps-scoped dataset subset with resource IDs, academic/public-health research (OpenAlex, CDC PLACES, Vancouver complaint study), prioritized data gaps and next steps; pairs with document 25 |
 
 ## Most consequential findings
 
 - The team has selected **RodentOps**. Earlier alternatives such as Last 100 Feet, ShiftFits and OpenDoor remain in the atlas as research context.
 - For rodent control, **RodentOps** is the recommended tool: turn recurring complaints into a reviewed inspection and follow-up brief. Exact-category checks found 5,321 Boston Rodent Activity records in the larger 2026 source; Cambridge separately publishes smart-device and sighting records. These are reports/catches, not population estimates. See document 16 for provenance and limits.
-- Start the RodentOps build with **documents 19 and 24**: case reconstruction, explicit unknowns and a reviewed follow-up brief. Boston already has analytics and pilots; a new workflow gap needs validation. Big Belly and DND inventory resources checked here date to 2016 and should not drive current recommendations.
+- Start the RodentOps build with **documents 24 and 25**: case reconstruction, explicit unknowns and a reviewed follow-up brief. Boston already has analytics and pilots; a new workflow gap needs validation. Big Belly and DND inventory resources checked here date to 2016 and should not drive current recommendations.
 - Public data goes beyond the kit: Cambridge ramp GeoJSON, Bluebikes GBFS/CSV, MBTA facility/alert relationships, MassGIS polygons, O*NET skills and OpenAlex identifiers were inspected directly. Integration pitfalls and failed probes are preserved in document 22.
 - The City has public curb-map, parking-sign and Bluebikes display code. Findhelp already tracks referral outcomes. Our ideas need a specific improvement over those existing capabilities.
 - Boston already has AI search, youth resource navigation, permitting work and curb-data projects. Identify a specific completion gap before claiming novelty.
