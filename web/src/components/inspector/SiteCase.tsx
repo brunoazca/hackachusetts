@@ -39,7 +39,7 @@ export default function SiteCase({ id }: { id: string }) {
 
   useEffect(() => {
     let live = true;
-    setD(null); setAllDrivers(false); setAllReports(false);
+    setD(null);
     fetchSiteDetail(id).then((x) => live && setD(x)).catch((e) => live && setError(String(e)));
     return () => { live = false; };
   }, [id]);
@@ -53,7 +53,7 @@ export default function SiteCase({ id }: { id: string }) {
     };
     const reports = d.reports.map((r) => ({ ...r, back: cameBack(r.opened) }));
     const t0 = Math.min(...reports.map((r) => Date.parse(r.opened)));
-    const t1 = Math.max(Date.now(), ...reports.map((r) => Date.parse(r.opened)));
+    const t1 = Math.max(Date.parse(d.site.last_at), ...reports.map((r) => Date.parse(r.opened)));
     const drivers = Object.entries(d.drivers_100m_12mo).sort((a, b) => b[1] - a[1]);
     return { reports, t0, t1, drivers, max: drivers[0]?.[1] ?? 1 };
   }, [d]);
