@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:57 — Removed the import status, refresh, theme and motion butt...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed the import status, refresh, theme and motion buttons from the top bar; new reports now load automatically every 5 minutes
+- Why: Bruno wanted a cleaner top bar and no manual refresh
+- Where: web/src/components/shell/TopBar.tsx
+- Idea: —
+
 ### 2026-10-24 18:54 — Motion graphic v2: no opening, one short headline per sce...
 - Teammate: Bruno
 - Agent: —
