@@ -43,9 +43,17 @@ language sql stable security definer set search_path = public as $$
   from (
     select jsonb_build_object(
       'type', 'Feature', 'id', city, 'properties', jsonb_build_object('city', city),
-      'geometry', st_asgeojson(st_simplifypreservetopology(st_union(geom::geometry), 0.0003), 5)::jsonb
+      'geometry', st_asgeojson(g, 5)::jsonb
     ) f
-    from tracts where city in ('boston', 'cambridge', 'somerville') group by city
+    from (
+      -- Close the slivers between simplified tracts (buffer out/in ~30 m), then drop interior rings.
+      select city, st_simplifypreservetopology(st_collect(st_makepolygon(st_exteriorring(d.geom))), 0.0002) g
+      from (
+        select city, (st_dump(st_buffer(st_union(st_buffer(geom::geometry, 0.0003)), -0.0003))).geom
+        from tracts where city in ('boston', 'cambridge', 'somerville') group by city
+      ) d
+      group by city
+    ) c
   ) x
 $$;
 

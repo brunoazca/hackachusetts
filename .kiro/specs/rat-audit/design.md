@@ -194,8 +194,7 @@ Layout [R0]: top bar (name, live badge + Refresh, search, mode switch **Assess /
 (site case, report / place / cell details, findings, forecast summary, work order, trial designer, assistant) opens in
 side panels or popovers on interaction, never as more top-level tabs. Selection is shared across modes. Panel placement,
 sizes and visual design are decided in the UI design pass (Gui); the component list below is what must exist, not where it sits.
-Depth [R0.5]: store flag `depth: "simple" | "explore"`. Simple hides the layer control, filters, timeline, heatmap and
-area draw and keeps queue → case → approve; Explore shows them all. Layer toggles read their tested result from
+Depth [R0.5]: none — all data by default (every layer on, heatmap view; icons from zoom 15; zoomed-out data aggregated server-side). Layer toggles read their tested result from
 `correlations` (keyed by layer id; fallback "not tested") [R2.16].
 Map store (`web/src/lib/map-store.ts`): `flyTo, setLayers, setFilters, setHighlight, select, setPanel, setForecastWeek`.
 

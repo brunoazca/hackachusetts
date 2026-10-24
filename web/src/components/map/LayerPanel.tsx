@@ -19,13 +19,6 @@ const GROUPS: { id: string; label: string }[] = [
   { id: "displace", label: "Displacement" },
 ];
 
-// Simple depth (R0.5): every rat signal, plus each driver that showed an effect in the block-level
-// tests (leading or weak). Drivers with no effect or not tested stay in Explore.
-export const SIMPLE_LAYERS = [
-  "rodent", "pest", "dead_animal", "bite", "rodent_program", "inat_rat",
-  "trash_storage", "trash_early", "litter", "dumpster", "move_in_trash", "ce_trash_storage", "weeds",
-];
-
 export function activeCategories(enabled: Record<string, boolean>) {
   return Object.keys(CATS).filter((id) => enabled[id]);
 }
@@ -103,15 +96,13 @@ function LayerRow({ icon, label, meta, checked, onToggle }: { icon: ReactNode; l
 export default function LayerPanel({ enabled, onChange, mode, onModeChange, count, loading, coverage, zoom }: Props) {
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
-  const explore = useMap((s) => s.depth) === "explore";
   const [open, setOpen] = useState<DockId | null>(null);
   const flyoutId = useId();
   const btnRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const flyRef = useRef<HTMLDivElement>(null);
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
-  const periodLabel = PRESETS.find((p) => Math.abs(span - p.days) < 2)?.label.replace(" ", "") ?? `${span}d`;
 
-  const groupIds = (g: string) => Object.entries(CATS).filter(([id, c]) => c.group === g && (explore || SIMPLE_LAYERS.includes(id))).map(([id]) => id);
+  const groupIds = (g: string) => Object.entries(CATS).filter(([, c]) => c.group === g).map(([id]) => id);
   const onIn = (ids: string[]) => ids.filter((id) => enabled[id]).length;
 
   const dock: { id: DockId; label: string; icon: ReactNode; badge?: number }[] = [
@@ -127,10 +118,9 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
       icon: <span aria-hidden className="flex h-5 w-6 overflow-hidden rounded-[3px]">{ERA_STOPS.map(([, c]) => <span key={c} className="flex-1" style={{ background: c }} />)}</span>,
       badge: (enabled.ctx_housing ? 1 : 0) + (enabled.ctx_buildings ? 1 : 0),
     },
-    { id: "period", label: `Period: ${periodLabel}`, icon: <span className="font-mono text-[11px] font-semibold text-fg">{periodLabel}</span> },
-    ...(explore ? [{ id: "view" as DockId, label: `View: ${mode}`, icon: (
+    { id: "view" as DockId, label: `Show as: ${MODES.find((m) => m.id === mode)?.label ?? mode}`, icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden className="text-fg-2"><path d="m12 2 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5" /><path d="m3 17 9 5 9-5" /></svg>
-    ) }] : []),
+    ) },
   ];
 
   // Esc closes and returns focus to the dock button that opened the flyout.

@@ -54,6 +54,37 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Guilherme found v1 ugly, inefficient, too AI-ish and short on color; wanted it on top of the current app
 - Where: web/src/**, docs/design/research/less-ai-ish.md, docs/design/README.md, docs/design/tokens/tokens.json
 - Idea: Map team palette (neutral/red/amber/emerald) to tokens instead of rewriting every component
+### 2026-10-24 15:17 — Started Kiro Crew campaign 'Rat Audit — new datasets to a...
+- Teammate: Bruno
+- Agent: —
+- Did: Started Kiro Crew campaign 'Rat Audit — new datasets to add' with the full list of sources we already have
+- Why: Find datasets that fill gaps (sewer, waste, problem properties, health, benchmarks)
+- Where: none
+- Idea: Candidates: BWSC sewer/catch basins, dumpster permits, Project Oscar compost bins, BPDA pipeline, BHA properties, problem properties, MA DPH health data, NYC/Chicago inspection outcomes
+
+### 2026-10-24 15:16 — Removed Simple/Explore: all layers on by default, heatmap...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed Simple/Explore: all layers on by default, heatmap view, icons from zoom 15; spec R0.5 updated
+- Why: Bruno: remove the distinction, all data by default
+- Where: web/src/components/{map,shell}, web/src/lib/map-store.ts, .kiro/specs/rat-audit/{requirements,design}.md
+- Idea: none
+
+### 2026-10-24 15:04 — Map: zoomed-out data now aggregated server-side (map_inci...
+- Teammate: Bruno
+- Agent: —
+- Did: Map: zoomed-out data now aggregated server-side (map_incident_bins: category × ~12 px cell with n/n_open), so nothing is truncated; clusters and heatmaps sum counts; raw points from zoom 15
+- Why: Bruno: West End looked empty of evidence — it had 782 trash tickets + 404 out-early + 299 litter in 90 days, hidden by the 20k newest-rows cap across 51k city reports
+- Where: supabase/migrations/20261024300004_api_map_bins.sql, web/src/components/map/MapView.tsx, web/src/lib/queries.ts
+- Idea: none
+
+### 2026-10-24 14:56 — Map: coverage fog (outside the 3 cities always; over any ...
+- Teammate: Bruno
+- Agent: —
+- Did: Map: coverage fog (outside the 3 cities always; over any city with no data for the active layers, labelled), BOS/CAM/SOM badges per layer from coverage_matrix(), Old housing choropleth (ACS % built before 1940, all 3 cities), Buildings by year built at zoom ≥ 15 (Boston parcels) + building card
+- Why: Bruno: scope to where we have data with foggy disabled areas; where is the old-housing data
+- Where: web/src/components/map/{ContextLayers,LayerPanel,MapView}.tsx, web/src/components/inspector/ParcelCard.tsx, supabase/migrations/20261024300003_api_context_layers.sql, supabase/migrations/20261024100005_data_coverage.sql
+- Idea: Tract union left sliver holes; buffer out/in + exterior rings fixes the outline
 
 ### 2026-10-24 14:51 — Cambridge + Somerville evidence loaded (Cambridge 2z9k-mv...
 - Teammate: Bruno
@@ -132,6 +163,13 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Keep every campaign's results in one file and keep personal paths out of the public repo
 - Where: .kiro/campaigns/rat-audit-research-campaigns.md, .kiro/campaigns/rat-platform/, .kiro/campaigns/rodents-property-values*.json, .kiro/KIRO_LOG.md
 - Idea: Build Boston-first, ship a persistence+season ranker before ML; Cambridge rodent data needs redistribution permission
+### 2026-10-24 14:47 — Wrote docs/submission/data-report.md: 22 datasets, join k...
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Wrote docs/submission/data-report.md: 22 datasets, join keys (ward/zip/neighborhood), rat findings (+0.87 heat, +0.32 return), overlaps for the video
+- Why: Need a video-ready data summary with main points, relationships, overlaps
+- Where: docs/submission/data-report.md
+- Idea: Lead with 'rats follow heat and trash and come back' — strongest two numbers carry the demo narrative
 
 ### 2026-10-24 14:37 — Baseline (mean of last 4 weeks), Poisson GBM, 26-week rol...
 - Teammate: Bruno
@@ -300,6 +338,37 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Bruno wanted to see the data on a map now; map track (Gui) can build on it
 - Where: web/src/components/{map,inspector,shell/TopBar}, web/src/lib/queries.ts, supabase/migrations/20261024300001_api_map_draft.sql, web/package.json
 - Idea: MapLibre 6 worker must be served from /public under Next 16 (postinstall copies it)
+### 2026-10-24 14:08 — Piper design system: full spec (color semantics both them...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Piper design system: full spec (color semantics both themes, type scale, spacing/sizes, layout at 1280x800 + phone, motion catalog, MapLibre paint, charts, 22 components, flows, keyboard, voice, a11y ship gate) plus token files
+- Why: Give the team one source of truth to build the UI from
+- Where: docs/rat-audit/design-system.md, web/src/styles/piper.css, web/src/lib/design-tokens.ts
+- Idea: Map padding so flyTo never lands under a panel; work order always in Bone theme; Tune auto-stops after 8s
+
+### 2026-10-24 13:58 — Brand v3: Piper (Pied Piper), tagline 'Follow the rats.',...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Brand v3: Piper (Pied Piper), tagline 'Follow the rats.', Hamelin palette (soot, bone, brass, vermilion, Delft, oxblood), Bodoni Moda + Atkinson Next/Mono, Line Rat mark, Rings + Tune motifs, plague-doctor Easter egg
+- Why: Guilherme wanted the brand to openly evoke rats/plague but in a chic way
+- Where: docs/rat-audit/brand.md
+- Idea: Rule: plague aesthetic for the brand only, never for places (1900 SF Chinatown quarantine precedent)
+
+### 2026-10-24 13:53 — Brand v2: renamed to Undertow, tagline 'Closed isn't gone...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Brand v2: renamed to Undertow, tagline 'Closed isn't gone.', Low Tide palette (warm=observed, cool=forecast, CVD-safe), Newsreader + Atkinson Hyperlegible Next/Mono, Tidelines + Currents motifs, equity and WCAG 2.2 sections, references board
+- Why: Guilherme found v1 tagline vague and asked for more unique, sleeker, accessible and equity-aware design
+- Where: docs/rat-audit/brand.md
+- Idea: Listening-gap texture for under-reporting tracts; Two voices (resident words vs closure note); Day mode required for field use
+
+### 2026-10-24 13:47 — Defined brand + product design: name Ratio, Nocturne pale...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Defined brand + product design: name Ratio, Nocturne palette, Instrument Serif/Geist/Geist Mono, Echoes motif, key screens, demo moment
+- Why: Make the rat product feel refined and YC-chic, not gross or scrappy
+- Where: docs/rat-audit/brand.md
+- Idea: Echo rings = recurrence; Source Line to adjacent vacant lot; closed is grey not green; tagline: Stop closing cases. Start closing blocks.
 
 ### 2026-10-24 13:44 — Added Supabase MCP (local scope, project rat-audit) and l...
 - Teammate: Bruno

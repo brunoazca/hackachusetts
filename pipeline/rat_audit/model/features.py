@@ -45,7 +45,15 @@ SIGNALS = {
     "ce_trash_storage": "Trash storage code-enforcement tickets",
 }
 RING_SIGNALS = ["dead_animal", "pest", "trash_storage", "ce_trash_storage"]
-PLACE_KINDS = ["demolition", "excavation", "restaurant", "bigbelly", "vacant_parcel"]
+RING_CANDIDATE = ["litter", "dumping", "ce_overfill"]
+PLACE_KINDS = ["demolition", "excavation", "restaurant", "bigbelly", "vacant_parcel", "city_lot"]
+# ACS 5-year tract values (tracts.attrs.acs) joined to the cell centroid; static.
+ACS = {
+    "acs_renters": ("pct_renters", "Share of households renting (census tract)"),
+    "acs_pre1940": ("pct_housing_pre1940", "Share of housing built before 1940 (census tract)"),
+    "acs_poverty": ("pct_poverty", "Share of residents in poverty (census tract)"),
+    "acs_density": (None, "People per km² (census tract)"),
+}
 
 LABELS: dict[str, str] = {
     "rodent_l1": "Rodent reports last week",
@@ -65,12 +73,28 @@ LABELS: dict[str, str] = {
     "precip_s4": "Rain, last 4 weeks (inches)",
     "snow_s4": "Snow, last 4 weeks (inches)",
     "events_s4": "Events nearby, last 4 weeks",
+    "food_rodent_s12": "Failed food inspections for rodents/pests, last 12 weeks",
+    "food_rodent_s52": "Failed food inspections for rodents/pests, last year",
+    "permit_new_s4": "New demolition/construction permits, last 4 weeks",
+    "permit_new_s12": "New demolition/construction permits, last 12 weeks",
+    "permit_active_m4": "Active demolition/construction permits, last 4 weeks (avg)",
+    "permit_active_m12": "Active demolition/construction permits, last 12 weeks (avg)",
+    "inat_rat_s52": "iNaturalist rat sightings, last year",
+    "precip_l1": "Rain last week (inches)",
+    "precip_s12": "Rain, last 12 weeks (inches)",
+    "heavy_rain_s4": "Heavy-rain days (≥ 0.5 in), last 4 weeks",
+    "hot_days_s4": "Hot days (≥ 85 °F), last 4 weeks",
+    "freeze_days_s12": "Hard-freeze nights (≤ 20 °F), last 12 weeks",
 }
 for _k, _v in SIGNALS.items():
     LABELS[f"{_k}_s4"] = f"{_v}, last 4 weeks"
     LABELS[f"{_k}_s12"] = f"{_v}, last 12 weeks"
 for _k in RING_SIGNALS:
     LABELS[f"ring_{_k}_s4"] = f"{SIGNALS[_k]} in neighbouring blocks, last 4 weeks"
+for _k in RING_CANDIDATE:
+    LABELS[f"ring_{_k}_s4"] = f"{SIGNALS[_k]} in neighbouring blocks, last 4 weeks"
+for _k, (_, _v) in ACS.items():
+    LABELS[_k] = _v
 for _k in PLACE_KINDS:
     LABELS[f"place_{_k}"] = f"{_k.replace('_', ' ').capitalize()} sites in this cell"
 
@@ -80,7 +104,21 @@ CORE = (
     + [f"ring_{k}_s4" for k in RING_SIGNALS]
     + ["vol_311_52", "parcels", "yr_built_med", "units", "woy_sin", "woy_cos", "move_out", "tmax_m4"]
 )
-CANDIDATE = ["precip_s4", "snow_s4", "events_s4"] + [f"place_{k}" for k in PLACE_KINDS]
+# New-data groups, tested one at a time against CORE (see backtest results in the commit log).
+CANDIDATE_GROUPS = {
+    "food": ["food_rodent_s12", "food_rodent_s52"],
+    "permits": ["permit_new_s4", "permit_new_s12", "permit_active_m4", "permit_active_m12"],
+    "acs": list(ACS),
+    "city_lots": ["place_city_lot"],
+    "inat": ["inat_rat_s52"],
+    "ring_more": [f"ring_{k}_s4" for k in RING_CANDIDATE],
+    "weather_more": ["precip_s4", "snow_s4", "precip_l1", "precip_s12", "heavy_rain_s4", "hot_days_s4",
+                     "freeze_days_s12"],
+}
+CANDIDATE = list(dict.fromkeys(
+    ["precip_s4", "snow_s4", "events_s4"] + [f"place_{k}" for k in PLACE_KINDS if k != "city_lot"]
+    + [f for g in CANDIDATE_GROUPS.values() for f in g]
+))
 
 
 def label(feature: str) -> str:
@@ -193,14 +231,38 @@ def _static(conn: psycopg.Connection, cell_pos: dict) -> pd.DataFrame:
 
 
 def _weather(conn: psycopg.Connection, weeks: pd.DatetimeIndex) -> pd.DataFrame:
-    rows = conn.execute("select day, precip_in, snow_in, tmax_f from weather_daily").fetchall()
-    w = pd.DataFrame(rows, columns=["day", "precip_in", "snow_in", "tmax_f"])
+    rows = conn.execute("select day, precip_in, snow_in, tmax_f, tmin_f from weather_daily").fetchall()
+    w = pd.DataFrame(rows, columns=["day", "precip_in", "snow_in", "tmax_f", "tmin_f"])
     w["day"] = pd.to_datetime(w["day"])
     w["week"] = w["day"] - pd.to_timedelta(w["day"].dt.weekday, unit="D")
-    wk = w.groupby("week").agg(precip=("precip_in", "sum"), snow=("snow_in", "sum"), tmax=("tmax_f", "mean"))
+    w["heavy"] = (w["precip_in"] >= 0.5).astype(float)
+    w["hot"] = (w["tmax_f"] >= 85).astype(float)
+    w["freeze"] = (w["tmin_f"] <= 20).astype(float)
+    wk = w.groupby("week").agg(precip=("precip_in", "sum"), snow=("snow_in", "sum"), tmax=("tmax_f", "mean"),
+                               heavy=("heavy", "sum"), hot=("hot", "sum"), freeze=("freeze", "sum"))
     wk = wk.reindex(weeks)
     wk["tmax"] = wk["tmax"].interpolate(limit_direction="both")
-    return wk.fillna({"precip": 0.0, "snow": 0.0})
+    return wk.fillna({"precip": 0.0, "snow": 0.0, "heavy": 0.0, "hot": 0.0, "freeze": 0.0})
+
+
+def _future_tmax_m4(tmax: pd.Series, last_obs: pd.Timestamp, week: pd.Timestamp) -> float:
+    """tmax_m4 for a forecast week: observed weekly highs up to `last_obs`, and for weeks not yet
+    observed the same-ISO-week average over earlier years (climatology), never later data.
+
+    Backtest over 2025-26 origins, horizons 2-5: mean error 2.2 °F vs 4.9 °F for copying the
+    last observed 4 weeks.
+    """
+    obs = tmax[tmax.index <= last_obs].dropna()
+    woy = obs.index.isocalendar().week
+    vals = []
+    for k in range(4, 0, -1):
+        w = week - pd.Timedelta(weeks=k)
+        if w <= last_obs and w in obs.index:
+            vals.append(obs[w])
+        else:
+            same = obs[woy.values == w.isocalendar().week]
+            vals.append(same.mean() if len(same) else obs.tail(4).mean())
+    return float(np.mean(vals))
 
 
 def _events(conn: psycopg.Connection, cell_pos: dict, weeks: pd.DatetimeIndex) -> np.ndarray:
@@ -214,6 +276,77 @@ def _events(conn: psycopg.Connection, cell_pos: dict, weeks: pd.DatetimeIndex) -
     e["week"] = t - pd.to_timedelta(t.dt.weekday, unit="D")
     e["cell_id"] = cell_ids_for(e["lon"].values, e["lat"].values)
     return _counts(e, cell_pos, weeks)
+
+
+def _week_of(ts: pd.Series) -> pd.Series:
+    t = pd.to_datetime(ts, utc=True).dt.tz_convert("America/New_York").dt.tz_localize(None).dt.normalize()
+    return t - pd.to_timedelta(t.dt.weekday, unit="D")
+
+
+def _food(conn: psycopg.Connection, cell_pos: dict, weeks: pd.DatetimeIndex) -> np.ndarray:
+    """Failed food inspections citing rodent/pest violations: one count per (license, inspection date)."""
+    rows = conn.execute(
+        """
+        select distinct p.id, v->>'date', p.lon, p.lat
+        from places p, jsonb_array_elements(coalesce(p.attrs->'rodent_violations', '[]'::jsonb)) v
+        where p.city = 'boston' and p.kind = 'restaurant' and p.lon is not null and v->>'status' = 'Fail'
+        """
+    ).fetchall()
+    f = pd.DataFrame(rows, columns=["id", "day", "lon", "lat"])
+    if f.empty:
+        return np.zeros((len(cell_pos), len(weeks)), dtype=np.float32)
+    d = pd.to_datetime(f["day"], errors="coerce")
+    f["week"] = d - pd.to_timedelta(d.dt.weekday, unit="D")
+    f["cell_id"] = cell_ids_for(f["lon"].values, f["lat"].values)
+    return _counts(f, cell_pos, weeks)
+
+
+def _permits(conn: psycopg.Connection, cell_pos: dict, weeks: pd.DatetimeIndex) -> tuple[np.ndarray, np.ndarray]:
+    """(new, active) demolition/excavation permit counts per cell-week. Active = issued ≤ week ≤ expiry."""
+    rows = conn.execute(
+        """
+        select starts_at, ends_at, lon, lat from places
+        where city = 'boston' and kind in ('demolition', 'excavation') and lon is not null and starts_at is not null
+        """
+    ).fetchall()
+    p = pd.DataFrame(rows, columns=["starts_at", "ends_at", "lon", "lat"])
+    shape = (len(cell_pos), len(weeks))
+    if p.empty:
+        return np.zeros(shape, np.float32), np.zeros(shape, np.float32)
+    p["week"] = _week_of(p["starts_at"])
+    p["cell_id"] = cell_ids_for(p["lon"].values, p["lat"].values)
+    new = _counts(p, cell_pos, weeks)
+    end = _week_of(p["ends_at"]).fillna(p["week"] + pd.Timedelta(weeks=26))  # no expiry: assume 6 months
+    first = weeks[0]
+    s = ((p["week"] - first).dt.days // 7).clip(0, len(weeks)).astype(int).values
+    e = ((end - first).dt.days // 7 + 1).clip(0, len(weeks)).astype(int).values
+    ci = p["cell_id"].map(cell_pos)
+    ok = ci.notna().values & (e > s)
+    diff = np.zeros((shape[0], shape[1] + 1), np.float32)
+    np.add.at(diff, (ci[ok].astype(int).values, s[ok]), 1)
+    np.add.at(diff, (ci[ok].astype(int).values, e[ok]), -1)
+    return new, np.cumsum(diff, axis=1)[:, :-1]
+
+
+def _acs(conn: psycopg.Connection, cells: list[dict]) -> pd.DataFrame:
+    """ACS tract values at each cell centroid (ST_Contains); cells outside any tract get the median."""
+    rows = conn.execute(
+        """
+        select u.i, t.attrs->'acs', st_area(t.geom::geography) / 1e6
+        from unnest(%s::float8[], %s::float8[]) with ordinality u(lon, lat, i)
+        left join tracts t on st_contains(t.geom::geometry, st_setsrid(st_point(u.lon, u.lat), 4326))
+        """,
+        ([c["lon"] for c in cells], [c["lat"] for c in cells]),
+    ).fetchall()
+    out = pd.DataFrame(index=pd.Index([c["id"] for c in cells], name="cell_id"), columns=list(ACS), dtype=float)
+    for i, acs, km2 in rows:
+        if not acs:
+            continue
+        cid = cells[i - 1]["id"]
+        for k, (src, _) in ACS.items():
+            v = (acs.get("pop") / km2 if km2 and acs.get("pop") is not None else None) if src is None else acs.get(src)
+            out.loc[cid, k] = v
+    return out.astype(float).fillna(out.astype(float).median())
 
 
 def build_panel(
@@ -280,6 +413,22 @@ def build_panel(
     ev = np.concatenate([ev, np.zeros((ev.shape[0], 1), np.float32)], axis=1)
     feats["events_s4"] = _window_sum(_cum(ev), 1, 4)
 
+    def pad(m):
+        return np.concatenate([m, np.zeros((m.shape[0], 1), np.float32)], axis=1)
+
+    for k in RING_CANDIDATE:
+        feats[f"ring_{k}_s4"] = np.log1p(_window_sum(_cum(_ring(mat(k), cols, rows)), 1, 4))
+    food = _cum(pad(_food(conn, cell_pos, weeks)))
+    feats["food_rodent_s12"] = np.log1p(_window_sum(food, 1, 12))
+    feats["food_rodent_s52"] = np.log1p(_window_sum(food, 1, 52))
+    new, active = _permits(conn, cell_pos, weeks)
+    new, active = _cum(pad(new)), _cum(pad(active))
+    feats["permit_new_s4"] = np.log1p(_window_sum(new, 1, 4))
+    feats["permit_new_s12"] = np.log1p(_window_sum(new, 1, 12))
+    feats["permit_active_m4"] = np.log1p(_window_sum(active, 1, 4) / 4)
+    feats["permit_active_m12"] = np.log1p(_window_sum(active, 1, 12) / 12)
+    feats["inat_rat_s52"] = np.log1p(_window_sum(_cum(mat("inat_rat")), 1, 52))
+
     # Week-level (same for every cell) features.
     wx = _weather(conn, all_weeks)
     pre = np.concatenate([[0.0], np.cumsum(wx["precip"].values)])
@@ -288,12 +437,22 @@ def build_panel(
     n_all = len(all_weeks)
     t = np.arange(n_all)
     hi, lo = np.clip(t, 0, n_all), np.clip(t - 4, 0, n_all)
+
+    def wsum(col, b):  # sum of weekly `col` over weeks t-b..t-1
+        cum = np.concatenate([[0.0], np.cumsum(wx[col].values)])
+        return cum[t] - cum[np.clip(t - b, 0, n_all)]
+
     week_feats = pd.DataFrame(
         {
             "week_start": all_weeks,
             "precip_s4": pre[hi] - pre[lo],
             "snow_s4": sno[hi] - sno[lo],
             "tmax_m4": (tmx[hi] - tmx[lo]) / np.maximum(hi - lo, 1),
+            "precip_l1": wsum("precip", 1),
+            "precip_s12": wsum("precip", 12),
+            "heavy_rain_s4": wsum("heavy", 4),
+            "hot_days_s4": wsum("hot", 4),
+            "freeze_days_s12": wsum("freeze", 12),
         }
     )
 
@@ -308,7 +467,7 @@ def build_panel(
     for k, v in feats.items():
         panel[k] = v.ravel().astype(np.float32)
     panel = panel.merge(week_feats, on="week_start", how="left")
-    st = _static(conn, cell_pos)
+    st = _static(conn, cell_pos).join(_acs(conn, cells))
     panel = panel.merge(st, left_on="cell_id", right_index=True, how="left")
     lonlat = pd.DataFrame({"cell_id": cell_ids, "lon": [c["lon"] for c in cells], "lat": [c["lat"] for c in cells]})
     panel = panel.merge(lonlat, on="cell_id", how="left")
@@ -333,6 +492,7 @@ def build_panel(
         woy_h = float(ws_h.isocalendar().week)
         f["woy_sin"], f["woy_cos"] = np.sin(2 * np.pi * woy_h / 52.18), np.cos(2 * np.pi * woy_h / 52.18)
         f["move_out"] = float((ws_h.month == 8 and ws_h.day >= 26) or (ws_h.month == 9 and ws_h.day <= 7))
+        f["tmax_m4"] = _future_tmax_m4(wx["tmax"].iloc[:-1], weeks[-1], ws_h)
         f["is_future"] = True
         fut.append(f)
     panel = pd.concat([panel, *fut], ignore_index=True)
@@ -340,4 +500,4 @@ def build_panel(
     return panel[["cell_id", "week_start", "y", "is_future", "lon", "lat"] + CORE + CANDIDATE]
 
 
-__all__ = ["CORE", "CANDIDATE", "LABELS", "SIGNALS", "label", "monday", "cell_ids_for", "build_panel"]
+__all__ = ["CORE", "CANDIDATE", "CANDIDATE_GROUPS", "LABELS", "SIGNALS", "label", "monday", "cell_ids_for", "build_panel"]

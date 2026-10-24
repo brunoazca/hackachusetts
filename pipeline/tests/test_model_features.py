@@ -1,7 +1,10 @@
 """Tests for rat_audit.model.features helpers (pure) — mainly the no-leakage windows."""
 import numpy as np
+import pandas as pd
 
-from rat_audit.model.features import CANDIDATE, CORE, _cum, _ring, _window_sum, cell_ids_for, label
+from rat_audit.model.features import (
+    CANDIDATE, CANDIDATE_GROUPS, CORE, _cum, _future_tmax_m4, _ring, _window_sum, cell_ids_for, label,
+)
 from rat_audit.model.grid import build_grid
 from shapely.geometry import box
 
@@ -41,3 +44,25 @@ def test_point_ids_match_grid_ids():
 def test_every_feature_has_a_plain_label():
     for f in CORE + CANDIDATE:
         assert label(f) != f.replace("_", " "), f
+
+
+def test_candidate_groups_are_candidates_with_labels():
+    for fs in CANDIDATE_GROUPS.values():
+        for f in fs:
+            assert f in CANDIDATE or f in CORE, f
+            assert label(f) != f.replace("_", " "), f
+
+
+def test_future_tmax_never_reads_after_last_observed_week():
+    weeks = pd.date_range("2023-01-02", periods=160, freq="7D")
+    tmax = pd.Series(50 + 20 * np.sin(np.arange(160) / 52 * 2 * np.pi), index=weeks)
+    last = weeks[120]
+    target = weeks[123]  # needs weeks 119..122; 121 and 122 are not observed yet
+    base = _future_tmax_m4(tmax, last, target)
+    leaked = tmax.copy()
+    leaked[leaked.index > last] = 999.0
+    assert _future_tmax_m4(leaked, last, target) == base
+    # unobserved weeks use same-ISO-week values from earlier years, not the last observed weeks
+    clim = [tmax[(tmax.index <= last) & (tmax.index.isocalendar().week == w.isocalendar().week)].mean()
+            for w in weeks[121:123]]
+    assert np.isclose(base, np.mean([tmax[weeks[119]], tmax[weeks[120]], *clim]))

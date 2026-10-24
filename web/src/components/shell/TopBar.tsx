@@ -1,35 +1,38 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { fetchLiveStatus } from "@/lib/queries";
-import { useMap, type Depth, type Mode } from "@/lib/map-store";
+import { useMap, type Mode } from "@/lib/map-store";
 import { restoreTheme, useTheme } from "@/lib/theme-store";
 import LineRat from "@/components/brand/LineRat";
 
-// Top bar: three floating glass clusters (brand + live, mode controls, actions).
-// Spec: docs/design/components/overlays-feedback.md (Live pill), controls.md (Segmented).
+// Top bar for everyday users: name, what view you are in, and a plain "Updated 12 minutes ago"
+// with one button to check for new reports. No jargon, no blinking dots.
 
 function ago(iso: string | null) {
-  if (!iso) return "unknown";
+  if (!iso) return "a while ago";
   const min = Math.round((Date.now() - Date.parse(iso)) / 60000);
   if (min < 1) return "just now";
-  if (min < 60) return `${min} min ago`;
+  if (min < 60) return `${min} minute${min === 1 ? "" : "s"} ago`;
   const h = Math.round(min / 60);
-  return h < 24 ? `${h} h ago` : `${Math.round(h / 24)} d ago`;
+  if (h < 24) return `${h} hour${h === 1 ? "" : "s"} ago`;
+  const d = Math.round(h / 24);
+  return `${d} day${d === 1 ? "" : "s"} ago`;
 }
 
-export function Segmented<T extends string>({ label, value, options, onChange, size = "md" }: {
-  label: string; value: T; options: { id: T; label: string }[]; onChange: (v: T) => void; size?: "sm" | "md";
+export function Segmented<T extends string>({ label, value, options, onChange }: {
+  label: string; value: T; options: { id: T; label: string; hint?: string }[]; onChange: (v: T) => void;
 }) {
   return (
-    <div role="radiogroup" aria-label={label} className={`flex gap-0.5 rounded-md border border-line bg-card p-0.5 ${size === "sm" ? "h-8" : "h-9"}`}>
+    <div role="radiogroup" aria-label={label} className="flex h-9 gap-0.5 rounded-md border border-line bg-card p-0.5">
       {options.map((o) => (
         <button
           key={o.id}
           type="button"
           role="radio"
           aria-checked={value === o.id}
+          title={o.hint}
           onClick={() => onChange(o.id)}
-          className="rounded-sm border border-transparent px-2.5 text-[13px] font-medium text-fg-2 transition-colors duration-150 hover:text-fg aria-checked:border-edge aria-checked:bg-bg aria-checked:text-fg"
+          className="rounded-sm px-3 text-[13px] font-semibold text-fg-2 transition-colors duration-150 hover:text-fg aria-checked:bg-fg aria-checked:text-bg"
         >
           {o.label}
         </button>
@@ -41,8 +44,6 @@ export function Segmented<T extends string>({ label, value, options, onChange, s
 export default function TopBar() {
   const mode = useMap((s) => s.mode);
   const setMode = useMap((s) => s.setMode);
-  const depth = useMap((s) => s.depth);
-  const setDepth = useMap((s) => s.setDepth);
   const setPanel = useMap((s) => s.setPanel);
   const theme = useTheme((s) => s.theme);
   const toggleTheme = useTheme((s) => s.toggle);
@@ -70,55 +71,57 @@ export default function TopBar() {
       const res = await fetch("/api/refresh", { method: "POST" });
       const body = await res.json();
       if (body.updatedAt) setUpdatedAt(body.updatedAt);
-      setMsg(res.status === 429 ? "Already up to date" : res.ok ? "Updated" : body.error ?? "Refresh failed");
+      setMsg(res.status === 429 ? "Already up to date" : res.ok ? "New reports loaded" : "Couldn't check right now");
     } catch {
-      setMsg("Refresh failed");
+      setMsg("Couldn't check right now");
     } finally {
       setBusy(false);
+      setTimeout(() => setMsg(null), 4000);
     }
   }, []);
 
   return (
     <header className="pointer-events-none absolute inset-x-3 top-3 z-40 flex h-11 items-center gap-3">
-      <div className="glass pointer-events-auto flex h-11 items-center gap-2.5 rounded-[12px] pl-3 pr-2">
-        <LineRat width={36} className="text-fg" />
+      <div className="glass pointer-events-auto flex h-11 items-center gap-2.5 rounded-lg pl-3 pr-3">
+        <LineRat width={34} className="text-fg" />
         <h1 className="text-[18px] font-bold leading-none tracking-[-0.02em] text-fg">Piper<span className="text-return">.</span></h1>
-        <span className="hidden text-[13px] text-fg-3 xl:inline">Boston · Cambridge · Somerville</span>
-        <span className="ml-1 flex h-7 items-center gap-2 rounded-full border border-line bg-card px-2.5 font-mono text-xs text-fg-2">
-          <span aria-hidden className="h-1.5 w-1.5 animate-live rounded-full bg-return" />
-          <span aria-live="polite">Live · updated {ago(updatedAt)}</span>
-        </span>
+        <span className="hidden text-[13px] text-fg-3 lg:inline">Rat reports in Boston, Cambridge &amp; Somerville</span>
       </div>
 
-      <div className="glass pointer-events-auto mx-auto flex h-11 items-center gap-2 rounded-[12px] px-1.5">
+      <div className="glass pointer-events-auto mx-auto flex h-11 items-center rounded-lg px-1">
         <Segmented<Mode>
-          label="Mode"
+          label="View"
           value={mode}
-          options={[{ id: "assess", label: "Assess" }, { id: "act", label: "Act" }]}
+          options={[
+            { id: "assess", label: "Map", hint: "See every report on the map" },
+            { id: "act", label: "Places to visit", hint: "Addresses where rats keep coming back" },
+          ]}
           onChange={(m) => { setMode(m); setPanel("inspector"); }}
         />
-        <Segmented<Depth>
-          label="Depth"
-          value={depth}
-          options={[{ id: "simple", label: "Simple" }, { id: "explore", label: "Explore" }]}
-          onChange={setDepth}
-        />
       </div>
 
-      <div className="glass pointer-events-auto flex h-11 items-center gap-1 rounded-[12px] px-1.5">
+      <div className="glass pointer-events-auto flex h-11 items-center gap-1 rounded-lg pl-3 pr-1">
+        <span className="text-[13px] text-fg-2" aria-live="polite">
+          {busy ? "Checking for new reports…" : msg ?? <>Updated {ago(updatedAt)}</>}
+        </span>
         <button
           type="button"
           onClick={refresh}
           disabled={busy}
-          className="h-8 rounded-sm border border-edge px-3 text-[13px] font-semibold text-fg transition-colors duration-150 hover:bg-card-hover active:scale-[.98] disabled:opacity-40"
+          aria-label="Check for new reports"
+          title="Check for new reports"
+          className="grid h-9 w-9 place-items-center rounded-md text-fg-2 transition-colors duration-150 hover:bg-card-hover hover:text-fg disabled:opacity-40"
         >
-          {busy ? "Refreshing…" : "Refresh"}
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden className={busy ? "animate-spin" : ""}>
+            <path d="M21 12a9 9 0 1 1-2.6-6.4" /><path d="M21 4v5h-5" />
+          </svg>
         </button>
+        <span aria-hidden className="mx-0.5 h-5 w-px bg-line" />
         <button
           type="button"
           onClick={toggleTheme}
-          aria-label={`Switch to ${theme === "night" ? "Bone (light)" : "Night (dark)"} theme (T)`}
-          title={`${theme === "night" ? "Bone" : "Night"} theme · T`}
+          aria-label={theme === "night" ? "Use light colors" : "Use dark colors"}
+          title={theme === "night" ? "Light colors (T)" : "Dark colors (T)"}
           className="grid h-9 w-9 place-items-center rounded-md text-fg-2 transition-colors duration-150 hover:bg-card-hover hover:text-fg"
         >
           {theme === "night" ? (
@@ -127,8 +130,6 @@ export default function TopBar() {
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>
           )}
         </button>
-        <span className="sr-only" aria-live="polite">{msg}</span>
-        {msg && <span className="px-1 text-xs text-fg-3">{msg}</span>}
       </div>
     </header>
   );
