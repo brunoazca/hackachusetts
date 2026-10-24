@@ -7,7 +7,10 @@ At the end, we read this file to write the Kiro usage story.
 ## Rules
 - Add the newest entry at the TOP of the log below.
 - Never delete old entries. Only add.
-- One entry per real piece of work. Not for tiny no-op turns.
+- One entry per real piece of work — code, a decision, OR a pure-talk idea.
+- Ideas count: a brainstorm with no file change still gets an entry. Put the
+  thought in `Did:` and `Idea:`, set `Where: none`.
+- Skip only true no-ops (pure reading, a yes/no with no thinking).
 - Keep each line short and true.
 
 ## Entry format
@@ -27,6 +30,14 @@ If the agent does not know the teammate's name, it asks before logging.
 ---
 
 ## Log
+
+### 2026-10-24 10:31 — Made pure-talk ideas/brainstorm loggable
+- Teammate: Guilherme
+- Agent: default
+- Did: Made pure-talk ideas/brainstorm loggable
+- Why: ideas are our strongest Kiro story; must be captured even with no code
+- Where: .kiro/steering/kiro-log.md, .kiro/KIRO_LOG.md
+- Idea: log a brainstorm with Where: none
 
 ### 2026-10-24 10:13 — Mirrored the Civic Action datasets into the repo
 - Teammate: Guilherme
