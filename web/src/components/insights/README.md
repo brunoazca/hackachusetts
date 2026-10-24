@@ -5,6 +5,55 @@ R7.4–5. The database writers, shared shell, map and migrations belong to other
 fronts. Work started on `feat/rat-audit-insights` at `1af6bcd`. It is now committed
 and integrated into local `main`; see the latest verification below.
 
+## Evidence-first panel — 2026-10-24 16:56
+
+Rebased this front onto main `cf4389b`, retaining main's Piper UI and research
+component, all previous log entries and the matched-v2 follow-up (`b9e61dc`).
+Carol's latest review identified a product problem: a technical forecast dump and
+three empty sections did not explain what the evidence means.
+
+- Research findings now lead the panel when the current findings table is empty.
+  The existing report's repeat-risk contrast (8–12% versus 56–75%) and matched
+  comparison (RR 1.03, CI 0.89–1.20) have a visible historical label/date, pinned
+  source links and observational limitations. They are not newly computed DB rows.
+  Published findings replace this fallback when present.
+- Forecast explains the real tradeoff: top-decile capture 64.3% versus 54.3%, but
+  count MAE 0.075 versus 0.071. Raw IDs, drivers, four-week tables and scores remain
+  available in closed, keyboard-accessible details. No model results were changed.
+- Two buttons reuse existing map-store actions: review places with repeat reports;
+  select the forecast's first week and enable its map layer. One pending-results
+  notice replaces repeated empty costs/price/findings sections.
+- All edited panels use existing theme tokens; no dependencies or shared-shell
+  changes. Re-read TEAM/CONTRACT/spec and Carol's assignment: this remains task 2.8.
+
+Verification:
+
+- **58 synthetic/mock/SSR checks passed**; **5 checks on an older real local export
+  passed**. The export is test input only, not a production fallback.
+- **4 shared-database checks passed; 3 skipped** because correlations and
+  price_impact are still empty and there are no finding/cost source references.
+  Forecast comparison covers 13,768 real predictions across four weeks.
+- Scoped ESLint and production build passed. Build retains two Next font-fallback
+  metadata warnings; no compile/type errors.
+- Real browser at port 3038: Insights GET 200, source-labelled research, honest
+  forecast summary, keyboard disclosure, both map actions and night/bone themes.
+  No uncaught JS errors or internal panel overflow (378/378 px), including a
+  390 px viewport. The shared shell still slightly clips the panel's left border
+  (content x=-1) and overlaps controls on mobile; full mobile acceptance is open.
+- One map_forecast request returned 500 during the browser run; an independent
+  read-only GET immediately returned 200 with 1,345 cells. forecast_surface,
+  forecast_run and site_queue returned 200. Do not infer durable map/API reliability
+  from the panel tests. The map/model owner should investigate if this recurs.
+- Initial browser harness attempts incorrectly blocked read-only RPCs sent by POST
+  and looked for a switch before opening its menu. Corrected the harness after
+  checking the stable read-only SQL; no server responses were mocked.
+
+Evidence: `/private/tmp/insights-product-review-20261024/` (`tests-local.log`,
+`live.log`, `build.log`, `browser-preview.json`, theme/forecast/mobile screenshots).
+Generated stale dev cache was moved to a scratch backup before restarting the
+preview. No secrets printed, shared writes, migration changes, push or deploy.
+Fresh findings/cost/price results remain Analytics A's publishing dependency.
+
 ## RPC now live; v2 client follow-up — 2026-10-24 16:34
 
 Analytics supplied/applied the RPC outside this front. Public-key GET now returns

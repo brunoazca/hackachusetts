@@ -31,6 +31,19 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:56 — 2.8: turn the Insights dump into evidence and next steps
+- Teammate: Carol
+- Agent:
+- Did: Lead with dated, source-linked historical findings when fresh findings are absent; explain repeat-report risk and the inconclusive matched response comparison. Summarize the forecast's ranking/count tradeoff, retain technical evidence behind a keyboard disclosure, and consolidate missing results into one notice.
+- Why: Carol's review showed that raw cell IDs, scores and empty sections did not communicate useful insights.
+- Where: web/src/components/insights/{HistoricalFindings,ForecastSummary,InsightsPanel,InsightsView,PriceImpact}.tsx, __tests__/render.test.tsx, README.md; .kiro/KIRO_LOG.md.
+- Evidence: Rebased over main cf4389b; preserved all previous log entries, Piper changes and matched-v2 follow-up b9e61dc. Re-read TEAM, CONTRACT, spec and Carol's task 2.8 scope; only Insights and its work log changed.
+- Evidence: 58 synthetic/mock/SSR checks plus 5 checks on an earlier real local export passed. Shared DB: 4 passed, 3 skipped (no correlations, costs/prices or their source references); 13,768 real predictions compared. Scoped lint and production build passed, with two existing font-fallback metadata warnings.
+- Evidence: Real browser GET 200, no response fixtures, no uncaught JS errors; two map actions, keyboard details, both themes and 378/378 px panel content verified. Historical 8–12%/56–75% and RR 1.03 (CI 0.89–1.20) come from the pinned team report, not a fresh DB calculation.
+- Evidence: At 390 px the panel has no internal overflow, but the shared shell still clips its left border slightly and overlaps mobile controls. One map_forecast 500 was followed by independent read-only GET 200 (1,345 cells); surface/run/queue reads succeeded. Full shared-map/mobile acceptance is not claimed.
+- Decision: Reuse existing map-store actions only; no migrations, recomputation, shared DB writes, push or deploy. Keep real-data limitations visible. Prepare this verified front for the previously authorized local main integration.
+- Idea: Analytics A must publish findings/costs for the three skipped live comparisons. Artifacts and preserved dev-cache backup: /private/tmp/insights-product-review-20261024/.
+
 ### 2026-10-24 16:35 — 2.8: real forecast RPC validation and v2 matched-result compatibility
 - Teammate: Carol
 - Agent:

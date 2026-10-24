@@ -7,6 +7,7 @@ import FindingCard from "../FindingCard";
 import FindingChart from "../FindingChart";
 import ForecastSummary from "../ForecastSummary";
 import InsightsView from "../InsightsView";
+import HistoricalFindings from "../HistoricalFindings";
 import { parseChart, toFinding, toForecast, toInsightsData } from "../parse";
 import type { InsightsState } from "../types";
 import { badChartRow, barRow, baselineRun, fullPayload, lineRow, modelRun, nullRow, scatterRow } from "./fixtures";
@@ -111,8 +112,8 @@ test("forecast summary compares model to baseline explicitly", () => {
   assert.match(html, /Drivers: Trash storage reports \(\+0\.8\)/);
   assert.match(html, /Oct 26, 2026[\s\S]*Nov 2, 2026/);
   assert.match(html, />60 of 900</);
-  // "rats" only appears in the disclaimer.
-  assert.equal(count(html, /\brats?\b/gi), 1);
+  // Both summary and expanded detail distinguish reports from rat counts.
+  assert.doesNotMatch(html, /predicted rats|expected rats/i);
 });
 
 test("forecast summary for a baseline-only run and a run missing baseline scores", () => {
@@ -172,14 +173,13 @@ test("ready state renders all sections, a caveat next to every price figure, val
   assertA11yRefs(html);
 });
 
-test("ready state with partial data shows per-section empty states", () => {
+test("partial data uses one pending notice without three empty result sections", () => {
   const html = render({ status: "ready", data: toInsightsData({ correlations: [nullRow], price_impact: [], forecast: null }) });
-  assert.match(html, /No forecast run has been written yet/);
-  assert.match(html, /No counted costs have been computed yet/);
-  assert.match(html, /No price comparisons have been computed yet/);
+  assert.equal(count(html, /data-pending/g), 1);
+  assert.match(html, /Awaiting published results: forecast, recorded costs, property-price comparisons/);
+  assert.match(html, /Missing results do not establish that there is no association or no cost/);
+  assert.doesNotMatch(html, /No findings have been computed|No counted costs have been computed|No price comparisons have been computed/);
   assert.equal(count(html, /data-finding=/g), 1);
-  const noFindings = render({ status: "ready", data: toInsightsData({ ...fullPayload, correlations: [] }) });
-  assert.match(noFindings, /No findings have been computed yet/);
 });
 
 test("fixtures are imported by tests only", () => {
@@ -325,4 +325,47 @@ test("v2 unavailable matched interval gets an insufficient-data badge", () => {
   assert.match(html, /Insufficient data/);
   assert.doesNotMatch(html, /No association found/);
   assert.match(html, /Fixture/);
+});
+
+test("an available forecast does not hide dated historical research when current findings are empty", () => {
+  const data = toInsightsData({ ...fullPayload, correlations: [], price_impact: [] });
+  const html = renderToStaticMarkup(<InsightsView state={{ status: "ready", data }} research={<HistoricalFindings />} />);
+  assert.match(html, /Historical results, not recalculated with the map/);
+  assert.match(html, /8–12%/);
+  assert.match(html, /56–75%/);
+  assert.match(html, /Risk ratio 1.03 · 95% CI 0.89–1.20/);
+  assert.ok(html.indexOf("data-research-snapshot") < html.indexOf("data-forecast-summary"));
+  assert.match(html, /Awaiting published results: updated findings, recorded costs, property-price comparisons/);
+  assertA11yRefs(html);
+});
+
+test("published findings replace the historical fallback rather than mixing datasets", () => {
+  const html = renderToStaticMarkup(<InsightsView state={{ status: "ready", data: toInsightsData(fullPayload) }} research={<HistoricalFindings />} />);
+  assert.doesNotMatch(html, /data-research-snapshot/);
+  assert.ok(html.indexOf("data-finding=") < html.indexOf("data-forecast-summary"));
+  assert.doesNotMatch(html, /data-pending/);
+});
+
+test("forecast summary explains the tradeoff while preserving all evidence in closed details", () => {
+  const f = toForecast(fullPayload.forecast)!;
+  const html = renderToStaticMarkup(<ForecastSummary forecast={{ ...f, mae: { model: 0.07518, baseline: 0.07132 }, top10: { model: 0.6429, baseline: 0.5433 } }} onShowForecast={() => {}} />);
+  assert.match(html, /Better at locating reports. Less accurate on counts/);
+  assert.match(html, /64.3% of reports/);
+  assert.match(html, /54.3% of reports/);
+  assert.match(html, /The benchmark was more accurate on counts/);
+  assert.match(html, /Show this forecast on the map/);
+  const detailTag = html.match(/<details[^>]*data-model-details[^>]*>/)![0];
+  assert.doesNotMatch(detailTag, /\sopen/);
+  assert.match(html, /data-score="MAE"/);
+  assert.match(html, /data-cell="g250_1_1"/);
+  assert.match(html, /fx-run-1/);
+  assertA11yRefs(html);
+});
+
+test("ranking and baseline summaries never claim an advantage without evidence", () => {
+  const f = toForecast(fullPayload.forecast)!;
+  assert.match(renderToStaticMarkup(<ForecastSummary forecast={f} />), /The simple benchmark ranked areas better/);
+  assert.match(renderToStaticMarkup(<ForecastSummary forecast={{ ...f, top10: { model: 0.5, baseline: 0.5 } }} />), /No ranking gain/);
+  assert.match(renderToStaticMarkup(<ForecastSummary forecast={{ ...f, top10: { model: 0.5, baseline: null } }} />), /ranking advantage is unknown/);
+  assert.match(renderToStaticMarkup(<ForecastSummary forecast={{ ...f, isBaseline: true }} />), /A forecast from the last four weeks/);
 });
