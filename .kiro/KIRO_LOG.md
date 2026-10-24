@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:23 — Filled the three empty submission docs: description.md (j...
+- Teammate: Guilherme
+- Agent: kirocrew (default)
+- Did: Filled the three empty submission docs: description.md (judge-facing, now full Piper writeup with cited numbers), kiro-usage.md (specific .kiro artifacts + real spec-override/data-audit moments), demo-script.md (Piper shot list pointing to video-script.md)
+- Why: They were empty <fill-in> templates; description.md + kiro-usage.md are required artifacts and were a disqualification risk
+- Where: docs/submission/description.md, docs/submission/kiro-usage.md, docs/submission/demo-script.md
+- Idea: check_submission_ready.py now reports READY; overclaim + secret scans clean
+
+### 2026-10-24 16:19 — Ranked remaining product work by implementation difficulty
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Ranked remaining product work by implementation difficulty
+- Why: Focus the next changes on trustworthy evidence and a useful inspector output
+- Where: none (planning only)
+- Idea: Suggested order: hide unfinished controls; fix date-only rendering; clarify distinct-day versus record counts; add source links and per-source freshness; export an inspection brief; stabilize release and happy-path checks; record the current-build demo; add saved human review; complete responsive accessibility; unify recurrence and deduplication; add a bounded cited assistant; validate treatment outcomes with field follow-up. Highest product value is evidence review to a usable brief, followed by a saved human decision. Existing push remains blocked pending destination approval.
+
 ### 2026-10-24 16:17 — Prepared requested product and submission changes for push
 - Teammate: Guilherme
 - Agent: Codex (not Kiro build activity)
