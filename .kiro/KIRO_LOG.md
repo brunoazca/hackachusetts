@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:03 — Deployed web/ to Vercel project rat-ops (https://rat-ops....
+- Teammate: Bruno
+- Agent: —
+- Did: Deployed web/ to Vercel project rat-ops (https://rat-ops.vercel.app) and added GitHub Actions deploy-on-push workflow
+- Why: Public demo URL; every push to main touching web/ redeploys production
+- Where: .github/workflows/deploy.yml, .gitignore
+- Idea: Workflow needs repo secret VERCEL_TOKEN from the rat-ops Vercel account
+
 ### 2026-10-24 14:03 — Added pure unit tests for the 250 m grid fallback
 - Teammate: Bruno
 - Agent: —
