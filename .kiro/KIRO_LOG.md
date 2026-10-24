@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:36 — Integrate the chat disclosure into the published app
+- Teammate: Carol
+- Agent: Codex
+- Did: Integrated the current remote main with the tested chat disclosure, preserving both logs. Updated the assistant instructions so new answers leave source lists in the disclosure while keeping caveats visible. Nine route/UI tests, TypeScript and scoped ESLint passed.
+- Why: A push to the feature branch did not update the main checkout or trigger the production workflow; Carol still saw the old source chips.
+- Where: web/src/lib/agent/prompt.ts, web/src/components/chat/Message.tsx
+- Idea: Verify the running main and deployment rather than treating a feature-branch push as publication.
+
 ### 2026-10-24 17:34 — Interpretability block on the forecast artifact (Actual tab)
 - Teammate: Bruno
 - Agent: —
