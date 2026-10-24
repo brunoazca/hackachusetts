@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:29 — Insight cards: rat/category marker icons on nearby rodent...
+- Teammate: Bruno
+- Agent: —
+- Did: Insight cards: rat/category marker icons on nearby rodent reports and nearby-cause rows; shorter dates, street-only addresses, trimmed headings and stat labels
+- Why: Panels were text-heavy and rows wrapped
+- Where: web/src/components/insight/{EvidenceCard,RecordCard,shared}.tsx
+- Idea: —
+
 ### 2026-10-24 19:28 — Agent drives the Insight panel: new server tools get_rank...
 - Teammate: Bruno
 - Agent: —

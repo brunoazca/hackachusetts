@@ -2,6 +2,7 @@
 import type { ReactNode } from "react";
 import { useMap } from "@/lib/map-store";
 import { fmtNumber } from "@/components/insights/format";
+import { markerDataUrl } from "@/components/map/icons";
 
 // Small pieces shared by the Insight panel views (ranking, area, report, evidence).
 
@@ -52,12 +53,14 @@ export type Cause = { kind: string; label: string; count: number; nearest_m: num
 export function Causes({ causes }: { causes: Cause[] }) {
   if (!causes.length) return <p className="text-small text-fg-3">No trash, lots or building work recorded within 150 m.</p>;
   return (
-    <ul className="space-y-1.5">
+    <ul className="space-y-1">
       {causes.slice(0, 6).map((c) => (
-        <li key={c.kind} className="flex items-baseline justify-between gap-3 text-small">
-          <span className="text-fg-2">{c.label}<span className="text-fg-3"> · {c.count}{c.nearest_m != null ? ` · nearest ${c.nearest_m} m` : ""}</span></span>
+        <li key={c.kind} className="flex items-center gap-2 text-small">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={markerDataUrl(c.kind)} alt="" width={20} height={20} className="shrink-0" />
+          <span className="min-w-0 flex-1 truncate text-fg-2">{c.label.replace(/\s*311$/, "")}<span className="text-fg-3"> · {c.count}</span></span>
           {c.times_boston != null && (
-            <span className={`shrink-0 font-mono tabular-nums ${c.times_boston >= 2 ? "font-semibold text-fg" : "text-fg-3"}`}>×{c.times_boston} Boston</span>
+            <span className={`shrink-0 font-mono tabular-nums ${c.times_boston >= 2 ? "font-semibold text-fg" : "text-fg-3"}`}>×{c.times_boston}</span>
           )}
         </li>
       ))}

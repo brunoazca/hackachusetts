@@ -1,11 +1,16 @@
 "use client";
 import type { EvidenceInsight } from "@/lib/insight";
+import { markerDataUrl } from "@/components/map/icons";
 import { actionLabel, Caveat, Causes, day, num, pct, ReportLink, Section, Stat, type Cause } from "./shared";
 
 // Evidence: a trash / dumping / dead-animal / pest 311 report, or a place (restaurant, vacant lot,
 // permit, bin). What it is, and the rodent reports within 150 m that it may relate to.
 
 type Json = Record<string, unknown>;
+
+const shortDay = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+// "INTERSECTION Cedar Lane Way & Mount Vernon St" -> "Cedar Lane Way & Mount Vernon St"; drop the ZIP.
+const street = (a: string | null) => (a ?? "—").replace(/^INTERSECTION\s+/i, "").replace(/,?\s*\d{5}$/, "");
 
 export default function EvidenceCard({ insight: v }: { insight: EvidenceInsight }) {
   const it = v.item as Json;
@@ -28,13 +33,12 @@ export default function EvidenceCard({ insight: v }: { insight: EvidenceInsight 
         </p>
       </header>
 
-      <Section title={`Rodent reports within 150 m · ${String(v.window)}`}>
+      <Section title="Rodent reports within 150 m">
         <div className="grid grid-cols-2 gap-2">
           {timed && <Stat value={num(before)} label="90 days before" />}
-          <Stat value={num(after)} label={!timed ? "Last 12 months" : partial ? `${afterDays} days after (so far)` : "90 days after"} />
+          <Stat value={num(after)} label={!timed ? "Last 12 months" : partial ? `${afterDays} of 90 days after` : "90 days after"} />
         </div>
-        {partial && <p className="text-fg-3">Too recent to compare: only {afterDays} of the 90 days after have passed.</p>}
-        {timed && !partial && <p className="text-fg-2">{after > (before ?? 0) ? "More rodent reports nearby after this item than before." : after < (before ?? 0) ? "Fewer rodent reports nearby after this item than before." : "Same number of rodent reports nearby before and after."}</p>}
+        {timed && !partial && <p className="text-fg-2">{after > (before ?? 0) ? "More reports after than before." : after < (before ?? 0) ? "Fewer reports after than before." : "No change before vs after."}</p>}
       </Section>
 
       {same && (
@@ -43,15 +47,18 @@ export default function EvidenceCard({ insight: v }: { insight: EvidenceInsight 
         </Section>
       )}
 
-      <Section title={`Rodent reports it may relate to (${related.length})`}>
+      <Section title={`Nearby rodent reports (${related.length})`}>
         {related.length ? (
-          <ol className="space-y-1.5">{related.map((r) => (
-            <li key={r.id} className="flex items-baseline justify-between gap-2">
-              <span><ReportLink id={r.id}>{r.opened}</ReportLink> <span className="text-fg-3">· {r.address_block ?? "—"} · {r.distance_m} m</span></span>
-              <span className="shrink-0 text-fg-3">{actionLabel(r.city_did)}{r.p_return_60d != null ? ` · ${pct(r.p_return_60d)} return` : ""}</span>
+          <ol className="space-y-1">{related.map((r) => (
+            <li key={r.id} className="flex items-center gap-2" title={actionLabel(r.city_did)}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={markerDataUrl("rodent", r.city_did !== "open")} alt="" width={20} height={20} className="shrink-0" />
+              <ReportLink id={r.id}>{shortDay(r.opened)}</ReportLink>
+              <span className="min-w-0 flex-1 truncate text-fg-3">{street(r.address_block)}</span>
+              <span className="shrink-0 font-mono tabular-nums text-fg-3">{r.distance_m} m{r.p_return_60d != null ? ` · ${pct(r.p_return_60d)}` : ""}</span>
             </li>
           ))}</ol>
-        ) : <p className="text-fg-3">No rodent reports within 150 m in this window.</p>}
+        ) : <p className="text-fg-3">None within 150 m in this window.</p>}
       </Section>
 
       <Section title="Other possible causes nearby">
