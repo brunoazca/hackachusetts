@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:35 — Priority blocks always load: map_forecast gets an explici...
+- Teammate: Bruno
+- Agent: —
+- Did: Priority blocks always load: map_forecast gets an explicit first week, layer retries on failure
+- Why: week=null made the RPC hit the statement timeout, so the red grid and top-block alerts vanished
+- Where: web/src/lib/forecast.ts, web/src/components/map/PriorityLayer.tsx
+- Idea: —
+
 ### 2026-10-24 19:34 — Act panel: clicking a ranking card outlines every block o...
 - Teammate: Bruno
 - Agent: —

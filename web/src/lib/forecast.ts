@@ -46,6 +46,9 @@ export async function fetchForecastRun(): Promise<ForecastRun | null> {
 
 export async function fetchForecast(bbox: BBox, week: string | null, minExpected = 0.01): Promise<FeatureCollection<Polygon, ForecastCellProps>> {
   const [min_lon, min_lat, max_lon, max_lat] = bbox;
+  // A null week makes the RPC look up the first week inside the query, which misses the week index and
+  // can hit the statement timeout; pass the run's first week explicitly instead.
+  if (!week) week = (await fetchForecastRun().catch(() => null))?.weeks?.[0] ?? null;
   const { data, error } = await supabase.rpc("map_forecast", { min_lon, min_lat, max_lon, max_lat, week, min_expected: minExpected });
   if (error) throw error;
   return data as FeatureCollection<Polygon, ForecastCellProps>;

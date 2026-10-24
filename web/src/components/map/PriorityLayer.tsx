@@ -37,9 +37,12 @@ export default function PriorityLayer({ visible, full, three, selectedId, region
 
   useEffect(() => {
     if (!visible || loaded?.week === wk) return;
+    // Keep trying until the blocks load: a failed fetch must not leave the map without them.
     let live = true;
-    fetchRankedCells(wk).then((fc) => live && setLoaded({ week: wk, fc })).catch(() => {});
-    return () => { live = false; };
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const load = () => fetchRankedCells(wk).then((fc) => live && setLoaded({ week: wk, fc })).catch(() => { if (live) timer = setTimeout(load, 3000); });
+    load();
+    return () => { live = false; clearTimeout(timer); };
   }, [visible, wk, loaded?.week]);
 
   const vis = visible ? "visible" : "none";
