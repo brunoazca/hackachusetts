@@ -13,16 +13,16 @@ const BAND = {
 } as const;
 
 export default function CellCard({ id }: { id: string }) {
-  const [d, setD] = useState<CellDetail | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  // Keyed by cell id so a stale response for the previous block is never shown.
+  const [got, setGot] = useState<{ id: string; d?: CellDetail; error?: string } | null>(null);
   useEffect(() => {
     let live = true;
-    setD(null);
-    fetchCellDetail(id).then((x) => live && (setD(x), setError(null))).catch((e) => live && setError(String(e)));
+    fetchCellDetail(id).then((d) => live && setGot({ id, d })).catch((e) => live && setGot({ id, error: String(e) }));
     return () => { live = false; };
   }, [id]);
 
-  if (error) return <p role="alert" className="p-4 text-sm text-red-700">Could not load this block: {error}</p>;
+  if (got?.id === id && got.error) return <p role="alert" className="p-4 text-sm text-red-700">Could not load this block: {got.error}</p>;
+  const d = got?.id === id ? got.d : undefined;
   if (!d) return <p className="p-4 text-sm text-neutral-700" aria-live="polite">Loading forecast…</p>;
 
   const now = d.forecast[0];

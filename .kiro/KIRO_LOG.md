@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:25 — Forecast on the map: map_forecast/cell_detail/forecast_ru...
+- Teammate: Bruno
+- Agent: —
+- Did: Forecast on the map: map_forecast/cell_detail/forecast_run RPCs (applied), draft ForecastLayer + ForecastControl + CellCard wired into MapView/InspectorPanel; integration doc
+- Why: Show the model in the app: blocks colored by expected reports (log scale), week picker, emerging outline, 'why here' card with actual vs model
+- Where: supabase/migrations/20261024500002_model_forecast_api.sql, web/src/lib/forecast.ts, web/src/components/map/ForecastLayer.tsx, ForecastControl.tsx, inspector/CellCard.tsx, MapView.tsx, InspectorPanel.tsx, docs/rat-audit/FORECAST_MAP.md
+- Idea: Next: past-week overlay toggle and /api/simulate what-if
+
 ### 2026-10-24 15:20 — Forecast: new candidate feature groups (food rodent fails...
 - Teammate: Bruno
 - Agent: —
