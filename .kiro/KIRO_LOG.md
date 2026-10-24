@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:40 — Make English the fixed chat response language
+- Teammate: Carol
+- Agent: Codex
+- Did: Added a mandatory English-only policy and a per-turn reminder after map context. Responses, caveats and generated draft notes stay in English even with another-language history or explicit language-switch requests; official names and IDs remain intact. Five route tests, TypeScript and scoped ESLint passed. Live handler checks answered in English for Portuguese history and Spanish requests after strengthening the initial rule.
+- Why: Carol requested English always, with commit and push to the running application.
+- Where: web/src/lib/agent/prompt.ts
+- Idea: State the response language independently of the user's input language and do not expose policy explanations in replies.
+
 ### 2026-10-24 17:36 — Built the AI region solution job (region_solution.py + re...
 - Teammate: Bruno
 - Agent: —
