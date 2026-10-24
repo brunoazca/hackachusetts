@@ -6,12 +6,14 @@ import { mask } from "@turf/turf";
 import { useTheme } from "@/lib/theme-store";
 import { themes } from "@/lib/design-tokens";
 import { fetchCityBoundaries, fetchParcels, fetchTracts, type BBox, type CoverageRow } from "@/lib/queries";
+import { CELL_RAMPS, fetchCellContextMap, metricFor, quantileStops } from "@/lib/cell-context";
 
 // Context + coverage layers:
 // - fog outside Boston/Cambridge/Somerville (always), and over any of the three cities where none of the
 //   active layers has data (from coverage_matrix), with a "no data" label;
 // - old housing: % of homes built before 1940 per tract (ACS, all three cities);
-// - buildings by year built (Boston parcels), only when zoomed in.
+// - buildings by year built (Boston parcels), only when zoomed in;
+// - one block-profile metric per 250 m cell (demographics or building age), off by default.
 
 const EMPTY: FeatureCollection = { type: "FeatureCollection", features: [] };
 export const HOUSING_RAMP = ["#fff7ec", "#fdd49e", "#fc8d59", "#d7301f", "#7f0000"];
@@ -29,12 +31,15 @@ type Props = {
   buildings: boolean;
   bbox: BBox | null;
   zoom: number;
+  /** Block-profile metric to color the 250 m cells by, or null for none. */
+  cellMetric: string | null;
 };
 
-export default function ContextLayers({ cats, coverage, housing, buildings, bbox, zoom }: Props) {
+export default function ContextLayers({ cats, coverage, housing, buildings, bbox, zoom, cellMetric }: Props) {
   const [cities, setCities] = useState<FeatureCollection<Polygon | MultiPolygon>>(EMPTY as FeatureCollection<Polygon | MultiPolygon>);
   const [tracts, setTracts] = useState<FeatureCollection>(EMPTY);
   const [parcels, setParcels] = useState<FeatureCollection>(EMPTY);
+  const [cells, setCells] = useState<FeatureCollection>(EMPTY);
   const T = themes[useTheme((t) => t.theme)];
 
   useEffect(() => {
@@ -49,6 +54,12 @@ export default function ContextLayers({ cats, coverage, housing, buildings, bbox
     fetchParcels(bbox).then((fc) => live && setParcels(fc)).catch(() => {});
     return () => { live = false; };
   }, [buildings, bbox, zoom]);
+
+  useEffect(() => {
+    if (cellMetric && cells.features.length === 0) fetchCellContextMap().then(setCells).catch(() => {});
+  }, [cellMetric, cells.features.length]);
+  const metric = metricFor(cellMetric);
+  const cellStops = useMemo(() => (metric ? quantileStops(cells, metric.key) : []), [cells, metric]);
 
   // World minus the three cities.
   const outside = useMemo(() => (cities.features.length ? mask(cities) : null), [cities]);
@@ -77,6 +88,24 @@ export default function ContextLayers({ cats, coverage, housing, buildings, bbox
             }}
           />
           <Layer id="ctx-housing-line" type="line" paint={{ "line-color": "#ffffff", "line-width": 0.5, "line-opacity": 0.6 }} />
+        </Source>
+      )}
+
+      {metric && cellStops.length === 5 && (
+        <Source id="ctx-cells" type="geojson" data={cells}>
+          <Layer
+            id="ctx-cells"
+            type="fill"
+            filter={["has", metric.key]}
+            paint={{
+              "fill-color": [
+                "interpolate", ["linear"], ["get", metric.key],
+                ...cellStops.flatMap((s, i) => [s, (metric.reverse ? [...CELL_RAMPS[metric.group]].reverse() : CELL_RAMPS[metric.group])[i]]),
+              ] as unknown as string,
+              "fill-opacity": ["interpolate", ["linear"], ["zoom"], 11, 0.65, 16, 0.35],
+            }}
+          />
+          <Layer id="ctx-cells-line" type="line" filter={["has", metric.key]} paint={{ "line-color": "#ffffff", "line-width": 0.3, "line-opacity": 0.5 }} />
         </Source>
       )}
 

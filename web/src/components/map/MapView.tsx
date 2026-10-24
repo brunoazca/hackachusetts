@@ -114,6 +114,8 @@ export default function MapView() {
   const [mode, setMode] = useState<ViewMode>("heat");
   // Causes (trash, vacant lots, works) are context for rats, not the headline: off until asked for.
   const [causes, setCauses] = useState(false);
+  // Block profile (demographics, building age per 250 m cell): off until picked in "Buildings & people".
+  const [cellMetric, setCellMetric] = useState<string | null>(null);
   const [coverage, setCoverage] = useState<CoverageRow[]>([]);
   const [bbox, setBbox] = useState<BBox | null>(null);
   const [zoom, setZoom] = useState(view.zoom);
@@ -261,8 +263,8 @@ export default function MapView() {
   }, [theme, iconsReady]);
 
   const interactive = useMemo(
-    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? ["all-clusters", "all-points"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
-    [iconsReady, appMode, enabled.ctx_buildings, zoom, forecastOn],
+    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(cellMetric ? ["ctx-cells"] : []), ...(iconsReady ? ["all-clusters", "all-points"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
+    [iconsReady, appMode, enabled.ctx_buildings, cellMetric, zoom, forecastOn],
   );
 
   // A tap on empty map flies there and opens the closest real report.
@@ -307,7 +309,7 @@ export default function MapView() {
       map?.easeTo({ center: target, zoom: Math.max(POINTS_ZOOM + 1, map.getZoom()), duration: 700 });
       return;
     }
-    if (f.layer.id === "forecast-hit") {
+    if (f.layer.id === "forecast-hit" || f.layer.id === "ctx-cells") {
       select({ kind: "cell", id: String(f.properties?.id) });
       return;
     }
@@ -346,7 +348,7 @@ export default function MapView() {
         attributionControl={{ compact: true }}
       >
         <NavigationControl position="bottom-right" />
-        <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} />
+        <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} cellMetric={cellMetric} />
         <ForecastLayer visible={forecastOn} period={forecastWeek ?? "4w"} bbox={bbox} selectedId={selectedId} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
@@ -436,7 +438,7 @@ export default function MapView() {
       {appMode === "act" ? (
         <SiteQueue />
       ) : (
-        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} />
+        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} cellMetric={cellMetric} onCellMetricChange={setCellMetric} />
       )}
 
       {appMode !== "act" && <MapLegend mode={viewMode} causes={causes} zoom={zoom} />}

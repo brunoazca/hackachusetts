@@ -4,6 +4,7 @@ import { useMap } from "@/lib/map-store";
 import { markerDataUrl } from "./icons";
 import { STRENGTH_STYLE, testedFor } from "./tested";
 import { ERA_STOPS, HOUSING_RAMP } from "./ContextLayers";
+import { CELL_METRICS, CELL_RAMPS, metricFor } from "@/lib/cell-context";
 import type { CoverageRow } from "@/lib/queries";
 import { useUi } from "@/lib/ui-store";
 import { useMorph } from "@/lib/use-morph";
@@ -59,6 +60,8 @@ type Props = {
   loading: boolean;
   coverage: CoverageRow[];
   zoom: number;
+  cellMetric: string | null;
+  onCellMetricChange: (key: string | null) => void;
 };
 
 const CITY_ABBR: [string, string][] = [["boston", "BOS"], ["cambridge", "CAM"], ["somerville", "SOM"]];
@@ -99,7 +102,43 @@ function LayerRow({ icon, label, meta, checked, onToggle }: { icon: ReactNode; l
   );
 }
 
-export default function LayerPanel({ enabled, onChange, mode, onModeChange, causes, onCausesChange, count, loading, coverage, zoom }: Props) {
+/** Extra, collapsed by default: color the 250 m blocks by one demographic or building-age value (one at a time). */
+function BlockProfile({ metric, onChange }: { metric: string | null; onChange: (key: string | null) => void }) {
+  const m = metricFor(metric);
+  const ramp = m ? (m.reverse ? [...CELL_RAMPS[m.group]].reverse() : CELL_RAMPS[m.group]) : [];
+  return (
+    <details open={!!metric} className="mt-3 border-t border-line pt-2">
+      <summary className="flex min-h-9 cursor-pointer items-center justify-between text-[13px] font-semibold text-fg">
+        Per 250 m block
+        <span className="text-[11px] font-normal text-fg-3">{m ? m.label : "off"}</span>
+      </summary>
+      <p className="mb-1 text-[11px] leading-4 text-fg-3">Demographics and building age for each forecast block. Pick one to color the map; tap a block for its full profile. Context only, not a cause.</p>
+      {m && (
+        <p className="mb-1 flex items-center gap-2 text-[11px] text-fg-3">
+          <span aria-hidden className="h-2 w-16 rounded-full" style={{ background: `linear-gradient(to right, ${ramp.join(", ")})` }} />
+          {m.reverse ? "newer → older" : "low → high"} · by rank across blocks
+        </p>
+      )}
+      {(["Buildings", "People"] as const).map((g) => (
+        <div key={g} className="mt-1">
+          <h3 className="text-[11px] font-semibold uppercase tracking-wide text-fg-3">{g}</h3>
+          {CELL_METRICS.filter((c) => c.group === g).map((c) => (
+            <LayerRow
+              key={c.key}
+              icon={<span aria-hidden className="h-3 w-5 rounded-[2px]" style={{ background: `linear-gradient(to right, ${CELL_RAMPS[g].join(", ")})` }} />}
+              label={c.label}
+              meta={c.source}
+              checked={metric === c.key}
+              onToggle={(v) => onChange(v ? c.key : null)}
+            />
+          ))}
+        </div>
+      ))}
+    </details>
+  );
+}
+
+export default function LayerPanel({ enabled, onChange, mode, onModeChange, causes, onCausesChange, count, loading, coverage, zoom, cellMetric, onCellMetricChange }: Props) {
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
   const [open, setOpen] = useState<DockId | null>(null);
@@ -126,7 +165,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
     {
       id: "context", label: "Buildings & people",
       icon: <span aria-hidden className="flex h-5 w-6 overflow-hidden rounded-[3px]">{ERA_STOPS.map(([, c]) => <span key={c} className="flex-1" style={{ background: c }} />)}</span>,
-      badge: (enabled.ctx_housing ? 1 : 0) + (enabled.ctx_buildings ? 1 : 0),
+      badge: (enabled.ctx_housing ? 1 : 0) + (enabled.ctx_buildings ? 1 : 0) + (cellMetric ? 1 : 0),
     },
     {
       id: "forecast" as DockId, label: "Forecast",
@@ -285,6 +324,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
               <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-fg-3">
                 {ERA_STOPS.map(([, c, l]) => <span key={l} className="flex items-center gap-1"><span className="h-2 w-2 rounded-[2px]" style={{ background: c }} />{l}</span>)}
               </div>
+              <BlockProfile metric={cellMetric} onChange={onCellMetricChange} />
             </div>
           )}
 
