@@ -126,8 +126,8 @@ def write_index(all_c: list[dict]) -> None:
         )
     INDEX.write_text(
         "# Research index\n\n"
-        "Every Kiro Crew Research Lab campaign and its full report. Maintained by the "
-        "`einstein` crewmate via `.kiro/scripts/research_lab.py`; do not edit by hand.\n"
+        "Every Kiro Crew Research Lab campaign and its full report. Regenerate with "
+        "`python3 .kiro/scripts/research_lab.py export-all`; do not edit by hand.\n"
         "Summaries that feed the product live in `knowledge/15_boston_rat_audit.md`.\n\n"
         "| Created | ID | Campaign | Status | Parent | Depth | Report |\n"
         "|---|---|---|---|---|---|---|\n" + "\n".join(rows) + "\n"

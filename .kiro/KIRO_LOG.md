@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:34 — Trimmed Kiro Crew to the useful crewmates: Da Vinci (desi...
+- Teammate: Bruno
+- Agent: —
+- Did: Trimmed Kiro Crew to the useful crewmates: Da Vinci (design, hourly), Hopper (build, 3h), Ginsburg (civic-judge), Keller (a11y-auditor); removed Einstein, kiro-historian, no-auto-action, rodent-honesty, snapshot-validator
+- Why: scope freeze; hooks already cover overclaims and citations; research frozen
+- Where: .kiro/agents/, .kiro/scripts/research_lab.py, knowledge/research/INDEX.md
+- Idea: —
+
 ### 2026-10-24 16:26 — Kiro Crew pipeline: 3 new crewmates (Da Vinci design crit...
 - Teammate: Bruno
 - Agent: —
