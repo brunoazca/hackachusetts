@@ -170,3 +170,9 @@ Current evidence:
   Move-out was checked only as a persisted finding, not recomputed in this session. Costs were
   recomputed from local inputs; none of these checks reran the worker's DB-writing pipeline.
 - Secret scan passed, including exact-value matching against the supplied env file.
+
+Post-rebase check against `main` at `f72541f`: **108 passed / 2 skipped** again, with 37 existing
+Shapely deprecation warnings from `model/grid.py`. The entire `pipeline/rat_audit/model/` subtree
+matches main. The only rebase conflict was the log; both histories were preserved. Secret scanning
+and diff whitespace checks passed. This confirms branch compatibility for the tested paths, not
+completion of the Spec v2 gaps listed above or validation of the shared database.

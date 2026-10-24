@@ -207,6 +207,18 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: web/src/components/{map,shell}, web/src/lib/map-store.ts, .kiro/specs/rat-audit/{requirements,design}.md
 - Idea: none
 
+### 2026-10-24 15:19 — Rebased analytics-core onto main; verified partial handoff
+- Teammate: Carol
+- Agent:
+- Did: Rebased the preserved analytics commit onto main f72541f. Resolved the only conflict in this log by keeping all main history and all analytics entries.
+- Why: Reuse the model already committed by Bruno and avoid collisions before sharing the feature branch.
+- Where: .kiro/KIRO_LOG.md, pipeline/rat_audit/analytics/README.md; model subtree unchanged relative to main.
+- Evidence: Post-rebase analytics suite 108 passed / 2 skipped; 37 pre-existing Shapely deprecation warnings from model/grid.py. Secret scan including supplied env values passed; diff whitespace check passed.
+- Evidence: Model modules baseline, gbm, backtest, features, recurrence, artifacts and explain are present from main; no model files were created or modified by this front. Migration name matches *_analytics_*.sql and its contents remain unapplied.
+- Decision: Branch-only sharing remains authorized. Spec v2 tasks 2.2 and 2.3 remain incomplete (90% coverage, cause_tag, 50 m DBSCAN and legal-lane); README lists the gaps. No main changes, shared-DB writes, migrations or deployment performed.
+- Idea: Integrators can use this branch as a dependency while analytics v2 work remains explicit.
+
+
 ### 2026-10-24 15:17 — Prepare analytics branch handoff and check Spec v2 against main
 - Teammate: Carol
 - Agent:
