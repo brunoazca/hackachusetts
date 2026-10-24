@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:56 — Map: coverage fog (outside the 3 cities always; over any ...
+- Teammate: Bruno
+- Agent: —
+- Did: Map: coverage fog (outside the 3 cities always; over any city with no data for the active layers, labelled), BOS/CAM/SOM badges per layer from coverage_matrix(), Old housing choropleth (ACS % built before 1940, all 3 cities), Buildings by year built at zoom ≥ 15 (Boston parcels) + building card
+- Why: Bruno: scope to where we have data with foggy disabled areas; where is the old-housing data
+- Where: web/src/components/map/{ContextLayers,LayerPanel,MapView}.tsx, web/src/components/inspector/ParcelCard.tsx, supabase/migrations/20261024300003_api_context_layers.sql, supabase/migrations/20261024100005_data_coverage.sql
+- Idea: Tract union left sliver holes; buffer out/in + exterior rings fixes the outline
+
 ### 2026-10-24 14:51 — Cambridge + Somerville evidence loaded (Cambridge 2z9k-mv...
 - Teammate: Bruno
 - Agent: —

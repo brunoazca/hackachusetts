@@ -98,12 +98,12 @@ export default function ContextLayers({ cats, coverage, housing, buildings, bbox
 
       {outside && (
         <Source id="fog-outside" type="geojson" data={outside}>
-          <Layer id="fog-outside" type="fill" paint={{ "fill-color": "#e5e7eb", "fill-opacity": 0.72 }} />
+          <Layer id="fog-outside" type="fill" paint={{ "fill-color": "#6b7280", "fill-opacity": 0.38 }} />
         </Source>
       )}
       <Source id="fog-nodata" type="geojson" data={noData}>
-        <Layer id="fog-nodata" type="fill" paint={{ "fill-color": "#e5e7eb", "fill-opacity": 0.7 }} />
-        <Layer id="fog-nodata-line" type="line" paint={{ "line-color": "#6b7280", "line-width": 1, "line-dasharray": [2, 2] }} />
+        <Layer id="fog-nodata" type="fill" paint={{ "fill-color": "#6b7280", "fill-opacity": 0.42 }} />
+        <Layer id="fog-nodata-line" type="line" paint={{ "line-color": "#374151", "line-width": 1.5, "line-dasharray": [3, 2] }} />
         <Layer
           id="fog-nodata-label"
           type="symbol"
@@ -113,7 +113,7 @@ export default function ContextLayers({ cats, coverage, housing, buildings, bbox
       </Source>
       {cities.features.length > 0 && (
         <Source id="city-outline" type="geojson" data={cities}>
-          <Layer id="city-outline" type="line" paint={{ "line-color": "#374151", "line-width": 1.2, "line-opacity": 0.5 }} />
+          <Layer id="city-outline" type="line" paint={{ "line-color": "#111827", "line-width": 1.5, "line-opacity": 0.55 }} />
         </Source>
       )}
     </>
