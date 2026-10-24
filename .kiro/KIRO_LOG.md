@@ -31,6 +31,17 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:58 — 2.8: verify the improved panel on local main and show it in the current app
+- Teammate: Carol
+- Agent:
+- Did: Fast-forwarded clean local main cf4389b to 96be3bc, including the matched-v2 follow-up b9e61dc. Restarted only this session's development server on port 3000 and opened Insights in Carol's existing browser tab.
+- Why: Make the reviewed improvement visible where Carol is testing, under her earlier authorization to integrate locally.
+- Where: local main; web/src/components/insights/README.md; .kiro/KIRO_LOG.md.
+- Evidence: Final feature suite: 58 synthetic/mock/SSR + 5 older-real-export checks passed. Integrated main production build passed. Main browser used real data: insights_summary GET 200, forecast_surface/run/map_forecast and site_queue 200, no uncaught JS errors, keyboard details and map actions passed. The preview's earlier map_forecast 500 did not recur in this run.
+- Evidence: Current in-app tab visibly shows both dated historical findings and the live stored forecast summary. Final screenshots and response results: /private/tmp/insights-product-review-20261024/main-night.png, main-forecast.png, browser-main.json; build-main.log and tests-final.log.
+- Decision: No push, deploy, migrations or shared data writes. Findings/cost/price publication and shared mobile-shell issues remain explicit dependencies; no full-delivery claim. Previous 234 log entries were preserved before the new product entry, and both new entries leave Agent empty.
+- Idea: none.
+
 ### 2026-10-24 16:56 — 2.8: turn the Insights dump into evidence and next steps
 - Teammate: Carol
 - Agent:

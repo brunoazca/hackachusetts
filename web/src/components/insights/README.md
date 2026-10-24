@@ -7,6 +7,14 @@ and integrated into local `main`; see the latest verification below.
 
 ## Evidence-first panel — 2026-10-24 16:56
 
+**Local integration verified at 16:58:** clean main fast-forwarded from `cf4389b`
+to `96be3bc` (including `b9e61dc`). Main production build and real browser checks
+on port 3000 passed; all observed forecast/map/queue RPCs returned 200 in this run.
+The existing in-app tab now displays the new Insights panel. Final local suite:
+58 synthetic/mock/SSR + 5 prior-real-export checks passed. Evidence: `build-main.log`,
+`tests-final.log`, `browser-main.json`, `main-night.png` and `main-forecast.png` in the
+scratch directory below. No push or deployment.
+
 Rebased this front onto main `cf4389b`, retaining main's Piper UI and research
 component, all previous log entries and the matched-v2 follow-up (`b9e61dc`).
 Carol's latest review identified a product problem: a technical forecast dump and
