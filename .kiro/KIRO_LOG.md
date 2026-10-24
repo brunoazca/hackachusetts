@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:37 — Baseline (mean of last 4 weeks), Poisson GBM, 26-week rol...
+- Teammate: Bruno
+- Agent: —
+- Did: Baseline (mean of last 4 weeks), Poisson GBM, 26-week rolling-origin backtest
+- Why: Kiro tasks 6-8 done in parallel. Backtest Apr 20-Oct 12 2026: GBM top-10% capture 64.3% vs baseline 54.3%; MAE 0.0752 vs 0.0713 (GBM slightly worse on MAE, recorded honestly). Rain/snow/places/events candidates add nothing (capture 64.4%, MAE 0.0750)
+- Where: pipeline/rat_audit/model/baseline.py, gbm.py, backtest.py
+- Idea: Keep CORE only; candidates do not earn their place
+
 ### 2026-10-24 14:34 — Added model_artifacts migration (model_run_id text FK, bl...
 - Teammate: Bruno
 - Agent: --
