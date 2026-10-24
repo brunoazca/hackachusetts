@@ -6,7 +6,8 @@ import type { FeatureCollection, Point } from "geojson";
 import { setWorkerUrl, type HeatmapLayerSpecification } from "maplibre-gl";
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
-import { fetchIncidents, type BBox, type IncidentProps } from "@/lib/queries";
+import { fetchCoverage, fetchIncidents, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
+import ContextLayers from "./ContextLayers";
 import LayerPanel, { activeCategories, HEAT_RAMPS, SIMPLE_LAYERS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
 import { addCategoryIcons, iconId } from "./icons";
@@ -48,6 +49,10 @@ export default function MapView() {
   const selection = useMap((s) => s.selection);
   const [enabled, setEnabled] = useState<Record<string, boolean>>({ rodent: true });
   const [mode, setMode] = useState<ViewMode>("points");
+  const [coverage, setCoverage] = useState<CoverageRow[]>([]);
+  const [bbox, setBbox] = useState<BBox | null>(null);
+  const [zoom, setZoom] = useState(view.zoom);
+  useEffect(() => { fetchCoverage().then(setCoverage).catch(() => {}); }, []);
   const [data, setData] = useState<FC>(EMPTY);
   const [iconsReady, setIconsReady] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -95,6 +100,8 @@ export default function MapView() {
     if (!map) return;
     const b = map.getBounds();
     const bbox: BBox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
+    setBbox(bbox);
+    setZoom(map.getZoom());
     const id = ++reqId.current;
     if (cats.length === 0) { setData(EMPTY); return; }
     setLoading(true);
@@ -117,6 +124,7 @@ export default function MapView() {
 
   const onLoad = useCallback(async () => {
     const map = mapRef.current?.getMap();
+    if (process.env.NODE_ENV !== "production" && map) (window as unknown as { __ratmap: unknown }).__ratmap = map;
     if (map) { await addCategoryIcons(map); setIconsReady(true); }
     load();
   }, [load]);
@@ -130,8 +138,8 @@ export default function MapView() {
   }, [flyToTarget, appMode]);
 
   const interactive = useMemo(
-    () => [...(appMode === "act" ? ["sites"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : [])],
-    [cats, iconsReady, appMode],
+    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : [])],
+    [cats, iconsReady, appMode, enabled.ctx_buildings, zoom],
   );
 
   const onClick = useCallback((e: MapLayerMouseEvent) => {
@@ -139,6 +147,10 @@ export default function MapView() {
     if (!f) return;
     if (f.layer.id.endsWith("-clusters")) {
       mapRef.current?.easeTo({ center: (f.geometry as Point).coordinates as [number, number], zoom: (mapRef.current?.getZoom() ?? 12) + 2 });
+      return;
+    }
+    if (f.layer.id === "ctx-buildings") {
+      select({ kind: "place", id: `parcel:${f.properties?.pid}` });
       return;
     }
     if (f.layer.id === "sites") {
@@ -164,6 +176,7 @@ export default function MapView() {
         attributionControl={{ compact: true }}
       >
         <NavigationControl position="bottom-right" />
+        <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
           <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.evidence.features.length)} />
@@ -250,7 +263,7 @@ export default function MapView() {
       {appMode === "act" ? (
         <SiteQueue />
       ) : (
-        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} count={data.features.length} loading={loading} />
+        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} count={data.features.length} loading={loading} coverage={coverage} zoom={zoom} />
       )}
 
       {error && (

@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabase";
 import type { SiteRow } from "@/lib/map-store";
-import type { FeatureCollection, Point } from "geojson";
+import type { FeatureCollection, FeatureCollection as AnyFC, Point } from "geojson";
 
 // Draft typed wrappers over the read-only RPCs (supabase/migrations/*_api_*.sql).
 
@@ -73,4 +73,33 @@ export async function fetchSiteDetail(id: string): Promise<SiteDetail | null> {
   const { data, error } = await supabase.rpc("site_detail", { site_id: id });
   if (error) throw error;
   return data as SiteDetail | null;
+}
+
+// ---- Coverage + context layers ----
+
+export type CoverageRow = { kind: string; layer: string; city: string; rows: number; first_date: string | null; last_date: string | null; update_mode: string };
+
+export async function fetchCoverage(): Promise<CoverageRow[]> {
+  const { data, error } = await supabase.rpc("coverage_matrix");
+  if (error) throw error;
+  return (data ?? []) as CoverageRow[];
+}
+
+export async function fetchCityBoundaries(): Promise<AnyFC> {
+  const { data, error } = await supabase.rpc("city_boundaries");
+  if (error) throw error;
+  return data as AnyFC;
+}
+
+export async function fetchTracts(): Promise<AnyFC> {
+  const { data, error } = await supabase.rpc("map_tracts");
+  if (error) throw error;
+  return data as AnyFC;
+}
+
+export async function fetchParcels(bbox: BBox): Promise<AnyFC> {
+  const [min_lon, min_lat, max_lon, max_lat] = bbox;
+  const { data, error } = await supabase.rpc("map_parcels", { min_lon, min_lat, max_lon, max_lat, max_rows: 6000 });
+  if (error) throw error;
+  return data as AnyFC;
 }

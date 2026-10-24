@@ -5,6 +5,7 @@ import { useMap } from "@/lib/map-store";
 import { fetchIncidentDetail, type IncidentDetail } from "@/lib/queries";
 import { markerDataUrl } from "@/components/map/icons";
 import SiteCase from "./SiteCase";
+import ParcelCard from "./ParcelCard";
 
 // Draft inspector: details of a selected report + other reports at the same address.
 // Owner: map/inspector track — replace with the full site card later.
@@ -33,6 +34,7 @@ export default function InspectorPanel() {
   }, [id]);
 
   if (selection?.kind === "site") return <SiteCase id={selection.id} />;
+  if (selection?.kind === "place" && selection.id.startsWith("parcel:")) return <ParcelCard pid={selection.id.slice(7)} />;
   if (!id) {
     return (
       <div className="p-4 text-sm text-neutral-800">
