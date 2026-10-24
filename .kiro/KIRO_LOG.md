@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:03 — Reviewed AI region cards and fixed 5 issues: treatment wo...
+- Teammate: Bruno
+- Agent: —
+- Did: Reviewed AI region cards and fixed 5 issues: treatment wording (baiting by another name) banned, headline_facts so numbers keep their meaning, vs-monitoring verdicts + code guard against proposing actions no better than monitoring, causes per report vs Boston (times_boston), what_is_specific_here so cards stop being generic; regenerated 20 regions (19 AI, 1 rules)
+- Why: Bruno asked to adjust what was needed after reading AI examples
+- Where: pipeline/rat_audit/model/region_solution.py, .kiro/specs/rat-audit/insights-severity-ranking.md §5.7
+- Idea: A numbers-in-input check is not enough: the model reused a real number with the wrong meaning; ready-made phrases fixed it
+
 ### 2026-10-24 18:00 — Refined chat sources disclosure
 - Teammate: Carol
 - Agent:

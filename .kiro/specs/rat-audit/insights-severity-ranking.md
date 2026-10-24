@@ -445,6 +445,18 @@ the DB now (19 AI, 1 rules fallback).** Carol / Gui / agent can build against it
   must appear in the input (plus spec constants 40/60/90/100/150/250), every record gets a
   `todo`. Up to 3 attempts with the rejection reason, then the §5.2 rules
   (`source='rules'`, `rule_id`, `guard_errors` says why).
+- **Guards added after review (rev. 3):** (1) output may not contain bait/poison/
+  rodenticide/treat/treatment/exterminate in any form; past baiting closures are shown to
+  the AI as "earlier ISD visit". (2) `region.headline_facts` gives the severity phrases
+  ("3.5 expected reports in the next 4 weeks", "1.1 expected returns within 60 days…") and
+  the AI must copy them, so a number never changes meaning. (3) each situation table marks
+  every action `vs_monitoring` (lower clear / lower not clear / same or higher) and lists
+  `proposable_actions_with_lower_return_than_monitoring`; an action that did no better
+  than monitoring in all of the region's situations is rejected in code. (4) nearby causes
+  carry `per_report_within_150m`, `boston_per_report_within_150m`, `times_boston`; "well
+  above Boston" only at ≥ 2×. (5) `region.what_is_specific_here` (causes ≥ 2× Boston, named
+  repeat blocks, sewer notes) and the AI must lead with it. Card UI should show
+  `times_boston` next to each cause.
 - **Columns:** `region_id, forecast_run_id, rank, cell_ids, action, lane, because, cites,
   records [{incident_id, todo}], unknowns, rule_id, source, llm_model, input_hash, input,
   guard_errors, caveat, computed_at`.

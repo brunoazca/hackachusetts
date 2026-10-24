@@ -53,7 +53,7 @@ OBS_WEEKS = 12
 NEAR_M = 150
 MAX_RECORDS = 30
 LANES = {"sanitation", "exclusion", "enforcement", "referral", "inspect"}
-BANNED = re.compile(r"\b(bait|baiting|poison|rodenticide|toxicant)", re.I)
+BANNED = re.compile(r"\b(bait\w*|poison\w*|rodenticide\w*|toxicant\w*|treat(?:ment|ments|ed|ing)?|exterminat\w*)\b", re.I)
 EARTH_M = 6_371_000.0
 CAVEAT = ("Model estimate from past cases and the forecast, not a measured effect. "
           "Expected 311 rodent reports, not a count of rats.")
@@ -71,7 +71,7 @@ _to_m = Transformer.from_crs(4326, 26986, always_xy=True)
 
 def _shown(action: str) -> str:
     """Action name as the AI sees it; past baiting is shown as treatment so the word is never echoed."""
-    return "ISD treatment (not proposable)" if action == "baiting" else sol.LABEL.get(action, action.replace("_", " "))
+    return "earlier ISD visit" if action == "baiting" else sol.LABEL.get(action, action.replace("_", " "))
 
 
 def _pct(x: float) -> str:
@@ -197,6 +197,16 @@ SHOWN_ACTIONS = ["monitoring", "inspection", "abatement_order", "citation", "war
                  "barrels", "baiting", "no_violation"]
 
 
+def _versus(a, rate, lo, hi, m_rate, m_lo, m_hi, mn) -> str:
+    if a == "monitoring":
+        return "reference"
+    if m_rate is None or mn < 20:
+        return "no monitoring reference"
+    if rate < m_rate:
+        return "lower, clear (intervals do not overlap)" if hi < m_lo else "lower, not clear (intervals overlap)"
+    return "same or higher than monitoring: do not propose for this situation"
+
+
 def solution_stats(rec: pd.DataFrame, res: dict) -> dict[str, dict]:
     obs = rec[rec["observed"] & rec["action"].isin(SHOWN_ACTIONS)].copy()
     obs["situation"] = _situation(obs)
@@ -206,6 +216,9 @@ def solution_stats(rec: pd.DataFrame, res: dict) -> dict[str, dict]:
     def table(mask) -> dict:
         sub = obs[mask]
         rows = []
+        mm = sub["action"] == "monitoring"
+        mk, mn = int(sub.loc[mm, "y"].sum()), int(mm.sum())
+        m_rate, (m_lo, m_hi) = (mk / mn if mn else None), _wilson(mk, mn)
         for a in SHOWN_ACTIONS:
             m = sub["action"] == a
             k, n = int(sub.loc[m, "y"].sum()), int(m.sum())
@@ -216,9 +229,12 @@ def solution_stats(rec: pd.DataFrame, res: dict) -> dict[str, dict]:
                          "share_of_cases": _pct(n / len(sub)),
                          "returned_within_60d": _pct(k / n), "interval_95": f"{_pct(lo)}-{_pct(hi)}",
                          "model_adjusted_return": _pct(float(adjusted[a][mask.values].mean())) if a in adjusted else None,
-                         "proposable": a in sol.ALLOWED})
+                         "proposable": a in sol.ALLOWED,
+                         "vs_monitoring": _versus(a, k / n, lo, hi, m_rate, m_lo, m_hi, mn)})
+        better = [r["action"] for r in rows if r["proposable"] and r["vs_monitoring"].startswith("lower")]
         return {"cases": int(len(sub)), "returned_within_60d": _pct(float(sub["y"].mean())) if len(sub) else None,
-                "by_action": rows}
+                "by_action": rows,
+                "proposable_actions_with_lower_return_than_monitoring": better or ["none"]}
 
     out = {"all Boston closed rodent cases": table(pd.Series(True, index=obs.index))}
     for s in obs["situation"].unique():
@@ -236,7 +252,10 @@ def _scrub(note) -> str | None:
     return note.strip()[:220]
 
 
-def _near_counts(pts: np.ndarray, others: pd.DataFrame, labels: dict, key: str) -> list[dict]:
+def _near_counts(pts: np.ndarray, others: pd.DataFrame, labels: dict, key: str,
+                 baseline: dict | None = None) -> list[dict]:
+    """Per kind: distinct items within 150 m of any point, mean per point, and the Boston mean
+    per recent report (`baseline`) so the AI can tell what is unusual here."""
     out = []
     q = np.radians(pts)
     for kind, label in labels.items():
@@ -250,9 +269,20 @@ def _near_counts(pts: np.ndarray, others: pd.DataFrame, labels: dict, key: str) 
             continue
         nearest = min((d.min() for d in dist if len(d)), default=None)
         srcs = sorted(o.iloc[sorted(hit)]["source_id"].dropna().unique().tolist())
-        out.append({"kind": kind, "label": label, "count": len(hit),
-                    "nearest_m": int(round(nearest * EARTH_M)), "source_ids": srcs[:4]})
-    return sorted(out, key=lambda d: -d["count"])
+        per = round(float(np.mean([len(i) for i in ind])), 1)
+        row = {"kind": kind, "label": label, "count": len(hit), "per_report_within_150m": per,
+               "nearest_m": int(round(nearest * EARTH_M)), "source_ids": srcs[:4]}
+        if baseline is not None:
+            b = baseline.get(kind, 0.0)
+            row["boston_per_report_within_150m"] = b
+            row["times_boston"] = round(per / b, 1) if b > 0 else None
+        out.append(row)
+    return sorted(out, key=lambda d: -(d.get("times_boston") or 0))
+
+
+def _baseline(pts: np.ndarray, others: pd.DataFrame, labels: dict, key: str) -> dict:
+    """Boston mean, per recent rodent report, of each kind within 150 m."""
+    return {c["kind"]: c["per_report_within_150m"] for c in _near_counts(pts, others, labels, key)}
 
 
 def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
@@ -270,6 +300,9 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
         columns=["cell_id", "week_start", "expected", "actual"])
     rec = rec.copy()
     rec["situation"] = _situation(rec)
+    city = rec[rec["opened_at"] > data_end - pd.Timedelta(weeks=OBS_WEEKS)][["lat", "lon"]].to_numpy(float)
+    sig_k = sig.rename(columns={"category": "kind"})
+    base_places, base_311 = _baseline(city, places, NEAR_PLACES, "kind"), _baseline(city, sig_k, NEAR_311, "kind")
     inputs = []
     for r in regions:
         cells = set(r["cell_ids"])
@@ -288,10 +321,10 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
         pts = (recent if len(recent) else mine.tail(20))[["lat", "lon"]].to_numpy(float)
         if len(pts) == 0:
             pts = np.array([[r["lat"], r["lon"]]])
-        causes = (_near_counts(pts, places, NEAR_PLACES, "kind")
+        causes = (_near_counts(pts, places, NEAR_PLACES, "kind", base_places)
                   + [dict(c, label=c["label"] + " (last 90 days)") for c in
-                     _near_counts(pts, sig.rename(columns={"category": "kind"}), NEAR_311, "kind")])
-        causes.sort(key=lambda d: -d["count"])
+                     _near_counts(pts, sig_k, NEAR_311, "kind", base_311)])
+        causes.sort(key=lambda d: -(d.get("times_boston") or 0))
 
         records = []
         for x in recent.head(MAX_RECORDS).itertuples():
@@ -319,9 +352,25 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
                          "actions_in_order": [_shown(a) for a in g["action"] if a not in ("duplicate", "open")][-8:]})
         hist = sorted(hist, key=lambda h: -h["reports_2y"])[:8]
         sits = recent["situation"].value_counts().head(3).index.tolist() or mine["situation"].value_counts().head(2).index.tolist()
+        sv = r["severity"]
+        p1 = _pct(float(1 - np.prod(1 - w1["p_any"].astype(float)))) if len(w1) else None
+        headline = [f"{sv['observed_12w']} rodent reports in the last 12 weeks",
+                    f"{sv['expected_4w']} expected reports in the next 4 weeks",
+                    f"{sv['expected_returns_60d']} expected returns within 60 days at its active addresses"]
+        if p1:
+            headline.append(f"{p1} chance of at least one report in week 1")
+        specific = ([f"{c['label']}: {c['per_report_within_150m']} per report within 150 m, "
+                     f"{c['times_boston']} times the Boston level" for c in causes
+                     if (c.get("times_boston") or 0) >= 2][:4]
+                    + [f"{h['block']}: {h['reports_2y']} reports in 2 years, {h['returns_within_60d']} returns"
+                       for h in hist[:2] if h["returns_within_60d"] >= 2])
+        notes = " ".join(str(x.closure_note or "") for x in recent.itertuples()).lower()
+        if re.search(r"sewer|catch ?basin|bwsc", notes):
+            specific.append("sewer or catch basin mentioned in closure notes")
         inputs.append({
             "region": {**{k: r[k] for k in ("rank", "rank_of", "region_id", "cell_ids", "neighborhood")},
-                       "severity": r["severity"]},
+                       "severity": r["severity"], "headline_facts": headline,
+                       "what_is_specific_here": specific or ["nothing stands out from the Boston level"]},
             "forecast": {
                 "model_run_id": run_id,
                 "next_4_weeks_expected_reports": {str(k): round(float(v), 2) for k, v in weekly.items()},
@@ -349,12 +398,17 @@ Decide ONE solution for the region and one short line per record.
 
 How to decide:
 - Compare monitoring/inspection with interventions (abatement order, citation, warning, cleanup, rat-resistant barrels, referral) in the statistics for the situations that match this region's records. Prefer what is not yet tried at addresses where the same action was repeated and reports came back.
+- Lead with what is specific to THIS region (region.what_is_specific_here: causes well above the Boston level, the named repeat addresses, sewer notes). Avoid generic advice that would fit any region.
 - Tie the action to the strongest nearby cause (e.g. trash 311 or restaurants -> containers/compliance; vacant parcel -> notice to owner, joint visit; sewer in notes -> BWSC referral).
 - Use the forecast: say whether reports are expected to stay high in the next 4 weeks.
+- For severity and forecast numbers, copy the phrases in region.headline_facts word for word (e.g. "3.5 expected reports in the next 4 weeks"); never attach a number to a different meaning.
+- For nearby causes cite per_report_within_150m and times_boston, not the raw count. Call a cause "well above" Boston only when times_boston is 2 or more; below 2 say "near the Boston level".
+- When the city's last step was an earlier ISD visit, the todo is the next sanitation, exclusion, enforcement or referral step; do not comment on the visit itself.
+- Only propose an intervention that is listed in proposable_actions_with_lower_return_than_monitoring for the matching situation. Never propose an action marked "same or higher than monitoring" for the region's situations; if none is lower, propose inspecting and recording the cause.
 - The statistics are observational: inspectors choose actions by situation, so a lower return rate is not proof the action works. Say "in past cases", never "reduces" or "works". The model's action differences are weak; use them as one input.
 - Read the rates correctly: a LOWER "returned_within_60d" is better. Never argue against an action whose rate is lower than monitoring's; prefer actions with a lower rate and enough cases (check the 95% interval; overlapping intervals mean "no clear difference" and you should say so).
 - If evidence is thin (few records, no notes), recommend inspecting and recording the cause.
-- Legal lane only: sanitation, exclusion, enforcement, referral, or inspect. Do not write the words bait, baiting, poison or rodenticide at all, not even to say "do not bait"; call past baiting "ISD treatment".
+- Legal lane only: sanitation, exclusion, enforcement, referral, or inspect. Do not write the words bait, poison, rodenticide, treat, treatment or exterminate at all, not even as history or to say "do not"; refer to past burrow work only as "earlier ISD visits". Never tell anyone to continue or schedule such visits.
 - Every number you write must be copied exactly from the input (e.g. "18%", "12 reports"). Do not compute new numbers. Do not mention names or full addresses; blocks are fine.
 - Plain English, short. "Expected reports", never "rats" counts.
 
@@ -389,6 +443,26 @@ FIXED_NUMBERS = {"40", "60", "90", "100", "150", "250"}  # spec constants: radii
 _NUM = re.compile(r"(?<![\w.])\d+(?:\.\d+)?%?")
 
 
+ACTION_WORDS = {
+    "abatement_order": r"abatement", "citation": r"\bcit(?:e|es|ation|ations)\b", "warning": r"warning|notice",
+    "barrels": r"barrels?|rat-resistant|sealed containers?", "cleanup": r"clean ?up", "referral": r"\brefer",
+}
+
+
+def _worse_than_monitoring(action: str, inp: dict) -> list[str]:
+    """Reject an action that, in every one of the region's situations where it has data, did no better than monitoring."""
+    tables = [t for k, t in inp["solution_statistics"].items() if k != "all Boston closed rodent cases"]
+    tables = tables or list(inp["solution_statistics"].values())
+    errs = []
+    for a, rx in ACTION_WORDS.items():
+        if not re.search(rx, action, re.I):
+            continue
+        verdicts = [r["vs_monitoring"] for t in tables for r in t["by_action"] if r["action"] == _shown(a)]
+        if verdicts and all(v.startswith("same or higher") for v in verdicts):
+            errs.append(f"'{_shown(a)}' did no better than monitoring in this region's situations; do not propose it")
+    return errs
+
+
 def check(out: dict, inp: dict, input_text: str) -> list[str]:
     errs = []
     if out.get("lane") not in LANES:
@@ -401,6 +475,7 @@ def check(out: dict, inp: dict, input_text: str) -> list[str]:
     bad = sorted({n for n in _NUM.findall(text) if n not in allowed and not (n.isdigit() and int(n) <= 12)})
     if bad:
         errs.append(f"numbers not in the input: {bad[:8]}")
+    errs += _worse_than_monitoring(str(out.get("action", "")), inp)
     want = {r["incident_id"] for r in inp["records_last_12_weeks"]}
     got = {r.get("incident_id") for r in out.get("records", [])}
     if want - got:
