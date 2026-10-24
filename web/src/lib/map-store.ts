@@ -31,13 +31,29 @@ export type SiteRow = {
   last_note: string | null; due: boolean;
 };
 
+/**
+ * One row of the keyboard "features in view" list — the accessible twin of the map
+ * (R2.11, R9.1, docs/design/accessibility.md §1). MapView keeps this in sync with what
+ * is actually drawn; the FeatureList renders it and selection syncs both ways.
+ */
+export type FeatureInView = {
+  kind: "incident" | "site";
+  id: string;
+  label: string;        // human name, e.g. street block
+  detail: string;       // short line: neighborhood · counts
+  lat: number;
+  lon: number;
+};
+
 type MapState = {
   mode: Mode;
   sites: SiteRow[];
   siteNeighborhood: string;
   setSiteNeighborhood: (neighborhood: string) => void;
+  featuresInView: FeatureInView[];
   setMode: (m: Mode) => void;
   setSites: (s: SiteRow[]) => void;
+  setFeaturesInView: (f: FeatureInView[]) => void;
   view: View;
   bounds: Bounds | null;
   viewMode: ViewMode;
@@ -54,6 +70,7 @@ type MapState = {
   selection: Selection;
   panel: "inspector" | "insights" | "chat";
   forecastWeek: string | null;     // ISO week_start or "4w"; null also means next four weeks
+  three: boolean;                  // pitched camera + extruded buildings at street level
   flyTo: (v: Partial<View> & { lat: number; lon: number }) => void;
   setView: (v: View) => void;
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
@@ -62,6 +79,7 @@ type MapState = {
   select: (s: Selection) => void;
   setPanel: (p: MapState["panel"]) => void;
   setForecastWeek: (w: string | null) => void;
+  setThree: (on: boolean) => void;
 };
 
 const today = new Date();
@@ -73,8 +91,10 @@ export const useMap = create<MapState>((set) => ({
   sites: [],
   siteNeighborhood: "",
   setSiteNeighborhood: (siteNeighborhood) => set({ siteNeighborhood }),
+  featuresInView: [],
   setMode: (mode) => set({ mode }),
   setSites: (sites) => set({ sites }),
+  setFeaturesInView: (featuresInView) => set({ featuresInView }),
   view: { lat: 42.32, lon: -71.08, zoom: 11.5 },
   flyToTarget: null,
   layers: initialLayers(),
@@ -91,6 +111,7 @@ export const useMap = create<MapState>((set) => ({
   selection: null,
   panel: "inspector",
   forecastWeek: null,
+  three: false,
   flyTo: (v) => set((s) => ({ view: { ...s.view, ...v }, bounds: null, flyToTarget: { zoom: s.view.zoom, ...v, nonce: Date.now() } })),
   setView: (view) => set({ view }),
   setLayers: (patch) => set((s) => {
@@ -113,4 +134,5 @@ export const useMap = create<MapState>((set) => ({
   select: (selection) => set({ selection, panel: selection ? "inspector" : "inspector" }),
   setPanel: (panel) => set({ panel }),
   setForecastWeek: (forecastWeek) => set({ forecastWeek }),
+  setThree: (three) => set({ three }),
 }));

@@ -137,6 +137,8 @@ export type ForecastView = {
     band: RiskBand | null;
     neighborhood: string | null;
     drivers: string[];
+    // Same top drivers, unformatted, for the visual driver bar. value = signed contribution.
+    driverParts: { label: string; value: number | null }[];
   }[];
 };
 

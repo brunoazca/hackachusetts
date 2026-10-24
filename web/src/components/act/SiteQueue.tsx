@@ -40,7 +40,7 @@ export default function SiteQueue() {
 
   if (!panelOpen) return <CollapsedTab side="left" label="Places to visit" meta={`${due} flagged`} onOpen={() => setPanelOpen(true)} />;
   return (
-    <div className="glass absolute bottom-3 left-3 top-[68px] z-20 flex w-96 flex-col overflow-hidden rounded-lg text-sm">
+    <div className="map-secondary-panel glass absolute bottom-3 left-3 top-(--shell-top) z-20 flex w-96 max-w-[calc(100%-88px)] flex-col overflow-hidden rounded-lg text-sm">
       <div className="border-b border-neutral-200 p-3">
         <div className="flex items-baseline justify-between">
           <h2 className="flex items-center gap-1 text-base font-semibold"><CollapseButton onClick={() => setPanelOpen(false)} label="Hide places to visit" dir="left" />Places to visit</h2>
@@ -77,6 +77,8 @@ export default function SiteQueue() {
             <li key={r.id}>
               <button
                 type="button"
+                data-site-trigger
+                aria-controls="details-panel"
                 onClick={() => open(r)}
                 aria-current={active ? "true" : undefined}
                 className={`grid w-full grid-cols-[1.5rem_minmax(0,1fr)] items-start gap-2 border-b border-neutral-100 px-3 py-2 text-left hover:bg-neutral-50 ${active ? "bg-amber-50" : ""}`}

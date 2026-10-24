@@ -340,6 +340,22 @@ If the agent does not know the teammate's name, it asks before logging.
 - Decision: Keep Agent empty in this chat's log entries, as requested by Carol; record each substantive piece of work here.
 - Idea: Chat and visual controls should share one state; analytical verdicts should use the same calculations as the panel.
 
+### 2026-10-24 17:25 — Prepared the requested commit and push of the item 4 qual...
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Prepared the requested commit and push of the item 4 quality fixes on a11y/map-twin-skip-motion.
+- Why: Guilherme explicitly asked to commit and push the completed work.
+- Where: .kiro/KIRO_LOG.md; branch a11y/map-twin-skip-motion; quality-fix commit d7be311
+- Idea: Fetched origin and confirmed the target branch. Publish the existing quality commits and their verification log; keep concurrent uncommitted implementation work with its owners.
+
+### 2026-10-24 17:23 — Completed item 4: repaired blank PDFs, mobile panels, key...
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Completed item 4: repaired blank PDFs, mobile panels, keyboard focus, and parcel-layer lint; committed d7be311.
+- Why: The brief printed eight blank pages; mobile controls clipped and keyboard focus was lost during panel visibility changes.
+- Where: web shell, map ContextLayers, inspection-brief CSS; .kiro/scripts/check_ui_quality.playwright.js; docs/rat-audit/inspection-brief.md and quality-proof/
+- Idea: Verified 320–1280px, live queue to brief, normal/reduced motion, all 31 records in eight-page Letter/A4 PDFs, offline HTML, full lint/types/tests/build. Migration is in main/origin/main; live API still PGRST202 at 5:22 PM, so DB catalog state remains unconfirmed.
+
 ### 2026-10-24 17:25 — Adicionei a secao 5.4a na spec de Insights: agregar popul...
 - Teammate: Carol
 - Agent: kirocrew (default)
@@ -383,6 +399,22 @@ If the agent does not know the teammate's name, it asks before logging.
 - Evidence: Public Piper /api/chat GET returned configured=false/data=live and missing AI_GATEWAY_API_KEY. Vercel project prj_rJiVrRy5Uwo9OiFa3HId0Sxe6ULx in bruno-team3 returns 403; consent helper returns 404 for known team id and slug. Deployed-model conversation blocked before sending a prompt.
 - Decision: This validated branch is ready for the authorized fast-forward into local main. Keep the human-push workflow; no push/deploy, production env mutation, migration or DB write here. Production needs its Gateway key and redeployment; populated Analytics still depends on its separate refresh.
 - Idea: Local chat/model success, published provider configuration and persisted Analytics outputs are separate checks.
+
+### 2026-10-24 16:54 — Refreshed remaining work, ordered from easiest to hardest
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Refreshed remaining work, ordered from easiest to hardest
+- Why: Prioritize finishing the deployed review workflow against the civic-action judging requirements
+- Where: none (read-only product audit; this log entry only)
+- Idea: Order: apply source migration; remove unfinished placeholders; configure deployed Ask; finish PDF/mobile/keyboard/lint QA; connect assistant map actions; populate and integrate analytics; save inspector decisions and follow-ups; validate recurrence ranking; evaluate interventions. Live checks: site_evidence missing, Ask key unset, sites/action_outcomes/correlations empty. Finish the accurate public demo video before submission.
+
+### 2026-10-24 16:42 — Implemented calendar-date fixes, distinct-day count label...
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Implemented calendar-date fixes, distinct-day count labels, source freshness, and printable inspection briefs
+- Why: Make evidence consistent and portable for an inspector to review
+- Where: web/src/lib/{dates,evidence,queries,inspection-brief}.ts; web/src/components/{act,inspector,evidence,brief,shell}; web/src/app/brief; web/tests; supabase/migrations/20261024202722_site_evidence_provenance.sql; supabase/tests/site_evidence.sql; docs/rat-audit/inspection-brief.md; README.md
+- Idea: Exact nearby-source citations require the tested read-only migration; live production currently lacks it. Direct Node build, TypeScript, targeted lint, five unit tests, PostGIS/RLS tests and live HTML download checks passed; native print preview remained unverified.
 
 ### 2026-10-24 16:46 — Prepare Agent for v2 data and validate the real chat
 - Teammate: Carol

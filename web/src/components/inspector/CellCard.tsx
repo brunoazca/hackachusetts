@@ -2,110 +2,132 @@
 import { useEffect, useState } from "react";
 import { fetchCellDetail, fmtWeek, type CellDetail } from "@/lib/forecast";
 import { CELL_METRICS, fetchCellContext, fmtMetric, type CellContext } from "@/lib/cell-context";
+import { BandPill, Eyebrow, Meter, Ring, Skeleton } from "@/components/ui/bits";
 
-// Draft card for a forecast block: next 4 weeks, why (drivers), last 12 weeks actual vs expected,
+// Forecast block card: the number first, then the next weeks, why (drivers), how the model did here,
 // and the block profile (demographics, building age), collapsed.
 // Owner: model track.
 
-const BAND = {
-  low: ["Low", "bg-neutral-100 text-neutral-800"],
-  elevated: ["Elevated", "bg-amber-100 text-amber-900"],
-  high: ["High", "bg-orange-200 text-orange-950"],
-  very_high: ["Very high", "bg-red-700 text-white"],
-} as const;
+function History({ h }: { h: CellDetail["history"] }) {
+  const W = 260, H = 64, n = h.length;
+  const max = Math.max(1, ...h.map((x) => Math.max(x.actual, x.expected)));
+  const x = (i: number) => 8 + (i * (W - 16)) / Math.max(1, n - 1);
+  const y = (v: number) => H - 6 - (v / max) * (H - 14);
+  const line = h.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p.expected).toFixed(1)}`).join(" ");
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="mt-2 h-16 w-full" role="img" aria-label="Actual reports (bars) and forecast (line), last 12 weeks">
+      <line x1="0" x2={W} y1={H - 6} y2={H - 6} stroke="var(--p-line)" />
+      {h.map((p, i) => p.actual > 0 && (
+        <rect key={p.week} x={x(i) - 5} y={y(p.actual)} width={10} height={H - 6 - y(p.actual)} rx={2} fill="var(--p-fg-3)" opacity={0.7} />
+      ))}
+      <path d={line} fill="none" stroke="var(--p-forecast)" strokeWidth={2} strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export default function CellCard({ id }: { id: string }) {
   // Keyed by cell id so a stale response for the previous block is never shown.
   const [got, setGot] = useState<{ id: string; d?: CellDetail; error?: string } | null>(null);
+  const [week, setWeek] = useState(0);
   useEffect(() => {
     let live = true;
     fetchCellDetail(id).then((d) => live && setGot({ id, d })).catch((e) => live && setGot({ id, error: String(e) }));
     return () => { live = false; };
   }, [id]);
 
-  if (got?.id === id && got.error) return <p role="alert" className="p-4 text-sm text-red-700">Could not load this block: {got.error}</p>;
+  if (got?.id === id && got.error) return <p role="alert" className="p-4 text-sm text-return">Could not load this block: {got.error}</p>;
   const d = got?.id === id ? got.d : undefined;
-  if (!d) return <p className="p-4 text-sm text-neutral-700" aria-live="polite">Loading forecast…</p>;
+  if (!d) return <Skeleton label="Loading forecast…" />;
 
-  const now = d.forecast[0];
-  const band = now ? BAND[now.band] : null;
-  const maxH = Math.max(1, ...d.history.map((h) => Math.max(h.actual, h.expected)));
+  const now = d.forecast[Math.min(week, d.forecast.length - 1)];
+  const maxDriver = Math.max(0.01, ...d.drivers.map((x) => x.contribution));
   const hTotal = d.history.reduce((a, h) => a + h.actual, 0);
   const eTotal = d.history.reduce((a, h) => a + h.expected, 0);
 
   return (
-    <article className="space-y-4 p-4 text-sm" aria-live="polite">
+    <article className="space-y-4 p-4 text-sm" aria-live="polite" data-cell={id}>
       <header>
-        <span className="text-xs font-semibold uppercase tracking-wide text-neutral-700">Forecast block · 250 m</span>
-        <h2 className="text-lg font-semibold">{d.cell?.neighborhood ?? "Boston"}</h2>
-        <p className="font-mono text-xs text-neutral-600">{id}</p>
+        <Eyebrow>Block forecast</Eyebrow>
+        <h2 className="mt-0.5 text-title font-bold text-fg">{d.cell?.neighborhood ?? "Boston"}</h2>
       </header>
 
       {now && (
-        <section>
-          <div className="flex flex-wrap items-baseline gap-2">
-            <span className="font-mono text-3xl tabular-nums">{now.expected.toFixed(2)}</span>
-            <span className="text-neutral-700">expected reports, week of {fmtWeek(now.week)}</span>
-            {band && <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${band[1]}`}>{band[0]}</span>}
-          </div>
-          <p className="text-neutral-700">{Math.round(now.p_any * 100)}% chance of at least one report that week.</p>
-          <div className="mt-2 grid grid-cols-4 gap-1 text-center">
-            {d.forecast.map((f) => (
-              <div key={f.week} className="rounded bg-neutral-50 py-1">
-                <div className="text-[11px] text-neutral-600">{fmtWeek(f.week)}</div>
-                <div className="font-mono tabular-nums">{f.expected.toFixed(2)}</div>
+        <section className="rounded-xl border p-3"
+          style={{ borderColor: "color-mix(in srgb, var(--p-forecast) 30%, var(--p-line))", background: "color-mix(in srgb, var(--p-forecast) 8%, var(--p-card))" }}>
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <p className="text-xs text-fg-2">Expected reports, week of {fmtWeek(now.week)}</p>
+              <div className="mt-0.5 flex items-baseline gap-2">
+                <span className="font-mono text-headline-sm font-bold tabular-nums text-fg">{now.expected.toFixed(1)}</span>
+                <BandPill band={now.band} />
               </div>
-            ))}
+            </div>
+            <div className="flex flex-col items-center gap-0.5">
+              <Ring share={now.p_any}>{Math.round(now.p_any * 100)}%</Ring>
+              <span className="text-[10px] text-fg-3">chance of a report</span>
+            </div>
           </div>
+          {d.forecast.length > 1 && (
+            <div className="mt-3 grid grid-cols-4 gap-1.5" role="group" aria-label="Forecast week">
+              {d.forecast.map((f, i) => (
+                <button key={f.week} type="button" onClick={() => setWeek(i)} aria-pressed={i === week}
+                  className={`rounded-lg py-1.5 text-center transition-colors ${i === week ? "bg-accent text-accent-fg" : "bg-card text-fg hover:bg-card-hover"}`}>
+                  <span className={`block text-[10px] ${i === week ? "" : "text-fg-3"}`}>{fmtWeek(f.week)}</span>
+                  <span className="block font-mono text-small font-semibold tabular-nums">{f.expected.toFixed(1)}</span>
+                </button>
+              ))}
+            </div>
+          )}
         </section>
       )}
 
       {d.emerging?.kind === "emerging_hotspot" && (
-        <p className="rounded-md bg-blue-50 p-2 text-blue-900">
-          <b>Emerging hotspot:</b> high forecast but at most 1 rodent report in the last 12 weeks.
-          {d.emerging.signals.length > 0 && <> Related report signals: {d.emerging.signals.map((s) => `${s.label.toLowerCase()} (${s.last_12_weeks})`).join(", ")}.</>}
+        <p className="flex gap-2 rounded-lg border border-line bg-card p-2.5 text-[13px] text-fg-2">
+          <span aria-hidden className="mt-1 h-2 w-2 flex-none rounded-full bg-forecast" />
+          <span><b className="text-fg">Emerging hotspot.</b> High forecast, but at most 1 rodent report in the last 12 weeks.
+            {d.emerging.signals.length > 0 && <> Related signals: {d.emerging.signals.map((s) => `${s.label.toLowerCase()} (${s.last_12_weeks})`).join(", ")}.</>}</span>
         </p>
       )}
       {d.emerging?.kind === "early_warning" && (
-        <p className="rounded-md bg-blue-50 p-2 text-blue-900"><b>Early warning:</b> dead-animal and indoor-pest reports are rising here.</p>
+        <p className="flex gap-2 rounded-lg border border-line bg-card p-2.5 text-[13px] text-fg-2">
+          <span aria-hidden className="mt-1 h-2 w-2 flex-none rounded-full bg-warn" />
+          <span><b className="text-fg">Early warning.</b> Dead-animal and indoor-pest reports are rising here.</span>
+        </p>
       )}
 
       <section>
-        <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Factors associated with this forecast</h3>
-        <p className="mb-2 text-xs text-fg-3">Model associations do not identify causes or treatment effects.</p>
+        <h3 className="text-[12px] font-semibold text-fg-2">Why this block</h3>
         {d.drivers.length ? (
-          <ul className="space-y-1">
+          <ul className="mt-1.5 space-y-2">
             {d.drivers.slice(0, 5).map((x) => (
-              <li key={x.feature} className="flex justify-between gap-3">
-                <span>{x.label}{x.value !== null && <span className="text-neutral-600"> ({x.value})</span>}</span>
-                <span className="font-mono text-neutral-600">+{x.contribution.toFixed(2)}</span>
+              <li key={x.feature} className="grid grid-cols-[minmax(0,1fr)_44px] items-center gap-x-2 gap-y-1">
+                <span className="truncate text-[13px] text-fg">{x.label}{x.value !== null && <span className="text-fg-3"> · {x.value}</span>}</span>
+                <span className="text-right font-mono text-[12px] tabular-nums text-fg-2">+{x.contribution.toFixed(2)}</span>
+                <span className="col-span-2"><Meter share={x.contribution / maxDriver} className="bg-forecast" /></span>
               </li>
             ))}
           </ul>
-        ) : <p className="text-neutral-700">Nothing here pushes the forecast above a typical block.</p>}
+        ) : <p className="mt-1 text-fg-3">Nothing here pushes the forecast above a typical block.</p>}
+        <p className="mt-2 text-[11px] text-fg-3">These go along with more reports. They do not prove cause.</p>
       </section>
 
       {d.history.length > 0 && (
         <section>
-          <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Last 12 weeks: actual vs model</h3>
-          <svg viewBox="0 0 240 60" className="w-full" role="img" aria-label="Actual reports (bars) and model expectation (line)">
-            {d.history.map((h, i) => {
-              const x = 6 + i * (228 / Math.max(1, d.history.length - 1));
-              const y = 56 - (h.actual / maxH) * 50;
-              return h.actual > 0 ? <rect key={h.week} x={x - 4} y={y} width={8} height={56 - y} fill="#374151" opacity={0.75} /> : null;
-            })}
-            <polyline
-              fill="none" stroke="#1f5fbf" strokeWidth={2}
-              points={d.history.map((h, i) => `${6 + i * (228 / Math.max(1, d.history.length - 1))},${56 - (h.expected / maxH) * 50}`).join(" ")}
-            />
-          </svg>
-          <p className="text-xs text-neutral-700">{hTotal} actual reports vs {eTotal.toFixed(1)} expected (bars = actual, blue line = model).</p>
+          <div className="flex items-baseline justify-between">
+            <h3 className="text-[12px] font-semibold text-fg-2">Last 12 weeks</h3>
+            <span className="font-mono text-[11px] tabular-nums text-fg-3">{hTotal} actual · {eTotal.toFixed(1)} expected</span>
+          </div>
+          <History h={d.history} />
+          <div className="flex gap-4 text-[11px] text-fg-3">
+            <span className="flex items-center gap-1.5"><span aria-hidden className="h-2.5 w-2.5 rounded-sm bg-fg-3/70" />actual</span>
+            <span className="flex items-center gap-1.5"><span aria-hidden className="h-0.5 w-3 bg-forecast" />forecast</span>
+          </div>
         </section>
       )}
 
       <BlockProfile id={id} />
 
-      <footer className="border-t border-neutral-100 pt-2 text-xs text-neutral-700">{d.caveat} Run {d.run_id}.</footer>
+      <footer className="border-t border-line pt-2 text-[11px] text-fg-3">{d.caveat} Run {d.run_id}.</footer>
     </article>
   );
 }

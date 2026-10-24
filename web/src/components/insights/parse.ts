@@ -230,6 +230,11 @@ export function toForecast(f: InsightsPayload["forecast"]): ForecastView | null 
     band: BANDS.includes(c.risk_band as RiskBand) ? (c.risk_band as RiskBand) : null,
     neighborhood: c.neighborhood,
     drivers: (Array.isArray(c.drivers) ? c.drivers : []).map(driverText).filter((s): s is string => !!s).slice(0, 3),
+    driverParts: (Array.isArray(c.drivers) ? c.drivers : [])
+      .filter(isObj)
+      .map((d) => ({ label: str(d.label) ?? str(d.feature) ?? "", value: num(d.contribution) }))
+      .filter((d) => d.label)
+      .slice(0, 3),
   }));
   return {
     runId: run.id,

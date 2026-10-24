@@ -14,8 +14,7 @@ export default function MapLegend({ mode, causes, zoom }: { mode: ViewMode; caus
     <div
       role="note"
       aria-label="Map key"
-      className="glass absolute left-3 z-10 rounded-lg px-3 py-2 text-[12px] leading-4 text-fg-2 transition-[bottom] duration-300 ease-[var(--ease-spring)]"
-      style={{ bottom: "calc(var(--ctrl-bottom, 4px) + 8px)" }}
+      className="glass rounded-lg px-3 py-2 text-[12px] leading-4 text-fg-2"
     >
       {!street ? (
         <div className="flex flex-col gap-1.5">

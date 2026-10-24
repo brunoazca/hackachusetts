@@ -42,8 +42,8 @@ export function reportDays<T extends { id: string; opened: string }>(reports: T[
 export const COUNT_EXPLANATION = "Report days and closure days count distinct dates, not individual records. Several records can share a date. Return days count report dates with a report more than 1 day and no more than 60 days after an earlier closure.";
 
 export const INSPECTION_QUESTIONS = [
-  "Is there current rodent activity? Record what you observe, where, and when.",
-  "What response was recorded previously, and can its current condition be checked on site?",
-  "Are food waste, storage, entry points, or shelter present? Verify nearby records against current conditions.",
-  "What follow-up is needed, who will own it, and when should the location be checked again?",
+  "Do you see signs of rodents now? Note what, where and when.",
+  "What did the city do last time, and can you check it now?",
+  "Is there food waste, open trash, a way in, or a place to hide? Check the nearby reports on site.",
+  "What should happen next, who will do it, and when should someone come back?",
 ];

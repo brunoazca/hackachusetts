@@ -34,11 +34,12 @@ export const BRIEF_CSS = `
   main { padding:0 !important; background:#fff !important; }
   .brief-toolbar, nextjs-portal { display:none !important; }
   .inspection-brief { max-width:none; padding:0; font-size:10pt; }
+  .inspection-brief, .inspection-brief * { visibility:visible; }
   .inspection-brief h1 { font-size:26pt; }
   .inspection-brief h2 { font-size:14pt; break-after:avoid; }
   .inspection-brief p { orphans:3; widows:3; }
   .inspection-brief thead { display:table-header-group; }
-  .inspection-brief tr, .brief-stats, .brief-questions li, .brief-sources li, .brief-record-heading { break-inside:avoid; }
+  .inspection-brief tr, .brief-stats, .brief-questions li, .brief-sources li, .brief-records li, .brief-footer { break-inside:avoid; }
   .brief-stats { grid-template-columns:repeat(4,1fr); }
   .brief-history { break-before:page; }
   .brief-muted, .brief-sources li, .brief-footer { font-size:9pt; }

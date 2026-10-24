@@ -1,7 +1,7 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { useMap } from "@/lib/map-store";
-import { rightInset, useUi } from "@/lib/ui-store";
+import { useUi } from "@/lib/ui-store";
 import SidePanel from "./SidePanel";
 import { useMorph } from "@/lib/use-morph";
 
@@ -17,6 +17,24 @@ const ICON: Record<Tab, ReactNode> = {
 };
 const LABEL: Record<Tab, string> = { inspector: "Inspect", insights: "Insights", chat: "Ask" };
 
+// Inherited visibility can settle a few frames after a morph changes the parent.
+// Wait for the actual target, and cancel if the panel changes again in the meantime.
+function focusWhenVisible(getTarget: () => HTMLElement | null) {
+  let frame: number;
+  const focus = () => {
+    const target = getTarget();
+    if (!target?.isConnected) return;
+    if (target.closest("[inert]")) return;
+    if (!target.checkVisibility({ visibilityProperty: true })) {
+      frame = requestAnimationFrame(focus);
+      return;
+    }
+    target.focus({ preventScroll: true });
+  };
+  frame = requestAnimationFrame(focus);
+  return () => cancelAnimationFrame(frame);
+}
+
 export default function RightPanel() {
   const open = useUi((s) => s.rightOpen);
   const setOpen = useUi((s) => s.setRightOpen);
@@ -26,6 +44,8 @@ export default function RightPanel() {
   const asideRef = useRef<HTMLElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
   const anchorRef = useRef<HTMLButtonElement | null>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
+  const wasOpenRef = useRef(open);
   const btnRefs = useRef<Partial<Record<Tab, HTMLButtonElement | null>>>({});
   useMorph(open, asideRef, () => anchorRef.current ?? btnRefs.current.inspector ?? null);
 
@@ -37,7 +57,8 @@ export default function RightPanel() {
     const aside = asideRef.current, body = bodyRef.current;
     if (!aside || !body) return;
     const measure = () => {
-      const max = (aside.parentElement?.clientHeight ?? window.innerHeight) - 68 - 12;
+      const top = parseFloat(getComputedStyle(aside).top);
+      const max = (aside.parentElement?.clientHeight ?? window.innerHeight) - top - 12;
       const head = (aside.querySelector('[role="tablist"]')?.parentElement as HTMLElement | null)?.offsetHeight ?? 49;
       setHeight(panel === "chat" ? max : Math.min(max, head + body.offsetHeight + 1));
     };
@@ -48,19 +69,65 @@ export default function RightPanel() {
     return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
   }, [panel]);
 
-  // A new selection on the map opens the panel.
-  useEffect(() => { if (selection) { anchorRef.current = btnRefs.current.inspector ?? null; setOpen(true); } }, [selection, setOpen]);
+  const focusPanel = useCallback(() => {
+    return focusWhenVisible(() => asideRef.current?.querySelector<HTMLButtonElement>('[role="tab"][aria-selected="true"]') ?? null);
+  }, []);
+  const closePanel = useCallback(() => {
+    setOpen(false);
+  }, [setOpen]);
+  const openTab = useCallback((t: Tab) => {
+    anchorRef.current = btnRefs.current[t] ?? null;
+    returnFocusRef.current = anchorRef.current;
+    setPanel(t);
+    setOpen(true);
+  }, [setPanel, setOpen]);
+
+  // A selection opens the panel. Keyboard/list users land directly on its controls.
+  useEffect(() => {
+    if (!selection) return;
+    anchorRef.current = btnRefs.current.inspector ?? null;
+    const trigger = document.activeElement;
+    let cancelFocus: (() => void) | undefined;
+    if (trigger instanceof HTMLElement && trigger.hasAttribute("data-site-trigger")) {
+      returnFocusRef.current = trigger;
+      if (useUi.getState().rightOpen) cancelFocus = focusPanel();
+    }
+    setOpen(true);
+    return cancelFocus;
+  }, [selection, setOpen, focusPanel]);
+
+  // Focus only after React has removed inert and the morph has made the panel visible.
+  // An event-time animation frame can run before that commit during a busy map render.
+  useEffect(() => {
+    if (open) {
+      wasOpenRef.current = true;
+      return focusPanel();
+    } else if (wasOpenRef.current) {
+      wasOpenRef.current = false;
+      return focusWhenVisible(() => returnFocusRef.current?.isConnected
+        ? returnFocusRef.current : anchorRef.current ?? btnRefs.current.inspector ?? null);
+    }
+    wasOpenRef.current = open;
+  }, [open, focusPanel]);
 
   // "]" toggles; Esc folds it when focus is inside.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      const typing = /INPUT|TEXTAREA|SELECT/.test((e.target as HTMLElement)?.tagName ?? "");
-      if (!typing && !e.metaKey && !e.ctrlKey && e.key === "]") setOpen((v) => !v);
-      if (e.key === "Escape" && asideRef.current?.contains(document.activeElement)) setOpen(false);
+      const target = e.target as HTMLElement;
+      const typing = /INPUT|TEXTAREA|SELECT/.test(target?.tagName ?? "") || target?.isContentEditable;
+      if (!typing && !e.metaKey && !e.ctrlKey && !e.altKey && e.key === "]") {
+        e.preventDefault();
+        if (useUi.getState().rightOpen) closePanel();
+        else openTab(useMap.getState().panel as Tab);
+      }
+      if (e.key === "Escape" && asideRef.current?.contains(document.activeElement)) {
+        e.preventDefault();
+        closePanel();
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [setOpen]);
+  }, [closePanel, openTab]);
 
   // Map controls move left only when the open panel actually reaches down to them;
   // a short panel leaves them in the corner.
@@ -69,11 +136,11 @@ export default function RightPanel() {
     const area = asideRef.current?.parentElement?.clientHeight ?? window.innerHeight;
     const ctrlBottom = parseFloat(getComputedStyle(root).getPropertyValue("--ctrl-bottom")) || 12;
     const ctrlTop = area - ctrlBottom - 150;
-    const covers = open && (height == null || 68 + height + 8 > ctrlTop);
-    root.style.setProperty("--right-inset", covers ? `${rightInset(true) + 8}px` : "12px");
+    const aside = asideRef.current;
+    const top = aside ? parseFloat(getComputedStyle(aside).top) : 68;
+    const covers = open && (height == null || top + height + 8 > ctrlTop);
+    root.style.setProperty("--right-inset", covers ? `${(aside?.offsetWidth ?? 380) + 32}px` : "12px");
   }, [open, height]);
-
-  const openTab = (t: Tab) => { anchorRef.current = btnRefs.current[t] ?? null; setPanel(t); setOpen(true); };
 
   return (
     <>
@@ -81,7 +148,7 @@ export default function RightPanel() {
       <div
         ref={railRef}
         inert={open}
-        className={`glass absolute right-3 top-[68px] z-30 flex w-[52px] flex-col items-center gap-1 rounded-lg p-1 transition-opacity duration-200 ${open ? "opacity-0" : "opacity-100"}`}
+        className={`glass absolute right-3 top-(--shell-top) z-30 flex w-[52px] flex-col items-center gap-1 rounded-lg p-1 transition-opacity duration-200 ${open ? "opacity-0" : "opacity-100"}`}
         role="toolbar"
         aria-label="Open details panel"
       >
@@ -92,6 +159,8 @@ export default function RightPanel() {
             type="button"
             onClick={() => openTab(t)}
             aria-label={`Open ${LABEL[t]}`}
+            aria-controls="details-panel"
+            aria-expanded={open}
             title={`${LABEL[t]} · ]`}
             className="relative grid h-11 w-11 place-items-center rounded-md text-fg-2 transition-colors duration-150 hover:bg-card-hover hover:text-fg"
           >
@@ -104,14 +173,15 @@ export default function RightPanel() {
       {/* Panel */}
       {(
         <aside
+          id="details-panel"
           ref={asideRef}
           inert={!open}
           aria-label={`${LABEL[panel as Tab] ?? "Details"} panel`}
           style={{ height: height ?? undefined }}
-          className="glass absolute right-3 top-[68px] z-[31] max-h-[calc(100%-80px)] w-[380px] overflow-hidden rounded-lg transition-[height] duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,clip-path] motion-reduce:transition-none"
+          className="glass absolute right-3 top-(--shell-top) z-[31] max-h-[calc(100%-var(--shell-top)-12px)] w-[380px] max-w-[calc(100%-24px)] overflow-hidden rounded-lg transition-[height] duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,clip-path] motion-reduce:transition-none"
         >
           <div className="flex h-full flex-col">
-            <SidePanel onCollapse={() => setOpen(false)} bodyRef={bodyRef} />
+            <SidePanel onCollapse={closePanel} bodyRef={bodyRef} />
           </div>
         </aside>
       )}
