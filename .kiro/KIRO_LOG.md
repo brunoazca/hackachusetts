@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:11 — Default date window is last week; fixed range slider so F...
+- Teammate: Bruno
+- Agent: —
+- Did: Default date window is last week; fixed range slider so From thumb is draggable when thumbs overlap
+- Why: Short windows stacked both thumbs and the To thumb swallowed drags, so the slider looked stuck
+- Where: web/src/lib/map-store.ts, web/src/components/map/Timeline.tsx
+- Idea: —
+
 ### 2026-10-24 19:10 — Removed week selectors from the Next forecast panel; it o...
 - Teammate: Bruno
 - Agent: —
