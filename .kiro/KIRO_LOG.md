@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:37 — Ran per-evidence-layer ablation of the cell-week Poisson ...
+- Teammate: Bruno
+- Agent: —
+- Did: Ran per-evidence-layer ablation of the cell-week Poisson GBM (train < 2026-04-20, test last 26 weeks): all evidence features together add +0.3 pt top-10% capture (0.655 -> 0.658); pest, dead animal, trash storage help a little; litter and dumping slightly hurt; trash_early, weeds, move_in_trash, ce_* have data only from mid-2026 so the model cannot use them
+- Why: Decide which evidence layers to keep in the panel from the current ML model instead of the hand-copied audit labels
+- Where: pipeline/rat_audit/model (scratch script, not committed)
+- Idea: Keep pest/dead animal/trash storage; hide ce_dumping, ce_dumpster, ce_weeds (no model feature); revisit the 2026-only 311 types after a year of data
+
 ### 2026-10-24 18:30 — Chat switched to Claude Sonnet 5.5 via AI Gateway: produc...
 - Teammate: Bruno
 - Agent: —
