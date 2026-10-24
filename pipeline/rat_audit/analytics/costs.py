@@ -53,7 +53,7 @@ def pest_payments(rows: list[tuple]) -> dict:
         out.append({"fiscal_year": fy, "amount": round(d["amount"], 2), "n_payments": d["n_payments"],
                     "departments": [{"department": k, "amount": round(v, 2)}
                                     for k, v in sorted(d["departments"].items(), key=lambda kv: (-kv[1], kv[0]))]})
-    return {"by_fiscal_year": out, "currency": "USD"}
+    return {"by_fiscal_year": out, "currency": "USD", "total_amount": round(sum(d["amount"] for d in out), 2)}
 
 
 def restaurant_citations(rows: list[tuple], year: int) -> dict:
@@ -115,9 +115,13 @@ def run(conn: psycopg.Connection, year: int = 2025, use_sites: bool = True) -> d
     if sp:
         v = pest_payments(sp)
         latest = v["by_fiscal_year"][-1]
+        stamp = conn.execute("select max(retrieved_at) from sources where id=any(%s)",
+                             (sorted({r[5] for r in sp}),)).fetchone()[0]
+        v["retrieved_at"] = str(stamp)
+        v["period"] = [v["by_fiscal_year"][0]["fiscal_year"], latest["fiscal_year"]]
         _upsert(conn, {
             "id": "cost-pest-control-payments", "scope": "city", "scope_id": "boston", "metric": "usd_paid",
-            "title": f"City payments to pest-control vendors: ${latest['amount']:,.0f} in FY{latest['fiscal_year']}",
+            "title": f"Recorded pest-control payments: ${v['total_amount']:,.0f}, FY{v['period'][0]}–FY{v['period'][1]} (retrieved {str(stamp)[:10]})",
             "value": v, "source_ids": sorted({r[5] for r in sp}),
             "caveat": ("Lower bound: Checkbook payments matched on vendor name (pest, exterminat*, Terminix, Orkin); "
                        "not every payment is for rodents. The FY2024 table holds only July 2023, so FY2024 is "
@@ -153,7 +157,7 @@ def run(conn: psycopg.Connection, year: int = 2025, use_sites: bool = True) -> d
 
     st = [] if not use_sites else conn.execute(
         "select id, report_count, recurrence_count, summary->'action_counts', summary->'source_ids' "
-        "from sites where city = 'boston' and rank is not null"
+        "from sites where city = 'boston' and rank is not null and summary->>'definition'='dbscan_50m_min3_v2'"
     ).fetchall()
     if st:
         tags = defaultdict(Counter)
@@ -163,7 +167,7 @@ def run(conn: psycopg.Connection, year: int = 2025, use_sites: bool = True) -> d
         v = repeat_cases([s[:3] for s in st], tags)
         _upsert(conn, {
             "id": "cost-repeat-cases-chronic-sites", "scope": "city", "scope_id": "boston", "metric": "cases",
-            "title": (f"{v['cases']:,} rodent cases were reported at {v['sites_with_recurrence']:,} addresses "
+            "title": (f"{v['cases']:,} rodent cases were reported at {v['sites_with_recurrence']:,} sites "
                       f"where reports came back; {v['recurrences']:,} came back within 60 days of a closure"),
             "value": v, "source_ids": sorted({s for r in st for s in (r[4] or [])}),
             "caveat": ("Counts cases, not inspector visits: a closure note does not record whether or how often someone "

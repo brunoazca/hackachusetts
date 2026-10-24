@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:04 — Analytics v2 producers and Insights RPC prepared; real reads separated from fixtures
+- Teammate: Carol
+- Agent:
+- Did: Implemented this front's v2 cluster/action/cause/outcome producers, Due/base rates, case/queue/trial/practice/follow-up SQL, dated findings, impact/regional calculations, equity context and cached AI-check interface. Added insights_summary from C's RPC_PROPOSAL.md, preserving its JSONB payload.
+- Why: Complete the analytics responsibilities in TEAM/tasks and provide the missing backend RPC for Insights task 2.8.
+- Where: pipeline/rat_audit/analytics/**; supabase/migrations/20261024194305_analytics_insights_rpc.sql, 20261025000000_analytics_core.sql, 20261025000001_analytics_v2_loop.sql; .kiro/KIRO_LOG.md.
+- Evidence: 141 unit/property/mock tests passed. Five separate native PostGIS SELECT tests passed (synthetic CTEs, including SQL/Python seeded trial agreement); two tests that install migrations deliberately skipped. SQL and PLpgSQL parsed; no migration or writing RPC executed.
+- Evidence: Local real public notes: non-unknown 2025 90.52%, 2026 90.24%, meeting the v2 gate; 2023 86.98% / 2024 89.39% remain below target. Cause assigned to all closures; named-cause share 8.88% / 13.90% in 2025/26. Contact-only remains unknown.
+- Evidence: Actual PostGIS clustering after virtual reclassification, read-only: 11,530 retained clustered reports, 1,073 sites, 228 Due. Matched 181 pairs, RR 0.964, bootstrap CI [0.782,1.209], no conclusive difference. Normandy main cluster 28 reports / 22 returns, rank 44, Due, vacant adjacency, demo pin. No DB persistence in this check.
+- Decision: Due threshold 50% from local base-rate table (0/1/2/3+ prior returns 40.01/41.51/47.17/84.93%); 25% flagged all buckets. Recalibrate on shared data. Keep historical cluster IDs for decisions/trials; never transfer approvals across cluster changes; no composite score.
+- Evidence: Insights SELECT on local persisted rows returned 3 findings, 3 costs, 10 resolving source citations; forecast null locally, forecast aggregation tested synthetically. P1 impact queries/calculations passed using real inputs plus virtual v2 sites with output persistence suppressed; not an end-to-end worker validation.
+- Blocked: Shared DB was not revalidated (prior MCP permission denial / HTTP 401, supplied env has no SQL URL). Regional data lacks Cambridge/Somerville incident months and smart-box follow-up; population vintages are not ACS. AI-check cache tested with fake model only, configured provider adapter missing. Migration installation, role execution, persistence and UI end-to-end remain untested.
+- Decision: Renumbered our legacy core migration from 20261024600001 to 20261025000000 because fetched main 50ed4bf uses the former version for incidents_archive; loop migration follows at 20261025000001. Contents of core schema logic preserved. Integrator must reconcile history if the old analytics version was already recorded; no history repair or migration applied here.
+- Decision: Automatic review rejected extra table SELECT grants for Insights as access expansion. Omitted them and kept the proposal's existing-permission approach; no workaround or new table grants for this RPC. All new log Agent fields remain empty. Branch-only publication is authorized; main merge/push and deploy remain prohibited.
+- Idea: Keep shared-data readiness, synthetic SQL checks and genuine source-data recomputation as separate evidence.
+
 ### 2026-10-24 15:53 — Handoff to model section: ACS ablation, three-city model ...
 - Teammate: Bruno
 - Agent: —

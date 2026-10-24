@@ -22,11 +22,11 @@ from datetime import datetime, timezone
 
 import psycopg
 
-from . import classify, correlations, costs, grid, outcomes, sites
+from . import classify, correlations, costs, grid, outcomes, sites, research, impact, regional, unknowns
 from .common import MissingInput, jsonb
 
-STEPS = ["grid", "classify", "outcomes", "sites", "correlations", "costs"]
-REQUIRES = {"outcomes": ["classify"], "sites": ["classify"]}
+STEPS = ["grid", "classify", "outcomes", "sites", "correlations", "costs", "research", "impact", "regional", "unknowns"]
+REQUIRES = {"outcomes": ["classify"], "sites": ["classify", "outcomes"], "impact": ["sites", "grid"], "unknowns": ["sites"]}
 
 
 def _log_start(conn: psycopg.Connection) -> int | None:
@@ -62,7 +62,7 @@ def select_steps(steps: list[str] | None) -> list[str]:
     return [s for s in STEPS if s in steps]
 
 
-def run_all(conn: psycopg.Connection, steps: list[str] | None = None) -> dict:
+def run_all(conn: psycopg.Connection, steps: list[str] | None = None, *, unknowns_drafter=None) -> dict:
     wanted = select_steps(steps)
     rid = _log_start(conn)
     res: dict[str, dict] = {}
@@ -96,6 +96,14 @@ def run_all(conn: psycopg.Connection, steps: list[str] | None = None) -> dict:
                 out = {"findings": correlations.run(conn, outcomes=oc, skip=skip)}
             elif name == "costs":
                 out = costs.run(conn, use_sites=not ("sites" in wanted and status("sites") != "ok"))
+            elif name == "research":
+                out = research.run(conn)
+            elif name == "impact":
+                out = impact.run(conn)
+            elif name == "regional":
+                out = regional.run(conn)
+            elif name == "unknowns":
+                out = unknowns.run(conn, draft=unknowns_drafter)
             step_status = "ok"
             if name == "correlations":
                 statuses = [f["status"] for f in out["findings"].values()]
@@ -103,7 +111,7 @@ def run_all(conn: psycopg.Connection, steps: list[str] | None = None) -> dict:
                     step_status = "error"
                 elif not all(s == "ok" for s in statuses):
                     step_status = "partial"
-            elif name == "costs" and out.get("missing_inputs"):
+            elif name in {"costs", "sites", "impact", "regional", "unknowns"} and out.get("missing_inputs"):
                 step_status = "partial"
             res[name] = {"status": step_status, **out}
         except MissingInput as e:
@@ -113,7 +121,7 @@ def run_all(conn: psycopg.Connection, steps: list[str] | None = None) -> dict:
             conn.rollback()
             res[name] = {"status": "error", "error": f"{type(e).__name__}: {e}"[:500]}
         res[name]["seconds"] = round(time.monotonic() - t0, 2)
-    ok = all(r["status"] == "ok" for r in res.values())
+    ok = all(r["status"] == "ok" and r.get("quality_ok", True) for r in res.values())
     _log_end(conn, rid, ok, res)
     return {"ok": ok, "run_id": rid, "finished_at": datetime.now(timezone.utc).isoformat(), "steps": res}
 

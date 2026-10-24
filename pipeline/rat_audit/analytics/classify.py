@@ -21,19 +21,20 @@ from collections import Counter
 import psycopg
 
 from ..ingest.common import categories
+from .common import public_note as scrub_note
 
 RULES: list[tuple[str, str]] = [
     ("duplicate",       r"duplicate of existing case|resubmitted as|duplicate complaint|\bduplicate\b|"
-                        r"see (new|follow[- ]?up) case|(currently|already) open for (the )?property"),
+                        r"see (new|follow[- ]?up) case|(currently|already) open (for|in) (the )?(property|area)|\bopen case\b"),
     ("collections",     r"collections"),
     ("abatement_order", r"abatement|abated|order to abate|24[- ]?hour (notice|order)"),
     ("citation",        r"\bcitations?\b|ticket(ed)?\b|fined|violations? (has been |have been |was |were )?issued|"
                         r"issue[ds]? (a )?violation|found in violation|already been cited|\bcited\b|"
                         r"violations? (were )?found|violations include|written up"),
     ("warning",         r"warning|notice of violation|notice to (the )?owner|spoke (to|with) (the )?owner|"
-                        r"contacted (the )?(owner|landlord|management)|letter (sent|mailed)"),
+                        r"contacted (the )?(owner|landlord|management)|letter (sent|mailed)|has reached out to owners"),
     ("baiting",         r"\bbait|rodenticide|\btraps?\b|exterminat|pest (control|mitigation|treatment)|"
-                        r"private pest|\btreat(ed)?\b|treatment|burrow ?rx|smoke team"),
+                        r"private pest|\btreat(ed)?\b|treatment|burrow ?rx|smoke team|location was sprayed"),
     ("barrels",         r"rat[- ]?resistant|barrel lid|sealed lid"),
     ("cleanup",         r"dpw (will )?pick up|pick(ed)? up (the )?(dead|trash|rat)|contact dpw|clean[- ]?up|cleaned|"
                         r"debris removed|trash removed|\bremoved\b|\bpick(ed)? ?up\b|remove (the )?dead"),
@@ -42,16 +43,20 @@ RULES: list[tuple[str, str]] = [
                         r"no evidence|no (signs? of )?(rat|rodent)s? ?(burrows?|activity)|found no (rat|rodent)|"
                         r"no (\w+ ){0,2}(activity|rodents?|rats?|source|burrows?) (was |were )?(found|observed|seen)|"
                         r"nothing (was )?found|\bnot found\b|no visible (rodent|rat)|"
-                        r"no ars|\bars\b (not )?found"),
+                        r"no (dead animal|issues?|rats?|rodents?)(?:\b)|no (rat|rodent) signs? found|no signs of rodents? on|no ars|\bars\b (not )?found"),
     ("referral",        r"esd will follow|referred to|refer to|referring to|sent to housing court|forwarded to|"
                         r"animal control|housing court|in court"),
     ("inspection",      r"as a result of an? inspection|inspector (visited|responded|found|confirmed)|site visit|"
                         r"\binspection\b|inspected|\binspect\b|investigat|activity (was )?found|found activity|"
-                        r"activity (in|on) (the )?(area|property)|walk ?through|came out and met"),
+                        r"activity (in|on) (the )?(area|property)|walk[- ]?through|came out and met|"
+                        r"\bburrows? (were |was )?(found|observed)|\bfound (active )?burrows?|"
+                        r"\b(checked|surveyed|visited|checking) (the )?(area|property|site|alley)|smoke test|"
+                        r"\b(rat|rodent) droppings (along|under|in|on)|active burrows at|evidence found|"
+                        r"has been out to property|will walk the area"),
     ("closed_no_action", r"timed out|we now consider this (request|service|case)"),
     ("monitoring",      r"monitor|will check (the )?area|look for rodent activity|case noted|\bnoted\b|working on|"
                         r"working with (the )?(home ?owner|owner|constituent|landlord|property)|"
-                        r"will look (for|at)"),
+                        r"will look (for|at|into)|will check\b|working (in|with) (the )?(area|management|problem properties)"),
 ]
 _COMPILED = [(tag, re.compile(rx, re.I)) for tag, rx in RULES]
 
@@ -95,6 +100,38 @@ def classify(note: str | None) -> tuple[str, float, str]:
     return "unknown", CONFIDENCE["unknown"], "no_match"
 
 
+CAUSE_RULES = [
+    ("sewer", r"\b(sewers?|catch[- ]?basins?|drains?|manholes?)\b"),
+    ("dumpster", r"\b(dumpsters?|compactors?)\b"),
+    ("construction", r"\b(construction|demolition|excavation|work ?zone)\b"),
+    ("debris", r"\b(debris|rubble|clutter)\b"),
+    ("vegetation", r"\b(vegetation|overgrowth|overgrown|weeds?|brush)\b"),
+    ("trash", r"\b(trash|garbage|rubbish|waste|barrels?|refuse|litter)\b"),
+]
+CAUSE_TAGS = {t for t, _ in CAUSE_RULES} | {"none"}
+
+
+def classify_cause(note: str | None) -> str:
+    """First affirmative keyword match; none means no named cause, not no cause exists."""
+    text = note or ""
+    for tag, pattern in CAUSE_RULES:
+        for match in re.finditer(pattern, text, re.I):
+            before, after = _clause(text, match.start(), match.end())
+            if not _NEGATION.search(before) and not re.match(r"\s+(?:not|absent)\b", after, re.I):
+                return tag
+    return "none"
+
+
+def cause_coverage(rows):
+    years = {}
+    for year, tag in rows:
+        years.setdefault(str(year), Counter())[tag] += 1
+    return {"by_year": {y: {"n": sum(c.values()), "counts": dict(sorted(c.items())),
+            "tagged_share": 1.0, "named_cause_share": round(1 - c["none"] / sum(c.values()), 4)}
+            for y, c in sorted(years.items())},
+            "meaning": "none is no named cause; it is not evidence that a cause was absent"}
+
+
 def contract_tags() -> set[str]:
     return set(categories()["actions"])
 
@@ -128,7 +165,7 @@ def run(conn: psycopg.Connection) -> dict:
         raise RuntimeError(f"rules use tags not in contracts/categories.json: {sorted(missing)}")
     rows = conn.execute(
         """select id, closure_note, extract(year from opened_at at time zone 'America/New_York')::int,
-                  action_tag, action_confidence
+                  action_tag, action_confidence, cause_tag
            from incidents where city = 'boston' and category = 'rodent' and status = 'closed'
            order by id"""
     ).fetchall()
@@ -136,29 +173,32 @@ def run(conn: psycopg.Connection) -> dict:
         from .common import MissingInput
         raise MissingInput({"table": "incidents", "where": "city='boston' and category='rodent' and status='closed'",
                             "loader": "rat_audit.ingest.t311", "why": "closure notes to classify"})
-    updates, cov_rows, reasons = [], [], Counter()
+    updates, cov_rows, cause_rows, reasons = [], [], [], Counter()
     samples: dict[int, list[str]] = {}
-    for iid, note, year, old_tag, old_conf in rows:
+    for iid, note, year, old_tag, old_conf, old_cause in rows:
         tag, conf, reason = classify(note)
+        cause = classify_cause(note)
+        cause_rows.append((year, cause))
         reasons[reason] += 1
         cov_rows.append((year, tag))
         if tag == "unknown" and note:
             s = samples.setdefault(year, [])
             if len(s) < 15:
-                s.append(note[:160])
-        if tag != old_tag or old_conf is None or abs(old_conf - conf) > 1e-6:
-            updates.append((iid, tag, conf))
+                s.append((scrub_note(note) or "")[:160])
+        if tag != old_tag or old_conf is None or abs(old_conf - conf) > 1e-6 or cause != old_cause:
+            updates.append((iid, tag, conf, cause))
     if updates:
-        conn.execute("create temp table _tags (id text primary key, tag text, conf real) on commit drop")
+        conn.execute("create temp table _tags (id text primary key, tag text, conf real, cause text) on commit drop")
         with conn.cursor().copy("copy _tags from stdin") as cp:
             for u in updates:
                 cp.write_row(u)
-        conn.execute("update incidents i set action_tag = t.tag, action_confidence = t.conf from _tags t where i.id = t.id")
+        conn.execute("update incidents i set action_tag = t.tag, action_confidence = t.conf, cause_tag = t.cause from _tags t where i.id = t.id")
     # Open cases have no closure yet: clear any stale tag.
     cleared = conn.execute(
-        "update incidents set action_tag = null, action_confidence = null "
-        "where city = 'boston' and category = 'rodent' and status = 'open' and action_tag is not null"
+        "update incidents set action_tag = null, action_confidence = null, cause_tag = null "
+        "where city = 'boston' and category = 'rodent' and status = 'open' and (action_tag is not null or action_confidence is not null or cause_tag is not null)"
     ).rowcount
     conn.commit()
     return {"classified": len(rows), "updated": len(updates), "cleared_open": cleared,
-            "reasons": dict(reasons), "coverage": coverage(cov_rows, samples)}
+            "reasons": dict(reasons), "coverage": coverage(cov_rows, samples), "cause_coverage": cause_coverage(cause_rows),
+            "quality_ok": all(coverage(cov_rows)["by_year"].get(y, {}).get("meets_threshold", False) for y in ("2025", "2026"))}

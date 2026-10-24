@@ -1,145 +1,101 @@
-# Analytics core (tasks 2.1–2.5, 2.7)
+# Analytics core — Spec v2
 
-> **Partial handoff; not Spec v2 complete.** Compared with `main` at `f72541f`:
-> task 2.2 has `action_tag` coverage reporting, but measured coverage is below 90% and `cause_tag`
-> is not implemented. Task 2.3 still groups by `address_key` and computes a composite score;
-> it does not implement `ST_ClusterDBSCAN` (EPSG:26986, 50 m, minpoints 3), the v2 summary fields,
-> the five ordered rules or the legal-lane filter. Existing recommendations include baiting,
-> which the v2 recommendation policy excludes. Revalidate recurrence/outcomes after changing
-> the site definition. The model modules already exist on `main` and are not owned by this handoff.
->
-> Migration `20261024600001_analytics_core.sql` matches CONTRACT's `*_analytics_*.sql` naming
-> pattern, but does not add the v2 `cause_tag` column or the rest of the v2-loop schema.
+Front A / Carol, branch `feat/rat-audit-analytics-core`. This front produces the
+numbers consumed by Insights, the site inspector and the agent. It does not build
+the UI or train Bruno's forecast models.
 
+## Delivery and integration status
 
-`run_all(conn)` is what `rat_audit.jobs.analytics()` calls. It needs migration
-`supabase/migrations/20261024600001_analytics_core.sql` (additive: new columns on `grid_cells` and
-`action_outcomes`, plus the `analytics_runs` table).
-
-## Run it (integrator, after the data load)
-
-```bash
-cd pipeline
-supabase db push                               # or apply 20261024600001_analytics_core.sql
-uv run python -m rat_audit.analytics           # all steps; exit code 1 if any step is not ok
-uv run python -m rat_audit.analytics --steps grid,classify   # a subset
-# on Modal: jobs.analytics() (already wired; no change to jobs.py / modal_app.py)
-```
-
-Then check the result (read-only; every row should say `ok = true`):
-
-```bash
-psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 -f pipeline/rat_audit/analytics/validate.sql
-```
-
-It checks the migration, the last `analytics_runs` row, grid ids and clip, classifier coverage per year
-(the 90% rows fail until ingest keeps the closure prefix), outcome windows and intervals, site score
-bounds, ranks and recommendations, the three findings, the cost rows, and that every cited `source_id`
-exists. On the local real-data run (Oct 24) it gave 20 passes and 4 failures, all of them the classifier
-target (2023 86.08%, 2024 88.70%, 2025 89.51%, 2026 89.32%).
-
-Inputs it reads: `tracts` (Boston, `climate-ready-boston-svi`), `incidents` (311 + code enforcement),
-`report_volume`, `signal_volume`, `places`, `parcels`, `spending`, `events` (move_out), `decisions`.
-
-## Steps and dependencies
-
-| Step | Needs | Writes |
+| Tasks | Implementation | Validation / remaining dependency |
 |---|---|---|
-| `grid` | `tracts` (Boston boundary) | `grid_cells` |
-| `classify` | rodent `incidents.closure_note` | `incidents.action_tag`, `action_confidence` |
-| `outcomes` | `classify` | `action_outcomes` |
-| `sites` | `classify` (+ `outcomes` numbers for the evidence text) | `sites` |
-| `correlations` | trash ← `grid`; what-worked ← `outcomes`; move-out ← incidents only | `correlations` |
-| `costs` | `spending`, `places(restaurant)`, `sites` | `price_impact` |
+| 2.1 | Boston 250 m grid, stable model-compatible IDs | Unit/property and earlier local real-data validation |
+| 2.2 | Action + cause tags; separate coverage reports | Local public notes: 2025 **90.52%**, 2026 **90.24%** non-unknown; ≥90% gate passes |
+| 2.3–2.4 | 50 m DBSCAN clusters, counts, returns, case summary, five ordered recommendations, legal lanes, outcomes and Wilson intervals | Native PostGIS SELECT plus real inputs, computed in memory; persistence not tested |
+| 2.0, 2.19–2.21, 2.23 | V2 schema; base rates/Due, queue/case, seeded trial design/results, practice shift, enforcement gaps, follow-ups | SQL/PLpgSQL parsed; selected SQL bodies exercised without installing functions; migration and writing RPCs unexecuted |
+| 2.5, 2.7 | Three core findings, matched what-worked headline, counted costs with source date | Calculation tests; local source reads; new persisted outputs pending authorized refresh |
+| 2.8 backend | `insights_summary()` from C's `RPC_PROPOSAL.md` | Empty/populated/forecast SELECT fixtures and existing real local rows passed; shared RPC deployment pending |
+| 2.9 | Nine dated research findings, including honest nulls | Explicit `dated_research` label and source; not presented as live recalculations |
+| 2.12, 2.14 | Matched assessments, listings, Zillow, regional reports and smart-box comparison | Synthetic calculation tests; real reads described below; missing inputs stay explicit |
+| 2.17–2.18 backend | Neighborhood rank, low-reporting tract context, schools-near-hotspots card | Equity query found 177 eligible local tracts; UI integration belongs to the map/Insights fronts |
+| 2.22 | Expected-vs-actual month; validated cached AI-check adapter, preserves human edits | Fake-LLM cache/privacy tests only; real model adapter not configured |
 
-When a required step fails, the dependent step is **skipped**. It never runs on stale data. Each step
-commits on its own. Incomplete findings or missing cost inputs produce `status: partial`,
-`ok: false`, and CLI exit code 1. Invalid or empty step selections are rejected before DB access.
-A completed computation is not proof that classifier coverage meets the 90% quality target.
-The result and the `analytics_runs.steps` row look like this:
+The worker writes data. It was **not** run against the shared database during this
+handoff. No migration was applied locally or remotely. A compiled file or a passing
+SELECT fixture is not a validated deployment or a complete migration test.
 
-```json
-{"ok": false, "run_id": 12, "steps": {
-  "grid": {"status": "missing_input", "need": {"table": "tracts", "where": "city = 'boston' and source_id = 'climate-ready-boston-svi'", "loader": "rat_audit.ingest.context (...)"}},
-  "classify": {"status": "ok", "classified": 10403, "updated": 10403, "coverage": {"by_year": {"2025": {"non_unknown": 0.895, "meets_threshold": false, "...": "..."}}}},
-  "outcomes": {"status": "ok", "observed_through": "2026-10-23", "by_tag": {"monitoring": {"n": 3427, "recur_60d_pct": 12.63, "ci_low": 11.56, "ci_high": 13.79, "n_censored": 43}}},
-  "sites": {"status": "ok", "sites": 1121, "top10": [], "normandy_st_check": [], "missing_inputs": []},
-  "correlations": {"status": "partial", "findings": {"trash-storage-vs-rodent": {"status": "skipped"}, "what-worked": {"status": "ok"}, "move-out-spike": {"status": "ok"}}},
-  "costs": {"status": "partial", "missing_inputs": [{"row": "cost-pest-control-payments", "table": "spending", "source_id": "boston-checkbook"}]}}}
-```
+## Migrations
 
-## Output formats
+All files follow CONTRACT's `*_analytics_*.sql` pattern:
 
-**`grid_cells`**: `id = g250_<floor(x/250)>_<floor(y/250)>` in EPSG:26986, the same lattice as
-`rat_audit.model.grid`. `geom` is the cell clipped to the union of Boston tracts. If a coastline clip
-splits a cell, `geom` is the convex hull of the pieces and `land_frac` keeps the true clipped share.
-Other columns: `col`, `row`, `land_frac`, `boundary_source`, `neighborhood` (the tract covering most
-of the cell), `zip` (the most common incident ZIP). Cells that drop out are deleted, unless
-`predictions` still references them.
+- `20261024194305_analytics_insights_rpc.sql`: stable, invoker RPC; unchanged JSONB
+  finding/cost payloads, cited sources, latest GBM (baseline fallback only when no
+  GBM), future weeks in Boston time and deterministic top five cells.
+- `20261025000000_analytics_core.sql`: existing core columns and run log. Renamed
+  from `20261024600001_analytics_core.sql` because fetched main uses version
+  `20261024600001` for `incidents_archive`. **If a database already recorded the
+  old analytics version, the integrator must reconcile its migration history;
+  do not blindly replay the renamed migration.**
+- `20261025000001_analytics_v2_loop.sql`: cause, base rates, reject reason, trials
+  and RPCs. Ordered after legacy migrations that use invalid clock hours in their
+  numeric versions. No other front's migration was edited.
 
-**`incidents.action_tag`**: one of the contract actions. Only closed Boston rodent cases get a tag;
-open cases are cleared to null. `action_confidence`: 0.9 rule match, 0.6 conditional → monitoring,
-1.0 empty note, 0 unknown.
+`insights_summary` relies on the tables' existing SELECT grants and public-read
+RLS policies, just like C's proposal. The automatic approval review rejected an
+extra table-GRANT expansion; those grants were not added. Verify existing privileges
+as part of authorized deployment. Creating the RPC alone does not populate empty
+`correlations`/`price_impact` tables: the analytics refresh must also run.
 
-**`action_outcomes`** (one row per tag): `n`, `n_recurred`, `recur_60d_pct`, `ci_low`/`ci_high` (95% Wilson,
-in %), `median_days_to_next`, `n_censored`, `window_days` (60), `observed_through`, `by_year`, `source_ids`.
+## Semantics consumers must retain
 
-**`sites`**: `id = site_<address_key[:16]>`, `score` 0–100, `rank` (null = retired but kept because a
-decision references it), `report_count`, `recurrence_count`, `first_at`/`last_at`, `parcel_pid`.
+Sites are Boston rodent reports in 2024–2026, after duplicate removal and same-key,
+same-local-day bulk collapse (≥5 → one), then
+`ST_ClusterDBSCAN(ST_Transform(geom,26986),eps:=50,minpoints:=3)`.
+Noise is excluded. Density-connected clusters can extend farther than a 50 m radius.
+IDs hash the earliest retained incident, deterministic for the same input; backfills
+and cluster merges can change IDs. Historical sites are retired, preserving decision
+and trial references. No approval is transferred to another cluster.
 
-`summary` holds:
-- `drivers`: `[{type: incident|place, category|kind, label, count, ids[≤20], source_ids}]`
-- `building`: `{pid, land_use, yr_built, own_occ, units, distance_m, source_id}`
-- `adjacent_vacant`: `{id, pid, land_use, distance_m, source_id}`
-- `action_counts`, `timeline[≤60]`, `score_parts`, `source_ids`, `why`
-- `retired?`
-- keys starting with `recur_` are written by the model and preserved on every run
+A return opens 1–60 Boston calendar days after an earlier closure in the same site.
+Outcomes require the entire 60-day window, including cases that returned early.
+The queue sorts Due first, then returns in 12 months. Legacy `sites.score` is zero
+only to satisfy the old schema and is omitted from the new queue/case RPC payload.
+Model-owned `recur_*` keys survive only when the retained member IDs are unchanged.
 
-`recommended` is a list of `{id, rule, action, action_tag, owner, priority, because[], evidence, source_ids, references[{label,url,kind}]}`.
-Rules run in order: `escalate` (R3.9), `adjacent_lot` (R3.10), `containers` (R3.11), then the driver
-table (`trash_early`, `dumpster`, `restaurant`, `demolition`, `city_lot`, `school`), with a `follow_up` fallback.
+Local base rates for 0/1/2/3+ prior returns are **40.01%, 41.51%, 47.17%, 84.93%**.
+The placeholder 25% would flag every bucket; **50%** separates the high-return
+bucket in these local inputs. Recalibrate on the shared cohort. The threshold is
+stored in `base_rates`, carried into the case and checked against the current date
+by the RPC. Counts are reported complaints, not rat population.
 
-**`correlations`**: ids `trash-storage-vs-rodent`, `what-worked`, `move-out-spike`. The columns follow the
-schema, and `chart` is `{type: scatter|bar|line, x_label, y_label, series:[{name, points:[[x,y]]}]}`.
-Titles are built from the computed numbers. Strength is `none` unless the permutation p < 0.05 for
-the trash finding, or the interval excludes 0 for what-worked.
+`summary` includes full timeline, ladder, closure speed by action vs citywide,
+same-day share, last five scrubbed notes with both tags, sources, drivers, building,
+vacant adjacency, trash tickets, enforcement gap, neighborhood rank, equity,
+expected month, season-adjusted 90-day counts and a Normandy demo pin. Recommendations
+use exactly the first applicable rule: untried citation/abatement after repeated
+soft-action returns; vacant lot; trash containers; sewer referral; cause inspection.
+Historical baiting may appear in notes/outcomes, never in recommendations.
 
-**`price_impact`**: ids `cost-pest-control-payments` (USD by fiscal year and department),
-`cost-restaurant-rodent-citations` (businesses and violations for 2025, explicit vs all, plus totals since 2024),
-and `cost-repeat-cases-chronic-sites` (**cases**, never visits or dollars). Every row carries the
-R7.5 price caveat.
+Rates in `action_outcomes` are **percentages**; base rates, yearly breakdowns and
+trial Wilson intervals are **fractions**. The what-worked headline uses exact
+matching on prior-report bucket × neighborhood × month, one mature closure/site,
+and a seeded pair bootstrap. The unadjusted contrast is supporting detail only.
+No causal effectiveness claim is made.
 
-## Tests
+Trials match neighborhood × prior-return bucket × trash-ticket tercile, exclude
+active trial sites, and use a supplied seed. Results stay pending until both clock
+and observed data cover 60 days. The prospective outcome is a report on days 1–60
+within 50 m of any frozen cluster member; it does not silently redefine arms after
+clusters merge. Designing a trial does not carry out an intervention.
 
-```bash
-cd pipeline
-uv run --group dev pytest rat_audit/analytics/tests -q                 # unit + property tests (no DB)
-docker run -d --name rat-analytics-pg -e POSTGRES_PASSWORD=test -p 54329:5432 postgis/postgis:16-3.4
-ANALYTICS_TEST_DB_URL=postgresql://postgres:test@localhost:54329/postgres \
-  uv run --group dev pytest rat_audit/analytics/tests/test_integration_db.py -q
-```
+Research findings retain their Oct 24 source/method and are not current fits.
+Price comparisons are exploratory; costs count payments, citations and **cases**,
+never inferred visits/hours/damage. Population vintages and missing regional inputs
+remain visible; the loaded census populations are not the requested current ACS.
 
-The integration test creates and drops its own database from all migrations and loads synthetic
-`fx-` rows only. It refuses Supabase URLs.
+## Running and testing
 
-## Known limits
-
-- Ingest's `clean_note` strips the 311 prefix ("Case Noted."). On public notes the classifier reaches
-  89.5% (2025) and 89.3% (2026) non-unknown; on the raw portal text it reaches 97.6% and 96.2%. Most of
-  the remaining unknowns are "message has been left with constituent", which names no action. To
-  restore the research's treatment, ingest would need to keep the prefix (for example as a flag).
-- Restaurant per-year counts are a lower bound when a business has more than 20 citations, because
-  `attrs` keeps the last 20.
-- Adjacent vacant uses parcel centroids within 40 m, so it is approximate.
-
-
-## Resumption validation — 2026-10-24
-
-Scope: analytics-core only, branch `feat/rat-audit-analytics-core`, starting commit `8814c1d`.
-Existing uncommitted implementation and migration preserved; no migration, merge, push or deploy performed.
-
-This worktree has no `.env.local`; `rat_audit.db` reads the process environment, not dotenv files.
-Load the existing file explicitly from this worktree (never print variables or enable shell tracing):
+`rat_audit.db` reads process environment; it does not auto-load dotenv. This worktree
+has no copied secret file. Load the supplied file without echo/tracing:
 
 ```bash
 set +x
@@ -148,31 +104,69 @@ set -a
 set +a
 ```
 
-Loading was verified. The file contains the public Supabase URL/key but no `SUPABASE_DB_URL`;
-loading it does not enable the SQL worker. Shared-project MCP access was denied and public API GET
-returned HTTP 401 with the supplied credentials, so shared schema/data were **not revalidated**.
-The earlier shared-grid/site-ID conflicts in the log remain unconfirmed integration dependencies.
+The supplied file was verified to have public Supabase settings but no SQL URL.
+A SQL worker needs `SUPABASE_DB_URL`. Earlier shared access attempts returned MCP
+permission denied / HTTP 401; these credentials do not establish shared validation.
 
-Current evidence:
-- **108 unit/property/mock tests passed**, including 16 new mocked regression cases; **2 integration
-  tests skipped**. Those tests apply migrations to a disposable DB, which this session did not permit.
-  Their assertions were aligned with the new `partial` status, but they were not rerun against a DB.
-- Existing local real-data container `rat-analytics-real`: `validate.sql`, with
-  `default_transaction_read_only=on`, returned **20 true and 4 false checks** over persisted outputs.
-  All four failures are classifier coverage: 2023 **86.08%**, 2024 **88.70%**, 2025 **89.51%**,
-  2026 **89.32%**. The 90% target remains unmet; no inferred actions were added to inflate it.
-- Real inputs were also recomputed in memory through SELECT-only reads, without mocks or writes:
-  19,496 rodent reports through Oct 23; 180 tracts → **2,412 cells** matching persisted IDs;
-  **1,121 sites** matching persisted scores/ranks/counts; outcome sample sizes and rates matched.
-  Normandy St's best rank remains **28** (the demo pin/top-three requirement is not resolved here).
-- Recomputed findings: trash partial rho **0.269** (weak, permutation p **0.002**); monitoring
-  **12.63%** vs citation **11.19%** recurrence, difference CI **[-4.07, 1.19] percentage points**.
-  Move-out was checked only as a persisted finding, not recomputed in this session. Costs were
-  recomputed from local inputs; none of these checks reran the worker's DB-writing pipeline.
-- Secret scan passed, including exact-value matching against the supplied env file.
+After the integrator separately authorizes/applies schema and supplies a SQL
+connection, the existing worker entry point remains `run_all(conn)` / jobs.analytics:
 
-Post-rebase check against `main` at `f72541f`: **108 passed / 2 skipped** again, with 37 existing
-Shapely deprecation warnings from `model/grid.py`. The entire `pipeline/rat_audit/model/` subtree
-matches main. The only rebase conflict was the log; both histories were preserved. Secret scanning
-and diff whitespace checks passed. This confirms branch compatibility for the tested paths, not
-completion of the Spec v2 gaps listed above or validation of the shared database.
+```bash
+cd pipeline
+uv run python -m rat_audit.analytics --steps grid,classify,outcomes,sites,correlations,costs,research
+```
+
+All steps also include `impact`, `regional`, `unknowns`. Missing inputs produce
+partial/skipped statuses and a nonzero CLI exit. To enable actual AI drafts, call
+`run_all(conn, unknowns_drafter=adapter)` or `unknowns.run(conn, draft=adapter)`.
+The adapter receives `(instructions, public_evidence)` and returns 2–3 question
+strings (or a JSON array string). No provider keys are read or model calls made by
+this module. Results are cached in `summary.unknowns`; the consumer edits
+`answer`/`edited`, retaining the check ID. The UI/provider integration is still needed.
+
+```bash
+cd pipeline
+uv run --group dev pytest rat_audit/analytics/tests -q -p no:cacheprovider
+# Optional existing PostGIS connection; fixture forces default_transaction_read_only=on:
+# ANALYTICS_READONLY_DB_URL=<connection> uv run --group dev pytest rat_audit/analytics/tests/test_rpc_sql.py -q
+```
+
+`ANALYTICS_TEST_DB_URL` enables a different suite that creates/drops a disposable DB
+and applies migrations. **It was deliberately unset here**; both tests are skipped.
+`validate.sql` is a read-only post-integration validator requiring the new schema;
+it cannot validate uninstalled functions. Do not confuse it with applying schema.
+
+## Evidence from this handoff (2026-10-24)
+
+- **141 unit/property/mock tests passed**. Seven skipped in that invocation: two
+  migration integration tests and five opt-in read-only SQL tests. The **five SQL
+  tests passed separately** on native PostGIS, using synthetic CTE fixtures; no DDL.
+- SQL and PLpgSQL parsed for all analytics migrations. Installation, role-level
+  execution and the writing `design_trial` RPC remain untested.
+- Real local data through Oct 23: **11,530 retained clustered reports, 1,073 sites,
+  228 Due**. Reclassified original public notes before clustering in a read-only
+  CTE; recomputed outcomes/recommendations in memory. Every recommendation passed
+  the legal filter. No persistence mocks were used for this core recomputation.
+- Action coverage 2023/2024 = **86.98%/89.39%** (below 90%); 2025/2026 =
+  **90.52%/90.24%** (the Spec v2 acceptance years). Contact-only notes remain unknown.
+  Cause assigned to every closure; named causes in 2025/26 = **8.88%/13.90%**.
+  `none` means the note names no cause, not that a cause does not exist.
+- Matched comparison: **181 pairs, RR 0.964, 95% bootstrap CI [0.782,1.209]**,
+  no conclusive difference. Normandy's main cluster: **28 reports, 22 returns,
+  rank 44, Due, adjacent vacant parcel, demo_pinned**. No artificial rank boost.
+- The Insights SELECT on existing local persisted outputs returned three findings,
+  three costs and ten resolving source citations; forecast null because that local
+  DB has no model runs. Forecast branches were tested with synthetic SQL fixtures.
+
+- P1 real-input checks: matched assessments, listings, ZIP prices, schools and
+  building context all computed successfully, with sources resolving. Ranked v2
+  sites were supplied as a SELECT-only CTE and output writers were suppressed:
+  this validates the calculations/queries, **not persistence or an end-to-end run**.
+  The indexed proximity query completed in 0.31 s; schools query about 33 s locally.
+- Regional SELECT succeeded but is **partial**: the local copy has 46 Boston
+  report-months, no Cambridge/Somerville report months and no eligible smart-box
+  follow-up cohort. Populations are 2010/2020 census, not current ACS. Data ingestion
+  and a genuine three-city comparison remain blocked on those inputs.
+- Remaining operational checks: apply migrations with separate authorization;
+  run persistence/writing-RPC tests and shared refresh; connect the UI; configure
+  the AI-check adapter. No merge, main push, deploy or shared-DB write was performed.

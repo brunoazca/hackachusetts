@@ -113,3 +113,14 @@ def test_cli_partial_run_exits_nonzero(monkeypatch, capsys):
     assert cli.main(["--steps", " costs "]) == 1
     run.assert_called_once_with(conn, ["costs"])
     assert '"partial"' in capsys.readouterr().out
+
+
+def test_quality_failure_and_dependent_p1_steps_are_reported(runner):
+    conn,runs,_,_=runner
+    runs['classify'].return_value={'quality_ok':False}
+    assert not analytics.run_all(conn,['classify'])['ok']
+    runs['sites'].side_effect=MissingInput({'table':'base_rates'})
+    result=analytics.run_all(conn,['sites','impact','unknowns'])
+    assert result['steps']['impact']['status']=='skipped'
+    assert result['steps']['unknowns']['status']=='skipped'
+    runs['impact'].assert_not_called()

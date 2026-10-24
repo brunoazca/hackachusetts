@@ -102,3 +102,33 @@ def test_coverage_report():
     assert y26["non_unknown"] == 0.6 and not y26["meets_threshold"]
     assert y26["unknown_samples"] == ["x"]
     assert abs(sum(y25["share"].values()) - 1) < 1e-9
+
+
+@pytest.mark.parametrize('note,expected',[
+    ('Trash beside the catch basin','sewer'),('Overflowing dumpster','dumpster'),
+    ('Construction debris','construction'),('Loose debris','debris'),('Overgrown weeds','vegetation'),
+    ('Trash outside','trash'),('No trash found. Sewer activity observed.','sewer'),
+    ('No sewer issue.','none'),('Nothing recorded','none'),(None,'none'),
+])
+def test_cause_rules_and_negation(note,expected):
+    from rat_audit.analytics.classify import classify_cause
+    assert classify_cause(note)==expected
+
+
+def test_cause_coverage_separates_assignment_from_named_cause():
+    from rat_audit.analytics.classify import cause_coverage
+    y=cause_coverage([(2025,'none'),(2025,'trash')])['by_year']['2025']
+    assert y['tagged_share']==1 and y['named_cause_share']==.5
+
+
+@pytest.mark.parametrize('note,tag',[
+    ('Open case for the property','duplicate'),
+    ('No open case exists; inspector checked the area','inspection'),
+    ('Active burrows at the rear of the property','inspection'),
+    ('Rat droppings under the porch','inspection'),
+    ('Working with management on the problem','monitoring'),
+    ('A message was left with the constituent','unknown'),
+    ('No dead animal found','no_violation'),
+])
+def test_public_note_action_patterns_without_contact_only_inflation(note,tag):
+    assert classify(note)[0]==tag

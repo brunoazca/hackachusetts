@@ -68,7 +68,7 @@ def local_date(ts: datetime | None) -> date | None:
 
 @dataclass(frozen=True)
 class Report:
-    """One rodent report at an address key (the unit for sites and outcomes)."""
+    """One report; key is the private address hash, site_id is its 50 m cluster."""
 
     id: str
     key: str
@@ -76,6 +76,10 @@ class Report:
     closed_at: datetime | None
     action_tag: str | None
     source_id: str
+    site_id: str | None = None
+    cause_tag: str = "none"
+    note: str | None = None
+    neighborhood: str | None = None
 
     @property
     def opened_day(self) -> date:
@@ -231,3 +235,16 @@ def jsonb(v) -> str:
 
 def days(n: int) -> timedelta:
     return timedelta(days=n)
+
+
+def public_note(note):
+    """Additional defense for copied CRM metadata and misspelled staff titles in public case summaries."""
+    import re
+    from ..ingest.common import scrub_note
+    if not note:
+        return None
+    if re.search(r"Case Ref|Created by|Raised by|Allocated To|CRM service account", note, re.I):
+        return "[Closure contains internal case metadata; use the logged reveal for the original.]"
+    note = re.sub(r"\b(?i:inspectior|inspecter|insepctor|inspetor|inspector)\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2}",
+                  "Inspector [staff]", note)
+    return scrub_note(note)

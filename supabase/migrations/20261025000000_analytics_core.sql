@@ -1,3 +1,5 @@
+-- Renumbered from 20261024600001: main uses that version for incidents_archive.
+-- Contents unchanged; do not replay on a database that already recorded the old analytics version.
 -- Analytics core (tasks 2.1-2.5, 2.7). Additive only: new columns on analytics-owned tables and a run log.
 
 -- grid_cells: lattice indexes, clipped land share, and the boundary the clip used.

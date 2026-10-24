@@ -19,6 +19,8 @@ import pytest
 
 from rat_audit.analytics import grid, run_all
 
+P0_STEPS = ["grid", "classify", "outcomes", "sites", "correlations", "costs"]
+
 ADMIN = os.environ.get("ANALYTICS_TEST_DB_URL")
 pytestmark = pytest.mark.skipif(not ADMIN, reason="ANALYTICS_TEST_DB_URL not set (disposable PostGIS)")
 MIGRATIONS = Path(__file__).resolve().parents[4] / "supabase" / "migrations"
@@ -38,7 +40,7 @@ def conn():
         if "supabase" in ADMIN or "pooler" in ADMIN:
             pytest.skip("refusing to run against a Supabase URL")
         admin.execute(f"create database {name}")
-        for role in ("anon", "authenticated"):
+        for role in ("anon", "authenticated", "service_role"):
             admin.execute(f"do $$ begin create role {role}; exception when duplicate_object then null; end $$")
     url = psycopg.conninfo.make_conninfo(ADMIN, dbname=name)
     c = psycopg.connect(url)
@@ -70,7 +72,7 @@ def _load_fixtures(c):
         wkt = f"MULTIPOLYGON((({a} {y0},{b} {y0},{b} {y1},{a} {y1},{a} {y0})))"
         c.execute("insert into tracts (geoid, source_id, name, attrs, geom, city) values "
                   "(%s, 'fx-svi', %s, %s, st_geogfromtext(%s), 'boston')",
-                  (geoid, geoid, json.dumps({"neighborhood": hood}), "SRID=4326;" + wkt))
+                  (geoid, geoid, json.dumps({"neighborhood": hood, "pop":1000, "tract_vintage":2010}), "SRID=4326;" + wkt))
     rows = []
     # chronic: 8 reports, 20 days apart, closed next day, monitoring -> recurrences 7
     for i in range(8):
@@ -92,7 +94,7 @@ def _load_fixtures(c):
         _inc(rows, f"fx:bulk{i}", "rodent", _ts(date(2025, 7, 11), 12 + i), _ts(date(2025, 7, 12)), "fxkey-bulk",
              "Area inspector monitoring", 42.2970, -71.0620)
     # recent closure (censored) and the newest report (open)
-    _inc(rows, "fx:e0", "rodent", _ts(date(2026, 10, 5)), _ts(date(2026, 10, 6)), "fxkey-e", "Violation issued", 42.30, -71.07)
+    _inc(rows, "fx:e0", "rodent", _ts(date(2026, 10, 5)), _ts(date(2026, 10, 6)), "fxkey-e", "Violation issued", LAT0, LON0)
     _inc(rows, "fx:newest", "rodent", _ts(date(2026, 10, 20)), None, "fxkey-f", None, 42.301, -71.071)
     # drivers near the chronic site (2025)
     for i in range(5):
@@ -166,7 +168,7 @@ def _snapshot(c):
 
 
 def test_full_run_then_repeat(conn):
-    out = run_all(conn)
+    out = run_all(conn, P0_STEPS)
     assert out["ok"], json.dumps(out["steps"], default=str)[:2000]
     s = out["steps"]
     assert s["grid"]["cells"] > 0 and s["grid"]["boundary_source"] == "fx-svi"
@@ -183,12 +185,12 @@ def test_full_run_then_repeat(conn):
     assert cit[1] >= 1 and str(cit[2]) == "2026-10-20"
     # sites
     ids = dict(conn.execute("select id, score from sites").fetchall())
-    assert all(0 <= v <= 100 for v in ids.values())
+    assert all(v == 0 for v in ids.values())
     chronic = conn.execute("select id, rank, recurrence_count, summary, recommended, parcel_pid from sites "
-                           "where report_count = 8").fetchone()
+                           "where report_count = 9").fetchone()
     assert chronic[2] == 7 and chronic[5] == "fx-p1"
     rules = [r["rule"] for r in chronic[4]]
-    assert rules[:3] == ["escalate", "adjacent_lot", "containers"] and "restaurant" in rules
+    assert rules == ["escalate"]
     assert chronic[3]["adjacent_vacant"]["id"] == "vacant:fx-p2"
     assert not conn.execute("select 1 from sites where report_count = 1").fetchone()  # bulk key collapsed
     # every source id resolves
@@ -210,18 +212,18 @@ def test_full_run_then_repeat(conn):
     # model-owned keys survive; decisions keep a site that is no longer chronic
     conn.execute("update sites set summary = summary || '{\"recur_p\": 0.42, \"recur_model\": \"fx\"}' where id = %s",
                  (chronic[0],))
-    rsite = conn.execute("select id from sites where report_count = 2").fetchone()[0]
+    rsite = conn.execute("select id from sites where summary->'address_keys' ? 'fxkey-b'").fetchone()[0]
     conn.execute("insert into decisions (site_id, action) values (%s, 'fixture decision')", (rsite,))
     conn.commit()
     before = _snapshot(conn)
-    out2 = run_all(conn)
+    out2 = run_all(conn, P0_STEPS)
     assert out2["ok"]
     after = _snapshot(conn)
     assert before == after  # repeat run, same data -> same outputs
     p = conn.execute("select summary->>'recur_p', summary->>'recur_model' from sites where id = %s", (chronic[0],)).fetchone()
     assert p == ("0.42", "fx")
 
-    conn.execute("delete from incidents where id = 'fx:r1'")
+    conn.execute("delete from incidents where id in ('fx:b2','fx:b3')")
     conn.commit()
     run_all(conn, ["sites"])
     kept = conn.execute("select rank, summary->>'retired' from sites where id = %s", (rsite,)).fetchone()

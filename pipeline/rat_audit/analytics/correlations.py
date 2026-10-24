@@ -193,12 +193,28 @@ def finding_what_worked(conn: psycopg.Connection, outcomes: dict | None) -> dict
         by_tag, observed = outcomes["by_tag"], outcomes["observed_through"]
     labels = {k: v["label"] for k, v in categories()["actions"].items()}
     w = what_worked(by_tag, labels)
+    if outcomes is None:
+        from .outcomes import compute, load_reports
+        reports = load_reports(conn)
+        matched = compute(reports, date.fromisoformat(observed), prepared=True)["matched"]
+    else:
+        matched = outcomes.get("matched")
+    if matched:
+        w["stat"]["unadjusted_contrast"] = w["stat"].pop("contrast")
+        w["stat"]["matched"] = matched
+        rr, ci = matched["risk_ratio"], matched["ci_95"]
+        w["strength"] = matched["strength"]
+        if rr is not None and ci:
+            w["title"] = (f"Matched sites: enforcement vs monitoring return risk ratio {rr:.2f} "
+                          f"(95% CI {ci[0]:.2f}–{ci[1]:.2f}; {matched['n_pairs']} pairs)")
+        else:
+            w["title"] = "Matched sites: insufficient evidence to compare enforcement with monitoring"
     return {
         "id": "what-worked", "title": w["title"],
-        "question": "Which city actions are followed by fewer repeat rodent reports at the same address?",
-        "method": ("Closed Boston rodent cases by closure-note action tag; share with a new report at the same address "
+        "question": "Which city actions are followed by fewer repeat rodent reports at the same 50 m site?",
+        "method": ("Closed Boston rodent cases by closure-note action tag; share with a new report at the same 50 m site "
                    f"1-60 days after closure. Cases closed in the last 60 days before {observed} are censored "
-                   "(excluded), not counted as successes. 95% Wilson intervals; contrast with a normal interval."),
+                   "(excluded), not counted as successes. 95% Wilson intervals; matched headline uses prior reports, neighborhood and month with pair bootstrap."),
         "unit": "closed rodent case", "stat": {**w["stat"], "observed_through": observed}, "strength": w["strength"],
         "chart": w["chart"],
         "caveat": ("Observational. Inspectors pick the action from what they see, so harder cases may get stronger "
