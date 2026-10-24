@@ -47,6 +47,62 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: .kiro/hooks/{accessibility-check,demo-path-green,log-all-work,overclaim-guard,secret-scan,sync-audit-log}.kiro.hook, .kiro/agents/{rodent-honesty,no-auto-action}.json, .kiro/scripts/check_overclaims.py
 - Idea: Dead automation is worse than none - a judge sees hooks that never ran; aligning paths makes every guard actually fire on the live app
 
+### 2026-10-24 13:33 — Fixed truncated 311 volume (CKAN caps SQL at 32k rows): c...
+- Teammate: Bruno
+- Agent: —
+- Did: Fixed truncated 311 volume (CKAN caps SQL at 32k rows): ckan_sql_all pages aggregates; report_volume now ~300k reports/year; enforcement hybrid (signal_volume 2023+ + 6 months of rows); VACUUM back to 408 MB
+- Why: report_volume feeds the model's who-reports control; every year was capped at exactly 32,000 bins
+- Where: pipeline/rat_audit/ingest/{common,t311,enforcement}.py
+- Idea: Supabase free tier near cap: upgrade to Pro before demo
+
+### 2026-10-24 13:33 — Parcels/food/permits/places_misc loaders written and load...
+- Teammate: Bruno
+- Agent: —
+- Did: Parcels/food/permits/places_misc loaders written and loaded: 184,552 parcels with 100% coordinates (Parcels25 polygon centroids), 6,046 vacant parcels, 1,157 restaurants with rodent violations, 1,460 demolition/excavation permits, Big Belly bins, city lots, schools, colleges
+- Why: Context layers for the map and the model; owners kept private
+- Where: pipeline/rat_audit/ingest/{parcels,food,permits,places_misc}.py, ingest/README.md, contracts + web categories.json (college)
+- Idea: Supabase is near its 500 MB cap (494 MB); VACUUM FULL parcels (~50 MB of dead tuples) once there's headroom
+
+### 2026-10-24 13:30 — Context data loaded: 238 tracts (Boston SVI + Cambridge/S...
+- Teammate: Bruno
+- Agent: —
+- Did: Context data loaded: 238 tracts (Boston SVI + Cambridge/Somerville 2020) with asthma, Zillow 4,131 ZIP-months, 3,579 Airbnb listings (200 rat reviews), 535 iNaturalist rats, city pest spending FY23–26; regional Cambridge 1,872 + Somerville 2,586 rodent + 3,246 program requests
+- Why: Data section: R1.10, R1.13, R7.4
+- Where: pipeline/rat_audit/ingest/context.py, supabase/migrations/20261024100002_data_spending.sql, contracts/categories.json
+- Idea: FY2024 spending table only has July 2023 — show as missing, not a drop
+
+### 2026-10-24 13:27 — Live refresh path working: Vercel /api/refresh (status + ...
+- Teammate: Bruno
+- Agent: —
+- Did: Live refresh path working: Vercel /api/refresh (status + 5-min guard) → Modal refresh; 14-day Boston 311 refresh runs in 12 s on Modal
+- Why: Data section: R1.4–R1.6 live data
+- Where: web/src/app/api/refresh/route.ts, pipeline/modal_app.py, pipeline/rat_audit/jobs.py
+- Idea: Per-source error isolation so one broken loader never blocks the refresh
+
+### 2026-10-24 13:27 — Added 250m grid-cell fallback helper (rat_audit/model/gri...
+- Teammate: Bruno
+- Agent: --
+- Did: Added 250m grid-cell fallback helper (rat_audit/model/grid.py)
+- Why: model needs cells even if grid_cells is empty; must not overwrite Carol table
+- Where: pipeline/rat_audit/model/grid.py
+- Idea: load_or_build_cells reads grid_cells first, builds in-memory fallback clipped to Boston footprint
+
+### 2026-10-24 13:26 — Added model_artifacts table (migration 20261024500001) an...
+- Teammate: Bruno
+- Agent: --
+- Did: Added model_artifacts table (migration 20261024500001) and applied to Supabase
+- Why: Modal has no shared disk; trained models must persist in DB to reload for scoring
+- Where: supabase/migrations/20261024500001_model_artifacts.sql
+- Idea: pickle/joblib model blob stored per model_run_id
+
+### 2026-10-24 13:25 — Boston 311 backfill in Supabase (221,745 rows 2023–2026; ...
+- Teammate: Bruno
+- Agent: —
+- Did: Boston 311 backfill in Supabase (221,745 rows 2023–2026; rodent 2025=5,225, 2026=5,321 match research); hardened note scrubbing (emails, phones, staff names, house numbers); upserts skip unchanged rows
+- Why: Data section: everything downstream waits on 311; privacy leaks found in sample notes; Supabase free tier went read-only at 465 MB from reload bloat
+- Where: pipeline/rat_audit/ingest/common.py
+- Idea: VACUUM FULL brought DB 465→300 MB; free tier is tight — consider Supabase Pro
+
 ### 2026-10-24 13:20 — Pushed pending spec edits (closure classifier rules, esca...
 - Teammate: Bruno
 - Agent: —

@@ -28,7 +28,9 @@ Persist the trained model so `score`/`simulate` on Modal can load it: store a pi
 ## Data (being loaded right now by the data section)
 - `incidents` — Boston 311 2023–2026 (rodent, pest, dead_animal, trash_storage, trash_early, missed_trash, dumping, litter, dumpster, sanitation, weeds, vacant_lot, abandoned_building, construction_debris, move_in_trash, bite), plus Cambridge/Somerville rows (`city`). Columns: `category, status, opened_at, closed_at, address_key, lat, lon, zip, neighborhood, action_tag`.
 - `report_volume(city, lat_bin, lon_bin, month, n_all)` — all-type 311 counts per ~100 m bin (floor(lat*1000), floor(lon*1000)) per month: your **reporting-volume control**.
-- Coming next: code-enforcement tickets (trash storage, overfilling, dumping, weeds), parcels (year built, units), weather (temperature), move-out dates.
+- `signal_volume(city, category, lat_bin, lon_bin, month, n)` — **code-enforcement tickets 2023+ aggregated** per ~100 m bin per month (categories `ce_trash_storage`, `ce_overfill`, `ce_weeds`, `ce_dumping`, `ce_dumpster`). Individual tickets are in `incidents` only for the last 12 months — use `signal_volume` for features.
+- Coming next: parcels (year built, units — already loaded, ~79% with coordinates), weather (temperature), move-out dates (`events` kind `move_out`).
+- **DB space is tight (Supabase free tier, 500 MB cap; ~330 MB used).** Keep `predictions` lean (≈ cells × 30 weeks; drivers ≤ 5 short items), store at most 2 model artifacts, and delete old `model_runs`' predictions when you re-score. If writes fail with "read-only transaction", stop and tell the data section.
 - Check progress: `select category, city, count(*) from incidents group by 1,2` and `select * from ingest_runs order by id desc limit 10`. Build and unit-test against whatever exists; re-run once data is complete.
 - `grid_cells` (~250 m) is owned by Carol (analytics). If it's still empty when you need it, build the grid yourself in a helper the analytics owner can reuse (250 m squares in EPSG:26986, clipped to Boston neighborhoods) and tell the team — don't block.
 

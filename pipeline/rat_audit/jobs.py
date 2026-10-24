@@ -32,8 +32,11 @@ def _run_source(name: str, since: str | None = None) -> dict:
         mod = importlib.import_module(f"rat_audit.ingest.{name}")
     except ModuleNotFoundError:
         return {"source": name, "skipped": "not implemented yet"}
-    with db.connect() as conn:
-        rows = mod.run(conn, since=since)
+    try:
+        with db.connect() as conn:
+            rows = mod.run(conn, since=since)
+    except Exception as e:  # one broken source must not stop the others
+        return {"source": name, "error": f"{type(e).__name__}: {e}"[:300]}
     return {"source": name, "rows": rows}
 
 
