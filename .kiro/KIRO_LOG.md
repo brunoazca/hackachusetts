@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:43 — ML/AI motion graphic (80 s, See → Act → Predict): real-da...
+- Teammate: Bruno
+- Agent: —
+- Did: ML/AI motion graphic (80 s, See → Act → Predict): real-data maps and charts + JS simulation of the Piper UI; rendered to MP4 deterministically
+- Why: Presentation needs a short explainer of how Piper uses intelligence from today's map to action to forecast
+- Where: docs/submission/ml-ai-motion/
+- Idea: Act includes Boston matched comparison and Cambridge/Somerville program evidence, labelled descriptive
+
 ### 2026-10-24 18:41 — Kept rendered video out of git: ignore *.mp4/*.mov/clips/...
 - Teammate: Guilherme
 - Agent: Claude Code
