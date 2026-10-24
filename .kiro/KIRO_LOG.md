@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:17 — Data section: ingest helpers + Boston 311 loader (2023–20...
+- Teammate: Bruno
+- Agent: —
+- Did: Data section: ingest helpers + Boston 311 loader (2023–2026 + new system, private details, report_volume); model-section prompt
+- Why: Bruno split work: this section retrieves data + live fetchers; another section builds the model
+- Where: pipeline/rat_audit/ingest/{common,t311}.py, supabase/migrations/20261024100001_data_report_volume.sql, contracts/categories.json, docs/rat-audit/prompts/model-section.md
+- Idea: report_volume per ~100 m bin/month as the who-reports control
+
 ### 2026-10-24 13:16 — Merged concurrent team research and preserved completed r...
 - Teammate: Guilherme
 - Agent: Codex (research integration; not Kiro build activity)
@@ -39,6 +47,21 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: knowledge/15_*, knowledge/19_rat_data_validation.md, knowledge/24_*, knowledge/README.md, README.md, data/civic/CATALOG.md, .kiro/specs/
 - Idea: Keep campaign numbers with provenance; distinguish associations, temporal overlap and actual forecast validation; use the completed rat-audit spec
 
+### 2026-10-24 13:16 — Applied the data tests to the rat-audit spec (requirement...
+- Teammate: Bruno
+- Agent: —
+- Did: Applied the data tests to the rat-audit spec (requirements R1.7/R1.9/R1.10/R2.3/R2.7/R3.11/R5.2/R5.3/R6.4/R7.6, tasks 1.6–1.8, 2.9, 2.10, 2.17, 2.18); full test record saved as data-audit.md; research narrative in docs
+- Why: Spec still listed drivers the tests ruled out (rain, NWS, work zones, games, asthma)
+- Where: .kiro/specs/rat-audit/{data-audit,requirements,tasks,design}.md, docs/rat-audit/data-research.md
+- Idea: Spec now matches evidence: trash + housing + season; honest nulls; equity view
+
+### 2026-10-24 13:13 — Modal worker deployed (rat-audit on harvard workspace): b...
+- Teammate: Bruno
+- Agent: —
+- Did: Modal worker deployed (rat-audit on harvard workspace): backfill fan-out, daily/weekly crons, refresh + simulate endpoints; spec updated
+- Why: Bruno approved Modal as the single Python worker that fetches data and predicts where reports will appear
+- Where: pipeline/, .kiro/specs/rat-audit/*, docs/rat-audit/CONTRACT.md
+- Idea: Emerging-hotspot flag (high forecast, little history) and what-if simulator (model estimate) added to spec as R6.7/R6.8
 ### 2026-10-24 13:12 — Expanded RodentOps evidence: public data, complaints and ...
 - Teammate: Guilherme
 - Agent: Codex (research; not Kiro build activity)

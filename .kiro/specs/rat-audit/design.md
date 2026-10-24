@@ -7,7 +7,13 @@ paths: `docs/rat-audit/CONTRACT.md`.
 
 ```
  Analyze Boston (CKAN)  NOAA  MLB  NWS  CDC  Zillow  Inside Airbnb  iNaturalist
-          │                 (bulk backfill: Python, pipeline/ingest)
+          │
+          ▼
+ ┌──────────── Modal worker (Python `pipeline/rat_audit`, workspace harvard) ───────────┐
+ │ backfill (fan-out per source) · daily cron: refresh → analytics → score              │
+ │ weekly cron: retrain + backtest · POST /refresh (button) · POST /simulate (what-if)   │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+          │ writes (SUPABASE_DB_URL)
           ▼
  ┌──────────────────────────── Supabase Postgres + PostGIS ────────────────────────────┐
  │ raw-ish:  sources, incidents, places, events, weather_daily, parcels, zip_prices,   │
@@ -17,9 +23,11 @@ paths: `docs/rat-audit/CONTRACT.md`.
  │ human:    decisions                                                                  │
  │ API:      read-only RPC functions (map_*, *_detail, area_stats, timeseries, agent_*) │
  └──────────────────────────────────────────────────────────────────────────────────────┘
-          ▲  anon key (RLS: public read; decisions insert)        ▲ service role
-          │                                                       │
- ┌──────── Next.js 16 on Vercel (web/) ─────────┐        /api/refresh (cron + button) [R1.4]
+          ▲  anon key (RLS: public read; decisions insert)
+          │
+ ┌──────── Next.js 16 on Vercel (web/) ─────────┐   /api/refresh → Modal /refresh (token server-side) [R1.4]
+                                                    /api/simulate → Modal /simulate [R6.8]
+                                                    /api/reveal  → private schema (service role) [R3.9]
  │ Map (MapLibre) · Inspect · Insights · Ask    │
  │ zustand map store  ◄── client tools ──┐      │
  │ /api/chat  (AI SDK streamText + server tools)│──► model provider (gateway|anthropic|bedrock)
@@ -27,7 +35,7 @@ paths: `docs/rat-audit/CONTRACT.md`.
 ```
 
 - **Live** [R1.1]: the browser reads Supabase directly through RPCs; no snapshot on the main path.
-- **Fresh** [R1.4]: `/api/refresh` upserts new 311 rows; the analytics jobs re-run on demand (Python) — for the demo, run them once after the final backfill; the forecast is recomputed with the latest weeks.
+- **Fresh** [R1.4]: the Modal worker owns all Python (ingest, analytics, model). Daily cron and the Refresh button (Vercel `/api/refresh` → Modal `refresh`, bearer `RAT_AUDIT_WORKER_TOKEN`) pull new rows, then re-run analytics and scoring, so the forecast is as live as the data. Weekly cron retrains. See `pipeline/README.md`.
 - **Provider-agnostic agent** [R8.9]: `MODEL_PROVIDER` env selects Vercel AI Gateway (default), Anthropic API or AWS Bedrock.
 
 ## 2. Data model
@@ -43,7 +51,7 @@ Key rules:
 - Every row carries `source_id` → `sources` [R3.8] and spatial rows carry `city` (boston | cambridge | somerville) [R1.13].
 - Points returned by the API are snapped to ~20 m.
 
-## 3. Ingestion (pipeline/ingest, Python 3.12 + uv) [R1]
+## 3. Ingestion (`pipeline/rat_audit/ingest/<source>.py`, each `run(conn, since=None) -> rows`; runs on Modal) [R1]
 
 | Loader | Source | Target |
 |---|---|---|
@@ -61,10 +69,7 @@ Bulk loads use `COPY` into a temp table then `INSERT … ON CONFLICT DO UPDATE`,
 overwriting `action_tag`. CKAN gotcha: `datastore_search_sql` blocks some functions;
 compute durations locally. Raw downloads cache to `.cache/raw/` (git-ignored).
 
-**Refresh** (`web/src/app/api/refresh/route.ts`) [R1.4–R1.6]: TypeScript, service role,
-fetches the 2026 311 table `WHERE open_dt > max(opened_at) - 14 days`, maps types via
-categories.json, upserts, writes `ingest_runs`. Auth: `Authorization: Bearer $CRON_SECRET`
-for cron; button calls allowed if the last run is ≥ 5 min old [R1.5]. `vercel.json` cron daily.
+**Refresh** [R1.4–R1.6]: Modal `refresh` endpoint runs `REFRESH_SOURCES` (Boston 311, regional, code enforcement) with `since=14d`, writes `ingest_runs`, then spawns `analytics_and_score`. Vercel `/api/refresh` is a thin proxy that adds the bearer token and enforces the 5-minute guard [R1.5] by reading the last `ingest_runs` row. Daily Modal cron at 10:00 UTC.
 
 ## 4. Analytics (pipeline/analytics) [R3, R5, R7]
 
@@ -84,7 +89,7 @@ for cron; button calls allowed if the last run is ≥ 5 min old [R1.5]. `vercel.
 - **Correlations** → `correlations` (one row each; method per `docs/rat-audit/CONTRACT.md` table). Cell-level rates use
   rodent reports per 100 total 311 reports in the cell (controls for reporting propensity). Spearman with permutation p;
   event studies with matched random control points; strength: |ρ| ≥ .5 strong, ≥ .3 moderate, ≥ .1 weak, else none.
-  Pre-tested results (Oct 24) are in `data-validation.md` and `knowledge/sources/rats/validation/*_results.txt`:
+  Pre-tested results (Oct 24) are in `data-audit.md` and `knowledge/sources/rats/validation/*_results.txt`:
   rain, snow, demolitions, events, restaurants and Big Belly are honest nulls; season (+0.87), dead animal, indoor pest,
   trash storage (311 and code enforcement) and move-out are the positive findings; tract-level 311 under-reporting replaces asthma.
 - **Three-city comparison** [R5.6]: monthly rodent reports per 1,000 residents per city (ACS population); Somerville program requests vs Rats requests over time; Cambridge sightings within 200 m of smart boxes before/after the box's first nonzero month vs other sightings. Caveat: three different reporting systems.
@@ -97,7 +102,7 @@ for cron; button calls allowed if the last run is ≥ 5 min old [R1.5]. `vercel.
 
 **cell_week_poisson_gbm** — target: rodent reports per cell per ISO week.
 Features (all known at prediction time):
-Feature set follows `data-validation.md` (tested Oct 24; nulls removed):
+Feature set follows `data-audit.md` (tested Oct 24; nulls removed):
 - lags: reports t-1, mean t-1..t-4, mean t-1..t-12, same week last year (strongest signal);
 - leading 311 signals in cell + ring, t-1..t-12: dead animal pickups, indoor pest, improper trash storage, overflowing,
   trash out early, weeds, litter, student move-in trash;
@@ -112,6 +117,15 @@ earlier weeks. Metrics: MAE vs baseline (mean of last 4 weeks), top-10% cell cap
 permutation importance (global) and per-cell drivers = prediction change when each feature group is set to its city
 median (top 5). `p_any = 1 - exp(-expected)`. Risk bands by quantile of `expected` (≤60% low, ≤85% elevated,
 ≤95% high, else very_high). Writes `model_runs` + `predictions` (backtest weeks with `actual`, next 4 weeks without).
+
+**Emerging hotspots** [R6.7]: cells whose forecast is in the top risk bands but had ≤ 1 rodent report in the previous
+12 weeks, flagged `summary.emerging` with the leading signals that drove them (trash storage, dead animals, indoor pest,
+move-out trash, code-enforcement tickets). Map style: dashed outline; agent tool `forecast(emerging=true)`.
+
+**What-if simulator** [R6.8]: Modal `simulate` loads the latest model, edits the chosen cell's/site's features per
+intervention (e.g. `trash_storage`: improper-storage signals × 0.5; `clear_lot`: weeds/vacant-lot signals → 0;
+`pest_followup`: indoor-pest lag × 0.5), re-predicts 4 weeks and returns `{baseline, scenario, delta, caveat}`.
+Labelled "model estimate, not a measured effect".
 
 **site_recurrence_logit** — one row per closed rodent case; y = new report at same key within 60 days; features: action tag,
 prior reports at key (90 days), nearby drivers, building, month. Logistic regression; AUC on time split. Per site → `summary.recur_p`.

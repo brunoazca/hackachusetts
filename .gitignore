@@ -37,3 +37,6 @@ __pycache__/
 # local caches
 .cache/
 pipeline/.venv/
+
+# Kiro Crew Spec Builder runtime marker
+.kiro/specs/*/STOP

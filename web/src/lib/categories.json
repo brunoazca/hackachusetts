@@ -43,7 +43,8 @@
       "color": "#8d6a9f",
       "sources": {
         "311": [
-          "Pick up Dead Animal"
+          "Pick up Dead Animal",
+          "Dead Animal General"
         ]
       }
     },
@@ -75,7 +76,8 @@
       "sources": {
         "311": [
           "Missed Trash/Recycling/Yard Waste/Bulk Item",
-          "Missed Trash"
+          "Missed Trash",
+          "Missed Waste Pick-up"
         ]
       }
     },
@@ -85,7 +87,8 @@
       "color": "#b5651d",
       "sources": {
         "311": [
-          "Illegal Dumping"
+          "Illegal Dumping",
+          "Illegal Dumping or Disposal"
         ]
       }
     },
@@ -96,7 +99,9 @@
       "sources": {
         "311": [
           "Empty Litter Basket",
-          "Litter"
+          "Litter",
+          "Litter & Debris",
+          "Park Litter & Debris"
         ]
       }
     },
@@ -107,7 +112,8 @@
       "sources": {
         "311": [
           "Overflowing or Un-kept Dumpster",
-          "Overflowing Trash"
+          "Overflowing Trash",
+          "Park Overflowing Trash Can"
         ]
       }
     },
@@ -148,7 +154,8 @@
       "color": "#52b788",
       "sources": {
         "311": [
-          "Overgrown Weeds On Property"
+          "Overgrown Weeds On Property",
+          "Overgrown Weeds"
         ]
       }
     },
@@ -171,6 +178,16 @@
           "Rodent Assistance Program request",
           "Rodent Assistance Program inquiry",
           "School Rodent Control "
+        ]
+      }
+    },
+    "move_in_trash": {
+      "label": "Student move-in trash",
+      "group": "food",
+      "color": "#e76f51",
+      "sources": {
+        "311": [
+          "Student Move-In (Trash Collection)"
         ]
       }
     }

@@ -46,10 +46,10 @@ on one live map, in minutes.
 4. **P0** WHEN the refresh endpoint runs (daily cron or the Refresh button) THE SYSTEM SHALL fetch 311 records newer than the latest stored record, plus records opened in the last 14 days (to catch closures), and upsert them.
 5. **P1** IF a refresh was run less than 5 minutes ago WHEN the Refresh button is pressed THEN THE SYSTEM SHALL skip the fetch and show the last refresh time.
 6. **P0** THE SYSTEM SHALL show "Live · updated <time ago>" from the latest successful ingest run.
-7. **P1** THE SYSTEM SHALL load places: restaurants with rodent violations (food inspections), demolitions and excavations (building permits), Public Works work zones, Big Belly bins, city-owned lots, vacant parcels, public schools.
+7. **P1** THE SYSTEM SHALL load places: restaurants with rodent violations (food inspections), demolitions and excavations (building permits), Big Belly bins, city-owned lots, vacant parcels, public schools; and code enforcement violations (`90ed3816-5e70-443c-803d-9a71f44470be`: improper trash storage, overfilled barrels, dumping, weeds), the inspector-issued trash signal validated in `data-audit.md`.
 8. **P1** THE SYSTEM SHALL load parcels (FY2025 and FY2026 assessment) with year built, owner-occupied flag, units, land use and values — without owner names.
-9. **P1** THE SYSTEM SHALL load daily weather (NOAA, Logan) and events: one-day alcohol and entertainment licenses, Red Sox home games, Sept 1 move-out, holiday pickup delays, heavy-rain/snow/heat days.
-10. **P1** THE SYSTEM SHALL load context: census tracts with social vulnerability and asthma prevalence, Zillow ZIP home values/rents, Inside Airbnb listings with rat-mention review counts, iNaturalist rat observations.
+9. **P1** THE SYSTEM SHALL load daily temperature (NOAA, Logan) for the seasonal signal (monthly r = +0.87) and the Sept 1 move-out event. Rain, snow, one-day licenses, Red Sox games and holiday delays SHALL NOT be loaded as drivers (no effect in `data-audit.md`).
+10. **P1** THE SYSTEM SHALL load context: census tracts with social vulnerability (equity lens) and asthma prevalence (context only; it is negatively associated with reports, so no impact claim), Zillow ZIP home values/rents, Inside Airbnb listings with rat-mention review counts, iNaturalist rat observations.
 11. **P0** THE SYSTEM SHALL strip house numbers into `address_block` (street + ZIP) and group repeat reports with a hashed `address_key`.
 12. **P1** IF the database is unreachable THEN THE SYSTEM SHALL show a clear error state and not a blank map.
 13. **P1** THE SYSTEM SHALL load Cambridge and Somerville rat data with a `city` on every row: Somerville 311 "Rats" and Rodent Assistance Program requests (placed at census-block centroids, flagged `geo_precision = block_centroid`), Cambridge rodent sightings (Commonwealth Connect, `uz4w-baz5`) and Cambridge smart rat boxes with monthly catches (`78bs-b5ig`).
@@ -58,11 +58,11 @@ on one live map, in minutes.
 
 1. **P0** WHEN the app opens THE SYSTEM SHALL show a full-screen map of Boston with rodent reports from the last 90 days and the ranked chronic sites.
 2. **P0** THE SYSTEM SHALL cluster points at low zoom and show individual reports at high zoom, styled open / closed / "closed but came back".
-3. **P0** THE SYSTEM SHALL offer layer toggles grouped as Rat signals, Food (trash drivers, restaurants), Shelter (vacant lots, abandoned buildings, weeds), Displacement (demolitions, digs, work zones), Protection (Big Belly), Events, Forecast, Context (vulnerability, asthma, listings).
+3. **P0** THE SYSTEM SHALL offer layer toggles grouped as Rat signals, Food (trash drivers, restaurants), Shelter (vacant lots, abandoned buildings, weeds), Displacement (demolitions), Protection (Big Belly), Events (move-out), Forecast, Context (vulnerability, listings).
 4. **P0** WHEN the user pans or zooms THE SYSTEM SHALL refetch the visible area for the active layers and filters within 1 second (debounced).
 5. **P0** THE SYSTEM SHALL filter by date range (30 days / 90 days / 1 year / all / custom) and status (open / closed / all).
 6. **P0** WHEN the user clicks any feature THE SYSTEM SHALL select it and open its detail in the Inspect panel.
-7. **P1** THE SYSTEM SHALL show a timeline under the map: weekly rodent reports in view with event marks (rain, games, move-out); dragging sets the date window; Play animates week by week.
+7. **P1** THE SYSTEM SHALL show a timeline under the map: weekly rodent reports in view with event marks (Sept 1 move-out) and a temperature line; dragging sets the date window; Play animates week by week.
 8. **P1** THE SYSTEM SHALL show a heatmap mode for rodent reports.
 9. **P1** WHEN the user draws an area (radius or polygon) THE SYSTEM SHALL show area statistics.
 10. **P1** THE SYSTEM SHALL support search by street, neighborhood or ZIP and fly to the result.
@@ -85,6 +85,7 @@ on one live map, in minutes.
 
 9. **P1** WHEN a card shows an owner name, full address or raw closure note THE SYSTEM SHALL show it blurred with an eye icon; WHEN the user clicks the eye THE SYSTEM SHALL fetch the value from a non-public store via a server route, show it, and log the reveal (kind, id, time).
 10. **P1** THE SYSTEM SHALL let the inspector see the owner's other parcels (portfolio) after a reveal, with reports per unit across them.
+11. **P1** THE SYSTEM SHALL offer an equity view of the chronic-site ranking (rank within each neighborhood) and flag low-reporting tracts, with the caveat that 311 counts are reports, not rats.
 
 ## R4 Human decision and work order
 
@@ -96,8 +97,8 @@ on one live map, in minutes.
 ## R5 Findings (correlations)
 
 1. **P0** THE SYSTEM SHALL show an Insights panel with findings, each with a plain headline, the question, method, statistic, a strength label (strong / moderate / weak / none), a small chart, a caveat and sources.
-2. **P0** THE SYSTEM SHALL include at least: trash storage vs rodent reports; what worked (60-day repeat rate by city action); Sept 1 move-out spike.
-3. **P1** THE SYSTEM SHALL also include: demolition displacement (300 m, ±90 days vs control), rain lag (0–7 days), trash-day effect, building age × owner occupancy, restaurant citations vs nearby reports, Big Belly association, events → trash → reports, under-reporting (iNaturalist vs 311 by vulnerability), asthma by tract, seasonality vs temperature.
+2. **P0** THE SYSTEM SHALL include at least: trash storage vs rodent reports (311 and code enforcement); dead-animal and indoor-pest reports as leading signals; what worked (60-day repeat rate by city action); Sept 1 move-out; seasonality vs temperature.
+3. **P1** THE SYSTEM SHALL also include the tested results from `data-audit.md`, nulls included: demolitions (no spike; consistent with pre-demolition baiting), rain (none), trash day (none), restaurants and food licenses (none after controls), Big Belly (none), events and Red Sox games (none), building age × owner occupancy, and 311 under-reporting by tract (fewer reports per resident where more children, people of color and residents with disabilities live).
 4. **P0** THE SYSTEM SHALL control for reporting volume by using rates where possible and SHALL report weak or null results honestly.
 5. **P1** WHEN a finding is clicked THE SYSTEM SHALL set the map layers that illustrate it.
 6. **P1** THE SYSTEM SHALL compare the three cities: reports per 1,000 residents over time, and what each city does differently (Somerville's Rodent Assistance Program, Cambridge's smart boxes and their catch trends near sightings), with caveats that each city's reporting system differs.
@@ -107,9 +108,13 @@ on one live map, in minutes.
 1. **P0** THE SYSTEM SHALL forecast rodent reports per ~250 m grid cell for each of the next 4 weeks and show it as a map layer with risk bands. A "mean of the last 4 weeks" baseline ships first as a fallback; the trained model replaces it.
 2. **P0** THE SYSTEM SHALL backtest the forecast on the most recent 26 weeks against the baseline "mean of the last 4 weeks", and show both scores (MAE and share of reports captured by the top 10% of cells).
 3. **P0** THE SYSTEM SHALL show the model's top features in plain language and the top drivers for each cell.
-4. **P1** THE SYSTEM SHALL use next week's rain from the live NWS forecast as an input.
+4. **P1** THE SYSTEM SHALL use temperature climatology (week-of-year mean) for future weeks. Live rain forecasts SHALL NOT be used (rain showed no effect).
 5. **P1** THE SYSTEM SHALL estimate, for each chronic site, the probability of a new report within 60 days after a closure.
 6. **P0** THE SYSTEM SHALL label forecasts as "expected reports", not rats, and SHALL state next to the layer whether it is the baseline or the backtested model.
+
+7. **P1** THE SYSTEM SHALL flag emerging hotspots: cells with high forecast risk but little recent history, with the leading signals that raised them.
+8. **P2** WHEN the inspector picks interventions for a cell or site THE SYSTEM SHALL return the model's expected change in reports over 4 weeks, labelled as a model estimate.
+9. **P0** THE SYSTEM SHALL run ingestion, analytics, training and scoring in a scheduled Python worker (Modal) that writes to the database, and SHALL re-score after every refresh.
 
 ## R7 Price and cost impact
 
@@ -118,6 +123,7 @@ on one live map, in minutes.
 3. **P1** THE SYSTEM SHALL show the ZIP-level home value / rent relationship and state that it is weak and confounded.
 4. **P0** THE SYSTEM SHALL show costs that can be counted: city pest-control payments (FY2026 ≈ $776K, BPS $611K), restaurant rodent citations, repeat inspections at chronic sites.
 5. **P0** THE SYSTEM SHALL NOT claim that rats lower property values unless the data shows it, and SHALL show the caveat next to every price figure.
+6. **P1** THE SYSTEM SHALL show schools near rodent hot spots (49% of schools are in or next to a top-10% cell vs 35% of lived-in cells) next to BPS pest-control spending ($611K, FY2026), and SHALL NOT claim asthma or fire impacts (not supported, see `data-audit.md`).
 
 ## R8 Assistant (agent chat)
 
