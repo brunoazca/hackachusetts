@@ -30,6 +30,19 @@ uv run modal deploy modal_app.py             # deploy (crons + endpoints)
 uv run python -c "import modal; print(modal.Function.from_name('rat-audit','backfill').remote())"
 ```
 
+## Which data is live
+
+Each source's mode is defined once in `rat_audit/ingest/update_modes.py` and written to `sources.update_mode`
+(`live` | `daily` | `static`) plus `sources.update_note`, so the UI and the agent can label every layer.
+
+| Mode | When it updates | Sources |
+|---|---|---|
+| **live** | Refresh button (Modal `refresh`, ~15 s) + daily cron | Boston 311 2026 + new system, 311 volume, code enforcement, Somerville 311, Cambridge rodent sightings, Cambridge smart rat boxes |
+| **daily** | Daily cron, 10:00 UTC | NOAA weather (~4-day lag), food inspections, building permits |
+| **static** | Loaded once; re-run with `backfill` | Boston 311 2023–2025 (closed years), property assessment, SAM addresses, Big Belly, city lots, schools, colleges, Checkbook spending, tracts (SVI, TIGERweb, CDC asthma), Zillow, Inside Airbnb, iNaturalist, Marathon / move-out / Red Sox calendars |
+
+A new source without an entry in `update_modes.py` fails at `db.upsert_source` on purpose.
+
 ## Modal functions
 
 | Function | Trigger | Does |

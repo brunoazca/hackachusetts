@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:36 — Marked every source live/daily/static: update_modes.py re...
+- Teammate: Bruno
+- Agent: —
+- Did: Marked every source live/daily/static: update_modes.py registry → sources.update_mode/update_note (7 live, 3 daily, 20 static); README table
+- Why: Bruno asked to mark which data gets live updates
+- Where: pipeline/rat_audit/ingest/update_modes.py, pipeline/rat_audit/db.py, pipeline/rat_audit/jobs.py, pipeline/README.md, supabase/migrations/20261024100004_data_update_mode.sql, docs/rat-audit/CONTRACT.md
+- Idea: UI can badge each layer Live / Daily / Static from sources.update_mode
+
+### 2026-10-24 13:36 — Shrank parcels: dropped 8,545 condo-parking parcels, null...
+- Teammate: Bruno
+- Agent: —
+- Did: Shrank parcels: dropped 8,545 condo-parking parcels, nulled mail_address, VACUUM FULL (parcels 101→51 MB, owners 35→26 MB)
+- Why: Supabase free-tier 500 MB cap had made the DB read-only
+- Where: pipeline/rat_audit/ingest/parcels.py, ingest/README.md
+- Idea: —
+
 ### 2026-10-24 13:35 — Filled the blank _TBD_ Commands section in steering/tech....
 - Teammate: Guilherme
 - Agent: kirocrew
@@ -38,6 +54,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: The demo-path hook and agents rely on tech.md for build/test commands; they were all _TBD_
 - Where: .kiro/steering/tech.md
 - Idea: Left partner's in-flight uncommitted knowledge/design changes untouched - not mine to commit
+
+### 2026-10-24 13:34 — All loaders done: parcels 184,552 (100% coords via Parcel...
+- Teammate: Bruno
+- Agent: —
+- Did: All loaders done: parcels 184,552 (100% coords via Parcels25), 1,157 restaurants, 1,460 permits, Big Belly 542, city lots 1,340, schools 134, colleges 60; listings slimmed to 518 (all rat-review listings + 10% sample); tracts simplified
+- Why: Data section complete except full enforcement aggregate
+- Where: pipeline/rat_audit/ingest/*.py, contracts/categories.json
+- Idea: listings is a sample: weight non-rat rows x10 for rates
 
 ### 2026-10-24 13:32 — Fixed submission-readiness checker to detect the real app...
 - Teammate: Guilherme
