@@ -46,6 +46,13 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Tables and lists were shown as raw text and crowded the panel
 - Where: web/src/components/chat; web/package.json; web/pnpm-lock.yaml
 - Idea: Keep wide tables keyboard-scrollable inside each answer and sources collapsed; validate with mocked chat responses without sending map context to AI
+### 2026-10-24 19:21 — Ranking cards: severity tier chip + colored side bar (Cri...
+- Teammate: Bruno
+- Agent: —
+- Did: Ranking cards: severity tier chip + colored side bar (Critical/High severity/Moderate/Low by score), dropped internal numbers and AI/Rules badge, shorter header
+- Why: Reduce noise in Where to act first; make urgency readable at a glance
+- Where: web/src/components/insight/RankingList.tsx
+- Idea: —
 
 ### 2026-10-24 19:16 — Removed the List button from the map's bottom-left stack
 - Teammate: Bruno
