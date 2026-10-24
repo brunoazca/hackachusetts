@@ -20,7 +20,7 @@ language sql stable security definer set search_path = public as $$
   agg as (
     select address_key,
            count(distinct d)::int as reports,
-           count(closed_at)::int as closures,
+           count(distinct closed_at::date)::int as closures,
            min(d) as first_at, max(d) as last_at,
            max(closed_at)::date as last_closed,
            mode() within group (order by address_block) as address_block,

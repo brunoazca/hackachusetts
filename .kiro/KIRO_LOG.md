@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:27 — UI per new spec: Assess/Act modes + Simple/Explore depth ...
+- Teammate: Bruno
+- Agent: —
+- Did: UI per new spec: Assess/Act modes + Simple/Explore depth in top bar; Act site queue (Due first, 148 due of 759 draft sites) with fly-to and site case (counts, came-back timeline, drivers within 100 m, adjacent vacant land); rat vs evidence heatmaps (Explore); tested-result label per layer; 7-day period
+- Why: Bruno: follow the new spec (R0 modes/depth, R2.16 labels, R4.0 queue), heatmaps for rats and evidence, last-week filter
+- Where: web/src/components/{act,inspector,map,shell}, web/src/lib/{map-store,queries}.ts, supabase/migrations/20261024300002_api_site_queue_draft.sql
+- Idea: Draft sites = repeat-report addresses until analytics 50 m DBSCAN sites land; heat weight normalized per family so trash doesn't drown rats
+
 ### 2026-10-24 14:26 — site_recurrence_logit: P(rodent report returns to same ad...
 - Teammate: Bruno
 - Agent: —

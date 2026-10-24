@@ -122,8 +122,12 @@ export default function MapView() {
   }, [load]);
 
   useEffect(() => {
-    if (flyToTarget) mapRef.current?.flyTo({ center: [flyToTarget.lon, flyToTarget.lat], zoom: flyToTarget.zoom, duration: 1200 });
-  }, [flyToTarget]);
+    // In Act the queue covers the left of the map; offset so the target lands in the visible part.
+    if (flyToTarget) mapRef.current?.flyTo({
+      center: [flyToTarget.lon, flyToTarget.lat], zoom: flyToTarget.zoom, duration: 1200,
+      padding: { left: appMode === "act" ? 400 : 0, top: 0, right: 0, bottom: 0 },
+    });
+  }, [flyToTarget, appMode]);
 
   const interactive = useMemo(
     () => [...(appMode === "act" ? ["sites"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : [])],
