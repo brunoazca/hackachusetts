@@ -394,6 +394,42 @@ and evidence stops at the border. Fixes, all cheap and done in SQL over `grid_ce
 - Output is stored, not generated on page load: `region_solutions` is recomputed after
   each forecast scoring run, so the tab and the agent read the same text.
 
+### 5.7 Implemented (Bruno, Oct 24) — `region_solutions` is live
+
+`pipeline/rat_audit/model/region_solution.py` → `region_solution(conn)`; table
+`supabase/migrations/20261024500005_region_solutions.sql` (public read). **20 rows are in
+the DB now (19 AI, 1 rules fallback).** Carol / Gui / agent can build against it today.
+
+- **Regions:** until Carol's `insights` table exists, the job builds the regions itself
+  exactly per §5.1 + §5.5 (12-week observed + 4-week expected, 3×3 smoothing with ring 0.5,
+  top 5 % cells, hill-climb to local maxima = clusters, ≤ 9 cells). `region_id` = the
+  cluster's top cell id. When `insights` lands, either adopt these regions (read
+  `region_solutions.input->'region'`) or point the job at `insights` — same ids.
+- **What the AI sees** (stored verbatim in `region_solutions.input`, so cards and the agent
+  can show the same evidence):
+  `region` (rank, cell_ids, severity parts) · `forecast` (next 4 weeks expected, week-1
+  chance of ≥ 1 report and risk bands, last 8 weeks expected vs actual, top drivers) ·
+  `records_last_12_weeks` (≤ 30: date, block, status, what the city did, scrubbed note,
+  earlier reports at the address, situation, the `record_solutions` options) ·
+  `address_histories` (blocks with ≥ 2 reports in 2 years: action ladder in order +
+  returns) · `possible_causes_within_150m` (places + 311 last 90 days, count, nearest m,
+  source_ids) · **`solution_statistics`**: for all Boston closed rodent cases and for the
+  region's top 3 situations (history at the address × trash 311 on the block × vacant
+  parcel within 40 m), per action — monitoring, inspection, abatement, citation, warning,
+  referral, cleanup, barrels, ISD treatment, no violation — the cases, share of cases,
+  60-day return rate with 95 % interval, model-adjusted return, and whether proposable.
+- **AI:** `anthropic/claude-haiku-5.5` through the Vercel AI Gateway (`VERCEL_OIDC_TOKEN`
+  or `AI_GATEWAY_API_KEY`), temperature 0, forced tool call `submit_solution` (valid JSON
+  guaranteed). Guards: lane enum, never the words bait/poison/rodenticide, every number
+  must appear in the input (plus spec constants 40/60/90/100/150/250), every record gets a
+  `todo`. Up to 3 attempts with the rejection reason, then the §5.2 rules
+  (`source='rules'`, `rule_id`, `guard_errors` says why).
+- **Columns:** `region_id, forecast_run_id, rank, cell_ids, action, lane, because, cites,
+  records [{incident_id, todo}], unknowns, rule_id, source, llm_model, input_hash, input,
+  guard_errors, caveat, computed_at`.
+- Run after scoring: `record_solution(conn)` then `region_solution(conn)`; ~2 min for 20
+  regions.
+
 ---
 
 ## 6. States (what the tab shows when data is partial)

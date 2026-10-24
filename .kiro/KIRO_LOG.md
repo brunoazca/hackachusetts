@@ -31,6 +31,13 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:36 — Built the AI region solution job (region_solution.py + re...
+- Teammate: Bruno
+- Agent: —
+- Did: Built the AI region solution job (region_solution.py + region_solutions table): edge-safe regions, evidence (forecast, drivers, records + per-record model, address action ladders, causes within 150 m) and solution statistics by situation (action mix, 60-day return with 95% CI, model-adjusted); Claude Haiku via AI Gateway with forced tool call and guards; 20 regions written (19 AI, 1 rules)
+- Why: Insights cards need one grounded solution per region plus a what-to-do line per report, using what is usually done in each kind of case and what followed
+- Where: pipeline/rat_audit/model/region_solution.py, supabase/migrations/20261024500005_region_solutions.sql, .kiro/specs/rat-audit/insights-severity-ranking.md §5.7
+- Idea: First run had 12/20 fall back (unescaped quotes in JSON, model echoing 'bait'); forced tool call + showing past baiting as 'ISD treatment' fixed it. Prompt also had to say lower return rate = better.
 ### 2026-10-24 17:36 — Integrate the chat disclosure into the published app
 - Teammate: Carol
 - Agent: Codex
