@@ -22,7 +22,7 @@ from .. import db
 from .common import _get_json, address_block, in_region, jsonb, parse_local_ts, since_cutoff, socrata_paged, \
     to_float, upsert_generic, zip5
 from .parcels import _changed, _street_title
-from .permits import NOTE as PERMIT_NOTE, _LEAD_NUM
+from .permits import NOTE as PERMIT_NOTE
 
 DOMAIN, PERMITS = "data.somervillema.gov", "nneb-s3f7"
 MASSGIS = "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL"
@@ -47,6 +47,7 @@ VACANT = {"130", "131", "132", "390", "391", "392", "440", "441", "442"}
 UNITS_BY_CLASS = {"101": 1, "102": 1, "104": 2, "105": 3}
 
 _ZIP = re.compile(r"\b(02\d{3})\b")
+_LEAD_NUM = re.compile(r"^\s*\d[\w./-]*\s+")  # '33.5 Cedar St', '12R-14 Elm St'
 _WS = re.compile(r"\s+")
 
 
@@ -110,7 +111,7 @@ def _permits(conn: psycopg.Connection, cutoff) -> int:
             street = _LEAD_NUM.sub("", addr.split(",")[0])
             attrs = {"permit": r.get("application_number"), "worktype": r["application_type"], "subtype": subtype,
                      "permit_type": sub, "status": r.get("status"), "display_only": True, "note": PERMIT_NOTE}
-            name = f"Demolition: {sub[0].lower() + sub[1:]}" if demo else sub
+            name = "Demolition: " + re.sub(r"\s*\(.*?\)\s*", " ", sub).strip() if demo else sub
             rows.append((f"sompermit:{r['application_id']}", sid, "demolition" if demo else "excavation", name[:80],
                          address_block(street, z.group(1) if z else None), issued,
                          parse_local_ts(r.get("expiration_date")), jsonb(attrs), lat, lon, "somerville"))
@@ -176,8 +177,8 @@ def _parcels(conn: psycopg.Connection) -> int:
         pcols = ["pid", "source_id", "address_block", "zip", "land_use", "yr_built", "own_occ", "units",
                  "value_fy25", "value_fy26", "lat", "lon", "city"]
         ocols = ["pid", "owner", "mail_address", "full_address", "source_id"]
-        parcels_new = [r for r in _changed(conn, "parcels", pcols, parcels)]
-        owners_new = [r for r in _changed(conn, "private.parcel_owners", ocols, owners)]
+        parcels_new = _changed(conn, "parcels", pcols, parcels)
+        owners_new = _changed(conn, "private.parcel_owners", ocols, owners)
         upsert_generic(conn, "parcels", pcols, parcels_new, key="pid")
         upsert_generic(conn, "private.parcel_owners", ocols, owners_new, key="pid", geom=False)
         conn.execute("delete from places where kind = 'vacant_parcel' and source_id = %s", (sid,))

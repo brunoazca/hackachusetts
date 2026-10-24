@@ -108,7 +108,11 @@ def _somerville(conn: psycopg.Connection, cutoff) -> int:
 
 # ---------- Cambridge rodent sightings ----------
 
-_CITY_CUT = re.compile(r"\s+(?:cambridge|ケンブリッジ|somerville|boston)\b|,", re.I)
+# Cut at the city name, but not when it is the street ("1126 Cambridge St", "Somerville Ave").
+_CITY_CUT = re.compile(
+    r"\s+(?:cambridge|ケンブリッジ|somerville|boston)\b(?!\s+(?:st|street|ave|avenue|rd|road|pl|place|ter|terrace|pk|park|sq|square|hwy|ct)\b)|,",
+    re.I,
+)
 _COORDS = re.compile(r"^\s*-?\d+\.\d+[,\s]+-?\d+\.\d+\s*$")
 
 
@@ -120,6 +124,8 @@ def _cam_address(full: str | None) -> tuple[str | None, str | None, str | None]:
         return None, None, None
     full = full.replace("\u2013", "-").replace("\u2014", "-")
     street = _CITY_CUT.split(full, maxsplit=1)[0].strip() or None
+    if street and re.fullmatch(r"[\d\s\-–&A-Za-z]{0,8}", street) and not re.search(r"[A-Za-z]{3}", street):
+        street = None  # only a house number left: never publish it
     zips = re.findall(r"(?<![\d.])\d{5}(?![\d.])", full)
     return full, street, zip5(zips[-1]) if zips else None
 

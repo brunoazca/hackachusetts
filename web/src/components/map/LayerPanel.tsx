@@ -178,7 +178,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
           <span className="min-w-0">
             <span className="block text-neutral-900">Buildings by year built</span>
             <span className="block text-xs text-neutral-700">
-              {enabled.ctx_buildings && zoom < 15 ? "zoom in to see buildings · " : ""}Boston parcels · {ERA_STOPS.map(([, , l]) => l).join(" / ")}
+              {enabled.ctx_buildings && zoom < 15 ? "zoom in to see buildings · " : ""}assessor parcels BOS CAM SOM · {ERA_STOPS.map(([, , l]) => l).join(" / ")}
             </span>
           </span>
         </label>

@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:39 — Queued 2 Kiro Crew campaigns on NYC data: outcomes after ...
+- Teammate: Bruno
+- Agent: —
+- Did: Queued 2 Kiro Crew campaigns on NYC data: outcomes after each follow-up + natural recovery curve; complaints vs inspected rat activity (under-reporting calibration)
+- Why: Use other-city data where Boston has no outcomes
+- Where: none
+- Idea: Uses: recommendation prior, Prove decay baseline, 'nobody asked' adjustment, forecast benchmark
+
+### 2026-10-24 15:38 — Loaded Cambridge equivalents of Boston-only layers: sanit...
+- Teammate: Bruno
+- Agent: —
+- Did: Loaded Cambridge equivalents of Boston-only layers: sanitary-inspection rodent violations (260 restaurants), housing-code pest cases (769 incidents), FY2026 property database (28,850 parcels + 394 vacant), demolition/new-construction permits (378), public schools (18), construction complaints (1,602 via cambridge-311 mapping)
+- Why: Cambridge map/model parity with Boston layers
+- Where: pipeline/rat_audit/ingest/cambridge.py, ingest/update_modes.py, jobs.py, ingest/README.md, contracts/categories.json, web/src/lib/categories.json
+- Idea: regional._cam_address cuts at ' Cambridge' and leaks house numbers for Cambridge St addresses (253 rows)
+
 ### 2026-10-24 15:36 — Decided how to use other cities' rat data for a Boston-fo...
 - Teammate: Bruno
 - Agent: —

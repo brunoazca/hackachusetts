@@ -28,7 +28,7 @@ from .common import (
     upsert_generic, upsert_incidents, upsert_private_details, zip5,
 )
 from .parcels import _centroid, _changed
-from .regional import _cam_address, scrub_text
+from .regional import _HOUSE_NO, _HOUSE_NO_AT, _cam_address, scrub_text
 
 DOMAIN = "data.cambridgema.gov"
 SANITARY, HOUSING, PROPERTY, PARCEL_POLY = "ryb9-qzmw", "f8su-kv88", "eey2-rv59", "c392-hjk3"
@@ -103,7 +103,8 @@ def _food(conn: psycopg.Connection) -> int:
                               "inpector_comments,latitude,longitude"):
         for r in page:
             when = parse_local_ts(r.get("case_open_date"))
-            name = " ".join((r.get("business_name") or "").split())
+            # Building-level inspections are named by address ('1105 Massachusetts Ave - Retail Shared Trash Room').
+            name = _HOUSE_NO_AT.sub(lambda m: m.group(1) + " ", _HOUSE_NO.sub("", " ".join((r.get("business_name") or "").split())))
             if when is None or not name:
                 continue
             full, block, _ = _block(r.get("full_address"))
