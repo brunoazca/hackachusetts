@@ -1,0 +1,29 @@
+{
+  "decisions": [
+    {
+      "id": "scope-freeze-p0",
+      "title": "Cut scope to a demo-safe P0 set for the 8 PM deadline?",
+      "options": [
+        "Yes — freeze to the reduced P0 list below and mark the rest P2/stretch",
+        "No — keep all P0 as written and accept deadline risk"
+      ],
+      "recommended": "Yes — freeze to the reduced P0 list below and mark the rest P2/stretch",
+      "answer": "No — keep full P0 (team + credits available); scope not cut"
+    },
+    {
+      "id": "apply-edits",
+      "title": "Apply the proposed requirements/design/tasks edits?",
+      "options": [
+        "Apply all proposed edits",
+        "Apply only the contradiction fixes",
+        "Make no file changes yet"
+      ],
+      "recommended": "Apply only the contradiction fixes",
+      "answer": "Kept accuracy fixes A–C (2026 number, forecast honesty, CSV fallback); reverted scope cut"
+    }
+  ],
+  "blocking": null,
+  "context": {
+    "template": "existing rat-audit spec (requirements/design/tasks already reviewed) — audit-only pass"
+  }
+}

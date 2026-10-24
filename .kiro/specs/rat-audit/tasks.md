@@ -14,7 +14,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 
 ## 1. Data track — `pipeline/ingest`, `/api/refresh`
 - [ ] 1.1 **P0** `pipeline/pyproject.toml` (uv, py3.12), db helper (COPY + upsert, never overwrite action_tag), `sources` + `ingest_runs` writers. (R1.3)
-- [ ] 1.2 **P0** 311 yearly 2023–2026 + new-system trash types → `incidents`; address_block/address_key; drop placeholder coords. Verify 2025 rodent ≈ 5,225; Normandy St 02121 grouped. (R1.2, R1.11)
+- [ ] 1.2 **P0** 311 yearly 2023–2026 + new-system trash types → `incidents`; address_block/address_key; drop placeholder coords. Verify 2026 rodent ≈ 5,321 (already past 2025's 5,225) — use the 2026 figure in the demo; Normandy St 02121 grouped. (R1.2, R1.11)
 - [ ] 1.3 **P0** `/api/refresh` route + `vercel.json` cron + 5-minute guard. (R1.4–R1.6)
 - [ ] 1.4 **P1** Parcels FY25/FY26 with coordinates; vacant parcels → places. (R1.8)
 - [ ] 1.5 **P1** Food inspections rodent violations → places(restaurant). (R1.7)
@@ -22,6 +22,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 1.7 **P1** NOAA weather → weather_daily + rain/snow/heat events; licenses, Red Sox games, move-out, holidays → events. (R1.9)
 - [ ] 1.8 **P1** Tracts (SVI + asthma), Zillow, Inside Airbnb listings, iNaturalist. (R1.10)
 - [ ] 1.10 **P1** Regional: Somerville 311 rat types (block centroids), Cambridge rodent sightings + smart rat boxes; `city` on every row. (R1.13)
+- [ ] 1.11 **P1** Load owner names, mailing and full addresses, raw closure notes into `private.*`; scrub names from public `closure_note`. (R3.9)
 - [ ] 1.9 **P0** `pipeline/ingest/README.md` with run commands.
 
 ## 2. Analytics + prediction track — `pipeline/analytics`, `pipeline/model`, Insights UI
@@ -30,7 +31,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 2.3 **P0** sites (score, recurrence, drivers, building, adjacent vacant, recommended); Normandy St rank check; property tests. (R3.2, R10.4)
 - [ ] 2.4 **P0** action_outcomes ("what worked"). (R3.2f, R5.2)
 - [ ] 2.5 **P0** Correlations: trash-storage-vs-rodent, what-worked, move-out-spike. (R5.2, R5.4)
-- [ ] 2.6 **P0** cell_week_poisson_gbm: features, 26-week backtest vs baseline, model_runs + predictions (backtest + next 4 weeks), per-cell drivers. (R6.1–R6.3, R6.6)
+- [ ] 2.6 **P0** cell_week_poisson_gbm: features, 26-week backtest vs baseline, model_runs + predictions (backtest + next 4 weeks), per-cell drivers. Ship the "mean of last 4 weeks" baseline first as a fallback, then the model. (R6.1–R6.3, R6.6)
 - [ ] 2.7 **P0** Counted costs in price_impact (Checkbook, citations, repeat visits). (R7.4)
 - [ ] 2.8 **P0** InsightsPanel: forecast summary, finding cards with charts + caveats, price & cost. (R5.1, R6.2, R7)
 - [ ] 2.9 **P1** Remaining correlations (demolition, rain lag, trash day, building age×owner, restaurants, Big Belly, events, under-reporting, asthma, seasonality). (R5.3)
@@ -53,6 +54,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 3.10 **P1** Timeline scrubber with event marks + play; heatmap. (R2.7, R2.8)
 - [ ] 3.11 **P1** Area draw + area_stats; past decisions on site card. (R2.9, R4.4)
 - [ ] 3.13 **P1** City filter; approximate-location styling for block centroids; smart-box layer. (R2.13)
+- [ ] 3.14 **P1** `/api/reveal` route + `Reveal` component (blurred + eye icon) on owner, address and raw note; owner portfolio after reveal. (R3.9, R3.10)
 - [ ] 3.12 **P2** Tract choropleths, listings layer, mobile bottom sheet. (R3.6, R9.4)
 
 ## 4. Agent track — `/api/chat`, `components/chat`, `lib/agent`

@@ -16,7 +16,7 @@ agent answers questions and drives the map.
 |---|---|
 | App | Next.js 16 (App Router, TS, Tailwind 4) in `web/`, deployed on Vercel (root dir `web`) |
 | Map | MapLibre GL via `react-map-gl/maplibre`, basemap `https://tiles.openfreemap.org/styles/positron` |
-| Data | Supabase Postgres + PostGIS, project ref `vfizpwajekykmbcrport` (us-east-1) |
+| Data | Supabase Postgres + PostGIS, project (ref in `.env.local` → `SUPABASE_PROJECT_REF`) (us-east-1) |
 | Pipeline | Python 3.12 via `uv` in `pipeline/` (bulk backfill, analytics, model) |
 | Live refresh | `web/src/app/api/refresh/route.ts` (Vercel cron + "Refresh" button) pulls new 311 rows from Analyze Boston into Supabase |
 | Agent | Vercel AI SDK v7 (`ai`, `@ai-sdk/react`), provider switch by `MODEL_PROVIDER` = `gateway` \| `anthropic` \| `bedrock` |
@@ -46,7 +46,9 @@ grid_cells, model_runs, predictions, price_impact). Category ids: `contracts/cat
 
 Rules:
 - Every row has a `source_id` that exists in `sources` (name, url, retrieved_at).
-- **Privacy:** no owner names, no staff names, no house numbers in any public column.
+- **Privacy:** no owner names, no staff names, no house numbers in any `public` schema column.
+  Those go to schema `private` (`parcel_owners`, `incident_details`) and reach the UI only via
+  `/api/reveal` when the user clicks the eye icon (blurred until then, every reveal logged).
   `address_block` = street + ZIP ("Normandy St, 02121"). `address_key` = sha256 of the
   normalized full address, for grouping only.
 - Times are `timestamptz` in UTC; display in America/New_York.

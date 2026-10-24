@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:05 — Privacy-by-reveal: names/full addresses in private schema...
+- Teammate: Bruno
+- Agent: —
+- Did: Privacy-by-reveal: names/full addresses in private schema, blurred with eye icon, fetched via /api/reveal and logged; imported spec into Kiro Crew Spec Builder
+- Why: Bruno wants names visible in the demo on demand, not by default; spec reviewed by the Kiro Crew spec agent
+- Where: supabase/migrations/20261024000004_private_reveal.sql, .kiro/specs/rat-audit/*, docs/rat-audit/CONTRACT.md
+- Idea: Owner portfolio view after reveal; validation shows rain/demolitions/events/restaurants/Big Belly are null predictors
+
 ### 2026-10-24 13:05 — Tested all 43 rat datasets on live data (grid, time, trac...
 - Teammate: Bruno
 - Agent: —

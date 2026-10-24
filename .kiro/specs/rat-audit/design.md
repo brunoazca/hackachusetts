@@ -39,6 +39,7 @@ tags: `contracts/categories.json` (single source; copied to `web/src/lib/categor
 Key rules:
 - Primary keys are stable strings (`311:<case_id>`, `food:<license>`, `permit:<id>`, `g250_<c>_<r>`) and equal the map feature ids, so the agent can highlight/select by id [R8.2].
 - `address_block` = street + ZIP; `address_key` = sha256(normalized full address) [R1.11].
+- Names and full addresses live in schema `private` (`parcel_owners`, `incident_details`, `reveal_log`), not exposed by PostgREST. `/api/reveal` (Vercel, service role) returns one value per click and writes `reveal_log`; the UI renders a blurred placeholder with an eye button until then [R3.9]. Public `closure_note` is scrubbed of personal names; the raw note is in `private.incident_details`.
 - Every row carries `source_id` → `sources` [R3.8] and spatial rows carry `city` (boston | cambridge | somerville) [R1.13].
 - Points returned by the API are snapped to ~20 m.
 

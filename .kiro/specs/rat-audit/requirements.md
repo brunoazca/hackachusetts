@@ -32,7 +32,7 @@ on one live map, in minutes.
 - Every number and claim shown has an in-product citation (source name, URL, retrieved/updated time).
 - A human approves every action. The app never sends, files or enforces anything.
 - Language: "reports", never "rats" as a count. Correlation is never presented as cause.
-- Privacy: no owner names, no staff names, no house numbers in the UI or API.
+- Privacy by default: owner names, staff names and full addresses are never in the public API or visible on screen by default. They appear blurred, and are revealed only when the user clicks the eye icon (fetched on demand, logged).
 - Accessible: keyboard operable, labelled controls, WCAG AA contrast, map has a list alternative.
 - English UI and materials.
 
@@ -40,7 +40,7 @@ on one live map, in minutes.
 
 ## R1 Live data platform
 
-1. **P0** THE SYSTEM SHALL store all signals in a hosted Postgres/PostGIS database (Supabase) and serve the app from it live (no bundled snapshot on the main path).
+1. **P0** THE SYSTEM SHALL store all signals in a hosted Postgres/PostGIS database (Supabase) and serve the app from it live (no bundled snapshot on the main path). IF live 311 ingest is not finished by scope-freeze THEN THE SYSTEM MAY seed Supabase from the committed `data/civic/` CSVs as a documented demo fallback, and the live badge SHALL state the data is seeded, not live.
 2. **P0** THE SYSTEM SHALL load 311 reports 2023–2026 for every category in `contracts/categories.json` (rodent, indoor pest, rat bite, dead animal, trash storage, trash out early, missed trash, illegal dumping, litter, dumpster, unsanitary conditions, vacant-lot trash, abandoned building, weeds, construction debris).
 3. **P0** THE SYSTEM SHALL record a `sources` row for every dataset and an `ingest_runs` row for every load, with row count and newest record time.
 4. **P0** WHEN the refresh endpoint runs (daily cron or the Refresh button) THE SYSTEM SHALL fetch 311 records newer than the latest stored record, plus records opened in the last 14 days (to catch closures), and upsert them.
@@ -83,6 +83,9 @@ on one live map, in minutes.
 7. **P0** WHEN nothing is selected THE SYSTEM SHALL show this week's top 10 chronic sites.
 8. **P0** THE SYSTEM SHALL show the source for every fact in the panel.
 
+9. **P1** WHEN a card shows an owner name, full address or raw closure note THE SYSTEM SHALL show it blurred with an eye icon; WHEN the user clicks the eye THE SYSTEM SHALL fetch the value from a non-public store via a server route, show it, and log the reveal (kind, id, time).
+10. **P1** THE SYSTEM SHALL let the inspector see the owner's other parcels (portfolio) after a reveal, with reports per unit across them.
+
 ## R4 Human decision and work order
 
 1. **P0** WHEN viewing a site's recommended actions THE SYSTEM SHALL let the inspector Approve, Edit or Reject each one.
@@ -101,12 +104,12 @@ on one live map, in minutes.
 
 ## R6 Prediction
 
-1. **P0** THE SYSTEM SHALL forecast rodent reports per ~250 m grid cell for each of the next 4 weeks and show it as a map layer with risk bands.
+1. **P0** THE SYSTEM SHALL forecast rodent reports per ~250 m grid cell for each of the next 4 weeks and show it as a map layer with risk bands. A "mean of the last 4 weeks" baseline ships first as a fallback; the trained model replaces it.
 2. **P0** THE SYSTEM SHALL backtest the forecast on the most recent 26 weeks against the baseline "mean of the last 4 weeks", and show both scores (MAE and share of reports captured by the top 10% of cells).
 3. **P0** THE SYSTEM SHALL show the model's top features in plain language and the top drivers for each cell.
 4. **P1** THE SYSTEM SHALL use next week's rain from the live NWS forecast as an input.
 5. **P1** THE SYSTEM SHALL estimate, for each chronic site, the probability of a new report within 60 days after a closure.
-6. **P0** THE SYSTEM SHALL label forecasts as "expected reports", not rats, and state the backtest result next to the forecast.
+6. **P0** THE SYSTEM SHALL label forecasts as "expected reports", not rats, and SHALL state next to the layer whether it is the baseline or the backtested model.
 
 ## R7 Price and cost impact
 
@@ -141,11 +144,11 @@ on one live map, in minutes.
 1. **P0** THE SYSTEM SHALL be deployed publicly on Vercel with free, unrestricted access for judges.
 2. **P0** THE SYSTEM SHALL keep secrets only in `.env.local` and Vercel env; the repository SHALL contain none.
 3. **P0** THE README SHALL explain how to run the app, the pipeline and the tests from a fresh clone.
-4. **P0** Tests: property-based tests (score bounded 0–100, ranking stable, every `source_id` resolves, no house number or owner name in any public column), unit tests for the closure classifier and agent tools, one end-to-end happy path (open → select site → approve → work order).
+4. **P0** Tests: property-based tests (score bounded 0–100, ranking stable, every `source_id` resolves, no house number or owner name in any `public` schema column (they live only in `private`)), unit tests for the closure classifier and agent tools, one end-to-end happy path (open → select site → approve → work order).
 
 ## Out of scope
 
 - Sending notices, fines or work orders to any city system.
 - Estimating rat populations.
-- Person-level data (owners, tenants, staff).
+- Tenant data. Owner and staff names only behind the reveal (R3.9).
 - Cities beyond Boston, Cambridge and Somerville.
