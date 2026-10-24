@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:18 — Map: one clustered source per category (clusters wear the...
+- Teammate: Bruno
+- Agent: —
+- Did: Map: one clustered source per category (clusters wear their category color, never mix signals), Lucide icons per category on map + legend + inspector, light theme pinned (dark-mode OS made text #ededed on white)
+- Why: Bruno: different points shouldn't aggregate equally; use icons; contrast was terrible
+- Where: web/src/components/map/{MapView,LayerPanel,icons}.tsx, web/src/app/{globals.css,layout.tsx}, web/src/components/{inspector,shell}
+- Idea: Unlayered body color rule beat Tailwind utilities — keep base rules in @layer base
+
 ### 2026-10-24 14:11 — Vercel rat-ops: verified env points to rat-audit Supabase...
 - Teammate: Bruno
 - Agent: —
