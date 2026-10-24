@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:16 — 3D map opens less tilted: pitch 52 → 35
+- Teammate: Bruno
+- Agent: —
+- Did: 3D map opens less tilted: pitch 52 → 35
+- Why: Map looked too inclined on open
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
 ### 2026-10-24 19:15 — One Insight panel UI: left panel follows the map selectio...
 - Teammate: Bruno
 - Agent: —

@@ -480,7 +480,7 @@ export default function MapView() {
     const map = mapRef.current?.getMap();
     if (!map || !iconsReady) return;
     if (map.getLayer(THREE_LAYER)) map.setLayoutProperty(THREE_LAYER, "visibility", three ? "visible" : "none");
-    map.easeTo({ pitch: three ? 52 : 0, bearing: three ? -18 : 0, duration: 900 });
+    map.easeTo({ pitch: three ? 35 : 0, bearing: three ? -18 : 0, duration: 900 });
   }, [three, iconsReady]);
 
   // Fresh reports pulse: a ring that grows and fades, 1.5 s per beat, only at marker zooms.
@@ -590,7 +590,7 @@ export default function MapView() {
     <div className="absolute inset-0">
       <Map
         ref={mapRef}
-        initialViewState={{ latitude: view.lat, longitude: view.lon, zoom: view.zoom, pitch: useMap.getState().three ? 52 : 0, bearing: useMap.getState().three ? -18 : 0 }}
+        initialViewState={{ latitude: view.lat, longitude: view.lon, zoom: view.zoom, pitch: useMap.getState().three ? 35 : 0, bearing: useMap.getState().three ? -18 : 0 }}
         mapStyle={STYLE}
         onLoad={onLoad}
         onMove={syncViewport}
