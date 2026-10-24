@@ -1,4 +1,4 @@
-"""NOAA GHCN-Daily, Boston Logan (USW00014739): precipitation, snowfall, max/min temperature, 2023 on.
+"""NOAA GHCN-Daily, Boston Logan (USW00014739): precipitation, snowfall, max/min temperature, mid-2015 on.
 
 Only temperature showed a relationship with rodent reports in validation; rain and snow are kept
 as columns but no rain/snow events are derived.
@@ -14,7 +14,7 @@ from .common import _get_json, since_cutoff, to_float, upsert_generic
 
 STATION = "USW00014739"
 API = "https://www.ncei.noaa.gov/access/services/data/v1"
-START = "2023-01-01"
+START = "2015-06-01"  # half a year before the model history (2016)
 
 
 def run(conn: psycopg.Connection, since: str | None = None) -> int:

@@ -28,7 +28,11 @@ from pyproj import Transformer
 
 from .grid import CELL_M, SRID_LL, SRID_M, load_or_build_cells
 
-START = date(2023, 1, 2)  # first Monday of the data
+START = date(2016, 1, 4)  # first Monday of the data (2016-2022 from incidents_archive)
+# Training rows (y) start after a one-year burn-in so every lag, incl. same week last year, is real.
+TRAIN_FROM = date(2017, 1, 2)
+# Weeks kept as lag inputs but never as training targets (y = NaN).
+SKIP_WEEKS: list[tuple[date, date]] = []
 _to_m = Transformer.from_crs(SRID_LL, SRID_M, always_xy=True)
 
 # 311 / code-enforcement categories used as leading signals (contracts/categories.json ids).
@@ -188,8 +192,13 @@ def _load_incidents(conn: psycopg.Connection, start: date, end: date) -> pd.Data
         from incidents
         where city = 'boston' and lon is not null and lat is not null
           and opened_at >= %s and opened_at < %s
+        union all
+        select category, opened_at, lon, lat
+        from incidents_archive
+        where city = 'boston' and lon is not null and lat is not null
+          and opened_at >= %s and opened_at < %s
         """,
-        (start, end),
+        (start, end, start, end),
     ).fetchall()
     df = pd.DataFrame(rows, columns=["category", "opened_at", "lon", "lat"])
     if df.empty:
@@ -478,6 +487,10 @@ def build_panel(
     ws = panel["week_start"]
     panel["move_out"] = ((ws.dt.month == 8) & (ws.dt.day >= 26) | (ws.dt.month == 9) & (ws.dt.day <= 7)).astype(float)
     panel["is_future"] = False
+    drop = ws < pd.Timestamp(TRAIN_FROM)
+    for a, b in SKIP_WEEKS:
+        drop |= (ws >= pd.Timestamp(a)) & (ws < pd.Timestamp(b))
+    panel.loc[drop, "y"] = np.nan
 
     # Future rows: copy the first-unobserved-week features to each forecast week.
     nxt = panel[panel["week_start"] == all_weeks[-1]]
