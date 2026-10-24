@@ -102,6 +102,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: .env.local
 - Idea: Rotate the Socrata token since it was pasted in chat; consider deleting stray .env
 
+### 2026-10-24 13:05 — Reviewed the current RodentOps/Boston Rat Audit idea acro...
+- Teammate: Guilherme
+- Agent: Claude Code (review; not Kiro build activity)
+- Did: Reviewed the current RodentOps/Boston Rat Audit idea across the atlas card, docs 15/16/18, spec, agents, hooks; re-queried 311 closure classes live
+- Why: Guilherme asked for a look at the current rodent idea after the direction change
+- Where: none
+- Idea: Spec is still the blank template; 2,033 of 5,321 2026 rodent closures contain inspector emails (strip from snapshot); atlas headline numbers (237/280, 14.1->14.2) are not reproduced in the repo
+
 ### 2026-10-24 13:05 — Privacy-by-reveal: names/full addresses in private schema...
 - Teammate: Bruno
 - Agent: —
@@ -157,6 +165,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Bruno asked for the complete initial spec before building; adds Cambridge + Somerville scope
 - Where: .kiro/specs/rat-audit/, .kiro/steering/{tech,product}.md, contracts/categories.json, supabase/migrations/20261024000003_city_column.sql
 - Idea: Somerville 311 has 8,770 Rats + 3,760 Rodent Assistance Program requests (block centroids); Cambridge 5,188 sightings + 528 smart rat boxes with monthly catches — three-city comparison finding
+
+### 2026-10-24 12:51 — Committed RodentOps guards on main (2df47d1): rodent-hone...
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Committed RodentOps guards on main (2df47d1): rodent-honesty + no-auto-action agents, overclaim-guard hook + scanner, spec renamed to rodent-ops
+- Why: Save the idea-specific Kiro automation; ready for human push
+- Where: .kiro/agents/*, .kiro/hooks/overclaim-guard.kiro.hook, .kiro/scripts/check_overclaims.py, .kiro/specs/rodent-ops/*, README.md, data/civic/CATALOG.md
+- Idea: none
 
 ### 2026-10-24 12:48 — Set up RodentOps-specific Kiro automation: rodent-honesty...
 - Teammate: Guilherme
