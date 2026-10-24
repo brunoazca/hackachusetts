@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:25 — Adicionei a secao 5.4a na spec de Insights: agregar popul...
+- Teammate: Carol
+- Agent: kirocrew (default)
+- Did: Adicionei a secao 5.4a na spec de Insights: agregar populacao de census tract para o grid 250m por area-weighting (areal interpolation), materializado numa tabela cell_population (migration data track), com duas leituras distintas (people affected como fator de benefit/tie-break vs reports_per_1k so diagnostico e caveated). Tambem regra na 5.5: pop da regiao = soma das celulas do cluster.
+- Why: Carol perguntou granularidade de populacao e pediu agregar no grid 250m; pop so existe em tract.
+- Where: .kiro/specs/rat-audit/insights-severity-ranking.md
+- Idea: Nao normalizar severidade por pop por padrao: menos reports pode ser menos reporting, nao menos ratos; e dividir por pop pequena explode a taxa.
+
 ### 2026-10-24 17:24 — Revised Carol's insights spec (severity = last 12w observ...
 - Teammate: Bruno
 - Agent: —

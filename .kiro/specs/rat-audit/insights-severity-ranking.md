@@ -282,6 +282,82 @@ Rules:
 Offer a second ranking "worst within each neighborhood" (top region per hood) so a big
 hood doesn't crowd out a small one — reuses `grid_cells.neighborhood`. Same card shape.
 
+### 5.4a Population per 250 m cell — area-weighted from tracts (Carol/Bruno, SQL)
+
+Population exists only at **census tract** level (`tracts.attrs.acs.pop`, via ACS). A
+tract is ~2–5k people across many blocks; the grid is 250 m. To put people on the card
+and (optionally) on the ranking, rate each tract's population down to the cells.
+
+**Why area-weighting, not point-in-polygon.** A cell often straddles 2–3 tracts, and a
+tract covers many cells. Assigning a cell the full pop of "its" tract double-counts.
+Instead, split each tract's pop across the cells by the **share of the tract's area that
+falls in each cell** — standard areal interpolation. Population is assumed uniform within
+a tract (the honest caveat; ACS gives no finer truth).
+
+```
+pop(cell) = Σ over tracts t intersecting the cell:
+              tract_pop(t) × area(cell ∩ t) / area(t)
+```
+
+**Materialize once** (the grid and tracts are static) into a small table, so the RPC
+never does live PostGIS intersection per request:
+
+```sql
+-- supabase/migrations/<ts>_data_cell_population.sql   (data track; grid+tracts are static)
+create table if not exists cell_population (
+  cell_id   text primary key references grid_cells(id),
+  pop       numeric not null,          -- area-weighted people in the cell
+  tract_ids text[]  not null,          -- tracts that contributed (for the citation)
+  source_id text    not null references sources(id)  -- the ACS source row
+);
+
+insert into cell_population (cell_id, pop, tract_ids, source_id)
+select g.id,
+       coalesce(sum(
+         (t.attrs->'acs'->>'pop')::numeric
+         * st_area(st_intersection(g.geom::geometry, t.geom::geometry))
+         / nullif(st_area(t.geom::geometry), 0)
+       ), 0) as pop,
+       array_remove(array_agg(distinct t.geoid), null),
+       '<acs-source-id>'          -- the sources row id for the ACS pull
+from grid_cells g
+left join tracts t
+  on t.city = 'boston'
+ and st_intersects(g.geom::geometry, t.geom::geometry)
+group by g.id;
+
+alter table cell_population enable row level security;
+create policy "public read" on cell_population for select using (true);
+```
+
+Notes:
+- Cast `geography → geometry` for `st_area`/`st_intersection`; the areas are a **ratio**,
+  so planar area in 4326 is fine for weighting (no equal-area reprojection needed for the
+  split). If a reviewer wants metric areas, wrap in `::geography` on both sides — the
+  ratio barely moves at Boston's latitude.
+- Cells with no tract overlap (edge of city, water) get `pop = 0` and an empty
+  `tract_ids` — show "population not available", never a fake number.
+- `source_id` points at the ACS `sources` row so the card cites it like every other fact.
+- Re-run only when the grid or the tract set changes (both static). Owner: data track
+  builds the table; analytics/Carol join it in `insights_regions` (§7).
+
+**How the card and ranking use it.** Two distinct uses — pick explicitly, do not blend
+silently:
+
+1. **People affected (display + benefit).** Show `pop` on the card ("~1,900 residents in
+   this block") and expose `people_affected = pop` so the ranking can prefer regions
+   where a fix reaches more people. This fits the "best benefit" goal: a tie-break or a
+   second "by people reached" ranking, **not** folded into the severity score as a weight
+   (the spec forbids a weighted composite, §5.5 / v2 §5.1).
+2. **Rate (diagnostic only, caveated).** `reports_per_1k = expected_week / pop × 1000`.
+   Useful to spot a small-population block that is intense per capita — but **do not rank
+   on it by default**: low reports can mean low reporting, not low rodents (v2 §5), and
+   dividing by a small pop explodes the rate. Offer it as an optional view with the
+   caveat printed, never as the primary sort.
+
+Add to the region object (§7.1): `population: { pop: number; tract_ids: string[];
+reports_per_1k: number | null; source_ids: string[] } | null`.
+
 ### 5.5 Grid cuts — keep hotspots whole (Carol, SQL)
 
 A fixed 250 m lattice splits a hotspot that sits on a cell corner into up to 4 cells.
@@ -296,7 +372,9 @@ and evidence stops at the border. Fixes, all cheap and done in SQL over `grid_ce
    8-connected neighbours into clusters (connected components). One cluster = one card
    (`region_id` = its top cell's id, `cell_ids` = all members, capped at 9 cells /
    ~750 m; bigger clusters split at their local maxima). Region severity = sum of the
-   members' raw severity; rank regions by it.
+   members' raw severity; rank regions by it. **Region population = sum of the members'
+   `cell_population.pop`** (union their `tract_ids` for the citation), so a merged card
+   reports the people across the whole hotspot, not one cell.
 3. **Non-max suppression for singletons.** A lone cell becomes a card only if it is the
    local maximum of `smoothed_severity` in its 3×3 neighbourhood; otherwise it is folded
    into the neighbour's card.
