@@ -53,3 +53,12 @@ test("unsafe proposals and per-record instructions use inspection fallback", () 
     assert.equal(r.source, "rules");
   }
 });
+
+test("current model's third severity term is displayed without inventing missing values", () => {
+  const current = { ...row, input: { ...row.input, region: { ...row.input.region,
+    severity: { ...row.input.region.severity, expected_returns_60d: 2.5, score: 20.6 },
+  } } };
+  assert.match(render(current), /Expected returns within 60 days/);
+  assert.match(render(current), /20.6/);
+  assert.doesNotMatch(render(row), /Expected returns within 60 days/);
+});

@@ -31,6 +31,16 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:51 — Reviewed ready branches for the production deployment
+- Teammate: Carol
+- Agent:
+- Did: Integrated codex/insights-region-solutions, design/piper-logo and feat/steering-use-apps on codex/ready-branches-integration; preserved the new main chat controls (ca86060).
+- Why: Publish completed, compatible changes while concurrent work continues separately.
+- Where: Insights region cards, Piper logo, .kiro/KIRO_LOG.md; web/AGENTS.md remains empty.
+- Verification: Integrated agent/Insights suite: 135 passed, 19 skipped; additional current-severity regression passed; TypeScript and scoped lint passed; production build passed with font fallback warnings.
+- Held: a11y/map-twin-skip-motion has conflicts and references an absent PriorityLayer; analytics-core is still being worked on; old severity-ranking is superseded and carries analytics dependencies; chat-map-filters is superseded by the integrated main controls.
+- Idea: Keep all existing work-log entries; publish through the existing main -> Deploy web -> piper-app.vercel.app workflow. No database migrations were applied.
+
 ### 2026-10-24 17:48 — Integrate all chat/map changes for the requested push
 - Teammate: Carol
 - Agent:
