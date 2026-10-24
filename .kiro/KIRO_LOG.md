@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:34 — Added model_artifacts migration (model_run_id text FK, bl...
+- Teammate: Bruno
+- Agent: --
+- Did: Added model_artifacts migration (model_run_id text FK, blob bytea, created_at) and applied to Supabase
+- Why: Persist/reload trained model on Modal which has no shared disk
+- Where: supabase/migrations/20261024500001_model_artifacts.sql
+- Idea: model_runs.id is text so FK is text not bigint
+
 ### 2026-10-24 14:33 — Production map verified rendering on rat-ops.vercel.app a...
 - Teammate: Bruno
 - Agent: —
