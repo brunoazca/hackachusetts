@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:17 — Data section: ingest helpers + Boston 311 loader (2023–20...
+- Teammate: Bruno
+- Agent: —
+- Did: Data section: ingest helpers + Boston 311 loader (2023–2026 + new system, private details, report_volume); model-section prompt
+- Why: Bruno split work: this section retrieves data + live fetchers; another section builds the model
+- Where: pipeline/rat_audit/ingest/{common,t311}.py, supabase/migrations/20261024100001_data_report_volume.sql, contracts/categories.json, docs/rat-audit/prompts/model-section.md
+- Idea: report_volume per ~100 m bin/month as the who-reports control
+
 ### 2026-10-24 13:16 — Applied the data tests to the rat-audit spec (requirement...
 - Teammate: Bruno
 - Agent: —
