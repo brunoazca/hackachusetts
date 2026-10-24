@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:33 — Production map verified rendering on rat-ops.vercel.app a...
+- Teammate: Bruno
+- Agent: —
+- Did: Production map verified rendering on rat-ops.vercel.app after serving the MapLibre worker as .js
+- Why: Vercel returned 404 for the .mjs file in public/ even when deployed
+- Where: web/public/maplibre-gl-worker.js, web/package.json, web/src/components/map/MapView.tsx
+- Idea: none
+
 ### 2026-10-24 14:31 — Feature engineering: per-cell per-ISO-week panel (CORE va...
 - Teammate: Bruno
 - Agent: —
