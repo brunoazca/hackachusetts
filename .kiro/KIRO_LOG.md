@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:16 — Applied the data tests to the rat-audit spec (requirement...
+- Teammate: Bruno
+- Agent: —
+- Did: Applied the data tests to the rat-audit spec (requirements R1.7/R1.9/R1.10/R2.3/R2.7/R3.11/R5.2/R5.3/R6.4/R7.6, tasks 1.6–1.8, 2.9, 2.10, 2.17, 2.18); full test record saved as data-audit.md; research narrative in docs
+- Why: Spec still listed drivers the tests ruled out (rain, NWS, work zones, games, asthma)
+- Where: .kiro/specs/rat-audit/{data-audit,requirements,tasks,design}.md, docs/rat-audit/data-research.md
+- Idea: Spec now matches evidence: trash + housing + season; honest nulls; equity view
+
 ### 2026-10-24 13:13 — Modal worker deployed (rat-audit on harvard workspace): b...
 - Teammate: Bruno
 - Agent: —

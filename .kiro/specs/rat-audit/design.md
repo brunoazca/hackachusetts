@@ -89,7 +89,7 @@ compute durations locally. Raw downloads cache to `.cache/raw/` (git-ignored).
 - **Correlations** → `correlations` (one row each; method per `docs/rat-audit/CONTRACT.md` table). Cell-level rates use
   rodent reports per 100 total 311 reports in the cell (controls for reporting propensity). Spearman with permutation p;
   event studies with matched random control points; strength: |ρ| ≥ .5 strong, ≥ .3 moderate, ≥ .1 weak, else none.
-  Pre-tested results (Oct 24) are in `data-validation.md` and `knowledge/sources/rats/validation/*_results.txt`:
+  Pre-tested results (Oct 24) are in `data-audit.md` and `knowledge/sources/rats/validation/*_results.txt`:
   rain, snow, demolitions, events, restaurants and Big Belly are honest nulls; season (+0.87), dead animal, indoor pest,
   trash storage (311 and code enforcement) and move-out are the positive findings; tract-level 311 under-reporting replaces asthma.
 - **Three-city comparison** [R5.6]: monthly rodent reports per 1,000 residents per city (ACS population); Somerville program requests vs Rats requests over time; Cambridge sightings within 200 m of smart boxes before/after the box's first nonzero month vs other sightings. Caveat: three different reporting systems.
@@ -102,7 +102,7 @@ compute durations locally. Raw downloads cache to `.cache/raw/` (git-ignored).
 
 **cell_week_poisson_gbm** — target: rodent reports per cell per ISO week.
 Features (all known at prediction time):
-Feature set follows `data-validation.md` (tested Oct 24; nulls removed):
+Feature set follows `data-audit.md` (tested Oct 24; nulls removed):
 - lags: reports t-1, mean t-1..t-4, mean t-1..t-12, same week last year (strongest signal);
 - leading 311 signals in cell + ring, t-1..t-12: dead animal pickups, indoor pest, improper trash storage, overflowing,
   trash out early, weeds, litter, student move-in trash;

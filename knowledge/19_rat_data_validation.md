@@ -137,7 +137,7 @@ The negative signs say 311 rodent reports are concentrated in dense student and 
 
 ## 8. What this changes in the spec
 
-See `.kiro/specs/rat-audit/data-validation.md` for the proposed requirement and task edits. In short:
+See `.kiro/specs/rat-audit/data-audit.md` for the full audit and the requirement and task edits (applied Oct 24). In short:
 - Forecast: drop rain, snow, demolition, event and Big Belly features. Add season/temperature, code-enforcement trash, dead animal, indoor pest, new-system trash types and the move-out flag.
 - Findings panel: keep the honest nulls (rain, demolitions, restaurants), because the spec already requires reporting null results.
 - Drop live NWS rain (R6.4).
