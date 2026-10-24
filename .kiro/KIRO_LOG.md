@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:25 — Boston 311 backfill in Supabase (221,745 rows 2023–2026; ...
+- Teammate: Bruno
+- Agent: —
+- Did: Boston 311 backfill in Supabase (221,745 rows 2023–2026; rodent 2025=5,225, 2026=5,321 match research); hardened note scrubbing (emails, phones, staff names, house numbers); upserts skip unchanged rows
+- Why: Data section: everything downstream waits on 311; privacy leaks found in sample notes; Supabase free tier went read-only at 465 MB from reload bloat
+- Where: pipeline/rat_audit/ingest/common.py
+- Idea: VACUUM FULL brought DB 465→300 MB; free tier is tight — consider Supabase Pro
+
 ### 2026-10-24 13:20 — Pushed pending spec edits (closure classifier rules, esca...
 - Teammate: Bruno
 - Agent: —

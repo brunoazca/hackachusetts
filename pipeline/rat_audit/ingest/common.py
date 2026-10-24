@@ -171,10 +171,20 @@ def address_key(full_address: str | None, city: str = "boston") -> str | None:
     return hashlib.sha256(f"{city}|{norm}".encode()).hexdigest()
 
 
-_EMAIL = re.compile(r"[\w.+-]+@[\w-]+(\.[\w-]+)+")
-_PREFIX = re.compile(r"^Case (Closed|Resolved|Noted)\.?\s*(Closed date\s*:\s*\w{3} \w{3} \d{1,2} [\d:]+ \w{3} \d{4})?\s*(Noted|Resolved|Case Resolved\.?|Case Noted\.?)?\s*", re.I)
+# Emails, including the malformed ones staff type ("first.last@ boston.gov", "first.last@boston gov").
+_EMAIL = re.compile(r"[\w.+-]+\s*@\s*[\w-]+(?:\s*\.\s*[\w-]+|\s+(?:gov|com|org|net|edu)\b)+", re.I)
+_DOTTED_NAME = re.compile(r"\b[a-z]+\.[a-z]+(?=\s*(?:@|boston\.?\s*gov))", re.I)
+_PHONE = re.compile(r"(?:\b1[-. ])?\(?\b\d{3}\)?[-. ]\d{3}[-. ]\d{4}")
+_AT_NUM = re.compile(r"@\s*\d+[A-Za-z]?\b(?!\s*(?:[ap]\.?m|:))", re.I)
+_STAFF_TAIL = re.compile(r"\[staff\]\s*@\s*\S+")
+_PREFIX = re.compile(
+    r"^(?:Case (?:Closed|Resolved|Noted)\.?\s*)?"
+    r"(?:Closed date\s*:\s*(?:\w{3} \w{3} \d{1,2} [\d:]+ \w{3} \d{4}|\d{4}-\d{2}-\d{2} [\d:.]+))?\s*"
+    r"(?:Case (?:Noted|Resolved|Closed)\.?|Noted|Resolved)?\s*", re.I)
 _SIGNOFF = re.compile(r"(?:[-–—,]\s*|\s{2,}|\.\s+)(?:Inspector\s+)?[A-Z][a-z]+(?:\s+[A-Z]\.?)?(?:\s+[A-Z][a-z]+)?\s*$")
-_TITLE_NAME = re.compile(r"\b(Inspector|Insp\.|Officer|Mr\.|Ms\.|Mrs\.)\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?")
+_TITLE_NAME = re.compile(r"\b((?i:inspector|insp\.|officer|director|supervisor|commissioner|sgt\.?|lt\.?|captain|mr\.|ms\.|mrs\.))\s+[A-Z][A-Za-z'’-]+(?:\s+[A-Z][A-Za-z'’-]+)?")
+# House numbers inside free text ("6/8 Webley", "24-26 Armington st"): any number right before a capitalized word.
+_HOUSE_NUM = re.compile(r"\b\d+[A-Za-z]?(?:\s*[/&-]?\s*\d+[A-Za-z]?)*(?=\s+[A-Z][a-z])")
 
 
 def clean_note(raw: str | None) -> str | None:
@@ -191,7 +201,12 @@ def scrub_note(note: str | None) -> str | None:
     if not note:
         return None
     s = _EMAIL.sub("[staff]", note)
+    s = _DOTTED_NAME.sub("[staff]", s)
+    s = _PHONE.sub("[phone]", s)
+    s = _AT_NUM.sub("@ #", s)
     s = _TITLE_NAME.sub(lambda m: m.group(1) + " [staff]", s)
+    s = _HOUSE_NUM.sub("#", s)
+    s = _STAFF_TAIL.sub("[staff]", s)
     s = _SIGNOFF.sub("", s).strip()
     return s or None
 
@@ -222,7 +237,9 @@ def upsert_incidents(conn: psycopg.Connection, rows: list[tuple]) -> int:
             select {', '.join(INCIDENT_COLS)},
                    case when lat is not null then st_setsrid(st_makepoint(lon, lat), 4326)::geography end
             from _inc
-            on conflict (id) do update set {upd}, geom = excluded.geom"""
+            on conflict (id) do update set {upd}, geom = excluded.geom
+            where (incidents.status, incidents.closed_at, incidents.closure_note, incidents.category, incidents.lat)
+                  is distinct from (excluded.status, excluded.closed_at, excluded.closure_note, excluded.category, excluded.lat)"""
     )
     conn.execute("drop table if exists _inc")
     return len(rows)
@@ -237,7 +254,9 @@ def upsert_private_details(conn: psycopg.Connection, rows: list[tuple]) -> None:
     conn.execute(
         """insert into private.incident_details select * from _det
            on conflict (incident_id) do update set full_address = excluded.full_address,
-             closure_note_raw = excluded.closure_note_raw, source_id = excluded.source_id"""
+             closure_note_raw = excluded.closure_note_raw, source_id = excluded.source_id
+           where (incident_details.full_address, incident_details.closure_note_raw)
+                 is distinct from (excluded.full_address, excluded.closure_note_raw)"""
     )
     conn.execute("drop table if exists _det")
 
@@ -261,7 +280,9 @@ def upsert_generic(conn: psycopg.Connection, table: str, cols: list[str], rows: 
         upd += ", geom = excluded.geom"
     conn.execute(
         f"insert into {table} ({ins_cols}) select {sel} from {tmp} "
-        f"on conflict ({key}) do update set {upd}"
+        f"on conflict ({key}) do update set {upd} "
+        f"where ({', '.join(table.split('.')[-1] + '.' + c for c in cols if c not in keys)}) "
+        f"is distinct from ({', '.join('excluded.' + c for c in cols if c not in keys)})"
     )
     conn.execute(f"drop table if exists {tmp}")
     return len(rows)
