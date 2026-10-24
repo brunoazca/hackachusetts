@@ -40,3 +40,6 @@ pipeline/.venv/
 
 # Kiro Crew Spec Builder runtime marker
 .kiro/specs/*/STOP
+
+# Supabase CLI local cache
+supabase/.temp/
