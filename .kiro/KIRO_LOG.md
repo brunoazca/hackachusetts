@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:10 — Merged Spec v2 ideas into the v1 spec without cutting scope
+- Teammate: Bruno
+- Agent: —
+- Did: Merged Spec v2 ideas into the v1 spec without cutting scope
+- Why: Keep full scope; take v2's sharper loop and defensible numbers
+- Where: .kiro/specs/rat-audit/{requirements,design,tasks}.md, .spec-state.json
+- Idea: Two top-level modes Assess / Act (R0); 50 m sites; counts not score; base rates + Due queue; escalation ladder; cause tag; 5 recommendation rules + legal lane; reject reason; revisit P0; trial designer P0 (R11); practice card; layout left to Gui
+
 ### 2026-10-24 14:04 — Picked the ideas from Spec v2 worth merging into v1 witho...
 - Teammate: Bruno
 - Agent: —

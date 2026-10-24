@@ -4,11 +4,11 @@
       "id": "scope-freeze-p0",
       "title": "Cut scope to a demo-safe P0 set for the 8 PM deadline?",
       "options": [
-        "Yes — freeze to the reduced P0 list below and mark the rest P2/stretch",
-        "No — keep all P0 as written and accept deadline risk"
+        "Yes \u2014 freeze to the reduced P0 list below and mark the rest P2/stretch",
+        "No \u2014 keep all P0 as written and accept deadline risk"
       ],
-      "recommended": "Yes — freeze to the reduced P0 list below and mark the rest P2/stretch",
-      "answer": "No — keep full P0 (team + credits available); scope not cut"
+      "recommended": "Yes \u2014 freeze to the reduced P0 list below and mark the rest P2/stretch",
+      "answer": "No \u2014 keep full P0 (team + credits available); scope not cut"
     },
     {
       "id": "apply-edits",
@@ -19,11 +19,21 @@
         "Make no file changes yet"
       ],
       "recommended": "Apply only the contradiction fixes",
-      "answer": "Kept accuracy fixes A–C (2026 number, forecast honesty, CSV fallback); reverted scope cut"
+      "answer": "Kept accuracy fixes A\u2013C (2026 number, forecast honesty, CSV fallback); reverted scope cut"
+    },
+    {
+      "id": "merge-v2",
+      "title": "Adopt friend's Spec v2?",
+      "options": [
+        "Replace v1 with v2 (scope cut)",
+        "Merge v2 ideas into v1, keep full scope"
+      ],
+      "recommended": "Merge v2 ideas into v1, keep full scope",
+      "answer": "Merged v2 ideas into v1, full scope kept; two top-level modes Assess / Act, details in panels/popovers, final layout left to Gui's UI pass"
     }
   ],
   "blocking": null,
   "context": {
-    "template": "existing rat-audit spec (requirements/design/tasks already reviewed) — audit-only pass"
+    "template": "existing rat-audit spec (requirements/design/tasks already reviewed) \u2014 audit-only pass"
   }
 }

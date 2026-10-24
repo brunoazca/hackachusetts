@@ -173,8 +173,8 @@ follow up, prove).
 3. **P1** THE SYSTEM SHALL also include the tested results from `data-audit.md`, nulls included: demolitions (no spike; consistent with pre-demolition baiting), rain (none), trash day (none), restaurants and food licenses (none after controls), Big Belly (none), events and Red Sox games (none), building age × owner occupancy, and 311 under-reporting by tract (fewer reports per resident where more children, people of color and residents with disabilities live).
 4. **P0** THE SYSTEM SHALL control for reporting volume by using rates where possible and SHALL report weak or null results honestly.
 5. **P1** WHEN a finding is clicked THE SYSTEM SHALL set the map layers that illustrate it.
-7. **P1** THE SYSTEM SHALL show a BRAP practice card: share of closures by action tag in 2025 vs 2026 (monitoring 49% → 27%, abatement and baiting up) and the return rate by tag per year, each with n and interval.
 6. **P1** THE SYSTEM SHALL compare the three cities: reports per 1,000 residents over time, and what each city does differently (Somerville's Rodent Assistance Program, Cambridge's smart boxes and their catch trends near sightings), with caveats that each city's reporting system differs.
+7. **P1** THE SYSTEM SHALL show a BRAP practice card: share of closures by action tag in 2025 vs 2026 (monitoring 49% → 27%, abatement and baiting up) and the return rate by tag per year, each with n and interval.
 
 ## R6 Prediction
 
