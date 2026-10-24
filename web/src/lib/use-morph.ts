@@ -12,6 +12,19 @@ const OPEN_MS = 280, CLOSE_MS = 200;
 const EASE_OPEN = "cubic-bezier(0.22, 1, 0.36, 1)";
 const EASE_CLOSE = "cubic-bezier(0.4, 0, 1, 1)";
 
+// Hide/show the panel. `visibility: hidden` alone is not enough: Chrome keeps painting a hidden
+// element's backdrop-filter, which left a blurred ghost of the panel on the map after it closed.
+function hide(el: HTMLElement) {
+  el.style.visibility = "hidden";
+  el.style.backdropFilter = "none";
+  el.style.setProperty("-webkit-backdrop-filter", "none");
+}
+function show(el: HTMLElement) {
+  el.style.visibility = "visible";
+  el.style.backdropFilter = "";
+  el.style.removeProperty("-webkit-backdrop-filter");
+}
+
 function reduced() {
   return typeof window !== "undefined" &&
     (window.matchMedia("(prefers-reduced-motion: reduce)").matches || document.documentElement.dataset.motion === "reduced");
@@ -53,17 +66,17 @@ export function useMorph(open: boolean, panelRef: RefObject<HTMLElement | null>,
     const anchor = anchorFn.current();
 
     if (open) {
-      el.style.visibility = "visible";
+      show(el);
       if (instant || !anchor) return;
       el.animate(frames(anchor.getBoundingClientRect(), el.getBoundingClientRect(), 10), { duration: OPEN_MS, easing: EASE_OPEN });
       content?.animate([{ opacity: 0 }, { opacity: 0, offset: 0.35 }, { opacity: 1 }], { duration: OPEN_MS, easing: "linear" });
     } else {
-      if (instant || !anchor || el.style.visibility === "hidden") { el.style.visibility = "hidden"; return; }
+      if (instant || !anchor || el.style.visibility === "hidden") { hide(el); return; }
       const kf = frames(anchor.getBoundingClientRect(), el.getBoundingClientRect(), 10).reverse();
       const a = el.animate(kf, { duration: CLOSE_MS, easing: EASE_CLOSE, fill: "forwards" });
       content?.animate([{ opacity: 1 }, { opacity: 0, offset: 0.5 }, { opacity: 0 }], { duration: CLOSE_MS, fill: "forwards" });
       a.onfinish = () => {
-        el.style.visibility = "hidden";
+        hide(el);
         el.getAnimations?.({ subtree: true }).forEach((x) => x.cancel());
       };
     }
