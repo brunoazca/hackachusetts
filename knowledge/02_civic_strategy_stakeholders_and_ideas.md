@@ -151,7 +151,7 @@ These concepts are original proposals informed by the sources, not official prom
 
 **Minimum flow:** choose service category and area → compare documented request volumes/statuses → inspect source rows and sampling limits → generate a plain-language brief for a staff reviewer.
 
-Use the portal's 311 snapshot and its published query. The displayed selected fields include opening date, category, department, status, neighborhood, ZIP and on-time flag. **They do not include closure time, precise location, free-text narrative, or a stable case identifier in that shown query.** Therefore the starter alone does not support reliable resolution-time analysis, text clustering, or exact duplicate detection. Inspect the actual ZIP/schema before promising these features. [S2]
+Use the portal's 311 snapshot and its published query. The displayed selected fields include opening date, category, department, status, neighborhood, ZIP and on-time flag. **They do not include closure time, precise location, free-text narrative, or a stable case identifier in that shown query.** Therefore the starter alone does not support reliable resolution-time analysis, text clustering, or exact duplicate detection. The subsequent [ZIP audit](07_civic_dataset_verification.md) confirmed these omissions and a 5,000-row October 8–18 extract. [S2]
 
 The page labels the saved 311 extract as 5,000 rows while its preview references a larger underlying case universe. Do not label the extract “all Boston complaints.” Request counts measure reporting, not unmet need. Neighborhood comparisons need denominators and compatible geography; demographic correlations are not evidence of an individual person's needs or of causal discrimination.
 
@@ -188,7 +188,7 @@ Prefer the concept for which the team can produce the strongest evidence today. 
 
 ## 8. Data and source inventory
 
-The [Civic portal][S2] advertises a **3.3 MB Civic starter ZIP** and 22 downloadable dataset previews. The links and on-page descriptions were inspected; **the ZIP contents were not downloaded, executed, profiled or independently validated**. Displayed counts are catalog claims, not our analysis. Saved tables are labeled October 18, 2026; each dataset has its own underlying vintage.
+The [Civic portal][S2] advertises a **3.3 MB Civic starter ZIP** and 22 downloadable dataset previews. The catalog table below records the initial portal review. A subsequent [direct audit of all 22 CSVs](07_civic_dataset_verification.md) checked row counts, columns, missingness, dates and selected joins. Use that audit for observed file contents; catalog descriptions do not establish live database completeness. Saved tables are labeled October 18, 2026; each dataset has its own underlying vintage. Included fetch scripts were not executed.
 
 [Download the organizer-linked Civic starter ZIP](https://hackachusetts2026.vercel.app/kits/tracks/civic.zip).
 
@@ -350,7 +350,7 @@ All checked October 24, 2026 unless described as a catalog lead. Sources S1–S4
 [S9]: https://www.mass.gov/news/governor-healey-announces-massachusetts-ai-hub-to-make-state-global-leader-in-applied-ai-innovation
 [S10]: https://engine.xyz/
 [S11]: https://www.pwc.com/us/en/about-us/newsroom/operationalizing-trust-in-agentic-ai.html
-[S12]: https://www.foundercollective.com/
+[S12]: https://foundercollective.com/
 [S13]: https://www.stifel.com/careers
 [S14]: https://www.massrobotics.org/
 [S15]: https://github.com/CityOfBoston/OpenContext

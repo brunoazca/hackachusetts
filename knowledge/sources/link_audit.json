@@ -1,0 +1,1667 @@
+{
+  "checked_at_utc": "2026-10-24T14:06:18.693888+00:00",
+  "scope": "Unique public URLs in knowledge/*.md, excluding fragments. HTTP reachability only; not link content or API validation.",
+  "status_counts": {
+    "200": 130,
+    "429": 1,
+    "403": 2,
+    "406": 1,
+    "000": 1
+  },
+  "results": [
+    {
+      "url": "https://aihub.masstech.org/about-ma-ai-hub",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://aihub.masstech.org/about-ma-ai-hub",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://api-v3.mbta.com/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://api-v3.mbta.com/alerts?page%5Blimit%5D=50",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/alerts?page%5Blimit%5D=50",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://api-v3.mbta.com/docs/swagger/index.html",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/docs/swagger/index.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://api-v3.mbta.com/routes?filter%5Btype%5D=0,1",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/routes?filter%5Btype%5D=0,1",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://app.notion.com/p/Hackachusetts-Hub-402af740ef9481ce8613d72e8010f944",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://app.notion.com/p/Hackachusetts-Hub-402af740ef9481ce8613d72e8010f944",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://apps.crashdata.dot.mass.gov/cdp/home",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://apps.crashdata.dot.mass.gov/cdp/home",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://bostonmpo.org/geoserver/www/apps/bp-counts-app-01262024/index.html",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://bostonmpo.org/geoserver/www/apps/bp-counts-app-01262024/index.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://catchwind.ai/episodes/2799996",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "429",
+      "final_url": "https://catchwind.ai/episodes/2799996",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://content.boston.gov/news/mayor-michelle-wu-appoints-emily-knight-economic-development-chief",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://content.boston.gov/news/mayor-michelle-wu-appoints-emily-knight-economic-development-chief",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://cssh.northeastern.edu/bari/bari-conference-2026-greater-bostons-10th-annual-insight-to-impact-summit/",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://cssh.northeastern.edu/bari/bari-conference-2026-greater-bostons-10th-annual-insight-to-impact-summit/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&limit=0",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&limit=0",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=6ddcd912-32a0-43df-9908-63574f8c7e77&limit=0",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=6ddcd912-32a0-43df-9908-63574f8c7e77&limit=0",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/browse",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/browse",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.census.gov/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.census.gov/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://developers.googleblog.com/en/datacommonsmcp/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://developers.googleblog.com/en/datacommonsmcp/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://devpost.com/software/denarii",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://devpost.com/software/denarii",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://devpost.com/software/trashypal",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://devpost.com/software/trashypal",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://devpost.com/software/upload-drive-in",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://devpost.com/software/upload-drive-in",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://discord.gg/h5zqSsSCu",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://discord.com/invite/h5zqSsSCu",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://discord.gg/kirodotdev",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://discord.com/invite/kirodotdev",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1SNUjxvBK5cCq273aYCceGPGKflVUCUF_zrxGw741kAs/edit",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md",
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://docs.google.com/document/d/1SNUjxvBK5cCq273aYCceGPGKflVUCUF_zrxGw741kAs/edit",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1aDagPzc29sNGHdycZ-30GMf2z-Np2SwqZX_hY46tLrQ/edit",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md",
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://docs.google.com/document/d/1aDagPzc29sNGHdycZ-30GMf2z-Np2SwqZX_hY46tLrQ/edit",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://docs.google.com/document/d/e/2PACX-1vTRYHZwGZWIN5tVB46cNJAZ1pOKpKuDDzQpmSw52W0vQBR1NZIGenoCIv68nMYOsFweY_Ink34GS0t1/pub",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://docs.google.com/document/d/e/2PACX-1vTRYHZwGZWIN5tVB46cNJAZ1pOKpKuDDzQpmSw52W0vQBR1NZIGenoCIv68nMYOsFweY_Ink34GS0t1/pub",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://docs.google.com/presentation/d/1X4RmC1_I3XLiYQSJZ4rrT-CMqUxTiXW4z_fDW63c6pM/edit",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md",
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://docs.google.com/presentation/d/1X4RmC1_I3XLiYQSJZ4rrT-CMqUxTiXW4z_fDW63c6pM/edit",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1ddQxvm_0l7W3A3vZPSsoCYb--HhMo5pb/view",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://drive.google.com/file/d/1ddQxvm_0l7W3A3vZPSsoCYb--HhMo5pb/view",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://engine.xyz/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://engine.xyz/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/CityOfBoston/OpenContext",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "03_past_winners_and_patterns.md",
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/CityOfBoston/OpenContext",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/OETBoston/Coastmix",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/OETBoston/Coastmix",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/johnfmorton/upload-drive-in",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/johnfmorton/upload-drive-in",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/manuu-r/cleanclik",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/manuu-r/cleanclik",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/projnanda/civic-agents/blob/main/boston-agents-identity-and-auth.md",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/projnanda/civic-agents/blob/main/boston-agents-identity-and-auth.md",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/sgarcese/Civic-Analytics-Agent-Workflow-Claude-Skill/blob/main/REFERENCE.md",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/sgarcese/Civic-Analytics-Agent-Workflow-Claude-Skill/blob/main/REFERENCE.md",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://hackachusetts2026.vercel.app/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md",
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://hackachusetts2026.vercel.app/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://hackachusetts2026.vercel.app/kits/tracks/civic.zip",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "04_recent_boston_priorities_and_data_opportunities.md",
+        "07_civic_dataset_verification.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://hackachusetts2026.vercel.app/kits/tracks/civic.zip",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://innovate-us.org/measuring-what-matters",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://innovate-us.org/measuring-what-matters",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.dev/",
+      "documents": [
+        "05_event_info_and_logistics.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.dev/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.dev/docs/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.dev/docs/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.dev/docs/hooks/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.dev/docs/hooks/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.dev/docs/mcp/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.dev/docs/mcp/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.dev/docs/specs/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.dev/docs/specs/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.dev/docs/steering/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.dev/docs/steering/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.dev/downloads/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.dev/downloads/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.dev/showcase/",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.dev/showcase/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.devpost.com/",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.devpost.com/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://kiro.devpost.com/project-gallery",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://kiro.devpost.com/project-gallery",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://mass211.org/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://mass211.org/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://massaicoalition.com/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "05_event_info_and_logistics.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://massaicoalition.com/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://massaicoalition.com/hackachusetts/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md",
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "05_event_info_and_logistics.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://massaicoalition.com/hackachusetts/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://massaicoalition.com/hackachusetts/setup/",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://massaicoalition.com/hackachusetts/setup/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://masstech.org/news/healey-driscoll-administration-launches-new-workforce-training-opportunities-support-business",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://masstech.org/news/healey-driscoll-administration-launches-new-workforce-training-opportunities-support-business",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://mhd.ms2soft.com/tdms.ui/nmds/dashboard?loc=mhd",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://mhd.ms2soft.com/tdms.ui/nmds/dashboard?loc=mhd",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://nces.ed.gov/collegenavigator/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://nces.ed.gov/collegenavigator/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://opentowns.org/towns/boston-ma/bc170e7a-6c2c-42f9-98e8-0ccd7884e42c/summary/",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://opentowns.org/towns/boston-ma/bc170e7a-6c2c-42f9-98e8-0ccd7884e42c/summary/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://profiles.doe.mass.edu/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://profiles.doe.mass.edu/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://rich-uranium-d4e.notion.site/b836a9c5ce974d32a09bbec1bd38f928",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://rich-uranium-d4e.notion.site/b836a9c5ce974d32a09bbec1bd38f928",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://search.boston.gov/government/cabinets/innovation-and-technology/city-boston-generative-artificial-intelligence-gen-ai",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://search.boston.gov/government/cabinets/innovation-and-technology/city-boston-generative-artificial-intelligence-gen-ai",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://stamen.com/mapping-bostons-curbs/",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://stamen.com/mapping-bostons-curbs/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://statescoop.com/bostons-cio-open-source-agentic-ai-tools/",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://statescoop.com/bostons-cio-open-source-agentic-ai-tools/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://tech.asu.edu/features/students-solve-educational-environmental-and-economic-challenges-new-ai-tool",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://tech.asu.edu/features/students-solve-educational-environmental-and-economic-challenges-new-ai-tool",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://tinyurl.com/sundaiterms",
+      "documents": [
+        "05_event_info_and_logistics.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://docs.google.com/document/d/13GuV6cYqmKcmDMOpE9D8F2SQZRhJlV0BQiP8F3NsrhM/edit?tab=t.0",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://wbznewsradio.iheart.com/content/ai-beta-looks-to-simplify-boston-permitting-process/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "406",
+      "final_url": "https://wbznewsradio.iheart.com/content/ai-beta-looks-to-simplify-boston-permitting-process/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable",
+      "manual_followup": {
+        "checked_on": "2026-10-24",
+        "method": "web research tool GET/read",
+        "result": "Article successfully read; February 2, 2026 publication and permitting-beta description confirmed."
+      }
+    },
+    {
+      "url": "https://www.bls.gov/oes/current/oes_ma.htm",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://www.bls.gov/oes/current/oes_ma.htm",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.boston.gov/departments/analytics-team/our-city-wide-data-strategy",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/analytics-team/our-city-wide-data-strategy",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/boston-311",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/boston-311",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/emerging-technology",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/emerging-technology",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/emerging-technology/boston-curb-lab-using-ai-and-open-data-improve-curb-management",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/emerging-technology/boston-curb-lab-using-ai-and-open-data-improve-curb-management",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/parking-clerk/reserve-parking-spot-your-moving-truck",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/parking-clerk/reserve-parking-spot-your-moving-truck",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/youth-engagement-and-advancement/youthline",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/youth-engagement-and-advancement/youthline",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/boston-launches-curb-lab-bringing-new-solutions-old-streets",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/boston-launches-curb-lab-bringing-new-solutions-old-streets",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/celebrating-digital-inclusion-week-2026-keeping-boston-connected",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/celebrating-digital-inclusion-week-2026-keeping-boston-connected",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/city-announces-six-selectees-2026-community-clean-air-grant-program",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/city-announces-six-selectees-2026-community-clean-air-grant-program",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/city-boston-launches-coastmix",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/city-boston-launches-coastmix",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/city-boston-prepares-launch-five-free-bus-routes-across-city",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/city-boston-prepares-launch-five-free-bus-routes-across-city",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/mayor-michelle-wu-announces-shin-pei-tsay-chief-information-officer-city-boston",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/mayor-michelle-wu-announces-shin-pei-tsay-chief-information-officer-city-boston",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/request-public-comment-py25-consolidated-annual-performance-and-evaluation-report",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/request-public-comment-py25-consolidated-annual-performance-and-evaluation-report",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/ride-your-life",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/ride-your-life",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/state-schools-2026",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md",
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/state-schools-2026",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/traffic-advisory-october-23-2026",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/traffic-advisory-october-23-2026",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/winners-innovation-expo-2026",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/winners-innovation-expo-2026",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/public-notices/16632881",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/public-notices/16632881",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2026/05/2026%20Innovation%20Expo%20Posters.pdf",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/sites/default/files/file/2026/05/2026%20Innovation%20Expo%20Posters.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2026/05/311%20Help%20Center%20pdf.pdf",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/sites/default/files/file/2026/05/311%20Help%20Center%20pdf.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2026/05/Bid%20Bot.pdf",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/sites/default/files/file/2026/05/Bid%20Bot.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2026/05/Mapping%20Disability%20Access%20in%20Boston.pdf",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/sites/default/files/file/2026/05/Mapping%20Disability%20Access%20in%20Boston.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2026/05/New%20Algorithms%20for%20Old%20Mattresses.pdf",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/sites/default/files/file/2026/05/New%20Algorithms%20for%20Old%20Mattresses.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.bostonplans.org/planning-zoning/zoning-initiatives/adopted/energy-infrastructure-zoning-and-permitting",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.bostonplans.org/planning-zoning/zoning-initiatives/adopted/energy-infrastructure-zoning-and-permitting",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.fema.gov/about/openfema",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.fema.gov/about/reports-and-data/openfema",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$filter=state%20eq%20%27MA%27&$top=100&$select=disasterNumber,declarationTitle,declarationDate,incidentType,designatedArea,declarationType&$orderby=declarationDate%20desc",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$filter=state%20eq%20%27MA%27&$top=100&$select=disasterNumber,declarationTitle,declarationDate,incidentType,designatedArea,declarationType&$orderby=declarationDate%20desc",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.foundercollective.com/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "000",
+      "final_url": "https://www.foundercollective.com/",
+      "curl_exit_code": 35,
+      "error": "curl: (35) LibreSSL/3.3.6: error:1404B458:SSL routines:ST_CONNECT:tlsv1 unrecognized name",
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable",
+      "manual_followup": {
+        "checked_on": "2026-10-24",
+        "method": "web research tool GET/read",
+        "canonical_url": "https://foundercollective.com/",
+        "result": "Successfully read canonical homepage; referring document corrected. Original HEAD result retained."
+      }
+    },
+    {
+      "url": "https://www.jeffluppes.nl/blog/kiro-miro-hackathon/",
+      "documents": [
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.jeffluppes.nl/blog/kiro-miro-hackathon/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.edu/datacenter/PMRS/home.asp",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.edu/datacenter/PMRS/home.asp",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.edu/datacenter/tuition/home.asp",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.edu/datacenter/factbook/tuitionfees.asp",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/how-to/applying-for-temporary-road-access-and-moving-permits",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/how-to/applying-for-temporary-road-access-and-moving-permits",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/info-details/artificial-intelligence-ai-and-accessibility",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/info-details/artificial-intelligence-ai-and-accessibility",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/info-details/e2c-hub-directory-of-datasets-and-reports",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/info-details/e2c-hub-directory-of-datasets-and-reports",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/info-details/massachusetts-college-and-career-outcomes-dashboard",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/info-details/massachusetts-college-and-career-outcomes-dashboard",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/info-details/massgis-data-layers",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/info-details/massgis-data-layers",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/news/governor-healey-announces-massachusetts-ai-hub-to-make-state-global-leader-in-applied-ai-innovation",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/news/governor-healey-announces-massachusetts-ai-hub-to-make-state-global-leader-in-applied-ai-innovation",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/news/healey-driscoll-administration-brings-massmakes-innovation-challenge-to-250-students-during-massachusetts-stem-week",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/news/healey-driscoll-administration-brings-massmakes-innovation-challenge-to-250-students-during-massachusetts-stem-week",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.massrobotics.org/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.massrobotics.org/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.onetcenter.org/dl_files/database/db_30_0_text/Occupation%20Data.txt",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.onetcenter.org/dl_files/database/db_30_0_text/Occupation%20Data.txt",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.openstreetmap.org/",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.openstreetmap.org/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.pwc.com/us/en/about-us/newsroom/building-trust-in-ai.html",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.pwc.com/us/en/about-us/newsroom/building-trust-in-ai.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.pwc.com/us/en/about-us/newsroom/operationalizing-trust-in-agentic-ai.html",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.pwc.com/us/en/about-us/newsroom/operationalizing-trust-in-agentic-ai.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.stifel.com/careers",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.stifel.com/careers",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.sundai.club/events/boston/hackachusetts-with-kiro",
+      "documents": [
+        "01_rules_judging_and_event_playbook.md",
+        "03_past_winners_and_patterns.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.sundai.club/events/boston/hackachusetts-with-kiro",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.sundai.foundation/about",
+      "documents": [
+        "02_civic_strategy_stakeholders_and_ideas.md",
+        "03_past_winners_and_patterns.md",
+        "05_event_info_and_logistics.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.sundai.foundation/about",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.wbur.org/news/2026/09/16/boston-mayor-wu-chamber-housing",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.wbur.org/news/2026/09/16/boston-mayor-wu-chamber-housing",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.wbur.org/news/2026/10/01/wu-ai-high-school-endorsement-governor",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md",
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.wbur.org/news/2026/10/01/wu-ai-high-school-endorsement-governor",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.wbur.org/news/2026/10/20/boston-free-bus-new-routes",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.wbur.org/news/2026/10/20/boston-free-bus-new-routes",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.wbur.org/upnext/2026/10/02/mayor-michelle-wu-boston-foliage-campbell-catholic-clergy-abuse-report",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.wbur.org/upnext/2026/10/02/mayor-michelle-wu-boston-foliage-campbell-catholic-clergy-abuse-report",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.wgbh.org/news/local/2026-10-21/gbh-daily-no-gas-tax-break",
+      "documents": [
+        "04_recent_boston_priorities_and_data_opportunities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.wgbh.org/news/local/2026-10-21/gbh-daily-no-gas-tax-break",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=38q_KBSiOEI",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=38q_KBSiOEI",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=38q_KBSiOEI&t=71",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=38q_KBSiOEI&t=71",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=38q_KBSiOEI&t=77",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=38q_KBSiOEI&t=77",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=38q_KBSiOEI&t=87",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=38q_KBSiOEI&t=87",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=1149",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=1149",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=1751",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=1751",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=246",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=246",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=2766",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=2766",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=3242",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=3242",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=539",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=539",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=745",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=745",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=912",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=_fYtQ_IycB8&t=912",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=h_IItifuKoM",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=h_IItifuKoM",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2083",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2083",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2174",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2174",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2734",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2734",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2762",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2762",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2963",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=2963",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=3152",
+      "documents": [
+        "06_deep_evidence_transcripts_and_city_priorities.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=h_IItifuKoM&t=3152",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://youtu.be/qVl4QdROUIA",
+      "documents": [
+        "05_event_info_and_logistics.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=qVl4QdROUIA&feature=youtu.be",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    }
+  ]
+}

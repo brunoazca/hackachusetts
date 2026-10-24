@@ -28,6 +28,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 10:07 — Expanded sourced Civic research and dataset audit
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Added caption notes, recent City sources, municipal awards, and all 22 CSV audits.
+- Why: Ground the project choice in verified needs, existing tools, and usable data.
+- Where: knowledge/02–04, knowledge/06–07, knowledge/README.md, knowledge/sources/
+- Idea: Show one completed service task with measured results and explicit data limits.
+
 ### 2026-10-24 10:04 — Pushed self-logging rule + historian agent
 - Teammate: Guilherme
 - Agent: default
