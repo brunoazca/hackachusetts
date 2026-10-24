@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:32 — Fixed submission-readiness checker to detect the real app...
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Fixed submission-readiness checker to detect the real app (web/ + pipeline/) instead of src/; now reports 5/7 green with the two blank submission docs as the only gaps
+- Why: The readiness cron would have reported 'no working project' forever since the app is in web/, not src/
+- Where: .kiro/scripts/check_submission_ready.py
+- Idea: The checker is now an honest 8PM safety net: it goes green only when description.md and kiro-usage.md lose their placeholders
+
 ### 2026-10-24 13:27 — Realigned all Kiro automation to the real rat-audit tree:...
 - Teammate: Guilherme
 - Agent: kirocrew

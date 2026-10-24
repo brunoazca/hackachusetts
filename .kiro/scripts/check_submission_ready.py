@@ -37,11 +37,18 @@ def has_placeholders(path: Path) -> bool:
 
 
 def src_has_code() -> bool:
-    src = REPO / "src"
-    if not src.is_dir():
-        return False
     exts = {".ts", ".tsx", ".js", ".jsx", ".vue", ".html", ".py", ".svelte"}
-    return any(p.suffix in exts for p in src.rglob("*") if p.is_file())
+    # The app lives in web/ (Next.js) with a Python pipeline in pipeline/.
+    # Keep src/ as a fallback for other layouts.
+    for root in ("web/src", "web", "pipeline", "src"):
+        d = REPO / root
+        if d.is_dir() and any(
+            p.suffix in exts
+            for p in d.rglob("*")
+            if p.is_file() and "node_modules" not in p.parts
+        ):
+            return True
+    return False
 
 
 def _run(script: str) -> bool:
@@ -71,7 +78,7 @@ def check() -> list[tuple[bool, str]]:
                     "LICENSE file present"))
 
     results.append((src_has_code(),
-                    "working project (app code under src/)"))
+                    "working project (app code in web/ or pipeline/)"))
 
     desc = REPO / "docs/submission/description.md"
     results.append((desc.is_file() and not has_placeholders(desc),
