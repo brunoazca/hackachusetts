@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:57 — Insights region cards: dropped the full demographic profi...
+- Teammate: Bruno
+- Agent: —
+- Did: Insights region cards: dropped the full demographic profile (noise); cards show only residents (~N residents) from new cell_population table (spec §5.4a, area-weighted tract pop per 250 m cell) via region_population(cell_ids)
+- Why: Bruno: most demographics were useless for insights; population is the one that matters (people affected, candidate for severity)
+- Where: supabase/migrations/20261025100003_data_cell_population.sql, web/src/components/insights/regions/RegionSolutionCard.tsx, web/src/lib/cell-context.ts
+- Idea: Decide how population enters severity (tie-break vs weight)
+
 ### 2026-10-24 18:57 — Removed the import status, refresh, theme and motion butt...
 - Teammate: Bruno
 - Agent: —
