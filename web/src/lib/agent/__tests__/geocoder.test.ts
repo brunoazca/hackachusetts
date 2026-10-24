@@ -15,7 +15,9 @@ test("geocoder expands MIT, bounds requests and validates coordinates; cache ded
     const url = new URL(String(input));
     assert.equal(url.searchParams.get("q"), "Massachusetts Institute of Technology");
     assert.equal(url.searchParams.get("bbox"), "-71.5,41.9,-70.7,42.7");
-    return Response.json({ features: [feature, { ...feature, geometry: { type: "Point", coordinates: [0, 0] } }] });
+    return Response.json({ features: [feature,
+      { ...feature, properties: { ...feature.properties, name: "Massachusetts Institute of Technology Lincoln Laboratory" } },
+      { ...feature, geometry: { type: "Point", coordinates: [0, 0] } }] });
   });
   const [a, b] = await Promise.all([lookup("MIT"), lookup("mit")]);
   assert.equal(calls, 1);

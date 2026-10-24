@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:54 — Verified landmark fix against integrated main and regiona...
+- Teammate: Carol
+- Agent: Codex
+- Did: Verified landmark fix against integrated main and regional solution cards
+- Why: Publish the MIT navigation fix without duplicating the concurrently completed Insights integration
+- Where: web/src/lib/agent/README.md; geocoder regression tests; integrated main
+- Idea: 140 tests passed, 19 conditional skips, TypeScript and scoped lint passed, production build passed with font fallback warnings. Browser confirmed MIT fly-to, one nearby report, English answer and collapsed sources; published Insights card opened its forecast cell.
+
 ### 2026-10-24 17:52 — Resolve named landmarks in chat and search nearby reports
 - Teammate: Carol
 - Agent: Codex
