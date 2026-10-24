@@ -17,6 +17,8 @@ export type MemoryTables = {
   sites?: SiteRow[];
   action_outcomes?: ActionOutcomeRow[];
   sources?: SourceRef[];
+  /** Stand-in for the map track's draft queue (used only when `sites` is empty). */
+  draft_sites?: SiteRow[];
 };
 
 const has = (v: string | null, t: string) => (v ?? "").toLowerCase().includes(t.toLowerCase());
@@ -24,7 +26,7 @@ const located = <T extends { lat: number | null; lon: number | null }>(r: T) => 
 
 export function createMemoryData(t: MemoryTables): AgentData {
   const incidents = t.incidents ?? [];
-  const sites = t.sites ?? [];
+  const sites = t.sites?.length ? t.sites : (t.draft_sites ?? []);
   return {
     async incidents(q) {
       const rows = incidents
@@ -38,6 +40,9 @@ export function createMemoryData(t: MemoryTables): AgentData {
         .sort((a, b) => b.opened_at.localeCompare(a.opened_at));
       return { rows: rows.slice(0, q.limit), total: rows.length };
     },
+    async incidentsByIds(ids) {
+      return incidents.filter((r) => ids.includes(r.id));
+    },
     async places(q) {
       return (t.places ?? [])
         .filter((r) => located(r) && inBBox(r.lat!, r.lon!, q.bbox))
@@ -46,10 +51,11 @@ export function createMemoryData(t: MemoryTables): AgentData {
     },
     async sites(q) {
       return sites
+        .filter((s) => q.due == null || s.summary.due === q.due)
         .filter((s) => !q.neighborhood || has(s.neighborhood, q.neighborhood))
         .filter((s) => !q.city || s.city === q.city)
         .filter((s) => !q.bbox || (located(s) && inBBox(s.lat!, s.lon!, q.bbox)))
-        .sort((a, b) => b.score - a.score)
+        .sort((a, b) => q.due ? b.recurrence_count - a.recurrence_count || a.id.localeCompare(b.id) : (b.score ?? 0) - (a.score ?? 0))
         .slice(0, q.limit);
     },
     async site(id) {
@@ -58,11 +64,17 @@ export function createMemoryData(t: MemoryTables): AgentData {
     async sitesByText(text, limit) {
       return sites
         .filter((s) => has(s.address_block, text) || has(s.neighborhood, text) || s.zip === text)
-        .sort((a, b) => b.score - a.score)
+        .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
         .slice(0, limit);
     },
     async actionOutcomes() {
       return t.action_outcomes ?? [];
+    },
+    async siteSource() {
+      return t.sites?.length ? "analytics" : t.draft_sites?.length ? "draft" : "none";
+    },
+    async analyticsCounts() {
+      return { sites: (t.sites ?? []).length, action_outcomes: (t.action_outcomes ?? []).length };
     },
     async sources(ids) {
       const uniq = [...new Set(ids)].filter(Boolean);

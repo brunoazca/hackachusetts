@@ -1,6 +1,7 @@
 "use client";
 import { useMap } from "@/lib/map-store";
 import type { FeatureRef, SourceRef } from "@/lib/agent/types";
+import { sourceProvenance } from "@/lib/agent/ui";
 
 const chip = "inline-flex max-w-full items-center gap-1 truncate rounded-full border px-2 py-0.5 text-xs focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-neutral-900";
 
@@ -8,21 +9,25 @@ export function SourceChips({ sources }: { sources: SourceRef[] }) {
   if (!sources.length) return null;
   return (
     <ul aria-label="Sources" className="flex flex-wrap gap-1">
-      {sources.map((s) => (
+      {sources.map((s) => {
+        const provenance = sourceProvenance(s);
+        return (
         <li key={s.id} className="max-w-full">
           {s.url ? (
-            <a href={s.url} target="_blank" rel="noopener noreferrer" className={`${chip} border-neutral-300 text-neutral-700 hover:bg-neutral-100`}>
+            <a href={s.url} title={provenance.detail} aria-label={`${s.name ?? s.id} · ${provenance.detail} (opens in a new tab)`} target="_blank" rel="noopener noreferrer" className={`${chip} border-neutral-300 text-neutral-700 hover:bg-neutral-100`}>
               <span aria-hidden>↗</span>
               <span className="truncate">{s.name ?? s.id}</span>
+              <span className="shrink-0">· {provenance.label}</span>
               <span className="sr-only">(source, opens in a new tab)</span>
             </a>
           ) : (
-            <span className={`${chip} border-dashed border-neutral-300 text-neutral-600`} title="Source id without a link">
-              {s.name ?? s.id}
+            <span className={`${chip} border-dashed border-neutral-300 text-neutral-600`} title={`Source id without a link · ${provenance.detail}`} aria-label={`${s.name ?? s.id} · ${provenance.detail} · Link unavailable`}>
+              {s.name ?? s.id} · {provenance.label}
             </span>
           )}
         </li>
-      ))}
+        );
+      })}
     </ul>
   );
 }

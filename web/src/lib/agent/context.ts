@@ -6,6 +6,7 @@ import type { BBox, MapContext } from "./types";
 // visible bounds; we never derive it from center + zoom (that would guess).
 
 type StoreLike = {
+  mode?: "assess" | "act";
   selection: { kind: string; id?: string } | null;
   view: { lat: number; lon: number; zoom: number };
   filters: { since: string; until: string; categories: string[]; status: string };
@@ -17,6 +18,7 @@ type StoreLike = {
 export function buildMapContext(s: StoreLike): MapContext {
   const sel = s.selection;
   return {
+    ...(s.mode ? { mode: s.mode } : {}),
     selection: sel == null ? null : sel.kind === "area" ? { kind: "area" } : { kind: sel.kind, id: sel.id ?? "" },
     view: s.view,
     bbox: s.bounds ?? null,
@@ -27,6 +29,7 @@ export function buildMapContext(s: StoreLike): MapContext {
 
 const num = z.number().finite();
 export const mapContextSchema = z.object({
+  mode: z.enum(["assess", "act"]).optional(),
   selection: z.union([z.object({ kind: z.string().max(20), id: z.string().max(200) }), z.object({ kind: z.literal("area") }), z.null()]),
   view: z.object({ lat: num, lon: num, zoom: num }).nullable(),
   bbox: z.tuple([num, num, num, num]).nullable(),

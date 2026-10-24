@@ -10,6 +10,8 @@ const RUNNING: Record<string, string> = {
   geocode: "Finding the place",
   search_incidents: "Looking up reports",
   top_sites: "Ranking chronic sites",
+  due_sites: "Finding sites due for follow-up",
+  app_set_mode: "Switching app view",
   get_site: "Opening the site",
   nearby_drivers: "Checking what is nearby",
   what_worked: "Checking what worked",
@@ -47,6 +49,8 @@ function doneLabel(name: string, input: Record<string, unknown>, r: Ok): string 
     }
     case "top_sites":
       return `Ranked ${plural(((d.sites as unknown[]) ?? []).length, "chronic site")}`;
+    case "due_sites":
+      return `Found ${plural(((d.sites as unknown[]) ?? []).length, "site")} due for follow-up`;
     case "get_site": {
       if (!d.found) return "Site not found";
       const s = d.site as { address_block?: string } | undefined;
@@ -124,7 +128,19 @@ export function messageText(m: UIMessage): string {
 
 export const STARTERS = [
   "Why do rats keep coming back on Normandy St?",
-  "What are the top chronic sites right now?",
+  "Which sites are due for follow-up?",
   "What is around the selected site?",
   "Which city actions were followed by fewer repeat reports?",
 ];
+
+
+/** Source provenance, using Boston time rather than the viewer's browser zone. */
+export function sourceProvenance(source: SourceRef): { label: string; detail: string } {
+  const modes = { live: "Live", daily: "Daily", static: "Static" };
+  const label = source.update_mode ? modes[source.update_mode] : "Update cadence unknown";
+  const date = source.retrieved_at ? new Date(source.retrieved_at) : null;
+  const retrieved = date && Number.isFinite(date.getTime())
+    ? `Retrieved ${new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", dateStyle: "medium", timeStyle: "short" }).format(date)} (America/New_York)`
+    : "Retrieval time unavailable";
+  return { label, detail: [label, retrieved, source.update_note].filter(Boolean).join(" · ") };
+}

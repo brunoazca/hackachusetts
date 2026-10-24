@@ -31,6 +31,16 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:57 — Prepare authorized Agent integration on current main
+- Teammate: Carol
+- Agent:
+- Did: Carol authorized integrating the partial Agent delivery. Preserved all 20 modified/untracked files, rebased onto origin/main a78765f, restored every file and reconciled only the additive log conflict. All old local/upstream log entries remain intact.
+- Why: Integrate the tested Agent front while preserving the newer map/data work and the separate Insights merge currently open on local main.
+- Where: web/src/lib/agent/README.md; existing Agent/chat changes from the handoff; .kiro/KIRO_LOG.md.
+- Evidence: Post-rebase: 55 local fixture/mock/store tests passed; 6 shared-DB read-only checks passed, 1 skipped because action_outcomes is empty. Build, TypeScript, scoped ESLint and git diff --check passed. Live snapshot: 49 sources, 303421 incidents, 12897 places, 331 events, 3442 grid cells and 206520 predictions; sites/action_outcomes/correlations still empty.
+- Decision: Commit the preserved Agent changes, then finish local integration after the other merge releases main. No push, deploy, migrations or shared DB writes. Real-model chat remains unvalidated without a model credential; P1 task 4.5 and the documented Analytics/Map dependencies remain pending.
+- Idea: Recovery snapshot: /var/folders/__/m31rfjwn2yn1rbjsjdm9jy4m0000gn/T/rat-agent-main-integration-mtzukjhe; recovery stash retained.
+
 ### 2026-10-24 15:57 — 2.8: integrate Insights into local main after combined-tree validation
 - Teammate: Carol
 - Agent:
@@ -66,6 +76,18 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Model can only be fair outside Boston with a reporting-volume control
 - Where: pipeline/rat_audit/ingest/volume_regional.py, pipeline/rat_audit/{jobs,ingest/update_modes}.py
 - Idea: Somerville date_created is text: SoQL date functions fail, count locally
+
+### 2026-10-24 15:46 — Final Agent scope audit and validation before main integration
+- Teammate: Carol
+- Agent:
+- Did: Re-read repository guidance, TEAM/CONTRACT, requirements/design/tasks, v2 proposal, data audit, Agent code/README/log and A's partial handoff. Added a task-by-task status table; 4.5 P1 remains pending and 4.3 has explicit Map/integrator dependencies. This does not certify the rest of Carol's Analytics/Insights scope.
+- Did: Fixed two Agent-owned gaps: malformed/null chat messages and invalid tool history return 400 via SDK validation; source chips show live/daily/static cadence and retrieval time in America/New_York, with missing-metadata fallback.
+- Where: Existing web/src/lib/agent/{chat,types,ui}.ts, data/supabase.ts, existing tests/README; components/chat/Chips.tsx; this log. No new repository files.
+- Evidence: Rebased feat/rat-audit-agent onto fetched main 75bb782; HEAD 75f0590. Restored all local changes and verified every old local/upstream log entry survived the additive conflict. Recovery stash retained; fixes uncommitted. No pipeline, migration, shared app, package or deployment-file differences introduced by Agent.
+- Evidence: Final suites: 55 local tests passed (fixtures/mock model/mock HTTP/actual store); 6 live read-only checks passed, 1 skipped because shared action_outcomes is empty. No timeout in this final run. Next build, TypeScript, scoped ESLint passed. Shared snapshot: 37 sources, 303421 incidents, 12317 places, 331 events, 3442 grid cells, 206520 predictions; sites/action_outcomes/correlations empty.
+- Evidence: Browser at 1280x800 on local production build: Ask reachable in Assess/Act; no-provider message and labelled disabled controls; map/queue and newly integrated forecast UI render; no console warnings/errors captured. Actual /api/chat GET 200 configured=false/data=live, POST 503 not_configured. Two real sources include valid cadence and retrieval time. No real-model response tested; no approval action taken.
+- Decision: Historical log entries retained, current README corrected. Forecast no longer listed as missing store wiring. Full acceptance remains blocked on model credentials, Analytics outputs/v2 Due, and remaining Map/store integration; mobile not certified. Main update remains a later step; no merge, push, deploy, migrations or DB writes.
+- Idea: The missing credential is the app's model-provider API key (default AI_GATEWAY_API_KEY; Anthropic alternative ANTHROPIC_API_KEY with MODEL_PROVIDER=anthropic), separate from the working Supabase access. Values remain private in the shared env file.
 
 ### 2026-10-24 15:46 — Permanent host redirect rat-ops.vercel.app -> piper-app.v...
 - Teammate: Bruno
@@ -189,6 +211,17 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: knowledge/15_boston_rat_audit.md
 - Idea: Load first: ISD building violations full (17,493 rows w/ lat-long), Problem Properties list (scrape), Article 80 projects, NYC rodent inspections (3.1M with results = real outcome data to test what works)
 
+### 2026-10-24 15:31 — Agent compatibility with A's published analytics output
+- Teammate: Carol
+- Agent:
+- Did: Checked origin/feat/rat-audit-analytics-core at f410efe (implementation 3884561). Adapted recommendation matching to action_tag while preserving action text and the no-rodenticide filter; get_site now uses Analytics summary.timeline IDs; what_worked preserves intervals, censoring, year breakdowns and contributing source IDs.
+- Why: Publishing A's partial handoff exposed contract mismatches. The shared sites/action_outcomes/correlations tables are still empty; code publication did not make the shared analytics path live. A still lacks v2 Due flags, clustering and legal-lane completion.
+- Where: Existing web/src/lib/agent/tools/server.ts, data/{supabase,types}.ts, __tests__/{server-tools,supabase-data,live}.test.ts, README.md; this log. No new repository files, dependencies or shared application changes.
+- Evidence: 52 fixture/mock/local-store tests passed; TypeScript, scoped ESLint and Next build passed. Shared Supabase before edits: 6 pass / 1 blocked. After edits: 5 pass / 1 statement timeout / 1 blocked; the failed geocode → nearby_drivers check passed on one isolated retry. what_worked remains blocked on empty shared action_outcomes. Credentials loaded via the existing env symlink; model credentials remain absent; no values shown.
+- Evidence: SELECT-only PostGIS check against A's existing local real-data outputs (read-only mode on), then Agent in-memory adapter: 4 sites, 152 incident rows, exact timeline IDs; 13 outcome tags with intervals and source IDs preserved; 8 permitted unsaved drafts; 2 baiting recommendations omitted. This is real local data, not a live Supabase/LLM validation. No real sampled timeline was capped; truncation was tested with fixtures. Temporary verifier: /tmp/rat-agent-a-readonly-check.mts.
+- Decision: Kept feat/rat-audit-agent at 7116693 with prior changes preserved and fixes uncommitted. Fetched main d05d381 adds only a log entry over the already-rebased 5b823f5 base. A's site IDs also differ from main's draft site_detail IDs: map/integrator must align Inspector before populating that path. No analytics files edited, DB writes, migrations, merge, push or deploy.
+- Idea: Local real-data compatibility can be checked while the shared analytics and model-key dependencies remain blocked.
+
 ### 2026-10-24 15:30 — Scheduled hourly design critique of the site via Kiro Cre...
 - Teammate: Bruno
 - Agent: —
@@ -233,6 +266,16 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: supabase/migrations/20261024500002_model_forecast_api.sql, web/src/lib/forecast.ts, web/src/components/map/ForecastLayer.tsx, ForecastControl.tsx, inspector/CellCard.tsx, MapView.tsx, InspectorPanel.tsx, docs/rat-audit/FORECAST_MAP.md
 - Idea: Next: past-week overlay toggle and /api/simulate what-if
 
+### 2026-10-24 15:23 — Agent v2 tools and prompt; rebased on current main
+- Teammate: Carol
+- Agent:
+- Did: Confirmed 679a41c lacked due_sites, app_set_mode and the rodenticide rule. Added them in existing Agent files; changes remain uncommitted. due_sites filters DB flags before the limit, returns counts/citations and labels draft Due provisional. Prompt forbids rodenticide/poison; draft actions and recommendation outputs are filtered; historical baiting stays readable.
+- Why: Spec v2 expanded tasks 4.2/4.3. Main 01c2fa4 subsequently removed Simple/Explore (R0.5/design/store), so app_set_mode now accepts Assess/Act only, preserves selection, and includes mode in chat context. Task 4.3/R8.11/design §8 still mentioning depth are stale; integrator should reconcile them.
+- Where: web/src/lib/agent/{prompt,context,types,ui}.ts, tools/{client,server}.ts, data/{types,supabase,memory}.ts, existing tests, README.md; this log. No new files in this pass.
+- Evidence: Rebased feat/rat-audit-agent on fetched main 5b823f5; 679a41c became 7116693. Resolved only additive log conflicts; verified every old local and target-main log entry survived. Local changes restored; recovery stashes retained. package/lock/store/queries/deploy workflow unchanged by Agent.
+- Evidence: 46 local tests passed (fixtures/mock HTTP/mock model plus actual Zustand store); 6 live read-only validations passed, including 10 Due IDs matching a direct query; what_worked skipped because action_outcomes is empty. pnpm build (including TypeScript) and scoped ESLint passed after frozen-lockfile dependency sync. Supabase env symlink preserved, values not printed.
+- Idea: Base-rate Due semantics still depend on Analytics 2.19; current draft rule is last closure within 60 days plus a prior return. Real-model chat remains blocked by absent credentials; browser integration not revalidated. No DB writes, migrations, merge, push or deploy.
+
 ### 2026-10-24 15:20 — Forecast: new candidate feature groups (food rodent fails...
 - Teammate: Bruno
 - Agent: —
@@ -276,6 +319,16 @@ If the agent does not know the teammate's name, it asks before logging.
 - Evidence: LIVE GET/HEAD only: RPC 404/PGRST202; correlations=0, price_impact=0, model_runs=6, predictions=206520, grid_cells=3442. Live suite: 3 pass (availability; stored GBM and baseline scores + SSR), 3 SKIP (RPC finding/cost/forecast comparisons). GBM MAE 0.07518 vs 0.07132 baseline; capture 0.6429 vs 0.5433. These are stored metrics, not model retraining or browser success-path validation.
 - Evidence: Browser: real GET 404/unavailable passed; six simulated/synthetic scenarios passed (network failure + Retry, DB timeout + Retry, malformed, loading/full fixture, baseline, empty). Initial harness hydration race fixed; screenshots and sanitized results in scratch. Shared DB received no writes; no migration, merge, push or deploy.
 - Idea: Integrator supplies `insights_summary`; analytics writes findings/costs; rerun live comparisons and browser success without interception. Source-name/URL/retrieved-at resolution also remains an integration gap; do not mark 2.8 fully live-validated yet.
+
+### 2026-10-24 15:09 — Resumed Agent work; verified fixes against mocks and live reads
+- Teammate: Carol
+- Agent:
+- Did: Preserved branch feat/rat-audit-agent at 679a41c and all 9 modified files + existing untracked errors.test.ts; backed up the handoff state outside the repo. Added only one new repo file, supabase-data.test.ts.
+- Why: Draft RPC failures were hidden as missing analytics; draft filters ran after a citywide limit; fixture source detection was wrong. Fixed these, removed what_worked's unrelated dependency on sites counts, and labelled truncated driver counts.
+- Where: web/src/lib/agent/data/{supabase,memory}.ts, tools/server.ts, __tests__/{supabase-data,server-tools,live}.test.ts, README.md; this log.
+- Evidence: Final suite 45 tests: 39 mocks/fixtures + 5 live passed, 1 live skipped (action_outcomes empty). Next build and TypeScript passed; scoped ESLint passed. Live Normandy: 30 reports since 2025 = independent count, 19 exact site report IDs, 2 area-filtered sites; draft saved=false.
+- Evidence: Read-only table counts: sources 32, incidents 294758, places 11267, events 331, grid_cells 3442, predictions 206520; sites/action_outcomes/correlations empty. web/.env.local already links to shared env; Supabase credentials present, model credentials absent, values never shown.
+- Idea: Real-model chat remains blocked on credentials; scored sites/action outcomes on Analytics. Browser/map integration was not revalidated. No shared-file edits, DB writes, migrations, merge, push, deploy or commit.
 
 ### 2026-10-24 15:04 — Map: zoomed-out data now aggregated server-side (map_inci...
 - Teammate: Bruno
@@ -325,6 +378,22 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: `web/.env.local` (symlink, untracked)
 - Idea: The integrator applies the RPC from `RPC_PROPOSAL.md`; the panel stays "not available" until analytics/model write rows.
 
+### 2026-10-24 14:46 — Map integration gaps found (chat → map)
+- Teammate: Carol
+- Agent: —
+- Did: Code check on origin/main 9301148: MapView consumes flyToTarget and selection (incident + site via SiteCase, same site_detail ids as the agent). It ignores store highlight, layers, forecastWeek, filters.categories/status, and does not publish bounds. Listed exact changes per owner in the agent README.
+- Why: know which map tools have a visible effect before calling the integration done
+- Where: web/src/lib/agent/README.md
+- Idea: Gui: read highlight + store layers in MapView; integrator: bounds in map-store
+
+### 2026-10-24 14:46 — Preview in the browser with real data
+- Teammate: Carol
+- Agent: —
+- Did: Preview = origin/main 9301148 + agent files, uncommitted, at http://localhost:3917 (next build + next start with .env.local). Headless Chrome 1280×800: map shows 2,548 real rodent reports, Live badge; Ask tab shows "Assistant not configured", input disabled and labelled; no console errors. /api/chat GET data=live, POST 503 not_configured.
+- Why: demonstrable state for the team; real-model chat blocked by missing AI key
+- Where: ../hackachusetts-agent-preview (working tree only, no commit)
+- Idea: none
+
 ### 2026-10-24 14:45 — Model public interface train/score/simulate + explain (dr...
 - Teammate: Bruno
 - Agent: —
@@ -332,6 +401,15 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Kiro tasks 9, 12, 14 done directly (Kiro paused, too slow). Live: run risk-v1-20261024T184358, 89k backtest + 13.7k forecast predictions (Oct 26-Nov 16), 133 emerging + 120 early-warning cells; grid_cells seeded with 3442 fallback cells because it was empty
 - Where: pipeline/rat_audit/model/__init__.py, explain.py, tests/test_model_explain.py
 - Idea: grid_cells seeding only runs while the table is empty; Carol can replace it
+
+### 2026-10-24 14:43 — Agent live check: Normandy St end-to-end on real data
+- Teammate: Carol
+- Agent: —
+- Did: Read-only run on the shared Supabase: geocode → provisional site bcd011739b564808 (Normandy St, 02121) → get_site 19 real reports → nearby_drivers (trash storage 15, dead animal 13, dumping 12) → draft_work_order (draft, saved=false). what_worked blocked: action_outcomes empty.
+- Why: prove the tools query real data; ok:false is not counted as success
+- Where: web/src/lib/agent/__tests__/live.test.ts
+- Idea: every closed case has empty action_tag → closure classifier (Analytics 2.2) not run yet
+
 ### 2026-10-24 14:41 — Umbrella campaign 947e85a6 finished; added its 13-track r...
 - Teammate: Carol
 - Agent: —
@@ -339,6 +417,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Keep every campaign's results in one file and keep personal paths out of the public repo
 - Where: .kiro/campaigns/rat-audit-research-campaigns.md, .kiro/campaigns/rat-platform/, .kiro/campaigns/rodents-property-values*.json, .kiro/KIRO_LOG.md
 - Idea: Build Boston-first, ship a persistence+season ranker before ML; Cambridge rodent data needs redistribution permission
+
 ### 2026-10-24 14:47 — Wrote docs/submission/data-report.md: 22 datasets, join k...
 - Teammate: Guilherme
 - Agent: kirocrew
@@ -347,6 +426,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: docs/submission/data-report.md
 - Idea: Lead with 'rats follow heat and trash and come back' — strongest two numbers carry the demo narrative
 
+### 2026-10-24 14:40 — Decision: provisional sites from the map's draft queue
+- Teammate: Carol
+- Agent: —
+- Did: While the Analytics `sites` table is empty, the agent reads the map track's site_queue / site_detail RPCs (migration 20261024300002). Sites are flagged provisional with no score; raw closure notes (last_note/note) are not passed to the model. Switches back to Analytics sites automatically once the table has rows.
+- Why: sites table has 0 rows; the draft queue is what the Act UI shows, so ids match the Inspector
+- Where: web/src/lib/agent/data/supabase.ts, data/types.ts, tools/server.ts
+- Idea: remove the fallback when Analytics 2.3 lands
+
 ### 2026-10-24 14:37 — Baseline (mean of last 4 weeks), Poisson GBM, 26-week rol...
 - Teammate: Bruno
 - Agent: —
@@ -354,6 +441,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Kiro tasks 6-8 done in parallel. Backtest Apr 20-Oct 12 2026: GBM top-10% capture 64.3% vs baseline 54.3%; MAE 0.0752 vs 0.0713 (GBM slightly worse on MAE, recorded honestly). Rain/snow/places/events candidates add nothing (capture 64.4%, MAE 0.0750)
 - Where: pipeline/rat_audit/model/baseline.py, gbm.py, backtest.py
 - Idea: Keep CORE only; candidates do not earn their place
+
+### 2026-10-24 14:35 — Agent tools now say WHY a lookup failed
+- Teammate: Carol
+- Agent: —
+- Did: Failures carry a reason: not_configured, connection, permission, missing_table, query, analytics_not_computed. Counts switched from estimated to exact so totals match the database.
+- Why: tell apart a connection error, a permission error, an empty table and missing Analytics output
+- Where: web/src/lib/agent/data/*, tools/server.ts, types.ts, __tests__/errors.test.ts
+- Idea: none
 
 ### 2026-10-24 14:34 — Added model_artifacts migration (model_run_id text FK, bl...
 - Teammate: Bruno
@@ -379,6 +474,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: `web/src/components/insights/parse.ts`, `FindingChart.tsx`, `__tests__/*`
 - Idea: none
 
+### 2026-10-24 14:31 — Live table check (read-only, anon key)
+- Teammate: Carol
+- Agent: —
+- Did: sources 30, incidents 267,720 (rodent 23,954), places 11,267, events 331 rows. sites, action_outcomes, grid_cells, correlations, predictions: 0 rows (Analytics not computed). No permission or connection errors.
+- Why: know what real data the agent can answer from
+- Where: none
+- Idea: none
+
 ### 2026-10-24 14:31 — Feature engineering: per-cell per-ISO-week panel (CORE va...
 - Teammate: Bruno
 - Agent: —
@@ -393,6 +496,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Did: Fixed blank map in production (MapLibre worker 404: file was git-ignored, so Vercel never got it) — now tracked + copied on prebuild; Simple depth now shows all rat signals + every driver with a tested effect
 - Why: Bruno: map not appearing; Simple should include the other signals
 - Where: web/public/maplibre-gl-worker.mjs, web/package.json, web/.gitignore, web/src/components/map/LayerPanel.tsx
+- Idea: none
+
+### 2026-10-24 14:28 — Agent env check: Supabase yes, model no
+- Teammate: Carol
+- Agent: —
+- Did: App and test process both load NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY from the shared .env.local (symlink web/.env.local, git-ignored; values not printed). No AI credential → real-model chat is BLOCKED.
+- Why: confirm config before testing; shared .env.local left untouched
+- Where: web/.env.local (symlink)
 - Idea: none
 
 ### 2026-10-24 14:27 — UI per new spec: Assess/Act modes + Simple/Explore depth ...
@@ -538,6 +649,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Bruno wanted to see the data on a map now; map track (Gui) can build on it
 - Where: web/src/components/{map,inspector,shell/TopBar}, web/src/lib/queries.ts, supabase/migrations/20261024300001_api_map_draft.sql, web/package.json
 - Idea: MapLibre 6 worker must be served from /public under Next 16 (postinstall copies it)
+
 ### 2026-10-24 14:08 — Piper design system: full spec (color semantics both them...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
@@ -801,6 +913,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Research Lab allows one active campaign at a time; 5 researchers is the app's cap
 - Where: .kiro/campaigns/rat-platform/build_umbrella.py, umbrella.json, runs.json, .kiro/KIRO_LOG.md
 - Idea: Per-track reports land in knowledge/research/R##_*.md
+
 ### 2026-10-24 13:56 — Agent handoff notes + map-store bounds proposal
 - Teammate: Carol
 - Agent: —
@@ -912,6 +1025,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Bruno approved Modal as the single Python worker that fetches data and predicts where reports will appear
 - Where: pipeline/, .kiro/specs/rat-audit/*, docs/rat-audit/CONTRACT.md
 - Idea: Emerging-hotspot flag (high forecast, little history) and what-if simulator (model estimate) added to spec as R6.7/R6.8
+
 ### 2026-10-24 13:12 — Expanded RodentOps evidence: public data, complaints and ...
 - Teammate: Guilherme
 - Agent: Codex (research; not Kiro build activity)
@@ -1159,6 +1273,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Run the rat research inside Kiro Crew
 - Where: .kiro/campaigns/rat-audit-research-campaigns.md
 - Idea: Research Lab allows one active campaign at a time; run 2, 1, 3 after this one
+
 ### 2026-10-24 12:37 — Pulled origin/main (Guilherme's secret-scan + knowledge r...
 - Teammate: Carol
 - Agent: kirocrew (default)
@@ -1493,6 +1608,7 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: ideas are our strongest Kiro story; must be captured even with no code
 - Where: .kiro/steering/kiro-log.md, .kiro/KIRO_LOG.md
 - Idea: log a brainstorm with Where: none
+
 ### 2026-10-24 10:16 — Correction: the three '— (unconfirmed)' entries from 10:1...
 - Teammate: Bruno
 - Agent: default (kiro-cli chat)

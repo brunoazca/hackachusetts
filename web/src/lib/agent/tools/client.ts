@@ -1,6 +1,6 @@
 import { tool } from "ai";
 import { z } from "zod";
-import type { LayerId, Selection } from "../../map-store";
+import type { LayerId, Mode, Selection } from "../../map-store";
 
 // Client-side map tools (task 4.3). The route declares them without `execute`,
 // so the model's calls stream to the browser; ChatPanel runs them on the map
@@ -20,6 +20,12 @@ const SELECT_KINDS = ["incident", "place", "event", "site", "cell", "listing", "
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 
 export const clientTools = {
+  app_set_mode: tool({
+    description: "Switch the app between Assess and Act. Keeps the selected site. All layers are already available; there is no separate depth mode.",
+    inputSchema: z.object({
+      mode: z.enum(["assess", "act"]),
+    }).strict(),
+  }),
   map_fly_to: tool({
     description: "Move the map to a point. Only use coordinates returned by a data tool (geocode, get_site, search_incidents…), never guessed ones.",
     inputSchema: z.object({
@@ -67,6 +73,7 @@ export const CLIENT_TOOL_NAMES = Object.keys(clientTools) as ClientToolName[];
 
 /** The map-store actions the client tools need (a subset of useMap's state). */
 export type MapActions = {
+  setMode: (mode: Mode) => void;
   flyTo: (v: { lat: number; lon: number; zoom?: number }) => void;
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
   setFilters: (patch: Partial<{ since: string; until: string; categories: string[]; status: "all" | "open" | "closed" }>) => void;
@@ -89,6 +96,11 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
   if (!parsed.success) return { ok: false, error: `Invalid input: ${parsed.error.issues[0]?.message ?? "bad input"}` };
   const v = parsed.data as never;
   switch (name) {
+    case "app_set_mode": {
+      const { mode } = v as { mode: Mode };
+      map.setMode(mode);
+      return { ok: true, done: `App view updated: ${mode}` };
+    }
     case "map_fly_to": {
       const { lat, lon, zoom } = v as { lat: number; lon: number; zoom?: number };
       map.flyTo(zoom == null ? { lat, lon } : { lat, lon, zoom });

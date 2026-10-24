@@ -106,3 +106,170 @@ test("adapter errors become ok:false, not thrown", async () => {
   assert.equal(r.ok, false);
   assert.match(r.error, /relation does not exist/);
 });
+
+test("Analytics tables empty → analytics_not_computed, not an empty success", async () => {
+  const t = createServerTools({ data: createMemoryData({ ...tables, sites: [], action_outcomes: [] }), now: () => NOW });
+  for (const [name, input] of [["top_sites", {}], ["due_sites", {}], ["get_site", { site_id: "x" }], ["draft_work_order", { site_id: "x", action: "inspection" }], ["what_worked", {}], ["nearby_drivers", { site_id: "x" }]] as const) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const r = await (t[name].execute as any)(input, opts);
+    assert.equal(r.ok, false, name);
+    assert.equal(r.reason, "analytics_not_computed", name);
+  }
+  // Tools on ingested data still work.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const s = await (t.search_incidents.execute as any)({ query: "Fixture St", since: "2026-01-01" }, opts);
+  assert.equal(s.ok, true);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const n = await (t.nearby_drivers.execute as any)({ lat: 42.3051, lon: -71.0712 }, opts);
+  assert.equal(n.ok, true);
+});
+
+test("sites empty but draft queue present → provisional sites, no score, caveat", async () => {
+  const draft = (tables.sites ?? []).map((s) => ({ ...s, score: null, rank: null, provisional: true, recommended: [], reports: [{ id: "fixture-inc-1", opened_at: "", closed_at: null, status: "closed", action_tag: "baiting" }] }));
+  const t = createServerTools({ data: createMemoryData({ ...tables, sites: [], draft_sites: draft }), now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const top = await (t.top_sites.execute as any)({}, opts);
+  assert.equal(top.ok, true);
+  assert.equal(top.data.sites[0].provisional, true);
+  assert.equal(top.data.sites[0].score, null);
+  assert.ok(top.caveats.some((c: string) => c.startsWith("Provisional sites")));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const s = await (t.get_site.execute as any)({ site_id: "fixture-site-1" }, opts);
+  assert.deepEqual(s.data.timeline.map((x: { id: string }) => x.id), ["fixture-inc-1"], "exact reports, not street-block grouping");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const ww = await (t.what_worked.execute as any)({}, opts);
+  assert.equal(ww.ok, true, "action_outcomes fixture still present");
+});
+
+
+test("what_worked does not depend on access to the sites table", async () => {
+  const data: AgentData = {
+    ...createMemoryData(tables),
+    analyticsCounts: async () => { throw new DataUnavailableError("sites permission denied", "permission"); },
+  };
+  const t = createServerTools({ data, now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const r = await (t.what_worked.execute as any)({}, opts);
+  assert.equal(r.ok, true);
+  assert.equal(r.data.outcomes.length, tables.action_outcomes!.length);
+});
+
+test("nearby_drivers labels partial counts when the database cap is below the tool limit", async () => {
+  const memory = createMemoryData(tables);
+  const data: AgentData = {
+    ...memory,
+    incidents: async (q) => ({ ...(await memory.incidents(q)), total: 2500 }),
+  };
+  const t = createServerTools({ data, now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const r = await (t.nearby_drivers.execute as any)({ site_id: "fixture-site-1" }, opts);
+  assert.equal(r.ok, true);
+  assert.equal(r.data.driver_reports_truncated, true);
+  assert.ok(r.caveats.some((c: string) => /partial.*2500/.test(c)));
+});
+
+
+test("due_sites filters Due before limiting and exposes counts, not scores", async () => {
+  const due = tables.sites!.map((s, i) => ({ ...s, summary: { ...s.summary, due: true, base_rate: 0.3 }, recurrence_count: i + 2 }));
+  const notDue = { ...due[0], id: "fixture-not-due", summary: { due: false }, recurrence_count: 99 };
+  const t = createServerTools({ data: createMemoryData({ ...tables, sites: [notDue, ...due] }), now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const r = await (t.due_sites.execute as any)({ limit: 1 }, opts);
+  assert.equal(r.ok, true);
+  assert.equal(r.data.provisional, false);
+  assert.equal(r.data.sites[0].id, due[1].id);
+  assert.equal(r.data.sites[0].due, true);
+  assert.equal(r.data.sites[0].base_rate, 0.3);
+  assert.ok(!("score" in r.data.sites[0]));
+  assert.ok(r.sources.length > 0);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const filtered = await (t.due_sites.execute as any)({ neighborhood: "dor", limit: 1 }, opts);
+  assert.equal(filtered.data.sites[0].id, due[0].id);
+});
+
+test("due_sites marks draft Due as provisional without inventing a base rate", async () => {
+  const draft = tables.sites!.map((s) => ({ ...s, provisional: true, score: null, summary: { due: true, closures: 2 } }));
+  const t = createServerTools({ data: createMemoryData({ ...tables, sites: [], draft_sites: draft }), now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const r = await (t.due_sites.execute as any)({}, opts);
+  assert.equal(r.ok, true);
+  assert.equal(r.data.provisional, true);
+  assert.ok(r.data.sites.every((s: { base_rate: unknown }) => s.base_rate === null));
+  assert.match(r.caveats[0], /not the Spec v2 base-rate threshold/);
+});
+
+test("historical baiting remains visible but is never emitted as a recommendation or draft", async () => {
+  const site = { ...tables.sites![0], recommended: [
+    ...tables.sites![0].recommended,
+    { action: "baiting", because: "historical action" },
+    { action: "cleanup", because: "apply poison" },
+  ] };
+  const t = createServerTools({ data: createMemoryData({ ...tables, sites: [site] }), now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const detail = await (t.get_site.execute as any)({ site_id: site.id }, opts);
+  assert.equal(detail.data.actions_taken.baiting, 1);
+  assert.deepEqual(detail.data.recommended, tables.sites![0].recommended);
+  for (const input of [{ site_id: site.id, action: "baiting" }, { site_id: site.id, action: "cleanup", note: "apply rodenticide" }]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const r = await (t.draft_work_order.execute as any)(input, opts);
+    assert.equal(r.data.drafted, false);
+    assert.ok(!("status" in r.data));
+  }
+});
+
+
+test("Analytics action_tag identifies recommendations while action keeps its display text", async () => {
+  const allowed = { id: "fixture:containers", action_tag: "barrels", action: "Sealed, rat-resistant containers for the block", because: ["Three nearby trash reports"], source_ids: ["fixture-311"] };
+  const site = { ...tables.sites![0], recommended: [
+    allowed,
+    { action_tag: "abatement_order", action: "Joint block visit: clear and bait the adjacent vacant parcel" },
+    { action_tag: "baiting", action: "Bait the surrounding blocks before demolition" },
+    { action_tag: "unknown", action: "cleanup" },
+  ] };
+  const t = createServerTools({ data: createMemoryData({ ...tables, sites: [site] }), now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const detail = await (t.get_site.execute as any)({ site_id: site.id }, opts);
+  assert.deepEqual(detail.data.recommended, [allowed]);
+  assert.ok(detail.caveats.some((c: string) => /recommendations are omitted/.test(c)));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const draft = await (t.draft_work_order.execute as any)({ site_id: site.id, action: "barrels" }, opts);
+  assert.equal(draft.data.recommended_by_analysis, true);
+  assert.deepEqual(draft.data.because, allowed.because);
+  assert.equal(draft.data.saved, false);
+});
+
+test("Analytics summary.timeline uses exact IDs and labels capped history", async () => {
+  const site = { ...tables.sites![0], report_count: 61, summary: { ...tables.sites![0].summary, timeline: [{ id: "fixture-inc-2" }] } };
+  const t = createServerTools({ data: createMemoryData({ ...tables, sites: [site] }), now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const detail = await (t.get_site.execute as any)({ site_id: site.id }, opts);
+  assert.deepEqual(detail.data.timeline.map((r: { id: string }) => r.id), ["fixture-inc-2"]);
+  assert.deepEqual(detail.data.actions_taken, { citation: 1 });
+  assert.ok(detail.caveats.some((c: string) => /Partial timeline: 1 of 61/.test(c)));
+  assert.ok(!detail.caveats.some((c: string) => /neighbouring addresses/.test(c)));
+});
+
+test("missing or empty listed report IDs never expand to other addresses on the street", async () => {
+  for (const timeline of [[], [{ id: "not-readable" }]]) {
+    const site = { ...tables.sites![0], summary: { timeline } };
+    const t = createServerTools({ data: createMemoryData({ ...tables, sites: [site] }), now: () => NOW });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const detail = await (t.get_site.execute as any)({ site_id: site.id }, opts);
+    assert.deepEqual(detail.data.timeline, []);
+    assert.ok(detail.caveats.some((c: string) => /Partial timeline: 0 of 3/.test(c)));
+  }
+});
+
+test("what_worked preserves Analytics intervals/censoring and cites the contributing years", async () => {
+  const outcome = { ...tables.action_outcomes![0], n_recurred: 124, n_censored: 8, window_days: 60, observed_through: "2026-10-23", ci_low: 26.67, ci_high: 35.64, by_year: { "2023": { n: 400, recurred: 124 } }, source_ids: ["fixture-311-2023"] };
+  const data: AgentData = {
+    ...createMemoryData({ ...tables, action_outcomes: [outcome], sources: [{ id: "fixture-311-2023", name: "Fixture 2023", url: "https://example.org/2023" }] }),
+    incidents: async () => { throw new Error("Must cite outcome sources, not an unrelated recent sample"); },
+  };
+  const t = createServerTools({ data, now: () => NOW });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const result = await (t.what_worked.execute as any)({}, opts);
+  assert.equal(result.ok, true);
+  for (const key of ["ci_low", "ci_high", "n_censored", "observed_through", "by_year"] as const) assert.deepEqual(result.data.outcomes[0][key], outcome[key]);
+  assert.deepEqual(result.sources.map((s: { id: string }) => s.id), outcome.source_ids);
+});

@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { UIMessage } from "ai";
-import { collectRefs, toolParts, toolStep, workOrderDrafts } from "../ui";
+import { collectRefs, sourceProvenance, toolParts, toolStep, workOrderDrafts } from "../ui";
 
 const msg = (parts: unknown[]): UIMessage => ({ id: "m", role: "assistant", parts }) as UIMessage;
 
@@ -36,4 +36,19 @@ test("collectRefs dedupes sources and features across tool calls", () => {
 test("work order drafts surface for review", () => {
   const m = msg([{ type: "tool-draft_work_order", toolCallId: "1", state: "output-available", input: {}, output: { ok: true, data: { drafted: true, site_id: "s1", action_label: "Abatement order", owner: "ISD", follow_up_on: "2026-12-23", address_block: "A St" }, sources: [], features: [], caveats: [] } }]);
   assert.deepEqual(workOrderDrafts(m).map((d) => d.site_id), ["s1"]);
+});
+
+
+test("source chips distinguish update cadence and use Boston retrieval time", () => {
+  const source = { id: "fixture", name: "Fixture", url: "https://example.org", update_mode: "daily" as const, retrieved_at: "2026-10-24T02:30:00Z", update_note: "Refreshes overnight" };
+  const provenance = sourceProvenance(source);
+  assert.equal(provenance.label, "Daily");
+  assert.match(provenance.detail, /Oct 23, 2026/);
+  assert.match(provenance.detail, /10:30 PM/);
+  assert.match(provenance.detail, /America\/New_York/);
+  assert.match(provenance.detail, /Refreshes overnight/);
+  assert.equal(sourceProvenance({ ...source, update_mode: "static" }).label, "Static");
+  const unknown = sourceProvenance({ ...source, update_mode: null, retrieved_at: "invalid" });
+  assert.equal(unknown.label, "Update cadence unknown");
+  assert.match(unknown.detail, /Retrieval time unavailable/);
 });

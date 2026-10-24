@@ -98,3 +98,33 @@ test("no provider → 503 not_configured; bad body → 400", async () => {
   assert.equal((await on(post({}))).status, 400);
   assert.equal((await on(new Request("http://x", { method: "POST", body: "{" }))).status, 400);
 });
+
+
+test("v2 route exposes due_sites and streams app_set_mode with the recommendation rule", async () => {
+  const model = fakeModel([
+    [toolCall("due", "due_sites", { limit: 1 }), finish("tool-calls")],
+    [toolCall("mode", "app_set_mode", { mode: "act" }), finish("tool-calls")],
+  ]);
+  const data = createMemoryData({ ...tables, sites: tables.sites!.map((s) => ({ ...s, summary: { ...s.summary, due: true } })) });
+  const POST = createChatHandler({ getModel: () => model, getData: () => data, now: () => NOW });
+  const response = await POST(post({ messages: [userMsg], context: { ...context, mode: "assess" } }));
+  const chunks = await readChunks(response);
+  assert.equal(chunks.find((c) => c.type === "tool-output-available" && c.toolCallId === "due").output.data.sites.length, 1);
+  assert.ok(chunks.some((c) => c.type === "tool-input-available" && c.toolName === "app_set_mode"));
+  assert.ok(!chunks.some((c) => c.type === "tool-output-available" && c.toolCallId === "mode"));
+  const prompt = JSON.stringify(model.doStreamCalls[0].prompt[0]);
+  assert.match(prompt, /Never recommend rodenticide or poison/);
+  assert.match(prompt, /app mode: assess/);
+});
+
+
+test("malformed conversation bodies return 400 before any model call", async () => {
+  const model = fakeModel([[finish("stop")]]);
+  const handler = createChatHandler({ getModel: () => model, getData: () => null });
+  for (const body of [null, { messages: [null] }, { messages: [{ id: "x", role: "user", parts: "invalid" }] }, { messages: [{ ...userMsg, role: "system" }] }, { messages: [{ id: "x", role: "assistant", parts: [{ type: "tool-map_fly_to", toolCallId: "bad", state: "output-available", input: { lat: 0, lon: 0 }, output: { ok: true } }] }] }]) {
+    const response = await handler(post(body));
+    assert.equal(response.status, 400);
+    assert.equal((await response.json()).error, "bad_request");
+  }
+  assert.equal(model.doStreamCalls.length, 0);
+});

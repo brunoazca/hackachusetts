@@ -1,4 +1,4 @@
-import { convertToModelMessages, stepCountIs, streamText, type LanguageModel, type UIMessage } from "ai";
+import { convertToModelMessages, safeValidateUIMessages, stepCountIs, streamText, type LanguageModel } from "ai";
 import { parseMapContext } from "./context";
 import { systemPrompt } from "./prompt";
 import { providerStatus, getModel } from "./provider";
@@ -33,18 +33,22 @@ export function createChatHandler(deps: ChatDeps) {
     if (!model) {
       return Response.json({ error: "not_configured", message: "Assistant not configured." }, { status: 503 });
     }
-    let body: { messages?: unknown; context?: unknown };
+    let body: { messages?: unknown; context?: unknown } | null;
     try {
       body = await req.json();
     } catch {
       return Response.json({ error: "bad_request", message: "Body must be JSON." }, { status: 400 });
     }
-    if (!Array.isArray(body.messages) || body.messages.length === 0) {
+    if (!body || !Array.isArray(body.messages) || body.messages.length === 0) {
       return Response.json({ error: "bad_request", message: "messages is required." }, { status: 400 });
     }
-    const messages = (body.messages as UIMessage[]).slice(-MAX_MESSAGES);
     const now = deps.now ?? (() => new Date());
     const tools = createTools(deps.getData(), now);
+    const validated = await safeValidateUIMessages({ messages: body.messages.slice(-MAX_MESSAGES), tools });
+    if (!validated.success || validated.data.some((m) => m.role === "system")) {
+      return Response.json({ error: "bad_request", message: "Invalid conversation messages." }, { status: 400 });
+    }
+    const messages = validated.data;
 
     const result = streamText({
       model,
