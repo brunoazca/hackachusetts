@@ -12,6 +12,7 @@ import LayerPanel, { activeCategories, HEAT_RAMPS, SIMPLE_LAYERS, type ViewMode 
 import SiteQueue from "@/components/act/SiteQueue";
 import { addCategoryIcons, iconId } from "./icons";
 import { useTheme } from "@/lib/theme-store";
+import { rightInset, useUi } from "@/lib/ui-store";
 import { basemap, BASEMAP_STYLE_URL, themes, type ThemeName } from "@/lib/design-tokens";
 
 // Draft map. Each category is its own clustered source, so a cluster only ever counts one kind
@@ -96,6 +97,7 @@ export default function MapView() {
 
   const appMode = useMap((s) => s.mode);
   const theme = useTheme((s) => s.theme);
+  const rightOpen = useUi((s) => s.rightOpen);
   const T = themes[theme];
   const explore = useMap((s) => s.depth) === "explore";
   const sites = useMap((s) => s.sites);
@@ -171,9 +173,16 @@ export default function MapView() {
     if (flyToTarget) mapRef.current?.flyTo({
       center: [flyToTarget.lon, flyToTarget.lat], zoom: flyToTarget.zoom, duration: 1200,
       // Land between the floating panels.
-      padding: { left: appMode === "act" ? 420 : 80, top: 80, right: 424, bottom: 24 },
+      padding: { left: appMode === "act" ? 420 : 80, top: 80, right: rightInset(useUi.getState().rightOpen) + 16, bottom: 24 },
     });
   }, [flyToTarget, appMode]);
+
+  // When the right panel slides, glide the map's clear area with it (same 300 ms).
+  useEffect(() => {
+    const map = mapRef.current?.getMap();
+    if (!map) return;
+    map.easeTo({ padding: { left: 0, top: 0, bottom: 0, right: rightOpen ? rightInset(true) - rightInset(false) : 0 }, duration: 300 });
+  }, [rightOpen]);
 
   // Theme switch: recolor the basemap in place.
   useEffect(() => {

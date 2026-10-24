@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:16 — Right panel now folds into a slim 52px rail (Inspect / In...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Right panel now folds into a slim 52px rail (Inspect / Insights / Ask icons, red dot when something is selected) and slides open on selection, rail click or ]; one 300ms transform, both states mounted with inert for a11y; map clear area and zoom controls glide with it; panel narrowed to 380px
+- Why: Guilherme: right panel took too much space; wanted fluid, sleek collapse/expand
+- Where: web/src/components/shell/RightPanel.tsx, web/src/lib/ui-store.ts, web/src/components/map/MapView.tsx, web/src/app/globals.css
+- Idea: Shared ui-store so map padding follows the panel
+
 ### 2026-10-24 15:11 — Replaced the big left Layers panel with a slim layer dock...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
