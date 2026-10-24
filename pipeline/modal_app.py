@@ -4,7 +4,7 @@ Deploy:  cd pipeline && MODAL_PROFILE=harvard uv run modal deploy modal_app.py
 Run one: MODAL_PROFILE=harvard uv run modal run modal_app.py::backfill
 Secret `rat-audit` holds SUPABASE_DB_URL, SUPABASE_SERVICE_ROLE_KEY, NEXT_PUBLIC_SUPABASE_URL,
 SOCRATA_APP_TOKEN, RAT_AUDIT_WORKER_TOKEN (the bearer token the web app sends) and
-AI_GATEWAY_API_KEY (Vercel AI Gateway, for the Insights AI cards).
+AI_GATEWAY_API_KEY lives in the separate secret `rat-audit-ai` (Vercel AI Gateway, Insights AI cards).
 """
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ image = (
     .add_local_file("../contracts/categories.json", "/root/contracts/categories.json")
     .add_local_python_source("rat_audit")
 )
-secrets = [modal.Secret.from_name("rat-audit")]
+secrets = [modal.Secret.from_name("rat-audit"), modal.Secret.from_name("rat-audit-ai")]  # -ai: AI_GATEWAY_API_KEY
 app = modal.App("rat-audit", image=image, secrets=secrets)
 
 

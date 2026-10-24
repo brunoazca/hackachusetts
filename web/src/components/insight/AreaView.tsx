@@ -19,7 +19,7 @@ export default function AreaView({ insight: a, onLocate, onReload }: {
   const setForecastWeek = useMap((s) => s.setForecastWeek);
   const setLayers = useMap((s) => s.setLayers);
   const [sources, setSources] = useState<SourceRow[]>([]);
-  const [ai, setAi] = useState<"idle" | "busy" | "failed">("idle");
+  const [failedFor, setFailedFor] = useState<string | null>(null);
 
   // The card component reads region_solutions rows; a cell_solutions row is the same shape keyed by cell_id.
   const raw = a.solution ? { region_id: (a.solution.region_id ?? a.solution.cell_id) as string, ...a.solution } : null;
@@ -38,14 +38,31 @@ export default function AreaView({ insight: a, onLocate, onReload }: {
   const regions = (a.regions ?? []) as { region_id: string; rank: number; action: string }[];
   const cells = (a.cells ?? []) as { cell_id: string; rank: number; severity: number }[];
 
-  async function generate() {
-    setAi("busy");
-    try { await generateAreaAi(a.cell_ids[0]); onReload(); setAi("idle"); } catch { setAi("failed"); }
-  }
+  // A cell still on the rule-based card gets its AI analysis as soon as it opens (cached after).
+  const pending = a.can_generate_ai ? a.cell_ids[0] : null;
+  useEffect(() => {
+    if (!pending) return;
+    const ctl = new AbortController();
+    generateAreaAi(pending, ctl.signal)
+      .then((r) => { if (!ctl.signal.aborted) { if (r.source === "ai") onReload(); else setFailedFor(pending); } })
+      .catch(() => { if (!ctl.signal.aborted) setFailedFor(pending); });
+    return () => ctl.abort();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pending]);
+  const writing = !!pending && failedFor !== pending;
 
   return (
     <div className="space-y-3 p-3 text-small">
-      {card ? (
+      {writing ? (
+        <div role="status" aria-live="polite" className="space-y-3 rounded-lg border border-line bg-card p-4">
+          <div className="flex items-center gap-2 text-fg">
+            <svg className="h-4 w-4 animate-spin motion-reduce:animate-none" viewBox="0 0 24 24" fill="none" aria-hidden><circle cx="12" cy="12" r="9" stroke="currentColor" strokeOpacity="0.25" strokeWidth="3" /><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" /></svg>
+            <span className="font-semibold">Writing the AI analysis for this block…</span>
+          </div>
+          <p className="text-fg-3">Reading its reports, nearby causes, the forecast and past cases (about 15 s, then saved).</p>
+          {[0, 1, 2].map((i) => <div key={i} aria-hidden className="h-4 animate-pulse rounded bg-card-hover motion-reduce:animate-none" style={{ width: `${90 - i * 20}%` }} />)}
+        </div>
+      ) : card ? (
         <RegionSolutionCard solution={card} sources={sources} onLocate={onLocate}
           onShowMap={async (_id, week) => {
             setForecastWeek(week); setLayers({ forecast: true });
@@ -66,16 +83,7 @@ export default function AreaView({ insight: a, onLocate, onReload }: {
         </>
       )}
 
-      {a.can_generate_ai && (
-        <div className="rounded-lg border border-dashed border-edge p-3">
-          <p className="text-fg-2">This card uses the rule-based fallback. An AI analysis reads the same evidence and past cases (about 10 s, then saved).</p>
-          <button type="button" onClick={generate} disabled={ai === "busy"}
-            className="mt-2 inline-flex min-h-10 items-center rounded-lg bg-fg px-3 text-[13px] font-semibold text-bg disabled:opacity-60">
-            {ai === "busy" ? "Analysing…" : "Generate AI analysis"}
-          </button>
-          {ai === "failed" && <p role="alert" className="mt-2 text-danger">AI analysis is not available right now; the rule-based card stays.</p>}
-        </div>
-      )}
+      {!!pending && failedFor === pending && <p role="alert" className="text-fg-3">AI analysis is not available right now; showing the rule-based card.</p>}
 
       {!card && forecast.length > 0 && (
         <Section title="Next 4 weeks">

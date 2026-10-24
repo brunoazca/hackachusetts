@@ -16,6 +16,7 @@ import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
 import PriorityLayer, { PRIORITY_LAYER_IDS } from "./PriorityLayer";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import InsightPanel from "@/components/insight/InsightPanel";
+import { cellAt } from "@/lib/insight";
 import FeatureList from "./FeatureList";
 import { addCategoryIcons } from "./icons";
 import { useTheme } from "@/lib/theme-store";
@@ -503,9 +504,8 @@ export default function MapView() {
     [iconsReady, appMode, enabled.sites, enabled.ctx_buildings, cellMetric, zoom, forecastOn, priorityOn],
   );
 
-  // A tap on empty map flies there and opens the closest real report.
-  const pending = useRef<[number, number] | null>(null);
-  const nearest = useCallback((at: [number, number], withId: boolean) => {
+  // A tap a few pixels off a drawn report still opens it; anywhere else opens the block under it.
+  const nearest = useCallback((at: [number, number], withId: boolean, maxPx = Infinity) => {
     const map = mapRef.current;
     if (!map) return null;
     const p = map.project(at);
@@ -516,35 +516,27 @@ export default function MapView() {
       const d = (q.x - p.x) ** 2 + (q.y - p.y) ** 2;
       if (d < bestD) { bestD = d; best = f; }
     }
-    return best;
+    return bestD <= maxPx * maxPx ? best : null;
   }, [clusterFC]);
-
-  // Once the street-level points arrive after a fly-in, pick the closest one.
-  useEffect(() => {
-    const at = pending.current;
-    if (!at || zoom < POINTS_ZOOM) return;
-    const f = nearest(at, true);
-    if (!f) return;
-    pending.current = null;
-    setFocus(f.geometry.coordinates as [number, number]);
-    select({ kind: "incident", id: String(f.properties.id) });
-  }, [clusterFC, zoom, nearest, select, setFocus]);
 
   const onClick = useCallback((e: MapLayerMouseEvent) => {
     const f = e.features?.[0];
     if (!f) {
       const at: [number, number] = [e.lngLat.lng, e.lngLat.lat];
-      const near = nearest(at, true);
       const map = mapRef.current;
-      if (near && (map?.getZoom() ?? 0) >= POINTS_ZOOM) {
+      // Only a report that is actually drawn, within 10 px of the tap, counts as clicked.
+      const near = map && map.getZoom() >= markerMinZoom ? nearest(at, true, 10) : null;
+      if (near) {
         setFocus(near.geometry.coordinates as [number, number]);
         select({ kind: "incident", id: String(near.properties.id) });
-        map?.easeTo({ center: near.geometry.coordinates as [number, number], duration: 500 });
         return;
       }
-      const target = (nearest(at, false)?.geometry.coordinates as [number, number] | undefined) ?? at;
-      pending.current = target;
-      map?.easeTo({ center: target, zoom: Math.max(POINTS_ZOOM + 1, map.getZoom()), duration: 700 });
+      // Empty ground: show the insight of the 250 m block under the tap (nothing outside Boston's grid).
+      void cellAt(at[1], at[0]).then((id) => {
+        if (!id) return;
+        setFocus(at);
+        select({ kind: "cell", id });
+      }).catch(() => {});
       return;
     }
     if (f.layer.id === "forecast-hit" || f.layer.id === "priority-hit" || f.layer.id === "ctx-cells") {
@@ -580,7 +572,7 @@ export default function MapView() {
     }
     setFocus(at);
     select({ kind: "incident", id: String(f.properties?.id) });
-  }, [select, nearest, setFocus]);
+  }, [select, nearest, setFocus, markerMinZoom]);
 
   const selectedId = selection && "id" in selection ? selection.id : "";
 

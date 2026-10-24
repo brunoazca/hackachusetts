@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:23 — On-demand AI live: Modal secret rat-audit-ai (AI_GATEWAY_...
+- Teammate: Bruno
+- Agent: —
+- Did: On-demand AI live: Modal secret rat-audit-ai (AI_GATEWAY_API_KEY), Modal redeployed with insight_ai endpoint, MODAL_INSIGHT_AI_URL in Vercel (prod+preview) and .env.local; block cards now write their AI analysis automatically on open with a loading state; empty-map clicks open the 250 m block under the tap (cell_at RPC) instead of the nearest hidden report
+- Why: Bruno supplied the gateway key and asked for automatic generation with loading, and reported that clicking empty map opened a report that was not drawn
+- Where: pipeline/modal_app.py, supabase/migrations/20261024500010_insight_ranking_paged.sql, web/src/components/insight/AreaView.tsx, web/src/components/map/MapView.tsx, web/src/lib/insight.ts
+- Idea: cell_at params named lat/lon silently matched grid_cells columns and returned the wrong block; qualify plpgsql/sql params
+
 ### 2026-10-24 19:22 — Map: removed the Buildings & people dock button and the h...
 - Teammate: Bruno
 - Agent: —

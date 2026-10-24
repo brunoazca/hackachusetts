@@ -71,6 +71,11 @@ export async function loadRanking(offset: number, limit = 20, signal?: AbortSign
   return { rows, total: rows[0]?.total ?? offset };
 }
 
+/** The Boston 250 m block under a map point, or null outside the grid. */
+export async function cellAt(lat: number, lon: number): Promise<string | null> {
+  return rpc<string>("cell_at", { lat, lon });
+}
+
 /** Map ids to emphasise for an insight: the area's reports, the related rodent reports of an
  *  evidence item, or the report itself plus the other reports at its address. */
 export function highlightIds(i: Insight | null): string[] {

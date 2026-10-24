@@ -14,3 +14,11 @@ language sql stable security definer set search_path = public as $$
   from n where position > off and position <= off + lim
 $$;
 grant execute on function insight_ranking(int, int) to anon, authenticated;
+
+-- Map click on empty ground -> the Boston 250 m block under it (null outside the grid).
+create or replace function cell_at(lat double precision, lon double precision) returns text
+language sql stable security definer set search_path = public as $$
+  select c.id from grid_cells c
+  where c.id = cell_of(st_setsrid(st_makepoint(cell_at.lon, cell_at.lat), 4326)::geography) and c.city = 'boston'
+$$;
+grant execute on function cell_at(double precision, double precision) to anon, authenticated;
