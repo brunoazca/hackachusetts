@@ -20,12 +20,12 @@ export default function ForecastControl({ embedded = false }: { embedded?: boole
   return (
     <div className={embedded ? "text-sm" : "glass absolute right-3 top-3 w-64 rounded-lg p-3 text-sm"}>
       <label className="flex cursor-pointer items-center justify-between gap-2">
-        <span className="font-semibold text-fg">Where reports are likely</span>
+        <span className="font-semibold text-fg"><span className="font-bold uppercase tracking-wide text-forecast">Next</span> · where reports are likely</span>
         <input type="checkbox" role="switch" aria-label="Show where reports are likely" checked={on} onChange={(e) => setLayers({ forecast: e.target.checked })} className="piper-switch" />
       </label>
       {on && run && (
         <div className="mt-2 space-y-2">
-          <div className="flex flex-wrap gap-1" role="group" aria-label="Forecast period">
+          <div className="flex flex-wrap gap-1" role="group" aria-label="Next: forecast period">
             {options.map(([v, label]) => (
               <button
                 key={v}

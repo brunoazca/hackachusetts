@@ -6,7 +6,7 @@ import type { BBox, MapContext } from "./types";
 // visible bounds; we never derive it from center + zoom (that would guess).
 
 type StoreLike = {
-  mode?: "assess" | "act";
+  mode?: "assess" | "act" | "inspect";
   selection: { kind: string; id?: string } | null;
   view: { lat: number; lon: number; zoom: number };
   filters: { since: string; until: string; categories: string[]; status: string };

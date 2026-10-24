@@ -8,7 +8,8 @@ import type { Polygon } from "geojson";
 export type LayerId =
   | "rodent" | "rats_other" | "food" | "shelter" | "displace"
   | "restaurants" | "bigbelly" | "events" | "sites" | "forecast"
-  | "heatmap" | "tracts_svi" | "tracts_asthma" | "listings" | "prices";
+  | "heatmap" | "tracts_svi" | "tracts_asthma" | "listings" | "prices"
+  | "priority";
 
 export type Selection =
   | { kind: "incident" | "place" | "event" | "site" | "cell" | "listing" | "tract"; id: string }
@@ -24,7 +25,8 @@ export type Filters = {
 
 export type View = { lat: number; lon: number; zoom: number };
 
-export type Mode = "assess" | "act";
+/** assess = Map; act = Places to visit; inspect = every block ranked by expected reports. */
+export type Mode = "assess" | "act" | "inspect";
 
 /** Sites currently listed in the Act queue, so the map can draw and fly to them. */
 export type SiteRow = {
@@ -64,6 +66,7 @@ type MapState = {
   panel: "inspector" | "insights" | "chat";
   forecastWeek: string | null;     // ISO week_start for the forecast layer
   three: boolean;                  // pitched camera + extruded buildings at street level
+  selectionAt: [number, number] | null; // [lon, lat] of the current selection once the map knows it
   flyTo: (v: Partial<View> & { lat: number; lon: number }) => void;
   setView: (v: View) => void;
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
@@ -73,6 +76,7 @@ type MapState = {
   setPanel: (p: MapState["panel"]) => void;
   setForecastWeek: (w: string | null) => void;
   setThree: (on: boolean) => void;
+  setSelectionAt: (at: [number, number] | null) => void;
 };
 
 const today = new Date();
@@ -80,7 +84,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 const daysAgo = (n: number) => iso(new Date(today.getTime() - n * 86400000));
 
 export const useMap = create<MapState>((set) => ({
-  mode: "act",
+  mode: "assess",
   sites: [],
   featuresInView: [],
   setMode: (mode) => set({ mode }),
@@ -92,13 +96,15 @@ export const useMap = create<MapState>((set) => ({
     rodent: true, rats_other: false, food: false, shelter: false, displace: false,
     restaurants: false, bigbelly: false, events: false, sites: true, forecast: false,
     heatmap: false, tracts_svi: false, tracts_asthma: false, listings: false, prices: false,
+    priority: false,
   },
   filters: { since: daysAgo(90), until: iso(today), categories: [], status: "all" },
   highlight: [],
   selection: null,
   panel: "inspector",
   forecastWeek: null,
-  three: false,
+  three: true,                     // the map opens tilted; "3D" by the zoom controls flattens it
+  selectionAt: null,
   flyTo: (v) => set((s) => ({ flyToTarget: { zoom: s.view.zoom, ...v, nonce: Date.now() } })),
   setView: (view) => set({ view }),
   setLayers: (patch) => set((s) => ({ layers: { ...s.layers, ...patch } })),
@@ -108,4 +114,5 @@ export const useMap = create<MapState>((set) => ({
   setPanel: (panel) => set({ panel }),
   setForecastWeek: (forecastWeek) => set({ forecastWeek }),
   setThree: (three) => set({ three }),
+  setSelectionAt: (selectionAt) => set({ selectionAt }),
 }));

@@ -10,6 +10,7 @@ import CellCard from "./CellCard";
 import { formatDate as fmt } from "@/lib/dates";
 import SourceList from "@/components/evidence/SourceList";
 import { Skeleton } from "@/components/ui/bits";
+import { NextHere } from "./HereSections";
 
 // Draft inspector: details of a selected report + other reports at the same address.
 // Owner: map/inspector track — replace with the full site card later.
@@ -17,6 +18,7 @@ import { Skeleton } from "@/components/ui/bits";
 const CATS = categories.incident_categories as Record<string, { label: string; color: string }>;
 export default function InspectorPanel() {
   const selection = useMap((s) => s.selection);
+  const at = useMap((s) => s.selectionAt);
   const id = selection?.kind === "incident" ? selection.id : null;
   const [result, setResult] = useState<{ id: string; detail?: IncidentDetail | null; error?: string; at?: number } | null>(null);
 
@@ -95,8 +97,8 @@ export default function InspectorPanel() {
 
       {detail.same_address.length > 0 && (
         <section>
-          <h3 className="mb-1.5 text-[12px] font-semibold text-fg-2">
-            Other reports here · {detail.same_address.length}
+          <h3 className="mb-1.5 flex items-baseline gap-1.5 text-[12px] font-semibold text-fg-2">
+            <span className="font-bold uppercase tracking-wide">So far</span><span>· other reports at this address · {detail.same_address.length}</span>
           </h3>
           <ol className="relative space-y-2 border-l border-line pl-4">
             {detail.same_address.map((o) => (
@@ -112,6 +114,8 @@ export default function InspectorPanel() {
           </ol>
         </section>
       )}
+
+      {at && <NextHere lon={at[0]} lat={at[1]} />}
 
       <footer className="border-t border-line pt-2 text-xs text-fg-3">
         <SourceList sources={[detail.source, ...(detail.same_address_sources ?? [])].filter((x, k, all) => all.findIndex((y) => y.id === x.id) === k)} />

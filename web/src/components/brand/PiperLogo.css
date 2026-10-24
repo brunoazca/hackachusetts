@@ -11,7 +11,7 @@
 
 .piper-logo-mark .piper-tail {
   /* Shorten horizontally around the haunch; leave the vertical sweep intact. */
-  transform: translateX(3.36px) scaleX(0.88);
+  transform: translateX(2.8px) scaleX(0.9);
   stroke-width: 1.4;
 }
 
@@ -21,13 +21,13 @@
 
 /* Move the holes with the shortened pipe while keeping them circular. */
 .piper-logo-mark circle:nth-of-type(1) {
-  transform: translateX(-5.28px);
+  transform: translateX(-4.4px);
 }
 
 .piper-logo-mark circle:nth-of-type(2) {
-  transform: translateX(-6.36px);
+  transform: translateX(-5.3px);
 }
 
 .piper-logo-mark circle:nth-of-type(3) {
-  transform: translateX(-7.44px);
+  transform: translateX(-6.2px);
 }

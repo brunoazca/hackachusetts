@@ -32,8 +32,8 @@ export default function PiperLogo({
         aria-hidden="true"
         className={`${wordmark.className} absolute whitespace-nowrap leading-none tracking-[-0.035em]`}
         style={{
-          // The shortened pipe ends at x=88.72 in the mark's viewBox.
-          right: `${((100 - 88.72) / 86) * 100}%`,
+          // Match the pipe's endpoint, leaving a little air beside the rat.
+          right: `${((100 - 90.1) / 86) * 100}%`,
           bottom: "30%",
           fontSize: width * 0.2,
         }}

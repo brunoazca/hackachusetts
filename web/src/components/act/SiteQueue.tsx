@@ -3,9 +3,12 @@ import { useEffect, useMemo, useState } from "react";
 import { useMap, type SiteRow } from "@/lib/map-store";
 import { fetchSiteQueue } from "@/lib/queries";
 import { CollapseButton, CollapsedTab } from "@/components/shell/Collapse";
+import { InfoHint } from "@/components/ui/bits";
 
-// Act mode: review suggestions first, then by reports after closure (R4.0). Draft: repeat-report addresses
-// from the `site_queue` RPC until the analytics `sites` table (50 m clusters) lands.
+// Act mode: recheck-now places first, then by comebacks (reports after a closure) (R4.0). Draft: repeat-report
+// addresses from the `site_queue` RPC until the analytics `sites` table (50 m clusters) lands.
+
+const closedText = (d: number | null) => d === null ? "never closed" : d === 0 ? "closed today" : d === 1 ? "closed yesterday" : `closed ${d} days ago`;
 
 export default function SiteQueue() {
   const setSites = useMap((s) => s.setSites);
@@ -37,40 +40,50 @@ export default function SiteQueue() {
     flyTo({ lat: r.lat, lon: r.lon, zoom: 16.5 });
   };
 
-  if (!panelOpen) return <CollapsedTab side="left" label="Places to visit" meta={`${due} flagged`} onOpen={() => setPanelOpen(true)} />;
+  if (!panelOpen) return <CollapsedTab side="left" label="Recheck list" meta={`${due} to recheck`} onOpen={() => setPanelOpen(true)} />;
   return (
     <div className="map-secondary-panel glass absolute bottom-3 left-3 top-(--shell-top) z-20 flex w-96 max-w-[calc(100%-88px)] flex-col overflow-hidden rounded-lg text-sm">
-      <div className="border-b border-neutral-200 p-3">
-        <div className="flex items-baseline justify-between">
-          <h2 className="flex items-center gap-1 text-base font-semibold"><CollapseButton onClick={() => setPanelOpen(false)} label="Hide places to visit" dir="left" />Places to visit</h2>
-          <span className="text-xs text-fg-3">{shown.length} shown</span>
+      <div className="border-b border-line p-3">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="flex items-center gap-1 text-base font-semibold text-fg"><CollapseButton onClick={() => setPanelOpen(false)} label="Hide recheck list" dir="left" />Recheck list</h2>
+          <InfoHint label="How this list works">
+            <p><b className="text-fg">Recheck now</b>: the city closed a case here in the last 60 days, and reports have come back after an earlier closure.</p>
+            <p className="mt-1.5"><b className="text-fg">Comeback</b>: a day with a new report 2 to 60 days after a closure.</p>
+            <p className="mt-1.5">Recheck-now places come first, then the most comebacks. We count days, not records: several reports on one day count once.</p>
+          </InfoHint>
         </div>
-        <p className="mt-0.5 text-xs text-neutral-700">
-          Select a place to review its reports and recorded responses.
-        </p>
-        <p className="mt-1 text-xs text-fg-3">
-          Review suggested: closed in the last 60 days, with an earlier report after closure. Flagged places first, then most return days. Counts are distinct dates; multiple records on one date count once.
-        </p>
-        <label className="mt-2 flex items-center gap-2 text-xs text-neutral-800">
-          Neighborhood
+        <p className="mt-0.5 text-xs text-fg-2">Addresses where rodent reports came back after the city closed the case.</p>
+
+        <div className="mt-2.5 flex items-center gap-2">
+          <span className="flex items-center gap-1.5 rounded-full bg-red-100 px-2 py-0.5 text-xs font-semibold text-return">
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-return" />{due} to recheck
+          </span>
+          <span className="text-xs text-fg-3">{shown.length} shown</span>
           <select
             aria-label="Neighborhood"
             value={hood}
             onChange={(e) => setHood(e.target.value)}
-            className="min-w-0 flex-1 rounded border border-neutral-300 bg-white px-1.5 py-1 text-xs"
+            className="ml-auto min-w-0 max-w-[45%] rounded-full border border-line bg-card px-2.5 py-1 text-xs text-fg hover:border-edge"
           >
-            <option value="">All</option>
+            <option value="">All neighborhoods</option>
             {hoods.map((h) => <option key={h} value={h}>{h}</option>)}
           </select>
-        </label>
+        </div>
       </div>
 
-      {error && <p role="alert" className="p-3 text-red-800">Could not load the queue: {error}</p>}
-      {!rows && !error && <p className="p-3 text-neutral-700">Loading sites…</p>}
+      {error && <p role="alert" className="p-3 text-return">Could not load the list: {error}</p>}
+      {!rows && !error && (
+        <div role="status" aria-busy="true" className="space-y-2 p-3">
+          <span className="sr-only">Loading places…</span>
+          {[0, 1, 2, 3].map((i) => <div key={i} aria-hidden className="h-16 animate-pulse rounded-lg bg-card-hover" />)}
+        </div>
+      )}
+      {rows && !shown.length && <p className="p-3 text-fg-3">No places in this neighborhood.</p>}
 
-      <ol className="min-h-0 flex-1 overflow-y-auto" aria-label="Places, review suggestions first">
+      <ol className="min-h-0 flex-1 space-y-1 overflow-y-auto p-2" aria-label="Places, recheck-now first">
         {shown.map((r, i) => {
           const active = selection?.kind === "site" && selection.id === r.id;
+          const backShare = r.reports ? Math.min(1, r.returns / r.reports) : 0;
           return (
             <li key={r.id}>
               <button
@@ -79,20 +92,23 @@ export default function SiteQueue() {
                 aria-controls="details-panel"
                 onClick={() => open(r)}
                 aria-current={active ? "true" : undefined}
-                className={`grid w-full grid-cols-[1.5rem_minmax(0,1fr)] items-start gap-2 border-b border-neutral-100 px-3 py-2 text-left hover:bg-neutral-50 ${active ? "bg-amber-50" : ""}`}
+                className={`grid w-full grid-cols-[1.75rem_minmax(0,1fr)] items-start gap-2 rounded-lg border px-2 py-2 text-left transition-colors ${active ? "border-edge bg-card-hover" : "border-transparent hover:bg-card-hover"}`}
               >
-                <span className="pt-0.5 text-xs font-semibold text-neutral-600">{i + 1}</span>
+                <span className={`mt-0.5 grid h-6 w-6 place-items-center rounded-md font-mono text-[11px] font-bold ${r.due ? "bg-return text-accent-fg" : "bg-card-hover text-fg-2"}`}>{i + 1}</span>
                 <span className="min-w-0">
-                  <span className="block truncate font-medium text-neutral-900">{r.address_block ?? "Unnamed block"}</span>
-                  <span className="block truncate text-xs text-neutral-700">
-                    {r.neighborhood ?? r.city} · last closed {r.days_since_close ?? "—"} d ago
+                  <span className="flex items-center gap-2">
+                    <span className="truncate font-semibold text-fg">{r.address_block ?? "Unnamed block"}</span>
+                    {r.due && <span className="ml-auto flex-none rounded-sm bg-return px-1.5 py-px text-[10px] font-semibold text-accent-fg">Recheck now</span>}
                   </span>
-                  <span className="mt-0.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-neutral-800">
-                    <span><b>{r.reports}</b> report days</span>
-                    <span title="Report dates more than 1 day and no more than 60 days after an earlier closure"><b>{r.returns}</b> return days</span>
-                    <span><b>{r.closures}</b> closure days</span>
+                  <span className="block truncate text-xs text-fg-3">{r.neighborhood ?? r.city} · {closedText(r.days_since_close)}</span>
+                  <span className="mt-1 flex items-center gap-3 text-xs text-fg-2">
+                    <span title="Days with a new report 2 to 60 days after a closure"><b className={r.returns ? "text-return" : "text-fg"}>{r.returns}</b> comebacks</span>
+                    <span><b className="text-fg">{r.reports}</b> days reported</span>
+                    <span><b className="text-fg">{r.closures}</b> closed</span>
                   </span>
-                  {r.due && <span className="mt-1 inline-block rounded bg-return/15 px-1.5 py-0.5 text-xs font-semibold text-return">Review suggested</span>}
+                  <span aria-hidden className="mt-1.5 block h-1 overflow-hidden rounded-full bg-card-hover">
+                    <span className="block h-full rounded-full bg-return" style={{ width: `${backShare * 100}%` }} />
+                  </span>
                 </span>
               </button>
             </li>

@@ -7,6 +7,7 @@ import { markerDataUrl } from "@/components/map/icons";
 import { formatDate } from "@/lib/dates";
 import { reportDays, sourcesFor } from "@/lib/evidence";
 import SourceList from "@/components/evidence/SourceList";
+import { NextHere } from "./HereSections";
 
 // Site case (R3.2), compact: the answer first (returns vs closures), one strip of numbers,
 // a report timeline, nearby records, and the last few recorded responses. Long closure notes are
@@ -158,6 +159,9 @@ export default function SiteCase({ id }: { id: string }) {
           <SourceList sources={d.evidence ? sourcesFor(d.evidence.vacant.source_ids, d.evidence.sources) : []} unavailable={d.evidence_unavailable} />
         </div>}
       </section>
+
+      {/* 4b. What the model expects for the block around this place */}
+      <div className="pt-3"><NextHere lon={s.lon} lat={s.lat} /></div>
 
       {/* 5. What the city did, newest first */}
       <section className="pt-4">

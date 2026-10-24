@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:30 — Refreshed remaining backlog against origin/main and live ...
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Refreshed remaining backlog against origin/main and live app-visible data at 17:29 EDT. Production Ask configured; site_evidence still PGRST202; sites, base_rates, action_outcomes and correlations expose zero rows; record_solutions exposes 10,526. Quality commit d7be311 is on the remote feature branch only.
+- Why: Avoid repeating completed work or claiming a migration was never applied when only API availability is known.
+- Where: none
+- Idea: Prioritize citation API recovery and integration of the pushed quality branch, then map-tool wiring, populated analytics, saved follow-ups and grounded region cards. Validate intervention benefit separately from observational predictions.
+
 ### 2026-10-24 17:25 — Prepared the requested commit and push of the item 4 qual...
 - Teammate: Guilherme
 - Agent: Codex (not Kiro build activity)

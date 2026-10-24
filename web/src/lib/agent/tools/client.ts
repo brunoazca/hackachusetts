@@ -10,6 +10,7 @@ export const LAYER_IDS = [
   "rodent", "rats_other", "food", "shelter", "displace",
   "restaurants", "bigbelly", "events", "sites", "forecast",
   "heatmap", "tracts_svi", "tracts_asthma", "listings", "prices",
+  "priority",
 ] as const satisfies readonly LayerId[];
 // Compile-time check that LAYER_IDS lists every LayerId in map-store.ts.
 type _AllLayers = Exclude<LayerId, (typeof LAYER_IDS)[number]> extends never ? true : never;
@@ -21,9 +22,9 @@ const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 
 export const clientTools = {
   app_set_mode: tool({
-    description: "Switch the app between Assess and Act. Keeps the selected site. All layers are already available; there is no separate depth mode.",
+    description: "Switch the app between Assess (the map), Act (places to visit) and Inspect (every block ranked by expected reports; tap one for detail). Keeps the selected site. All layers are already available; there is no separate depth mode.",
     inputSchema: z.object({
-      mode: z.enum(["assess", "act"]),
+      mode: z.enum(["assess", "act", "inspect"]),
     }).strict(),
   }),
   map_fly_to: tool({

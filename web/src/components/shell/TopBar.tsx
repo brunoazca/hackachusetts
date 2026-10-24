@@ -1,7 +1,6 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { fetchLiveStatus } from "@/lib/queries";
-import { useMap, type Mode } from "@/lib/map-store";
 import { restoreTheme, useTheme } from "@/lib/theme-store";
 import { restoreMotion, useA11y } from "@/lib/a11y-store";
 import PiperLogo from "@/components/brand/PiperLogo";
@@ -54,9 +53,6 @@ export function Segmented<T extends string>({ label, value, options, onChange }:
 }
 
 export default function TopBar() {
-  const mode = useMap((s) => s.mode);
-  const setMode = useMap((s) => s.setMode);
-  const setPanel = useMap((s) => s.setPanel);
   const theme = useTheme((s) => s.theme);
   const toggleTheme = useTheme((s) => s.toggle);
   const motion = useA11y((s) => s.motion);
@@ -107,21 +103,10 @@ export default function TopBar() {
         <span className="hidden text-[13px] text-fg-3 lg:inline">Rat reports in Boston, Cambridge &amp; Somerville</span>
       </div>
 
-      <div className="glass pointer-events-auto col-span-2 row-start-2 mx-auto flex h-11 shrink-0 items-center rounded-lg px-1">
-        <Segmented<Mode>
-          label="View"
-          value={mode}
-          options={[
-            { id: "act", label: "Places to visit", hint: "Review places with repeat rodent reports" },
-            { id: "assess", label: "Map", hint: "Explore recorded reports on the map" },
-          ]}
-          onChange={(m) => { setMode(m); setPanel("inspector"); }}
-        />
-      </div>
 
       <div className="glass pointer-events-auto col-start-2 row-start-1 flex h-11 shrink-0 items-center justify-self-end gap-1 rounded-lg px-1 xl:pl-3">
-        <span className="sr-only whitespace-nowrap text-[13px] text-fg-2 xl:not-sr-only" aria-live="polite" title="Latest successful import from any source. Sources update independently; each evidence section shows its own freshness.">
-          {busy ? "Checking for new reports…" : msg ?? (updatedAt ? <>Latest import {ago(updatedAt)}</> : "Import time unknown")}
+        <span className="sr-only whitespace-nowrap text-[13px] text-fg-2 xl:not-sr-only" aria-live="polite" title="When we last got new data. Each source updates on its own schedule.">
+          {busy ? "Checking for new reports…" : msg ?? (updatedAt ? <>Updated {ago(updatedAt)}</> : "Update time unknown")}
         </span>
         <button
           type="button"
@@ -141,8 +126,9 @@ export default function TopBar() {
           onClick={toggleTheme}
           aria-label={theme === "night" ? "Use light colors" : "Use dark colors"}
           title={theme === "night" ? "Light colors (T)" : "Dark colors (T)"}
-          className="grid h-9 w-9 place-items-center rounded-md text-fg-2 transition-colors duration-150 hover:bg-card-hover hover:text-fg"
+          className="flex h-9 items-center gap-1.5 rounded-md px-2 text-fg-2 transition-colors duration-150 hover:bg-card-hover hover:text-fg"
         >
+          <span className="hidden text-[12px] font-semibold lg:inline">{theme === "night" ? "Light" : "Dark"}</span>
           {theme === "night" ? (
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
           ) : (

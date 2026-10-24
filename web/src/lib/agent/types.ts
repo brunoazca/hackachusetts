@@ -41,7 +41,7 @@ export type ToolFailure = {
 
 /** Map context sent with each chat message (R8.5). */
 export type MapContext = {
-  mode?: "assess" | "act";
+  mode?: "assess" | "act" | "inspect";
   selection: { kind: string; id: string } | { kind: "area" } | null;
   view: { lat: number; lon: number; zoom: number } | null;
   /** Visible map bounds. null until the map store exposes them (see report: `bounds` contract change). */
