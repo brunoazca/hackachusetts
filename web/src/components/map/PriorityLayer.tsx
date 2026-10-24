@@ -4,6 +4,8 @@ import { Layer, Source } from "react-map-gl/maplibre";
 import type { ExpressionSpecification } from "maplibre-gl";
 import { fetchRankedCells, weekKey, type RankedFC } from "@/lib/priority";
 import type { DataColors } from "@/lib/design-tokens";
+import { useMap } from "@/lib/map-store";
+import { ALERT_ICON } from "./icons";
 
 // Priority grid for the Inspect flow: every block (250 m model cell) drawn at once, ranked citywide,
 // strongest first. Tap a block to open its card (select kind "cell"). Owner: map track.
@@ -15,9 +17,10 @@ import type { DataColors } from "@/lib/design-tokens";
 const EMPTY: RankedFC = { type: "FeatureCollection", features: [] };
 export const PRIORITY_LAYER_IDS = ["priority-hit"];
 export const TOP_N = 20;
+const ALERT_RED = "#8B0000";
 
 /**
- * `visible`: draw the top-20 outlines and ranks (mirrors the block list). `full`: also tint every block
+ * `visible`: mark the top-20 blocks dark red with an alert badge, minus the ones marked resolved. `full`: also tint every block
  * by rank — the "Priority blocks" switch in the rail; off by default so the heatmap stays the hero.
  */
 export default function PriorityLayer({ visible, full, three, selectedId, week, T }: { visible: boolean; full: boolean; three: boolean; selectedId: string; week: string | null; T: DataColors }) {
@@ -25,6 +28,8 @@ export default function PriorityLayer({ visible, full, three, selectedId, week, 
   const IS_SEL = ["==", ["get", "id"], selectedId] as unknown as ExpressionSpecification;
   const dim = (full: unknown, factor: number) =>
     (selectedId ? ["case", IS_SEL, 1, ["*", full, factor]] : full) as unknown as ExpressionSpecification;
+  const resolved = useMap((s) => s.resolvedCells);
+  const ALERT = ["all", ["<=", ["get", "rank"], TOP_N], ["!", ["in", ["get", "id"], ["literal", resolved]]]] as unknown as ExpressionSpecification;
   const [loaded, setLoaded] = useState<{ week: string | null; fc: RankedFC } | null>(null);
   const wk = weekKey(week);
   const ranked = loaded?.week === wk ? loaded.fc : EMPTY;
@@ -60,27 +65,33 @@ export default function PriorityLayer({ visible, full, three, selectedId, week, 
         minzoom={13}
         paint={{ "line-color": T.bg, "line-width": 0.6, "line-opacity": 0.5 }}
       />
-      {/* The top blocks get an outline and a rank. */}
+      {/* Open top blocks: dark red fill and outline, with an alert badge. Resolved ones drop out. */}
+      <Layer
+        id="priority-top-fill"
+        type="fill"
+        layout={{ visibility: vis }}
+        filter={ALERT}
+        paint={{ "fill-color": ALERT_RED, "fill-opacity": dim(0.55, 0.4) }}
+      />
       <Layer
         id="priority-top-line"
         type="line"
         layout={{ visibility: vis }}
-        filter={["<=", ["get", "rank"], TOP_N]}
-        paint={{ "line-color": T.fg, "line-width": ["interpolate", ["linear"], ["zoom"], 11, 0.8, 14, 1.5], "line-opacity": dim(0.9, 0.35) }}
+        filter={ALERT}
+        paint={{ "line-color": ALERT_RED, "line-width": ["interpolate", ["linear"], ["zoom"], 11, 1, 14, 2], "line-opacity": dim(1, 0.4) }}
       />
       <Layer
-        id="priority-rank"
+        id="priority-alert"
         type="symbol"
         layout={{
           visibility: vis,
-          "text-field": ["to-string", ["get", "rank"]],
-          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10, 14, 13],
-          "text-font": ["Noto Sans Bold"],
-          "text-allow-overlap": false,
+          "icon-image": ALERT_ICON,
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.6, 14, 0.9],
+          "icon-allow-overlap": true,
           "symbol-sort-key": ["get", "rank"],
         }}
-        filter={["<=", ["get", "rank"], TOP_N]}
-        paint={{ "text-color": T.fg, "text-halo-color": T.bg, "text-halo-width": 1.4, "text-opacity": dim(1, 0.35) }}
+        filter={ALERT}
+        paint={{ "icon-opacity": dim(1, 0.4) }}
       />
       <Layer id="priority-hit" type="fill" layout={{ visibility: vis }} paint={{ "fill-color": "#000000", "fill-opacity": 0 }} />
       {/* In 3D, lines hide behind the buildings; a thin raised slab shows the block between them. */}

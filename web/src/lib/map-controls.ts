@@ -20,7 +20,7 @@ export function activeCategories(layers: Record<string, boolean>): CategoryId[] 
 export function isNearbyCategory(id: string) {
   return CATEGORY_IDS.includes(id as CategoryId) && categories.incident_categories[id as CategoryId].group !== "rats";
 }
-export const initialLayers = () => Object.fromEntries(LAYER_IDS.map(id => [id, CATEGORY_IDS.includes(id as CategoryId) || id === "sites"])) as Record<LayerId, boolean>;
+export const initialLayers = () => Object.fromEntries(LAYER_IDS.map(id => [id, CATEGORY_IDS.includes(id as CategoryId) || id === "sites" || id === "priority"])) as Record<LayerId, boolean>;
 
 /** Bins contain n/n_open, not individual statuses. Preserve their exact weights. */
 export function filterIncidentStatus<T extends { properties: { status?: string; n?: number; n_open?: number } }>(

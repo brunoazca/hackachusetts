@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:30 — Priority map: top-20 blocks drawn dark red with an alert ...
+- Teammate: Bruno
+- Agent: —
+- Did: Priority map: top-20 blocks drawn dark red with an alert badge instead of rank numbers; 'Mark resolved' / 'Reopen' on a block's card clears its alert (saved per browser); map opens with Both, nearby records, priority blocks and 3D on
+- Why: Ranks on the map were noise; teams need to see what's still open and clear it when handled
+- Where: web/src/components/map/PriorityLayer.tsx, icons.ts, lib/map-store.ts, lib/map-controls.ts, components/insight/InsightPanel.tsx
+- Idea: Move resolved blocks to a shared Supabase table so the whole team sees them
+
 ### 2026-10-24 19:29 — Insight cards: rat/category marker icons on nearby rodent...
 - Teammate: Bruno
 - Agent: —

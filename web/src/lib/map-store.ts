@@ -85,7 +85,15 @@ type MapState = {
   setForecastWeek: (w: string | null) => void;
   setThree: (on: boolean) => void;
   setSelectionAt: (at: [number, number] | null) => void;
+  resolvedCells: string[];         // top blocks someone marked as handled; they drop their alert on the map
+  toggleResolved: (id: string) => void;
 };
+
+// Resolved blocks live in this browser only (no shared table yet).
+const RESOLVED_KEY = "ratmap.resolvedCells";
+function loadResolved(): string[] {
+  try { return typeof window === "undefined" ? [] : JSON.parse(localStorage.getItem(RESOLVED_KEY) ?? "[]"); } catch { return []; }
+}
 
 const today = new Date();
 const iso = (d: Date) => d.toISOString().slice(0, 10);
@@ -104,8 +112,8 @@ export const useMap = create<MapState>((set) => ({
   flyToTarget: null,
   layers: initialLayers(),
   bounds: null,
-  viewMode: "heat",
-  causes: false,
+  viewMode: "both",
+  causes: true,
   cellMetric: null,
   setCellMetric: (cellMetric) => set({ cellMetric }),
   setBounds: (bounds) => set({ bounds }),
@@ -148,6 +156,12 @@ export const useMap = create<MapState>((set) => ({
   setForecastWeek: (forecastWeek) => set({ forecastWeek }),
   setThree: (three) => set({ three }),
   setSelectionAt: (selectionAt) => set({ selectionAt }),
+  resolvedCells: loadResolved(),
+  toggleResolved: (id) => set((s) => {
+    const resolvedCells = s.resolvedCells.includes(id) ? s.resolvedCells.filter((c) => c !== id) : [...s.resolvedCells, id];
+    try { localStorage.setItem(RESOLVED_KEY, JSON.stringify(resolvedCells)); } catch {}
+    return { resolvedCells };
+  }),
 }));
 
 function sameSelection(a: NonNullable<Selection>, b: NonNullable<Selection>): boolean {

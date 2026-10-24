@@ -66,15 +66,33 @@ export function markerSvg(category: string, size = 32, closed = false): string {
 export const markerDataUrl = (category: string, closed = false) =>
   `data:image/svg+xml;charset=utf-8,${encodeURIComponent(markerSvg(category, 32, closed))}`;
 
+export const ALERT_ICON = "priority-alert";
+
+/** Alert badge for the open top blocks: dark red disc, white warning triangle. */
+function alertSvg(size: number): string {
+  const glyph = TriangleAlert
+    .replace(/stroke="currentColor"/g, 'stroke="#ffffff"')
+    .replace(/stroke-width="2"/g, 'stroke-width="2.5"')
+    .replace(/width="24"/, 'width="16"')
+    .replace(/height="24"/, 'height="16"')
+    .replace("<svg", '<svg x="8" y="7"');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 32 32">
+    <circle cx="16" cy="16" r="12" fill="#8B0000" stroke="#ffffff" stroke-width="1.5"/>
+    ${glyph}
+  </svg>`;
+}
+
 /** Register both marker variants (open, closed) for every category at 2x for crisp rendering. */
 export async function addCategoryIcons(map: MlMap): Promise<void> {
   const scale = 2, px = 32 * scale;
-  const jobs = Object.keys(CATS).flatMap((cat) => [false, true].map((closed) => ({ cat, closed })));
+  const jobs = [
+    ...Object.keys(CATS).flatMap((cat) => [false, true].map((closed) => ({ id: iconId(cat, closed), svg: markerSvg(cat, px, closed) }))),
+    { id: ALERT_ICON, svg: alertSvg(px) },
+  ];
   await Promise.all(
     jobs.map(
-      ({ cat, closed }) =>
+      ({ id, svg }) =>
         new Promise<void>((resolve) => {
-          const id = iconId(cat, closed);
           if (map.hasImage(id)) return resolve();
           const img = new Image(px, px);
           img.onload = () => {
@@ -86,7 +104,7 @@ export async function addCategoryIcons(map: MlMap): Promise<void> {
             resolve();
           };
           img.onerror = () => resolve();
-          img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(markerSvg(cat, px, closed))}`;
+          img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
         }),
     ),
   );
