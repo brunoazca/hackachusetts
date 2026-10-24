@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:10 — Removed week selectors from the Next forecast panel; it o...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed week selectors from the Next forecast panel; it only shows the next 4 weeks
+- Why: Simpler panel, one clear forecast period
+- Where: web/src/components/map/ForecastControl.tsx
+- Idea: —
+
 ### 2026-10-24 19:08 — Motion graphic v3: section intro, dataset icons, timeline...
 - Teammate: Bruno
 - Agent: —
