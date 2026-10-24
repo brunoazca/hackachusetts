@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:11 — Vercel rat-ops: verified env points to rat-audit Supabase...
+- Teammate: Bruno
+- Agent: —
+- Did: Vercel rat-ops: verified env points to rat-audit Supabase; reset RAT_AUDIT_WORKER_TOKEN + MODAL_REFRESH_URL; manual prod deploy; Refresh works in production
+- Why: Bruno asked to wire keys for the deployed site
+- Where: Vercel env (no repo files)
+- Idea: GitHub deploy workflow fails: VERCEL_TOKEN repo secret is empty
+
 ### 2026-10-24 14:10 — Merged Spec v2 ideas into the v1 spec without cutting scope
 - Teammate: Bruno
 - Agent: —
