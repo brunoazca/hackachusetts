@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:56 — Fixed the right panel never opening (morph hook now keeps...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Fixed the right panel never opening (morph hook now keeps panels mounted and only toggles visibility + runs the animation; verified by driving the app with headless Chrome); heatmap edges no longer go gray; brought feat/piper-ui up to date with origin/main twice (forecast layer, CellCard, 3-city parcels, archive ingest) and moved the team's forecast control into the layer dock
+- Why: Guilherme: right panel disappearing; branch must track current origin
+- Where: web/src/lib/use-morph.ts, web/src/components/shell/RightPanel.tsx, web/src/components/map/{LayerPanel,Timeline,MapView,ForecastControl}.tsx, web/src/components/inspector/InspectorPanel.tsx
+- Idea: Use puppeteer-core with the local Chrome to click-test UI before reporting
+
 ### 2026-10-24 15:46 — Time window is now a compact 320px card that grows out of...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
@@ -78,6 +86,30 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Guilherme found v1 ugly, inefficient, too AI-ish and short on color; wanted it on top of the current app
 - Where: web/src/**, docs/design/research/less-ai-ish.md, docs/design/README.md, docs/design/tokens/tokens.json
 - Idea: Map team palette (neutral/red/amber/emerald) to tokens instead of rewriting every component
+### 2026-10-24 15:53 — Handoff to model section: ACS ablation, three-city model ...
+- Teammate: Bruno
+- Agent: —
+- Did: Handoff to model section: ACS ablation, three-city model on shared features (NaN not 0 for Boston-only signals), per-city capture metrics
+- Why: Bruno asked how much demographics affect the model and whether missing data hurts Cambridge/Somerville
+- Where: docs/rat-audit/prompts/model-update-1545.md
+- Idea: Current run uses no ACS features and a Boston-only grid; GBM top-10% capture 0.64 vs baseline 0.54
+
+### 2026-10-24 15:53 — Pull na main com merge dos branches divergentes
+- Teammate: Carol
+- Agent: kirocrew
+- Did: Pull na main com merge dos branches divergentes
+- Why: trazer trabalho novo do remoto
+- Where: .kiro/KIRO_LOG.md, pipeline/rat_audit/*
+- Idea: none
+
+### 2026-10-24 15:52 — report_volume now covers Cambridge (13–18k requests/yr, b...
+- Teammate: Bruno
+- Agent: —
+- Did: report_volume now covers Cambridge (13–18k requests/yr, by point) and Somerville (~80k/yr, block centroids) — the who-reports control for all three cities; daily refresh
+- Why: Model can only be fair outside Boston with a reporting-volume control
+- Where: pipeline/rat_audit/ingest/volume_regional.py, pipeline/rat_audit/{jobs,ingest/update_modes}.py
+- Idea: Somerville date_created is text: SoQL date functions fail, count locally
+
 ### 2026-10-24 15:46 — Permanent host redirect rat-ops.vercel.app -> piper-app.v...
 - Teammate: Bruno
 - Agent: —
@@ -85,6 +117,30 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Old links land on the renamed Piper URL
 - Where: web/next.config.ts
 - Idea: —
+
+### 2026-10-24 15:45 — Ran a read-only Kiro monitor loop (~2h, 21 cycles) over w...
+- Teammate: Carol
+- Agent: —
+- Did: Ran a read-only Kiro monitor loop (~2h, 21 cycles) over worktrees analytics-core (A, 2.1-2.5/2.7), agent (B, 4.1-4.4/4.6), insights (C, 2.8); alerted only on real signals, wrote nothing during the run
+- Why: Watch ownership, contract compatibility, dependencies and conflicts across the three parallel fronts without touching their work
+- Where: none (read-only)
+- Idea: Merge order A to B to C after the insights_summary() RPC exists; none merged yet at close
+
+### 2026-10-24 15:45 — Decided front C needs a sequential order, not a parallel ...
+- Teammate: Carol
+- Agent: —
+- Did: Decided front C needs a sequential order, not a parallel split: commit then rebase on main (conflict only in InsightsPanel.tsx) then run 5 tests then merge after A; insights_summary() RPC is analytics-track, not C's to create
+- Why: Splitting C into two agents would only cause same-folder conflicts; the real cost was a stale base, which C then fixed by rebasing
+- Where: none
+- Idea: The integration blocker is the missing insights_summary() RPC, not C's speed
+
+### 2026-10-24 15:45 — Monitor flagged main moved under the three fronts: Spec v...
+- Teammate: Carol
+- Agent: —
+- Did: Monitor flagged main moved under the three fronts: Spec v2 merged (task scope widened 2.2/2.3/4.2/4.3), whole model/ built on main (analytics-track), deploy-on-push to main live, A-C contract shapes compatible
+- Why: These are integration risks that surface when A/B/C merge into the current main
+- Where: none (read-only)
+- Idea: A migration named _analytics_core does not match the CONTRACT glob *_analytics_*.sql — rename before merge
 
 ### 2026-10-24 15:41 — Removed Modal crons (daily, weekly_retrain); both stay as...
 - Teammate: Bruno

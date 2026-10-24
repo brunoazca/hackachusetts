@@ -14,6 +14,7 @@ from . import db
 # Order matters: 311 first (the map needs it), context last.
 INGEST_SOURCES = [
     "t311",        # Boston 311 yearly 2023-2026 + new-system trash types
+    "t311_history",  # Boston 311 2016-2022, lean, model history only
     "regional",    # Somerville 311, Cambridge sightings + smart boxes
     "cambridge",   # Cambridge food, housing pests, parcels, permits, schools
     "somerville",  # Somerville permits, MassGIS assessor parcels, schools
