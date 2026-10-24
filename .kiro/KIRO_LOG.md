@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:27 — Live refresh path working: Vercel /api/refresh (status + ...
+- Teammate: Bruno
+- Agent: —
+- Did: Live refresh path working: Vercel /api/refresh (status + 5-min guard) → Modal refresh; 14-day Boston 311 refresh runs in 12 s on Modal
+- Why: Data section: R1.4–R1.6 live data
+- Where: web/src/app/api/refresh/route.ts, pipeline/modal_app.py, pipeline/rat_audit/jobs.py
+- Idea: Per-source error isolation so one broken loader never blocks the refresh
+
+### 2026-10-24 13:27 — Added 250m grid-cell fallback helper (rat_audit/model/gri...
+- Teammate: Bruno
+- Agent: --
+- Did: Added 250m grid-cell fallback helper (rat_audit/model/grid.py)
+- Why: model needs cells even if grid_cells is empty; must not overwrite Carol table
+- Where: pipeline/rat_audit/model/grid.py
+- Idea: load_or_build_cells reads grid_cells first, builds in-memory fallback clipped to Boston footprint
+
 ### 2026-10-24 13:26 — Added model_artifacts table (migration 20261024500001) an...
 - Teammate: Bruno
 - Agent: --

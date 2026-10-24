@@ -54,11 +54,12 @@ def _tract_label(geoid: str) -> str:
 
 
 def _regional_city(geoid: str) -> str | None:
-    """Middlesex 2020 tracts 3501-3515 are Somerville, 3521-3550 Cambridge."""
+    """Middlesex 2020 tracts 3501-3515 are Somerville; 3521-3550 and 3594 (Harvard) are Cambridge.
+    Checked against 2020 Census city totals (Somerville 81,045; Cambridge 118,403)."""
     if not geoid.startswith("25017"):
         return None
     n = int(geoid[5:9])
-    return "somerville" if 3501 <= n <= 3515 else "cambridge" if 3521 <= n <= 3550 else None
+    return "somerville" if 3501 <= n <= 3515 else "cambridge" if 3521 <= n <= 3550 or n == 3594 else None
 
 
 def _upsert_tracts(conn: psycopg.Connection, rows: list[tuple]) -> None:
@@ -188,7 +189,8 @@ NOISE_RE = re.compile(
     r"\b(mouse ?pads?|computer mouse|wireless mouse|mouse and keyboard|keyboard and mouse|mickey mouse|"
     r"rat ?race|rat pack|gym rats?|mall rats?|lab rats?|museum rats?|beach rats?|"
     r"rat und tat|guten rat|einen rat|dem rat|ihren rat|seinen rat|"  # German "Rat" = advice
-    r"cat and mouse|church mouse|quiet as a mouse|mouse ?click)\b",
+    r"cat and mouse|church mouse|quiet as a mouse|mouse ?click|"
+    r"(?:no|never (?:saw|seen|had)|without)\s+(?:\w+\s+(?:or|and)\s+)?(?:rats?|mice|mouse|rodents?))\b",  # "no mice"
     re.I,
 )
 _TAGS = re.compile(r"<[^>]+>")

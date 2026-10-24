@@ -18,6 +18,7 @@ image = (
         "psycopg[binary]>=3.2", "requests>=2.32", "pandas>=2.2", "numpy>=2.0", "scipy>=1.14",
         "scikit-learn>=1.5", "shapely>=2.0", "pyproj>=3.6", "fastapi[standard]>=0.115",
     )
+    .add_local_file("../contracts/categories.json", "/root/contracts/categories.json")
     .add_local_python_source("rat_audit")
 )
 secrets = [modal.Secret.from_name("rat-audit")]
