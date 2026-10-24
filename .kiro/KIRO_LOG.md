@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:02 — Backtested 7 new data groups + combos + leave-one-group-o...
+- Teammate: Bruno
+- Agent: —
+- Did: Backtested 7 new data groups + combos + leave-one-group-out ablation and grouped permutation importance; wrote 33 ablation rows to model_runs (model cell_week_poisson_gbm_ablation, params.ablation acs/no_acs)
+- Why: Keep only data that measurably helps; answer which drivers matter most
+- Where: pipeline/rat_audit/model/features.py model_runs
+- Idea: Nothing beat the +0.5 pt bar; 3-city model needs grid_cells for CAM/SOM (Carol) — after freeze
+
 ### 2026-10-24 15:53 — Handoff to model section: ACS ablation, three-city model ...
 - Teammate: Bruno
 - Agent: —
