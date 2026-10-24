@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 10:51 — Full repo review; shortlisted 5 build ideas, recommend Bl...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Full repo review; shortlisted 5 build ideas, recommend BlockBrief + overdue view
+- Why: Pick an app now; 0 code at 10:50 AM
+- Where: none
+- Idea: 311 on_time: Dorchester 24% overdue vs Back Bay 14%; Wait Watch, Safe Last Mile, Cost-to-Career as alternates
+
+### 2026-10-24 10:48 — Committed on main (68d2e23): clean civic-service spec + i...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Committed on main (68d2e23): clean civic-service spec + idea-neutral Kiro automation; ready for human to push
+- Why: Save the spec reset and automation work; idea to come later
+- Where: 13 files: .kiro/specs/civic-service/*, .kiro/agents/snapshot-validator.json, .kiro/hooks/snapshot-citation-check.kiro.hook, .kiro/scripts/*, README.md, docs/submission/kiro-usage.md, data/civic/CATALOG.md, .kiro/steering/structure.md
+- Idea: Human runs: git push origin main
+
 ### 2026-10-24 10:45 — dry-run scorecard of current state
 - Teammate: Guilherme
 - Agent: civic-judge
