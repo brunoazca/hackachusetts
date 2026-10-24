@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 — Investigate missing region outlines after pulls
+- Teammate: Carolina
+- Agent:
+- Did: Compared current checkout, primary local checkout and freshly fetched origin/main. Commit 1d5def9 exists only on codex/ready-branches-integration; it is not an ancestor of main. Main has the redesigned Insight panel and get_ranking/get_insight/open_insight tools but no RegionFocusLayer, map_focus_regions or ranking-focus fallback.
+- Why: Distinguish missing branch integration from a regression inside the tested contour implementation.
+- Where: Read-only Git/history/process inspection; localhost 3052 runs this unchanged integration worktree. No frontend edits or push.
+- Idea: Port contour behavior into the new ranking/panel architecture, preserving teammates' UI work, after frontend approval.
+
 ### 2026-10-24 — Final regression battery and authorized publication
 - Teammate: Carolina
 - Agent:
