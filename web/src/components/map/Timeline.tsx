@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMap } from "@/lib/map-store";
 import { rightInset, useUi } from "@/lib/ui-store";
 
@@ -9,6 +9,9 @@ import { rightInset, useUi } from "@/lib/ui-store";
 
 const DAY = 86400000;
 const START = Date.UTC(2023, 0, 1);
+// Module scope (evaluated once on the client), not during render.
+const NOW = new Date();
+const TODAY = Date.UTC(NOW.getUTCFullYear(), NOW.getUTCMonth(), NOW.getUTCDate());
 const iso = (t: number) => new Date(t).toISOString().slice(0, 10);
 const nice = (t: number, year = true) =>
   new Date(t).toLocaleDateString("en-US", { month: "short", day: "numeric", ...(year ? { year: "numeric" } : {}), timeZone: "UTC" });
@@ -26,7 +29,9 @@ export default function Timeline() {
   const setFilters = useMap((s) => s.setFilters);
   const appMode = useMap((s) => s.mode);
   const rightOpen = useUi((s) => s.rightOpen);
-  const today = useMemo(() => { const d = new Date(); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()); }, []);
+  const today = TODAY;
+  const open = useUi((s) => s.timelineOpen);
+  const setOpen = useUi((s) => s.setTimelineOpen);
   const total = Math.round((today - START) / DAY);
 
   const toIdx = (isoDate: string) => Math.min(total, Math.max(0, Math.round((Date.parse(isoDate) - START) / DAY)));
@@ -44,6 +49,18 @@ export default function Timeline() {
     timer.current = setTimeout(() => setFilters({ since: iso(START + a * DAY), until: iso(START + b * DAY) }), 250);
   };
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
+  // Map controls lift above the strip while it is open.
+  useEffect(() => { document.documentElement.style.setProperty("--ctrl-bottom", open ? "112px" : "4px"); }, [open]);
+
+  // Esc closes and hands focus back to the "When" button in the layer dock.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { setOpen(false); document.getElementById("dock-when")?.focus(); }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, setOpen]);
 
   const pick = (days: number) => {
     const a = days ? Math.max(0, total - days) : 0;
@@ -59,8 +76,11 @@ export default function Timeline() {
 
   return (
     <section
+      id="timeline"
       aria-label="Time window"
-      className="glass absolute bottom-3 z-20 rounded-lg px-4 pb-3 pt-2.5 transition-[right] duration-300 ease-[var(--ease-spring)]"
+      inert={!open}
+      aria-hidden={!open}
+      className={`glass absolute bottom-3 z-20 rounded-lg px-4 pb-3 pt-2.5 transition-[right,transform,opacity] duration-300 ease-[var(--ease-spring)] ${open ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-[calc(100%+16px)] opacity-0"}`}
       style={{ left: appMode === "act" ? 420 : 76, right: rightInset(rightOpen) }}
     >
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -69,7 +89,7 @@ export default function Timeline() {
           <b className="font-semibold">{nice(START + lo * DAY, false)} – {nice(START + hi * DAY)}</b>
           <span className="text-fg-3"> · {span + 1} days</span>
         </p>
-        <div role="radiogroup" aria-label="Quick picks" className="ml-auto flex flex-wrap gap-1">
+        <div role="radiogroup" aria-label="Quick picks" className="ml-auto flex flex-wrap items-center gap-1">
           {QUICK.map((q) => (
             <button
               key={q.label}
@@ -82,6 +102,14 @@ export default function Timeline() {
               {q.label}
             </button>
           ))}
+          <button
+            type="button"
+            onClick={() => { setOpen(false); document.getElementById("dock-when")?.focus(); }}
+            aria-label="Close time window"
+            className="ml-1 grid h-7 w-7 place-items-center rounded-sm text-fg-3 hover:bg-card-hover hover:text-fg"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden><path d="M18 6 6 18M6 6l12 12" /></svg>
+          </button>
         </div>
       </div>
 

@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:29 — Merged latest main (Simple/Explore already removed upstre...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Merged latest main (Simple/Explore already removed upstream); plain-language top bar ('Updated 37 minutes ago' + refresh icon, 'Map' / 'Places to visit'); time window rebuilt as a timeline strip (Jan 2023 to today, two draggable handles, quick picks in words, range written out) that slides up only from a calendar 'When' button in the left dock; new map markers (solid = open, white = closed, soft shadow) and haloed clusters; fixed new Date() prerender error
+- Why: Guilherme: kill Simple/Explore, better timeline UX, better icons, LIVE pill too techy for normal people, timeline must not always show
+- Where: web/src/components/shell/TopBar.tsx, web/src/components/map/Timeline.tsx, web/src/components/map/LayerPanel.tsx, web/src/components/map/icons.ts, web/src/components/map/MapView.tsx, web/src/lib/ui-store.ts, web/src/app/*
+- Idea: Open vs closed shown by fill, not opacity
+
 ### 2026-10-24 15:16 — Right panel now folds into a slim 52px rail (Inspect / In...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

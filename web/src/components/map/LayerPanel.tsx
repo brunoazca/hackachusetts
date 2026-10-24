@@ -5,6 +5,7 @@ import { markerDataUrl } from "./icons";
 import { STRENGTH_STYLE, testedFor } from "./tested";
 import { ERA_STOPS, HOUSING_RAMP } from "./ContextLayers";
 import type { CoverageRow } from "@/lib/queries";
+import { useUi } from "@/lib/ui-store";
 import { useEffect, useId, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from "react";
 
 // Layer dock: a slim vertical rail of group buttons (rat signals, trash, shelter, works, buildings,
@@ -88,7 +89,7 @@ function LayerRow({ icon, label, meta, checked, onToggle }: { icon: ReactNode; l
         <span className="block truncate text-[13px] font-medium leading-[18px] text-fg" title={label}>{label}</span>
         {meta && <span className="block truncate text-[11px] leading-4 text-fg-3">{meta}</span>}
       </span>
-      <input type="checkbox" role="switch" className="piper-switch" checked={checked} onChange={(e) => onToggle(e.target.checked)} aria-label={label} />
+      <input type="checkbox" role="switch" aria-label={label} className="piper-switch" checked={checked} onChange={(e) => onToggle(e.target.checked)} />
     </label>
   );
 }
@@ -101,6 +102,9 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
   const btnRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const flyRef = useRef<HTMLDivElement>(null);
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
+  const timelineOpen = useUi((s) => s.timelineOpen);
+  const setTimelineOpen = useUi((s) => s.setTimelineOpen);
+  const whenLabel = span <= 8 ? "1 wk" : span <= 31 ? "1 mo" : span <= 92 ? "3 mo" : span <= 366 ? "1 yr" : span > 1000 ? "All" : `${Math.round(span / 30)} mo`;
 
   const groupIds = (g: string) => Object.entries(CATS).filter(([, c]) => c.group === g).map(([id]) => id);
   const onIn = (ids: string[]) => ids.filter((id) => enabled[id]).length;
@@ -152,7 +156,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
             key={d.id}
             ref={(el) => { btnRefs.current[d.id] = el; }}
             type="button"
-            onClick={() => setOpen((o) => (o === d.id ? null : d.id))}
+            onClick={() => { setTimelineOpen(false); setOpen((o) => (o === d.id ? null : d.id)); }}
             onKeyDown={(e) => onDockKey(e, i)}
             aria-expanded={open === d.id}
             aria-controls={open === d.id ? flyoutId : undefined}
@@ -166,6 +170,22 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
             )}
           </button>
         ))}
+        <span aria-hidden className="my-0.5 h-px w-8 bg-line" />
+        <button
+          id="dock-when"
+          type="button"
+          onClick={() => { setOpen(null); setTimelineOpen((v) => !v); }}
+          aria-expanded={timelineOpen}
+          aria-controls="timeline"
+          aria-label={`Time window: ${whenLabel}`}
+          title="Time window"
+          className="grid h-11 w-11 place-items-center rounded-md text-fg-2 transition-[background-color,transform] duration-150 hover:bg-card-hover hover:text-fg active:scale-95 aria-expanded:bg-card aria-expanded:text-fg aria-expanded:ring-1 aria-expanded:ring-edge"
+        >
+          <span className="flex flex-col items-center leading-none">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>
+            <span className="mt-0.5 font-mono text-[9px] font-semibold">{whenLabel}</span>
+          </span>
+        </button>
         <span className="mt-0.5 border-t border-line pt-1 text-center font-mono text-[10px] leading-3 text-fg-3" aria-live="polite" title="Reports in view">
           {loading ? "…" : count >= 1000 ? `${(count / 1000).toFixed(count >= 10000 ? 0 : 1)}k` : count}
         </span>

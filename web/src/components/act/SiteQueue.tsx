@@ -51,6 +51,7 @@ export default function SiteQueue() {
         <label className="mt-2 flex items-center gap-2 text-xs text-neutral-800">
           Neighborhood
           <select
+            aria-label="Neighborhood"
             value={hood}
             onChange={(e) => setHood(e.target.value)}
             className="min-w-0 flex-1 rounded border border-neutral-300 bg-white px-1.5 py-1 text-xs"

@@ -53,7 +53,7 @@
   .maplibregl-ctrl-group button + button { border-top: 1px solid var(--p-line) !important; }
   [data-theme="night"] .maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: invert(0.92) sepia(0.15); }
   /* Keep map controls in the clear area, left of the floating side panel. */
-  .maplibregl-ctrl-bottom-right { right: var(--right-inset, 84px) !important; bottom: 100px; transition: right 300ms var(--ease-spring); }
+  .maplibregl-ctrl-bottom-right { right: var(--right-inset, 84px) !important; bottom: var(--ctrl-bottom, 4px); transition: right 300ms var(--ease-spring), bottom 300ms var(--ease-spring); }
   .maplibregl-ctrl-attrib { background: var(--p-panel) !important; color: var(--p-fg-3) !important; }
   .maplibregl-ctrl-attrib a { color: var(--p-fg-2) !important; }
   [data-theme="night"] .maplibregl-ctrl-attrib-button { filter: invert(0.9); }
