@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:32 — Made a 'commit-and-handoff' skill: the safe-commit recipe...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Made a 'commit-and-handoff' skill: the safe-commit recipe — stage only your own files by path, scan secrets, commit with hooks on, then hand 'git push origin main' to a human because the agent is policy-blocked from pushing main
+- Why: We repeat this every ship; the three traps (git add -A in a shared worktree, retrying the blocked push, leaking a secret) keep biting
+- Where: .kiro/skills/commit-and-handoff/SKILL.md
+- Idea: none
+
+### 2026-10-24 16:31 — Made a 'verify-demo-path' skill: the verify-before-done g...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Made a 'verify-demo-path' skill: the verify-before-done gauntlet we repeat every turn (secret scan, typecheck, lint, build, overclaim, submission) in one order, with hard gates marked
+- Why: We ran these scripts by hand on almost every change; a skill stops anyone skipping a step
+- Where: .kiro/skills/verify-demo-path/SKILL.md
+- Idea: Skill-ify the other repeated thing next: commit-only-your-paths then hand push to a human
+
 ### 2026-10-24 16:28 — Enabled the Playwright CLI browser + new skills in Kiro Crew
 - Teammate: Guilherme
 - Agent: default (kirocrew)
