@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:52 — Merged the finished accessibility and plain-language UI w...
+- Teammate: Guilherme
+- Agent: Claude Code
+- Did: Merged the finished accessibility and plain-language UI work into main (a11y/map-twin-skip-motion through d7be311 plus the log and copy commits; 246309b's unfinished priority-layer wiring left out). Resolved 17 conflicted files against main's Insights v2, chat map controls and block profiles; List button now stacks above the map key; focus ring no longer sets state in an effect.
+- Why: Guilherme asked to commit and merge everything finished, kept separate from in-progress work
+- Where: web/src/components/{map,insights,inspector,chat,shell}; web/src/lib/map-store.ts; .kiro/KIRO_LOG.md; README.md; web/README.md
+- Idea: tsc, eslint, 5 node tests and 136/137 tsx tests pass (region-solutions needs SUPABASE env, same as main). Production build passes. Still pending in the working folder: priority layer, inspect mode, grid-cell labels migration, video render.
+
 ### 2026-10-24 18:41 — Kept rendered video out of git: ignore *.mp4/*.mov/clips/...
 - Teammate: Guilherme
 - Agent: Claude Code
