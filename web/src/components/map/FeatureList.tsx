@@ -34,7 +34,7 @@ export default function FeatureList({ onClose }: { onClose: () => void }) {
   return (
     <section
       aria-label="Features in view (list alternative to the map)"
-      className="glass absolute bottom-3 left-3 top-[68px] z-30 flex w-96 flex-col overflow-hidden rounded-lg text-sm motion-reduce:transition-none"
+      className="map-secondary-panel glass absolute bottom-3 left-3 top-(--shell-top) z-30 flex w-96 max-w-[calc(100%-88px)] flex-col overflow-hidden rounded-lg text-sm motion-reduce:transition-none"
     >
       <div className="flex items-start justify-between border-b border-line p-3">
         <div>
@@ -73,6 +73,8 @@ export default function FeatureList({ onClose }: { onClose: () => void }) {
               <li key={`${f.kind}:${f.id}`}>
                 <button
                   type="button"
+                  data-site-trigger
+                  aria-controls="details-panel"
                   onClick={() => open(f)}
                   aria-current={active ? "true" : undefined}
                   className={`grid w-full grid-cols-[1.5rem_minmax(0,1fr)] items-start gap-2 border-b border-line/60 px-3 py-2 text-left transition-colors hover:bg-card-hover focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-accent ${active ? "bg-card-hover" : ""}`}

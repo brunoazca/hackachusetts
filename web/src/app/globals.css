@@ -2,6 +2,14 @@
 /* Piper design tokens, themes, utilities. Spec: docs/design/README.md */
 @import "../styles/piper.css";
 
+/* Narrow screens show one content panel; covered controls also leave the tab order. */
+@media (max-width: 860px) {
+  .piper-shell:has(#details-panel:not([inert])) .map-secondary-panel,
+  .piper-shell:has(#details-panel:not([inert])) .maplibregl-control-container {
+    visibility: hidden;
+  }
+}
+
 /* Switch (docs/design/components/controls.md): a native checkbox styled as a 32×18 track. */
 @layer components {
   .piper-switch {

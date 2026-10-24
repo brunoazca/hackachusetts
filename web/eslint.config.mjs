@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Copied unchanged from maplibre-gl by postinstall/prebuild.
+    "public/maplibre-gl-worker.js",
   ]),
 ]);
 

@@ -34,7 +34,9 @@ type Props = {
 export default function ContextLayers({ cats, coverage, housing, buildings, bbox, zoom }: Props) {
   const [cities, setCities] = useState<FeatureCollection<Polygon | MultiPolygon>>(EMPTY as FeatureCollection<Polygon | MultiPolygon>);
   const [tracts, setTracts] = useState<FeatureCollection>(EMPTY);
-  const [parcels, setParcels] = useState<FeatureCollection>(EMPTY);
+  const [parcelResult, setParcelResult] = useState<{ key: string; data: FeatureCollection } | null>(null);
+  const parcelKey = buildings && bbox && zoom >= 15 ? bbox.join(",") : null;
+  const parcels = parcelResult?.key === parcelKey ? parcelResult.data : EMPTY;
   const T = themes[useTheme((t) => t.theme)];
 
   useEffect(() => {
@@ -44,11 +46,12 @@ export default function ContextLayers({ cats, coverage, housing, buildings, bbox
     if (housing && tracts.features.length === 0) fetchTracts().then(setTracts).catch(() => {});
   }, [housing, tracts.features.length]);
   useEffect(() => {
-    if (!buildings || !bbox || zoom < 15) { setParcels(EMPTY); return; }
+    if (!parcelKey) return;
     let live = true;
-    fetchParcels(bbox).then((fc) => live && setParcels(fc)).catch(() => {});
+    const bounds = parcelKey.split(",").map(Number) as BBox;
+    fetchParcels(bounds).then((data) => { if (live) setParcelResult({ key: parcelKey, data }); }).catch(() => {});
     return () => { live = false; };
-  }, [buildings, bbox, zoom]);
+  }, [parcelKey]);
 
   // World minus the three cities.
   const outside = useMemo(() => (cities.features.length ? mask(cities) : null), [cities]);

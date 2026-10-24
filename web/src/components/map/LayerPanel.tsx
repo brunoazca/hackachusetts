@@ -175,7 +175,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   const setAll = (ids: string[], v: boolean) => apply({ ...enabled, ...Object.fromEntries(ids.map((id) => [id, v])) }, ids, v);
 
   return (
-    <nav aria-label="Map layers" className="absolute left-3 top-[68px] z-20">
+    <nav aria-label="Map layers" className="map-secondary-panel absolute left-3 top-(--shell-top) z-20">
       {/* Rail */}
       <div className="glass flex w-[52px] flex-col items-center gap-1 rounded-lg p-1">
         {dock.map((d, i) => (
