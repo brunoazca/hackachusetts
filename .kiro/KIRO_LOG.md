@@ -28,6 +28,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 10:13 — Mirrored the Civic Action datasets into the repo
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Pulled origin/main (ff), then downloaded all 23 Civic Action datasets + 6 starter-kit zips from the Hackachusetts data portal into data/civic/, with a CATALOG.md index.
+- Why: Have authoritative, demo-safe static snapshots in-repo instead of relying on live APIs.
+- Where: data/civic/CATALOG.md, data/civic/datasets/* (23 datasets: data.csv + README + fetch.py/js), data/civic/kits/*.zip
+- Idea: permits + boston-311 + neighborhoods + violations are the snapshots to wire into the parking-permit-navigator demo.
+
 ### 2026-10-24 10:04 — Pushed self-logging rule + historian agent
 - Teammate: Guilherme
 - Agent: default
