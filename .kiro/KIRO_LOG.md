@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:45 — Shared analytics migrations applied; Python refresh blocked by database authentication
+- Teammate: Carol
+- Agent:
+- Did: Applied Insights, core and v2 analytics migrations to rat-audit through the zebra connection; verified shared public RPCs and forecast preservation; updated current delivery status.
+- Why: Complete the authorized shared-schema work and distinguish deployed SQL from a still-pending Python refresh.
+- Where: Supabase rat-audit; pipeline/rat_audit/analytics/README.md; .kiro/KIRO_LOG.md.
+- Evidence: Canonical history versions 20261024194305 / 20261025000000 / 20261025000001 confirmed. Existing baseline history was empty; only our three entries were reconciled. Integrator must reconcile baseline history before a blanket migration push.
+- Evidence: Immediately before/after all migrations, exact row fingerprints matched for 206,520 predictions, 39 model runs and 2 artifacts. At 20:43 UTC predictions/artifacts still matched; model-run metadata fingerprint had subsequently changed with count still 39, cause unestablished and no analytics refresh run.
+- Evidence: Real anon Insights read returned risk-v1-20261024T185032 with four future weeks; legacy queue and supporting RPC reads passed. Synthetic anon trial design produced one pair/pending result inside rollback; confirmed zero residual test sites, trials and pairs.
+- Decision: Public demo trial writes were explicitly authorized after automatic review initially blocked them. Carol also authorized terminating exactly the three identified idle blockers (23669, 24666, 25481); no other sessions were terminated.
+- Blocked: SQL connection reaches the session pooler but rejects the supplied password. No Python step or analytics_runs row exists; shared findings/costs remain empty. Env values stayed private. Real AI adapter and missing regional inputs remain separate dependencies.
+- Evidence: User confirms database password. Standard dotenv parsing agrees; URI escaping bypassed with keyword parameters; both pooler ports reject authentication. Postgres login enabled, password unexpired; direct hostname fails DNS locally. No password reset performed; dashboard endpoint comparison pending.
+- Risk: Pre-existing model_artifacts RLS disabled with anon SELECT/INSERT, outside this front; data/model owner should review before main integration. No model permission change made.
+- Decision: Publish documentation on the feature branch; main merge/push and deployment remain later. Preserve all prior log entries and leave this Agent field empty.
+- Idea: Migration success, synthetic transaction checks and real analytics population are separate acceptance evidence.
+
 ### 2026-10-24 16:19 — Analytics migrations and runtime validated locally; forecasts preserved
 - Teammate: Carol
 - Agent:

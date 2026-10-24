@@ -4,7 +4,50 @@ Front A / Carol, branch `feat/rat-audit-analytics-core`. This front produces the
 numbers consumed by Insights, the site inspector and the agent. It does not build
 the UI or train Bruno's forecast models.
 
-## Latest validation — authorized migrations (2026-10-24)
+## Current shared status — migrations applied (2026-10-24)
+
+The three analytics migrations below are installed in shared project `rat-audit`
+(`vfizpwajekykmbcrport`) through the authorized Supabase connection. This supersedes
+older access-blocked statements. The Python refresh has **not** run: the supplied
+session-pooler connection reaches Supabase but returns `password authentication failed`.
+The dotenv was parsed in memory; no credential was printed, copied or committed.
+The standard dotenv parser agrees with the loader; keyword-parameter connections
+rule out URI escaping. Session and transaction pooler endpoints both reject
+authentication; the postgres role is enabled and not expired. Direct connection
+could not resolve its hostname here, so it cannot establish password validity.
+The user confirms the database password; comparison with the dashboard pooler host
+is pending. A transient pooler credential cache is possible but unconfirmed.
+
+- Migration history now records `20261024194305`, `20261025000000` and
+  `20261025000001` with their analytics names. Existing baseline tables had no
+  migration-history rows. Only these three analytics entries were reconciled;
+  the integrator must reconcile the baseline before using a blanket migration push.
+- Exact before/after checks across all three migrations preserved **206,520
+  predictions, 39 model runs and 2 model artifacts**. Predictions checksum:
+  `5faa3115a1b526bfc25714834ec10f94`; artifacts checksum:
+  `e698a89253cbd456dcdc497da7890c52`. Both still matched at 20:43 UTC.
+  The model-runs checksum changed in a later read while its count stayed 39;
+  the cause is not established, and no analytics refresh had run. Do not describe
+  that later model metadata as unchanged.
+- Real shared, read-only `anon` RPC checks passed: Insights returns forecast run
+  `risk-v1-20261024T185032` and four future weeks; queue returns legacy rows;
+  supporting RPCs execute. Findings/costs are still empty pending refresh.
+- A **synthetic, rolled-back** shared transaction exercised `design_trial` as
+  `anon`: one pair and a pending result. Confirmed zero test sites, trials and
+  trial pairs afterward. This is public-role/transaction validation, not a real trial.
+- Carol explicitly authorized public demo trial writes and termination of the
+  three identified idle sessions that blocked DDL. No other sessions were terminated.
+- Existing out-of-scope issue: `model_artifacts` has RLS disabled and `anon` has
+  SELECT/INSERT privileges. The data/model owner should review this before main
+  integration ([Supabase advisory](https://supabase.com/docs/guides/database/database-linter?lint=0013_rls_disabled_in_public)).
+- Local evidence remains 141 unit/property/mock tests, five read-only PostGIS
+  fixture tests, five disposable migration/runtime tests, and a passing production
+  build/TypeScript check. These do not establish a successful shared Python refresh
+  or deployed UI flow. Regional-input and real AI-check-provider gaps remain explicit.
+
+No main merge/push or deploy was performed. The feature branch is the handoff target.
+
+## Earlier local validation — authorized migrations (2026-10-24)
 
 This update supersedes the earlier unexecuted-migration status below. Carol authorized
 shared migrations and analytics; access to the correct Supabase project is still missing.
