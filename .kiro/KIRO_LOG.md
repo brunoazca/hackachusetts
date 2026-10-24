@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:54 — Decided where the forecast model runs: batch Python writi...
+- Teammate: Bruno
+- Agent: —
+- Did: Decided where the forecast model runs: batch Python writing predictions to Supabase
+- Why: Supabase cannot run Python; the model is batch, not real-time
+- Where: none
+- Idea: Schedule via GitHub Actions cron (free) or Modal (cron + on-demand what-if endpoint); Vercel only calls the chat LLM API
+
 ### 2026-10-24 12:52 — Wrote full initial spec for Rat Audit (requirements EARS,...
 - Teammate: Bruno
 - Agent: —
