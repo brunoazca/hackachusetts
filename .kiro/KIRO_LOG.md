@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:48 — Model report: long backtest rerun on current model (Jan 2...
+- Teammate: Bruno
+- Agent: —
+- Did: Model report: long backtest rerun on current model (Jan 2024–Oct 2026): capture 65.3% vs 49.7%, MAE 0.0475 vs 0.0469
+- Why: Report numbers must match the model in production
+- Where: docs/rat-audit/model-report/README.md, index.html, data/bt_long.json
+- Idea: —
+
 ### 2026-10-24 17:48 — Integrate all chat/map changes for the requested push
 - Teammate: Carol
 - Agent:
