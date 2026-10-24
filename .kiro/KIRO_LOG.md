@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:51 — Prediction mode: Act cards turn yellow and sort by expect...
+- Teammate: Bruno
+- Agent: —
+- Did: Prediction mode: Act cards turn yellow and sort by expected reports next 4 weeks; map shows alert icons on the worst-predicted blocks instead of red blocks
+- Why: Prediction should rank where it gets worse, not current severity
+- Where: web/src/components/insight/RankingList.tsx, web/src/components/map/PriorityLayer.tsx, web/src/components/map/MapView.tsx
+- Idea: —
+
 ### 2026-10-24 19:49 — Current/Prediction selector at the top of the map; Predic...
 - Teammate: Bruno
 - Agent: —

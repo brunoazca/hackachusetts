@@ -23,7 +23,7 @@ const ALERT_RED = "#8B0000";
  * `visible`: mark the top-20 blocks dark red with an alert badge, minus the ones marked resolved. `full`: also tint every block
  * by rank — the "Priority blocks" switch in the rail; off by default so the heatmap stays the hero.
  */
-export default function PriorityLayer({ visible, full, three, selectedId, regionIds, week, T }: { visible: boolean; full: boolean; three: boolean; selectedId: string; regionIds: string[]; week: string | null; T: DataColors }) {
+export default function PriorityLayer({ visible, full, predict = false, three, selectedId, regionIds, week, T }: { visible: boolean; full: boolean; predict?: boolean; three: boolean; selectedId: string; regionIds: string[]; week: string | null; T: DataColors }) {
   // While a block (or an insight's region) is selected, it is the only strong thing on the grid: everything else steps back.
   const sel = [...new Set([selectedId, ...regionIds].filter(Boolean))];
   const IS_SEL = ["in", ["get", "id"], ["literal", sel]] as unknown as ExpressionSpecification;
@@ -45,8 +45,10 @@ export default function PriorityLayer({ visible, full, three, selectedId, region
     return () => { live = false; clearTimeout(timer); };
   }, [visible, wk, loaded?.week]);
 
+  // Prediction: no red blocks, just the alert badge on the blocks with the most reports expected.
   const vis = visible ? "visible" : "none";
-  const fillVis = visible && full ? "visible" : "none";
+  const redVis = visible && !predict ? "visible" : "none";
+  const fillVis = visible && full && !predict ? "visible" : "none";
   return (
     <Source id="priority" type="geojson" data={ranked}>
       {/* Every block, faint to strong by citywide percentile. */}
@@ -73,14 +75,14 @@ export default function PriorityLayer({ visible, full, three, selectedId, region
       <Layer
         id="priority-top-fill"
         type="fill"
-        layout={{ visibility: vis }}
+        layout={{ visibility: redVis }}
         filter={ALERT}
         paint={{ "fill-color": ALERT_RED, "fill-opacity": dim(0.55, 0.4) }}
       />
       <Layer
         id="priority-top-line"
         type="line"
-        layout={{ visibility: vis }}
+        layout={{ visibility: redVis }}
         filter={ALERT}
         paint={{ "line-color": ALERT_RED, "line-width": ["interpolate", ["linear"], ["zoom"], 11, 1, 14, 2], "line-opacity": dim(1, 0.4) }}
       />

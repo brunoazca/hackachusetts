@@ -192,8 +192,8 @@ export default function MapView() {
   // The ranked outlines always mirror the block list; the full tinted grid is the rail switch
   // (or Inspect mode, if the chat agent asks for it), and then the heatmap steps aside.
   const priorityFull = useMap((s) => s.layers.priority) || appMode === "inspect";
-  // Current shows the red priority blocks; Prediction swaps them for the forecast.
-  const priorityOn = appMode !== "act" && !forecastOn;
+  // Current shows the red priority blocks; Prediction swaps them for the forecast, with alerts on the worst-predicted blocks.
+  const priorityOn = appMode !== "act";
   const forecastWeek = useMap((s) => s.forecastWeek);
   const setForecastWeek = useMap((s) => s.setForecastWeek);
   const three = useMap((s) => s.three);
@@ -662,7 +662,7 @@ export default function MapView() {
         <NavigationControl position="bottom-right" />
         <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings && !regionCells.length} bbox={bbox} zoom={zoom} cellMetric={cellMetric} />
         <ForecastLayer visible={forecastOn} period={forecastWeek ?? "4w"} bbox={bbox} selectedId={selectedId} />
-        <PriorityLayer visible={priorityOn} full={priorityFull} three={three} selectedId={selection?.kind === "cell" ? selectedId : ""} regionIds={regionCells} week={forecastWeek} T={T} />
+        <PriorityLayer visible={priorityOn} full={priorityFull} predict={forecastOn} three={three} selectedId={selection?.kind === "cell" ? selectedId : ""} regionIds={regionCells} week={forecastWeek} T={T} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
           <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat && causes ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />
