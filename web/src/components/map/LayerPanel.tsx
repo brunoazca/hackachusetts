@@ -38,7 +38,7 @@ const PRESETS = [
 
 export type ViewMode = "points" | "heat" | "both";
 export const HEAT_RAMPS = {
-  rats: ["#fee5d9", "#fcae91", "#fb6a4a", "#de2d26", "#a50f15"],
+  rats: ["#fde0c5", "#fbb27a", "#f4793e", "#d7263d", "#8f0f24"],
   evidence: ["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"],
 };
 const MODES: { id: ViewMode; label: string; hint: string }[] = [
@@ -142,8 +142,8 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   // Keep showing the last group while the flyout morphs closed.
   const [lastId, setLastId] = useState<DockId | null>(open);
   if (open && open !== lastId) setLastId(open);
-  const shown = useMorph(!!open, flyRef, () => (lastId ? btnRefs.current[lastId] ?? null : null));
-  const current = shown ? dock.find((d) => d.id === (open ?? lastId)) : undefined;
+  useMorph(!!open, flyRef, () => (lastId ? btnRefs.current[lastId] ?? null : null));
+  const current = dock.find((d) => d.id === (open ?? lastId));
   const isCause = (id: string) => CATS[id]?.group !== "rats";
   // Switching on a cause layer (trash, shelter, works) turns "Show likely causes" on, so it actually
   // appears; switching off the last one turns it back off.
@@ -157,7 +157,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   const setAll = (ids: string[], v: boolean) => apply({ ...enabled, ...Object.fromEntries(ids.map((id) => [id, v])) }, ids, v);
 
   return (
-    <nav aria-label="Map layers" className="absolute left-3 top-[68px] z-20 flex items-start gap-2">
+    <nav aria-label="Map layers" className="absolute left-3 top-[68px] z-20">
       {/* Rail */}
       <div className="glass flex w-[52px] flex-col items-center gap-1 rounded-lg p-1">
         {dock.map((d, i) => (
@@ -206,7 +206,8 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
           id={flyoutId}
           ref={flyRef}
           aria-label={current.label}
-          className="glass w-72 overflow-hidden rounded-lg text-sm will-change-[transform,clip-path]"
+          inert={!open}
+          className="glass absolute left-[60px] top-0 w-72 overflow-hidden rounded-lg text-sm will-change-[transform,clip-path]"
         >
           <div className="overflow-y-auto p-3 [max-height:calc(100dvh-92px)]">
           <header className="mb-2 flex items-center justify-between gap-2">

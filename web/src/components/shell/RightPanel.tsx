@@ -27,7 +27,7 @@ export default function RightPanel() {
   const railRef = useRef<HTMLDivElement>(null);
   const anchorRef = useRef<HTMLButtonElement | null>(null);
   const btnRefs = useRef<Partial<Record<Tab, HTMLButtonElement | null>>>({});
-  const shown = useMorph(open, asideRef, () => anchorRef.current ?? btnRefs.current.inspector ?? null);
+  useMorph(open, asideRef, () => anchorRef.current ?? btnRefs.current.inspector ?? null);
 
   // A new selection on the map opens the panel.
   useEffect(() => { if (selection) { anchorRef.current = btnRefs.current.inspector ?? null; setOpen(true); } }, [selection, setOpen]);
@@ -56,7 +56,7 @@ export default function RightPanel() {
       <div
         ref={railRef}
         inert={open}
-        className="glass absolute right-3 top-[68px] z-30 flex w-[52px] flex-col items-center gap-1 rounded-lg p-1"
+        className={`glass absolute right-3 top-[68px] z-30 flex w-[52px] flex-col items-center gap-1 rounded-lg p-1 transition-opacity duration-200 ${open ? "opacity-0" : "opacity-100"}`}
         role="toolbar"
         aria-label="Open details panel"
       >
@@ -77,7 +77,7 @@ export default function RightPanel() {
       </div>
 
       {/* Panel */}
-      {shown && (
+      {(
         <aside
           ref={asideRef}
           inert={!open}

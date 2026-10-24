@@ -33,7 +33,7 @@ export default function Timeline() {
   const open = useUi((s) => s.timelineOpen);
   const setOpen = useUi((s) => s.setTimelineOpen);
   const boxRef = useRef<HTMLElement>(null);
-  const shown = useMorph(open, boxRef, () => document.getElementById("dock-when"));
+  useMorph(open, boxRef, () => document.getElementById("dock-when"));
 
   const [lo, setLo] = useState(() => toIdx(filters.since));
   const [hi, setHi] = useState(() => toIdx(filters.until));
@@ -70,14 +70,13 @@ export default function Timeline() {
   for (let y = 2024; y <= NOW.getUTCFullYear(); y++) years.push(y);
   const close = () => { setOpen(false); document.getElementById("dock-when")?.focus(); };
 
-  if (!shown) return null;
   return (
     <section
       id="timeline"
       ref={boxRef}
       aria-label="Time window"
       inert={!open}
-      className="glass w-[320px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
+      className="glass absolute left-[60px] top-0 w-[320px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
     >
       <div className="p-3">
         <header className="flex items-start justify-between gap-2">
@@ -135,7 +134,7 @@ export default function Timeline() {
           <label className="text-[11px] font-semibold text-fg-3">
             From
             <input
-              type="date" min={iso(START)} max={iso(TODAY)} value={iso(START + lo * DAY)}
+              type="date" aria-label="From date" min={iso(START)} max={iso(TODAY)} value={iso(START + lo * DAY)}
               onChange={(e) => { if (!e.target.value) return; const v = Math.min(toIdx(e.target.value), hi - 1); setLo(v); commit(v, hi, true); }}
               className="mt-0.5 block h-8 w-full rounded-sm border border-edge bg-card px-2 font-mono text-[12px] text-fg"
             />
@@ -143,7 +142,7 @@ export default function Timeline() {
           <label className="text-[11px] font-semibold text-fg-3">
             To
             <input
-              type="date" min={iso(START)} max={iso(TODAY)} value={iso(START + hi * DAY)}
+              type="date" aria-label="To date" min={iso(START)} max={iso(TODAY)} value={iso(START + hi * DAY)}
               onChange={(e) => { if (!e.target.value) return; const v = Math.max(toIdx(e.target.value), lo + 1); setHi(v); commit(lo, v, true); }}
               className="mt-0.5 block h-8 w-full rounded-sm border border-edge bg-card px-2 font-mono text-[12px] text-fg"
             />
