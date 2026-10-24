@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:45 — Added per-site return chance as the third severity term (...
+- Teammate: Bruno
+- Agent: —
+- Did: Added per-site return chance as the third severity term (expected_returns_60d from record_solutions) and materialised cell_severity for all 3,586 cells; spec §5.1/§4.1/§7.1/§9/§10 now require Carol's ranking to read cell_severity
+- Why: Bruno asked to use the per-site return probability in the grid score and make sure Carol uses the same numbers
+- Where: pipeline/rat_audit/model/region_solution.py, supabase/migrations/20261024500006_cell_severity.sql, .kiro/specs/rat-audit/insights-severity-ranking.md
+- Idea: sites.summary.recur_p is empty (sites has 0 rows), so the return term comes from record_solutions; swap in recur_p when sites is filled
+
 ### 2026-10-24 17:42 — Model audit report: README (method, results, calibration,...
 - Teammate: Bruno
 - Agent: —

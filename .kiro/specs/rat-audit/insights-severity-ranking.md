@@ -14,7 +14,9 @@ exactly what the Insights tab becomes and which existing data feeds it.
 ## 0. Product direction (Bruno, Oct 24) — overrides anything below that disagrees
 
 1. **Rank 250 m cells by severity**, where severity = the problems already in the cell
-   **plus** the severity forecast for the future (§5.1). Not the forecast alone.
+   **plus** the severity forecast for the future **plus the chance that reports return at
+   the cell's addresses** (per-site/per-record return probability, §5.1). Not the forecast
+   alone. **Read it from `cell_severity` — do not recompute it.**
 2. **One card per ranked region** with: (a) the problems and the estimated future,
    (b) the proposed solution, (c) evidence of possible causes around it (§4).
 3. **Proposed solution is per region (cell/cluster), written by AI, grounded in a
@@ -139,7 +141,7 @@ see §4.1):
 
 | Block | Fields | Source |
 |---|---|---|
-| **Severity (problems + future)** | `observed_12w` (rodent reports in the last 12 weeks, the problems already here), `expected_4w` (forecast, next 4 weeks), `severity` = their sum (§5.1), `p_any`, `risk_band` badge, `rank` | `incidents` + `predictions` |
+| **Severity (problems + future + returns)** | `observed_12w` (rodent reports in the last 12 weeks, the problems already here), `expected_4w` (forecast, next 4 weeks), `expected_returns_60d` (per-site return chance summed over active addresses), `severity` = their sum (§5.1), `p_any`, `risk_band` badge, `rank` | `cell_severity` (+ `predictions` for `p_any` / band) |
 | **The problem** | top 3–5 `drivers`: plain `label`, signed `contribution`, optional `value`. Sort by `|contribution|` desc | `predictions.drivers` |
 | **What you can do** | region solution: `action`, `because` (cites records/evidence), legal lane, `source` = `ai` or `rules`; + the model's per-action return chances for the region (mean of its records) | `region_solutions` (§5.2) |
 | **Records** | the region's rodent reports, last 12 weeks, newest first (max 10, "show all"): date, block, status, what the city did (`done_action`), **what to do with this report** (AI line, else model's best action), P(return 60 d) | `incidents` + `record_solutions` + `region_solutions.records` |
@@ -170,24 +172,43 @@ see §4.1):
 Four pieces: a severity score (past + future), edge-safe regions, a solution per region
 (AI over a per-record model), and an after-fix estimate.
 
-### 5.1 Severity score per cell — problems now + forecast future (Carol, SQL)
+### 5.1 Severity score per cell — problems now + forecast future + return chance (Bruno computes, Carol reads)
 
-Severity must include **the problems already in the cell** and **the predicted future**.
-Both are counted in the same unit (rodent reports), so the sum is a count over a 16-week
-window, not a weighted composite (this keeps `v2-spec.md` §5.1 intact: no arbitrary weights):
+Severity has **three terms**: the problems already in the cell, the predicted future, and
+the **per-site return chance** (how likely reports come back at the cell's active
+addresses if they are handled as now). All three are counted in the same unit (rodent
+reports), so the sum is a count, not a weighted composite (keeps `v2-spec.md` §5.1 intact):
 
 ```
-observed_12w(cell) = rodent reports opened in the cell in the last 12 weeks   # incidents, category='rodent'
-expected_4w(cell)  = Σ predictions.expected over the next 4 forecast weeks     # actual is null
-severity(cell)     = observed_12w + expected_4w                                # reports, 16-week window
-ranked on smoothed_severity (§5.5); tie-breakers: expected_4w → p_any (week 1) → cell_id
+observed_12w(cell)         = rodent reports opened in the cell in the last 12 weeks        # incidents, category='rodent'
+expected_4w(cell)          = Σ predictions.expected over the next 4 forecast weeks          # actual is null
+expected_returns_60d(cell) = Σ over addresses with a report in the last 12 weeks of
+                             record_solutions.p_return_monitoring of the address's latest record
+                             # P(a rodent report returns to that address within 60 days if handled
+                             # as now); the per-site return probability, per record because
+                             # `sites.summary.recur_p` is empty
+severity(cell)             = observed_12w + expected_4w + expected_returns_60d             # reports
+smoothed(cell)             = severity + 0.5 × Σ severity of the 8 neighbours                # §5.5
+ranked on smoothed; tie-breakers: expected_4w → p_any (week 1) → cell_id
 ```
 
-- Show both parts on the card ("12 reports in the last 12 weeks · 6.1 expected in the
-  next 4"), so the reader sees whether it is ranked for its past or its future.
+**This is materialised — use it, do not re-derive it.** Table `cell_severity` (migration
+`20261024500006_cell_severity.sql`, public read), written by
+`pipeline/rat_audit/model/region_solution.py` on every run, one row per Boston cell
+(3,586): `cell_id, forecast_run_id, observed_12w, expected_4w, expected_returns_60d,
+severity, smoothed, rank, region_id, computed_at`. `region_id` links the cell to its
+`region_solutions` card. Carol's `insights_regions()` and `insights` table **SHALL rank
+from `cell_severity`** so the tab, the agent and the AI solutions use the same order.
+Region severity = Σ of its cells' terms (also in `region_solutions.input->'region'->'severity'`).
+
+- Show all three parts on the card ("88 reports in the last 12 weeks · 19.3 expected in
+  the next 4 · 10.2 expected to return within 60 days"), so the reader sees whether it is
+  ranked for its past, its future, or its chronic addresses.
 - `risk_band` stays the badge (week 1), never the sort key.
-- Optional P1: also rank by return history (`sites.recurrence_count` in the cell) as a
-  tie-breaker. Do not add weights.
+- When `sites.summary.recur_p` is filled, it may replace the per-record term for sites
+  that have it (same meaning, same unit). Until then `record_solutions` is the source.
+- Note: the forecast already reflects history, so chronic addresses weigh a little
+  twice. That is intended: returning addresses are what the program can act on.
 
 ### 5.2 Solution per region — AI over a per-record model (Bruno)
 
@@ -493,7 +514,8 @@ type InsightsRegion = {
   severity: {
     observed_12w: number;       // rodent reports in the region, last 12 weeks
     expected_4w: number;        // forecast, next 4 weeks
-    score: number;              // observed_12w + expected_4w (§5.1)
+    expected_returns_60d: number; // Σ per-address return chance, record_solutions (§5.1)
+    score: number;              // observed_12w + expected_4w + expected_returns_60d (§5.1), from cell_severity
     expected: number;           // reports/week, current forecast week
     p_any: number;              // 0..1
     band: "low" | "elevated" | "high" | "very_high";
@@ -623,7 +645,8 @@ the store only). "Open case" uses `select({kind:'site', id: recommendation.site_
 |---|---|---|
 | 1. `RegionCard` + `RegionList` render from `insights_summary.forecast.top_cells` (severity + drivers only) | Gui | Top 5 cells show as ranked cards today, no new RPC |
 | 2a. `record_solutions` model §5.2 layer 1 | Bruno | Table filled for every rodent report since 2025-01-01 (model written) |
-| 2b. Severity §5.1 + regions §5.5 + nearby causes §4.1 → `insights` table | Carol | Top regions materialised, hotspots on corners appear once |
+| 2a'. `cell_severity` §5.1 (3 terms incl. return chance) | Bruno | Done: 3,586 cells, written with `region_solutions` |
+| 2b. Regions §5.5 + nearby causes §4.1 → `insights` table, **ranked from `cell_severity`** | Carol | Top regions materialised, hotspots on corners appear once, same order as `cell_severity` |
 | 2c. Rule engine fallback §5.2 | Carol | Each region has a rules recommendation, rodenticide impossible |
 | 3. After-fix arithmetic §5.3 | Carol | Each non-inspect region has `expected_after` + `delta_4w` |
 | 3b. AI `region_solutions` §5.2 layer 2 | Bruno | Each ranked region has an AI solution + per-record lines, guards pass |
@@ -649,7 +672,9 @@ Step 1 is shippable **now** against existing data and is the demo-safe fallback.
    degrades per §6 — it never blanks and never shows placeholder numbers.
 7. Keyboard operable, AA contrast, rank conveyed in text, 1280×800 (§8.1).
 8. One read-only RPC call powers the tab (`insights_regions`), GET + anon key, STABLE.
-9. Severity shows both parts (last 12 weeks observed + next 4 weeks expected).
+9. Severity shows all three parts (last 12 weeks observed + next 4 weeks expected +
+   expected returns within 60 days) and the ranking reads `cell_severity` — no other
+   severity formula anywhere (RPC, agent, front).
 10. A hotspot on a cell corner appears as **one** card, not several (§5.5); nearby causes
     are counted by distance, not by cell membership.
 11. Each card lists its records with "what to do" per record; the region solution is AI
@@ -664,7 +689,8 @@ Step 1 is shippable **now** against existing data and is the demo-safe fallback.
 - After-fix estimate: driver-contribution arithmetic (§5.3) is the honest minimum. OK to
   ship that, or hold the "After the fix" block until a measured trial exists?
   (Bruno: ship it, with the caveat, plus the `record_solutions` return-chance line.)
-- Severity: resolved — past 12 weeks + next 4 weeks, in reports (§5.1).
+- Severity: resolved — past 12 weeks + next 4 weeks + per-site return chance, in reports,
+  materialised in `cell_severity` (§5.1).
 - Solution: resolved — per region by AI, grounded in the per-record model (§5.2).
 - Does the ranked region card **replace** the city-wide findings view, or sit above it
   with findings collapsed below? (spec assumes: replace as the lead, findings collapse

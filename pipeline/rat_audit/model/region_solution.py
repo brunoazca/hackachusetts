@@ -3,9 +3,10 @@
 Pipeline, all from data already in the DB:
 
 1. Regions (spec §5.1 / §5.5). severity(cell) = rodent reports in the last 12 weeks +
-   expected reports over the next 4 forecast weeks. Smoothed with a 3×3 kernel (ring 0.5),
-   top 5 % cells merged into 8-connected clusters (≤ 9 cells, split at local maxima), so a
-   hotspot on a cell corner is one region. Ranked by summed raw severity. When Carol's
+   expected reports over the next 4 forecast weeks + expected returns in the next 60 days
+   (Σ per-address return chance from `record_solutions`), all in reports. Smoothed with a
+   3×3 kernel (ring 0.5), top 5 % cells merged into 8-connected clusters (≤ 9 cells, split
+   at local maxima), so a hotspot on a cell corner is one region. Ranked by summed raw severity. When Carol's
    `insights` table exists it should become the source of regions; until then we build them.
 2. Evidence per region: the forecast (next 4 weeks + last 8 weeks actual vs expected), the
    forecast drivers, the region's records with what the city did and the per-record model
@@ -88,7 +89,19 @@ def _forecast_run(conn) -> str:
     ).fetchone()[0]
 
 
-def build_regions(conn, rec: pd.DataFrame, run_id: str, n: int = N_REGIONS) -> tuple[list[dict], pd.DataFrame]:
+def expected_returns(rec: pd.DataFrame, rs: dict, data_end) -> pd.Series:
+    """Per cell: Σ over addresses with a report in the last 12 weeks of P(a report returns within
+    60 days if handled as now, i.e. monitoring), from the address's latest record in `record_solutions`.
+    Unit = reports, so it adds to the other severity terms without weights. Records without an
+    address key count as their own address."""
+    recent = rec[rec["opened_at"] > data_end - pd.Timedelta(weeks=OBS_WEEKS)].sort_values("opened_at")
+    addr = recent["address_key"].fillna(recent["id"])
+    latest = recent.groupby(addr).tail(1)
+    p = latest["id"].map(lambda i: (rs.get(i) or {}).get("p_return_monitoring")).astype(float)
+    return p.groupby(latest["cell_id"]).sum()
+
+
+def build_regions(conn, rec: pd.DataFrame, run_id: str, rs: dict, n: int = N_REGIONS) -> tuple[list[dict], pd.DataFrame, pd.DataFrame]:
     cells = pd.DataFrame(conn.execute(
         "select id, col, row, lat, lon, neighborhood from grid_cells where city = 'boston'").fetchall(),
         columns=["cell_id", "col", "row", "lat", "lon", "neighborhood"])
@@ -106,7 +119,8 @@ def build_regions(conn, rec: pd.DataFrame, run_id: str, n: int = N_REGIONS) -> t
 
     cells["observed_12w"] = cells["cell_id"].map(obs).fillna(0).astype(int)
     cells["expected_4w"] = cells["cell_id"].map(exp4).fillna(0.0)
-    cells["severity"] = cells["observed_12w"] + cells["expected_4w"]
+    cells["expected_returns_60d"] = cells["cell_id"].map(expected_returns(rec, rs, data_end)).fillna(0.0)
+    cells["severity"] = cells["observed_12w"] + cells["expected_4w"] + cells["expected_returns_60d"]
     pos = {(c, r): s for c, r, s in zip(cells["col"], cells["row"], cells["severity"])}
     ring = [(dc, dr) for dc in (-1, 0, 1) for dr in (-1, 0, 1) if (dc, dr) != (0, 0)]
     cells["smoothed"] = [s + RING_WEIGHT * sum(pos.get((c + dc, r + dr), 0.0) for dc, dr in ring)
@@ -139,6 +153,7 @@ def build_regions(conn, rec: pd.DataFrame, run_id: str, n: int = N_REGIONS) -> t
             "neighborhood": top["neighborhood"], "lat": float(top["lat"]), "lon": float(top["lon"]),
             "severity": {"observed_12w": int(rows["observed_12w"].sum()),
                          "expected_4w": round(float(rows["expected_4w"].sum()), 1),
+                         "expected_returns_60d": round(float(rows["expected_returns_60d"].sum()), 1),
                          "score": round(float(rows["severity"].sum()), 1)},
         })
     regions.sort(key=lambda r: (-r["severity"]["score"], -r["severity"]["expected_4w"], r["region_id"]))
@@ -146,7 +161,10 @@ def build_regions(conn, rec: pd.DataFrame, run_id: str, n: int = N_REGIONS) -> t
     for i, r in enumerate(regions, 1):
         r["rank"] = i
         r["rank_of"] = len(cells)
-    return regions, fut
+    cells["region_id"] = None
+    for r in regions:
+        cells.loc[cells["cell_id"].isin(r["cell_ids"]), "region_id"] = r["region_id"]
+    return regions, fut, cells
 
 
 def _assign_cells(rec: pd.DataFrame) -> pd.Series:
@@ -325,7 +343,7 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
 
 # ── 4. AI + guards + rules fallback ───────────────────────────────────────────
 
-SYSTEM = """You advise Boston's rodent program (BRAP coordinators and ISD inspectors). You get one 250 m region as JSON: its severity (rodent 311 reports in the last 12 weeks + expected reports in the next 4 weeks), the forecast and its drivers, the region's recent reports with what the city did and a per-record model, each address's action history, possible causes within 150 m, and statistics of past cases by situation: for each action, how often it is used and how often reports came back within 60 days.
+SYSTEM = """You advise Boston's rodent program (BRAP coordinators and ISD inspectors). You get one 250 m region as JSON: its severity (rodent 311 reports in the last 12 weeks + expected reports in the next 4 weeks + expected returns within 60 days at its active addresses), the forecast and its drivers, the region's recent reports with what the city did and a per-record model, each address's action history, possible causes within 150 m, and statistics of past cases by situation: for each action, how often it is used and how often reports came back within 60 days.
 
 Decide ONE solution for the region and one short line per record.
 
@@ -400,6 +418,7 @@ def ask(inp: dict) -> tuple[dict | None, list[str]]:
         except Exception as e:  # network, quota, malformed tool call
             errs = [f"call/parse failed: {e}"]
             continue
+        out["action"] = re.sub(r"^\s*lane:\s*\w+\.?\s*", "", str(out.get("action", "")), flags=re.I)
         errs = check(out, inp, text)
         if not errs:
             return out, []
@@ -435,6 +454,22 @@ def rules(inp: dict) -> dict:
             "unknowns": []}
 
 
+def write_cell_severity(conn, cells: pd.DataFrame, run_id: str, now) -> None:
+    """All Boston cells with the three severity terms, the smoothed score and the region they fall in."""
+    cells = cells.assign(rank=cells["smoothed"].rank(ascending=False, method="first").astype(int))
+    with conn.cursor() as cur:
+        cur.execute("delete from cell_severity")
+        cur.executemany(
+            """
+            insert into cell_severity (cell_id, forecast_run_id, observed_12w, expected_4w, expected_returns_60d,
+                severity, smoothed, rank, region_id, computed_at)
+            values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            """,
+            [(c.cell_id, run_id, int(c.observed_12w), round(float(c.expected_4w), 4),
+              round(float(c.expected_returns_60d), 4), round(float(c.severity), 4), round(float(c.smoothed), 4),
+              int(c.rank), c.region_id, now) for c in cells.itertuples()])
+
+
 def region_solution(conn: psycopg.Connection, n: int = N_REGIONS, use_ai: bool = True) -> dict:
     """Build regions + evidence, ask the AI (or rules), write `region_solutions`. Caller commits."""
     rodent, cosig, places = sol._load(conn)
@@ -450,7 +485,7 @@ def region_solution(conn: psycopg.Connection, n: int = N_REGIONS, use_ai: bool =
           for r in conn.execute("select incident_id, label, p_return, p_return_monitoring, confident, "
                                 "alternatives, because from record_solutions").fetchall()}
     run_id = _forecast_run(conn)
-    regions, fut = build_regions(conn, rec, run_id, n)
+    regions, fut, cells = build_regions(conn, rec, run_id, rs, n)
     inputs = build_inputs(conn, regions, fut, rec, rs, stats, run_id)
 
     def solve(inp):
@@ -474,6 +509,7 @@ def region_solution(conn: psycopg.Connection, n: int = N_REGIONS, use_ai: bool =
                      json.dumps(out.get("records", [])), json.dumps(out.get("unknowns", [])),
                      out.get("rule_id"), source, LLM_MODEL if source == "ai" else None,
                      hashlib.sha256(text.encode()).hexdigest()[:16], text, json.dumps(errs), CAVEAT, now))
+    write_cell_severity(conn, cells, run_id, now)
     with conn.cursor() as cur:
         cur.execute("delete from region_solutions")
         cur.executemany(
