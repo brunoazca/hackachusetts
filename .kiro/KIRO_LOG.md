@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:08 — Boston 311 history 2016-2022 (incidents_archive) + weathe...
+- Teammate: Bruno
+- Agent: —
+- Did: Boston 311 history 2016-2022 (incidents_archive) + weather from 2015 + coverage years in UI
+- Why: more seasons for the forecast; pandemic years kept as lag inputs, training window chosen by backtest
+- Where: supabase/migrations/20261024600001_incidents_archive.sql pipeline/rat_audit/ingest/t311_history.py pipeline/rat_audit/ingest/weather.py web/src/components/map/LayerPanel.tsx
+- Idea: ce_* tickets only exist as rows since 2026-04 — use signal_volume monthly counts or drop from CORE
+
 ### 2026-10-24 16:02 — Backtested 7 new data groups + combos + leave-one-group-o...
 - Teammate: Bruno
 - Agent: —

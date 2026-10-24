@@ -57,11 +57,20 @@ const CITY_ABBR: [string, string][] = [["boston", "BOS"], ["cambridge", "CAM"], 
 /** Which of the three cities have data for a layer (R: coverage registry). */
 function CityBadges({ layer, coverage }: { layer: string; coverage: CoverageRow[] }) {
   if (!coverage.length) return null;
-  const has = new Set(coverage.filter((c) => c.kind === "incident" && c.layer === layer).map((c) => c.city));
+  const rows = coverage.filter((c) => c.layer === layer && (c.kind === "incident" || c.kind === "incident_history"));
+  const has = new Set(rows.filter((c) => c.kind === "incident").map((c) => c.city));
+  const span = (city: string) => {
+    const mine = rows.filter((c) => c.city === city);
+    const map = mine.find((c) => c.kind === "incident");
+    const hist = mine.find((c) => c.kind === "incident_history");
+    if (!map) return "No data";
+    const yr = (d: string | null) => (d ?? "").slice(0, 7);
+    return `${yr(map.first_date)} to ${yr(map.last_date)} on the map` + (hist ? `; forecast history from ${yr(hist.first_date)}` : "");
+  };
   return (
-    <span className="ml-1 inline-flex gap-0.5 align-middle" aria-label={`Data in: ${CITY_ABBR.filter(([c]) => has.has(c)).map(([, a]) => a).join(", ") || "none"}`}>
+    <span className="ml-1 inline-flex gap-0.5 align-middle" aria-label={`Data in: ${CITY_ABBR.filter(([c]) => has.has(c)).map(([c, a]) => `${a} (${span(c)})`).join(", ") || "none"}`}>
       {CITY_ABBR.map(([c, a]) => (
-        <span key={c} className={`rounded px-1 text-[10px] font-semibold leading-4 ${has.has(c) ? "bg-neutral-800 text-white" : "bg-neutral-100 text-neutral-500 line-through"}`}>{a}</span>
+        <span key={c} title={span(c)} className={`rounded px-1 text-[10px] font-semibold leading-4 ${has.has(c) ? "bg-neutral-800 text-white" : "bg-neutral-100 text-neutral-500 line-through"}`}>{a}</span>
       ))}
     </span>
   );
