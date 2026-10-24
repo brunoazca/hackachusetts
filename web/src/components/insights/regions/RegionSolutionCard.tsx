@@ -3,15 +3,19 @@ import { useId, useState } from "react";
 import { fmtDate, fmtDateTime, fmtNumber } from "../format";
 import Sources from "../Sources";
 import type { SourceRow } from "../types";
-import type { RegionSolution } from "./parse";
+import type { RegionLocation, RegionSolution } from "./parse";
+import PlaceText from "./PlaceText";
 import RegionProfile from "./RegionProfile";
 
 const actionLabels = { sanitation: "Clean up & contain waste", exclusion: "Seal entry points", enforcement: "Follow up with property owners", referral: "Coordinate with city agencies", inspect: "Inspect & identify causes" };
 
 const number = (n: number | null) => n === null ? "Unavailable" : fmtNumber(n);
-export default function RegionSolutionCard({ solution: r, sources, onShowMap }: {
+export default function RegionSolutionCard({ solution: r, sources, onShowMap, onLocate }: {
   solution: RegionSolution; sources: SourceRow[]; onShowMap: (id: string, week: string | null) => Promise<void>;
+  onLocate: (loc: RegionLocation) => void;
 }) {
+  const place = (text: string) => <PlaceText text={text} locations={r.locations} onLocate={onLocate} />;
+  const locOf = new Map(r.locations.map(l => [l.id, l]));
   const heading = useId();
   const [all, setAll] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -39,7 +43,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap }: 
     <div className="space-y-2">
       <p className="text-xs text-fg-3">Suggested next step</p>
       <h4 className="text-base font-medium text-fg">{actionLabels[r.lane]}</h4>
-      <p className="line-clamp-3 text-sm leading-relaxed">{r.action}</p>
+      <p className="line-clamp-3 text-sm leading-relaxed">{place(r.action)}</p>
       <p className="text-xs text-fg-3">Model suggestion · verify on site</p>
     </div>
     <button type="button" onClick={show} disabled={busy} className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-lg bg-card-hover px-3 text-sm font-medium text-fg transition-colors hover:bg-panel focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50">
@@ -53,9 +57,9 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap }: 
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden className="transition-transform group-open/analysis:rotate-180 motion-reduce:transition-none"><path d="m6 9 6 6 6-6"/></svg>
       </summary>
       <div className="space-y-4 pt-3">
-        <div className="space-y-2"><h4 className="font-medium text-fg">Recommended action</h4><p>{r.action}</p></div>
-        <div className="space-y-2"><h4 className="font-medium text-fg">Why this region</h4><p>{r.because}</p></div>
-        {r.unknowns.length > 0 && <div><h4 className="mb-2 font-medium text-fg">Check on site</h4><ul className="list-disc space-y-2 pl-4">{r.unknowns.map((u,i) => <li key={i}>{u}</li>)}</ul></div>}
+        <div className="space-y-2"><h4 className="font-medium text-fg">Recommended action</h4><p>{place(r.action)}</p></div>
+        <div className="space-y-2"><h4 className="font-medium text-fg">Why this region</h4><p>{place(r.because)}</p></div>
+        {r.unknowns.length > 0 && <div><h4 className="mb-2 font-medium text-fg">Check on site</h4><ul className="list-disc space-y-2 pl-4">{r.unknowns.map((u,i) => <li key={i}>{place(u)}</li>)}</ul></div>}
         {input.region.severity.expected_returns_60d !== null && <p className="text-xs">Expected returns within 60 days: {number(input.region.severity.expected_returns_60d)} · severity total: {number(input.region.severity.score)}. Model estimate from active addresses.</p>}
         <p className="text-xs text-fg-3">{r.caveat} Action comparisons are observational and subject to selection bias; a lower predicted return rate is not proof an intervention works.</p>
     <details><summary className="min-h-10 cursor-pointer py-2 text-sm font-medium text-fg">Forecast & possible causes</summary>
@@ -67,7 +71,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap }: 
     <RegionProfile cellIds={r.cell_ids} />
     <details><summary className="min-h-10 cursor-pointer py-2 text-sm font-medium text-fg">Records · what to do next</summary>
       {!r.records.length && <p>Record-level recommendations pending.</p>}
-      <ul className="space-y-3">{r.records.slice(0, all ? undefined : 10).map(record => <li key={record.incident_id} className="border-l-2 border-edge pl-3"><p className="font-semibold text-fg">{record.block ?? "Block unavailable"} · {record.status}</p><p>{fmtDate(record.opened)} · City action: {record.city_did}</p><p className="mt-1">Next: {record.todo}</p>{record.model?.confident && <p className="text-xs text-fg-3">Per-record model ({record.model.best_action}): {record.model.return_if_best ?? "unavailable"} predicted return within 60 days, versus {record.model.return_if_monitoring ?? "unavailable"} under monitoring. This compares the record model’s best action, which may differ from the region proposal.</p>}<p className="break-all text-xs text-fg-3">Record: {record.incident_id}</p></li>)}</ul>
+      <ul className="space-y-3">{r.records.slice(0, all ? undefined : 10).map(record => <li key={record.incident_id} className="border-l-2 border-edge pl-3"><p className="font-semibold text-fg">{record.location_id && locOf.get(record.location_id) ? <PlaceText text={`[${record.block ?? "Block"}](${record.location_id})`} locations={r.locations} onLocate={onLocate} /> : record.block ?? "Block unavailable"} · {record.status}</p><p>{fmtDate(record.opened)} · City action: {record.city_did}</p><p className="mt-1">Next: {place(record.todo)}</p>{record.model?.confident && <p className="text-xs text-fg-3">Per-record model ({record.model.best_action}): {record.model.return_if_best ?? "unavailable"} predicted return within 60 days, versus {record.model.return_if_monitoring ?? "unavailable"} under monitoring. This compares the record model’s best action, which may differ from the region proposal.</p>}<p className="break-all text-xs text-fg-3">Record: {record.incident_id}</p></li>)}</ul>
       {r.records.length > 10 && <button className="mt-2 min-h-10 underline" onClick={() => setAll(v => !v)}>{all ? "Show fewer" : "Show all available records"}</button>}
     </details>
     <details><summary className="min-h-10 cursor-pointer py-2 text-sm font-medium text-fg">Past cases in similar situations</summary><p className="mb-2">Observed outcomes, not measured treatment effects. Overlapping intervals do not establish a difference.</p>

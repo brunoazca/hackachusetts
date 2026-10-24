@@ -20,7 +20,7 @@ const row = {
     source_ids: ["311"],
   },
 };
-const render = (value: unknown) => renderToStaticMarkup(<RegionSolutionCard solution={parseRegionSolutions([value])[0]} sources={[]} onShowMap={async () => {}}/>);
+const render = (value: unknown) => renderToStaticMarkup(<RegionSolutionCard solution={parseRegionSolutions([value])[0]} sources={[]} onShowMap={async () => {}} onLocate={() => {}}/>);
 
 test("persisted model output renders proposal, record todo, evidence and provenance", () => {
   const html = render(row);
@@ -61,4 +61,14 @@ test("current model's third severity term is displayed without inventing missing
   assert.match(render(current), /Expected returns within 60 days/);
   assert.match(render(current), /20.6/);
   assert.doesNotMatch(render(row), /Expected returns within 60 days/);
+});
+
+test("place links render as map buttons; unknown ids stay plain text", () => {
+  const linked = { ...row, action: "Cite owners on [W Fourth St](L1) and [Nowhere](L9)",
+    locations: [{ id: "L1", label: "W Fourth St", block: "W Fourth St, 02127", lat: 42.33, lon: -71.05, incident_ids: ["i1"] }],
+    input: { ...row.input, records_last_12_weeks: [{ ...row.input.records_last_12_weeks[0], block: "W Fourth St, 02127", location_id: "L1" }] } };
+  const html = render(linked);
+  assert.match(html, /<button[^>]*title="Show W Fourth St, 02127 on the map"[^>]*>W Fourth St<\/button>/);
+  assert.match(html, /and Nowhere/);
+  assert.doesNotMatch(html, /\]\(L\d+\)/);
 });
