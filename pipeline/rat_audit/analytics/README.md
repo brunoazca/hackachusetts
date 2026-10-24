@@ -4,7 +4,37 @@ Front A / Carol, branch `feat/rat-audit-analytics-core`. This front produces the
 numbers consumed by Insights, the site inspector and the agent. It does not build
 the UI or train Bruno's forecast models.
 
-## Delivery and integration status
+## Latest validation — authorized migrations (2026-10-24)
+
+This update supersedes the earlier unexecuted-migration status below. Carol authorized
+shared migrations and analytics; access to the correct Supabase project is still missing.
+No shared migration/refresh, main merge/push or deploy has occurred.
+
+- 141 unit/property/mock tests passed; five native read-only SQL fixture tests
+  passed separately. The default run skips the ten opt-in database tests, all run
+  separately. 37 existing Shapely deprecation warnings remain in model/grid.py.
+- Five disposable PostGIS integration tests passed: migrations installed; P0 ran
+  twice; legacy/v2 queue and detail compatibility; seeded trial writes, reproducibility,
+  active-site exclusions, pending/mature results, frozen member snapshots; support RPCs
+  and required rejection reasons. Synthetic fixtures, admin role; not shared data or
+  public-role validation.
+- Exact predictions, model_runs and model_artifacts snapshots stayed unchanged after
+  migrations and repeated refreshes. Prediction-referenced grid cells survive pruning.
+  Site recur_* probabilities survive unchanged membership and are invalidated when
+  members change; cell-week predictions remain unchanged.
+- SQL Wilson bounds now handle zero/all returns exactly; containment checked for all
+  counts with sample sizes 1–100. The legacy queue remains available until v2 refresh,
+  and old address-based detail IDs remain readable afterward.
+- Production Next.js build and TypeScript passed with supplied dotenv values loaded
+  in memory only. No frontend source or lockfile changed. This does not verify the
+  separate Insights branch or a deployed end-to-end flow.
+- Shared access is the remaining deployment blocker: connected plugin lists other
+  projects; CLI has no login; supplied dotenv has no SQL URL. User chose plugin
+  reconnection. Verify migration history and existing public-role grants before applying.
+  Missing regional inputs and a configured real AI-check adapter remain separate gaps.
+
+## Earlier delivery evidence (before migration authorization)
+
 
 | Tasks | Implementation | Validation / remaining dependency |
 |---|---|---|

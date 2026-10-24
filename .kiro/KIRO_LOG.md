@@ -31,6 +31,19 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:19 — Analytics migrations and runtime validated locally; forecasts preserved
+- Teammate: Carol
+- Agent:
+- Did: Kept legacy queue/detail compatibility during v2 transition; fixed Wilson interval rounding at zero/all returns; expanded existing integration tests; built the frontend without source/dependency changes.
+- Why: Verify migration and refresh behavior before shared execution and eventual main integration.
+- Where: supabase/migrations/20261025000001_analytics_v2_loop.sql; pipeline/rat_audit/analytics/tests/test_integration_db.py; pipeline/rat_audit/analytics/README.md; .kiro/KIRO_LOG.md.
+- Evidence: 141 unit/property/mock tests passed; five native read-only SQL fixture tests passed separately. Ten opt-in database tests skipped in the default run, all executed separately; 37 pre-existing model/grid.py Shapely warnings.
+- Evidence: Five disposable PostGIS integration tests passed: all analytics migrations installed; P0 run twice; exact predictions/model_runs/model_artifacts preservation; referenced grid retained; legacy/v2 RPCs; seeded trial persistence/reproducibility/exclusions; pending and mature frozen-membership results; support RPCs and rejection validation. Synthetic data and admin role, not shared/public-role validation.
+- Evidence: Production build and TypeScript passed with existing dotenv in memory, no values printed/copied. Site recur_* keys survive identical membership and are invalidated after member changes, without modifying cell-week forecasts.
+- Decision: Carol authorized shared migrations and analytics, replacing the original read-only restriction; chose Supabase plugin reconnection. Main integration remains later. Publish only the feature branch now.
+- Blocked: Current connector exposes other projects, not rat-audit; CLI has no login and dotenv lacks SQL URL. Correct account/organization access and shared migration history/privileges still need verification. No shared migration/refresh, main push or deploy performed.
+- Idea: Keep synthetic persistence, real-input calculation evidence and live deployment validation separate.
+
 ### 2026-10-24 16:06 — Analytics v2 rebased and validated for branch-only sharing
 - Teammate: Carol
 - Agent:

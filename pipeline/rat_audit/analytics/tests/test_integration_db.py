@@ -35,26 +35,54 @@ def _ts(d: date, hour=14):
 
 @pytest.fixture(scope="module")
 def conn():
+    """Disposable only. Seed forecasts BEFORE analytics migrations, then verify unchanged."""
+    if "supabase" in ADMIN or "pooler" in ADMIN:
+        pytest.skip("refusing to run against a Supabase URL")
     name = f"analytics_test_{uuid.uuid4().hex[:8]}"
     with psycopg.connect(ADMIN, autocommit=True) as admin:
-        if "supabase" in ADMIN or "pooler" in ADMIN:
-            pytest.skip("refusing to run against a Supabase URL")
         admin.execute(f"create database {name}")
         for role in ("anon", "authenticated", "service_role"):
             admin.execute(f"do $$ begin create role {role}; exception when duplicate_object then null; end $$")
-    url = psycopg.conninfo.make_conninfo(ADMIN, dbname=name)
-    c = psycopg.connect(url)
-    for f in sorted(MIGRATIONS.glob("*.sql")):
-        c.execute(f.read_text())
-    c.commit()
-    _load_fixtures(c)
+    c = None
     real = grid.BOUNDARY_SOURCE
-    grid.BOUNDARY_SOURCE = "fx-svi"  # synthetic boundary; the real one is climate-ready-boston-svi
-    yield c
-    grid.BOUNDARY_SOURCE = real
-    c.close()
-    with psycopg.connect(ADMIN, autocommit=True) as admin:
-        admin.execute(f"drop database {name} with (force)")
+    try:
+        c = psycopg.connect(psycopg.conninfo.make_conninfo(ADMIN, dbname=name))
+        migrations = sorted(MIGRATIONS.glob("*.sql"))
+        for f in migrations:
+            if '_analytics_' not in f.name:
+                c.execute(f.read_text())
+        _load_fixtures(c)
+        _seed_forecast(c)
+        before = _forecast_snapshot(c)
+        for f in migrations:
+            if '_analytics_' in f.name:
+                c.execute(f.read_text())
+        c.commit()
+        assert _forecast_snapshot(c) == before, "analytics migrations modified forecasts"
+        grid.BOUNDARY_SOURCE = "fx-svi"
+        yield c
+    finally:
+        grid.BOUNDARY_SOURCE = real
+        if c is not None:
+            c.close()
+        with psycopg.connect(ADMIN, autocommit=True) as admin:
+            admin.execute(f"drop database {name} with (force)")
+
+
+def _seed_forecast(c):
+    c.execute("""insert into grid_cells(id,geom,lat,lon,city) values
+      ('fx-forecast-stale',st_makeenvelope(-71.30,42.40,-71.29,42.41,4326)::geography,42.405,-71.295,'boston')""")
+    c.execute("insert into model_runs(id,model,metrics) values ('fx-model','cell_week_poisson_gbm',%s::jsonb)", (json.dumps({"mae":.42}),))
+    c.execute("insert into model_artifacts(model_run_id,blob) values ('fx-model',%s)",(b'fixture-trained-model',))
+    c.execute("""insert into predictions(cell_id,week_start,model_run_id,expected,p_any,risk_band,actual,drivers)
+      values ('fx-forecast-stale','2026-10-12','fx-model',1.25,.7,'high',2,'[{"feature":"lag","contribution":0.5}]'),
+             ('fx-forecast-stale',current_date+14,'fx-model',2.5,.9,'very_high',null,'[]')""")
+    c.commit()
+
+
+def _forecast_snapshot(c):
+    return {t:c.execute(f"select * from {t} order by 1,2").fetchall()
+            for t in ('predictions','model_runs','model_artifacts')}
 
 
 def _inc(rows, iid, cat, opened, closed=None, key=None, note=None, lat=None, lon=None, zip_="02121", src="fx-311"):
@@ -167,14 +195,30 @@ def _snapshot(c):
     }
 
 
+
+def test_rpc_transition_keeps_draft_queue_and_old_ids_before_refresh(conn):
+    queue = conn.execute('select * from site_queue(10)').fetchall()
+    assert queue and all(r[0]['analytics_status']=='awaiting_refresh' for r in queue)
+    detail = conn.execute('select site_detail(%s)',('fxkey-chronic',)).fetchone()[0]
+    assert detail['legacy'] is True and detail['site']['reports']>=8
+    payload = conn.execute('select insights_summary()').fetchone()[0]
+    assert payload['forecast']['run']['id']=='fx-model'
+    assert payload['forecast']['weeks'][0]['expected_total']==2.5
+    assert conn.execute("select site_detail('does-not-exist')").fetchone()[0] is None
+
+
 def test_full_run_then_repeat(conn):
+    forecast_before = _forecast_snapshot(conn)
     out = run_all(conn, P0_STEPS)
     assert out["ok"], json.dumps(out["steps"], default=str)[:2000]
+    assert _forecast_snapshot(conn) == forecast_before
+    assert out["steps"]["grid"]["stale_kept_for_predictions"] == 1
     s = out["steps"]
     assert s["grid"]["cells"] > 0 and s["grid"]["boundary_source"] == "fx-svi"
     # grid
     n, lo, hi = conn.execute("select count(*), min(id), max(id) from grid_cells").fetchone()
-    assert n == s["grid"]["cells"] and lo.startswith("g250_")
+    assert n == s["grid"]["cells"] + 1
+    assert hi.startswith("g250_")
     # classifier
     tags = dict(conn.execute("select id, action_tag from incidents where id like 'fx:%%' and category = 'rodent' "
                              "and address_key is not null").fetchall())
@@ -189,6 +233,11 @@ def test_full_run_then_repeat(conn):
     chronic = conn.execute("select id, rank, recurrence_count, summary, recommended, parcel_pid from sites "
                            "where report_count = 9").fetchone()
     assert chronic[2] == 7 and chronic[5] == "fx-p1"
+    queue = conn.execute('select * from site_queue(50)').fetchall()
+    assert queue and all(r[0]['definition']=='dbscan_50m_min3_v2' for r in queue)
+    detail = conn.execute('select site_detail(%s)',(chronic[0],)).fetchone()[0]
+    assert detail['site']['id']==chronic[0] and len(detail['reports'])==9
+    assert conn.execute("select site_detail('fxkey-chronic')->>'legacy'").fetchone()[0]=='true'
     rules = [r["rule"] for r in chronic[4]]
     assert rules == ["escalate"]
     assert chronic[3]["adjacent_vacant"]["id"] == "vacant:fx-p2"
@@ -218,16 +267,117 @@ def test_full_run_then_repeat(conn):
     before = _snapshot(conn)
     out2 = run_all(conn, P0_STEPS)
     assert out2["ok"]
+    assert _forecast_snapshot(conn) == forecast_before
     after = _snapshot(conn)
     assert before == after  # repeat run, same data -> same outputs
     p = conn.execute("select summary->>'recur_p', summary->>'recur_model' from sites where id = %s", (chronic[0],)).fetchone()
     assert p == ("0.42", "fx")
 
+    # A changed cluster must not keep a recurrence probability fitted to old membership.
+    conn.execute("delete from incidents where id='fx:c7'")
     conn.execute("delete from incidents where id in ('fx:b2','fx:b3')")
     conn.commit()
     run_all(conn, ["sites"])
     kept = conn.execute("select rank, summary->>'retired' from sites where id = %s", (rsite,)).fetchone()
     assert kept == (None, "true")
+    assert conn.execute("select summary ? 'recur_p' or summary ? 'recur_model' from sites where id=%s",
+                        (chronic[0],)).fetchone()[0] is False
+    assert _forecast_snapshot(conn) == forecast_before
+
+
+def test_trial_rpcs_write_reproduce_exclude_and_measure_frozen_members(conn):
+    # All changes roll back. These six independent fixtures form exactly three pairs.
+    conn.rollback()
+    with conn.transaction(force_rollback=True):
+        conn.execute("update sites set rank=null")
+        for i in range(6):
+            iid, sid = f'fx:anchor-{i}', f'fx:trial-{i}'
+            lon = -71.2 + .002 * i
+            conn.execute("""insert into incidents(id,source_id,category,status,opened_at,geom,lat,lon)
+              values (%s,'fx-311','rodent','open',now()-interval '90 days',
+                st_setsrid(st_makepoint(%s,42.30),4326),42.30,%s)""", (iid,lon,lon))
+            conn.execute("""insert into sites(id,address_block,score,rank,report_count,recurrence_count,
+              neighborhood,lat,lon,summary) values (%s,'Fixture St, 02121',0,%s,10,4,'Fixture',42.30,%s,
+                jsonb_build_object('definition','dbscan_50m_min3_v2','prior_returns_bucket','3+',
+                  'trash_tickets_12mo',2,'base_rate',jsonb_build_object('n',100,'rate',.8),
+                  'due_threshold',.5,'last_closed_at',now()-interval '1 day',
+                  'incident_ids',jsonb_build_array(%s::text),'source_ids',jsonb_build_array('fx-311')))""",
+                (sid,i+1,lon,iid))
+
+        def design(n=2):
+            return conn.execute("select design_trial(%s,'sealed_containers',42)", (n,)).fetchone()[0]
+
+        def pairs(result):
+            return [(p['treatment_site'],p['comparison_site'],p['match_keys']) for p in result['pairs']]
+
+        with conn.transaction(force_rollback=True):
+            first = design()
+        repeated = design()
+        assert pairs(first) == pairs(repeated)
+        assert len(repeated['pairs']) == 2
+        assert all(p['match_keys'] == {'neighborhood':'Fixture','prior_returns_bucket':'3+',
+                    'trash_ticket_tercile':1} for p in repeated['pairs'])
+        used = {p[k] for p in repeated['pairs'] for k in ('treatment_site','comparison_site')}
+        remaining = design(1)
+        assert used.isdisjoint({p[k] for p in remaining['pairs'] for k in ('treatment_site','comparison_site')})
+        before = conn.execute('select count(*) from trials').fetchone()[0]
+        with pytest.raises(psycopg.errors.RaiseException, match='Only 0 matched pairs'):
+            with conn.transaction():
+                design(1)
+        assert conn.execute('select count(*) from trials').fetchone()[0] == before
+        with pytest.raises(psycopg.errors.RaiseException, match='Unsupported intervention'):
+            with conn.transaction():
+                conn.execute("select design_trial(1,'rodenticide',42)")
+
+        tid = repeated['trial']['id']
+        pending = conn.execute('select trial_result(%s)',(tid,)).fetchone()[0]
+        assert pending['status'] == 'pending' and pending['arms'] is None
+        # Mature the trial and add one eligible return and one excluded duplicate.
+        conn.execute("update trials set created_at=now()-interval '61 days' where id=%s",(tid,))
+        for arm, duplicate in (('treatment',False),('comparison',True)):
+            anchor = repeated['pairs'][0]['snapshot'][arm]['incident_ids'][0]
+            conn.execute("""insert into incidents(id,source_id,category,status,opened_at,geom,lat,lon,action_tag)
+              select %s,'fx-311','rodent','open',now()-interval '30 days',geom,lat,lon,%s
+              from incidents where id=%s""", (f'fx:trial-return-{arm}','duplicate' if duplicate else None,anchor))
+        # An unrelated report proves observation through today, even if no arm returns.
+        conn.execute("""insert into incidents(id,source_id,category,status,opened_at)
+          values ('fx:trial-observed','fx-311','rodent','open',now())""")
+        complete = conn.execute('select trial_result(%s)',(tid,)).fetchone()[0]
+        assert complete['status'] == 'complete'
+        assert complete['arms']['treatment']['n'] == 2
+        assert complete['arms']['treatment']['returns'] == 1
+        assert complete['arms']['comparison']['returns'] == 0
+        for arm in complete['arms'].values():
+            assert 0 <= arm['ci_low'] <= arm['rate'] <= arm['ci_high'] <= 1
+        # Stored snapshots define results even after current cluster membership changes.
+        conn.execute("update sites set summary=summary || '{\"incident_ids\":[]}' where id like 'fx:trial-%%'")
+        assert conn.execute('select trial_result(%s)',(tid,)).fetchone()[0] == complete
+
+
+def test_supporting_rpcs_and_required_rejection_reason(conn):
+    # Floating-point cancellation must not put zero/100% outside its own interval.
+    assert conn.execute("""select count(*) from generate_series(1,100) n
+      cross join lateral generate_series(0,n) k
+      cross join lateral (select analytics_wilson(k,n) as v) w
+      where not ((v->>'ci_low')::float8 <= (v->>'rate')::float8
+        and (v->>'rate')::float8 <= (v->>'ci_high')::float8)""").fetchone()[0] == 0
+    assert len(conn.execute('select * from base_rates()').fetchall()) == 4
+    practice = [r[0] for r in conn.execute('select * from practice_shift()').fetchall()]
+    assert practice
+    for year in {r['year'] for r in practice}:
+        assert sum(r['share'] for r in practice if r['year']==year) == pytest.approx(1)
+    conn.execute('select * from enforcement_gaps()').fetchall()
+    sid = conn.execute('select id from sites where rank is not null limit 1').fetchone()[0]
+    with conn.transaction(force_rollback=True):
+        conn.execute("""insert into decisions(site_id,action,follow_up_on)
+          values (%s,'fixture action',current_date)""",(sid,))
+        followups = [r[0] for r in conn.execute('select * from followups_due()').fetchall()]
+        assert any(r['site_id']==sid and r['returns_since']==0 for r in followups)
+        with pytest.raises(psycopg.errors.CheckViolation, match='decisions_reject_reason_required'):
+            with conn.transaction():
+                conn.execute("insert into decisions(site_id,action,status) values (%s,'fixture','rejected')",(sid,))
+        conn.execute("""insert into decisions(site_id,action,status,reject_reason)
+          values (%s,'fixture','rejected','Needs review')""",(sid,))
 
 
 def test_missing_inputs_are_named(conn):

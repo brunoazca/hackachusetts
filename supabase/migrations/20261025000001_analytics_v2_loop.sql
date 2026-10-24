@@ -75,21 +75,36 @@ language sql stable security invoker set search_path = '' as $$
     'lat',round(s.lat::numeric,4),'lon',round(s.lon::numeric,4))
 $$;
 
+-- Retain the existing read-only endpoints during the schema/data transition and
+-- for clients that still hold an old address-based site ID. Their original grants
+-- and behavior are preserved; the new endpoints below remain invoker functions.
+alter function public.site_queue(int,text) rename to analytics_legacy_site_queue;
+alter function public.site_detail(text) rename to analytics_legacy_site_detail;
+
 -- Same arguments/return type as Gui's draft, so existing callers keep working.
 create or replace function public.site_queue(lim int default 50, hood text default null)
 returns setof jsonb language sql stable security invoker set search_path = '' as $$
-  select public.analytics_site_case(s) from public.sites s
-  where s.city='boston' and s.rank is not null and (hood is null or s.neighborhood=hood)
-    and s.summary->>'definition'='dbscan_50m_min3_v2'
-  order by (public.analytics_site_case(s)->>'due')::boolean desc,
-    coalesce((s.summary->>'returns_12mo')::int,0) desc,s.report_count desc,s.last_at desc,s.id
+  with active as (
+    select * from public.sites where city='boston' and rank is not null
+      and summary->>'definition'='dbscan_50m_min3_v2'
+  ), result as (
+    select public.analytics_site_case(s) as value from public.sites s
+    where s.id in (select id from active) and (hood is null or s.neighborhood=hood)
+    union all
+    select legacy.value || jsonb_build_object('definition','address_draft','analytics_status','awaiting_refresh')
+    from public.analytics_legacy_site_queue(greatest(0,least(coalesce(lim,50),500)),hood) as legacy(value)
+    where not exists(select 1 from active)
+  )
+  select value from result order by (value->>'due')::boolean desc,
+    coalesce((value->>'returns_12mo')::int,(value->>'returns')::int,0) desc,
+    (value->>'reports')::int desc,value->>'last_at' desc,value->>'id'
   limit greatest(0,least(coalesce(lim,50),500))
 $$;
 
 -- Keep the draft's response shape, add the full case and original member IDs.
 create or replace function public.site_detail(site_id text) returns jsonb
 language sql stable security invoker set search_path = '' as $$
-  select jsonb_build_object('site',public.analytics_site_case(s),
+  select coalesce((select jsonb_build_object('site',public.analytics_site_case(s),
     'reports',coalesce((select jsonb_agg(x || jsonb_build_object(
       'opened',x->'opened_at','closed',x->'closed_at','action',x->'action_tag',
       'status',case when x->>'closed_at' is null then 'open' else 'closed' end,
@@ -100,7 +115,8 @@ language sql stable security invoker set search_path = '' as $$
     'adjacent_vacant_parcels',case when s.summary->'adjacent_vacant' <> 'null'::jsonb then 1 else 0 end,
     'source_ids',s.summary->'source_ids','recommended',s.recommended,
     'decisions',coalesce((select jsonb_agg(to_jsonb(d) order by d.created_at desc) from public.decisions d where d.site_id=s.id),'[]'))
-  from public.sites s where s.id=site_id and s.summary->>'definition'='dbscan_50m_min3_v2'
+  from public.sites s where s.id=site_id and s.summary->>'definition'='dbscan_50m_min3_v2'),
+    public.analytics_legacy_site_detail(site_id) || jsonb_build_object('legacy',true))
 $$;
 
 create function public.base_rates() returns setof public.base_rates
@@ -194,8 +210,8 @@ create function public.analytics_wilson(k int,n int) returns jsonb
 language sql immutable security invoker set search_path = '' as $$
   select case when n=0 then jsonb_build_object('n',0,'returns',k,'rate',null,'ci_low',null,'ci_high',null)
     else jsonb_build_object('n',n,'returns',k,'rate',k::float8/n,
-      'ci_low',greatest(0,(k::float8/n+3.8416/(2*n)-1.96*sqrt(k::float8/n*(1-k::float8/n)/n+3.8416/(4*n::float8*n)))/(1+3.8416/n)),
-      'ci_high',least(1,(k::float8/n+3.8416/(2*n)+1.96*sqrt(k::float8/n*(1-k::float8/n)/n+3.8416/(4*n::float8*n)))/(1+3.8416/n))) end
+      'ci_low',case when k=0 then 0 else greatest(0,(k::float8/n+3.8416/(2*n)-1.96*sqrt(k::float8/n*(1-k::float8/n)/n+3.8416/(4*n::float8*n)))/(1+3.8416/n)) end,
+      'ci_high',case when k=n then 1 else least(1,(k::float8/n+3.8416/(2*n)+1.96*sqrt(k::float8/n*(1-k::float8/n)/n+3.8416/(4*n::float8*n)))/(1+3.8416/n)) end) end
 $$;
 create function public.trial_result(id uuid) returns jsonb
 language sql stable security invoker set search_path = '' as $$
