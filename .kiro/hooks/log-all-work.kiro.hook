@@ -1,0 +1,17 @@
+{
+  "name": "Log all app/file work to the Kiro log",
+  "description": "Catch-all: whenever any repo file changes (the work product of any Crew app or agent), append one entry to .kiro/KIRO_LOG.md so every piece of work is visible to judges.",
+  "trigger": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*",
+      ".kiro/specs/**/*",
+      "docs/**/*",
+      "knowledge/**/*",
+      "*.md",
+      "*.json"
+    ]
+  },
+  "prompt": "A file in the repo just changed. This is real work and must be logged. Do NOT modify the changed file. Infer which app/agent most likely produced it from the path (e.g. .kiro/specs/** -> spec-builder; src/**/*.tsx|jsx|html -> design-critique or app code; docs/** -> docs/writing; else -> the active agent). Then log exactly one entry from the repo root: `.kiro/klog.sh -t \"<teammate if known, else — (unconfirmed)>\" -a \"<inferred app/agent>\" -d \"<one-line what changed>\" -w \"<one-line why, if known, else —>\" -f \"<changed file path(s)>\" -i \"—\"`. Skip logging only if the change is itself a KIRO_LOG.md write (avoid self-trigger loops). Report the logged line in one sentence.",
+  "enabled": true
+}

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hackachusetts Civic Data Explorer</title>
+<style>
+  :root {
+    --bg: #f7f7f4; --card: #ffffff; --ink: #1b1f24; --muted: #4a5360; --line: #d9dcd3;
+    --accent: #0b5cad; --accent-ink: #ffffff; --chip: #e8eef6;
+    --V1: #7a3e00; --V2: #8a1538; --V3: #0f5e3a; --V4: #4b2a8a; --V5: #00566b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+  a { color: var(--accent); }
+  :focus-visible { outline: 3px solid #f2a900; outline-offset: 2px; }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 1rem; top: 1rem; background: #fff; padding: .5rem 1rem; z-index: 10; }
+  header { background: #12263f; color: #fff; padding: 2rem 1.25rem 1.5rem; }
+  header h1 { margin: 0 0 .25rem; font-size: 1.9rem; }
+  header p { margin: 0; color: #d4dceb; max-width: 60rem; }
+  nav { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+  nav a { color: #fff; font-weight: 600; }
+  main { max-width: 78rem; margin: 0 auto; padding: 1.25rem; }
+  section { margin: 2rem 0; }
+  h2 { font-size: 1.4rem; margin: 0 0 .75rem; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1rem; }
+  .stat b { display: block; font-size: 1.6rem; }
+  .stat span { color: var(--muted); font-size: .9rem; }
+  .challenges { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .75rem; }
+  .challenge { background: var(--card); border: 1px solid var(--line); border-left: 6px solid; border-radius: 10px; padding: .8rem 1rem; }
+  .challenge h3 { margin: 0 0 .25rem; font-size: 1rem; }
+  .challenge p { margin: 0; color: var(--muted); font-size: .9rem; }
+  .controls { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-bottom: 1rem; }
+  .controls label { font-weight: 600; }
+  .controls input { padding: .5rem .7rem; border: 1px solid #8a919c; border-radius: 8px; font: inherit; min-width: 16rem; }
+  .filter { border: 1px solid #8a919c; background: #fff; color: var(--ink); border-radius: 999px; padding: .35rem .8rem; font: inherit; cursor: pointer; }
+  .filter[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); gap: 1rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: .5rem; }
+  .card h3 { margin: 0; font-size: 1.1rem; }
+  .meta { color: var(--muted); font-size: .88rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .tag { font-size: .78rem; font-weight: 700; padding: .1rem .5rem; border-radius: 999px; color: #fff; }
+  .key { font-size: .8rem; background: var(--chip); color: #12263f; padding: .1rem .5rem; border-radius: 6px; }
+  .bars { display: grid; gap: .2rem; font-size: .85rem; }
+  .bar { display: grid; grid-template-columns: 1fr 4.5rem; gap: .5rem; align-items: center; }
+  .bar .fill { position: relative; background: #eef1ea; border-radius: 4px; overflow: hidden; padding: .1rem .4rem; white-space: nowrap; text-overflow: ellipsis; }
+  .bar .fill i { position: absolute; inset: 0 auto 0 0; background: #c9dcf0; z-index: 0; }
+  .bar .fill span { position: relative; z-index: 1; }
+  .bar .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  details { font-size: .85rem; }
+  summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .85rem; background: var(--card); }
+  th, td { border: 1px solid var(--line); padding: .35rem .5rem; text-align: left; vertical-align: top; }
+  th { background: #eef1ea; }
+  code { background: #eef1ea; padding: 0 .3rem; border-radius: 4px; font-size: .85em; }
+  .ideas { display: grid; grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr)); gap: 1rem; }
+  .idea { background: var(--card); border: 1px solid var(--line); border-top: 6px solid; border-radius: 12px; padding: 1rem 1.1rem; }
+  .idea h3 { margin: 0 0 .35rem; }
+  .idea p { margin: .35rem 0; }
+  .idea .human { background: #fff8e6; border: 1px solid #e9d39a; border-radius: 8px; padding: .4rem .6rem; font-size: .9rem; }
+  .dslink { background: none; border: none; padding: 0; color: var(--accent); text-decoration: underline; font: inherit; cursor: pointer; }
+  .note { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .8rem 1rem; color: var(--muted); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .card.flash { box-shadow: 0 0 0 4px #f2a900; }
+  .card.remote { border: 2px dashed #8a919c; background: #fbfcfe; }
+  .badge { font-size: .78rem; font-weight: 700; padding: .15rem .55rem; border-radius: 6px; }
+  .badge.have { background: #d7ecd9; color: #0f3d22; }
+  .badge.ok { background: #dbe8f7; color: #0b3a6e; }
+  .badge.key { background: #fff1c7; color: #5a4300; }
+  .badge.manual { background: #f6dede; color: #6b1414; }
+  .unlocks { background: #eef6ee; border-radius: 8px; padding: .4rem .6rem; font-size: .9rem; margin: 0; }
+  .url { word-break: break-all; font-size: .8rem; }
+  .legend { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+  footer { color: var(--muted); font-size: .85rem; padding: 2rem 1.25rem; text-align: center; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <h1>Civic Data Explorer</h1>
+  <p>Every Hackachusetts Civic Action dataset in this repo, what it contains, how the datasets join, and
+     integration ideas you can build today. All numbers are computed from the committed <code>data.csv</code> snapshots.</p>
+  <nav aria-label="Sections">
+    <a href="#overview">Overview</a><a href="#datasets">Datasets</a><a href="#joins">How they connect</a>
+    <a href="#fetch">Fetchable online</a><a href="#ideas">Build ideas</a><a href="#tips">Gotchas</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section id="overview" aria-labelledby="h-overview">
+    <h2 id="h-overview">Overview</h2>
+    <div class="stats" id="stats"></div>
+    <h2 style="margin-top:1.5rem">Challenges</h2>
+    <div class="challenges" id="challenges"></div>
+  </section>
+
+  <section id="datasets" aria-labelledby="h-datasets">
+    <h2 id="h-datasets">Datasets</h2>
+    <div class="controls" role="group" aria-label="Filter datasets">
+      <label for="q">Search</label>
+      <input id="q" type="search" placeholder="e.g. zip, crash, college, ward">
+      <span id="filters"></span>
+    </div>
+    <p id="count" class="meta" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="joins" aria-labelledby="h-joins">
+    <h2 id="h-joins">How they connect</h2>
+    <p class="meta">Join keys at a glance, then measured coverage for the obvious joins.</p>
+    <div class="scroll"><table id="matrix"><caption class="sr">Which join keys each dataset has</caption></table></div>
+    <h3>Measured join coverage</h3>
+    <div class="scroll"><table id="joinTable"><caption class="sr">Join coverage between datasets</caption></table></div>
+    <h3>Already-computed: 311 cases per 1,000 residents</h3>
+    <p class="meta">boston-311 joined to neighborhoods. Snapshot is the 5,000 most recent cases, so read this as a recent-activity signal, not an annual rate.</p>
+    <div class="scroll"><table id="rates"><caption class="sr">311 cases per 1,000 residents by neighborhood</caption></table></div>
+  </section>
+
+  <section id="fetch" aria-labelledby="h-fetch">
+    <h2 id="h-fetch">Not in the repo yet: fetchable online</h2>
+    <p class="meta" id="fetchIntro"></p>
+    <div class="legend" aria-label="Legend">
+      <span class="badge have">In repo</span>
+      <span class="badge ok">Fetchable: responded OK</span>
+      <span class="badge key">Needs a free API key</span>
+      <span class="badge manual">Manual browser download</span>
+    </div>
+    <p id="fetchCount" class="meta" aria-live="polite"></p>
+    <div class="grid" id="fetchGrid"></div>
+  </section>
+
+  <section id="ideas" aria-labelledby="h-ideas">
+    <h2 id="h-ideas">Build ideas (smart integrations)</h2>
+    <p class="meta">Each idea names the datasets, the join, and the human decision point the judges ask for. Filter by challenge with the buttons above the dataset grid.</p>
+    <div class="ideas" id="ideaGrid"></div>
+  </section>
+
+  <section id="tips" aria-labelledby="h-tips">
+    <h2 id="h-tips">Gotchas before you join</h2>
+    <ul class="note">
+      <li>Zip codes lose their leading <code>0</code> in spreadsheets. Zero-pad to 5 characters.</li>
+      <li>Most live API calls return only ~100 rows. Demo on the committed <code>data.csv</code>; use <code>fetch.py</code> to refresh.</li>
+      <li>Snapshots differ in time window: 311 is recent weeks, permits/violations since 2024, Numina is 2020-2021, Bluebikes is Nov 2024 only. Say so on screen.</li>
+      <li>Counts are not rates. Divide crashes by bike volume, 311 cases by population.</li>
+      <li>Scorecard earnings are not causal, and <code>PrivacySuppressed</code> is not zero.</li>
+      <li>Vision Zero is crash location, not where people live. Avoid framing it as "dangerous neighborhoods".</li>
+      <li>Check each source license before republishing a slice (every dataset README repeats this).</li>
+    </ul>
+  </section>
+</main>
+<footer>Generated by <code>data/civic/explorer/build.py</code>. Snapshots saved by the Hackachusetts portal on 2026-10-18.</footer>
+
+<script>
+const DATA = /*__DATA__*/null;
+const CH = ["V1","V2","V3","V4","V5"];
+const colorOf = c => getComputedStyle(document.documentElement).getPropertyValue("--" + c).trim();
+const fmt = n => Number(n).toLocaleString("en-US");
+
+// Tiny DOM builder: children are nodes or strings (always set as text, never HTML).
+function h(tag, attrs = {}, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "style" && typeof v === "object") Object.assign(el.style, v);
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v);
+  }
+  for (const kid of kids.flat()) if (kid != null) el.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
+  return el;
+}
+const chTag = c => h("span", { class: "tag", style: { background: colorOf(c) }, title: DATA.challenges[c].title }, c);
+
+// Overview
+const geoCount = DATA.cards.filter(c => c.keys.some(k => k.includes("lat/long"))).length;
+document.getElementById("stats").append(
+  ...[[DATA.cards.length, "datasets"], [fmt(DATA.totalRows), "rows in snapshots"],
+      [geoCount, "with lat/long"], [DATA.fetchable.length, "more fetchable online"], [DATA.joins.length, "joins measured"], [DATA.ideas.length, "build ideas"]]
+    .map(([b, s]) => h("div", { class: "stat" }, h("b", {}, b), h("span", {}, s))));
+document.getElementById("challenges").append(...CH.map(c => {
+  const n = DATA.cards.filter(d => d.ch.includes(c)).length;
+  return h("div", { class: "challenge", style: { borderLeftColor: colorOf(c) } },
+    h("h3", {}, `${c} · ${DATA.challenges[c].title}`), h("p", {}, DATA.challenges[c].blurb), h("p", {}, `${n} datasets`));
+}));
+
+// Dataset cards
+function card(d) {
+  const max = d.top.length ? d.top[0][1] : 1;
+  return h("article", { class: "card", id: "ds-" + d.id, "aria-labelledby": "t-" + d.id },
+    h("div", { class: "tags" }, h("span", { class: "badge have" }, "In repo")),
+    h("h3", { id: "t-" + d.id }, d.title),
+    h("div", { class: "meta" }, `${d.id} · ${d.org} · ${d.src}`),
+    h("div", { class: "tags" }, d.ch.map(chTag)),
+    h("p", { style: { margin: 0 } }, d.what),
+    h("div", { class: "meta" }, h("b", {}, fmt(d.rows)), " rows · ", `${d.cols.length} columns`,
+      d.range ? ` · ${d.range}` : "", d.geo ? ` · geography: ${d.geo}` : ""),
+    h("div", { class: "tags", "aria-label": "Join keys" }, h("span", { class: "meta" }, "Join on:"), d.keys.map(k => h("span", { class: "key" }, k))),
+    d.top.length ? h("div", { class: "bars", role: "list", "aria-label": `Top values of ${d.topCol}` },
+      h("div", { class: "meta" }, `Top ${d.topCol}`),
+      d.top.map(([v, n]) => h("div", { class: "bar", role: "listitem" },
+        h("div", { class: "fill", title: v }, h("i", { style: { width: (100 * n / max) + "%" } }), h("span", {}, v)),
+        h("div", { class: "n" }, fmt(n))))) : null,
+    h("details", {}, h("summary", {}, "Columns and sample rows"),
+      h("p", {}, d.cols.map((c, i) => [i ? ", " : "", h("code", {}, c)])),
+      h("div", { class: "scroll" }, h("table", {},
+        h("thead", {}, h("tr", {}, d.cols.map(c => h("th", { scope: "col" }, c)))),
+        h("tbody", {}, d.sample.map(r => h("tr", {}, r.map(v => h("td", {}, v))))))),
+      h("p", {}, "File: ", h("code", {}, d.path), ". Refresh with ", h("code", {}, "python fetch.py"), " in that folder.")));
+}
+
+let active = null;
+const grid = document.getElementById("grid"), q = document.getElementById("q"), filters = document.getElementById("filters");
+const btns = ["All", ...CH].map(c => h("button", { class: "filter", type: "button", "aria-pressed": c === "All" ? "true" : "false",
+  onclick: () => { active = c === "All" ? null : c; btns.forEach(b => b.setAttribute("aria-pressed", String(b.textContent === c))); render(); } }, c));
+filters.append(...btns);
+q.addEventListener("input", render);
+
+function render() {
+  const term = q.value.trim().toLowerCase();
+  const list = DATA.cards.filter(d => (!active || d.ch.includes(active)) &&
+    (!term || [d.id, d.title, d.what, d.geo, ...d.keys, ...d.cols].join(" ").toLowerCase().includes(term)));
+  grid.replaceChildren(...list.map(card));
+  document.getElementById("count").textContent = `Showing ${list.length} of ${DATA.cards.length} datasets` + (active ? ` for ${active}` : "");
+  const ideas = DATA.ideas.filter(i => !active || i.ch === active);
+  document.getElementById("ideaGrid").replaceChildren(...ideas.map(idea));
+  const fl = DATA.fetchable.filter(f => (!active || f.ch.includes(active)) &&
+    (!term || [f.id, f.title, f.what, f.unlocks, ...f.joins].join(" ").toLowerCase().includes(term)));
+  document.getElementById("fetchGrid").replaceChildren(...fl.map(remoteCard));
+  document.getElementById("fetchCount").textContent = `Showing ${fl.length} of ${DATA.fetchable.length} fetchable datasets` +
+    (active ? ` for ${active}` : "") + (term ? ` matching "${q.value.trim()}"` : "");
+}
+
+// Fetchable-online cards
+const STATUS = { ok: ["ok", "Fetchable: responded OK"], key: ["key", "Needs a free API key"], manual: ["manual", "Manual browser download"] };
+const haveIds = new Set(DATA.cards.map(c => c.id));
+function remoteCard(f) {
+  const [cls, label] = STATUS[f.status] || STATUS.ok;
+  return h("article", { class: "card remote", id: "ds-" + f.id, "aria-labelledby": "t-" + f.id },
+    h("div", { class: "tags" }, h("span", { class: "badge " + cls }, label), h("span", { class: "badge", style: { background: "#eceef1" } }, "Not downloaded")),
+    h("h3", { id: "t-" + f.id }, f.title),
+    h("div", { class: "meta" }, `${f.id} · ${f.org}`),
+    h("div", { class: "tags" }, f.ch.map(chTag)),
+    h("p", { style: { margin: 0 } }, f.what),
+    h("p", { class: "unlocks" }, h("b", {}, "Unlocks: "), f.unlocks),
+    f.joins.length ? h("p", { class: "meta", style: { margin: 0 } }, "Joins with: ",
+      f.joins.map((j, k) => [k ? ", " : "", h("button", { class: "dslink", type: "button", onclick: () => jump(j) }, j),
+        haveIds.has(j) ? "" : " (fetchable)"])) : null,
+    h("p", { class: "meta", style: { margin: 0 } }, h("b", {}, `Check ${DATA.checked}: `), f.note),
+    f.caution ? h("p", { class: "meta", style: { margin: 0 } }, h("b", {}, "Careful: "), f.caution) : null,
+    h("details", {}, h("summary", {}, "Request URL"),
+      h("p", { class: "url" }, h("a", { href: f.url, target: "_blank", rel: "noopener noreferrer" }, f.url))));
+}
+document.getElementById("fetchIntro").textContent =
+  `${DATA.fetchable.length} public sources that fill gaps in the kit (coordinates, close dates, live feeds, wages, weather). ` +
+  `Each was probed from this machine on ${DATA.checked}. Responses can change, so save a dated snapshot before the demo instead of calling live.`;
+
+// Join-key matrix
+const KEYS = [["Neighborhood", k => /neighborhood/.test(k)], ["Zip", k => /zip/.test(k)], ["Ward", k => /ward/.test(k)],
+  ["Town / county", k => /municipality|town|county/.test(k)], ["Lat/long", k => /lat\/long/.test(k)],
+  ["Street", k => /street/.test(k)], ["Station / route", k => /station|route|^id$|line/.test(k)],
+  ["unitid / school name", k => /unitid|^name/.test(k)], ["Time series", k => /time|year/.test(k)]];
+const mt = document.getElementById("matrix");
+mt.append(h("thead", {}, h("tr", {}, h("th", { scope: "col" }, "Dataset"), KEYS.map(([n]) => h("th", { scope: "col" }, n)))),
+  h("tbody", {}, DATA.cards.map(d => h("tr", {}, h("th", { scope: "row" }, d.id),
+    KEYS.map(([n, f]) => { const yes = d.keys.some(k => f(k.toLowerCase())) || (n === "Time series" && !!d.range);
+      return h("td", { style: { textAlign: "center", background: yes ? "#d7ecd9" : "" } }, yes ? "✓" : h("span", { class: "sr" }, "no")); })))));
+
+const jt = document.getElementById("joinTable");
+jt.append(h("thead", {}, h("tr", {}, ["From", "To", "Key", "Result", "Note"].map(c => h("th", { scope: "col" }, c)))),
+  h("tbody", {}, DATA.joins.map(j => h("tr", {}, h("td", {}, j.a), h("td", {}, j.b), h("td", {}, j.key), h("td", {}, h("b", {}, j.result)), h("td", {}, j.note)))));
+
+const rt = document.getElementById("rates");
+rt.append(h("thead", {}, h("tr", {}, ["Neighborhood", "311 cases", "Per 1,000 residents", "On time", "Poverty rate"].map(c => h("th", { scope: "col" }, c)))),
+  h("tbody", {}, DATA.facts.rates311.map(r => h("tr", {}, h("th", { scope: "row" }, r.name), h("td", {}, fmt(r.cases)),
+    h("td", {}, r.per1k.toFixed(1)), h("td", {}, r.ontime.toFixed(0) + "%"), h("td", {}, r.poverty.toFixed(0) + "%")))));
+
+// Ideas
+function jump(id) {
+  active = null; q.value = ""; btns.forEach(b => b.setAttribute("aria-pressed", String(b.textContent === "All"))); render();
+  const el = document.getElementById("ds-" + id);
+  if (el) { el.scrollIntoView({ behavior: "smooth", block: "center" }); el.classList.add("flash"); el.setAttribute("tabindex", "-1"); el.focus({ preventScroll: true }); setTimeout(() => el.classList.remove("flash"), 1500); }
+}
+function idea(i) {
+  return h("article", { class: "idea", style: { borderTopColor: colorOf(i.ch) } },
+    h("div", { class: "tags" }, chTag(i.ch), h("span", { class: "key" }, i.effort)),
+    h("h3", {}, i.title),
+    h("p", {}, i.pitch),
+    h("p", { class: "meta" }, "Data: ", i.data.map((d, k) => [k ? ", " : "", h("button", { class: "dslink", type: "button", onclick: () => jump(d) }, d)]), ` · join on ${i.join}`),
+    (i.boost || []).length ? h("p", { class: "meta" }, h("span", { class: "badge ok" }, "Upgrade with fetchable"), " ",
+      i.boost.map((d, k) => [k ? ", " : "", h("button", { class: "dslink", type: "button", onclick: () => jump(d) }, d)])) : null,
+    h("p", { class: "human" }, h("b", {}, "Human decision point: "), i.decision));
+}
+
+render();
+</script>
+</body>
+</html>
