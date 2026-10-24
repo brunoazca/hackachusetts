@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:41 — Kept rendered video out of git: ignore *.mp4/*.mov/clips/...
+- Teammate: Guilherme
+- Agent: Claude Code
+- Did: Kept rendered video out of git: ignore *.mp4/*.mov/clips/assets, untracked docs/submission/video/piper-demo.mp4 (602 MB render in progress), 50 MB blob guard in .githooks/pre-commit; pushed to main (193ca96) and a11y/map-twin-skip-motion (399912e)
+- Why: GitHub rejects files over 100 MB; an autopush or git add -A would have staged the render and blocked every push
+- Where: .gitignore; .githooks/pre-commit; docs/submission/video/piper-demo.mp4
+- Idea: Share renders via Drive and link them from docs/submission/video/README.md; the local backup/main-before-sync-1620 branch holds 1.3 GB of .mov and must never be pushed
+
 ### 2026-10-24 18:37 — Ran per-evidence-layer ablation of the cell-week Poisson ...
 - Teammate: Bruno
 - Agent: —
