@@ -1,6 +1,6 @@
 # Piper: how we use ML and AI (motion graphic)
 
-A 63-second segment for the presentation video: **See → Act → Predict**. Every map and chart is drawn from the live data; the platform
+A 60-second segment for the presentation video: **See → Act → Predict**. Every map and chart is drawn from the live data; the platform
 scene is a JS simulation of the Piper UI using real numbers. 1920×1080, 30 fps, no audio (captions on screen).
 
 | File | What |
@@ -13,21 +13,23 @@ scene is a JS simulation of the Piper UI using real numbers. 1920×1080, 30 fps,
 
 ## Storyboard
 
-A segment for a bigger video: no opening title or closing logo, one short headline per scene. A See → Act → Predict
-strip stays top-right. Blue = model, red = what happened. 63 s.
+A segment for a bigger video: a short section intro, then one headline per scene, no closing logo. A See → Act → Predict
+strip stays top-right. Blue = model, red = what happened. Scenes dip to black between each other (no overlapping titles). 60 s.
 
 | # | Time | Headline | Visual | Facts (source) |
 |---|---|---|---|---|
-| 1 | 0–5.6 s | What predicts rodent reports? | dataset chips: kept ✓ / struck out; "43 datasets tested" | `docs/rat-audit/AUDIT.md` |
-| 2 | 5.6–11.2 | **See** · Every report, one live map | real 250 m grid, rodent reports last 12 weeks | model report run `risk-v1-20261024T210943` |
-| 3 | 11.2–17.6 | **Act** · What worked? | bars: came back within 60 days by action; 45% enforcement vs 46% monitoring, "no clear difference", matched 181 pairs | `correlations.what-worked` |
-| 4 | 17.6–23.2 | **Act** · Learning from our neighbours | Cambridge smart boxes ×1.46 near vs ×1.61 elsewhere (descriptive); Somerville Rodent Assistance Program 545 requests in 12 months | `correlations.three-city-comparison` |
-| 5 | 23.2–30.4 | **Act** · Will it come back? | return-risk deciles (predicted vs came back) + a real region solution by Claude Haiku with 3 guards | model report; `region_solutions` `g250_918_3597` |
-| 6 | 30.4–38.0 | **Predict** · Every block, every week | forecast grid fills in, zoom to top block: 6.5 expected, top 3 drivers | forecast run |
-| 7 | 38.0–45.2 | **Predict** · Where the model looked | Actual / Model / Both maps, 16 weeks, top-10% outline and weekly % | long backtest |
-| 8 | 45.2–51.8 | **Predict** · 146 weeks it never saw | weekly reports + top-10% share; 65% vs 50%, 145 / 146 weeks | long backtest |
-| 9 | 51.8–59.4 | (platform) | Piper UI simulation: forecast on, Ask Piper question, real tool names, answer with sources; tag "Claude Sonnet 5.5", note "Simulated · real numbers" | forecast run top 4 blocks |
-| 10 | 59.4–62.8 | See · Act · Predict | three words | — |
+| 0 | 0–3.8 s | Data, from start to finish | See → Act → Predict path draws, data points flow along it | — |
+| 1 | 3.8–9.4 | What predicts rodent reports? | dataset chips with icons (Lucide): kept ✓ / struck out; "43 datasets tested" | `docs/rat-audit/AUDIT.md` |
+| 2 | 9.4–15.0 | **See** · Every report, one live map | real 250 m grid, rodent reports last 12 weeks, slow push-in | model report run `risk-v1-20261024T210943` |
+| 3 | 15.0–20.0 | **Act** · Learning from our neighbours | Cambridge smart boxes ×1.46 near vs ×1.61 elsewhere (descriptive); Somerville Rodent Assistance Program 545 requests | `correlations.three-city-comparison` |
+| 4 | 20.0–27.2 | **Act** · Will it come back? | return-risk deciles + a real region solution by Claude Haiku with 3 guards | model report; `region_solutions` `g250_918_3597` |
+| 5 | 27.2–34.8 | **Predict** · Every block, every week | forecast grid fills in, zoom to top block: 6.5 expected, top 3 drivers | forecast run |
+| 6 | 34.8–42.0 | **Predict** · Where the model looked | weekly timeline (bar = share in top 10%) with playhead; Actual / Model / Both maps | long backtest, last 16 weeks |
+| 7 | 42.0–48.6 | **Predict** · 146 weeks it never saw | weekly reports + top-10% share; 65% vs 50%, 145 / 146 weeks | long backtest |
+| 8 | 48.6–56.2 | (platform) | Piper UI simulation: forecast on, Ask Piper question, real tool names, answer with sources; "Claude Sonnet 5.5"; "Simulated · real numbers" | forecast run top 4 blocks |
+| 9 | 56.2–59.6 | See · Act · Predict | three words | — |
+
+Cut from this version: the "What worked?" by-action slide (no single clear takeaway); kept in `film.html` as an unused scene.
 
 ## Rebuild
 

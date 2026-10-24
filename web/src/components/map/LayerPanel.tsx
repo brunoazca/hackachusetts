@@ -221,9 +221,9 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   const setAll = (ids: string[], v: boolean) => apply({ ...enabled, ...Object.fromEntries(ids.map((id) => [id, v])) }, ids, v);
 
   return (
-    <nav aria-label="Map layers" className="map-secondary-panel absolute left-3 top-(--shell-top) z-20">
-      {/* Rail */}
-      <div className="glass flex w-[52px] flex-col items-center gap-1 rounded-lg p-1">
+    <nav aria-label="Map layers and filters" className="map-secondary-panel absolute bottom-3 left-[404px] z-20">
+      {/* Bottom bar */}
+      <div className="glass flex h-[52px] flex-row items-center gap-1 rounded-lg p-1">
         {dock.map((d, i) => (
           <button
             key={d.id}
@@ -243,7 +243,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
             )}
           </button>
         ))}
-        <span aria-hidden className="my-0.5 h-px w-8 bg-line" />
+        <span aria-hidden className="mx-0.5 h-8 w-px bg-line" />
         <button
           id="dock-when"
           type="button"
@@ -259,7 +259,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
             <span className="mt-0.5 font-mono text-[9px] font-semibold">{whenLabel}</span>
           </span>
         </button>
-        <span className="mt-0.5 border-t border-line pt-1 text-center font-mono text-[10px] leading-3 text-fg-3" aria-live="polite" title="Reports in view">
+        <span className="ml-0.5 border-l border-line pl-2 pr-1 text-center font-mono text-[10px] leading-3 text-fg-3" aria-live="polite" title="Reports in view">
           {loading ? "…" : count >= 1000 ? `${(count / 1000).toFixed(count >= 10000 ? 0 : 1)}k` : count}
         </span>
       </div>
@@ -271,9 +271,9 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
           ref={flyRef}
           aria-label={current.label}
           inert={!open}
-          className="glass absolute left-[60px] top-0 w-72 overflow-hidden rounded-lg text-sm will-change-[transform,clip-path]"
+          className="glass absolute bottom-[60px] left-0 w-72 overflow-hidden rounded-lg text-sm will-change-[transform,clip-path]"
         >
-          <div className="overflow-y-auto p-3 [max-height:calc(100dvh-92px)]">
+          <div className="overflow-y-auto p-3 [max-height:calc(100dvh-var(--shell-top)-84px)]">
           <header className="mb-2 flex items-center justify-between gap-2">
             <h2 className="text-[14px] font-bold text-fg">{current.id === "period" ? "So far: which reports" : current.id === "view" ? "How to show reports" : current.id === "forecast" ? "Next: where reports are likely" : current.label}</h2>
             <div className="flex items-center gap-1">

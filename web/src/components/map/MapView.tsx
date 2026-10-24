@@ -5,7 +5,7 @@ import Map, { Layer, NavigationControl, Source, type MapLayerMouseEvent, type Ma
 import type { FeatureCollection, Point, Polygon } from "geojson";
 import { setWorkerUrl, type ExpressionSpecification, type HeatmapLayerSpecification } from "maplibre-gl";
 import categories from "@/lib/categories.json";
-import { useMap } from "@/lib/map-store";
+import { useMap, type Mode } from "@/lib/map-store";
 import { filterIncidentStatus, type CategoryId } from "@/lib/map-controls";
 import { fetchCoverage, fetchIncidentBins, fetchIncidents, fetchSiteQueue, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
 import { circle as turfCircle } from "@turf/turf";
@@ -16,8 +16,7 @@ import MapLegend from "./MapLegend";
 import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
 import PriorityLayer, { PRIORITY_LAYER_IDS } from "./PriorityLayer";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
-import SiteQueue from "@/components/act/SiteQueue";
-import BlockQueue from "./BlockQueue";
+import InsightPanel from "@/components/insight/InsightPanel";
 import FeatureList from "./FeatureList";
 import { addCategoryIcons } from "./icons";
 import { useTheme } from "@/lib/theme-store";
@@ -180,10 +179,11 @@ export default function MapView() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [listOpen, setListOpen] = useState(false);
-  const [flyoutOpen, setFlyoutOpen] = useState(false);
+  const [, setFlyoutOpen] = useState(false);
   const reqId = useRef(0);
 
-  const appMode = useMap((s) => s.mode);
+  // "Places to visit" (act) is gone: one map, whatever mode the agent sets.
+  const appMode = useMap((s) => (s.mode === "act" ? "assess" : s.mode)) as Mode;
   const theme = useTheme((s) => s.theme);
   const rightOpen = useUi((s) => s.rightOpen);
   const T = themes[theme];
@@ -458,7 +458,7 @@ export default function MapView() {
     if (flyToTarget) mapRef.current?.flyTo({
       center: [flyToTarget.lon, flyToTarget.lat], zoom: flyToTarget.zoom, duration: 1200,
       // Land between the floating panels.
-      padding: { left: appMode === "act" ? 420 : 80, top: 80, right: rightInset(useUi.getState().rightOpen) + 16, bottom: 24 },
+      padding: { left: 420, top: 80, right: rightInset(useUi.getState().rightOpen) + 16, bottom: 24 },
     });
   }, [flyToTarget, appMode]);
 
@@ -480,7 +480,7 @@ export default function MapView() {
     const map = mapRef.current?.getMap();
     if (!map || !iconsReady) return;
     if (map.getLayer(THREE_LAYER)) map.setLayoutProperty(THREE_LAYER, "visibility", three ? "visible" : "none");
-    map.easeTo({ pitch: three ? 52 : 0, bearing: three ? -18 : 0, duration: 900 });
+    map.easeTo({ pitch: three ? 35 : 0, bearing: three ? -18 : 0, duration: 900 });
   }, [three, iconsReady]);
 
   // Fresh reports pulse: a ring that grows and fades, 1.5 s per beat, only at marker zooms.
@@ -590,7 +590,7 @@ export default function MapView() {
     <div className="absolute inset-0">
       <Map
         ref={mapRef}
-        initialViewState={{ latitude: view.lat, longitude: view.lon, zoom: view.zoom, pitch: useMap.getState().three ? 52 : 0, bearing: useMap.getState().three ? -18 : 0 }}
+        initialViewState={{ latitude: view.lat, longitude: view.lon, zoom: view.zoom, pitch: useMap.getState().three ? 35 : 0, bearing: useMap.getState().three ? -18 : 0 }}
         mapStyle={STYLE}
         onLoad={onLoad}
         onMove={syncViewport}
@@ -874,42 +874,20 @@ export default function MapView() {
         3D
       </button>
 
-      {/* One map: the layer rail, then the ranked block list beside it. The old recheck queue only
-          appears if the chat agent switches to Act. */}
-      {appMode === "act" ? (
-        <SiteQueue />
-      ) : (
-        <>
-          <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} cellMetric={cellMetric} onCellMetricChange={setCellMetric} onOpenChange={setFlyoutOpen} />
-          <BlockQueue hidden={flyoutOpen} />
-        </>
-      )}
+      {/* One map: the Insight panel on the left (ranking, or whatever is selected), the layer and
+          filter bar along the bottom. Spec: insights-severity-ranking.md §12. */}
+      <InsightPanel />
+      <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} cellMetric={cellMetric} onCellMetricChange={setCellMetric} onOpenChange={setFlyoutOpen} />
 
       {/* Keyboard twin of the map (R2.11 / R9.1). In Act, the Places queue is already the list
           twin, so this only appears in Assess/Map mode. Reachable by Tab and by the "L" shortcut. */}
       {appMode !== "act" && listOpen && <FeatureList onClose={() => setListOpen(false)} />}
-      {/* Bottom-left stack: the List button sits ABOVE the map key so the two can never overlap,
-          whatever the key's width. While the list panel is open (384 px wide, bottom-3 left-3) the
-          stack slides right of it and the button is hidden. */}
+      {/* Bottom-left map key, offset right of the 384 px left panel. */}
       {appMode !== "act" && (
         <div
           className="absolute z-20 flex flex-col items-start gap-2 transition-[left,bottom] duration-300 ease-[var(--ease-spring)]"
-          style={{ left: listOpen ? 12 + 384 + 8 : 12, bottom: "calc(var(--ctrl-bottom, 4px) + 8px)" }}
+          style={{ left: 12 + 384 + 8, bottom: "calc(var(--ctrl-bottom, 4px) + 72px)" }}
         >
-          {!listOpen && (
-            <button
-              type="button"
-              onClick={() => setListOpen(true)}
-              aria-label="Show features in view as a list"
-              title="Features in view, as a list · L"
-              className="glass flex h-10 shrink-0 items-center gap-2 rounded-lg px-3 text-[13px] font-semibold text-fg transition-colors hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden>
-                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
-              </svg>
-              List
-            </button>
-          )}
           <MapLegend mode={viewMode} causes={causes} zoom={zoom} priority={priorityFull} />
         </div>
       )}

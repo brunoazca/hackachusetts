@@ -6,7 +6,9 @@ Pipeline, all from data already in the DB:
    expected reports over the next 4 forecast weeks + expected returns in the next 60 days
    (Σ per-address return chance from `record_solutions`), all in reports. Smoothed with a
    3×3 kernel (ring 0.5), top 5 % cells merged into 8-connected clusters (≤ 9 cells, split
-   at local maxima), so a hotspot on a cell corner is one region. Ranked by summed raw severity. When Carol's
+   at local maxima), so a hotspot on a cell corner is one region. Ranked by summed raw severity
+   × a residents weight, 1 + log10(1 + residents / 1000) (residents from `cell_population`, tract
+   population split by area): the same reports count more where more people live. When Carol's
    `insights` table exists it should become the source of regions; until then we build them.
 2. Evidence per region: the forecast (next 4 weeks + last 8 weeks actual vs expected), the
    forecast drivers, the region's records with what the city did and the per-record model
@@ -102,6 +104,21 @@ def expected_returns(rec: pd.DataFrame, rs: dict, data_end) -> pd.Series:
     return p.groupby(latest["cell_id"]).sum()
 
 
+def people_weight(residents: float) -> float:
+    """Severity multiplier for a region's residents: 1 with nobody, ~1.3 at 1k, ~2 at 9k, ~2.3 at 20k.
+    Log so a dense block doesn't swamp the report counts. Decided by Bruno, Oct 24."""
+    return 1.0 + float(np.log10(1.0 + max(residents, 0.0) / 1000.0))
+
+
+def _cell_population(conn) -> dict:
+    """cell_id -> residents; empty (every weight = 1) until the cell_population migration is applied."""
+    try:
+        with conn.transaction():
+            return dict(conn.execute("select cell_id, pop::float from cell_population").fetchall())
+    except psycopg.errors.UndefinedTable:
+        return {}
+
+
 def build_regions(conn, rec: pd.DataFrame, run_id: str, rs: dict, n: int = N_REGIONS) -> tuple[list[dict], pd.DataFrame, pd.DataFrame]:
     cells = pd.DataFrame(conn.execute(
         "select id, col, row, lat, lon, neighborhood from grid_cells where city = 'boston'").fetchall(),
@@ -122,6 +139,7 @@ def build_regions(conn, rec: pd.DataFrame, run_id: str, rs: dict, n: int = N_REG
     cells["expected_4w"] = cells["cell_id"].map(exp4).fillna(0.0)
     cells["expected_returns_60d"] = cells["cell_id"].map(expected_returns(rec, rs, data_end)).fillna(0.0)
     cells["severity"] = cells["observed_12w"] + cells["expected_4w"] + cells["expected_returns_60d"]
+    cells["residents"] = cells["cell_id"].map(_cell_population(conn)).fillna(0.0)
     pos = {(c, r): s for c, r, s in zip(cells["col"], cells["row"], cells["severity"])}
     ring = [(dc, dr) for dc in (-1, 0, 1) for dr in (-1, 0, 1) if (dc, dr) != (0, 0)]
     cells["smoothed"] = [s + RING_WEIGHT * sum(pos.get((c + dc, r + dr), 0.0) for dc, dr in ring)
@@ -155,9 +173,12 @@ def build_regions(conn, rec: pd.DataFrame, run_id: str, rs: dict, n: int = N_REG
             "severity": {"observed_12w": int(rows["observed_12w"].sum()),
                          "expected_4w": round(float(rows["expected_4w"].sum()), 1),
                          "expected_returns_60d": round(float(rows["expected_returns_60d"].sum()), 1),
-                         "score": round(float(rows["severity"].sum()), 1)},
+                         "score": round(float(rows["severity"].sum()), 1),
+                         "residents": int(round(rows["residents"].sum(), -2)),
+                         "people_weight": round(people_weight(rows["residents"].sum()), 2),
+                         "weighted_score": round(float(rows["severity"].sum()) * people_weight(rows["residents"].sum()), 1)},
         })
-    regions.sort(key=lambda r: (-r["severity"]["score"], -r["severity"]["expected_4w"], r["region_id"]))
+    regions.sort(key=lambda r: (-r["severity"]["weighted_score"], -r["severity"]["expected_4w"], r["region_id"]))
     regions = regions[:n]
     for i, r in enumerate(regions, 1):
         r["rank"] = i

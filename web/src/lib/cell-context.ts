@@ -66,12 +66,3 @@ export async function fetchCellContext(cellId: string): Promise<CellContext | nu
   if (error) throw error;
   return data as CellContext | null;
 }
-
-export type RegionPopulation = { pop: number; n_cells: number; sources: { id: string; name: string; url: string }[] };
-
-/** Residents in a set of cells (an Insights region), area-weighted from census tracts. */
-export async function fetchRegionPopulation(cellIds: string[]): Promise<RegionPopulation> {
-  const { data, error } = await supabase.rpc("region_population", { cell_ids: cellIds });
-  if (error) throw error;
-  return data as RegionPopulation;
-}

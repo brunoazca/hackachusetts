@@ -76,7 +76,7 @@ export default function Timeline() {
       ref={boxRef}
       aria-label="Dates"
       inert={!open}
-      className="glass absolute left-[60px] top-0 w-[320px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
+      className="glass absolute bottom-[60px] left-0 w-[320px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
     >
       <div className="p-3">
         <header className="flex items-start justify-between gap-2">
@@ -120,7 +120,8 @@ export default function Timeline() {
             type="range" min={0} max={TOTAL} value={lo}
             aria-label="From" aria-valuetext={nice(START + lo * DAY)}
             onChange={(e) => { const v = Math.min(Number(e.target.value), hi - 1); setLo(v); commit(v, hi); }}
-            className="piper-range absolute inset-x-0 top-0 h-7 w-full"
+            // Short windows put both thumbs on the same pixel; near the end only "From" can move, so it must be the one on top.
+            className={`piper-range absolute inset-x-0 top-0 h-7 w-full ${lo > TOTAL / 2 ? "z-10" : ""}`}
           />
           <input
             type="range" min={0} max={TOTAL} value={hi}

@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:19 — Integrate chat Markdown fix with the current main for the...
+- Teammate: Carol
+- Agent: Codex
+- Did: Integrate chat Markdown fix with the current main for the authorized release
+- Why: Preserve the new chat-only shell and all teammate changes before pushing
+- Where: web/src/components/chat; web/package.json; web/pnpm-lock.yaml; .kiro/KIRO_LOG.md
+- Idea: Only the append-only Kiro log collided; keep both histories and validate the combined frontend
+
 ### 2026-10-24 19:11 — Render Ask answers as safe Markdown; match the latest cha...
 - Teammate: Carol
 - Agent: Codex
@@ -38,6 +46,62 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Tables and lists were shown as raw text and crowded the panel
 - Where: web/src/components/chat; web/package.json; web/pnpm-lock.yaml
 - Idea: Keep wide tables keyboard-scrollable inside each answer and sources collapsed; validate with mocked chat responses without sending map context to AI
+
+### 2026-10-24 19:16 — Removed the List button from the map's bottom-left stack
+- Teammate: Bruno
+- Agent: —
+- Did: Removed the List button from the map's bottom-left stack
+- Why: Left panel already lists what is on the map; the button was redundant clutter
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
+### 2026-10-24 19:16 — 3D map opens less tilted: pitch 52 → 35
+- Teammate: Bruno
+- Agent: —
+- Did: 3D map opens less tilted: pitch 52 → 35
+- Why: Map looked too inclined on open
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
+### 2026-10-24 19:15 — One Insight panel UI: left panel follows the map selectio...
+- Teammate: Bruno
+- Agent: —
+- Did: One Insight panel UI: left panel follows the map selection (ranking with infinite scroll → area / rodent report / evidence views, Back + Esc), chat-only right panel, filters moved to a bottom bar, top-bar mode selector removed; deleted Blocks list, Places to visit and the old Insights tab; paged insight_ranking RPC, evidence after-window fix, code-enforcement labels; checked in the browser
+- Why: Bruno asked to merge Inspect and Insights into one, drop Blocks and Places to visit, keep only the map with click behaviours, infinite scrolling, filters at the bottom
+- Where: web/src/components/insight/*, web/src/components/shell/{RightPanel,SidePanel,TopBar}.tsx, web/src/components/map/{MapView,LayerPanel,Timeline}.tsx, web/src/lib/{insight,map-store}.ts, web/src/app/api/insight-ai, supabase/migrations/20261024500009-10
+- Idea: A 90-day before/after comparison is misleading for items filed days ago; the RPC now returns after_days and the card says it is too recent to compare
+
+### 2026-10-24 19:11 — Default date window is last week; fixed range slider so F...
+- Teammate: Bruno
+- Agent: —
+- Did: Default date window is last week; fixed range slider so From thumb is draggable when thumbs overlap
+- Why: Short windows stacked both thumbs and the To thumb swallowed drags, so the slider looked stuck
+- Where: web/src/lib/map-store.ts, web/src/components/map/Timeline.tsx
+- Idea: —
+
+### 2026-10-24 19:10 — Removed week selectors from the Next forecast panel; it o...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed week selectors from the Next forecast panel; it only shows the next 4 weeks
+- Why: Simpler panel, one clear forecast period
+- Where: web/src/components/map/ForecastControl.tsx
+- Idea: —
+
+### 2026-10-24 19:08 — Motion graphic v3: section intro, dataset icons, timeline...
+- Teammate: Bruno
+- Agent: —
+- Did: Motion graphic v3: section intro, dataset icons, timeline in the backtest maps, dip transitions, removed unclear 'What worked?' slide; reviewed in 3 passes (contact sheets + MP4 frames)
+- Why: Feedback: fewer words, clear goal per slide, timeline instead of a changing date
+- Where: docs/submission/ml-ai-motion/
+- Idea: —
+
+### 2026-10-24 19:05 — Region severity now weighted by residents: weighted_score...
+- Teammate: Bruno
+- Agent: —
+- Did: Region severity now weighted by residents: weighted_score = score × (1 + log10(1 + residents/1000)); ranking by weighted_score in region_solution.py; live region_solutions re-ranked in SQL with the same formula (no AI rerun); card shows ~N residents and the weight; spec §5.4a decision recorded
+- Why: Bruno chose to weight severity by people affected (overrides spec's no-composite rule)
+- Where: pipeline/rat_audit/model/region_solution.py, web/src/components/insights/regions/*, .kiro/specs/rat-audit/insights-severity-ranking.md
+- Idea: Effect is small (hot regions all 5-10k residents, weights 1.8-2.0); stronger weight if wanted. site_queue RPC times out for anon (~2.6 s), unrelated
 
 ### 2026-10-24 19:01 — Unified Insight backend: RPCs area_insight / area_insight...
 - Teammate: Bruno
