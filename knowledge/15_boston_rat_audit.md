@@ -145,6 +145,27 @@ Observational: the before/after comparison does not control for why inspectors c
 
 Grouping property assessment by owner mailing address shows hidden portfolios. One address sits behind 125 owner names, 128 rental parcels and 1,053 units. Problems per unit separate big landlords from bad ones: the city average is 0.12 tenant-facing problems per unit since 2024, that group is at 0.13, and another group of 17 names is at 1.43. See the Problem Landlord Radar notes in the Data Atlas.
 
+### Closure notes classifier (Kiro Crew campaign `d19b46b7`, rules aligned in `sources/scripts/closure_classifier_rules.py`)
+
+| Tag | 2025 | 2026 |
+|---|---|---|
+| monitoring (incl. generic "noted") | 49.1% | 27.4% |
+| abatement_order | 12.4% | 17.9% |
+| baiting | 11.6% | 17.0% |
+| inspection | 9.5% | 11.1% |
+| no_violation | 3.2% | 5.3% |
+| citation | 2.4% | 1.3% |
+| closed_no_action (empty note) | 1.1% | 1.6% |
+| unknown | 4.5% | 7.3% |
+
+Non-unknown coverage: 95.5% (2025), 92.7% (2026). In 2026 the city's notes shift from monitoring toward abatement and baiting. That is worth showing, but it is observational.
+
+### Sept 1 move-out and events (Kiro Crew campaign `ebc7405e`)
+
+- **Trash spike: strong.** Trash reports peak the week containing Sept 1 every year: about 2.0× the prior 8-week median citywide (2023 1,745 vs 888; 2024 1,573 vs 805; 2025 1,523 vs 838) and 4–5× in Allston 02134, Mission Hill 02120 and Fenway 02215 (4.4×, 4.9×, 3.9×).
+- **Rodent lag: none.** Rodent reports do not rise 1–4 weeks after Sept 1 in any year; they decline through the fall.
+- **Red Sox home games: weak.** Trash reports within 500 m of Fenway the day after a home game: 1.28× (0.65 vs 0.51 per day, 79 games, permutation p = 0.18). Not a finding to show.
+
 ## 5. Impact possibilities
 
 | Area | What rats cost | Evidence we have | Strength |
