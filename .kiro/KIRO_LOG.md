@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:11 — Wrote docs/rat-audit/TEAM.md: Bruno=data+models, Carol=an...
+- Teammate: Bruno Azca
+- Agent: kirocrew (Spec agent)
+- Did: Wrote docs/rat-audit/TEAM.md: Bruno=data+models, Carol=analytics+agent, Gui=map+inspector UI, Kiro=integration. Recorded build-order dependency chain
+- Why: team divided the four CONTRACT tracks before building
+- Where: docs/rat-audit/TEAM.md
+- Idea: Bruno loads 311 first; Carol+Gui parallel after; model+insights last
+
+### 2026-10-24 13:06 — Moved SOCRATA_APP_TOKEN from .env into .env.local (the fi...
+- Teammate: Bruno Azca
+- Agent: kirocrew (Spec agent)
+- Did: Moved SOCRATA_APP_TOKEN from .env into .env.local (the file the OpenContext MCP bridge and pipeline actually read); verified all 8 MCP servers PASS incl cambridge/somerville
+- Why: token was in the wrong env file so regional live data was unreachable
+- Where: .env.local
+- Idea: Rotate the Socrata token since it was pasted in chat; consider deleting stray .env
+
 ### 2026-10-24 13:05 — Privacy-by-reveal: names/full addresses in private schema...
 - Teammate: Bruno
 - Agent: —
