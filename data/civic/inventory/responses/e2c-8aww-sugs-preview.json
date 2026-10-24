@@ -1,0 +1,100 @@
+[{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"K-12","tot":"823078","sped_tot":"169858","movein_cnt":"21889","moveout_cnt":"11998"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Kindergarten","tot":"59867","sped_tot":"8611","movein_cnt":"2871","moveout_cnt":"903"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 1","tot":"62357","sped_tot":"9914","movein_cnt":"2784","moveout_cnt":"688"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 2","tot":"64728","sped_tot":"11846","movein_cnt":"3023","moveout_cnt":"749"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 3","tot":"62982","sped_tot":"12900","movein_cnt":"2441","moveout_cnt":"1019"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 4","tot":"64217","sped_tot":"13844","movein_cnt":"1958","moveout_cnt":"1015"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 5","tot":"64974","sped_tot":"14213","movein_cnt":"1482","moveout_cnt":"977"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 6","tot":"65108","sped_tot":"14186","movein_cnt":"1140","moveout_cnt":"958"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 7","tot":"66344","sped_tot":"14075","movein_cnt":"1123","moveout_cnt":"999"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 8","tot":"65118","sped_tot":"13819","movein_cnt":"1013","moveout_cnt":"1167"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 9","tot":"71477","sped_tot":"14494","movein_cnt":"1204","moveout_cnt":"1007"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 10","tot":"71043","sped_tot":"13482","movein_cnt":"762","moveout_cnt":"955"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 11","tot":"69017","sped_tot":"12330","movein_cnt":"475","moveout_cnt":"968"}
+,{"sy":"2025","dist_code":"00000000","dist_name":"State","grades":"Grade 12","tot":"2714","sped_tot":"1874","movein_cnt":"38","moveout_cnt":"41"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"K-12","tot":"1297","sped_tot":"145","movein_cnt":"63","moveout_cnt":"15"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Kindergarten","tot":"119","sped_tot":"9","movein_cnt":"16","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 1","tot":"116","sped_tot":"6","movein_cnt":"11","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 2","tot":"117","sped_tot":"15","movein_cnt":"10","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 3","tot":"127","sped_tot":"11","movein_cnt":"12","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 4","tot":"120","sped_tot":"23","movein_cnt":"5","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 5","tot":"118","sped_tot":"16","movein_cnt":"4","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 6","tot":"121","sped_tot":"12","movein_cnt":"4","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 7","tot":"114","sped_tot":"16","movein_cnt":"0","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 8","tot":"99","sped_tot":"15","movein_cnt":"1","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 9","tot":"87","sped_tot":"9","movein_cnt":"0","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 10","tot":"81","sped_tot":"7","movein_cnt":"0","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","grades":"Grade 11","tot":"78","sped_tot":"6","movein_cnt":"0","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"K-12","tot":"1965","sped_tot":"383","movein_cnt":"57","moveout_cnt":"21"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Kindergarten","tot":"174","sped_tot":"21","movein_cnt":"13","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 1","tot":"158","sped_tot":"23","movein_cnt":"8","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 2","tot":"169","sped_tot":"36","movein_cnt":"9","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 3","tot":"193","sped_tot":"35","movein_cnt":"8","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 4","tot":"163","sped_tot":"37","movein_cnt":"3","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 5","tot":"170","sped_tot":"37","movein_cnt":"3","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 6","tot":"158","sped_tot":"34","movein_cnt":"2","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 7","tot":"164","sped_tot":"36","movein_cnt":"2","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 8","tot":"132","sped_tot":"30","movein_cnt":"2","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 9","tot":"138","sped_tot":"17","movein_cnt":"4","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 10","tot":"133","sped_tot":"26","movein_cnt":"1","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","grades":"Grade 11","tot":"129","sped_tot":"22","movein_cnt":"1","moveout_cnt":"4"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"K-12","tot":"361","sped_tot":"72","movein_cnt":"20","moveout_cnt":"10"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"Grade 5","tot":"29","sped_tot":"0","movein_cnt":"4","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"Grade 6","tot":"53","sped_tot":"2","movein_cnt":"5","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"Grade 7","tot":"54","sped_tot":"16","movein_cnt":"3","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"Grade 8","tot":"64","sped_tot":"16","movein_cnt":"3","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"Grade 9","tot":"59","sped_tot":"17","movein_cnt":"4","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"Grade 10","tot":"52","sped_tot":"10","movein_cnt":"0","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"Grade 11","tot":"48","sped_tot":"10","movein_cnt":"1","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","grades":"Grade 12","tot":"2","sped_tot":"1","movein_cnt":"0","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"K-12","tot":"4631","sped_tot":"761","movein_cnt":"111","moveout_cnt":"50"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Kindergarten","tot":"323","sped_tot":"33","movein_cnt":"7","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 1","tot":"319","sped_tot":"45","movein_cnt":"13","moveout_cnt":"6"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 2","tot":"348","sped_tot":"43","movein_cnt":"21","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 3","tot":"328","sped_tot":"59","movein_cnt":"11","moveout_cnt":"11"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 4","tot":"366","sped_tot":"64","movein_cnt":"8","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 5","tot":"395","sped_tot":"65","movein_cnt":"5","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 6","tot":"404","sped_tot":"68","movein_cnt":"13","moveout_cnt":"5"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 7","tot":"396","sped_tot":"74","movein_cnt":"5","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 8","tot":"402","sped_tot":"59","movein_cnt":"6","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 9","tot":"394","sped_tot":"54","movein_cnt":"5","moveout_cnt":"6"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 10","tot":"422","sped_tot":"67","movein_cnt":"7","moveout_cnt":"4"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 11","tot":"399","sped_tot":"58","movein_cnt":"6","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","grades":"Grade 12","tot":"10","sped_tot":"9","movein_cnt":"0","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"K-12","tot":"930","sped_tot":"152","movein_cnt":"15","moveout_cnt":"17"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Kindergarten","tot":"99","sped_tot":"25","movein_cnt":"0","moveout_cnt":"5"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 1","tot":"93","sped_tot":"11","movein_cnt":"1","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 2","tot":"88","sped_tot":"16","movein_cnt":"0","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 3","tot":"106","sped_tot":"15","movein_cnt":"2","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 4","tot":"91","sped_tot":"18","movein_cnt":"1","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 5","tot":"122","sped_tot":"16","movein_cnt":"2","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 6","tot":"97","sped_tot":"11","movein_cnt":"0","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 7","tot":"87","sped_tot":"10","movein_cnt":"1","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 8","tot":"103","sped_tot":"15","movein_cnt":"0","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 9","tot":"1","sped_tot":"0","movein_cnt":"1","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"00030000","dist_name":"Acushnet","grades":"Grade 10","tot":"2","sped_tot":"2","movein_cnt":"0","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04300000","dist_name":"Advanced Math and Science Academy Charter (District)","grades":"K-12","tot":"831","sped_tot":"53","movein_cnt":"8","moveout_cnt":"7"}
+,{"sy":"2025","dist_code":"04300000","dist_name":"Advanced Math and Science Academy Charter (District)","grades":"Grade 6","tot":"145","sped_tot":"9","movein_cnt":"2","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"04300000","dist_name":"Advanced Math and Science Academy Charter (District)","grades":"Grade 7","tot":"141","sped_tot":"12","movein_cnt":"2","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04300000","dist_name":"Advanced Math and Science Academy Charter (District)","grades":"Grade 8","tot":"139","sped_tot":"10","movein_cnt":"0","moveout_cnt":"3"}
+,{"sy":"2025","dist_code":"04300000","dist_name":"Advanced Math and Science Academy Charter (District)","grades":"Grade 9","tot":"147","sped_tot":"8","movein_cnt":"1","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04300000","dist_name":"Advanced Math and Science Academy Charter (District)","grades":"Grade 10","tot":"132","sped_tot":"7","movein_cnt":"2","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04300000","dist_name":"Advanced Math and Science Academy Charter (District)","grades":"Grade 11","tot":"127","sped_tot":"7","movein_cnt":"1","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"K-12","tot":"3137","sped_tot":"592","movein_cnt":"59","moveout_cnt":"51"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Kindergarten","tot":"224","sped_tot":"24","movein_cnt":"12","moveout_cnt":"5"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 1","tot":"239","sped_tot":"26","movein_cnt":"12","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 2","tot":"244","sped_tot":"33","movein_cnt":"8","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 3","tot":"237","sped_tot":"40","movein_cnt":"7","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 4","tot":"266","sped_tot":"67","movein_cnt":"0","moveout_cnt":"7"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 5","tot":"258","sped_tot":"54","movein_cnt":"5","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 6","tot":"237","sped_tot":"32","movein_cnt":"3","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 7","tot":"277","sped_tot":"60","movein_cnt":"2","moveout_cnt":"6"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 8","tot":"242","sped_tot":"53","movein_cnt":"2","moveout_cnt":"7"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 9","tot":"266","sped_tot":"60","movein_cnt":"1","moveout_cnt":"9"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 10","tot":"263","sped_tot":"47","movein_cnt":"0","moveout_cnt":"4"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 11","tot":"228","sped_tot":"34","movein_cnt":"1","moveout_cnt":"1"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","grades":"Grade 12","tot":"11","sped_tot":"10","movein_cnt":"0","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04090000","dist_name":"Alma del Mar Charter School (District)","grades":"K-12","tot":"1010","sped_tot":"198","movein_cnt":"37","moveout_cnt":"12"}
+,{"sy":"2025","dist_code":"04090000","dist_name":"Alma del Mar Charter School (District)","grades":"Kindergarten","tot":"97","sped_tot":"6","movein_cnt":"17","moveout_cnt":"0"}
+,{"sy":"2025","dist_code":"04090000","dist_name":"Alma del Mar Charter School (District)","grades":"Grade 1","tot":"102","sped_tot":"17","movein_cnt":"7","moveout_cnt":"2"}
+,{"sy":"2025","dist_code":"04090000","dist_name":"Alma del Mar Charter School (District)","grades":"Grade 2","tot":"103","sped_tot":"22","movein_cnt":"6","moveout_cnt":"1"}]

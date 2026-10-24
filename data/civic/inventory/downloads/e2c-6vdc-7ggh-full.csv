@@ -1,0 +1,2881 @@
+DATA_LOAD_DATE,MONTH,SUBSIDY_REGION,AGE_GROUP,CHILD_COUNT
+08/01/2026,04/2026,Central,Infant,612
+08/01/2026,04/2026,Central,Preschool,916
+08/01/2026,04/2026,Central,School Age,1460
+08/01/2026,04/2026,Central,Toddler,841
+08/01/2026,04/2026,Metro,Infant,646
+08/01/2026,04/2026,Metro,Preschool,1259
+08/01/2026,04/2026,Metro,School Age,1607
+08/01/2026,04/2026,Metro,Toddler,1125
+08/01/2026,04/2026,Metro Boston,Infant,1064
+08/01/2026,04/2026,Metro Boston,Preschool,1081
+08/01/2026,04/2026,Metro Boston,School Age,1626
+08/01/2026,04/2026,Metro Boston,Toddler,1342
+08/01/2026,04/2026,Northeast,Infant,1735
+08/01/2026,04/2026,Northeast,Preschool,2682
+08/01/2026,04/2026,Northeast,School Age,3839
+08/01/2026,04/2026,Northeast,Toddler,2615
+08/01/2026,04/2026,Southeast,Infant,783
+08/01/2026,04/2026,Southeast,Preschool,1415
+08/01/2026,04/2026,Southeast,School Age,2122
+08/01/2026,04/2026,Southeast,Toddler,1374
+08/01/2026,04/2026,Western,Infant,427
+08/01/2026,04/2026,Western,Preschool,526
+08/01/2026,04/2026,Western,School Age,1310
+08/01/2026,04/2026,Western,Toddler,616
+08/01/2026,03/2026,Central,Infant,617
+08/01/2026,03/2026,Central,Preschool,860
+08/01/2026,03/2026,Central,School Age,1385
+08/01/2026,03/2026,Central,Toddler,818
+08/01/2026,03/2026,Metro,Infant,655
+08/01/2026,03/2026,Metro,Preschool,1174
+08/01/2026,03/2026,Metro,School Age,1539
+08/01/2026,03/2026,Metro,Toddler,1102
+08/01/2026,03/2026,Metro Boston,Infant,1089
+08/01/2026,03/2026,Metro Boston,Preschool,1016
+08/01/2026,03/2026,Metro Boston,School Age,1558
+08/01/2026,03/2026,Metro Boston,Toddler,1266
+08/01/2026,03/2026,Northeast,Infant,1757
+08/01/2026,03/2026,Northeast,Preschool,2574
+08/01/2026,03/2026,Northeast,School Age,3679
+08/01/2026,03/2026,Northeast,Toddler,2513
+08/01/2026,03/2026,Southeast,Infant,748
+08/01/2026,03/2026,Southeast,Preschool,1304
+08/01/2026,03/2026,Southeast,School Age,2006
+08/01/2026,03/2026,Southeast,Toddler,1288
+08/01/2026,03/2026,Western,Infant,434
+08/01/2026,03/2026,Western,Preschool,472
+08/01/2026,03/2026,Western,School Age,1261
+08/01/2026,03/2026,Western,Toddler,609
+08/01/2026,02/2026,Central,Infant,598
+08/01/2026,02/2026,Central,Preschool,773
+08/01/2026,02/2026,Central,School Age,1333
+08/01/2026,02/2026,Central,Toddler,780
+08/01/2026,02/2026,Metro,Infant,649
+08/01/2026,02/2026,Metro,Preschool,1109
+08/01/2026,02/2026,Metro,School Age,1456
+08/01/2026,02/2026,Metro,Toddler,1052
+08/01/2026,02/2026,Metro Boston,Infant,1071
+08/01/2026,02/2026,Metro Boston,Preschool,931
+08/01/2026,02/2026,Metro Boston,School Age,1465
+08/01/2026,02/2026,Metro Boston,Toddler,1216
+08/01/2026,02/2026,Northeast,Infant,1731
+08/01/2026,02/2026,Northeast,Preschool,2451
+08/01/2026,02/2026,Northeast,School Age,3580
+08/01/2026,02/2026,Northeast,Toddler,2470
+08/01/2026,02/2026,Southeast,Infant,722
+08/01/2026,02/2026,Southeast,Preschool,1234
+08/01/2026,02/2026,Southeast,School Age,1895
+08/01/2026,02/2026,Southeast,Toddler,1219
+08/01/2026,02/2026,Western,Infant,413
+08/01/2026,02/2026,Western,Preschool,413
+08/01/2026,02/2026,Western,School Age,1203
+08/01/2026,02/2026,Western,Toddler,583
+08/01/2026,01/2026,Central,Infant,583
+08/01/2026,01/2026,Central,Preschool,765
+08/01/2026,01/2026,Central,School Age,1274
+08/01/2026,01/2026,Central,Toddler,746
+08/01/2026,01/2026,Metro,Infant,634
+08/01/2026,01/2026,Metro,Preschool,1051
+08/01/2026,01/2026,Metro,School Age,1375
+08/01/2026,01/2026,Metro,Toddler,1017
+08/01/2026,01/2026,Metro Boston,Infant,1065
+08/01/2026,01/2026,Metro Boston,Preschool,893
+08/01/2026,01/2026,Metro Boston,School Age,1415
+08/01/2026,01/2026,Metro Boston,Toddler,1152
+08/01/2026,01/2026,Northeast,Infant,1707
+08/01/2026,01/2026,Northeast,Preschool,2314
+08/01/2026,01/2026,Northeast,School Age,3447
+08/01/2026,01/2026,Northeast,Toddler,2441
+08/01/2026,01/2026,Southeast,Infant,723
+08/01/2026,01/2026,Southeast,Preschool,1159
+08/01/2026,01/2026,Southeast,School Age,1796
+08/01/2026,01/2026,Southeast,Toddler,1147
+08/01/2026,01/2026,Western,Infant,412
+08/01/2026,01/2026,Western,Preschool,409
+08/01/2026,01/2026,Western,School Age,1164
+08/01/2026,01/2026,Western,Toddler,585
+08/01/2026,12/2025,Central,Infant,544
+08/01/2026,12/2025,Central,Preschool,724
+08/01/2026,12/2025,Central,School Age,1213
+08/01/2026,12/2025,Central,Toddler,707
+08/01/2026,12/2025,Metro,Infant,634
+08/01/2026,12/2025,Metro,Preschool,1016
+08/01/2026,12/2025,Metro,School Age,1345
+08/01/2026,12/2025,Metro,Toddler,1000
+08/01/2026,12/2025,Metro Boston,Infant,1040
+08/01/2026,12/2025,Metro Boston,Preschool,834
+08/01/2026,12/2025,Metro Boston,School Age,1349
+08/01/2026,12/2025,Metro Boston,Toddler,1098
+08/01/2026,12/2025,Northeast,Infant,1658
+08/01/2026,12/2025,Northeast,Preschool,2229
+08/01/2026,12/2025,Northeast,School Age,3318
+08/01/2026,12/2025,Northeast,Toddler,2394
+08/01/2026,12/2025,Southeast,Infant,724
+08/01/2026,12/2025,Southeast,Preschool,1117
+08/01/2026,12/2025,Southeast,School Age,1699
+08/01/2026,12/2025,Southeast,Toddler,1084
+08/01/2026,12/2025,Western,Infant,405
+08/01/2026,12/2025,Western,Preschool,391
+08/01/2026,12/2025,Western,School Age,1123
+08/01/2026,12/2025,Western,Toddler,537
+08/01/2026,11/2025,Central,Infant,531
+08/01/2026,11/2025,Central,Preschool,704
+08/01/2026,11/2025,Central,School Age,1199
+08/01/2026,11/2025,Central,Toddler,718
+08/01/2026,11/2025,Metro,Infant,651
+08/01/2026,11/2025,Metro,Preschool,1032
+08/01/2026,11/2025,Metro,School Age,1369
+08/01/2026,11/2025,Metro,Toddler,1025
+08/01/2026,11/2025,Metro Boston,Infant,1065
+08/01/2026,11/2025,Metro Boston,Preschool,832
+08/01/2026,11/2025,Metro Boston,School Age,1481
+08/01/2026,11/2025,Metro Boston,Toddler,1151
+08/01/2026,11/2025,Northeast,Infant,1635
+08/01/2026,11/2025,Northeast,Preschool,2218
+08/01/2026,11/2025,Northeast,School Age,3254
+08/01/2026,11/2025,Northeast,Toddler,2359
+08/01/2026,11/2025,Southeast,Infant,773
+08/01/2026,11/2025,Southeast,Preschool,1160
+08/01/2026,11/2025,Southeast,School Age,1712
+08/01/2026,11/2025,Southeast,Toddler,1095
+08/01/2026,11/2025,Western,Infant,408
+08/01/2026,11/2025,Western,Preschool,386
+08/01/2026,11/2025,Western,School Age,1122
+08/01/2026,11/2025,Western,Toddler,526
+08/01/2026,10/2025,Central,Infant,568
+08/01/2026,10/2025,Central,Preschool,798
+08/01/2026,10/2025,Central,School Age,1262
+08/01/2026,10/2025,Central,Toddler,739
+08/01/2026,10/2025,Metro,Infant,682
+08/01/2026,10/2025,Metro,Preschool,1053
+08/01/2026,10/2025,Metro,School Age,1394
+08/01/2026,10/2025,Metro,Toddler,1007
+08/01/2026,10/2025,Metro Boston,Infant,1113
+08/01/2026,10/2025,Metro Boston,Preschool,872
+08/01/2026,10/2025,Metro Boston,School Age,1537
+08/01/2026,10/2025,Metro Boston,Toddler,1187
+08/01/2026,10/2025,Northeast,Infant,1693
+08/01/2026,10/2025,Northeast,Preschool,2312
+08/01/2026,10/2025,Northeast,School Age,3308
+08/01/2026,10/2025,Northeast,Toddler,2290
+08/01/2026,10/2025,Southeast,Infant,814
+08/01/2026,10/2025,Southeast,Preschool,1213
+08/01/2026,10/2025,Southeast,School Age,1740
+08/01/2026,10/2025,Southeast,Toddler,1101
+08/01/2026,10/2025,Western,Infant,440
+08/01/2026,10/2025,Western,Preschool,464
+08/01/2026,10/2025,Western,School Age,1192
+08/01/2026,10/2025,Western,Toddler,581
+08/01/2026,09/2025,Central,Infant,563
+08/01/2026,09/2025,Central,Preschool,905
+08/01/2026,09/2025,Central,School Age,1301
+08/01/2026,09/2025,Central,Toddler,797
+08/01/2026,09/2025,Metro,Infant,666
+08/01/2026,09/2025,Metro,Preschool,1122
+08/01/2026,09/2025,Metro,School Age,1425
+08/01/2026,09/2025,Metro,Toddler,1033
+08/01/2026,09/2025,Metro Boston,Infant,1137
+08/01/2026,09/2025,Metro Boston,Preschool,908
+08/01/2026,09/2025,Metro Boston,School Age,1570
+08/01/2026,09/2025,Metro Boston,Toddler,1215
+08/01/2026,09/2025,Northeast,Infant,1701
+08/01/2026,09/2025,Northeast,Preschool,2428
+08/01/2026,09/2025,Northeast,School Age,3304
+08/01/2026,09/2025,Northeast,Toddler,2322
+08/01/2026,09/2025,Southeast,Infant,846
+08/01/2026,09/2025,Southeast,Preschool,1271
+08/01/2026,09/2025,Southeast,School Age,1715
+08/01/2026,09/2025,Southeast,Toddler,1154
+08/01/2026,09/2025,Western,Infant,486
+08/01/2026,09/2025,Western,Preschool,551
+08/01/2026,09/2025,Western,School Age,1238
+08/01/2026,09/2025,Western,Toddler,656
+08/01/2026,08/2025,Central,Infant,564
+08/01/2026,08/2025,Central,Preschool,971
+08/01/2026,08/2025,Central,School Age,1322
+08/01/2026,08/2025,Central,Toddler,857
+08/01/2026,08/2025,Metro,Infant,693
+08/01/2026,08/2025,Metro,Preschool,1157
+08/01/2026,08/2025,Metro,School Age,1440
+08/01/2026,08/2025,Metro,Toddler,1059
+08/01/2026,08/2025,Metro Boston,Infant,1115
+08/01/2026,08/2025,Metro Boston,Preschool,927
+08/01/2026,08/2025,Metro Boston,School Age,1564
+08/01/2026,08/2025,Metro Boston,Toddler,1256
+08/01/2026,08/2025,Northeast,Infant,1697
+08/01/2026,08/2025,Northeast,Preschool,2484
+08/01/2026,08/2025,Northeast,School Age,3306
+08/01/2026,08/2025,Northeast,Toddler,2376
+08/01/2026,08/2025,Southeast,Infant,860
+08/01/2026,08/2025,Southeast,Preschool,1296
+08/01/2026,08/2025,Southeast,School Age,1720
+08/01/2026,08/2025,Southeast,Toddler,1199
+08/01/2026,08/2025,Western,Infant,489
+08/01/2026,08/2025,Western,Preschool,552
+08/01/2026,08/2025,Western,School Age,1239
+08/01/2026,08/2025,Western,Toddler,644
+08/01/2026,07/2025,Central,Infant,581
+08/01/2026,07/2025,Central,Preschool,974
+08/01/2026,07/2025,Central,School Age,1346
+08/01/2026,07/2025,Central,Toddler,883
+08/01/2026,07/2025,Metro,Infant,706
+08/01/2026,07/2025,Metro,Preschool,1240
+08/01/2026,07/2025,Metro,School Age,1480
+08/01/2026,07/2025,Metro,Toddler,1115
+08/01/2026,07/2025,Metro Boston,Infant,1138
+08/01/2026,07/2025,Metro Boston,Preschool,940
+08/01/2026,07/2025,Metro Boston,School Age,1600
+08/01/2026,07/2025,Metro Boston,Toddler,1288
+08/01/2026,07/2025,Northeast,Infant,1713
+08/01/2026,07/2025,Northeast,Preschool,2506
+08/01/2026,07/2025,Northeast,School Age,3276
+08/01/2026,07/2025,Northeast,Toddler,2415
+08/01/2026,07/2025,Southeast,Infant,869
+08/01/2026,07/2025,Southeast,Preschool,1307
+08/01/2026,07/2025,Southeast,School Age,1716
+08/01/2026,07/2025,Southeast,Toddler,1164
+08/01/2026,07/2025,Western,Infant,478
+08/01/2026,07/2025,Western,Preschool,656
+08/01/2026,07/2025,Western,School Age,1225
+08/01/2026,07/2025,Western,Toddler,650
+08/01/2026,06/2025,Central,Infant,566
+08/01/2026,06/2025,Central,Preschool,950
+08/01/2026,06/2025,Central,School Age,1329
+08/01/2026,06/2025,Central,Toddler,859
+08/01/2026,06/2025,Metro,Infant,708
+08/01/2026,06/2025,Metro,Preschool,1231
+08/01/2026,06/2025,Metro,School Age,1466
+08/01/2026,06/2025,Metro,Toddler,1107
+08/01/2026,06/2025,Metro Boston,Infant,1148
+08/01/2026,06/2025,Metro Boston,Preschool,933
+08/01/2026,06/2025,Metro Boston,School Age,1575
+08/01/2026,06/2025,Metro Boston,Toddler,1275
+08/01/2026,06/2025,Northeast,Infant,1723
+08/01/2026,06/2025,Northeast,Preschool,2531
+08/01/2026,06/2025,Northeast,School Age,3303
+08/01/2026,06/2025,Northeast,Toddler,2377
+08/01/2026,06/2025,Southeast,Infant,870
+08/01/2026,06/2025,Southeast,Preschool,1337
+08/01/2026,06/2025,Southeast,School Age,1734
+08/01/2026,06/2025,Southeast,Toddler,1168
+08/01/2026,06/2025,Western,Infant,465
+08/01/2026,06/2025,Western,Preschool,671
+08/01/2026,06/2025,Western,School Age,1197
+08/01/2026,06/2025,Western,Toddler,627
+08/01/2026,05/2025,Central,Infant,575
+08/01/2026,05/2025,Central,Preschool,941
+08/01/2026,05/2025,Central,School Age,1332
+08/01/2026,05/2025,Central,Toddler,870
+08/01/2026,05/2025,Metro,Infant,737
+08/01/2026,05/2025,Metro,Preschool,1217
+08/01/2026,05/2025,Metro,School Age,1471
+08/01/2026,05/2025,Metro,Toddler,1110
+08/01/2026,05/2025,Metro Boston,Infant,1145
+08/01/2026,05/2025,Metro Boston,Preschool,945
+08/01/2026,05/2025,Metro Boston,School Age,1605
+08/01/2026,05/2025,Metro Boston,Toddler,1261
+08/01/2026,05/2025,Northeast,Infant,1745
+08/01/2026,05/2025,Northeast,Preschool,2280
+08/01/2026,05/2025,Northeast,School Age,3032
+08/01/2026,05/2025,Northeast,Toddler,2215
+08/01/2026,05/2025,Southeast,Infant,880
+08/01/2026,05/2025,Southeast,Preschool,1337
+08/01/2026,05/2025,Southeast,School Age,1762
+08/01/2026,05/2025,Southeast,Toddler,1211
+08/01/2026,05/2025,Western,Infant,474
+08/01/2026,05/2025,Western,Preschool,655
+08/01/2026,05/2025,Western,School Age,1199
+08/01/2026,05/2025,Western,Toddler,642
+08/01/2026,04/2025,Central,Infant,576
+08/01/2026,04/2025,Central,Preschool,915
+08/01/2026,04/2025,Central,School Age,1295
+08/01/2026,04/2025,Central,Toddler,883
+08/01/2026,04/2025,Metro,Infant,744
+08/01/2026,04/2025,Metro,Preschool,1235
+08/01/2026,04/2025,Metro,School Age,1491
+08/01/2026,04/2025,Metro,Toddler,1129
+08/01/2026,04/2025,Metro Boston,Infant,1160
+08/01/2026,04/2025,Metro Boston,Preschool,918
+08/01/2026,04/2025,Metro Boston,School Age,1641
+08/01/2026,04/2025,Metro Boston,Toddler,1245
+08/01/2026,04/2025,Northeast,Infant,1748
+08/01/2026,04/2025,Northeast,Preschool,2168
+08/01/2026,04/2025,Northeast,School Age,3115
+08/01/2026,04/2025,Northeast,Toddler,2197
+08/01/2026,04/2025,Southeast,Infant,911
+08/01/2026,04/2025,Southeast,Preschool,1332
+08/01/2026,04/2025,Southeast,School Age,1813
+08/01/2026,04/2025,Southeast,Toddler,1239
+08/01/2026,04/2025,Western,Infant,473
+08/01/2026,04/2025,Western,Preschool,637
+08/01/2026,04/2025,Western,School Age,1198
+08/01/2026,04/2025,Western,Toddler,654
+08/01/2026,03/2025,Central,Infant,573
+08/01/2026,03/2025,Central,Preschool,891
+08/01/2026,03/2025,Central,School Age,1267
+08/01/2026,03/2025,Central,Toddler,881
+08/01/2026,03/2025,Metro,Infant,762
+08/01/2026,03/2025,Metro,Preschool,1243
+08/01/2026,03/2025,Metro,School Age,1480
+08/01/2026,03/2025,Metro,Toddler,1150
+08/01/2026,03/2025,Metro Boston,Infant,1154
+08/01/2026,03/2025,Metro Boston,Preschool,918
+08/01/2026,03/2025,Metro Boston,School Age,1647
+08/01/2026,03/2025,Metro Boston,Toddler,1261
+08/01/2026,03/2025,Northeast,Infant,1808
+08/01/2026,03/2025,Northeast,Preschool,2151
+08/01/2026,03/2025,Northeast,School Age,3056
+08/01/2026,03/2025,Northeast,Toddler,2161
+08/01/2026,03/2025,Southeast,Infant,894
+08/01/2026,03/2025,Southeast,Preschool,1337
+08/01/2026,03/2025,Southeast,School Age,1764
+08/01/2026,03/2025,Southeast,Toddler,1263
+08/01/2026,03/2025,Western,Infant,489
+08/01/2026,03/2025,Western,Preschool,628
+08/01/2026,03/2025,Western,School Age,1201
+08/01/2026,03/2025,Western,Toddler,635
+08/01/2026,02/2025,Central,Infant,571
+08/01/2026,02/2025,Central,Preschool,850
+08/01/2026,02/2025,Central,School Age,1239
+08/01/2026,02/2025,Central,Toddler,877
+08/01/2026,02/2025,Metro,Infant,756
+08/01/2026,02/2025,Metro,Preschool,1220
+08/01/2026,02/2025,Metro,School Age,1478
+08/01/2026,02/2025,Metro,Toddler,1153
+08/01/2026,02/2025,Metro Boston,Infant,1131
+08/01/2026,02/2025,Metro Boston,Preschool,900
+08/01/2026,02/2025,Metro Boston,School Age,1626
+08/01/2026,02/2025,Metro Boston,Toddler,1261
+08/01/2026,02/2025,Northeast,Infant,1803
+08/01/2026,02/2025,Northeast,Preschool,2144
+08/01/2026,02/2025,Northeast,School Age,3043
+08/01/2026,02/2025,Northeast,Toddler,2097
+08/01/2026,02/2025,Southeast,Infant,908
+08/01/2026,02/2025,Southeast,Preschool,1384
+08/01/2026,02/2025,Southeast,School Age,1819
+08/01/2026,02/2025,Southeast,Toddler,1317
+08/01/2026,02/2025,Western,Infant,504
+08/01/2026,02/2025,Western,Preschool,651
+08/01/2026,02/2025,Western,School Age,1227
+08/01/2026,02/2025,Western,Toddler,677
+08/01/2026,01/2025,Central,Infant,579
+08/01/2026,01/2025,Central,Preschool,874
+08/01/2026,01/2025,Central,School Age,1289
+08/01/2026,01/2025,Central,Toddler,886
+08/01/2026,01/2025,Metro,Infant,756
+08/01/2026,01/2025,Metro,Preschool,1174
+08/01/2026,01/2025,Metro,School Age,1456
+08/01/2026,01/2025,Metro,Toddler,1167
+08/01/2026,01/2025,Metro Boston,Infant,1117
+08/01/2026,01/2025,Metro Boston,Preschool,903
+08/01/2026,01/2025,Metro Boston,School Age,1608
+08/01/2026,01/2025,Metro Boston,Toddler,1271
+08/01/2026,01/2025,Northeast,Infant,1878
+08/01/2026,01/2025,Northeast,Preschool,2144
+08/01/2026,01/2025,Northeast,School Age,3058
+08/01/2026,01/2025,Northeast,Toddler,2086
+08/01/2026,01/2025,Southeast,Infant,931
+08/01/2026,01/2025,Southeast,Preschool,1401
+08/01/2026,01/2025,Southeast,School Age,1827
+08/01/2026,01/2025,Southeast,Toddler,1363
+08/01/2026,01/2025,Western,Infant,505
+08/01/2026,01/2025,Western,Preschool,643
+08/01/2026,01/2025,Western,School Age,1200
+08/01/2026,01/2025,Western,Toddler,657
+08/01/2026,12/2024,Central,Infant,583
+08/01/2026,12/2024,Central,Preschool,849
+08/01/2026,12/2024,Central,School Age,1235
+08/01/2026,12/2024,Central,Toddler,873
+08/01/2026,12/2024,Metro,Infant,751
+08/01/2026,12/2024,Metro,Preschool,1106
+08/01/2026,12/2024,Metro,School Age,1423
+08/01/2026,12/2024,Metro,Toddler,1126
+08/01/2026,12/2024,Metro Boston,Infant,1096
+08/01/2026,12/2024,Metro Boston,Preschool,846
+08/01/2026,12/2024,Metro Boston,School Age,1573
+08/01/2026,12/2024,Metro Boston,Toddler,1216
+08/01/2026,12/2024,Northeast,Infant,1792
+08/01/2026,12/2024,Northeast,Preschool,2027
+08/01/2026,12/2024,Northeast,School Age,2969
+08/01/2026,12/2024,Northeast,Toddler,2005
+08/01/2026,12/2024,Southeast,Infant,921
+08/01/2026,12/2024,Southeast,Preschool,1379
+08/01/2026,12/2024,Southeast,School Age,1772
+08/01/2026,12/2024,Southeast,Toddler,1326
+08/01/2026,12/2024,Western,Infant,494
+08/01/2026,12/2024,Western,Preschool,597
+08/01/2026,12/2024,Western,School Age,1129
+08/01/2026,12/2024,Western,Toddler,639
+08/01/2026,11/2024,Central,Infant,592
+08/01/2026,11/2024,Central,Preschool,817
+08/01/2026,11/2024,Central,School Age,1204
+08/01/2026,11/2024,Central,Toddler,847
+08/01/2026,11/2024,Metro,Infant,759
+08/01/2026,11/2024,Metro,Preschool,1085
+08/01/2026,11/2024,Metro,School Age,1439
+08/01/2026,11/2024,Metro,Toddler,1132
+08/01/2026,11/2024,Metro Boston,Infant,1088
+08/01/2026,11/2024,Metro Boston,Preschool,835
+08/01/2026,11/2024,Metro Boston,School Age,1592
+08/01/2026,11/2024,Metro Boston,Toddler,1220
+08/01/2026,11/2024,Northeast,Infant,1813
+08/01/2026,11/2024,Northeast,Preschool,2071
+08/01/2026,11/2024,Northeast,School Age,2942
+08/01/2026,11/2024,Northeast,Toddler,2009
+08/01/2026,11/2024,Southeast,Infant,946
+08/01/2026,11/2024,Southeast,Preschool,1371
+08/01/2026,11/2024,Southeast,School Age,1725
+08/01/2026,11/2024,Southeast,Toddler,1304
+08/01/2026,11/2024,Western,Infant,473
+08/01/2026,11/2024,Western,Preschool,562
+08/01/2026,11/2024,Western,School Age,1108
+08/01/2026,11/2024,Western,Toddler,635
+08/01/2026,10/2024,Central,Infant,606
+08/01/2026,10/2024,Central,Preschool,812
+08/01/2026,10/2024,Central,School Age,1200
+08/01/2026,10/2024,Central,Toddler,843
+08/01/2026,10/2024,Metro,Infant,777
+08/01/2026,10/2024,Metro,Preschool,1103
+08/01/2026,10/2024,Metro,School Age,1457
+08/01/2026,10/2024,Metro,Toddler,1134
+08/01/2026,10/2024,Metro Boston,Infant,1078
+08/01/2026,10/2024,Metro Boston,Preschool,854
+08/01/2026,10/2024,Metro Boston,School Age,1572
+08/01/2026,10/2024,Metro Boston,Toddler,1197
+08/01/2026,10/2024,Northeast,Infant,1840
+08/01/2026,10/2024,Northeast,Preschool,2063
+08/01/2026,10/2024,Northeast,School Age,2969
+08/01/2026,10/2024,Northeast,Toddler,1973
+08/01/2026,10/2024,Southeast,Infant,973
+08/01/2026,10/2024,Southeast,Preschool,1410
+08/01/2026,10/2024,Southeast,School Age,1712
+08/01/2026,10/2024,Southeast,Toddler,1301
+08/01/2026,10/2024,Western,Infant,475
+08/01/2026,10/2024,Western,Preschool,569
+08/01/2026,10/2024,Western,School Age,1086
+08/01/2026,10/2024,Western,Toddler,608
+08/01/2026,09/2024,Central,Infant,621
+08/01/2026,09/2024,Central,Preschool,826
+08/01/2026,09/2024,Central,School Age,1168
+08/01/2026,09/2024,Central,Toddler,840
+08/01/2026,09/2024,Metro,Infant,764
+08/01/2026,09/2024,Metro,Preschool,1102
+08/01/2026,09/2024,Metro,School Age,1389
+08/01/2026,09/2024,Metro,Toddler,1105
+08/01/2026,09/2024,Metro Boston,Infant,1072
+08/01/2026,09/2024,Metro Boston,Preschool,844
+08/01/2026,09/2024,Metro Boston,School Age,1545
+08/01/2026,09/2024,Metro Boston,Toddler,1158
+08/01/2026,09/2024,Northeast,Infant,1807
+08/01/2026,09/2024,Northeast,Preschool,2003
+08/01/2026,09/2024,Northeast,School Age,2930
+08/01/2026,09/2024,Northeast,Toddler,1961
+08/01/2026,09/2024,Southeast,Infant,949
+08/01/2026,09/2024,Southeast,Preschool,1402
+08/01/2026,09/2024,Southeast,School Age,1657
+08/01/2026,09/2024,Southeast,Toddler,1301
+08/01/2026,09/2024,Western,Infant,441
+08/01/2026,09/2024,Western,Preschool,575
+08/01/2026,09/2024,Western,School Age,1095
+08/01/2026,09/2024,Western,Toddler,600
+08/01/2026,08/2024,Central,Infant,613
+08/01/2026,08/2024,Central,Preschool,803
+08/01/2026,08/2024,Central,School Age,1146
+08/01/2026,08/2024,Central,Toddler,818
+08/01/2026,08/2024,Metro,Infant,730
+08/01/2026,08/2024,Metro,Preschool,1122
+08/01/2026,08/2024,Metro,School Age,1315
+08/01/2026,08/2024,Metro,Toddler,1026
+08/01/2026,08/2024,Metro Boston,Infant,1017
+08/01/2026,08/2024,Metro Boston,Preschool,821
+08/01/2026,08/2024,Metro Boston,School Age,1476
+08/01/2026,08/2024,Metro Boston,Toddler,1118
+08/01/2026,08/2024,Northeast,Infant,1756
+08/01/2026,08/2024,Northeast,Preschool,2018
+08/01/2026,08/2024,Northeast,School Age,2828
+08/01/2026,08/2024,Northeast,Toddler,1943
+08/01/2026,08/2024,Southeast,Infant,917
+08/01/2026,08/2024,Southeast,Preschool,1396
+08/01/2026,08/2024,Southeast,School Age,1634
+08/01/2026,08/2024,Southeast,Toddler,1285
+08/01/2026,08/2024,Western,Infant,420
+08/01/2026,08/2024,Western,Preschool,540
+08/01/2026,08/2024,Western,School Age,1067
+08/01/2026,08/2024,Western,Toddler,567
+08/01/2026,07/2024,Central,Infant,564
+08/01/2026,07/2024,Central,Preschool,738
+08/01/2026,07/2024,Central,School Age,1073
+08/01/2026,07/2024,Central,Toddler,766
+08/01/2026,07/2024,Metro,Infant,670
+08/01/2026,07/2024,Metro,Preschool,1147
+08/01/2026,07/2024,Metro,School Age,1289
+08/01/2026,07/2024,Metro,Toddler,1011
+08/01/2026,07/2024,Metro Boston,Infant,971
+08/01/2026,07/2024,Metro Boston,Preschool,771
+08/01/2026,07/2024,Metro Boston,School Age,1408
+08/01/2026,07/2024,Metro Boston,Toddler,1067
+08/01/2026,07/2024,Northeast,Infant,1703
+08/01/2026,07/2024,Northeast,Preschool,2026
+08/01/2026,07/2024,Northeast,School Age,2756
+08/01/2026,07/2024,Northeast,Toddler,1852
+08/01/2026,07/2024,Southeast,Infant,886
+08/01/2026,07/2024,Southeast,Preschool,1403
+08/01/2026,07/2024,Southeast,School Age,1613
+08/01/2026,07/2024,Southeast,Toddler,1237
+08/01/2026,07/2024,Western,Infant,382
+08/01/2026,07/2024,Western,Preschool,499
+08/01/2026,07/2024,Western,School Age,1034
+08/01/2026,07/2024,Western,Toddler,567
+08/01/2026,06/2024,Central,Infant,543
+08/01/2026,06/2024,Central,Preschool,714
+08/01/2026,06/2024,Central,School Age,1028
+08/01/2026,06/2024,Central,Toddler,718
+08/01/2026,06/2024,Metro,Infant,656
+08/01/2026,06/2024,Metro,Preschool,1118
+08/01/2026,06/2024,Metro,School Age,1257
+08/01/2026,06/2024,Metro,Toddler,996
+08/01/2026,06/2024,Metro Boston,Infant,900
+08/01/2026,06/2024,Metro Boston,Preschool,724
+08/01/2026,06/2024,Metro Boston,School Age,1324
+08/01/2026,06/2024,Metro Boston,Toddler,1021
+08/01/2026,06/2024,Northeast,Infant,1547
+08/01/2026,06/2024,Northeast,Preschool,1934
+08/01/2026,06/2024,Northeast,School Age,2690
+08/01/2026,06/2024,Northeast,Toddler,1744
+08/01/2026,06/2024,Southeast,Infant,864
+08/01/2026,06/2024,Southeast,Preschool,1406
+08/01/2026,06/2024,Southeast,School Age,1589
+08/01/2026,06/2024,Southeast,Toddler,1219
+08/01/2026,06/2024,Western,Infant,363
+08/01/2026,06/2024,Western,Preschool,467
+08/01/2026,06/2024,Western,School Age,1035
+08/01/2026,06/2024,Western,Toddler,533
+08/01/2026,05/2024,Central,Infant,516
+08/01/2026,05/2024,Central,Preschool,646
+08/01/2026,05/2024,Central,School Age,936
+08/01/2026,05/2024,Central,Toddler,669
+08/01/2026,05/2024,Metro,Infant,635
+08/01/2026,05/2024,Metro,Preschool,1058
+08/01/2026,05/2024,Metro,School Age,1178
+08/01/2026,05/2024,Metro,Toddler,958
+08/01/2026,05/2024,Metro Boston,Infant,881
+08/01/2026,05/2024,Metro Boston,Preschool,637
+08/01/2026,05/2024,Metro Boston,School Age,1240
+08/01/2026,05/2024,Metro Boston,Toddler,951
+08/01/2026,05/2024,Northeast,Infant,1415
+08/01/2026,05/2024,Northeast,Preschool,1824
+08/01/2026,05/2024,Northeast,School Age,2542
+08/01/2026,05/2024,Northeast,Toddler,1659
+08/01/2026,05/2024,Southeast,Infant,838
+08/01/2026,05/2024,Southeast,Preschool,1333
+08/01/2026,05/2024,Southeast,School Age,1522
+08/01/2026,05/2024,Southeast,Toddler,1206
+08/01/2026,05/2024,Western,Infant,363
+08/01/2026,05/2024,Western,Preschool,399
+08/01/2026,05/2024,Western,School Age,973
+08/01/2026,05/2024,Western,Toddler,487
+08/01/2026,04/2024,Central,Infant,457
+08/01/2026,04/2024,Central,Preschool,562
+08/01/2026,04/2024,Central,School Age,831
+08/01/2026,04/2024,Central,Toddler,609
+08/01/2026,04/2024,Metro,Infant,595
+08/01/2026,04/2024,Metro,Preschool,965
+08/01/2026,04/2024,Metro,School Age,1067
+08/01/2026,04/2024,Metro,Toddler,922
+08/01/2026,04/2024,Metro Boston,Infant,799
+08/01/2026,04/2024,Metro Boston,Preschool,586
+08/01/2026,04/2024,Metro Boston,School Age,1102
+08/01/2026,04/2024,Metro Boston,Toddler,862
+08/01/2026,04/2024,Northeast,Infant,1308
+08/01/2026,04/2024,Northeast,Preschool,1639
+08/01/2026,04/2024,Northeast,School Age,2325
+08/01/2026,04/2024,Northeast,Toddler,1460
+08/01/2026,04/2024,Southeast,Infant,834
+08/01/2026,04/2024,Southeast,Preschool,1252
+08/01/2026,04/2024,Southeast,School Age,1413
+08/01/2026,04/2024,Southeast,Toddler,1144
+08/01/2026,04/2024,Western,Infant,348
+08/01/2026,04/2024,Western,Preschool,332
+08/01/2026,04/2024,Western,School Age,885
+08/01/2026,04/2024,Western,Toddler,450
+08/01/2026,03/2024,Central,Infant,421
+08/01/2026,03/2024,Central,Preschool,524
+08/01/2026,03/2024,Central,School Age,751
+08/01/2026,03/2024,Central,Toddler,531
+08/01/2026,03/2024,Metro,Infant,568
+08/01/2026,03/2024,Metro,Preschool,898
+08/01/2026,03/2024,Metro,School Age,970
+08/01/2026,03/2024,Metro,Toddler,832
+08/01/2026,03/2024,Metro Boston,Infant,749
+08/01/2026,03/2024,Metro Boston,Preschool,501
+08/01/2026,03/2024,Metro Boston,School Age,974
+08/01/2026,03/2024,Metro Boston,Toddler,783
+08/01/2026,03/2024,Northeast,Infant,1192
+08/01/2026,03/2024,Northeast,Preschool,1454
+08/01/2026,03/2024,Northeast,School Age,2135
+08/01/2026,03/2024,Northeast,Toddler,1373
+08/01/2026,03/2024,Southeast,Infant,802
+08/01/2026,03/2024,Southeast,Preschool,1169
+08/01/2026,03/2024,Southeast,School Age,1344
+08/01/2026,03/2024,Southeast,Toddler,1083
+08/01/2026,03/2024,Western,Infant,328
+08/01/2026,03/2024,Western,Preschool,287
+08/01/2026,03/2024,Western,School Age,802
+08/01/2026,03/2024,Western,Toddler,423
+08/01/2026,02/2024,Central,Infant,416
+08/01/2026,02/2024,Central,Preschool,485
+08/01/2026,02/2024,Central,School Age,688
+08/01/2026,02/2024,Central,Toddler,497
+08/01/2026,02/2024,Metro,Infant,551
+08/01/2026,02/2024,Metro,Preschool,834
+08/01/2026,02/2024,Metro,School Age,938
+08/01/2026,02/2024,Metro,Toddler,791
+08/01/2026,02/2024,Metro Boston,Infant,720
+08/01/2026,02/2024,Metro Boston,Preschool,436
+08/01/2026,02/2024,Metro Boston,School Age,889
+08/01/2026,02/2024,Metro Boston,Toddler,730
+08/01/2026,02/2024,Northeast,Infant,1225
+08/01/2026,02/2024,Northeast,Preschool,1419
+08/01/2026,02/2024,Northeast,School Age,2103
+08/01/2026,02/2024,Northeast,Toddler,1355
+08/01/2026,02/2024,Southeast,Infant,745
+08/01/2026,02/2024,Southeast,Preschool,1052
+08/01/2026,02/2024,Southeast,School Age,1251
+08/01/2026,02/2024,Southeast,Toddler,1004
+08/01/2026,02/2024,Western,Infant,330
+08/01/2026,02/2024,Western,Preschool,260
+08/01/2026,02/2024,Western,School Age,798
+08/01/2026,02/2024,Western,Toddler,468
+08/01/2026,01/2024,Central,Infant,397
+08/01/2026,01/2024,Central,Preschool,446
+08/01/2026,01/2024,Central,School Age,678
+08/01/2026,01/2024,Central,Toddler,482
+08/01/2026,01/2024,Metro,Infant,545
+08/01/2026,01/2024,Metro,Preschool,779
+08/01/2026,01/2024,Metro,School Age,869
+08/01/2026,01/2024,Metro,Toddler,723
+08/01/2026,01/2024,Metro Boston,Infant,694
+08/01/2026,01/2024,Metro Boston,Preschool,395
+08/01/2026,01/2024,Metro Boston,School Age,880
+08/01/2026,01/2024,Metro Boston,Toddler,712
+08/01/2026,01/2024,Northeast,Infant,1256
+08/01/2026,01/2024,Northeast,Preschool,1328
+08/01/2026,01/2024,Northeast,School Age,2024
+08/01/2026,01/2024,Northeast,Toddler,1345
+08/01/2026,01/2024,Southeast,Infant,726
+08/01/2026,01/2024,Southeast,Preschool,1020
+08/01/2026,01/2024,Southeast,School Age,1279
+08/01/2026,01/2024,Southeast,Toddler,968
+08/01/2026,01/2024,Western,Infant,330
+08/01/2026,01/2024,Western,Preschool,251
+08/01/2026,01/2024,Western,School Age,752
+08/01/2026,01/2024,Western,Toddler,463
+08/01/2026,12/2023,Central,Infant,367
+08/01/2026,12/2023,Central,Preschool,428
+08/01/2026,12/2023,Central,School Age,639
+08/01/2026,12/2023,Central,Toddler,447
+08/01/2026,12/2023,Metro,Infant,479
+08/01/2026,12/2023,Metro,Preschool,697
+08/01/2026,12/2023,Metro,School Age,816
+08/01/2026,12/2023,Metro,Toddler,660
+08/01/2026,12/2023,Metro Boston,Infant,667
+08/01/2026,12/2023,Metro Boston,Preschool,381
+08/01/2026,12/2023,Metro Boston,School Age,834
+08/01/2026,12/2023,Metro Boston,Toddler,689
+08/01/2026,12/2023,Northeast,Infant,1169
+08/01/2026,12/2023,Northeast,Preschool,1218
+08/01/2026,12/2023,Northeast,School Age,1853
+08/01/2026,12/2023,Northeast,Toddler,1222
+08/01/2026,12/2023,Southeast,Infant,663
+08/01/2026,12/2023,Southeast,Preschool,980
+08/01/2026,12/2023,Southeast,School Age,1216
+08/01/2026,12/2023,Southeast,Toddler,913
+08/01/2026,12/2023,Western,Infant,305
+08/01/2026,12/2023,Western,Preschool,251
+08/01/2026,12/2023,Western,School Age,732
+08/01/2026,12/2023,Western,Toddler,450
+08/01/2026,11/2023,Central,Infant,408
+08/01/2026,11/2023,Central,Preschool,478
+08/01/2026,11/2023,Central,School Age,800
+08/01/2026,11/2023,Central,Toddler,496
+08/01/2026,11/2023,Metro,Infant,537
+08/01/2026,11/2023,Metro,Preschool,790
+08/01/2026,11/2023,Metro,School Age,986
+08/01/2026,11/2023,Metro,Toddler,763
+08/01/2026,11/2023,Metro Boston,Infant,747
+08/01/2026,11/2023,Metro Boston,Preschool,498
+08/01/2026,11/2023,Metro Boston,School Age,1093
+08/01/2026,11/2023,Metro Boston,Toddler,776
+08/01/2026,11/2023,Northeast,Infant,1352
+08/01/2026,11/2023,Northeast,Preschool,1361
+08/01/2026,11/2023,Northeast,School Age,2200
+08/01/2026,11/2023,Northeast,Toddler,1446
+08/01/2026,11/2023,Southeast,Infant,741
+08/01/2026,11/2023,Southeast,Preschool,1182
+08/01/2026,11/2023,Southeast,School Age,1544
+08/01/2026,11/2023,Southeast,Toddler,1086
+08/01/2026,11/2023,Western,Infant,323
+08/01/2026,11/2023,Western,Preschool,295
+08/01/2026,11/2023,Western,School Age,887
+08/01/2026,11/2023,Western,Toddler,535
+08/01/2026,10/2023,Central,Infant,430
+08/01/2026,10/2023,Central,Preschool,455
+08/01/2026,10/2023,Central,School Age,813
+08/01/2026,10/2023,Central,Toddler,486
+08/01/2026,10/2023,Metro,Infant,527
+08/01/2026,10/2023,Metro,Preschool,759
+08/01/2026,10/2023,Metro,School Age,973
+08/01/2026,10/2023,Metro,Toddler,742
+08/01/2026,10/2023,Metro Boston,Infant,768
+08/01/2026,10/2023,Metro Boston,Preschool,591
+08/01/2026,10/2023,Metro Boston,School Age,1130
+08/01/2026,10/2023,Metro Boston,Toddler,806
+08/01/2026,10/2023,Northeast,Infant,1393
+08/01/2026,10/2023,Northeast,Preschool,1352
+08/01/2026,10/2023,Northeast,School Age,2166
+08/01/2026,10/2023,Northeast,Toddler,1408
+08/01/2026,10/2023,Southeast,Infant,743
+08/01/2026,10/2023,Southeast,Preschool,1224
+08/01/2026,10/2023,Southeast,School Age,1563
+08/01/2026,10/2023,Southeast,Toddler,1099
+08/01/2026,10/2023,Western,Infant,368
+08/01/2026,10/2023,Western,Preschool,293
+08/01/2026,10/2023,Western,School Age,860
+08/01/2026,10/2023,Western,Toddler,533
+08/01/2026,09/2023,Central,Infant,433
+08/01/2026,09/2023,Central,Preschool,518
+08/01/2026,09/2023,Central,School Age,846
+08/01/2026,09/2023,Central,Toddler,505
+08/01/2026,09/2023,Metro,Infant,528
+08/01/2026,09/2023,Metro,Preschool,765
+08/01/2026,09/2023,Metro,School Age,997
+08/01/2026,09/2023,Metro,Toddler,764
+08/01/2026,09/2023,Metro Boston,Infant,780
+08/01/2026,09/2023,Metro Boston,Preschool,658
+08/01/2026,09/2023,Metro Boston,School Age,1146
+08/01/2026,09/2023,Metro Boston,Toddler,793
+08/01/2026,09/2023,Northeast,Infant,1389
+08/01/2026,09/2023,Northeast,Preschool,1512
+08/01/2026,09/2023,Northeast,School Age,2226
+08/01/2026,09/2023,Northeast,Toddler,1475
+08/01/2026,09/2023,Southeast,Infant,748
+08/01/2026,09/2023,Southeast,Preschool,1187
+08/01/2026,09/2023,Southeast,School Age,1542
+08/01/2026,09/2023,Southeast,Toddler,1053
+08/01/2026,09/2023,Western,Infant,390
+08/01/2026,09/2023,Western,Preschool,346
+08/01/2026,09/2023,Western,School Age,840
+08/01/2026,09/2023,Western,Toddler,524
+08/01/2026,08/2023,Central,Infant,425
+08/01/2026,08/2023,Central,Preschool,592
+08/01/2026,08/2023,Central,School Age,858
+08/01/2026,08/2023,Central,Toddler,523
+08/01/2026,08/2023,Metro,Infant,486
+08/01/2026,08/2023,Metro,Preschool,762
+08/01/2026,08/2023,Metro,School Age,883
+08/01/2026,08/2023,Metro,Toddler,694
+08/01/2026,08/2023,Metro Boston,Infant,767
+08/01/2026,08/2023,Metro Boston,Preschool,694
+08/01/2026,08/2023,Metro Boston,School Age,1101
+08/01/2026,08/2023,Metro Boston,Toddler,776
+08/01/2026,08/2023,Northeast,Infant,1295
+08/01/2026,08/2023,Northeast,Preschool,1520
+08/01/2026,08/2023,Northeast,School Age,2142
+08/01/2026,08/2023,Northeast,Toddler,1404
+08/01/2026,08/2023,Southeast,Infant,728
+08/01/2026,08/2023,Southeast,Preschool,1222
+08/01/2026,08/2023,Southeast,School Age,1547
+08/01/2026,08/2023,Southeast,Toddler,1022
+08/01/2026,08/2023,Western,Infant,376
+08/01/2026,08/2023,Western,Preschool,379
+08/01/2026,08/2023,Western,School Age,788
+08/01/2026,08/2023,Western,Toddler,511
+08/01/2026,07/2023,Central,Infant,409
+08/01/2026,07/2023,Central,Preschool,588
+08/01/2026,07/2023,Central,School Age,854
+08/01/2026,07/2023,Central,Toddler,524
+08/01/2026,07/2023,Metro,Infant,478
+08/01/2026,07/2023,Metro,Preschool,800
+08/01/2026,07/2023,Metro,School Age,883
+08/01/2026,07/2023,Metro,Toddler,711
+08/01/2026,07/2023,Metro Boston,Infant,768
+08/01/2026,07/2023,Metro Boston,Preschool,646
+08/01/2026,07/2023,Metro Boston,School Age,1075
+08/01/2026,07/2023,Metro Boston,Toddler,746
+08/01/2026,07/2023,Northeast,Infant,1206
+08/01/2026,07/2023,Northeast,Preschool,1481
+08/01/2026,07/2023,Northeast,School Age,2024
+08/01/2026,07/2023,Northeast,Toddler,1351
+08/01/2026,07/2023,Southeast,Infant,719
+08/01/2026,07/2023,Southeast,Preschool,1222
+08/01/2026,07/2023,Southeast,School Age,1556
+08/01/2026,07/2023,Southeast,Toddler,1020
+08/01/2026,07/2023,Western,Infant,336
+08/01/2026,07/2023,Western,Preschool,371
+08/01/2026,07/2023,Western,School Age,763
+08/01/2026,07/2023,Western,Toddler,473
+08/01/2026,06/2023,Central,Infant,420
+08/01/2026,06/2023,Central,Preschool,568
+08/01/2026,06/2023,Central,School Age,867
+08/01/2026,06/2023,Central,Toddler,517
+08/01/2026,06/2023,Metro,Infant,488
+08/01/2026,06/2023,Metro,Preschool,805
+08/01/2026,06/2023,Metro,School Age,892
+08/01/2026,06/2023,Metro,Toddler,683
+08/01/2026,06/2023,Metro Boston,Infant,741
+08/01/2026,06/2023,Metro Boston,Preschool,647
+08/01/2026,06/2023,Metro Boston,School Age,1101
+08/01/2026,06/2023,Metro Boston,Toddler,705
+08/01/2026,06/2023,Northeast,Infant,1197
+08/01/2026,06/2023,Northeast,Preschool,1554
+08/01/2026,06/2023,Northeast,School Age,2035
+08/01/2026,06/2023,Northeast,Toddler,1335
+08/01/2026,06/2023,Southeast,Infant,691
+08/01/2026,06/2023,Southeast,Preschool,1206
+08/01/2026,06/2023,Southeast,School Age,1607
+08/01/2026,06/2023,Southeast,Toddler,1026
+08/01/2026,06/2023,Western,Infant,336
+08/01/2026,06/2023,Western,Preschool,348
+08/01/2026,06/2023,Western,School Age,784
+08/01/2026,06/2023,Western,Toddler,453
+08/01/2026,05/2023,Central,Infant,414
+08/01/2026,05/2023,Central,Preschool,549
+08/01/2026,05/2023,Central,School Age,852
+08/01/2026,05/2023,Central,Toddler,516
+08/01/2026,05/2023,Metro,Infant,486
+08/01/2026,05/2023,Metro,Preschool,765
+08/01/2026,05/2023,Metro,School Age,863
+08/01/2026,05/2023,Metro,Toddler,664
+08/01/2026,05/2023,Metro Boston,Infant,760
+08/01/2026,05/2023,Metro Boston,Preschool,593
+08/01/2026,05/2023,Metro Boston,School Age,1093
+08/01/2026,05/2023,Metro Boston,Toddler,670
+08/01/2026,05/2023,Northeast,Infant,1157
+08/01/2026,05/2023,Northeast,Preschool,1499
+08/01/2026,05/2023,Northeast,School Age,2003
+08/01/2026,05/2023,Northeast,Toddler,1288
+08/01/2026,05/2023,Southeast,Infant,680
+08/01/2026,05/2023,Southeast,Preschool,1162
+08/01/2026,05/2023,Southeast,School Age,1559
+08/01/2026,05/2023,Southeast,Toddler,1024
+08/01/2026,05/2023,Western,Infant,300
+08/01/2026,05/2023,Western,Preschool,345
+08/01/2026,05/2023,Western,School Age,760
+08/01/2026,05/2023,Western,Toddler,449
+08/01/2026,04/2023,Central,Infant,386
+08/01/2026,04/2023,Central,Preschool,575
+08/01/2026,04/2023,Central,School Age,819
+08/01/2026,04/2023,Central,Toddler,534
+08/01/2026,04/2023,Metro,Infant,505
+08/01/2026,04/2023,Metro,Preschool,764
+08/01/2026,04/2023,Metro,School Age,1014
+08/01/2026,04/2023,Metro,Toddler,672
+08/01/2026,04/2023,Metro Boston,Infant,718
+08/01/2026,04/2023,Metro Boston,Preschool,561
+08/01/2026,04/2023,Metro Boston,School Age,1099
+08/01/2026,04/2023,Metro Boston,Toddler,646
+08/01/2026,04/2023,Northeast,Infant,1128
+08/01/2026,04/2023,Northeast,Preschool,1445
+08/01/2026,04/2023,Northeast,School Age,1932
+08/01/2026,04/2023,Northeast,Toddler,1332
+08/01/2026,04/2023,Southeast,Infant,679
+08/01/2026,04/2023,Southeast,Preschool,1160
+08/01/2026,04/2023,Southeast,School Age,1575
+08/01/2026,04/2023,Southeast,Toddler,1037
+08/01/2026,04/2023,Western,Infant,308
+08/01/2026,04/2023,Western,Preschool,329
+08/01/2026,04/2023,Western,School Age,735
+08/01/2026,04/2023,Western,Toddler,526
+08/01/2026,03/2023,Central,Infant,391
+08/01/2026,03/2023,Central,Preschool,552
+08/01/2026,03/2023,Central,School Age,833
+08/01/2026,03/2023,Central,Toddler,542
+08/01/2026,03/2023,Metro,Infant,507
+08/01/2026,03/2023,Metro,Preschool,774
+08/01/2026,03/2023,Metro,School Age,1032
+08/01/2026,03/2023,Metro,Toddler,689
+08/01/2026,03/2023,Metro Boston,Infant,679
+08/01/2026,03/2023,Metro Boston,Preschool,548
+08/01/2026,03/2023,Metro Boston,School Age,1065
+08/01/2026,03/2023,Metro Boston,Toddler,655
+08/01/2026,03/2023,Northeast,Infant,1215
+08/01/2026,03/2023,Northeast,Preschool,1409
+08/01/2026,03/2023,Northeast,School Age,2022
+08/01/2026,03/2023,Northeast,Toddler,1339
+08/01/2026,03/2023,Southeast,Infant,705
+08/01/2026,03/2023,Southeast,Preschool,1168
+08/01/2026,03/2023,Southeast,School Age,1605
+08/01/2026,03/2023,Southeast,Toddler,1082
+08/01/2026,03/2023,Western,Infant,327
+08/01/2026,03/2023,Western,Preschool,319
+08/01/2026,03/2023,Western,School Age,748
+08/01/2026,03/2023,Western,Toddler,534
+08/01/2026,02/2023,Central,Infant,387
+08/01/2026,02/2023,Central,Preschool,527
+08/01/2026,02/2023,Central,School Age,820
+08/01/2026,02/2023,Central,Toddler,563
+08/01/2026,02/2023,Metro,Infant,493
+08/01/2026,02/2023,Metro,Preschool,697
+08/01/2026,02/2023,Metro,School Age,995
+08/01/2026,02/2023,Metro,Toddler,690
+08/01/2026,02/2023,Metro Boston,Infant,679
+08/01/2026,02/2023,Metro Boston,Preschool,525
+08/01/2026,02/2023,Metro Boston,School Age,1083
+08/01/2026,02/2023,Metro Boston,Toddler,675
+08/01/2026,02/2023,Northeast,Infant,1176
+08/01/2026,02/2023,Northeast,Preschool,1369
+08/01/2026,02/2023,Northeast,School Age,2027
+08/01/2026,02/2023,Northeast,Toddler,1306
+08/01/2026,02/2023,Southeast,Infant,709
+08/01/2026,02/2023,Southeast,Preschool,1158
+08/01/2026,02/2023,Southeast,School Age,1597
+08/01/2026,02/2023,Southeast,Toddler,1058
+08/01/2026,02/2023,Western,Infant,344
+08/01/2026,02/2023,Western,Preschool,316
+08/01/2026,02/2023,Western,School Age,762
+08/01/2026,02/2023,Western,Toddler,517
+08/01/2026,01/2023,Central,Infant,394
+08/01/2026,01/2023,Central,Preschool,496
+08/01/2026,01/2023,Central,School Age,778
+08/01/2026,01/2023,Central,Toddler,552
+08/01/2026,01/2023,Metro,Infant,509
+08/01/2026,01/2023,Metro,Preschool,679
+08/01/2026,01/2023,Metro,School Age,1052
+08/01/2026,01/2023,Metro,Toddler,716
+08/01/2026,01/2023,Metro Boston,Infant,663
+08/01/2026,01/2023,Metro Boston,Preschool,519
+08/01/2026,01/2023,Metro Boston,School Age,1117
+08/01/2026,01/2023,Metro Boston,Toddler,701
+08/01/2026,01/2023,Northeast,Infant,1223
+08/01/2026,01/2023,Northeast,Preschool,1393
+08/01/2026,01/2023,Northeast,School Age,2099
+08/01/2026,01/2023,Northeast,Toddler,1318
+08/01/2026,01/2023,Southeast,Infant,704
+08/01/2026,01/2023,Southeast,Preschool,1129
+08/01/2026,01/2023,Southeast,School Age,1544
+08/01/2026,01/2023,Southeast,Toddler,1043
+08/01/2026,01/2023,Western,Infant,347
+08/01/2026,01/2023,Western,Preschool,302
+08/01/2026,01/2023,Western,School Age,753
+08/01/2026,01/2023,Western,Toddler,532
+08/01/2026,12/2022,Central,Infant,368
+08/01/2026,12/2022,Central,Preschool,442
+08/01/2026,12/2022,Central,School Age,700
+08/01/2026,12/2022,Central,Toddler,500
+08/01/2026,12/2022,Metro,Infant,484
+08/01/2026,12/2022,Metro,Preschool,633
+08/01/2026,12/2022,Metro,School Age,1011
+08/01/2026,12/2022,Metro,Toddler,684
+08/01/2026,12/2022,Metro Boston,Infant,623
+08/01/2026,12/2022,Metro Boston,Preschool,490
+08/01/2026,12/2022,Metro Boston,School Age,1067
+08/01/2026,12/2022,Metro Boston,Toddler,658
+08/01/2026,12/2022,Northeast,Infant,1149
+08/01/2026,12/2022,Northeast,Preschool,1297
+08/01/2026,12/2022,Northeast,School Age,1973
+08/01/2026,12/2022,Northeast,Toddler,1216
+08/01/2026,12/2022,Southeast,Infant,665
+08/01/2026,12/2022,Southeast,Preschool,1059
+08/01/2026,12/2022,Southeast,School Age,1445
+08/01/2026,12/2022,Southeast,Toddler,977
+08/01/2026,12/2022,Western,Infant,318
+08/01/2026,12/2022,Western,Preschool,256
+08/01/2026,12/2022,Western,School Age,721
+08/01/2026,12/2022,Western,Toddler,492
+08/01/2026,11/2022,Central,Infant,375
+08/01/2026,11/2022,Central,Preschool,463
+08/01/2026,11/2022,Central,School Age,714
+08/01/2026,11/2022,Central,Toddler,521
+08/01/2026,11/2022,Metro,Infant,479
+08/01/2026,11/2022,Metro,Preschool,627
+08/01/2026,11/2022,Metro,School Age,1018
+08/01/2026,11/2022,Metro,Toddler,702
+08/01/2026,11/2022,Metro Boston,Infant,659
+08/01/2026,11/2022,Metro Boston,Preschool,499
+08/01/2026,11/2022,Metro Boston,School Age,1087
+08/01/2026,11/2022,Metro Boston,Toddler,683
+08/01/2026,11/2022,Northeast,Infant,1187
+08/01/2026,11/2022,Northeast,Preschool,1335
+08/01/2026,11/2022,Northeast,School Age,1953
+08/01/2026,11/2022,Northeast,Toddler,1236
+08/01/2026,11/2022,Southeast,Infant,700
+08/01/2026,11/2022,Southeast,Preschool,1071
+08/01/2026,11/2022,Southeast,School Age,1455
+08/01/2026,11/2022,Southeast,Toddler,953
+08/01/2026,11/2022,Western,Infant,333
+08/01/2026,11/2022,Western,Preschool,288
+08/01/2026,11/2022,Western,School Age,723
+08/01/2026,11/2022,Western,Toddler,462
+08/01/2026,10/2022,Central,Infant,371
+08/01/2026,10/2022,Central,Preschool,472
+08/01/2026,10/2022,Central,School Age,749
+08/01/2026,10/2022,Central,Toddler,517
+08/01/2026,10/2022,Metro,Infant,492
+08/01/2026,10/2022,Metro,Preschool,646
+08/01/2026,10/2022,Metro,School Age,1023
+08/01/2026,10/2022,Metro,Toddler,715
+08/01/2026,10/2022,Metro Boston,Infant,651
+08/01/2026,10/2022,Metro Boston,Preschool,473
+08/01/2026,10/2022,Metro Boston,School Age,1087
+08/01/2026,10/2022,Metro Boston,Toddler,683
+08/01/2026,10/2022,Northeast,Infant,1201
+08/01/2026,10/2022,Northeast,Preschool,1378
+08/01/2026,10/2022,Northeast,School Age,1945
+08/01/2026,10/2022,Northeast,Toddler,1202
+08/01/2026,10/2022,Southeast,Infant,693
+08/01/2026,10/2022,Southeast,Preschool,1140
+08/01/2026,10/2022,Southeast,School Age,1450
+08/01/2026,10/2022,Southeast,Toddler,938
+08/01/2026,10/2022,Western,Infant,346
+08/01/2026,10/2022,Western,Preschool,365
+08/01/2026,10/2022,Western,School Age,801
+08/01/2026,10/2022,Western,Toddler,469
+08/01/2026,09/2022,Central,Infant,387
+08/01/2026,09/2022,Central,Preschool,555
+08/01/2026,09/2022,Central,School Age,775
+08/01/2026,09/2022,Central,Toddler,570
+08/01/2026,09/2022,Metro,Infant,497
+08/01/2026,09/2022,Metro,Preschool,672
+08/01/2026,09/2022,Metro,School Age,1029
+08/01/2026,09/2022,Metro,Toddler,705
+08/01/2026,09/2022,Metro Boston,Infant,694
+08/01/2026,09/2022,Metro Boston,Preschool,553
+08/01/2026,09/2022,Metro Boston,School Age,1180
+08/01/2026,09/2022,Metro Boston,Toddler,739
+08/01/2026,09/2022,Northeast,Infant,1200
+08/01/2026,09/2022,Northeast,Preschool,1404
+08/01/2026,09/2022,Northeast,School Age,1873
+08/01/2026,09/2022,Northeast,Toddler,1174
+08/01/2026,09/2022,Southeast,Infant,701
+08/01/2026,09/2022,Southeast,Preschool,1165
+08/01/2026,09/2022,Southeast,School Age,1411
+08/01/2026,09/2022,Southeast,Toddler,929
+08/01/2026,09/2022,Western,Infant,361
+08/01/2026,09/2022,Western,Preschool,494
+08/01/2026,09/2022,Western,School Age,894
+08/01/2026,09/2022,Western,Toddler,538
+08/01/2026,08/2022,Central,Infant,407
+08/01/2026,08/2022,Central,Preschool,565
+08/01/2026,08/2022,Central,School Age,774
+08/01/2026,08/2022,Central,Toddler,571
+08/01/2026,08/2022,Metro,Infant,470
+08/01/2026,08/2022,Metro,Preschool,672
+08/01/2026,08/2022,Metro,School Age,959
+08/01/2026,08/2022,Metro,Toddler,675
+08/01/2026,08/2022,Metro Boston,Infant,641
+08/01/2026,08/2022,Metro Boston,Preschool,594
+08/01/2026,08/2022,Metro Boston,School Age,1142
+08/01/2026,08/2022,Metro Boston,Toddler,752
+08/01/2026,08/2022,Northeast,Infant,1175
+08/01/2026,08/2022,Northeast,Preschool,1398
+08/01/2026,08/2022,Northeast,School Age,1746
+08/01/2026,08/2022,Northeast,Toddler,1138
+08/01/2026,08/2022,Southeast,Infant,684
+08/01/2026,08/2022,Southeast,Preschool,1155
+08/01/2026,08/2022,Southeast,School Age,1381
+08/01/2026,08/2022,Southeast,Toddler,915
+08/01/2026,08/2022,Western,Infant,372
+08/01/2026,08/2022,Western,Preschool,510
+08/01/2026,08/2022,Western,School Age,925
+08/01/2026,08/2022,Western,Toddler,575
+08/01/2026,07/2022,Central,Infant,373
+08/01/2026,07/2022,Central,Preschool,497
+08/01/2026,07/2022,Central,School Age,718
+08/01/2026,07/2022,Central,Toddler,542
+08/01/2026,07/2022,Metro,Infant,451
+08/01/2026,07/2022,Metro,Preschool,617
+08/01/2026,07/2022,Metro,School Age,880
+08/01/2026,07/2022,Metro,Toddler,603
+08/01/2026,07/2022,Metro Boston,Infant,625
+08/01/2026,07/2022,Metro Boston,Preschool,538
+08/01/2026,07/2022,Metro Boston,School Age,1093
+08/01/2026,07/2022,Metro Boston,Toddler,742
+08/01/2026,07/2022,Northeast,Infant,1098
+08/01/2026,07/2022,Northeast,Preschool,1258
+08/01/2026,07/2022,Northeast,School Age,1624
+08/01/2026,07/2022,Northeast,Toddler,1085
+08/01/2026,07/2022,Southeast,Infant,641
+08/01/2026,07/2022,Southeast,Preschool,1047
+08/01/2026,07/2022,Southeast,School Age,1288
+08/01/2026,07/2022,Southeast,Toddler,866
+08/01/2026,07/2022,Western,Infant,367
+08/01/2026,07/2022,Western,Preschool,609
+08/01/2026,07/2022,Western,School Age,943
+08/01/2026,07/2022,Western,Toddler,563
+08/01/2026,06/2022,Central,Infant,365
+08/01/2026,06/2022,Central,Preschool,452
+08/01/2026,06/2022,Central,School Age,681
+08/01/2026,06/2022,Central,Toddler,485
+08/01/2026,06/2022,Metro,Infant,460
+08/01/2026,06/2022,Metro,Preschool,589
+08/01/2026,06/2022,Metro,School Age,859
+08/01/2026,06/2022,Metro,Toddler,630
+08/01/2026,06/2022,Metro Boston,Infant,598
+08/01/2026,06/2022,Metro Boston,Preschool,497
+08/01/2026,06/2022,Metro Boston,School Age,1072
+08/01/2026,06/2022,Metro Boston,Toddler,735
+08/01/2026,06/2022,Northeast,Infant,1077
+08/01/2026,06/2022,Northeast,Preschool,1337
+08/01/2026,06/2022,Northeast,School Age,1713
+08/01/2026,06/2022,Northeast,Toddler,1135
+08/01/2026,06/2022,Southeast,Infant,629
+08/01/2026,06/2022,Southeast,Preschool,1017
+08/01/2026,06/2022,Southeast,School Age,1250
+08/01/2026,06/2022,Southeast,Toddler,835
+08/01/2026,06/2022,Western,Infant,363
+08/01/2026,06/2022,Western,Preschool,581
+08/01/2026,06/2022,Western,School Age,922
+08/01/2026,06/2022,Western,Toddler,581
+08/01/2026,05/2022,Central,Infant,352
+08/01/2026,05/2022,Central,Preschool,412
+08/01/2026,05/2022,Central,School Age,700
+08/01/2026,05/2022,Central,Toddler,447
+08/01/2026,05/2022,Metro,Infant,451
+08/01/2026,05/2022,Metro,Preschool,577
+08/01/2026,05/2022,Metro,School Age,868
+08/01/2026,05/2022,Metro,Toddler,641
+08/01/2026,05/2022,Metro Boston,Infant,592
+08/01/2026,05/2022,Metro Boston,Preschool,429
+08/01/2026,05/2022,Metro Boston,School Age,1016
+08/01/2026,05/2022,Metro Boston,Toddler,700
+08/01/2026,05/2022,Northeast,Infant,1078
+08/01/2026,05/2022,Northeast,Preschool,1339
+08/01/2026,05/2022,Northeast,School Age,1798
+08/01/2026,05/2022,Northeast,Toddler,1240
+08/01/2026,05/2022,Southeast,Infant,604
+08/01/2026,05/2022,Southeast,Preschool,942
+08/01/2026,05/2022,Southeast,School Age,1168
+08/01/2026,05/2022,Southeast,Toddler,785
+08/01/2026,05/2022,Western,Infant,350
+08/01/2026,05/2022,Western,Preschool,538
+08/01/2026,05/2022,Western,School Age,899
+08/01/2026,05/2022,Western,Toddler,561
+08/01/2026,04/2022,Central,Infant,342
+08/01/2026,04/2022,Central,Preschool,363
+08/01/2026,04/2022,Central,School Age,638
+08/01/2026,04/2022,Central,Toddler,431
+08/01/2026,04/2022,Metro,Infant,426
+08/01/2026,04/2022,Metro,Preschool,546
+08/01/2026,04/2022,Metro,School Age,835
+08/01/2026,04/2022,Metro,Toddler,624
+08/01/2026,04/2022,Metro Boston,Infant,612
+08/01/2026,04/2022,Metro Boston,Preschool,401
+08/01/2026,04/2022,Metro Boston,School Age,988
+08/01/2026,04/2022,Metro Boston,Toddler,681
+08/01/2026,04/2022,Northeast,Infant,1037
+08/01/2026,04/2022,Northeast,Preschool,1208
+08/01/2026,04/2022,Northeast,School Age,1674
+08/01/2026,04/2022,Northeast,Toddler,1188
+08/01/2026,04/2022,Southeast,Infant,557
+08/01/2026,04/2022,Southeast,Preschool,846
+08/01/2026,04/2022,Southeast,School Age,1030
+08/01/2026,04/2022,Southeast,Toddler,765
+08/01/2026,04/2022,Western,Infant,345
+08/01/2026,04/2022,Western,Preschool,472
+08/01/2026,04/2022,Western,School Age,935
+08/01/2026,04/2022,Western,Toddler,590
+08/01/2026,03/2022,Central,Infant,328
+08/01/2026,03/2022,Central,Preschool,331
+08/01/2026,03/2022,Central,School Age,640
+08/01/2026,03/2022,Central,Toddler,435
+08/01/2026,03/2022,Metro,Infant,407
+08/01/2026,03/2022,Metro,Preschool,512
+08/01/2026,03/2022,Metro,School Age,809
+08/01/2026,03/2022,Metro,Toddler,614
+08/01/2026,03/2022,Metro Boston,Infant,603
+08/01/2026,03/2022,Metro Boston,Preschool,395
+08/01/2026,03/2022,Metro Boston,School Age,955
+08/01/2026,03/2022,Metro Boston,Toddler,702
+08/01/2026,03/2022,Northeast,Infant,1047
+08/01/2026,03/2022,Northeast,Preschool,1217
+08/01/2026,03/2022,Northeast,School Age,1687
+08/01/2026,03/2022,Northeast,Toddler,1203
+08/01/2026,03/2022,Southeast,Infant,518
+08/01/2026,03/2022,Southeast,Preschool,784
+08/01/2026,03/2022,Southeast,School Age,957
+08/01/2026,03/2022,Southeast,Toddler,738
+08/01/2026,03/2022,Western,Infant,379
+08/01/2026,03/2022,Western,Preschool,508
+08/01/2026,03/2022,Western,School Age,919
+08/01/2026,03/2022,Western,Toddler,580
+08/01/2026,02/2022,Central,Infant,337
+08/01/2026,02/2022,Central,Preschool,365
+08/01/2026,02/2022,Central,School Age,642
+08/01/2026,02/2022,Central,Toddler,440
+08/01/2026,02/2022,Metro,Infant,379
+08/01/2026,02/2022,Metro,Preschool,438
+08/01/2026,02/2022,Metro,School Age,706
+08/01/2026,02/2022,Metro,Toddler,547
+08/01/2026,02/2022,Metro Boston,Infant,566
+08/01/2026,02/2022,Metro Boston,Preschool,340
+08/01/2026,02/2022,Metro Boston,School Age,914
+08/01/2026,02/2022,Metro Boston,Toddler,665
+08/01/2026,02/2022,Northeast,Infant,1033
+08/01/2026,02/2022,Northeast,Preschool,1123
+08/01/2026,02/2022,Northeast,School Age,1596
+08/01/2026,02/2022,Northeast,Toddler,1147
+08/01/2026,02/2022,Southeast,Infant,452
+08/01/2026,02/2022,Southeast,Preschool,691
+08/01/2026,02/2022,Southeast,School Age,840
+08/01/2026,02/2022,Southeast,Toddler,682
+08/01/2026,02/2022,Western,Infant,398
+08/01/2026,02/2022,Western,Preschool,482
+08/01/2026,02/2022,Western,School Age,888
+08/01/2026,02/2022,Western,Toddler,580
+08/01/2026,01/2022,Central,Infant,320
+08/01/2026,01/2022,Central,Preschool,327
+08/01/2026,01/2022,Central,School Age,596
+08/01/2026,01/2022,Central,Toddler,436
+08/01/2026,01/2022,Metro,Infant,372
+08/01/2026,01/2022,Metro,Preschool,437
+08/01/2026,01/2022,Metro,School Age,688
+08/01/2026,01/2022,Metro,Toddler,550
+08/01/2026,01/2022,Metro Boston,Infant,545
+08/01/2026,01/2022,Metro Boston,Preschool,362
+08/01/2026,01/2022,Metro Boston,School Age,960
+08/01/2026,01/2022,Metro Boston,Toddler,649
+08/01/2026,01/2022,Northeast,Infant,998
+08/01/2026,01/2022,Northeast,Preschool,1110
+08/01/2026,01/2022,Northeast,School Age,1530
+08/01/2026,01/2022,Northeast,Toddler,1134
+08/01/2026,01/2022,Southeast,Infant,498
+08/01/2026,01/2022,Southeast,Preschool,681
+08/01/2026,01/2022,Southeast,School Age,905
+08/01/2026,01/2022,Southeast,Toddler,698
+08/01/2026,01/2022,Western,Infant,396
+08/01/2026,01/2022,Western,Preschool,507
+08/01/2026,01/2022,Western,School Age,902
+08/01/2026,01/2022,Western,Toddler,615
+08/01/2026,12/2021,Central,Infant,298
+08/01/2026,12/2021,Central,Preschool,273
+08/01/2026,12/2021,Central,School Age,576
+08/01/2026,12/2021,Central,Toddler,399
+08/01/2026,12/2021,Metro,Infant,354
+08/01/2026,12/2021,Metro,Preschool,383
+08/01/2026,12/2021,Metro,School Age,622
+08/01/2026,12/2021,Metro,Toddler,521
+08/01/2026,12/2021,Metro Boston,Infant,496
+08/01/2026,12/2021,Metro Boston,Preschool,315
+08/01/2026,12/2021,Metro Boston,School Age,876
+08/01/2026,12/2021,Metro Boston,Toddler,600
+08/01/2026,12/2021,Northeast,Infant,899
+08/01/2026,12/2021,Northeast,Preschool,999
+08/01/2026,12/2021,Northeast,School Age,1394
+08/01/2026,12/2021,Northeast,Toddler,1037
+08/01/2026,12/2021,Southeast,Infant,478
+08/01/2026,12/2021,Southeast,Preschool,615
+08/01/2026,12/2021,Southeast,School Age,851
+08/01/2026,12/2021,Southeast,Toddler,672
+08/01/2026,12/2021,Western,Infant,364
+08/01/2026,12/2021,Western,Preschool,460
+08/01/2026,12/2021,Western,School Age,848
+08/01/2026,12/2021,Western,Toddler,590
+08/01/2026,11/2021,Central,Infant,302
+08/01/2026,11/2021,Central,Preschool,251
+08/01/2026,11/2021,Central,School Age,544
+08/01/2026,11/2021,Central,Toddler,362
+08/01/2026,11/2021,Metro,Infant,369
+08/01/2026,11/2021,Metro,Preschool,398
+08/01/2026,11/2021,Metro,School Age,668
+08/01/2026,11/2021,Metro,Toddler,509
+08/01/2026,11/2021,Metro Boston,Infant,520
+08/01/2026,11/2021,Metro Boston,Preschool,350
+08/01/2026,11/2021,Metro Boston,School Age,909
+08/01/2026,11/2021,Metro Boston,Toddler,579
+08/01/2026,11/2021,Northeast,Infant,926
+08/01/2026,11/2021,Northeast,Preschool,945
+08/01/2026,11/2021,Northeast,School Age,1363
+08/01/2026,11/2021,Northeast,Toddler,1054
+08/01/2026,11/2021,Southeast,Infant,529
+08/01/2026,11/2021,Southeast,Preschool,619
+08/01/2026,11/2021,Southeast,School Age,892
+08/01/2026,11/2021,Southeast,Toddler,677
+08/01/2026,11/2021,Western,Infant,380
+08/01/2026,11/2021,Western,Preschool,471
+08/01/2026,11/2021,Western,School Age,852
+08/01/2026,11/2021,Western,Toddler,590
+08/01/2026,10/2021,Central,Infant,295
+08/01/2026,10/2021,Central,Preschool,240
+08/01/2026,10/2021,Central,School Age,551
+08/01/2026,10/2021,Central,Toddler,360
+08/01/2026,10/2021,Metro,Infant,361
+08/01/2026,10/2021,Metro,Preschool,463
+08/01/2026,10/2021,Metro,School Age,702
+08/01/2026,10/2021,Metro,Toddler,500
+08/01/2026,10/2021,Metro Boston,Infant,525
+08/01/2026,10/2021,Metro Boston,Preschool,358
+08/01/2026,10/2021,Metro Boston,School Age,887
+08/01/2026,10/2021,Metro Boston,Toddler,559
+08/01/2026,10/2021,Northeast,Infant,883
+08/01/2026,10/2021,Northeast,Preschool,857
+08/01/2026,10/2021,Northeast,School Age,1255
+08/01/2026,10/2021,Northeast,Toddler,969
+08/01/2026,10/2021,Southeast,Infant,525
+08/01/2026,10/2021,Southeast,Preschool,688
+08/01/2026,10/2021,Southeast,School Age,920
+08/01/2026,10/2021,Southeast,Toddler,651
+08/01/2026,10/2021,Western,Infant,392
+08/01/2026,10/2021,Western,Preschool,468
+08/01/2026,10/2021,Western,School Age,836
+08/01/2026,10/2021,Western,Toddler,565
+08/01/2026,09/2021,Central,Infant,296
+08/01/2026,09/2021,Central,Preschool,253
+08/01/2026,09/2021,Central,School Age,529
+08/01/2026,09/2021,Central,Toddler,358
+08/01/2026,09/2021,Metro,Infant,330
+08/01/2026,09/2021,Metro,Preschool,463
+08/01/2026,09/2021,Metro,School Age,642
+08/01/2026,09/2021,Metro,Toddler,464
+08/01/2026,09/2021,Metro Boston,Infant,514
+08/01/2026,09/2021,Metro Boston,Preschool,448
+08/01/2026,09/2021,Metro Boston,School Age,910
+08/01/2026,09/2021,Metro Boston,Toddler,593
+08/01/2026,09/2021,Northeast,Infant,913
+08/01/2026,09/2021,Northeast,Preschool,918
+08/01/2026,09/2021,Northeast,School Age,1315
+08/01/2026,09/2021,Northeast,Toddler,975
+08/01/2026,09/2021,Southeast,Infant,531
+08/01/2026,09/2021,Southeast,Preschool,760
+08/01/2026,09/2021,Southeast,School Age,966
+08/01/2026,09/2021,Southeast,Toddler,663
+08/01/2026,09/2021,Western,Infant,368
+08/01/2026,09/2021,Western,Preschool,535
+08/01/2026,09/2021,Western,School Age,872
+08/01/2026,09/2021,Western,Toddler,568
+08/01/2026,08/2021,Central,Infant,268
+08/01/2026,08/2021,Central,Preschool,272
+08/01/2026,08/2021,Central,School Age,479
+08/01/2026,08/2021,Central,Toddler,312
+08/01/2026,08/2021,Metro,Infant,287
+08/01/2026,08/2021,Metro,Preschool,403
+08/01/2026,08/2021,Metro,School Age,521
+08/01/2026,08/2021,Metro,Toddler,405
+08/01/2026,08/2021,Metro Boston,Infant,474
+08/01/2026,08/2021,Metro Boston,Preschool,373
+08/01/2026,08/2021,Metro Boston,School Age,762
+08/01/2026,08/2021,Metro Boston,Toddler,560
+08/01/2026,08/2021,Northeast,Infant,837
+08/01/2026,08/2021,Northeast,Preschool,818
+08/01/2026,08/2021,Northeast,School Age,1133
+08/01/2026,08/2021,Northeast,Toddler,842
+08/01/2026,08/2021,Southeast,Infant,486
+08/01/2026,08/2021,Southeast,Preschool,731
+08/01/2026,08/2021,Southeast,School Age,904
+08/01/2026,08/2021,Southeast,Toddler,564
+08/01/2026,08/2021,Western,Infant,349
+08/01/2026,08/2021,Western,Preschool,514
+08/01/2026,08/2021,Western,School Age,840
+08/01/2026,08/2021,Western,Toddler,517
+08/01/2026,07/2021,Central,Infant,215
+08/01/2026,07/2021,Central,Preschool,238
+08/01/2026,07/2021,Central,School Age,380
+08/01/2026,07/2021,Central,Toddler,279
+08/01/2026,07/2021,Metro,Infant,257
+08/01/2026,07/2021,Metro,Preschool,349
+08/01/2026,07/2021,Metro,School Age,428
+08/01/2026,07/2021,Metro,Toddler,358
+08/01/2026,07/2021,Metro Boston,Infant,435
+08/01/2026,07/2021,Metro Boston,Preschool,367
+08/01/2026,07/2021,Metro Boston,School Age,672
+08/01/2026,07/2021,Metro Boston,Toddler,545
+08/01/2026,07/2021,Northeast,Infant,756
+08/01/2026,07/2021,Northeast,Preschool,797
+08/01/2026,07/2021,Northeast,School Age,998
+08/01/2026,07/2021,Northeast,Toddler,813
+08/01/2026,07/2021,Southeast,Infant,433
+08/01/2026,07/2021,Southeast,Preschool,652
+08/01/2026,07/2021,Southeast,School Age,829
+08/01/2026,07/2021,Southeast,Toddler,524
+08/01/2026,07/2021,Western,Infant,321
+08/01/2026,07/2021,Western,Preschool,482
+08/01/2026,07/2021,Western,School Age,793
+08/01/2026,07/2021,Western,Toddler,453
+08/01/2026,06/2021,Central,Infant,182
+08/01/2026,06/2021,Central,Preschool,212
+08/01/2026,06/2021,Central,School Age,350
+08/01/2026,06/2021,Central,Toddler,240
+08/01/2026,06/2021,Metro,Infant,240
+08/01/2026,06/2021,Metro,Preschool,373
+08/01/2026,06/2021,Metro,School Age,432
+08/01/2026,06/2021,Metro,Toddler,332
+08/01/2026,06/2021,Metro Boston,Infant,407
+08/01/2026,06/2021,Metro Boston,Preschool,306
+08/01/2026,06/2021,Metro Boston,School Age,616
+08/01/2026,06/2021,Metro Boston,Toddler,474
+08/01/2026,06/2021,Northeast,Infant,763
+08/01/2026,06/2021,Northeast,Preschool,697
+08/01/2026,06/2021,Northeast,School Age,967
+08/01/2026,06/2021,Northeast,Toddler,759
+08/01/2026,06/2021,Southeast,Infant,430
+08/01/2026,06/2021,Southeast,Preschool,668
+08/01/2026,06/2021,Southeast,School Age,920
+08/01/2026,06/2021,Southeast,Toddler,520
+08/01/2026,06/2021,Western,Infant,310
+08/01/2026,06/2021,Western,Preschool,456
+08/01/2026,06/2021,Western,School Age,808
+08/01/2026,06/2021,Western,Toddler,433
+08/01/2026,05/2021,Central,Infant,158
+08/01/2026,05/2021,Central,Preschool,190
+08/01/2026,05/2021,Central,School Age,287
+08/01/2026,05/2021,Central,Toddler,215
+08/01/2026,05/2021,Metro,Infant,236
+08/01/2026,05/2021,Metro,Preschool,368
+08/01/2026,05/2021,Metro,School Age,453
+08/01/2026,05/2021,Metro,Toddler,347
+08/01/2026,05/2021,Metro Boston,Infant,377
+08/01/2026,05/2021,Metro Boston,Preschool,273
+08/01/2026,05/2021,Metro Boston,School Age,570
+08/01/2026,05/2021,Metro Boston,Toddler,421
+08/01/2026,05/2021,Northeast,Infant,720
+08/01/2026,05/2021,Northeast,Preschool,642
+08/01/2026,05/2021,Northeast,School Age,977
+08/01/2026,05/2021,Northeast,Toddler,642
+08/01/2026,05/2021,Southeast,Infant,392
+08/01/2026,05/2021,Southeast,Preschool,597
+08/01/2026,05/2021,Southeast,School Age,874
+08/01/2026,05/2021,Southeast,Toddler,470
+08/01/2026,05/2021,Western,Infant,295
+08/01/2026,05/2021,Western,Preschool,433
+08/01/2026,05/2021,Western,School Age,821
+08/01/2026,05/2021,Western,Toddler,403
+08/01/2026,04/2021,Central,Infant,150
+08/01/2026,04/2021,Central,Preschool,189
+08/01/2026,04/2021,Central,School Age,257
+08/01/2026,04/2021,Central,Toddler,183
+08/01/2026,04/2021,Metro,Infant,272
+08/01/2026,04/2021,Metro,Preschool,386
+08/01/2026,04/2021,Metro,School Age,489
+08/01/2026,04/2021,Metro,Toddler,369
+08/01/2026,04/2021,Metro Boston,Infant,336
+08/01/2026,04/2021,Metro Boston,Preschool,260
+08/01/2026,04/2021,Metro Boston,School Age,554
+08/01/2026,04/2021,Metro Boston,Toddler,360
+08/01/2026,04/2021,Northeast,Infant,696
+08/01/2026,04/2021,Northeast,Preschool,618
+08/01/2026,04/2021,Northeast,School Age,1064
+08/01/2026,04/2021,Northeast,Toddler,641
+08/01/2026,04/2021,Southeast,Infant,380
+08/01/2026,04/2021,Southeast,Preschool,550
+08/01/2026,04/2021,Southeast,School Age,824
+08/01/2026,04/2021,Southeast,Toddler,441
+08/01/2026,04/2021,Western,Infant,287
+08/01/2026,04/2021,Western,Preschool,409
+08/01/2026,04/2021,Western,School Age,805
+08/01/2026,04/2021,Western,Toddler,393
+08/01/2026,03/2021,Central,Infant,133
+08/01/2026,03/2021,Central,Preschool,184
+08/01/2026,03/2021,Central,School Age,278
+08/01/2026,03/2021,Central,Toddler,150
+08/01/2026,03/2021,Metro,Infant,297
+08/01/2026,03/2021,Metro,Preschool,397
+08/01/2026,03/2021,Metro,School Age,560
+08/01/2026,03/2021,Metro,Toddler,412
+08/01/2026,03/2021,Metro Boston,Infant,289
+08/01/2026,03/2021,Metro Boston,Preschool,236
+08/01/2026,03/2021,Metro Boston,School Age,556
+08/01/2026,03/2021,Metro Boston,Toddler,324
+08/01/2026,03/2021,Northeast,Infant,703
+08/01/2026,03/2021,Northeast,Preschool,687
+08/01/2026,03/2021,Northeast,School Age,1233
+08/01/2026,03/2021,Northeast,Toddler,670
+08/01/2026,03/2021,Southeast,Infant,332
+08/01/2026,03/2021,Southeast,Preschool,554
+08/01/2026,03/2021,Southeast,School Age,836
+08/01/2026,03/2021,Southeast,Toddler,437
+08/01/2026,03/2021,Western,Infant,285
+08/01/2026,03/2021,Western,Preschool,395
+08/01/2026,03/2021,Western,School Age,870
+08/01/2026,03/2021,Western,Toddler,393
+08/01/2026,02/2021,Central,Infant,136
+08/01/2026,02/2021,Central,Preschool,172
+08/01/2026,02/2021,Central,School Age,263
+08/01/2026,02/2021,Central,Toddler,140
+08/01/2026,02/2021,Metro,Infant,309
+08/01/2026,02/2021,Metro,Preschool,419
+08/01/2026,02/2021,Metro,School Age,619
+08/01/2026,02/2021,Metro,Toddler,460
+08/01/2026,02/2021,Metro Boston,Infant,308
+08/01/2026,02/2021,Metro Boston,Preschool,216
+08/01/2026,02/2021,Metro Boston,School Age,647
+08/01/2026,02/2021,Metro Boston,Toddler,309
+08/01/2026,02/2021,Northeast,Infant,671
+08/01/2026,02/2021,Northeast,Preschool,653
+08/01/2026,02/2021,Northeast,School Age,1283
+08/01/2026,02/2021,Northeast,Toddler,739
+08/01/2026,02/2021,Southeast,Infant,319
+08/01/2026,02/2021,Southeast,Preschool,577
+08/01/2026,02/2021,Southeast,School Age,884
+08/01/2026,02/2021,Southeast,Toddler,445
+08/01/2026,02/2021,Western,Infant,280
+08/01/2026,02/2021,Western,Preschool,391
+08/01/2026,02/2021,Western,School Age,871
+08/01/2026,02/2021,Western,Toddler,419
+08/01/2026,01/2021,Central,Infant,182
+08/01/2026,01/2021,Central,Preschool,191
+08/01/2026,01/2021,Central,School Age,347
+08/01/2026,01/2021,Central,Toddler,185
+08/01/2026,01/2021,Metro,Infant,317
+08/01/2026,01/2021,Metro,Preschool,423
+08/01/2026,01/2021,Metro,School Age,623
+08/01/2026,01/2021,Metro,Toddler,459
+08/01/2026,01/2021,Metro Boston,Infant,419
+08/01/2026,01/2021,Metro Boston,Preschool,265
+08/01/2026,01/2021,Metro Boston,School Age,674
+08/01/2026,01/2021,Metro Boston,Toddler,449
+08/01/2026,01/2021,Northeast,Infant,806
+08/01/2026,01/2021,Northeast,Preschool,840
+08/01/2026,01/2021,Northeast,School Age,1585
+08/01/2026,01/2021,Northeast,Toddler,943
+08/01/2026,01/2021,Southeast,Infant,347
+08/01/2026,01/2021,Southeast,Preschool,613
+08/01/2026,01/2021,Southeast,School Age,954
+08/01/2026,01/2021,Southeast,Toddler,500
+08/01/2026,01/2021,Western,Infant,323
+08/01/2026,01/2021,Western,Preschool,466
+08/01/2026,01/2021,Western,School Age,944
+08/01/2026,01/2021,Western,Toddler,471
+08/01/2026,12/2020,Central,Infant,180
+08/01/2026,12/2020,Central,Preschool,170
+08/01/2026,12/2020,Central,School Age,313
+08/01/2026,12/2020,Central,Toddler,170
+08/01/2026,12/2020,Metro,Infant,312
+08/01/2026,12/2020,Metro,Preschool,406
+08/01/2026,12/2020,Metro,School Age,647
+08/01/2026,12/2020,Metro,Toddler,434
+08/01/2026,12/2020,Metro Boston,Infant,424
+08/01/2026,12/2020,Metro Boston,Preschool,278
+08/01/2026,12/2020,Metro Boston,School Age,668
+08/01/2026,12/2020,Metro Boston,Toddler,416
+08/01/2026,12/2020,Northeast,Infant,783
+08/01/2026,12/2020,Northeast,Preschool,792
+08/01/2026,12/2020,Northeast,School Age,1468
+08/01/2026,12/2020,Northeast,Toddler,881
+08/01/2026,12/2020,Southeast,Infant,342
+08/01/2026,12/2020,Southeast,Preschool,602
+08/01/2026,12/2020,Southeast,School Age,952
+08/01/2026,12/2020,Southeast,Toddler,525
+08/01/2026,12/2020,Western,Infant,317
+08/01/2026,12/2020,Western,Preschool,451
+08/01/2026,12/2020,Western,School Age,912
+08/01/2026,12/2020,Western,Toddler,466
+08/01/2026,11/2020,Central,Infant,194
+08/01/2026,11/2020,Central,Preschool,196
+08/01/2026,11/2020,Central,School Age,363
+08/01/2026,11/2020,Central,Toddler,193
+08/01/2026,11/2020,Metro,Infant,324
+08/01/2026,11/2020,Metro,Preschool,394
+08/01/2026,11/2020,Metro,School Age,669
+08/01/2026,11/2020,Metro,Toddler,442
+08/01/2026,11/2020,Metro Boston,Infant,421
+08/01/2026,11/2020,Metro Boston,Preschool,234
+08/01/2026,11/2020,Metro Boston,School Age,666
+08/01/2026,11/2020,Metro Boston,Toddler,440
+08/01/2026,11/2020,Northeast,Infant,799
+08/01/2026,11/2020,Northeast,Preschool,789
+08/01/2026,11/2020,Northeast,School Age,1468
+08/01/2026,11/2020,Northeast,Toddler,855
+08/01/2026,11/2020,Southeast,Infant,363
+08/01/2026,11/2020,Southeast,Preschool,608
+08/01/2026,11/2020,Southeast,School Age,982
+08/01/2026,11/2020,Southeast,Toddler,516
+08/01/2026,11/2020,Western,Infant,315
+08/01/2026,11/2020,Western,Preschool,427
+08/01/2026,11/2020,Western,School Age,889
+08/01/2026,11/2020,Western,Toddler,427
+08/01/2026,10/2020,Central,Infant,210
+08/01/2026,10/2020,Central,Preschool,220
+08/01/2026,10/2020,Central,School Age,416
+08/01/2026,10/2020,Central,Toddler,236
+08/01/2026,10/2020,Metro,Infant,342
+08/01/2026,10/2020,Metro,Preschool,415
+08/01/2026,10/2020,Metro,School Age,711
+08/01/2026,10/2020,Metro,Toddler,416
+08/01/2026,10/2020,Metro Boston,Infant,422
+08/01/2026,10/2020,Metro Boston,Preschool,271
+08/01/2026,10/2020,Metro Boston,School Age,677
+08/01/2026,10/2020,Metro Boston,Toddler,426
+08/01/2026,10/2020,Northeast,Infant,813
+08/01/2026,10/2020,Northeast,Preschool,885
+08/01/2026,10/2020,Northeast,School Age,1497
+08/01/2026,10/2020,Northeast,Toddler,856
+08/01/2026,10/2020,Southeast,Infant,394
+08/01/2026,10/2020,Southeast,Preschool,671
+08/01/2026,10/2020,Southeast,School Age,1029
+08/01/2026,10/2020,Southeast,Toddler,565
+08/01/2026,10/2020,Western,Infant,317
+08/01/2026,10/2020,Western,Preschool,429
+08/01/2026,10/2020,Western,School Age,804
+08/01/2026,10/2020,Western,Toddler,428
+08/01/2026,09/2020,Central,Infant,233
+08/01/2026,09/2020,Central,Preschool,277
+08/01/2026,09/2020,Central,School Age,420
+08/01/2026,09/2020,Central,Toddler,235
+08/01/2026,09/2020,Metro,Infant,370
+08/01/2026,09/2020,Metro,Preschool,488
+08/01/2026,09/2020,Metro,School Age,704
+08/01/2026,09/2020,Metro,Toddler,406
+08/01/2026,09/2020,Metro Boston,Infant,431
+08/01/2026,09/2020,Metro Boston,Preschool,281
+08/01/2026,09/2020,Metro Boston,School Age,645
+08/01/2026,09/2020,Metro Boston,Toddler,443
+08/01/2026,09/2020,Northeast,Infant,795
+08/01/2026,09/2020,Northeast,Preschool,963
+08/01/2026,09/2020,Northeast,School Age,1416
+08/01/2026,09/2020,Northeast,Toddler,891
+08/01/2026,09/2020,Southeast,Infant,404
+08/01/2026,09/2020,Southeast,Preschool,664
+08/01/2026,09/2020,Southeast,School Age,963
+08/01/2026,09/2020,Southeast,Toddler,554
+08/01/2026,09/2020,Western,Infant,327
+08/01/2026,09/2020,Western,Preschool,443
+08/01/2026,09/2020,Western,School Age,777
+08/01/2026,09/2020,Western,Toddler,442
+08/01/2026,08/2020,Central,Infant,213
+08/01/2026,08/2020,Central,Preschool,266
+08/01/2026,08/2020,Central,School Age,350
+08/01/2026,08/2020,Central,Toddler,226
+08/01/2026,08/2020,Metro,Infant,357
+08/01/2026,08/2020,Metro,Preschool,455
+08/01/2026,08/2020,Metro,School Age,706
+08/01/2026,08/2020,Metro,Toddler,409
+08/01/2026,08/2020,Metro Boston,Infant,455
+08/01/2026,08/2020,Metro Boston,Preschool,226
+08/01/2026,08/2020,Metro Boston,School Age,524
+08/01/2026,08/2020,Metro Boston,Toddler,400
+08/01/2026,08/2020,Northeast,Infant,829
+08/01/2026,08/2020,Northeast,Preschool,976
+08/01/2026,08/2020,Northeast,School Age,1341
+08/01/2026,08/2020,Northeast,Toddler,875
+08/01/2026,08/2020,Southeast,Infant,391
+08/01/2026,08/2020,Southeast,Preschool,683
+08/01/2026,08/2020,Southeast,School Age,920
+08/01/2026,08/2020,Southeast,Toddler,554
+08/01/2026,08/2020,Western,Infant,307
+08/01/2026,08/2020,Western,Preschool,415
+08/01/2026,08/2020,Western,School Age,728
+08/01/2026,08/2020,Western,Toddler,431
+08/01/2026,07/2020,Central,Infant,248
+08/01/2026,07/2020,Central,Preschool,233
+08/01/2026,07/2020,Central,School Age,326
+08/01/2026,07/2020,Central,Toddler,207
+08/01/2026,07/2020,Metro,Infant,371
+08/01/2026,07/2020,Metro,Preschool,470
+08/01/2026,07/2020,Metro,School Age,713
+08/01/2026,07/2020,Metro,Toddler,438
+08/01/2026,07/2020,Metro Boston,Infant,522
+08/01/2026,07/2020,Metro Boston,Preschool,204
+08/01/2026,07/2020,Metro Boston,School Age,487
+08/01/2026,07/2020,Metro Boston,Toddler,394
+08/01/2026,07/2020,Northeast,Infant,846
+08/01/2026,07/2020,Northeast,Preschool,971
+08/01/2026,07/2020,Northeast,School Age,1331
+08/01/2026,07/2020,Northeast,Toddler,882
+08/01/2026,07/2020,Southeast,Infant,363
+08/01/2026,07/2020,Southeast,Preschool,664
+08/01/2026,07/2020,Southeast,School Age,856
+08/01/2026,07/2020,Southeast,Toddler,561
+08/01/2026,07/2020,Western,Infant,332
+08/01/2026,07/2020,Western,Preschool,430
+08/01/2026,07/2020,Western,School Age,777
+08/01/2026,07/2020,Western,Toddler,462
+08/01/2026,06/2020,Central,Infant,245
+08/01/2026,06/2020,Central,Preschool,202
+08/01/2026,06/2020,Central,School Age,320
+08/01/2026,06/2020,Central,Toddler,180
+08/01/2026,06/2020,Metro,Infant,353
+08/01/2026,06/2020,Metro,Preschool,439
+08/01/2026,06/2020,Metro,School Age,679
+08/01/2026,06/2020,Metro,Toddler,416
+08/01/2026,06/2020,Metro Boston,Infant,517
+08/01/2026,06/2020,Metro Boston,Preschool,197
+08/01/2026,06/2020,Metro Boston,School Age,480
+08/01/2026,06/2020,Metro Boston,Toddler,379
+08/01/2026,06/2020,Northeast,Infant,853
+08/01/2026,06/2020,Northeast,Preschool,924
+08/01/2026,06/2020,Northeast,School Age,1285
+08/01/2026,06/2020,Northeast,Toddler,846
+08/01/2026,06/2020,Southeast,Infant,383
+08/01/2026,06/2020,Southeast,Preschool,670
+08/01/2026,06/2020,Southeast,School Age,900
+08/01/2026,06/2020,Southeast,Toddler,570
+08/01/2026,06/2020,Western,Infant,347
+08/01/2026,06/2020,Western,Preschool,425
+08/01/2026,06/2020,Western,School Age,850
+08/01/2026,06/2020,Western,Toddler,479
+08/01/2026,05/2020,Central,Infant,243
+08/01/2026,05/2020,Central,Preschool,175
+08/01/2026,05/2020,Central,School Age,287
+08/01/2026,05/2020,Central,Toddler,157
+08/01/2026,05/2020,Metro,Infant,408
+08/01/2026,05/2020,Metro,Preschool,466
+08/01/2026,05/2020,Metro,School Age,772
+08/01/2026,05/2020,Metro,Toddler,458
+08/01/2026,05/2020,Metro Boston,Infant,577
+08/01/2026,05/2020,Metro Boston,Preschool,172
+08/01/2026,05/2020,Metro Boston,School Age,605
+08/01/2026,05/2020,Metro Boston,Toddler,382
+08/01/2026,05/2020,Northeast,Infant,860
+08/01/2026,05/2020,Northeast,Preschool,867
+08/01/2026,05/2020,Northeast,School Age,1289
+08/01/2026,05/2020,Northeast,Toddler,875
+08/01/2026,05/2020,Southeast,Infant,404
+08/01/2026,05/2020,Southeast,Preschool,674
+08/01/2026,05/2020,Southeast,School Age,879
+08/01/2026,05/2020,Southeast,Toddler,551
+08/01/2026,05/2020,Western,Infant,368
+08/01/2026,05/2020,Western,Preschool,439
+08/01/2026,05/2020,Western,School Age,911
+08/01/2026,05/2020,Western,Toddler,482
+08/01/2026,04/2020,Central,Infant,224
+08/01/2026,04/2020,Central,Preschool,150
+08/01/2026,04/2020,Central,School Age,263
+08/01/2026,04/2020,Central,Toddler,145
+08/01/2026,04/2020,Metro,Infant,410
+08/01/2026,04/2020,Metro,Preschool,446
+08/01/2026,04/2020,Metro,School Age,780
+08/01/2026,04/2020,Metro,Toddler,470
+08/01/2026,04/2020,Metro Boston,Infant,582
+08/01/2026,04/2020,Metro Boston,Preschool,156
+08/01/2026,04/2020,Metro Boston,School Age,617
+08/01/2026,04/2020,Metro Boston,Toddler,382
+08/01/2026,04/2020,Northeast,Infant,901
+08/01/2026,04/2020,Northeast,Preschool,858
+08/01/2026,04/2020,Northeast,School Age,1326
+08/01/2026,04/2020,Northeast,Toddler,924
+08/01/2026,04/2020,Southeast,Infant,426
+08/01/2026,04/2020,Southeast,Preschool,689
+08/01/2026,04/2020,Southeast,School Age,925
+08/01/2026,04/2020,Southeast,Toddler,575
+08/01/2026,04/2020,Western,Infant,378
+08/01/2026,04/2020,Western,Preschool,434
+08/01/2026,04/2020,Western,School Age,995
+08/01/2026,04/2020,Western,Toddler,518
+08/01/2026,03/2020,Central,Infant,246
+08/01/2026,03/2020,Central,Preschool,175
+08/01/2026,03/2020,Central,School Age,298
+08/01/2026,03/2020,Central,Toddler,166
+08/01/2026,03/2020,Metro,Infant,443
+08/01/2026,03/2020,Metro,Preschool,484
+08/01/2026,03/2020,Metro,School Age,841
+08/01/2026,03/2020,Metro,Toddler,508
+08/01/2026,03/2020,Metro Boston,Infant,639
+08/01/2026,03/2020,Metro Boston,Preschool,173
+08/01/2026,03/2020,Metro Boston,School Age,709
+08/01/2026,03/2020,Metro Boston,Toddler,425
+08/01/2026,03/2020,Northeast,Infant,1005
+08/01/2026,03/2020,Northeast,Preschool,926
+08/01/2026,03/2020,Northeast,School Age,1475
+08/01/2026,03/2020,Northeast,Toddler,1063
+08/01/2026,03/2020,Southeast,Infant,433
+08/01/2026,03/2020,Southeast,Preschool,684
+08/01/2026,03/2020,Southeast,School Age,928
+08/01/2026,03/2020,Southeast,Toddler,611
+08/01/2026,03/2020,Western,Infant,443
+08/01/2026,03/2020,Western,Preschool,457
+08/01/2026,03/2020,Western,School Age,1064
+08/01/2026,03/2020,Western,Toddler,550
+08/01/2026,02/2020,Central,Infant,280
+08/01/2026,02/2020,Central,Preschool,204
+08/01/2026,02/2020,Central,School Age,380
+08/01/2026,02/2020,Central,Toddler,208
+08/01/2026,02/2020,Metro,Infant,455
+08/01/2026,02/2020,Metro,Preschool,554
+08/01/2026,02/2020,Metro,School Age,960
+08/01/2026,02/2020,Metro,Toddler,551
+08/01/2026,02/2020,Metro Boston,Infant,659
+08/01/2026,02/2020,Metro Boston,Preschool,194
+08/01/2026,02/2020,Metro Boston,School Age,734
+08/01/2026,02/2020,Metro Boston,Toddler,452
+08/01/2026,02/2020,Northeast,Infant,1077
+08/01/2026,02/2020,Northeast,Preschool,957
+08/01/2026,02/2020,Northeast,School Age,1527
+08/01/2026,02/2020,Northeast,Toddler,1091
+08/01/2026,02/2020,Southeast,Infant,462
+08/01/2026,02/2020,Southeast,Preschool,647
+08/01/2026,02/2020,Southeast,School Age,925
+08/01/2026,02/2020,Southeast,Toddler,633
+08/01/2026,02/2020,Western,Infant,473
+08/01/2026,02/2020,Western,Preschool,434
+08/01/2026,02/2020,Western,School Age,1065
+08/01/2026,02/2020,Western,Toddler,595
+08/01/2026,01/2020,Central,Infant,311
+08/01/2026,01/2020,Central,Preschool,218
+08/01/2026,01/2020,Central,School Age,463
+08/01/2026,01/2020,Central,Toddler,243
+08/01/2026,01/2020,Metro,Infant,457
+08/01/2026,01/2020,Metro,Preschool,586
+08/01/2026,01/2020,Metro,School Age,964
+08/01/2026,01/2020,Metro,Toddler,570
+08/01/2026,01/2020,Metro Boston,Infant,683
+08/01/2026,01/2020,Metro Boston,Preschool,211
+08/01/2026,01/2020,Metro Boston,School Age,725
+08/01/2026,01/2020,Metro Boston,Toddler,448
+08/01/2026,01/2020,Northeast,Infant,1091
+08/01/2026,01/2020,Northeast,Preschool,952
+08/01/2026,01/2020,Northeast,School Age,1596
+08/01/2026,01/2020,Northeast,Toddler,1142
+08/01/2026,01/2020,Southeast,Infant,442
+08/01/2026,01/2020,Southeast,Preschool,634
+08/01/2026,01/2020,Southeast,School Age,982
+08/01/2026,01/2020,Southeast,Toddler,625
+08/01/2026,01/2020,Western,Infant,458
+08/01/2026,01/2020,Western,Preschool,411
+08/01/2026,01/2020,Western,School Age,1042
+08/01/2026,01/2020,Western,Toddler,590
+08/01/2026,12/2019,Central,Infant,307
+08/01/2026,12/2019,Central,Preschool,208
+08/01/2026,12/2019,Central,School Age,480
+08/01/2026,12/2019,Central,Toddler,241
+08/01/2026,12/2019,Metro,Infant,447
+08/01/2026,12/2019,Metro,Preschool,572
+08/01/2026,12/2019,Metro,School Age,970
+08/01/2026,12/2019,Metro,Toddler,574
+08/01/2026,12/2019,Metro Boston,Infant,622
+08/01/2026,12/2019,Metro Boston,Preschool,224
+08/01/2026,12/2019,Metro Boston,School Age,691
+08/01/2026,12/2019,Metro Boston,Toddler,407
+08/01/2026,12/2019,Northeast,Infant,1052
+08/01/2026,12/2019,Northeast,Preschool,768
+08/01/2026,12/2019,Northeast,School Age,1654
+08/01/2026,12/2019,Northeast,Toddler,1093
+08/01/2026,12/2019,Southeast,Infant,420
+08/01/2026,12/2019,Southeast,Preschool,614
+08/01/2026,12/2019,Southeast,School Age,941
+08/01/2026,12/2019,Southeast,Toddler,613
+08/01/2026,12/2019,Western,Infant,452
+08/01/2026,12/2019,Western,Preschool,357
+08/01/2026,12/2019,Western,School Age,1015
+08/01/2026,12/2019,Western,Toddler,584
+08/01/2026,11/2019,Central,Infant,320
+08/01/2026,11/2019,Central,Preschool,209
+08/01/2026,11/2019,Central,School Age,552
+08/01/2026,11/2019,Central,Toddler,263
+08/01/2026,11/2019,Metro,Infant,460
+08/01/2026,11/2019,Metro,Preschool,579
+08/01/2026,11/2019,Metro,School Age,1007
+08/01/2026,11/2019,Metro,Toddler,578
+08/01/2026,11/2019,Metro Boston,Infant,566
+08/01/2026,11/2019,Metro Boston,Preschool,225
+08/01/2026,11/2019,Metro Boston,School Age,705
+08/01/2026,11/2019,Metro Boston,Toddler,420
+08/01/2026,11/2019,Northeast,Infant,1054
+08/01/2026,11/2019,Northeast,Preschool,838
+08/01/2026,11/2019,Northeast,School Age,1718
+08/01/2026,11/2019,Northeast,Toddler,1117
+08/01/2026,11/2019,Southeast,Infant,529
+08/01/2026,11/2019,Southeast,Preschool,773
+08/01/2026,11/2019,Southeast,School Age,1179
+08/01/2026,11/2019,Southeast,Toddler,753
+08/01/2026,11/2019,Western,Infant,472
+08/01/2026,11/2019,Western,Preschool,339
+08/01/2026,11/2019,Western,School Age,998
+08/01/2026,11/2019,Western,Toddler,556
+08/01/2026,10/2019,Central,Infant,344
+08/01/2026,10/2019,Central,Preschool,291
+08/01/2026,10/2019,Central,School Age,665
+08/01/2026,10/2019,Central,Toddler,308
+08/01/2026,10/2019,Metro,Infant,480
+08/01/2026,10/2019,Metro,Preschool,562
+08/01/2026,10/2019,Metro,School Age,1050
+08/01/2026,10/2019,Metro,Toddler,609
+08/01/2026,10/2019,Metro Boston,Infant,574
+08/01/2026,10/2019,Metro Boston,Preschool,243
+08/01/2026,10/2019,Metro Boston,School Age,797
+08/01/2026,10/2019,Metro Boston,Toddler,493
+08/01/2026,10/2019,Northeast,Infant,1077
+08/01/2026,10/2019,Northeast,Preschool,934
+08/01/2026,10/2019,Northeast,School Age,1878
+08/01/2026,10/2019,Northeast,Toddler,1199
+08/01/2026,10/2019,Southeast,Infant,569
+08/01/2026,10/2019,Southeast,Preschool,896
+08/01/2026,10/2019,Southeast,School Age,1233
+08/01/2026,10/2019,Southeast,Toddler,796
+08/01/2026,10/2019,Western,Infant,487
+08/01/2026,10/2019,Western,Preschool,332
+08/01/2026,10/2019,Western,School Age,1061
+08/01/2026,10/2019,Western,Toddler,555
+08/01/2026,09/2019,Central,Infant,362
+08/01/2026,09/2019,Central,Preschool,350
+08/01/2026,09/2019,Central,School Age,774
+08/01/2026,09/2019,Central,Toddler,361
+08/01/2026,09/2019,Metro,Infant,467
+08/01/2026,09/2019,Metro,Preschool,603
+08/01/2026,09/2019,Metro,School Age,1120
+08/01/2026,09/2019,Metro,Toddler,652
+08/01/2026,09/2019,Metro Boston,Infant,572
+08/01/2026,09/2019,Metro Boston,Preschool,260
+08/01/2026,09/2019,Metro Boston,School Age,865
+08/01/2026,09/2019,Metro Boston,Toddler,520
+08/01/2026,09/2019,Northeast,Infant,1120
+08/01/2026,09/2019,Northeast,Preschool,1183
+08/01/2026,09/2019,Northeast,School Age,1951
+08/01/2026,09/2019,Northeast,Toddler,1301
+08/01/2026,09/2019,Southeast,Infant,557
+08/01/2026,09/2019,Southeast,Preschool,904
+08/01/2026,09/2019,Southeast,School Age,1229
+08/01/2026,09/2019,Southeast,Toddler,765
+08/01/2026,09/2019,Western,Infant,452
+08/01/2026,09/2019,Western,Preschool,353
+08/01/2026,09/2019,Western,School Age,1080
+08/01/2026,09/2019,Western,Toddler,525
+08/01/2026,08/2019,Central,Infant,367
+08/01/2026,08/2019,Central,Preschool,403
+08/01/2026,08/2019,Central,School Age,785
+08/01/2026,08/2019,Central,Toddler,410
+08/01/2026,08/2019,Metro,Infant,484
+08/01/2026,08/2019,Metro,Preschool,714
+08/01/2026,08/2019,Metro,School Age,1073
+08/01/2026,08/2019,Metro,Toddler,717
+08/01/2026,08/2019,Metro Boston,Infant,666
+08/01/2026,08/2019,Metro Boston,Preschool,377
+08/01/2026,08/2019,Metro Boston,School Age,857
+08/01/2026,08/2019,Metro Boston,Toddler,631
+08/01/2026,08/2019,Northeast,Infant,1157
+08/01/2026,08/2019,Northeast,Preschool,1478
+08/01/2026,08/2019,Northeast,School Age,2064
+08/01/2026,08/2019,Northeast,Toddler,1392
+08/01/2026,08/2019,Southeast,Infant,567
+08/01/2026,08/2019,Southeast,Preschool,980
+08/01/2026,08/2019,Southeast,School Age,1245
+08/01/2026,08/2019,Southeast,Toddler,773
+08/01/2026,08/2019,Western,Infant,500
+08/01/2026,08/2019,Western,Preschool,488
+08/01/2026,08/2019,Western,School Age,1169
+08/01/2026,08/2019,Western,Toddler,536
+08/01/2026,07/2019,Central,Infant,402
+08/01/2026,07/2019,Central,Preschool,411
+08/01/2026,07/2019,Central,School Age,789
+08/01/2026,07/2019,Central,Toddler,404
+08/01/2026,07/2019,Metro,Infant,501
+08/01/2026,07/2019,Metro,Preschool,744
+08/01/2026,07/2019,Metro,School Age,1060
+08/01/2026,07/2019,Metro,Toddler,732
+08/01/2026,07/2019,Metro Boston,Infant,653
+08/01/2026,07/2019,Metro Boston,Preschool,424
+08/01/2026,07/2019,Metro Boston,School Age,862
+08/01/2026,07/2019,Metro Boston,Toddler,636
+08/01/2026,07/2019,Northeast,Infant,1197
+08/01/2026,07/2019,Northeast,Preschool,1517
+08/01/2026,07/2019,Northeast,School Age,2102
+08/01/2026,07/2019,Northeast,Toddler,1458
+08/01/2026,07/2019,Southeast,Infant,588
+08/01/2026,07/2019,Southeast,Preschool,1085
+08/01/2026,07/2019,Southeast,School Age,1372
+08/01/2026,07/2019,Southeast,Toddler,853
+08/01/2026,07/2019,Western,Infant,524
+08/01/2026,07/2019,Western,Preschool,595
+08/01/2026,07/2019,Western,School Age,1156
+08/01/2026,07/2019,Western,Toddler,552
+08/01/2026,06/2019,Central,Infant,404
+08/01/2026,06/2019,Central,Preschool,415
+08/01/2026,06/2019,Central,School Age,823
+08/01/2026,06/2019,Central,Toddler,396
+08/01/2026,06/2019,Metro,Infant,506
+08/01/2026,06/2019,Metro,Preschool,690
+08/01/2026,06/2019,Metro,School Age,983
+08/01/2026,06/2019,Metro,Toddler,695
+08/01/2026,06/2019,Metro Boston,Infant,623
+08/01/2026,06/2019,Metro Boston,Preschool,416
+08/01/2026,06/2019,Metro Boston,School Age,797
+08/01/2026,06/2019,Metro Boston,Toddler,603
+08/01/2026,06/2019,Northeast,Infant,1229
+08/01/2026,06/2019,Northeast,Preschool,1486
+08/01/2026,06/2019,Northeast,School Age,2134
+08/01/2026,06/2019,Northeast,Toddler,1437
+08/01/2026,06/2019,Southeast,Infant,594
+08/01/2026,06/2019,Southeast,Preschool,1125
+08/01/2026,06/2019,Southeast,School Age,1405
+08/01/2026,06/2019,Southeast,Toddler,899
+08/01/2026,06/2019,Western,Infant,484
+08/01/2026,06/2019,Western,Preschool,582
+08/01/2026,06/2019,Western,School Age,1133
+08/01/2026,06/2019,Western,Toddler,528
+08/01/2026,05/2019,Central,Infant,405
+08/01/2026,05/2019,Central,Preschool,421
+08/01/2026,05/2019,Central,School Age,822
+08/01/2026,05/2019,Central,Toddler,388
+08/01/2026,05/2019,Metro,Infant,537
+08/01/2026,05/2019,Metro,Preschool,687
+08/01/2026,05/2019,Metro,School Age,1098
+08/01/2026,05/2019,Metro,Toddler,697
+08/01/2026,05/2019,Metro Boston,Infant,618
+08/01/2026,05/2019,Metro Boston,Preschool,366
+08/01/2026,05/2019,Metro Boston,School Age,751
+08/01/2026,05/2019,Metro Boston,Toddler,586
+08/01/2026,05/2019,Northeast,Infant,1197
+08/01/2026,05/2019,Northeast,Preschool,1452
+08/01/2026,05/2019,Northeast,School Age,2289
+08/01/2026,05/2019,Northeast,Toddler,1460
+08/01/2026,05/2019,Southeast,Infant,607
+08/01/2026,05/2019,Southeast,Preschool,1094
+08/01/2026,05/2019,Southeast,School Age,1394
+08/01/2026,05/2019,Southeast,Toddler,889
+08/01/2026,05/2019,Western,Infant,507
+08/01/2026,05/2019,Western,Preschool,554
+08/01/2026,05/2019,Western,School Age,1169
+08/01/2026,05/2019,Western,Toddler,549
+08/01/2026,04/2019,Central,Infant,387
+08/01/2026,04/2019,Central,Preschool,393
+08/01/2026,04/2019,Central,School Age,844
+08/01/2026,04/2019,Central,Toddler,392
+08/01/2026,04/2019,Metro,Infant,517
+08/01/2026,04/2019,Metro,Preschool,667
+08/01/2026,04/2019,Metro,School Age,1108
+08/01/2026,04/2019,Metro,Toddler,722
+08/01/2026,04/2019,Metro Boston,Infant,589
+08/01/2026,04/2019,Metro Boston,Preschool,326
+08/01/2026,04/2019,Metro Boston,School Age,712
+08/01/2026,04/2019,Metro Boston,Toddler,569
+08/01/2026,04/2019,Northeast,Infant,1179
+08/01/2026,04/2019,Northeast,Preschool,1321
+08/01/2026,04/2019,Northeast,School Age,2173
+08/01/2026,04/2019,Northeast,Toddler,1423
+08/01/2026,04/2019,Southeast,Infant,564
+08/01/2026,04/2019,Southeast,Preschool,999
+08/01/2026,04/2019,Southeast,School Age,1325
+08/01/2026,04/2019,Southeast,Toddler,899
+08/01/2026,04/2019,Western,Infant,479
+08/01/2026,04/2019,Western,Preschool,479
+08/01/2026,04/2019,Western,School Age,1134
+08/01/2026,04/2019,Western,Toddler,509
+08/01/2026,03/2019,Central,Infant,370
+08/01/2026,03/2019,Central,Preschool,383
+08/01/2026,03/2019,Central,School Age,833
+08/01/2026,03/2019,Central,Toddler,397
+08/01/2026,03/2019,Metro,Infant,513
+08/01/2026,03/2019,Metro,Preschool,635
+08/01/2026,03/2019,Metro,School Age,1093
+08/01/2026,03/2019,Metro,Toddler,715
+08/01/2026,03/2019,Metro Boston,Infant,574
+08/01/2026,03/2019,Metro Boston,Preschool,248
+08/01/2026,03/2019,Metro Boston,School Age,632
+08/01/2026,03/2019,Metro Boston,Toddler,579
+08/01/2026,03/2019,Northeast,Infant,1174
+08/01/2026,03/2019,Northeast,Preschool,1186
+08/01/2026,03/2019,Northeast,School Age,2204
+08/01/2026,03/2019,Northeast,Toddler,1382
+08/01/2026,03/2019,Southeast,Infant,563
+08/01/2026,03/2019,Southeast,Preschool,962
+08/01/2026,03/2019,Southeast,School Age,1322
+08/01/2026,03/2019,Southeast,Toddler,862
+08/01/2026,03/2019,Western,Infant,490
+08/01/2026,03/2019,Western,Preschool,455
+08/01/2026,03/2019,Western,School Age,1173
+08/01/2026,03/2019,Western,Toddler,530
+08/01/2026,02/2019,Central,Infant,373
+08/01/2026,02/2019,Central,Preschool,352
+08/01/2026,02/2019,Central,School Age,806
+08/01/2026,02/2019,Central,Toddler,394
+08/01/2026,02/2019,Metro,Infant,482
+08/01/2026,02/2019,Metro,Preschool,580
+08/01/2026,02/2019,Metro,School Age,1030
+08/01/2026,02/2019,Metro,Toddler,669
+08/01/2026,02/2019,Metro Boston,Infant,600
+08/01/2026,02/2019,Metro Boston,Preschool,263
+08/01/2026,02/2019,Metro Boston,School Age,650
+08/01/2026,02/2019,Metro Boston,Toddler,596
+08/01/2026,02/2019,Northeast,Infant,1181
+08/01/2026,02/2019,Northeast,Preschool,1092
+08/01/2026,02/2019,Northeast,School Age,2180
+08/01/2026,02/2019,Northeast,Toddler,1267
+08/01/2026,02/2019,Southeast,Infant,589
+08/01/2026,02/2019,Southeast,Preschool,947
+08/01/2026,02/2019,Southeast,School Age,1330
+08/01/2026,02/2019,Southeast,Toddler,881
+08/01/2026,02/2019,Western,Infant,487
+08/01/2026,02/2019,Western,Preschool,424
+08/01/2026,02/2019,Western,School Age,1165
+08/01/2026,02/2019,Western,Toddler,490
+08/01/2026,01/2019,Central,Infant,389
+08/01/2026,01/2019,Central,Preschool,338
+08/01/2026,01/2019,Central,School Age,865
+08/01/2026,01/2019,Central,Toddler,400
+08/01/2026,01/2019,Metro,Infant,482
+08/01/2026,01/2019,Metro,Preschool,541
+08/01/2026,01/2019,Metro,School Age,1040
+08/01/2026,01/2019,Metro,Toddler,631
+08/01/2026,01/2019,Metro Boston,Infant,668
+08/01/2026,01/2019,Metro Boston,Preschool,261
+08/01/2026,01/2019,Metro Boston,School Age,697
+08/01/2026,01/2019,Metro Boston,Toddler,594
+08/01/2026,01/2019,Northeast,Infant,1206
+08/01/2026,01/2019,Northeast,Preschool,993
+08/01/2026,01/2019,Northeast,School Age,2195
+08/01/2026,01/2019,Northeast,Toddler,1239
+08/01/2026,01/2019,Southeast,Infant,618
+08/01/2026,01/2019,Southeast,Preschool,941
+08/01/2026,01/2019,Southeast,School Age,1301
+08/01/2026,01/2019,Southeast,Toddler,935
+08/01/2026,01/2019,Western,Infant,487
+08/01/2026,01/2019,Western,Preschool,389
+08/01/2026,01/2019,Western,School Age,1141
+08/01/2026,01/2019,Western,Toddler,475
+08/01/2026,12/2018,Central,Infant,362
+08/01/2026,12/2018,Central,Preschool,311
+08/01/2026,12/2018,Central,School Age,853
+08/01/2026,12/2018,Central,Toddler,356
+08/01/2026,12/2018,Metro,Infant,439
+08/01/2026,12/2018,Metro,Preschool,510
+08/01/2026,12/2018,Metro,School Age,1005
+08/01/2026,12/2018,Metro,Toddler,594
+08/01/2026,12/2018,Metro Boston,Infant,620
+08/01/2026,12/2018,Metro Boston,Preschool,214
+08/01/2026,12/2018,Metro Boston,School Age,602
+08/01/2026,12/2018,Metro Boston,Toddler,538
+08/01/2026,12/2018,Northeast,Infant,1121
+08/01/2026,12/2018,Northeast,Preschool,837
+08/01/2026,12/2018,Northeast,School Age,2145
+08/01/2026,12/2018,Northeast,Toddler,1142
+08/01/2026,12/2018,Southeast,Infant,626
+08/01/2026,12/2018,Southeast,Preschool,869
+08/01/2026,12/2018,Southeast,School Age,1248
+08/01/2026,12/2018,Southeast,Toddler,870
+08/01/2026,12/2018,Western,Infant,500
+08/01/2026,12/2018,Western,Preschool,392
+08/01/2026,12/2018,Western,School Age,1111
+08/01/2026,12/2018,Western,Toddler,444
+08/01/2026,11/2018,Central,Infant,368
+08/01/2026,11/2018,Central,Preschool,304
+08/01/2026,11/2018,Central,School Age,929
+08/01/2026,11/2018,Central,Toddler,364
+08/01/2026,11/2018,Metro,Infant,441
+08/01/2026,11/2018,Metro,Preschool,513
+08/01/2026,11/2018,Metro,School Age,1031
+08/01/2026,11/2018,Metro,Toddler,581
+08/01/2026,11/2018,Metro Boston,Infant,655
+08/01/2026,11/2018,Metro Boston,Preschool,215
+08/01/2026,11/2018,Metro Boston,School Age,795
+08/01/2026,11/2018,Metro Boston,Toddler,589
+08/01/2026,11/2018,Northeast,Infant,1050
+08/01/2026,11/2018,Northeast,Preschool,990
+08/01/2026,11/2018,Northeast,School Age,2196
+08/01/2026,11/2018,Northeast,Toddler,1114
+08/01/2026,11/2018,Southeast,Infant,666
+08/01/2026,11/2018,Southeast,Preschool,811
+08/01/2026,11/2018,Southeast,School Age,1298
+08/01/2026,11/2018,Southeast,Toddler,907
+08/01/2026,11/2018,Western,Infant,469
+08/01/2026,11/2018,Western,Preschool,342
+08/01/2026,11/2018,Western,School Age,1088
+08/01/2026,11/2018,Western,Toddler,442
+08/01/2026,10/2018,Central,Infant,374
+08/01/2026,10/2018,Central,Preschool,335
+08/01/2026,10/2018,Central,School Age,915
+08/01/2026,10/2018,Central,Toddler,373
+08/01/2026,10/2018,Metro,Infant,459
+08/01/2026,10/2018,Metro,Preschool,545
+08/01/2026,10/2018,Metro,School Age,1032
+08/01/2026,10/2018,Metro,Toddler,566
+08/01/2026,10/2018,Metro Boston,Infant,673
+08/01/2026,10/2018,Metro Boston,Preschool,276
+08/01/2026,10/2018,Metro Boston,School Age,963
+08/01/2026,10/2018,Metro Boston,Toddler,620
+08/01/2026,10/2018,Northeast,Infant,1121
+08/01/2026,10/2018,Northeast,Preschool,1193
+08/01/2026,10/2018,Northeast,School Age,2216
+08/01/2026,10/2018,Northeast,Toddler,1187
+08/01/2026,10/2018,Southeast,Infant,697
+08/01/2026,10/2018,Southeast,Preschool,828
+08/01/2026,10/2018,Southeast,School Age,1332
+08/01/2026,10/2018,Southeast,Toddler,893
+08/01/2026,10/2018,Western,Infant,487
+08/01/2026,10/2018,Western,Preschool,402
+08/01/2026,10/2018,Western,School Age,1069
+08/01/2026,10/2018,Western,Toddler,432
+08/01/2026,09/2018,Central,Infant,377
+08/01/2026,09/2018,Central,Preschool,438
+08/01/2026,09/2018,Central,School Age,954
+08/01/2026,09/2018,Central,Toddler,430
+08/01/2026,09/2018,Metro,Infant,436
+08/01/2026,09/2018,Metro,Preschool,545
+08/01/2026,09/2018,Metro,School Age,1013
+08/01/2026,09/2018,Metro,Toddler,574
+08/01/2026,09/2018,Metro Boston,Infant,696
+08/01/2026,09/2018,Metro Boston,Preschool,302
+08/01/2026,09/2018,Metro Boston,School Age,1036
+08/01/2026,09/2018,Metro Boston,Toddler,640
+08/01/2026,09/2018,Northeast,Infant,1194
+08/01/2026,09/2018,Northeast,Preschool,1298
+08/01/2026,09/2018,Northeast,School Age,2237
+08/01/2026,09/2018,Northeast,Toddler,1227
+08/01/2026,09/2018,Southeast,Infant,683
+08/01/2026,09/2018,Southeast,Preschool,832
+08/01/2026,09/2018,Southeast,School Age,1322
+08/01/2026,09/2018,Southeast,Toddler,855
+08/01/2026,09/2018,Western,Infant,499
+08/01/2026,09/2018,Western,Preschool,453
+08/01/2026,09/2018,Western,School Age,1090
+08/01/2026,09/2018,Western,Toddler,422
+08/01/2026,08/2018,Central,Infant,358
+08/01/2026,08/2018,Central,Preschool,464
+08/01/2026,08/2018,Central,School Age,936
+08/01/2026,08/2018,Central,Toddler,423
+08/01/2026,08/2018,Metro,Infant,452
+08/01/2026,08/2018,Metro,Preschool,659
+08/01/2026,08/2018,Metro,School Age,993
+08/01/2026,08/2018,Metro,Toddler,577
+08/01/2026,08/2018,Metro Boston,Infant,724
+08/01/2026,08/2018,Metro Boston,Preschool,377
+08/01/2026,08/2018,Metro Boston,School Age,1064
+08/01/2026,08/2018,Metro Boston,Toddler,664
+08/01/2026,08/2018,Northeast,Infant,1182
+08/01/2026,08/2018,Northeast,Preschool,1420
+08/01/2026,08/2018,Northeast,School Age,2214
+08/01/2026,08/2018,Northeast,Toddler,1218
+08/01/2026,08/2018,Southeast,Infant,636
+08/01/2026,08/2018,Southeast,Preschool,858
+08/01/2026,08/2018,Southeast,School Age,1239
+08/01/2026,08/2018,Southeast,Toddler,798
+08/01/2026,08/2018,Western,Infant,493
+08/01/2026,08/2018,Western,Preschool,530
+08/01/2026,08/2018,Western,School Age,1035
+08/01/2026,08/2018,Western,Toddler,423
+08/01/2026,07/2018,Central,Infant,344
+08/01/2026,07/2018,Central,Preschool,486
+08/01/2026,07/2018,Central,School Age,906
+08/01/2026,07/2018,Central,Toddler,435
+08/01/2026,07/2018,Metro,Infant,445
+08/01/2026,07/2018,Metro,Preschool,658
+08/01/2026,07/2018,Metro,School Age,989
+08/01/2026,07/2018,Metro,Toddler,558
+08/01/2026,07/2018,Metro Boston,Infant,652
+08/01/2026,07/2018,Metro Boston,Preschool,358
+08/01/2026,07/2018,Metro Boston,School Age,1036
+08/01/2026,07/2018,Metro Boston,Toddler,611
+08/01/2026,07/2018,Northeast,Infant,1154
+08/01/2026,07/2018,Northeast,Preschool,1477
+08/01/2026,07/2018,Northeast,School Age,2215
+08/01/2026,07/2018,Northeast,Toddler,1296
+08/01/2026,07/2018,Southeast,Infant,587
+08/01/2026,07/2018,Southeast,Preschool,892
+08/01/2026,07/2018,Southeast,School Age,1192
+08/01/2026,07/2018,Southeast,Toddler,785
+08/01/2026,07/2018,Western,Infant,463
+08/01/2026,07/2018,Western,Preschool,571
+08/01/2026,07/2018,Western,School Age,974
+08/01/2026,07/2018,Western,Toddler,421
+08/01/2026,06/2018,Central,Infant,337
+08/01/2026,06/2018,Central,Preschool,442
+08/01/2026,06/2018,Central,School Age,889
+08/01/2026,06/2018,Central,Toddler,409
+08/01/2026,06/2018,Metro,Infant,399
+08/01/2026,06/2018,Metro,Preschool,637
+08/01/2026,06/2018,Metro,School Age,959
+08/01/2026,06/2018,Metro,Toddler,544
+08/01/2026,06/2018,Metro Boston,Infant,637
+08/01/2026,06/2018,Metro Boston,Preschool,393
+08/01/2026,06/2018,Metro Boston,School Age,1281
+08/01/2026,06/2018,Metro Boston,Toddler,566
+08/01/2026,06/2018,Northeast,Infant,1166
+08/01/2026,06/2018,Northeast,Preschool,1489
+08/01/2026,06/2018,Northeast,School Age,2248
+08/01/2026,06/2018,Northeast,Toddler,1353
+08/01/2026,06/2018,Southeast,Infant,553
+08/01/2026,06/2018,Southeast,Preschool,929
+08/01/2026,06/2018,Southeast,School Age,1241
+08/01/2026,06/2018,Southeast,Toddler,757
+08/01/2026,06/2018,Western,Infant,445
+08/01/2026,06/2018,Western,Preschool,565
+08/01/2026,06/2018,Western,School Age,935
+08/01/2026,06/2018,Western,Toddler,409
+08/01/2026,05/2018,Central,Infant,307
+08/01/2026,05/2018,Central,Preschool,402
+08/01/2026,05/2018,Central,School Age,653
+08/01/2026,05/2018,Central,Toddler,372
+08/01/2026,05/2018,Metro,Infant,364
+08/01/2026,05/2018,Metro,Preschool,606
+08/01/2026,05/2018,Metro,School Age,880
+08/01/2026,05/2018,Metro,Toddler,525
+08/01/2026,05/2018,Metro Boston,Infant,689
+08/01/2026,05/2018,Metro Boston,Preschool,355
+08/01/2026,05/2018,Metro Boston,School Age,1040
+08/01/2026,05/2018,Metro Boston,Toddler,572
+08/01/2026,05/2018,Northeast,Infant,1176
+08/01/2026,05/2018,Northeast,Preschool,1543
+08/01/2026,05/2018,Northeast,School Age,2104
+08/01/2026,05/2018,Northeast,Toddler,1347
+08/01/2026,05/2018,Southeast,Infant,526
+08/01/2026,05/2018,Southeast,Preschool,863
+08/01/2026,05/2018,Southeast,School Age,1091
+08/01/2026,05/2018,Southeast,Toddler,734
+08/01/2026,05/2018,Western,Infant,406
+08/01/2026,05/2018,Western,Preschool,513
+08/01/2026,05/2018,Western,School Age,778
+08/01/2026,05/2018,Western,Toddler,399
+08/01/2026,04/2018,Central,Infant,265
+08/01/2026,04/2018,Central,Preschool,335
+08/01/2026,04/2018,Central,School Age,543
+08/01/2026,04/2018,Central,Toddler,308
+08/01/2026,04/2018,Metro,Infant,370
+08/01/2026,04/2018,Metro,Preschool,567
+08/01/2026,04/2018,Metro,School Age,861
+08/01/2026,04/2018,Metro,Toddler,499
+08/01/2026,04/2018,Metro Boston,Infant,639
+08/01/2026,04/2018,Metro Boston,Preschool,296
+08/01/2026,04/2018,Metro Boston,School Age,905
+08/01/2026,04/2018,Metro Boston,Toddler,545
+08/01/2026,04/2018,Northeast,Infant,1155
+08/01/2026,04/2018,Northeast,Preschool,1413
+08/01/2026,04/2018,Northeast,School Age,1946
+08/01/2026,04/2018,Northeast,Toddler,1337
+08/01/2026,04/2018,Southeast,Infant,450
+08/01/2026,04/2018,Southeast,Preschool,771
+08/01/2026,04/2018,Southeast,School Age,972
+08/01/2026,04/2018,Southeast,Toddler,694
+08/01/2026,04/2018,Western,Infant,366
+08/01/2026,04/2018,Western,Preschool,466
+08/01/2026,04/2018,Western,School Age,692
+08/01/2026,04/2018,Western,Toddler,339
+08/01/2026,03/2018,Central,Infant,292
+08/01/2026,03/2018,Central,Preschool,331
+08/01/2026,03/2018,Central,School Age,571
+08/01/2026,03/2018,Central,Toddler,298
+08/01/2026,03/2018,Metro,Infant,440
+08/01/2026,03/2018,Metro,Preschool,624
+08/01/2026,03/2018,Metro,School Age,1001
+08/01/2026,03/2018,Metro,Toddler,559
+08/01/2026,03/2018,Metro Boston,Infant,705
+08/01/2026,03/2018,Metro Boston,Preschool,263
+08/01/2026,03/2018,Metro Boston,School Age,923
+08/01/2026,03/2018,Metro Boston,Toddler,546
+08/01/2026,03/2018,Northeast,Infant,1148
+08/01/2026,03/2018,Northeast,Preschool,1314
+08/01/2026,03/2018,Northeast,School Age,1979
+08/01/2026,03/2018,Northeast,Toddler,1342
+08/01/2026,03/2018,Southeast,Infant,504
+08/01/2026,03/2018,Southeast,Preschool,847
+08/01/2026,03/2018,Southeast,School Age,1150
+08/01/2026,03/2018,Southeast,Toddler,728
+08/01/2026,03/2018,Western,Infant,391
+08/01/2026,03/2018,Western,Preschool,491
+08/01/2026,03/2018,Western,School Age,882
+08/01/2026,03/2018,Western,Toddler,404
+08/01/2026,02/2018,Central,Infant,359
+08/01/2026,02/2018,Central,Preschool,386
+08/01/2026,02/2018,Central,School Age,761
+08/01/2026,02/2018,Central,Toddler,393
+08/01/2026,02/2018,Metro,Infant,505
+08/01/2026,02/2018,Metro,Preschool,750
+08/01/2026,02/2018,Metro,School Age,1158
+08/01/2026,02/2018,Metro,Toddler,710
+08/01/2026,02/2018,Metro Boston,Infant,736
+08/01/2026,02/2018,Metro Boston,Preschool,258
+08/01/2026,02/2018,Metro Boston,School Age,1018
+08/01/2026,02/2018,Metro Boston,Toddler,623
+08/01/2026,02/2018,Northeast,Infant,1261
+08/01/2026,02/2018,Northeast,Preschool,1367
+08/01/2026,02/2018,Northeast,School Age,2293
+08/01/2026,02/2018,Northeast,Toddler,1518
+08/01/2026,02/2018,Southeast,Infant,585
+08/01/2026,02/2018,Southeast,Preschool,939
+08/01/2026,02/2018,Southeast,School Age,1306
+08/01/2026,02/2018,Southeast,Toddler,842
+08/01/2026,02/2018,Western,Infant,457
+08/01/2026,02/2018,Western,Preschool,569
+08/01/2026,02/2018,Western,School Age,1107
+08/01/2026,02/2018,Western,Toddler,522
+08/01/2026,01/2018,Central,Infant,372
+08/01/2026,01/2018,Central,Preschool,382
+08/01/2026,01/2018,Central,School Age,803
+08/01/2026,01/2018,Central,Toddler,443
+08/01/2026,01/2018,Metro,Infant,521
+08/01/2026,01/2018,Metro,Preschool,752
+08/01/2026,01/2018,Metro,School Age,1165
+08/01/2026,01/2018,Metro,Toddler,715
+08/01/2026,01/2018,Metro Boston,Infant,721
+08/01/2026,01/2018,Metro Boston,Preschool,206
+08/01/2026,01/2018,Metro Boston,School Age,999
+08/01/2026,01/2018,Metro Boston,Toddler,670
+08/01/2026,01/2018,Northeast,Infant,1269
+08/01/2026,01/2018,Northeast,Preschool,1436
+08/01/2026,01/2018,Northeast,School Age,2349
+08/01/2026,01/2018,Northeast,Toddler,1607
+08/01/2026,01/2018,Southeast,Infant,590
+08/01/2026,01/2018,Southeast,Preschool,929
+08/01/2026,01/2018,Southeast,School Age,1330
+08/01/2026,01/2018,Southeast,Toddler,812
+08/01/2026,01/2018,Western,Infant,463
+08/01/2026,01/2018,Western,Preschool,554
+08/01/2026,01/2018,Western,School Age,1123
+08/01/2026,01/2018,Western,Toddler,552
+08/01/2026,12/2017,Central,Infant,368
+08/01/2026,12/2017,Central,Preschool,388
+08/01/2026,12/2017,Central,School Age,856
+08/01/2026,12/2017,Central,Toddler,458
+08/01/2026,12/2017,Metro,Infant,531
+08/01/2026,12/2017,Metro,Preschool,753
+08/01/2026,12/2017,Metro,School Age,1201
+08/01/2026,12/2017,Metro,Toddler,737
+08/01/2026,12/2017,Metro Boston,Infant,707
+08/01/2026,12/2017,Metro Boston,Preschool,200
+08/01/2026,12/2017,Metro Boston,School Age,1019
+08/01/2026,12/2017,Metro Boston,Toddler,628
+08/01/2026,12/2017,Northeast,Infant,1257
+08/01/2026,12/2017,Northeast,Preschool,1347
+08/01/2026,12/2017,Northeast,School Age,2379
+08/01/2026,12/2017,Northeast,Toddler,1624
+08/01/2026,12/2017,Southeast,Infant,585
+08/01/2026,12/2017,Southeast,Preschool,875
+08/01/2026,12/2017,Southeast,School Age,1389
+08/01/2026,12/2017,Southeast,Toddler,808
+08/01/2026,12/2017,Western,Infant,475
+08/01/2026,12/2017,Western,Preschool,568
+08/01/2026,12/2017,Western,School Age,1246
+08/01/2026,12/2017,Western,Toddler,632
+08/01/2026,11/2017,Central,Infant,410
+08/01/2026,11/2017,Central,Preschool,487
+08/01/2026,11/2017,Central,School Age,961
+08/01/2026,11/2017,Central,Toddler,493
+08/01/2026,11/2017,Metro,Infant,550
+08/01/2026,11/2017,Metro,Preschool,771
+08/01/2026,11/2017,Metro,School Age,1265
+08/01/2026,11/2017,Metro,Toddler,799
+08/01/2026,11/2017,Metro Boston,Infant,735
+08/01/2026,11/2017,Metro Boston,Preschool,239
+08/01/2026,11/2017,Metro Boston,School Age,1192
+08/01/2026,11/2017,Metro Boston,Toddler,713
+08/01/2026,11/2017,Northeast,Infant,1299
+08/01/2026,11/2017,Northeast,Preschool,1391
+08/01/2026,11/2017,Northeast,School Age,2494
+08/01/2026,11/2017,Northeast,Toddler,1666
+08/01/2026,11/2017,Southeast,Infant,609
+08/01/2026,11/2017,Southeast,Preschool,949
+08/01/2026,11/2017,Southeast,School Age,1530
+08/01/2026,11/2017,Southeast,Toddler,861
+08/01/2026,11/2017,Western,Infant,503
+08/01/2026,11/2017,Western,Preschool,620
+08/01/2026,11/2017,Western,School Age,1359
+08/01/2026,11/2017,Western,Toddler,685
+08/01/2026,10/2017,Central,Infant,409
+08/01/2026,10/2017,Central,Preschool,497
+08/01/2026,10/2017,Central,School Age,997
+08/01/2026,10/2017,Central,Toddler,524
+08/01/2026,10/2017,Metro,Infant,546
+08/01/2026,10/2017,Metro,Preschool,814
+08/01/2026,10/2017,Metro,School Age,1224
+08/01/2026,10/2017,Metro,Toddler,810
+08/01/2026,10/2017,Metro Boston,Infant,745
+08/01/2026,10/2017,Metro Boston,Preschool,274
+08/01/2026,10/2017,Metro Boston,School Age,1177
+08/01/2026,10/2017,Metro Boston,Toddler,711
+08/01/2026,10/2017,Northeast,Infant,1327
+08/01/2026,10/2017,Northeast,Preschool,1493
+08/01/2026,10/2017,Northeast,School Age,2542
+08/01/2026,10/2017,Northeast,Toddler,1701
+08/01/2026,10/2017,Southeast,Infant,608
+08/01/2026,10/2017,Southeast,Preschool,946
+08/01/2026,10/2017,Southeast,School Age,1534
+08/01/2026,10/2017,Southeast,Toddler,871
+08/01/2026,10/2017,Western,Infant,546
+08/01/2026,10/2017,Western,Preschool,629
+08/01/2026,10/2017,Western,School Age,1386
+08/01/2026,10/2017,Western,Toddler,726
+08/01/2026,09/2017,Central,Infant,405
+08/01/2026,09/2017,Central,Preschool,573
+08/01/2026,09/2017,Central,School Age,1061
+08/01/2026,09/2017,Central,Toddler,536
+08/01/2026,09/2017,Metro,Infant,532
+08/01/2026,09/2017,Metro,Preschool,788
+08/01/2026,09/2017,Metro,School Age,1203
+08/01/2026,09/2017,Metro,Toddler,808
+08/01/2026,09/2017,Metro Boston,Infant,764
+08/01/2026,09/2017,Metro Boston,Preschool,429
+08/01/2026,09/2017,Metro Boston,School Age,1303
+08/01/2026,09/2017,Metro Boston,Toddler,779
+08/01/2026,09/2017,Northeast,Infant,1305
+08/01/2026,09/2017,Northeast,Preschool,1505
+08/01/2026,09/2017,Northeast,School Age,2567
+08/01/2026,09/2017,Northeast,Toddler,1740
+08/01/2026,09/2017,Southeast,Infant,580
+08/01/2026,09/2017,Southeast,Preschool,965
+08/01/2026,09/2017,Southeast,School Age,1586
+08/01/2026,09/2017,Southeast,Toddler,884
+08/01/2026,09/2017,Western,Infant,560
+08/01/2026,09/2017,Western,Preschool,615
+08/01/2026,09/2017,Western,School Age,1375
+08/01/2026,09/2017,Western,Toddler,718
+08/01/2026,08/2017,Central,Infant,417
+08/01/2026,08/2017,Central,Preschool,647
+08/01/2026,08/2017,Central,School Age,1120
+08/01/2026,08/2017,Central,Toddler,587
+08/01/2026,08/2017,Metro,Infant,519
+08/01/2026,08/2017,Metro,Preschool,819
+08/01/2026,08/2017,Metro,School Age,1228
+08/01/2026,08/2017,Metro,Toddler,840
+08/01/2026,08/2017,Metro Boston,Infant,791
+08/01/2026,08/2017,Metro Boston,Preschool,409
+08/01/2026,08/2017,Metro Boston,School Age,1440
+08/01/2026,08/2017,Metro Boston,Toddler,776
+08/01/2026,08/2017,Northeast,Infant,1314
+08/01/2026,08/2017,Northeast,Preschool,1762
+08/01/2026,08/2017,Northeast,School Age,2832
+08/01/2026,08/2017,Northeast,Toddler,1812
+08/01/2026,08/2017,Southeast,Infant,566
+08/01/2026,08/2017,Southeast,Preschool,983
+08/01/2026,08/2017,Southeast,School Age,1605
+08/01/2026,08/2017,Southeast,Toddler,897
+08/01/2026,08/2017,Western,Infant,595
+08/01/2026,08/2017,Western,Preschool,733
+08/01/2026,08/2017,Western,School Age,1314
+08/01/2026,08/2017,Western,Toddler,711
+08/01/2026,07/2017,Central,Infant,431
+08/01/2026,07/2017,Central,Preschool,654
+08/01/2026,07/2017,Central,School Age,1115
+08/01/2026,07/2017,Central,Toddler,562
+08/01/2026,07/2017,Metro,Infant,549
+08/01/2026,07/2017,Metro,Preschool,900
+08/01/2026,07/2017,Metro,School Age,1220
+08/01/2026,07/2017,Metro,Toddler,824
+08/01/2026,07/2017,Metro Boston,Infant,824
+08/01/2026,07/2017,Metro Boston,Preschool,431
+08/01/2026,07/2017,Metro Boston,School Age,1517
+08/01/2026,07/2017,Metro Boston,Toddler,821
+08/01/2026,07/2017,Northeast,Infant,1286
+08/01/2026,07/2017,Northeast,Preschool,1896
+08/01/2026,07/2017,Northeast,School Age,2896
+08/01/2026,07/2017,Northeast,Toddler,1770
+08/01/2026,07/2017,Southeast,Infant,551
+08/01/2026,07/2017,Southeast,Preschool,1116
+08/01/2026,07/2017,Southeast,School Age,1586
+08/01/2026,07/2017,Southeast,Toddler,892
+08/01/2026,07/2017,Western,Infant,578
+08/01/2026,07/2017,Western,Preschool,776
+08/01/2026,07/2017,Western,School Age,1238
+08/01/2026,07/2017,Western,Toddler,699
+08/01/2026,06/2017,Central,Infant,419
+08/01/2026,06/2017,Central,Preschool,669
+08/01/2026,06/2017,Central,School Age,1222
+08/01/2026,06/2017,Central,Toddler,584
+08/01/2026,06/2017,Metro,Infant,563
+08/01/2026,06/2017,Metro,Preschool,923
+08/01/2026,06/2017,Metro,School Age,1414
+08/01/2026,06/2017,Metro,Toddler,878
+08/01/2026,06/2017,Metro Boston,Infant,843
+08/01/2026,06/2017,Metro Boston,Preschool,394
+08/01/2026,06/2017,Metro Boston,School Age,1744
+08/01/2026,06/2017,Metro Boston,Toddler,795
+08/01/2026,06/2017,Northeast,Infant,1318
+08/01/2026,06/2017,Northeast,Preschool,1901
+08/01/2026,06/2017,Northeast,School Age,3020
+08/01/2026,06/2017,Northeast,Toddler,1784
+08/01/2026,06/2017,Southeast,Infant,590
+08/01/2026,06/2017,Southeast,Preschool,1195
+08/01/2026,06/2017,Southeast,School Age,1857
+08/01/2026,06/2017,Southeast,Toddler,909
+08/01/2026,06/2017,Western,Infant,568
+08/01/2026,06/2017,Western,Preschool,809
+08/01/2026,06/2017,Western,School Age,1496
+08/01/2026,06/2017,Western,Toddler,718
+08/01/2026,05/2017,Central,Infant,430
+08/01/2026,05/2017,Central,Preschool,644
+08/01/2026,05/2017,Central,School Age,1067
+08/01/2026,05/2017,Central,Toddler,577
+08/01/2026,05/2017,Metro,Infant,587
+08/01/2026,05/2017,Metro,Preschool,912
+08/01/2026,05/2017,Metro,School Age,1395
+08/01/2026,05/2017,Metro,Toddler,894
+08/01/2026,05/2017,Metro Boston,Infant,825
+08/01/2026,05/2017,Metro Boston,Preschool,473
+08/01/2026,05/2017,Metro Boston,School Age,1718
+08/01/2026,05/2017,Metro Boston,Toddler,793
+08/01/2026,05/2017,Northeast,Infant,1282
+08/01/2026,05/2017,Northeast,Preschool,1963
+08/01/2026,05/2017,Northeast,School Age,3107
+08/01/2026,05/2017,Northeast,Toddler,1858
+08/01/2026,05/2017,Southeast,Infant,568
+08/01/2026,05/2017,Southeast,Preschool,1176
+08/01/2026,05/2017,Southeast,School Age,1600
+08/01/2026,05/2017,Southeast,Toddler,872
+08/01/2026,05/2017,Western,Infant,575
+08/01/2026,05/2017,Western,Preschool,790
+08/01/2026,05/2017,Western,School Age,1522
+08/01/2026,05/2017,Western,Toddler,733
+08/01/2026,04/2017,Central,Infant,423
+08/01/2026,04/2017,Central,Preschool,584
+08/01/2026,04/2017,Central,School Age,1108
+08/01/2026,04/2017,Central,Toddler,573
+08/01/2026,04/2017,Metro,Infant,567
+08/01/2026,04/2017,Metro,Preschool,873
+08/01/2026,04/2017,Metro,School Age,1377
+08/01/2026,04/2017,Metro,Toddler,893
+08/01/2026,04/2017,Metro Boston,Infant,814
+08/01/2026,04/2017,Metro Boston,Preschool,430
+08/01/2026,04/2017,Metro Boston,School Age,1399
+08/01/2026,04/2017,Metro Boston,Toddler,733
+08/01/2026,04/2017,Northeast,Infant,1220
+08/01/2026,04/2017,Northeast,Preschool,1846
+08/01/2026,04/2017,Northeast,School Age,2992
+08/01/2026,04/2017,Northeast,Toddler,1781
+08/01/2026,04/2017,Southeast,Infant,588
+08/01/2026,04/2017,Southeast,Preschool,1130
+08/01/2026,04/2017,Southeast,School Age,1574
+08/01/2026,04/2017,Southeast,Toddler,885
+08/01/2026,04/2017,Western,Infant,572
+08/01/2026,04/2017,Western,Preschool,681
+08/01/2026,04/2017,Western,School Age,1417
+08/01/2026,04/2017,Western,Toddler,708
+08/01/2026,03/2017,Central,Infant,434
+08/01/2026,03/2017,Central,Preschool,552
+08/01/2026,03/2017,Central,School Age,1133
+08/01/2026,03/2017,Central,Toddler,568
+08/01/2026,03/2017,Metro,Infant,577
+08/01/2026,03/2017,Metro,Preschool,833
+08/01/2026,03/2017,Metro,School Age,1394
+08/01/2026,03/2017,Metro,Toddler,882
+08/01/2026,03/2017,Metro Boston,Infant,809
+08/01/2026,03/2017,Metro Boston,Preschool,364
+08/01/2026,03/2017,Metro Boston,School Age,1334
+08/01/2026,03/2017,Metro Boston,Toddler,695
+08/01/2026,03/2017,Northeast,Infant,1235
+08/01/2026,03/2017,Northeast,Preschool,1734
+08/01/2026,03/2017,Northeast,School Age,2894
+08/01/2026,03/2017,Northeast,Toddler,1697
+08/01/2026,03/2017,Southeast,Infant,563
+08/01/2026,03/2017,Southeast,Preschool,1076
+08/01/2026,03/2017,Southeast,School Age,1597
+08/01/2026,03/2017,Southeast,Toddler,900
+08/01/2026,03/2017,Western,Infant,546
+08/01/2026,03/2017,Western,Preschool,591
+08/01/2026,03/2017,Western,School Age,1361
+08/01/2026,03/2017,Western,Toddler,703
+08/01/2026,02/2017,Central,Infant,411
+08/01/2026,02/2017,Central,Preschool,515
+08/01/2026,02/2017,Central,School Age,1121
+08/01/2026,02/2017,Central,Toddler,548
+08/01/2026,02/2017,Metro,Infant,590
+08/01/2026,02/2017,Metro,Preschool,783
+08/01/2026,02/2017,Metro,School Age,1359
+08/01/2026,02/2017,Metro,Toddler,857
+08/01/2026,02/2017,Metro Boston,Infant,762
+08/01/2026,02/2017,Metro Boston,Preschool,321
+08/01/2026,02/2017,Metro Boston,School Age,1229
+08/01/2026,02/2017,Metro Boston,Toddler,671
+08/01/2026,02/2017,Northeast,Infant,1224
+08/01/2026,02/2017,Northeast,Preschool,1597
+08/01/2026,02/2017,Northeast,School Age,2819
+08/01/2026,02/2017,Northeast,Toddler,1674
+08/01/2026,02/2017,Southeast,Infant,547
+08/01/2026,02/2017,Southeast,Preschool,1030
+08/01/2026,02/2017,Southeast,School Age,1589
+08/01/2026,02/2017,Southeast,Toddler,867
+08/01/2026,02/2017,Western,Infant,555
+08/01/2026,02/2017,Western,Preschool,599
+08/01/2026,02/2017,Western,School Age,1388
+08/01/2026,02/2017,Western,Toddler,723
+08/01/2026,01/2017,Central,Infant,424
+08/01/2026,01/2017,Central,Preschool,516
+08/01/2026,01/2017,Central,School Age,1134
+08/01/2026,01/2017,Central,Toddler,549
+08/01/2026,01/2017,Metro,Infant,605
+08/01/2026,01/2017,Metro,Preschool,735
+08/01/2026,01/2017,Metro,School Age,1350
+08/01/2026,01/2017,Metro,Toddler,881
+08/01/2026,01/2017,Metro Boston,Infant,769
+08/01/2026,01/2017,Metro Boston,Preschool,339
+08/01/2026,01/2017,Metro Boston,School Age,1254
+08/01/2026,01/2017,Metro Boston,Toddler,665
+08/01/2026,01/2017,Northeast,Infant,1228
+08/01/2026,01/2017,Northeast,Preschool,1574
+08/01/2026,01/2017,Northeast,School Age,2906
+08/01/2026,01/2017,Northeast,Toddler,1637
+08/01/2026,01/2017,Southeast,Infant,564
+08/01/2026,01/2017,Southeast,Preschool,987
+08/01/2026,01/2017,Southeast,School Age,1650
+08/01/2026,01/2017,Southeast,Toddler,872
+08/01/2026,01/2017,Western,Infant,542
+08/01/2026,01/2017,Western,Preschool,595
+08/01/2026,01/2017,Western,School Age,1375
+08/01/2026,01/2017,Western,Toddler,714
+08/01/2026,12/2016,Central,Infant,400
+08/01/2026,12/2016,Central,Preschool,509
+08/01/2026,12/2016,Central,School Age,1077
+08/01/2026,12/2016,Central,Toddler,513
+08/01/2026,12/2016,Metro,Infant,600
+08/01/2026,12/2016,Metro,Preschool,700
+08/01/2026,12/2016,Metro,School Age,1363
+08/01/2026,12/2016,Metro,Toddler,837
+08/01/2026,12/2016,Metro Boston,Infant,707
+08/01/2026,12/2016,Metro Boston,Preschool,349
+08/01/2026,12/2016,Metro Boston,School Age,1172
+08/01/2026,12/2016,Metro Boston,Toddler,644
+08/01/2026,12/2016,Northeast,Infant,1198
+08/01/2026,12/2016,Northeast,Preschool,1572
+08/01/2026,12/2016,Northeast,School Age,3364
+08/01/2026,12/2016,Northeast,Toddler,1612
+08/01/2026,12/2016,Southeast,Infant,588
+08/01/2026,12/2016,Southeast,Preschool,937
+08/01/2026,12/2016,Southeast,School Age,1608
+08/01/2026,12/2016,Southeast,Toddler,858
+08/01/2026,12/2016,Western,Infant,544
+08/01/2026,12/2016,Western,Preschool,526
+08/01/2026,12/2016,Western,School Age,1313
+08/01/2026,12/2016,Western,Toddler,680
+08/01/2026,11/2016,Central,Infant,400
+08/01/2026,11/2016,Central,Preschool,493
+08/01/2026,11/2016,Central,School Age,1117
+08/01/2026,11/2016,Central,Toddler,528
+08/01/2026,11/2016,Metro,Infant,631
+08/01/2026,11/2016,Metro,Preschool,789
+08/01/2026,11/2016,Metro,School Age,1396
+08/01/2026,11/2016,Metro,Toddler,866
+08/01/2026,11/2016,Metro Boston,Infant,767
+08/01/2026,11/2016,Metro Boston,Preschool,435
+08/01/2026,11/2016,Metro Boston,School Age,1280
+08/01/2026,11/2016,Metro Boston,Toddler,725
+08/01/2026,11/2016,Northeast,Infant,1236
+08/01/2026,11/2016,Northeast,Preschool,1656
+08/01/2026,11/2016,Northeast,School Age,3439
+08/01/2026,11/2016,Northeast,Toddler,1739
+08/01/2026,11/2016,Southeast,Infant,617
+08/01/2026,11/2016,Southeast,Preschool,994
+08/01/2026,11/2016,Southeast,School Age,1623
+08/01/2026,11/2016,Southeast,Toddler,887
+08/01/2026,11/2016,Western,Infant,570
+08/01/2026,11/2016,Western,Preschool,528
+08/01/2026,11/2016,Western,School Age,1362
+08/01/2026,11/2016,Western,Toddler,744
+08/01/2026,10/2016,Central,Infant,400
+08/01/2026,10/2016,Central,Preschool,575
+08/01/2026,10/2016,Central,School Age,1111
+08/01/2026,10/2016,Central,Toddler,524
+08/01/2026,10/2016,Metro,Infant,627
+08/01/2026,10/2016,Metro,Preschool,771
+08/01/2026,10/2016,Metro,School Age,1382
+08/01/2026,10/2016,Metro,Toddler,869
+08/01/2026,10/2016,Metro Boston,Infant,834
+08/01/2026,10/2016,Metro Boston,Preschool,552
+08/01/2026,10/2016,Metro Boston,School Age,1622
+08/01/2026,10/2016,Metro Boston,Toddler,878
+08/01/2026,10/2016,Northeast,Infant,1258
+08/01/2026,10/2016,Northeast,Preschool,1832
+08/01/2026,10/2016,Northeast,School Age,3494
+08/01/2026,10/2016,Northeast,Toddler,1759
+08/01/2026,10/2016,Southeast,Infant,607
+08/01/2026,10/2016,Southeast,Preschool,1021
+08/01/2026,10/2016,Southeast,School Age,1688
+08/01/2026,10/2016,Southeast,Toddler,868
+08/01/2026,10/2016,Western,Infant,543
+08/01/2026,10/2016,Western,Preschool,449
+08/01/2026,10/2016,Western,School Age,1314
+08/01/2026,10/2016,Western,Toddler,682
+08/01/2026,09/2016,Central,Infant,402
+08/01/2026,09/2016,Central,Preschool,651
+08/01/2026,09/2016,Central,School Age,1106
+08/01/2026,09/2016,Central,Toddler,555
+08/01/2026,09/2016,Metro,Infant,636
+08/01/2026,09/2016,Metro,Preschool,831
+08/01/2026,09/2016,Metro,School Age,1350
+08/01/2026,09/2016,Metro,Toddler,840
+08/01/2026,09/2016,Metro Boston,Infant,855
+08/01/2026,09/2016,Metro Boston,Preschool,762
+08/01/2026,09/2016,Metro Boston,School Age,1669
+08/01/2026,09/2016,Metro Boston,Toddler,961
+08/01/2026,09/2016,Northeast,Infant,1324
+08/01/2026,09/2016,Northeast,Preschool,1936
+08/01/2026,09/2016,Northeast,School Age,3542
+08/01/2026,09/2016,Northeast,Toddler,1842
+08/01/2026,09/2016,Southeast,Infant,603
+08/01/2026,09/2016,Southeast,Preschool,1056
+08/01/2026,09/2016,Southeast,School Age,1687
+08/01/2026,09/2016,Southeast,Toddler,836
+08/01/2026,09/2016,Western,Infant,555
+08/01/2026,09/2016,Western,Preschool,448
+08/01/2026,09/2016,Western,School Age,1321
+08/01/2026,09/2016,Western,Toddler,696
+08/01/2026,08/2016,Central,Infant,420
+08/01/2026,08/2016,Central,Preschool,713
+08/01/2026,08/2016,Central,School Age,1049
+08/01/2026,08/2016,Central,Toddler,553
+08/01/2026,08/2016,Metro,Infant,610
+08/01/2026,08/2016,Metro,Preschool,930
+08/01/2026,08/2016,Metro,School Age,1331
+08/01/2026,08/2016,Metro,Toddler,856
+08/01/2026,08/2016,Metro Boston,Infant,860
+08/01/2026,08/2016,Metro Boston,Preschool,808
+08/01/2026,08/2016,Metro Boston,School Age,1607
+08/01/2026,08/2016,Metro Boston,Toddler,989
+08/01/2026,08/2016,Northeast,Infant,1342
+08/01/2026,08/2016,Northeast,Preschool,1988
+08/01/2026,08/2016,Northeast,School Age,3518
+08/01/2026,08/2016,Northeast,Toddler,1806
+08/01/2026,08/2016,Southeast,Infant,569
+08/01/2026,08/2016,Southeast,Preschool,1111
+08/01/2026,08/2016,Southeast,School Age,1647
+08/01/2026,08/2016,Southeast,Toddler,879
+08/01/2026,08/2016,Western,Infant,526
+08/01/2026,08/2016,Western,Preschool,604
+08/01/2026,08/2016,Western,School Age,1292
+08/01/2026,08/2016,Western,Toddler,688
+08/01/2026,07/2016,Central,Infant,403
+08/01/2026,07/2016,Central,Preschool,702
+08/01/2026,07/2016,Central,School Age,1026
+08/01/2026,07/2016,Central,Toddler,529
+08/01/2026,07/2016,Metro,Infant,600
+08/01/2026,07/2016,Metro,Preschool,934
+08/01/2026,07/2016,Metro,School Age,1267
+08/01/2026,07/2016,Metro,Toddler,862
+08/01/2026,07/2016,Metro Boston,Infant,841
+08/01/2026,07/2016,Metro Boston,Preschool,788
+08/01/2026,07/2016,Metro Boston,School Age,1469
+08/01/2026,07/2016,Metro Boston,Toddler,941
+08/01/2026,07/2016,Northeast,Infant,1329
+08/01/2026,07/2016,Northeast,Preschool,2030
+08/01/2026,07/2016,Northeast,School Age,3365
+08/01/2026,07/2016,Northeast,Toddler,1685
+08/01/2026,07/2016,Southeast,Infant,547
+08/01/2026,07/2016,Southeast,Preschool,1107
+08/01/2026,07/2016,Southeast,School Age,1653
+08/01/2026,07/2016,Southeast,Toddler,829
+08/01/2026,07/2016,Western,Infant,507
+08/01/2026,07/2016,Western,Preschool,675
+08/01/2026,07/2016,Western,School Age,1260
+08/01/2026,07/2016,Western,Toddler,634
+08/01/2026,06/2016,Central,Infant,411
+08/01/2026,06/2016,Central,Preschool,685
+08/01/2026,06/2016,Central,School Age,1093
+08/01/2026,06/2016,Central,Toddler,516
+08/01/2026,06/2016,Metro,Infant,602
+08/01/2026,06/2016,Metro,Preschool,892
+08/01/2026,06/2016,Metro,School Age,1350
+08/01/2026,06/2016,Metro,Toddler,867
+08/01/2026,06/2016,Metro Boston,Infant,891
+08/01/2026,06/2016,Metro Boston,Preschool,779
+08/01/2026,06/2016,Metro Boston,School Age,1963
+08/01/2026,06/2016,Metro Boston,Toddler,928
+08/01/2026,06/2016,Northeast,Infant,1296
+08/01/2026,06/2016,Northeast,Preschool,2171
+08/01/2026,06/2016,Northeast,School Age,3512
+08/01/2026,06/2016,Northeast,Toddler,1679
+08/01/2026,06/2016,Southeast,Infant,536
+08/01/2026,06/2016,Southeast,Preschool,1101
+08/01/2026,06/2016,Southeast,School Age,1720
+08/01/2026,06/2016,Southeast,Toddler,833
+08/01/2026,06/2016,Western,Infant,477
+08/01/2026,06/2016,Western,Preschool,706
+08/01/2026,06/2016,Western,School Age,1205
+08/01/2026,06/2016,Western,Toddler,624
+08/01/2026,05/2016,Central,Infant,417
+08/01/2026,05/2016,Central,Preschool,643
+08/01/2026,05/2016,Central,School Age,1012
+08/01/2026,05/2016,Central,Toddler,486
+08/01/2026,05/2016,Metro,Infant,588
+08/01/2026,05/2016,Metro,Preschool,844
+08/01/2026,05/2016,Metro,School Age,1316
+08/01/2026,05/2016,Metro,Toddler,819
+08/01/2026,05/2016,Metro Boston,Infant,865
+08/01/2026,05/2016,Metro Boston,Preschool,718
+08/01/2026,05/2016,Metro Boston,School Age,1937
+08/01/2026,05/2016,Metro Boston,Toddler,882
+08/01/2026,05/2016,Northeast,Infant,1298
+08/01/2026,05/2016,Northeast,Preschool,2112
+08/01/2026,05/2016,Northeast,School Age,3692
+08/01/2026,05/2016,Northeast,Toddler,1617
+08/01/2026,05/2016,Southeast,Infant,537
+08/01/2026,05/2016,Southeast,Preschool,1067
+08/01/2026,05/2016,Southeast,School Age,1733
+08/01/2026,05/2016,Southeast,Toddler,813
+08/01/2026,05/2016,Western,Infant,498
+08/01/2026,05/2016,Western,Preschool,663
+08/01/2026,05/2016,Western,School Age,1361
+08/01/2026,05/2016,Western,Toddler,631

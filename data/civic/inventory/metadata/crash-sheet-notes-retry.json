@@ -1,0 +1,46 @@
+{
+  "id": "crash-sheet-0-1260855922",
+  "url": "https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit",
+  "sheet": "notes ",
+  "range": "A1:Z1001",
+  "retention": "full_tab_grid_values",
+  "retrieved_at_utc": "2026-10-24T15:16:34.411Z",
+  "result": {
+    "range": "'notes '!A1:Z100",
+    "majorDimension": "ROWS",
+    "values": [
+      [
+        "MDOT 4muni 2020-2025 crash data with selected fields"
+      ],
+      [
+        "downloaded by Jack Dougherty on 2 March 2026 from"
+      ],
+      [
+        "MDOT Crash Data Query and Visualization tool"
+      ],
+      [
+        "https://apps.crashdata.dot.mass.gov/cdv/"
+      ],
+      [],
+      [
+        "Data Level:",
+        "CRASH"
+      ],
+      [
+        "Query Type:",
+        "Advanced"
+      ],
+      [
+        "Criteria:",
+        "select * from Crash  where crash_date BETWEEN '1/1/2020' AND '12/31/2025' AND ( city_town_name = 'BOSTON' OR city_town_name = 'BROOKLINE' OR city_town_name = 'CAMBRIDGE' OR city_town_name = 'SOMERVILLE' )"
+      ]
+    ]
+  },
+  "tail_check": {
+    "range": "'notes '!A101:Z1001",
+    "majorDimension": "ROWS",
+    "values": []
+  },
+  "access": "fetched",
+  "note": "Quoted trailing-space sheet name resolved the initial range parse error; remainder of grid checked separately."
+}

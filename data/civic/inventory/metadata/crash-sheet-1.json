@@ -1,0 +1,115 @@
+{
+  "spreadsheetId": "1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs/edit",
+  "properties": {
+    "title": "boston-area-crashes-2024",
+    "locale": "en_US",
+    "timeZone": "America/New_York"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 0,
+        "title": "summary",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1037,
+          "columnCount": 26
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1299925912,
+        "title": "maps",
+        "index": 1,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1740767246,
+        "title": "data-2024",
+        "index": 2,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 11862,
+          "columnCount": 23,
+          "frozenRowCount": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1562907338,
+        "title": "brookline-madot-2024",
+        "index": 3,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 420,
+          "columnCount": 132,
+          "frozenColumnCount": 10
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1571844657,
+        "title": "somerville-madot+UNmatchSPD-2024",
+        "index": 4,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 786,
+          "columnCount": 168,
+          "frozenRowCount": 1,
+          "frozenColumnCount": 10
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1037184410,
+        "title": "boston-mdot+UNmatchBVZ-2024",
+        "index": 5,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 8363,
+          "columnCount": 139,
+          "frozenRowCount": 1,
+          "frozenColumnCount": 9
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 503454283,
+        "title": "lat-lng-only",
+        "index": 6,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 11861,
+          "columnCount": 26
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1495060305,
+        "title": "camb-madot+UNmatchCPD-2024",
+        "index": 7,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 2296,
+          "columnCount": 314,
+          "frozenRowCount": 1,
+          "frozenColumnCount": 10
+        }
+      }
+    }
+  ]
+}

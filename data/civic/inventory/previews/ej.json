@@ -1,0 +1,919 @@
+{
+  "dataset": "ej",
+  "source": "data/civic/datasets/ej/data.csv",
+  "source_sha256": "3616a34c7336da3bd7b4e7960e0dd8f9722f42305108bb7493ae113770daa557",
+  "total_snapshot_rows": 2604,
+  "preview_rows": 100,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "municipality",
+    "population",
+    "minority_pct",
+    "limited_english_hh_pct",
+    "block_group_income",
+    "ej",
+    "criteria"
+  ],
+  "records": [
+    {
+      "municipality": "Harwich",
+      "population": "565",
+      "minority_pct": "9.7345",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "54375",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Dennis",
+      "population": "1630",
+      "minority_pct": "28.2209",
+      "limited_english_hh_pct": "2.9246",
+      "block_group_income": "46015",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Dennis",
+      "population": "689",
+      "minority_pct": "18.2874",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "52826",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Yarmouth",
+      "population": "1224",
+      "minority_pct": "26.7974",
+      "limited_english_hh_pct": "7.6768",
+      "block_group_income": "55880",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Yarmouth",
+      "population": "1116",
+      "minority_pct": "30.914",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "98664",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Yarmouth",
+      "population": "605",
+      "minority_pct": "19.3388",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "47963",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Yarmouth",
+      "population": "1155",
+      "minority_pct": "33.6797",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "62438",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "947",
+      "minority_pct": "39.7043",
+      "limited_english_hh_pct": "1.5873",
+      "block_group_income": "35023",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Provincetown",
+      "population": "664",
+      "minority_pct": "17.9217",
+      "limited_english_hh_pct": "12.2093",
+      "block_group_income": "54688",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Truro",
+      "population": "892",
+      "minority_pct": "7.9596",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "47554",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Eastham",
+      "population": "889",
+      "minority_pct": "14.8481",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "46806",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Orleans",
+      "population": "872",
+      "minority_pct": "11.9266",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "40833",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Chatham",
+      "population": "596",
+      "minority_pct": "8.0537",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "43558",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Brewster",
+      "population": "503",
+      "minority_pct": "6.9583",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "47083",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "915",
+      "minority_pct": "47.541",
+      "limited_english_hh_pct": "10.4265",
+      "block_group_income": "70170",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "2164",
+      "minority_pct": "33.78",
+      "limited_english_hh_pct": "15.4944",
+      "block_group_income": "60919",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1134",
+      "minority_pct": "35.3616",
+      "limited_english_hh_pct": "2.5397",
+      "block_group_income": "82344",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1480",
+      "minority_pct": "46.5541",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "38125",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1765",
+      "minority_pct": "58.5269",
+      "limited_english_hh_pct": "35.1759",
+      "block_group_income": "51214",
+      "ej": "Yes",
+      "criteria": "Minority, income and English isolation"
+    },
+    {
+      "municipality": "Falmouth",
+      "population": "1237",
+      "minority_pct": "13.9854",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "55057",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Falmouth",
+      "population": "861",
+      "minority_pct": "13.4727",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "29583",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Falmouth",
+      "population": "1128",
+      "minority_pct": "12.8546",
+      "limited_english_hh_pct": "1.0363",
+      "block_group_income": "27396",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Mashpee",
+      "population": "1312",
+      "minority_pct": "25.6098",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "70129",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1113",
+      "minority_pct": "53.549",
+      "limited_english_hh_pct": "14.9682",
+      "block_group_income": "54000",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1350",
+      "minority_pct": "42.1481",
+      "limited_english_hh_pct": "11.5337",
+      "block_group_income": "26339",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1494",
+      "minority_pct": "53.1459",
+      "limited_english_hh_pct": "17.8571",
+      "block_group_income": "43750",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "982",
+      "minority_pct": "33.0957",
+      "limited_english_hh_pct": "2.7426",
+      "block_group_income": "28929",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "842",
+      "minority_pct": "41.8052",
+      "limited_english_hh_pct": "3.3399",
+      "block_group_income": "28094",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1284",
+      "minority_pct": "50.0779",
+      "limited_english_hh_pct": "4.6296",
+      "block_group_income": "58631",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1139",
+      "minority_pct": "49.4293",
+      "limited_english_hh_pct": "8.8496",
+      "block_group_income": "52757",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Bourne",
+      "population": "596",
+      "minority_pct": "4.698",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "42569",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Bourne",
+      "population": "797",
+      "minority_pct": "32.4969",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "53108",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Falmouth",
+      "population": "1336",
+      "minority_pct": "11.976",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "49643",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Falmouth",
+      "population": "1299",
+      "minority_pct": "18.3988",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "53571",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Barnstable",
+      "population": "1040",
+      "minority_pct": "34.3269",
+      "limited_english_hh_pct": "25.5411",
+      "block_group_income": "64286",
+      "ej": "Yes",
+      "criteria": "Minority and English isolation"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "1117",
+      "minority_pct": "27.6634",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "50208",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "664",
+      "minority_pct": "44.2771",
+      "limited_english_hh_pct": "1.9337",
+      "block_group_income": "29137",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "1116",
+      "minority_pct": "47.4014",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "21033",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Taunton",
+      "population": "1284",
+      "minority_pct": "37.0717",
+      "limited_english_hh_pct": "10.1839",
+      "block_group_income": "19327",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Taunton",
+      "population": "742",
+      "minority_pct": "39.3531",
+      "limited_english_hh_pct": "3.8567",
+      "block_group_income": "74057",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Taunton",
+      "population": "1279",
+      "minority_pct": "35.4965",
+      "limited_english_hh_pct": "13.036",
+      "block_group_income": "36908",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "North Attleborough",
+      "population": "1962",
+      "minority_pct": "30.632",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "80625",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Attleboro",
+      "population": "1492",
+      "minority_pct": "22.118",
+      "limited_english_hh_pct": "2.656",
+      "block_group_income": "30203",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Attleboro",
+      "population": "1157",
+      "minority_pct": "18.4097",
+      "limited_english_hh_pct": "4.5317",
+      "block_group_income": "52409",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Attleboro",
+      "population": "1086",
+      "minority_pct": "26.0589",
+      "limited_english_hh_pct": "20.915",
+      "block_group_income": "55769",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Attleboro",
+      "population": "1603",
+      "minority_pct": "54.7099",
+      "limited_english_hh_pct": "9.0416",
+      "block_group_income": "45574",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Attleboro",
+      "population": "958",
+      "minority_pct": "45.4071",
+      "limited_english_hh_pct": "2.6163",
+      "block_group_income": "59667",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Eastham",
+      "population": "630",
+      "minority_pct": "7.4603",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "37168",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Dennis",
+      "population": "834",
+      "minority_pct": "10.9113",
+      "limited_english_hh_pct": "9.8191",
+      "block_group_income": "49598",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Dennis",
+      "population": "768",
+      "minority_pct": "16.7969",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "50714",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "1462",
+      "minority_pct": "13.7483",
+      "limited_english_hh_pct": "2.2754",
+      "block_group_income": "49856",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Lenox",
+      "population": "473",
+      "minority_pct": "8.0338",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "36875",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "North Adams",
+      "population": "1439",
+      "minority_pct": "22.3072",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "29922",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Adams",
+      "population": "717",
+      "minority_pct": "9.3445",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "35000",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Adams",
+      "population": "1259",
+      "minority_pct": "13.3439",
+      "limited_english_hh_pct": "2.7523",
+      "block_group_income": "38409",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Adams",
+      "population": "1768",
+      "minority_pct": "10.0679",
+      "limited_english_hh_pct": "0.7463",
+      "block_group_income": "44457",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Stockbridge",
+      "population": "842",
+      "minority_pct": "8.7886",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "31875",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Savoy",
+      "population": "645",
+      "minority_pct": "8.2171",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "47200",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Becket",
+      "population": "1199",
+      "minority_pct": "7.9233",
+      "limited_english_hh_pct": "0.3497",
+      "block_group_income": "50270",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Hinsdale",
+      "population": "574",
+      "minority_pct": "4.1812",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "54241",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Mansfield",
+      "population": "2023",
+      "minority_pct": "24.8146",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "73080",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Taunton",
+      "population": "1791",
+      "minority_pct": "25.7398",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "55284",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Taunton",
+      "population": "1839",
+      "minority_pct": "34.6928",
+      "limited_english_hh_pct": "4.8301",
+      "block_group_income": "54531",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Taunton",
+      "population": "1569",
+      "minority_pct": "35.5003",
+      "limited_english_hh_pct": "19.8263",
+      "block_group_income": "34078",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Bourne",
+      "population": "713",
+      "minority_pct": "4.4881",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "31266",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "1582",
+      "minority_pct": "28.6979",
+      "limited_english_hh_pct": "2.0154",
+      "block_group_income": "20833",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "660",
+      "minority_pct": "27.1212",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "32054",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "642",
+      "minority_pct": "38.4735",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "49773",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "892",
+      "minority_pct": "38.2287",
+      "limited_english_hh_pct": "1.9737",
+      "block_group_income": "24948",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "790",
+      "minority_pct": "35.8228",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "53125",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "619",
+      "minority_pct": "41.0339",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "36250",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "657",
+      "minority_pct": "40.7915",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "70375",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Adams",
+      "population": "995",
+      "minority_pct": "9.1457",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "44487",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Great Barrington",
+      "population": "647",
+      "minority_pct": "14.5286",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "53654",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "2050",
+      "minority_pct": "15.0244",
+      "limited_english_hh_pct": "0.8867",
+      "block_group_income": "33083",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "North Adams",
+      "population": "764",
+      "minority_pct": "14.1361",
+      "limited_english_hh_pct": "3.1325",
+      "block_group_income": "46349",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Adams",
+      "population": "1039",
+      "minority_pct": "8.2772",
+      "limited_english_hh_pct": "3.8855",
+      "block_group_income": "53060",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Dalton",
+      "population": "853",
+      "minority_pct": "8.9097",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "48564",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Dalton",
+      "population": "819",
+      "minority_pct": "6.7155",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "50667",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Dalton",
+      "population": "582",
+      "minority_pct": "9.9656",
+      "limited_english_hh_pct": "9.3023",
+      "block_group_income": "49167",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Lee",
+      "population": "956",
+      "minority_pct": "15.795",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "55144",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Adams",
+      "population": "983",
+      "minority_pct": "12.0041",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "54680",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Lenox",
+      "population": "1045",
+      "minority_pct": "4.689",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "48182",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Williamstown",
+      "population": "1815",
+      "minority_pct": "32.9477",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "101833",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "North Adams",
+      "population": "698",
+      "minority_pct": "11.8911",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "34000",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Sheffield",
+      "population": "508",
+      "minority_pct": "8.2677",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "49071",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "North Adams",
+      "population": "2145",
+      "minority_pct": "14.6853",
+      "limited_english_hh_pct": "4.0816",
+      "block_group_income": "42461",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "North Adams",
+      "population": "915",
+      "minority_pct": "10.8197",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "51746",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "792",
+      "minority_pct": "34.8485",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "59129",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Great Barrington",
+      "population": "738",
+      "minority_pct": "25.0678",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "60625",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Great Barrington",
+      "population": "728",
+      "minority_pct": "18.4066",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "38333",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "647",
+      "minority_pct": "26.2751",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "70774",
+      "ej": "Yes",
+      "criteria": "Minority"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "603",
+      "minority_pct": "32.67",
+      "limited_english_hh_pct": "3.3816",
+      "block_group_income": "20451",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "1160",
+      "minority_pct": "40.1724",
+      "limited_english_hh_pct": "3.2727",
+      "block_group_income": "23990",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "601",
+      "minority_pct": "13.9767",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "41250",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "1083",
+      "minority_pct": "30.2862",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "41400",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "Pittsfield",
+      "population": "962",
+      "minority_pct": "24.948",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "47596",
+      "ej": "Yes",
+      "criteria": "Minority and income"
+    },
+    {
+      "municipality": "North Adams",
+      "population": "2020",
+      "minority_pct": "13.2178",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "45347",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "North Adams",
+      "population": "1008",
+      "minority_pct": "14.2857",
+      "limited_english_hh_pct": "0",
+      "block_group_income": "55139",
+      "ej": "Yes",
+      "criteria": "Income"
+    },
+    {
+      "municipality": "Yarmouth",
+      "population": "799",
+      "minority_pct": "23.9049",
+      "limited_english_hh_pct": "2.719",
+      "block_group_income": "39141",
+      "ej": "Yes",
+      "criteria": "Income"
+    }
+  ]
+}

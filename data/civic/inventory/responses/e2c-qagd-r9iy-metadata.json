@@ -1,0 +1,99 @@
+{
+  "id" : "qagd-r9iy",
+  "name" : "MCAS Data Trends",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1695152281,
+  "description" : "These interactive charts explore trends in MCAS results by district and school.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 39979227,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1695243582,
+  "publicationGroup" : 19294514,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1695152281,
+  "tableId" : 19294514,
+  "totalTimesRated" : 0,
+  "viewCount" : 50182,
+  "viewLastModified" : 1790192802,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1727272679,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6561219,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1727272661,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "aurd-vfnd",
+      "displayName" : "Sam Ribnick"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1727272679,
+      "failureCount" : 0,
+      "startedAt" : 1727272679,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "aurd-vfnd",
+      "displayName" : "Sam Ribnick"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "Use this interactive chart to view trends in MCAS results by school district since 2017.",
+      "title" : "MCAS Data Trends"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "mcas", "k-12", "test", "assessment", "standardized test", "ela", "english", "math", "science", "civics", "meeting expectations", "not meeting expectations", "exceeding expectations" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

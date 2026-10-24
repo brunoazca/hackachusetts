@@ -1,0 +1,515 @@
+{
+  "dataset": "mbta-stations",
+  "source": "data/civic/datasets/mbta-stations/data.csv",
+  "source_sha256": "aba32080532d4f2397f30040d4e03d11a0fa70ace8c5b20df64c4a8b191672d0",
+  "total_snapshot_rows": 170,
+  "preview_rows": 100,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "station",
+    "line",
+    "route"
+  ],
+  "records": [
+    {
+      "station": "Park Street",
+      "line": "GREEN/RED",
+      "route": "GREEN B C D E / RED A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "JFK/UMass",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "State",
+      "line": "BLUE/ORANGE",
+      "route": "BLUE Bowdoin to Wonderland / ORANGE Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Roxbury Crossing",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Airport Terminal B2",
+      "line": "SILVER",
+      "route": "SL1"
+    },
+    {
+      "station": "Design Center",
+      "line": "SILVER",
+      "route": "SL2"
+    },
+    {
+      "station": "Lenox St",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Massachusetts Ave",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "West Newton Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Union Park Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "East Berkeley Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Herald Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Worcester Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Melnea Cass Blvd",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Tufts Medical Center",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Tide St",
+      "line": "SILVER",
+      "route": "SL2"
+    },
+    {
+      "station": "Harbor St",
+      "line": "SILVER",
+      "route": "SL2"
+    },
+    {
+      "station": "Airport Terminal B1",
+      "line": "SILVER",
+      "route": "SL1"
+    },
+    {
+      "station": "Airport Terminal A",
+      "line": "SILVER",
+      "route": "SL1"
+    },
+    {
+      "station": "Airport Terminal C",
+      "line": "SILVER",
+      "route": "SL1"
+    },
+    {
+      "station": "Airport Terminal E",
+      "line": "SILVER",
+      "route": "SL1"
+    },
+    {
+      "station": "Silver Line Way",
+      "line": "SILVER",
+      "route": "SL1 SL2 SL3"
+    },
+    {
+      "station": "World Trade Center",
+      "line": "SILVER",
+      "route": "SL1 SL2 SL3"
+    },
+    {
+      "station": "Courthouse",
+      "line": "SILVER",
+      "route": "SL1 SL2 SL3"
+    },
+    {
+      "station": "South Station",
+      "line": "SILVER",
+      "route": "SL1 SL2 SL3"
+    },
+    {
+      "station": "88 Black Falcon Ave",
+      "line": "SILVER",
+      "route": "SL2"
+    },
+    {
+      "station": "23 Dry Dock Ave",
+      "line": "SILVER",
+      "route": "SL2"
+    },
+    {
+      "station": "27 Dry Dock Ave",
+      "line": "SILVER",
+      "route": "SL2"
+    },
+    {
+      "station": "Tremont St @ Boylston Station",
+      "line": "SILVER",
+      "route": "SL5"
+    },
+    {
+      "station": "Temple Pl @ Washington St",
+      "line": "SILVER",
+      "route": "SL5"
+    },
+    {
+      "station": "Chinatown Gate",
+      "line": "SILVER",
+      "route": "SL4"
+    },
+    {
+      "station": "Nubian",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Essex St @ Atlantic Ave",
+      "line": "SILVER",
+      "route": "SL4"
+    },
+    {
+      "station": "Northern Ave",
+      "line": "SILVER",
+      "route": "SL2"
+    },
+    {
+      "station": "Melnea Cass Blvd",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Lenox St",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Massachusetts Ave",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Worcester Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "West Newton Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Union Park Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "East Berkeley Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Herald Street",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Hynes Convention Center",
+      "line": "GREEN",
+      "route": "B C D"
+    },
+    {
+      "station": "Blandford Street",
+      "line": "GREEN",
+      "route": "B - Boston College"
+    },
+    {
+      "station": "Boston University East",
+      "line": "GREEN",
+      "route": "B - Boston College"
+    },
+    {
+      "station": "Magoun Square",
+      "line": "GREEN",
+      "route": "E - Medford/Tufts"
+    },
+    {
+      "station": "Ball Square",
+      "line": "GREEN",
+      "route": "E - Medford/Tufts"
+    },
+    {
+      "station": "Union Square",
+      "line": "GREEN",
+      "route": "D - Union Square"
+    },
+    {
+      "station": "East Somerville",
+      "line": "GREEN",
+      "route": "E - Medford/Tufts"
+    },
+    {
+      "station": "Medford/Tufts",
+      "line": "GREEN",
+      "route": "E - Medford/Tufts"
+    },
+    {
+      "station": "Lechmere",
+      "line": "GREEN",
+      "route": "D E"
+    },
+    {
+      "station": "Gilman Square",
+      "line": "GREEN",
+      "route": "E - Medford/Tufts"
+    },
+    {
+      "station": "Tufts Medical Center",
+      "line": "SILVER",
+      "route": "SL4 SL5"
+    },
+    {
+      "station": "Black Falcon Ave",
+      "line": "SILVER",
+      "route": "SL2"
+    },
+    {
+      "station": "Assembly",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Ashmont",
+      "line": "RED",
+      "route": "A - Ashmont  C - Alewife"
+    },
+    {
+      "station": "Harvard",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Kendall/MIT",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Capen Street",
+      "line": "RED",
+      "route": "Mattapan Trolley"
+    },
+    {
+      "station": "Tufts Medical Center",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Waban",
+      "line": "GREEN",
+      "route": "D - Riverside"
+    },
+    {
+      "station": "Kenmore",
+      "line": "GREEN",
+      "route": "B C D"
+    },
+    {
+      "station": "Arlington",
+      "line": "GREEN",
+      "route": "B C D E"
+    },
+    {
+      "station": "Copley",
+      "line": "GREEN",
+      "route": "B C D E"
+    },
+    {
+      "station": "Boylston",
+      "line": "GREEN",
+      "route": "B C D E"
+    },
+    {
+      "station": "Chinatown",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Haymarket",
+      "line": "GREEN/ORANGE",
+      "route": "GREEN D E / ORANGE Forest Hills to Oak Grove"
+    },
+    {
+      "station": "North Station",
+      "line": "GREEN/ORANGE",
+      "route": "GREEN D E / ORANGE Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Davis",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "South Station",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Oak Grove",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Malden Center",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Wellington",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Sullivan Square",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Community College",
+      "line": "ORANGE",
+      "route": "Forest Hills to Oak Grove"
+    },
+    {
+      "station": "Science Park/West End",
+      "line": "GREEN",
+      "route": "D E"
+    },
+    {
+      "station": "Bowdoin",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Government Center",
+      "line": "BLUE/GREEN",
+      "route": "BLUE Bowdoin to Wonderland / GREEN B C D E"
+    },
+    {
+      "station": "Aquarium",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Maverick",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Airport",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Wood Island",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Orient Heights",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Suffolk Downs",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Beachmont",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Revere Beach",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Wonderland",
+      "line": "BLUE",
+      "route": "Bowdoin to Wonderland"
+    },
+    {
+      "station": "Alewife",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Porter",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Central",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Charles/MGH",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Broadway",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Andrew",
+      "line": "RED",
+      "route": "A - Ashmont  B - Braintree  C - Alewife"
+    },
+    {
+      "station": "Savin Hill",
+      "line": "RED",
+      "route": "A - Ashmont  C - Alewife"
+    },
+    {
+      "station": "Fields Corner",
+      "line": "RED",
+      "route": "A - Ashmont  C - Alewife"
+    },
+    {
+      "station": "Shawmut",
+      "line": "RED",
+      "route": "A - Ashmont  C - Alewife"
+    },
+    {
+      "station": "Cedar Grove",
+      "line": "RED",
+      "route": "Mattapan Trolley"
+    },
+    {
+      "station": "Butler",
+      "line": "RED",
+      "route": "Mattapan Trolley"
+    },
+    {
+      "station": "Milton",
+      "line": "RED",
+      "route": "Mattapan Trolley"
+    },
+    {
+      "station": "Central Avenue",
+      "line": "RED",
+      "route": "Mattapan Trolley"
+    }
+  ]
+}

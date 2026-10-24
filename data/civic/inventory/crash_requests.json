@@ -1,0 +1,3228 @@
+[
+  {
+    "id": "crash-link-7b91a942a144",
+    "url": "https://labs.bostoncyclistsunion.org",
+    "name": "Boston Cyclists Union Labs",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:13.667551+00:00",
+    "http_status": 200,
+    "final_url": "https://labs.bostoncyclistsunion.org/",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 3717,
+    "content_length": "3717",
+    "etag": "\"6ac5c279-e85\"",
+    "last_modified": "Wed, 07 Oct 2026 03:54:33 GMT",
+    "response_sha256": "8741ba32656860f744013ad4eb7134436f76ee9e21870acafa081104e3a8fb6b",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "BCU Labs",
+    "excerpt": "BCU Labs Welcome to BCU Labs! Experiments in data-backed advocacy We are a volunteer-driven group within Boston Cyclists Union . You can join BCU Labs",
+    "outbound_links": [
+      {
+        "url": "https://labs.bostoncyclistsunion.org/",
+        "label": ""
+      },
+      {
+        "url": "https://BostonCyclistsUnion.org",
+        "label": "Boston Cyclists Union"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSefzxEQ-CAbJd_rrt90DHvdglYvP9RLqdDUVsFq28onw9xXJQ/viewform",
+        "label": "Join BCU Labs here"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/BetterRoutes/",
+        "label": "Suggest Bike Routes Tell us where you want to bike in Boston"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/ProjectTracker/",
+        "label": "Project Tracker Track Boston area micromobility projects"
+      },
+      {
+        "url": "https://landway.BostonCyclistsUnion.org",
+        "label": "Landway Map Mobility network vision"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/stressmap/",
+        "label": "Bike Stress Map See how stressful Boston's streets are"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/crashes/",
+        "label": "Crash Map See where crashes have been reported"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/intersections/",
+        "label": "Forgotten Intersections Where are intersections designed for bikes?"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/BikeParking/",
+        "label": "Bike Parking Where can you park your bike?"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/map/",
+        "label": "BCU Labs Projects Map Explore multiple of our projects at the same time"
+      },
+      {
+        "url": "https://BostonCyclistsUnion.org/author/bcu-labs",
+        "label": "Articles Data analysis, stories, infrastructure projects, and more"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/labs-website",
+        "label": "Source Code"
+      },
+      {
+        "url": "https://secure.everyaction.com/mfRgF-hjuEueYqUtvn9Jeg2",
+        "label": "Donate"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-3c9a8cd4a5ba",
+    "url": "https://geodot.mass.gov/search?groupIds=1816c66377f9495ba6baa72515494d2c",
+    "name": "https://geodot.mass.gov/search?groupIds=1816c66377f9495ba6baa72515494d2c",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:13.733272+00:00",
+    "http_status": 200,
+    "final_url": "https://geodot.mass.gov/search?groupIds=1816c66377f9495ba6baa72515494d2c",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 169059,
+    "content_length": "169059",
+    "etag": "W/\"29463-wznPAiJn2Kbw3Gk/5XpGqQjteiY\"",
+    "last_modified": null,
+    "response_sha256": "49688e6f4621b64a7b78a44c8a0e43cb4028bfffa55079465b8580c59b1d2b02",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "geoDOT",
+    "excerpt": "geoDOT",
+    "outbound_links": [],
+    "content_note": "JavaScript shell or very little readable HTML; content not independently extracted."
+  },
+  {
+    "id": "crash-link-4e27458f1e36",
+    "url": "https://geodot.mass.gov/datasets/b42f2c990f784716b320ae0499886591_0/api",
+    "name": "https://geodot.mass.gov/datasets/b42f2c990f784716b320ae0499886591_0/api",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:13.736264+00:00",
+    "http_status": 200,
+    "final_url": "https://geodot.mass.gov/datasets/b42f2c990f784716b320ae0499886591_0/api",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 169158,
+    "content_length": "169158",
+    "etag": "W/\"294c6-CDc3yQ7PJkP1fd20BXRv++ML5PE\"",
+    "last_modified": null,
+    "response_sha256": "a50df616f646a5892e2a9ccd251f27cfcb05609ac3e49b9871ea4a3cdb788e4e",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "2024 Crashes",
+    "excerpt": "2024 Crashes",
+    "outbound_links": [],
+    "content_note": "JavaScript shell or very little readable HTML; content not independently extracted."
+  },
+  {
+    "id": "crash-link-dc7252132240",
+    "url": "https://data.boston.gov/organization/vision-zero-boston-program",
+    "name": "https://data.boston.gov/organization/vision-zero-boston-program",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:13.748096+00:00",
+    "http_status": 200,
+    "final_url": "https://data.boston.gov/organization/vision-zero-boston-program",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 35718,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "bd72afbaa3043ea559ca81b223164d7e58a1f9031e92b29d527c70d06ce9a26b",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Vision Zero Boston - Organizations - Analyze Boston",
+    "excerpt": "Vision Zero Boston - Organizations - Analyze Boston Skip to content Log in Home Boston.gov Showcases News Datasets Organizations Topics Tips for Users About Log",
+    "outbound_links": [
+      {
+        "url": "https://data.boston.gov/organization/vision-zero-boston-program",
+        "label": "Datasets"
+      },
+      {
+        "url": "https://data.boston.gov/user/login",
+        "label": "Log in"
+      },
+      {
+        "url": "https://data.boston.gov/",
+        "label": "Home"
+      },
+      {
+        "url": "https://www.boston.gov/",
+        "label": ""
+      },
+      {
+        "url": "https://data.boston.gov/showcase",
+        "label": "Showcases"
+      },
+      {
+        "url": "https://www.boston.gov/news?title=&field_contact_target_id%5B%5D=1691&field_published_date_value%5Bmin%5D%5Bdate%5D=&field_published_date_value%5Bmax%5D%5Bdate%5D=",
+        "label": "News"
+      },
+      {
+        "url": "https://data.boston.gov/dataset/",
+        "label": "Datasets"
+      },
+      {
+        "url": "https://data.boston.gov/organization/",
+        "label": "Organizations"
+      },
+      {
+        "url": "https://data.boston.gov/group/",
+        "label": "Topics"
+      },
+      {
+        "url": "https://data.boston.gov/pages/ckan-training-videos",
+        "label": "Tips for Users"
+      },
+      {
+        "url": "https://data.boston.gov/about",
+        "label": "About Analyze Boston"
+      },
+      {
+        "url": "https://forms.gle/u8J13xqjtdHj9AF18",
+        "label": "Help and Feedback"
+      },
+      {
+        "url": "https://www.boston.gov/news",
+        "label": "News"
+      },
+      {
+        "url": "https://data.boston.gov/organization/about/vision-zero-boston-program",
+        "label": "About"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?organization=vision-zero-boston-program",
+        "label": "Vision Zero Boston - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=accidents",
+        "label": "accidents - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=bikes",
+        "label": "bikes - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=cars",
+        "label": "cars - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=crashes",
+        "label": "crashes - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=pedestrians",
+        "label": "pedestrians - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=safety",
+        "label": "safety - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=streets",
+        "label": "streets - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=traffic",
+        "label": "traffic - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=vision+zero",
+        "label": "vision zero - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?tags=fatalities",
+        "label": "fatalities - 1"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?_tags_limit=0",
+        "label": "Show More Tags"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?res_format=CSV",
+        "label": "CSV - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/4599ef4f-38ad-4435-a8c4-f15ee844c743?license_id=odc-pddl",
+        "label": "Open Data Commons P... - 2"
+      },
+      {
+        "url": "https://data.boston.gov/organization/activity/vision-zero-boston-program/0",
+        "label": "Activity Stream"
+      },
+      {
+        "url": "https://data.boston.gov/dataset/vision-zero-crash-records",
+        "label": "CSV"
+      },
+      {
+        "url": "https://data.boston.gov/dataset/vision-zero-fatality-records",
+        "label": "CSV"
+      },
+      {
+        "url": "https://www.boston.gov/departments/mayors-office/michelle-wu",
+        "label": "Mayor Michelle Wu"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/api/index.html",
+        "label": "API Documentation"
+      },
+      {
+        "url": "https://www.boston.gov/departments/analytics-team",
+        "label": "Analytics Team"
+      },
+      {
+        "url": "https://www.boston.gov/departments/innovation-and-technology",
+        "label": "DoIT"
+      },
+      {
+        "url": "https://data.boston.gov/pages/glossary",
+        "label": "Glossary"
+      },
+      {
+        "url": "https://forms.gle/coCZfSco7xgcpVJK9",
+        "label": "Help & Feedback Form"
+      },
+      {
+        "url": "https://opengov.com/?utm_campaign=Footer-Product-OpenData&utm_source=OpenGov&utm_medium=product&utm_term=PO-OGOV-1274&utm_content=logo",
+        "label": ""
+      },
+      {
+        "url": "https://ckan.org",
+        "label": "CKAN"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-71aa3a5619f5",
+    "url": "https://data.boston.gov/api/3/action/package_list",
+    "name": "https://data.boston.gov/api/3/action/package_list",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:13.529160+00:00",
+    "http_status": 200,
+    "final_url": "https://data.boston.gov/api/3/action/package_list",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 8416,
+    "content_length": "8416",
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "e02416f38ca15d887f7c900fcf5b85c675d1c7fdbfdefec92b705aaf21854554",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "help",
+      "success",
+      "result"
+    ],
+    "local_path": "data/civic/inventory/responses/crash-link-71aa3a5619f5.json",
+    "local_sha256": "e02416f38ca15d887f7c900fcf5b85c675d1c7fdbfdefec92b705aaf21854554"
+  },
+  {
+    "id": "crash-link-b3c4a6285ba7",
+    "url": "https://docs.ckan.org/en/latest/api/index.html",
+    "name": "https://docs.ckan.org/en/latest/api/index.html",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:13.987008+00:00",
+    "http_status": 200,
+    "final_url": "https://docs.ckan.org/en/latest/api/index.html",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 519782,
+    "content_length": null,
+    "etag": "W/\"2f5492f9fba70935388d367044393082\"",
+    "last_modified": "Wed, 07 Oct 2026 05:44:25 GMT",
+    "response_sha256": "15626d2abc0d24c394d3bb4634290fe7bfb9278d4e4c04b034375f9e31edb30b",
+    "error": null,
+    "access": "blocked_page",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "API guide — CKAN 2.13.0a0 documentation",
+    "excerpt": "API guide — CKAN 2.13.0a0 documentation Warning This is the documentation for the latest development version of CKAN, which may be unstable. For other stable",
+    "outbound_links": [
+      {
+        "url": "https://docs.ckan.org/en/latest/contents.html",
+        "label": ""
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/user-guide.html",
+        "label": "User guide"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/sysadmin-guide.html",
+        "label": "Sysadmin guide"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/maintaining/index.html",
+        "label": "Maintainer’s guide"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/api/index.html",
+        "label": ""
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/api/legacy-api.html",
+        "label": ""
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/extensions/index.html",
+        "label": "Extending guide"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/theming/index.html",
+        "label": "Theming guide"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/contributing/index.html",
+        "label": "Contributing guide"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/changelog.html",
+        "label": "Changelog"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/_sources/api/index.rst.txt",
+        "label": "View page source"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/maintaining/filestore.html",
+        "label": "Upload"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/maintaining/datastore.html",
+        "label": "DataStore extension"
+      },
+      {
+        "url": "https://curl.haxx.se/",
+        "label": "Curl"
+      },
+      {
+        "url": "https://github.com/ckan/ckanapi",
+        "label": "ckanapi Python library"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/maintaining/configuration.html",
+        "label": "Previous"
+      },
+      {
+        "url": "https://addons.mozilla.org/en-us/firefox/addon/jsonview/",
+        "label": "JSONView for Firefox"
+      },
+      {
+        "url": "https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc",
+        "label": "Chrome"
+      },
+      {
+        "url": "https://data.hdx.rwlabs.org/api/3/action/package_search?fq=vocab_Topics:education",
+        "label": "https://data.hdx.rwlabs.org/api/3/action/package_search?fq=vocab_Topics:education"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/extensions/plugin-interfaces.html",
+        "label": "files_get_location_transformers()"
+      },
+      {
+        "url": "https://lucene.apache.org/solr/guide/6_6/common-query-parameters.html",
+        "label": "Solr Documentation"
+      },
+      {
+        "url": "https://docs.ckan.org/en/latest/extensions/remote-config-update.html",
+        "label": "Making configuration options runtime-editable"
+      },
+      {
+        "url": "https://okfn.org/",
+        "label": "Open Knowledge Foundation"
+      },
+      {
+        "url": "https://github.com/ckan/ckan/graphs/contributors",
+        "label": "contributors"
+      },
+      {
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "label": "Creative Commons Attribution ShareAlike (Unported) v3.0 License"
+      },
+      {
+        "url": "https://opendefinition.org/",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/ckan/ckan",
+        "label": "Source"
+      },
+      {
+        "url": "https://github.com/ckan/ckan/issues",
+        "label": "Issues"
+      },
+      {
+        "url": "https://groups.google.com/a/ckan.org/g/ckan-dev",
+        "label": "Mailing List"
+      },
+      {
+        "url": "https://github.com/snide/sphinx_rtd_theme",
+        "label": "Sphinx theme"
+      },
+      {
+        "url": "https://readthedocs.org",
+        "label": "Read the Docs"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-317d8d7bd079",
+    "url": "https://data.cambridgema.gov/Public-Safety/CPD-Crash-Log/h6fp-bp8s/",
+    "name": "https://data.cambridgema.gov/Public-Safety/CPD-Crash-Log/h6fp-bp8s/",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.234096+00:00",
+    "http_status": 200,
+    "final_url": "https://data.cambridgema.gov/Public-Safety/CPD-Crash-Log/h6fp-bp8s/",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 554294,
+    "content_length": null,
+    "etag": "W/\"17ff419922c7d5955ff6236ff23cb616\"",
+    "last_modified": null,
+    "response_sha256": "17ff419922c7d5955ff6236ff23cb616f2774b7d38b6e80a7e74c549eef3162c",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "CPD Crash Log | Open Data Portal | City of Cambridge",
+    "excerpt": "CPD Crash Log | Open Data Portal | City of Cambridge Skip to main content City of Cambridge Open Data Portal City of Cambridge Developers",
+    "outbound_links": [
+      {
+        "url": "https://data.cambridgema.gov/Public-Safety/CPD-Crash-Log/h6fp-bp8s/",
+        "label": "Menu"
+      },
+      {
+        "url": "https://data.cambridgema.gov/",
+        "label": "City of Cambridge Open Data Portal"
+      },
+      {
+        "url": "https://data.cambridgema.gov/login",
+        "label": "Sign In"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-964591a3ca78",
+    "url": "https://data.cambridgema.gov/resource/h6fp-bp8s.json",
+    "name": "https://data.cambridgema.gov/resource/h6fp-bp8s.json",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.123439+00:00",
+    "http_status": 200,
+    "final_url": "https://data.cambridgema.gov/resource/h6fp-bp8s.json",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 228265,
+    "content_length": null,
+    "etag": "W/\"aG90ZWwuNjU1MTlfMV8xMTk4UFJpcnZDS0VIdFgxb2FTR0NDVXpwcmk5V0Nr---gzipZsDfKyZxeu0Msgnry0Tg1eodD0M--gzip--gzip\"",
+    "last_modified": "Fri, 23 Oct 2026 16:01:24 GMT",
+    "response_sha256": "e29101afa7fba4d73120acca3fd160c5f26b0e87faaac4bfb32b26aa314522c5",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "returned_rows": 1000,
+    "row_fields": [
+      "datetime",
+      "address_number",
+      "address_street",
+      "motorists",
+      "cyclists",
+      "pedestrians",
+      "injuries",
+      "hospitalizations",
+      "neighborhood"
+    ],
+    "local_path": "data/civic/inventory/responses/crash-link-964591a3ca78.json",
+    "local_sha256": "e29101afa7fba4d73120acca3fd160c5f26b0e87faaac4bfb32b26aa314522c5"
+  },
+  {
+    "id": "crash-link-5d695a3829ed",
+    "url": "https://data.somervillema.gov/Public-Safety/Police-Data-Crashes/mtik-28va",
+    "name": "https://data.somervillema.gov/Public-Safety/Police-Data-Crashes/mtik-28va",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.500579+00:00",
+    "http_status": 200,
+    "final_url": "https://data.somervillema.gov/Public-Safety/Police-Data-Crashes/mtik-28va",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 611453,
+    "content_length": null,
+    "etag": "W/\"26dad35de8dd732c880b6cd2d4fe11ac\"",
+    "last_modified": null,
+    "response_sha256": "26dad35de8dd732c880b6cd2d4fe11ac87ea3f413094d195a9dd8a6e200b001b",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Police Data: Crashes | City of Somerville, MA",
+    "excerpt": "Police Data: Crashes | City of Somerville, MA Skip to main content Somerville, MA City of Somerville Help Data Catalog Search Search Sign In Menu",
+    "outbound_links": [
+      {
+        "url": "https://data.somervillema.gov/Public-Safety/Police-Data-Crashes/mtik-28va",
+        "label": "Menu"
+      },
+      {
+        "url": "https://data.somervillema.gov/browse?sortBy=newest&utf8=%E2%9C%93",
+        "label": "Somerville, MA"
+      },
+      {
+        "url": "https://data.somervillema.gov/browse",
+        "label": "Data Catalog"
+      },
+      {
+        "url": "https://data.somervillema.gov/login",
+        "label": "Sign In"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-dc43e537c0c5",
+    "url": "https://data.somervillema.gov/resource/mtik-28va.json",
+    "name": "https://data.somervillema.gov/resource/mtik-28va.json",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.596056+00:00",
+    "http_status": 200,
+    "final_url": "https://data.somervillema.gov/resource/mtik-28va.json",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 1292347,
+    "content_length": null,
+    "etag": "W/\"aW5kaWEuMzMwMzFfMl85MTBmNnAyU2o2Q2xDMXNoTERIRHdmYkU5UFFrenc---gzir2fDGI4wiTj0JLY4lTdEYfjI38PQ--gzip--gzip\"",
+    "last_modified": "Sat, 24 Oct 2026 06:02:30 GMT",
+    "response_sha256": "1199740398cb2cbae5a14fe3310d9a277faa5088fc7e1e30eba01b2631c9f87d",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "returned_rows": 1000,
+    "row_fields": [
+      "crashnum",
+      "dtcrash",
+      "policeshift",
+      "address",
+      "ambntlightdesc",
+      "weathcond1desc",
+      "roadsurfdesc",
+      "roadcontribdesc",
+      "trafcntrltypedesc",
+      "rdwyjuncdesc",
+      "trafydescrdesc",
+      "manrcolldesc",
+      "hrmfeventdesc2",
+      "hrmfeventdesc1",
+      "speedlimit",
+      "workzonerelddesc",
+      "fatalinjury",
+      "suspectedseriousinjury",
+      "suspectedminorinjury",
+      "possibleinjury",
+      "noapparentinjury",
+      "unknown",
+      "notreported",
+      "numnonmotorist",
+      "nonmotoristpedestrian",
+      "nonmotoristcyclist",
+      "nonmotoristother",
+      "nonmtrstlocdesc",
+      "nonmtrstactdesc",
+      "nonmtrstconddesc",
+      "hitrunflag",
+      "latitude",
+      "longitude",
+      "blockcode"
+    ],
+    "local_path": "data/civic/inventory/responses/crash-link-dc43e537c0c5.json",
+    "local_sha256": "1199740398cb2cbae5a14fe3310d9a277faa5088fc7e1e30eba01b2631c9f87d"
+  },
+  {
+    "id": "crash-link-605a07aed5b6",
+    "url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Summarized-Crashes-Page?_gl=1%2A2u5jav%2A_ga%2AMTIzNDQyOTYzMS4xNzcxNTE3MjQ0%2A_ga_TVRXRVW1YN%2AczE3NzE1MTcyNDQkbzEkZzEkdDE3NzE1MTczNjkkajEyJGwwJGgw",
+    "name": "Boston Metro Planning Org and its Vision Zero maps and datasets",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.190569+00:00",
+    "http_status": 200,
+    "final_url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Summarized-Crashes-Page?_gl=1%2A2u5jav%2A_ga%2AMTIzNDQyOTYzMS4xNzcxNTE3MjQ0%2A_ga_TVRXRVW1YN%2AczE3NzE1MTcyNDQkbzEkZzEkdDE3NzE1MTczNjkkajEyJGwwJGgw",
+    "content_type": "text/html",
+    "curl_exit_code": 0,
+    "response_bytes": 5433,
+    "content_length": "5433",
+    "etag": "\"c98c69f8912ab37c0b4125a1728cef50\"",
+    "last_modified": "Fri, 24 Jul 2026 07:01:48 GMT",
+    "response_sha256": "d183d08124a3215b7d102a980bd27ab2d198233375ce2b9d085ee37511f9a184",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Experience",
+    "excerpt": "Experience",
+    "outbound_links": [],
+    "content_note": "JavaScript shell or very little readable HTML; content not independently extracted."
+  },
+  {
+    "id": "crash-link-7d993ed51f18",
+    "url": "https://www.mass.gov/info-details/highway-safety-improvement-program",
+    "name": "Highway Safety Manager Bonnie Polin",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.178257+00:00",
+    "http_status": 403,
+    "final_url": "https://www.mass.gov/info-details/highway-safety-improvement-program",
+    "content_type": "text/html",
+    "curl_exit_code": 0,
+    "response_bytes": 14062,
+    "content_length": "14062",
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "a103e7086ad077d2901d3388727d82fefead898d067a32f4b64d309fe1124a0b",
+    "error": null,
+    "access": "unavailable"
+  },
+  {
+    "id": "crash-link-ec16d4e099cd",
+    "url": "https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit?gid=1980353091",
+    "name": "Data Quality analysis in Google Sheet",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.651358+00:00",
+    "http_status": 200,
+    "final_url": "https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit?gid=1980353091",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 300907,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "7f8da4f235568719ca51e08959f237fb54e8438819e33df3d0c3319581875edd",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "data quality in mdot-4muni-2020-2025 - Google Sheets Loading...",
+    "excerpt": "data quality in mdot-4muni-2020-2025 - Google Sheets This browser version is no longer supported. Please upgrade to a supported browser. data quality in mdot-4muni-2020-2025 Share",
+    "outbound_links": [
+      {
+        "url": "https://docs.google.com/spreadsheets/?usp=sheets_web",
+        "label": ""
+      },
+      {
+        "url": "https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&osid=1&continue=https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit?gid%3D1980353091&followup=https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit?gid%3D1980353091&ltmpl=sheets&ec=GAZAmwI",
+        "label": "Sign in"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-b794b250a139",
+    "url": "https://jackdougherty.github.io/mass-lat-lng/",
+    "name": "simple demo map",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.393830+00:00",
+    "http_status": 200,
+    "final_url": "https://jackdougherty.github.io/mass-lat-lng/",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 2435,
+    "content_length": "2435",
+    "etag": "\"6ab83919-983\"",
+    "last_modified": "Sat, 26 Sep 2026 21:28:57 GMT",
+    "response_sha256": "c6073ac7601d350d44dd4b9cfa1099407ae1a9f32b00ee29c8ed015b2114cc06",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "leaflet-map-simple",
+    "excerpt": "leaflet-map-simple Demo ± 0.001 Lat Lng",
+    "outbound_links": [],
+    "content_note": "JavaScript shell or very little readable HTML; content not independently extracted."
+  },
+  {
+    "id": "crash-link-3839739d766c",
+    "url": "https://docs.google.com/spreadsheets/d/1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs/edit?gid=0",
+    "name": "2024 manually-cleaned data in this Google Sheet",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.629084+00:00",
+    "http_status": 200,
+    "final_url": "https://docs.google.com/spreadsheets/d/1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs/edit?gid=0",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 304847,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "5c44d2d927285163b9157567c579a26a6ccfd5f4cab1f8426c5f754715070418",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "boston-area-crashes-2024 - Google Sheets Loading...",
+    "excerpt": "boston-area-crashes-2024 - Google Sheets This browser version is no longer supported. Please upgrade to a supported browser. boston-area-crashes-2024 Share Sign in File Edit View Insert",
+    "outbound_links": [
+      {
+        "url": "https://docs.google.com/spreadsheets/?usp=sheets_web",
+        "label": ""
+      },
+      {
+        "url": "https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&osid=1&continue=https://docs.google.com/spreadsheets/d/1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs/edit?gid%3D0&followup=https://docs.google.com/spreadsheets/d/1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs/edit?gid%3D0&ltmpl=sheets&ec=GAZAmwI",
+        "label": "Sign in"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-c99d0e29b0b7",
+    "url": "https://bostonmpo.org",
+    "name": "Boston Region Metropolitan Planning Organization",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.645158+00:00",
+    "http_status": 200,
+    "final_url": "https://bostonmpo.org/",
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "response_bytes": 34509,
+    "content_length": "34509",
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "d20a242a9906a2b5b5e1491e2aac6988895673516d0c7acb3a32958fbbfb1d2b",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Home Page | Boston Region MPO",
+    "excerpt": "Home Page | Boston Region MPO Skip to main content Menu About Boston Region MPO Board Members Staff Careers Community Advisory Council Trending Topics Our",
+    "outbound_links": [
+      {
+        "url": "https://bostonmpo.org/",
+        "label": "Show and jump to slide 5"
+      },
+      {
+        "url": "https://bostonmpo.org/mpo",
+        "label": "Boston Region MPO"
+      },
+      {
+        "url": "https://bostonmpo.org/mpo_membership",
+        "label": "Board Members"
+      },
+      {
+        "url": "https://bostonmpo.org/ctps-staff",
+        "label": "Staff"
+      },
+      {
+        "url": "https://bostonmpo.org/careers",
+        "label": ""
+      },
+      {
+        "url": "https://bostonmpo.org/advisory-council",
+        "label": "Community Advisory Council"
+      },
+      {
+        "url": "https://bostonmpo.org/trending",
+        "label": "Trending Topics"
+      },
+      {
+        "url": "https://bostonmpo.org/lrtp",
+        "label": "Long-RangeTransportation Plan"
+      },
+      {
+        "url": "https://bostonmpo.org/tip",
+        "label": "Transportation Improvement Program"
+      },
+      {
+        "url": "https://bostonmpo.org/upwp",
+        "label": "Unified PlanningWork Program"
+      },
+      {
+        "url": "https://bostonmpo.org/no-heat",
+        "label": ""
+      },
+      {
+        "url": "https://bostonmpo.org/travel-demand-model",
+        "label": "Travel Demand Model"
+      },
+      {
+        "url": "https://bostonmpo.org/cmp",
+        "label": "CongestionManagement Process"
+      },
+      {
+        "url": "https://bostonmpo.org/cpt-hst",
+        "label": "CoordinatedPublic Transit-Human ServicesTransportation Plan"
+      },
+      {
+        "url": "https://bostonmpo.org/public-engagement",
+        "label": "Public Engagement"
+      },
+      {
+        "url": "https://bostonmpo.org/community-transportation-access",
+        "label": "Community Transportation Access Program"
+      },
+      {
+        "url": "https://bostonmpo.org/active-transportation-planning",
+        "label": "Active Transportation Planning"
+      },
+      {
+        "url": "https://bostonmpo.org/freight-planning",
+        "label": "Freight Planning"
+      },
+      {
+        "url": "https://bostonmpo.org/performance",
+        "label": "Performance-Based Planning and Programming"
+      },
+      {
+        "url": "https://bostonmpo.org/transit-working-group",
+        "label": "Transit Working Group"
+      },
+      {
+        "url": "https://bostonmpo.org/transportation-impact-mitigation",
+        "label": "Transportation Impact Mitigation"
+      },
+      {
+        "url": "https://bostonmpo.org/visionzero",
+        "label": ""
+      },
+      {
+        "url": "https://bostonmpo.org/technical-assistance-program",
+        "label": ""
+      },
+      {
+        "url": "https://bostonmpo.org/multimodal-mobility-infrastructure-program",
+        "label": "Multimodal Mobility Infrastructure Program"
+      },
+      {
+        "url": "https://bostonmpo.org/recent-studies",
+        "label": "Other Studies"
+      },
+      {
+        "url": "https://bostonmpo.org/recent_studies",
+        "label": "Bicycle and Pedestrian Studies"
+      },
+      {
+        "url": "https://bostonmpo.org/applications",
+        "label": "Tour the suite of tools that are available to inform regional and local decision-making."
+      },
+      {
+        "url": "https://bostonmpo.org/data-resources",
+        "label": "Data Inquiry"
+      },
+      {
+        "url": "https://bostonmpo.org/calendar/month",
+        "label": "View upcoming meetings. Access meeting agendas, materials, minutes, and audio recordings."
+      },
+      {
+        "url": "https://bostonmpo.org/subscribe",
+        "label": "Subscribe"
+      },
+      {
+        "url": "https://bostonmpo.org/blog",
+        "label": "Blog"
+      },
+      {
+        "url": "https://bostonmpo.org/contact",
+        "label": "Feedback"
+      },
+      {
+        "url": "https://bostonmpo.org/faq",
+        "label": "Frequently Asked Questions"
+      },
+      {
+        "url": "https://bostonmpo.org/contact-details",
+        "label": "Contact"
+      },
+      {
+        "url": "https://bostonmpo.org/mpo-election-process",
+        "label": ""
+      },
+      {
+        "url": "https://bostonmpo.org/planning_assistance",
+        "label": "Learn how the MPO can provide technical assistance to your community."
+      },
+      {
+        "url": "https://bostonmpo.org/transportation_planning",
+        "label": "Explore the MPO’s planning processes and documents. Discover opportunities to participate."
+      },
+      {
+        "url": "https://bostonmpo.org/mpo_non_discrimination",
+        "label": "Civil Rights/Title VI"
+      },
+      {
+        "url": "https://bostonmpo.org/sitemap",
+        "label": "SiteMap"
+      },
+      {
+        "url": "https://bostonmpo.org/site_policies",
+        "label": "SitePolicies"
+      },
+      {
+        "url": "https://www.facebook.com/bostonregionmpo",
+        "label": ""
+      },
+      {
+        "url": "https://www.youtube.com/channel/UCw6XrWswjfySVHwR2QGZIHQ",
+        "label": ""
+      },
+      {
+        "url": "https://twitter.com/bostonregionmpo",
+        "label": ""
+      },
+      {
+        "url": "https://www.linkedin.com/company/boston-region-metropolitan-planning-organization-mpo-",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "id": "crash-link-13d30a4363ae",
+    "url": "https://bostonmpo.org/visionzero",
+    "name": "Boston MPO Vision Zero",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.678217+00:00",
+    "http_status": 200,
+    "final_url": "https://bostonmpo.org/visionzero",
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "response_bytes": 41895,
+    "content_length": "41895",
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "e4ed25d35ee1094c61cc4cd0c7ec0a73d355c9c9608a2ab34e4993fed73ab078",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Boston Region Vision Zero | Boston Region MPO",
+    "excerpt": "Boston Region Vision Zero | Boston Region MPO Skip to main content Menu About Boston Region MPO Board Members Staff Careers Community Advisory Council Trending",
+    "outbound_links": [
+      {
+        "url": "https://bostonmpo.org/visionzero",
+        "label": "Vision Zero Action Plan"
+      },
+      {
+        "url": "https://bostonmpo.org/",
+        "label": ""
+      },
+      {
+        "url": "https://bostonmpo.org/mpo",
+        "label": "Boston Region MPO"
+      },
+      {
+        "url": "https://bostonmpo.org/mpo_membership",
+        "label": "Board Members"
+      },
+      {
+        "url": "https://bostonmpo.org/ctps-staff",
+        "label": "Staff"
+      },
+      {
+        "url": "https://bostonmpo.org/careers",
+        "label": "Careers"
+      },
+      {
+        "url": "https://bostonmpo.org/advisory-council",
+        "label": "Community Advisory Council"
+      },
+      {
+        "url": "https://bostonmpo.org/trending",
+        "label": "Trending Topics"
+      },
+      {
+        "url": "https://bostonmpo.org/lrtp",
+        "label": "Long-RangeTransportation Plan"
+      },
+      {
+        "url": "https://bostonmpo.org/tip",
+        "label": "Transportation Improvement Program"
+      },
+      {
+        "url": "https://bostonmpo.org/upwp",
+        "label": "Unified PlanningWork Program"
+      },
+      {
+        "url": "https://bostonmpo.org/no-heat",
+        "label": "NO-HEAT Project"
+      },
+      {
+        "url": "https://bostonmpo.org/travel-demand-model",
+        "label": "Travel Demand Model"
+      },
+      {
+        "url": "https://bostonmpo.org/cmp",
+        "label": "CongestionManagement Process"
+      },
+      {
+        "url": "https://bostonmpo.org/cpt-hst",
+        "label": "CoordinatedPublic Transit-Human ServicesTransportation Plan"
+      },
+      {
+        "url": "https://bostonmpo.org/public-engagement",
+        "label": "Public Engagement"
+      },
+      {
+        "url": "https://bostonmpo.org/community-transportation-access",
+        "label": "Community Transportation Access Program"
+      },
+      {
+        "url": "https://bostonmpo.org/active-transportation-planning",
+        "label": "Active Transportation Planning"
+      },
+      {
+        "url": "https://bostonmpo.org/freight-planning",
+        "label": "Freight Planning"
+      },
+      {
+        "url": "https://bostonmpo.org/performance",
+        "label": "Performance-Based Planning and Programming"
+      },
+      {
+        "url": "https://bostonmpo.org/transit-working-group",
+        "label": "Transit Working Group"
+      },
+      {
+        "url": "https://bostonmpo.org/transportation-impact-mitigation",
+        "label": "Transportation Impact Mitigation"
+      },
+      {
+        "url": "https://bostonmpo.org/technical-assistance-program",
+        "label": "Technical Assistance Program"
+      },
+      {
+        "url": "https://bostonmpo.org/multimodal-mobility-infrastructure-program",
+        "label": "Multimodal Mobility Infrastructure Program"
+      },
+      {
+        "url": "https://bostonmpo.org/recent-studies",
+        "label": "Other Studies"
+      },
+      {
+        "url": "https://bostonmpo.org/recent_studies",
+        "label": "Bicycle and Pedestrian Studies"
+      },
+      {
+        "url": "https://bostonmpo.org/applications",
+        "label": "Interactive Applications"
+      },
+      {
+        "url": "https://bostonmpo.org/data-resources",
+        "label": "Data Inquiry"
+      },
+      {
+        "url": "https://bostonmpo.org/calendar/month",
+        "label": "Meeting Calendar"
+      },
+      {
+        "url": "https://bostonmpo.org/subscribe",
+        "label": "Subscribe to Updates on Our Vision Zero Action Plan"
+      },
+      {
+        "url": "https://bostonmpo.org/blog",
+        "label": "Blog"
+      },
+      {
+        "url": "https://bostonmpo.org/contact",
+        "label": "Feedback"
+      },
+      {
+        "url": "https://bostonmpo.org/faq",
+        "label": "Frequently Asked Questions"
+      },
+      {
+        "url": "https://bostonmpo.org/contact-details",
+        "label": "Contact"
+      },
+      {
+        "url": "https://bostonmpo.org/home",
+        "label": "Home"
+      },
+      {
+        "url": "https://bostonmpo.org/calendar/day/20260305",
+        "label": "March 5, 2026"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/Vizion-Zero-Action-Plan-Final-10-14-2026.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Main-Menu",
+        "label": "Explore the Vision Zero Dashboard"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026-03-05%20-Vision-Zero-Commitment_-A-Resolution-of-the%20-Boston-Region-MPO-Signed.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/2026-03-05%20Exec%20Summ%20Vision%20Zero.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/Vision-Zero-Executive-Summary-2026.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20Action%20Plan.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/Spanish-2026.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20Exec%20Summ-Spanish.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/Portuguese-2026.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20Exec%20Summ-Portuguese.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/Chinese-S-2026.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20Exec%20Summ-Simplified-Chinese.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/Chinese-T-2026.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20Exec%20Summ-Traditional-Chinese.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/Haitian-Creole-2026.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20Exec%20Summ-Haitian-Creole.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/Vietnamese-2026.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20Exec%20Summ-Vietnamese.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/2025-03-05%20Vision%20Zero%20Appendix%20A.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20App%20A%20Acronyms.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/2026-03-05%20Vision%20Zero%20Appendix%20B.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20App%20B%20Existing%20Conditons.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/2026-03-05%20Vision%20Zero%20Appendix%20C.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20App%20C%20High-Injury%20Network%20Methodology.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/2026-03-05%20Vision%20Zero%20Appendix%20D.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20App%20D%20High-Risk%20%28Systemic%29%20Network%20Methodology.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/2026-03-05%20Vision%20Zero%20Appendix%20E.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/2026-03-05%20Vision%20Zero%20Appendix%20F.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20App%20F%20Engagement.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/2025-03-05%20Vision%20Zero%20Appendix%20G.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/2026/Vision%20Zero%20App%20G%20Policy%20and%20Process.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/Vision-Zero-Walk-Audit-Academy.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/Vision-Zero-Walk-Audit-Academies.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/Vision-Zero-Projects-strategies-distracted-driving-education.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/Vision-Zero-Distracted-Driving-Education.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://bostonmpo.org/data/pdf/plans/VisionZero/VisionZero-2026/Vision-Zero-Projects-Strategies-Countermeasures.pdf",
+        "label": "PDF"
+      },
+      {
+        "url": "https://bostonmpo.org/data/html/plans/Vision-Zero/Vision-Zero-Strategy-Countermeasure-Toolboxes.html",
+        "label": "HTML"
+      },
+      {
+        "url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Stakeholder-Feedback-Page",
+        "label": "Let us know what areas feel unsafe"
+      },
+      {
+        "url": "https://visionzeronetwork.org/about/what-is-vision-zero/",
+        "label": "Vision Zero Network"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=2ZENW9PDMoI",
+        "label": "June 2025 Public Forum Recording"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=ZpHl7cXJfWE",
+        "label": "January 2025 Public Forum Recording"
+      },
+      {
+        "url": "https://visionzeronetwork.org/vision-zero-101-basics/",
+        "label": "Vision Zero 101 Basics"
+      },
+      {
+        "url": "https://bostonmpo.org/mpo_non_discrimination",
+        "label": "Civil Rights/Title VI"
+      },
+      {
+        "url": "https://bostonmpo.org/sitemap",
+        "label": "SiteMap"
+      },
+      {
+        "url": "https://bostonmpo.org/site_policies",
+        "label": "SitePolicies"
+      },
+      {
+        "url": "https://www.facebook.com/bostonregionmpo",
+        "label": ""
+      },
+      {
+        "url": "https://www.youtube.com/channel/UCw6XrWswjfySVHwR2QGZIHQ",
+        "label": ""
+      },
+      {
+        "url": "https://twitter.com/bostonregionmpo",
+        "label": ""
+      },
+      {
+        "url": "https://www.linkedin.com/company/boston-region-metropolitan-planning-organization-mpo-",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "id": "crash-link-51a533b7da8c",
+    "url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Main-Menu",
+    "name": "regional VZ Dashboard",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.723052+00:00",
+    "http_status": 200,
+    "final_url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Main-Menu",
+    "content_type": "text/html",
+    "curl_exit_code": 0,
+    "response_bytes": 5433,
+    "content_length": "5433",
+    "etag": "\"c98c69f8912ab37c0b4125a1728cef50\"",
+    "last_modified": "Fri, 24 Jul 2026 07:01:48 GMT",
+    "response_sha256": "d183d08124a3215b7d102a980bd27ab2d198233375ce2b9d085ee37511f9a184",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Experience",
+    "excerpt": "Experience",
+    "outbound_links": [],
+    "content_note": "JavaScript shell or very little readable HTML; content not independently extracted."
+  },
+  {
+    "id": "crash-link-989181e189e2",
+    "url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Summarized-Crashes-Page",
+    "name": "regional crash map",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.689645+00:00",
+    "http_status": 200,
+    "final_url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Summarized-Crashes-Page",
+    "content_type": "text/html",
+    "curl_exit_code": 0,
+    "response_bytes": 5433,
+    "content_length": "5433",
+    "etag": "\"c98c69f8912ab37c0b4125a1728cef50\"",
+    "last_modified": "Fri, 24 Jul 2026 07:01:48 GMT",
+    "response_sha256": "d183d08124a3215b7d102a980bd27ab2d198233375ce2b9d085ee37511f9a184",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Experience",
+    "excerpt": "Experience",
+    "outbound_links": [],
+    "content_note": "JavaScript shell or very little readable HTML; content not independently extracted."
+  },
+  {
+    "id": "crash-link-d9452044c461",
+    "url": "https://picturedigits.github.io/mass-crash-map/",
+    "name": "DRAFT Massachusetts Crash Map",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.764675+00:00",
+    "http_status": 200,
+    "final_url": "https://picturedigits.github.io/mass-crash-map/",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 10569,
+    "content_length": "10569",
+    "etag": "\"6abaa5d1-2949\"",
+    "last_modified": "Mon, 28 Sep 2026 17:37:21 GMT",
+    "response_sha256": "4ff2f1ca79893af7e3ceea465bcce4cb7ff5a38efd0e142cfda740097c781093",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Massachusetts Crash Map",
+    "excerpt": "Massachusetts Crash Map Massachusetts Crash Map About map - About data last updated 1 September 2026 ▼ Show crashes as Heatmap clusters Adjust intensity Symbol",
+    "outbound_links": [
+      {
+        "url": "https://bostoncyclistsunion.org/",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/picturedigits/mass-crash-map",
+        "label": "About data"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-ff7258da30c9",
+    "url": "https://github.com/picturedigits/mass-crash-map/",
+    "name": "GitHub repo",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:15.345398+00:00",
+    "http_status": 200,
+    "final_url": "https://github.com/picturedigits/mass-crash-map/",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 340740,
+    "content_length": null,
+    "etag": "W/\"b59e6ff7adaf9b24bfff15d30ebdb86c\"",
+    "last_modified": null,
+    "response_sha256": "078288f1e589a4b9d398f3df28c80187c99a70c8f339abc643498fca52464bec",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "GitHub - Picturedigits/mass-crash-map: Interactive map of crashes involving vulnerable roadway users (pedestrians, cyclists, others) and motorists for various regions in Massachusetts · GitHub",
+    "excerpt": "GitHub - Picturedigits/mass-crash-map: Interactive map of crashes involving vulnerable roadway users (pedestrians, cyclists, others) and motorists for various regions in Massachusetts · GitHub Skip to",
+    "outbound_links": [
+      {
+        "url": "https://github.com/picturedigits/mass-crash-map/",
+        "label": "GPL-3.0 license"
+      },
+      {
+        "url": "https://github.com/",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fpicturedigits%2Fmass-crash-map%2F",
+        "label": "Sign in"
+      },
+      {
+        "url": "https://github.com/features/copilot",
+        "label": "GitHub CopilotWrite better code with AI"
+      },
+      {
+        "url": "https://github.com/features/ai/github-app",
+        "label": "GitHub Copilot appDirect agents from issue to merge"
+      },
+      {
+        "url": "https://github.com/mcp",
+        "label": "MCP RegistryIntegrate external tools"
+      },
+      {
+        "url": "https://github.com/features/actions",
+        "label": "ActionsAutomate any workflow"
+      },
+      {
+        "url": "https://github.com/features/codespaces",
+        "label": "CodespacesInstant dev environments"
+      },
+      {
+        "url": "https://github.com/features/issues",
+        "label": "IssuesPlan and track work"
+      },
+      {
+        "url": "https://github.com/features/code-review",
+        "label": "Code ReviewManage code changes"
+      },
+      {
+        "url": "https://github.com/features/code-quality",
+        "label": "Code QualityEnforce quality at merge"
+      },
+      {
+        "url": "https://github.com/security/advanced-security",
+        "label": "GitHub Advanced SecurityEnterprise-grade security features"
+      },
+      {
+        "url": "https://github.com/security/advanced-security/code-security",
+        "label": "Code securitySecure your code as you build"
+      },
+      {
+        "url": "https://github.com/security/advanced-security/secret-protection",
+        "label": "Secret protectionStop leaks before they start"
+      },
+      {
+        "url": "https://github.com/why-github",
+        "label": "Why GitHub"
+      },
+      {
+        "url": "https://docs.github.com",
+        "label": "Documentation"
+      },
+      {
+        "url": "https://github.blog",
+        "label": "Blog"
+      },
+      {
+        "url": "https://github.blog/changelog",
+        "label": "Changelog"
+      },
+      {
+        "url": "https://github.com/marketplace",
+        "label": "Marketplace"
+      },
+      {
+        "url": "https://github.com/features",
+        "label": "View all features"
+      },
+      {
+        "url": "https://github.com/enterprise",
+        "label": "Enterprise platformAI-powered developer platform"
+      },
+      {
+        "url": "https://github.com/team",
+        "label": "Small and medium teams"
+      },
+      {
+        "url": "https://github.com/enterprise/startups",
+        "label": "Startups"
+      },
+      {
+        "url": "https://github.com/solutions/industry/nonprofits",
+        "label": "Nonprofits"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/app-modernization",
+        "label": "App Modernization"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/devsecops",
+        "label": "DevSecOps"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/devops",
+        "label": "DevOps"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/ci-cd",
+        "label": "CI/CD"
+      },
+      {
+        "url": "https://github.com/solutions/use-case",
+        "label": "View all use cases"
+      },
+      {
+        "url": "https://github.com/solutions/industry/healthcare",
+        "label": "Healthcare"
+      },
+      {
+        "url": "https://github.com/solutions/industry/financial-services",
+        "label": "Financial services"
+      },
+      {
+        "url": "https://github.com/solutions/industry/manufacturing",
+        "label": "Manufacturing"
+      },
+      {
+        "url": "https://github.com/solutions/industry/government",
+        "label": "Government"
+      },
+      {
+        "url": "https://github.com/solutions/industry",
+        "label": "See all industries"
+      },
+      {
+        "url": "https://github.com/solutions",
+        "label": "View all solutions"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=ai",
+        "label": "AI"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=software-development",
+        "label": "Software Development"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=devops",
+        "label": "DevOps"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=security",
+        "label": "Security"
+      },
+      {
+        "url": "https://github.com/resources/articles",
+        "label": "View all topics"
+      },
+      {
+        "url": "https://github.com/customer-stories",
+        "label": "Customer stories"
+      },
+      {
+        "url": "https://github.com/resources/events",
+        "label": "Events & webinars"
+      },
+      {
+        "url": "https://github.com/resources/whitepapers",
+        "label": "Ebooks & reports"
+      },
+      {
+        "url": "https://github.com/solutions/executive-insights",
+        "label": "Business insights"
+      },
+      {
+        "url": "https://skills.github.com",
+        "label": "GitHub Skills"
+      },
+      {
+        "url": "https://support.github.com",
+        "label": "Customer support"
+      },
+      {
+        "url": "https://github.com/orgs/community/discussions",
+        "label": "Community forum"
+      },
+      {
+        "url": "https://github.com/trust-center",
+        "label": "Trust center"
+      },
+      {
+        "url": "https://github.com/partners",
+        "label": "Partners"
+      },
+      {
+        "url": "https://github.com/resources",
+        "label": "View all resources"
+      },
+      {
+        "url": "https://github.com/open-source/sponsors",
+        "label": "GitHub SponsorsFund open source developers"
+      },
+      {
+        "url": "https://securitylab.github.com",
+        "label": "Security Lab"
+      },
+      {
+        "url": "https://maintainers.github.com",
+        "label": "Maintainer Community"
+      },
+      {
+        "url": "https://stars.github.com",
+        "label": "GitHub Stars"
+      },
+      {
+        "url": "https://archiveprogram.github.com",
+        "label": "Archive Program"
+      },
+      {
+        "url": "https://github.com/topics",
+        "label": "Topics"
+      },
+      {
+        "url": "https://github.com/trending",
+        "label": "Trending"
+      },
+      {
+        "url": "https://github.com/collections",
+        "label": "Collections"
+      },
+      {
+        "url": "https://github.com/features/copilot/copilot-business",
+        "label": "Copilot for BusinessEnterprise-grade AI features"
+      },
+      {
+        "url": "https://github.com/enterprise/premium-support",
+        "label": "Premium SupportEnterprise-grade 24/7 support"
+      },
+      {
+        "url": "https://github.com/pricing",
+        "label": "Pricing"
+      },
+      {
+        "url": "https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=Picturedigits%2Fmass-crash-map",
+        "label": "Sign up"
+      },
+      {
+        "url": "https://github.com/Picturedigits",
+        "label": "Picturedigits"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map",
+        "label": "mass-crash-map"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/issues",
+        "label": "Issues"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/pulls",
+        "label": "Pull requests"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/actions",
+        "label": "Actions"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/projects",
+        "label": "Projects"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/security",
+        "label": "Security and quality"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/pulse",
+        "label": "Insights"
+      },
+      {
+        "url": "https://github.com/login?return_to=%2FPicturedigits%2Fmass-crash-map",
+        "label": "Star0 (0)"
+      },
+      {
+        "url": "https://picturedigits.github.io/mass-crash-map/",
+        "label": "picturedigits.github.io/mass-crash-map/"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/activity",
+        "label": "Activity"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/custom-properties",
+        "label": "Custom properties"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/forks",
+        "label": "2 forks"
+      },
+      {
+        "url": "https://github.com/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FPicturedigits%2Fmass-crash-map&report=Picturedigits+%28user%29",
+        "label": "Report repository"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/branches",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/tags",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/commits/main/",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/tree/main/data",
+        "label": "data"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/tree/main/misc",
+        "label": "misc"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/blob/main/.gitignore",
+        "label": ".gitignore"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/blob/main/LICENSE",
+        "label": "LICENSE"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/blob/main/README.md",
+        "label": "README.md"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/blob/main/index.html",
+        "label": "index.html"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/blob/main/script.js",
+        "label": "script.js"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/blob/main/style.css",
+        "label": "style.css"
+      },
+      {
+        "url": "https://picturedigits.github.io/mass-crash-map",
+        "label": "https://picturedigits.github.io/mass-crash-map"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/crashes/",
+        "label": "https://labs.bostoncyclistsunion.org/crashes/"
+      },
+      {
+        "url": "https://jackdougherty.org",
+        "label": "Jack Dougherty"
+      },
+      {
+        "url": "https://ilyankou.com",
+        "label": "Ilya Ilyankou"
+      },
+      {
+        "url": "https://www.picturedigits.com",
+        "label": "Picturedigits Ltd"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org",
+        "label": "BCU Labs"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org",
+        "label": "Boston Cyclists Union"
+      },
+      {
+        "url": "https://www.bu.edu/spark/",
+        "label": "Boston University Spark!"
+      },
+      {
+        "url": "https://github.com/BU-Spark/ds-bcu-biking",
+        "label": "BU Spark! GitHub project repository"
+      },
+      {
+        "url": "https://forms.gle/kLhR3muWdTuQtSz58",
+        "label": "Share your feedback about the Mass Crash Map"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map/blob/main/misc/interface.png",
+        "label": ""
+      },
+      {
+        "url": "https://geodot-massdot.hub.arcgis.com/pages/open-data-portal",
+        "label": "Mass GeoDOT Open Data Portal"
+      },
+      {
+        "url": "https://gis.crashdata.dot.mass.gov/arcgis/rest/services/MassDOT",
+        "label": "ArcGIS FeatureServer REST API"
+      },
+      {
+        "url": "https://data.boston.gov/organization/vision-zero-boston-program",
+        "label": "City of Boston Vision Zero (2 datasets: crashes with reported injuries, and crashes with fatalities)"
+      },
+      {
+        "url": "https://data.cambridgema.gov/Public-Safety/Police-Department-Crash-Data-Updated/gb5w-yva3",
+        "label": "Cambridge Police Department Crash Data - Updated (quarterly, more detail)"
+      },
+      {
+        "url": "https://data.cambridgema.gov/Public-Safety/CPD-Crash-Log/h6fp-bp8s/about_data",
+        "label": "CPD Crash Log (daily, less detail)"
+      },
+      {
+        "url": "https://data.somervillema.gov/Public-Safety/Police-Data-Crashes/mtik-28va/about_data",
+        "label": "Somerville Police Data Crashes"
+      },
+      {
+        "url": "https://apps.crashdata.dot.mass.gov/cdp/home",
+        "label": "MassDOT Impact crash data site"
+      },
+      {
+        "url": "https://github.com",
+        "label": ""
+      },
+      {
+        "url": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+        "label": "Terms"
+      },
+      {
+        "url": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+        "label": "Privacy"
+      },
+      {
+        "url": "https://github.com/security",
+        "label": "Security"
+      },
+      {
+        "url": "https://www.githubstatus.com/",
+        "label": "Status"
+      },
+      {
+        "url": "https://github.community/",
+        "label": "Community"
+      },
+      {
+        "url": "https://docs.github.com/",
+        "label": "Docs"
+      },
+      {
+        "url": "https://support.github.com?tags=dotcom-footer",
+        "label": "Contact"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-67b8d8a40b2f",
+    "url": "https://bostoncyclistsunion.org/collaborative-releases-new-police-crash-map-data",
+    "name": "Boston-only crash map in 2014",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:18.150001+00:00",
+    "http_status": 200,
+    "final_url": "https://bostoncyclistsunion.org/collaborative-releases-new-police-crash-map-data",
+    "content_type": "text/html; charset=UTF-8",
+    "curl_exit_code": 0,
+    "response_bytes": 72950,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "ea450772d89ed9828d0c4464cdf7120634fc07300f1abe23107ec5441a435ba1",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Collaborative releases new police crash map, data - Boston Cyclists Union",
+    "excerpt": "Collaborative releases new police crash map, data - Boston Cyclists Union Skip to content Boston Cyclists Union DONATE What We Do Policy Campaigns Bills Of",
+    "outbound_links": [
+      {
+        "url": "https://bostoncyclistsunion.org/collaborative-releases-new-police-crash-map-data",
+        "label": "Cancel Reply"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/",
+        "label": ""
+      },
+      {
+        "url": "https://bostoncyclistsunion.org",
+        "label": "Boston Cyclists Union"
+      },
+      {
+        "url": "https://secure.everyaction.com/mfRgF-hjuEueYqUtvn9Jeg2",
+        "label": "DONATE"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/advocacy-campaigns-old",
+        "label": "What We Do"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/policy",
+        "label": "Policy Campaigns"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/bills-of-interest",
+        "label": "Bills Of Interest"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/advocacy-campaigns",
+        "label": "Street Campaigns"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/events",
+        "label": "Upcoming Events"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/bostreal",
+        "label": "Bos/treal"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/category/boston-bike-story",
+        "label": "Boston Bike Stories"
+      },
+      {
+        "url": "https://storymaps.arcgis.com/stories/d4e2b651ca084c9fb0fa747f7057bb90",
+        "label": "#HealthyStreetsBOS"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/arborway",
+        "label": "Arborway"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/takeaction",
+        "label": "Get Involved"
+      },
+      {
+        "url": "https://secure.everyaction.com/9ITOa7HZHUClmKmAaBGITA2",
+        "label": "Subscribe to the BCU’s Newsletter"
+      },
+      {
+        "url": "https://secure.everyaction.com/Xfni5ZBMq0ajyrHDWhW6BQ2",
+        "label": "Become a Member"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/activists-group",
+        "label": "Activist Group"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/bcu-labs",
+        "label": "BCU Labs"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/?page_id=9603",
+        "label": "BCU Chapters and Bike Groups"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/resources",
+        "label": "Resources"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/blog",
+        "label": "Latest News"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/learn-to-bike-boston",
+        "label": "New to Biking Resources"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/why-bike-lanes",
+        "label": "Why Bike Lanes?"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/bikeparking",
+        "label": "BCU Report: Boston Bike Parking"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org/crashes/",
+        "label": "Interactive Crash Map"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/resources/crash-center-bike-attorney",
+        "label": "Crash Center: Advice & Attorneys"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/bluebikes",
+        "label": "Get Bluebikes for $5/year"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/about_us/mission-vision-and-values",
+        "label": "About"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/strategic-plan",
+        "label": "Strategic Plan & Mission"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/about_us/staff",
+        "label": "Meet the Staff"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/about_us/board-of-directors",
+        "label": "Board of Directors"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/about_us/job-opportunities",
+        "label": "Jobs Opportunities"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/about_us/supporters",
+        "label": "Supporters"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/about_us/contact",
+        "label": "Contact Us"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/author/boston-cyclists-union",
+        "label": "Boston Cyclists Union"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/wp-content/upLoads/2014/06/Screen-Shot-2014-06-17-at-2.53.37-PM.png",
+        "label": ""
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/jessie.partridge@gmail.com",
+        "label": "Jessie Partridge"
+      },
+      {
+        "url": "https://bostoncyclistsunion.org/category/uncategorized",
+        "label": "Uncategorized"
+      },
+      {
+        "url": "https://www.facebook.com/bostoncyclistsunion",
+        "label": ""
+      },
+      {
+        "url": "https://www.instagram.com/bostoncyclistsunion",
+        "label": ""
+      },
+      {
+        "url": "https://bsky.app/profile/bikeboston.bsky.social",
+        "label": ""
+      },
+      {
+        "url": "https://secure.everyaction.com/p/xb2I-0vShU6blAIIqUIVow2",
+        "label": "donation self-service page"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-0a3d65d0891e",
+    "url": "https://bostoncyclistsunion.org/resources/interactive-crash-map",
+    "name": "2023 map online",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:17.901801+00:00",
+    "http_status": 200,
+    "final_url": "https://labs.bostoncyclistsunion.org/crashes/",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 5097,
+    "content_length": "5097",
+    "etag": "\"6ac5c279-13e9\"",
+    "last_modified": "Wed, 07 Oct 2026 03:54:33 GMT",
+    "response_sha256": "d6db3f5d4e4f3b38e9b2449c80cae8ffd6f4fa65bf6ec20195e23a7557f70de4",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Crashes - BCU Labs",
+    "excerpt": "Crashes - BCU Labs Massachusetts Crash Map Visualize crash patterns in five regions across the state. Zoom out for a broad view of hotspots, and",
+    "outbound_links": [
+      {
+        "url": "https://labs.bostoncyclistsunion.org/",
+        "label": ""
+      },
+      {
+        "url": "https://forms.gle/kLhR3muWdTuQtSz58",
+        "label": "Share your feedback about the map"
+      },
+      {
+        "url": "https://picturedigits.github.io/mass-crash-map",
+        "label": "Embedded dashboard"
+      },
+      {
+        "url": "https://labs.bostoncyclistsunion.org",
+        "label": "BCU Labs"
+      },
+      {
+        "url": "https://picturedigits.com",
+        "label": "Picturedigits"
+      },
+      {
+        "url": "https://www.bu.edu/spark/",
+        "label": "Boston University Spark!"
+      },
+      {
+        "url": "https://apps.crashdata.dot.mass.gov/cdp/home",
+        "label": "MassDOT Crash Impact database"
+      },
+      {
+        "url": "https://data.boston.gov/organization/vision-zero-boston-program",
+        "label": "City of Boston Vision Zero database"
+      },
+      {
+        "url": "https://github.com/Picturedigits/mass-crash-map",
+        "label": "Map Crash Map repository on GitHub"
+      },
+      {
+        "url": "https://BostonCyclistsUnion.org",
+        "label": "Boston Cyclists Union"
+      },
+      {
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSefzxEQ-CAbJd_rrt90DHvdglYvP9RLqdDUVsFq28onw9xXJQ/viewform",
+        "label": "Join BCU Labs here"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/labs-website",
+        "label": "Source Code"
+      },
+      {
+        "url": "https://secure.everyaction.com/mfRgF-hjuEueYqUtvn9Jeg2",
+        "label": "Donate"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-edcff3f6249a",
+    "url": "https://github.com/BostonCyclistsUnion/crash_map",
+    "name": "code on GitHub",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:15.490799+00:00",
+    "http_status": 200,
+    "final_url": "https://github.com/BostonCyclistsUnion/crash_map",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 251597,
+    "content_length": null,
+    "etag": "W/\"1957aa096cc59ac56a51f112db3551be\"",
+    "last_modified": null,
+    "response_sha256": "6ff306443bf7ce3bec7008881e9da956396ec4135bb3a87adf087408e91f21c3",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "GitHub - BostonCyclistsUnion/crash_map: Crash heatmap for Boston · GitHub",
+    "excerpt": "GitHub - BostonCyclistsUnion/crash_map: Crash heatmap for Boston · GitHub Skip to content Navigation Menu Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write",
+    "outbound_links": [
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map",
+        "label": "Readme"
+      },
+      {
+        "url": "https://github.com/",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FBostonCyclistsUnion%2Fcrash_map",
+        "label": "Sign in"
+      },
+      {
+        "url": "https://github.com/features/copilot",
+        "label": "GitHub CopilotWrite better code with AI"
+      },
+      {
+        "url": "https://github.com/features/ai/github-app",
+        "label": "GitHub Copilot appDirect agents from issue to merge"
+      },
+      {
+        "url": "https://github.com/mcp",
+        "label": "MCP RegistryIntegrate external tools"
+      },
+      {
+        "url": "https://github.com/features/actions",
+        "label": "ActionsAutomate any workflow"
+      },
+      {
+        "url": "https://github.com/features/codespaces",
+        "label": "CodespacesInstant dev environments"
+      },
+      {
+        "url": "https://github.com/features/issues",
+        "label": "IssuesPlan and track work"
+      },
+      {
+        "url": "https://github.com/features/code-review",
+        "label": "Code ReviewManage code changes"
+      },
+      {
+        "url": "https://github.com/features/code-quality",
+        "label": "Code QualityEnforce quality at merge"
+      },
+      {
+        "url": "https://github.com/security/advanced-security",
+        "label": "GitHub Advanced SecurityEnterprise-grade security features"
+      },
+      {
+        "url": "https://github.com/security/advanced-security/code-security",
+        "label": "Code securitySecure your code as you build"
+      },
+      {
+        "url": "https://github.com/security/advanced-security/secret-protection",
+        "label": "Secret protectionStop leaks before they start"
+      },
+      {
+        "url": "https://github.com/why-github",
+        "label": "Why GitHub"
+      },
+      {
+        "url": "https://docs.github.com",
+        "label": "Documentation"
+      },
+      {
+        "url": "https://github.blog",
+        "label": "Blog"
+      },
+      {
+        "url": "https://github.blog/changelog",
+        "label": "Changelog"
+      },
+      {
+        "url": "https://github.com/marketplace",
+        "label": "Marketplace"
+      },
+      {
+        "url": "https://github.com/features",
+        "label": "View all features"
+      },
+      {
+        "url": "https://github.com/enterprise",
+        "label": "Enterprise platformAI-powered developer platform"
+      },
+      {
+        "url": "https://github.com/team",
+        "label": "Small and medium teams"
+      },
+      {
+        "url": "https://github.com/enterprise/startups",
+        "label": "Startups"
+      },
+      {
+        "url": "https://github.com/solutions/industry/nonprofits",
+        "label": "Nonprofits"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/app-modernization",
+        "label": "App Modernization"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/devsecops",
+        "label": "DevSecOps"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/devops",
+        "label": "DevOps"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/ci-cd",
+        "label": "CI/CD"
+      },
+      {
+        "url": "https://github.com/solutions/use-case",
+        "label": "View all use cases"
+      },
+      {
+        "url": "https://github.com/solutions/industry/healthcare",
+        "label": "Healthcare"
+      },
+      {
+        "url": "https://github.com/solutions/industry/financial-services",
+        "label": "Financial services"
+      },
+      {
+        "url": "https://github.com/solutions/industry/manufacturing",
+        "label": "Manufacturing"
+      },
+      {
+        "url": "https://github.com/solutions/industry/government",
+        "label": "Government"
+      },
+      {
+        "url": "https://github.com/solutions/industry",
+        "label": "See all industries"
+      },
+      {
+        "url": "https://github.com/solutions",
+        "label": "View all solutions"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=ai",
+        "label": "AI"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=software-development",
+        "label": "Software Development"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=devops",
+        "label": "DevOps"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=security",
+        "label": "Security"
+      },
+      {
+        "url": "https://github.com/resources/articles",
+        "label": "View all topics"
+      },
+      {
+        "url": "https://github.com/customer-stories",
+        "label": "Customer stories"
+      },
+      {
+        "url": "https://github.com/resources/events",
+        "label": "Events & webinars"
+      },
+      {
+        "url": "https://github.com/resources/whitepapers",
+        "label": "Ebooks & reports"
+      },
+      {
+        "url": "https://github.com/solutions/executive-insights",
+        "label": "Business insights"
+      },
+      {
+        "url": "https://skills.github.com",
+        "label": "GitHub Skills"
+      },
+      {
+        "url": "https://support.github.com",
+        "label": "Customer support"
+      },
+      {
+        "url": "https://github.com/orgs/community/discussions",
+        "label": "Community forum"
+      },
+      {
+        "url": "https://github.com/trust-center",
+        "label": "Trust center"
+      },
+      {
+        "url": "https://github.com/partners",
+        "label": "Partners"
+      },
+      {
+        "url": "https://github.com/resources",
+        "label": "View all resources"
+      },
+      {
+        "url": "https://github.com/open-source/sponsors",
+        "label": "GitHub SponsorsFund open source developers"
+      },
+      {
+        "url": "https://securitylab.github.com",
+        "label": "Security Lab"
+      },
+      {
+        "url": "https://maintainers.github.com",
+        "label": "Maintainer Community"
+      },
+      {
+        "url": "https://stars.github.com",
+        "label": "GitHub Stars"
+      },
+      {
+        "url": "https://archiveprogram.github.com",
+        "label": "Archive Program"
+      },
+      {
+        "url": "https://github.com/topics",
+        "label": "Topics"
+      },
+      {
+        "url": "https://github.com/trending",
+        "label": "Trending"
+      },
+      {
+        "url": "https://github.com/collections",
+        "label": "Collections"
+      },
+      {
+        "url": "https://github.com/features/copilot/copilot-business",
+        "label": "Copilot for BusinessEnterprise-grade AI features"
+      },
+      {
+        "url": "https://github.com/enterprise/premium-support",
+        "label": "Premium SupportEnterprise-grade 24/7 support"
+      },
+      {
+        "url": "https://github.com/pricing",
+        "label": "Pricing"
+      },
+      {
+        "url": "https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=BostonCyclistsUnion%2Fcrash_map",
+        "label": "Sign up"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion",
+        "label": "BostonCyclistsUnion"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/issues",
+        "label": "Issues2 (2)"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/pulls",
+        "label": "Pull requests"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/actions",
+        "label": "Actions"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/projects",
+        "label": "Projects"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/security",
+        "label": "Security and quality"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/pulse",
+        "label": "Insights"
+      },
+      {
+        "url": "https://github.com/login?return_to=%2FBostonCyclistsUnion%2Fcrash_map",
+        "label": "Star1 (1)"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/activity",
+        "label": "Activity"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/custom-properties",
+        "label": "Custom properties"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/forks",
+        "label": "0 forks"
+      },
+      {
+        "url": "https://github.com/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FBostonCyclistsUnion%2Fcrash_map&report=BostonCyclistsUnion+%28user%29",
+        "label": "Report repository"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/branches",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/tags",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/commits/main/",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/tree/main/.github/workflows",
+        "label": ".github/workflows"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/tree/main/data",
+        "label": "data"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/tree/main/notebooks",
+        "label": "notebooks"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/tree/main/static",
+        "label": "static"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/blob/main/README.md",
+        "label": "README.md"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/blob/main/crash_update.ipynb",
+        "label": "crash_update.ipynb"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/blob/main/crash_update.py",
+        "label": "crash_update.py"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/blob/main/index.html",
+        "label": "index.html"
+      },
+      {
+        "url": "https://github.com/BostonCyclistsUnion/crash_map/blob/main/requirements.txt",
+        "label": "requirements.txt"
+      },
+      {
+        "url": "https://github.com",
+        "label": ""
+      },
+      {
+        "url": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+        "label": "Terms"
+      },
+      {
+        "url": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+        "label": "Privacy"
+      },
+      {
+        "url": "https://github.com/security",
+        "label": "Security"
+      },
+      {
+        "url": "https://www.githubstatus.com/",
+        "label": "Status"
+      },
+      {
+        "url": "https://github.community/",
+        "label": "Community"
+      },
+      {
+        "url": "https://docs.github.com/",
+        "label": "Docs"
+      },
+      {
+        "url": "https://support.github.com?tags=dotcom-footer",
+        "label": "Contact"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-b1570fcc3e72",
+    "url": "https://experience.arcgis.com/experience/bae68e65908f45e1bcc86fe5f089d266/page/",
+    "name": "City of Boston Vision Zero hosts its Boston-only crash map",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:14.926409+00:00",
+    "http_status": 200,
+    "final_url": "https://experience.arcgis.com/experience/bae68e65908f45e1bcc86fe5f089d266/page/",
+    "content_type": "text/html",
+    "curl_exit_code": 0,
+    "response_bytes": 5433,
+    "content_length": "5433",
+    "etag": "\"c98c69f8912ab37c0b4125a1728cef50\"",
+    "last_modified": "Fri, 24 Jul 2026 07:01:48 GMT",
+    "response_sha256": "d183d08124a3215b7d102a980bd27ab2d198233375ce2b9d085ee37511f9a184",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Experience",
+    "excerpt": "Experience",
+    "outbound_links": [],
+    "content_note": "JavaScript shell or very little readable HTML; content not independently extracted."
+  },
+  {
+    "id": "crash-link-52ff8207a6b4",
+    "url": "https://geodot.mass.gov/datasets/b42f2c990f784716b320ae0499886591_0/explore?location=42.341191%2C-71.078711%2C13",
+    "name": "MassDOT hosts its own crash maps",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:15.087697+00:00",
+    "http_status": 200,
+    "final_url": "https://geodot.mass.gov/datasets/b42f2c990f784716b320ae0499886591_0/explore?location=42.341191%2C-71.078711%2C13",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 169195,
+    "content_length": "169195",
+    "etag": "W/\"294eb-G51mK8HOYJhCXHkFyOjII4tItoI\"",
+    "last_modified": null,
+    "response_sha256": "333845d8a3d8231b9b03a42e69910077533ae5ecf1e4518bb9f79bcc231dc5ae",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "2024 Crashes",
+    "excerpt": "2024 Crashes",
+    "outbound_links": [],
+    "content_note": "JavaScript shell or very little readable HTML; content not independently extracted."
+  },
+  {
+    "id": "crash-link-283c8396c900",
+    "url": "https://jackdougherty.org/2024/01/01/crash-map/",
+    "name": "Heat and Point Map of crashes in Hartford CT",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:15.490205+00:00",
+    "http_status": 200,
+    "final_url": "https://jackdougherty.org/2024/01/01/crash-map/",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 17151,
+    "content_length": "17151",
+    "etag": "\"6ad790c1-42ff\"",
+    "last_modified": "Tue, 20 Oct 2026 16:03:13 GMT",
+    "response_sha256": "a9ae4d6cab26511657a1d74761a529ac4c5b9115b16e6f9df5da85cccff3221b",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "Mapping Crashes for Safer Streets - JackDougherty.org",
+    "excerpt": "Mapping Crashes for Safer Streets - JackDougherty.org Skip to primary navigation Skip to content Skip to footer JackDougherty.org Let's make change more visible with data,",
+    "outbound_links": [
+      {
+        "url": "https://jackdougherty.org/2024/01/01/crash-map/",
+        "label": "Mapping Crashes for Safer Streets"
+      },
+      {
+        "url": "https://jackdougherty.org/",
+        "label": "Jack Dougherty"
+      },
+      {
+        "url": "https://jackdougherty.org/coaching/",
+        "label": "Coaching"
+      },
+      {
+        "url": "https://jackdougherty.org/about/",
+        "label": "About"
+      },
+      {
+        "url": "https://jackdougherty.org/contact/",
+        "label": "Contact"
+      },
+      {
+        "url": "https://jackdougherty.org/posts/",
+        "label": "Posts"
+      },
+      {
+        "url": "https://jackdougherty.org/calendar",
+        "label": "Calendar"
+      },
+      {
+        "url": "https://mstdn.social/@jackdougherty",
+        "label": "Mastodon"
+      },
+      {
+        "url": "https://github.com/jackdougherty",
+        "label": "GitHub"
+      },
+      {
+        "url": "https://jackbikes.org",
+        "label": "JackBikes.org"
+      },
+      {
+        "url": "https://datavizforall.org/hartford-crashes/",
+        "label": "updated Hartford Crash Map"
+      },
+      {
+        "url": "https://www.ctcrash.uconn.edu",
+        "label": "Connecticut Crash Data Repository"
+      },
+      {
+        "url": "https://datavizforall.org/partners-projects/",
+        "label": "Data Visualization for All course at Trinity College in Spring 2023"
+      },
+      {
+        "url": "https://bikewesthartford.github.io/wh-crashes/",
+        "label": "West Hartford Crash Map"
+      },
+      {
+        "url": "https://github.com/datavizforall/hartford-crashes/",
+        "label": "open-source code"
+      },
+      {
+        "url": "https://jackdougherty.org/categories/",
+        "label": "Trinity College"
+      },
+      {
+        "url": "https://jackdougherty.org/2023/10/02/professor-by-first-name/",
+        "label": "Previous"
+      },
+      {
+        "url": "https://jackdougherty.org/2024/03/22/thank-you-lisa-smulyan/",
+        "label": "Next"
+      },
+      {
+        "url": "https://jackdougherty.org/2016-04-27-when-real-audiences/",
+        "label": ""
+      },
+      {
+        "url": "https://jackdougherty.org/2016-02-15-idp-open-house-2016/",
+        "label": ""
+      },
+      {
+        "url": "https://jackdougherty.org/2016-01-23-heq-teaching-forum/",
+        "label": ""
+      },
+      {
+        "url": "https://jackdougherty.org/2025/12/16/school-health-equity/",
+        "label": "Which Legislative Districts have School Based Health Centers?"
+      },
+      {
+        "url": "https://jackdougherty.org/feed.xml",
+        "label": "Feed"
+      },
+      {
+        "url": "https://jackdougherty.org",
+        "label": "JackDougherty.org"
+      },
+      {
+        "url": "https://jekyllrb.com",
+        "label": "Jekyll"
+      },
+      {
+        "url": "https://mademistakes.com/work/jekyll-themes/minimal-mistakes/",
+        "label": "Minimal Mistakes"
+      }
+    ]
+  },
+  {
+    "id": "crash-link-ad006939caf5",
+    "url": "https://github.com/datavizforall/hartford-crashes",
+    "name": "Python script in Jupyter Notebook on GitHub",
+    "role": "crash_background_link",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:13:16.271627+00:00",
+    "http_status": 200,
+    "final_url": "https://github.com/datavizforall/hartford-crashes",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 309849,
+    "content_length": null,
+    "etag": "W/\"92831c88e86e40090fdbf83ab2ed56bd\"",
+    "last_modified": null,
+    "response_sha256": "d899bdae72980557948f9ce000efd87cd8420f0928f5d684a4104332a1355e12",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "GitHub - DataVizForAll/hartford-crashes: data visualizations of crashes in Hartford CT, 2015-present · GitHub",
+    "excerpt": "GitHub - DataVizForAll/hartford-crashes: data visualizations of crashes in Hartford CT, 2015-present · GitHub Skip to content Navigation Menu Sign in Appearance settings Platform AI CODE",
+    "outbound_links": [
+      {
+        "url": "https://github.com/datavizforall/hartford-crashes",
+        "label": "License"
+      },
+      {
+        "url": "https://github.com/",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fdatavizforall%2Fhartford-crashes",
+        "label": "Sign in"
+      },
+      {
+        "url": "https://github.com/features/copilot",
+        "label": "GitHub CopilotWrite better code with AI"
+      },
+      {
+        "url": "https://github.com/features/ai/github-app",
+        "label": "GitHub Copilot appDirect agents from issue to merge"
+      },
+      {
+        "url": "https://github.com/mcp",
+        "label": "MCP RegistryIntegrate external tools"
+      },
+      {
+        "url": "https://github.com/features/actions",
+        "label": "ActionsAutomate any workflow"
+      },
+      {
+        "url": "https://github.com/features/codespaces",
+        "label": "CodespacesInstant dev environments"
+      },
+      {
+        "url": "https://github.com/features/issues",
+        "label": "IssuesPlan and track work"
+      },
+      {
+        "url": "https://github.com/features/code-review",
+        "label": "Code ReviewManage code changes"
+      },
+      {
+        "url": "https://github.com/features/code-quality",
+        "label": "Code QualityEnforce quality at merge"
+      },
+      {
+        "url": "https://github.com/security/advanced-security",
+        "label": "GitHub Advanced SecurityEnterprise-grade security features"
+      },
+      {
+        "url": "https://github.com/security/advanced-security/code-security",
+        "label": "Code securitySecure your code as you build"
+      },
+      {
+        "url": "https://github.com/security/advanced-security/secret-protection",
+        "label": "Secret protectionStop leaks before they start"
+      },
+      {
+        "url": "https://github.com/why-github",
+        "label": "Why GitHub"
+      },
+      {
+        "url": "https://docs.github.com",
+        "label": "Documentation"
+      },
+      {
+        "url": "https://github.blog",
+        "label": "Blog"
+      },
+      {
+        "url": "https://github.blog/changelog",
+        "label": "Changelog"
+      },
+      {
+        "url": "https://github.com/marketplace",
+        "label": "Marketplace"
+      },
+      {
+        "url": "https://github.com/features",
+        "label": "View all features"
+      },
+      {
+        "url": "https://github.com/enterprise",
+        "label": "Enterprise platformAI-powered developer platform"
+      },
+      {
+        "url": "https://github.com/team",
+        "label": "Small and medium teams"
+      },
+      {
+        "url": "https://github.com/enterprise/startups",
+        "label": "Startups"
+      },
+      {
+        "url": "https://github.com/solutions/industry/nonprofits",
+        "label": "Nonprofits"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/app-modernization",
+        "label": "App Modernization"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/devsecops",
+        "label": "DevSecOps"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/devops",
+        "label": "DevOps"
+      },
+      {
+        "url": "https://github.com/solutions/use-case/ci-cd",
+        "label": "CI/CD"
+      },
+      {
+        "url": "https://github.com/solutions/use-case",
+        "label": "View all use cases"
+      },
+      {
+        "url": "https://github.com/solutions/industry/healthcare",
+        "label": "Healthcare"
+      },
+      {
+        "url": "https://github.com/solutions/industry/financial-services",
+        "label": "Financial services"
+      },
+      {
+        "url": "https://github.com/solutions/industry/manufacturing",
+        "label": "Manufacturing"
+      },
+      {
+        "url": "https://github.com/solutions/industry/government",
+        "label": "Government"
+      },
+      {
+        "url": "https://github.com/solutions/industry",
+        "label": "See all industries"
+      },
+      {
+        "url": "https://github.com/solutions",
+        "label": "View all solutions"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=ai",
+        "label": "AI"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=software-development",
+        "label": "Software Development"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=devops",
+        "label": "DevOps"
+      },
+      {
+        "url": "https://github.com/resources/articles?topic=security",
+        "label": "Security"
+      },
+      {
+        "url": "https://github.com/resources/articles",
+        "label": "View all topics"
+      },
+      {
+        "url": "https://github.com/customer-stories",
+        "label": "Customer stories"
+      },
+      {
+        "url": "https://github.com/resources/events",
+        "label": "Events & webinars"
+      },
+      {
+        "url": "https://github.com/resources/whitepapers",
+        "label": "Ebooks & reports"
+      },
+      {
+        "url": "https://github.com/solutions/executive-insights",
+        "label": "Business insights"
+      },
+      {
+        "url": "https://skills.github.com",
+        "label": "GitHub Skills"
+      },
+      {
+        "url": "https://support.github.com",
+        "label": "Customer support"
+      },
+      {
+        "url": "https://github.com/orgs/community/discussions",
+        "label": "Community forum"
+      },
+      {
+        "url": "https://github.com/trust-center",
+        "label": "Trust center"
+      },
+      {
+        "url": "https://github.com/partners",
+        "label": "Partners"
+      },
+      {
+        "url": "https://github.com/resources",
+        "label": "View all resources"
+      },
+      {
+        "url": "https://github.com/open-source/sponsors",
+        "label": "GitHub SponsorsFund open source developers"
+      },
+      {
+        "url": "https://securitylab.github.com",
+        "label": "Security Lab"
+      },
+      {
+        "url": "https://maintainers.github.com",
+        "label": "Maintainer Community"
+      },
+      {
+        "url": "https://stars.github.com",
+        "label": "GitHub Stars"
+      },
+      {
+        "url": "https://archiveprogram.github.com",
+        "label": "Archive Program"
+      },
+      {
+        "url": "https://github.com/topics",
+        "label": "Topics"
+      },
+      {
+        "url": "https://github.com/trending",
+        "label": "Trending"
+      },
+      {
+        "url": "https://github.com/collections",
+        "label": "Collections"
+      },
+      {
+        "url": "https://github.com/features/copilot/copilot-business",
+        "label": "Copilot for BusinessEnterprise-grade AI features"
+      },
+      {
+        "url": "https://github.com/enterprise/premium-support",
+        "label": "Premium SupportEnterprise-grade 24/7 support"
+      },
+      {
+        "url": "https://github.com/pricing",
+        "label": "Pricing"
+      },
+      {
+        "url": "https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=DataVizForAll%2Fhartford-crashes",
+        "label": "Sign up"
+      },
+      {
+        "url": "https://github.com/DataVizForAll",
+        "label": "DataVizForAll"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes",
+        "label": "hartford-crashes"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/pulls",
+        "label": "Pull requests"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/actions",
+        "label": "Actions"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/projects",
+        "label": "Projects"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/security",
+        "label": "Security and quality"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/pulse",
+        "label": "Insights"
+      },
+      {
+        "url": "https://github.com/bikewesthartford/wh-crashes",
+        "label": "bikewesthartford/wh-crashes"
+      },
+      {
+        "url": "https://github.com/login?return_to=%2FDataVizForAll%2Fhartford-crashes",
+        "label": "Star0 (0)"
+      },
+      {
+        "url": "https://datavizforall.github.io/hartford-crashes",
+        "label": "datavizforall.github.io/hartford-crashes"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/activity",
+        "label": "Activity"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/custom-properties",
+        "label": "Custom properties"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/forks",
+        "label": "0 forks"
+      },
+      {
+        "url": "https://github.com/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FDataVizForAll%2Fhartford-crashes&report=DataVizForAll+%28user%29",
+        "label": "Report repository"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/branches",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/tags",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/commits/master/",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/tree/master/data",
+        "label": "data"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/tree/master/img",
+        "label": "img"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/blob/master/.gitignore",
+        "label": ".gitignore"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/blob/master/LICENSE",
+        "label": "LICENSE"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/blob/master/README.md",
+        "label": "README.md"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/blob/master/index.html",
+        "label": "index.html"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/blob/master/script.js",
+        "label": "script.js"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/blob/master/style.css",
+        "label": "style.css"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/blob/master/img/hartford-crash-map-image.png",
+        "label": ""
+      },
+      {
+        "url": "https://github.com/Picturedigits/hartford-crashes",
+        "label": "original Hartford Crash Data heatmap"
+      },
+      {
+        "url": "https://www.picturedigits.com",
+        "label": "Picturedigits"
+      },
+      {
+        "url": "https://jackdougherty.org",
+        "label": "Jack Dougherty"
+      },
+      {
+        "url": "https://github.com/Keelymac32",
+        "label": "Keelyn McNamara"
+      },
+      {
+        "url": "https://www.ctcrash.uconn.edu",
+        "label": "https://www.ctcrash.uconn.edu"
+      },
+      {
+        "url": "https://www.nhtsa.gov/mmucc-1",
+        "label": "https://www.nhtsa.gov/mmucc-1"
+      },
+      {
+        "url": "https://handsondataviz.org/github.html",
+        "label": "Chapter 10: Edit and Host Code in GitHub"
+      },
+      {
+        "url": "https://www.ctcrash.uconn.edu/",
+        "label": "https://www.ctcrash.uconn.edu/"
+      },
+      {
+        "url": "https://jupyter.org",
+        "label": "https://jupyter.org"
+      },
+      {
+        "url": "https://www.anaconda.com",
+        "label": "https://www.anaconda.com"
+      },
+      {
+        "url": "https://github.com/DataVizForAll/hartford-crashes/blob/master/img/jupyterlab-screenshot.png",
+        "label": ""
+      },
+      {
+        "url": "https://github.com",
+        "label": ""
+      },
+      {
+        "url": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+        "label": "Terms"
+      },
+      {
+        "url": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+        "label": "Privacy"
+      },
+      {
+        "url": "https://github.com/security",
+        "label": "Security"
+      },
+      {
+        "url": "https://www.githubstatus.com/",
+        "label": "Status"
+      },
+      {
+        "url": "https://github.community/",
+        "label": "Community"
+      },
+      {
+        "url": "https://docs.github.com/",
+        "label": "Docs"
+      },
+      {
+        "url": "https://support.github.com?tags=dotcom-footer",
+        "label": "Contact"
+      }
+    ]
+  }
+]

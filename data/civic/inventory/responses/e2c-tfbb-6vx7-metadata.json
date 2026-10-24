@@ -1,0 +1,886 @@
+{
+  "id" : "tfbb-6vx7",
+  "name" : "Educator Preparation Employment by Program",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1720811901,
+  "description" : "This dataset provides employment information about candidates who completed an <a href=\"https://www.doe.mass.edu/edprep/directory.html\" target=\"_blank\" rel=\"noopener noreferrer\">approved Massachusetts educator preparation program</a> since 2013. It includes counts and percentages of educators who were employed in a Massachusetts public school or district by June of a given school year, counts of educators who were retained, and percentages of educators who remained employed for two years.\n\nEmployment rates are reported by program completion year, program subject area, and license level. \n\nEmployment is determined by matching program completers reported by preparation program providers with employment data collected from districts in the Education Personnel Information Management System (EPIMS). The number in the retention cohort includes the number of program completers first employed at least one year prior to the report year, and is the numerator for the retention rates.\n\nNote: Data only includes program completers who became employed in a Massachusetts public, K-12 school, including charter schools, and collaboratives. The data do not include employment in private schools or outside of Massachusetts.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/epppempratebyprogram.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Ed Prep Employment by Program</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 31,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41751205,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1763666704,
+  "publicationGroup" : 19577716,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1780070225,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 20166916,
+  "totalTimesRated" : 0,
+  "viewCount" : 396,
+  "viewLastModified" : 1786391346,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1763759276,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7213124,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1763759263,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1763759276,
+      "failureCount" : 0,
+      "startedAt" : 1763759276,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 621524351,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153668022,
+    "cachedContents" : {
+      "non_null" : "115208",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023",
+        "count" : "11856"
+      }, {
+        "item" : "2025",
+        "count" : "11237"
+      }, {
+        "item" : "2022",
+        "count" : "10774"
+      }, {
+        "item" : "2024",
+        "count" : "10378"
+      }, {
+        "item" : "2018",
+        "count" : "10035"
+      }, {
+        "item" : "2020",
+        "count" : "9908"
+      }, {
+        "item" : "2021",
+        "count" : "9770"
+      }, {
+        "item" : "2017",
+        "count" : "8862"
+      }, {
+        "item" : "2019",
+        "count" : "8701"
+      }, {
+        "item" : "2016",
+        "count" : "7716"
+      }, {
+        "item" : "2015",
+        "count" : "6626"
+      }, {
+        "item" : "2014",
+        "count" : "5324"
+      }, {
+        "item" : "2013",
+        "count" : "4021"
+      } ],
+      "smallest" : "2013",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524352,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153668023,
+    "cachedContents" : {
+      "non_null" : "115208",
+      "largest" : "30000066",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "14579"
+      }, {
+        "item" : "30000012",
+        "count" : "5687"
+      }, {
+        "item" : "30000010",
+        "count" : "5041"
+      }, {
+        "item" : "30000053",
+        "count" : "3948"
+      }, {
+        "item" : "30000058",
+        "count" : "3922"
+      }, {
+        "item" : "30000024",
+        "count" : "3673"
+      }, {
+        "item" : "30000029",
+        "count" : "3571"
+      }, {
+        "item" : "30000045",
+        "count" : "3523"
+      }, {
+        "item" : "20200001",
+        "count" : "3468"
+      }, {
+        "item" : "30000023",
+        "count" : "3395"
+      }, {
+        "item" : "30000052",
+        "count" : "3266"
+      }, {
+        "item" : "30000022",
+        "count" : "3238"
+      }, {
+        "item" : "30000063",
+        "count" : "2733"
+      }, {
+        "item" : "30000048",
+        "count" : "2671"
+      }, {
+        "item" : "30000001",
+        "count" : "2556"
+      }, {
+        "item" : "30000008",
+        "count" : "2439"
+      }, {
+        "item" : "30000054",
+        "count" : "2292"
+      }, {
+        "item" : "30000046",
+        "count" : "2271"
+      }, {
+        "item" : "30000036",
+        "count" : "1971"
+      }, {
+        "item" : "30000026",
+        "count" : "1850"
+      } ],
+      "smallest" : "00000000",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524353,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153668024,
+    "cachedContents" : {
+      "non_null" : "115208",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State Total",
+        "count" : "14049"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "5523"
+      }, {
+        "item" : "Boston University",
+        "count" : "5041"
+      }, {
+        "item" : "UMass/Boston",
+        "count" : "3948"
+      }, {
+        "item" : "Westfield State University",
+        "count" : "3787"
+      }, {
+        "item" : "Gordon College",
+        "count" : "3673"
+      }, {
+        "item" : "Lesley University",
+        "count" : "3571"
+      }, {
+        "item" : "Catherine Leahy Brine Educational Consultants, Inc.",
+        "count" : "3468"
+      }, {
+        "item" : "Salem State University",
+        "count" : "3383"
+      }, {
+        "item" : "Framingham State University",
+        "count" : "3272"
+      }, {
+        "item" : "UMass/Amherst",
+        "count" : "3266"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "3138"
+      }, {
+        "item" : "Springfield College",
+        "count" : "2671"
+      }, {
+        "item" : "Worcester State University",
+        "count" : "2642"
+      }, {
+        "item" : "American International College",
+        "count" : "2556"
+      }, {
+        "item" : "Boston College",
+        "count" : "2439"
+      }, {
+        "item" : "UMass/Dartmouth",
+        "count" : "2292"
+      }, {
+        "item" : "Merrimack College",
+        "count" : "1971"
+      }, {
+        "item" : "Harvard Graduate School of Education",
+        "count" : "1850"
+      }, {
+        "item" : "Endicott College",
+        "count" : "1800"
+      } ],
+      "smallest" : "ACCEPT Education Collaborative",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524354,
+    "name" : "PRGRM_YR",
+    "dataTypeName" : "text",
+    "description" : "Program Completer Year",
+    "fieldName" : "prgrm_yr",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153668025,
+    "cachedContents" : {
+      "non_null" : "115208",
+      "largest" : "All Years",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Years",
+        "count" : "24380"
+      }, {
+        "item" : "2013-14",
+        "count" : "10722"
+      }, {
+        "item" : "2015-16",
+        "count" : "10134"
+      }, {
+        "item" : "2016-17",
+        "count" : "9058"
+      }, {
+        "item" : "2014-15",
+        "count" : "8882"
+      }, {
+        "item" : "2012-13",
+        "count" : "8364"
+      }, {
+        "item" : "2017-18",
+        "count" : "7864"
+      }, {
+        "item" : "2010-11",
+        "count" : "7431"
+      }, {
+        "item" : "2011-12",
+        "count" : "7301"
+      }, {
+        "item" : "2018-19",
+        "count" : "6437"
+      }, {
+        "item" : "2019-20",
+        "count" : "5036"
+      }, {
+        "item" : "2020-21",
+        "count" : "3908"
+      }, {
+        "item" : "2021-22",
+        "count" : "3003"
+      }, {
+        "item" : "2022-23",
+        "count" : "1843"
+      }, {
+        "item" : "2023-24",
+        "count" : "845"
+      } ],
+      "smallest" : "2010-11",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524355,
+    "name" : "LIC_LVL",
+    "dataTypeName" : "text",
+    "description" : "License Level",
+    "fieldName" : "lic_lvl",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153668026,
+    "cachedContents" : {
+      "non_null" : "115208",
+      "largest" : "Professional",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Initial",
+        "count" : "103151"
+      }, {
+        "item" : "Professional",
+        "count" : "12057"
+      } ],
+      "smallest" : "Initial",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524356,
+    "name" : "PRGRM_NAME",
+    "dataTypeName" : "text",
+    "description" : "Program Name",
+    "fieldName" : "prgrm_name",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153668027,
+    "cachedContents" : {
+      "non_null" : "115208",
+      "largest" : "Academic: Teacher, World Language [Spanish], PreK-6, Initial, Post-Baccalaureate",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Academic: Teacher, Elementary, 1-6, Initial, Baccalaureate",
+        "count" : "3191"
+      }, {
+        "item" : "Academic: Teacher, Elementary, 1-6, Initial, Post-Baccalaureate",
+        "count" : "3133"
+      }, {
+        "item" : "Academic: Teacher, Moderate Disabilities, PreK-8, Initial, Post-Baccalaureate",
+        "count" : "2780"
+      }, {
+        "item" : "Academic: Teacher, Mathematics, 8-12, Initial, Post-Baccalaureate",
+        "count" : "2395"
+      }, {
+        "item" : "Academic: Teacher, Moderate Disabilities, 5-12, Initial, Post-Baccalaureate",
+        "count" : "2388"
+      }, {
+        "item" : "Academic: Teacher, English, 8-12, Initial, Post-Baccalaureate",
+        "count" : "2334"
+      }, {
+        "item" : "Academic: Teacher, English, 8-12, Initial, Baccalaureate",
+        "count" : "2318"
+      }, {
+        "item" : "Academic: Teacher, Mathematics, 8-12, Initial, Baccalaureate",
+        "count" : "2309"
+      }, {
+        "item" : "Academic: Teacher, Biology, 8-12, Initial, Post-Baccalaureate",
+        "count" : "2244"
+      }, {
+        "item" : "Academic: Teacher, History, 8-12, Initial, Baccalaureate",
+        "count" : "2223"
+      }, {
+        "item" : "Academic: Teacher, History, 8-12, Initial, Post-Baccalaureate",
+        "count" : "2187"
+      }, {
+        "item" : "Academic: Teacher, Early Childhood: Students with and without Disabilities, PreK-2, Initial, Baccalaureate",
+        "count" : "2172"
+      }, {
+        "item" : "Academic: Teacher, Mathematics, 5-8, Initial, Post-Baccalaureate",
+        "count" : "2009"
+      }, {
+        "item" : "Academic: Specialist Teacher, Reading, All Levels, Initial, Post-Baccalaureate",
+        "count" : "2000"
+      }, {
+        "item" : "Academic: Teacher, Early Childhood: Students with and without Disabilities, PreK-2, Initial, Post-Baccalaureate",
+        "count" : "1819"
+      }, {
+        "item" : "Academic: Administrator, Principal/Assistant Principal, PreK-6, Initial, Post-Baccalaureate",
+        "count" : "1716"
+      }, {
+        "item" : "Academic: Administrator, Principal/Assistant Principal, 9-12, Initial, Post-Baccalaureate",
+        "count" : "1688"
+      }, {
+        "item" : "Academic: Teacher, English, 5-8, Initial, Post-Baccalaureate",
+        "count" : "1600"
+      }, {
+        "item" : "Academic: Administrator, Principal/Assistant Principal, 5-8, Initial, Post-Baccalaureate",
+        "count" : "1558"
+      }, {
+        "item" : "Academic: Teacher, General Science, 5-8, Initial, Post-Baccalaureate",
+        "count" : "1505"
+      } ],
+      "smallest" : "Academic: Administrator, Principal/Assistant Principal, 5-12, Initial, Post-Baccalaureate",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524357,
+    "name" : "CMPLTR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Completer Count",
+    "fieldName" : "cmpltr_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 153668028,
+    "cachedContents" : {
+      "non_null" : "115208",
+      "largest" : "4279",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "29799"
+      }, {
+        "item" : "2",
+        "count" : "15626"
+      }, {
+        "item" : "3",
+        "count" : "10439"
+      }, {
+        "item" : "4",
+        "count" : "8083"
+      }, {
+        "item" : "5",
+        "count" : "6416"
+      }, {
+        "item" : "6",
+        "count" : "5165"
+      }, {
+        "item" : "7",
+        "count" : "4034"
+      }, {
+        "item" : "8",
+        "count" : "3207"
+      }, {
+        "item" : "9",
+        "count" : "2748"
+      }, {
+        "item" : "10",
+        "count" : "2347"
+      }, {
+        "item" : "11",
+        "count" : "2108"
+      }, {
+        "item" : "12",
+        "count" : "1577"
+      }, {
+        "item" : "13",
+        "count" : "1523"
+      }, {
+        "item" : "14",
+        "count" : "1326"
+      }, {
+        "item" : "15",
+        "count" : "1197"
+      }, {
+        "item" : "16",
+        "count" : "1047"
+      }, {
+        "item" : "18",
+        "count" : "1009"
+      }, {
+        "item" : "17",
+        "count" : "957"
+      }, {
+        "item" : "19",
+        "count" : "859"
+      }, {
+        "item" : "20",
+        "count" : "772"
+      } ],
+      "smallest" : "1",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524358,
+    "name" : "EMPLYD_CNT",
+    "dataTypeName" : "number",
+    "description" : "Ever Employed in a MA Public School Count",
+    "fieldName" : "emplyd_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 153668029,
+    "cachedContents" : {
+      "non_null" : "24572",
+      "largest" : "2994",
+      "null" : "90636",
+      "top" : [ {
+        "item" : "6",
+        "count" : "1887"
+      }, {
+        "item" : "7",
+        "count" : "1850"
+      }, {
+        "item" : "8",
+        "count" : "1664"
+      }, {
+        "item" : "5",
+        "count" : "1653"
+      }, {
+        "item" : "4",
+        "count" : "1386"
+      }, {
+        "item" : "9",
+        "count" : "1276"
+      }, {
+        "item" : "10",
+        "count" : "1094"
+      }, {
+        "item" : "3",
+        "count" : "961"
+      }, {
+        "item" : "11",
+        "count" : "889"
+      }, {
+        "item" : "12",
+        "count" : "853"
+      }, {
+        "item" : "2",
+        "count" : "707"
+      }, {
+        "item" : "13",
+        "count" : "707"
+      }, {
+        "item" : "14",
+        "count" : "623"
+      }, {
+        "item" : "15",
+        "count" : "554"
+      }, {
+        "item" : "16",
+        "count" : "486"
+      }, {
+        "item" : "1",
+        "count" : "457"
+      }, {
+        "item" : "17",
+        "count" : "416"
+      }, {
+        "item" : "19",
+        "count" : "355"
+      }, {
+        "item" : "18",
+        "count" : "352"
+      }, {
+        "item" : "21",
+        "count" : "273"
+      } ],
+      "smallest" : "0",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524359,
+    "name" : "EMPLYD_PCT",
+    "dataTypeName" : "number",
+    "description" : "Ever Employed in a MA Public School Percent",
+    "fieldName" : "emplyd_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 153668021,
+    "cachedContents" : {
+      "non_null" : "39502",
+      "largest" : "1.0",
+      "null" : "75706",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "3012"
+      }, {
+        "item" : "0.857",
+        "count" : "1274"
+      }, {
+        "item" : "0.5",
+        "count" : "1111"
+      }, {
+        "item" : "0.667",
+        "count" : "1106"
+      }, {
+        "item" : "0.75",
+        "count" : "1045"
+      }, {
+        "item" : "0.714",
+        "count" : "1032"
+      }, {
+        "item" : "0.571",
+        "count" : "864"
+      }, {
+        "item" : "0.875",
+        "count" : "779"
+      }, {
+        "item" : "0.8",
+        "count" : "715"
+      }, {
+        "item" : "0.625",
+        "count" : "667"
+      }, {
+        "item" : "0.778",
+        "count" : "656"
+      }, {
+        "item" : "0.889",
+        "count" : "596"
+      }, {
+        "item" : "0.429",
+        "count" : "571"
+      }, {
+        "item" : "0.6",
+        "count" : "516"
+      }, {
+        "item" : "0.9",
+        "count" : "496"
+      }, {
+        "item" : "0.556",
+        "count" : "471"
+      }, {
+        "item" : "0.7",
+        "count" : "445"
+      }, {
+        "item" : "0.833",
+        "count" : "423"
+      }, {
+        "item" : "0.333",
+        "count" : "419"
+      }, {
+        "item" : "0.909",
+        "count" : "419"
+      } ],
+      "smallest" : "0.0",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 621524360,
+    "name" : "DIST_RET_COH_CNT",
+    "dataTypeName" : "number",
+    "description" : "District Retention Cohort Count",
+    "fieldName" : "dist_ret_coh_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 153668030,
+    "cachedContents" : {
+      "non_null" : "36281",
+      "largest" : "2492",
+      "null" : "78927",
+      "top" : [ {
+        "item" : "6",
+        "count" : "2738"
+      }, {
+        "item" : "7",
+        "count" : "2582"
+      }, {
+        "item" : "5",
+        "count" : "2350"
+      }, {
+        "item" : "4",
+        "count" : "2284"
+      }, {
+        "item" : "8",
+        "count" : "2146"
+      }, {
+        "item" : "0",
+        "count" : "1999"
+      }, {
+        "item" : "3",
+        "count" : "1942"
+      }, {
+        "item" : "9",
+        "count" : "1652"
+      }, {
+        "item" : "2",
+        "count" : "1619"
+      }, {
+        "item" : "10",
+        "count" : "1479"
+      }, {
+        "item" : "11",
+        "count" : "1228"
+      }, {
+        "item" : "1",
+        "count" : "1203"
+      }, {
+        "item" : "12",
+        "count" : "994"
+      }, {
+        "item" : "13",
+        "count" : "849"
+      }, {
+        "item" : "14",
+        "count" : "722"
+      }, {
+        "item" : "15",
+        "count" : "691"
+      }, {
+        "item" : "16",
+        "count" : "608"
+      }, {
+        "item" : "17",
+        "count" : "539"
+      }, {
+        "item" : "18",
+        "count" : "477"
+      }, {
+        "item" : "19",
+        "count" : "426"
+      } ],
+      "smallest" : "0",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : { }
+  }, {
+    "id" : 621524362,
+    "name" : "DIST_RET_PCT",
+    "dataTypeName" : "number",
+    "description" : "Remaining Employed (Retained) in Same District for 2 Years Percent",
+    "fieldName" : "dist_ret_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 163507235,
+    "cachedContents" : {
+      "non_null" : "34192",
+      "largest" : "1.0",
+      "null" : "81016",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "6546"
+      }, {
+        "item" : "0.667",
+        "count" : "1628"
+      }, {
+        "item" : "0.5",
+        "count" : "1556"
+      }, {
+        "item" : "0.75",
+        "count" : "1264"
+      }, {
+        "item" : "0.833",
+        "count" : "1076"
+      }, {
+        "item" : "0.8",
+        "count" : "984"
+      }, {
+        "item" : "0.857",
+        "count" : "960"
+      }, {
+        "item" : "0.875",
+        "count" : "762"
+      }, {
+        "item" : "0.6",
+        "count" : "758"
+      }, {
+        "item" : "0.0",
+        "count" : "726"
+      }, {
+        "item" : "0.714",
+        "count" : "724"
+      }, {
+        "item" : "0.889",
+        "count" : "580"
+      }, {
+        "item" : "0.571",
+        "count" : "485"
+      }, {
+        "item" : "0.9",
+        "count" : "481"
+      }, {
+        "item" : "0.333",
+        "count" : "449"
+      }, {
+        "item" : "0.778",
+        "count" : "435"
+      }, {
+        "item" : "0.625",
+        "count" : "401"
+      }, {
+        "item" : "0.4",
+        "count" : "341"
+      }, {
+        "item" : "0.909",
+        "count" : "341"
+      }, {
+        "item" : "0.7",
+        "count" : "328"
+      } ],
+      "smallest" : "0.0",
+      "count" : "115208",
+      "cardinality" : "115208"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "ed prep", "educator preparation", "educator preparation program", "educators", "teachers", "employment", "educator pipeline" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

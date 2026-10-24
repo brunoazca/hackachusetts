@@ -1,0 +1,1823 @@
+{
+  "id" : "mtik-28va",
+  "name" : "Police Data: Crashes",
+  "assetType" : "dataset",
+  "attribution" : "Somerville PD",
+  "averageRating" : 0,
+  "category" : "Public Safety",
+  "createdAt" : 1712087224,
+  "description" : "This data set contains Somerville crashes that occurred from May 2018 to present. Crash reports are completed when a motor vehicle crash occurs on a public way and involves at least one of the following: Any person is killed, any person is injured,  or damage is in excess of $1,000 to any one vehicle or other property. Data does not include crashes that are under active investigation, nor those that occur on state roads, which are under the jurisdiction of the Massachusetts State Police.   State crash data may be accessed on the Massachusetts Department of Transportation’s crash data portal, IMPACT.\n \n<p>This data set should be refreshed daily with data appearing with a one-month delay (e.g. crashes that occurred from 1/1 will appear on 2/1).  If a daily update does not refresh, please email data@somervillema.gov.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2608,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "ODBL",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40856536,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1725983086,
+  "publicationGroup" : 19493541,
+  "publicationStage" : "published",
+  "rowIdentifierColumnId" : 599239952,
+  "rowsUpdatedAt" : 1792821754,
+  "rowsUpdatedBy" : "nnwx-dqbu",
+  "tableId" : 19647838,
+  "totalTimesRated" : 0,
+  "viewCount" : 8348,
+  "viewLastModified" : 1738696784,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1715195793,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 6545749,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1715195793,
+    "targetAudience" : "public",
+    "workflowId" : 1447,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1715195793,
+      "failureCount" : 0,
+      "startedAt" : 1715195793,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "nnwx-dqbu",
+      "displayName" : "SomerStat"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 599239952,
+    "name" : "Crash Number",
+    "dataTypeName" : "text",
+    "description" : "A unique number representing each traffic crash.",
+    "fieldName" : "crashnum",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106763,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "26067825",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1800000018",
+        "count" : "1"
+      }, {
+        "item" : "1800000022",
+        "count" : "1"
+      }, {
+        "item" : "1800000029",
+        "count" : "1"
+      }, {
+        "item" : "1800000032",
+        "count" : "1"
+      }, {
+        "item" : "1800000041",
+        "count" : "1"
+      }, {
+        "item" : "1800000048",
+        "count" : "1"
+      }, {
+        "item" : "1800000049",
+        "count" : "1"
+      }, {
+        "item" : "1800000050",
+        "count" : "1"
+      }, {
+        "item" : "1800000051",
+        "count" : "1"
+      }, {
+        "item" : "1800000052",
+        "count" : "1"
+      }, {
+        "item" : "1800000053",
+        "count" : "1"
+      }, {
+        "item" : "1800000054",
+        "count" : "1"
+      }, {
+        "item" : "1800000055",
+        "count" : "1"
+      }, {
+        "item" : "1800000056",
+        "count" : "1"
+      }, {
+        "item" : "1800000057",
+        "count" : "1"
+      }, {
+        "item" : "1800000058",
+        "count" : "1"
+      }, {
+        "item" : "1800000059",
+        "count" : "1"
+      }, {
+        "item" : "1800000060",
+        "count" : "1"
+      }, {
+        "item" : "1800000061",
+        "count" : "1"
+      }, {
+        "item" : "1800000006",
+        "count" : "1"
+      } ],
+      "smallest" : "1800000006",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239953,
+    "name" : "Date and Time of Crash",
+    "dataTypeName" : "text",
+    "description" : "When the crash occurred.",
+    "fieldName" : "dtcrash",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106778,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "2026-09-22 14:53:00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-01-27 11:18:00",
+        "count" : "2"
+      }, {
+        "item" : "2025-12-17 06:30:00",
+        "count" : "2"
+      }, {
+        "item" : "2019-11-24 00:59:00",
+        "count" : "2"
+      }, {
+        "item" : "2019-08-26 18:02:00",
+        "count" : "2"
+      }, {
+        "item" : "2018-04-24 14:44:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-04-24 17:24:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-04-10 10:03:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-04-29 15:48:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-04-19 10:04:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-04-30 07:32:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-01 12:37:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-01 16:08:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-02 10:23:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-03 11:42:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-05 22:47:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-04-28 12:49:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-04 14:01:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-07 07:42:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-10 08:25:00",
+        "count" : "1"
+      }, {
+        "item" : "2018-05-04 10:45:00",
+        "count" : "1"
+      } ],
+      "smallest" : "2018-03-23 11:03:00",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239954,
+    "name" : "Police Shift",
+    "dataTypeName" : "text",
+    "description" : "The police work shift during which the crash occurred.     ",
+    "fieldName" : "policeshift",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106769,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "Last Half (Midnight - 8AM)",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Day Shift (8AM - 4PM)",
+        "count" : "1782"
+      }, {
+        "item" : "First Half (4PM - Midnight)",
+        "count" : "1273"
+      }, {
+        "item" : "Last Half (Midnight - 8AM)",
+        "count" : "489"
+      } ],
+      "smallest" : "Day Shift (8AM - 4PM)",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239955,
+    "name" : "Crash Location",
+    "dataTypeName" : "text",
+    "description" : "Address or intersection where the crash occurred.",
+    "fieldName" : "address",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106783,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "WYATT ST & CONCORD AVE Somerville, MA",
+      "null" : "0",
+      "top" : [ {
+        "item" : "14 MCGRATH HWY Somerville, MA",
+        "count" : "31"
+      }, {
+        "item" : "ALBION ST & LOWELL ST Somerville, MA",
+        "count" : "20"
+      }, {
+        "item" : "400 SOMERVILLE AV Somerville, MA",
+        "count" : "20"
+      }, {
+        "item" : "220 WASHINGTON ST Somerville, MA",
+        "count" : "19"
+      }, {
+        "item" : "BROADWAY & TEMPLE ST Somerville, MA",
+        "count" : "18"
+      }, {
+        "item" : "CURTIS ST & POWDER HOUSE BLVD Somerville, MA",
+        "count" : "17"
+      }, {
+        "item" : "BEACON ST & WASHINGTON ST Somerville, MA",
+        "count" : "16"
+      }, {
+        "item" : "BROADWAY & WILLOW AV Somerville, MA",
+        "count" : "15"
+      }, {
+        "item" : "COLUMBUS AV & WASHINGTON ST Somerville, MA",
+        "count" : "14"
+      }, {
+        "item" : "CENTRAL ST & HIGHLAND AV Somerville, MA",
+        "count" : "12"
+      }, {
+        "item" : "266 BROADWAY Somerville, MA",
+        "count" : "12"
+      }, {
+        "item" : "CUTTER AV & SUMMER ST Somerville, MA",
+        "count" : "11"
+      }, {
+        "item" : "1 DAVIS SQ Somerville, MA",
+        "count" : "11"
+      }, {
+        "item" : "PROSPECT ST & SOMERVILLE AV Somerville, MA",
+        "count" : "11"
+      }, {
+        "item" : "CENTRAL ST & MEDFORD ST Somerville, MA",
+        "count" : "10"
+      }, {
+        "item" : "GROVE ST & HIGHLAND AV Somerville, MA",
+        "count" : "10"
+      }, {
+        "item" : "75 MYSTIC AV Somerville, MA",
+        "count" : "10"
+      }, {
+        "item" : "282 SOMERVILLE AV Somerville, MA",
+        "count" : "10"
+      }, {
+        "item" : "855 BROADWAY Somerville, MA",
+        "count" : "10"
+      }, {
+        "item" : "CROSS ST & PEARL ST Somerville, MA",
+        "count" : "10"
+      } ],
+      "smallest" : "00 GREAT RIVER RD Somerville, MA",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239956,
+    "name" : "Light Conditions",
+    "dataTypeName" : "text",
+    "description" : "The type/level of light that existed at the time of the motor vehicle crash.",
+    "fieldName" : "ambntlightdesc",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106762,
+    "cachedContents" : {
+      "non_null" : "3543",
+      "largest" : "UNKNOWN                                           ",
+      "null" : "1",
+      "top" : [ {
+        "item" : "DAYLIGHT                                          ",
+        "count" : "2418"
+      }, {
+        "item" : "DARK - LIGHTED ROADWAY                            ",
+        "count" : "903"
+      }, {
+        "item" : "DUSK                                              ",
+        "count" : "99"
+      }, {
+        "item" : "DAWN                                              ",
+        "count" : "39"
+      }, {
+        "item" : "DARK - ROADWAY NOT LIGHTED                        ",
+        "count" : "35"
+      }, {
+        "item" : "DARK - UNKNOWN ROADWAY LIGHTING                   ",
+        "count" : "30"
+      }, {
+        "item" : "OTHER                                             ",
+        "count" : "10"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "9"
+      } ],
+      "smallest" : "DARK - LIGHTED ROADWAY                            ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239957,
+    "name" : "Weather Conditions",
+    "dataTypeName" : "text",
+    "description" : "The prevailing atmospheric conditions that existed at the time of the crash.",
+    "fieldName" : "weathcond1desc",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106756,
+    "cachedContents" : {
+      "non_null" : "3539",
+      "largest" : "UNKNOWN                                           ",
+      "null" : "5",
+      "top" : [ {
+        "item" : "CLEAR                                             ",
+        "count" : "2547"
+      }, {
+        "item" : "CLOUDY                                            ",
+        "count" : "509"
+      }, {
+        "item" : "RAIN                                              ",
+        "count" : "329"
+      }, {
+        "item" : "SNOW                                              ",
+        "count" : "95"
+      }, {
+        "item" : "SLEET, HAIL, FREEZING RAIN OR DRIZZLE             ",
+        "count" : "24"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "17"
+      }, {
+        "item" : "OTHER                                             ",
+        "count" : "10"
+      }, {
+        "item" : "FOG, SMOG, SMOKE                                  ",
+        "count" : "4"
+      }, {
+        "item" : "BLOWING, SAND, SNOW                               ",
+        "count" : "3"
+      }, {
+        "item" : "SEVERE CROSSWINDS                                 ",
+        "count" : "1"
+      } ],
+      "smallest" : "BLOWING, SAND, SNOW                               ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239959,
+    "name" : "Road Surface",
+    "dataTypeName" : "text",
+    "description" : "The roadway surface condition at the time and place of a crash.",
+    "fieldName" : "roadsurfdesc",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106761,
+    "cachedContents" : {
+      "non_null" : "3538",
+      "largest" : "WET                                               ",
+      "null" : "6",
+      "top" : [ {
+        "item" : "DRY                                               ",
+        "count" : "2783"
+      }, {
+        "item" : "WET                                               ",
+        "count" : "565"
+      }, {
+        "item" : "SNOW                                              ",
+        "count" : "95"
+      }, {
+        "item" : "ICE                                               ",
+        "count" : "32"
+      }, {
+        "item" : "SLUSH                                             ",
+        "count" : "28"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "15"
+      }, {
+        "item" : "OTHER                                             ",
+        "count" : "13"
+      }, {
+        "item" : "SAND, MUD, DIRT, OIL, GRAVEL                      ",
+        "count" : "6"
+      }, {
+        "item" : "WATER, STANDING, MOVING                           ",
+        "count" : "1"
+      } ],
+      "smallest" : "DRY                                               ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239960,
+    "name" : "Road Contributing Circumstances",
+    "dataTypeName" : "text",
+    "description" : "Apparent environmental or roadway conditions which may have contributed to the crash.",
+    "fieldName" : "roadcontribdesc",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106751,
+    "cachedContents" : {
+      "non_null" : "3531",
+      "largest" : "WORN, TRAVEL-POLISHED SURFACE                     ",
+      "null" : "13",
+      "top" : [ {
+        "item" : "NONE                                              ",
+        "count" : "3008"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "221"
+      }, {
+        "item" : "OTHER                                             ",
+        "count" : "93"
+      }, {
+        "item" : "ROAD SURFACE CONDITION                            ",
+        "count" : "81"
+      }, {
+        "item" : "OBSTRUCTION IN ROADWAY                            ",
+        "count" : "42"
+      }, {
+        "item" : "TRAFFIC CONGESTION RELATED                        ",
+        "count" : "36"
+      }, {
+        "item" : "TRAFFIC CONTROL DEVICE                            ",
+        "count" : "23"
+      }, {
+        "item" : "WORK ZONE                                         ",
+        "count" : "16"
+      }, {
+        "item" : "DEBRIS                                            ",
+        "count" : "4"
+      }, {
+        "item" : "RUT, HOLES, BUMPS                                 ",
+        "count" : "4"
+      }, {
+        "item" : "SHOULDERS                                         ",
+        "count" : "1"
+      }, {
+        "item" : "NON-HIGHWAY WORK                                  ",
+        "count" : "1"
+      }, {
+        "item" : "WORN, TRAVEL-POLISHED SURFACE                     ",
+        "count" : "1"
+      } ],
+      "smallest" : "DEBRIS                                            ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239961,
+    "name" : "Traffic Control Device Type",
+    "dataTypeName" : "text",
+    "description" : "The type of traffic control device (TCD) applicable to this motor vehicle at the crash location.",
+    "fieldName" : "trafcntrltypedesc",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106782,
+    "cachedContents" : {
+      "non_null" : "3533",
+      "largest" : "YIELD SIGNS                                       ",
+      "null" : "11",
+      "top" : [ {
+        "item" : "NO CONTROLS                                       ",
+        "count" : "2184"
+      }, {
+        "item" : "TRAFFIC CONTROL SIGNAL                            ",
+        "count" : "650"
+      }, {
+        "item" : "STOP SIGNS                                        ",
+        "count" : "527"
+      }, {
+        "item" : "FLASHING TRAFIC CONTROL SIGNAL                    ",
+        "count" : "50"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "45"
+      }, {
+        "item" : "YIELD SIGNS                                       ",
+        "count" : "43"
+      }, {
+        "item" : "WARNING SIGNS                                     ",
+        "count" : "21"
+      }, {
+        "item" : "PEDESTRIAN CROSSING SIGNAL/BEACON                 ",
+        "count" : "7"
+      }, {
+        "item" : "SCHOOL ZONE SIGNS                                 ",
+        "count" : "4"
+      }, {
+        "item" : "RAILWAY CROSSING DEVICE                           ",
+        "count" : "2"
+      } ],
+      "smallest" : "FLASHING TRAFIC CONTROL SIGNAL                    ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239962,
+    "name" : "Roadway Intersection Type",
+    "dataTypeName" : "text",
+    "description" : "An intersection consists of two or more roadways that intersect at the same level.",
+    "fieldName" : "rdwyjuncdesc",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106790,
+    "cachedContents" : {
+      "non_null" : "3533",
+      "largest" : "Y-INTERSECTION                                    ",
+      "null" : "11",
+      "top" : [ {
+        "item" : "NOT AT INTERSECTION                               ",
+        "count" : "1745"
+      }, {
+        "item" : "T-INTERSECTION                                    ",
+        "count" : "1014"
+      }, {
+        "item" : "FOUR WAY INTERSECTION                             ",
+        "count" : "546"
+      }, {
+        "item" : "Y-INTERSECTION                                    ",
+        "count" : "55"
+      }, {
+        "item" : "DRIVEWAY                                          ",
+        "count" : "52"
+      }, {
+        "item" : "TRAFFIC CIRCLE                                    ",
+        "count" : "46"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "37"
+      }, {
+        "item" : "FIVE-POINT OR MORE                                ",
+        "count" : "33"
+      }, {
+        "item" : "ON RAMP                                           ",
+        "count" : "2"
+      }, {
+        "item" : "RAILWAY, GRADE CROSSING                           ",
+        "count" : "2"
+      }, {
+        "item" : "OFF RAMP                                          ",
+        "count" : "1"
+      } ],
+      "smallest" : "DRIVEWAY                                          ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239963,
+    "name" : "Trafficway Description",
+    "dataTypeName" : "text",
+    "description" : "Indicates whether the trafficway for this vehicle is divided and whether it serves one-way or two-way traffic. A divided trafficway is one in which roadways for travel in opposite directions are physically separated by a median.",
+    "fieldName" : "trafydescrdesc",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106752,
+    "cachedContents" : {
+      "non_null" : "3527",
+      "largest" : "UNKNOWN                                           ",
+      "null" : "17",
+      "top" : [ {
+        "item" : "TWO-WAY, NOT DIVIDED                              ",
+        "count" : "1930"
+      }, {
+        "item" : "ONE-WAY, NOT DIVIDED                              ",
+        "count" : "723"
+      }, {
+        "item" : "TWO-WAY, DIVIDED, UNPROTECTED MEDIAN              ",
+        "count" : "515"
+      }, {
+        "item" : "TWO-WAY, DIVIDED, POSITIVE MEDIAN BARRIER         ",
+        "count" : "204"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "155"
+      } ],
+      "smallest" : "ONE-WAY, NOT DIVIDED                              ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239964,
+    "name" : "Manner of Collision",
+    "dataTypeName" : "text",
+    "description" : "The identification of the manner in which two motor vehicles in transport initially came together without regard to the direction of force. This data element refers only to crashes where the first harmful event involves a collision between two motor vehicles in transport.",
+    "fieldName" : "manrcolldesc",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106788,
+    "cachedContents" : {
+      "non_null" : "3537",
+      "largest" : "UNKNOWN                                           ",
+      "null" : "7",
+      "top" : [ {
+        "item" : "ANGLE                                             ",
+        "count" : "1010"
+      }, {
+        "item" : "SIDESWIPE, SAME DIRECTION                         ",
+        "count" : "803"
+      }, {
+        "item" : "SINGLE VEHICLE CRASH                              ",
+        "count" : "671"
+      }, {
+        "item" : "REAR-END                                          ",
+        "count" : "558"
+      }, {
+        "item" : "HEAD ON                                           ",
+        "count" : "225"
+      }, {
+        "item" : "SIDESWIPE, OPPOSITE DIRECTION                     ",
+        "count" : "155"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "82"
+      }, {
+        "item" : "REAR TO REAR                                      ",
+        "count" : "33"
+      } ],
+      "smallest" : "ANGLE                                             ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239965,
+    "name" : "First Harmful Event",
+    "dataTypeName" : "text",
+    "description" : "The first injury or damage-producing event that characterizes the crash type.",
+    "fieldName" : "hrmfeventdesc2",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106766,
+    "cachedContents" : {
+      "non_null" : "3526",
+      "largest" : "UNKNOWN                                           ",
+      "null" : "18",
+      "top" : [ {
+        "item" : "COLLISION WITH MOTOR VEHICLE IN TRAFFIC           ",
+        "count" : "1652"
+      }, {
+        "item" : "COLLISION WITH PARKED MOTOR VEHICLE               ",
+        "count" : "841"
+      }, {
+        "item" : "COLLISION WITH PEDALCYCLE                         ",
+        "count" : "285"
+      }, {
+        "item" : "COLLISION WITH PEDESTRIAN                         ",
+        "count" : "250"
+      }, {
+        "item" : "OTHER                                             ",
+        "count" : "130"
+      }, {
+        "item" : "COLLISION WITH LIGHT POLE OR OTHER POST/SUPPORT   ",
+        "count" : "112"
+      }, {
+        "item" : "COLLISION WITH TREE                               ",
+        "count" : "49"
+      }, {
+        "item" : "COLLISION WITH CURB                               ",
+        "count" : "39"
+      }, {
+        "item" : "COLLISION WITH OTHER MOVABLE OBJECT               ",
+        "count" : "37"
+      }, {
+        "item" : "COLLISION WITH UTILITY POLE                       ",
+        "count" : "27"
+      }, {
+        "item" : "COLLISION WITH UNKNOWN FIXED OBJECT               ",
+        "count" : "24"
+      }, {
+        "item" : "COLLISION WITH MOPED                              ",
+        "count" : "16"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "15"
+      }, {
+        "item" : "OTHER NON-COLLISION                               ",
+        "count" : "15"
+      }, {
+        "item" : "COLLISION WITH MEDIAN BARRIER                     ",
+        "count" : "14"
+      }, {
+        "item" : "COLLISION WITH GUARDRAIL                          ",
+        "count" : "7"
+      }, {
+        "item" : "COLLISION WITH WORK ZONE MAINTENANCE EQUIPMENT    ",
+        "count" : "4"
+      }, {
+        "item" : "COLLISION WITH DITCH                              ",
+        "count" : "3"
+      }, {
+        "item" : "COLLISION WITH BRIDGE OVERHEAD STRUCTURE          ",
+        "count" : "3"
+      }, {
+        "item" : "OVERTURN/ROLLOVER                                 ",
+        "count" : "2"
+      } ],
+      "smallest" : "COLLISION WITH BRIDGE OVERHEAD STRUCTURE          ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239966,
+    "name" : "First Harmful Event Location",
+    "dataTypeName" : "text",
+    "description" : "The first injury or damage-producing event that characterizes the crash type.",
+    "fieldName" : "hrmfeventdesc1",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106793,
+    "cachedContents" : {
+      "non_null" : "3537",
+      "largest" : "UNKNOWN                                           ",
+      "null" : "7",
+      "top" : [ {
+        "item" : "ROADWAY                                           ",
+        "count" : "2867"
+      }, {
+        "item" : "ROADSIDE                                          ",
+        "count" : "250"
+      }, {
+        "item" : "OUTSIDE ROADWAY                                   ",
+        "count" : "232"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "133"
+      }, {
+        "item" : "SHOULDER - PAVED                                  ",
+        "count" : "25"
+      }, {
+        "item" : "MEDIAN                                            ",
+        "count" : "21"
+      }, {
+        "item" : "SHOULDER - TRAVEL LANE                            ",
+        "count" : "9"
+      } ],
+      "smallest" : "MEDIAN                                            ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239967,
+    "name" : "Speed Limit",
+    "dataTypeName" : "text",
+    "description" : "The posted/statutory speed limit for the motor vehicle at the time of the crash. The authorization may be indicated by the posted speed limit, blinking sign at construction zones, etc.",
+    "fieldName" : "speedlimit",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106767,
+    "cachedContents" : {
+      "non_null" : "3471",
+      "largest" : "UNK",
+      "null" : "73",
+      "top" : [ {
+        "item" : "25 ",
+        "count" : "2270"
+      }, {
+        "item" : "20 ",
+        "count" : "793"
+      }, {
+        "item" : "30 ",
+        "count" : "206"
+      }, {
+        "item" : "15 ",
+        "count" : "55"
+      }, {
+        "item" : "10 ",
+        "count" : "54"
+      }, {
+        "item" : "5  ",
+        "count" : "42"
+      }, {
+        "item" : "35 ",
+        "count" : "26"
+      }, {
+        "item" : "0  ",
+        "count" : "8"
+      }, {
+        "item" : "00 ",
+        "count" : "6"
+      }, {
+        "item" : "N/A",
+        "count" : "4"
+      }, {
+        "item" : "UNK",
+        "count" : "1"
+      }, {
+        "item" : "254",
+        "count" : "1"
+      }, {
+        "item" : "255",
+        "count" : "1"
+      }, {
+        "item" : "40 ",
+        "count" : "1"
+      }, {
+        "item" : "NA ",
+        "count" : "1"
+      }, {
+        "item" : "O  ",
+        "count" : "1"
+      }, {
+        "item" : "-  ",
+        "count" : "1"
+      } ],
+      "smallest" : "-  ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239968,
+    "name" : "Work Zone",
+    "dataTypeName" : "text",
+    "description" : " Indicating a crash that occurs in or related to a construction, maintenance, or utility work zone, identified by warning signs/signals/indicators, including those on transport devices (e.g. signs, flashing lights, channelizing devices, barriers, pavement markings, flagperson, warning signs and arrow boards mounted on the vehicles in a mobile maintenance activity), whether or not workers were actually present at the time of the crash.",
+    "fieldName" : "workzonerelddesc",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106784,
+    "cachedContents" : {
+      "non_null" : "3530",
+      "largest" : "Y",
+      "null" : "14",
+      "top" : [ {
+        "item" : "N",
+        "count" : "3425"
+      }, {
+        "item" : "Y",
+        "count" : "105"
+      } ],
+      "smallest" : "N",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239970,
+    "name" : "Count Fatal Injury ",
+    "dataTypeName" : "text",
+    "description" : "The count of fatal injuries resulting from a crash.  The injured party could be a driver, passenger or non-motorist involved in a crash.",
+    "fieldName" : "fatalinjury",
+    "position" : 19,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106755,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3541"
+      }, {
+        "item" : "1",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239971,
+    "name" : "Count Suspected Serious Injury",
+    "dataTypeName" : "text",
+    "description" : "The count of suspected serious injuries resulting from a crash.  The injured party could be a driver, passenger or non-motorist involved in a crash.",
+    "fieldName" : "suspectedseriousinjury",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106780,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "2",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3472"
+      }, {
+        "item" : "1",
+        "count" : "66"
+      }, {
+        "item" : "2",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239972,
+    "name" : "Count Suspected Minor Injury ",
+    "dataTypeName" : "text",
+    "description" : "The count of suspected minor injuries resulting from a crash.  The injured party could be a driver, passenger or non-motorist involved in a crash.",
+    "fieldName" : "suspectedminorinjury",
+    "position" : 21,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106773,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "4",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2959"
+      }, {
+        "item" : "1",
+        "count" : "534"
+      }, {
+        "item" : "2",
+        "count" : "42"
+      }, {
+        "item" : "3",
+        "count" : "6"
+      }, {
+        "item" : "4",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239973,
+    "name" : "Count Possible Injury",
+    "dataTypeName" : "text",
+    "description" : "The count of possible injuries resulting from a crash.  The injured party could be a driver, passenger or non-motorist involved in a crash.",
+    "fieldName" : "possibleinjury",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106775,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "3",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3034"
+      }, {
+        "item" : "1",
+        "count" : "460"
+      }, {
+        "item" : "2",
+        "count" : "43"
+      }, {
+        "item" : "3",
+        "count" : "7"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239974,
+    "name" : "Count No Apparent Injury",
+    "dataTypeName" : "text",
+    "description" : "The count of no apparent injuries resulting from a crash.  The injured party could be a driver, passenger or non-motorist involved in a crash.",
+    "fieldName" : "noapparentinjury",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106774,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "9",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2",
+        "count" : "1136"
+      }, {
+        "item" : "3",
+        "count" : "861"
+      }, {
+        "item" : "1",
+        "count" : "805"
+      }, {
+        "item" : "4",
+        "count" : "326"
+      }, {
+        "item" : "0",
+        "count" : "268"
+      }, {
+        "item" : "5",
+        "count" : "102"
+      }, {
+        "item" : "6",
+        "count" : "34"
+      }, {
+        "item" : "7",
+        "count" : "9"
+      }, {
+        "item" : "9",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239975,
+    "name" : "Count Unknown Injury",
+    "dataTypeName" : "text",
+    "description" : "The count of unknown injuries resulting from a crash.  The injured party could be a driver, passenger or non-motorist involved in a crash.",
+    "fieldName" : "unknown",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106781,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "5",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3331"
+      }, {
+        "item" : "1",
+        "count" : "172"
+      }, {
+        "item" : "2",
+        "count" : "29"
+      }, {
+        "item" : "3",
+        "count" : "7"
+      }, {
+        "item" : "4",
+        "count" : "4"
+      }, {
+        "item" : "5",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239976,
+    "name" : "Count Not Reported Injury",
+    "dataTypeName" : "text",
+    "description" : "The count of not reported injuries resulting from a crash.  The injured party could be a driver, passenger or non-motorist involved in a crash.",
+    "fieldName" : "notreported",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106770,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3544"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239979,
+    "name" : "Total Non-Motorists",
+    "dataTypeName" : "text",
+    "description" : "Indicates the total number of non-motorists involved in a crash. ",
+    "fieldName" : "numnonmotorist",
+    "position" : 28,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106757,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "3",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2905"
+      }, {
+        "item" : "1",
+        "count" : "615"
+      }, {
+        "item" : "2",
+        "count" : "21"
+      }, {
+        "item" : "3",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239980,
+    "name" : "Pedestrian Involvement (Non-Motorist)",
+    "dataTypeName" : "text",
+    "description" : "Indicates the number of pedestrians involved in a crash, if any. A pedestrian is one type of non-motorist which is defined as any person other than a motorist.",
+    "fieldName" : "nonmotoristpedestrian",
+    "position" : 29,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106765,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "3",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3312"
+      }, {
+        "item" : "1",
+        "count" : "219"
+      }, {
+        "item" : "2",
+        "count" : "11"
+      }, {
+        "item" : "3",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239981,
+    "name" : "Cyclist Involvement (Non-Motorist)",
+    "dataTypeName" : "text",
+    "description" : "Indicates the number of cyclists involved in a crash, if any. A cyclist is one type of non-motorist which is defined as any person other than a motorist.",
+    "fieldName" : "nonmotoristcyclist",
+    "position" : 30,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106753,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "3",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3205"
+      }, {
+        "item" : "1",
+        "count" : "338"
+      }, {
+        "item" : "3",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239982,
+    "name" : "Other Non-Motorist Involvement",
+    "dataTypeName" : "text",
+    "description" : "Indicates the number of non-motorists other than pedestrians or cyclists involved in a crash, if any. Examples include a skater, motorized scooter, wheelchair, etc.  ",
+    "fieldName" : "nonmotoristother",
+    "position" : 31,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106748,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "2",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3476"
+      }, {
+        "item" : "1",
+        "count" : "66"
+      }, {
+        "item" : "2",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239983,
+    "name" : "Non-Motorist Location ",
+    "dataTypeName" : "text",
+    "description" : "The location of the non-motorist with respect to the trafficway at the time of crash.  In the infrequent cases where multiple non-motorists are involved, only one value will be displayed. ",
+    "fieldName" : "nonmtrstlocdesc",
+    "position" : 32,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106758,
+    "cachedContents" : {
+      "non_null" : "632",
+      "largest" : "UNKNOWN                                           ",
+      "null" : "2912",
+      "top" : [ {
+        "item" : "IN ROADWAY                                        ",
+        "count" : "291"
+      }, {
+        "item" : "MARKED CROSSWALK AT INTERSECTION                  ",
+        "count" : "134"
+      }, {
+        "item" : "ON-STREET BIKE LANES                              ",
+        "count" : "54"
+      }, {
+        "item" : "AT INTERSECTION BUT NO CROSSWALK                  ",
+        "count" : "33"
+      }, {
+        "item" : "SHARED-USE PATH OR TRAILS                         ",
+        "count" : "26"
+      }, {
+        "item" : "NON-INTERSECTION CROSSWALK                        ",
+        "count" : "24"
+      }, {
+        "item" : "NOT IN ROADWAY                                    ",
+        "count" : "17"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "15"
+      }, {
+        "item" : "OTHER                                             ",
+        "count" : "12"
+      }, {
+        "item" : "SIDEWALK                                          ",
+        "count" : "7"
+      }, {
+        "item" : "ON-STREET BUFFERED BIKE LANES                     ",
+        "count" : "6"
+      }, {
+        "item" : "SEPARATED BIKE LANES                              ",
+        "count" : "6"
+      }, {
+        "item" : "SHOULDER                                          ",
+        "count" : "4"
+      }, {
+        "item" : "RAISED CROSSWALK                                  ",
+        "count" : "2"
+      }, {
+        "item" : "MEDIAN, BUT NOT ON SHOULDER                       ",
+        "count" : "1"
+      } ],
+      "smallest" : "AT INTERSECTION BUT NO CROSSWALK                  ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239985,
+    "name" : "Non-Motorist Action",
+    "dataTypeName" : "text",
+    "description" : "The action of the non-motorist immediately prior to the crash. In the infrequent cases where multiple non-motorists are involved, only one value will be displayed. ",
+    "fieldName" : "nonmtrstactdesc",
+    "position" : 34,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106764,
+    "cachedContents" : {
+      "non_null" : "633",
+      "largest" : "WORKING ON VEHICLE                                ",
+      "null" : "2911",
+      "top" : [ {
+        "item" : "WALKING, RUNNING OR CYCLING                       ",
+        "count" : "343"
+      }, {
+        "item" : "ENTERING OR CROSSING SPECIFIED LOCATION           ",
+        "count" : "215"
+      }, {
+        "item" : "OTHER                                             ",
+        "count" : "36"
+      }, {
+        "item" : "STANDING                                          ",
+        "count" : "18"
+      }, {
+        "item" : "APPROACHING OR LEAVING VEHICLE                    ",
+        "count" : "7"
+      }, {
+        "item" : "NONE                                              ",
+        "count" : "5"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "4"
+      }, {
+        "item" : "WORKING                                           ",
+        "count" : "4"
+      }, {
+        "item" : "WORKING ON VEHICLE                                ",
+        "count" : "1"
+      } ],
+      "smallest" : "APPROACHING OR LEAVING VEHICLE                    ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239987,
+    "name" : "Non-Motorist Condition",
+    "dataTypeName" : "text",
+    "description" : "Any relevant condition of the individual (non-motorist) that is directly related to the crash.  In the infrequent cases where multiple non-motorists are involved, only one value will be displayed. ",
+    "fieldName" : "nonmtrstconddesc",
+    "position" : 36,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106772,
+    "cachedContents" : {
+      "non_null" : "632",
+      "largest" : "UNKNOWN                                           ",
+      "null" : "2912",
+      "top" : [ {
+        "item" : "APPARENTLY NORMAL                                 ",
+        "count" : "537"
+      }, {
+        "item" : "UNKNOWN                                           ",
+        "count" : "56"
+      }, {
+        "item" : "EMOTIONAL                                         ",
+        "count" : "13"
+      }, {
+        "item" : "OTHER                                             ",
+        "count" : "13"
+      }, {
+        "item" : "PHYSICAL IMPAIRMENT                               ",
+        "count" : "7"
+      }, {
+        "item" : "UNDER THE INFLUENCE OF MEDICATIONS/DRUGS/ALCOHOL  ",
+        "count" : "6"
+      } ],
+      "smallest" : "APPARENTLY NORMAL                                 ",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239989,
+    "name" : "Hit and Run Flag",
+    "dataTypeName" : "text",
+    "description" : "Refers to cases where the vehicle or driver of the vehicle in transport is a contact vehicle in the crash and departs the scene without stopping to render aid or report the crash.",
+    "fieldName" : "hitrunflag",
+    "position" : 38,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106786,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "Y",
+      "null" : "0",
+      "top" : [ {
+        "item" : "N",
+        "count" : "3306"
+      }, {
+        "item" : "Y",
+        "count" : "238"
+      } ],
+      "smallest" : "N",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : { }
+  }, {
+    "id" : 599239992,
+    "name" : "Latitude",
+    "dataTypeName" : "text",
+    "description" : "Latitude measures the distance north or south of the equator.  When coupled with longitude, a specific geographic location is identified.",
+    "fieldName" : "latitude",
+    "position" : 41,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106789,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "42.4174",
+      "null" : "0",
+      "top" : [ {
+        "item" : "42.3947",
+        "count" : "48"
+      }, {
+        "item" : "42.3941",
+        "count" : "39"
+      }, {
+        "item" : "42.3746",
+        "count" : "36"
+      }, {
+        "item" : "42.3851",
+        "count" : "34"
+      }, {
+        "item" : "42.3807",
+        "count" : "34"
+      }, {
+        "item" : "42.379",
+        "count" : "32"
+      }, {
+        "item" : "42.3957",
+        "count" : "32"
+      }, {
+        "item" : "42.3914",
+        "count" : "32"
+      }, {
+        "item" : "42.3965",
+        "count" : "32"
+      }, {
+        "item" : "42.3908",
+        "count" : "30"
+      }, {
+        "item" : "42.3795",
+        "count" : "29"
+      }, {
+        "item" : "42.3902",
+        "count" : "28"
+      }, {
+        "item" : "42.389",
+        "count" : "28"
+      }, {
+        "item" : "42.3783",
+        "count" : "27"
+      }, {
+        "item" : "42.3837",
+        "count" : "26"
+      }, {
+        "item" : "42.3868",
+        "count" : "25"
+      }, {
+        "item" : "42.3946",
+        "count" : "25"
+      }, {
+        "item" : "42.3884",
+        "count" : "24"
+      }, {
+        "item" : "42.3846",
+        "count" : "24"
+      }, {
+        "item" : "42.3938",
+        "count" : "24"
+      } ],
+      "smallest" : "42.3656",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239993,
+    "name" : "Longitude",
+    "dataTypeName" : "text",
+    "description" : "Longitude measures distance east or west of the prime meridian. When coupled with longitude, a specific geographic location is identified.",
+    "fieldName" : "longitude",
+    "position" : 42,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106760,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "-71.1424",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-71.085",
+        "count" : "42"
+      }, {
+        "item" : "-71.0828",
+        "count" : "35"
+      }, {
+        "item" : "-71.1064",
+        "count" : "35"
+      }, {
+        "item" : "-71.0964",
+        "count" : "30"
+      }, {
+        "item" : "-71.096",
+        "count" : "28"
+      }, {
+        "item" : "-71.0924",
+        "count" : "27"
+      }, {
+        "item" : "-71.1034",
+        "count" : "26"
+      }, {
+        "item" : "-71.1071",
+        "count" : "23"
+      }, {
+        "item" : "-71.0933",
+        "count" : "23"
+      }, {
+        "item" : "-71.1016",
+        "count" : "23"
+      }, {
+        "item" : "-71.0904",
+        "count" : "22"
+      }, {
+        "item" : "-71.0926",
+        "count" : "22"
+      }, {
+        "item" : "-71.0915",
+        "count" : "21"
+      }, {
+        "item" : "-71.0912",
+        "count" : "20"
+      }, {
+        "item" : "-71.1127",
+        "count" : "20"
+      }, {
+        "item" : "-71.0978",
+        "count" : "20"
+      }, {
+        "item" : "-71.1205",
+        "count" : "20"
+      }, {
+        "item" : "-71.1164",
+        "count" : "19"
+      }, {
+        "item" : "-71.1043",
+        "count" : "18"
+      }, {
+        "item" : "-71.0886",
+        "count" : "18"
+      } ],
+      "smallest" : "-71.0584",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239994,
+    "name" : "Ward",
+    "dataTypeName" : "text",
+    "description" : "The Ward where the violation occurred. ",
+    "fieldName" : "ward",
+    "position" : 43,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106759,
+    "cachedContents" : {
+      "non_null" : "3519",
+      "largest" : "7",
+      "null" : "25",
+      "top" : [ {
+        "item" : "1",
+        "count" : "635"
+      }, {
+        "item" : "2",
+        "count" : "626"
+      }, {
+        "item" : "6",
+        "count" : "565"
+      }, {
+        "item" : "5",
+        "count" : "507"
+      }, {
+        "item" : "3",
+        "count" : "474"
+      }, {
+        "item" : "4",
+        "count" : "441"
+      }, {
+        "item" : "7",
+        "count" : "271"
+      } ],
+      "smallest" : "1",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 599239995,
+    "name" : "Block Code ",
+    "dataTypeName" : "text",
+    "description" : "Block codes represent the census block where each incident occurred. Somerville is composed of approximately 700 census blocks.  Census blocks are numbered uniquely with a four-digit census block number from 0000 to 9999 within census tract code, which nests within state and county codes. These block codes are used to map incidents in the associated Tableau visualizations. Block codes are automatically assigned using the incident address and a small portion of incidents with limited address information may be mapped to a nearby block.",
+    "fieldName" : "blockcode",
+    "position" : 44,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152106791,
+    "cachedContents" : {
+      "non_null" : "3544",
+      "largest" : "250250302002000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "250173513001000",
+        "count" : "51"
+      }, {
+        "item" : "250173501061008",
+        "count" : "49"
+      }, {
+        "item" : "250173515003003",
+        "count" : "45"
+      }, {
+        "item" : "250173501061014",
+        "count" : "40"
+      }, {
+        "item" : "250173515001007",
+        "count" : "35"
+      }, {
+        "item" : "250173509003000",
+        "count" : "35"
+      }, {
+        "item" : "250173515003005",
+        "count" : "32"
+      }, {
+        "item" : "250173501082009",
+        "count" : "30"
+      }, {
+        "item" : "250173504001007",
+        "count" : "30"
+      }, {
+        "item" : "250173512042003",
+        "count" : "28"
+      }, {
+        "item" : "250173510021003",
+        "count" : "26"
+      }, {
+        "item" : "250173510013008",
+        "count" : "25"
+      }, {
+        "item" : "250173510021000",
+        "count" : "25"
+      }, {
+        "item" : "250173506004006",
+        "count" : "23"
+      }, {
+        "item" : "250173514044004",
+        "count" : "23"
+      }, {
+        "item" : "250173512031003",
+        "count" : "22"
+      }, {
+        "item" : "250173511022003",
+        "count" : "21"
+      }, {
+        "item" : "250173501082001",
+        "count" : "21"
+      }, {
+        "item" : "250173506002004",
+        "count" : "20"
+      }, {
+        "item" : "250173513002001",
+        "count" : "20"
+      } ],
+      "smallest" : "250173395002008",
+      "count" : "3544",
+      "cardinality" : "3544"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Open Data Commons Open Database License",
+    "termsLink" : "http://opendatacommons.org/licenses/odbl/1.0/"
+  },
+  "metadata" : {
+    "attachments" : [ {
+      "filename" : "繁體中文 - Police-Data-Crashes.pdf",
+      "assetId" : "218e3096-399d-47ea-99e8-db6bba45e700",
+      "name" : "繁體中文 - Police-Data-Crashes.pdf"
+    }, {
+      "filename" : "नेपाली - Police-Data-Crashes.pdf",
+      "assetId" : "bdaa4ee8-5402-4f06-bff6-f78ed6a04473",
+      "name" : "नेपाली - Police-Data-Crashes.pdf"
+    }, {
+      "filename" : "简体中文  - Police-Data-Crashes.pdf",
+      "assetId" : "5209a47b-f838-4b0a-b07e-cf688cf1bcc9",
+      "name" : "简体中文  - Police-Data-Crashes.pdf"
+    }, {
+      "filename" : "Português - Police-Data-Crashes.pdf",
+      "assetId" : "f3d81f93-c441-4aac-b938-9e2895e05319",
+      "name" : "Português - Police-Data-Crashes.pdf"
+    }, {
+      "filename" : "Español - Police-Data-Crashes.pdf",
+      "assetId" : "e7551e83-4d6c-4a61-8235-424fc51b56cf",
+      "name" : "Español - Police-Data-Crashes.pdf"
+    }, {
+      "filename" : "Kreyòl Ayisyen - Police-Data-Crashes.pdf",
+      "assetId" : "bcab77cf-671f-4598-b10f-9f1c621a58af",
+      "name" : "Kreyòl Ayisyen - Police-Data-Crashes.pdf"
+    }, {
+      "filename" : "English-Police-Data-Crashes.pdf",
+      "assetId" : "35c8ebfd-2be2-4393-be5e-d8a53a37bc32",
+      "name" : "English-Police-Data-Crashes.pdf"
+    } ],
+    "custom_fields" : {
+      "Common Core" : {
+        "Contact Email" : "data@somervillema.gov"
+      }
+    },
+    "rowIdentifier" : 599239952,
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "nnwx-dqbu",
+    "displayName" : "SomerStat",
+    "screenName" : "SomerStat",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "nnwx-dqbu",
+    "displayName" : "SomerStat",
+    "screenName" : "SomerStat",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,443 @@
+{
+  "id" : "n8nv-juq7",
+  "name" : "Public Postsecondary Institution Locations",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Higher Education",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1771951888,
+  "description" : "This dataset contains latitude and longitude coordinates for the main campuses of all public institutions of higher education in Massachusetts as of 2026. Branch and satellite campuses are not included.\n\nTo join this dataset with other E2C Hub datasets, use the INSTITUTION or <a href=\"https://blog.collegeboard.org/how-look-ceeb-codes/\">CEEB_CODE</a> columns where available.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 9,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41986367,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1772738443,
+  "publicationGroup" : 20289317,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1772738432,
+  "rowsUpdatedBy" : "3fm6-nje8",
+  "tableId" : 20297372,
+  "totalTimesRated" : 0,
+  "viewCount" : 362,
+  "viewLastModified" : 1775500816,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1772805565,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7377852,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1772738936,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "3fm6-nje8",
+      "displayName" : "Symantha Clough"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1772805565,
+      "failureCount" : 0,
+      "startedAt" : 1772805565,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "3fm6-nje8",
+      "displayName" : "Symantha Clough"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 627957052,
+    "name" : "SEGMENT",
+    "dataTypeName" : "text",
+    "description" : "Segment",
+    "fieldName" : "segment",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 165893898,
+    "cachedContents" : {
+      "non_null" : "28",
+      "largest" : "University of Massachusetts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Community Colleges",
+        "count" : "15"
+      }, {
+        "item" : "State Universities",
+        "count" : "9"
+      }, {
+        "item" : "University of Massachusetts",
+        "count" : "4"
+      } ],
+      "smallest" : "Community Colleges",
+      "count" : "28",
+      "cardinality" : "28"
+    },
+    "format" : { }
+  }, {
+    "id" : 627957053,
+    "name" : "INSTITUTION",
+    "dataTypeName" : "text",
+    "description" : "Public Institution Name",
+    "fieldName" : "institution",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 165893893,
+    "cachedContents" : {
+      "non_null" : "28",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Westfield State University",
+        "count" : "1"
+      }, {
+        "item" : "Massasoit Community College",
+        "count" : "1"
+      }, {
+        "item" : "University of Massachusetts Amherst",
+        "count" : "1"
+      }, {
+        "item" : "Massachusetts College of Art and Design",
+        "count" : "1"
+      }, {
+        "item" : "Springfield Technical Community College",
+        "count" : "1"
+      }, {
+        "item" : "Worcester State University",
+        "count" : "1"
+      }, {
+        "item" : "Holyoke Community College",
+        "count" : "1"
+      }, {
+        "item" : "Greenfield Community College",
+        "count" : "1"
+      }, {
+        "item" : "Massachusetts Maritime Academy",
+        "count" : "1"
+      }, {
+        "item" : "Framingham State University",
+        "count" : "1"
+      }, {
+        "item" : "Massachusetts College of Liberal Arts",
+        "count" : "1"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "1"
+      }, {
+        "item" : "Northern Essex Community College",
+        "count" : "1"
+      }, {
+        "item" : "Bunker Hill Community College",
+        "count" : "1"
+      }, {
+        "item" : "Roxbury Community College",
+        "count" : "1"
+      }, {
+        "item" : "Bristol Community College",
+        "count" : "1"
+      }, {
+        "item" : "Quinsigamond Community College",
+        "count" : "1"
+      }, {
+        "item" : "Berkshire Community College",
+        "count" : "1"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "1"
+      }, {
+        "item" : "Mt. Wachusett Community College",
+        "count" : "1"
+      } ],
+      "smallest" : "Berkshire Community College",
+      "count" : "28",
+      "cardinality" : "28"
+    },
+    "format" : { }
+  }, {
+    "id" : 627957132,
+    "name" : "CEEB_CODE",
+    "dataTypeName" : "text",
+    "description" : "CEEB Code",
+    "fieldName" : "ceeb_code",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 165910174,
+    "cachedContents" : {
+      "non_null" : "28",
+      "largest" : "3924",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3420",
+        "count" : "1"
+      }, {
+        "item" : "3917",
+        "count" : "1"
+      }, {
+        "item" : "3517",
+        "count" : "1"
+      }, {
+        "item" : "3110",
+        "count" : "1"
+      }, {
+        "item" : "3911",
+        "count" : "1"
+      }, {
+        "item" : "3523",
+        "count" : "1"
+      }, {
+        "item" : "3554",
+        "count" : "1"
+      }, {
+        "item" : "3924",
+        "count" : "1"
+      }, {
+        "item" : "3515",
+        "count" : "1"
+      }, {
+        "item" : "3289",
+        "count" : "1"
+      }, {
+        "item" : "3524",
+        "count" : "1"
+      }, {
+        "item" : "3545",
+        "count" : "1"
+      }, {
+        "item" : "3522",
+        "count" : "1"
+      }, {
+        "item" : "3294",
+        "count" : "1"
+      }, {
+        "item" : "3786",
+        "count" : "1"
+      }, {
+        "item" : "3791",
+        "count" : "1"
+      }, {
+        "item" : "3519",
+        "count" : "1"
+      }, {
+        "item" : "3549",
+        "count" : "1"
+      }, {
+        "item" : "3674",
+        "count" : "1"
+      }, {
+        "item" : "3740",
+        "count" : "1"
+      } ],
+      "smallest" : "3102",
+      "count" : "28",
+      "cardinality" : "28"
+    },
+    "format" : { }
+  }, {
+    "id" : 627957054,
+    "name" : "LATITUDE",
+    "dataTypeName" : "number",
+    "description" : "Latitude of Institution",
+    "fieldName" : "latitude",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 165893888,
+    "cachedContents" : {
+      "non_null" : "28",
+      "largest" : "42.796634",
+      "null" : "0",
+      "top" : [ {
+        "item" : "42.691361",
+        "count" : "1"
+      }, {
+        "item" : "42.132698",
+        "count" : "1"
+      }, {
+        "item" : "42.374806",
+        "count" : "1"
+      }, {
+        "item" : "42.459750",
+        "count" : "1"
+      }, {
+        "item" : "41.691911",
+        "count" : "1"
+      }, {
+        "item" : "42.267526",
+        "count" : "1"
+      }, {
+        "item" : "42.796634",
+        "count" : "1"
+      }, {
+        "item" : "41.739072",
+        "count" : "1"
+      }, {
+        "item" : "42.297116",
+        "count" : "1"
+      }, {
+        "item" : "42.108827",
+        "count" : "1"
+      }, {
+        "item" : "42.652864",
+        "count" : "1"
+      }, {
+        "item" : "41.987490",
+        "count" : "1"
+      }, {
+        "item" : "42.194781",
+        "count" : "1"
+      }, {
+        "item" : "41.628690",
+        "count" : "1"
+      }, {
+        "item" : "42.593142",
+        "count" : "1"
+      }, {
+        "item" : "42.524328",
+        "count" : "1"
+      }, {
+        "item" : "42.599512",
+        "count" : "1"
+      }, {
+        "item" : "42.313790",
+        "count" : "1"
+      }, {
+        "item" : "42.385999",
+        "count" : "1"
+      }, {
+        "item" : "42.503575",
+        "count" : "1"
+      } ],
+      "smallest" : "41.628690",
+      "count" : "28",
+      "cardinality" : "28"
+    },
+    "format" : { }
+  }, {
+    "id" : 627957056,
+    "name" : "LONGITUDE",
+    "dataTypeName" : "number",
+    "description" : "Longitude of Institution",
+    "fieldName" : "longitude",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 165893882,
+    "cachedContents" : {
+      "non_null" : "28",
+      "largest" : "-70.337334",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-71.844018",
+        "count" : "1"
+      }, {
+        "item" : "-70.974553",
+        "count" : "1"
+      }, {
+        "item" : "-71.263821",
+        "count" : "1"
+      }, {
+        "item" : "-72.578514",
+        "count" : "1"
+      }, {
+        "item" : "-70.337334",
+        "count" : "1"
+      }, {
+        "item" : "-71.036865",
+        "count" : "1"
+      }, {
+        "item" : "-72.796503",
+        "count" : "1"
+      }, {
+        "item" : "-70.989799",
+        "count" : "1"
+      }, {
+        "item" : "-71.069263",
+        "count" : "1"
+      }, {
+        "item" : "-71.437565",
+        "count" : "1"
+      }, {
+        "item" : "-71.095490",
+        "count" : "1"
+      }, {
+        "item" : "-70.968044",
+        "count" : "1"
+      }, {
+        "item" : "-71.789666",
+        "count" : "1"
+      }, {
+        "item" : "-72.526728",
+        "count" : "1"
+      }, {
+        "item" : "-71.119133",
+        "count" : "1"
+      }, {
+        "item" : "-72.630977",
+        "count" : "1"
+      }, {
+        "item" : "-71.984148",
+        "count" : "1"
+      }, {
+        "item" : "-72.651252",
+        "count" : "1"
+      }, {
+        "item" : "-73.102817",
+        "count" : "1"
+      }, {
+        "item" : "-71.049040",
+        "count" : "1"
+      } ],
+      "smallest" : "-73.314704",
+      "count" : "28",
+      "cardinality" : "28"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "Geographic data information for each main campus location",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "geodata", "geography", "location", "latitude", "longitude", "college", "university", "state university", "university of massachusetts", "community college", "address" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

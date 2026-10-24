@@ -1,0 +1,896 @@
+{
+  "id" : "shzx-cvwg",
+  "name" : "Legacy MCAS Open Response Item Results",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1731968781,
+  "description" : "This dataset contains results from the open response items administered as part of the legacy MCAS assessment between 2009-2021. Data is only available for students averaging 2 or above on the open response items in the following years and subjects:\n<ul><li>Grades 3-8 ELA and math: 2007-2016</li><li>Grade 10 ELA and math: 2007-2018</li><li>Grades 5 and 8 STE: 2007-2018</li><li>High school science: 2007-2021</li></ul>The Massachusetts Comprehensive Assessment System (MCAS) is a statewide assessment administered to help parents, students, educators, and policymakers determine where districts, schools, and students are meeting expectations and where they need additional support. For more information about MCAS data, please visit the Department of Elementary and Secondary Education's <a href=\"https://profiles.doe.mass.edu/help/data.aspx?section=assess\" target=\"_blank\" rel=\"noopener noreferrer\">Profiles Help - About the Data</a> page.\n\nFor overall MCAS results from this assessment, visit the <a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Legacy-MCAS-Achievement-Results/ccsh-ajgw/about_data\">Legacy MCAS Achievement Results</a> dataset. Current (“Next Gen”) MCAS results can be found in the <a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/MCAS-Achievement-Results/i9w6-niyt/about_data\">MCAS Achievement Results</a> dataset. PARCC results can be found on the Department of Elementary and Secondary Education's <a href=\"https://profiles.doe.mass.edu/statereport/parcc.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Profiles site</a>. Results from different assessment systems measure different standards and cannot be directly compared. Please see the DESE Researcher's Guide linked as featured content below for more information.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/mcasopenitemresponse.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Legacy MCAS Open Response Item Results</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 5,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40960973,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1731969062,
+  "publicationGroup" : 19692204,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1772125830,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19692204,
+  "totalTimesRated" : 0,
+  "viewCount" : 525,
+  "viewLastModified" : 1786392570,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1772224284,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7372550,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1772223918,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1772224284,
+      "failureCount" : 0,
+      "startedAt" : 1772224284,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 601866759,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618621,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "2021",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2014",
+        "count" : "208626"
+      }, {
+        "item" : "2013",
+        "count" : "207884"
+      }, {
+        "item" : "2012",
+        "count" : "197982"
+      }, {
+        "item" : "2011",
+        "count" : "196367"
+      }, {
+        "item" : "2010",
+        "count" : "177443"
+      }, {
+        "item" : "2009",
+        "count" : "177202"
+      }, {
+        "item" : "2015",
+        "count" : "134958"
+      }, {
+        "item" : "2016",
+        "count" : "115988"
+      }, {
+        "item" : "2018",
+        "count" : "66282"
+      }, {
+        "item" : "2017",
+        "count" : "64446"
+      }, {
+        "item" : "2019",
+        "count" : "16402"
+      }, {
+        "item" : "2021",
+        "count" : "12739"
+      } ],
+      "smallest" : "2009",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866760,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618622,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "86070"
+      }, {
+        "item" : "03480000",
+        "count" : "39403"
+      }, {
+        "item" : "02810000",
+        "count" : "34501"
+      }, {
+        "item" : "01490000",
+        "count" : "20249"
+      }, {
+        "item" : "01630000",
+        "count" : "20083"
+      }, {
+        "item" : "01600000",
+        "count" : "19389"
+      }, {
+        "item" : "00440000",
+        "count" : "18630"
+      }, {
+        "item" : "02430000",
+        "count" : "17418"
+      }, {
+        "item" : "02070000",
+        "count" : "15695"
+      }, {
+        "item" : "02010000",
+        "count" : "15684"
+      }, {
+        "item" : "00950000",
+        "count" : "15548"
+      }, {
+        "item" : "00490000",
+        "count" : "14284"
+      }, {
+        "item" : "00460000",
+        "count" : "13323"
+      }, {
+        "item" : "02740000",
+        "count" : "12432"
+      }, {
+        "item" : "01370000",
+        "count" : "12064"
+      }, {
+        "item" : "01000000",
+        "count" : "10949"
+      }, {
+        "item" : "07750000",
+        "count" : "10333"
+      }, {
+        "item" : "03250000",
+        "count" : "9905"
+      }, {
+        "item" : "00610000",
+        "count" : "9807"
+      }, {
+        "item" : "01650000",
+        "count" : "9685"
+      } ],
+      "smallest" : "00000000",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866761,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618623,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "86070"
+      }, {
+        "item" : "Worcester",
+        "count" : "39403"
+      }, {
+        "item" : "Springfield",
+        "count" : "34501"
+      }, {
+        "item" : "Lawrence",
+        "count" : "20249"
+      }, {
+        "item" : "Lynn",
+        "count" : "20083"
+      }, {
+        "item" : "Lowell",
+        "count" : "19389"
+      }, {
+        "item" : "Brockton",
+        "count" : "18630"
+      }, {
+        "item" : "Quincy",
+        "count" : "17418"
+      }, {
+        "item" : "Newton",
+        "count" : "15695"
+      }, {
+        "item" : "New Bedford",
+        "count" : "15684"
+      }, {
+        "item" : "Fall River",
+        "count" : "15548"
+      }, {
+        "item" : "Cambridge",
+        "count" : "14284"
+      }, {
+        "item" : "Brookline",
+        "count" : "13323"
+      }, {
+        "item" : "Somerville",
+        "count" : "12432"
+      }, {
+        "item" : "Holyoke",
+        "count" : "12064"
+      }, {
+        "item" : "Framingham",
+        "count" : "10949"
+      }, {
+        "item" : "Wachusett",
+        "count" : "10333"
+      }, {
+        "item" : "Westfield",
+        "count" : "9905"
+      }, {
+        "item" : "Chicopee",
+        "count" : "9807"
+      }, {
+        "item" : "Malden",
+        "count" : "9685"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866762,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618624,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "3723"
+      }, {
+        "item" : "00350000",
+        "count" : "2974"
+      }, {
+        "item" : "00950000",
+        "count" : "2820"
+      }, {
+        "item" : "02810000",
+        "count" : "2775"
+      }, {
+        "item" : "03480000",
+        "count" : "2773"
+      }, {
+        "item" : "00460000",
+        "count" : "2718"
+      }, {
+        "item" : "02430000",
+        "count" : "2675"
+      }, {
+        "item" : "02740000",
+        "count" : "2615"
+      }, {
+        "item" : "01490000",
+        "count" : "2533"
+      }, {
+        "item" : "01630000",
+        "count" : "2515"
+      }, {
+        "item" : "00490000",
+        "count" : "2512"
+      }, {
+        "item" : "01810000",
+        "count" : "2510"
+      }, {
+        "item" : "03250000",
+        "count" : "2506"
+      }, {
+        "item" : "01600000",
+        "count" : "2499"
+      }, {
+        "item" : "02440000",
+        "count" : "2495"
+      }, {
+        "item" : "00440000",
+        "count" : "2491"
+      }, {
+        "item" : "03080000",
+        "count" : "2483"
+      }, {
+        "item" : "01550000",
+        "count" : "2460"
+      }, {
+        "item" : "01760000",
+        "count" : "2440"
+      }, {
+        "item" : "02070000",
+        "count" : "2433"
+      } ],
+      "smallest" : "00000000",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866763,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618625,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Lawrence",
+        "count" : "4413"
+      }, {
+        "item" : "State",
+        "count" : "3723"
+      }, {
+        "item" : "Peabody",
+        "count" : "3256"
+      }, {
+        "item" : "Boston",
+        "count" : "2974"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "2890"
+      }, {
+        "item" : "Fall River",
+        "count" : "2820"
+      }, {
+        "item" : "Springfield",
+        "count" : "2775"
+      }, {
+        "item" : "Worcester",
+        "count" : "2773"
+      }, {
+        "item" : "Franklin",
+        "count" : "2731"
+      }, {
+        "item" : "Winthrop",
+        "count" : "2719"
+      }, {
+        "item" : "Brookline",
+        "count" : "2718"
+      }, {
+        "item" : "Quincy",
+        "count" : "2675"
+      }, {
+        "item" : "Lincoln",
+        "count" : "2648"
+      }, {
+        "item" : "Somerville",
+        "count" : "2615"
+      }, {
+        "item" : "Lynn",
+        "count" : "2515"
+      }, {
+        "item" : "Cambridge",
+        "count" : "2512"
+      }, {
+        "item" : "Methuen",
+        "count" : "2510"
+      }, {
+        "item" : "Westfield",
+        "count" : "2506"
+      }, {
+        "item" : "Lowell",
+        "count" : "2499"
+      }, {
+        "item" : "Randolph",
+        "count" : "2495"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866764,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618626,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "1067381"
+      }, {
+        "item" : "District",
+        "count" : "505215"
+      }, {
+        "item" : "State",
+        "count" : "3723"
+      } ],
+      "smallest" : "District",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866765,
+    "name" : "GRD",
+    "dataTypeName" : "text",
+    "description" : "Grade",
+    "fieldName" : "grd",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618627,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "HS",
+      "null" : "0",
+      "top" : [ {
+        "item" : "AL",
+        "count" : "528253"
+      }, {
+        "item" : "05",
+        "count" : "262506"
+      }, {
+        "item" : "08",
+        "count" : "180424"
+      }, {
+        "item" : "04",
+        "count" : "154415"
+      }, {
+        "item" : "10",
+        "count" : "135408"
+      }, {
+        "item" : "06",
+        "count" : "115637"
+      }, {
+        "item" : "07",
+        "count" : "103237"
+      }, {
+        "item" : "HS",
+        "count" : "96439"
+      } ],
+      "smallest" : "04",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866766,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618628,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "154824"
+      }, {
+        "item" : "Male",
+        "count" : "149988"
+      }, {
+        "item" : "Female",
+        "count" : "149116"
+      }, {
+        "item" : "White",
+        "count" : "137743"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "118736"
+      }, {
+        "item" : "Non-Title I",
+        "count" : "112402"
+      }, {
+        "item" : "High Needs",
+        "count" : "110175"
+      }, {
+        "item" : "Non-Low Income",
+        "count" : "105121"
+      }, {
+        "item" : "Low Income",
+        "count" : "95246"
+      }, {
+        "item" : "Title I",
+        "count" : "69956"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "68710"
+      }, {
+        "item" : "Black or African American",
+        "count" : "45987"
+      }, {
+        "item" : "English Learners and Former English Learners",
+        "count" : "45658"
+      }, {
+        "item" : "Asian",
+        "count" : "37227"
+      }, {
+        "item" : "Non-Economically Disadvantaged",
+        "count" : "36319"
+      }, {
+        "item" : "Ever English Learners",
+        "count" : "35303"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "31488"
+      }, {
+        "item" : "English Learners",
+        "count" : "29997"
+      }, {
+        "item" : "Former English Learners",
+        "count" : "21606"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "19657"
+      } ],
+      "smallest" : "All Students",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866767,
+    "name" : "SUBJ",
+    "dataTypeName" : "text",
+    "description" : "Subject",
+    "fieldName" : "subj",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155618629,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "Technology/Engineering",
+      "null" : "0",
+      "top" : [ {
+        "item" : "English Language Arts",
+        "count" : "540707"
+      }, {
+        "item" : "Mathematics",
+        "count" : "540639"
+      }, {
+        "item" : "Science",
+        "count" : "398534"
+      }, {
+        "item" : "Biology",
+        "count" : "65017"
+      }, {
+        "item" : "Introductory Physics",
+        "count" : "22521"
+      }, {
+        "item" : "Technology/Engineering",
+        "count" : "6728"
+      }, {
+        "item" : "Chemistry",
+        "count" : "2173"
+      } ],
+      "smallest" : "Biology",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866769,
+    "name" : "STU_TESTED",
+    "dataTypeName" : "number",
+    "description" : "Students Tested Count",
+    "fieldName" : "stu_tested",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155618631,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "421853",
+      "null" : "0",
+      "top" : [ {
+        "item" : "10",
+        "count" : "38620"
+      }, {
+        "item" : "11",
+        "count" : "35578"
+      }, {
+        "item" : "12",
+        "count" : "33563"
+      }, {
+        "item" : "13",
+        "count" : "30460"
+      }, {
+        "item" : "14",
+        "count" : "28916"
+      }, {
+        "item" : "15",
+        "count" : "26836"
+      }, {
+        "item" : "16",
+        "count" : "25792"
+      }, {
+        "item" : "17",
+        "count" : "24669"
+      }, {
+        "item" : "18",
+        "count" : "23819"
+      }, {
+        "item" : "20",
+        "count" : "22517"
+      }, {
+        "item" : "19",
+        "count" : "22473"
+      }, {
+        "item" : "21",
+        "count" : "21314"
+      }, {
+        "item" : "22",
+        "count" : "20413"
+      }, {
+        "item" : "23",
+        "count" : "19437"
+      }, {
+        "item" : "24",
+        "count" : "19205"
+      }, {
+        "item" : "25",
+        "count" : "18083"
+      }, {
+        "item" : "26",
+        "count" : "17608"
+      }, {
+        "item" : "27",
+        "count" : "16874"
+      }, {
+        "item" : "28",
+        "count" : "16609"
+      }, {
+        "item" : "29",
+        "count" : "16331"
+      } ],
+      "smallest" : "10",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866768,
+    "name" : "AVG_2_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students Averaging a Score of 2 or Above Count",
+    "fieldName" : "avg_2_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155618630,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "306632",
+      "null" : "0",
+      "top" : [ {
+        "item" : "9",
+        "count" : "41010"
+      }, {
+        "item" : "8",
+        "count" : "40763"
+      }, {
+        "item" : "7",
+        "count" : "39868"
+      }, {
+        "item" : "10",
+        "count" : "39535"
+      }, {
+        "item" : "6",
+        "count" : "37542"
+      }, {
+        "item" : "11",
+        "count" : "36525"
+      }, {
+        "item" : "5",
+        "count" : "34867"
+      }, {
+        "item" : "12",
+        "count" : "33537"
+      }, {
+        "item" : "4",
+        "count" : "32051"
+      }, {
+        "item" : "13",
+        "count" : "31114"
+      }, {
+        "item" : "14",
+        "count" : "29183"
+      }, {
+        "item" : "3",
+        "count" : "28069"
+      }, {
+        "item" : "15",
+        "count" : "27235"
+      }, {
+        "item" : "16",
+        "count" : "25531"
+      }, {
+        "item" : "2",
+        "count" : "24713"
+      }, {
+        "item" : "17",
+        "count" : "24433"
+      }, {
+        "item" : "18",
+        "count" : "23362"
+      }, {
+        "item" : "19",
+        "count" : "22312"
+      }, {
+        "item" : "20",
+        "count" : "20933"
+      }, {
+        "item" : "21",
+        "count" : "19951"
+      } ],
+      "smallest" : "0",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : { }
+  }, {
+    "id" : 601866770,
+    "name" : "AVG_2_PCT",
+    "dataTypeName" : "number",
+    "description" : "Students Averaging a Score of 2 or Above Percent",
+    "fieldName" : "avg_2_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155618632,
+    "cachedContents" : {
+      "non_null" : "1576319",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.5",
+        "count" : "32270"
+      }, {
+        "item" : "0.67",
+        "count" : "28828"
+      }, {
+        "item" : "0.73",
+        "count" : "26334"
+      }, {
+        "item" : "0.8",
+        "count" : "26275"
+      }, {
+        "item" : "0.64",
+        "count" : "25657"
+      }, {
+        "item" : "0.7",
+        "count" : "25590"
+      }, {
+        "item" : "0.71",
+        "count" : "25563"
+      }, {
+        "item" : "0.75",
+        "count" : "25219"
+      }, {
+        "item" : "0.6",
+        "count" : "24969"
+      }, {
+        "item" : "0.83",
+        "count" : "24695"
+      }, {
+        "item" : "0.82",
+        "count" : "24114"
+      }, {
+        "item" : "0.79",
+        "count" : "24009"
+      }, {
+        "item" : "0.63",
+        "count" : "23740"
+      }, {
+        "item" : "0.69",
+        "count" : "23586"
+      }, {
+        "item" : "0.88",
+        "count" : "22936"
+      }, {
+        "item" : "0.76",
+        "count" : "22900"
+      }, {
+        "item" : "0.58",
+        "count" : "22883"
+      }, {
+        "item" : "0.68",
+        "count" : "22628"
+      }, {
+        "item" : "0.77",
+        "count" : "22421"
+      }, {
+        "item" : "0.65",
+        "count" : "22402"
+      } ],
+      "smallest" : "0",
+      "count" : "1576319",
+      "cardinality" : "1576319"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "testing", "legacy", "mcas", "open response", "assessment", "standardized test", "ela", "math", "science" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

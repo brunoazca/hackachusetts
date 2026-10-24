@@ -1,0 +1,685 @@
+SY,DIST_CODE,DIST_NAME,PROGRESS,ATTAINMENT,ACCOUNTABILITY_FOR_EL_FORMER_EL,AYP_FOR_LEP_ELA,AYP_FOR_LEP_MATH
+2016,00000000,State,Yes,Yes,,,
+2016,04450000,Abby Kelley Foster Charter Public (District),Yes,Yes,No,,
+2016,06000000,Acton-Boxborough,Yes,Yes,Yes,,
+2016,00050000,Agawam,Yes,Yes,No,,
+2016,00080000,Amherst,Yes,Yes,No,,
+2016,00090000,Andover,Yes,Yes,Yes,,
+2016,00100000,Arlington,Yes,Yes,No,,
+2016,00160000,Attleboro,Yes,Yes,No,,
+2016,00200000,Barnstable,Yes,Yes,No,,
+2016,00260000,Belmont,Yes,Yes,Yes,,
+2016,00300000,Beverly,Yes,Yes,No,,
+2016,00350000,Boston,Yes,Yes,No,,
+2016,00400000,Braintree,Yes,Yes,Yes,,
+2016,00440000,Brockton,Yes,Yes,No,,
+2016,00460000,Brookline,Yes,Yes,No,,
+2016,00490000,Cambridge,Yes,Yes,Yes,,
+2016,00560000,Chelmsford,Yes,Yes,Yes,,
+2016,00570000,Chelsea,Yes,No,No,,
+2016,00610000,Chicopee,Yes,No,No,,
+2016,00640000,Clinton,Yes,Yes,No,,
+2016,00730000,Dedham,Yes,Yes,No,,
+2016,06450000,Dennis-Yarmouth,Yes,Yes,No,,
+2016,00930000,Everett,Yes,Yes,No,,
+2016,00950000,Fall River,Yes,Yes,No,,
+2016,00970000,Fitchburg,Yes,Yes,No,,
+2016,01000000,Framingham,Yes,Yes,No,,
+2016,01030000,Gardner,Yes,Yes,No,,
+2016,08230000,Greater Lawrence Regional Vocational Technical,Yes,Yes,,,
+2016,08280000,Greater Lowell Regional Vocational Technical,No,No,Yes,,
+2016,01280000,Haverhill,Yes,No,No,,
+2016,01370000,Holyoke,No,No,No,,
+2016,01410000,Hudson,Yes,Yes,No,,
+2016,01490000,Lawrence,Yes,Yes,No,,
+2016,04540000,Lawrence Family Development Charter (District),Yes,Yes,No,,
+2016,04860000,Learning First Charter Public School (District),No,No,No,,
+2016,01530000,Leominster,Yes,Yes,No,,
+2016,01550000,Lexington,Yes,Yes,Yes,,
+2016,01600000,Lowell,Yes,Yes,No,,
+2016,04560000,Lowell Community Charter Public (District),Yes,Yes,Yes,,
+2016,01630000,Lynn,Yes,No,No,,
+2016,01650000,Malden,Yes,Yes,No,,
+2016,01680000,Marblehead,Yes,Yes,No,,
+2016,01700000,Marlborough,Yes,Yes,No,,
+2016,04690000,Match Charter Public School (District),Yes,Yes,No,,
+2016,01760000,Medford,Yes,Yes,No,,
+2016,01780000,Melrose,Yes,Yes,No,,
+2016,01810000,Methuen,Yes,Yes,No,,
+2016,01850000,Milford,Yes,Yes,No,,
+2016,01970000,Nantucket,Yes,Yes,No,,
+2016,01990000,Needham,Yes,Yes,No,,
+2016,02010000,New Bedford,Yes,No,No,,
+2016,02070000,Newton,Yes,Yes,Yes,,
+2016,02120000,North Attleborough,Yes,No,No,,
+2016,02200000,Norwood,Yes,Yes,Yes,,
+2016,02290000,Peabody,Yes,No,No,,
+2016,02360000,Pittsfield,Yes,Yes,Yes,,
+2016,04870000,Prospect Hill Academy Charter (District),Yes,Yes,No,,
+2016,02430000,Quincy,Yes,Yes,Yes,,
+2016,02440000,Randolph,Yes,Yes,No,,
+2016,02480000,Revere,Yes,Yes,No,,
+2016,04840000,Roxbury Preparatory Charter (District),No,No,Yes,,
+2016,02580000,Salem,No,Yes,No,,
+2016,02710000,Shrewsbury,Yes,Yes,Yes,,
+2016,02740000,Somerville,Yes,No,No,,
+2016,02770000,Southbridge,No,No,No,,
+2016,02810000,Springfield,No,No,No,,
+2016,02850000,Stoughton,Yes,Yes,No,,
+2016,02930000,Taunton,Yes,Yes,No,,
+2016,07750000,Wachusett,Yes,Yes,Yes,,
+2016,03080000,Waltham,Yes,Yes,No,,
+2016,03140000,Watertown,Yes,Yes,No,,
+2016,03170000,Wellesley,Yes,Yes,Yes,,
+2016,03320000,West Springfield,Yes,No,No,,
+2016,03210000,Westborough,Yes,Yes,No,,
+2016,03250000,Westfield,Yes,Yes,No,,
+2016,03360000,Weymouth,Yes,Yes,No,,
+2016,03440000,Winchester,Yes,Yes,Yes,,
+2016,03460000,Winthrop,Yes,Yes,Yes,,
+2016,03470000,Woburn,Yes,Yes,No,,
+2016,03480000,Worcester,No,Yes,No,,
+2015,00000000,State,Yes,Yes,,,
+2015,06000000,Acton-Boxborough,Yes,Yes,Yes,,
+2015,00050000,Agawam,Yes,No,No,,
+2015,00080000,Amherst,Yes,No,No,,
+2015,00090000,Andover,Yes,Yes,Yes,,
+2015,00100000,Arlington,Yes,Yes,No,,
+2015,00160000,Attleboro,Yes,Yes,No,,
+2015,00200000,Barnstable,Yes,No,No,,
+2015,00260000,Belmont,Yes,Yes,Yes,,
+2015,00350000,Boston,No,No,No,,
+2015,00400000,Braintree,Yes,Yes,Yes,,
+2015,00440000,Brockton,Yes,Yes,No,,
+2015,00460000,Brookline,Yes,Yes,No,,
+2015,00490000,Cambridge,Yes,Yes,Yes,,
+2015,00560000,Chelmsford,Yes,Yes,No,,
+2015,00570000,Chelsea,Yes,No,No,,
+2015,00610000,Chicopee,Yes,No,No,,
+2015,00640000,Clinton,Yes,Yes,No,,
+2015,00720000,Dartmouth,Yes,No,No,,
+2015,00730000,Dedham,Yes,Yes,No,,
+2015,06450000,Dennis-Yarmouth,Yes,Yes,No,,
+2015,00930000,Everett,Yes,No,No,,
+2015,00950000,Fall River,Yes,No,No,,
+2015,00970000,Fitchburg,Yes,Yes,No,,
+2015,01000000,Framingham,Yes,No,No,,
+2015,01030000,Gardner,No,Yes,No,,
+2015,08280000,Greater Lowell Regional Vocational Technical,No,No,Yes,,
+2015,01280000,Haverhill,Yes,No,No,,
+2015,01370000,Holyoke,No,No,No,,
+2015,01410000,Hudson,Yes,No,No,,
+2015,01490000,Lawrence,Yes,No,No,,
+2015,04540000,Lawrence Family Development Charter (District),Yes,No,No,,
+2015,04860000,Learning First Charter Public School (District),No,Yes,No,,
+2015,01530000,Leominster,Yes,Yes,No,,
+2015,01550000,Lexington,Yes,Yes,Yes,,
+2015,01600000,Lowell,Yes,Yes,No,,
+2015,04560000,Lowell Community Charter Public (District),Yes,Yes,Yes,,
+2015,01630000,Lynn,No,No,No,,
+2015,01650000,Malden,Yes,Yes,No,,
+2015,01700000,Marlborough,Yes,Yes,No,,
+2015,04690000,Match Charter Public School (District),Yes,Yes,Yes,,
+2015,01760000,Medford,Yes,Yes,No,,
+2015,01810000,Methuen,Yes,Yes,No,,
+2015,01850000,Milford,Yes,Yes,No,,
+2015,01970000,Nantucket,Yes,No,No,,
+2015,02010000,New Bedford,No,No,No,,
+2015,02070000,Newton,Yes,Yes,Yes,,
+2015,02200000,Norwood,Yes,Yes,Yes,,
+2015,02290000,Peabody,Yes,Yes,No,,
+2015,02360000,Pittsfield,No,No,No,,
+2015,04870000,Prospect Hill Academy Charter (District),Yes,No,No,,
+2015,02430000,Quincy,Yes,Yes,Yes,,
+2015,02440000,Randolph,Yes,Yes,No,,
+2015,02480000,Revere,Yes,Yes,No,,
+2015,02580000,Salem,Yes,Yes,No,,
+2015,02710000,Shrewsbury,Yes,Yes,Yes,,
+2015,02740000,Somerville,Yes,No,No,,
+2015,02770000,Southbridge,No,No,No,,
+2015,02810000,Springfield,No,No,No,,
+2015,02850000,Stoughton,Yes,Yes,Yes,,
+2015,02930000,Taunton,Yes,Yes,No,,
+2015,07750000,Wachusett,Yes,Yes,Yes,,
+2015,03070000,Walpole,Yes,Yes,No,,
+2015,03080000,Waltham,Yes,No,No,,
+2015,03140000,Watertown,Yes,Yes,No,,
+2015,03320000,West Springfield,Yes,No,Yes,,
+2015,03210000,Westborough,Yes,Yes,No,,
+2015,03250000,Westfield,Yes,No,No,,
+2015,03360000,Weymouth,Yes,Yes,No,,
+2015,03440000,Winchester,Yes,Yes,Yes,,
+2015,03460000,Winthrop,Yes,No,No,,
+2015,03470000,Woburn,Yes,Yes,No,,
+2015,03480000,Worcester,Yes,Yes,No,,
+2014,00000000,State,Yes,Yes,No,,
+2014,00020000,Acton (non-op),Yes,Yes,No,,
+2014,00050000,Agawam,Yes,Yes,Yes,,
+2014,00080000,Amherst,Yes,No,No,,
+2014,00090000,Andover,Yes,Yes,Yes,,
+2014,00100000,Arlington,Yes,Yes,No,,
+2014,00160000,Attleboro,No,No,No,,
+2014,00200000,Barnstable,Yes,Yes,No,,
+2014,00260000,Belmont,Yes,Yes,Yes,,
+2014,00350000,Boston,No,No,No,,
+2014,00400000,Braintree,Yes,Yes,Yes,,
+2014,00440000,Brockton,No,No,No,,
+2014,00460000,Brookline,Yes,Yes,No,,
+2014,00490000,Cambridge,Yes,Yes,No,,
+2014,00560000,Chelmsford,Yes,Yes,No,,
+2014,00570000,Chelsea,No,No,No,,
+2014,00610000,Chicopee,Yes,Yes,No,,
+2014,00640000,Clinton,Yes,No,No,,
+2014,00730000,Dedham,Yes,Yes,No,,
+2014,06450000,Dennis-Yarmouth,Yes,Yes,No,,
+2014,00930000,Everett,Yes,No,No,,
+2014,00950000,Fall River,No,No,No,,
+2014,00970000,Fitchburg,No,Yes,No,,
+2014,01000000,Framingham,Yes,No,No,,
+2014,01030000,Gardner,Yes,Yes,No,,
+2014,08280000,Greater Lowell Regional Vocational Technical,No,No,Yes,,
+2014,01280000,Haverhill,Yes,No,No,,
+2014,01370000,Holyoke,No,No,No,,
+2014,01410000,Hudson,Yes,Yes,No,,
+2014,01490000,Lawrence,Yes,No,No,,
+2014,04540000,Lawrence Family Development Charter (District),No,No,Yes,,
+2014,04860000,Learning First Charter Public School (District),Yes,Yes,No,,
+2014,01530000,Leominster,Yes,Yes,No,,
+2014,01550000,Lexington,Yes,Yes,Yes,,
+2014,01600000,Lowell,No,No,No,,
+2014,04560000,Lowell Community Charter Public (District),Yes,Yes,Yes,,
+2014,01630000,Lynn,Yes,No,No,,
+2014,04650000,MATCH Community Day Charter Public School (District),Yes,Yes,,,
+2014,01650000,Malden,Yes,Yes,No,,
+2014,01700000,Marlborough,Yes,Yes,No,,
+2014,01760000,Medford,Yes,No,No,,
+2014,01810000,Methuen,Yes,Yes,No,,
+2014,01850000,Milford,Yes,Yes,No,,
+2014,01970000,Nantucket,Yes,No,No,,
+2014,02010000,New Bedford,No,No,No,,
+2014,02070000,Newton,Yes,Yes,Yes,,
+2014,02200000,Norwood,Yes,Yes,Yes,,
+2014,02290000,Peabody,Yes,Yes,No,,
+2014,02360000,Pittsfield,No,No,No,,
+2014,04870000,Prospect Hill Academy Charter (District),Yes,No,,,
+2014,02430000,Quincy,Yes,Yes,No,,
+2014,02440000,Randolph,Yes,Yes,No,,
+2014,02480000,Revere,Yes,Yes,No,,
+2014,02580000,Salem,Yes,Yes,No,,
+2014,02710000,Shrewsbury,Yes,Yes,Yes,,
+2014,02740000,Somerville,No,No,No,,
+2014,02770000,Southbridge,No,No,No,,
+2014,02810000,Springfield,No,No,No,,
+2014,02850000,Stoughton,Yes,Yes,Yes,,
+2014,02930000,Taunton,Yes,Yes,No,,
+2014,03080000,Waltham,Yes,No,No,,
+2014,03140000,Watertown,Yes,Yes,No,,
+2014,03320000,West Springfield,Yes,No,Yes,,
+2014,03210000,Westborough,Yes,Yes,No,,
+2014,03250000,Westfield,No,Yes,No,,
+2014,03360000,Weymouth,Yes,Yes,No,,
+2014,03440000,Winchester,Yes,Yes,Yes,,
+2014,03460000,Winthrop,Yes,Yes,No,,
+2014,03470000,Woburn,Yes,Yes,No,,
+2014,03480000,Worcester,Yes,Yes,No,,
+2013,00000000,State,No,Yes,No,,
+2013,00020000,Acton (non-op),No,Yes,Yes,,
+2013,00050000,Agawam,Yes,Yes,Yes,,
+2013,00080000,Amherst,No,Yes,No,,
+2013,00090000,Andover,Yes,Yes,Yes,,
+2013,00100000,Arlington,No,Yes,No,,
+2013,00160000,Attleboro,No,No,Yes,,
+2013,00200000,Barnstable,Yes,No,No,,
+2013,00260000,Belmont,Yes,Yes,Yes,,
+2013,00350000,Boston,No,Yes,No,,
+2013,00400000,Braintree,Yes,Yes,Yes,,
+2013,00440000,Brockton,No,No,No,,
+2013,00460000,Brookline,Yes,Yes,Yes,,
+2013,00490000,Cambridge,Yes,No,No,,
+2013,00560000,Chelmsford,Yes,Yes,Yes,,
+2013,00570000,Chelsea,No,No,No,,
+2013,00610000,Chicopee,No,Yes,No,,
+2013,00640000,Clinton,No,No,No,,
+2013,04400000,Community Day Charter Public School (District),Yes,Yes,Yes,,
+2013,00730000,Dedham,No,Yes,No,,
+2013,06450000,Dennis-Yarmouth,No,No,No,,
+2013,00930000,Everett,Yes,No,No,,
+2013,00950000,Fall River,No,No,No,,
+2013,00970000,Fitchburg,No,No,No,,
+2013,01000000,Framingham,Yes,No,No,,
+2013,01280000,Haverhill,No,No,No,,
+2013,01370000,Holyoke,No,No,No,,
+2013,01410000,Hudson,No,Yes,No,,
+2013,01490000,Lawrence,Yes,No,No,,
+2013,04540000,Lawrence Family Development Charter (District),Yes,No,Yes,,
+2013,04860000,Learning First Charter Public School (District),Yes,Yes,Yes,,
+2013,01530000,Leominster,No,Yes,No,,
+2013,01550000,Lexington,Yes,Yes,Yes,,
+2013,01600000,Lowell,No,No,No,,
+2013,04560000,Lowell Community Charter Public (District),No,Yes,Yes,,
+2013,01630000,Lynn,No,No,No,,
+2013,01650000,Malden,No,Yes,No,,
+2013,01700000,Marlborough,No,No,No,,
+2013,01760000,Medford,Yes,Yes,No,,
+2013,01810000,Methuen,No,No,No,,
+2013,01850000,Milford,Yes,Yes,Yes,,
+2013,02010000,New Bedford,Yes,No,No,,
+2013,02070000,Newton,Yes,Yes,Yes,,
+2013,02200000,Norwood,Yes,Yes,No,,
+2013,02290000,Peabody,No,Yes,No,,
+2013,02360000,Pittsfield,Yes,Yes,No,,
+2013,02430000,Quincy,Yes,Yes,No,,
+2013,02440000,Randolph,Yes,Yes,No,,
+2013,02480000,Revere,Yes,No,No,,
+2013,02580000,Salem,No,No,No,,
+2013,02710000,Shrewsbury,Yes,Yes,Yes,,
+2013,02740000,Somerville,No,No,No,,
+2013,02770000,Southbridge,No,No,No,,
+2013,02810000,Springfield,No,No,No,,
+2013,02850000,Stoughton,No,Yes,No,,
+2013,02930000,Taunton,No,No,No,,
+2013,04800000,UP Academy Charter School of Boston (District),Yes,No,Yes,,
+2013,03080000,Waltham,No,No,No,,
+2013,03140000,Watertown,Yes,Yes,No,,
+2013,03320000,West Springfield,Yes,No,No,,
+2013,03210000,Westborough,Yes,Yes,Yes,,
+2013,03250000,Westfield,No,No,No,,
+2013,03360000,Weymouth,No,Yes,No,,
+2013,03440000,Winchester,Yes,Yes,Yes,,
+2013,03470000,Woburn,Yes,Yes,No,,
+2013,03480000,Worcester,No,Yes,No,,
+2012,00000000,State,Yes,Yes,No,,
+2012,00020000,Acton (non-op),Yes,Yes,Yes,,
+2012,00050000,Agawam,No,Yes,No,,
+2012,00080000,Amherst,Yes,Yes,No,,
+2012,00090000,Andover,Yes,Yes,Yes,,
+2012,00100000,Arlington,Yes,Yes,No,,
+2012,00160000,Attleboro,Yes,Yes,Yes,,
+2012,00200000,Barnstable,Yes,Yes,No,,
+2012,00260000,Belmont,Yes,Yes,No,,
+2012,00350000,Boston,No,Yes,No,,
+2012,00400000,Braintree,Yes,Yes,No,,
+2012,00440000,Brockton,Yes,No,No,,
+2012,00460000,Brookline,Yes,Yes,Yes,,
+2012,00490000,Cambridge,Yes,No,No,,
+2012,00570000,Chelsea,Yes,No,No,,
+2012,00610000,Chicopee,Yes,Yes,No,,
+2012,00640000,Clinton,No,Yes,No,,
+2012,04400000,Community Day Charter Public School (District),Yes,Yes,Yes,,
+2012,00730000,Dedham,Yes,Yes,No,,
+2012,06450000,Dennis-Yarmouth,No,Yes,No,,
+2012,00930000,Everett,Yes,Yes,No,,
+2012,00950000,Fall River,No,No,No,,
+2012,00970000,Fitchburg,No,No,No,,
+2012,01000000,Framingham,Yes,No,No,,
+2012,01280000,Haverhill,No,No,No,,
+2012,01370000,Holyoke,No,No,No,,
+2012,01410000,Hudson,Yes,Yes,Yes,,
+2012,01490000,Lawrence,No,No,No,,
+2012,04540000,Lawrence Family Development Charter (District),Yes,No,Yes,,
+2012,01530000,Leominster,Yes,Yes,No,,
+2012,01550000,Lexington,Yes,Yes,Yes,,
+2012,01600000,Lowell,No,Yes,No,,
+2012,04560000,Lowell Community Charter Public (District),Yes,Yes,Yes,,
+2012,01630000,Lynn,Yes,No,No,,
+2012,01650000,Malden,Yes,Yes,No,,
+2012,01700000,Marlborough,Yes,Yes,No,,
+2012,01760000,Medford,Yes,Yes,Yes,,
+2012,01810000,Methuen,Yes,No,No,,
+2012,01850000,Milford,Yes,Yes,No,,
+2012,02010000,New Bedford,No,No,No,,
+2012,02070000,Newton,Yes,Yes,Yes,,
+2012,02200000,Norwood,Yes,Yes,Yes,,
+2012,02290000,Peabody,Yes,Yes,No,,
+2012,02360000,Pittsfield,No,Yes,No,,
+2012,02430000,Quincy,Yes,Yes,No,,
+2012,02440000,Randolph,Yes,Yes,No,,
+2012,02480000,Revere,Yes,Yes,No,,
+2012,02580000,Salem,No,No,No,,
+2012,02710000,Shrewsbury,Yes,Yes,Yes,,
+2012,02740000,Somerville,Yes,No,No,,
+2012,02770000,Southbridge,No,No,No,,
+2012,02810000,Springfield,No,No,No,,
+2012,02850000,Stoughton,Yes,Yes,No,,
+2012,02930000,Taunton,Yes,Yes,No,,
+2012,03080000,Waltham,Yes,No,No,,
+2012,03140000,Watertown,Yes,Yes,No,,
+2012,03320000,West Springfield,Yes,Yes,No,,
+2012,03210000,Westborough,Yes,Yes,Yes,,
+2012,03250000,Westfield,Yes,Yes,No,,
+2012,03360000,Weymouth,Yes,Yes,No,,
+2012,03440000,Winchester,Yes,Yes,Yes,,
+2012,03470000,Woburn,Yes,Yes,No,,
+2012,03480000,Worcester,No,Yes,No,,
+2011,00000000,State,No,Yes,,No,No
+2011,00080000,Amherst,Yes,Yes,,No,No
+2011,00100000,Arlington,Yes,Yes,,Yes,Yes
+2011,00160000,Attleboro,Yes,Yes,,No,No
+2011,00200000,Barnstable,Yes,Yes,,Yes,Yes
+2011,00260000,Belmont,Yes,Yes,,,
+2011,00350000,Boston,No,Yes,,No,No
+2011,00400000,Braintree,Yes,Yes,,,
+2011,00440000,Brockton,No,No,,No,No
+2011,00460000,Brookline,Yes,Yes,,Yes,Yes
+2011,00490000,Cambridge,No,No,,No,No
+2011,00570000,Chelsea,Yes,No,,No,No
+2011,00610000,Chicopee,Yes,Yes,,No,No
+2011,00640000,Clinton,Yes,Yes,,Yes,No
+2011,06450000,Dennis-Yarmouth,Yes,Yes,,No,No
+2011,00930000,Everett,Yes,Yes,,No,No
+2011,00950000,Fall River,No,No,,No,No
+2011,00970000,Fitchburg,No,No,,No,No
+2011,01000000,Framingham,Yes,No,,No,No
+2011,01280000,Haverhill,Yes,No,,No,No
+2011,01370000,Holyoke,No,No,,No,No
+2011,01410000,Hudson,No,Yes,,No,No
+2011,01490000,Lawrence,No,No,,No,No
+2011,04540000,Lawrence Family Development Charter (District),No,No,,Yes,Yes
+2011,01530000,Leominster,No,No,,No,No
+2011,01550000,Lexington,Yes,Yes,,Yes,Yes
+2011,01600000,Lowell,No,Yes,,No,No
+2011,04560000,Lowell Community Charter Public (District),No,Yes,,Yes,Yes
+2011,01630000,Lynn,No,No,,No,No
+2011,01650000,Malden,Yes,Yes,,No,No
+2011,01700000,Marlborough,Yes,Yes,,No,No
+2011,01760000,Medford,Yes,Yes,,No,No
+2011,01810000,Methuen,Yes,No,,No,No
+2011,01850000,Milford,Yes,Yes,,No,No
+2011,02010000,New Bedford,No,No,,No,No
+2011,02070000,Newton,Yes,Yes,,No,No
+2011,02200000,Norwood,Yes,Yes,,No,No
+2011,02290000,Peabody,Yes,Yes,,No,No
+2011,02360000,Pittsfield,No,Yes,,,
+2011,02430000,Quincy,Yes,Yes,,No,No
+2011,02440000,Randolph,Yes,Yes,,No,No
+2011,02480000,Revere,Yes,Yes,,No,No
+2011,02580000,Salem,No,No,,No,No
+2011,02710000,Shrewsbury,Yes,Yes,,,No
+2011,02740000,Somerville,Yes,Yes,,No,No
+2011,02770000,Southbridge,No,No,,No,No
+2011,02810000,Springfield,No,No,,No,No
+2011,02850000,Stoughton,Yes,Yes,,No,No
+2011,02930000,Taunton,No,Yes,,,
+2011,03080000,Waltham,No,No,,No,No
+2011,03140000,Watertown,Yes,Yes,,No,No
+2011,03320000,West Springfield,Yes,No,,No,No
+2011,03210000,Westborough,Yes,Yes,,No,Yes
+2011,03250000,Westfield,Yes,No,,No,No
+2011,03360000,Weymouth,Yes,Yes,,,
+2011,03440000,Winchester,Yes,Yes,,,
+2011,03470000,Woburn,Yes,Yes,,No,No
+2011,03480000,Worcester,No,Yes,,No,No
+2010,00000000,State,Yes,Yes,,No,No
+2010,00080000,Amherst,Yes,Yes,,No,No
+2010,00100000,Arlington,Yes,Yes,,No,No
+2010,00160000,Attleboro,No,Yes,,No,No
+2010,00200000,Barnstable,Yes,Yes,,,
+2010,00260000,Belmont,Yes,Yes,,,
+2010,00350000,Boston,No,No,,No,No
+2010,00440000,Brockton,No,No,,No,No
+2010,00460000,Brookline,Yes,Yes,,No,Yes
+2010,00490000,Cambridge,Yes,No,,No,No
+2010,00570000,Chelsea,No,No,,No,No
+2010,00610000,Chicopee,Yes,Yes,,No,No
+2010,00640000,Clinton,Yes,Yes,,No,No
+2010,06450000,Dennis-Yarmouth,No,Yes,,No,No
+2010,00930000,Everett,Yes,Yes,,No,No
+2010,00950000,Fall River,No,No,,No,No
+2010,00970000,Fitchburg,Yes,Yes,,No,No
+2010,01000000,Framingham,Yes,Yes,,No,No
+2010,01280000,Haverhill,No,No,,No,No
+2010,01370000,Holyoke,No,No,,No,No
+2010,01410000,Hudson,Yes,Yes,,Yes,Yes
+2010,01490000,Lawrence,No,No,,No,No
+2010,04540000,Lawrence Family Development Charter (District),Yes,Yes,,No,Yes
+2010,01530000,Leominster,No,No,,No,No
+2010,01550000,Lexington,Yes,Yes,,No,Yes
+2010,01600000,Lowell,No,Yes,,No,No
+2010,04560000,Lowell Community Charter Public (District),Yes,Yes,,No,No
+2010,01630000,Lynn,No,Yes,,No,No
+2010,01650000,Malden,Yes,Yes,,No,No
+2010,01700000,Marlborough,Yes,Yes,,No,No
+2010,01760000,Medford,Yes,Yes,,No,No
+2010,01810000,Methuen,No,No,,No,No
+2010,01850000,Milford,Yes,Yes,,No,No
+2010,02010000,New Bedford,No,No,,No,No
+2010,02070000,Newton,Yes,Yes,,No,Yes
+2010,02200000,Norwood,Yes,Yes,,Yes,No
+2010,02290000,Peabody,Yes,Yes,,Yes,No
+2010,02360000,Pittsfield,Yes,Yes,,Yes,No
+2010,02430000,Quincy,Yes,Yes,,No,No
+2010,02440000,Randolph,Yes,Yes,,No,Yes
+2010,02480000,Revere,Yes,Yes,,No,No
+2010,02580000,Salem,No,No,,No,No
+2010,02710000,Shrewsbury,Yes,Yes,,No,Yes
+2010,02740000,Somerville,Yes,No,,No,No
+2010,02770000,Southbridge,No,No,,No,No
+2010,02810000,Springfield,No,No,,No,No
+2010,02850000,Stoughton,Yes,Yes,,Yes,Yes
+2010,02930000,Taunton,Yes,Yes,,,
+2010,03080000,Waltham,Yes,Yes,,No,No
+2010,03140000,Watertown,Yes,Yes,,No,No
+2010,03320000,West Springfield,Yes,No,,No,No
+2010,03210000,Westborough,Yes,Yes,,Yes,No
+2010,03250000,Westfield,Yes,No,,No,No
+2010,03360000,Weymouth,Yes,Yes,,,
+2010,03470000,Woburn,Yes,Yes,,No,Yes
+2010,03480000,Worcester,Yes,Yes,,No,No
+2009,00000000,State,Yes,Yes,,No,No
+2009,00080000,Amherst,Yes,Yes,,Yes,No
+2009,00100000,Arlington,Yes,Yes,,Yes,Yes
+2009,00160000,Attleboro,Yes,Yes,,Yes,No
+2009,00200000,Barnstable,Yes,Yes,,Yes,No
+2009,00260000,Belmont,Yes,Yes,,,
+2009,00350000,Boston,Yes,No,,No,No
+2009,00440000,Brockton,Yes,Yes,,No,No
+2009,00460000,Brookline,Yes,Yes,,Yes,Yes
+2009,00490000,Cambridge,Yes,Yes,,No,No
+2009,00570000,Chelsea,Yes,No,,Yes,No
+2009,00610000,Chicopee,Yes,Yes,,No,No
+2009,00640000,Clinton,Yes,Yes,,Yes,No
+2009,00730000,Dedham,Yes,Yes,,Yes,Yes
+2009,06450000,Dennis-Yarmouth,Yes,Yes,,No,No
+2009,00930000,Everett,Yes,Yes,,No,No
+2009,00950000,Fall River,Yes,Yes,,No,No
+2009,00970000,Fitchburg,Yes,Yes,,No,No
+2009,01000000,Framingham,Yes,Yes,,No,No
+2009,01280000,Haverhill,Yes,Yes,,No,No
+2009,01370000,Holyoke,No,No,,No,No
+2009,01410000,Hudson,Yes,Yes,,No,No
+2009,01490000,Lawrence,No,Yes,,No,No
+2009,04540000,Lawrence Family Development Charter (District),Yes,No,,Yes,No
+2009,01530000,Leominster,No,Yes,,No,No
+2009,01550000,Lexington,Yes,Yes,,Yes,Yes
+2009,01600000,Lowell,Yes,Yes,,No,No
+2009,04560000,Lowell Community Charter Public (District),Yes,Yes,,No,No
+2009,01630000,Lynn,Yes,Yes,,No,No
+2009,01650000,Malden,Yes,Yes,,No,No
+2009,01700000,Marlborough,Yes,Yes,,No,No
+2009,01760000,Medford,Yes,Yes,,Yes,Yes
+2009,01810000,Methuen,Yes,Yes,,No,No
+2009,01850000,Milford,Yes,Yes,,No,No
+2009,02010000,New Bedford,No,No,,No,No
+2009,02070000,Newton,Yes,Yes,,Yes,Yes
+2009,02200000,Norwood,Yes,Yes,,Yes,Yes
+2009,02290000,Peabody,Yes,Yes,,Yes,No
+2009,02360000,Pittsfield,Yes,Yes,,,
+2009,02430000,Quincy,Yes,Yes,,No,No
+2009,02440000,Randolph,Yes,Yes,,No,No
+2009,02480000,Revere,Yes,Yes,,Yes,Yes
+2009,02580000,Salem,No,No,,Yes,No
+2009,02710000,Shrewsbury,Yes,Yes,,,
+2009,02740000,Somerville,Yes,Yes,,No,No
+2009,02770000,Southbridge,Yes,Yes,,No,No
+2009,02810000,Springfield,No,No,,No,No
+2009,02850000,Stoughton,Yes,Yes,,,
+2009,02930000,Taunton,Yes,Yes,,,
+2009,03080000,Waltham,Yes,Yes,,No,No
+2009,03140000,Watertown,Yes,Yes,,Yes,No
+2009,03320000,West Springfield,Yes,Yes,,Yes,No
+2009,03210000,Westborough,Yes,Yes,,Yes,Yes
+2009,03250000,Westfield,Yes,Yes,,Yes,No
+2009,03470000,Woburn,Yes,Yes,,,
+2009,03480000,Worcester,Yes,Yes,,No,No
+2008,00000000,State,Yes,Yes,,No,No
+2008,00080000,Amherst,Yes,Yes,,No,Yes
+2008,00100000,Arlington,Yes,Yes,,Yes,Yes
+2008,00160000,Attleboro,Yes,Yes,,No,Yes
+2008,00200000,Barnstable,Yes,Yes,,No,No
+2008,00350000,Boston,Yes,Yes,,No,No
+2008,00440000,Brockton,Yes,Yes,,No,No
+2008,00460000,Brookline,Yes,Yes,,No,Yes
+2008,00490000,Cambridge,Yes,Yes,,No,Yes
+2008,00570000,Chelsea,No,Yes,,No,No
+2008,00610000,Chicopee,Yes,Yes,,No,No
+2008,00730000,Dedham,Yes,Yes,,Yes,Yes
+2008,06450000,Dennis-Yarmouth,Yes,Yes,,No,No
+2008,00930000,Everett,Yes,Yes,,No,Yes
+2008,00950000,Fall River,Yes,Yes,,No,No
+2008,00970000,Fitchburg,Yes,Yes,,No,No
+2008,01000000,Framingham,Yes,Yes,,No,No
+2008,01280000,Haverhill,No,Yes,,No,No
+2008,01370000,Holyoke,No,No,,No,No
+2008,01410000,Hudson,Yes,Yes,,No,No
+2008,01490000,Lawrence,Yes,Yes,,No,Yes
+2008,04540000,Lawrence Family Development Charter (District),Yes,Yes,,Yes,Yes
+2008,01530000,Leominster,Yes,Yes,,No,No
+2008,01550000,Lexington,Yes,Yes,,Yes,Yes
+2008,01600000,Lowell,Yes,Yes,,No,No
+2008,04560000,Lowell Community Charter Public (District),Yes,Yes,,No,No
+2008,01630000,Lynn,Yes,Yes,,No,No
+2008,01650000,Malden,Yes,Yes,,No,No
+2008,01700000,Marlborough,Yes,Yes,,No,No
+2008,07000000,Martha's Vineyard,Yes,Yes,,,
+2008,01760000,Medford,Yes,No,,No,No
+2008,01810000,Methuen,Yes,Yes,,No,No
+2008,01850000,Milford,Yes,Yes,,No,No
+2008,02010000,New Bedford,No,No,,No,No
+2008,02070000,Newton,Yes,Yes,,No,Yes
+2008,02200000,Norwood,Yes,Yes,,No,No
+2008,02290000,Peabody,Yes,Yes,,,
+2008,02360000,Pittsfield,Yes,Yes,,,No
+2008,02430000,Quincy,Yes,Yes,,No,Yes
+2008,02440000,Randolph,Yes,Yes,,No,No
+2008,02480000,Revere,Yes,Yes,,No,Yes
+2008,02580000,Salem,Yes,Yes,,No,No
+2008,02710000,Shrewsbury,Yes,Yes,,,
+2008,02740000,Somerville,Yes,Yes,,Yes,No
+2008,02770000,Southbridge,No,No,,No,No
+2008,02810000,Springfield,No,No,,No,No
+2008,02850000,Stoughton,Yes,Yes,,,
+2008,02930000,Taunton,Yes,Yes,,,
+2008,03080000,Waltham,Yes,Yes,,No,No
+2008,03140000,Watertown,Yes,Yes,,No,No
+2008,03320000,West Springfield,Yes,Yes,,No,Yes
+2008,03210000,Westborough,Yes,Yes,,Yes,Yes
+2008,03250000,Westfield,Yes,Yes,,No,Yes
+2008,03470000,Woburn,Yes,Yes,,,
+2008,03480000,Worcester,No,Yes,,No,No
+2007,00000000,State,Yes,Yes,,No,No
+2007,00080000,Amherst,Yes,Yes,,Yes,Yes
+2007,00100000,Arlington,Yes,Yes,,Yes,Yes
+2007,00160000,Attleboro,Yes,Yes,,Yes,Yes
+2007,00200000,Barnstable,No,Yes,,No,Yes
+2007,00350000,Boston,Yes,Yes,,No,No
+2007,00440000,Brockton,Yes,Yes,,No,No
+2007,00460000,Brookline,Yes,Yes,,Yes,Yes
+2007,00490000,Cambridge,Yes,Yes,,No,No
+2007,00570000,Chelsea,Yes,Yes,,No,Yes
+2007,00610000,Chicopee,Yes,No,,Yes,No
+2007,00730000,Dedham,Yes,Yes,,No,Yes
+2007,06450000,Dennis-Yarmouth,Yes,Yes,,Yes,No
+2007,00930000,Everett,Yes,Yes,,No,No
+2007,00950000,Fall River,No,No,,Yes,No
+2007,00970000,Fitchburg,Yes,Yes,,No,No
+2007,01000000,Framingham,Yes,Yes,,No,No
+2007,01280000,Haverhill,Yes,Yes,,No,No
+2007,01370000,Holyoke,No,No,,No,No
+2007,01410000,Hudson,Yes,Yes,,No,No
+2007,01490000,Lawrence,No,No,,No,No
+2007,04540000,Lawrence Family Development Charter (District),Yes,Yes,,Yes,Yes
+2007,01530000,Leominster,Yes,Yes,,No,Yes
+2007,01550000,Lexington,Yes,Yes,,Yes,Yes
+2007,01600000,Lowell,Yes,Yes,,No,Yes
+2007,04560000,Lowell Community Charter Public (District),Yes,Yes,,Yes,Yes
+2007,01630000,Lynn,Yes,Yes,,No,Yes
+2007,01650000,Malden,Yes,Yes,,No,No
+2007,01700000,Marlborough,Yes,Yes,,No,Yes
+2007,01760000,Medford,Yes,Yes,,No,No
+2007,01810000,Methuen,Yes,Yes,,Yes,No
+2007,01850000,Milford,Yes,Yes,,Yes,Yes
+2007,02010000,New Bedford,No,No,,No,No
+2007,02070000,Newton,Yes,Yes,,Yes,Yes
+2007,02200000,Norwood,Yes,Yes,,Yes,Yes
+2007,02290000,Peabody,Yes,Yes,,,
+2007,02360000,Pittsfield,No,No,,No,Yes
+2007,02430000,Quincy,Yes,Yes,,No,Yes
+2007,02440000,Randolph,Yes,No,,No,No
+2007,02480000,Revere,Yes,Yes,,Yes,Yes
+2007,02580000,Salem,No,No,,No,No
+2007,02710000,Shrewsbury,Yes,Yes,,,
+2007,02740000,Somerville,Yes,Yes,,No,No
+2007,02770000,Southbridge,No,No,,No,No
+2007,02810000,Springfield,No,No,,No,No
+2007,02930000,Taunton,Yes,Yes,,,
+2007,03080000,Waltham,Yes,Yes,,No,No
+2007,03140000,Watertown,Yes,Yes,,Yes,Yes
+2007,03320000,West Springfield,Yes,Yes,,No,Yes
+2007,03210000,Westborough,Yes,Yes,,Yes,Yes
+2007,03250000,Westfield,Yes,Yes,,No,No
+2007,03470000,Woburn,Yes,Yes,,,
+2007,03480000,Worcester,No,No,,No,No
+2006,00000000,State,Yes,Yes,,No,No
+2006,00080000,Amherst,Yes,Yes,,No,Yes
+2006,00100000,Arlington,Yes,Yes,,Yes,Yes
+2006,00160000,Attleboro,Yes,Yes,,No,No
+2006,00200000,Barnstable,Yes,Yes,,No,No
+2006,00260000,Belmont,Yes,Yes,,,
+2006,00350000,Boston,Yes,Yes,,No,No
+2006,00440000,Brockton,Yes,Yes,,No,No
+2006,00460000,Brookline,Yes,Yes,,No,Yes
+2006,00490000,Cambridge,Yes,Yes,,Yes,Yes
+2006,00570000,Chelsea,Yes,Yes,,No,No
+2006,00610000,Chicopee,Yes,Yes,,No,Yes
+2006,00640000,Clinton,Yes,Yes,,,
+2006,00730000,Dedham,Yes,Yes,,No,No
+2006,06450000,Dennis-Yarmouth,Yes,Yes,,No,Yes
+2006,00930000,Everett,Yes,Yes,,No,No
+2006,00950000,Fall River,Yes,Yes,,No,No
+2006,00970000,Fitchburg,Yes,Yes,,No,No
+2006,01000000,Framingham,Yes,Yes,,No,No
+2006,01280000,Haverhill,Yes,No,,No,No
+2006,01370000,Holyoke,No,No,,No,No
+2006,01410000,Hudson,Yes,Yes,,,
+2006,01490000,Lawrence,No,No,,No,No
+2006,04540000,Lawrence Family Development Charter (District),Yes,Yes,,No,Yes
+2006,01530000,Leominster,Yes,No,,No,No
+2006,01550000,Lexington,Yes,Yes,,Yes,
+2006,01600000,Lowell,Yes,No,,No,No
+2006,04560000,Lowell Community Charter Public (District),Yes,No,,No,No
+2006,01630000,Lynn,Yes,Yes,,No,No
+2006,01650000,Malden,Yes,Yes,,No,No
+2006,01700000,Marlborough,Yes,Yes,,No,No
+2006,01760000,Medford,Yes,Yes,,No,No
+2006,01810000,Methuen,Yes,Yes,,No,No
+2006,01850000,Milford,Yes,Yes,,No,No
+2006,02010000,New Bedford,Yes,Yes,,No,No
+2006,02070000,Newton,Yes,Yes,,Yes,Yes
+2006,02200000,Norwood,Yes,No,,No,No
+2006,02290000,Peabody,Yes,Yes,,,
+2006,02360000,Pittsfield,Yes,Yes,,,
+2006,02430000,Quincy,Yes,Yes,,No,Yes
+2006,02440000,Randolph,Yes,Yes,,No,No
+2006,02480000,Revere,Yes,Yes,,No,No
+2006,02580000,Salem,Yes,Yes,,No,No
+2006,02740000,Somerville,Yes,Yes,,No,No
+2006,02770000,Southbridge,No,No,,,No
+2006,02810000,Springfield,No,No,,No,No
+2006,02930000,Taunton,Yes,Yes,,,
+2006,03080000,Waltham,Yes,Yes,,No,No
+2006,03140000,Watertown,Yes,Yes,,No,Yes
+2006,03320000,West Springfield,Yes,Yes,,No,No
+2006,03210000,Westborough,Yes,Yes,,No,No
+2006,03250000,Westfield,Yes,No,,No,Yes
+2006,03470000,Woburn,Yes,Yes,,,
+2006,03480000,Worcester,Yes,Yes,,No,No

@@ -1,0 +1,818 @@
+{
+  "id" : "8szy-v4ed",
+  "name" : "Elementary and Secondary District Expenditures Per Pupil",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu",
+  "averageRating" : 0,
+  "category" : "Finance and Budget",
+  "createdAt" : 1708978359,
+  "description" : "This dataset contains per-pupil expenditure data for Massachusetts public school districts from 2009 onward. Per-pupil expenditure data for charter schools can be found in the <a href=\"https://www.doe.mass.edu/charter/finance/dashboard\" target=\"_blank\" rel=\"noopener noreferrer\">Massachusetts Charter School Financial Dashboard</a>.\n\nDistricts report expenditure data via the <a href=\"https://www.doe.mass.edu/finance/accounting/eoy\" target=\"_blank\" rel=\"noopener noreferrer\">End of Year Financial Report</a>. Per-pupil expenditures are calculated by dividing a district’s operating expenditures by its average pupil membership. Measures include both in-district expenditures per pupil and total expenditures per pupil. The following data elements are used in these calculations:\n<ul><li><i>In-District Full-Time Equivalent (FTE) Average Membership:</i> Average enrollment across the school year for pupils enrolled in district schools.</li><li><i>In-District Expenditures:</i> All district operating expenditures for in-district programs.</li><li><i>In-District Expenditures Per Pupil:</i> Total in-district expenditures divided by in-district FTE average membership.</li><li><i>Total FTE Average Membership:</i> Average enrollment across the school year for students enrolled in district schools as well as publicly funded students enrolled in other placements, including charter schools, special education collaboratives, and private special education schools.</li><li><i>Total Expenditures:</i> All district operating expenditures, including both in-district programs and out-of-district placements.</li><li><i>Total Expenditures Per Pupil:</i> Total expenditures divided by total FTE average membership.</li></ul>This dataset contains a subset of the data also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmVkOWM4NmMtOGQyYi00ZjY0LTkwZWUtZGQyZGM3YTlhZjgxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noopener noreferrer\">School Finance Dashboard</a>. For more information about the dashboard and its corresponding datasets, see the <a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/School-Finance-Dashboard/w4kz-gcts/about_data\">School Finance Dashboard landing page</a> in the E2C Hub.\n\nAmendments to district expenditures or FTE counts are included in this dataset, meaning data may be updated over time. Per pupil expenditure data is also published on our DESE Profiles site but may differ slightly due to timing of amendments and rounding:\n<a href=\"https://profiles.doe.mass.edu/statereport/ppx.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Per Pupil Expenditure</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 10,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42618081,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1790786010,
+  "publicationGroup" : 19465123,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790802254,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20643145,
+  "totalTimesRated" : 0,
+  "viewCount" : 178,
+  "viewLastModified" : 1790802511,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1790802290,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7769427,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1790802269,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1790802290,
+      "failureCount" : 0,
+      "startedAt" : 1790802290,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 647596073,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166313538,
+    "cachedContents" : {
+      "non_null" : "5475",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2011",
+        "count" : "328"
+      }, {
+        "item" : "2009",
+        "count" : "328"
+      }, {
+        "item" : "2010",
+        "count" : "328"
+      }, {
+        "item" : "2012",
+        "count" : "326"
+      }, {
+        "item" : "2014",
+        "count" : "324"
+      }, {
+        "item" : "2013",
+        "count" : "324"
+      }, {
+        "item" : "2017",
+        "count" : "322"
+      }, {
+        "item" : "2016",
+        "count" : "322"
+      }, {
+        "item" : "2018",
+        "count" : "322"
+      }, {
+        "item" : "2015",
+        "count" : "321"
+      }, {
+        "item" : "2019",
+        "count" : "320"
+      }, {
+        "item" : "2025",
+        "count" : "319"
+      }, {
+        "item" : "2024",
+        "count" : "319"
+      }, {
+        "item" : "2022",
+        "count" : "318"
+      }, {
+        "item" : "2023",
+        "count" : "318"
+      }, {
+        "item" : "2020",
+        "count" : "318"
+      }, {
+        "item" : "2021",
+        "count" : "318"
+      } ],
+      "smallest" : "2009",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : { }
+  }, {
+    "id" : 647596074,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151575762,
+    "cachedContents" : {
+      "non_null" : "5475",
+      "largest" : "09150000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "07730000",
+        "count" : "17"
+      }, {
+        "item" : "00610000",
+        "count" : "17"
+      }, {
+        "item" : "01600000",
+        "count" : "17"
+      }, {
+        "item" : "02170000",
+        "count" : "17"
+      }, {
+        "item" : "00070000",
+        "count" : "17"
+      }, {
+        "item" : "02070000",
+        "count" : "17"
+      }, {
+        "item" : "00010000",
+        "count" : "17"
+      }, {
+        "item" : "02180000",
+        "count" : "17"
+      }, {
+        "item" : "03080000",
+        "count" : "17"
+      }, {
+        "item" : "08530000",
+        "count" : "17"
+      }, {
+        "item" : "07300000",
+        "count" : "17"
+      }, {
+        "item" : "01310000",
+        "count" : "17"
+      }, {
+        "item" : "08280000",
+        "count" : "17"
+      }, {
+        "item" : "02190000",
+        "count" : "17"
+      }, {
+        "item" : "03320000",
+        "count" : "17"
+      }, {
+        "item" : "02650000",
+        "count" : "17"
+      }, {
+        "item" : "00430000",
+        "count" : "17"
+      }, {
+        "item" : "02110000",
+        "count" : "17"
+      }, {
+        "item" : "03180000",
+        "count" : "17"
+      }, {
+        "item" : "08060000",
+        "count" : "17"
+      } ],
+      "smallest" : "00010000",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : { }
+  }, {
+    "id" : 647596075,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151575776,
+    "cachedContents" : {
+      "non_null" : "5475",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Norfolk",
+        "count" : "17"
+      }, {
+        "item" : "Hawlemont",
+        "count" : "17"
+      }, {
+        "item" : "Andover",
+        "count" : "17"
+      }, {
+        "item" : "Acton-Boxborough",
+        "count" : "17"
+      }, {
+        "item" : "New Bedford",
+        "count" : "17"
+      }, {
+        "item" : "Littleton",
+        "count" : "17"
+      }, {
+        "item" : "Norwood",
+        "count" : "17"
+      }, {
+        "item" : "Springfield",
+        "count" : "17"
+      }, {
+        "item" : "Brimfield",
+        "count" : "17"
+      }, {
+        "item" : "North Middlesex",
+        "count" : "17"
+      }, {
+        "item" : "Haverhill",
+        "count" : "17"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "17"
+      }, {
+        "item" : "Truro",
+        "count" : "17"
+      }, {
+        "item" : "Needham",
+        "count" : "17"
+      }, {
+        "item" : "Bedford",
+        "count" : "17"
+      }, {
+        "item" : "Silver Lake",
+        "count" : "17"
+      }, {
+        "item" : "Northborough",
+        "count" : "17"
+      }, {
+        "item" : "Minuteman Regional Vocational Technical",
+        "count" : "17"
+      }, {
+        "item" : "Bourne",
+        "count" : "17"
+      }, {
+        "item" : "Boxford",
+        "count" : "17"
+      } ],
+      "smallest" : "Abington",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : { }
+  }, {
+    "id" : 647596076,
+    "name" : "IN_DIST_EXP",
+    "dataTypeName" : "number",
+    "description" : "In-District Expenditures",
+    "fieldName" : "in_dist_exp",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151575794,
+    "cachedContents" : {
+      "non_null" : "5470",
+      "largest" : "1690739814.00",
+      "null" : "5",
+      "top" : [ {
+        "item" : "37211743.00",
+        "count" : "1"
+      }, {
+        "item" : "5541238.00",
+        "count" : "1"
+      }, {
+        "item" : "79971965.00",
+        "count" : "1"
+      }, {
+        "item" : "59120421.00",
+        "count" : "1"
+      }, {
+        "item" : "15776730.00",
+        "count" : "1"
+      }, {
+        "item" : "52829927.00",
+        "count" : "1"
+      }, {
+        "item" : "989688.00",
+        "count" : "1"
+      }, {
+        "item" : "79497996.00",
+        "count" : "1"
+      }, {
+        "item" : "68041618.00",
+        "count" : "1"
+      }, {
+        "item" : "16060617.00",
+        "count" : "1"
+      }, {
+        "item" : "41984063.00",
+        "count" : "1"
+      }, {
+        "item" : "2189913.00",
+        "count" : "1"
+      }, {
+        "item" : "113294283.00",
+        "count" : "1"
+      }, {
+        "item" : "36027456.00",
+        "count" : "1"
+      }, {
+        "item" : "97116944.00",
+        "count" : "1"
+      }, {
+        "item" : "39950537.00",
+        "count" : "1"
+      }, {
+        "item" : "56489074.00",
+        "count" : "1"
+      }, {
+        "item" : "27815244.00",
+        "count" : "1"
+      }, {
+        "item" : "90795896.00",
+        "count" : "1"
+      }, {
+        "item" : "30039874.00",
+        "count" : "1"
+      } ],
+      "smallest" : "531407.00",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 647596077,
+    "name" : "IN_DIST_FTE",
+    "dataTypeName" : "number",
+    "description" : "In-District Full Time Equivalent (FTE)",
+    "fieldName" : "in_dist_fte",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151575795,
+    "cachedContents" : {
+      "non_null" : "5470",
+      "largest" : "56858.8",
+      "null" : "5",
+      "top" : [ {
+        "item" : "1421.7",
+        "count" : "3"
+      }, {
+        "item" : "1211.1",
+        "count" : "3"
+      }, {
+        "item" : "432.4",
+        "count" : "3"
+      }, {
+        "item" : "151.2",
+        "count" : "3"
+      }, {
+        "item" : "2976.9",
+        "count" : "3"
+      }, {
+        "item" : "1290.8",
+        "count" : "3"
+      }, {
+        "item" : "133.5",
+        "count" : "3"
+      }, {
+        "item" : "114.0",
+        "count" : "3"
+      }, {
+        "item" : "134.5",
+        "count" : "3"
+      }, {
+        "item" : "181.6",
+        "count" : "3"
+      }, {
+        "item" : "681.5",
+        "count" : "3"
+      }, {
+        "item" : "132.6",
+        "count" : "3"
+      }, {
+        "item" : "737.4",
+        "count" : "3"
+      }, {
+        "item" : "117.0",
+        "count" : "3"
+      }, {
+        "item" : "151.9",
+        "count" : "3"
+      }, {
+        "item" : "119.0",
+        "count" : "2"
+      }, {
+        "item" : "551.1",
+        "count" : "2"
+      }, {
+        "item" : "1636.9",
+        "count" : "2"
+      }, {
+        "item" : "146.6",
+        "count" : "2"
+      }, {
+        "item" : "174.6",
+        "count" : "2"
+      } ],
+      "smallest" : "28.3",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 647596078,
+    "name" : "IN_DIST_EXP_PER_PUPIL",
+    "dataTypeName" : "number",
+    "description" : "In-District Expenditures Per Pupil",
+    "fieldName" : "in_dist_exp_per_pupil",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151575796,
+    "cachedContents" : {
+      "non_null" : "5470",
+      "largest" : "68565.0",
+      "null" : "5",
+      "top" : [ {
+        "item" : "19791.0",
+        "count" : "4"
+      }, {
+        "item" : "13599.0",
+        "count" : "4"
+      }, {
+        "item" : "12908.0",
+        "count" : "4"
+      }, {
+        "item" : "12195.0",
+        "count" : "4"
+      }, {
+        "item" : "16916.0",
+        "count" : "4"
+      }, {
+        "item" : "17252.0",
+        "count" : "4"
+      }, {
+        "item" : "18376.0",
+        "count" : "3"
+      }, {
+        "item" : "21252.0",
+        "count" : "3"
+      }, {
+        "item" : "14487.0",
+        "count" : "3"
+      }, {
+        "item" : "14805.0",
+        "count" : "3"
+      }, {
+        "item" : "13857.0",
+        "count" : "3"
+      }, {
+        "item" : "13443.0",
+        "count" : "3"
+      }, {
+        "item" : "12518.0",
+        "count" : "3"
+      }, {
+        "item" : "12338.0",
+        "count" : "3"
+      }, {
+        "item" : "10570.0",
+        "count" : "3"
+      }, {
+        "item" : "16762.0",
+        "count" : "3"
+      }, {
+        "item" : "19767.0",
+        "count" : "3"
+      }, {
+        "item" : "11912.0",
+        "count" : "3"
+      }, {
+        "item" : "14041.0",
+        "count" : "3"
+      }, {
+        "item" : "12176.0",
+        "count" : "3"
+      } ],
+      "smallest" : "7823.0",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 647596079,
+    "name" : "TOT_EXP",
+    "dataTypeName" : "number",
+    "description" : "Total Expenditures",
+    "fieldName" : "tot_exp",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151575797,
+    "cachedContents" : {
+      "non_null" : "5470",
+      "largest" : "2083951609.00",
+      "null" : "5",
+      "top" : [ {
+        "item" : "40912195.00",
+        "count" : "1"
+      }, {
+        "item" : "59958610.00",
+        "count" : "1"
+      }, {
+        "item" : "45864515.00",
+        "count" : "1"
+      }, {
+        "item" : "50411635.00",
+        "count" : "1"
+      }, {
+        "item" : "47503941.00",
+        "count" : "1"
+      }, {
+        "item" : "136436312.00",
+        "count" : "1"
+      }, {
+        "item" : "43829405.00",
+        "count" : "1"
+      }, {
+        "item" : "92970694.00",
+        "count" : "1"
+      }, {
+        "item" : "194101037.00",
+        "count" : "1"
+      }, {
+        "item" : "2605662.00",
+        "count" : "1"
+      }, {
+        "item" : "98652546.00",
+        "count" : "1"
+      }, {
+        "item" : "48091746.00",
+        "count" : "1"
+      }, {
+        "item" : "27725358.00",
+        "count" : "1"
+      }, {
+        "item" : "60293725.00",
+        "count" : "1"
+      }, {
+        "item" : "32505935.00",
+        "count" : "1"
+      }, {
+        "item" : "14718343.00",
+        "count" : "1"
+      }, {
+        "item" : "36965316.00",
+        "count" : "1"
+      }, {
+        "item" : "41985614.00",
+        "count" : "1"
+      }, {
+        "item" : "195910239.00",
+        "count" : "1"
+      }, {
+        "item" : "30289877.00",
+        "count" : "1"
+      } ],
+      "smallest" : "1032942.00",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "percentScale" : "1",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 647596080,
+    "name" : "TOT_FTE",
+    "dataTypeName" : "number",
+    "description" : "Total Full Time Equivalent (FTE)",
+    "fieldName" : "tot_fte",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151575798,
+    "cachedContents" : {
+      "non_null" : "5470",
+      "largest" : "68948.7",
+      "null" : "5",
+      "top" : [ {
+        "item" : "1412.0",
+        "count" : "3"
+      }, {
+        "item" : "1328.0",
+        "count" : "3"
+      }, {
+        "item" : "214.8",
+        "count" : "3"
+      }, {
+        "item" : "153.2",
+        "count" : "3"
+      }, {
+        "item" : "461.7",
+        "count" : "3"
+      }, {
+        "item" : "648.4",
+        "count" : "3"
+      }, {
+        "item" : "235.6",
+        "count" : "3"
+      }, {
+        "item" : "139.8",
+        "count" : "3"
+      }, {
+        "item" : "145.8",
+        "count" : "3"
+      }, {
+        "item" : "948.5",
+        "count" : "3"
+      }, {
+        "item" : "135.4",
+        "count" : "3"
+      }, {
+        "item" : "128.7",
+        "count" : "3"
+      }, {
+        "item" : "1325.5",
+        "count" : "3"
+      }, {
+        "item" : "422.5",
+        "count" : "2"
+      }, {
+        "item" : "3277.0",
+        "count" : "2"
+      }, {
+        "item" : "232.4",
+        "count" : "2"
+      }, {
+        "item" : "1352.3",
+        "count" : "2"
+      }, {
+        "item" : "639.8",
+        "count" : "2"
+      }, {
+        "item" : "2713.7",
+        "count" : "2"
+      }, {
+        "item" : "500.0",
+        "count" : "2"
+      } ],
+      "smallest" : "37.8",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 647596081,
+    "name" : "TOT_EXP_PER_PUPIL",
+    "dataTypeName" : "number",
+    "description" : "Total Expenditures Per Pupil",
+    "fieldName" : "tot_exp_per_pupil",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151575799,
+    "cachedContents" : {
+      "non_null" : "5470",
+      "largest" : "59111.0",
+      "null" : "5",
+      "top" : [ {
+        "item" : "16081.0",
+        "count" : "4"
+      }, {
+        "item" : "12583.0",
+        "count" : "4"
+      }, {
+        "item" : "14281.0",
+        "count" : "4"
+      }, {
+        "item" : "12327.0",
+        "count" : "4"
+      }, {
+        "item" : "14912.0",
+        "count" : "4"
+      }, {
+        "item" : "18899.0",
+        "count" : "4"
+      }, {
+        "item" : "17465.0",
+        "count" : "4"
+      }, {
+        "item" : "13695.0",
+        "count" : "4"
+      }, {
+        "item" : "18673.0",
+        "count" : "4"
+      }, {
+        "item" : "13527.0",
+        "count" : "4"
+      }, {
+        "item" : "12977.0",
+        "count" : "4"
+      }, {
+        "item" : "17839.0",
+        "count" : "4"
+      }, {
+        "item" : "17107.0",
+        "count" : "4"
+      }, {
+        "item" : "10527.0",
+        "count" : "4"
+      }, {
+        "item" : "13955.0",
+        "count" : "4"
+      }, {
+        "item" : "13478.0",
+        "count" : "4"
+      }, {
+        "item" : "13092.0",
+        "count" : "3"
+      }, {
+        "item" : "13675.0",
+        "count" : "3"
+      }, {
+        "item" : "14852.0",
+        "count" : "3"
+      }, {
+        "item" : "13271.0",
+        "count" : "3"
+      } ],
+      "smallest" : "8532.0",
+      "count" : "5475",
+      "cardinality" : "5475"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "\thttps://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "fte", "expenditure", "students", "pupil", "school finance dashboard", "financial", "district comparison", "district detail", "business" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

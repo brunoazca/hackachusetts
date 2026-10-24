@@ -1,0 +1,1462 @@
+{
+  "id" : "ujwr-ux9i",
+  "name" : "Advanced Course Completion",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1704475350,
+  "description" : "This report shows the number and rate of Massachusetts public school students in grades 11 and 12 who completed advanced coursework since 2018.\n\nAdvanced coursework includes the following: Advanced Placement, International Baccalaureate, Project Lead the Way, dual enrollment courses, Chapter 74-approved vocational/technical secondary cooperative education programs, and other selected rigorous courses. For a full list of advanced coursework, please see the <a href=\"https://www.doe.mass.edu/accountability/lists-tools/advanced-courses.docx\" target=\"_blank\" rel=\"noopener noreferrer\">List of Advanced Courses for Accountability Reporting</a> on the <a href=\"https://www.doe.mass.edu/accountability/lists-tools\" target=\"_blank\" rel=\"noopener noreferrer\">Accountability Lists, Materials, and Tools</a> website.\n\nEconomically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noopener noreferrer\">DESE Researcher's Guide</a> for more information.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/advcoursecomprate.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Advanced Course Completion Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 584,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41278501,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745330687,
+  "publicationGroup" : 19420519,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790109896,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19862516,
+  "totalTimesRated" : 0,
+  "viewCount" : 1950,
+  "viewLastModified" : 1792441767,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1709316746,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6851769,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1709316733,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1709316746,
+      "failureCount" : 0,
+      "startedAt" : 1709316746,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609138711,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786831,
+    "cachedContents" : {
+      "non_null" : "78252",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "8850"
+      }, {
+        "item" : "2026",
+        "count" : "8850"
+      }, {
+        "item" : "2024",
+        "count" : "8771"
+      }, {
+        "item" : "2022",
+        "count" : "8748"
+      }, {
+        "item" : "2023",
+        "count" : "8706"
+      }, {
+        "item" : "2021",
+        "count" : "8670"
+      }, {
+        "item" : "2020",
+        "count" : "8597"
+      }, {
+        "item" : "2019",
+        "count" : "8541"
+      }, {
+        "item" : "2018",
+        "count" : "8519"
+      } ],
+      "smallest" : "2018",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138715,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786834,
+    "cachedContents" : {
+      "non_null" : "78252",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "3625"
+      }, {
+        "item" : "02810000",
+        "count" : "1429"
+      }, {
+        "item" : "03480000",
+        "count" : "941"
+      }, {
+        "item" : "00440000",
+        "count" : "687"
+      }, {
+        "item" : "01630000",
+        "count" : "604"
+      }, {
+        "item" : "01600000",
+        "count" : "488"
+      }, {
+        "item" : "01490000",
+        "count" : "474"
+      }, {
+        "item" : "01530000",
+        "count" : "472"
+      }, {
+        "item" : "01280000",
+        "count" : "459"
+      }, {
+        "item" : "00950000",
+        "count" : "447"
+      }, {
+        "item" : "02010000",
+        "count" : "447"
+      }, {
+        "item" : "00610000",
+        "count" : "430"
+      }, {
+        "item" : "02580000",
+        "count" : "410"
+      }, {
+        "item" : "00160000",
+        "count" : "406"
+      }, {
+        "item" : "02360000",
+        "count" : "397"
+      }, {
+        "item" : "02930000",
+        "count" : "386"
+      }, {
+        "item" : "02430000",
+        "count" : "373"
+      }, {
+        "item" : "03250000",
+        "count" : "367"
+      }, {
+        "item" : "02070000",
+        "count" : "358"
+      }, {
+        "item" : "00570000",
+        "count" : "356"
+      } ],
+      "smallest" : "00000000",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138716,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786835,
+    "cachedContents" : {
+      "non_null" : "78252",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "3625"
+      }, {
+        "item" : "Springfield",
+        "count" : "1429"
+      }, {
+        "item" : "Worcester",
+        "count" : "941"
+      }, {
+        "item" : "Brockton",
+        "count" : "687"
+      }, {
+        "item" : "Lynn",
+        "count" : "604"
+      }, {
+        "item" : "Lowell",
+        "count" : "488"
+      }, {
+        "item" : "Lawrence",
+        "count" : "474"
+      }, {
+        "item" : "Leominster",
+        "count" : "472"
+      }, {
+        "item" : "Haverhill",
+        "count" : "459"
+      }, {
+        "item" : "New Bedford",
+        "count" : "447"
+      }, {
+        "item" : "Fall River",
+        "count" : "447"
+      }, {
+        "item" : "Chicopee",
+        "count" : "430"
+      }, {
+        "item" : "Salem",
+        "count" : "410"
+      }, {
+        "item" : "Attleboro",
+        "count" : "406"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "397"
+      }, {
+        "item" : "Taunton",
+        "count" : "386"
+      }, {
+        "item" : "Quincy",
+        "count" : "373"
+      }, {
+        "item" : "Westfield",
+        "count" : "367"
+      }, {
+        "item" : "Newton",
+        "count" : "358"
+      }, {
+        "item" : "Chelsea",
+        "count" : "356"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138712,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786832,
+    "cachedContents" : {
+      "non_null" : "78252",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00200505",
+        "count" : "126"
+      }, {
+        "item" : "00000000",
+        "count" : "126"
+      }, {
+        "item" : "00440505",
+        "count" : "126"
+      }, {
+        "item" : "00350000",
+        "count" : "126"
+      }, {
+        "item" : "02430505",
+        "count" : "126"
+      }, {
+        "item" : "00200000",
+        "count" : "126"
+      }, {
+        "item" : "00440000",
+        "count" : "126"
+      }, {
+        "item" : "02430000",
+        "count" : "126"
+      }, {
+        "item" : "02010000",
+        "count" : "125"
+      }, {
+        "item" : "02010505",
+        "count" : "125"
+      }, {
+        "item" : "01010505",
+        "count" : "124"
+      }, {
+        "item" : "02930000",
+        "count" : "124"
+      }, {
+        "item" : "03470505",
+        "count" : "124"
+      }, {
+        "item" : "00930505",
+        "count" : "124"
+      }, {
+        "item" : "00930000",
+        "count" : "124"
+      }, {
+        "item" : "01010000",
+        "count" : "124"
+      }, {
+        "item" : "03470000",
+        "count" : "124"
+      }, {
+        "item" : "00350537",
+        "count" : "124"
+      }, {
+        "item" : "08150000",
+        "count" : "124"
+      }, {
+        "item" : "08150605",
+        "count" : "124"
+      } ],
+      "smallest" : "00000000",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138713,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786833,
+    "cachedContents" : {
+      "non_null" : "78252",
+      "largest" : "Worcester Technical High",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Massachusetts Connections Academy, Commonwealth Virtual School",
+        "count" : "244"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "238"
+      }, {
+        "item" : "Tri-County Regional Vocational Technical",
+        "count" : "230"
+      }, {
+        "item" : "Norfolk County Agricultural",
+        "count" : "228"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "224"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "214"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "206"
+      }, {
+        "item" : "Quincy High",
+        "count" : "126"
+      }, {
+        "item" : "Brockton",
+        "count" : "126"
+      }, {
+        "item" : "Boston",
+        "count" : "126"
+      }, {
+        "item" : "Quincy",
+        "count" : "126"
+      }, {
+        "item" : "Barnstable",
+        "count" : "126"
+      }, {
+        "item" : "Barnstable High",
+        "count" : "126"
+      }, {
+        "item" : "State",
+        "count" : "126"
+      }, {
+        "item" : "Brockton High",
+        "count" : "126"
+      }, {
+        "item" : "New Bedford",
+        "count" : "125"
+      }, {
+        "item" : "New Bedford High",
+        "count" : "125"
+      }, {
+        "item" : "Franklin High",
+        "count" : "124"
+      }, {
+        "item" : "Woburn",
+        "count" : "124"
+      }, {
+        "item" : "Cape Cod Regional Vocational Technical",
+        "count" : "124"
+      } ],
+      "smallest" : "21st Century Skills Academy",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138714,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151042822,
+    "cachedContents" : {
+      "non_null" : "78252",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "44169"
+      }, {
+        "item" : "District",
+        "count" : "33957"
+      }, {
+        "item" : "State",
+        "count" : "126"
+      } ],
+      "smallest" : "District",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138717,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786836,
+    "cachedContents" : {
+      "non_null" : "78252",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "6405"
+      }, {
+        "item" : "High Needs",
+        "count" : "6404"
+      }, {
+        "item" : "Male",
+        "count" : "6397"
+      }, {
+        "item" : "Female",
+        "count" : "6383"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "6349"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "6348"
+      }, {
+        "item" : "White",
+        "count" : "6316"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "6015"
+      }, {
+        "item" : "Black or African American",
+        "count" : "6015"
+      }, {
+        "item" : "Asian",
+        "count" : "5657"
+      }, {
+        "item" : "English Learners",
+        "count" : "5372"
+      }, {
+        "item" : "Low Income",
+        "count" : "3581"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "2821"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "2682"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "1507"
+      } ],
+      "smallest" : "All Students",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138718,
+    "name" : "G11_G12_CNT",
+    "dataTypeName" : "number",
+    "description" : "Grade 11 and 12 Students Count",
+    "fieldName" : "g11_g12_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786837,
+    "cachedContents" : {
+      "non_null" : "78252",
+      "largest" : "143096",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "4777"
+      }, {
+        "item" : "2",
+        "count" : "2909"
+      }, {
+        "item" : "3",
+        "count" : "2417"
+      }, {
+        "item" : "4",
+        "count" : "1930"
+      }, {
+        "item" : "5",
+        "count" : "1728"
+      }, {
+        "item" : "6",
+        "count" : "1488"
+      }, {
+        "item" : "7",
+        "count" : "1401"
+      }, {
+        "item" : "8",
+        "count" : "1172"
+      }, {
+        "item" : "9",
+        "count" : "1128"
+      }, {
+        "item" : "10",
+        "count" : "982"
+      }, {
+        "item" : "11",
+        "count" : "912"
+      }, {
+        "item" : "12",
+        "count" : "845"
+      }, {
+        "item" : "13",
+        "count" : "801"
+      }, {
+        "item" : "14",
+        "count" : "772"
+      }, {
+        "item" : "16",
+        "count" : "714"
+      }, {
+        "item" : "15",
+        "count" : "682"
+      }, {
+        "item" : "17",
+        "count" : "657"
+      }, {
+        "item" : "18",
+        "count" : "655"
+      }, {
+        "item" : "19",
+        "count" : "640"
+      }, {
+        "item" : "20",
+        "count" : "585"
+      } ],
+      "smallest" : "0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138719,
+    "name" : "ADV_COMP_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students Completing Advanced Count",
+    "fieldName" : "adv_comp_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786838,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "98496",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2531"
+      }, {
+        "item" : "6",
+        "count" : "1584"
+      }, {
+        "item" : "5",
+        "count" : "1566"
+      }, {
+        "item" : "7",
+        "count" : "1397"
+      }, {
+        "item" : "4",
+        "count" : "1329"
+      }, {
+        "item" : "8",
+        "count" : "1286"
+      }, {
+        "item" : "9",
+        "count" : "1201"
+      }, {
+        "item" : "3",
+        "count" : "1199"
+      }, {
+        "item" : "10",
+        "count" : "1023"
+      }, {
+        "item" : "2",
+        "count" : "998"
+      }, {
+        "item" : "11",
+        "count" : "984"
+      }, {
+        "item" : "12",
+        "count" : "981"
+      }, {
+        "item" : "1",
+        "count" : "908"
+      }, {
+        "item" : "13",
+        "count" : "839"
+      }, {
+        "item" : "15",
+        "count" : "786"
+      }, {
+        "item" : "14",
+        "count" : "719"
+      }, {
+        "item" : "16",
+        "count" : "719"
+      }, {
+        "item" : "18",
+        "count" : "685"
+      }, {
+        "item" : "17",
+        "count" : "680"
+      }, {
+        "item" : "20",
+        "count" : "650"
+      } ],
+      "smallest" : "0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : { }
+  }, {
+    "id" : 609138720,
+    "name" : "ADV_COMP_PCT",
+    "dataTypeName" : "number",
+    "description" : "Students Completing Advanced Percent",
+    "fieldName" : "adv_comp_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786839,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "1.0",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "2725"
+      }, {
+        "item" : "0.0",
+        "count" : "2531"
+      }, {
+        "item" : "0.5",
+        "count" : "1147"
+      }, {
+        "item" : "0.667",
+        "count" : "805"
+      }, {
+        "item" : "0.333",
+        "count" : "513"
+      }, {
+        "item" : "0.75",
+        "count" : "470"
+      }, {
+        "item" : "0.833",
+        "count" : "441"
+      }, {
+        "item" : "0.714",
+        "count" : "433"
+      }, {
+        "item" : "0.571",
+        "count" : "425"
+      }, {
+        "item" : "0.857",
+        "count" : "368"
+      }, {
+        "item" : "0.6",
+        "count" : "355"
+      }, {
+        "item" : "0.625",
+        "count" : "348"
+      }, {
+        "item" : "0.429",
+        "count" : "344"
+      }, {
+        "item" : "0.8",
+        "count" : "308"
+      }, {
+        "item" : "0.4",
+        "count" : "292"
+      }, {
+        "item" : "0.167",
+        "count" : "287"
+      }, {
+        "item" : "0.556",
+        "count" : "287"
+      }, {
+        "item" : "0.778",
+        "count" : "263"
+      }, {
+        "item" : "0.545",
+        "count" : "262"
+      }, {
+        "item" : "0.444",
+        "count" : "257"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1",
+      "align" : "left"
+    }
+  }, {
+    "id" : 609138721,
+    "name" : "ADV_ELA_PCT",
+    "dataTypeName" : "number",
+    "description" : "English Language Arts Advanced Percent",
+    "fieldName" : "adv_ela_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786840,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "1.0",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "12841"
+      }, {
+        "item" : "0.167",
+        "count" : "715"
+      }, {
+        "item" : "0.143",
+        "count" : "608"
+      }, {
+        "item" : "0.125",
+        "count" : "589"
+      }, {
+        "item" : "0.333",
+        "count" : "571"
+      }, {
+        "item" : "0.25",
+        "count" : "514"
+      }, {
+        "item" : "0.111",
+        "count" : "476"
+      }, {
+        "item" : "1.0",
+        "count" : "448"
+      }, {
+        "item" : "0.2",
+        "count" : "416"
+      }, {
+        "item" : "0.1",
+        "count" : "404"
+      }, {
+        "item" : "0.286",
+        "count" : "397"
+      }, {
+        "item" : "0.091",
+        "count" : "386"
+      }, {
+        "item" : "0.5",
+        "count" : "384"
+      }, {
+        "item" : "0.077",
+        "count" : "346"
+      }, {
+        "item" : "0.222",
+        "count" : "345"
+      }, {
+        "item" : "0.063",
+        "count" : "338"
+      }, {
+        "item" : "0.071",
+        "count" : "337"
+      }, {
+        "item" : "0.083",
+        "count" : "332"
+      }, {
+        "item" : "0.182",
+        "count" : "286"
+      }, {
+        "item" : "0.154",
+        "count" : "282"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609138722,
+    "name" : "ADV_MATH_PCT",
+    "dataTypeName" : "number",
+    "description" : "Math Advanced Percent",
+    "fieldName" : "adv_math_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786841,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "1.0",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "3743"
+      }, {
+        "item" : "0.5",
+        "count" : "1266"
+      }, {
+        "item" : "1.0",
+        "count" : "1039"
+      }, {
+        "item" : "0.333",
+        "count" : "797"
+      }, {
+        "item" : "0.667",
+        "count" : "711"
+      }, {
+        "item" : "0.429",
+        "count" : "444"
+      }, {
+        "item" : "0.25",
+        "count" : "435"
+      }, {
+        "item" : "0.571",
+        "count" : "433"
+      }, {
+        "item" : "0.4",
+        "count" : "410"
+      }, {
+        "item" : "0.286",
+        "count" : "389"
+      }, {
+        "item" : "0.167",
+        "count" : "387"
+      }, {
+        "item" : "0.556",
+        "count" : "346"
+      }, {
+        "item" : "0.375",
+        "count" : "313"
+      }, {
+        "item" : "0.833",
+        "count" : "309"
+      }, {
+        "item" : "0.6",
+        "count" : "308"
+      }, {
+        "item" : "0.444",
+        "count" : "306"
+      }, {
+        "item" : "0.143",
+        "count" : "305"
+      }, {
+        "item" : "0.2",
+        "count" : "299"
+      }, {
+        "item" : "0.625",
+        "count" : "287"
+      }, {
+        "item" : "0.714",
+        "count" : "271"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609138723,
+    "name" : "ADV_SCI_PCT",
+    "dataTypeName" : "number",
+    "description" : "Science Advanced Percent",
+    "fieldName" : "adv_sci_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786842,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "1.0",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "10448"
+      }, {
+        "item" : "0.167",
+        "count" : "714"
+      }, {
+        "item" : "0.333",
+        "count" : "655"
+      }, {
+        "item" : "0.25",
+        "count" : "597"
+      }, {
+        "item" : "0.143",
+        "count" : "570"
+      }, {
+        "item" : "0.125",
+        "count" : "520"
+      }, {
+        "item" : "0.111",
+        "count" : "513"
+      }, {
+        "item" : "0.5",
+        "count" : "482"
+      }, {
+        "item" : "0.2",
+        "count" : "463"
+      }, {
+        "item" : "0.286",
+        "count" : "406"
+      }, {
+        "item" : "0.1",
+        "count" : "394"
+      }, {
+        "item" : "0.091",
+        "count" : "366"
+      }, {
+        "item" : "0.083",
+        "count" : "350"
+      }, {
+        "item" : "0.182",
+        "count" : "340"
+      }, {
+        "item" : "0.071",
+        "count" : "335"
+      }, {
+        "item" : "0.077",
+        "count" : "321"
+      }, {
+        "item" : "0.222",
+        "count" : "315"
+      }, {
+        "item" : "0.067",
+        "count" : "284"
+      }, {
+        "item" : "0.063",
+        "count" : "279"
+      }, {
+        "item" : "0.053",
+        "count" : "276"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609138724,
+    "name" : "ADV_CIS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Computer and Information Science Advanced Percent",
+    "fieldName" : "adv_cis_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786843,
+    "cachedContents" : {
+      "non_null" : "57342",
+      "largest" : "1.0",
+      "null" : "20910",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "27470"
+      }, {
+        "item" : "0.014",
+        "count" : "473"
+      }, {
+        "item" : "0.018",
+        "count" : "430"
+      }, {
+        "item" : "0.013",
+        "count" : "403"
+      }, {
+        "item" : "0.017",
+        "count" : "402"
+      }, {
+        "item" : "0.009",
+        "count" : "400"
+      }, {
+        "item" : "0.029",
+        "count" : "396"
+      }, {
+        "item" : "0.011",
+        "count" : "390"
+      }, {
+        "item" : "0.019",
+        "count" : "385"
+      }, {
+        "item" : "0.022",
+        "count" : "381"
+      }, {
+        "item" : "0.024",
+        "count" : "371"
+      }, {
+        "item" : "0.012",
+        "count" : "369"
+      }, {
+        "item" : "0.01",
+        "count" : "368"
+      }, {
+        "item" : "0.015",
+        "count" : "366"
+      }, {
+        "item" : "0.016",
+        "count" : "361"
+      }, {
+        "item" : "0.025",
+        "count" : "354"
+      }, {
+        "item" : "0.02",
+        "count" : "352"
+      }, {
+        "item" : "0.008",
+        "count" : "350"
+      }, {
+        "item" : "0.021",
+        "count" : "345"
+      }, {
+        "item" : "0.043",
+        "count" : "344"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609138725,
+    "name" : "ADV_HSS_PCT",
+    "dataTypeName" : "number",
+    "description" : "History and Social Science Advanced Percent",
+    "fieldName" : "adv_hss_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786844,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "1.0",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "13612"
+      }, {
+        "item" : "0.167",
+        "count" : "614"
+      }, {
+        "item" : "0.25",
+        "count" : "602"
+      }, {
+        "item" : "0.143",
+        "count" : "593"
+      }, {
+        "item" : "0.333",
+        "count" : "523"
+      }, {
+        "item" : "0.2",
+        "count" : "512"
+      }, {
+        "item" : "0.125",
+        "count" : "464"
+      }, {
+        "item" : "0.111",
+        "count" : "456"
+      }, {
+        "item" : "0.1",
+        "count" : "433"
+      }, {
+        "item" : "1.0",
+        "count" : "409"
+      }, {
+        "item" : "0.5",
+        "count" : "401"
+      }, {
+        "item" : "0.286",
+        "count" : "378"
+      }, {
+        "item" : "0.222",
+        "count" : "347"
+      }, {
+        "item" : "0.091",
+        "count" : "344"
+      }, {
+        "item" : "0.083",
+        "count" : "337"
+      }, {
+        "item" : "0.077",
+        "count" : "295"
+      }, {
+        "item" : "0.071",
+        "count" : "279"
+      }, {
+        "item" : "0.056",
+        "count" : "261"
+      }, {
+        "item" : "0.182",
+        "count" : "254"
+      }, {
+        "item" : "0.063",
+        "count" : "252"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609138726,
+    "name" : "ADV_ART_PCT",
+    "dataTypeName" : "number",
+    "description" : "Arts Advanced Percent",
+    "fieldName" : "adv_art_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786845,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "1.0",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "39459"
+      }, {
+        "item" : "0.011",
+        "count" : "584"
+      }, {
+        "item" : "0.007",
+        "count" : "579"
+      }, {
+        "item" : "0.013",
+        "count" : "572"
+      }, {
+        "item" : "0.008",
+        "count" : "572"
+      }, {
+        "item" : "0.006",
+        "count" : "559"
+      }, {
+        "item" : "0.01",
+        "count" : "555"
+      }, {
+        "item" : "0.016",
+        "count" : "549"
+      }, {
+        "item" : "0.014",
+        "count" : "545"
+      }, {
+        "item" : "0.009",
+        "count" : "530"
+      }, {
+        "item" : "0.015",
+        "count" : "507"
+      }, {
+        "item" : "0.012",
+        "count" : "498"
+      }, {
+        "item" : "0.005",
+        "count" : "488"
+      }, {
+        "item" : "0.019",
+        "count" : "455"
+      }, {
+        "item" : "0.018",
+        "count" : "443"
+      }, {
+        "item" : "0.017",
+        "count" : "437"
+      }, {
+        "item" : "0.004",
+        "count" : "430"
+      }, {
+        "item" : "0.02",
+        "count" : "428"
+      }, {
+        "item" : "0.022",
+        "count" : "408"
+      }, {
+        "item" : "0.024",
+        "count" : "394"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609138727,
+    "name" : "ADV_OTHER_PCT",
+    "dataTypeName" : "number",
+    "description" : "Other Subjects Advanced Percent",
+    "fieldName" : "adv_other_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786846,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "1.0",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "25735"
+      }, {
+        "item" : "0.03",
+        "count" : "622"
+      }, {
+        "item" : "0.05",
+        "count" : "589"
+      }, {
+        "item" : "0.01",
+        "count" : "579"
+      }, {
+        "item" : "0.02",
+        "count" : "576"
+      }, {
+        "item" : "0.04",
+        "count" : "571"
+      }, {
+        "item" : "0.1",
+        "count" : "481"
+      }, {
+        "item" : "0.07",
+        "count" : "401"
+      }, {
+        "item" : "0.08",
+        "count" : "393"
+      }, {
+        "item" : "0.06",
+        "count" : "381"
+      }, {
+        "item" : "1.0",
+        "count" : "344"
+      }, {
+        "item" : "0.125",
+        "count" : "341"
+      }, {
+        "item" : "0.032",
+        "count" : "340"
+      }, {
+        "item" : "0.029",
+        "count" : "334"
+      }, {
+        "item" : "0.037",
+        "count" : "332"
+      }, {
+        "item" : "0.143",
+        "count" : "330"
+      }, {
+        "item" : "0.043",
+        "count" : "326"
+      }, {
+        "item" : "0.056",
+        "count" : "320"
+      }, {
+        "item" : "0.063",
+        "count" : "318"
+      }, {
+        "item" : "0.167",
+        "count" : "318"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609138728,
+    "name" : "CH74_COOP_PCT",
+    "dataTypeName" : "number",
+    "description" : "Chapter 74 Secondary Cooperative Program Percent",
+    "fieldName" : "ch74_coop_pct",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786847,
+    "cachedContents" : {
+      "non_null" : "64294",
+      "largest" : "0.667",
+      "null" : "13958",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "56700"
+      }, {
+        "item" : "0.008",
+        "count" : "110"
+      }, {
+        "item" : "0.004",
+        "count" : "103"
+      }, {
+        "item" : "0.333",
+        "count" : "90"
+      }, {
+        "item" : "0.003",
+        "count" : "85"
+      }, {
+        "item" : "0.167",
+        "count" : "83"
+      }, {
+        "item" : "0.002",
+        "count" : "80"
+      }, {
+        "item" : "0.25",
+        "count" : "79"
+      }, {
+        "item" : "0.007",
+        "count" : "76"
+      }, {
+        "item" : "0.005",
+        "count" : "74"
+      }, {
+        "item" : "0.018",
+        "count" : "70"
+      }, {
+        "item" : "0.01",
+        "count" : "69"
+      }, {
+        "item" : "0.013",
+        "count" : "69"
+      }, {
+        "item" : "0.006",
+        "count" : "68"
+      }, {
+        "item" : "0.014",
+        "count" : "62"
+      }, {
+        "item" : "0.143",
+        "count" : "59"
+      }, {
+        "item" : "0.012",
+        "count" : "56"
+      }, {
+        "item" : "0.016",
+        "count" : "55"
+      }, {
+        "item" : "0.009",
+        "count" : "55"
+      }, {
+        "item" : "0.111",
+        "count" : "55"
+      } ],
+      "smallest" : "0.0",
+      "count" : "78252",
+      "cardinality" : "78252"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Yearly",
+        "Update Frequency" : "Yearly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "race and ethnicity", "gender", "high needs", "low income", "economically disadvantaged", "english learners", "students with disabilities" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

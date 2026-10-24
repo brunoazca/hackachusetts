@@ -1,0 +1,1247 @@
+{
+  "id" : "jqvp-ngaw",
+  "name" : "VOCAL Item Response Scores",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1704479218,
+  "description" : "This dataset contains student responses to each item on the Views of Climate and Learning (VOCAL) survey since 2018. These responses are aggregated at the state level by grade and student group to protect student privacy.\n\nThe VOCAL survey is designed to provide information on student perceptions of school climate. There are two reports with different types of data: responses to individual items and aggregate index scaled scores that combine item responses. For more information about the VOCAL survey, please visit the <a href=\"https://www.doe.mass.edu/research/vocal\" target=\"_blank\" rel=\"noopener noreferrer\">VOCAL home page</a>.\n\nThis dataset is one of two containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiODcyMDMzMjQtZGU5Yi00YTRiLTg4ODEtODI4MmViMDI5NzY3IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">VOCAL state dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Students-and-Teachers/VOCAL-Index-Scaled-Scores-and-Favorability/bfp2-2pmt/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">VOCAL Index Scaled Scores and Favorability</a>\n<a href=\"https://educationtocareer.data.mass.gov/Students-and-Teachers/VOCAL-Item-Response-Scores/jqvp-ngaw/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">VOCAL Item Response Scores</a>\n\n<b>List of Items by Index and Topic</b>\n\nEngagement - Cultural Competence<ul><li>ENGCLC1: Adults working at this school treat all students respectfully, regardless of a student's race, culture, family income, religion, sex, or sexual orientation.</li><li>ENGCLC2: Teachers at this school accept me for who I am.</li><li>ENGCLC3: My textbooks or class materials include people and examples that reflect my race, cultural background and/or identity.</li><li>ENGCLC4: Within school, I am encouraged to take upper level courses (honors, AP).</li><li>ENGCLC5: Students from different backgrounds respect each other in our school, regardless of their race, culture, family income, religion, sex, or sexual orientation.</li><li>ENGCLC6: Students like to have friends who are different from themselves (for example, boys and girls, rich and poor, or classmates of different color).</li><li>ENGCLC7: Students are open to having friends who come from different backgrounds (for example, friends from different races, cultures, family incomes, or religions, or friends of a different sex, or sexual orientation).</li><li>ENGCLC8: I read books in class that include people who are similar to me (for example, we look the same, speak the same, or live in similar neighborhoods).</li><li>ENGCLC9: Adults working at this school treat all students with respect.</li><li>ENGCLC10: In my academic classes, I work with groups of students who are from different backgrounds (for example, students from different races, cultures, family incomes, or religions, or students of a different sex or sexual orientation).</li></ul>Engagement - Participation<ul><li>ENGPAR1: I get the chance to take part in school events (for example, science fairs, art or music shows).</li><li>ENGPAR2: My parents feel respected when they participate at our school (e.g., at parent-teacher conferences, open houses).</li><li>ENGPAR3: I feel welcome to participate in extra-curricular activities offered through my school, such as, school clubs or organizations, musical groups, sports teams, student council, or any other extra-curricular activities.</li><li>ENGPAR4: My teachers use my ideas to help my classmates learn.</li><li>ENGPAR5: I have a choice in how I show my learning (e.g., write a paper, prepare a presentation, make a video).</li><li>ENGPAR6: My teachers will explain things in different ways until I understand.</li><li>ENGPAR7: When I need help, my teachers use my interests to help me learn.</li><li>ENGPAR8: My teachers ask me to share what I have learned in a lesson.</li><li>ENGPAR9: When I am stuck, my teachers want me to try again before they help me.</li><li>ENGPAR10: In my classes, my teachers use students' interests to plan class activities.</li><li>ENGPAR11: In at least two of my academic classes, I can work on assignments that interest me personally.</li><li>ENGPAR12: If I finish my work early, I have a opportunity to do more challenging work.</li><li>ENGPAR13: My classmates behave the way my teachers want them to.</li><li>ENGPAR14: In at least two of my academic classes, students are asked to teach a lesson or part of a lesson.</li><li>ENGPAR15: In my classes, students teach each other how they solved a problem.</li><li>ENGPAR16: Students plan and work on group projects that solve real-world (everyday) problems.</li><li>ENGPAR17: In at least two of my academic classes, students plan and work on projects that solve real-world problems.</li><li>ENGPAR18: In my academic classes, students review each other's work and provided advice on how to improve it.</li><li>ENGPAR19: In my classes, teachers use open-ended questions that make students think of many possible answers.</li><li>ENGPAR20: I can connect what I learn in on class to what I learn in other classes.</li><li>ENGPAR21: In my academic classes, students wrestle with problems that don't have an obvious answer.</li><li>ENGPAR22: In my academic classes, I am asked to apply what I know to new types of complex tasks or problems.</li><li>ENGPAR24: In my academic classes, students work on long-term group projects (more than one month in length) that they independently carry out.</li><li>ENGPAR25: Students plan and work on group projects that solve real problems.</li></ul>Engagement - Relationships<ul><li>ENGREL1: Students respect one another.</li><li>ENGREL2: Students respect each other in my school.</li><li>ENGREL3: My teachers care about me as a person.</li><li>ENGREL4: Students at my school get along well with each other.</li><li>ENGREL6: Teachers are available when I need to talk with them.</li><li>ENGREL13: Adults at our school are respectful of student ideas even if the ideas expressed are different from their own.</li><li>ENGREL14: My teachers promote respect among students.</li><li>ENGREL15: In my classes, students work well together in groups.</li></ul>Environment - Discipline Environment<ul><li>ENVDIS1: Students have a voice in deciding school rules.</li><li>ENVDIS2: School rules are fair for all students.</li><li>ENVDIS3: Students help decide school rules.</li><li>ENVDIS4: School staff are consistent when enforcing rules in school.</li><li>ENVDIS5: Teachers give students a chance to explain when they do something wrong.</li><li>ENVDIS6: The consequences for the same inappropriate behavior (e.g., disrupting the class) are the same, no matter who the student is.</li><li>ENVDIS7: Teachers give students a chance to explain their behavior when they do something wrong.</li><li>ENVDIS8: My teachers will first try to help (guide) students who break class rules, instead of punishing them.</li><li>ENVDIS9: My teachers will first try to help students who break class rules, instead of punishing them.</li></ul>Environment - Instructional Environment<ul><li>ENVINS1: Students help each other learn without having to be asked by the teacher.</li><li>ENVINS2: My teachers are proud of me when I work hard in school.</li><li>ENVINS3: My teachers help me succeed with my schoolwork when I need help.</li><li>ENVINS4: In class, students help each other learn.</li><li>ENVINS5: My teachers set high expectations for my work.</li><li>ENVINS8: My teachers believe that all students can do well in their learning.</li><li>ENVINS9: My school work is challenging (hard) but not too difficult.</li><li>ENVINS10: My classwork is hard but not too hard.</li><li>ENVINS11: My teachers support me even when my work is not my best.</li><li>ENVINS12: The things I am learning in school are relevant (important) to me.</li><li>ENVINS13: Teachers ask students for feedback on their classroom instruction.</li><li>ENVINS14: When I am home, I like to learn more about the things we are learning in school.</li><li>ENVINS15: My teachers inspire confidence in my ability to be ready for college or career.</li><li>ENVINS16: In this class, other students take the time to listen to my ideas.</li><li>ENVINS17: In my classes, it is OK for me to suggest other ways to do my work.</li><li>ENVINS18: Teachers go over my work with me so I can improve it before it is graded.</li><li>ENVINS19: In my school, teachers focus on my understanding of the material and not on my grades.</li><li>ENVINS20: In my academic classes, there is a good balance between students having to master subject content and being able to explore topics that interest them.</li><li>ENVINS21: In my classes, mistakes or even failure on an assignment are viewed as an important part of our learning.</li><li>ENVINS22: Students are given multiple opportunities to show that they have mastered their classwork.</li><li>ENVINS23: Teachers go over my work with me so I can improve it.</li></ul>Environment - Mental Environment<ul><li>ENVMEN1: In school, I learn how to manage (control) my feelings when I am angry or upset.</li><li>ENVMEN2: In school, I learn how to manage (control) my feelings when I am upset.</li><li>ENVMEN3: Our school offers guidance to students on how to mediate (settle) conflicts (e.g., arguments, fights) by themselves.</li><li>ENVMEN4: If I need help with my emotions (feelings), effective help is available at my school.</li><li>ENVMEN6: I have access to effective help at school if I am struggling emotionally or mentally.</li><li>ENVMEN7: At our school, students learn to care about other students' feelings.</li><li>ENVMEN9: The level of pressure I feel at school to perform well is unhealthy.</li></ul>Safety - Bullying/Cyber-bullying<ul><li>SAFBUL1: If I tell a teacher or other adult that someone is being bullied, the teacher/adult will do something to help.</li><li>SAFBUL2: I have been punched or shoved by other students more than once in the school or on the playground.</li><li>SAFBUL3: Teachers don't let students pick on other students in class or in the hallways.</li><li>SAFBUL4: Students at school try to stop bullying when they see it happening.</li><li>SAFBUL5: Students have spread rumors or lies about me more than once on social media.</li><li>SAFBUL6: If I tell my teacher my classmate is being bullied, my teacher will help that person.</li><li>SAFBUL7: I have been hit by other students more than once in school.</li><li>SAFBUL8: Teachers don't let students tease each other.</li><li>SAFBUL9: Teachers, students, and the principal work together to prevent (stop) bullying.</li><li>SAFBUL10: I have been teased or picked on more than once because of my real or perceived (imagined) sexual orientation.</li><li>SAFBUL11: I have been teased or picked on more than once because of my race or ethnicity.</li><li>SAFBUL12: In my school, older students scare or pick on younger students.</li><li>SAFBUL13: In my school, groups of students tease or pick on one student.</li><li>SAFBUL14: I have been called names or made fun of by other students more than once in school.</li><li>SAFBUL15: In my school, bigger students taunt or pick on smaller students.</li><li>SAFBUL16: Students with learning or physical difficulties are teased or picked on at my school.</li><li>SAFBUL17: My teachers have taught me about what to do if I am bullied.</li></ul>Safety - Emotional Safety<ul><li>SAFEMO1: Teachers support (help) students who come to class upset.</li><li>SAFEMO3: I am happy to be at our school.</li><li>SAFEMO4: I feel comfortable reaching out to teachers/counselors for emotional support if I need it.</li><li>SAFEMO5: Teachers and adults are interested in my well-being beyond just my class work.</li><li>SAFEMO6: I have a group of friends I can rely on to help me when I feel down (sad).</li><li>SAFEMO7: I feel as though I belong in my school community.</li><li>SAFEMO8: I feel comfortable talking to my teacher(s) about something that is bothering me.</li><li>SAFEMO9: Students at school try to work out their problems with other students in a respectful way.</li><li>SAFEMO10: Students will help other students if they are upset, even if they are not close friends.</li><li>SAFEMO11: Because I worry about my grades, it is hard for me to enjoy school.</li><li>SAFEMO12: Students will help other students if they are upset.</li><li>SAFEMO13: I feel safe sharing my feelings in class.</li></ul>Safety - Physical Safety<ul><li>SAFPSF1: I feel safe at our school.</li><li>SAFPSF3: Students at school damage and/or steal other students' property.</li><li>SAFPSF4: I have seen students with weapons at our school.</li><li>SAFPSF5: I have stayed at home (or avoided school) because I did not feel safe at my school.</li><li>SAFPSF7: I have seen more than one fight at my school in the last month.</li><li>SAFPSF8: Students are sexually harassed at my school (for example, bothered by unwanted touching and/or indecent name-calling).</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1844,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41287988,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745418795,
+  "publicationGroup" : 19420735,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1792522400,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19871018,
+  "totalTimesRated" : 0,
+  "viewCount" : 1708,
+  "viewLastModified" : 1792522390,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1707509974,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6860008,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1707509959,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1707509974,
+      "failureCount" : 0,
+      "startedAt" : 1707509974,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609187405,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151151224,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026",
+        "count" : "2820"
+      }, {
+        "item" : "2025",
+        "count" : "2820"
+      }, {
+        "item" : "2022",
+        "count" : "2820"
+      }, {
+        "item" : "2024",
+        "count" : "2820"
+      }, {
+        "item" : "2023",
+        "count" : "2820"
+      }, {
+        "item" : "2021",
+        "count" : "2400"
+      }, {
+        "item" : "2019",
+        "count" : "2400"
+      }, {
+        "item" : "2018",
+        "count" : "1232"
+      } ],
+      "smallest" : "2018",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187406,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787511,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "00000000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "20132"
+      } ],
+      "smallest" : "00000000",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187407,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151295957,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State",
+        "count" : "20132"
+      } ],
+      "smallest" : "State",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187408,
+    "name" : "GRADE",
+    "dataTypeName" : "text",
+    "description" : "Grade",
+    "fieldName" : "grade",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787512,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "10",
+      "null" : "0",
+      "top" : [ {
+        "item" : "10",
+        "count" : "5218"
+      }, {
+        "item" : "08",
+        "count" : "5218"
+      }, {
+        "item" : "05",
+        "count" : "5046"
+      }, {
+        "item" : "04",
+        "count" : "4650"
+      } ],
+      "smallest" : "04",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187409,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787515,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "American Indian or Alaska Native, Multi-Race, Not Hispanic or Latino, or Native Hawaiian or Other Pacific Islander",
+        "count" : "1372"
+      }, {
+        "item" : "All Students",
+        "count" : "1372"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "1372"
+      }, {
+        "item" : "Male",
+        "count" : "1372"
+      }, {
+        "item" : "Black or African American",
+        "count" : "1372"
+      }, {
+        "item" : "English Learners",
+        "count" : "1372"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "1372"
+      }, {
+        "item" : "White",
+        "count" : "1372"
+      }, {
+        "item" : "Asian",
+        "count" : "1372"
+      }, {
+        "item" : "Female",
+        "count" : "1372"
+      }, {
+        "item" : "Students without Disabilities",
+        "count" : "1260"
+      }, {
+        "item" : "Non-English Learners",
+        "count" : "1260"
+      }, {
+        "item" : "Nonbinary",
+        "count" : "1260"
+      }, {
+        "item" : "Low Income",
+        "count" : "940"
+      }, {
+        "item" : "Non-Low Income",
+        "count" : "940"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "432"
+      }, {
+        "item" : "Non-Economically Disadvantaged",
+        "count" : "320"
+      } ],
+      "smallest" : "All Students",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187410,
+    "name" : "INDEX",
+    "dataTypeName" : "text",
+    "description" : "Index",
+    "fieldName" : "index",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787518,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "Safety",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Engagement",
+        "count" : "7341"
+      }, {
+        "item" : "Safety",
+        "count" : "6578"
+      }, {
+        "item" : "Environment",
+        "count" : "6213"
+      } ],
+      "smallest" : "Engagement",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187411,
+    "name" : "TOPIC",
+    "dataTypeName" : "text",
+    "description" : "Topic",
+    "fieldName" : "topic",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787516,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "Relationships",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Participation",
+        "count" : "3724"
+      }, {
+        "item" : "Instructional Environment",
+        "count" : "3528"
+      }, {
+        "item" : "Bullying/Cyber-bullying",
+        "count" : "3508"
+      }, {
+        "item" : "Emotional Safety",
+        "count" : "2164"
+      }, {
+        "item" : "Cultural Competence",
+        "count" : "1876"
+      }, {
+        "item" : "Discipline Environment",
+        "count" : "1779"
+      }, {
+        "item" : "Relationships",
+        "count" : "1741"
+      }, {
+        "item" : "Physical Safety",
+        "count" : "906"
+      }, {
+        "item" : "Mental Environment",
+        "count" : "840"
+      }, {
+        "item" : "Mental Health Environment",
+        "count" : "66"
+      } ],
+      "smallest" : "Bullying/Cyber-bullying",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187412,
+    "name" : "ITEM_CODE",
+    "dataTypeName" : "text",
+    "description" : "Item Code",
+    "fieldName" : "item_code",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787513,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "SAFPSF8",
+      "null" : "0",
+      "top" : [ {
+        "item" : "SAFBUL9",
+        "count" : "453"
+      }, {
+        "item" : "ENVINS11",
+        "count" : "453"
+      }, {
+        "item" : "SAFBUL13",
+        "count" : "453"
+      }, {
+        "item" : "ENGPAR4",
+        "count" : "453"
+      }, {
+        "item" : "SAFBUL4",
+        "count" : "453"
+      }, {
+        "item" : "SAFEMO1",
+        "count" : "453"
+      }, {
+        "item" : "ENVDIS1",
+        "count" : "348"
+      }, {
+        "item" : "ENVINS1",
+        "count" : "348"
+      }, {
+        "item" : "ENVDIS7",
+        "count" : "348"
+      }, {
+        "item" : "SAFBUL1",
+        "count" : "348"
+      }, {
+        "item" : "ENVINS2",
+        "count" : "337"
+      }, {
+        "item" : "ENGPAR13",
+        "count" : "315"
+      }, {
+        "item" : "ENGREL1",
+        "count" : "243"
+      }, {
+        "item" : "SAFBUL3",
+        "count" : "243"
+      }, {
+        "item" : "ENGCLC1",
+        "count" : "243"
+      }, {
+        "item" : "SAFEMO11",
+        "count" : "232"
+      }, {
+        "item" : "SAFEMO10",
+        "count" : "232"
+      }, {
+        "item" : "ENGREL14",
+        "count" : "232"
+      }, {
+        "item" : "ENGCLC5",
+        "count" : "232"
+      }, {
+        "item" : "ENGREL6",
+        "count" : "232"
+      } ],
+      "smallest" : "ENGCLC1",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187413,
+    "name" : "ITEM_TEXT",
+    "dataTypeName" : "text",
+    "description" : "Item Text",
+    "fieldName" : "item_text",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787514,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "Within school, I am encouraged to take upper level courses (honors, AP).",
+      "null" : "0",
+      "top" : [ {
+        "item" : "My teachers use my ideas to help my classmates learn.",
+        "count" : "453"
+      }, {
+        "item" : "Students at school try to stop bullying when they see it happening.",
+        "count" : "453"
+      }, {
+        "item" : "In my school, groups of students tease or pick on one student.",
+        "count" : "453"
+      }, {
+        "item" : "Teachers support (help) students who come to class upset.",
+        "count" : "453"
+      }, {
+        "item" : "My teachers support me even when my work is not my best.",
+        "count" : "453"
+      }, {
+        "item" : "Students help each other learn without having to be asked by the teacher.",
+        "count" : "348"
+      }, {
+        "item" : "Students have a voice in deciding school rules.",
+        "count" : "348"
+      }, {
+        "item" : "Teachers give students a chance to explain their behavior when they do something wrong.",
+        "count" : "348"
+      }, {
+        "item" : "If I tell a teacher or other adult that someone is being bullied, the teacher/adult will do something to help.",
+        "count" : "348"
+      }, {
+        "item" : "My teachers are proud of me when I work hard in school.",
+        "count" : "337"
+      }, {
+        "item" : "My classmates behave the way my teachers want them to.",
+        "count" : "315"
+      }, {
+        "item" : "Teachers don't let students pick on other students in class or in the hallways.",
+        "count" : "243"
+      }, {
+        "item" : "Students respect one another.",
+        "count" : "243"
+      }, {
+        "item" : "Students will help other students if they are upset, even if they are not close friends.",
+        "count" : "232"
+      }, {
+        "item" : "Teachers are available when I need to talk with them.",
+        "count" : "232"
+      }, {
+        "item" : "My teachers promote respect among students.",
+        "count" : "232"
+      }, {
+        "item" : "Adults at our school are respectful of student ideas even if the ideas expressed are different from their own.",
+        "count" : "232"
+      }, {
+        "item" : "My teachers set high expectations for my work.",
+        "count" : "232"
+      }, {
+        "item" : "Because I worry about my grades, it is hard for me to enjoy school.",
+        "count" : "232"
+      }, {
+        "item" : "Teachers, students, and the principal work together to prevent (stop) bullying.",
+        "count" : "225"
+      } ],
+      "smallest" : "Adults at our school are respectful of student ideas even if the ideas expressed are different from their own.",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187414,
+    "name" : "TOT_RESP_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Response Count",
+    "fieldName" : "tot_resp_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787528,
+    "cachedContents" : {
+      "non_null" : "20132",
+      "largest" : "62828",
+      "null" : "0",
+      "top" : [ {
+        "item" : "15",
+        "count" : "105"
+      }, {
+        "item" : "32",
+        "count" : "91"
+      }, {
+        "item" : "38",
+        "count" : "84"
+      }, {
+        "item" : "4",
+        "count" : "80"
+      }, {
+        "item" : "31",
+        "count" : "47"
+      }, {
+        "item" : "33",
+        "count" : "46"
+      }, {
+        "item" : "27",
+        "count" : "46"
+      }, {
+        "item" : "70",
+        "count" : "46"
+      }, {
+        "item" : "24",
+        "count" : "46"
+      }, {
+        "item" : "123",
+        "count" : "45"
+      }, {
+        "item" : "101",
+        "count" : "43"
+      }, {
+        "item" : "30",
+        "count" : "42"
+      }, {
+        "item" : "37",
+        "count" : "40"
+      }, {
+        "item" : "6",
+        "count" : "40"
+      }, {
+        "item" : "11",
+        "count" : "38"
+      }, {
+        "item" : "51",
+        "count" : "30"
+      }, {
+        "item" : "16",
+        "count" : "26"
+      }, {
+        "item" : "48",
+        "count" : "26"
+      }, {
+        "item" : "84",
+        "count" : "24"
+      }, {
+        "item" : "3717",
+        "count" : "21"
+      } ],
+      "smallest" : "4",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187415,
+    "name" : "NVR_TRU_CNT",
+    "dataTypeName" : "number",
+    "description" : "Never True Count",
+    "fieldName" : "nvr_tru_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787524,
+    "cachedContents" : {
+      "non_null" : "20004",
+      "largest" : "41769.00",
+      "null" : "128",
+      "top" : [ {
+        "item" : "1.00",
+        "count" : "200"
+      }, {
+        "item" : "0.00",
+        "count" : "189"
+      }, {
+        "item" : "2.00",
+        "count" : "122"
+      }, {
+        "item" : "3.00",
+        "count" : "88"
+      }, {
+        "item" : "4.00",
+        "count" : "79"
+      }, {
+        "item" : "5.00",
+        "count" : "46"
+      }, {
+        "item" : "6.00",
+        "count" : "46"
+      }, {
+        "item" : "7.00",
+        "count" : "35"
+      }, {
+        "item" : "8.00",
+        "count" : "34"
+      }, {
+        "item" : "11.00",
+        "count" : "32"
+      }, {
+        "item" : "57.00",
+        "count" : "31"
+      }, {
+        "item" : "64.00",
+        "count" : "29"
+      }, {
+        "item" : "9.00",
+        "count" : "29"
+      }, {
+        "item" : "55.00",
+        "count" : "28"
+      }, {
+        "item" : "10.00",
+        "count" : "28"
+      }, {
+        "item" : "53.00",
+        "count" : "26"
+      }, {
+        "item" : "60.00",
+        "count" : "26"
+      }, {
+        "item" : "52.00",
+        "count" : "25"
+      }, {
+        "item" : "56.00",
+        "count" : "25"
+      }, {
+        "item" : "83.00",
+        "count" : "25"
+      } ],
+      "smallest" : "0.00",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187416,
+    "name" : "MSTLY_UNTRU_CNT",
+    "dataTypeName" : "number",
+    "description" : "Mostly Untrue Count",
+    "fieldName" : "mstly_untru_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787525,
+    "cachedContents" : {
+      "non_null" : "20004",
+      "largest" : "31396",
+      "null" : "128",
+      "top" : [ {
+        "item" : "4",
+        "count" : "83"
+      }, {
+        "item" : "3",
+        "count" : "74"
+      }, {
+        "item" : "2",
+        "count" : "72"
+      }, {
+        "item" : "5",
+        "count" : "59"
+      }, {
+        "item" : "6",
+        "count" : "57"
+      }, {
+        "item" : "7",
+        "count" : "53"
+      }, {
+        "item" : "1",
+        "count" : "49"
+      }, {
+        "item" : "8",
+        "count" : "47"
+      }, {
+        "item" : "9",
+        "count" : "38"
+      }, {
+        "item" : "14",
+        "count" : "31"
+      }, {
+        "item" : "10",
+        "count" : "29"
+      }, {
+        "item" : "11",
+        "count" : "29"
+      }, {
+        "item" : "13",
+        "count" : "28"
+      }, {
+        "item" : "12",
+        "count" : "28"
+      }, {
+        "item" : "0",
+        "count" : "24"
+      }, {
+        "item" : "16",
+        "count" : "21"
+      }, {
+        "item" : "15",
+        "count" : "21"
+      }, {
+        "item" : "18",
+        "count" : "19"
+      }, {
+        "item" : "641",
+        "count" : "17"
+      }, {
+        "item" : "22",
+        "count" : "16"
+      } ],
+      "smallest" : "0",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187417,
+    "name" : "MSTLY_TRU_CNT",
+    "dataTypeName" : "number",
+    "description" : "Mostly True Count",
+    "fieldName" : "mstly_tru_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787526,
+    "cachedContents" : {
+      "non_null" : "20004",
+      "largest" : "41382",
+      "null" : "128",
+      "top" : [ {
+        "item" : "7",
+        "count" : "55"
+      }, {
+        "item" : "13",
+        "count" : "47"
+      }, {
+        "item" : "5",
+        "count" : "47"
+      }, {
+        "item" : "12",
+        "count" : "42"
+      }, {
+        "item" : "16",
+        "count" : "42"
+      }, {
+        "item" : "14",
+        "count" : "40"
+      }, {
+        "item" : "10",
+        "count" : "39"
+      }, {
+        "item" : "15",
+        "count" : "38"
+      }, {
+        "item" : "9",
+        "count" : "37"
+      }, {
+        "item" : "4",
+        "count" : "35"
+      }, {
+        "item" : "6",
+        "count" : "34"
+      }, {
+        "item" : "11",
+        "count" : "34"
+      }, {
+        "item" : "18",
+        "count" : "31"
+      }, {
+        "item" : "3",
+        "count" : "30"
+      }, {
+        "item" : "17",
+        "count" : "28"
+      }, {
+        "item" : "20",
+        "count" : "26"
+      }, {
+        "item" : "8",
+        "count" : "22"
+      }, {
+        "item" : "19",
+        "count" : "21"
+      }, {
+        "item" : "23",
+        "count" : "20"
+      }, {
+        "item" : "24",
+        "count" : "18"
+      } ],
+      "smallest" : "0",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187418,
+    "name" : "ALWZ_TRU_CNT",
+    "dataTypeName" : "number",
+    "description" : "Always True Count",
+    "fieldName" : "alwz_tru_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787527,
+    "cachedContents" : {
+      "non_null" : "20004",
+      "largest" : "45052",
+      "null" : "128",
+      "top" : [ {
+        "item" : "4",
+        "count" : "79"
+      }, {
+        "item" : "2",
+        "count" : "78"
+      }, {
+        "item" : "3",
+        "count" : "77"
+      }, {
+        "item" : "5",
+        "count" : "74"
+      }, {
+        "item" : "8",
+        "count" : "64"
+      }, {
+        "item" : "7",
+        "count" : "61"
+      }, {
+        "item" : "1",
+        "count" : "55"
+      }, {
+        "item" : "9",
+        "count" : "49"
+      }, {
+        "item" : "10",
+        "count" : "49"
+      }, {
+        "item" : "6",
+        "count" : "48"
+      }, {
+        "item" : "13",
+        "count" : "44"
+      }, {
+        "item" : "14",
+        "count" : "40"
+      }, {
+        "item" : "11",
+        "count" : "34"
+      }, {
+        "item" : "15",
+        "count" : "29"
+      }, {
+        "item" : "12",
+        "count" : "28"
+      }, {
+        "item" : "16",
+        "count" : "27"
+      }, {
+        "item" : "17",
+        "count" : "26"
+      }, {
+        "item" : "18",
+        "count" : "22"
+      }, {
+        "item" : "19",
+        "count" : "21"
+      }, {
+        "item" : "21",
+        "count" : "20"
+      } ],
+      "smallest" : "0",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187419,
+    "name" : "NVR_TRU_PCT",
+    "dataTypeName" : "number",
+    "description" : "Never True Percent",
+    "fieldName" : "nvr_tru_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787520,
+    "cachedContents" : {
+      "non_null" : "20004",
+      "largest" : "0.86",
+      "null" : "128",
+      "top" : [ {
+        "item" : "0.02",
+        "count" : "2497"
+      }, {
+        "item" : "0.03",
+        "count" : "2495"
+      }, {
+        "item" : "0.04",
+        "count" : "2062"
+      }, {
+        "item" : "0.05",
+        "count" : "1691"
+      }, {
+        "item" : "0.06",
+        "count" : "1313"
+      }, {
+        "item" : "0.07",
+        "count" : "1072"
+      }, {
+        "item" : "0.01",
+        "count" : "1048"
+      }, {
+        "item" : "0.08",
+        "count" : "992"
+      }, {
+        "item" : "0.09",
+        "count" : "841"
+      }, {
+        "item" : "0.10",
+        "count" : "644"
+      }, {
+        "item" : "0.11",
+        "count" : "433"
+      }, {
+        "item" : "0.12",
+        "count" : "377"
+      }, {
+        "item" : "0.13",
+        "count" : "313"
+      }, {
+        "item" : "0.14",
+        "count" : "255"
+      }, {
+        "item" : "0.15",
+        "count" : "243"
+      }, {
+        "item" : "0.00",
+        "count" : "199"
+      }, {
+        "item" : "0.16",
+        "count" : "189"
+      }, {
+        "item" : "0.17",
+        "count" : "183"
+      }, {
+        "item" : "0.18",
+        "count" : "146"
+      }, {
+        "item" : "0.29",
+        "count" : "128"
+      } ],
+      "smallest" : "0.00",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187420,
+    "name" : "MSTLY_UNTRU_PCT",
+    "dataTypeName" : "number",
+    "description" : "Mostly Untrue Percent",
+    "fieldName" : "mstly_untru_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787521,
+    "cachedContents" : {
+      "non_null" : "20004",
+      "largest" : "0.61",
+      "null" : "128",
+      "top" : [ {
+        "item" : "0.08",
+        "count" : "994"
+      }, {
+        "item" : "0.07",
+        "count" : "844"
+      }, {
+        "item" : "0.10",
+        "count" : "754"
+      }, {
+        "item" : "0.14",
+        "count" : "754"
+      }, {
+        "item" : "0.09",
+        "count" : "753"
+      }, {
+        "item" : "0.15",
+        "count" : "747"
+      }, {
+        "item" : "0.16",
+        "count" : "744"
+      }, {
+        "item" : "0.17",
+        "count" : "705"
+      }, {
+        "item" : "0.13",
+        "count" : "696"
+      }, {
+        "item" : "0.06",
+        "count" : "688"
+      }, {
+        "item" : "0.18",
+        "count" : "680"
+      }, {
+        "item" : "0.11",
+        "count" : "677"
+      }, {
+        "item" : "0.19",
+        "count" : "613"
+      }, {
+        "item" : "0.12",
+        "count" : "600"
+      }, {
+        "item" : "0.05",
+        "count" : "573"
+      }, {
+        "item" : "0.20",
+        "count" : "539"
+      }, {
+        "item" : "0.25",
+        "count" : "509"
+      }, {
+        "item" : "0.24",
+        "count" : "468"
+      }, {
+        "item" : "0.27",
+        "count" : "465"
+      }, {
+        "item" : "0.21",
+        "count" : "461"
+      } ],
+      "smallest" : "0.00",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187421,
+    "name" : "MSTLY_TRU_PCT",
+    "dataTypeName" : "number",
+    "description" : "Mostly True Percent",
+    "fieldName" : "mstly_tru_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787522,
+    "cachedContents" : {
+      "non_null" : "20004",
+      "largest" : "0.87",
+      "null" : "128",
+      "top" : [ {
+        "item" : "0.42",
+        "count" : "745"
+      }, {
+        "item" : "0.45",
+        "count" : "734"
+      }, {
+        "item" : "0.47",
+        "count" : "724"
+      }, {
+        "item" : "0.43",
+        "count" : "690"
+      }, {
+        "item" : "0.44",
+        "count" : "664"
+      }, {
+        "item" : "0.46",
+        "count" : "659"
+      }, {
+        "item" : "0.41",
+        "count" : "629"
+      }, {
+        "item" : "0.48",
+        "count" : "600"
+      }, {
+        "item" : "0.39",
+        "count" : "600"
+      }, {
+        "item" : "0.50",
+        "count" : "592"
+      }, {
+        "item" : "0.40",
+        "count" : "588"
+      }, {
+        "item" : "0.49",
+        "count" : "562"
+      }, {
+        "item" : "0.51",
+        "count" : "510"
+      }, {
+        "item" : "0.38",
+        "count" : "498"
+      }, {
+        "item" : "0.37",
+        "count" : "465"
+      }, {
+        "item" : "0.36",
+        "count" : "450"
+      }, {
+        "item" : "0.33",
+        "count" : "438"
+      }, {
+        "item" : "0.54",
+        "count" : "436"
+      }, {
+        "item" : "0.34",
+        "count" : "431"
+      }, {
+        "item" : "0.53",
+        "count" : "414"
+      } ],
+      "smallest" : "0.00",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187422,
+    "name" : "ALWZ_TRU_PCT",
+    "dataTypeName" : "number",
+    "description" : "Always True Percent",
+    "fieldName" : "alwz_tru_pct",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787523,
+    "cachedContents" : {
+      "non_null" : "20004",
+      "largest" : "0.87",
+      "null" : "128",
+      "top" : [ {
+        "item" : "0.13",
+        "count" : "614"
+      }, {
+        "item" : "0.14",
+        "count" : "531"
+      }, {
+        "item" : "0.15",
+        "count" : "493"
+      }, {
+        "item" : "0.18",
+        "count" : "487"
+      }, {
+        "item" : "0.11",
+        "count" : "482"
+      }, {
+        "item" : "0.27",
+        "count" : "476"
+      }, {
+        "item" : "0.16",
+        "count" : "474"
+      }, {
+        "item" : "0.12",
+        "count" : "472"
+      }, {
+        "item" : "0.10",
+        "count" : "471"
+      }, {
+        "item" : "0.19",
+        "count" : "462"
+      }, {
+        "item" : "0.17",
+        "count" : "453"
+      }, {
+        "item" : "0.26",
+        "count" : "430"
+      }, {
+        "item" : "0.28",
+        "count" : "430"
+      }, {
+        "item" : "0.09",
+        "count" : "426"
+      }, {
+        "item" : "0.08",
+        "count" : "423"
+      }, {
+        "item" : "0.20",
+        "count" : "414"
+      }, {
+        "item" : "0.29",
+        "count" : "414"
+      }, {
+        "item" : "0.30",
+        "count" : "387"
+      }, {
+        "item" : "0.06",
+        "count" : "386"
+      }, {
+        "item" : "0.07",
+        "count" : "370"
+      } ],
+      "smallest" : "0.00",
+      "count" : "20132",
+      "cardinality" : "20132"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "State-Level"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "race and ethnicity", "gender", "low income", "economically disadvantaged", "english learners", "students with disabilities" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

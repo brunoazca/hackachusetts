@@ -1,0 +1,540 @@
+{
+  "id" : "u9sw-3ren",
+  "name" : "Licensed Early Education and Care Program Tuition",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "attributionLink" : "https://www.mass.gov/lists/data-on-massachusetts-child-care-programs",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1784205541,
+  "description" : "This data set includes median early education and care tuition rates for Massachusetts. Median rates are calculated by program type, age group, and EEC subsidy region. Tuition rates reported by providers were converted to a daily rate to allow for consistent comparisons and weighted by providers’ licensed capacity. Data are updated monthly.\n\nThis dataset is part of <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d\" target=\"_blank\" rel=\"noopener noreferrer\">EEC's Key Performance Indicator (KPI) Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 18,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42297557,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1785411938,
+  "publicationGroup" : 20468651,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1785857535,
+  "rowsUpdatedBy" : "279s-kggh",
+  "tableId" : 20468651,
+  "totalTimesRated" : 0,
+  "viewCount" : 189,
+  "viewLastModified" : 1788275877,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1785411958,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7598676,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1785411938,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1785411958,
+      "failureCount" : 0,
+      "startedAt" : 1785411958,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 640366250,
+    "name" : "TUITION_SNAPSHOT_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date of of data pull.",
+    "fieldName" : "tuition_snapshot_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 170200331,
+    "cachedContents" : {
+      "non_null" : "42",
+      "largest" : "2026-08-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-08-01T00:00:00.000",
+        "count" : "42"
+      } ],
+      "smallest" : "2026-08-01T00:00:00.000",
+      "count" : "42",
+      "cardinality" : "42"
+    },
+    "format" : { }
+  }, {
+    "id" : 640366249,
+    "name" : "SUBSIDY_REGION",
+    "dataTypeName" : "text",
+    "description" : "EEC subsidy region; \"All\" when aggregated statewide across all regions.",
+    "fieldName" : "subsidy_region",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 170200330,
+    "cachedContents" : {
+      "non_null" : "42",
+      "largest" : "Western",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Metro Boston",
+        "count" : "6"
+      }, {
+        "item" : "Northeast",
+        "count" : "6"
+      }, {
+        "item" : "Central",
+        "count" : "6"
+      }, {
+        "item" : "Statewide",
+        "count" : "6"
+      }, {
+        "item" : "Western",
+        "count" : "6"
+      }, {
+        "item" : "Southeast",
+        "count" : "6"
+      }, {
+        "item" : "Metro",
+        "count" : "6"
+      } ],
+      "smallest" : "Central",
+      "count" : "42",
+      "cardinality" : "42"
+    },
+    "format" : { }
+  }, {
+    "id" : 640366248,
+    "name" : "PROGRAM_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Type of child care program: Center-based Care, Family Child Care.",
+    "fieldName" : "program_type",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 170200329,
+    "cachedContents" : {
+      "non_null" : "42",
+      "largest" : "Family Child Care",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Center-based Care",
+        "count" : "21"
+      }, {
+        "item" : "Family Child Care",
+        "count" : "21"
+      } ],
+      "smallest" : "Center-based Care",
+      "count" : "42",
+      "cardinality" : "42"
+    },
+    "format" : { }
+  }, {
+    "id" : 640366247,
+    "name" : "DCR_AGE_GROUP",
+    "dataTypeName" : "text",
+    "description" : "Age group category used in the Daily Converted Rate (DCR) rate: Infant (birth-15 months), Toddler (15 months-2 years and 9 months), Preschool (2 years and 9 months- Kindergarten).",
+    "fieldName" : "dcr_age_group",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 170200328,
+    "cachedContents" : {
+      "non_null" : "42",
+      "largest" : "Toddler",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Toddler",
+        "count" : "14"
+      }, {
+        "item" : "Preschool",
+        "count" : "14"
+      }, {
+        "item" : "Infant",
+        "count" : "14"
+      } ],
+      "smallest" : "Infant",
+      "count" : "42",
+      "cardinality" : "42"
+    },
+    "format" : { }
+  }, {
+    "id" : 640366246,
+    "name" : "PROVIDER_COUNT",
+    "dataTypeName" : "number",
+    "description" : "Count of distinct providers included in this aggregation group.",
+    "fieldName" : "provider_count",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 170200327,
+    "cachedContents" : {
+      "non_null" : "42",
+      "largest" : "4064",
+      "null" : "0",
+      "top" : [ {
+        "item" : "521",
+        "count" : "1"
+      }, {
+        "item" : "1743",
+        "count" : "1"
+      }, {
+        "item" : "465",
+        "count" : "1"
+      }, {
+        "item" : "679",
+        "count" : "1"
+      }, {
+        "item" : "355",
+        "count" : "1"
+      }, {
+        "item" : "1070",
+        "count" : "1"
+      }, {
+        "item" : "350",
+        "count" : "1"
+      }, {
+        "item" : "568",
+        "count" : "1"
+      }, {
+        "item" : "174",
+        "count" : "1"
+      }, {
+        "item" : "208",
+        "count" : "1"
+      }, {
+        "item" : "856",
+        "count" : "1"
+      }, {
+        "item" : "196",
+        "count" : "1"
+      }, {
+        "item" : "3389",
+        "count" : "1"
+      }, {
+        "item" : "264",
+        "count" : "1"
+      }, {
+        "item" : "224",
+        "count" : "1"
+      }, {
+        "item" : "467",
+        "count" : "1"
+      }, {
+        "item" : "507",
+        "count" : "1"
+      }, {
+        "item" : "491",
+        "count" : "1"
+      }, {
+        "item" : "584",
+        "count" : "1"
+      }, {
+        "item" : "116",
+        "count" : "1"
+      } ],
+      "smallest" : "80",
+      "count" : "42",
+      "cardinality" : "42"
+    },
+    "format" : { }
+  }, {
+    "id" : 640366245,
+    "name" : "MEDIAN_DAILY_RATE",
+    "dataTypeName" : "number",
+    "description" : "Capacity-weighted median daily child care rate for this program type, age group, and region.",
+    "fieldName" : "median_daily_rate",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 170200326,
+    "cachedContents" : {
+      "non_null" : "42",
+      "largest" : "133",
+      "null" : "0",
+      "top" : [ {
+        "item" : "60",
+        "count" : "7"
+      }, {
+        "item" : "50",
+        "count" : "4"
+      }, {
+        "item" : "80",
+        "count" : "3"
+      }, {
+        "item" : "70",
+        "count" : "2"
+      }, {
+        "item" : "56",
+        "count" : "2"
+      }, {
+        "item" : "83",
+        "count" : "2"
+      }, {
+        "item" : "73",
+        "count" : "1"
+      }, {
+        "item" : "98",
+        "count" : "1"
+      }, {
+        "item" : "76",
+        "count" : "1"
+      }, {
+        "item" : "65",
+        "count" : "1"
+      }, {
+        "item" : "58",
+        "count" : "1"
+      }, {
+        "item" : "104",
+        "count" : "1"
+      }, {
+        "item" : "59",
+        "count" : "1"
+      }, {
+        "item" : "100",
+        "count" : "1"
+      }, {
+        "item" : "55",
+        "count" : "1"
+      }, {
+        "item" : "64",
+        "count" : "1"
+      }, {
+        "item" : "120",
+        "count" : "1"
+      }, {
+        "item" : "91",
+        "count" : "1"
+      }, {
+        "item" : "51",
+        "count" : "1"
+      }, {
+        "item" : "86",
+        "count" : "1"
+      } ],
+      "smallest" : "48",
+      "count" : "42",
+      "cardinality" : "42"
+    },
+    "format" : {
+      "precisionStyle" : "currency"
+    }
+  }, {
+    "id" : 640366244,
+    "name" : "MEDIAN_MONTHLY_RATE",
+    "dataTypeName" : "number",
+    "description" : "Capacity-weighted median monthly child care rate for this program type, age group, and region.",
+    "fieldName" : "median_monthly_rate",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 170200325,
+    "cachedContents" : {
+      "non_null" : "42",
+      "largest" : "2879",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1299",
+        "count" : "6"
+      }, {
+        "item" : "1083",
+        "count" : "3"
+      }, {
+        "item" : "1732",
+        "count" : "3"
+      }, {
+        "item" : "1797",
+        "count" : "2"
+      }, {
+        "item" : "1516",
+        "count" : "2"
+      }, {
+        "item" : "1263",
+        "count" : "1"
+      }, {
+        "item" : "2477",
+        "count" : "1"
+      }, {
+        "item" : "2849",
+        "count" : "1"
+      }, {
+        "item" : "1039",
+        "count" : "1"
+      }, {
+        "item" : "1570",
+        "count" : "1"
+      }, {
+        "item" : "1864",
+        "count" : "1"
+      }, {
+        "item" : "1645",
+        "count" : "1"
+      }, {
+        "item" : "2598",
+        "count" : "1"
+      }, {
+        "item" : "1096",
+        "count" : "1"
+      }, {
+        "item" : "1210",
+        "count" : "1"
+      }, {
+        "item" : "1386",
+        "count" : "1"
+      }, {
+        "item" : "2126",
+        "count" : "1"
+      }, {
+        "item" : "1884",
+        "count" : "1"
+      }, {
+        "item" : "1407",
+        "count" : "1"
+      }, {
+        "item" : "1602",
+        "count" : "1"
+      } ],
+      "smallest" : "1039",
+      "count" : "42",
+      "cardinality" : "42"
+    },
+    "format" : {
+      "precisionStyle" : "currency"
+    }
+  }, {
+    "id" : 640366243,
+    "name" : "MEDIAN_YEARLY_RATE",
+    "dataTypeName" : "number",
+    "description" : "Capacity-weighted median yearly child care rate for this program type, age group, and region.",
+    "fieldName" : "median_yearly_rate",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 170200324,
+    "cachedContents" : {
+      "non_null" : "42",
+      "largest" : "34553",
+      "null" : "0",
+      "top" : [ {
+        "item" : "15588",
+        "count" : "6"
+      }, {
+        "item" : "12990",
+        "count" : "3"
+      }, {
+        "item" : "20784",
+        "count" : "3"
+      }, {
+        "item" : "21563",
+        "count" : "2"
+      }, {
+        "item" : "18186",
+        "count" : "2"
+      }, {
+        "item" : "25512",
+        "count" : "1"
+      }, {
+        "item" : "15572",
+        "count" : "1"
+      }, {
+        "item" : "16887",
+        "count" : "1"
+      }, {
+        "item" : "13156",
+        "count" : "1"
+      }, {
+        "item" : "31176",
+        "count" : "1"
+      }, {
+        "item" : "15157",
+        "count" : "1"
+      }, {
+        "item" : "12470",
+        "count" : "1"
+      }, {
+        "item" : "28682",
+        "count" : "1"
+      }, {
+        "item" : "19225",
+        "count" : "1"
+      }, {
+        "item" : "25899",
+        "count" : "1"
+      }, {
+        "item" : "22603",
+        "count" : "1"
+      }, {
+        "item" : "29721",
+        "count" : "1"
+      }, {
+        "item" : "15336",
+        "count" : "1"
+      }, {
+        "item" : "34190",
+        "count" : "1"
+      }, {
+        "item" : "22369",
+        "count" : "1"
+      } ],
+      "smallest" : "12470",
+      "count" : "42",
+      "cardinality" : "42"
+    },
+    "format" : {
+      "precisionStyle" : "currency"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Monthly",
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-early-education-and-care"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "licensed childcare", "licensed", "daycare", "prek", "preschool", "toddlers", "infants" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

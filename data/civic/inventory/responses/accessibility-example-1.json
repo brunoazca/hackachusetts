@@ -1,0 +1,10 @@
+{
+  "title": "accessible-spreadsheet-example.xlsx",
+  "url": "https://docs.google.com/spreadsheets/d/11l7S_gieduOH1uW9w1E-XB881JKB3Qmn/edit",
+  "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "created_time": "2025-09-28T16:59:40.659Z",
+  "modified_time": "2025-09-28T16:55:44.000Z",
+  "retention": "readable_preview",
+  "content": ",Name,Date of birth,Image,Link\n0,John Doe,1960-05-02 00:00:00,,Artificial intelligence (AI) and accessibilityArtificial intelligence (AI) and accessibility\n1,Michael Smith,1985-12-08 00:00:00,,Executive Office of Technology Services and Security (EOTSS)\n",
+  "note": "Illustrative accessibility training workbook, not civic operational data. Connector text omits formatting and embedded images."
+}

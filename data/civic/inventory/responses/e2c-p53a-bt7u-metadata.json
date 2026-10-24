@@ -1,0 +1,99 @@
+{
+  "id" : "p53a-bt7u",
+  "name" : "Increasing community college enrollment with MassReconnect",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1732627577,
+  "description" : "This data story examines a rebound in community college enrollment with the fall 2023 rollout of MassReconnect, a state-funded program to provide free tuition and fees to students aged 25 and over at all Massachusetts public community colleges.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40981546,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1732643794,
+  "publicationGroup" : 19703016,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1732627577,
+  "tableId" : 19703016,
+  "totalTimesRated" : 0,
+  "viewCount" : 6187,
+  "viewLastModified" : 1775145891,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1740776705,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6775182,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1740776651,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1740776705,
+      "failureCount" : 0,
+      "startedAt" : 1740776705,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "This data story examines a rebound in community college enrollment with the fall 2023 rollout of MassReconnect, a state-funded program to provide free tuition and fees to students aged 25 and over at all Massachusetts public community colleges.",
+      "title" : "Increasing community college enrollment with MassReconnect"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "tuition", "college tuition", "community college", "cost of college", "enrollment", "college retention", "2 year public college", "higher education", "free community college", "tuition and fee free", "free tuition and fees", "free tuition", "fee free", "massreconnect", "masseducate" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

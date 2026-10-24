@@ -1,0 +1,717 @@
+{
+  "dataset": "openalex-works",
+  "source": "data/civic/datasets/openalex-works/data.csv",
+  "source_sha256": "00175039f46f6261fc09b5ba48942d4087476eeaed3253f2cc71e0a5f6825065",
+  "total_snapshot_rows": 500,
+  "preview_rows": 100,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "title",
+    "year",
+    "type",
+    "cited_by",
+    "source"
+  ],
+  "records": [
+    {
+      "title": "Minimal information for studies of extracellular vesicles (MISEV2023): From basic to advanced approaches",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "4554",
+      "source": "Journal of Extracellular Vesicles"
+    },
+    {
+      "title": "TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "4364",
+      "source": "BMJ"
+    },
+    {
+      "title": "Qualitative Case Studies",
+      "year": "2024",
+      "type": "other",
+      "cited_by": "4041",
+      "source": ""
+    },
+    {
+      "title": "Review of Particle Physics",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "3621",
+      "source": "Physical review. D/Physical review. D."
+    },
+    {
+      "title": "Revised criteria for diagnosis and staging of Alzheimer's disease: Alzheimer's Association Workgroup",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "2752",
+      "source": "Alzheimer s & Dementia"
+    },
+    {
+      "title": "Worldwide trends in underweight and obesity from 1990 to 2022: a pooled analysis of 3663 population-representative studies with 222 million children, adolescents, and adults",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "2483",
+      "source": "The Lancet"
+    },
+    {
+      "title": "Towards a general-purpose foundation model for computational pathology",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "1523",
+      "source": "Nature Medicine"
+    },
+    {
+      "title": "phytools 2.0: an updated R ecosystem for phylogenetic comparative methods (and other things)",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "1051",
+      "source": "PeerJ"
+    },
+    {
+      "title": "Generative AI at Work",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "1022",
+      "source": "The Quarterly Journal of Economics"
+    },
+    {
+      "title": "The Galaxy platform for accessible, reproducible, and collaborative data analyses: 2024 update",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "948",
+      "source": "Nucleic Acids Research"
+    },
+    {
+      "title": "A visual-language foundation model for computational pathology",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "948",
+      "source": "Nature Medicine"
+    },
+    {
+      "title": "Epidemiology of metabolic dysfunction-associated steatotic liver disease",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "934",
+      "source": "Clinical and Molecular Hepatology"
+    },
+    {
+      "title": "Combinatorial Enumeration",
+      "year": "2024",
+      "type": "book-chapter",
+      "cited_by": "924",
+      "source": "Cambridge University Press eBooks"
+    },
+    {
+      "title": "Individualised neoantigen therapy mRNA-4157 (V940) plus pembrolizumab versus pembrolizumab monotherapy in resected melanoma (KEYNOTE-942): a randomised, phase 2b study",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "895",
+      "source": "The Lancet"
+    },
+    {
+      "title": "The 2024 report of the Lancet Countdown on health and climate change: facing record-breaking threats from delayed action",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "864",
+      "source": "The Lancet"
+    },
+    {
+      "title": "Roadmapping the next generation of silicon photonics",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "861",
+      "source": "Nature Communications"
+    },
+    {
+      "title": "Frailty in Older Adults",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "843",
+      "source": "New England Journal of Medicine"
+    },
+    {
+      "title": "The Heart of the World",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "837",
+      "source": "Global Heart"
+    },
+    {
+      "title": "Breast cancer statistics 2024",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "791",
+      "source": "CA A Cancer Journal for Clinicians"
+    },
+    {
+      "title": "Digital twins for health: a scoping review",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "774",
+      "source": "npj Digital Medicine"
+    },
+    {
+      "title": "Mixup: Beyond empirical risk minimization",
+      "year": "2024",
+      "type": "preprint",
+      "cited_by": "772",
+      "source": "arXiv (Cornell University)"
+    },
+    {
+      "title": "Quantum error correction below the surface code threshold",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "765",
+      "source": "Nature"
+    },
+    {
+      "title": "The Lancet Commission on prostate cancer: planning for the surge in cases",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "747",
+      "source": "The Lancet"
+    },
+    {
+      "title": "Large Language Model Influence on Diagnostic Reasoning",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "705",
+      "source": "JAMA Network Open"
+    },
+    {
+      "title": "Point Transformer V3: Simpler, Faster, Stronger",
+      "year": "2024",
+      "type": "conference-paper",
+      "cited_by": "685",
+      "source": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings"
+    },
+    {
+      "title": "Automated model building and protein identification in cryo-EM maps",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "677",
+      "source": "Nature"
+    },
+    {
+      "title": "Testing and Evaluation of Health Care Applications of Large Language Models",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "646",
+      "source": "JAMA"
+    },
+    {
+      "title": "2024 European Heart Rhythm Association/Heart Rhythm Society/Asia Pacific Heart Rhythm Society/Latin American Heart Rhythm Society expert consensus statement on catheter and surgical ablation of atrial fibrillation",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "639",
+      "source": "EP Europace"
+    },
+    {
+      "title": "Rewrite the Stars",
+      "year": "2024",
+      "type": "conference-paper",
+      "cited_by": "627",
+      "source": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings"
+    },
+    {
+      "title": "Glioma",
+      "year": "2024",
+      "type": "review",
+      "cited_by": "601",
+      "source": "Nature Reviews Disease Primers"
+    },
+    {
+      "title": "Genetic drivers of heterogeneity in type 2 diabetes pathophysiology",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "600",
+      "source": "Nature"
+    },
+    {
+      "title": "Emerging contaminants: A One Health perspective",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "589",
+      "source": "The Innovation"
+    },
+    {
+      "title": "Diffusion policy: Visuomotor policy learning via action diffusion",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "585",
+      "source": "The International Journal of Robotics Research"
+    },
+    {
+      "title": "International Consensus Criteria for Pediatric Sepsis and Septic Shock",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "580",
+      "source": "JAMA"
+    },
+    {
+      "title": "Neuroinflammation in Alzheimer disease",
+      "year": "2024",
+      "type": "review",
+      "cited_by": "578",
+      "source": "Nature reviews. Immunology"
+    },
+    {
+      "title": "When combinations of humans and AI are useful: A systematic review and meta-analysis",
+      "year": "2024",
+      "type": "review",
+      "cited_by": "574",
+      "source": "Nature Human Behaviour"
+    },
+    {
+      "title": "A pathology foundation model for cancer diagnosis and prognosis prediction",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "568",
+      "source": "Nature"
+    },
+    {
+      "title": "The Conceptual Definition of Sarcopenia: Delphi Consensus from the Global Leadership Initiative in Sarcopenia (GLIS)",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "564",
+      "source": "Age and Ageing"
+    },
+    {
+      "title": "Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "563",
+      "source": "The Journal of Clinical Endocrinology & Metabolism"
+    },
+    {
+      "title": "Neuronal wiring diagram of an adult brain",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "561",
+      "source": "Nature"
+    },
+    {
+      "title": "Prevalence of Cardiovascular-Kidney-Metabolic Syndrome Stages in US Adults, 2011-2020",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "560",
+      "source": "JAMA"
+    },
+    {
+      "title": "A Survey on Generative Diffusion Models",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "550",
+      "source": "IEEE Transactions on Knowledge and Data Engineering"
+    },
+    {
+      "title": "Little Red Dots: An Abundant Population of Faint Active Galactic Nuclei at z ∼ 5 Revealed by the EIGER and FRESCO JWST Surveys",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "542",
+      "source": "The Astrophysical Journal"
+    },
+    {
+      "title": "Fractional quantum anomalous Hall effect in multilayer graphene",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "525",
+      "source": "Nature"
+    },
+    {
+      "title": "GWTC-2.1: Deep extended catalog of compact binary coalescences observed by LIGO and Virgo during the first half of the third observing run",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "496",
+      "source": "Physical review. D/Physical review. D."
+    },
+    {
+      "title": "Boltz-1 Democratizing Biomolecular Interaction Modeling",
+      "year": "2024",
+      "type": "preprint",
+      "cited_by": "486",
+      "source": "bioRxiv (Cold Spring Harbor Laboratory)"
+    },
+    {
+      "title": "Nurse Burnout and Patient Safety, Satisfaction, and Quality of Care",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "486",
+      "source": "JAMA Network Open"
+    },
+    {
+      "title": "Materials design for hypersonics",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "485",
+      "source": "Nature Communications"
+    },
+    {
+      "title": "How to Interpret Statistical Models Using marginaleffects for R and Python",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "480",
+      "source": "Journal of Statistical Software"
+    },
+    {
+      "title": "Plasmonic silver and gold nanoparticles: shape- and structure-modulated plasmonic functionality for point-of-caring sensing, bio-imaging and medical therapy",
+      "year": "2024",
+      "type": "review",
+      "cited_by": "477",
+      "source": "Chemical Society Reviews"
+    },
+    {
+      "title": "Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "472",
+      "source": "New England Journal of Medicine"
+    },
+    {
+      "title": "Screening for Breast Cancer",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "467",
+      "source": "JAMA"
+    },
+    {
+      "title": "Probability Theory, An Analytic View",
+      "year": "2024",
+      "type": "book",
+      "cited_by": "466",
+      "source": "Cambridge University Press eBooks"
+    },
+    {
+      "title": "SplaTAM: Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM",
+      "year": "2024",
+      "type": "conference-paper",
+      "cited_by": "466",
+      "source": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings"
+    },
+    {
+      "title": "Advancing electrochemical impedance analysis through innovations in the distribution of relaxation times method",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "465",
+      "source": "Joule"
+    },
+    {
+      "title": "Recent advances in extracellular vesicles for therapeutic cargo delivery",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "465",
+      "source": "Experimental & Molecular Medicine"
+    },
+    {
+      "title": "Graph neural networks",
+      "year": "2024",
+      "type": "review",
+      "cited_by": "461",
+      "source": "Nature Reviews Methods Primers"
+    },
+    {
+      "title": "New promises and challenges in the treatment of advanced non-small-cell lung cancer",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "460",
+      "source": "The Lancet"
+    },
+    {
+      "title": "A multimodal generative AI copilot for human pathology",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "459",
+      "source": "Nature"
+    },
+    {
+      "title": "Inflammation in atherosclerosis: pathophysiology and mechanisms",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "457",
+      "source": "Cell Death and Disease"
+    },
+    {
+      "title": "Generative artificial intelligence, human creativity, and art",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "453",
+      "source": "PNAS Nexus"
+    },
+    {
+      "title": "Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "451",
+      "source": "Science"
+    },
+    {
+      "title": "A distinct Fusobacterium nucleatum clade dominates the colorectal cancer niche",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "449",
+      "source": "Nature"
+    },
+    {
+      "title": "Generative artificial intelligence in supply chain and operations management: a capability-based framework for analysis and implementation",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "448",
+      "source": "International Journal of Production Research"
+    },
+    {
+      "title": "Neural general circulation models for weather and climate",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "447",
+      "source": "Nature"
+    },
+    {
+      "title": "High-threshold and low-overhead fault-tolerant quantum memory",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "445",
+      "source": "Nature"
+    },
+    {
+      "title": "The present and future of the Cancer Dependency Map",
+      "year": "2024",
+      "type": "review",
+      "cited_by": "443",
+      "source": "Nature reviews. Cancer"
+    },
+    {
+      "title": "Global trends in antibiotic consumption during 2016–2023 and future projections through 2030",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "441",
+      "source": "Proceedings of the National Academy of Sciences"
+    },
+    {
+      "title": "Achievement of Target Gain Larger than Unity in an Inertial Fusion Experiment",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "437",
+      "source": "Physical Review Letters"
+    },
+    {
+      "title": "OpenFold: retraining AlphaFold2 yields new insights into its learning mechanisms and capacity for generalization",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "436",
+      "source": "Nature Methods"
+    },
+    {
+      "title": "Epidemiology and management of gestational diabetes",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "432",
+      "source": "The Lancet"
+    },
+    {
+      "title": "UNCOVER Spectroscopy Confirms the Surprising Ubiquity of Active Galactic Nuclei in Red Sources at z > 5",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "429",
+      "source": "The Astrophysical Journal"
+    },
+    {
+      "title": "Deep learning-based structural health monitoring",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "424",
+      "source": "Automation in Construction"
+    },
+    {
+      "title": "Targeted protein degradation: from mechanisms to clinic",
+      "year": "2024",
+      "type": "review",
+      "cited_by": "421",
+      "source": "Nature Reviews Molecular Cell Biology"
+    },
+    {
+      "title": "GENCODE 2025: reference gene annotation for human and mouse",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "417",
+      "source": "Nucleic Acids Research"
+    },
+    {
+      "title": "FlyBase: updates to the Drosophila genes and genomes database",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "414",
+      "source": "Genetics"
+    },
+    {
+      "title": "Alzheimer Disease as a Clinical-Biological Construct—An International Working Group Recommendation",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "413",
+      "source": "JAMA Neurology"
+    },
+    {
+      "title": "Roadmap for Optical Metasurfaces",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "413",
+      "source": "ACS Photonics"
+    },
+    {
+      "title": "How to build the virtual cell with artificial intelligence: Priorities and opportunities",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "409",
+      "source": "Cell"
+    },
+    {
+      "title": "Whole-brain annotation and multi-connectome cell typing of Drosophila",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "408",
+      "source": "Nature"
+    },
+    {
+      "title": "Ribociclib plus Endocrine Therapy in Early Breast Cancer",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "407",
+      "source": "New England Journal of Medicine"
+    },
+    {
+      "title": "Sustained human outbreak of a new MPXV clade I lineage in eastern Democratic Republic of the Congo",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "405",
+      "source": "Nature Medicine"
+    },
+    {
+      "title": "Integrative spatial analysis reveals a multi-layered organization of glioblastoma",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "399",
+      "source": "Cell"
+    },
+    {
+      "title": "SenNet recommendations for detecting senescent cells in different tissues",
+      "year": "2024",
+      "type": "review",
+      "cited_by": "396",
+      "source": "Nature Reviews Molecular Cell Biology"
+    },
+    {
+      "title": "ECCO Guidelines on Therapeutics in Crohn’s Disease: Medical Treatment",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "395",
+      "source": "Journal of Crohn s and Colitis"
+    },
+    {
+      "title": "The future of two-dimensional semiconductors beyond Moore’s law",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "394",
+      "source": "Nature Nanotechnology"
+    },
+    {
+      "title": "The Allen Ancient DNA Resource (AADR) a curated compendium of ancient human genomes",
+      "year": "2024",
+      "type": "data-paper",
+      "cited_by": "385",
+      "source": "Scientific Data"
+    },
+    {
+      "title": "Hydrogel dressings with intrinsic antibiofilm and antioxidative dual functionalities accelerate infected diabetic wound healing",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "383",
+      "source": "Nature Communications"
+    },
+    {
+      "title": "The SRG/eROSITA all-sky survey",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "377",
+      "source": "Astronomy and Astrophysics"
+    },
+    {
+      "title": "Global burden of metabolic diseases, 1990–2021",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "373",
+      "source": "Metabolism"
+    },
+    {
+      "title": "The 2024 state of the climate report: Perilous times on planet Earth",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "372",
+      "source": "BioScience"
+    },
+    {
+      "title": "The impact of generative artificial intelligence on socioeconomic inequalities and policy making",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "367",
+      "source": "PNAS Nexus"
+    },
+    {
+      "title": "APOE4 homozygosity represents a distinct genetic form of Alzheimer’s disease",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "363",
+      "source": "Nature Medicine"
+    },
+    {
+      "title": "Nanoparticles in tumor microenvironment remodeling and cancer immunotherapy",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "362",
+      "source": "Journal of Hematology & Oncology"
+    },
+    {
+      "title": "AAV1-hOTOF gene therapy for autosomal recessive deafness 9: a single-arm trial",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "362",
+      "source": "The Lancet"
+    },
+    {
+      "title": "Hypoxia induces mitochondrial protein lactylation to limit oxidative phosphorylation",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "362",
+      "source": "Cell Research"
+    },
+    {
+      "title": "Concurrent inhibition of oncogenic and wild-type RAS-GTP for cancer therapy",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "361",
+      "source": "Nature"
+    },
+    {
+      "title": "A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "356",
+      "source": "Science"
+    },
+    {
+      "title": "Proteomic aging clock predicts mortality and risk of common age-related diseases in diverse populations",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "354",
+      "source": "Nature Medicine"
+    },
+    {
+      "title": "The Early Data Release of the Dark Energy Spectroscopic Instrument",
+      "year": "2024",
+      "type": "article",
+      "cited_by": "354",
+      "source": "The Astronomical Journal"
+    }
+  ]
+}

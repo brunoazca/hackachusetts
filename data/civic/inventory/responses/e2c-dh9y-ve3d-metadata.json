@@ -1,0 +1,95 @@
+{
+  "id" : "dh9y-ve3d",
+  "name" : "AP Participation Trends",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1766153068,
+  "description" : "Use interactive charts to select a public school district and any number of Advanced Placement (AP) subjects to examine 10-year trends and compare student groups.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 41813625,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1766153217,
+  "publicationGroup" : 20207950,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1766153068,
+  "tableId" : 20207950,
+  "totalTimesRated" : 0,
+  "viewCount" : 1308,
+  "viewLastModified" : 1778703764,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1773690736,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7390780,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1773690718,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1773690736,
+      "failureCount" : 0,
+      "startedAt" : 1773690736,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "advanced placement", "ap", "ap test", "participation", "participation rates" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

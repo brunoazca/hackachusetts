@@ -1,0 +1,941 @@
+[
+  {
+    "id": "arcgis-fa5bd7b3b6d245a9af16063635dd5391",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/fa5bd7b3b6d245a9af16063635dd5391/data?f=json",
+    "name": "Boston bicycle dashboard web map",
+    "role": "additional_schema_or_data",
+    "parent": "boston-bike-dashboard",
+    "checked_at_utc": "2026-10-24T15:14:11.225961+00:00",
+    "http_status": 200,
+    "final_url": "https://www.arcgis.com/sharing/rest/content/items/fa5bd7b3b6d245a9af16063635dd5391/data?f=json",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 248162,
+    "content_length": null,
+    "etag": "\"1a0d00b84f8\"",
+    "last_modified": null,
+    "response_sha256": "3585e34e89d48c87b65b9f0e3212ce95d583001204dea4096a74cbf7866393a9",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "operationalLayers",
+      "tables",
+      "baseMap",
+      "authoringApp",
+      "authoringAppVersion",
+      "bookmarks",
+      "initialState",
+      "spatialReference",
+      "timeZone",
+      "version",
+      "widgets"
+    ],
+    "local_path": "data/civic/inventory/responses/arcgis-fa5bd7b3b6d245a9af16063635dd5391.json",
+    "local_sha256": "3585e34e89d48c87b65b9f0e3212ce95d583001204dea4096a74cbf7866393a9"
+  },
+  {
+    "id": "arcgis-35b5008743be439096ceebd61cf1bc17",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/35b5008743be439096ceebd61cf1bc17/data?f=json",
+    "name": "Boston bicycle dashboard web map",
+    "role": "additional_schema_or_data",
+    "parent": "boston-bike-dashboard",
+    "checked_at_utc": "2026-10-24T15:14:11.226027+00:00",
+    "http_status": 200,
+    "final_url": "https://www.arcgis.com/sharing/rest/content/items/35b5008743be439096ceebd61cf1bc17/data?f=json",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 248928,
+    "content_length": null,
+    "etag": "\"1a0eda71bf8\"",
+    "last_modified": null,
+    "response_sha256": "417f1640c1dadd95cde4a13690d00f23de7bbd5c3171f961cc157e5dcda9a493",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "operationalLayers",
+      "tables",
+      "baseMap",
+      "authoringApp",
+      "authoringAppVersion",
+      "bookmarks",
+      "initialState",
+      "spatialReference",
+      "timeZone",
+      "version",
+      "widgets"
+    ],
+    "local_path": "data/civic/inventory/responses/arcgis-35b5008743be439096ceebd61cf1bc17.json",
+    "local_sha256": "417f1640c1dadd95cde4a13690d00f23de7bbd5c3171f961cc157e5dcda9a493"
+  },
+  {
+    "id": "arcgis-b42f2c990f784716b320ae0499886591",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/b42f2c990f784716b320ae0499886591?f=json",
+    "name": "Crash map ArcGIS item",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:14:11.101655+00:00",
+    "http_status": 200,
+    "final_url": "https://www.arcgis.com/sharing/rest/content/items/b42f2c990f784716b320ae0499886591?f=json",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 1243,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "ac5bc39f8718c4b26031a96b96e4189e473f16f809d73c33a4ba4e52789aa081",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "id",
+      "owner",
+      "ownerId",
+      "orgId",
+      "created",
+      "modified",
+      "guid",
+      "name",
+      "title",
+      "type",
+      "typeKeywords",
+      "description",
+      "tags",
+      "snippet",
+      "thumbnail",
+      "documentation",
+      "extent",
+      "categories",
+      "spatialReference",
+      "accessInformation",
+      "classification",
+      "licenseInfo",
+      "culture",
+      "properties",
+      "advancedSettings",
+      "url",
+      "proxyFilter",
+      "access",
+      "size",
+      "subInfo",
+      "appCategories",
+      "industries",
+      "languages",
+      "largeThumbnail",
+      "banner",
+      "screenshots",
+      "listed",
+      "commentsEnabled",
+      "numComments",
+      "numRatings",
+      "avgRating",
+      "numViews",
+      "contentStatus",
+      "scoreCompleteness",
+      "groupDesignations",
+      "apiToken1ExpirationDate",
+      "apiToken2ExpirationDate",
+      "lastViewed"
+    ],
+    "local_path": "data/civic/inventory/responses/arcgis-b42f2c990f784716b320ae0499886591.json",
+    "local_sha256": "ac5bc39f8718c4b26031a96b96e4189e473f16f809d73c33a4ba4e52789aa081"
+  },
+  {
+    "id": "arcgis-19a74f37055b4fb9aad8269153ba82b0",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/19a74f37055b4fb9aad8269153ba82b0?f=json",
+    "name": "Crash map ArcGIS item",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:14:11.110740+00:00",
+    "http_status": 200,
+    "final_url": "https://www.arcgis.com/sharing/rest/content/items/19a74f37055b4fb9aad8269153ba82b0?f=json",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 4254,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "dc39aaeb3db292be6a7937ab788243906651603eb0ae58b21ed9cdc0313d927c",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "id",
+      "owner",
+      "ownerId",
+      "created",
+      "modified",
+      "guid",
+      "name",
+      "title",
+      "type",
+      "typeKeywords",
+      "description",
+      "tags",
+      "snippet",
+      "thumbnail",
+      "documentation",
+      "extent",
+      "categories",
+      "spatialReference",
+      "accessInformation",
+      "classification",
+      "licenseInfo",
+      "culture",
+      "properties",
+      "advancedSettings",
+      "url",
+      "proxyFilter",
+      "access",
+      "size",
+      "subInfo",
+      "appCategories",
+      "industries",
+      "languages",
+      "largeThumbnail",
+      "banner",
+      "screenshots",
+      "listed",
+      "commentsEnabled",
+      "numComments",
+      "numRatings",
+      "avgRating",
+      "numViews",
+      "scoreCompleteness",
+      "groupDesignations",
+      "apiToken1ExpirationDate",
+      "apiToken2ExpirationDate",
+      "lastViewed"
+    ],
+    "local_path": "data/civic/inventory/responses/arcgis-19a74f37055b4fb9aad8269153ba82b0.json",
+    "local_sha256": "dc39aaeb3db292be6a7937ab788243906651603eb0ae58b21ed9cdc0313d927c"
+  },
+  {
+    "id": "arcgis-bae68e65908f45e1bcc86fe5f089d266",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/bae68e65908f45e1bcc86fe5f089d266?f=json",
+    "name": "Crash map ArcGIS item",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:14:11.105101+00:00",
+    "http_status": 200,
+    "final_url": "https://www.arcgis.com/sharing/rest/content/items/bae68e65908f45e1bcc86fe5f089d266?f=json",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 1633,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "abaa4773ccd77ba3fa59d72cd9f0974b2a024daa45b8122c9680106bdae59b9a",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "id",
+      "owner",
+      "ownerId",
+      "orgId",
+      "created",
+      "modified",
+      "guid",
+      "name",
+      "title",
+      "type",
+      "typeKeywords",
+      "description",
+      "tags",
+      "snippet",
+      "thumbnail",
+      "documentation",
+      "extent",
+      "categories",
+      "spatialReference",
+      "accessInformation",
+      "classification",
+      "licenseInfo",
+      "culture",
+      "properties",
+      "advancedSettings",
+      "url",
+      "proxyFilter",
+      "access",
+      "size",
+      "subInfo",
+      "appCategories",
+      "industries",
+      "languages",
+      "largeThumbnail",
+      "banner",
+      "screenshots",
+      "listed",
+      "commentsEnabled",
+      "numComments",
+      "numRatings",
+      "avgRating",
+      "numViews",
+      "scoreCompleteness",
+      "groupDesignations",
+      "apiToken1ExpirationDate",
+      "apiToken2ExpirationDate",
+      "lastViewed"
+    ],
+    "local_path": "data/civic/inventory/responses/arcgis-bae68e65908f45e1bcc86fe5f089d266.json",
+    "local_sha256": "abaa4773ccd77ba3fa59d72cd9f0974b2a024daa45b8122c9680106bdae59b9a"
+  },
+  {
+    "id": "cpd-schema",
+    "url": "https://data.cambridgema.gov/api/views/h6fp-bp8s.json",
+    "name": "cpd schema",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:14:11.365961+00:00",
+    "http_status": 200,
+    "final_url": "https://data.cambridgema.gov/api/views/h6fp-bp8s.json",
+    "content_type": "application/json; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 18876,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "5fe60c1d66c84fe36d2ee9b5e77a8b18015a3dcf8874d781988bfd4850727b0a",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "id",
+      "name",
+      "assetType",
+      "attribution",
+      "averageRating",
+      "category",
+      "createdAt",
+      "description",
+      "diciBackend",
+      "displayType",
+      "downloadCount",
+      "hideFromCatalog",
+      "hideFromDataJson",
+      "licenseId",
+      "locked",
+      "newBackend",
+      "numberOfComments",
+      "oid",
+      "provenance",
+      "publicationAppendEnabled",
+      "publicationDate",
+      "publicationGroup",
+      "publicationStage",
+      "rowsUpdatedAt",
+      "rowsUpdatedBy",
+      "tableId",
+      "totalTimesRated",
+      "viewCount",
+      "viewLastModified",
+      "viewType",
+      "approvals",
+      "clientContext",
+      "columns",
+      "grants",
+      "license",
+      "metadata",
+      "owner",
+      "query",
+      "rights",
+      "tableAuthor",
+      "tags",
+      "flags"
+    ],
+    "local_path": "data/civic/inventory/responses/cpd-schema.json",
+    "local_sha256": "5fe60c1d66c84fe36d2ee9b5e77a8b18015a3dcf8874d781988bfd4850727b0a"
+  },
+  {
+    "id": "cpd-count",
+    "url": "https://data.cambridgema.gov/resource/h6fp-bp8s.json?$select=count(*)",
+    "name": "cpd source row count",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:14:11.342532+00:00",
+    "http_status": 200,
+    "final_url": "https://data.cambridgema.gov/resource/h6fp-bp8s.json?$select=count(*)",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 20,
+    "content_length": null,
+    "etag": "W/\"aG90ZWwuNjU1MTlfMV8xMTk4QmdFdUNKLUt6cmxYZUQxM0lVWlhjRTFGMWVZ--gzihRORbjcKx1rzkwuKXtwDExDrO-L---gzip\"",
+    "last_modified": "Fri, 23 Oct 2026 16:01:24 GMT",
+    "response_sha256": "367645ce0575a6c32a6689a51cf19ef385f8001362e1613875fd8fdb9e6d9537",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "returned_rows": 1,
+    "row_fields": [
+      "count"
+    ],
+    "local_path": "data/civic/inventory/responses/cpd-count.json",
+    "local_sha256": "367645ce0575a6c32a6689a51cf19ef385f8001362e1613875fd8fdb9e6d9537"
+  },
+  {
+    "id": "somerville-crashes-schema",
+    "url": "https://data.somervillema.gov/api/views/mtik-28va.json",
+    "name": "somerville-crashes schema",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:14:11.375020+00:00",
+    "http_status": 200,
+    "final_url": "https://data.somervillema.gov/api/views/mtik-28va.json",
+    "content_type": "application/json; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 54892,
+    "content_length": null,
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "15c3c7e274b79ecd2de0de9c931017ed7c6ff7247a8457ce2b161ca64ce43d41",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "id",
+      "name",
+      "assetType",
+      "attribution",
+      "averageRating",
+      "category",
+      "createdAt",
+      "description",
+      "diciBackend",
+      "displayType",
+      "downloadCount",
+      "hideFromCatalog",
+      "hideFromDataJson",
+      "licenseId",
+      "locked",
+      "newBackend",
+      "numberOfComments",
+      "oid",
+      "provenance",
+      "publicationAppendEnabled",
+      "publicationDate",
+      "publicationGroup",
+      "publicationStage",
+      "rowIdentifierColumnId",
+      "rowsUpdatedAt",
+      "rowsUpdatedBy",
+      "tableId",
+      "totalTimesRated",
+      "viewCount",
+      "viewLastModified",
+      "viewType",
+      "approvals",
+      "clientContext",
+      "columns",
+      "grants",
+      "license",
+      "metadata",
+      "owner",
+      "query",
+      "rights",
+      "tableAuthor",
+      "flags"
+    ],
+    "local_path": "data/civic/inventory/responses/somerville-crashes-schema.json",
+    "local_sha256": "15c3c7e274b79ecd2de0de9c931017ed7c6ff7247a8457ce2b161ca64ce43d41"
+  },
+  {
+    "id": "somerville-crashes-count",
+    "url": "https://data.somervillema.gov/resource/mtik-28va.json?$select=count(*)",
+    "name": "somerville-crashes source row count",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background",
+    "checked_at_utc": "2026-10-24T15:14:11.880997+00:00",
+    "http_status": 200,
+    "final_url": "https://data.somervillema.gov/resource/mtik-28va.json?$select=count(*)",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 19,
+    "content_length": null,
+    "etag": "W/\"aW5kaWEuMzMwMzFfMl85MTBGZnlHWlRPNW52OE84OVJKN3MxeVZ5Q0tQLTQ--gziSR385a2jDjVwGSWPBG6Spwxh2M0---gzip\"",
+    "last_modified": "Sat, 24 Oct 2026 06:02:30 GMT",
+    "response_sha256": "579672119b3d3723a940f8edc19dd144729fc0cbda47867aaeea4194f3a64409",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "returned_rows": 1,
+    "row_fields": [
+      "count"
+    ],
+    "local_path": "data/civic/inventory/responses/somerville-crashes-count.json",
+    "local_sha256": "579672119b3d3723a940f8edc19dd144729fc0cbda47867aaeea4194f3a64409"
+  },
+  {
+    "id": "e2c-2bxu-kf62-page-fallback",
+    "url": "https://educationtocareer.data.mass.gov/stories/s/2bxu-kf62",
+    "name": "Student Discipline Data Trends landing page",
+    "role": "additional_schema_or_data",
+    "parent": "e2c",
+    "checked_at_utc": "2026-10-24T15:14:11.742871+00:00",
+    "http_status": 200,
+    "final_url": "https://educationtocareer.data.mass.gov/login?return_to=%2Fstories%2Fs%2F2bxu-kf62",
+    "content_type": "text/html; charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 534327,
+    "content_length": null,
+    "etag": "W/\"e2558b02605538100dac605614c9374c\"",
+    "last_modified": null,
+    "response_sha256": "e2558b02605538100dac605614c9374c0e97705c035ca338ce9c81a1af3873dc",
+    "error": null,
+    "access": "fetched",
+    "format": "html",
+    "retention": "title_short_excerpt_and_link_inventory",
+    "page_title": "E2C Hub icon-dot-gov icon-https",
+    "excerpt": "E2C Hub Skip to main content Skip to footer An official website of the Commonwealth of Massachusetts Here's how you know icon-dot-gov Official websites use",
+    "outbound_links": [
+      {
+        "url": "https://educationtocareer.data.mass.gov/login?return_to=%2Fstories%2Fs%2F2bxu-kf62",
+        "label": "Menu"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/",
+        "label": "Home Page"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/browse",
+        "label": "Public Data"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/stories/s/gu9b-7kb7",
+        "label": "Data Stories"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/stories/s/5845-7546",
+        "label": "Educators"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/stories/s/q6gk-4r28",
+        "label": "Policymakers"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/stories/s/n23g-fcyv",
+        "label": "Researchers"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/stories/s/Students-Families/bq7p-j8jf/",
+        "label": "Students & Families"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/stories/s/Getting-Started-LV/mjun-yzq2/",
+        "label": "Getting Started"
+      },
+      {
+        "url": "https://www.mass.gov/info-details/about-the-e2c-research-and-data-hub",
+        "label": "About"
+      },
+      {
+        "url": "https://educationtocareer.data.mass.gov/login",
+        "label": "Sign In"
+      },
+      {
+        "url": "https://www.mass.gov/info-details/enterprise-digital-accessibility-statement",
+        "label": "Accessibility"
+      },
+      {
+        "url": "https://www.mass.gov/massgov-privacy-policy",
+        "label": "Privacy Policy"
+      },
+      {
+        "url": "https://www.mass.gov/massgov-terms-of-use",
+        "label": "Terms of Use"
+      },
+      {
+        "url": "https://www.mass.gov/forms/e2c-hub-contact-form",
+        "label": "Contact Us"
+      }
+    ]
+  },
+  {
+    "id": "ckan-bdae89c8-d4ce-40e9-a6e1-a5203953a2e0-schema",
+    "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=bdae89c8-d4ce-40e9-a6e1-a5203953a2e0&limit=0",
+    "name": "Historical 311 empty datastore check",
+    "role": "additional_schema_or_data",
+    "parent": "boston-311",
+    "checked_at_utc": "2026-10-24T15:14:11.443620+00:00",
+    "http_status": 200,
+    "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=bdae89c8-d4ce-40e9-a6e1-a5203953a2e0&limit=0",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 2222,
+    "content_length": "2222",
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "7bdec08bb02cb8d8b63868b9f9c6f4a0e05469d4b94ae955cc1ea24b40459dfb",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "help",
+      "success",
+      "result"
+    ],
+    "reported_total": 0,
+    "fields": [
+      {
+        "id": "_id",
+        "type": "int"
+      },
+      {
+        "id": "case_enquiry_id",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "open_dt",
+        "type": "timestamp",
+        "info": {
+          "type_override": "timestamp"
+        }
+      },
+      {
+        "id": "sla_target_dt",
+        "type": "timestamp",
+        "info": {
+          "type_override": "timestamp"
+        }
+      },
+      {
+        "id": "closed_dt",
+        "type": "timestamp",
+        "info": {
+          "type_override": "timestamp"
+        }
+      },
+      {
+        "id": "on_time",
+        "type": "text"
+      },
+      {
+        "id": "case_status",
+        "type": "text"
+      },
+      {
+        "id": "closure_reason",
+        "type": "text"
+      },
+      {
+        "id": "case_title",
+        "type": "text"
+      },
+      {
+        "id": "subject",
+        "type": "text"
+      },
+      {
+        "id": "reason",
+        "type": "text"
+      },
+      {
+        "id": "type",
+        "type": "text"
+      },
+      {
+        "id": "queue",
+        "type": "text"
+      },
+      {
+        "id": "department",
+        "type": "text"
+      },
+      {
+        "id": "submitted_photo",
+        "type": "text"
+      },
+      {
+        "id": "closed_photo",
+        "type": "text"
+      },
+      {
+        "id": "location",
+        "type": "text"
+      },
+      {
+        "id": "fire_district",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "pwd_district",
+        "type": "text"
+      },
+      {
+        "id": "city_council_district",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "police_district",
+        "type": "text"
+      },
+      {
+        "id": "neighborhood",
+        "type": "text"
+      },
+      {
+        "id": "neighborhood_services_district",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "ward",
+        "type": "text"
+      },
+      {
+        "id": "precinct",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "location_street_name",
+        "type": "text"
+      },
+      {
+        "id": "location_zipcode",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "latitude",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "longitude",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "geom_4326",
+        "type": "text"
+      },
+      {
+        "id": "source",
+        "type": "text"
+      }
+    ],
+    "returned_rows": 0,
+    "local_path": "data/civic/inventory/responses/ckan-bdae89c8-d4ce-40e9-a6e1-a5203953a2e0-schema.json",
+    "local_sha256": "7bdec08bb02cb8d8b63868b9f9c6f4a0e05469d4b94ae955cc1ea24b40459dfb"
+  },
+  {
+    "id": "ckan-94b499d9-712a-4d2a-b790-7ceec5c9c4b1-schema",
+    "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=94b499d9-712a-4d2a-b790-7ceec5c9c4b1&limit=0",
+    "name": "Historical 311 empty datastore check",
+    "role": "additional_schema_or_data",
+    "parent": "boston-311",
+    "checked_at_utc": "2026-10-24T15:14:11.458872+00:00",
+    "http_status": 200,
+    "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=94b499d9-712a-4d2a-b790-7ceec5c9c4b1&limit=0",
+    "content_type": "application/json;charset=utf-8",
+    "curl_exit_code": 0,
+    "response_bytes": 2222,
+    "content_length": "2222",
+    "etag": null,
+    "last_modified": null,
+    "response_sha256": "390f20da464e46dea89d4b751305d1548443bbe8f28b6f78def7a97a68481075",
+    "error": null,
+    "access": "fetched",
+    "format": "json",
+    "retention": "complete_response_not_necessarily_complete_dataset",
+    "top_level_keys": [
+      "help",
+      "success",
+      "result"
+    ],
+    "reported_total": 0,
+    "fields": [
+      {
+        "id": "_id",
+        "type": "int"
+      },
+      {
+        "id": "case_enquiry_id",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "open_dt",
+        "type": "timestamp",
+        "info": {
+          "type_override": "timestamp"
+        }
+      },
+      {
+        "id": "sla_target_dt",
+        "type": "timestamp",
+        "info": {
+          "type_override": "timestamp"
+        }
+      },
+      {
+        "id": "closed_dt",
+        "type": "timestamp",
+        "info": {
+          "type_override": "timestamp"
+        }
+      },
+      {
+        "id": "on_time",
+        "type": "text"
+      },
+      {
+        "id": "case_status",
+        "type": "text"
+      },
+      {
+        "id": "closure_reason",
+        "type": "text"
+      },
+      {
+        "id": "case_title",
+        "type": "text"
+      },
+      {
+        "id": "subject",
+        "type": "text"
+      },
+      {
+        "id": "reason",
+        "type": "text"
+      },
+      {
+        "id": "type",
+        "type": "text"
+      },
+      {
+        "id": "queue",
+        "type": "text"
+      },
+      {
+        "id": "department",
+        "type": "text"
+      },
+      {
+        "id": "submitted_photo",
+        "type": "text"
+      },
+      {
+        "id": "closed_photo",
+        "type": "text"
+      },
+      {
+        "id": "location",
+        "type": "text"
+      },
+      {
+        "id": "fire_district",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "pwd_district",
+        "type": "text"
+      },
+      {
+        "id": "city_council_district",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "police_district",
+        "type": "text"
+      },
+      {
+        "id": "neighborhood",
+        "type": "text"
+      },
+      {
+        "id": "neighborhood_services_district",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "ward",
+        "type": "text"
+      },
+      {
+        "id": "precinct",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "location_street_name",
+        "type": "text"
+      },
+      {
+        "id": "location_zipcode",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "latitude",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "longitude",
+        "type": "numeric",
+        "info": {
+          "type_override": "numeric"
+        }
+      },
+      {
+        "id": "geom_4326",
+        "type": "text"
+      },
+      {
+        "id": "source",
+        "type": "text"
+      }
+    ],
+    "returned_rows": 0,
+    "local_path": "data/civic/inventory/responses/ckan-94b499d9-712a-4d2a-b790-7ceec5c9c4b1-schema.json",
+    "local_sha256": "390f20da464e46dea89d4b751305d1548443bbe8f28b6f78def7a97a68481075"
+  }
+]

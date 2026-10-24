@@ -10,6 +10,11 @@ Mirror of the **Civic Action** track from the official Hackachusetts data portal
 
 ## What's here
 
+The expanded [source inventory](inventory/README.md) covers all 74 Civic resources,
+the five challenge subsets, 43 Boston-family resources, and 133 E2C assets. Use the
+[searchable local catalog](inventory/index.html) to open full files, previews,
+schemas, reports, and access results.
+
 ```
 data/civic/
 ├── CATALOG.md              # this file
@@ -44,6 +49,8 @@ challenge; they are kept zipped to avoid duplicating files.
   sites, long PDFs, language barriers, multi-agency application flows.
 - **More Responsive Neighborhood Services** — 311-style reporting where volume
   hides patterns and makes it hard to prioritize and show progress.
+- **Stronger Community Emergency Readiness** — trusted alerts, local resources,
+  preparedness, and coordination across agencies and community organizations.
 
 **Challenges**
 | Code | Title | Framing | Direction |

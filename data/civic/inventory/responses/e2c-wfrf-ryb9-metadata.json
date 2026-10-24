@@ -1,0 +1,299 @@
+{
+  "id" : "wfrf-ryb9",
+  "name" : "Licensed Residential and Placement (R&P) Programs",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "attributionLink" : "https://www.mass.gov/lists/data-on-licensed-and-funded-child-care-programs",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1769536262,
+  "description" : "The Department of Early Education and Care (EEC) licenses certain Residential Programs, Foster Care Placement Agencies, and Adoption Agencies in the Commonwealth of Massachusetts. This dataset provides a count of the number of residential programs, foster care placement agencies, and adoption agencies licensed by EEC, along with their capacity. For more information about residential programs and placement agencies, see <a href=\"https://www.mass.gov/info-details/learn-about-residential-programs-placement-agencies\" target=\"_blank\" rel=\"noopener noreferrer\">EEC's webpage about residential and placement programs</a>.  \n\nThis dataset is part of <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d\" target=\"_blank\" rel=\"noopener noreferrer\">EEC's Key Performance Indicator (KPI) Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 55,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41893762,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1769537266,
+  "publicationGroup" : 20244509,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790016322,
+  "rowsUpdatedBy" : "m5tk-n3hd",
+  "tableId" : 20244509,
+  "totalTimesRated" : 0,
+  "viewCount" : 620,
+  "viewLastModified" : 1790016321,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1770993450,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7353290,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1770993306,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1770993450,
+      "failureCount" : 0,
+      "startedAt" : 1770993450,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 625358594,
+    "name" : "DATA_LOAD_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Refresh date.",
+    "fieldName" : "data_load_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 164859437,
+    "cachedContents" : {
+      "non_null" : "45",
+      "largest" : "2026-09-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-08-01T00:00:00.000",
+        "count" : "15"
+      }, {
+        "item" : "2026-07-01T00:00:00.000",
+        "count" : "15"
+      }, {
+        "item" : "2026-09-01T00:00:00.000",
+        "count" : "15"
+      } ],
+      "smallest" : "2026-07-01T00:00:00.000",
+      "count" : "45",
+      "cardinality" : "45"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 625358593,
+    "name" : "LICENSING_REGION",
+    "dataTypeName" : "text",
+    "description" : "Regional office that oversees program’s licensing.",
+    "fieldName" : "licensing_region",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164859436,
+    "cachedContents" : {
+      "non_null" : "45",
+      "largest" : "Western",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Western",
+        "count" : "9"
+      }, {
+        "item" : "Southeast and Cape",
+        "count" : "9"
+      }, {
+        "item" : "Metro Boston",
+        "count" : "9"
+      }, {
+        "item" : "Northeast",
+        "count" : "9"
+      }, {
+        "item" : "Central",
+        "count" : "9"
+      } ],
+      "smallest" : "Central",
+      "count" : "45",
+      "cardinality" : "45"
+    },
+    "format" : { }
+  }, {
+    "id" : 625358592,
+    "name" : "PROGRAM_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Types of Residential Placement Programs: Residential Care, Foster Care Agency, or Adoption Agency.",
+    "fieldName" : "program_type",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164859435,
+    "cachedContents" : {
+      "non_null" : "45",
+      "largest" : "Residential Care",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Adoption Agency",
+        "count" : "15"
+      }, {
+        "item" : "Residential Care",
+        "count" : "15"
+      }, {
+        "item" : "Foster Care Agency",
+        "count" : "15"
+      } ],
+      "smallest" : "Adoption Agency",
+      "count" : "45",
+      "cardinality" : "45"
+    },
+    "format" : { }
+  }, {
+    "id" : 625358591,
+    "name" : "PROVIDER_COUNT",
+    "dataTypeName" : "number",
+    "description" : "The number of programs licensed by EEC.",
+    "fieldName" : "provider_count",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164859434,
+    "cachedContents" : {
+      "non_null" : "45",
+      "largest" : "89",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3",
+        "count" : "9"
+      }, {
+        "item" : "6",
+        "count" : "4"
+      }, {
+        "item" : "51",
+        "count" : "4"
+      }, {
+        "item" : "60",
+        "count" : "3"
+      }, {
+        "item" : "74",
+        "count" : "3"
+      }, {
+        "item" : "10",
+        "count" : "3"
+      }, {
+        "item" : "2",
+        "count" : "3"
+      }, {
+        "item" : "11",
+        "count" : "3"
+      }, {
+        "item" : "16",
+        "count" : "3"
+      }, {
+        "item" : "12",
+        "count" : "3"
+      }, {
+        "item" : "7",
+        "count" : "2"
+      }, {
+        "item" : "50",
+        "count" : "2"
+      }, {
+        "item" : "87",
+        "count" : "2"
+      }, {
+        "item" : "89",
+        "count" : "1"
+      } ],
+      "smallest" : "2",
+      "count" : "45",
+      "cardinality" : "45"
+    },
+    "format" : { }
+  }, {
+    "id" : 625358590,
+    "name" : "LICENSED_CAPACITY",
+    "dataTypeName" : "number",
+    "description" : "The total number of children that a program can serve at a given time. Note: 1) Licensed capacity by age is not available for Family Child Care programs or Group and School Age programs with a capacity of 10 or fewer children. 2) Family Child Care programs' license capacity usually start at 6 and vary between 6-10. In some cases, a program cannot be approved to care for 6 children due to factors such as lack of sufficient space. 3) Classrooms in Group and School Age programs often overlap age groups, so capacity by age will not equal licensed capacity. For instance, if a preschool program uses the same space as the after-school school-age program, both preschool and after school capacities would be listed, but both groups cannot be in attendance at the same time because they occupy the same space, so licensed capacity would be lower than the sum of capacity by age.",
+    "fieldName" : "licensed_capacity",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164859433,
+    "cachedContents" : {
+      "non_null" : "15",
+      "largest" : "1609",
+      "null" : "30",
+      "top" : [ {
+        "item" : "1173",
+        "count" : "3"
+      }, {
+        "item" : "812",
+        "count" : "3"
+      }, {
+        "item" : "888",
+        "count" : "2"
+      }, {
+        "item" : "1591",
+        "count" : "2"
+      }, {
+        "item" : "757",
+        "count" : "2"
+      }, {
+        "item" : "753",
+        "count" : "1"
+      }, {
+        "item" : "1609",
+        "count" : "1"
+      }, {
+        "item" : "894",
+        "count" : "1"
+      } ],
+      "smallest" : "753",
+      "count" : "45",
+      "cardinality" : "45"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Monthly",
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-early-education-and-care"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "licensed childcare", "early childhood", "daycare", "licensed", "infants", "toddlers", "prek", "preschool", "capacity", "provider", "funded" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

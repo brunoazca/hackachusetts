@@ -1,0 +1,283 @@
+{
+ "extent": {
+  "ymin": 884240.96759999893,
+  "xmin": 220391.71299999999,
+  "ymax": 909753.4486000021,
+  "xmax": 241850.5123,
+  "spatialReference": {
+   "falseM": -100000,
+   "xyTolerance": 0.001,
+   "mUnits": 10000,
+   "zUnits": 1,
+   "latestWkid": 26986,
+   "zTolerance": 2,
+   "wkid": 26986,
+   "xyUnits": 122610652.811951116,
+   "mTolerance": 0.001,
+   "falseX": -36530900,
+   "falseY": -28803200,
+   "falseZ": 0
+  }
+ },
+ "maxRecordCount": 2000,
+ "datesInUnknownTimezone": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "type": "Feature Layer",
+ "maxSelectionCount": 2000,
+ "subtypes": [],
+ "relationships": [],
+ "cimVersion": "3.7.0",
+ "isDataArchived": false,
+ "id": 0,
+ "archivingInfo": {
+  "startArchivingMoment": -1,
+  "supportsQueryWithHistoricMoment": false
+ },
+ "spatialReference": {
+  "falseM": -100000,
+  "xyTolerance": 0.001,
+  "mUnits": 10000,
+  "zUnits": 1,
+  "latestWkid": 26986,
+  "zTolerance": 2,
+  "wkid": 26986,
+  "xyUnits": 122610652.811951116,
+  "mTolerance": 0.001,
+  "falseX": -36530900,
+  "falseY": -28803200,
+  "falseZ": 0
+ },
+ "subtypeFieldName": null,
+ "supportsStatistics": true,
+ "hasLastEditTime": false,
+ "standardMaxRecordCount": 32000,
+ "isDataVersioned": false,
+ "supportsAdvancedQueries": true,
+ "parentLayer": null,
+ "subLayers": [],
+ "currentVersion": 12.1,
+ "referenceScale": 0,
+ "canScaleSymbols": false,
+ "name": "MBTA Rapid Transit Stops",
+ "displayField": "STATION",
+ "fields": [
+  {
+   "nullable": false,
+   "domain": null,
+   "name": "OBJECTID",
+   "alias": "OBJECTID_1",
+   "type": "esriFieldTypeOID"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "STATION",
+   "length": 40,
+   "alias": "STATION",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "LINE",
+   "length": 12,
+   "alias": "LINE",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "TERMINUS",
+   "length": 1,
+   "alias": "TERMINUS",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "ROUTE",
+   "length": 80,
+   "alias": "ROUTE",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "SHAPE",
+   "alias": "Shape",
+   "type": "esriFieldTypeGeometry"
+  }
+ ],
+ "maxRecordCountFactor": 1,
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "useStandardizedQueries": true,
+ "sourceSpatialReference": {
+  "falseM": 0,
+  "xyTolerance": 0.001,
+  "mUnits": 1,
+  "zUnits": 1,
+  "latestWkid": 26986,
+  "zTolerance": 0.001,
+  "wkid": 26986,
+  "xyUnits": 10000,
+  "mTolerance": 0.001,
+  "falseX": -36530900,
+  "falseY": -28803200,
+  "falseZ": 0
+ },
+ "description": "The MBTA Rapid Transit Station layers represents the station stops on the five subway, streetcar/trolley and Silver Line bus lines in the Massachusetts Bay Transportation Authority\u2019s rapid transit rail network. Stations are contained in a point feature class named MBTA_NODE. The five \u2018T\u2019 lines - Blue, Green, Orange, Red and Silver - are represented with linework in the layer MBTA_ARC. The layers were developed by the Central Transportation Planning Staff (CTPS), with additional editing by MassGIS based on current information from mbta.com. The MBTA Commuter Rail lines are included in the TRAINS_ARC layer. It should be noted that the Silver Line actually consists of buses, not trains, but the line is included in this layer because the MBTA includes it as part of its Subway system (see http://www.mbta.com/schedules_and_maps/subway/).",
+ "canModifyLayer": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "standardMaxRecordCountNoGeometry": 32000,
+ "indexes": [
+  {
+   "name": "R968747_SDE_ROWID_UK",
+   "isUnique": true,
+   "description": "",
+   "fields": "OBJECTID",
+   "isAscending": true
+  },
+  {
+   "name": "A36945_IX1",
+   "isUnique": true,
+   "description": "",
+   "fields": "SHAPE",
+   "isAscending": true
+  }
+ ],
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "supportsDatumTransformation": true,
+ "minScale": 2000000,
+ "supportsDynamicLegends": true,
+ "hasAttachments": false,
+ "advancedQueryCapabilities": {
+  "supportsSqlExpression": true,
+  "supportsQueryWithResultType": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsSqlFormat": false,
+  "useStandardizedQueries": true,
+  "supportsResultPaginationToken": false,
+  "supportsQueryWithCacheHint": false,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsQueryWithLodSR": false,
+  "supportsPagination": true,
+  "supportsMaxRecordCountFactor": false,
+  "supportsStatistics": true,
+  "supportsTrueCurve": true,
+  "supportsOrderBy": true,
+  "supportsLod": false,
+  "supportsQueryWithDistance": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsReturningQueryExtent": true,
+  "supportsDistinct": true,
+  "supportsTimeRelation": true,
+  "supportsQueryAnalytic": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true
+ },
+ "subtypeField": null,
+ "supportsCoordinatesQuantization": true,
+ "capabilities": "Map,Query,Data",
+ "maxScale": 150001,
+ "supportsExceedsLimitStatistics": true,
+ "defaultVisibility": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsAsync": false,
+  "supportsLinearRegression": true,
+  "supportsPercentileAnalytic": true
+ },
+ "hasMetadata": true,
+ "tileMaxRecordCount": 8000,
+ "typeIdField": null,
+ "defaultSubtypeCode": null,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "hasLabels": true,
+ "drawingInfo": {
+  "renderer": {
+   "symbol": {
+    "imageData": "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAArElEQVQYlWNhIABYYIyGhgYBd3f3JC4uLqHLly9vjImJOQ1XEBoayhwTE7NGWVnZGcRXVlbOXbVqlUdYWNhxsAJ7e3szJSUlsCQIcHNz82lra0cwMDBAFDAwMLz9+fPnXw4ODmaYol+/fn2GW5GTk3PL2tq6X0NDo4idnZ3p4cOHl65fvz4ZxZGGhoalK1asWMLCwiL99u3b3enp6b9RFIBARETERQYGBhCGAwCrijPDT05aFwAAAABJRU5ErkJggg==",
+    "yoffset": 0,
+    "width": 6,
+    "xoffset": 0,
+    "angle": 0,
+    "type": "esriPMS",
+    "contentType": "image/png",
+    "url": "857d057ec85ed33a7a5607f453f84ea2",
+    "height": 6
+   },
+   "type": "simple"
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": [{
+   "symbol": {
+    "backgroundColor": null,
+    "kerning": true,
+    "color": [
+     0,
+     0,
+     0,
+     255
+    ],
+    "yoffset": 0,
+    "xoffset": 0,
+    "haloColor": [
+     255,
+     255,
+     255,
+     255
+    ],
+    "type": "esriTS",
+    "borderLineColor": null,
+    "borderLineSize": null,
+    "horizontalAlignment": "left",
+    "haloSize": 0.5,
+    "angle": 0,
+    "rightToLeft": false,
+    "verticalAlignment": "baseline",
+    "font": {
+     "size": 6,
+     "weight": "bold",
+     "style": "normal",
+     "family": "Arial",
+     "decoration": "none"
+    }
+   },
+   "stackLabel": true,
+   "stackRowLength": 24,
+   "maxScale": 0,
+   "allowOverlapOfFeatureInterior": "avoid",
+   "deconflictionStrategy": "dynamic",
+   "priority": 6,
+   "labelExpression": "UCASE([STATION])",
+   "labelPlacement": "esriServerPointLabelPlacementAboveRight",
+   "removeDuplicates": "all",
+   "removeDuplicatesDistance": 0,
+   "name": "Terminus",
+   "where": "TERMINUS = 'Y'",
+   "minScale": 0,
+   "stackAlignment": "dynamic",
+   "useCodedValues": true
+  }]
+ },
+ "geometryField": {
+  "name": "SHAPE",
+  "alias": "Shape",
+  "type": "esriFieldTypeGeometry"
+ },
+ "copyrightText": "Central Transportation Planning Staff, mbta.com, MassGIS",
+ "geometryType": "esriGeometryPoint"
+}

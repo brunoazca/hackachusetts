@@ -1,0 +1,103 @@
+{
+  "id" : "vdnx-8f88",
+  "name" : "Regional Occupation Alignment Dashboard (ROAD): Resource Page",
+  "assetType" : "href",
+  "attribution" : "Department of Economic Research",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1774383351,
+  "description" : "This webpage serves as a landing page for the Regional Occupation Alignment Dashboard (ROAD), a tool created and maintained by the Department of Economic Research at the Executive Office of Labor and Workforce Development. It includes an introduction to the dashboard, data sources, methodology, and a user guide. It also provides general information about the Opportunity Star System, the Training Pipeline Alignment, and guidance for how to use the dashboard in combination with local knowledge and regional context.\n\nThe Regional Occupation Alignment Dashboard identifies high-demand, high-wage occupations and highlights how local education and training programs align with projected job openings across Massachusetts and its workforce regions. It is designed to help state and regional leaders in workforce development, education, and policy make data-driven decisions about workforce training and education.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 42022572,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1774383400,
+  "publicationGroup" : 20316808,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1774383351,
+  "tableId" : 20316808,
+  "totalTimesRated" : 0,
+  "viewCount" : 229,
+  "viewLastModified" : 1774453089,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1774558409,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7404137,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1774558392,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1774558410,
+      "failureCount" : 0,
+      "startedAt" : 1774558409,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "URL" : "https://www.mass.gov/info-details/regional-occupation-alignment-dashboard-road"
+      },
+      "title" : "Regional Occupation Alignment Dashboard"
+    } ],
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-economic-research"
+      }
+    },
+    "accessPoints" : {
+      "URL" : "https://www.mass.gov/info-details/regional-occupation-alignment-dashboard-road"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "labor", "workforce", "openings", "growth", "salary", "workforce skills cabinet", "workforce development area", "typical entry education", "sector", "pipeline" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

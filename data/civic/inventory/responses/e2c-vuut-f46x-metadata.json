@@ -1,0 +1,99 @@
+{
+  "id" : "vuut-f46x",
+  "name" : "Reducing chronic absenteeism in our schools",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1705067385,
+  "description" : "This data story illustrates the scope of chronic absenteeism in Massachusetts, how it affects student success, and evidence-based strategies to improve student attendance.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40358291,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1705429481,
+  "publicationGroup" : 19426845,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1705067385,
+  "tableId" : 19426845,
+  "totalTimesRated" : 0,
+  "viewCount" : 37409,
+  "viewLastModified" : 1790780396,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1758297215,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7128630,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1758297203,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1758297215,
+      "failureCount" : 0,
+      "startedAt" : 1758297215,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "This data story illustrates the scope of chronic absenteeism in Massachusetts, how it affects student success, and evidence-based strategies to improve student attendance.",
+      "title" : "Reducing Chronic Absenteeism in Our Schools"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "attendance", "chronic absence", "absenteeism", "accountability", "k-12", "dropout" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

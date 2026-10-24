@@ -1,0 +1,1150 @@
+{
+  "id" : "cmm7-ttbg",
+  "name" : "Dropout Report",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1702500971,
+  "description" : "This dataset provides the number and percentage of Massachusetts public high school students who dropped out of high school since 2008. It also includes the percentage of dropouts by grade.\n\nDropout rate is calculated as the percentage of students in a given grade who dropped out of school between July 1 and June 30 prior to the listed year and who did not return to school by the following October 1. Dropouts are defined as students who leave school prior to graduation for reasons other than transfer to another school. Dropout rates are not reported for any student group where the number of students is less than 6.\n\nEconomically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noopener noreferrer\">DESE Researcher's Guide</a> for more information.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/dropout.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Dropout Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 450,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40488839,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1711046850,
+  "publicationGroup" : 19397174,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1773072720,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19485203,
+  "totalTimesRated" : 0,
+  "viewCount" : 1729,
+  "viewLastModified" : 1786391249,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1714158894,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6291348,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1714158825,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1714158894,
+      "failureCount" : 0,
+      "startedAt" : 1714158894,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 591076974,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150416828,
+    "cachedContents" : {
+      "non_null" : "159351",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024",
+        "count" : "9261"
+      }, {
+        "item" : "2025",
+        "count" : "9217"
+      }, {
+        "item" : "2023",
+        "count" : "9207"
+      }, {
+        "item" : "2022",
+        "count" : "9192"
+      }, {
+        "item" : "2020",
+        "count" : "9149"
+      }, {
+        "item" : "2019",
+        "count" : "9144"
+      }, {
+        "item" : "2021",
+        "count" : "9059"
+      }, {
+        "item" : "2018",
+        "count" : "8994"
+      }, {
+        "item" : "2016",
+        "count" : "8958"
+      }, {
+        "item" : "2017",
+        "count" : "8925"
+      }, {
+        "item" : "2015",
+        "count" : "8839"
+      }, {
+        "item" : "2014",
+        "count" : "8756"
+      }, {
+        "item" : "2013",
+        "count" : "8597"
+      }, {
+        "item" : "2012",
+        "count" : "8574"
+      }, {
+        "item" : "2011",
+        "count" : "8494"
+      }, {
+        "item" : "2010",
+        "count" : "8428"
+      }, {
+        "item" : "2009",
+        "count" : "8279"
+      }, {
+        "item" : "2008",
+        "count" : "8278"
+      } ],
+      "smallest" : "2008",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076975,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150416827,
+    "cachedContents" : {
+      "non_null" : "159351",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "7939"
+      }, {
+        "item" : "02810000",
+        "count" : "2631"
+      }, {
+        "item" : "03480000",
+        "count" : "1880"
+      }, {
+        "item" : "01490000",
+        "count" : "1468"
+      }, {
+        "item" : "00440000",
+        "count" : "1349"
+      }, {
+        "item" : "01630000",
+        "count" : "1216"
+      }, {
+        "item" : "00610000",
+        "count" : "910"
+      }, {
+        "item" : "01280000",
+        "count" : "902"
+      }, {
+        "item" : "02010000",
+        "count" : "894"
+      }, {
+        "item" : "01530000",
+        "count" : "861"
+      }, {
+        "item" : "00950000",
+        "count" : "842"
+      }, {
+        "item" : "01600000",
+        "count" : "812"
+      }, {
+        "item" : "01760000",
+        "count" : "776"
+      }, {
+        "item" : "02360000",
+        "count" : "773"
+      }, {
+        "item" : "03250000",
+        "count" : "755"
+      }, {
+        "item" : "02430000",
+        "count" : "749"
+      }, {
+        "item" : "03100000",
+        "count" : "738"
+      }, {
+        "item" : "02390000",
+        "count" : "737"
+      }, {
+        "item" : "02070000",
+        "count" : "732"
+      }, {
+        "item" : "02740000",
+        "count" : "704"
+      } ],
+      "smallest" : "00000000",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076976,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150416826,
+    "cachedContents" : {
+      "non_null" : "159351",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "7939"
+      }, {
+        "item" : "Springfield",
+        "count" : "2631"
+      }, {
+        "item" : "Worcester",
+        "count" : "1880"
+      }, {
+        "item" : "Lawrence",
+        "count" : "1468"
+      }, {
+        "item" : "Brockton",
+        "count" : "1349"
+      }, {
+        "item" : "Lynn",
+        "count" : "1216"
+      }, {
+        "item" : "Chicopee",
+        "count" : "910"
+      }, {
+        "item" : "Haverhill",
+        "count" : "902"
+      }, {
+        "item" : "New Bedford",
+        "count" : "894"
+      }, {
+        "item" : "Leominster",
+        "count" : "861"
+      }, {
+        "item" : "Fall River",
+        "count" : "842"
+      }, {
+        "item" : "Lowell",
+        "count" : "812"
+      }, {
+        "item" : "Medford",
+        "count" : "776"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "773"
+      }, {
+        "item" : "Westfield",
+        "count" : "755"
+      }, {
+        "item" : "Quincy",
+        "count" : "749"
+      }, {
+        "item" : "Wareham",
+        "count" : "738"
+      }, {
+        "item" : "Plymouth",
+        "count" : "737"
+      }, {
+        "item" : "Newton",
+        "count" : "732"
+      }, {
+        "item" : "Somerville",
+        "count" : "704"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076977,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150416825,
+    "cachedContents" : {
+      "non_null" : "159351",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "252"
+      }, {
+        "item" : "00000000",
+        "count" : "252"
+      }, {
+        "item" : "02430000",
+        "count" : "252"
+      }, {
+        "item" : "00350537",
+        "count" : "252"
+      }, {
+        "item" : "00200505",
+        "count" : "252"
+      }, {
+        "item" : "02010000",
+        "count" : "252"
+      }, {
+        "item" : "00440000",
+        "count" : "252"
+      }, {
+        "item" : "00200000",
+        "count" : "252"
+      }, {
+        "item" : "00440505",
+        "count" : "252"
+      }, {
+        "item" : "02010505",
+        "count" : "252"
+      }, {
+        "item" : "02430505",
+        "count" : "252"
+      }, {
+        "item" : "02930000",
+        "count" : "251"
+      }, {
+        "item" : "00160000",
+        "count" : "251"
+      }, {
+        "item" : "02930505",
+        "count" : "251"
+      }, {
+        "item" : "00160505",
+        "count" : "251"
+      }, {
+        "item" : "00350575",
+        "count" : "251"
+      }, {
+        "item" : "07300000",
+        "count" : "250"
+      }, {
+        "item" : "02810000",
+        "count" : "250"
+      }, {
+        "item" : "01010505",
+        "count" : "250"
+      }, {
+        "item" : "01010000",
+        "count" : "250"
+      } ],
+      "smallest" : "00000000",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076978,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150416824,
+    "cachedContents" : {
+      "non_null" : "159351",
+      "largest" : "Worcester Technical High",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "486"
+      }, {
+        "item" : "Tri-County Regional Vocational Technical",
+        "count" : "474"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "468"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "458"
+      }, {
+        "item" : "Norfolk County Agricultural",
+        "count" : "446"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "436"
+      }, {
+        "item" : "Brockton",
+        "count" : "252"
+      }, {
+        "item" : "Quincy",
+        "count" : "252"
+      }, {
+        "item" : "Quincy High",
+        "count" : "252"
+      }, {
+        "item" : "New Bedford High",
+        "count" : "252"
+      }, {
+        "item" : "New Bedford",
+        "count" : "252"
+      }, {
+        "item" : "Boston",
+        "count" : "252"
+      }, {
+        "item" : "Barnstable High",
+        "count" : "252"
+      }, {
+        "item" : "Brockton High",
+        "count" : "252"
+      }, {
+        "item" : "Madison Park Technical Vocational High School",
+        "count" : "252"
+      }, {
+        "item" : "State",
+        "count" : "252"
+      }, {
+        "item" : "Barnstable",
+        "count" : "252"
+      }, {
+        "item" : "O'Bryant School of Math & Science",
+        "count" : "251"
+      }, {
+        "item" : "Taunton",
+        "count" : "251"
+      }, {
+        "item" : "Attleboro",
+        "count" : "251"
+      } ],
+      "smallest" : "21st Century Skills Academy",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076987,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151987448,
+    "cachedContents" : {
+      "non_null" : "159351",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "89886"
+      }, {
+        "item" : "District",
+        "count" : "69213"
+      }, {
+        "item" : "State",
+        "count" : "252"
+      } ],
+      "smallest" : "District",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076979,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150416823,
+    "cachedContents" : {
+      "non_null" : "159351",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "12603"
+      }, {
+        "item" : "High Needs",
+        "count" : "12589"
+      }, {
+        "item" : "Male",
+        "count" : "12586"
+      }, {
+        "item" : "Female",
+        "count" : "12575"
+      }, {
+        "item" : "White",
+        "count" : "12565"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "12511"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "12502"
+      }, {
+        "item" : "Black or African American",
+        "count" : "12310"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "11834"
+      }, {
+        "item" : "Asian",
+        "count" : "11581"
+      }, {
+        "item" : "English Learners",
+        "count" : "10871"
+      }, {
+        "item" : "Low Income",
+        "count" : "7607"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "7530"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "4961"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "4726"
+      } ],
+      "smallest" : "All Students",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076980,
+    "name" : "ENROLL_CNT_ALL",
+    "dataTypeName" : "number",
+    "description" : "All (Grade 9-12) Enrollment Count",
+    "fieldName" : "enroll_cnt_all",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150416822,
+    "cachedContents" : {
+      "non_null" : "159351",
+      "largest" : "295937",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "8355"
+      }, {
+        "item" : "2",
+        "count" : "5276"
+      }, {
+        "item" : "3",
+        "count" : "3760"
+      }, {
+        "item" : "4",
+        "count" : "3279"
+      }, {
+        "item" : "5",
+        "count" : "2862"
+      }, {
+        "item" : "6",
+        "count" : "2332"
+      }, {
+        "item" : "7",
+        "count" : "2304"
+      }, {
+        "item" : "8",
+        "count" : "2149"
+      }, {
+        "item" : "9",
+        "count" : "1910"
+      }, {
+        "item" : "10",
+        "count" : "1767"
+      }, {
+        "item" : "11",
+        "count" : "1597"
+      }, {
+        "item" : "13",
+        "count" : "1465"
+      }, {
+        "item" : "12",
+        "count" : "1439"
+      }, {
+        "item" : "14",
+        "count" : "1347"
+      }, {
+        "item" : "15",
+        "count" : "1257"
+      }, {
+        "item" : "16",
+        "count" : "1172"
+      }, {
+        "item" : "17",
+        "count" : "1142"
+      }, {
+        "item" : "18",
+        "count" : "1049"
+      }, {
+        "item" : "20",
+        "count" : "1044"
+      }, {
+        "item" : "19",
+        "count" : "1043"
+      } ],
+      "smallest" : "0",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076982,
+    "name" : "DRPOUT_CNT_ALL",
+    "dataTypeName" : "number",
+    "description" : "All (Grade 9-12) Dropout Count",
+    "fieldName" : "drpout_cnt_all",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150416821,
+    "cachedContents" : {
+      "non_null" : "135149",
+      "largest" : "9959",
+      "null" : "24202",
+      "top" : [ {
+        "item" : "0",
+        "count" : "41847"
+      }, {
+        "item" : "1",
+        "count" : "19935"
+      }, {
+        "item" : "2",
+        "count" : "13058"
+      }, {
+        "item" : "3",
+        "count" : "9468"
+      }, {
+        "item" : "4",
+        "count" : "7127"
+      }, {
+        "item" : "5",
+        "count" : "5733"
+      }, {
+        "item" : "6",
+        "count" : "4376"
+      }, {
+        "item" : "7",
+        "count" : "3760"
+      }, {
+        "item" : "8",
+        "count" : "3032"
+      }, {
+        "item" : "9",
+        "count" : "2539"
+      }, {
+        "item" : "10",
+        "count" : "2048"
+      }, {
+        "item" : "11",
+        "count" : "1816"
+      }, {
+        "item" : "12",
+        "count" : "1579"
+      }, {
+        "item" : "13",
+        "count" : "1372"
+      }, {
+        "item" : "14",
+        "count" : "1145"
+      }, {
+        "item" : "15",
+        "count" : "1067"
+      }, {
+        "item" : "16",
+        "count" : "836"
+      }, {
+        "item" : "17",
+        "count" : "789"
+      }, {
+        "item" : "18",
+        "count" : "763"
+      }, {
+        "item" : "19",
+        "count" : "698"
+      } ],
+      "smallest" : "0",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : { }
+  }, {
+    "id" : 591076981,
+    "name" : "DRPOUT_PCT_ALL",
+    "dataTypeName" : "number",
+    "description" : "All (Grade 9-12) Dropout Percent",
+    "fieldName" : "drpout_pct_all",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150416829,
+    "cachedContents" : {
+      "non_null" : "135149",
+      "largest" : "0.907",
+      "null" : "24202",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "41852"
+      }, {
+        "item" : "0.005",
+        "count" : "2813"
+      }, {
+        "item" : "0.003",
+        "count" : "2795"
+      }, {
+        "item" : "0.006",
+        "count" : "2747"
+      }, {
+        "item" : "0.008",
+        "count" : "2637"
+      }, {
+        "item" : "0.004",
+        "count" : "2626"
+      }, {
+        "item" : "0.002",
+        "count" : "2493"
+      }, {
+        "item" : "0.007",
+        "count" : "2486"
+      }, {
+        "item" : "0.009",
+        "count" : "2412"
+      }, {
+        "item" : "0.01",
+        "count" : "2367"
+      }, {
+        "item" : "0.011",
+        "count" : "2215"
+      }, {
+        "item" : "0.013",
+        "count" : "2113"
+      }, {
+        "item" : "0.014",
+        "count" : "2078"
+      }, {
+        "item" : "0.012",
+        "count" : "1961"
+      }, {
+        "item" : "0.015",
+        "count" : "1779"
+      }, {
+        "item" : "0.016",
+        "count" : "1770"
+      }, {
+        "item" : "0.019",
+        "count" : "1689"
+      }, {
+        "item" : "0.017",
+        "count" : "1671"
+      }, {
+        "item" : "0.02",
+        "count" : "1643"
+      }, {
+        "item" : "0.018",
+        "count" : "1612"
+      } ],
+      "smallest" : "0.0",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591076983,
+    "name" : "DRPOUT_PCT_GRD_09",
+    "dataTypeName" : "number",
+    "description" : "Grade 9 Dropout Percent",
+    "fieldName" : "drpout_pct_grd_09",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150416820,
+    "cachedContents" : {
+      "non_null" : "111452",
+      "largest" : "0.833",
+      "null" : "47899",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "64904"
+      }, {
+        "item" : "0.008",
+        "count" : "1143"
+      }, {
+        "item" : "0.006",
+        "count" : "1117"
+      }, {
+        "item" : "0.011",
+        "count" : "1116"
+      }, {
+        "item" : "0.014",
+        "count" : "1040"
+      }, {
+        "item" : "0.007",
+        "count" : "1036"
+      }, {
+        "item" : "0.009",
+        "count" : "1030"
+      }, {
+        "item" : "0.01",
+        "count" : "1029"
+      }, {
+        "item" : "0.005",
+        "count" : "1025"
+      }, {
+        "item" : "0.012",
+        "count" : "1012"
+      }, {
+        "item" : "0.004",
+        "count" : "990"
+      }, {
+        "item" : "0.013",
+        "count" : "983"
+      }, {
+        "item" : "0.016",
+        "count" : "933"
+      }, {
+        "item" : "0.019",
+        "count" : "885"
+      }, {
+        "item" : "0.02",
+        "count" : "873"
+      }, {
+        "item" : "0.015",
+        "count" : "846"
+      }, {
+        "item" : "0.018",
+        "count" : "838"
+      }, {
+        "item" : "0.017",
+        "count" : "831"
+      }, {
+        "item" : "0.029",
+        "count" : "801"
+      }, {
+        "item" : "0.024",
+        "count" : "783"
+      } ],
+      "smallest" : "0.0",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591076984,
+    "name" : "DRPOUT_PCT_GRD_10",
+    "dataTypeName" : "number",
+    "description" : "Grade 10 Dropout Percent",
+    "fieldName" : "drpout_pct_grd_10",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150416832,
+    "cachedContents" : {
+      "non_null" : "109689",
+      "largest" : "0.881",
+      "null" : "49662",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "54038"
+      }, {
+        "item" : "0.011",
+        "count" : "1281"
+      }, {
+        "item" : "0.014",
+        "count" : "1173"
+      }, {
+        "item" : "0.008",
+        "count" : "1171"
+      }, {
+        "item" : "0.007",
+        "count" : "1160"
+      }, {
+        "item" : "0.006",
+        "count" : "1123"
+      }, {
+        "item" : "0.01",
+        "count" : "1090"
+      }, {
+        "item" : "0.013",
+        "count" : "1060"
+      }, {
+        "item" : "0.016",
+        "count" : "1058"
+      }, {
+        "item" : "0.005",
+        "count" : "1032"
+      }, {
+        "item" : "0.012",
+        "count" : "1030"
+      }, {
+        "item" : "0.009",
+        "count" : "1007"
+      }, {
+        "item" : "0.019",
+        "count" : "979"
+      }, {
+        "item" : "0.02",
+        "count" : "943"
+      }, {
+        "item" : "0.015",
+        "count" : "913"
+      }, {
+        "item" : "0.017",
+        "count" : "911"
+      }, {
+        "item" : "0.022",
+        "count" : "902"
+      }, {
+        "item" : "0.029",
+        "count" : "888"
+      }, {
+        "item" : "0.018",
+        "count" : "885"
+      }, {
+        "item" : "0.023",
+        "count" : "877"
+      } ],
+      "smallest" : "0.0",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591076985,
+    "name" : "DRPOUT_PCT_GRD_11",
+    "dataTypeName" : "number",
+    "description" : "Grade 11 Dropout Percent",
+    "fieldName" : "drpout_pct_grd_11",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150416831,
+    "cachedContents" : {
+      "non_null" : "108532",
+      "largest" : "0.773",
+      "null" : "50819",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "49091"
+      }, {
+        "item" : "0.011",
+        "count" : "1272"
+      }, {
+        "item" : "0.014",
+        "count" : "1203"
+      }, {
+        "item" : "0.01",
+        "count" : "1185"
+      }, {
+        "item" : "0.009",
+        "count" : "1185"
+      }, {
+        "item" : "0.008",
+        "count" : "1178"
+      }, {
+        "item" : "0.007",
+        "count" : "1167"
+      }, {
+        "item" : "0.006",
+        "count" : "1152"
+      }, {
+        "item" : "0.012",
+        "count" : "1093"
+      }, {
+        "item" : "0.016",
+        "count" : "1079"
+      }, {
+        "item" : "0.013",
+        "count" : "1035"
+      }, {
+        "item" : "0.005",
+        "count" : "1035"
+      }, {
+        "item" : "0.02",
+        "count" : "1034"
+      }, {
+        "item" : "0.019",
+        "count" : "1034"
+      }, {
+        "item" : "0.018",
+        "count" : "1017"
+      }, {
+        "item" : "0.017",
+        "count" : "1017"
+      }, {
+        "item" : "0.022",
+        "count" : "1000"
+      }, {
+        "item" : "0.015",
+        "count" : "970"
+      }, {
+        "item" : "0.029",
+        "count" : "943"
+      }, {
+        "item" : "0.004",
+        "count" : "911"
+      } ],
+      "smallest" : "0.0",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591076986,
+    "name" : "DRPOUT_PCT_GRD_12",
+    "dataTypeName" : "number",
+    "description" : "Grade 12 Dropout Percent",
+    "fieldName" : "drpout_pct_grd_12",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150416830,
+    "cachedContents" : {
+      "non_null" : "106286",
+      "largest" : "0.881",
+      "null" : "53065",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "45790"
+      }, {
+        "item" : "0.014",
+        "count" : "1288"
+      }, {
+        "item" : "0.008",
+        "count" : "1274"
+      }, {
+        "item" : "0.011",
+        "count" : "1208"
+      }, {
+        "item" : "0.007",
+        "count" : "1207"
+      }, {
+        "item" : "0.009",
+        "count" : "1176"
+      }, {
+        "item" : "0.013",
+        "count" : "1159"
+      }, {
+        "item" : "0.006",
+        "count" : "1133"
+      }, {
+        "item" : "0.012",
+        "count" : "1129"
+      }, {
+        "item" : "0.019",
+        "count" : "1125"
+      }, {
+        "item" : "0.016",
+        "count" : "1093"
+      }, {
+        "item" : "0.01",
+        "count" : "1092"
+      }, {
+        "item" : "0.02",
+        "count" : "1055"
+      }, {
+        "item" : "0.029",
+        "count" : "1021"
+      }, {
+        "item" : "0.017",
+        "count" : "1021"
+      }, {
+        "item" : "0.018",
+        "count" : "1020"
+      }, {
+        "item" : "0.015",
+        "count" : "990"
+      }, {
+        "item" : "0.022",
+        "count" : "965"
+      }, {
+        "item" : "0.024",
+        "count" : "942"
+      }, {
+        "item" : "0.005",
+        "count" : "940"
+      } ],
+      "smallest" : "0.0",
+      "count" : "159351",
+      "cardinality" : "159351"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "dropout", "graduation", "race and ethnicity", "gender", "low income", "economically disadvantaged", "high needs", "english learners", "students with disabilities", "grade" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

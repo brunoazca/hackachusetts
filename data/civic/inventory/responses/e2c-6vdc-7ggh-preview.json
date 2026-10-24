@@ -1,0 +1,100 @@
+[{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Central","age_group":"Infant","child_count":"612"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Central","age_group":"Preschool","child_count":"916"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Central","age_group":"School Age","child_count":"1460"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Central","age_group":"Toddler","child_count":"841"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Metro","age_group":"Infant","child_count":"646"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Metro","age_group":"Preschool","child_count":"1259"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Metro","age_group":"School Age","child_count":"1607"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Metro","age_group":"Toddler","child_count":"1125"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Infant","child_count":"1064"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Preschool","child_count":"1081"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"School Age","child_count":"1626"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Toddler","child_count":"1342"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Infant","child_count":"1735"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Preschool","child_count":"2682"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Northeast","age_group":"School Age","child_count":"3839"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Toddler","child_count":"2615"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Infant","child_count":"783"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Preschool","child_count":"1415"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Southeast","age_group":"School Age","child_count":"2122"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Toddler","child_count":"1374"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Western","age_group":"Infant","child_count":"427"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Western","age_group":"Preschool","child_count":"526"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Western","age_group":"School Age","child_count":"1310"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-04-01T00:00:00.000","subsidy_region":"Western","age_group":"Toddler","child_count":"616"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Central","age_group":"Infant","child_count":"617"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Central","age_group":"Preschool","child_count":"860"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Central","age_group":"School Age","child_count":"1385"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Central","age_group":"Toddler","child_count":"818"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Metro","age_group":"Infant","child_count":"655"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Metro","age_group":"Preschool","child_count":"1174"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Metro","age_group":"School Age","child_count":"1539"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Metro","age_group":"Toddler","child_count":"1102"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Infant","child_count":"1089"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Preschool","child_count":"1016"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"School Age","child_count":"1558"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Toddler","child_count":"1266"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Infant","child_count":"1757"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Preschool","child_count":"2574"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Northeast","age_group":"School Age","child_count":"3679"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Toddler","child_count":"2513"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Infant","child_count":"748"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Preschool","child_count":"1304"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Southeast","age_group":"School Age","child_count":"2006"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Toddler","child_count":"1288"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Western","age_group":"Infant","child_count":"434"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Western","age_group":"Preschool","child_count":"472"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Western","age_group":"School Age","child_count":"1261"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-03-01T00:00:00.000","subsidy_region":"Western","age_group":"Toddler","child_count":"609"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Central","age_group":"Infant","child_count":"598"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Central","age_group":"Preschool","child_count":"773"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Central","age_group":"School Age","child_count":"1333"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Central","age_group":"Toddler","child_count":"780"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Metro","age_group":"Infant","child_count":"649"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Metro","age_group":"Preschool","child_count":"1109"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Metro","age_group":"School Age","child_count":"1456"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Metro","age_group":"Toddler","child_count":"1052"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Infant","child_count":"1071"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Preschool","child_count":"931"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"School Age","child_count":"1465"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Toddler","child_count":"1216"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Infant","child_count":"1731"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Preschool","child_count":"2451"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Northeast","age_group":"School Age","child_count":"3580"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Toddler","child_count":"2470"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Infant","child_count":"722"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Preschool","child_count":"1234"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Southeast","age_group":"School Age","child_count":"1895"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Toddler","child_count":"1219"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Western","age_group":"Infant","child_count":"413"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Western","age_group":"Preschool","child_count":"413"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Western","age_group":"School Age","child_count":"1203"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-02-01T00:00:00.000","subsidy_region":"Western","age_group":"Toddler","child_count":"583"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Central","age_group":"Infant","child_count":"583"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Central","age_group":"Preschool","child_count":"765"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Central","age_group":"School Age","child_count":"1274"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Central","age_group":"Toddler","child_count":"746"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Metro","age_group":"Infant","child_count":"634"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Metro","age_group":"Preschool","child_count":"1051"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Metro","age_group":"School Age","child_count":"1375"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Metro","age_group":"Toddler","child_count":"1017"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Infant","child_count":"1065"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Preschool","child_count":"893"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"School Age","child_count":"1415"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Metro Boston","age_group":"Toddler","child_count":"1152"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Infant","child_count":"1707"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Preschool","child_count":"2314"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Northeast","age_group":"School Age","child_count":"3447"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Northeast","age_group":"Toddler","child_count":"2441"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Infant","child_count":"723"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Preschool","child_count":"1159"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Southeast","age_group":"School Age","child_count":"1796"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Southeast","age_group":"Toddler","child_count":"1147"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Western","age_group":"Infant","child_count":"412"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Western","age_group":"Preschool","child_count":"409"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Western","age_group":"School Age","child_count":"1164"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2026-01-01T00:00:00.000","subsidy_region":"Western","age_group":"Toddler","child_count":"585"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2025-12-01T00:00:00.000","subsidy_region":"Central","age_group":"Infant","child_count":"544"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2025-12-01T00:00:00.000","subsidy_region":"Central","age_group":"Preschool","child_count":"724"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2025-12-01T00:00:00.000","subsidy_region":"Central","age_group":"School Age","child_count":"1213"}
+,{"data_load_date":"2026-08-01T00:00:00.000","month":"2025-12-01T00:00:00.000","subsidy_region":"Central","age_group":"Toddler","child_count":"707"}]

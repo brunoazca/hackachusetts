@@ -1,0 +1,495 @@
+[
+  {
+    "rows": 5000,
+    "columns": [
+      "open_date",
+      "case_topic",
+      "service_name",
+      "assigned_department",
+      "case_status",
+      "neighborhood",
+      "zip_code",
+      "on_time",
+      "city_council_district",
+      "ward"
+    ],
+    "blank_cells": {
+      "neighborhood": 7,
+      "zip_code": 10,
+      "city_council_district": 10,
+      "ward": 10,
+      "assigned_department": 3
+    },
+    "bytes": 676710,
+    "sha256": "baf1a7f0f19e168db2d8d1f3c903998a26304252dfd705356113a7fc735b20c4",
+    "id": "boston-311",
+    "path": "data/civic/datasets/boston-311/data.csv",
+    "preview_path": "data/civic/inventory/previews/boston-311.json"
+  },
+  {
+    "rows": 130,
+    "columns": [
+      "updated",
+      "effect",
+      "severity",
+      "routes",
+      "header"
+    ],
+    "blank_cells": {},
+    "bytes": 26265,
+    "sha256": "f7c5b3bd957c7781632f9755c8de98814238119df5c5994559479daeea5f88d5",
+    "id": "mbta-alerts",
+    "path": "data/civic/datasets/mbta-alerts/data.csv",
+    "preview_path": "data/civic/inventory/previews/mbta-alerts.json"
+  },
+  {
+    "rows": 8,
+    "columns": [
+      "id",
+      "name",
+      "mode",
+      "fare_class"
+    ],
+    "blank_cells": {},
+    "bytes": 378,
+    "sha256": "e7e460891025cf5e584c1921e367333a19a9d6ea74372f14c9b5d4025dc98d5b",
+    "id": "mbta-routes",
+    "path": "data/civic/datasets/mbta-routes/data.csv",
+    "preview_path": "data/civic/inventory/previews/mbta-routes.json"
+  },
+  {
+    "rows": 170,
+    "columns": [
+      "station",
+      "line",
+      "route"
+    ],
+    "blank_cells": {},
+    "bytes": 6579,
+    "sha256": "aba32080532d4f2397f30040d4e03d11a0fa70ace8c5b20df64c4a8b191672d0",
+    "id": "mbta-stations",
+    "path": "data/civic/datasets/mbta-stations/data.csv",
+    "preview_path": "data/civic/inventory/previews/mbta-stations.json"
+  },
+  {
+    "rows": 2604,
+    "columns": [
+      "municipality",
+      "population",
+      "minority_pct",
+      "limited_english_hh_pct",
+      "block_group_income",
+      "ej",
+      "criteria"
+    ],
+    "blank_cells": {
+      "block_group_income": 19
+    },
+    "bytes": 136357,
+    "sha256": "3616a34c7336da3bd7b4e7960e0dd8f9722f42305108bb7493ae113770daa557",
+    "id": "ej",
+    "path": "data/civic/datasets/ej/data.csv",
+    "preview_path": "data/civic/inventory/previews/ej.json"
+  },
+  {
+    "rows": 415,
+    "columns": [
+      "declarationDate",
+      "disasterNumber",
+      "incidentType",
+      "declarationTitle",
+      "designatedArea",
+      "declarationType"
+    ],
+    "blank_cells": {},
+    "bytes": 41038,
+    "sha256": "3314b4071a1f4d22c43025f947f16d4207320f1c6deb0256aa79a04c407cab8b",
+    "id": "fema",
+    "path": "data/civic/datasets/fema/data.csv",
+    "preview_path": "data/civic/inventory/previews/fema.json"
+  },
+  {
+    "rows": 8240,
+    "columns": [
+      "permitnumber",
+      "worktype",
+      "permittypedescr",
+      "description",
+      "declared_valuation",
+      "total_fees",
+      "issued_date",
+      "expiration_date",
+      "status",
+      "occupancytype",
+      "sq_feet",
+      "zip",
+      "ward"
+    ],
+    "blank_cells": {
+      "expiration_date": 364,
+      "ward": 1,
+      "worktype": 3,
+      "description": 3
+    },
+    "bytes": 956926,
+    "sha256": "4a7edbe786b4e9defdd1d0aef6c2560cb9a9be71868e531465556a43e4214414",
+    "id": "permits",
+    "path": "data/civic/datasets/permits/data.csv",
+    "preview_path": "data/civic/inventory/previews/permits.json"
+  },
+  {
+    "rows": 24,
+    "columns": [
+      "neighborhood",
+      "year",
+      "land_sqmi",
+      "population",
+      "hs_or_ged",
+      "bachelors",
+      "graduate_degree",
+      "poverty_universe",
+      "poverty_count"
+    ],
+    "blank_cells": {
+      "year": 1,
+      "land_sqmi": 1,
+      "population": 1,
+      "hs_or_ged": 1,
+      "bachelors": 1,
+      "graduate_degree": 1,
+      "poverty_universe": 1,
+      "poverty_count": 1
+    },
+    "bytes": 1827,
+    "sha256": "335577ffd48a1d3a0388091a90520c4654a40653a4370f426b70094dab4fe31f",
+    "id": "neighborhoods",
+    "path": "data/civic/datasets/neighborhoods/data.csv",
+    "preview_path": "data/civic/inventory/previews/neighborhoods.json"
+  },
+  {
+    "rows": 2018,
+    "columns": [
+      "case_no",
+      "status_date",
+      "status",
+      "code",
+      "value",
+      "description",
+      "city",
+      "zip",
+      "ward"
+    ],
+    "blank_cells": {
+      "description": 7,
+      "zip": 1
+    },
+    "bytes": 151856,
+    "sha256": "631096995e8e1e0b5fe7735a0fc562d991a84e2ebcc1b9c988dc96d32d36bb5b",
+    "id": "violations",
+    "path": "data/civic/datasets/violations/data.csv",
+    "preview_path": "data/civic/inventory/previews/violations.json"
+  },
+  {
+    "rows": 140,
+    "columns": [
+      "unitid",
+      "name",
+      "city",
+      "control",
+      "highest_degree",
+      "admission_rate",
+      "undergraduates",
+      "net_price_public",
+      "net_price_private",
+      "cost",
+      "in_state_tuition",
+      "median_debt",
+      "earnings_10yr",
+      "completion_4yr",
+      "completion_under_4yr"
+    ],
+    "blank_cells": {
+      "net_price_private": 63,
+      "completion_under_4yr": 93,
+      "net_price_public": 103,
+      "admission_rate": 69,
+      "completion_4yr": 70,
+      "cost": 55,
+      "in_state_tuition": 47,
+      "median_debt": 10,
+      "earnings_10yr": 3,
+      "undergraduates": 12
+    },
+    "bytes": 15636,
+    "sha256": "da6891a582bf007736e145a35f6ff66735c25dab2e37d4b9f48757f49a8f34f3",
+    "id": "scorecard",
+    "path": "data/civic/datasets/scorecard/data.csv",
+    "preview_path": "data/civic/inventory/previews/scorecard.json"
+  },
+  {
+    "rows": 1016,
+    "columns": [
+      "code",
+      "title",
+      "description"
+    ],
+    "blank_cells": {},
+    "bytes": 267003,
+    "sha256": "508ed34f254e22186418ebb85f5cfff2b952d47b844d51cc49090245c0ccfe2d",
+    "id": "onet",
+    "path": "data/civic/datasets/onet/data.csv",
+    "preview_path": "data/civic/inventory/previews/onet.json"
+  },
+  {
+    "rows": 144,
+    "columns": [
+      "unitid",
+      "name",
+      "city",
+      "sector",
+      "level",
+      "control",
+      "hbcu",
+      "size",
+      "website",
+      "latitude",
+      "longitude"
+    ],
+    "blank_cells": {
+      "website": 1
+    },
+    "bytes": 24266,
+    "sha256": "9fd736c1b7a72ffaffef41f69eaa370e924026322213168206f058d91f029ad6",
+    "id": "ipeds",
+    "path": "data/civic/datasets/ipeds/data.csv",
+    "preview_path": "data/civic/inventory/previews/ipeds.json"
+  },
+  {
+    "rows": 500,
+    "columns": [
+      "title",
+      "year",
+      "type",
+      "cited_by",
+      "source"
+    ],
+    "blank_cells": {
+      "source": 2
+    },
+    "bytes": 62863,
+    "sha256": "00175039f46f6261fc09b5ba48942d4087476eeaed3253f2cc71e0a5f6825065",
+    "id": "openalex-works",
+    "path": "data/civic/datasets/openalex-works/data.csv",
+    "preview_path": "data/civic/inventory/previews/openalex-works.json"
+  },
+  {
+    "rows": 206,
+    "columns": [
+      "college",
+      "campus",
+      "city",
+      "zip",
+      "town",
+      "type",
+      "level",
+      "category",
+      "housing",
+      "latitude",
+      "longitude"
+    ],
+    "blank_cells": {
+      "campus": 114
+    },
+    "bytes": 28555,
+    "sha256": "81d0524825cb94070f77517617ad251c2d8d46accc2c371e921fb99590f33dbc",
+    "id": "colleges",
+    "path": "data/civic/datasets/colleges/data.csv",
+    "preview_path": "data/civic/inventory/previews/colleges.json"
+  },
+  {
+    "rows": 63063,
+    "columns": [
+      "start_station",
+      "end_station",
+      "trips",
+      "member_trips",
+      "casual_trips"
+    ],
+    "blank_cells": {},
+    "bytes": 4187621,
+    "sha256": "064f6aec47d0871a19061888a8ab78f90c26a53f9289665c88528943a3cda122",
+    "id": "bluebikes",
+    "path": "data/civic/datasets/bluebikes/data.csv",
+    "preview_path": "data/civic/inventory/previews/bluebikes.json"
+  },
+  {
+    "rows": 44986,
+    "columns": [
+      "when",
+      "mode",
+      "where",
+      "street",
+      "cross_street",
+      "cross_street_2",
+      "latitude",
+      "longitude"
+    ],
+    "blank_cells": {
+      "street": 23461,
+      "cross_street": 3428,
+      "cross_street_2": 3428
+    },
+    "bytes": 3696343,
+    "sha256": "d0fd9bd9c8580496c7ac142e84e50a2549b50491cccb1fa6b4cdd971ecfa47ee",
+    "id": "vision-zero",
+    "path": "data/civic/datasets/vision-zero/data.csv",
+    "preview_path": "data/civic/inventory/previews/vision-zero.json"
+  },
+  {
+    "rows": 17230,
+    "columns": [
+      "when",
+      "day",
+      "street",
+      "cross_street",
+      "near_street",
+      "cyclist",
+      "pedestrian",
+      "manner",
+      "first_event",
+      "light",
+      "weather",
+      "road",
+      "speed_limit",
+      "at",
+      "latitude",
+      "longitude"
+    ],
+    "blank_cells": {
+      "cross_street": 10853,
+      "pedestrian": 16061,
+      "near_street": 12719,
+      "latitude": 8352,
+      "longitude": 8352,
+      "cyclist": 15291,
+      "street": 44,
+      "speed_limit": 2676,
+      "first_event": 951,
+      "road": 259,
+      "weather": 115,
+      "manner": 212,
+      "light": 74,
+      "at": 20
+    },
+    "bytes": 2693846,
+    "sha256": "950aaac2c061bb36f708dd4a4324fbfe4d2847aa2bcd5ba2c73afb9c1ebca23f",
+    "id": "cambridge-crashes",
+    "path": "data/civic/datasets/cambridge-crashes/data.csv",
+    "preview_path": "data/civic/inventory/previews/cambridge-crashes.json"
+  },
+  {
+    "rows": 92268,
+    "columns": [
+      "location",
+      "year",
+      "date",
+      "period",
+      "street",
+      "direction",
+      "where",
+      "movement",
+      "count",
+      "weather",
+      "latitude",
+      "longitude"
+    ],
+    "blank_cells": {
+      "count": 3060
+    },
+    "bytes": 12542625,
+    "sha256": "408e3638b0fa0a3580eb2653b545eeb4cddf4dc8c815ed535d0e753fe04a0477",
+    "id": "cambridge-bikes",
+    "path": "data/civic/datasets/cambridge-bikes/data.csv",
+    "preview_path": "data/civic/inventory/previews/cambridge-bikes.json"
+  },
+  {
+    "rows": 17123,
+    "columns": [
+      "when",
+      "day",
+      "total",
+      "entries",
+      "exits"
+    ],
+    "blank_cells": {},
+    "bytes": 664532,
+    "sha256": "82d1441742a58b84afbb7c89753c1a5de790a17c0d86ab0af5f31cd221f2dda9",
+    "id": "eco-totem",
+    "path": "data/civic/datasets/eco-totem/data.csv",
+    "preview_path": "data/civic/inventory/previews/eco-totem.json"
+  },
+  {
+    "rows": 8784,
+    "columns": [
+      "when",
+      "season",
+      "month",
+      "hour",
+      "average_users",
+      "blacks_nook",
+      "community_garden",
+      "little_fresh_pond",
+      "lusitania",
+      "pro_shop"
+    ],
+    "blank_cells": {
+      "community_garden": 46,
+      "blacks_nook": 21,
+      "lusitania": 19,
+      "pro_shop": 3,
+      "little_fresh_pond": 9,
+      "average_users": 1
+    },
+    "bytes": 470653,
+    "sha256": "fca141945f15ed6bbc6841b7db5de20922c3f42816cb2ae6bbd1dc6be98a6878",
+    "id": "fresh-pond",
+    "path": "data/civic/datasets/fresh-pond/data.csv",
+    "preview_path": "data/civic/inventory/previews/fresh-pond.json"
+  },
+  {
+    "rows": 2532,
+    "columns": [
+      "year",
+      "location",
+      "latitude",
+      "longitude",
+      "period",
+      "mode",
+      "count"
+    ],
+    "blank_cells": {
+      "count": 6
+    },
+    "bytes": 148622,
+    "sha256": "41207079e683e01ba088a3fd491a81905b4268c845bd7a850d1d2761d43921f7",
+    "id": "somerville-counts",
+    "path": "data/civic/datasets/somerville-counts/data.csv",
+    "preview_path": "data/civic/inventory/previews/somerville-counts.json"
+  },
+  {
+    "rows": 245555,
+    "columns": [
+      "zone",
+      "metric",
+      "object",
+      "count",
+      "time"
+    ],
+    "blank_cells": {},
+    "bytes": 11559290,
+    "sha256": "42446ef8bed171dee50b5db94dcbbb72b28b7a3cfe4ac4dd8231f5cf022c38e8",
+    "id": "numina",
+    "path": "data/civic/datasets/numina/data.csv",
+    "preview_path": "data/civic/inventory/previews/numina.json"
+  }
+]

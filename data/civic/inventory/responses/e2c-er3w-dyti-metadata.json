@@ -1,0 +1,554 @@
+{
+  "id" : "er3w-dyti",
+  "name" : "District Expenditures by Spending Category",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Finance and Budget",
+  "createdAt" : 1708986257,
+  "description" : "This dataset includes expenditure data reported by school districts, charter schools, and virtual schools starting with fiscal year 2009. It also includes student enrollment, demographic, and performance indicators as well as teacher salary and staffing data.\n\nIn addition to showing the overall cost per pupil, this dataset provides detail about how much districts spend in major functional areas such as administration, teaching, and maintenance. For more information about the data and how to interpret it, please visit the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmVkOWM4NmMtOGQyYi00ZjY0LTkwZWUtZGQyZGM3YTlhZjgxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noopener noreferrer\">School Finance Dashboard</a>.\n\nEconomically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noreferrer noopener\">DESE Researcher's Guide</a> for more information.\n\nThis dataset is one of three containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmVkOWM4NmMtOGQyYi00ZjY0LTkwZWUtZGQyZGM3YTlhZjgxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noopener noreferrer\">School Finance Dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/District-Expenditures-by-Spending-Category/er3w-dyti/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">District Expenditures by Spending Category</a>\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/District-Expenditures-by-Function-Code/cnfs-edqq/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">District Expenditures by Function Code</a>\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/School-Expenditures-by-Spending-Category/i5up-aez6/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">School Expenditures by Spending Category</a>\n\n<b>List of Indicators by Category</b>\n\nStudent Enrollment<ul><li>In-District FTE Pupils</li><li>Out-of-District FTE Pupils</li><li>Total FTE Pupils</li></ul>Student Demographics<ul><li>Student Headcount</li><li>Low-Income % Headcount</li><li>English Learner % Headcount</li><li>Students with Disabilities % Headcount</li></ul>Teacher Salaries<ul><li>Teacher FTE</li><li>Teachers per 100 FTE Students</li><li>Average Teacher Salary</li></ul>Other Staff<ul><li>Instructional Coach FTE</li><li>Instructional Support FTE</li><li>Special Education Instructional Support FTE</li><li>Paraprofessional FTE</li></ul>MCAS Performance<ul><li>ELA Grades 3-8 % Meets Exceeds</li><li>Math Grades 3-8 % Meets Exceeds</li><li>ELA Grade 10 % Meets Exceeds</li><li>Math Grade 10 % Meets Exceeds</li></ul>Expenditures<ul><li>Administration</li><li>Instructional Leadership</li><li>Teachers</li><li>Other Teaching Services</li><li>Professional Development</li><li>Instructional Materials, Equipment and Technology</li><li>Guidance, Counseling and Testing</li><li>Pupil Services</li><li>Operations and Maintenance</li><li>Insurance, Retirement Programs and Other</li><li>Total In-District Expenditures</li><li>Total Expenditures</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 740,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41312690,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1746738081,
+  "publicationGroup" : 19465667,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1786130427,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19887623,
+  "totalTimesRated" : 0,
+  "viewCount" : 19044,
+  "viewLastModified" : 1789570861,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1732654902,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6878048,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1732654872,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1732654902,
+      "failureCount" : 0,
+      "startedAt" : 1732654902,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609670175,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158341202,
+    "cachedContents" : {
+      "non_null" : "176328",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2019",
+        "count" : "12137"
+      }, {
+        "item" : "2021",
+        "count" : "11925"
+      }, {
+        "item" : "2022",
+        "count" : "11917"
+      }, {
+        "item" : "2024",
+        "count" : "11903"
+      }, {
+        "item" : "2023",
+        "count" : "11875"
+      }, {
+        "item" : "2025",
+        "count" : "11720"
+      }, {
+        "item" : "2020",
+        "count" : "10431"
+      }, {
+        "item" : "2018",
+        "count" : "9707"
+      }, {
+        "item" : "2009",
+        "count" : "9532"
+      }, {
+        "item" : "2010",
+        "count" : "9532"
+      }, {
+        "item" : "2011",
+        "count" : "9527"
+      }, {
+        "item" : "2012",
+        "count" : "9471"
+      }, {
+        "item" : "2014",
+        "count" : "9430"
+      }, {
+        "item" : "2013",
+        "count" : "9418"
+      }, {
+        "item" : "2017",
+        "count" : "9378"
+      }, {
+        "item" : "2015",
+        "count" : "9217"
+      }, {
+        "item" : "2016",
+        "count" : "9208"
+      } ],
+      "smallest" : "2009",
+      "count" : "176328",
+      "cardinality" : "176328"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 609670169,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151601116,
+    "cachedContents" : {
+      "non_null" : "176328",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00310000",
+        "count" : "497"
+      }, {
+        "item" : "00300000",
+        "count" : "497"
+      }, {
+        "item" : "00050000",
+        "count" : "497"
+      }, {
+        "item" : "00010000",
+        "count" : "497"
+      }, {
+        "item" : "00030000",
+        "count" : "497"
+      }, {
+        "item" : "00090000",
+        "count" : "497"
+      }, {
+        "item" : "00100000",
+        "count" : "497"
+      }, {
+        "item" : "00140000",
+        "count" : "497"
+      }, {
+        "item" : "00070000",
+        "count" : "497"
+      }, {
+        "item" : "00170000",
+        "count" : "497"
+      }, {
+        "item" : "00180000",
+        "count" : "497"
+      }, {
+        "item" : "00080000",
+        "count" : "497"
+      }, {
+        "item" : "00200000",
+        "count" : "497"
+      }, {
+        "item" : "00230000",
+        "count" : "497"
+      }, {
+        "item" : "00240000",
+        "count" : "497"
+      }, {
+        "item" : "00250000",
+        "count" : "497"
+      }, {
+        "item" : "00260000",
+        "count" : "497"
+      }, {
+        "item" : "00270000",
+        "count" : "497"
+      }, {
+        "item" : "00160000",
+        "count" : "497"
+      }, {
+        "item" : "00350000",
+        "count" : "497"
+      } ],
+      "smallest" : "00010000",
+      "count" : "176328",
+      "cardinality" : "176328"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670170,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151601117,
+    "cachedContents" : {
+      "non_null" : "176328",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Avon",
+        "count" : "497"
+      }, {
+        "item" : "Belchertown",
+        "count" : "497"
+      }, {
+        "item" : "Attleboro",
+        "count" : "497"
+      }, {
+        "item" : "Auburn",
+        "count" : "497"
+      }, {
+        "item" : "Acushnet",
+        "count" : "497"
+      }, {
+        "item" : "Bedford",
+        "count" : "497"
+      }, {
+        "item" : "Agawam",
+        "count" : "497"
+      }, {
+        "item" : "Abington",
+        "count" : "497"
+      }, {
+        "item" : "Acton-Boxborough",
+        "count" : "497"
+      }, {
+        "item" : "Amherst",
+        "count" : "497"
+      }, {
+        "item" : "Amherst-Pelham",
+        "count" : "497"
+      }, {
+        "item" : "Andover",
+        "count" : "497"
+      }, {
+        "item" : "Barnstable",
+        "count" : "497"
+      }, {
+        "item" : "Arlington",
+        "count" : "497"
+      }, {
+        "item" : "Ashburnham-Westminster",
+        "count" : "497"
+      }, {
+        "item" : "Ashland",
+        "count" : "497"
+      }, {
+        "item" : "Assabet Valley Regional Vocational Technical",
+        "count" : "497"
+      }, {
+        "item" : "Athol-Royalston",
+        "count" : "497"
+      }, {
+        "item" : "Amesbury",
+        "count" : "497"
+      }, {
+        "item" : "Bellingham",
+        "count" : "497"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "176328",
+      "cardinality" : "176328"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670171,
+    "name" : "IND_CAT",
+    "dataTypeName" : "text",
+    "description" : "Indicator Category",
+    "fieldName" : "ind_cat",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151601118,
+    "cachedContents" : {
+      "non_null" : "176328",
+      "largest" : "Teacher Salaries",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Expenditures Per Pupil",
+        "count" : "72249"
+      }, {
+        "item" : "Student Demographics",
+        "count" : "24284"
+      }, {
+        "item" : "Other Staff",
+        "count" : "24264"
+      }, {
+        "item" : "MCAS Performance",
+        "count" : "22296"
+      }, {
+        "item" : "Student Enrollment",
+        "count" : "18060"
+      }, {
+        "item" : "Teacher Salaries",
+        "count" : "15175"
+      } ],
+      "smallest" : "Expenditures Per Pupil",
+      "count" : "176328",
+      "cardinality" : "176328"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670172,
+    "name" : "IND_SUBCAT",
+    "dataTypeName" : "text",
+    "description" : "Indicator Sub-Category",
+    "fieldName" : "ind_subcat",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151601119,
+    "cachedContents" : {
+      "non_null" : "176328",
+      "largest" : "Total In-District Expenditures",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Students with disabilities % Headcount",
+        "count" : "6071"
+      }, {
+        "item" : "Low-Income % Headcount",
+        "count" : "6071"
+      }, {
+        "item" : "Student Headcount",
+        "count" : "6071"
+      }, {
+        "item" : "English learner % Headcount",
+        "count" : "6071"
+      }, {
+        "item" : "Teacher FTE",
+        "count" : "6066"
+      }, {
+        "item" : "Special Education Instructional Support FTE",
+        "count" : "6066"
+      }, {
+        "item" : "Instructional Support FTE",
+        "count" : "6066"
+      }, {
+        "item" : "Paraprofessional FTE",
+        "count" : "6066"
+      }, {
+        "item" : "Instructional Coach FTE",
+        "count" : "6066"
+      }, {
+        "item" : "Administration",
+        "count" : "6023"
+      }, {
+        "item" : "Instructional Leadership",
+        "count" : "6023"
+      }, {
+        "item" : "Instructional Materials, Equipment and Technology",
+        "count" : "6023"
+      }, {
+        "item" : "Other Teaching Services",
+        "count" : "6023"
+      }, {
+        "item" : "Pupil Services",
+        "count" : "6023"
+      }, {
+        "item" : "Teachers",
+        "count" : "6023"
+      }, {
+        "item" : "Total Expenditures",
+        "count" : "6023"
+      }, {
+        "item" : "Total In-District Expenditures",
+        "count" : "6023"
+      }, {
+        "item" : "Insurance, Retirement Programs and Other",
+        "count" : "6022"
+      }, {
+        "item" : "In-District FTE Pupils",
+        "count" : "6020"
+      }, {
+        "item" : "Professional Development",
+        "count" : "6020"
+      } ],
+      "smallest" : "Administration",
+      "count" : "176328",
+      "cardinality" : "176328"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670173,
+    "name" : "IND_VALUE",
+    "dataTypeName" : "number",
+    "description" : "Indicator Value",
+    "fieldName" : "ind_value",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158341146,
+    "cachedContents" : {
+      "non_null" : "176328",
+      "largest" : "179677.0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "9791"
+      }, {
+        "item" : "1.0",
+        "count" : "1562"
+      }, {
+        "item" : "2.0",
+        "count" : "993"
+      }, {
+        "item" : "3.0",
+        "count" : "688"
+      }, {
+        "item" : "7.0",
+        "count" : "544"
+      }, {
+        "item" : "4.0",
+        "count" : "529"
+      }, {
+        "item" : "5.0",
+        "count" : "470"
+      }, {
+        "item" : "6.0",
+        "count" : "468"
+      }, {
+        "item" : "8.0",
+        "count" : "468"
+      }, {
+        "item" : "9.0",
+        "count" : "432"
+      }, {
+        "item" : "0.5",
+        "count" : "383"
+      }, {
+        "item" : "7.5",
+        "count" : "356"
+      }, {
+        "item" : "0.2",
+        "count" : "337"
+      }, {
+        "item" : "0.8",
+        "count" : "311"
+      }, {
+        "item" : "10.0",
+        "count" : "311"
+      }, {
+        "item" : "7.8",
+        "count" : "299"
+      }, {
+        "item" : "7.4",
+        "count" : "292"
+      }, {
+        "item" : "11.0",
+        "count" : "287"
+      }, {
+        "item" : "0.6",
+        "count" : "286"
+      }, {
+        "item" : "8.5",
+        "count" : "283"
+      } ],
+      "smallest" : "-1028.0",
+      "count" : "176328",
+      "cardinality" : "176328"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670174,
+    "name" : "IND_VALUE_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Indicator Value Type",
+    "fieldName" : "ind_value_type",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155602579,
+    "cachedContents" : {
+      "non_null" : "176328",
+      "largest" : "Percent",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Amount",
+        "count" : "75343"
+      }, {
+        "item" : "Count",
+        "count" : "60476"
+      }, {
+        "item" : "Percent",
+        "count" : "40509"
+      } ],
+      "smallest" : "Amount",
+      "count" : "176328",
+      "cardinality" : "176328"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "expenditure", "public school", "charter schools", "virtual schools", "financial", "grants", "donations", "revolving", "cost per pupil", "cpp", "administration", "teaching", "maintenance", "fte", "district", "funding", "appropriations", "federal grants", "state grants", "private grants", "gift", "circuit breaker funds", "school lunch funds", "athletic funds", "local receipts", "insurance receipts", "school committee", "community services", "fixed assets", "debt service", "low income", "demographics", "teacher salaries", "class sizes", "school finance dashboard", "district comparison" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,732 @@
+{
+  "id" : "2hei-cc7k",
+  "name" : "Elementary and Secondary Staff Attendance",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1762980925,
+  "description" : "This dataset contains staff attendance data from 2025 onward, as reported by districts at the end of each school year. In this dataset, an absence is defined as missing more than half of the workday for time that falls outside of paid vacation time or district-approved professional activities. All employees reported on the staff roster are included in the All Staff category, not just Administrators and Teachers. Staff may appear in multiple categories. Please see the <a href=\"https://www.doe.mass.edu/infoservices/data/epims\" target=\"_blank\" rel=\"noopener noreferrer\">Staff Attendance FAQ</a> for more information.\n\nIn instances where a cell is blank, data is suppressed due to one of the following reasons:<ul><li>The number of staff in a category was fewer than 6</li><li>Either an Administrators or Teachers count was 1 and the All Staff category equaled the Administrators and Teachers count. In these instances, only the All Staff category is displayed.</li></ul>This dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/staffattendance.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Staff Attendance Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 33,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41745308,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1763486655,
+  "publicationGroup" : 20156969,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1763579524,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 20163464,
+  "totalTimesRated" : 0,
+  "viewCount" : 477,
+  "viewLastModified" : 1786392172,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1763579597,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7208636,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1763579564,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1763579597,
+      "failureCount" : 0,
+      "startedAt" : 1763579597,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 621353782,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163199812,
+    "cachedContents" : {
+      "non_null" : "6620",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "6620"
+      } ],
+      "smallest" : "2025",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 621353783,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163253329,
+    "cachedContents" : {
+      "non_null" : "6620",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "327"
+      }, {
+        "item" : "02810000",
+        "count" : "201"
+      }, {
+        "item" : "03480000",
+        "count" : "144"
+      }, {
+        "item" : "01600000",
+        "count" : "84"
+      }, {
+        "item" : "01630000",
+        "count" : "84"
+      }, {
+        "item" : "01490000",
+        "count" : "81"
+      }, {
+        "item" : "02010000",
+        "count" : "75"
+      }, {
+        "item" : "00440000",
+        "count" : "75"
+      }, {
+        "item" : "02070000",
+        "count" : "69"
+      }, {
+        "item" : "02430000",
+        "count" : "60"
+      }, {
+        "item" : "00950000",
+        "count" : "60"
+      }, {
+        "item" : "00490000",
+        "count" : "54"
+      }, {
+        "item" : "01280000",
+        "count" : "51"
+      }, {
+        "item" : "00610000",
+        "count" : "48"
+      }, {
+        "item" : "02360000",
+        "count" : "45"
+      }, {
+        "item" : "01000000",
+        "count" : "45"
+      }, {
+        "item" : "02930000",
+        "count" : "42"
+      }, {
+        "item" : "01530000",
+        "count" : "42"
+      }, {
+        "item" : "07750000",
+        "count" : "42"
+      }, {
+        "item" : "02390000",
+        "count" : "42"
+      } ],
+      "smallest" : "00000000",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : { }
+  }, {
+    "id" : 621353784,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163199804,
+    "cachedContents" : {
+      "non_null" : "6620",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "327"
+      }, {
+        "item" : "Springfield",
+        "count" : "201"
+      }, {
+        "item" : "Worcester",
+        "count" : "144"
+      }, {
+        "item" : "Lynn",
+        "count" : "84"
+      }, {
+        "item" : "Lowell",
+        "count" : "84"
+      }, {
+        "item" : "Lawrence",
+        "count" : "81"
+      }, {
+        "item" : "Brockton",
+        "count" : "75"
+      }, {
+        "item" : "New Bedford",
+        "count" : "75"
+      }, {
+        "item" : "Newton",
+        "count" : "69"
+      }, {
+        "item" : "Quincy",
+        "count" : "60"
+      }, {
+        "item" : "Fall River",
+        "count" : "60"
+      }, {
+        "item" : "Cambridge",
+        "count" : "54"
+      }, {
+        "item" : "Haverhill",
+        "count" : "51"
+      }, {
+        "item" : "Chicopee",
+        "count" : "48"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "45"
+      }, {
+        "item" : "Framingham",
+        "count" : "45"
+      }, {
+        "item" : "Wachusett",
+        "count" : "42"
+      }, {
+        "item" : "Plymouth",
+        "count" : "42"
+      }, {
+        "item" : "Leominster",
+        "count" : "42"
+      }, {
+        "item" : "Taunton",
+        "count" : "42"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : { }
+  }, {
+    "id" : 621353785,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163253330,
+    "cachedContents" : {
+      "non_null" : "6620",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00780005",
+        "count" : "3"
+      }, {
+        "item" : "00350066",
+        "count" : "3"
+      }, {
+        "item" : "03480512",
+        "count" : "3"
+      }, {
+        "item" : "01600000",
+        "count" : "3"
+      }, {
+        "item" : "00070000",
+        "count" : "3"
+      }, {
+        "item" : "02430060",
+        "count" : "3"
+      }, {
+        "item" : "02310010",
+        "count" : "3"
+      }, {
+        "item" : "02130015",
+        "count" : "3"
+      }, {
+        "item" : "02640015",
+        "count" : "3"
+      }, {
+        "item" : "07750305",
+        "count" : "3"
+      }, {
+        "item" : "03320040",
+        "count" : "3"
+      }, {
+        "item" : "08530000",
+        "count" : "3"
+      }, {
+        "item" : "04170000",
+        "count" : "3"
+      }, {
+        "item" : "07450010",
+        "count" : "3"
+      }, {
+        "item" : "01700008",
+        "count" : "3"
+      }, {
+        "item" : "07170010",
+        "count" : "3"
+      }, {
+        "item" : "00570515",
+        "count" : "3"
+      }, {
+        "item" : "02810475",
+        "count" : "3"
+      }, {
+        "item" : "01550305",
+        "count" : "3"
+      }, {
+        "item" : "02810100",
+        "count" : "3"
+      } ],
+      "smallest" : "00000000",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : { }
+  }, {
+    "id" : 621353786,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163199806,
+    "cachedContents" : {
+      "non_null" : "6620",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Early Childhood Center",
+        "count" : "18"
+      }, {
+        "item" : "Memorial",
+        "count" : "18"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "15"
+      }, {
+        "item" : "South Elementary",
+        "count" : "12"
+      }, {
+        "item" : "Franklin",
+        "count" : "9"
+      }, {
+        "item" : "Lincoln",
+        "count" : "9"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "9"
+      }, {
+        "item" : "Center",
+        "count" : "9"
+      }, {
+        "item" : "Winthrop",
+        "count" : "9"
+      }, {
+        "item" : "Lawrence",
+        "count" : "9"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "9"
+      }, {
+        "item" : "Brookfield",
+        "count" : "6"
+      }, {
+        "item" : "Glover",
+        "count" : "6"
+      }, {
+        "item" : "Peirce",
+        "count" : "6"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "6"
+      }, {
+        "item" : "John F Kennedy Middle School",
+        "count" : "6"
+      }, {
+        "item" : "East Middle School",
+        "count" : "6"
+      }, {
+        "item" : "King Elementary School",
+        "count" : "6"
+      }, {
+        "item" : "John F Kennedy Middle",
+        "count" : "6"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "6"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : { }
+  }, {
+    "id" : 621353787,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163199807,
+    "cachedContents" : {
+      "non_null" : "6620",
+      "largest" : "School",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "5435"
+      }, {
+        "item" : "District",
+        "count" : "1185"
+      } ],
+      "smallest" : "District",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : { }
+  }, {
+    "id" : 621353788,
+    "name" : "STAFF_GRP",
+    "dataTypeName" : "text",
+    "description" : "Staff Group",
+    "fieldName" : "staff_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163199808,
+    "cachedContents" : {
+      "non_null" : "6620",
+      "largest" : "Teachers",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Staff",
+        "count" : "2207"
+      }, {
+        "item" : "Administrators",
+        "count" : "2207"
+      }, {
+        "item" : "Teachers",
+        "count" : "2206"
+      } ],
+      "smallest" : "Administrators",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : { }
+  }, {
+    "id" : 621353789,
+    "name" : "STAFF_CNT",
+    "dataTypeName" : "number",
+    "description" : "Staff Count",
+    "fieldName" : "staff_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 163199809,
+    "cachedContents" : {
+      "non_null" : "6620",
+      "largest" : "159653",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2",
+        "count" : "440"
+      }, {
+        "item" : "3",
+        "count" : "364"
+      }, {
+        "item" : "4",
+        "count" : "245"
+      }, {
+        "item" : "1",
+        "count" : "232"
+      }, {
+        "item" : "5",
+        "count" : "143"
+      }, {
+        "item" : "7",
+        "count" : "114"
+      }, {
+        "item" : "6",
+        "count" : "103"
+      }, {
+        "item" : "8",
+        "count" : "76"
+      }, {
+        "item" : "10",
+        "count" : "74"
+      }, {
+        "item" : "28",
+        "count" : "66"
+      }, {
+        "item" : "37",
+        "count" : "66"
+      }, {
+        "item" : "32",
+        "count" : "66"
+      }, {
+        "item" : "46",
+        "count" : "63"
+      }, {
+        "item" : "33",
+        "count" : "62"
+      }, {
+        "item" : "26",
+        "count" : "61"
+      }, {
+        "item" : "11",
+        "count" : "59"
+      }, {
+        "item" : "48",
+        "count" : "59"
+      }, {
+        "item" : "51",
+        "count" : "59"
+      }, {
+        "item" : "41",
+        "count" : "59"
+      }, {
+        "item" : "45",
+        "count" : "58"
+      } ],
+      "smallest" : "1",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : { }
+  }, {
+    "id" : 621353790,
+    "name" : "STAFF_ATTEND_RATE",
+    "dataTypeName" : "number",
+    "description" : "Staffing Attendance Rate",
+    "fieldName" : "staff_attend_rate",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 163199810,
+    "cachedContents" : {
+      "non_null" : "5194",
+      "largest" : "1.0",
+      "null" : "1426",
+      "top" : [ {
+        "item" : "0.938",
+        "count" : "145"
+      }, {
+        "item" : "0.943",
+        "count" : "129"
+      }, {
+        "item" : "0.94",
+        "count" : "128"
+      }, {
+        "item" : "0.933",
+        "count" : "128"
+      }, {
+        "item" : "0.936",
+        "count" : "128"
+      }, {
+        "item" : "0.932",
+        "count" : "128"
+      }, {
+        "item" : "0.937",
+        "count" : "126"
+      }, {
+        "item" : "0.935",
+        "count" : "124"
+      }, {
+        "item" : "0.941",
+        "count" : "121"
+      }, {
+        "item" : "0.939",
+        "count" : "118"
+      }, {
+        "item" : "0.942",
+        "count" : "113"
+      }, {
+        "item" : "0.93",
+        "count" : "108"
+      }, {
+        "item" : "0.929",
+        "count" : "104"
+      }, {
+        "item" : "0.931",
+        "count" : "102"
+      }, {
+        "item" : "0.944",
+        "count" : "102"
+      }, {
+        "item" : "0.946",
+        "count" : "99"
+      }, {
+        "item" : "0.945",
+        "count" : "98"
+      }, {
+        "item" : "0.934",
+        "count" : "93"
+      }, {
+        "item" : "0.949",
+        "count" : "91"
+      }, {
+        "item" : "0.928",
+        "count" : "90"
+      } ],
+      "smallest" : "0.767",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 621353792,
+    "name" : "STAFF_CNT_AVG_ABS",
+    "dataTypeName" : "number",
+    "description" : "Staff Average Absence Count",
+    "fieldName" : "staff_cnt_avg_abs",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 163433401,
+    "cachedContents" : {
+      "non_null" : "5194",
+      "largest" : "57.9",
+      "null" : "1426",
+      "top" : [ {
+        "item" : "11.4",
+        "count" : "87"
+      }, {
+        "item" : "11.1",
+        "count" : "84"
+      }, {
+        "item" : "12.0",
+        "count" : "81"
+      }, {
+        "item" : "10.3",
+        "count" : "79"
+      }, {
+        "item" : "11.3",
+        "count" : "79"
+      }, {
+        "item" : "10.8",
+        "count" : "77"
+      }, {
+        "item" : "10.6",
+        "count" : "76"
+      }, {
+        "item" : "11.9",
+        "count" : "75"
+      }, {
+        "item" : "12.3",
+        "count" : "74"
+      }, {
+        "item" : "11.6",
+        "count" : "73"
+      }, {
+        "item" : "11.7",
+        "count" : "70"
+      }, {
+        "item" : "9.8",
+        "count" : "69"
+      }, {
+        "item" : "11.0",
+        "count" : "68"
+      }, {
+        "item" : "12.5",
+        "count" : "66"
+      }, {
+        "item" : "11.8",
+        "count" : "66"
+      }, {
+        "item" : "10.9",
+        "count" : "65"
+      }, {
+        "item" : "12.9",
+        "count" : "65"
+      }, {
+        "item" : "12.2",
+        "count" : "65"
+      }, {
+        "item" : "10.4",
+        "count" : "60"
+      }, {
+        "item" : "9.9",
+        "count" : "60"
+      } ],
+      "smallest" : "0.0",
+      "count" : "6620",
+      "cardinality" : "6620"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "staffing", "attendance", "administrators", "teachers" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

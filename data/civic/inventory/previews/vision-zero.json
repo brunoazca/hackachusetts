@@ -1,0 +1,1020 @@
+{
+  "dataset": "vision-zero",
+  "source": "data/civic/datasets/vision-zero/data.csv",
+  "source_sha256": "d0fd9bd9c8580496c7ac142e84e50a2549b50491cccb1fa6b4cdd971ecfa47ee",
+  "total_snapshot_rows": 44986,
+  "preview_rows": 100,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "when",
+    "mode",
+    "where",
+    "street",
+    "cross_street",
+    "cross_street_2",
+    "latitude",
+    "longitude"
+  ],
+  "records": [
+    {
+      "when": "2026-09-01 00:03:10+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "COLUMBIA RD",
+      "cross_street": "DEVON ST",
+      "cross_street_2": "STANWOOD ST",
+      "latitude": "42.3072",
+      "longitude": "-71.0765"
+    },
+    {
+      "when": "2026-08-31 22:28:11+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "COMMONWEALTH AVE",
+      "cross_street": "BUICK ST",
+      "cross_street_2": "ESSEX ST",
+      "latitude": "42.3509",
+      "longitude": "-71.1153"
+    },
+    {
+      "when": "2026-08-31 21:15:49+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "SOLDIERS FIELD RD",
+      "cross_street": "N HARVARD ST",
+      "cross_street_2": "RAMP",
+      "latitude": "42.3683",
+      "longitude": "-71.1236"
+    },
+    {
+      "when": "2026-08-31 21:00:16+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "JAMES J STORROW MEMORIAL DR",
+      "cross_street_2": "RAMP - SOLDIERS FIELD ROAD WB",
+      "latitude": "42.352",
+      "longitude": "-71.1117"
+    },
+    {
+      "when": "2026-08-31 16:11:01+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "SOLDIERS FIELD RD",
+      "cross_street": "N BEACON ST",
+      "cross_street_2": "SOLDIERS FIELD PL",
+      "latitude": "42.3591",
+      "longitude": "-71.1549"
+    },
+    {
+      "when": "2026-08-31 14:11:44+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "CHARLESGATE E",
+      "cross_street_2": "COMMONWEALTH AVE",
+      "latitude": "42.3492",
+      "longitude": "-71.0916"
+    },
+    {
+      "when": "2026-08-31 11:35:41+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "SUMMER ST",
+      "cross_street": "THOMAS J. BUTLER FREIGHT CORRI",
+      "cross_street_2": "POWER HOUSE ST",
+      "latitude": "42.341",
+      "longitude": "-71.0356"
+    },
+    {
+      "when": "2026-08-31 08:30:15+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "HUTCHINGS ST",
+      "cross_street": "HUMBOLDT AVE",
+      "cross_street_2": "ELM HILL AVE",
+      "latitude": "42.3111",
+      "longitude": "-71.0909"
+    },
+    {
+      "when": "2026-08-31 04:19:09+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "MASSACHUSETTS TPKE",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.3584",
+      "longitude": "-71.1477"
+    },
+    {
+      "when": "2026-08-30 20:57:44+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "WOODHAVEN ST",
+      "cross_street_2": "BLUE HILL AVE",
+      "latitude": "42.2733",
+      "longitude": "-71.0935"
+    },
+    {
+      "when": "2026-08-30 19:34:22+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "NONANTUM RD",
+      "cross_street_2": "N BEACON ST",
+      "latitude": "42.3586",
+      "longitude": "-71.1609"
+    },
+    {
+      "when": "2026-08-30 18:59:56+00",
+      "mode": "bike",
+      "where": "Other",
+      "street": "",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.372",
+      "longitude": "-71.1325"
+    },
+    {
+      "when": "2026-08-30 18:02:39+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "BLUE HILL AVE",
+      "cross_street_2": "INTERVALE ST",
+      "latitude": "42.3119",
+      "longitude": "-71.0807"
+    },
+    {
+      "when": "2026-08-30 17:54:35+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "WAYLAND ST",
+      "cross_street_2": "HOWARD AVE",
+      "latitude": "42.3139",
+      "longitude": "-71.0753"
+    },
+    {
+      "when": "2026-08-30 17:42:21+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "BLUE HILL AVE",
+      "cross_street": "FREMONT ST",
+      "cross_street_2": "WOODHAVEN ST",
+      "latitude": "42.2733",
+      "longitude": "-71.0935"
+    },
+    {
+      "when": "2026-08-30 13:37:39+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "BROOKLINE AVE",
+      "cross_street": "PILGRIM RD",
+      "cross_street_2": "SHORT ST",
+      "latitude": "42.3419",
+      "longitude": "-71.1041"
+    },
+    {
+      "when": "2026-08-30 13:06:57+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "SEAVER ST",
+      "cross_street": "ELM HILL AVE",
+      "cross_street_2": "HUMBOLDT AVE",
+      "latitude": "42.3096",
+      "longitude": "-71.0916"
+    },
+    {
+      "when": "2026-08-30 08:51:30+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "WALDEMAR AVE",
+      "cross_street": "ORIENT AVE",
+      "cross_street_2": "CRESTWAY RD",
+      "latitude": "42.3919",
+      "longitude": "-71.0024"
+    },
+    {
+      "when": "2026-08-30 08:13:32+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "LAUREL ST",
+      "cross_street": "CHARLAME ST",
+      "cross_street_2": "CATAWBA ST",
+      "latitude": "42.3201",
+      "longitude": "-71.0852"
+    },
+    {
+      "when": "2026-08-30 06:23:09+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "WALK HILL ST",
+      "cross_street_2": "AMERICAN LEGION HWY",
+      "latitude": "42.2878",
+      "longitude": "-71.1068"
+    },
+    {
+      "when": "2026-08-30 05:33:36+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "WILLIAM J DAY BLVD",
+      "cross_street": "WILLIAM T MORRISSEY BLVD",
+      "cross_street_2": "BABE RUTH PARK DR",
+      "latitude": "42.3227",
+      "longitude": "-71.0493"
+    },
+    {
+      "when": "2026-08-30 04:22:52+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "GRANITE AVE",
+      "cross_street": "GALLIVAN BLVD",
+      "cross_street_2": "BEAUFIELD ST",
+      "latitude": "42.2823",
+      "longitude": "-71.0556"
+    },
+    {
+      "when": "2026-08-30 02:12:55+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "BLUE HILL AVE",
+      "cross_street_2": "HARVARD ST",
+      "latitude": "42.2949",
+      "longitude": "-71.0878"
+    },
+    {
+      "when": "2026-08-29 23:56:58+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "CUMMINS HWY",
+      "cross_street": "KENNEBEC ST",
+      "cross_street_2": "WEYBOSSET ST",
+      "latitude": "42.2719",
+      "longitude": "-71.1069"
+    },
+    {
+      "when": "2026-08-29 23:51:03+00",
+      "mode": "bike",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "CHESTNUT HILL AVE",
+      "cross_street_2": "COMMONWEALTH AVE",
+      "latitude": "42.3382",
+      "longitude": "-71.1534"
+    },
+    {
+      "when": "2026-08-29 23:09:46+00",
+      "mode": "ped",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "SAVIN HILL AVE",
+      "cross_street_2": "PLEASANT ST",
+      "latitude": "42.3128",
+      "longitude": "-71.0589"
+    },
+    {
+      "when": "2026-08-29 19:40:51+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "MONSIGNOR PATRICK J. LYDON WAY",
+      "cross_street": "DORCHESTER AVE",
+      "cross_street_2": "FLORIDA ST",
+      "latitude": "42.2886",
+      "longitude": "-71.0616"
+    },
+    {
+      "when": "2026-08-29 19:38:32+00",
+      "mode": "bike",
+      "where": "Street",
+      "street": "ANTWERP ST",
+      "cross_street": "WESTERN AVE",
+      "cross_street_2": "JUSTINIAN WAY",
+      "latitude": "42.3625",
+      "longitude": "-71.1384"
+    },
+    {
+      "when": "2026-08-29 18:25:44+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "TRUMAN PKWY",
+      "cross_street": "WAKEFIELD AVE",
+      "cross_street_2": "CRANMORE RD",
+      "latitude": "42.2425",
+      "longitude": "-71.1264"
+    },
+    {
+      "when": "2026-08-29 16:10:06+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "PARK ST",
+      "cross_street_2": "BOURNESIDE ST",
+      "latitude": "42.298",
+      "longitude": "-71.0628"
+    },
+    {
+      "when": "2026-08-29 14:12:29+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "SOUTH ST",
+      "cross_street_2": "WASHINGTON ST",
+      "latitude": "42.2886",
+      "longitude": "-71.1258"
+    },
+    {
+      "when": "2026-08-29 05:40:24+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "SUMMER ST",
+      "cross_street": "PUMPHOUSE RD",
+      "cross_street_2": "FARGO ST",
+      "latitude": "42.3447",
+      "longitude": "-71.0398"
+    },
+    {
+      "when": "2026-08-29 05:03:14+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "MASSACHUSETTS AVE",
+      "cross_street": "CLAPP ST",
+      "cross_street_2": "COLUMBIA RD",
+      "latitude": "42.3208",
+      "longitude": "-71.0618"
+    },
+    {
+      "when": "2026-08-29 00:49:54+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "COMMERCIAL ST",
+      "cross_street": "SARGENTS WHARF",
+      "cross_street_2": "CLARK ST",
+      "latitude": "42.3647",
+      "longitude": "-71.0511"
+    },
+    {
+      "when": "2026-08-28 23:01:12+00",
+      "mode": "bike",
+      "where": "Street",
+      "street": "COMMONWEALTH AVE",
+      "cross_street": "SAINT MARYS ST",
+      "cross_street_2": "UNIVERSITY RD",
+      "latitude": "42.3502",
+      "longitude": "-71.1076"
+    },
+    {
+      "when": "2026-08-28 22:24:33+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "BROOKLINE AVE",
+      "cross_street": "SHORT ST",
+      "cross_street_2": "LONGWOOD AVE",
+      "latitude": "42.3401",
+      "longitude": "-71.1061"
+    },
+    {
+      "when": "2026-08-28 21:52:11+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "ROBBART LN",
+      "cross_street": "PROSPECT ST",
+      "cross_street_2": "DEAD END",
+      "latitude": "42.2464",
+      "longitude": "-71.1137"
+    },
+    {
+      "when": "2026-08-28 21:15:57+00",
+      "mode": "mv",
+      "where": "Other",
+      "street": "",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.357",
+      "longitude": "-71.1199"
+    },
+    {
+      "when": "2026-08-28 20:39:02+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "NEWBURY ST",
+      "cross_street_2": "GLOUCESTER ST",
+      "latitude": "42.3492",
+      "longitude": "-71.0841"
+    },
+    {
+      "when": "2026-08-28 20:28:19+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "WASHINGTON ST",
+      "cross_street": "NEW WASHINGTON ST",
+      "cross_street_2": "TOWER ST",
+      "latitude": "42.3007",
+      "longitude": "-71.1131"
+    },
+    {
+      "when": "2026-08-28 19:59:40+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "COMMONWEALTH AVE",
+      "cross_street_2": "BERKELEY ST",
+      "latitude": "42.3529",
+      "longitude": "-71.0738"
+    },
+    {
+      "when": "2026-08-28 18:23:15+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "WASHINGTON ST",
+      "cross_street": "MESHAKA ST",
+      "cross_street_2": "DEAD END",
+      "latitude": "42.2577",
+      "longitude": "-71.1615"
+    },
+    {
+      "when": "2026-08-28 17:43:18+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "LONGWOOD AVE",
+      "cross_street": "PILGRIM RD",
+      "cross_street_2": "PLYMOUTH ST",
+      "latitude": "42.3397",
+      "longitude": "-71.1087"
+    },
+    {
+      "when": "2026-08-28 16:45:36+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "BLUE HILL AVE",
+      "cross_street": "MORTON ST",
+      "cross_street_2": "FRONTENAC ST",
+      "latitude": "42.2846",
+      "longitude": "-71.0912"
+    },
+    {
+      "when": "2026-08-28 13:05:19+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "INTERSTATE 93",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.2967",
+      "longitude": "-71.0464"
+    },
+    {
+      "when": "2026-08-28 04:35:09+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "SUDBURY ST",
+      "cross_street": "BULFINCH PL",
+      "cross_street_2": "CONGRESS ST",
+      "latitude": "42.3616",
+      "longitude": "-71.0601"
+    },
+    {
+      "when": "2026-08-28 03:55:59+00",
+      "mode": "mv",
+      "where": "Other",
+      "street": "",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.3736",
+      "longitude": "-71.0381"
+    },
+    {
+      "when": "2026-08-28 02:03:29+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "BLUE HILL AVE",
+      "cross_street_2": "BALSAM ST",
+      "latitude": "42.2872",
+      "longitude": "-71.0904"
+    },
+    {
+      "when": "2026-08-27 22:42:21+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "WASHINGTON ST",
+      "cross_street": "STELLMAN RD",
+      "cross_street_2": "SOUTH ST",
+      "latitude": "42.2894",
+      "longitude": "-71.125"
+    },
+    {
+      "when": "2026-08-27 22:28:43+00",
+      "mode": "bike",
+      "where": "Street",
+      "street": "CENTRE ST",
+      "cross_street": "STARR LN",
+      "cross_street_2": "SEAVERNS AVE",
+      "latitude": "42.3125",
+      "longitude": "-71.1142"
+    },
+    {
+      "when": "2026-08-27 20:09:51+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "MURDOCK ST",
+      "cross_street_2": "N BEACON ST",
+      "latitude": "42.3552",
+      "longitude": "-71.1451"
+    },
+    {
+      "when": "2026-08-27 19:49:56+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "SOLDIERS FIELD RD",
+      "cross_street": "EVERETT ST",
+      "cross_street_2": "RAMP - SOLDIERS FIELD ROAD WB",
+      "latitude": "42.3641",
+      "longitude": "-71.1377"
+    },
+    {
+      "when": "2026-08-27 19:21:30+00",
+      "mode": "bike",
+      "where": "Street",
+      "street": "MASSACHUSETTS AVE",
+      "cross_street": "PEIRSON ST",
+      "cross_street_2": "RUSFIELD ST",
+      "latitude": "42.3294",
+      "longitude": "-71.0691"
+    },
+    {
+      "when": "2026-08-27 15:47:40+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "CENTRE ST",
+      "cross_street_2": "LAGRANGE ST",
+      "latitude": "42.2807",
+      "longitude": "-71.1582"
+    },
+    {
+      "when": "2026-08-27 15:04:55+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "CENTRE ST",
+      "cross_street_2": "LAGRANGE ST",
+      "latitude": "42.2807",
+      "longitude": "-71.1582"
+    },
+    {
+      "when": "2026-08-27 06:20:51+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "ALBANY ST",
+      "cross_street": "FRONTAGE RD",
+      "cross_street_2": "UNION PARK ST",
+      "latitude": "42.3399",
+      "longitude": "-71.0646"
+    },
+    {
+      "when": "2026-08-27 02:14:38+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "COLUMBUS AVE",
+      "cross_street": "WASHINGTON ST",
+      "cross_street_2": "WELD AVE",
+      "latitude": "42.3154",
+      "longitude": "-71.0981"
+    },
+    {
+      "when": "2026-08-26 23:58:38+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "NEW CYPHER ST",
+      "cross_street": "W SERVICE RD",
+      "cross_street_2": "C ST",
+      "latitude": "42.3435",
+      "longitude": "-71.051"
+    },
+    {
+      "when": "2026-08-26 23:37:34+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "CENTRE ST",
+      "cross_street": "MOZART ST",
+      "cross_street_2": "GAY HEAD ST",
+      "latitude": "42.3227",
+      "longitude": "-71.1051"
+    },
+    {
+      "when": "2026-08-26 18:42:00+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "WASHINGTON ST",
+      "cross_street": "MYSTIC ST",
+      "cross_street_2": "W BROOKLINE ST",
+      "latitude": "42.3399",
+      "longitude": "-71.072"
+    },
+    {
+      "when": "2026-08-26 17:11:02+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "COMMONWEALTH AVE",
+      "cross_street": "COLBORNE RD",
+      "cross_street_2": "CUMMINGS RD",
+      "latitude": "42.3417",
+      "longitude": "-71.1452"
+    },
+    {
+      "when": "2026-08-26 16:03:34+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "CENTRE ST",
+      "cross_street_2": "RAMBLER RD",
+      "latitude": "42.3044",
+      "longitude": "-71.1248"
+    },
+    {
+      "when": "2026-08-26 15:54:54+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "DUNBAR AVE",
+      "cross_street": "MOODY ST",
+      "cross_street_2": "WENTWORTH TER",
+      "latitude": "42.2866",
+      "longitude": "-71.0733"
+    },
+    {
+      "when": "2026-08-26 15:45:01+00",
+      "mode": "ped",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "TREMONT ST",
+      "cross_street_2": "WIGGLESWORTH ST",
+      "latitude": "42.3337",
+      "longitude": "-71.1033"
+    },
+    {
+      "when": "2026-08-26 14:17:26+00",
+      "mode": "ped",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "ESSEX ST",
+      "cross_street_2": "HARRISON AVE",
+      "latitude": "42.3525",
+      "longitude": "-71.0614"
+    },
+    {
+      "when": "2026-08-26 14:15:25+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "FENWAY",
+      "cross_street_2": "AVENUE LOUIS PASTEUR",
+      "latitude": "42.3404",
+      "longitude": "-71.1008"
+    },
+    {
+      "when": "2026-08-26 04:06:40+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "NORFOLK ST",
+      "cross_street_2": "CAPEN ST",
+      "latitude": "42.2843",
+      "longitude": "-71.0811"
+    },
+    {
+      "when": "2026-08-26 01:29:01+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "TREMONT ST",
+      "cross_street": "BOSWORTH ST",
+      "cross_street_2": "BROMFIELD ST",
+      "latitude": "42.3573",
+      "longitude": "-71.0611"
+    },
+    {
+      "when": "2026-08-26 00:40:33+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "ATLANTIC AVE",
+      "cross_street_2": "PEARL ST",
+      "latitude": "42.3541",
+      "longitude": "-71.0529"
+    },
+    {
+      "when": "2026-08-26 00:29:41+00",
+      "mode": "mv",
+      "where": "Other",
+      "street": "",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.3019",
+      "longitude": "-71.0501"
+    },
+    {
+      "when": "2026-08-25 18:52:42+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "RIVER ST",
+      "cross_street": "WASHINGTON ST",
+      "cross_street_2": "WICHITA TER",
+      "latitude": "42.2723",
+      "longitude": "-71.0699"
+    },
+    {
+      "when": "2026-08-25 17:53:43+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "MORTON ST",
+      "cross_street_2": "CEMETERY RD",
+      "latitude": "42.3003",
+      "longitude": "-71.1047"
+    },
+    {
+      "when": "2026-08-25 17:13:21+00",
+      "mode": "bike",
+      "where": "Street",
+      "street": "ARLINGTON ST",
+      "cross_street": "MARLBOROUGH ST",
+      "cross_street_2": "PUBLIC ALLEY NO. 422",
+      "latitude": "42.3543",
+      "longitude": "-71.0719"
+    },
+    {
+      "when": "2026-08-25 16:15:23+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "N WASHINGTON ST",
+      "cross_street_2": "CHELSEA ST",
+      "latitude": "42.371",
+      "longitude": "-71.062"
+    },
+    {
+      "when": "2026-08-25 13:28:02+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "INTERSTATE 93",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.2967",
+      "longitude": "-71.0464"
+    },
+    {
+      "when": "2026-08-25 13:19:00+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "GALLIVAN BLVD",
+      "cross_street": "SAINT BRENDAN RD",
+      "cross_street_2": "RITA RD",
+      "latitude": "42.2832",
+      "longitude": "-71.0514"
+    },
+    {
+      "when": "2026-08-25 10:54:51+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "FRONTAGE RD",
+      "cross_street_2": "BROADWAY",
+      "latitude": "42.3438",
+      "longitude": "-71.0612"
+    },
+    {
+      "when": "2026-08-25 10:48:43+00",
+      "mode": "mv",
+      "where": "Other",
+      "street": "",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.3571",
+      "longitude": "-71.0513"
+    },
+    {
+      "when": "2026-08-25 05:43:25+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "BLUE HILL AVE",
+      "cross_street_2": "AMERICAN LEGION HWY",
+      "latitude": "42.2981",
+      "longitude": "-71.087"
+    },
+    {
+      "when": "2026-08-25 02:47:40+00",
+      "mode": "bike",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "MALCOLM X BLVD",
+      "cross_street_2": "GUILD ROW",
+      "latitude": "42.3294",
+      "longitude": "-71.0859"
+    },
+    {
+      "when": "2026-08-24 23:37:51+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "AMERICAN LEGION HWY",
+      "cross_street_2": "BLUE HILL AVE",
+      "latitude": "42.2981",
+      "longitude": "-71.087"
+    },
+    {
+      "when": "2026-08-24 22:37:00+00",
+      "mode": "ped",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "PARKER ST",
+      "cross_street_2": "TREMONT ST",
+      "latitude": "42.3318",
+      "longitude": "-71.0972"
+    },
+    {
+      "when": "2026-08-24 20:11:45+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "WASHINGTON ST",
+      "cross_street_2": "RUTLAND ST",
+      "latitude": "42.3384",
+      "longitude": "-71.0743"
+    },
+    {
+      "when": "2026-08-24 19:08:48+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "ALLANDALE ST",
+      "cross_street_2": "CENTRE ST",
+      "latitude": "42.3002",
+      "longitude": "-71.1279"
+    },
+    {
+      "when": "2026-08-24 16:05:22+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "HYDE PARK AVE",
+      "cross_street": "WILLOW AVE",
+      "cross_street_2": "THATCHER ST",
+      "latitude": "42.2678",
+      "longitude": "-71.1209"
+    },
+    {
+      "when": "2026-08-24 15:55:28+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "INTERSTATE 93",
+      "cross_street": "",
+      "cross_street_2": "",
+      "latitude": "42.307",
+      "longitude": "-71.0541"
+    },
+    {
+      "when": "2026-08-24 04:42:53+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "SOUTHAMPTON ST",
+      "cross_street": "ELLERY ST",
+      "cross_street_2": "BOSTON ST",
+      "latitude": "42.3296",
+      "longitude": "-71.0576"
+    },
+    {
+      "when": "2026-08-24 03:37:40+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "INTERVALE ST",
+      "cross_street": "COLEUS PARK",
+      "cross_street_2": "MAGNOLIA ST",
+      "latitude": "42.3098",
+      "longitude": "-71.0755"
+    },
+    {
+      "when": "2026-08-24 00:10:32+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "TOWNSEND ST",
+      "cross_street_2": "WARREN ST",
+      "latitude": "42.3164",
+      "longitude": "-71.0829"
+    },
+    {
+      "when": "2026-08-23 23:23:23+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "CHARLESBANK RD",
+      "cross_street": "LEVERETT CIRCLE CONNECTOR",
+      "cross_street_2": "RAMP",
+      "latitude": "42.3647",
+      "longitude": "-71.0699"
+    },
+    {
+      "when": "2026-08-23 18:32:46+00",
+      "mode": "ped",
+      "where": "Street",
+      "street": "DENNIS ST",
+      "cross_street": "WOODVILLE PARK",
+      "cross_street_2": "MORELAND ST",
+      "latitude": "42.3223",
+      "longitude": "-71.0755"
+    },
+    {
+      "when": "2026-08-23 17:52:27+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "CORNELL ST",
+      "cross_street_2": "WASHINGTON ST",
+      "latitude": "42.2796",
+      "longitude": "-71.1355"
+    },
+    {
+      "when": "2026-08-23 16:26:02+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "ARLINGTON ST",
+      "cross_street_2": "CORTES ST",
+      "latitude": "42.3484",
+      "longitude": "-71.0693"
+    },
+    {
+      "when": "2026-08-23 12:55:00+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "CHARLES ST",
+      "cross_street_2": "BLOSSOM ST",
+      "latitude": "42.3644",
+      "longitude": "-71.0697"
+    },
+    {
+      "when": "2026-08-23 06:30:18+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "MORTON ST",
+      "cross_street": "W MAIN ST",
+      "cross_street_2": "CANTERBURY LN",
+      "latitude": "42.2913",
+      "longitude": "-71.0955"
+    },
+    {
+      "when": "2026-08-23 04:47:05+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "GIBSON ST",
+      "cross_street": "DORCHESTER AVE",
+      "cross_street_2": "BISPHAM ST",
+      "latitude": "42.2977",
+      "longitude": "-71.0591"
+    },
+    {
+      "when": "2026-08-23 04:17:41+00",
+      "mode": "mv",
+      "where": "Street",
+      "street": "COLUMBIA RD",
+      "cross_street": "ANNABEL ST",
+      "cross_street_2": "ELDER ST",
+      "latitude": "42.3187",
+      "longitude": "-71.0633"
+    },
+    {
+      "when": "2026-08-23 01:43:59+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "WARREN ST",
+      "cross_street_2": "ELM HILL AVE",
+      "latitude": "42.3131",
+      "longitude": "-71.0835"
+    },
+    {
+      "when": "2026-08-22 21:34:01+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "MASSACHUSETTS TPKE W",
+      "cross_street_2": "WILLIAM F MCCLELLAN HWY",
+      "latitude": "42.3763",
+      "longitude": "-71.0288"
+    },
+    {
+      "when": "2026-08-22 13:10:21+00",
+      "mode": "mv",
+      "where": "Intersection",
+      "street": "",
+      "cross_street": "COLUMBIA RD",
+      "cross_street_2": "G ST",
+      "latitude": "42.3305",
+      "longitude": "-71.0441"
+    }
+  ]
+}

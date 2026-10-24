@@ -1,0 +1,484 @@
+{
+  "id" : "5722-nbhm",
+  "name" : "Commonwealth Cares for Children (C3) Funds by Program",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1722964399,
+  "description" : "C3 provides monthly operational funding to child care programs across Massachusetts. Each row in this dataset represents the amount of C3 funds disbursed to a program by fiscal year. The state's fiscal year begins on July 1 and ends on June 30. The C3 funds totals do not include the FY22 Workforce Bonus or FY23 Subsidized Provider Bonus. The data may not reflect all adjustments made to payment amounts. Individual family child care program names are excluded from the data.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 431,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41005823,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1733949432,
+  "publicationGroup" : 19612861,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1792850555,
+  "rowsUpdatedBy" : "m5tk-n3hd",
+  "tableId" : 19713359,
+  "totalTimesRated" : 0,
+  "viewCount" : 17007,
+  "viewLastModified" : 1792850545,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1734706585,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6658933,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1734706466,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "m5tk-n3hd",
+      "displayName" : "E2C Hub"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1734706585,
+      "failureCount" : 0,
+      "startedAt" : 1734706585,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "b2zp-yiy6",
+      "displayName" : "Ellen Song"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 602788942,
+    "name" : "FISCAL_YEAR",
+    "dataTypeName" : "number",
+    "description" : "Fiscal year",
+    "fieldName" : "fiscal_year",
+    "position" : 1,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155869152,
+    "cachedContents" : {
+      "non_null" : "46013",
+      "largest" : "2027",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "8344"
+      }, {
+        "item" : "2026",
+        "count" : "8086"
+      }, {
+        "item" : "2024",
+        "count" : "7904"
+      }, {
+        "item" : "2023",
+        "count" : "7506"
+      }, {
+        "item" : "2027",
+        "count" : "7361"
+      }, {
+        "item" : "2022",
+        "count" : "6812"
+      } ],
+      "smallest" : "2022",
+      "count" : "46013",
+      "cardinality" : "46013"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 602788933,
+    "name" : "PROVIDER_NUMBER",
+    "dataTypeName" : "text",
+    "description" : "Unique program identifier from EEC’s Licensing Education Analytic Database (LEAD)",
+    "fieldName" : "provider_number",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154276817,
+    "cachedContents" : {
+      "non_null" : "46013",
+      "largest" : "P-274225",
+      "null" : "0",
+      "top" : [ {
+        "item" : "P-169926",
+        "count" : "6"
+      }, {
+        "item" : "P-173156",
+        "count" : "6"
+      }, {
+        "item" : "P-184333",
+        "count" : "6"
+      }, {
+        "item" : "P-169733",
+        "count" : "6"
+      }, {
+        "item" : "P-184329",
+        "count" : "6"
+      }, {
+        "item" : "P-170189",
+        "count" : "6"
+      }, {
+        "item" : "P-170655",
+        "count" : "6"
+      }, {
+        "item" : "P-250152",
+        "count" : "6"
+      }, {
+        "item" : "P-174169",
+        "count" : "6"
+      }, {
+        "item" : "P-244528",
+        "count" : "6"
+      }, {
+        "item" : "P-186882",
+        "count" : "6"
+      }, {
+        "item" : "P-178339",
+        "count" : "6"
+      }, {
+        "item" : "P-244194",
+        "count" : "6"
+      }, {
+        "item" : "P-247273",
+        "count" : "6"
+      }, {
+        "item" : "P-244626",
+        "count" : "6"
+      }, {
+        "item" : "P-185575",
+        "count" : "6"
+      }, {
+        "item" : "P-170756",
+        "count" : "6"
+      }, {
+        "item" : "P-178041",
+        "count" : "6"
+      }, {
+        "item" : "P-185800",
+        "count" : "6"
+      }, {
+        "item" : "P-256187",
+        "count" : "6"
+      } ],
+      "smallest" : "P-169293",
+      "count" : "46013",
+      "cardinality" : "46013"
+    },
+    "format" : { }
+  }, {
+    "id" : 602788934,
+    "name" : "PROGRAM_NAME",
+    "dataTypeName" : "text",
+    "description" : "Program name",
+    "fieldName" : "program_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154276818,
+    "cachedContents" : {
+      "non_null" : "46013",
+      "largest" : "Zorn Fruherziehung LLC DBA Li'l Steps Academy",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Family Child Care",
+        "count" : "29597"
+      }, {
+        "item" : "The Goddard School",
+        "count" : "103"
+      }, {
+        "item" : "Kindercare Learning Center",
+        "count" : "89"
+      }, {
+        "item" : "The Learning Experience",
+        "count" : "73"
+      }, {
+        "item" : "Knowledge Beginnings",
+        "count" : "54"
+      }, {
+        "item" : "KinderCare Learning Center",
+        "count" : "48"
+      }, {
+        "item" : "Pine Village Preschool",
+        "count" : "42"
+      }, {
+        "item" : "Kinder Care Learning Center",
+        "count" : "36"
+      }, {
+        "item" : "Cambridge Preschool of the Arts",
+        "count" : "26"
+      }, {
+        "item" : "123 Grow Child Center, Inc.",
+        "count" : "24"
+      }, {
+        "item" : "The Kids' Place",
+        "count" : "24"
+      }, {
+        "item" : "First Circle Learning Center",
+        "count" : "22"
+      }, {
+        "item" : "Early Risers",
+        "count" : "20"
+      }, {
+        "item" : "Learning House Preschool",
+        "count" : "18"
+      }, {
+        "item" : "Children's House Learning Inc.",
+        "count" : "18"
+      }, {
+        "item" : "Spanish Immersion Montessori School",
+        "count" : "17"
+      }, {
+        "item" : "Little Panda Early Learning and Care Center",
+        "count" : "17"
+      }, {
+        "item" : "Roots Learning Center",
+        "count" : "17"
+      }, {
+        "item" : "South Shore Community Action Council",
+        "count" : "17"
+      }, {
+        "item" : "Youbellor Child Academy",
+        "count" : "17"
+      } ],
+      "smallest" : "1-2-3 Grow Child Center",
+      "count" : "46013",
+      "cardinality" : "46013"
+    },
+    "format" : { }
+  }, {
+    "id" : 602788935,
+    "name" : "PROGRAM_ZIP_CODE",
+    "dataTypeName" : "text",
+    "description" : "Program zip code",
+    "fieldName" : "program_zip_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154276819,
+    "cachedContents" : {
+      "non_null" : "46013",
+      "largest" : "1570",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01841",
+        "count" : "1588"
+      }, {
+        "item" : "01843",
+        "count" : "748"
+      }, {
+        "item" : "01844",
+        "count" : "713"
+      }, {
+        "item" : "01902",
+        "count" : "698"
+      }, {
+        "item" : "02149",
+        "count" : "626"
+      }, {
+        "item" : "01420",
+        "count" : "623"
+      }, {
+        "item" : "02124",
+        "count" : "611"
+      }, {
+        "item" : "02136",
+        "count" : "560"
+      }, {
+        "item" : "01604",
+        "count" : "555"
+      }, {
+        "item" : "02151",
+        "count" : "541"
+      }, {
+        "item" : "01109",
+        "count" : "540"
+      }, {
+        "item" : "02148",
+        "count" : "530"
+      }, {
+        "item" : "02301",
+        "count" : "521"
+      }, {
+        "item" : "01852",
+        "count" : "481"
+      }, {
+        "item" : "01104",
+        "count" : "456"
+      }, {
+        "item" : "02121",
+        "count" : "452"
+      }, {
+        "item" : "01108",
+        "count" : "434"
+      }, {
+        "item" : "01960",
+        "count" : "419"
+      }, {
+        "item" : "01752",
+        "count" : "409"
+      }, {
+        "item" : "01453",
+        "count" : "406"
+      } ],
+      "smallest" : "01001",
+      "count" : "46013",
+      "cardinality" : "46013"
+    },
+    "format" : { }
+  }, {
+    "id" : 602788941,
+    "name" : "C3_FUNDS",
+    "dataTypeName" : "number",
+    "description" : "C3 funds disbursed",
+    "fieldName" : "c3_funds",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155869151,
+    "cachedContents" : {
+      "non_null" : "46013",
+      "largest" : "1268160.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "14000.04",
+        "count" : "3937"
+      }, {
+        "item" : "27999.96",
+        "count" : "2487"
+      }, {
+        "item" : "9600.00",
+        "count" : "1995"
+      }, {
+        "item" : "6000.00",
+        "count" : "1674"
+      }, {
+        "item" : "28800.00",
+        "count" : "1370"
+      }, {
+        "item" : "28533.32",
+        "count" : "1124"
+      }, {
+        "item" : "18000.00",
+        "count" : "969"
+      }, {
+        "item" : "16666.68",
+        "count" : "883"
+      }, {
+        "item" : "9999.96",
+        "count" : "571"
+      }, {
+        "item" : "2000.00",
+        "count" : "563"
+      }, {
+        "item" : "12999.96",
+        "count" : "517"
+      }, {
+        "item" : "21000.00",
+        "count" : "442"
+      }, {
+        "item" : "7200.00",
+        "count" : "439"
+      }, {
+        "item" : "12950.04",
+        "count" : "381"
+      }, {
+        "item" : "3200.00",
+        "count" : "320"
+      }, {
+        "item" : "26000.04",
+        "count" : "280"
+      }, {
+        "item" : "8749.96",
+        "count" : "256"
+      }, {
+        "item" : "25899.96",
+        "count" : "249"
+      }, {
+        "item" : "6566.68",
+        "count" : "236"
+      }, {
+        "item" : "20000.04",
+        "count" : "227"
+      } ],
+      "smallest" : "70.00",
+      "count" : "46013",
+      "cardinality" : "46013"
+    },
+    "format" : {
+      "precisionStyle" : "currency"
+    }
+  }, {
+    "id" : 602788940,
+    "name" : "DATA_LOAD_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Refresh date",
+    "fieldName" : "data_load_date",
+    "position" : 6,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 154276833,
+    "cachedContents" : {
+      "non_null" : "46013",
+      "largest" : "2026-10-22T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-10-22T00:00:00.000",
+        "count" : "46013"
+      } ],
+      "smallest" : "2026-10-22T00:00:00.000",
+      "count" : "46013",
+      "cardinality" : "46013"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Daily",
+        "Update Frequency" : "Daily"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/lists/data-on-massachusetts-child-care-programs"
+      }
+    },
+    "rowLabel" : "program and the amount of C3 funds disbursed in a given fiscal year",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "licensed childcare", "funded", "infants", "toddlers", "prek", "preschool", "c3", "commonwealth cares for children", "grants" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

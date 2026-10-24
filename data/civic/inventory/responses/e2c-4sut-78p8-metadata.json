@@ -1,0 +1,833 @@
+{
+  "id" : "4sut-78p8",
+  "name" : "Grade Nine Course Passing Report",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1704924279,
+  "description" : "This dataset shows the number and rate of grade nine students who completed and passed all courses by subject area since 2018.\n\nEconomically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noopener noreferrer\">DESE Researcher's Guide</a> for more information.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/gradeninecoursepass.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Grade Nine Course Passing Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 194,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40677853,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1720725291,
+  "publicationGroup" : 19425458,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1767127311,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19576230,
+  "totalTimesRated" : 0,
+  "viewCount" : 687,
+  "viewLastModified" : 1786392447,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1746815032,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6878355,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1746815016,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1746815032,
+      "failureCount" : 0,
+      "startedAt" : 1746815032,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 595368595,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150846416,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2019",
+        "count" : "53635"
+      }, {
+        "item" : "2020",
+        "count" : "52782"
+      }, {
+        "item" : "2021",
+        "count" : "52598"
+      }, {
+        "item" : "2024",
+        "count" : "50015"
+      }, {
+        "item" : "2023",
+        "count" : "49730"
+      }, {
+        "item" : "2025",
+        "count" : "49674"
+      }, {
+        "item" : "2022",
+        "count" : "49254"
+      }, {
+        "item" : "2018",
+        "count" : "48371"
+      } ],
+      "smallest" : "2018",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368596,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150846418,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "17061"
+      }, {
+        "item" : "02810000",
+        "count" : "6826"
+      }, {
+        "item" : "03480000",
+        "count" : "4913"
+      }, {
+        "item" : "00440000",
+        "count" : "3495"
+      }, {
+        "item" : "01630000",
+        "count" : "3282"
+      }, {
+        "item" : "02010000",
+        "count" : "2412"
+      }, {
+        "item" : "01600000",
+        "count" : "2358"
+      }, {
+        "item" : "01530000",
+        "count" : "2323"
+      }, {
+        "item" : "00610000",
+        "count" : "2296"
+      }, {
+        "item" : "01280000",
+        "count" : "2295"
+      }, {
+        "item" : "00950000",
+        "count" : "2230"
+      }, {
+        "item" : "02360000",
+        "count" : "2138"
+      }, {
+        "item" : "01490000",
+        "count" : "2112"
+      }, {
+        "item" : "02430000",
+        "count" : "2046"
+      }, {
+        "item" : "02070000",
+        "count" : "1969"
+      }, {
+        "item" : "03250000",
+        "count" : "1937"
+      }, {
+        "item" : "02580000",
+        "count" : "1896"
+      }, {
+        "item" : "02390000",
+        "count" : "1860"
+      }, {
+        "item" : "02480000",
+        "count" : "1844"
+      }, {
+        "item" : "07700000",
+        "count" : "1724"
+      } ],
+      "smallest" : "00000000",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368597,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150846420,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "17061"
+      }, {
+        "item" : "Springfield",
+        "count" : "6826"
+      }, {
+        "item" : "Worcester",
+        "count" : "4913"
+      }, {
+        "item" : "Brockton",
+        "count" : "3495"
+      }, {
+        "item" : "Lynn",
+        "count" : "3282"
+      }, {
+        "item" : "New Bedford",
+        "count" : "2412"
+      }, {
+        "item" : "Lowell",
+        "count" : "2358"
+      }, {
+        "item" : "Leominster",
+        "count" : "2323"
+      }, {
+        "item" : "Chicopee",
+        "count" : "2296"
+      }, {
+        "item" : "Haverhill",
+        "count" : "2295"
+      }, {
+        "item" : "Fall River",
+        "count" : "2230"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "2138"
+      }, {
+        "item" : "Lawrence",
+        "count" : "2112"
+      }, {
+        "item" : "Quincy",
+        "count" : "2046"
+      }, {
+        "item" : "Newton",
+        "count" : "1969"
+      }, {
+        "item" : "Westfield",
+        "count" : "1937"
+      }, {
+        "item" : "Salem",
+        "count" : "1896"
+      }, {
+        "item" : "Plymouth",
+        "count" : "1860"
+      }, {
+        "item" : "Revere",
+        "count" : "1844"
+      }, {
+        "item" : "Tantasqua",
+        "count" : "1724"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368598,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150846422,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00440000",
+        "count" : "714"
+      }, {
+        "item" : "00440505",
+        "count" : "714"
+      }, {
+        "item" : "00000000",
+        "count" : "714"
+      }, {
+        "item" : "00350000",
+        "count" : "712"
+      }, {
+        "item" : "02430000",
+        "count" : "699"
+      }, {
+        "item" : "02010000",
+        "count" : "698"
+      }, {
+        "item" : "02010505",
+        "count" : "698"
+      }, {
+        "item" : "02430505",
+        "count" : "687"
+      }, {
+        "item" : "07300000",
+        "count" : "682"
+      }, {
+        "item" : "07300505",
+        "count" : "682"
+      }, {
+        "item" : "02930000",
+        "count" : "679"
+      }, {
+        "item" : "02930505",
+        "count" : "679"
+      }, {
+        "item" : "02070000",
+        "count" : "677"
+      }, {
+        "item" : "39020900",
+        "count" : "674"
+      }, {
+        "item" : "02810000",
+        "count" : "674"
+      }, {
+        "item" : "39020000",
+        "count" : "674"
+      }, {
+        "item" : "00490506",
+        "count" : "672"
+      }, {
+        "item" : "00490000",
+        "count" : "672"
+      }, {
+        "item" : "01850000",
+        "count" : "670"
+      }, {
+        "item" : "01850505",
+        "count" : "670"
+      } ],
+      "smallest" : "00000000",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368599,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150846424,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "Worcester Technical High",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "1224"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "1210"
+      }, {
+        "item" : "Tri-County Regional Vocational Technical",
+        "count" : "1200"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "1172"
+      }, {
+        "item" : "Norfolk County Agricultural",
+        "count" : "1158"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "1096"
+      }, {
+        "item" : "Brockton",
+        "count" : "714"
+      }, {
+        "item" : "State",
+        "count" : "714"
+      }, {
+        "item" : "Brockton High",
+        "count" : "714"
+      }, {
+        "item" : "Boston",
+        "count" : "712"
+      }, {
+        "item" : "Quincy",
+        "count" : "699"
+      }, {
+        "item" : "New Bedford High",
+        "count" : "698"
+      }, {
+        "item" : "New Bedford",
+        "count" : "698"
+      }, {
+        "item" : "Quincy High",
+        "count" : "687"
+      }, {
+        "item" : "Algonquin Regional High",
+        "count" : "682"
+      }, {
+        "item" : "Northboro-Southboro",
+        "count" : "682"
+      }, {
+        "item" : "Taunton",
+        "count" : "679"
+      }, {
+        "item" : "Taunton High",
+        "count" : "679"
+      }, {
+        "item" : "Newton",
+        "count" : "677"
+      }, {
+        "item" : "Springfield",
+        "count" : "674"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368600,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151043184,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "225459"
+      }, {
+        "item" : "District",
+        "count" : "179886"
+      }, {
+        "item" : "State",
+        "count" : "714"
+      } ],
+      "smallest" : "District",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368601,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150846426,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "34762"
+      }, {
+        "item" : "High Needs",
+        "count" : "34649"
+      }, {
+        "item" : "Male",
+        "count" : "34601"
+      }, {
+        "item" : "Female",
+        "count" : "34233"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "34119"
+      }, {
+        "item" : "White",
+        "count" : "33745"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "33547"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "30384"
+      }, {
+        "item" : "Black or African American",
+        "count" : "30336"
+      }, {
+        "item" : "Asian",
+        "count" : "27923"
+      }, {
+        "item" : "English Learners",
+        "count" : "27901"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "17750"
+      }, {
+        "item" : "Low Income",
+        "count" : "16788"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "10405"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "4916"
+      } ],
+      "smallest" : "All Students",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368602,
+    "name" : "SUBJECT",
+    "dataTypeName" : "text",
+    "description" : "Subject",
+    "fieldName" : "subject",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150846428,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "Science",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Subjects",
+        "count" : "66556"
+      }, {
+        "item" : "English Language Arts",
+        "count" : "65664"
+      }, {
+        "item" : "Mathematics",
+        "count" : "65652"
+      }, {
+        "item" : "Other",
+        "count" : "65453"
+      }, {
+        "item" : "Science",
+        "count" : "65321"
+      }, {
+        "item" : "History/Social Science",
+        "count" : "64622"
+      }, {
+        "item" : "Computer and Information Science",
+        "count" : "12791"
+      } ],
+      "smallest" : "All Subjects",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368603,
+    "name" : "G09_CNT",
+    "dataTypeName" : "number",
+    "description" : "Grade 9 Count",
+    "fieldName" : "g09_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150846430,
+    "cachedContents" : {
+      "non_null" : "406059",
+      "largest" : "77215",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "30693"
+      }, {
+        "item" : "2",
+        "count" : "20395"
+      }, {
+        "item" : "3",
+        "count" : "15285"
+      }, {
+        "item" : "4",
+        "count" : "12425"
+      }, {
+        "item" : "5",
+        "count" : "10792"
+      }, {
+        "item" : "6",
+        "count" : "9400"
+      }, {
+        "item" : "7",
+        "count" : "7861"
+      }, {
+        "item" : "8",
+        "count" : "7281"
+      }, {
+        "item" : "9",
+        "count" : "6556"
+      }, {
+        "item" : "10",
+        "count" : "6037"
+      }, {
+        "item" : "11",
+        "count" : "5619"
+      }, {
+        "item" : "13",
+        "count" : "4762"
+      }, {
+        "item" : "12",
+        "count" : "4618"
+      }, {
+        "item" : "14",
+        "count" : "4286"
+      }, {
+        "item" : "17",
+        "count" : "4053"
+      }, {
+        "item" : "15",
+        "count" : "4042"
+      }, {
+        "item" : "16",
+        "count" : "3962"
+      }, {
+        "item" : "18",
+        "count" : "3773"
+      }, {
+        "item" : "19",
+        "count" : "3707"
+      }, {
+        "item" : "21",
+        "count" : "3535"
+      } ],
+      "smallest" : "1",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368604,
+    "name" : "PASS_CNT",
+    "dataTypeName" : "number",
+    "description" : "Passing All Courses Count",
+    "fieldName" : "pass_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150846432,
+    "cachedContents" : {
+      "non_null" : "313988",
+      "largest" : "70135",
+      "null" : "92071",
+      "top" : [ {
+        "item" : "7",
+        "count" : "8074"
+      }, {
+        "item" : "6",
+        "count" : "8058"
+      }, {
+        "item" : "8",
+        "count" : "7223"
+      }, {
+        "item" : "9",
+        "count" : "6501"
+      }, {
+        "item" : "10",
+        "count" : "6016"
+      }, {
+        "item" : "11",
+        "count" : "5666"
+      }, {
+        "item" : "13",
+        "count" : "4880"
+      }, {
+        "item" : "12",
+        "count" : "4830"
+      }, {
+        "item" : "14",
+        "count" : "4695"
+      }, {
+        "item" : "16",
+        "count" : "4451"
+      }, {
+        "item" : "15",
+        "count" : "4393"
+      }, {
+        "item" : "17",
+        "count" : "4165"
+      }, {
+        "item" : "18",
+        "count" : "4084"
+      }, {
+        "item" : "19",
+        "count" : "3777"
+      }, {
+        "item" : "20",
+        "count" : "3755"
+      }, {
+        "item" : "5",
+        "count" : "3637"
+      }, {
+        "item" : "21",
+        "count" : "3512"
+      }, {
+        "item" : "22",
+        "count" : "3413"
+      }, {
+        "item" : "23",
+        "count" : "3379"
+      }, {
+        "item" : "26",
+        "count" : "3358"
+      } ],
+      "smallest" : "0",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : { }
+  }, {
+    "id" : 595368605,
+    "name" : "PASS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Passing All Courses Percent",
+    "fieldName" : "pass_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150846434,
+    "cachedContents" : {
+      "non_null" : "313988",
+      "largest" : "1.0",
+      "null" : "92071",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "64316"
+      }, {
+        "item" : "0.857",
+        "count" : "3600"
+      }, {
+        "item" : "0.833",
+        "count" : "3524"
+      }, {
+        "item" : "0.875",
+        "count" : "3233"
+      }, {
+        "item" : "0.889",
+        "count" : "2977"
+      }, {
+        "item" : "0.9",
+        "count" : "2785"
+      }, {
+        "item" : "0.75",
+        "count" : "2624"
+      }, {
+        "item" : "0.909",
+        "count" : "2567"
+      }, {
+        "item" : "0.667",
+        "count" : "2528"
+      }, {
+        "item" : "0.8",
+        "count" : "2348"
+      }, {
+        "item" : "0.917",
+        "count" : "2326"
+      }, {
+        "item" : "0.923",
+        "count" : "2198"
+      }, {
+        "item" : "0.929",
+        "count" : "2149"
+      }, {
+        "item" : "0.938",
+        "count" : "2122"
+      }, {
+        "item" : "0.933",
+        "count" : "2019"
+      }, {
+        "item" : "0.957",
+        "count" : "1857"
+      }, {
+        "item" : "0.947",
+        "count" : "1791"
+      }, {
+        "item" : "0.944",
+        "count" : "1774"
+      }, {
+        "item" : "0.952",
+        "count" : "1747"
+      }, {
+        "item" : "0.941",
+        "count" : "1735"
+      } ],
+      "smallest" : "0.0",
+      "count" : "406059",
+      "cardinality" : "406059"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "grade nine", "subject area", "subject", "gender", "high needs", "low income", "english learners", "students with disabilities", "race", "ethnicity", "high school", "course completion", "demographics", "economically disadvantaged", "ecodis", "ela", "math", "science", "history", "social science", "english language arts", "grade 9" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

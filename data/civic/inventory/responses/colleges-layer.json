@@ -1,0 +1,837 @@
+{
+ "extent": {
+  "ymin": 783925.51210000005,
+  "xmin": 44747.961900003298,
+  "ymax": 954858.34800000093,
+  "xmax": 322250.28530000203,
+  "spatialReference": {
+   "falseM": -100000,
+   "xyTolerance": 0.001,
+   "mUnits": 10000,
+   "zUnits": 1,
+   "latestWkid": 26986,
+   "zTolerance": 2,
+   "wkid": 26986,
+   "xyUnits": 122610652.811951116,
+   "mTolerance": 0.001,
+   "falseX": -36530900,
+   "falseY": -28803200,
+   "falseZ": 0
+  }
+ },
+ "maxRecordCount": 2000,
+ "datesInUnknownTimezone": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "type": "Feature Layer",
+ "maxSelectionCount": 2000,
+ "subtypes": [],
+ "relationships": [],
+ "cimVersion": "3.7.0",
+ "isDataArchived": false,
+ "id": 0,
+ "archivingInfo": {
+  "startArchivingMoment": -1,
+  "supportsQueryWithHistoricMoment": false
+ },
+ "spatialReference": {
+  "falseM": -100000,
+  "xyTolerance": 0.001,
+  "mUnits": 10000,
+  "zUnits": 1,
+  "latestWkid": 26986,
+  "zTolerance": 2,
+  "wkid": 26986,
+  "xyUnits": 122610652.811951116,
+  "mTolerance": 0.001,
+  "falseX": -36530900,
+  "falseY": -28803200,
+  "falseZ": 0
+ },
+ "subtypeFieldName": null,
+ "supportsStatistics": true,
+ "hasLastEditTime": false,
+ "standardMaxRecordCount": 32000,
+ "isDataVersioned": false,
+ "supportsAdvancedQueries": true,
+ "parentLayer": null,
+ "subLayers": [],
+ "currentVersion": 12.1,
+ "referenceScale": 0,
+ "canScaleSymbols": false,
+ "name": "Higher Education",
+ "displayField": "COLLEGE",
+ "fields": [
+  {
+   "nullable": false,
+   "domain": null,
+   "name": "OBJECTID",
+   "alias": "OBJECTID",
+   "type": "esriFieldTypeOID"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "COLLEGE",
+   "length": 80,
+   "alias": "Name",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "CAMPUS",
+   "length": 40,
+   "alias": "Campus",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "ADDRESS",
+   "length": 40,
+   "alias": "Address",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "CITY",
+   "length": 40,
+   "alias": "City",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "ZIPCODE",
+   "length": 5,
+   "alias": "ZIP Code",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "PLUS_FOUR",
+   "length": 4,
+   "alias": "Plus-4",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "GEOG_TOWN",
+   "length": 21,
+   "alias": "Municipality",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "MAIN_TEL",
+   "length": 20,
+   "alias": "Pnone",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "URL",
+   "length": 80,
+   "alias": "Website",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "NCES_ID",
+   "length": 8,
+   "alias": "NCES ID",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "TYPE",
+   "length": 10,
+   "alias": "Type",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "NCES_TYPE",
+   "length": 60,
+   "alias": "NCES Type",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "CATEGORY",
+   "length": 50,
+   "alias": "Category",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "DEGREEOFFR",
+   "length": 30,
+   "alias": "Degrees Offered",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "AWARDSOFFR",
+   "length": 500,
+   "alias": "Awards Offered",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "LARGEPROG",
+   "length": 100,
+   "alias": "Largest Program",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "CAMPUSSETT",
+   "length": 30,
+   "alias": "Campus Setting",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "CAMPUSHOUS",
+   "length": 3,
+   "alias": "Campus Housing",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "L_SRC",
+   "length": 40,
+   "alias": "Location Source",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "SHAPE",
+   "alias": "SHAPE",
+   "type": "esriFieldTypeGeometry"
+  }
+ ],
+ "maxRecordCountFactor": 1,
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "useStandardizedQueries": true,
+ "sourceSpatialReference": {
+  "falseM": 0,
+  "xyTolerance": 0.001,
+  "mUnits": 1,
+  "zUnits": 1,
+  "latestWkid": 26986,
+  "zTolerance": 0.001,
+  "wkid": 26986,
+  "xyUnits": 10000,
+  "mTolerance": 0.001,
+  "falseX": -36530900,
+  "falseY": -28803200,
+  "falseZ": 0
+ },
+ "description": "",
+ "canModifyLayer": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "standardMaxRecordCountNoGeometry": 32000,
+ "indexes": [
+  {
+   "name": "R968658_SDE_ROWID_UK",
+   "isUnique": true,
+   "description": "",
+   "fields": "OBJECTID",
+   "isAscending": true
+  },
+  {
+   "name": "A36856_IX1",
+   "isUnique": true,
+   "description": "",
+   "fields": "SHAPE",
+   "isAscending": true
+  }
+ ],
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "supportsDatumTransformation": true,
+ "minScale": 5000000,
+ "supportsDynamicLegends": true,
+ "hasAttachments": false,
+ "advancedQueryCapabilities": {
+  "supportsSqlExpression": true,
+  "supportsQueryWithResultType": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsSqlFormat": false,
+  "useStandardizedQueries": true,
+  "supportsResultPaginationToken": false,
+  "supportsQueryWithCacheHint": false,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsQueryWithLodSR": false,
+  "supportsPagination": true,
+  "supportsMaxRecordCountFactor": false,
+  "supportsStatistics": true,
+  "supportsTrueCurve": true,
+  "supportsOrderBy": true,
+  "supportsLod": false,
+  "supportsQueryWithDistance": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsReturningQueryExtent": true,
+  "supportsDistinct": true,
+  "supportsTimeRelation": true,
+  "supportsQueryAnalytic": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true
+ },
+ "subtypeField": null,
+ "supportsCoordinatesQuantization": true,
+ "capabilities": "Map,Query,Data",
+ "maxScale": 0,
+ "supportsExceedsLimitStatistics": true,
+ "defaultVisibility": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsAsync": false,
+  "supportsLinearRegression": true,
+  "supportsPercentileAnalytic": true
+ },
+ "hasMetadata": true,
+ "tileMaxRecordCount": 8000,
+ "typeIdField": null,
+ "defaultSubtypeCode": null,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "hasLabels": true,
+ "drawingInfo": {
+  "renderer": {
+   "uniqueValueGroups": [{
+    "heading": "",
+    "classes": [
+     {
+      "symbol": {
+       "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABmUlEQVQ4jWNhoDJgoZmBF+6+T9p0+qkxOYbY64tutNcU34Vi4M1nn2Trll7JwqZBmJeN4cPX3wx///3HauAGeZunDAwMqAYiA0ZGBgZDJUEGH1MpBm8TKQZTVSGGFx++Myw7+Ihh8f4HDBfvf8DpWhZ0gXQPZYb6SG0GSUFOFHEQvzhAHYwvP/zI0LX2OsOSAw8JGzhzx12Gs3feM2R4KjNE2MoxcHMglLz9/Ithw4knDMsPPWJgZ2UizoUgcObOO4bDV/kYRPnZGb79/MvAzMQIDj8hHjaGVx9/Muy9+JIhzkmBgaRkw8nOzOBnJg1m//v/n4EJFLAMDGDvggDIIpIMPHXrHcPjN98YZEW44Ia9//KLYd+llwx6CgIMZqpCDDvPPWf4/P0PcQaeu/ueQTl1K4OttiiDojg3w7N33xkOXH7F8P3XXwYTFSEGNlYmcFCQlFN+//0HdhE6+M/wn+HP3/9Y0yULAxkA5Pqfv/9heJcB2UAJAQ6GaDv566QYrC8vAHPzKwwD7XXFGxkYGECYZLAUmwupBQCdyY8vQ6NvGQAAAABJRU5ErkJggg==",
+       "yoffset": 0,
+       "width": 15,
+       "xoffset": 0,
+       "angle": 0,
+       "type": "esriPMS",
+       "contentType": "image/png",
+       "url": "d183db4324be2adb863a58b87a2db54c",
+       "height": 12
+      },
+      "values": [["4-year, Public"]],
+      "description": "4-year State Universities",
+      "label": "4-year State Universities"
+     },
+     {
+      "symbol": {
+       "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABgklEQVQ4jbWUSS9DURTHf6+9NbTVpqVmmiaGWGBBxIqV2PgUdnwFK9/Glh1LK8QCCSolqaEV1BMdXofX3ifvLWirQql/cpJ7z8n93XPOHQQNlvg34M1zZvkkmpz6DWS0p21zuNe9UwF8UHMDW4fx1VoLXC2CbL6ENIyawJXFUAyoBJZLAQY6nEwMehkf9BDsdJHUdA4uVfYiKnfP2S+zFdWOubEOlqZ68DodFX5zvjDRZVlMzbJ9/MB+RP0euHue4DqhMT8WYHrIR7OwvccyuSJH0VcOrlSE/cNfrpolXz9pRHxp3K2CQlFiU0Aa4Gq2k8zphGMpZkf89V0bh1CYDHqtsXkWitlYsMo1ZW5UFzD6qPGSLuBzN73DtHyJcDxNv7+VUMDF2W2KnF76GfAmobG2ccpwt5t2TxOvGZ2L+zR6URIMOLHbFasVdb2UkjQIx1MQrwoYIKVh9bUhT8/MXpfGp3IpB3qcgpkh/3k9YLOXlqTt8RNwtM+7Dpj2JzX8t3kDWpyMZ8Zzq4EAAAAASUVORK5CYII=",
+       "yoffset": 0,
+       "width": 15,
+       "xoffset": 0,
+       "angle": 0,
+       "type": "esriPMS",
+       "contentType": "image/png",
+       "url": "b2f11c33fa9b2d543751c3efa8d41e8a",
+       "height": 12
+      },
+      "values": [["2-year, Public"]],
+      "description": "2-year Community Colleges",
+      "label": "2-year Community Colleges"
+     },
+     {
+      "symbol": {
+       "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABm0lEQVQ4jbWSuUsDQRTGv92sOUwIMZLDiIkSjyKoGK9GyR+g2NgIgoWNYmuv2NpbWHu1UbBQUBQLQTQoSRARIVFzSk4l52ZXdpGQY8VE9IPHzLzh/eabN0Phj0X9G/A2Fpw/8D0O/gZi05j2bTrjcRnwIRlpW3GdLwkVNItliOczKLCsINA+Nu0DUA4sFQFgoEmPSUMXJgydGFYbEEx/YPfZjS2PE3fx0LduqcrEgtmKVcs4WmSKsjy3Xu4Z5cOZCGP9/hLbXtfPwM0nB25iASyarZgxWiCnGop7kVwa9tcH7D27ISGF35MSSl5HA7hQvkAjaUSqQENEEHz/1GIpwtkUTkIezLX31g7kJBNRmGrt5ucMy4IkuM4CzsQbP3IH1QW8ivrxkkqirVFZhMVyGZyGPOhTaTGiNuAo8IR3Olcb0BELwny4gXGNER1yFfzpd5yFvUgXaAypWyAmSYgIsnaHnPIMwzuqFPcdaZZFgWXqA37vPoAsQ1ddF6VAvVSBWZPlvh5wv0r7ZZkMVwFtOtMaAC7q1o6Qw7/SJz9Mj7MZaSeZAAAAAElFTkSuQmCC",
+       "yoffset": 0,
+       "width": 15,
+       "xoffset": 0,
+       "angle": 0,
+       "type": "esriPMS",
+       "contentType": "image/png",
+       "url": "a9932075bf5a64d1d71a47f366380f53",
+       "height": 12
+      },
+      "values": [
+       ["4-year, Private not-for-profit"],
+       ["4-year, Private for-profit"],
+       ["4-year, primarily associate's, Private not-for-profit"]
+      ],
+      "description": "4-year, Private",
+      "label": "4-year, Private"
+     },
+     {
+      "symbol": {
+       "imageData": "iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABUklEQVQ4jbXTT07CQBQG8K+lLViBgoi2SkxQEzQBWbB14RXcuPMS3oOtJ3Cp8QomGuLCjdWF0YBG+RMjINRCoTAdY41GLEFQ+ZK3mcz7ZV5mhsM/hhsbdli8TBNCrFGAFa+8Fw/OnjuwQrO2o9ZLjgaWYWBR2hdb9clZAE7sa0KCiLikIOGXEfPNIG/UcFq9x9nzAxpds2+PA/PzHmwvpLAmKT3ri5Mhu7YiSWQqd9jPq2hb3cGY1mlhN5tBMqBgI7yMmDdsj6l328g1qjgu5+x9HUp+PtlbKCiKhoaoGMSFVgKhFD7OjYQk46CgIsBPDDfmRwi14HbxSEpz39YpRBcPxeNHwagPh1XMJtLXR1ifjmJKEFE1mzgp3+KprSMVjEAn5miP9kYv2zXWH3ClPaLUehmMzXukHMswxjBgQHi/BIFjP9UebDOSWPrNSftif80rF+JywcaX7qkAAAAASUVORK5CYII=",
+       "yoffset": 0,
+       "width": 14,
+       "xoffset": 0,
+       "angle": 0,
+       "type": "esriPMS",
+       "contentType": "image/png",
+       "url": "f4722dc3bae295c61ddcd0078d4aa491",
+       "height": 11
+      },
+      "values": [
+       ["2-year, Private for-profit"],
+       ["2-year, Private not-for-profit"],
+       ["< 2-year, Private for-profit"],
+       ["< 2-year, Private not-for-profit"],
+       ["< 2-year, Public"]
+      ],
+      "description": "< 4-year Schools",
+      "label": "< 4-year Schools"
+     }
+    ]
+   }],
+   "field1": "NCES_TYPE",
+   "authoringInfo": {"colorRamp": {
+    "colorRamps": [
+     {
+      "toColor": [
+       252,
+       221,
+       199,
+       255
+      ],
+      "fromColor": [
+       252,
+       221,
+       199,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       179,
+       185,
+       252,
+       255
+      ],
+      "fromColor": [
+       179,
+       185,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       182,
+       252,
+       194,
+       255
+      ],
+      "fromColor": [
+       182,
+       252,
+       194,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       179,
+       240,
+       252,
+       255
+      ],
+      "fromColor": [
+       179,
+       240,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       179,
+       217,
+       255
+      ],
+      "fromColor": [
+       252,
+       179,
+       217,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       251,
+       184,
+       255
+      ],
+      "fromColor": [
+       252,
+       251,
+       184,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       215,
+       218,
+       252,
+       255
+      ],
+      "fromColor": [
+       215,
+       218,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       207,
+       252,
+       227,
+       255
+      ],
+      "fromColor": [
+       207,
+       252,
+       227,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       187,
+       190,
+       255
+      ],
+      "fromColor": [
+       252,
+       187,
+       190,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       236,
+       182,
+       252,
+       255
+      ],
+      "fromColor": [
+       236,
+       182,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       215,
+       236,
+       255
+      ],
+      "fromColor": [
+       252,
+       215,
+       236,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       237,
+       207,
+       252,
+       255
+      ],
+      "fromColor": [
+       237,
+       207,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       249,
+       215,
+       255
+      ],
+      "fromColor": [
+       252,
+       249,
+       215,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     }
+    ],
+    "type": "multipart"
+   }},
+   "uniqueValueInfos": [
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABmUlEQVQ4jWNhoDJgoZmBF+6+T9p0+qkxOYbY64tutNcU34Vi4M1nn2Trll7JwqZBmJeN4cPX3wx///3HauAGeZunDAwMqAYiA0ZGBgZDJUEGH1MpBm8TKQZTVSGGFx++Myw7+Ihh8f4HDBfvf8DpWhZ0gXQPZYb6SG0GSUFOFHEQvzhAHYwvP/zI0LX2OsOSAw8JGzhzx12Gs3feM2R4KjNE2MoxcHMglLz9/Ithw4knDMsPPWJgZ2UizoUgcObOO4bDV/kYRPnZGb79/MvAzMQIDj8hHjaGVx9/Muy9+JIhzkmBgaRkw8nOzOBnJg1m//v/n4EJFLAMDGDvggDIIpIMPHXrHcPjN98YZEW44Ia9//KLYd+llwx6CgIMZqpCDDvPPWf4/P0PcQaeu/ueQTl1K4OttiiDojg3w7N33xkOXH7F8P3XXwYTFSEGNlYmcFCQlFN+//0HdhE6+M/wn+HP3/9Y0yULAxkA5Pqfv/9heJcB2UAJAQ6GaDv566QYrC8vAHPzKwwD7XXFGxkYGECYZLAUmwupBQCdyY8vQ6NvGQAAAABJRU5ErkJggg==",
+      "yoffset": 0,
+      "width": 15,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "d183db4324be2adb863a58b87a2db54c",
+      "height": 12
+     },
+     "label": "4-year State Universities",
+     "value": "4-year, Public"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABgklEQVQ4jbWUSS9DURTHf6+9NbTVpqVmmiaGWGBBxIqV2PgUdnwFK9/Glh1LK8QCCSolqaEV1BMdXofX3ifvLWirQql/cpJ7z8n93XPOHQQNlvg34M1zZvkkmpz6DWS0p21zuNe9UwF8UHMDW4fx1VoLXC2CbL6ENIyawJXFUAyoBJZLAQY6nEwMehkf9BDsdJHUdA4uVfYiKnfP2S+zFdWOubEOlqZ68DodFX5zvjDRZVlMzbJ9/MB+RP0euHue4DqhMT8WYHrIR7OwvccyuSJH0VcOrlSE/cNfrpolXz9pRHxp3K2CQlFiU0Aa4Gq2k8zphGMpZkf89V0bh1CYDHqtsXkWitlYsMo1ZW5UFzD6qPGSLuBzN73DtHyJcDxNv7+VUMDF2W2KnF76GfAmobG2ccpwt5t2TxOvGZ2L+zR6URIMOLHbFasVdb2UkjQIx1MQrwoYIKVh9bUhT8/MXpfGp3IpB3qcgpkh/3k9YLOXlqTt8RNwtM+7Dpj2JzX8t3kDWpyMZ8Zzq4EAAAAASUVORK5CYII=",
+      "yoffset": 0,
+      "width": 15,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "b2f11c33fa9b2d543751c3efa8d41e8a",
+      "height": 12
+     },
+     "label": "2-year Community Colleges",
+     "value": "2-year, Public"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABm0lEQVQ4jbWSuUsDQRTGv92sOUwIMZLDiIkSjyKoGK9GyR+g2NgIgoWNYmuv2NpbWHu1UbBQUBQLQTQoSRARIVFzSk4l52ZXdpGQY8VE9IPHzLzh/eabN0Phj0X9G/A2Fpw/8D0O/gZi05j2bTrjcRnwIRlpW3GdLwkVNItliOczKLCsINA+Nu0DUA4sFQFgoEmPSUMXJgydGFYbEEx/YPfZjS2PE3fx0LduqcrEgtmKVcs4WmSKsjy3Xu4Z5cOZCGP9/hLbXtfPwM0nB25iASyarZgxWiCnGop7kVwa9tcH7D27ISGF35MSSl5HA7hQvkAjaUSqQENEEHz/1GIpwtkUTkIezLX31g7kJBNRmGrt5ucMy4IkuM4CzsQbP3IH1QW8ivrxkkqirVFZhMVyGZyGPOhTaTGiNuAo8IR3Olcb0BELwny4gXGNER1yFfzpd5yFvUgXaAypWyAmSYgIsnaHnPIMwzuqFPcdaZZFgWXqA37vPoAsQ1ddF6VAvVSBWZPlvh5wv0r7ZZkMVwFtOtMaAC7q1o6Qw7/SJz9Mj7MZaSeZAAAAAElFTkSuQmCC",
+      "yoffset": 0,
+      "width": 15,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "a9932075bf5a64d1d71a47f366380f53",
+      "height": 12
+     },
+     "label": "4-year, Private",
+     "value": "4-year, Private not-for-profit"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABm0lEQVQ4jbWSuUsDQRTGv92sOUwIMZLDiIkSjyKoGK9GyR+g2NgIgoWNYmuv2NpbWHu1UbBQUBQLQTQoSRARIVFzSk4l52ZXdpGQY8VE9IPHzLzh/eabN0Phj0X9G/A2Fpw/8D0O/gZi05j2bTrjcRnwIRlpW3GdLwkVNItliOczKLCsINA+Nu0DUA4sFQFgoEmPSUMXJgydGFYbEEx/YPfZjS2PE3fx0LduqcrEgtmKVcs4WmSKsjy3Xu4Z5cOZCGP9/hLbXtfPwM0nB25iASyarZgxWiCnGop7kVwa9tcH7D27ISGF35MSSl5HA7hQvkAjaUSqQENEEHz/1GIpwtkUTkIezLX31g7kJBNRmGrt5ucMy4IkuM4CzsQbP3IH1QW8ivrxkkqirVFZhMVyGZyGPOhTaTGiNuAo8IR3Olcb0BELwny4gXGNER1yFfzpd5yFvUgXaAypWyAmSYgIsnaHnPIMwzuqFPcdaZZFgWXqA37vPoAsQ1ddF6VAvVSBWZPlvh5wv0r7ZZkMVwFtOtMaAC7q1o6Qw7/SJz9Mj7MZaSeZAAAAAElFTkSuQmCC",
+      "yoffset": 0,
+      "width": 15,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "a9932075bf5a64d1d71a47f366380f53",
+      "height": 12
+     },
+     "label": "4-year, Private",
+     "value": "4-year, Private for-profit"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABm0lEQVQ4jbWSuUsDQRTGv92sOUwIMZLDiIkSjyKoGK9GyR+g2NgIgoWNYmuv2NpbWHu1UbBQUBQLQTQoSRARIVFzSk4l52ZXdpGQY8VE9IPHzLzh/eabN0Phj0X9G/A2Fpw/8D0O/gZi05j2bTrjcRnwIRlpW3GdLwkVNItliOczKLCsINA+Nu0DUA4sFQFgoEmPSUMXJgydGFYbEEx/YPfZjS2PE3fx0LduqcrEgtmKVcs4WmSKsjy3Xu4Z5cOZCGP9/hLbXtfPwM0nB25iASyarZgxWiCnGop7kVwa9tcH7D27ISGF35MSSl5HA7hQvkAjaUSqQENEEHz/1GIpwtkUTkIezLX31g7kJBNRmGrt5ucMy4IkuM4CzsQbP3IH1QW8ivrxkkqirVFZhMVyGZyGPOhTaTGiNuAo8IR3Olcb0BELwny4gXGNER1yFfzpd5yFvUgXaAypWyAmSYgIsnaHnPIMwzuqFPcdaZZFgWXqA37vPoAsQ1ddF6VAvVSBWZPlvh5wv0r7ZZkMVwFtOtMaAC7q1o6Qw7/SJz9Mj7MZaSeZAAAAAElFTkSuQmCC",
+      "yoffset": 0,
+      "width": 15,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "a9932075bf5a64d1d71a47f366380f53",
+      "height": 12
+     },
+     "label": "4-year, Private",
+     "value": "4-year, primarily associate's, Private not-for-profit"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABUklEQVQ4jbXTT07CQBQG8K+lLViBgoi2SkxQEzQBWbB14RXcuPMS3oOtJ3Cp8QomGuLCjdWF0YBG+RMjINRCoTAdY41GLEFQ+ZK3mcz7ZV5mhsM/hhsbdli8TBNCrFGAFa+8Fw/OnjuwQrO2o9ZLjgaWYWBR2hdb9clZAE7sa0KCiLikIOGXEfPNIG/UcFq9x9nzAxpds2+PA/PzHmwvpLAmKT3ri5Mhu7YiSWQqd9jPq2hb3cGY1mlhN5tBMqBgI7yMmDdsj6l328g1qjgu5+x9HUp+PtlbKCiKhoaoGMSFVgKhFD7OjYQk46CgIsBPDDfmRwi14HbxSEpz39YpRBcPxeNHwagPh1XMJtLXR1ifjmJKEFE1mzgp3+KprSMVjEAn5miP9kYv2zXWH3ClPaLUehmMzXukHMswxjBgQHi/BIFjP9UebDOSWPrNSftif80rF+JywcaX7qkAAAAASUVORK5CYII=",
+      "yoffset": 0,
+      "width": 14,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "f4722dc3bae295c61ddcd0078d4aa491",
+      "height": 11
+     },
+     "label": "< 4-year Schools",
+     "value": "2-year, Private for-profit"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABUklEQVQ4jbXTT07CQBQG8K+lLViBgoi2SkxQEzQBWbB14RXcuPMS3oOtJ3Cp8QomGuLCjdWF0YBG+RMjINRCoTAdY41GLEFQ+ZK3mcz7ZV5mhsM/hhsbdli8TBNCrFGAFa+8Fw/OnjuwQrO2o9ZLjgaWYWBR2hdb9clZAE7sa0KCiLikIOGXEfPNIG/UcFq9x9nzAxpds2+PA/PzHmwvpLAmKT3ri5Mhu7YiSWQqd9jPq2hb3cGY1mlhN5tBMqBgI7yMmDdsj6l328g1qjgu5+x9HUp+PtlbKCiKhoaoGMSFVgKhFD7OjYQk46CgIsBPDDfmRwi14HbxSEpz39YpRBcPxeNHwagPh1XMJtLXR1ifjmJKEFE1mzgp3+KprSMVjEAn5miP9kYv2zXWH3ClPaLUehmMzXukHMswxjBgQHi/BIFjP9UebDOSWPrNSftif80rF+JywcaX7qkAAAAASUVORK5CYII=",
+      "yoffset": 0,
+      "width": 14,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "f4722dc3bae295c61ddcd0078d4aa491",
+      "height": 11
+     },
+     "label": "< 4-year Schools",
+     "value": "2-year, Private not-for-profit"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABUklEQVQ4jbXTT07CQBQG8K+lLViBgoi2SkxQEzQBWbB14RXcuPMS3oOtJ3Cp8QomGuLCjdWF0YBG+RMjINRCoTAdY41GLEFQ+ZK3mcz7ZV5mhsM/hhsbdli8TBNCrFGAFa+8Fw/OnjuwQrO2o9ZLjgaWYWBR2hdb9clZAE7sa0KCiLikIOGXEfPNIG/UcFq9x9nzAxpds2+PA/PzHmwvpLAmKT3ri5Mhu7YiSWQqd9jPq2hb3cGY1mlhN5tBMqBgI7yMmDdsj6l328g1qjgu5+x9HUp+PtlbKCiKhoaoGMSFVgKhFD7OjYQk46CgIsBPDDfmRwi14HbxSEpz39YpRBcPxeNHwagPh1XMJtLXR1ifjmJKEFE1mzgp3+KprSMVjEAn5miP9kYv2zXWH3ClPaLUehmMzXukHMswxjBgQHi/BIFjP9UebDOSWPrNSftif80rF+JywcaX7qkAAAAASUVORK5CYII=",
+      "yoffset": 0,
+      "width": 14,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "f4722dc3bae295c61ddcd0078d4aa491",
+      "height": 11
+     },
+     "label": "< 4-year Schools",
+     "value": "< 2-year, Private for-profit"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABUklEQVQ4jbXTT07CQBQG8K+lLViBgoi2SkxQEzQBWbB14RXcuPMS3oOtJ3Cp8QomGuLCjdWF0YBG+RMjINRCoTAdY41GLEFQ+ZK3mcz7ZV5mhsM/hhsbdli8TBNCrFGAFa+8Fw/OnjuwQrO2o9ZLjgaWYWBR2hdb9clZAE7sa0KCiLikIOGXEfPNIG/UcFq9x9nzAxpds2+PA/PzHmwvpLAmKT3ri5Mhu7YiSWQqd9jPq2hb3cGY1mlhN5tBMqBgI7yMmDdsj6l328g1qjgu5+x9HUp+PtlbKCiKhoaoGMSFVgKhFD7OjYQk46CgIsBPDDfmRwi14HbxSEpz39YpRBcPxeNHwagPh1XMJtLXR1ifjmJKEFE1mzgp3+KprSMVjEAn5miP9kYv2zXWH3ClPaLUehmMzXukHMswxjBgQHi/BIFjP9UebDOSWPrNSftif80rF+JywcaX7qkAAAAASUVORK5CYII=",
+      "yoffset": 0,
+      "width": 14,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "f4722dc3bae295c61ddcd0078d4aa491",
+      "height": 11
+     },
+     "label": "< 4-year Schools",
+     "value": "< 2-year, Private not-for-profit"
+    },
+    {
+     "symbol": {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABUklEQVQ4jbXTT07CQBQG8K+lLViBgoi2SkxQEzQBWbB14RXcuPMS3oOtJ3Cp8QomGuLCjdWF0YBG+RMjINRCoTAdY41GLEFQ+ZK3mcz7ZV5mhsM/hhsbdli8TBNCrFGAFa+8Fw/OnjuwQrO2o9ZLjgaWYWBR2hdb9clZAE7sa0KCiLikIOGXEfPNIG/UcFq9x9nzAxpds2+PA/PzHmwvpLAmKT3ri5Mhu7YiSWQqd9jPq2hb3cGY1mlhN5tBMqBgI7yMmDdsj6l328g1qjgu5+x9HUp+PtlbKCiKhoaoGMSFVgKhFD7OjYQk46CgIsBPDDfmRwi14HbxSEpz39YpRBcPxeNHwagPh1XMJtLXR1ifjmJKEFE1mzgp3+KprSMVjEAn5miP9kYv2zXWH3ClPaLUehmMzXukHMswxjBgQHi/BIFjP9UebDOSWPrNSftif80rF+JywcaX7qkAAAAASUVORK5CYII=",
+      "yoffset": 0,
+      "width": 14,
+      "xoffset": 0,
+      "angle": 0,
+      "type": "esriPMS",
+      "contentType": "image/png",
+      "url": "f4722dc3bae295c61ddcd0078d4aa491",
+      "height": 11
+     },
+     "label": "< 4-year Schools",
+     "value": "< 2-year, Public"
+    }
+   ],
+   "type": "uniqueValue",
+   "fieldDelimiter": ";"
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": [{
+   "symbol": {
+    "backgroundColor": null,
+    "kerning": true,
+    "color": [
+     52,
+     52,
+     52,
+     255
+    ],
+    "yoffset": 0,
+    "xoffset": 0,
+    "haloColor": [
+     255,
+     255,
+     255,
+     255
+    ],
+    "type": "esriTS",
+    "borderLineColor": null,
+    "borderLineSize": null,
+    "horizontalAlignment": "left",
+    "haloSize": 1,
+    "angle": 0,
+    "rightToLeft": false,
+    "verticalAlignment": "baseline",
+    "font": {
+     "size": 8,
+     "weight": "normal",
+     "style": "normal",
+     "family": "Calibri",
+     "decoration": "none"
+    }
+   },
+   "stackLabel": true,
+   "stackRowLength": 24,
+   "offsetDistance": 0.5,
+   "maxScale": 0,
+   "allowOverlapOfFeatureInterior": "avoid",
+   "deconflictionStrategy": "dynamic",
+   "priority": 1,
+   "labelExpression": "[COLLEGE]",
+   "labelPlacement": "esriServerPointLabelPlacementAboveRight",
+   "removeDuplicates": "none",
+   "name": "Private",
+   "minScale": 50000,
+   "stackAlignment": "dynamic",
+   "useCodedValues": true
+  }]
+ },
+ "geometryField": {
+  "name": "SHAPE",
+  "alias": "SHAPE",
+  "type": "esriFieldTypeGeometry"
+ },
+ "copyrightText": "",
+ "geometryType": "esriGeometryPoint"
+}

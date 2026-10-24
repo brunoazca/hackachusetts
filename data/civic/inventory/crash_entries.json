@@ -1,0 +1,198 @@
+[
+  {
+    "id": "crash-link-7b91a942a144",
+    "url": "https://labs.bostoncyclistsunion.org",
+    "name": "Boston Cyclists Union Labs",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-3c9a8cd4a5ba",
+    "url": "https://geodot.mass.gov/search?groupIds=1816c66377f9495ba6baa72515494d2c",
+    "name": "https://geodot.mass.gov/search?groupIds=1816c66377f9495ba6baa72515494d2c",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-4e27458f1e36",
+    "url": "https://geodot.mass.gov/datasets/b42f2c990f784716b320ae0499886591_0/api",
+    "name": "https://geodot.mass.gov/datasets/b42f2c990f784716b320ae0499886591_0/api",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-dc7252132240",
+    "url": "https://data.boston.gov/organization/vision-zero-boston-program",
+    "name": "https://data.boston.gov/organization/vision-zero-boston-program",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-71aa3a5619f5",
+    "url": "https://data.boston.gov/api/3/action/package_list",
+    "name": "https://data.boston.gov/api/3/action/package_list",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-b3c4a6285ba7",
+    "url": "https://docs.ckan.org/en/latest/api/index.html",
+    "name": "https://docs.ckan.org/en/latest/api/index.html",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-317d8d7bd079",
+    "url": "https://data.cambridgema.gov/Public-Safety/CPD-Crash-Log/h6fp-bp8s/",
+    "name": "https://data.cambridgema.gov/Public-Safety/CPD-Crash-Log/h6fp-bp8s/",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-964591a3ca78",
+    "url": "https://data.cambridgema.gov/resource/h6fp-bp8s.json",
+    "name": "https://data.cambridgema.gov/resource/h6fp-bp8s.json",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-5d695a3829ed",
+    "url": "https://data.somervillema.gov/Public-Safety/Police-Data-Crashes/mtik-28va",
+    "name": "https://data.somervillema.gov/Public-Safety/Police-Data-Crashes/mtik-28va",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-dc43e537c0c5",
+    "url": "https://data.somervillema.gov/resource/mtik-28va.json",
+    "name": "https://data.somervillema.gov/resource/mtik-28va.json",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-605a07aed5b6",
+    "url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Summarized-Crashes-Page?_gl=1%2A2u5jav%2A_ga%2AMTIzNDQyOTYzMS4xNzcxNTE3MjQ0%2A_ga_TVRXRVW1YN%2AczE3NzE1MTcyNDQkbzEkZzEkdDE3NzE1MTczNjkkajEyJGwwJGgw",
+    "name": "Boston Metro Planning Org and its Vision Zero maps and datasets",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-7d993ed51f18",
+    "url": "https://www.mass.gov/info-details/highway-safety-improvement-program",
+    "name": "Highway Safety Manager Bonnie Polin",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-ec16d4e099cd",
+    "url": "https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit?gid=1980353091",
+    "name": "Data Quality analysis in Google Sheet",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-b794b250a139",
+    "url": "https://jackdougherty.github.io/mass-lat-lng/",
+    "name": "simple demo map",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-3839739d766c",
+    "url": "https://docs.google.com/spreadsheets/d/1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs/edit?gid=0",
+    "name": "2024 manually-cleaned data in this Google Sheet",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-c99d0e29b0b7",
+    "url": "https://bostonmpo.org",
+    "name": "Boston Region Metropolitan Planning Organization",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-13d30a4363ae",
+    "url": "https://bostonmpo.org/visionzero",
+    "name": "Boston MPO Vision Zero",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-51a533b7da8c",
+    "url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Main-Menu",
+    "name": "regional VZ Dashboard",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-989181e189e2",
+    "url": "https://experience.arcgis.com/experience/19a74f37055b4fb9aad8269153ba82b0/page/Summarized-Crashes-Page",
+    "name": "regional crash map",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-d9452044c461",
+    "url": "https://picturedigits.github.io/mass-crash-map/",
+    "name": "DRAFT Massachusetts Crash Map",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-ff7258da30c9",
+    "url": "https://github.com/picturedigits/mass-crash-map/",
+    "name": "GitHub repo",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-67b8d8a40b2f",
+    "url": "https://bostoncyclistsunion.org/collaborative-releases-new-police-crash-map-data",
+    "name": "Boston-only crash map in 2014",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-0a3d65d0891e",
+    "url": "https://bostoncyclistsunion.org/resources/interactive-crash-map",
+    "name": "2023 map online",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-edcff3f6249a",
+    "url": "https://github.com/BostonCyclistsUnion/crash_map",
+    "name": "code on GitHub",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-b1570fcc3e72",
+    "url": "https://experience.arcgis.com/experience/bae68e65908f45e1bcc86fe5f089d266/page/",
+    "name": "City of Boston Vision Zero hosts its Boston-only crash map",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-52ff8207a6b4",
+    "url": "https://geodot.mass.gov/datasets/b42f2c990f784716b320ae0499886591_0/explore?location=42.341191%2C-71.078711%2C13",
+    "name": "MassDOT hosts its own crash maps",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-283c8396c900",
+    "url": "https://jackdougherty.org/2024/01/01/crash-map/",
+    "name": "Heat and Point Map of crashes in Hartford CT",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  },
+  {
+    "id": "crash-link-ad006939caf5",
+    "url": "https://github.com/datavizforall/hartford-crashes",
+    "name": "Python script in Jupyter Notebook on GitHub",
+    "role": "crash_background_link",
+    "parent": "crash-background"
+  }
+]

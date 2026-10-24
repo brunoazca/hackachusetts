@@ -1,0 +1,682 @@
+{
+  "id" : "8ibc-ffun",
+  "name" : "Crosswalk of Career Technical Education (CTE) Programs to Occupations",
+  "assetType" : "dataset",
+  "attribution" : "Department of Economic Research and Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1774560165,
+  "description" : "This crosswalk maps Massachusetts' <a href=\"https://www.doe.mass.edu/ccte/pathways/cte/default.html\" target=\"_blank\" rel=\"noopener noreferrer\">Career Technical Education (CTE) pathway programs</a> to aligned occupations. These are defined as occupations that enrolled students are typically prepared to enter upon graduation given the skills and knowledge covered in the program, without any subsequent schooling.\n\nThe crosswalk was created jointly by the Department of Economic Research (DER) at the Executive Office of Labor and Workforce Development (EOLWD) and the Office of College, Career, and Technical Education at the Department of Elementary and Secondary Education (DESE). It matches active CTE program codes found in the Student Information Management System (SIMS) Data Handbook Appendices with occupations in the Standard Occupational Classification (SOC) system. Mappings were determined based on standard curriculum described in the <a href=\"https://www.doe.mass.edu/ccte/frameworks/frameworks.html\" target=\"_blank\" rel=\"noopener noreferrer\">CTE Instructional Frameworks</a> as well as occupational requirements observed in recent labor market data. Please note that not all program codes in the SIMS Data Handbook are represented; programs were excluded if no aligned entry-level occupation could be identified, if no graduates had been produced, or if no active programs existed in the state at the time the crosswalk was created.\n\nAdditional versions of this crosswalk will be created as program curriculum or the labor market changes, when there are changes to the SIMS or SOC coding systems, or as currently excluded programs produce graduates, establish active programs, and develop occupational alignments.\n\nData used to create this crosswalk:\n<ul><li>SIMS Data Handbook Appendices v1.1 (2025-2026 school year)</li><li>CTE Instructional Frameworks as of March 2026</li><li><a href=\"https://www.bls.gov/soc\" target=\"_blank\" rel=\"noopener noreferrer\">2018 SOC system</a> from the U.S. Bureau of Labor Statistics (detailed 6-digit codes used, except in cases where labor market information was published in 2023 for aggregated codes)</li><li>Labor market data from the American Community Survey 5-year (2018-2023) and Lightcast job postings (2025)</li></ul>For more information on the SOC system or how to use labor market information, please contact economicresearch@mass.gov.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 20,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42080203,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1776435824,
+  "publicationGroup" : 20321013,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1776435813,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20348934,
+  "totalTimesRated" : 0,
+  "viewCount" : 596,
+  "viewLastModified" : 1776440982,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1776441107,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7437294,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1776441096,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1776441107,
+      "failureCount" : 0,
+      "startedAt" : 1776441107,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 630987743,
+    "name" : "CROSSWALK_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Crosswalk Date",
+    "fieldName" : "crosswalk_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 166469039,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "2026-08-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-08-01T00:00:00.000",
+        "count" : "122"
+      } ],
+      "smallest" : "2026-08-01T00:00:00.000",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 630987751,
+    "name" : "CAREER_CLUSTER_CODE",
+    "dataTypeName" : "text",
+    "description" : "Career Cluster Code",
+    "fieldName" : "career_cluster_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 167069067,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "92",
+      "null" : "0",
+      "top" : [ {
+        "item" : "23",
+        "count" : "31"
+      }, {
+        "item" : "31-33",
+        "count" : "26"
+      }, {
+        "item" : "11",
+        "count" : "12"
+      }, {
+        "item" : "62",
+        "count" : "12"
+      }, {
+        "item" : "48-49",
+        "count" : "10"
+      }, {
+        "item" : "92",
+        "count" : "9"
+      }, {
+        "item" : "72",
+        "count" : "8"
+      }, {
+        "item" : "52-55",
+        "count" : "4"
+      }, {
+        "item" : "71",
+        "count" : "4"
+      }, {
+        "item" : "61",
+        "count" : "3"
+      }, {
+        "item" : "51",
+        "count" : "3"
+      } ],
+      "smallest" : "11",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : { }
+  }, {
+    "id" : 630987750,
+    "name" : "CAREER CLUSTER",
+    "dataTypeName" : "text",
+    "description" : "Career Cluster",
+    "fieldName" : "career_cluster",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 167069066,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "Supply Chain & Transportation",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Construction",
+        "count" : "31"
+      }, {
+        "item" : "Advanced Manufacturing",
+        "count" : "26"
+      }, {
+        "item" : "Healthcare & Human Services",
+        "count" : "12"
+      }, {
+        "item" : "Agriculture",
+        "count" : "12"
+      }, {
+        "item" : "Supply Chain & Transportation",
+        "count" : "10"
+      }, {
+        "item" : "Public Service & Safety",
+        "count" : "9"
+      }, {
+        "item" : "Hospitality, Events, & Tourism",
+        "count" : "8"
+      }, {
+        "item" : "Arts, Entertainment, & Design",
+        "count" : "4"
+      }, {
+        "item" : "Financial Services; Management & Entrepreneurship; Marketing & Sales",
+        "count" : "4"
+      }, {
+        "item" : "Education",
+        "count" : "3"
+      }, {
+        "item" : "Digital Technology",
+        "count" : "3"
+      } ],
+      "smallest" : "Advanced Manufacturing",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : { }
+  }, {
+    "id" : 630987744,
+    "name" : "PROGRAM_CODE",
+    "dataTypeName" : "text",
+    "description" : "Program Code",
+    "fieldName" : "program_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166469038,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "520901",
+      "null" : "0",
+      "top" : [ {
+        "item" : "430107",
+        "count" : "9"
+      }, {
+        "item" : "480703",
+        "count" : "6"
+      }, {
+        "item" : "150000",
+        "count" : "5"
+      }, {
+        "item" : "120401",
+        "count" : "5"
+      }, {
+        "item" : "120500",
+        "count" : "5"
+      }, {
+        "item" : "480506",
+        "count" : "5"
+      }, {
+        "item" : "151301",
+        "count" : "4"
+      }, {
+        "item" : "480510",
+        "count" : "4"
+      }, {
+        "item" : "460101",
+        "count" : "4"
+      }, {
+        "item" : "480599",
+        "count" : "4"
+      }, {
+        "item" : "470603",
+        "count" : "4"
+      }, {
+        "item" : "010599",
+        "count" : "3"
+      }, {
+        "item" : "520407",
+        "count" : "3"
+      }, {
+        "item" : "510000",
+        "count" : "3"
+      }, {
+        "item" : "090701",
+        "count" : "3"
+      }, {
+        "item" : "460401",
+        "count" : "3"
+      }, {
+        "item" : "460302",
+        "count" : "3"
+      }, {
+        "item" : "510801",
+        "count" : "3"
+      }, {
+        "item" : "150507",
+        "count" : "3"
+      }, {
+        "item" : "520901",
+        "count" : "3"
+      } ],
+      "smallest" : "010201",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 630987745,
+    "name" : "PROGRAM",
+    "dataTypeName" : "text",
+    "description" : "Program",
+    "fieldName" : "program",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166469033,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "Veterinary Science",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Criminal Justice",
+        "count" : "9"
+      }, {
+        "item" : "Cabinetmaking",
+        "count" : "6"
+      }, {
+        "item" : "Engineering Technology",
+        "count" : "5"
+      }, {
+        "item" : "Culinary Arts",
+        "count" : "5"
+      }, {
+        "item" : "Sheet Metalworking",
+        "count" : "5"
+      }, {
+        "item" : "Cosmetology",
+        "count" : "5"
+      }, {
+        "item" : "Automotive Collision Repair & Refinishing",
+        "count" : "4"
+      }, {
+        "item" : "Metal Fabrication & Joining Technologies",
+        "count" : "4"
+      }, {
+        "item" : "Drafting",
+        "count" : "4"
+      }, {
+        "item" : "Masonry & Tile Setting",
+        "count" : "4"
+      }, {
+        "item" : "Advanced Manufacturing Technology",
+        "count" : "4"
+      }, {
+        "item" : "Automotive Technology",
+        "count" : "3"
+      }, {
+        "item" : "Environmental Science & Technology",
+        "count" : "3"
+      }, {
+        "item" : "Electronics",
+        "count" : "3"
+      }, {
+        "item" : "Health Assisting",
+        "count" : "3"
+      }, {
+        "item" : "Business Technology",
+        "count" : "3"
+      }, {
+        "item" : "Radio & Television Broadcasting",
+        "count" : "3"
+      }, {
+        "item" : "Hospitality Management",
+        "count" : "3"
+      }, {
+        "item" : "Building/Property Maintenance",
+        "count" : "3"
+      }, {
+        "item" : "Animal Science",
+        "count" : "3"
+      } ],
+      "smallest" : "Advanced Manufacturing Technology",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : { }
+  }, {
+    "id" : 630987746,
+    "name" : "SOC_CODE",
+    "dataTypeName" : "text",
+    "description" : "SOC Code",
+    "fieldName" : "soc_code",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166469036,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "51-9162",
+      "null" : "0",
+      "top" : [ {
+        "item" : "19-4012",
+        "count" : "3"
+      }, {
+        "item" : "15-1231",
+        "count" : "2"
+      }, {
+        "item" : "17-3026",
+        "count" : "2"
+      }, {
+        "item" : "49-3023",
+        "count" : "2"
+      }, {
+        "item" : "47-2051",
+        "count" : "2"
+      }, {
+        "item" : "47-2211",
+        "count" : "2"
+      }, {
+        "item" : "45-2092",
+        "count" : "2"
+      }, {
+        "item" : "47-2031",
+        "count" : "2"
+      }, {
+        "item" : "17-3023",
+        "count" : "2"
+      }, {
+        "item" : "31-1131",
+        "count" : "2"
+      }, {
+        "item" : "31-9092",
+        "count" : "2"
+      }, {
+        "item" : "11-9051",
+        "count" : "2"
+      }, {
+        "item" : "49-3021",
+        "count" : "2"
+      }, {
+        "item" : "47-2142",
+        "count" : "1"
+      }, {
+        "item" : "15-1232",
+        "count" : "1"
+      }, {
+        "item" : "51-7011",
+        "count" : "1"
+      }, {
+        "item" : "45-2091",
+        "count" : "1"
+      }, {
+        "item" : "47-2221",
+        "count" : "1"
+      }, {
+        "item" : "49-9071",
+        "count" : "1"
+      }, {
+        "item" : "51-7042",
+        "count" : "1"
+      } ],
+      "smallest" : "11-3013",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : { }
+  }, {
+    "id" : 630987747,
+    "name" : "SOC_OCCUPATION",
+    "dataTypeName" : "text",
+    "description" : "SOC Occupation",
+    "fieldName" : "soc_occupation",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166469034,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "Woodworking Machine Setters, Operators, and Tenders, Except Sawing",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Agricultural Technicians",
+        "count" : "3"
+      }, {
+        "item" : "Carpenters",
+        "count" : "2"
+      }, {
+        "item" : "Cement Masons and Concrete Finishers",
+        "count" : "2"
+      }, {
+        "item" : "Sheet Metal Workers",
+        "count" : "2"
+      }, {
+        "item" : "Nursing Assistants",
+        "count" : "2"
+      }, {
+        "item" : "Farmworkers and Laborers, Crop, Nursery, and Greenhouse",
+        "count" : "2"
+      }, {
+        "item" : "Medical Assistants",
+        "count" : "2"
+      }, {
+        "item" : "Electrical and Electronic Engineering Technologists and Technicians",
+        "count" : "2"
+      }, {
+        "item" : "Automotive Body and Related Repairers",
+        "count" : "2"
+      }, {
+        "item" : "Food Service Managers",
+        "count" : "2"
+      }, {
+        "item" : "Automotive Service Technicians and Mechanics",
+        "count" : "2"
+      }, {
+        "item" : "Computer Network Support Specialists",
+        "count" : "2"
+      }, {
+        "item" : "Industrial Engineering Technologists and Technicians",
+        "count" : "2"
+      }, {
+        "item" : "Civil Engineering Technologists and Technicians",
+        "count" : "1"
+      }, {
+        "item" : "Telecommunications Line Installers and Repairers",
+        "count" : "1"
+      }, {
+        "item" : "Motorboat Mechanics and Service Technicians",
+        "count" : "1"
+      }, {
+        "item" : "Aircraft Mechanics and Service Technicians",
+        "count" : "1"
+      }, {
+        "item" : "Engineering Technologists and Technicians, Except Drafters, all Other",
+        "count" : "1"
+      }, {
+        "item" : "Woodworking Machine Setters, Operators, and Tenders, Except Sawing",
+        "count" : "1"
+      }, {
+        "item" : "Makeup Artists, Theatrical and Performance",
+        "count" : "1"
+      } ],
+      "smallest" : "Agricultural Equipment Operators",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : { }
+  }, {
+    "id" : 630987748,
+    "name" : "SOC_MAJOR_CODE",
+    "dataTypeName" : "text",
+    "description" : "SOC Major Code",
+    "fieldName" : "soc_major_code",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166469037,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "51-0000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "47-0000",
+        "count" : "19"
+      }, {
+        "item" : "49-0000",
+        "count" : "17"
+      }, {
+        "item" : "51-0000",
+        "count" : "17"
+      }, {
+        "item" : "17-0000",
+        "count" : "14"
+      }, {
+        "item" : "33-0000",
+        "count" : "7"
+      }, {
+        "item" : "31-0000",
+        "count" : "7"
+      }, {
+        "item" : "39-0000",
+        "count" : "6"
+      }, {
+        "item" : "43-0000",
+        "count" : "6"
+      }, {
+        "item" : "11-0000",
+        "count" : "5"
+      }, {
+        "item" : "19-0000",
+        "count" : "5"
+      }, {
+        "item" : "45-0000",
+        "count" : "4"
+      }, {
+        "item" : "35-0000",
+        "count" : "4"
+      }, {
+        "item" : "15-0000",
+        "count" : "3"
+      }, {
+        "item" : "27-0000",
+        "count" : "3"
+      }, {
+        "item" : "37-0000",
+        "count" : "2"
+      }, {
+        "item" : "25-0000",
+        "count" : "2"
+      }, {
+        "item" : "41-0000",
+        "count" : "1"
+      } ],
+      "smallest" : "11-0000",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : { }
+  }, {
+    "id" : 630987749,
+    "name" : "SOC_MAJOR_OCCUPATION",
+    "dataTypeName" : "text",
+    "description" : "SOC Major Occupation",
+    "fieldName" : "soc_major_occupation",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166469035,
+    "cachedContents" : {
+      "non_null" : "122",
+      "largest" : "Sales and Related Occupations",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Construction and Extraction Occupations",
+        "count" : "19"
+      }, {
+        "item" : "Installation, Maintenance, and Repair Occupations",
+        "count" : "17"
+      }, {
+        "item" : "Production Occupations",
+        "count" : "17"
+      }, {
+        "item" : "Architecture and Engineering Occupations",
+        "count" : "14"
+      }, {
+        "item" : "Healthcare Support Occupations",
+        "count" : "7"
+      }, {
+        "item" : "Protective Service Occupations",
+        "count" : "7"
+      }, {
+        "item" : "Office and Administrative Support Occupations",
+        "count" : "6"
+      }, {
+        "item" : "Personal Care and Service Occupations",
+        "count" : "6"
+      }, {
+        "item" : "Management Occupations",
+        "count" : "5"
+      }, {
+        "item" : "Life, Physical, and Social Science Occupations",
+        "count" : "5"
+      }, {
+        "item" : "Farming, Fishing, and Forestry Occupations",
+        "count" : "4"
+      }, {
+        "item" : "Food Preparation and Serving Related Occupations",
+        "count" : "4"
+      }, {
+        "item" : "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "count" : "3"
+      }, {
+        "item" : "Computer and Mathematical Occupations",
+        "count" : "3"
+      }, {
+        "item" : "Building and Grounds Cleaning and Maintenance Occupations",
+        "count" : "2"
+      }, {
+        "item" : "Educational Instruction and Library Occupations",
+        "count" : "2"
+      }, {
+        "item" : "Sales and Related Occupations",
+        "count" : "1"
+      } ],
+      "smallest" : "Architecture and Engineering Occupations",
+      "count" : "122",
+      "cardinality" : "122"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-economic-research"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "crosswalk", "cte", "ccte", "chapter 74", "labor" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

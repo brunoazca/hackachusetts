@@ -1,0 +1,806 @@
+{
+  "id" : "3ss8-pnvb",
+  "name" : "Student Restraints",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1708976894,
+  "description" : "This dataset contains instances in which students in Massachusetts public schools, public school collaboratives, and approved day and residential special education schools were <a href=\"http://www.doe.mass.edu/lawsregs/603cmr46.html?section=02\"target=\"_blank\" rel=\"noopener noreferrer\">restrained</a> by staff during school hours, as reported by each school from 2017 onward.\n\nEnrollment data is collected for public schools and approved private schools, but not for collaboratives or approved private programs. Collaboratives or approved private programs are indicated by blank cells in their enrollment column.\n\nThe categories of schools in this dataset serve different student populations, and some may have a significantly longer school year, which may account for differences in the data reported. Other factors that can lead to variation in restraint rates are the age range and the health and safety needs of the students served. Because of these differences, the data reported do not support comparisons between schools.\n\nBlank cells indicate data suppression. Data is suppressed when there are fewer than 6 students restrained, or when the number of injuries to staff or students is between 1 and 5.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/restraints.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Student Restraints</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 43,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41641023,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1758650324,
+  "publicationGroup" : 19465036,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1769728042,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20103713,
+  "totalTimesRated" : 0,
+  "viewCount" : 711,
+  "viewLastModified" : 1786393389,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1762960691,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7198274,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1762960675,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1762960691,
+      "failureCount" : 0,
+      "startedAt" : 1762960691,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 618063117,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151569364,
+    "cachedContents" : {
+      "non_null" : "7914",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2019",
+        "count" : "960"
+      }, {
+        "item" : "2024",
+        "count" : "960"
+      }, {
+        "item" : "2025",
+        "count" : "954"
+      }, {
+        "item" : "2023",
+        "count" : "927"
+      }, {
+        "item" : "2018",
+        "count" : "913"
+      }, {
+        "item" : "2022",
+        "count" : "889"
+      }, {
+        "item" : "2017",
+        "count" : "869"
+      }, {
+        "item" : "2020",
+        "count" : "853"
+      }, {
+        "item" : "2021",
+        "count" : "589"
+      } ],
+      "smallest" : "2017",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063126,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162009040,
+    "cachedContents" : {
+      "non_null" : "7914",
+      "largest" : "99999999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "273"
+      }, {
+        "item" : "02810000",
+        "count" : "177"
+      }, {
+        "item" : "05040000",
+        "count" : "137"
+      }, {
+        "item" : "02070000",
+        "count" : "136"
+      }, {
+        "item" : "01600000",
+        "count" : "117"
+      }, {
+        "item" : "02010000",
+        "count" : "102"
+      }, {
+        "item" : "01490000",
+        "count" : "99"
+      }, {
+        "item" : "05220000",
+        "count" : "94"
+      }, {
+        "item" : "03480000",
+        "count" : "89"
+      }, {
+        "item" : "00950000",
+        "count" : "88"
+      }, {
+        "item" : "01280000",
+        "count" : "82"
+      }, {
+        "item" : "02360000",
+        "count" : "79"
+      }, {
+        "item" : "00610000",
+        "count" : "77"
+      }, {
+        "item" : "01000000",
+        "count" : "76"
+      }, {
+        "item" : "01370000",
+        "count" : "75"
+      }, {
+        "item" : "00440000",
+        "count" : "69"
+      }, {
+        "item" : "00160000",
+        "count" : "68"
+      }, {
+        "item" : "02390000",
+        "count" : "65"
+      }, {
+        "item" : "02930000",
+        "count" : "63"
+      }, {
+        "item" : "05340000",
+        "count" : "57"
+      } ],
+      "smallest" : "00010000",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063125,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162009039,
+    "cachedContents" : {
+      "non_null" : "7914",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "228"
+      }, {
+        "item" : "Springfield",
+        "count" : "177"
+      }, {
+        "item" : "Bi-County Collaborative (BICO)",
+        "count" : "137"
+      }, {
+        "item" : "Newton",
+        "count" : "136"
+      }, {
+        "item" : "Lowell",
+        "count" : "117"
+      }, {
+        "item" : "New Bedford",
+        "count" : "102"
+      }, {
+        "item" : "Lawrence",
+        "count" : "99"
+      }, {
+        "item" : "South Coast Educational Collaborative",
+        "count" : "94"
+      }, {
+        "item" : "Worcester",
+        "count" : "89"
+      }, {
+        "item" : "Haverhill",
+        "count" : "82"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "79"
+      }, {
+        "item" : "Chicopee",
+        "count" : "77"
+      }, {
+        "item" : "Fall River",
+        "count" : "76"
+      }, {
+        "item" : "Framingham",
+        "count" : "76"
+      }, {
+        "item" : "Holyoke",
+        "count" : "75"
+      }, {
+        "item" : "Brockton",
+        "count" : "69"
+      }, {
+        "item" : "Attleboro",
+        "count" : "68"
+      }, {
+        "item" : "Plymouth",
+        "count" : "65"
+      }, {
+        "item" : "LABBB Collaborative",
+        "count" : "57"
+      }, {
+        "item" : "Cambridge",
+        "count" : "56"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063118,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151569365,
+    "cachedContents" : {
+      "non_null" : "7914",
+      "largest" : "99999999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "02440020",
+        "count" : "9"
+      }, {
+        "item" : "02270008",
+        "count" : "9"
+      }, {
+        "item" : "50650101",
+        "count" : "9"
+      }, {
+        "item" : "50940101",
+        "count" : "9"
+      }, {
+        "item" : "50480101",
+        "count" : "9"
+      }, {
+        "item" : "02010123",
+        "count" : "9"
+      }, {
+        "item" : "02810025",
+        "count" : "9"
+      }, {
+        "item" : "50420101",
+        "count" : "9"
+      }, {
+        "item" : "02120013",
+        "count" : "9"
+      }, {
+        "item" : "00350004",
+        "count" : "9"
+      }, {
+        "item" : "50250101",
+        "count" : "9"
+      }, {
+        "item" : "05740005",
+        "count" : "9"
+      }, {
+        "item" : "02070310",
+        "count" : "9"
+      }, {
+        "item" : "00140010",
+        "count" : "9"
+      }, {
+        "item" : "01700008",
+        "count" : "9"
+      }, {
+        "item" : "05580002",
+        "count" : "9"
+      }, {
+        "item" : "02640015",
+        "count" : "9"
+      }, {
+        "item" : "01410015",
+        "count" : "9"
+      }, {
+        "item" : "06800005",
+        "count" : "9"
+      }, {
+        "item" : "50130101",
+        "count" : "9"
+      } ],
+      "smallest" : "00005415",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063119,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151569366,
+    "width" : 375,
+    "cachedContents" : {
+      "non_null" : "7914",
+      "largest" : "Zervas Elementary",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "26"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "21"
+      }, {
+        "item" : "West Elementary",
+        "count" : "17"
+      }, {
+        "item" : "Glover",
+        "count" : "16"
+      }, {
+        "item" : "South Elementary",
+        "count" : "15"
+      }, {
+        "item" : "Lincoln",
+        "count" : "14"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "14"
+      }, {
+        "item" : "Williams",
+        "count" : "13"
+      }, {
+        "item" : "Franklin",
+        "count" : "13"
+      }, {
+        "item" : "Woodland",
+        "count" : "12"
+      }, {
+        "item" : "Centerville Elementary",
+        "count" : "12"
+      }, {
+        "item" : "Center School",
+        "count" : "12"
+      }, {
+        "item" : "Elm Street School",
+        "count" : "11"
+      }, {
+        "item" : "South Middle School",
+        "count" : "11"
+      }, {
+        "item" : "West Street",
+        "count" : "11"
+      }, {
+        "item" : "John F Kennedy Middle",
+        "count" : "10"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "10"
+      }, {
+        "item" : "Downey",
+        "count" : "10"
+      }, {
+        "item" : "Bates",
+        "count" : "10"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "10"
+      } ],
+      "smallest" : "100 Longwater Circle",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063120,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151569367,
+    "width" : 369,
+    "cachedContents" : {
+      "non_null" : "7914",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Public Schools",
+        "count" : "6191"
+      }, {
+        "item" : "Collaboratives and Approved Private Schools",
+        "count" : "1714"
+      }, {
+        "item" : "State",
+        "count" : "9"
+      } ],
+      "smallest" : "Collaboratives and Approved Private Schools",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063121,
+    "name" : "ENROLL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Enrollment Count",
+    "fieldName" : "enroll_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151569368,
+    "cachedContents" : {
+      "non_null" : "6134",
+      "largest" : "969973",
+      "null" : "1780",
+      "top" : [ {
+        "item" : "389",
+        "count" : "21"
+      }, {
+        "item" : "462",
+        "count" : "21"
+      }, {
+        "item" : "329",
+        "count" : "20"
+      }, {
+        "item" : "338",
+        "count" : "20"
+      }, {
+        "item" : "335",
+        "count" : "20"
+      }, {
+        "item" : "362",
+        "count" : "19"
+      }, {
+        "item" : "413",
+        "count" : "19"
+      }, {
+        "item" : "417",
+        "count" : "18"
+      }, {
+        "item" : "502",
+        "count" : "18"
+      }, {
+        "item" : "328",
+        "count" : "18"
+      }, {
+        "item" : "442",
+        "count" : "18"
+      }, {
+        "item" : "317",
+        "count" : "18"
+      }, {
+        "item" : "399",
+        "count" : "18"
+      }, {
+        "item" : "402",
+        "count" : "18"
+      }, {
+        "item" : "318",
+        "count" : "18"
+      }, {
+        "item" : "392",
+        "count" : "18"
+      }, {
+        "item" : "360",
+        "count" : "18"
+      }, {
+        "item" : "261",
+        "count" : "17"
+      }, {
+        "item" : "471",
+        "count" : "17"
+      }, {
+        "item" : "425",
+        "count" : "17"
+      } ],
+      "smallest" : "0",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063122,
+    "name" : "STU_REST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Student Restraint Count",
+    "fieldName" : "stu_rest_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151569369,
+    "cachedContents" : {
+      "non_null" : "1778",
+      "largest" : "4889",
+      "null" : "6136",
+      "top" : [ {
+        "item" : "6",
+        "count" : "283"
+      }, {
+        "item" : "7",
+        "count" : "210"
+      }, {
+        "item" : "8",
+        "count" : "148"
+      }, {
+        "item" : "9",
+        "count" : "141"
+      }, {
+        "item" : "10",
+        "count" : "97"
+      }, {
+        "item" : "11",
+        "count" : "88"
+      }, {
+        "item" : "12",
+        "count" : "83"
+      }, {
+        "item" : "14",
+        "count" : "63"
+      }, {
+        "item" : "15",
+        "count" : "63"
+      }, {
+        "item" : "13",
+        "count" : "62"
+      }, {
+        "item" : "16",
+        "count" : "44"
+      }, {
+        "item" : "19",
+        "count" : "43"
+      }, {
+        "item" : "17",
+        "count" : "42"
+      }, {
+        "item" : "18",
+        "count" : "39"
+      }, {
+        "item" : "21",
+        "count" : "21"
+      }, {
+        "item" : "30",
+        "count" : "20"
+      }, {
+        "item" : "25",
+        "count" : "19"
+      }, {
+        "item" : "24",
+        "count" : "19"
+      }, {
+        "item" : "20",
+        "count" : "19"
+      }, {
+        "item" : "22",
+        "count" : "18"
+      } ],
+      "smallest" : "6",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063123,
+    "name" : "TOT_REST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Restraint Count",
+    "fieldName" : "tot_rest_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151569370,
+    "cachedContents" : {
+      "non_null" : "1778",
+      "largest" : "38994",
+      "null" : "6136",
+      "top" : [ {
+        "item" : "10",
+        "count" : "42"
+      }, {
+        "item" : "16",
+        "count" : "37"
+      }, {
+        "item" : "17",
+        "count" : "36"
+      }, {
+        "item" : "20",
+        "count" : "36"
+      }, {
+        "item" : "13",
+        "count" : "34"
+      }, {
+        "item" : "22",
+        "count" : "33"
+      }, {
+        "item" : "15",
+        "count" : "32"
+      }, {
+        "item" : "19",
+        "count" : "32"
+      }, {
+        "item" : "12",
+        "count" : "30"
+      }, {
+        "item" : "11",
+        "count" : "29"
+      }, {
+        "item" : "14",
+        "count" : "27"
+      }, {
+        "item" : "29",
+        "count" : "26"
+      }, {
+        "item" : "9",
+        "count" : "26"
+      }, {
+        "item" : "23",
+        "count" : "25"
+      }, {
+        "item" : "34",
+        "count" : "25"
+      }, {
+        "item" : "28",
+        "count" : "23"
+      }, {
+        "item" : "30",
+        "count" : "22"
+      }, {
+        "item" : "18",
+        "count" : "21"
+      }, {
+        "item" : "21",
+        "count" : "21"
+      }, {
+        "item" : "7",
+        "count" : "21"
+      } ],
+      "smallest" : "6",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  }, {
+    "id" : 618063124,
+    "name" : "INJ_CNT",
+    "dataTypeName" : "number",
+    "description" : "Injuries Count",
+    "fieldName" : "inj_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151569371,
+    "cachedContents" : {
+      "non_null" : "967",
+      "largest" : "939",
+      "null" : "6947",
+      "top" : [ {
+        "item" : "0",
+        "count" : "795"
+      }, {
+        "item" : "7",
+        "count" : "26"
+      }, {
+        "item" : "8",
+        "count" : "20"
+      }, {
+        "item" : "9",
+        "count" : "17"
+      }, {
+        "item" : "11",
+        "count" : "14"
+      }, {
+        "item" : "13",
+        "count" : "8"
+      }, {
+        "item" : "10",
+        "count" : "7"
+      }, {
+        "item" : "12",
+        "count" : "5"
+      }, {
+        "item" : "20",
+        "count" : "5"
+      }, {
+        "item" : "15",
+        "count" : "5"
+      }, {
+        "item" : "19",
+        "count" : "3"
+      }, {
+        "item" : "18",
+        "count" : "3"
+      }, {
+        "item" : "17",
+        "count" : "3"
+      }, {
+        "item" : "27",
+        "count" : "3"
+      }, {
+        "item" : "14",
+        "count" : "3"
+      }, {
+        "item" : "21",
+        "count" : "3"
+      }, {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "31",
+        "count" : "2"
+      }, {
+        "item" : "33",
+        "count" : "2"
+      }, {
+        "item" : "52",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "7914",
+      "cardinality" : "7914"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "restraints", "public school", "district", "accountability", "discipline", "injury" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

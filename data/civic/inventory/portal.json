@@ -1,0 +1,1178 @@
+{
+  "slug": "civic",
+  "index": "04",
+  "name": "Civic action",
+  "short": "Civic",
+  "blurb": "Strengthen the places, communities, and opportunities that shape daily life.",
+  "opportunities": [
+    {
+      "title": "Better Together: Improving Where We Live, Work, Study & Play",
+      "context": "Whether on a college campus or in a city or town, people encounter everyday challenges related to housing, transportation, public spaces, community connections, and access to opportunities. Technology can help improve these experiences and create stronger, more inclusive communities.",
+      "directions": "Explore better places to live, work, and study; stronger community connections and civic participation; and greater access to education, jobs, mentorship, financial resources, and other opportunities."
+    },
+    {
+      "title": "Citizen-Friendly Digital Government",
+      "context": "Government services can be difficult to navigate. Residents and small businesses often face complex websites, lengthy PDFs, language barriers, and confusing application processes across multiple agencies. Massachusetts also has valuable public datasets that could be used to improve how services are delivered.",
+      "directions": "Explore AI agents to improve Mass.gov, accessible government documents, multilingual service navigation, simpler permitting and application processes, and GIS-powered solutions to community problems."
+    },
+    {
+      "title": "More Responsive Neighborhood Services",
+      "context": "Cities receive reports about potholes, sanitation, streetlights, and other neighborhood concerns through systems such as 311. High volumes and repeated reports can make it hard to recognize patterns, prioritize action, and communicate progress.",
+      "directions": "Explore issue triage, geographic patterns, service transparency, and more accessible resident feedback."
+    },
+    {
+      "title": "Stronger Community Emergency Readiness",
+      "context": "Severe weather and other disruptions require fast, clear communication among public agencies, community groups, and residents. Information may change quickly, and vulnerable populations can be hardest to reach.",
+      "directions": "Explore trusted alerts, local resource navigation, preparedness, and coordination without substituting for official emergency instructions."
+    }
+  ],
+  "challenges": [
+    {
+      "id": "v1",
+      "code": "V1",
+      "title": "Simplified public services",
+      "context": "One task. Too many sites and agencies.",
+      "directions": "Plain language. Show the next step."
+    },
+    {
+      "id": "v2",
+      "code": "V2",
+      "title": "Responsive and resilient communities",
+      "context": "Volume hides who is waiting, and who an alert misses.",
+      "directions": "Triage the pattern. Prep is not a siren."
+    },
+    {
+      "id": "v3",
+      "code": "V3",
+      "title": "Safer and connected places",
+      "context": "The last mile is a street, a bike, or a crash.",
+      "directions": "Show what changed, and where it is unsafe."
+    },
+    {
+      "id": "v4",
+      "code": "V4",
+      "title": "Better college experiences",
+      "context": "Create more supportive college experiences.",
+      "directions": "Show the campus, the engagement, and the research."
+    },
+    {
+      "id": "v5",
+      "code": "V5",
+      "title": "Pathways to education and opportunity",
+      "context": "Expand access to life-changing opportunities.",
+      "directions": "Cost, wages, and the next step."
+    }
+  ],
+  "resources": [
+    {
+      "id": "boston-311",
+      "name": "Boston 311 service requests",
+      "kind": "dataset",
+      "summary": "Topic, department, status, neighborhood. No street address.",
+      "usefulFor": "Neighborhood service patterns and triage.",
+      "href": "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&fields=open_date,case_topic,service_name,assigned_department,case_status,neighborhood,zip_code,on_time,city_council_district,ward&sort=open_date%20desc&limit=100",
+      "challenges": [
+        "v2"
+      ],
+      "previewId": "boston311",
+      "kitId": "boston-311"
+    },
+    {
+      "id": "mbta-alerts",
+      "name": "MBTA service alerts",
+      "kind": "api",
+      "summary": "Effect, severity, routes, rider text.",
+      "usefulFor": "Disruption communication and trip decisions.",
+      "href": "https://api-v3.mbta.com/alerts?page%5Blimit%5D=50",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "mbtaAlerts",
+      "kitId": "mbta-alerts"
+    },
+    {
+      "id": "mbta-routes",
+      "name": "MBTA subway routes",
+      "kind": "api",
+      "summary": "Subway and light rail.",
+      "usefulFor": "Transit navigation and routing context.",
+      "href": "https://api-v3.mbta.com/routes?filter%5Btype%5D=0,1",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "mbtaRoutes",
+      "kitId": "mbta-routes"
+    },
+    {
+      "id": "mbta-stations",
+      "name": "MBTA rapid transit stations",
+      "kind": "dataset",
+      "summary": "Station and line. No geometry.",
+      "usefulFor": "Station-level transit context on a map.",
+      "href": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/MBTA_Rapid_Transit/MapServer/0/query?where=1%3D1&outFields=STATION,LINE,ROUTE&returnGeometry=false&f=json",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "mbtaStations",
+      "kitId": "mbta-stations"
+    },
+    {
+      "id": "civic-ej",
+      "name": "MassGIS environmental justice block groups",
+      "kind": "dataset",
+      "summary": "Block groups flagged for income, race, or language.",
+      "usefulFor": "Equity context for services, neighborhoods, and alerts.",
+      "href": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0/query?where=EJ%3D%27Yes%27&outFields=MUNICIPALITY,TOTAL_POP,PCT_MINORITY,LIMENGHHPCT,BG_MHHI,EJ,EJ_CRIT_DESC&returnGeometry=false&resultRecordCount=100&f=json",
+      "challenges": [
+        "v1",
+        "v2"
+      ],
+      "previewId": "ej",
+      "kitId": "ej"
+    },
+    {
+      "id": "fema",
+      "name": "OpenFEMA disaster declarations",
+      "kind": "api",
+      "summary": "Massachusetts declarations.",
+      "usefulFor": "Emergency readiness and disaster history.",
+      "href": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$filter=state%20eq%20%27MA%27&$top=100&$select=disasterNumber,declarationTitle,declarationDate,incidentType,designatedArea,declarationType&$orderby=declarationDate%20desc",
+      "challenges": [
+        "v2"
+      ],
+      "previewId": "fema",
+      "kitId": "fema"
+    },
+    {
+      "id": "permits",
+      "name": "Boston approved building permits",
+      "kind": "dataset",
+      "summary": "Issued since 2024. No street address.",
+      "usefulFor": "Permitting volume, type, and ward.",
+      "href": "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20permitnumber%2Cworktype%2Cpermittypedescr%2Cdescription%2Cdeclared_valuation%2Ctotal_fees%2Cissued_date%2Cexpiration_date%2Cstatus%2Coccupancytype%2Csq_feet%2Czip%2Cward%20FROM%20%226ddcd912-32a0-43df-9908-63574f8c7e77%22%20WHERE%20issued_date%20%3E%3D%20%272024-01-01%27%20ORDER%20BY%20issued_date%20DESC%20LIMIT%20100",
+      "challenges": [
+        "v1"
+      ],
+      "previewId": "permits",
+      "kitId": "permits"
+    },
+    {
+      "id": "neighborhoods",
+      "name": "Boston neighborhood estimates, 2025",
+      "kind": "dataset",
+      "summary": "Population, education, poverty. City estimates.",
+      "usefulFor": "Who lives where, before a service is designed.",
+      "href": "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20name%2Cyear%2Carealand_sqmi%2Cpopulation_b01001_001e%2Ceducation_b15003_hsgrad_and_ged%2Ceducation_b15003_022e%2Ceducation_b15003_gradprofdegree%2Cincome_b17001_001e%2Cincome_b17001_002e%20FROM%20%22b0543358-d03f-4682-bf0c-658ea4573d6f%22",
+      "challenges": [
+        "v1"
+      ],
+      "previewId": "neighborhoods",
+      "kitId": "neighborhoods"
+    },
+    {
+      "id": "violations",
+      "name": "Boston building and property violations",
+      "kind": "dataset",
+      "summary": "Status since 2024. No street address.",
+      "usefulFor": "Where permits and inspections pile up.",
+      "href": "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20case_no%2Cstatus_dttm%2Cstatus%2Ccode%2Cvalue%2Cdescription%2Cviolation_city%2Cviolation_zip%2Cward%20FROM%20%22800a2663-1d6a-46e7-9356-bedb70f5332c%22%20WHERE%20status_dttm%20%3E%3D%20%272024-01-01%27%20ORDER%20BY%20status_dttm%20DESC%20LIMIT%20100",
+      "challenges": [
+        "v1"
+      ],
+      "previewId": "violations",
+      "kitId": "violations"
+    },
+    {
+      "id": "scorecard",
+      "name": "College Scorecard, Massachusetts",
+      "kind": "dataset",
+      "summary": "Cost, debt, earnings, and completion. Suppressed cells stay suppressed.",
+      "usefulFor": "Comparing what a college costs and what students earn later.",
+      "href": "https://ed-public-download.scorecard.network/downloads/Most-Recent-Cohorts-Institution_10152026.zip",
+      "challenges": [
+        "v1",
+        "v5"
+      ],
+      "previewId": "scorecard",
+      "kitId": "scorecard"
+    },
+    {
+      "id": "onet",
+      "name": "O*NET occupations",
+      "kind": "dataset",
+      "summary": "Occupation titles and descriptions from O*NET 30.0.",
+      "usefulFor": "Connecting a skill or a major to a career name.",
+      "href": "https://www.onetcenter.org/dl_files/database/db_30_0_text/Occupation%20Data.txt",
+      "challenges": [
+        "v1",
+        "v5"
+      ],
+      "previewId": "onet",
+      "kitId": "onet"
+    },
+    {
+      "id": "ipeds",
+      "name": "IPEDS institutional directory, Massachusetts",
+      "kind": "dataset",
+      "summary": "Every Massachusetts institution in the 2024 IPEDS directory.",
+      "usefulFor": "A fact book of campuses, sector, and size.",
+      "href": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip",
+      "challenges": [
+        "v2",
+        "v4",
+        "v5"
+      ],
+      "previewId": "ipeds",
+      "kitId": "ipeds"
+    },
+    {
+      "id": "openalex-works",
+      "name": "OpenAlex works at the nine campuses, 2024",
+      "kind": "api",
+      "summary": "Most-cited 2024 works with an author at a Hackachusetts campus.",
+      "usefulFor": "Finding research already happening where students are.",
+      "href": "https://api.openalex.org/works?filter=authorships.institutions.id:I63966007%7CI136199984%7CI103531236%7CI111088046%7CI12912129%7CI24603500%7CI133738476%7CI33434090%7CI96062909,publication_year:2024&sort=cited_by_count:desc&per_page=25&select=display_name,publication_year,cited_by_count,type,primary_location",
+      "challenges": [
+        "v2",
+        "v4"
+      ],
+      "previewId": "openalexWorks",
+      "kitId": "openalex-works"
+    },
+    {
+      "id": "colleges",
+      "name": "MassGIS colleges and universities",
+      "kind": "dataset",
+      "summary": "Campus points statewide. Street address and phone are left out.",
+      "usefulFor": "Seeing which campuses a bus, a bike, or a service can reach.",
+      "href": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/HigherEd/MapServer/0/query?where=1%3D1&outFields=COLLEGE,CAMPUS,CITY,ZIPCODE,GEOG_TOWN,TYPE,NCES_TYPE,CATEGORY,CAMPUSHOUS&returnGeometry=true&outSR=4326&f=json",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "colleges",
+      "kitId": "colleges"
+    },
+    {
+      "id": "bluebikes",
+      "name": "Bluebikes trips, November 2024",
+      "kind": "dataset",
+      "summary": "Station-to-station counts for one month. The URL is every trip.",
+      "usefulFor": "Where shared bikes actually move around campus.",
+      "href": "https://s3.amazonaws.com/hubway-data/202411-bluebikes-tripdata.zip",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "bluebikes",
+      "kitId": "bluebikes"
+    },
+    {
+      "id": "vision-zero",
+      "name": "Boston Vision Zero crash records",
+      "kind": "dataset",
+      "summary": "Mode, street, and cross street. The city's crash point, not a home.",
+      "usefulFor": "Finding injury patterns near a campus or a bike route.",
+      "href": "https://data.boston.gov/api/3/action/datastore_search?resource_id=e4bfe397-6bfc-49c5-9367-c879fac7401d&fields=dispatch_ts,mode_type,location_type,street,xstreet1,xstreet2,lat,long&sort=dispatch_ts%20desc&limit=100",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "visionZero",
+      "kitId": "vision-zero"
+    },
+    {
+      "id": "cambridge-crashes",
+      "name": "Cambridge police crash records",
+      "kind": "dataset",
+      "summary": "Street and crash type. No house number, plate, age, or sex.",
+      "usefulFor": "Intersections where people walking or biking get hit.",
+      "href": "https://data.cambridgema.gov/resource/gb5w-yva3.json?$select=date_time,day_of_week,street_name,cross_street,near_street,location,may_involve_cyclist,may_involve_pedestrian,manner_of_collision,first_harmful_event,ambient_light,weather_condition_1,road_surface_condition,speed_limit,street_or_intersection&$order=date_time%20DESC&$limit=100",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "cambridgeCrashes",
+      "kitId": "cambridge-crashes"
+    },
+    {
+      "id": "cambridge-bikes",
+      "name": "Cambridge citywide bicycle counts",
+      "kind": "dataset",
+      "summary": "Counts since 2018 at named locations.",
+      "usefulFor": "Which streets already carry bike traffic.",
+      "href": "https://data.cambridgema.gov/resource/ijm6-q7em.json?$select=countlocation,year,date,timeperiod,street,trafficdirection,cyclistlocation,movementtype,count,weather,latitude,longitude&$where=year%20%3E=%20%272018%27&$order=date%20DESC&$limit=100",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "cambridgeBikes",
+      "kitId": "cambridge-bikes"
+    },
+    {
+      "id": "eco-totem",
+      "name": "Cambridge Broadway bicycle counter",
+      "kind": "dataset",
+      "summary": "Automated Broadway counts from 2024 on.",
+      "usefulFor": "Season and time of day on one real bike street.",
+      "href": "https://data.cambridgema.gov/resource/q8v9-mcfg.json?$select=datetime,day,total,entries,exits&$where=datetime%20%3E=%20%272024-01-01T00:00:00%27&$order=datetime%20DESC&$limit=100",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "ecoTotem",
+      "kitId": "eco-totem"
+    },
+    {
+      "id": "fresh-pond",
+      "name": "Cambridge Fresh Pond usership",
+      "kind": "dataset",
+      "summary": "Hourly use of the reservation from 2024 on.",
+      "usefulFor": "How a shared outdoor place is actually used.",
+      "href": "https://data.cambridgema.gov/resource/6xy8-cstb.json?$select=datetime,season,month,hour,fp_avg_hrly_use,bn,cg,lfp,lus,pro_shop&$where=year%20%3E=%20%272024%27&$order=datetime%20DESC&$limit=100",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "freshPond",
+      "kitId": "fresh-pond"
+    },
+    {
+      "id": "somerville-counts",
+      "name": "Somerville bicycle and pedestrian counts",
+      "kind": "dataset",
+      "summary": "Bike and walk counts at named intersections.",
+      "usefulFor": "A campus-to-neighborhood walking or biking route.",
+      "href": "https://data.somervillema.gov/resource/qu9x-4xq5.json?$select=year,location_name,latitude,longitude,am_pm,mode,count&$order=year%20DESC&$limit=100",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "somervilleCounts",
+      "kitId": "somerville-counts"
+    },
+    {
+      "id": "numina",
+      "name": "Boston Numina street sensors",
+      "kind": "dataset",
+      "summary": "Pedestrian and other street counts from the published sensors.",
+      "usefulFor": "Who is using a shared street, hour by hour.",
+      "href": "https://data.boston.gov/api/3/action/datastore_search?resource_id=d6c06150-418d-4705-b0c9-e92afd23ede7&fields=zone_id,metric,objClass,result,time&limit=100",
+      "challenges": [
+        "v3"
+      ],
+      "previewId": "numina",
+      "kitId": "numina"
+    },
+    {
+      "id": "open-context",
+      "name": "Boston Open Context",
+      "kind": "tool",
+      "summary": "Connect a model to city context.",
+      "usefulFor": "Source-grounded civic agents.",
+      "href": "https://github.com/CityOfBoston/OpenContext",
+      "challenges": [
+        "v1",
+        "v2"
+      ]
+    },
+    {
+      "id": "boston-gov",
+      "name": "Boston.gov",
+      "kind": "guidance",
+      "summary": "City services.",
+      "usefulFor": "Authoritative service copy and process steps.",
+      "href": "https://www.boston.gov/",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "mass-gov",
+      "name": "Mass.gov",
+      "kind": "guidance",
+      "summary": "State services.",
+      "usefulFor": "Statewide service navigation.",
+      "href": "https://www.mass.gov/",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "mass-211",
+      "name": "Massachusetts 211",
+      "kind": "guidance",
+      "summary": "Referrals.",
+      "usefulFor": "Local resource navigation in an emergency or service gap.",
+      "href": "https://mass211.org/",
+      "challenges": [
+        "v1",
+        "v2"
+      ]
+    },
+    {
+      "id": "civic-agents",
+      "name": "Civic AI agents for Boston",
+      "kind": "guidance",
+      "summary": "How the city wants agents to identify themselves.",
+      "usefulFor": "Identity and auth constraints for civic agents.",
+      "href": "https://github.com/projnanda/civic-agents/blob/main/boston-agents-identity-and-auth.md",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "bls-oews",
+      "name": "BLS occupational wages, Massachusetts",
+      "kind": "guidance",
+      "summary": "State wage tables. The file download blocked a scripted pull.",
+      "usefulFor": "What an occupation pays here, before you recommend it.",
+      "href": "https://www.bls.gov/oes/current/oes_ma.htm",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "e2c",
+      "name": "Massachusetts E2C Hub",
+      "kind": "guidance",
+      "summary": "Directory of education and workforce files. Not one download.",
+      "usefulFor": "Picking a state pathway dataset that matches the question.",
+      "href": "https://www.mass.gov/info-details/e2c-hub-directory-of-datasets-and-reports",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "ma-outcomes",
+      "name": "Massachusetts college and career outcomes",
+      "kind": "guidance",
+      "summary": "Dashboard of enrollment after high school.",
+      "usefulFor": "Where college-going pathways diverge.",
+      "href": "https://www.mass.gov/info-details/massachusetts-college-and-career-outcomes-dashboard",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "acs",
+      "name": "American Community Survey",
+      "kind": "guidance",
+      "summary": "Income, education, and commuting. A Census key is required, so there is no zip.",
+      "usefulFor": "Neighborhood context around a campus. Mind the margin of error.",
+      "href": "https://data.census.gov/",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "college-navigator",
+      "name": "College Navigator",
+      "kind": "guidance",
+      "summary": "Federal institution profiles. Use IPEDS for the bulk file.",
+      "usefulFor": "Checking one college before you generalize.",
+      "href": "https://nces.ed.gov/collegenavigator/",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "us-news",
+      "name": "U.S. News college rankings",
+      "kind": "guidance",
+      "summary": "Published ranks. Not an open bulk file. Do not scrape it.",
+      "usefulFor": "Setting a ranking next to cost and earnings.",
+      "href": "https://www.usnews.com/best-colleges/rankings",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "times-higher",
+      "name": "Times Higher Education rankings",
+      "kind": "guidance",
+      "summary": "Global ranks. Licensed. Not a starter zip.",
+      "usefulFor": "Showing how a global rank is built.",
+      "href": "https://www.timeshighereducation.com/world-university-rankings",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "qs",
+      "name": "QS subject rankings",
+      "kind": "guidance",
+      "summary": "Subject ranks. Not an open bulk file.",
+      "usefulFor": "Comparing a department rank with the institution rank.",
+      "href": "https://www.topuniversities.com/subject-rankings",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "arwu",
+      "name": "ShanghaiRanking ARWU",
+      "kind": "guidance",
+      "summary": "Research-weighted ranks. Not an open bulk file.",
+      "usefulFor": "Setting a research rank next to student outcomes.",
+      "href": "https://www.shanghairanking.com/rankings/arwu/2026",
+      "challenges": [
+        "v1",
+        "v5"
+      ]
+    },
+    {
+      "id": "nsse",
+      "name": "NSSE public displays",
+      "kind": "guidance",
+      "summary": "Aggregate engagement displays. Student microdata is restricted.",
+      "usefulFor": "Belonging and engagement, without pretending you have the survey.",
+      "href": "https://nsse.indiana.edu/nsse/reports-data/data-displays.html",
+      "challenges": [
+        "v2",
+        "v4"
+      ]
+    },
+    {
+      "id": "ma-higher-ed",
+      "name": "Massachusetts public higher education performance",
+      "kind": "guidance",
+      "summary": "Performance reports for public colleges. Private colleges are out of scope.",
+      "usefulFor": "Benchmarking a public campus before you build on it.",
+      "href": "https://www.mass.edu/datacenter/PMRS/home.asp",
+      "challenges": [
+        "v2",
+        "v4"
+      ]
+    },
+    {
+      "id": "dhe-enrollment",
+      "name": "Public college enrollment, fall 2021",
+      "kind": "guidance",
+      "summary": "Headcount for community colleges and state universities. The 2020 edition is the older twin.",
+      "usefulFor": "Seeing which public campuses grew or shrank before you design for them.",
+      "href": "https://www.mass.edu/datacenter/2021enrollmentestimates.asp",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dhe-access",
+      "name": "Access and affordability at public colleges",
+      "kind": "guidance",
+      "summary": "Enrollment by demographic and income at state universities and community colleges.",
+      "usefulFor": "Who can actually get in, and who the price leaves out.",
+      "href": "https://www.mass.edu/datacenter/access/home.asp",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dhe-tuition",
+      "name": "Tuition and fees at Massachusetts public colleges",
+      "kind": "guidance",
+      "summary": "Published tuition and fees. Not a net-price estimate.",
+      "usefulFor": "The sticker a student sees before aid.",
+      "href": "https://www.mass.edu/datacenter/tuition/home.asp",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dhe-success",
+      "name": "Student success at public colleges",
+      "kind": "guidance",
+      "summary": "Completion at state universities and community colleges.",
+      "usefulFor": "Whether a campus finishes what it starts.",
+      "href": "https://www.mass.edu/datacenter/success/home.asp",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dhe-adults",
+      "name": "Adult learners at public colleges",
+      "kind": "guidance",
+      "summary": "Who is already enrolled later in life, and what stops others.",
+      "usefulFor": "A pathway tool that is not only for 18-year-olds.",
+      "href": "https://www.mass.edu/datacenter/2017adultlearners.asp",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dese-profiles",
+      "name": "Massachusetts school and district profiles",
+      "kind": "guidance",
+      "summary": "Enrollment, graduation, teacher pay, and finance by school and district.",
+      "usefulFor": "The K–12 side of a campus-to-career story.",
+      "href": "https://profiles.doe.mass.edu/",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dese-reports",
+      "name": "Elementary and secondary statistical reports",
+      "kind": "guidance",
+      "summary": "Graduation, dropout, retention, educator evaluation, and mobility.",
+      "usefulFor": "A district number you can cite instead of a statewide average.",
+      "href": "https://www.doe.mass.edu/infoservices/reports/default.html",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dese-mcas",
+      "name": "MCAS results",
+      "kind": "guidance",
+      "summary": "Assessment results for the last six years. A score is not a student.",
+      "usefulFor": "Where a district’s academic picture is public.",
+      "href": "https://www.doe.mass.edu/mcas/results.html",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dese-cvte",
+      "name": "Career and vocational technical education data",
+      "kind": "guidance",
+      "summary": "Reports for high-school and two-year career programs.",
+      "usefulFor": "A path that is not a four-year college.",
+      "href": "https://www.doe.mass.edu/ccte/data-reports/default.html",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dese-charter",
+      "name": "Charter school finance and enrollment",
+      "kind": "guidance",
+      "summary": "Funding, spending, tuition, and enrollment for charter schools.",
+      "usefulFor": "Comparing a charter with the district next to it.",
+      "href": "https://www.doe.mass.edu/charter/finance/default.html",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "sped-tuition",
+      "name": "Special education tuition rates",
+      "kind": "guidance",
+      "summary": "Approved tuition prices for special-education programs.",
+      "usefulFor": "What a placement costs the district, in the state’s own table.",
+      "href": "https://www.mass.gov/info-details/special-education-tuition-pricing-details",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "stem-dashboard",
+      "name": "Massachusetts STEM dashboard",
+      "kind": "guidance",
+      "summary": "The state’s STEM indicators. A dashboard, not a bulk extract.",
+      "usefulFor": "Where the science and tech pipeline is thin.",
+      "href": "https://www.mass.gov/info-details/stem-dashboard",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dese-research",
+      "name": "DESE research and evaluations",
+      "kind": "guidance",
+      "summary": "Policy briefs, program evaluations, and legislative reports.",
+      "usefulFor": "Reading what the state already measured before you invent a metric.",
+      "href": "https://www.doe.mass.edu/research/reports/default.aspx",
+      "challenges": [
+        "v1"
+      ]
+    },
+    {
+      "id": "dhe-equity-place",
+      "name": "College equity by place and income",
+      "kind": "guidance",
+      "summary": "Attainment and earnings gaps by ZIP code among Massachusetts adults.",
+      "usefulFor": "A neighborhood where a degree is rare, and what that costs.",
+      "href": "https://www.mass.edu/datacenter/EquitySpotlight-GeographySES.asp",
+      "challenges": [
+        "v2"
+      ]
+    },
+    {
+      "id": "dhe-equity-race",
+      "name": "College equity by race and gender",
+      "kind": "guidance",
+      "summary": "Outcome gaps the Board of Higher Education asked the state to close.",
+      "usefulFor": "A completion number that is not one statewide average.",
+      "href": "https://www.mass.edu/datacenter/equityspotlight-latinomales.asp",
+      "challenges": [
+        "v2"
+      ]
+    },
+    {
+      "id": "dhe-equity-pandemic",
+      "name": "Pandemic enrollment changes by population",
+      "kind": "guidance",
+      "summary": "Who left public colleges when the pandemic hit, by race and other traits.",
+      "usefulFor": "A drop that a campus average will hide.",
+      "href": "https://www.mass.edu/datacenter/2020enrollmenttrends.asp",
+      "challenges": [
+        "v2"
+      ]
+    },
+    {
+      "id": "pmrs-completion",
+      "name": "PMRS spotlight on success and completion",
+      "kind": "guidance",
+      "summary": "Rising completion, and the gaps that stayed. One report inside PMRS.",
+      "usefulFor": "The specific gap, not only the campus dashboard.",
+      "href": "https://www.mass.edu/datacenter/pmrs/reports/2019/Success-Completion.asp",
+      "challenges": [
+        "v2"
+      ]
+    },
+    {
+      "id": "sped-disputes",
+      "name": "Special education disputes and rejected IEPs",
+      "kind": "guidance",
+      "summary": "Yearly counts of rejected plans, mediations, and hearings. Not student records.",
+      "usefulFor": "Where a plan broke down before anyone reached a campus.",
+      "href": "https://www.mass.gov/data-on-special-education-disputes-rejected-individualized-education-programs-ieps",
+      "challenges": [
+        "v2"
+      ]
+    },
+    {
+      "id": "myrbs",
+      "name": "Massachusetts youth risk behavior survey",
+      "kind": "guidance",
+      "summary": "Statewide risk behaviors among public high school students. Not a student file.",
+      "usefulFor": "What a high-school community is already dealing with.",
+      "href": "https://www.doe.mass.edu/sfs/yrbs/",
+      "challenges": [
+        "v2"
+      ]
+    },
+    {
+      "id": "web-of-science",
+      "name": "Web of Science API",
+      "kind": "guidance",
+      "summary": "Citation index. Access may require a subscription.",
+      "usefulFor": "Collaboration questions OpenAlex cannot answer alone.",
+      "href": "https://developer.clarivate.com/apis/wos",
+      "challenges": [
+        "v2",
+        "v4"
+      ]
+    },
+    {
+      "id": "google-scholar",
+      "name": "Google Scholar",
+      "kind": "guidance",
+      "summary": "Search. There is no public API. Do not scrape it.",
+      "usefulFor": "Reading the literature behind a campus project.",
+      "href": "https://scholar.google.com/",
+      "challenges": [
+        "v2",
+        "v4"
+      ]
+    },
+    {
+      "id": "boston-bike-dashboard",
+      "name": "Boston bicycle count dashboard",
+      "kind": "guidance",
+      "summary": "City bike-count charts. Confirm an export before you depend on one.",
+      "usefulFor": "Checking a corridor the sensor table does not cover.",
+      "href": "https://www.arcgis.com/apps/dashboards/3491f78e46a545fe8186ad70ebe897aa",
+      "challenges": [
+        "v3"
+      ]
+    },
+    {
+      "id": "massdot-counts",
+      "name": "MassDOT traffic count dashboard",
+      "kind": "guidance",
+      "summary": "Statewide count stations. Exports vary by station.",
+      "usefulFor": "Traffic next to a campus outside Boston.",
+      "href": "https://mhd.ms2soft.com/tdms.ui/nmds/dashboard?loc=mhd",
+      "challenges": [
+        "v3"
+      ]
+    },
+    {
+      "id": "mpo-counts",
+      "name": "Boston region bike and pedestrian counts",
+      "kind": "guidance",
+      "summary": "Regional count map. Download options vary.",
+      "usefulFor": "Active-transportation counts beyond one city.",
+      "href": "https://bostonmpo.org/geoserver/www/apps/bp-counts-app-01262024/index.html",
+      "challenges": [
+        "v3"
+      ]
+    },
+    {
+      "id": "massdot-crashes",
+      "name": "MassDOT crash portal",
+      "kind": "guidance",
+      "summary": "Statewide crash records. Not the same definitions as Vision Zero.",
+      "usefulFor": "A crash outside Boston. Watch geocoding gaps and duplicates.",
+      "href": "https://apps.crashdata.dot.mass.gov/cdp/home",
+      "challenges": [
+        "v3"
+      ]
+    },
+    {
+      "id": "osm",
+      "name": "OpenStreetMap",
+      "kind": "tool",
+      "summary": "Roads, paths, and amenities. Completeness varies. Attribute the map.",
+      "usefulFor": "A walking or biking path when the city file stops.",
+      "href": "https://www.openstreetmap.org/",
+      "challenges": [
+        "v3"
+      ]
+    },
+    {
+      "id": "bike-counts-explainer",
+      "name": "How Boston counts people biking",
+      "kind": "guidance",
+      "summary": "An explainer of local bike counts. Not a dataset.",
+      "usefulFor": "Saying what a counter can and cannot see.",
+      "href": "https://bostoncyclistsunion.org/how-does-boston-know-when-and-where-people-are-biking",
+      "challenges": [
+        "v3"
+      ]
+    },
+    {
+      "id": "crash-background",
+      "name": "Massachusetts crash data background",
+      "kind": "guidance",
+      "summary": "Why city and state crash files do not match.",
+      "usefulFor": "Writing the limitation into a safety demo.",
+      "href": "https://docs.google.com/document/d/1uXopTPMfoXXUVYxw3qVNQyWBeCKVfKLmRSZtwE6gJOc/edit",
+      "challenges": [
+        "v3"
+      ]
+    },
+    {
+      "id": "boston-open-data",
+      "name": "Boston Open Data",
+      "kind": "guidance",
+      "summary": "311, transportation, and city operations datasets.",
+      "usefulFor": "311, transportation, and city operations datasets.",
+      "href": "https://data.boston.gov/",
+      "challenges": []
+    },
+    {
+      "id": "massgis",
+      "name": "MassGIS",
+      "kind": "guidance",
+      "summary": "Community boundaries, infrastructure, and geospatial data. Instant download after submitting the form.",
+      "usefulFor": "Geospatial data, infrastructure, and community analysis.",
+      "href": "https://www.mass.gov/info-details/massgis-data-layers",
+      "challenges": []
+    },
+    {
+      "id": "cambridge-open-data",
+      "name": "Cambridge Open Data",
+      "kind": "guidance",
+      "summary": "Local government, transportation, housing, and community datasets.",
+      "usefulFor": "City datasets on housing, transportation, community services, and local government.",
+      "href": "https://data.cambridgema.gov/browse",
+      "challenges": []
+    },
+    {
+      "id": "mbta-v3",
+      "name": "MBTA V3 API",
+      "kind": "api",
+      "summary": "Public transit routes, schedules, and alerts.",
+      "usefulFor": "Public transit routes, schedules, and alerts.",
+      "href": "https://api-v3.mbta.com/",
+      "challenges": []
+    },
+    {
+      "id": "data-commons-mcp",
+      "name": "Google Data Commons MCP",
+      "kind": "tool",
+      "summary": "Connecting AI agents to public statistical datasets.",
+      "usefulFor": "Connecting AI agents to public statistical datasets.",
+      "href": "https://developers.googleblog.com/en/datacommonsmcp/",
+      "challenges": []
+    },
+    {
+      "id": "nanda-town",
+      "name": "NANDA Town",
+      "kind": "tool",
+      "summary": "Research environment for autonomous AI agent interactions.",
+      "usefulFor": "Research environment for autonomous AI agent interactions.",
+      "href": "https://nandatown.projectnanda.org/",
+      "challenges": []
+    },
+    {
+      "id": "openfema-docs",
+      "name": "FEMA OpenFEMA",
+      "kind": "guidance",
+      "summary": "Emergency management and disaster data.",
+      "usefulFor": "Emergency management and disaster data.",
+      "href": "https://www.fema.gov/about/openfema",
+      "challenges": []
+    },
+    {
+      "id": "civic-extra",
+      "name": "Additional Civic Action Resources",
+      "kind": "guidance",
+      "summary": "Supplementary tools, datasets, and references for participants.",
+      "usefulFor": "Supplementary tools, datasets, and references for participants.",
+      "href": "https://docs.google.com/document/d/1SNUjxvBK5cCq273aYCceGPGKflVUCUF_zrxGw741kAs/edit",
+      "challenges": []
+    }
+  ],
+  "track_kit": {
+    "bytes": 3437060,
+    "zip": "/kits/tracks/civic.zip",
+    "datasets": [
+      "boston-311",
+      "mbta-alerts",
+      "mbta-routes",
+      "mbta-stations",
+      "ej",
+      "fema",
+      "permits",
+      "neighborhoods",
+      "violations",
+      "scorecard",
+      "onet",
+      "ipeds",
+      "openalex-works",
+      "colleges",
+      "bluebikes",
+      "vision-zero",
+      "cambridge-crashes",
+      "cambridge-bikes",
+      "eco-totem",
+      "fresh-pond",
+      "somerville-counts",
+      "numina"
+    ]
+  },
+  "challenge_kits": {
+    "v1": {
+      "bytes": 296369,
+      "zip": "/kits/challenges/v1.zip",
+      "datasets": [
+        "neighborhoods",
+        "ej",
+        "permits",
+        "violations",
+        "scorecard",
+        "onet"
+      ]
+    },
+    "v2": {
+      "bytes": 152025,
+      "zip": "/kits/challenges/v2.zip",
+      "datasets": [
+        "boston-311",
+        "ej",
+        "fema",
+        "ipeds",
+        "openalex-works"
+      ]
+    },
+    "v3": {
+      "bytes": 3032225,
+      "zip": "/kits/challenges/v3.zip",
+      "datasets": [
+        "mbta-alerts",
+        "mbta-routes",
+        "mbta-stations",
+        "colleges",
+        "bluebikes",
+        "vision-zero",
+        "cambridge-crashes",
+        "cambridge-bikes",
+        "eco-totem",
+        "fresh-pond",
+        "somerville-counts",
+        "numina"
+      ]
+    },
+    "v4": {
+      "bytes": 31529,
+      "zip": "/kits/challenges/v4.zip",
+      "datasets": [
+        "ipeds",
+        "openalex-works"
+      ]
+    },
+    "v5": {
+      "bytes": 95597,
+      "zip": "/kits/challenges/v5.zip",
+      "datasets": [
+        "scorecard",
+        "ipeds",
+        "onet"
+      ]
+    }
+  },
+  "dataset_kits": {
+    "boston-311": {
+      "title": "Boston 311 service requests",
+      "rows": 5000,
+      "bytes": 72055,
+      "zip": "/kits/boston-311.zip",
+      "apiUrl": "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&fields=open_date,case_topic,service_name,assigned_department,case_status,neighborhood,zip_code,on_time,city_council_district,ward&sort=open_date%20desc&limit=100"
+    },
+    "mbta-alerts": {
+      "title": "MBTA service alerts",
+      "rows": 130,
+      "bytes": 9523,
+      "zip": "/kits/mbta-alerts.zip",
+      "apiUrl": "https://api-v3.mbta.com/alerts?page%5Blimit%5D=50"
+    },
+    "mbta-routes": {
+      "title": "MBTA subway routes",
+      "rows": 8,
+      "bytes": 1689,
+      "zip": "/kits/mbta-routes.zip",
+      "apiUrl": "https://api-v3.mbta.com/routes?filter%5Btype%5D=0,1"
+    },
+    "mbta-stations": {
+      "title": "MBTA rapid transit stations",
+      "rows": 170,
+      "bytes": 3377,
+      "zip": "/kits/mbta-stations.zip",
+      "apiUrl": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/MBTA_Rapid_Transit/MapServer/0/query?where=1%3D1&outFields=STATION,LINE,ROUTE&returnGeometry=false&f=json"
+    },
+    "ej": {
+      "title": "MassGIS environmental justice block groups",
+      "rows": 2604,
+      "bytes": 43189,
+      "zip": "/kits/ej.zip",
+      "apiUrl": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0/query?where=EJ%3D%27Yes%27&outFields=MUNICIPALITY,TOTAL_POP,PCT_MINORITY,LIMENGHHPCT,BG_MHHI,EJ,EJ_CRIT_DESC&returnGeometry=false&resultRecordCount=100&f=json"
+    },
+    "fema": {
+      "title": "OpenFEMA disaster declarations, Massachusetts",
+      "rows": 415,
+      "bytes": 5083,
+      "zip": "/kits/fema.zip",
+      "apiUrl": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$filter=state%20eq%20%27MA%27&$top=100&$select=disasterNumber,declarationTitle,declarationDate,incidentType,designatedArea,declarationType&$orderby=declarationDate%20desc"
+    },
+    "permits": {
+      "title": "Boston approved building permits",
+      "rows": 8240,
+      "bytes": 139546,
+      "zip": "/kits/permits.zip",
+      "apiUrl": "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20permitnumber%2Cworktype%2Cpermittypedescr%2Cdescription%2Cdeclared_valuation%2Ctotal_fees%2Cissued_date%2Cexpiration_date%2Cstatus%2Coccupancytype%2Csq_feet%2Czip%2Cward%20FROM%20%226ddcd912-32a0-43df-9908-63574f8c7e77%22%20WHERE%20issued_date%20%3E%3D%20%272024-01-01%27%20ORDER%20BY%20issued_date%20DESC%20LIMIT%20100"
+    },
+    "neighborhoods": {
+      "title": "Boston neighborhood estimates, 2025",
+      "rows": 24,
+      "bytes": 3135,
+      "zip": "/kits/neighborhoods.zip",
+      "apiUrl": "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20name%2Cyear%2Carealand_sqmi%2Cpopulation_b01001_001e%2Ceducation_b15003_hsgrad_and_ged%2Ceducation_b15003_022e%2Ceducation_b15003_gradprofdegree%2Cincome_b17001_001e%2Cincome_b17001_002e%20FROM%20%22b0543358-d03f-4682-bf0c-658ea4573d6f%22"
+    },
+    "violations": {
+      "title": "Boston building and property violations",
+      "rows": 2018,
+      "bytes": 21451,
+      "zip": "/kits/violations.zip",
+      "apiUrl": "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20case_no%2Cstatus_dttm%2Cstatus%2Ccode%2Cvalue%2Cdescription%2Cviolation_city%2Cviolation_zip%2Cward%20FROM%20%22800a2663-1d6a-46e7-9356-bedb70f5332c%22%20WHERE%20status_dttm%20%3E%3D%20%272024-01-01%27%20ORDER%20BY%20status_dttm%20DESC%20LIMIT%20100"
+    },
+    "scorecard": {
+      "title": "College Scorecard, Massachusetts",
+      "rows": 140,
+      "bytes": 7644,
+      "zip": "/kits/scorecard.zip",
+      "apiUrl": "https://ed-public-download.scorecard.network/downloads/Most-Recent-Cohorts-Institution_10152026.zip"
+    },
+    "onet": {
+      "title": "O*NET occupations",
+      "rows": 1016,
+      "bytes": 80797,
+      "zip": "/kits/onet.zip",
+      "apiUrl": "https://www.onetcenter.org/dl_files/database/db_30_0_text/Occupation%20Data.txt"
+    },
+    "ipeds": {
+      "title": "IPEDS institutional directory, Massachusetts",
+      "rows": 144,
+      "bytes": 6800,
+      "zip": "/kits/ipeds.zip",
+      "apiUrl": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip"
+    },
+    "openalex-works": {
+      "title": "OpenAlex works at the nine campuses, 2024",
+      "rows": 500,
+      "bytes": 24348,
+      "zip": "/kits/openalex-works.zip",
+      "apiUrl": "https://api.openalex.org/works?filter=authorships.institutions.id:I63966007%7CI136199984%7CI103531236%7CI111088046%7CI12912129%7CI24603500%7CI133738476%7CI33434090%7CI96062909,publication_year:2024&sort=cited_by_count:desc&per_page=25&select=display_name,publication_year,cited_by_count,type,primary_location"
+    },
+    "colleges": {
+      "title": "MassGIS colleges and universities",
+      "rows": 206,
+      "bytes": 8505,
+      "zip": "/kits/colleges.zip",
+      "apiUrl": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/HigherEd/MapServer/0/query?where=1%3D1&outFields=COLLEGE,CAMPUS,CITY,ZIPCODE,GEOG_TOWN,TYPE,NCES_TYPE,CATEGORY,CAMPUSHOUS&returnGeometry=true&outSR=4326&f=json"
+    },
+    "bluebikes": {
+      "title": "Bluebikes station-to-station counts, November 2024",
+      "rows": 63063,
+      "bytes": 508865,
+      "zip": "/kits/bluebikes.zip",
+      "apiUrl": "https://s3.amazonaws.com/hubway-data/202411-bluebikes-tripdata.zip"
+    },
+    "vision-zero": {
+      "title": "Boston Vision Zero crash records",
+      "rows": 44986,
+      "bytes": 891677,
+      "zip": "/kits/vision-zero.zip",
+      "apiUrl": "https://data.boston.gov/api/3/action/datastore_search?resource_id=e4bfe397-6bfc-49c5-9367-c879fac7401d&fields=dispatch_ts,mode_type,location_type,street,xstreet1,xstreet2,lat,long&sort=dispatch_ts%20desc&limit=100"
+    },
+    "cambridge-crashes": {
+      "title": "Cambridge police crash records",
+      "rows": 17230,
+      "bytes": 346989,
+      "zip": "/kits/cambridge-crashes.zip",
+      "apiUrl": "https://data.cambridgema.gov/resource/gb5w-yva3.json?$select=date_time,day_of_week,street_name,cross_street,near_street,location,may_involve_cyclist,may_involve_pedestrian,manner_of_collision,first_harmful_event,ambient_light,weather_condition_1,road_surface_condition,speed_limit,street_or_intersection&$order=date_time%20DESC&$limit=100"
+    },
+    "cambridge-bikes": {
+      "title": "Cambridge citywide bicycle counts",
+      "rows": 92268,
+      "bytes": 180065,
+      "zip": "/kits/cambridge-bikes.zip",
+      "apiUrl": "https://data.cambridgema.gov/resource/ijm6-q7em.json?$select=countlocation,year,date,timeperiod,street,trafficdirection,cyclistlocation,movementtype,count,weather,latitude,longitude&$where=year%20%3E=%20%272018%27&$order=date%20DESC&$limit=100"
+    },
+    "eco-totem": {
+      "title": "Cambridge Broadway bicycle counter",
+      "rows": 17123,
+      "bytes": 92173,
+      "zip": "/kits/eco-totem.zip",
+      "apiUrl": "https://data.cambridgema.gov/resource/q8v9-mcfg.json?$select=datetime,day,total,entries,exits&$where=datetime%20%3E=%20%272024-01-01T00:00:00%27&$order=datetime%20DESC&$limit=100"
+    },
+    "fresh-pond": {
+      "title": "Cambridge Fresh Pond usership",
+      "rows": 8784,
+      "bytes": 87101,
+      "zip": "/kits/fresh-pond.zip",
+      "apiUrl": "https://data.cambridgema.gov/resource/6xy8-cstb.json?$select=datetime,season,month,hour,fp_avg_hrly_use,bn,cg,lfp,lus,pro_shop&$where=year%20%3E=%20%272024%27&$order=datetime%20DESC&$limit=100"
+    },
+    "somerville-counts": {
+      "title": "Somerville bicycle and pedestrian counts",
+      "rows": 2532,
+      "bytes": 14834,
+      "zip": "/kits/somerville-counts.zip",
+      "apiUrl": "https://data.somervillema.gov/resource/qu9x-4xq5.json?$select=year,location_name,latitude,longitude,am_pm,mode,count&$order=year%20DESC&$limit=100"
+    },
+    "numina": {
+      "title": "Boston Numina street sensors",
+      "rows": 245555,
+      "bytes": 886055,
+      "zip": "/kits/numina.zip",
+      "apiUrl": "https://data.boston.gov/api/3/action/datastore_search?resource_id=d6c06150-418d-4705-b0c9-e92afd23ede7&fields=zone_id,metric,objClass,result,time&limit=100"
+    }
+  },
+  "source_url": "https://hackachusetts2026.vercel.app/#/civic",
+  "bundle_sha256": "f12d6ea358738ec2ad9f2fd46a2b217828fd0ba84f2cda4f19023b56eac8a681",
+  "retrieved_at_utc": "2026-10-24T15:05:24.730186+00:00"
+}

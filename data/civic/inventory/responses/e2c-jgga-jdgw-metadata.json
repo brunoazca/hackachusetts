@@ -1,0 +1,103 @@
+{
+  "id" : "jgga-jdgw",
+  "name" : "VOCAL School Climate Survey: Resource Page",
+  "assetType" : "href",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1698802267,
+  "description" : "The Views of Climate and Learning (VOCAL) survey is designed to provide schools with information on student perceptions of three dimensions of school climate (engagement, safety, and environment). The resource page summarizes all topics measured within each dimension and includes other helpful links.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40125726,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1698802295,
+  "publicationGroup" : 19346865,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1698802267,
+  "tableId" : 19346865,
+  "totalTimesRated" : 0,
+  "viewCount" : 1218,
+  "viewLastModified" : 1715615569,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1715368233,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6308916,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1715368220,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1715368233,
+      "failureCount" : 0,
+      "startedAt" : 1715368233,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "URL" : "https://www.doe.mass.edu/research/vocal/default.html"
+      },
+      "title" : "VOCAL School Climate Survey"
+    } ],
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "accessPoints" : {
+      "URL" : "https://www.doe.mass.edu/research/vocal/default.html"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "engagement", "safety", "environment", "survey", "climate", "perceptions", "cultural competence", "participation", "bullying", "emotional safety" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

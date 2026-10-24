@@ -1,0 +1,1011 @@
+{
+  "id" : "3dib-mg9p",
+  "name" : "Educator Preparation Program Completer Performance",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1706289939,
+  "description" : "This dataset summarizes the educator evaluation summative performance ratings for educators who completed Massachusetts educator preparation programs and were employed in Massachusetts public schools since 2015. \n\nEducator evaluation performance is determined by matching program completers reported by preparation program providers in the Educator Licensure and Renewal (ELAR) system with educator evaluation data collected from districts in the Education Personnel Information Management System (EPIMS).\n\nIn instances where a cell is blank, the data is suppressed due to one of the following reasons: \n<ul><li>The number of staff evaluated was fewer than 6</li><li>All staff evaluated in the group received the same rating</li><li>All educators were evaluated and a single educator had a rating different from all other educators with the same rating in the group</li><li>If the \"Administrators\" or \"Teachers\" row is suppressed, all group rows are suppressed with the exception of \"All Educators\"</li></ul>This dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\" https://profiles.doe.mass.edu/statereport/epppprogramcompleterperformance.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Ed Prep Completer Performance</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 12,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40390952,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1706298832,
+  "publicationGroup" : 19442156,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1782843762,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19442156,
+  "totalTimesRated" : 0,
+  "viewCount" : 254,
+  "viewLastModified" : 1786391359,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1782852974,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7547489,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1782852965,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1782852974,
+      "failureCount" : 0,
+      "startedAt" : 1782852974,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 588756910,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108677,
+    "cachedContents" : {
+      "non_null" : "53875",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "10682"
+      }, {
+        "item" : "2024",
+        "count" : "8932"
+      }, {
+        "item" : "2023",
+        "count" : "8214"
+      }, {
+        "item" : "2022",
+        "count" : "6704"
+      }, {
+        "item" : "2021",
+        "count" : "5433"
+      }, {
+        "item" : "2020",
+        "count" : "4188"
+      }, {
+        "item" : "2019",
+        "count" : "3310"
+      }, {
+        "item" : "2018",
+        "count" : "2380"
+      }, {
+        "item" : "2017",
+        "count" : "2121"
+      }, {
+        "item" : "2016",
+        "count" : "1281"
+      }, {
+        "item" : "2015",
+        "count" : "630"
+      } ],
+      "smallest" : "2015",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756911,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108678,
+    "cachedContents" : {
+      "non_null" : "53875",
+      "largest" : "30000066",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "1065"
+      }, {
+        "item" : "30000012",
+        "count" : "1044"
+      }, {
+        "item" : "30000001",
+        "count" : "1044"
+      }, {
+        "item" : "30000045",
+        "count" : "1041"
+      }, {
+        "item" : "30000008",
+        "count" : "1037"
+      }, {
+        "item" : "30000055",
+        "count" : "1028"
+      }, {
+        "item" : "30000022",
+        "count" : "1028"
+      }, {
+        "item" : "30000063",
+        "count" : "1026"
+      }, {
+        "item" : "30000016",
+        "count" : "1007"
+      }, {
+        "item" : "30000024",
+        "count" : "1007"
+      }, {
+        "item" : "20200007",
+        "count" : "1004"
+      }, {
+        "item" : "30000026",
+        "count" : "1004"
+      }, {
+        "item" : "30000031",
+        "count" : "996"
+      }, {
+        "item" : "05320000",
+        "count" : "992"
+      }, {
+        "item" : "30000053",
+        "count" : "988"
+      }, {
+        "item" : "30000010",
+        "count" : "987"
+      }, {
+        "item" : "30000013",
+        "count" : "969"
+      }, {
+        "item" : "30000005",
+        "count" : "911"
+      }, {
+        "item" : "30000021",
+        "count" : "911"
+      }, {
+        "item" : "30000029",
+        "count" : "909"
+      } ],
+      "smallest" : "00000000",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756912,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108679,
+    "cachedContents" : {
+      "non_null" : "53875",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State",
+        "count" : "1065"
+      }, {
+        "item" : "American International College",
+        "count" : "1044"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "1044"
+      }, {
+        "item" : "Salem State University",
+        "count" : "1041"
+      }, {
+        "item" : "Boston College",
+        "count" : "1037"
+      }, {
+        "item" : "UMass/Lowell",
+        "count" : "1028"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "1028"
+      }, {
+        "item" : "Worcester State University",
+        "count" : "1026"
+      }, {
+        "item" : "Curry College",
+        "count" : "1007"
+      }, {
+        "item" : "Gordon College",
+        "count" : "1007"
+      }, {
+        "item" : "Massachusetts School Administrators’ Association (MSAA)",
+        "count" : "1004"
+      }, {
+        "item" : "Harvard Graduate School of Education",
+        "count" : "1004"
+      }, {
+        "item" : "Massachusetts College of Liberal Arts (MCLA)",
+        "count" : "996"
+      }, {
+        "item" : "Collaborative for Educational Services",
+        "count" : "992"
+      }, {
+        "item" : "UMass/Boston",
+        "count" : "988"
+      }, {
+        "item" : "Boston University",
+        "count" : "987"
+      }, {
+        "item" : "Cambridge College",
+        "count" : "969"
+      }, {
+        "item" : "Endicott College",
+        "count" : "911"
+      }, {
+        "item" : "Bay Path University",
+        "count" : "911"
+      }, {
+        "item" : "Lesley University",
+        "count" : "909"
+      } ],
+      "smallest" : "ACCEPT Education Collaborative",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756913,
+    "name" : "PRG_START",
+    "dataTypeName" : "text",
+    "description" : "Start of Period for Educator Preparation Program Completion",
+    "fieldName" : "prg_start",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108680,
+    "cachedContents" : {
+      "non_null" : "53875",
+      "largest" : "2024",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2013",
+        "count" : "11063"
+      }, {
+        "item" : "2014",
+        "count" : "9929"
+      }, {
+        "item" : "2015",
+        "count" : "8351"
+      }, {
+        "item" : "2016",
+        "count" : "6934"
+      }, {
+        "item" : "2017",
+        "count" : "5432"
+      }, {
+        "item" : "2018",
+        "count" : "4154"
+      }, {
+        "item" : "2019",
+        "count" : "3025"
+      }, {
+        "item" : "2020",
+        "count" : "2151"
+      }, {
+        "item" : "2021",
+        "count" : "1416"
+      }, {
+        "item" : "2022",
+        "count" : "857"
+      }, {
+        "item" : "2023",
+        "count" : "423"
+      }, {
+        "item" : "2024",
+        "count" : "140"
+      } ],
+      "smallest" : "2013",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756914,
+    "name" : "PRG_END",
+    "dataTypeName" : "text",
+    "description" : "End of Period for Educator Preparation Program Completion",
+    "fieldName" : "prg_end",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108681,
+    "cachedContents" : {
+      "non_null" : "53875",
+      "largest" : "2024",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2018",
+        "count" : "6774"
+      }, {
+        "item" : "2017",
+        "count" : "6390"
+      }, {
+        "item" : "2019",
+        "count" : "6118"
+      }, {
+        "item" : "2016",
+        "count" : "6065"
+      }, {
+        "item" : "2020",
+        "count" : "5880"
+      }, {
+        "item" : "2021",
+        "count" : "5031"
+      }, {
+        "item" : "2022",
+        "count" : "4340"
+      }, {
+        "item" : "2015",
+        "count" : "4209"
+      }, {
+        "item" : "2014",
+        "count" : "3171"
+      }, {
+        "item" : "2023",
+        "count" : "3113"
+      }, {
+        "item" : "2024",
+        "count" : "1680"
+      }, {
+        "item" : "2013",
+        "count" : "1104"
+      } ],
+      "smallest" : "2013",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756915,
+    "name" : "GRP_TYP",
+    "dataTypeName" : "text",
+    "description" : "Educator Group Type",
+    "fieldName" : "grp_typ",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108682,
+    "cachedContents" : {
+      "non_null" : "53875",
+      "largest" : "Teachers",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Educators",
+        "count" : "22280"
+      }, {
+        "item" : "Teachers",
+        "count" : "21888"
+      }, {
+        "item" : "Administrators",
+        "count" : "9707"
+      } ],
+      "smallest" : "Administrators",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756916,
+    "name" : "CMPLTR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Completer Count",
+    "fieldName" : "cmpltr_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108683,
+    "cachedContents" : {
+      "non_null" : "53875",
+      "largest" : "30611",
+      "null" : "0",
+      "top" : [ {
+        "item" : "5",
+        "count" : "1120"
+      }, {
+        "item" : "3",
+        "count" : "1067"
+      }, {
+        "item" : "0",
+        "count" : "1044"
+      }, {
+        "item" : "8",
+        "count" : "939"
+      }, {
+        "item" : "2",
+        "count" : "878"
+      }, {
+        "item" : "7",
+        "count" : "841"
+      }, {
+        "item" : "6",
+        "count" : "789"
+      }, {
+        "item" : "10",
+        "count" : "776"
+      }, {
+        "item" : "11",
+        "count" : "759"
+      }, {
+        "item" : "12",
+        "count" : "719"
+      }, {
+        "item" : "14",
+        "count" : "714"
+      }, {
+        "item" : "1",
+        "count" : "708"
+      }, {
+        "item" : "13",
+        "count" : "699"
+      }, {
+        "item" : "9",
+        "count" : "696"
+      }, {
+        "item" : "4",
+        "count" : "695"
+      }, {
+        "item" : "16",
+        "count" : "678"
+      }, {
+        "item" : "17",
+        "count" : "662"
+      }, {
+        "item" : "20",
+        "count" : "607"
+      }, {
+        "item" : "15",
+        "count" : "578"
+      }, {
+        "item" : "19",
+        "count" : "564"
+      } ],
+      "smallest" : "0",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756917,
+    "name" : "EVAL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Completers Evaluated Count",
+    "fieldName" : "eval_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108684,
+    "cachedContents" : {
+      "non_null" : "53875",
+      "largest" : "21280",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "1785"
+      }, {
+        "item" : "3",
+        "count" : "1662"
+      }, {
+        "item" : "2",
+        "count" : "1556"
+      }, {
+        "item" : "4",
+        "count" : "1468"
+      }, {
+        "item" : "5",
+        "count" : "1411"
+      }, {
+        "item" : "6",
+        "count" : "1292"
+      }, {
+        "item" : "7",
+        "count" : "1246"
+      }, {
+        "item" : "8",
+        "count" : "1143"
+      }, {
+        "item" : "9",
+        "count" : "1066"
+      }, {
+        "item" : "0",
+        "count" : "1055"
+      }, {
+        "item" : "10",
+        "count" : "967"
+      }, {
+        "item" : "12",
+        "count" : "955"
+      }, {
+        "item" : "11",
+        "count" : "853"
+      }, {
+        "item" : "13",
+        "count" : "805"
+      }, {
+        "item" : "14",
+        "count" : "734"
+      }, {
+        "item" : "17",
+        "count" : "692"
+      }, {
+        "item" : "16",
+        "count" : "657"
+      }, {
+        "item" : "15",
+        "count" : "648"
+      }, {
+        "item" : "18",
+        "count" : "626"
+      }, {
+        "item" : "19",
+        "count" : "577"
+      } ],
+      "smallest" : "0",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756918,
+    "name" : "EVAL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Completers Evaluated Percent",
+    "fieldName" : "eval_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108685,
+    "cachedContents" : {
+      "non_null" : "43646",
+      "largest" : "8.185",
+      "null" : "10229",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "817"
+      }, {
+        "item" : "0.667",
+        "count" : "799"
+      }, {
+        "item" : "0.5",
+        "count" : "541"
+      }, {
+        "item" : "0.75",
+        "count" : "500"
+      }, {
+        "item" : "0.7",
+        "count" : "321"
+      }, {
+        "item" : "0.714",
+        "count" : "317"
+      }, {
+        "item" : "0.8",
+        "count" : "309"
+      }, {
+        "item" : "0.6",
+        "count" : "292"
+      }, {
+        "item" : "0.778",
+        "count" : "273"
+      }, {
+        "item" : "0.727",
+        "count" : "269"
+      }, {
+        "item" : "0.643",
+        "count" : "236"
+      }, {
+        "item" : "0.625",
+        "count" : "232"
+      }, {
+        "item" : "0.692",
+        "count" : "228"
+      }, {
+        "item" : "0.583",
+        "count" : "226"
+      }, {
+        "item" : "0.833",
+        "count" : "225"
+      }, {
+        "item" : "0.875",
+        "count" : "223"
+      }, {
+        "item" : "0.706",
+        "count" : "221"
+      }, {
+        "item" : "0.636",
+        "count" : "220"
+      }, {
+        "item" : "0.786",
+        "count" : "209"
+      }, {
+        "item" : "0.571",
+        "count" : "208"
+      } ],
+      "smallest" : "0.061",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588756919,
+    "name" : "EXP_PCT",
+    "dataTypeName" : "number",
+    "description" : "Exemplary Percent",
+    "fieldName" : "exp_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108686,
+    "cachedContents" : {
+      "non_null" : "43198",
+      "largest" : "0.917",
+      "null" : "10677",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "4264"
+      }, {
+        "item" : "0.143",
+        "count" : "836"
+      }, {
+        "item" : "0.125",
+        "count" : "773"
+      }, {
+        "item" : "0.1",
+        "count" : "744"
+      }, {
+        "item" : "0.111",
+        "count" : "739"
+      }, {
+        "item" : "0.083",
+        "count" : "630"
+      }, {
+        "item" : "0.091",
+        "count" : "624"
+      }, {
+        "item" : "0.167",
+        "count" : "537"
+      }, {
+        "item" : "0.25",
+        "count" : "510"
+      }, {
+        "item" : "0.2",
+        "count" : "509"
+      }, {
+        "item" : "0.071",
+        "count" : "500"
+      }, {
+        "item" : "0.077",
+        "count" : "481"
+      }, {
+        "item" : "0.063",
+        "count" : "433"
+      }, {
+        "item" : "0.067",
+        "count" : "429"
+      }, {
+        "item" : "0.105",
+        "count" : "387"
+      }, {
+        "item" : "0.222",
+        "count" : "376"
+      }, {
+        "item" : "0.118",
+        "count" : "372"
+      }, {
+        "item" : "0.056",
+        "count" : "371"
+      }, {
+        "item" : "0.286",
+        "count" : "361"
+      }, {
+        "item" : "0.059",
+        "count" : "353"
+      } ],
+      "smallest" : "0.0",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588756920,
+    "name" : "PROF_PCT",
+    "dataTypeName" : "number",
+    "description" : "Proficient Percent",
+    "fieldName" : "prof_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108687,
+    "cachedContents" : {
+      "non_null" : "43198",
+      "largest" : "1.0",
+      "null" : "10677",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "1925"
+      }, {
+        "item" : "0.857",
+        "count" : "1075"
+      }, {
+        "item" : "0.875",
+        "count" : "970"
+      }, {
+        "item" : "0.833",
+        "count" : "799"
+      }, {
+        "item" : "0.75",
+        "count" : "767"
+      }, {
+        "item" : "0.889",
+        "count" : "753"
+      }, {
+        "item" : "0.8",
+        "count" : "753"
+      }, {
+        "item" : "0.9",
+        "count" : "718"
+      }, {
+        "item" : "0.909",
+        "count" : "550"
+      }, {
+        "item" : "0.846",
+        "count" : "504"
+      }, {
+        "item" : "0.714",
+        "count" : "489"
+      }, {
+        "item" : "0.778",
+        "count" : "477"
+      }, {
+        "item" : "0.917",
+        "count" : "465"
+      }, {
+        "item" : "0.867",
+        "count" : "456"
+      }, {
+        "item" : "0.882",
+        "count" : "438"
+      }, {
+        "item" : "0.818",
+        "count" : "413"
+      }, {
+        "item" : "0.667",
+        "count" : "391"
+      }, {
+        "item" : "0.864",
+        "count" : "386"
+      }, {
+        "item" : "0.87",
+        "count" : "371"
+      }, {
+        "item" : "0.86",
+        "count" : "348"
+      } ],
+      "smallest" : "0.083",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588756921,
+    "name" : "IMPROV_PCT",
+    "dataTypeName" : "number",
+    "description" : "Needs Improvement Percent",
+    "fieldName" : "improv_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108688,
+    "cachedContents" : {
+      "non_null" : "43198",
+      "largest" : "0.857",
+      "null" : "10677",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "12477"
+      }, {
+        "item" : "0.029",
+        "count" : "656"
+      }, {
+        "item" : "0.031",
+        "count" : "616"
+      }, {
+        "item" : "0.024",
+        "count" : "611"
+      }, {
+        "item" : "0.022",
+        "count" : "607"
+      }, {
+        "item" : "0.019",
+        "count" : "595"
+      }, {
+        "item" : "0.02",
+        "count" : "591"
+      }, {
+        "item" : "0.023",
+        "count" : "574"
+      }, {
+        "item" : "0.018",
+        "count" : "570"
+      }, {
+        "item" : "0.026",
+        "count" : "569"
+      }, {
+        "item" : "0.036",
+        "count" : "563"
+      }, {
+        "item" : "0.033",
+        "count" : "561"
+      }, {
+        "item" : "0.038",
+        "count" : "557"
+      }, {
+        "item" : "0.021",
+        "count" : "548"
+      }, {
+        "item" : "0.043",
+        "count" : "545"
+      }, {
+        "item" : "0.017",
+        "count" : "543"
+      }, {
+        "item" : "0.03",
+        "count" : "537"
+      }, {
+        "item" : "0.027",
+        "count" : "534"
+      }, {
+        "item" : "0.034",
+        "count" : "530"
+      }, {
+        "item" : "0.025",
+        "count" : "527"
+      } ],
+      "smallest" : "0.0",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588756922,
+    "name" : "UNSAT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Unsatisfactory Percent",
+    "fieldName" : "unsat_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108689,
+    "cachedContents" : {
+      "non_null" : "43198",
+      "largest" : "0.25",
+      "null" : "10677",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "37150"
+      }, {
+        "item" : "0.002",
+        "count" : "1123"
+      }, {
+        "item" : "0.001",
+        "count" : "872"
+      }, {
+        "item" : "0.003",
+        "count" : "746"
+      }, {
+        "item" : "0.004",
+        "count" : "565"
+      }, {
+        "item" : "0.005",
+        "count" : "380"
+      }, {
+        "item" : "0.006",
+        "count" : "280"
+      }, {
+        "item" : "0.007",
+        "count" : "207"
+      }, {
+        "item" : "0.008",
+        "count" : "195"
+      }, {
+        "item" : "0.009",
+        "count" : "144"
+      }, {
+        "item" : "0.01",
+        "count" : "140"
+      }, {
+        "item" : "0.011",
+        "count" : "115"
+      }, {
+        "item" : "0.014",
+        "count" : "95"
+      }, {
+        "item" : "0.013",
+        "count" : "93"
+      }, {
+        "item" : "0.012",
+        "count" : "85"
+      }, {
+        "item" : "0.015",
+        "count" : "70"
+      }, {
+        "item" : "0.017",
+        "count" : "51"
+      }, {
+        "item" : "0.018",
+        "count" : "50"
+      }, {
+        "item" : "0.02",
+        "count" : "49"
+      }, {
+        "item" : "0.05",
+        "count" : "45"
+      } ],
+      "smallest" : "0.0",
+      "count" : "53875",
+      "cardinality" : "53875"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "performance", "teachers professional status", "teachers non professional status", "education personnel information management system", "epims", "administrators", "teacher ratings" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

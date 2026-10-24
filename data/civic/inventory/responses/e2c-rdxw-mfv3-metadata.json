@@ -1,0 +1,1283 @@
+{
+  "id" : "rdxw-mfv3",
+  "name" : "School Attending Children",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1702503343,
+  "description" : "This dataset contains the number of students attending different types of Massachusetts schools by town since 1985. It includes full-time students whose parents or legal guardians are residents of the city or town.\n\nThis report is required from each city and town under the provisions of Chapter 72, Section 2A of the General Laws. The information is as of January 1st of the given school year. A value of zero indicates that the city or town does not have any students enrolled in the specified type of school.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/schoolattendingchildren.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">School Attending Children Report</a>\n\n<b>List of School Types</b>\n<ul><li>Local Public Schools</li><li>Academic Regional Schools</li><li>Vocational Technical Regional Schools</li><li>Collaboratives</li><li>Charter Schools (included since 2011)</li><li>Out-of-District Public Schools</li><li>Home Schooled (included since 2011)</li><li>In State Private and Parochial Schools</li><li>Out-of-State Private and Parochial Schools</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1858,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41476479,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1753301469,
+  "publicationGroup" : 19397688,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1779802150,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19980518,
+  "totalTimesRated" : 0,
+  "viewCount" : 2545,
+  "viewLastModified" : 1786393133,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1705502178,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6996471,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1705502168,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1705502178,
+      "failureCount" : 0,
+      "startedAt" : 1705502178,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 614695638,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150440520,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2004",
+        "count" : "385"
+      }, {
+        "item" : "2008",
+        "count" : "353"
+      }, {
+        "item" : "2010",
+        "count" : "353"
+      }, {
+        "item" : "2002",
+        "count" : "353"
+      }, {
+        "item" : "2016",
+        "count" : "353"
+      }, {
+        "item" : "2017",
+        "count" : "353"
+      }, {
+        "item" : "2015",
+        "count" : "353"
+      }, {
+        "item" : "2007",
+        "count" : "353"
+      }, {
+        "item" : "2003",
+        "count" : "353"
+      }, {
+        "item" : "2019",
+        "count" : "353"
+      }, {
+        "item" : "2023",
+        "count" : "353"
+      }, {
+        "item" : "1986",
+        "count" : "352"
+      }, {
+        "item" : "2013",
+        "count" : "352"
+      }, {
+        "item" : "1987",
+        "count" : "352"
+      }, {
+        "item" : "1996",
+        "count" : "352"
+      }, {
+        "item" : "1988",
+        "count" : "352"
+      }, {
+        "item" : "1993",
+        "count" : "352"
+      }, {
+        "item" : "1992",
+        "count" : "352"
+      }, {
+        "item" : "2012",
+        "count" : "352"
+      }, {
+        "item" : "1994",
+        "count" : "352"
+      } ],
+      "smallest" : "1985",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695639,
+    "name" : "TOWN_CODE",
+    "dataTypeName" : "text",
+    "description" : "Town Code",
+    "fieldName" : "town_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150440521,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "03520000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00050000",
+        "count" : "42"
+      }, {
+        "item" : "00490000",
+        "count" : "42"
+      }, {
+        "item" : "00220000",
+        "count" : "42"
+      }, {
+        "item" : "01120000",
+        "count" : "42"
+      }, {
+        "item" : "01550000",
+        "count" : "42"
+      }, {
+        "item" : "02070000",
+        "count" : "42"
+      }, {
+        "item" : "01430000",
+        "count" : "42"
+      }, {
+        "item" : "00010000",
+        "count" : "42"
+      }, {
+        "item" : "02170000",
+        "count" : "42"
+      }, {
+        "item" : "03080000",
+        "count" : "42"
+      }, {
+        "item" : "01310000",
+        "count" : "42"
+      }, {
+        "item" : "00530000",
+        "count" : "42"
+      }, {
+        "item" : "02190000",
+        "count" : "42"
+      }, {
+        "item" : "03320000",
+        "count" : "42"
+      }, {
+        "item" : "02650000",
+        "count" : "42"
+      }, {
+        "item" : "00430000",
+        "count" : "42"
+      }, {
+        "item" : "02110000",
+        "count" : "42"
+      }, {
+        "item" : "03180000",
+        "count" : "42"
+      }, {
+        "item" : "00610000",
+        "count" : "42"
+      }, {
+        "item" : "01860000",
+        "count" : "42"
+      } ],
+      "smallest" : "00000000",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695640,
+    "name" : "TOWN",
+    "dataTypeName" : "text",
+    "description" : "Town",
+    "fieldName" : "town",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150440522,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "Yarmouth (non-op)",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Needham",
+        "count" : "42"
+      }, {
+        "item" : "Northborough",
+        "count" : "42"
+      }, {
+        "item" : "Bolton (non-op)",
+        "count" : "42"
+      }, {
+        "item" : "Tolland (non-op)",
+        "count" : "42"
+      }, {
+        "item" : "Norfolk",
+        "count" : "42"
+      }, {
+        "item" : "Bedford",
+        "count" : "42"
+      }, {
+        "item" : "Boxford",
+        "count" : "42"
+      }, {
+        "item" : "Mendon (non-op)",
+        "count" : "42"
+      }, {
+        "item" : "New Bedford",
+        "count" : "42"
+      }, {
+        "item" : "Littleton",
+        "count" : "42"
+      }, {
+        "item" : "Norwood",
+        "count" : "42"
+      }, {
+        "item" : "Springfield",
+        "count" : "42"
+      }, {
+        "item" : "Hawley (non-op)",
+        "count" : "42"
+      }, {
+        "item" : "Brimfield",
+        "count" : "42"
+      }, {
+        "item" : "Becket (non-op)",
+        "count" : "42"
+      }, {
+        "item" : "Washington (non-op)",
+        "count" : "42"
+      }, {
+        "item" : "Raynham (non-op)",
+        "count" : "42"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "42"
+      }, {
+        "item" : "Truro",
+        "count" : "42"
+      }, {
+        "item" : "Stoneham",
+        "count" : "42"
+      } ],
+      "smallest" : "Abington",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695641,
+    "name" : "LOC_PUB_CNT",
+    "dataTypeName" : "number",
+    "description" : "Local Public Schools Count",
+    "fieldName" : "loc_pub_cnt",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440523,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "800165",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "4224"
+      }, {
+        "item" : "2",
+        "count" : "18"
+      }, {
+        "item" : "144",
+        "count" : "14"
+      }, {
+        "item" : "88",
+        "count" : "12"
+      }, {
+        "item" : "1",
+        "count" : "11"
+      }, {
+        "item" : "126",
+        "count" : "11"
+      }, {
+        "item" : "127",
+        "count" : "11"
+      }, {
+        "item" : "200",
+        "count" : "11"
+      }, {
+        "item" : "204",
+        "count" : "11"
+      }, {
+        "item" : "131",
+        "count" : "10"
+      }, {
+        "item" : "113",
+        "count" : "10"
+      }, {
+        "item" : "128",
+        "count" : "10"
+      }, {
+        "item" : "58",
+        "count" : "10"
+      }, {
+        "item" : "75",
+        "count" : "10"
+      }, {
+        "item" : "201",
+        "count" : "10"
+      }, {
+        "item" : "488",
+        "count" : "10"
+      }, {
+        "item" : "138",
+        "count" : "10"
+      }, {
+        "item" : "408",
+        "count" : "9"
+      }, {
+        "item" : "137",
+        "count" : "9"
+      }, {
+        "item" : "149",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695642,
+    "name" : "ACAD_REG_CNT",
+    "dataTypeName" : "number",
+    "description" : "Academic Regional Schools Count",
+    "fieldName" : "acad_reg_cnt",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440524,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "106297",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "8089"
+      }, {
+        "item" : "1",
+        "count" : "56"
+      }, {
+        "item" : "2",
+        "count" : "40"
+      }, {
+        "item" : "3",
+        "count" : "24"
+      }, {
+        "item" : "48",
+        "count" : "23"
+      }, {
+        "item" : "93",
+        "count" : "22"
+      }, {
+        "item" : "125",
+        "count" : "21"
+      }, {
+        "item" : "138",
+        "count" : "20"
+      }, {
+        "item" : "76",
+        "count" : "20"
+      }, {
+        "item" : "96",
+        "count" : "20"
+      }, {
+        "item" : "98",
+        "count" : "20"
+      }, {
+        "item" : "89",
+        "count" : "19"
+      }, {
+        "item" : "83",
+        "count" : "19"
+      }, {
+        "item" : "114",
+        "count" : "19"
+      }, {
+        "item" : "112",
+        "count" : "19"
+      }, {
+        "item" : "137",
+        "count" : "18"
+      }, {
+        "item" : "102",
+        "count" : "18"
+      }, {
+        "item" : "88",
+        "count" : "18"
+      }, {
+        "item" : "87",
+        "count" : "18"
+      }, {
+        "item" : "150",
+        "count" : "18"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695643,
+    "name" : "VOC_REG_CNT",
+    "dataTypeName" : "number",
+    "description" : "Vocational Technical Regional Schools Count",
+    "fieldName" : "voc_reg_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440525,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "32742",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "4384"
+      }, {
+        "item" : "7",
+        "count" : "190"
+      }, {
+        "item" : "3",
+        "count" : "188"
+      }, {
+        "item" : "11",
+        "count" : "187"
+      }, {
+        "item" : "5",
+        "count" : "185"
+      }, {
+        "item" : "4",
+        "count" : "182"
+      }, {
+        "item" : "6",
+        "count" : "180"
+      }, {
+        "item" : "1",
+        "count" : "179"
+      }, {
+        "item" : "9",
+        "count" : "173"
+      }, {
+        "item" : "10",
+        "count" : "165"
+      }, {
+        "item" : "2",
+        "count" : "164"
+      }, {
+        "item" : "8",
+        "count" : "155"
+      }, {
+        "item" : "13",
+        "count" : "148"
+      }, {
+        "item" : "12",
+        "count" : "145"
+      }, {
+        "item" : "15",
+        "count" : "140"
+      }, {
+        "item" : "14",
+        "count" : "128"
+      }, {
+        "item" : "19",
+        "count" : "124"
+      }, {
+        "item" : "16",
+        "count" : "123"
+      }, {
+        "item" : "17",
+        "count" : "122"
+      }, {
+        "item" : "18",
+        "count" : "119"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695644,
+    "name" : "COLLABS_CNT",
+    "dataTypeName" : "number",
+    "description" : "Collaboratives Count",
+    "fieldName" : "collabs_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440528,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "4809",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "4590"
+      }, {
+        "item" : "1",
+        "count" : "804"
+      }, {
+        "item" : "2",
+        "count" : "674"
+      }, {
+        "item" : "3",
+        "count" : "603"
+      }, {
+        "item" : "4",
+        "count" : "569"
+      }, {
+        "item" : "6",
+        "count" : "464"
+      }, {
+        "item" : "7",
+        "count" : "463"
+      }, {
+        "item" : "5",
+        "count" : "459"
+      }, {
+        "item" : "8",
+        "count" : "417"
+      }, {
+        "item" : "9",
+        "count" : "380"
+      }, {
+        "item" : "11",
+        "count" : "377"
+      }, {
+        "item" : "10",
+        "count" : "349"
+      }, {
+        "item" : "12",
+        "count" : "325"
+      }, {
+        "item" : "13",
+        "count" : "309"
+      }, {
+        "item" : "14",
+        "count" : "266"
+      }, {
+        "item" : "16",
+        "count" : "242"
+      }, {
+        "item" : "15",
+        "count" : "237"
+      }, {
+        "item" : "17",
+        "count" : "228"
+      }, {
+        "item" : "18",
+        "count" : "194"
+      }, {
+        "item" : "19",
+        "count" : "178"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695645,
+    "name" : "CHART_CNT",
+    "dataTypeName" : "number",
+    "description" : "Charter Schools Count",
+    "fieldName" : "chart_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440532,
+    "cachedContents" : {
+      "non_null" : "5575",
+      "largest" : "47780",
+      "null" : "9129",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1357"
+      }, {
+        "item" : "1",
+        "count" : "275"
+      }, {
+        "item" : "2",
+        "count" : "258"
+      }, {
+        "item" : "3",
+        "count" : "225"
+      }, {
+        "item" : "4",
+        "count" : "174"
+      }, {
+        "item" : "5",
+        "count" : "168"
+      }, {
+        "item" : "7",
+        "count" : "146"
+      }, {
+        "item" : "8",
+        "count" : "125"
+      }, {
+        "item" : "6",
+        "count" : "119"
+      }, {
+        "item" : "9",
+        "count" : "107"
+      }, {
+        "item" : "10",
+        "count" : "100"
+      }, {
+        "item" : "12",
+        "count" : "99"
+      }, {
+        "item" : "16",
+        "count" : "84"
+      }, {
+        "item" : "11",
+        "count" : "78"
+      }, {
+        "item" : "14",
+        "count" : "64"
+      }, {
+        "item" : "13",
+        "count" : "64"
+      }, {
+        "item" : "17",
+        "count" : "58"
+      }, {
+        "item" : "22",
+        "count" : "56"
+      }, {
+        "item" : "15",
+        "count" : "55"
+      }, {
+        "item" : "19",
+        "count" : "51"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695646,
+    "name" : "OOD_PUB_CNT",
+    "dataTypeName" : "number",
+    "description" : "Out of District Public Schools Count",
+    "fieldName" : "ood_pub_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440538,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "40193",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1605"
+      }, {
+        "item" : "1",
+        "count" : "621"
+      }, {
+        "item" : "2",
+        "count" : "604"
+      }, {
+        "item" : "3",
+        "count" : "492"
+      }, {
+        "item" : "4",
+        "count" : "427"
+      }, {
+        "item" : "5",
+        "count" : "415"
+      }, {
+        "item" : "6",
+        "count" : "369"
+      }, {
+        "item" : "7",
+        "count" : "335"
+      }, {
+        "item" : "8",
+        "count" : "326"
+      }, {
+        "item" : "9",
+        "count" : "296"
+      }, {
+        "item" : "11",
+        "count" : "272"
+      }, {
+        "item" : "10",
+        "count" : "266"
+      }, {
+        "item" : "13",
+        "count" : "248"
+      }, {
+        "item" : "12",
+        "count" : "247"
+      }, {
+        "item" : "16",
+        "count" : "234"
+      }, {
+        "item" : "14",
+        "count" : "230"
+      }, {
+        "item" : "15",
+        "count" : "218"
+      }, {
+        "item" : "18",
+        "count" : "213"
+      }, {
+        "item" : "17",
+        "count" : "210"
+      }, {
+        "item" : "20",
+        "count" : "197"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695647,
+    "name" : "HOME_SCHLD_CNT",
+    "dataTypeName" : "number",
+    "description" : "Home Schooled Count",
+    "fieldName" : "home_schld_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440545,
+    "cachedContents" : {
+      "non_null" : "5575",
+      "largest" : "17127",
+      "null" : "9129",
+      "top" : [ {
+        "item" : "0",
+        "count" : "305"
+      }, {
+        "item" : "9",
+        "count" : "180"
+      }, {
+        "item" : "8",
+        "count" : "170"
+      }, {
+        "item" : "4",
+        "count" : "167"
+      }, {
+        "item" : "7",
+        "count" : "162"
+      }, {
+        "item" : "2",
+        "count" : "160"
+      }, {
+        "item" : "10",
+        "count" : "152"
+      }, {
+        "item" : "3",
+        "count" : "149"
+      }, {
+        "item" : "5",
+        "count" : "148"
+      }, {
+        "item" : "12",
+        "count" : "147"
+      }, {
+        "item" : "6",
+        "count" : "146"
+      }, {
+        "item" : "11",
+        "count" : "144"
+      }, {
+        "item" : "13",
+        "count" : "137"
+      }, {
+        "item" : "1",
+        "count" : "128"
+      }, {
+        "item" : "15",
+        "count" : "126"
+      }, {
+        "item" : "17",
+        "count" : "123"
+      }, {
+        "item" : "14",
+        "count" : "119"
+      }, {
+        "item" : "16",
+        "count" : "117"
+      }, {
+        "item" : "19",
+        "count" : "116"
+      }, {
+        "item" : "18",
+        "count" : "116"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695648,
+    "name" : "IN_STATE_PRIV_CNT",
+    "dataTypeName" : "number",
+    "description" : "In State Private and Parochial Schools Count",
+    "fieldName" : "in_state_priv_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440552,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "130525",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "576"
+      }, {
+        "item" : "1",
+        "count" : "244"
+      }, {
+        "item" : "2",
+        "count" : "234"
+      }, {
+        "item" : "3",
+        "count" : "221"
+      }, {
+        "item" : "5",
+        "count" : "217"
+      }, {
+        "item" : "6",
+        "count" : "212"
+      }, {
+        "item" : "4",
+        "count" : "205"
+      }, {
+        "item" : "8",
+        "count" : "194"
+      }, {
+        "item" : "7",
+        "count" : "177"
+      }, {
+        "item" : "9",
+        "count" : "174"
+      }, {
+        "item" : "11",
+        "count" : "145"
+      }, {
+        "item" : "10",
+        "count" : "141"
+      }, {
+        "item" : "12",
+        "count" : "124"
+      }, {
+        "item" : "15",
+        "count" : "113"
+      }, {
+        "item" : "13",
+        "count" : "111"
+      }, {
+        "item" : "16",
+        "count" : "108"
+      }, {
+        "item" : "17",
+        "count" : "104"
+      }, {
+        "item" : "14",
+        "count" : "103"
+      }, {
+        "item" : "23",
+        "count" : "89"
+      }, {
+        "item" : "22",
+        "count" : "86"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695649,
+    "name" : "OOS_PRIV_CNT",
+    "dataTypeName" : "number",
+    "description" : "Out of State Private and Parochial Schools Count",
+    "fieldName" : "oos_priv_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440556,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "3973",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "8438"
+      }, {
+        "item" : "1",
+        "count" : "1572"
+      }, {
+        "item" : "2",
+        "count" : "837"
+      }, {
+        "item" : "3",
+        "count" : "544"
+      }, {
+        "item" : "4",
+        "count" : "371"
+      }, {
+        "item" : "5",
+        "count" : "296"
+      }, {
+        "item" : "6",
+        "count" : "219"
+      }, {
+        "item" : "8",
+        "count" : "204"
+      }, {
+        "item" : "7",
+        "count" : "188"
+      }, {
+        "item" : "9",
+        "count" : "138"
+      }, {
+        "item" : "10",
+        "count" : "132"
+      }, {
+        "item" : "11",
+        "count" : "106"
+      }, {
+        "item" : "13",
+        "count" : "102"
+      }, {
+        "item" : "12",
+        "count" : "99"
+      }, {
+        "item" : "15",
+        "count" : "76"
+      }, {
+        "item" : "14",
+        "count" : "73"
+      }, {
+        "item" : "16",
+        "count" : "62"
+      }, {
+        "item" : "18",
+        "count" : "59"
+      }, {
+        "item" : "17",
+        "count" : "55"
+      }, {
+        "item" : "19",
+        "count" : "52"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695650,
+    "name" : "TOTAL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Count",
+    "fieldName" : "total_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440559,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "1072349",
+      "null" : "0",
+      "top" : [ {
+        "item" : "109",
+        "count" : "21"
+      }, {
+        "item" : "103",
+        "count" : "19"
+      }, {
+        "item" : "104",
+        "count" : "18"
+      }, {
+        "item" : "146",
+        "count" : "17"
+      }, {
+        "item" : "101",
+        "count" : "17"
+      }, {
+        "item" : "125",
+        "count" : "17"
+      }, {
+        "item" : "112",
+        "count" : "17"
+      }, {
+        "item" : "132",
+        "count" : "17"
+      }, {
+        "item" : "64",
+        "count" : "17"
+      }, {
+        "item" : "161",
+        "count" : "16"
+      }, {
+        "item" : "126",
+        "count" : "16"
+      }, {
+        "item" : "154",
+        "count" : "16"
+      }, {
+        "item" : "139",
+        "count" : "16"
+      }, {
+        "item" : "59",
+        "count" : "15"
+      }, {
+        "item" : "141",
+        "count" : "15"
+      }, {
+        "item" : "190",
+        "count" : "15"
+      }, {
+        "item" : "99",
+        "count" : "15"
+      }, {
+        "item" : "284",
+        "count" : "15"
+      }, {
+        "item" : "213",
+        "count" : "15"
+      }, {
+        "item" : "51",
+        "count" : "15"
+      } ],
+      "smallest" : "1",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695651,
+    "name" : "TOTAL_PUB_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Public Count",
+    "fieldName" : "total_pub_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150440563,
+    "cachedContents" : {
+      "non_null" : "14704",
+      "largest" : "962830",
+      "null" : "0",
+      "top" : [ {
+        "item" : "96",
+        "count" : "23"
+      }, {
+        "item" : "110",
+        "count" : "22"
+      }, {
+        "item" : "49",
+        "count" : "18"
+      }, {
+        "item" : "103",
+        "count" : "18"
+      }, {
+        "item" : "147",
+        "count" : "17"
+      }, {
+        "item" : "269",
+        "count" : "17"
+      }, {
+        "item" : "77",
+        "count" : "17"
+      }, {
+        "item" : "94",
+        "count" : "17"
+      }, {
+        "item" : "127",
+        "count" : "16"
+      }, {
+        "item" : "59",
+        "count" : "16"
+      }, {
+        "item" : "91",
+        "count" : "16"
+      }, {
+        "item" : "279",
+        "count" : "15"
+      }, {
+        "item" : "95",
+        "count" : "15"
+      }, {
+        "item" : "11",
+        "count" : "15"
+      }, {
+        "item" : "100",
+        "count" : "15"
+      }, {
+        "item" : "268",
+        "count" : "15"
+      }, {
+        "item" : "135",
+        "count" : "15"
+      }, {
+        "item" : "89",
+        "count" : "15"
+      }, {
+        "item" : "83",
+        "count" : "15"
+      }, {
+        "item" : "106",
+        "count" : "14"
+      } ],
+      "smallest" : "-153",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  }, {
+    "id" : 614695653,
+    "name" : "PUBLIC_PCT",
+    "dataTypeName" : "text",
+    "description" : "Public Percent",
+    "fieldName" : "public_pct",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 160345656,
+    "cachedContents" : {
+      "non_null" : "14703",
+      "largest" : "99.9",
+      "null" : "1",
+      "top" : [ {
+        "item" : "100",
+        "count" : "369"
+      }, {
+        "item" : "94.6",
+        "count" : "152"
+      }, {
+        "item" : "95.1",
+        "count" : "150"
+      }, {
+        "item" : "95.2",
+        "count" : "149"
+      }, {
+        "item" : "93.2",
+        "count" : "148"
+      }, {
+        "item" : "94.8",
+        "count" : "147"
+      }, {
+        "item" : "93.3",
+        "count" : "146"
+      }, {
+        "item" : "94.5",
+        "count" : "145"
+      }, {
+        "item" : "94.2",
+        "count" : "139"
+      }, {
+        "item" : "93.8",
+        "count" : "138"
+      }, {
+        "item" : "93.5",
+        "count" : "138"
+      }, {
+        "item" : "95.4",
+        "count" : "138"
+      }, {
+        "item" : "94.3",
+        "count" : "137"
+      }, {
+        "item" : "93.9",
+        "count" : "137"
+      }, {
+        "item" : "94.9",
+        "count" : "136"
+      }, {
+        "item" : "94.4",
+        "count" : "135"
+      }, {
+        "item" : "93.7",
+        "count" : "134"
+      }, {
+        "item" : "94.7",
+        "count" : "133"
+      }, {
+        "item" : "93.6",
+        "count" : "130"
+      }, {
+        "item" : "95.3",
+        "count" : "129"
+      } ],
+      "smallest" : "0",
+      "count" : "14704",
+      "cardinality" : "14704"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "attendance", "enrollment" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,355 @@
+{
+  "id" : "6vdc-7ggh",
+  "name" : "Early Education and Care's Centralized Waitlist for Child Care Financial Assistance (CCFA)",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "attributionLink" : "https://www.mass.gov/lists/data-on-licensed-and-funded-child-care-programs",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1769537510,
+  "description" : "This dataset includes the number of children who are on EEC's centralized waitlist for Child Care Financial Assistance (CCFA). Families may be added to the waitlist by any Family Access Administrator which includes, but is not limited to, Child Care Resource and Referral Agency (CCR&R), Contracted Child Care Provider, or Mass 211. The data is both longitudinal and disaggregated by Subsidy Region.\n\nThis dataset is part of <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d\" target=\"_blank\" rel=\"noopener noreferrer\">EEC's Key Performance Indicator (KPI) Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 86,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41893786,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1769537994,
+  "publicationGroup" : 20244524,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1788264148,
+  "rowsUpdatedBy" : "279s-kggh",
+  "tableId" : 20244524,
+  "totalTimesRated" : 0,
+  "viewCount" : 1619,
+  "viewLastModified" : 1788264146,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1770993454,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7353292,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1770993365,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1770993454,
+      "failureCount" : 0,
+      "startedAt" : 1770993454,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 625358894,
+    "name" : "DATA_LOAD_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Refresh date.",
+    "fieldName" : "data_load_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 164859454,
+    "cachedContents" : {
+      "non_null" : "2880",
+      "largest" : "2026-08-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-08-01T00:00:00.000",
+        "count" : "2880"
+      } ],
+      "smallest" : "2026-08-01T00:00:00.000",
+      "count" : "2880",
+      "cardinality" : "2880"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 625358898,
+    "name" : "MONTH",
+    "dataTypeName" : "calendar_date",
+    "description" : "Month for which the data is being aggregated.",
+    "fieldName" : "month",
+    "position" : 2,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 164859458,
+    "cachedContents" : {
+      "non_null" : "2880",
+      "largest" : "2026-04-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-04-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2024-12-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2018-06-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2023-05-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2019-11-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2016-06-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2023-09-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-02-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-04-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2017-02-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2018-12-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2020-09-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2023-08-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2026-03-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-03-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2017-04-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2022-12-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2022-11-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2017-10-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2024-06-01T00:00:00.000",
+        "count" : "24"
+      } ],
+      "smallest" : "2016-05-01T00:00:00.000",
+      "count" : "2880",
+      "cardinality" : "2880"
+    },
+    "format" : {
+      "view" : "date_my"
+    }
+  }, {
+    "id" : 625358897,
+    "name" : "SUBSIDY_REGION",
+    "dataTypeName" : "text",
+    "description" : "Region for the purpose of subsidy administration.",
+    "fieldName" : "subsidy_region",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164859457,
+    "cachedContents" : {
+      "non_null" : "2880",
+      "largest" : "Western",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Metro",
+        "count" : "480"
+      }, {
+        "item" : "Western",
+        "count" : "480"
+      }, {
+        "item" : "Southeast",
+        "count" : "480"
+      }, {
+        "item" : "Metro Boston",
+        "count" : "480"
+      }, {
+        "item" : "Northeast",
+        "count" : "480"
+      }, {
+        "item" : "Central",
+        "count" : "480"
+      } ],
+      "smallest" : "Central",
+      "count" : "2880",
+      "cardinality" : "2880"
+    },
+    "format" : { }
+  }, {
+    "id" : 625358896,
+    "name" : "AGE_GROUP",
+    "dataTypeName" : "text",
+    "description" : "Child age group.",
+    "fieldName" : "age_group",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164859456,
+    "cachedContents" : {
+      "non_null" : "2880",
+      "largest" : "Toddler",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School Age",
+        "count" : "720"
+      }, {
+        "item" : "Toddler",
+        "count" : "720"
+      }, {
+        "item" : "Preschool",
+        "count" : "720"
+      }, {
+        "item" : "Infant",
+        "count" : "720"
+      } ],
+      "smallest" : "Infant",
+      "count" : "2880",
+      "cardinality" : "2880"
+    },
+    "format" : { }
+  }, {
+    "id" : 625358895,
+    "name" : "CHILD_COUNT",
+    "dataTypeName" : "number",
+    "description" : "The total number of children on the waitlist during a specific month.",
+    "fieldName" : "child_count",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164859455,
+    "cachedContents" : {
+      "non_null" : "2880",
+      "largest" : "3839",
+      "null" : "0",
+      "top" : [ {
+        "item" : "552",
+        "count" : "8"
+      }, {
+        "item" : "568",
+        "count" : "8"
+      }, {
+        "item" : "409",
+        "count" : "8"
+      }, {
+        "item" : "524",
+        "count" : "8"
+      }, {
+        "item" : "463",
+        "count" : "7"
+      }, {
+        "item" : "840",
+        "count" : "7"
+      }, {
+        "item" : "718",
+        "count" : "7"
+      }, {
+        "item" : "487",
+        "count" : "7"
+      }, {
+        "item" : "575",
+        "count" : "7"
+      }, {
+        "item" : "363",
+        "count" : "7"
+      }, {
+        "item" : "554",
+        "count" : "7"
+      }, {
+        "item" : "368",
+        "count" : "7"
+      }, {
+        "item" : "590",
+        "count" : "7"
+      }, {
+        "item" : "486",
+        "count" : "7"
+      }, {
+        "item" : "479",
+        "count" : "6"
+      }, {
+        "item" : "1093",
+        "count" : "6"
+      }, {
+        "item" : "452",
+        "count" : "6"
+      }, {
+        "item" : "482",
+        "count" : "6"
+      }, {
+        "item" : "577",
+        "count" : "6"
+      }, {
+        "item" : "525",
+        "count" : "6"
+      } ],
+      "smallest" : "133",
+      "count" : "2880",
+      "cardinality" : "2880"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Monthly",
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-early-education-and-care"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "daycare", "licensed childcare", "licensed", "funded", "prek", "preschool", "toddlers", "infants", "capacity" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

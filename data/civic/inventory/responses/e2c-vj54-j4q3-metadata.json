@@ -1,0 +1,585 @@
+{
+  "id" : "vj54-j4q3",
+  "name" : "College and Career Outcomes of High School Graduates",
+  "assetType" : "dataset",
+  "attribution" : "Executive Office of Education",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1685735493,
+  "description" : "<b>See notice below about this dataset</b>\n\nThis dataset provides the number of graduates who enrolled in each type of postsecondary education per district.\n\nWage records are obtained from the Massachusetts Department of Unemployment Assistance (DUA) using a secure, anonymized matching process with limitations. For details on the process and suppression rules, please visit the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiODA3NDU1NWMtOTJiMS00YTZiLTg1MmEtN2JhOTM4ZjNmNWExIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">Employment and Earnings of High School Graduates dashboard</a>.\n\nThis dataset is one of three containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiODA3NDU1NWMtOTJiMS00YTZiLTg1MmEtN2JhOTM4ZjNmNWExIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">Employment and Earnings of High School Graduates dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/Wage-Dashboard-Average-Earnings-by-Student-Group/9vfm-6vxq/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Average Earnings by Student Group</a>\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/Wage-Dashboard-Average-Annual-Earnings-by-Industry/wxc8-6an4/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Average Earnings by Industry</a>\n<a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Wage-Dashboard-College-and-Career-Outcomes/vj54-j4q3/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">College and Career Outcomes</a>\n\n<b>List of Outcomes</b>\n<ul><li>Total Postsecondary Enrollment</li><li>In-State Public 2-Year</li><li>In-State Public 4-Year</li><li>In-State Private</li><li>Out-of-State</li><li>Total Employed</li><li>Total Missing</li></ul><b>2025 Update on DESE Data on Employment and Earnings </b>\n\nThe data link between high school graduates and future earnings makes it possible to follow students beyond high school and college into the workforce, enabling long-term evaluation of educational programs using workforce outcomes. \n\nWhile DESE has published these data in the past, as of June 2025 we are temporarily pausing updates due to an issue conducting the link that was brought to our attention in 2023 by a team of researchers.  The issue impacts the earnings information for students who never attended a postsecondary institution or who only attended private or out-of-state colleges or universities, beginning with the 2017 high school graduation cohort, with growing impact in each successive high school graduation cohort.  \n\nThe issue does not impact the earnings information for students who attended a Massachusetts public institution of higher education, and earnings data for those students will continue to be updated. \n\nOnce a solution is found, the past cohorts of data with low match rates will be updated. DESE and partner agencies are exploring linking strategies to maximize the utility of the information.\n\nMore detailed information can be found in the attached memo provided by the research team from the Annenberg Institute. We thank them for calling this issue to our attention.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 865,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 39686739,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1686947529,
+  "publicationGroup" : 19170897,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1689281259,
+  "tableId" : 19183752,
+  "totalTimesRated" : 0,
+  "viewCount" : 3374,
+  "viewLastModified" : 1772576536,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1689281375,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 5630949,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1689281332,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1689281376,
+      "failureCount" : 0,
+      "startedAt" : 1689281375,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 577038643,
+    "name" : "HS_GRAD_YEAR",
+    "dataTypeName" : "text",
+    "description" : "High School Graduation Year",
+    "fieldName" : "hs_grad_year",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147207363,
+    "cachedContents" : {
+      "non_null" : "152106",
+      "largest" : "2021",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2010",
+        "count" : "22686"
+      }, {
+        "item" : "2011",
+        "count" : "21248"
+      }, {
+        "item" : "2012",
+        "count" : "19602"
+      }, {
+        "item" : "2013",
+        "count" : "16326"
+      }, {
+        "item" : "2014",
+        "count" : "15777"
+      }, {
+        "item" : "2015",
+        "count" : "13888"
+      }, {
+        "item" : "2016",
+        "count" : "11997"
+      }, {
+        "item" : "2017",
+        "count" : "10060"
+      }, {
+        "item" : "2018",
+        "count" : "8172"
+      }, {
+        "item" : "2019",
+        "count" : "6169"
+      }, {
+        "item" : "2020",
+        "count" : "4122"
+      }, {
+        "item" : "2021",
+        "count" : "2059"
+      } ],
+      "smallest" : "2010",
+      "count" : "152106",
+      "cardinality" : "12"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "noCommas" : "true",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 577038614,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "district_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147100190,
+    "cachedContents" : {
+      "non_null" : "152106",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "03480000",
+        "count" : "546"
+      }, {
+        "item" : "06050000",
+        "count" : "546"
+      }, {
+        "item" : "00350000",
+        "count" : "546"
+      }, {
+        "item" : "02100000",
+        "count" : "546"
+      }, {
+        "item" : "06250000",
+        "count" : "546"
+      }, {
+        "item" : "01650000",
+        "count" : "546"
+      }, {
+        "item" : "00000000",
+        "count" : "546"
+      }, {
+        "item" : "02440000",
+        "count" : "545"
+      }, {
+        "item" : "00090000",
+        "count" : "545"
+      }, {
+        "item" : "00880000",
+        "count" : "545"
+      }, {
+        "item" : "01550000",
+        "count" : "545"
+      }, {
+        "item" : "02850000",
+        "count" : "544"
+      }, {
+        "item" : "06450000",
+        "count" : "544"
+      }, {
+        "item" : "01990000",
+        "count" : "544"
+      }, {
+        "item" : "02290000",
+        "count" : "544"
+      }, {
+        "item" : "00610000",
+        "count" : "544"
+      }, {
+        "item" : "00570000",
+        "count" : "544"
+      }, {
+        "item" : "03050000",
+        "count" : "544"
+      }, {
+        "item" : "00050000",
+        "count" : "544"
+      }, {
+        "item" : "00440000",
+        "count" : "544"
+      } ],
+      "smallest" : "00000000",
+      "count" : "152106",
+      "cardinality" : "312"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 577038615,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "district_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147100186,
+    "cachedContents" : {
+      "non_null" : "152106",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Malden",
+        "count" : "546"
+      }, {
+        "item" : "Amherst-Pelham",
+        "count" : "546"
+      }, {
+        "item" : "Northampton",
+        "count" : "546"
+      }, {
+        "item" : "Worcester",
+        "count" : "546"
+      }, {
+        "item" : "State",
+        "count" : "546"
+      }, {
+        "item" : "Bridgewater-Raynham",
+        "count" : "546"
+      }, {
+        "item" : "Boston",
+        "count" : "546"
+      }, {
+        "item" : "Andover",
+        "count" : "545"
+      }, {
+        "item" : "Lexington",
+        "count" : "545"
+      }, {
+        "item" : "Randolph",
+        "count" : "545"
+      }, {
+        "item" : "Easton",
+        "count" : "545"
+      }, {
+        "item" : "Belchertown",
+        "count" : "544"
+      }, {
+        "item" : "Peabody",
+        "count" : "544"
+      }, {
+        "item" : "Brockton",
+        "count" : "544"
+      }, {
+        "item" : "Chicopee",
+        "count" : "544"
+      }, {
+        "item" : "Needham",
+        "count" : "544"
+      }, {
+        "item" : "Newton",
+        "count" : "544"
+      }, {
+        "item" : "Agawam",
+        "count" : "544"
+      }, {
+        "item" : "Ludlow",
+        "count" : "544"
+      }, {
+        "item" : "Stoughton",
+        "count" : "544"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "152106",
+      "cardinality" : "312"
+    },
+    "format" : { }
+  }, {
+    "id" : 577038621,
+    "name" : "OUTCOME_YEAR",
+    "dataTypeName" : "text",
+    "description" : "Outcome Year",
+    "fieldName" : "outcome_year",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147207362,
+    "cachedContents" : {
+      "non_null" : "152106",
+      "largest" : "2021",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2021",
+        "count" : "23480"
+      }, {
+        "item" : "2020",
+        "count" : "21638"
+      }, {
+        "item" : "2019",
+        "count" : "19701"
+      }, {
+        "item" : "2018",
+        "count" : "17727"
+      }, {
+        "item" : "2017",
+        "count" : "15693"
+      }, {
+        "item" : "2016",
+        "count" : "13688"
+      }, {
+        "item" : "2015",
+        "count" : "11640"
+      }, {
+        "item" : "2014",
+        "count" : "9505"
+      }, {
+        "item" : "2013",
+        "count" : "7363"
+      }, {
+        "item" : "2012",
+        "count" : "5864"
+      }, {
+        "item" : "2011",
+        "count" : "3883"
+      }, {
+        "item" : "2010",
+        "count" : "1924"
+      } ],
+      "smallest" : "2010",
+      "count" : "152106",
+      "cardinality" : "12"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "noCommas" : "true",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 577038617,
+    "name" : "OUTCOME_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Outcome Type",
+    "fieldName" : "outcome_type",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 147100187,
+    "cachedContents" : {
+      "non_null" : "152106",
+      "largest" : "Total Postsecondary Enrollment",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Total Postsecondary Enrollment",
+        "count" : "22194"
+      }, {
+        "item" : "Total Employed",
+        "count" : "22132"
+      }, {
+        "item" : "Total Missing",
+        "count" : "22132"
+      }, {
+        "item" : "In-State Public 4-Year",
+        "count" : "21949"
+      }, {
+        "item" : "In-State Public 2-Year",
+        "count" : "21754"
+      }, {
+        "item" : "Out-of-State",
+        "count" : "21216"
+      }, {
+        "item" : "In-State Private",
+        "count" : "20729"
+      } ],
+      "smallest" : "In-State Private",
+      "count" : "152106",
+      "cardinality" : "7"
+    },
+    "format" : { }
+  }, {
+    "id" : 577038618,
+    "name" : "GRAD_CNT",
+    "dataTypeName" : "number",
+    "description" : "Graduated Count",
+    "fieldName" : "grad_count",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147100188,
+    "cachedContents" : {
+      "non_null" : "152106",
+      "largest" : "69080",
+      "null" : "0",
+      "top" : [ {
+        "item" : "96",
+        "count" : "1195"
+      }, {
+        "item" : "90",
+        "count" : "944"
+      }, {
+        "item" : "270",
+        "count" : "928"
+      }, {
+        "item" : "108",
+        "count" : "885"
+      }, {
+        "item" : "83",
+        "count" : "881"
+      }, {
+        "item" : "69",
+        "count" : "830"
+      }, {
+        "item" : "106",
+        "count" : "824"
+      }, {
+        "item" : "89",
+        "count" : "815"
+      }, {
+        "item" : "237",
+        "count" : "804"
+      }, {
+        "item" : "79",
+        "count" : "798"
+      }, {
+        "item" : "160",
+        "count" : "758"
+      }, {
+        "item" : "165",
+        "count" : "758"
+      }, {
+        "item" : "103",
+        "count" : "747"
+      }, {
+        "item" : "111",
+        "count" : "731"
+      }, {
+        "item" : "118",
+        "count" : "724"
+      }, {
+        "item" : "117",
+        "count" : "714"
+      }, {
+        "item" : "102",
+        "count" : "705"
+      }, {
+        "item" : "110",
+        "count" : "704"
+      }, {
+        "item" : "80",
+        "count" : "696"
+      }, {
+        "item" : "67",
+        "count" : "696"
+      } ],
+      "smallest" : "20",
+      "count" : "152106",
+      "cardinality" : "617"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 577038619,
+    "name" : "OUTCOME_CNT",
+    "dataTypeName" : "number",
+    "description" : "Outcome Count",
+    "fieldName" : "outcome_count",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 147100189,
+    "cachedContents" : {
+      "non_null" : "148946",
+      "largest" : "49135",
+      "null" : "3160",
+      "top" : [ {
+        "item" : "6",
+        "count" : "4041"
+      }, {
+        "item" : "4",
+        "count" : "4027"
+      }, {
+        "item" : "3",
+        "count" : "4011"
+      }, {
+        "item" : "7",
+        "count" : "3936"
+      }, {
+        "item" : "5",
+        "count" : "3847"
+      }, {
+        "item" : "8",
+        "count" : "3782"
+      }, {
+        "item" : "2",
+        "count" : "3729"
+      }, {
+        "item" : "9",
+        "count" : "3544"
+      }, {
+        "item" : "10",
+        "count" : "3455"
+      }, {
+        "item" : "11",
+        "count" : "3250"
+      }, {
+        "item" : "12",
+        "count" : "3032"
+      }, {
+        "item" : "1",
+        "count" : "2969"
+      }, {
+        "item" : "14",
+        "count" : "2964"
+      }, {
+        "item" : "13",
+        "count" : "2930"
+      }, {
+        "item" : "15",
+        "count" : "2703"
+      }, {
+        "item" : "16",
+        "count" : "2688"
+      }, {
+        "item" : "17",
+        "count" : "2638"
+      }, {
+        "item" : "18",
+        "count" : "2496"
+      }, {
+        "item" : "19",
+        "count" : "2330"
+      }, {
+        "item" : "20",
+        "count" : "2204"
+      } ],
+      "smallest" : "0",
+      "count" : "152106",
+      "cardinality" : "1429"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "attachments" : [ {
+      "filename" : "Technical_Memo-DESE_DUA_Data_Match_Rate.docx",
+      "assetId" : "920d4f41-78c9-43f6-8c99-380b06f9064c",
+      "name" : "Technical_Memo-DESE_DUA_Data_Match_Rate.docx"
+    } ],
+    "custom_fields" : {
+      "Update" : {
+        "Update Frequency" : "Biannually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "wage", "college", "university", "career", "graduation", "earnings" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

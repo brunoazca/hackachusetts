@@ -1,0 +1,521 @@
+{
+  "id" : "b99t-n6jh",
+  "name" : "Experienced and In-Field Teachers by Race/Ethnicity",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1695249819,
+  "description" : "This dataset displays state and district teacher indicators (In-Field or Experienced) by race and ethnicity with rows for different years. It was created as part of a dashboard supporting the Massachusetts Department of Elementary and Secondary Education's commitment to provide all students with a racially diverse and culturally responsive educator workforce.<BR>\n<B>Selected Teacher Indicators:</B> This displays the number and percent of teachers who are licensed in the subject area(s) they teach (In-Field), as well as the number and percent of teachers who have been teaching in a Massachusetts public school for at least three years (Experienced).<I> Note: The In-Field report uses end-of-year EPIMS; the most recently available data are displayed.</I><BR>\nThis dataset contains the same data that is also published in the Teacher Indicators table on our <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiNGQ2NmM5ZGItZjgyNS00ZjEyLWEyYmMtZDBkZGQxMWJiMTFlIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\"target=\"_blank\" rel=\"noopener noreferrer\">Educator Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 630,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40002926,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1695759135,
+  "publicationGroup" : 19296519,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1695308161,
+  "tableId" : 19302266,
+  "totalTimesRated" : 0,
+  "viewCount" : 1132,
+  "viewLastModified" : 1772577823,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1695929935,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 5803023,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1695929891,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1695929935,
+      "failureCount" : 0,
+      "startedAt" : 1695929935,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 581709747,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148582707,
+    "cachedContents" : {
+      "non_null" : "10573",
+      "largest" : "2023",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2022",
+        "count" : "3543"
+      }, {
+        "item" : "2021",
+        "count" : "3512"
+      }, {
+        "item" : "2023",
+        "count" : "1767"
+      }, {
+        "item" : "2020",
+        "count" : "1751"
+      } ],
+      "smallest" : "2020",
+      "count" : "10573",
+      "cardinality" : "4"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581709748,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148582712,
+    "cachedContents" : {
+      "non_null" : "10573",
+      "largest" : "990000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "350000",
+        "count" : "48"
+      }, {
+        "item" : "0",
+        "count" : "48"
+      }, {
+        "item" : "440000",
+        "count" : "48"
+      }, {
+        "item" : "2480000",
+        "count" : "47"
+      }, {
+        "item" : "90000",
+        "count" : "46"
+      }, {
+        "item" : "2850000",
+        "count" : "46"
+      }, {
+        "item" : "520000",
+        "count" : "45"
+      }, {
+        "item" : "1370000",
+        "count" : "44"
+      }, {
+        "item" : "460000",
+        "count" : "44"
+      }, {
+        "item" : "950000",
+        "count" : "44"
+      }, {
+        "item" : "1490000",
+        "count" : "43"
+      }, {
+        "item" : "2810000",
+        "count" : "43"
+      }, {
+        "item" : "3250000",
+        "count" : "42"
+      }, {
+        "item" : "4280000",
+        "count" : "42"
+      }, {
+        "item" : "400000",
+        "count" : "42"
+      }, {
+        "item" : "490000",
+        "count" : "42"
+      }, {
+        "item" : "1630000",
+        "count" : "42"
+      }, {
+        "item" : "2010000",
+        "count" : "41"
+      }, {
+        "item" : "960000",
+        "count" : "41"
+      }, {
+        "item" : "1600000",
+        "count" : "41"
+      } ],
+      "smallest" : "0",
+      "count" : "10573",
+      "cardinality" : "401"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581709749,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148582708,
+    "cachedContents" : {
+      "non_null" : "10573",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "48"
+      }, {
+        "item" : "Brockton",
+        "count" : "48"
+      }, {
+        "item" : "State Totals",
+        "count" : "48"
+      }, {
+        "item" : "Revere",
+        "count" : "47"
+      }, {
+        "item" : "Stoughton",
+        "count" : "46"
+      }, {
+        "item" : "Andover",
+        "count" : "46"
+      }, {
+        "item" : "Carver",
+        "count" : "45"
+      }, {
+        "item" : "Brookline",
+        "count" : "44"
+      }, {
+        "item" : "Fall River",
+        "count" : "44"
+      }, {
+        "item" : "Holyoke",
+        "count" : "44"
+      }, {
+        "item" : "Springfield",
+        "count" : "43"
+      }, {
+        "item" : "Lawrence",
+        "count" : "43"
+      }, {
+        "item" : "Westfield",
+        "count" : "42"
+      }, {
+        "item" : "Braintree",
+        "count" : "42"
+      }, {
+        "item" : "Brooke Charter School (District)",
+        "count" : "42"
+      }, {
+        "item" : "Lynn",
+        "count" : "42"
+      }, {
+        "item" : "Cambridge",
+        "count" : "42"
+      }, {
+        "item" : "Falmouth",
+        "count" : "41"
+      }, {
+        "item" : "Chicopee",
+        "count" : "41"
+      }, {
+        "item" : "Neighborhood House Charter (District)",
+        "count" : "41"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "10573",
+      "cardinality" : "401"
+    },
+    "format" : { }
+  }, {
+    "id" : 581709750,
+    "name" : "RACE_ETH",
+    "dataTypeName" : "text",
+    "description" : "Race and Ethnicity",
+    "fieldName" : "race_eth",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148582709,
+    "cachedContents" : {
+      "non_null" : "10573",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Educators",
+        "count" : "2397"
+      }, {
+        "item" : "White",
+        "count" : "2397"
+      }, {
+        "item" : "Hispanic/Latino",
+        "count" : "1733"
+      }, {
+        "item" : "Asian",
+        "count" : "1356"
+      }, {
+        "item" : "Afr. Amer./Black",
+        "count" : "1314"
+      }, {
+        "item" : "Multi-race, Non-Hisp./Lat.",
+        "count" : "912"
+      }, {
+        "item" : "Amer. Ind. or Alaska Nat.",
+        "count" : "272"
+      }, {
+        "item" : "Nat. Haw. or Pacif. Isl.",
+        "count" : "192"
+      } ],
+      "smallest" : "Afr. Amer./Black",
+      "count" : "10573",
+      "cardinality" : "8"
+    },
+    "format" : { }
+  }, {
+    "id" : 581709751,
+    "name" : "IND",
+    "dataTypeName" : "text",
+    "description" : "Indicator",
+    "fieldName" : "ind",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148582710,
+    "cachedContents" : {
+      "non_null" : "10573",
+      "largest" : "In-Field Teachers",
+      "null" : "0",
+      "top" : [ {
+        "item" : "In-Field Teachers",
+        "count" : "5294"
+      }, {
+        "item" : "Experienced Teachers",
+        "count" : "5279"
+      } ],
+      "smallest" : "Experienced Teachers",
+      "count" : "10573",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 581709752,
+    "name" : "IND_CNT",
+    "dataTypeName" : "number",
+    "description" : "Indicator Count",
+    "fieldName" : "ind_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148582711,
+    "cachedContents" : {
+      "non_null" : "6126",
+      "largest" : "75311",
+      "null" : "4447",
+      "top" : [ {
+        "item" : "6",
+        "count" : "186"
+      }, {
+        "item" : "5",
+        "count" : "141"
+      }, {
+        "item" : "7",
+        "count" : "132"
+      }, {
+        "item" : "8",
+        "count" : "121"
+      }, {
+        "item" : "4",
+        "count" : "112"
+      }, {
+        "item" : "16",
+        "count" : "104"
+      }, {
+        "item" : "10",
+        "count" : "95"
+      }, {
+        "item" : "14",
+        "count" : "93"
+      }, {
+        "item" : "9",
+        "count" : "91"
+      }, {
+        "item" : "12",
+        "count" : "89"
+      }, {
+        "item" : "13",
+        "count" : "83"
+      }, {
+        "item" : "3",
+        "count" : "80"
+      }, {
+        "item" : "18",
+        "count" : "79"
+      }, {
+        "item" : "17",
+        "count" : "78"
+      }, {
+        "item" : "2",
+        "count" : "77"
+      }, {
+        "item" : "11",
+        "count" : "69"
+      }, {
+        "item" : "15",
+        "count" : "63"
+      }, {
+        "item" : "19",
+        "count" : "51"
+      }, {
+        "item" : "20",
+        "count" : "45"
+      }, {
+        "item" : "22",
+        "count" : "44"
+      } ],
+      "smallest" : "0",
+      "count" : "10573",
+      "cardinality" : "707"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581709753,
+    "name" : "IND_PCT",
+    "dataTypeName" : "number",
+    "description" : "Indicator Percent",
+    "fieldName" : "ind_pct",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148582713,
+    "cachedContents" : {
+      "non_null" : "6118",
+      "largest" : "100",
+      "null" : "4455",
+      "top" : [ {
+        "item" : "100",
+        "count" : "415"
+      }, {
+        "item" : "83.3",
+        "count" : "82"
+      }, {
+        "item" : "50",
+        "count" : "75"
+      }, {
+        "item" : "66.7",
+        "count" : "69"
+      }, {
+        "item" : "88.9",
+        "count" : "64"
+      }, {
+        "item" : "85.7",
+        "count" : "59"
+      }, {
+        "item" : "80",
+        "count" : "59"
+      }, {
+        "item" : "87.5",
+        "count" : "54"
+      }, {
+        "item" : "75",
+        "count" : "50"
+      }, {
+        "item" : "90",
+        "count" : "49"
+      }, {
+        "item" : "90.9",
+        "count" : "45"
+      }, {
+        "item" : "96.6",
+        "count" : "44"
+      }, {
+        "item" : "33.3",
+        "count" : "42"
+      }, {
+        "item" : "95.7",
+        "count" : "42"
+      }, {
+        "item" : "71.4",
+        "count" : "41"
+      }, {
+        "item" : "91.7",
+        "count" : "40"
+      }, {
+        "item" : "57.1",
+        "count" : "40"
+      }, {
+        "item" : "96",
+        "count" : "40"
+      }, {
+        "item" : "92.9",
+        "count" : "39"
+      }, {
+        "item" : "96.3",
+        "count" : "39"
+      } ],
+      "smallest" : "0",
+      "count" : "10573",
+      "cardinality" : "619"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "administrators", "accountability", "demographic", "employment", "ethnicity", "full-time employment", "in field experience", "paraprofessionals", "educators", "educator data dashboard" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

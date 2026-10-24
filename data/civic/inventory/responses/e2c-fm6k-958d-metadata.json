@@ -1,0 +1,95 @@
+{
+  "id" : "fm6k-958d",
+  "name" : "The state of educator racial diversity in Massachusetts",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1693409771,
+  "description" : "Follow the teacher pipeline to see where gaps occur, and learn about programs to promote a diverse educator workforce.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 39917250,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1694629791,
+  "publicationGroup" : 19271731,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1693409771,
+  "tableId" : 19271731,
+  "totalTimesRated" : 0,
+  "viewCount" : 13897,
+  "viewLastModified" : 1765912357,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1697736084,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 5860014,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1697735770,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "a5ys-drys",
+      "displayName" : "Ofa"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1697736084,
+      "failureCount" : 0,
+      "startedAt" : 1697736084,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a5ys-drys",
+      "displayName" : "Ofa"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "a5ys-drys",
+    "displayName" : "Ofa",
+    "screenName" : "Ofa",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a5ys-drys",
+    "displayName" : "Ofa",
+    "screenName" : "Ofa",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "educator diversity", "teacher diversity", "racial diversity", "educators", "teacher diversity pipeline" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

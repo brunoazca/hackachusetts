@@ -1,0 +1,1861 @@
+DATA_LOAD_DATE,SUBSIDY_REGION,AGE_GROUP,LABOR_FORCE_PARTICIPATION,CHILD_COUNT,SERVED_COUNT,BELOW_50_SMI_COUNT,CCFA_COUNT
+01/15/2026,Central MA,Children Age 0-5,All households,50021,23335,17598,4490
+01/15/2026,Central MA,Children Age 0-5,Households with all adults in the labor force,37066,18212,11063,4490
+01/15/2026,Central MA,Infant,All households,11662,2113,4178,405
+01/15/2026,Central MA,Infant,Households with all adults in the labor force,8647,1777,2655,405
+01/15/2026,Central MA,Preschool,All households,24351,16531,8435,2808
+01/15/2026,Central MA,Preschool,Households with all adults in the labor force,17984,12513,5234,2808
+01/15/2026,Central MA,School Age,All households,79346,7029,28224,2606
+01/15/2026,Central MA,School Age,Households with all adults in the labor force,98427,24099,29384,7096
+01/15/2026,Central MA,Toddler,All households,14008,4691,4985,1277
+01/15/2026,Central MA,Toddler,Households with all adults in the labor force,10435,3922,3174,1277
+01/15/2026,Metro,Children Age 0-5,All households,103806,57452,20482,4792
+01/15/2026,Metro,Children Age 0-5,Households with all adults in the labor force,77316,43907,11533,4792
+01/15/2026,Metro,Infant,All households,24204,5777,4902,418
+01/15/2026,Metro,Infant,Households with all adults in the labor force,17963,4536,2774,418
+01/15/2026,Metro,Preschool,All households,50437,38189,9678,3009
+01/15/2026,Metro,Preschool,Households with all adults in the labor force,37613,28870,5435,3009
+01/15/2026,Metro,School Age,All households,164367,25345,33747,2884
+01/15/2026,Metro,School Age,Households with all adults in the labor force,203994,63144,32745,7676
+01/15/2026,Metro,Toddler,All households,29165,13486,5902,1365
+01/15/2026,Metro,Toddler,Households with all adults in the labor force,21740,10501,3324,1365
+01/15/2026,Metro Boston,Children Age 0-5,All households,43768,24737,16492,5958
+01/15/2026,Metro Boston,Children Age 0-5,Households with all adults in the labor force,34972,19788,11365,5958
+01/15/2026,Metro Boston,Infant,All households,10353,2741,3866,713
+01/15/2026,Metro Boston,Infant,Households with all adults in the labor force,8287,2296,2668,713
+01/15/2026,Metro Boston,Preschool,All households,21278,16510,8155,3357
+01/15/2026,Metro Boston,Preschool,Households with all adults in the labor force,16844,12856,5529,3357
+01/15/2026,Metro Boston,School Age,All households,55138,7734,27281,2785
+01/15/2026,Metro Boston,School Age,Households with all adults in the labor force,78251,26255,30863,8743
+01/15/2026,Metro Boston,Toddler,All households,12137,5486,4471,1888
+01/15/2026,Metro Boston,Toddler,Households with all adults in the labor force,9841,4636,3168,1888
+01/15/2026,Northeast MA,Children Age 0-5,All households,62037,34964,23122,8711
+01/15/2026,Northeast MA,Children Age 0-5,Households with all adults in the labor force,46149,27549,15098,8711
+01/15/2026,Northeast MA,Infant,All households,14298,3803,5417,923
+01/15/2026,Northeast MA,Infant,Households with all adults in the labor force,10642,3211,3554,923
+01/15/2026,Northeast MA,Preschool,All households,30640,23325,11378,5339
+01/15/2026,Northeast MA,Preschool,Households with all adults in the labor force,22840,17889,7430,5339
+01/15/2026,Northeast MA,School Age,All households,95387,13746,33732,6068
+01/15/2026,Northeast MA,School Age,Households with all adults in the labor force,121888,39524,38587,14779
+01/15/2026,Northeast MA,Toddler,All households,17099,7836,6327,2449
+01/15/2026,Northeast MA,Toddler,Households with all adults in the labor force,12667,6449,4114,2449
+01/15/2026,Southeast and Cape MA,Children Age 0-5,All households,69912,33337,24914,6604
+01/15/2026,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,52756,25905,15866,6604
+01/15/2026,Southeast and Cape MA,Infant,All households,16243,3160,5872,621
+01/15/2026,Southeast and Cape MA,Infant,Households with all adults in the labor force,12241,2570,3780,621
+01/15/2026,Southeast and Cape MA,Preschool,All households,34211,23221,12086,4122
+01/15/2026,Southeast and Cape MA,Preschool,Households with all adults in the labor force,25804,17663,7625,4122
+01/15/2026,Southeast and Cape MA,School Age,All households,110382,13283,39520,4808
+01/15/2026,Southeast and Cape MA,School Age,Households with all adults in the labor force,139723,37005,42802,11412
+01/15/2026,Southeast and Cape MA,Toddler,All households,19458,6956,6956,1861
+01/15/2026,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14711,5672,4461,1861
+01/15/2026,Western MA,Children Age 0-5,All households,39810,20734,20197,5229
+01/15/2026,Western MA,Children Age 0-5,Households with all adults in the labor force,28325,16020,12630,5229
+01/15/2026,Western MA,Infant,All households,9269,1865,4745,513
+01/15/2026,Western MA,Infant,Households with all adults in the labor force,6575,1602,2965,513
+01/15/2026,Western MA,Preschool,All households,19483,14922,9847,3219
+01/15/2026,Western MA,Preschool,Households with all adults in the labor force,13896,11047,6175,3219
+01/15/2026,Western MA,School Age,All households,65817,9216,33310,4342
+01/15/2026,Western MA,School Age,Households with all adults in the labor force,77378,23905,34348,9571
+01/15/2026,Western MA,Toddler,All households,11058,3947,5605,1497
+01/15/2026,Western MA,Toddler,Households with all adults in the labor force,7854,3371,3490,1497
+12/15/2025,Central MA,Children Age 0-5,All households,49160,23303,17290,4454
+12/15/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,36421,18169,10860,4454
+12/15/2025,Central MA,Infant,All households,11615,2152,4156,433
+12/15/2025,Central MA,Infant,Households with all adults in the labor force,8598,1813,2646,433
+12/15/2025,Central MA,Preschool,All households,23475,16379,8137,2725
+12/15/2025,Central MA,Preschool,Households with all adults in the labor force,17352,12357,5051,2725
+12/15/2025,Central MA,School Age,All households,80174,7121,28555,2596
+12/15/2025,Central MA,School Age,Households with all adults in the labor force,98399,24103,29400,7050
+12/15/2025,Central MA,Toddler,All households,14070,4772,4997,1296
+12/15/2025,Central MA,Toddler,Households with all adults in the labor force,10471,3999,3163,1296
+12/15/2025,Metro,Children Age 0-5,All households,101944,56689,20078,4765
+12/15/2025,Metro,Children Age 0-5,Households with all adults in the labor force,75942,43261,11320,4765
+12/15/2025,Metro,Infant,All households,24214,5685,4897,445
+12/15/2025,Metro,Infant,Households with all adults in the labor force,18012,4488,2789,445
+12/15/2025,Metro,Preschool,All households,48557,37486,9277,2953
+12/15/2025,Metro,Preschool,Households with all adults in the labor force,36258,28254,5213,2953
+12/15/2025,Metro,School Age,All households,165834,25378,34017,2920
+12/15/2025,Metro,School Age,Households with all adults in the labor force,203705,62561,32673,7685
+12/15/2025,Metro,Toddler,All households,29173,13518,5904,1367
+12/15/2025,Metro,Toddler,Households with all adults in the labor force,21672,10519,3318,1367
+12/15/2025,Metro Boston,Children Age 0-5,All households,43165,24524,16254,5948
+12/15/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,34486,19601,11195,5948
+12/15/2025,Metro Boston,Infant,All households,10340,2774,3862,760
+12/15/2025,Metro Boston,Infant,Households with all adults in the labor force,8271,2330,2675,760
+12/15/2025,Metro Boston,Preschool,All households,20785,16262,7960,3287
+12/15/2025,Metro Boston,Preschool,Households with all adults in the labor force,16454,12628,5394,3287
+12/15/2025,Metro Boston,School Age,All households,56006,8233,27575,2829
+12/15/2025,Metro Boston,School Age,Households with all adults in the labor force,78460,26449,30908,8777
+12/15/2025,Metro Boston,Toddler,All households,12040,5488,4432,1901
+12/15/2025,Metro Boston,Toddler,Households with all adults in the labor force,9761,4643,3126,1901
+12/15/2025,Northeast MA,Children Age 0-5,All households,61170,34705,22853,8632
+12/15/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,45478,27286,14916,8632
+12/15/2025,Northeast MA,Infant,All households,14310,3816,5426,973
+12/15/2025,Northeast MA,Infant,Households with all adults in the labor force,10663,3236,3559,973
+12/15/2025,Northeast MA,Preschool,All households,29705,23001,11059,5205
+12/15/2025,Northeast MA,Preschool,Households with all adults in the labor force,22116,17564,7227,5205
+12/15/2025,Northeast MA,School Age,All households,96260,13812,34082,6128
+12/15/2025,Northeast MA,School Age,Households with all adults in the labor force,121879,39336,38638,14760
+12/15/2025,Northeast MA,Toddler,All households,17155,7888,6368,2454
+12/15/2025,Northeast MA,Toddler,Households with all adults in the labor force,12699,6486,4130,2454
+12/15/2025,Southeast and Cape MA,Children Age 0-5,All households,68972,33470,24536,6550
+12/15/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,52011,25985,15603,6550
+12/15/2025,Southeast and Cape MA,Infant,All households,16300,3121,5873,670
+12/15/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12300,2561,3778,670
+12/15/2025,Southeast and Cape MA,Preschool,All households,33294,23148,11750,4003
+12/15/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,25070,17575,7407,4003
+12/15/2025,Southeast and Cape MA,School Age,All households,111443,13141,39930,4855
+12/15/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,139803,36979,42824,11405
+12/15/2025,Southeast and Cape MA,Toddler,All households,19378,7201,6913,1877
+12/15/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14641,5849,4418,1877
+12/15/2025,Western MA,Children Age 0-5,All households,39231,20562,19911,5159
+12/15/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,27933,15881,12470,5159
+12/15/2025,Western MA,Infant,All households,9234,1810,4742,525
+12/15/2025,Western MA,Infant,Households with all adults in the labor force,6543,1592,2962,525
+12/15/2025,Western MA,Preschool,All households,18898,14776,9554,3134
+12/15/2025,Western MA,Preschool,Households with all adults in the labor force,13503,10910,6018,3134
+12/15/2025,Western MA,School Age,All households,66431,9253,33655,4386
+12/15/2025,Western MA,School Age,Households with all adults in the labor force,77414,23786,34403,9545
+12/15/2025,Western MA,Toddler,All households,11099,3976,5615,1500
+12/15/2025,Western MA,Toddler,Households with all adults in the labor force,7887,3379,3490,1500
+11/01/2025,Central MA,Children Age 0-5,All households,48029,22803,16879,4305
+11/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,35612,17935,10611,4305
+11/01/2025,Central MA,Infant,All households,11686,2418,4200,434
+11/01/2025,Central MA,Infant,Households with all adults in the labor force,8652,2016,2671,434
+11/01/2025,Central MA,Preschool,All households,22387,15765,7733,2567
+11/01/2025,Central MA,Preschool,Households with all adults in the labor force,16607,12011,4799,2567
+11/01/2025,Central MA,School Age,All households,81339,7442,28945,2611
+11/01/2025,Central MA,School Age,Households with all adults in the labor force,98482,24146,29412,6916
+11/01/2025,Central MA,Toddler,All households,13956,4620,4946,1304
+11/01/2025,Central MA,Toddler,Households with all adults in the labor force,10353,3908,3141,1304
+11/01/2025,Metro,Children Age 0-5,All households,99619,57618,19560,4630
+11/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,74134,44272,10993,4630
+11/01/2025,Metro,Infant,All households,24291,6483,4899,451
+11/01/2025,Metro,Infant,Households with all adults in the labor force,18018,5067,2750,451
+11/01/2025,Metro,Preschool,All households,46338,37777,8759,2835
+11/01/2025,Metro,Preschool,Households with all adults in the labor force,34587,28735,4925,2835
+11/01/2025,Metro,School Age,All households,168259,26581,34552,2943
+11/01/2025,Metro,School Age,Households with all adults in the labor force,203680,64525,32621,7573
+11/01/2025,Metro,Toddler,All households,28990,13358,5902,1344
+11/01/2025,Metro,Toddler,Households with all adults in the labor force,21529,10470,3318,1344
+11/01/2025,Metro Boston,Children Age 0-5,All households,42352,24315,15983,5864
+11/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,33981,19510,11045,5864
+11/01/2025,Metro Boston,Infant,All households,10217,2894,3801,782
+11/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8262,2432,2679,782
+11/01/2025,Metro Boston,Preschool,All households,19893,15970,7637,3158
+11/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,15848,12444,5206,3158
+11/01/2025,Metro Boston,School Age,All households,57054,8521,27946,2848
+11/01/2025,Metro Boston,School Age,Households with all adults in the labor force,78823,26562,31019,8712
+11/01/2025,Metro Boston,Toddler,All households,12242,5451,4545,1924
+11/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,9871,4634,3160,1924
+11/01/2025,Northeast MA,Children Age 0-5,All households,59644,35341,22340,8420
+11/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,44186,27830,14587,8420
+11/01/2025,Northeast MA,Infant,All households,14317,4117,5411,979
+11/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10670,3433,3556,979
+11/01/2025,Northeast MA,Preschool,All households,28199,23492,10576,4970
+11/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,20854,17946,6901,4970
+11/01/2025,Northeast MA,School Age,All households,97464,14524,34593,6230
+11/01/2025,Northeast MA,School Age,Households with all adults in the labor force,121444,40429,38650,14650
+11/01/2025,Northeast MA,Toddler,All households,17128,7732,6353,2471
+11/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12662,6451,4130,2471
+11/01/2025,Southeast and Cape MA,Children Age 0-5,All households,67319,32478,23993,6350
+11/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,50830,25465,15295,6350
+11/01/2025,Southeast and Cape MA,Infant,All households,16180,3390,5872,677
+11/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12172,2755,3767,677
+11/01/2025,Southeast and Cape MA,Preschool,All households,31627,22310,11177,3810
+11/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,23880,17125,7067,3810
+11/01/2025,Southeast and Cape MA,School Age,All households,113024,14327,40527,4909
+11/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,139792,37418,42892,11259
+11/01/2025,Southeast and Cape MA,Toddler,All households,19512,6778,6944,1863
+11/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14778,5585,4461,1863
+11/01/2025,Western MA,Children Age 0-5,All households,38354,20640,19480,5033
+11/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,27315,16041,12204,5033
+11/01/2025,Western MA,Infant,All households,9250,1952,4729,530
+11/01/2025,Western MA,Infant,Households with all adults in the labor force,6573,1692,2962,530
+11/01/2025,Western MA,Preschool,All households,18096,14784,9230,3022
+11/01/2025,Western MA,Preschool,Households with all adults in the labor force,12913,10950,5820,3022
+11/01/2025,Western MA,School Age,All households,67337,9347,34135,4446
+11/01/2025,Western MA,School Age,Households with all adults in the labor force,77443,24053,34446,9479
+11/01/2025,Western MA,Toddler,All households,11008,3904,5521,1481
+11/01/2025,Western MA,Toddler,Households with all adults in the labor force,7829,3399,3422,1481
+10/01/2025,Central MA,Children Age 0-5,All households,47276,22846,16562,4126
+10/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,35022,17716,10402,4126
+10/01/2025,Central MA,Infant,All households,11663,2150,4166,425
+10/01/2025,Central MA,Infant,Households with all adults in the labor force,8602,1808,2621,425
+10/01/2025,Central MA,Preschool,All households,21646,15990,7440,2428
+10/01/2025,Central MA,Preschool,Households with all adults in the labor force,16029,11984,4608,2428
+10/01/2025,Central MA,School Age,All households,82024,6963,29226,2621
+10/01/2025,Central MA,School Age,Households with all adults in the labor force,98360,23554,29364,6747
+10/01/2025,Central MA,Toddler,All households,13967,4706,4956,1273
+10/01/2025,Central MA,Toddler,Households with all adults in the labor force,10391,3924,3173,1273
+10/01/2025,Metro,Children Age 0-5,All households,97887,55991,19207,4575
+10/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,72999,42759,10855,4575
+10/01/2025,Metro,Infant,All households,24255,5772,4882,460
+10/01/2025,Metro,Infant,Households with all adults in the labor force,18028,4555,2772,460
+10/01/2025,Metro,Preschool,All households,44448,36553,8404,2757
+10/01/2025,Metro,Preschool,Households with all adults in the labor force,33321,27585,4770,2757
+10/01/2025,Metro,School Age,All households,169892,26103,34873,2975
+10/01/2025,Metro,School Age,Households with all adults in the labor force,203807,62518,32715,7550
+10/01/2025,Metro,Toddler,All households,29184,13666,5921,1358
+10/01/2025,Metro,Toddler,Households with all adults in the labor force,21650,10619,3313,1358
+10/01/2025,Metro Boston,Children Age 0-5,All households,41512,23976,15845,5750
+10/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,33052,19054,10863,5750
+10/01/2025,Metro Boston,Infant,All households,10137,2666,3812,739
+10/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8104,2233,2646,739
+10/01/2025,Metro Boston,Preschool,All households,19268,15904,7497,3116
+10/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,15146,12237,5039,3116
+10/01/2025,Metro Boston,School Age,All households,57700,8608,28227,2896
+10/01/2025,Metro Boston,School Age,Households with all adults in the labor force,78357,26178,31035,8646
+10/01/2025,Metro Boston,Toddler,All households,12107,5406,4536,1895
+10/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,9802,4584,3178,1895
+10/01/2025,Northeast MA,Children Age 0-5,All households,58803,33837,21941,8229
+10/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,43770,26505,14359,8229
+10/01/2025,Northeast MA,Infant,All households,14285,3861,5330,994
+10/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10632,3255,3486,994
+10/01/2025,Northeast MA,Preschool,All households,27303,22289,10150,4749
+10/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,20351,16902,6654,4749
+10/01/2025,Northeast MA,School Age,All households,98536,13600,34984,6350
+10/01/2025,Northeast MA,School Age,Households with all adults in the labor force,121855,38481,38669,14579
+10/01/2025,Northeast MA,Toddler,All households,17215,7687,6461,2486
+10/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12787,6348,4219,2486
+10/01/2025,Southeast and Cape MA,Children Age 0-5,All households,66270,32676,23616,6084
+10/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,49984,25296,15048,6084
+10/01/2025,Southeast and Cape MA,Infant,All households,16309,3119,5907,655
+10/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12287,2555,3793,655
+10/01/2025,Southeast and Cape MA,Preschool,All households,30424,22409,10771,3612
+10/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,22945,16937,6809,3612
+10/01/2025,Southeast and Cape MA,School Age,All households,114171,13572,40947,4961
+10/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,139810,36643,42917,11045
+10/01/2025,Southeast and Cape MA,Toddler,All households,19537,7148,6938,1817
+10/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14752,5804,4446,1817
+10/01/2025,Western MA,Children Age 0-5,All households,37736,20049,19184,4957
+10/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,26885,15449,12034,4957
+10/01/2025,Western MA,Infant,All households,9272,1832,4708,550
+10/01/2025,Western MA,Infant,Households with all adults in the labor force,6579,1592,2942,550
+10/01/2025,Western MA,Preschool,All households,17445,14313,8878,2952
+10/01/2025,Western MA,Preschool,Households with all adults in the labor force,12455,10514,5609,2952
+10/01/2025,Western MA,School Age,All households,67985,9519,34483,4500
+10/01/2025,Western MA,School Age,Households with all adults in the labor force,77472,23575,34501,9457
+10/01/2025,Western MA,Toddler,All households,11019,3904,5598,1455
+10/01/2025,Western MA,Toddler,Households with all adults in the labor force,7851,3343,3483,1455
+09/01/2025,Central MA,Children Age 0-5,All households,46601,22292,16328,3886
+09/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,34548,17388,10253,3886
+09/01/2025,Central MA,Infant,All households,11677,2290,4196,381
+09/01/2025,Central MA,Infant,Households with all adults in the labor force,8625,1910,2652,381
+09/01/2025,Central MA,Preschool,All households,20918,15383,7175,2296
+09/01/2025,Central MA,Preschool,Households with all adults in the labor force,15496,11582,4432,2296
+09/01/2025,Central MA,School Age,All households,82849,8019,29505,2538
+09/01/2025,Central MA,School Age,Households with all adults in the labor force,98522,24011,29397,6424
+09/01/2025,Central MA,Toddler,All households,14006,4619,4957,1209
+09/01/2025,Central MA,Toddler,Households with all adults in the labor force,10427,3896,3169,1209
+09/01/2025,Metro,Children Age 0-5,All households,96469,55708,18929,4303
+09/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,71818,42785,10661,4303
+09/01/2025,Metro,Infant,All households,24259,6666,4860,402
+09/01/2025,Metro,Infant,Households with all adults in the labor force,18004,5226,2751,402
+09/01/2025,Metro,Preschool,All households,43072,35815,8058,2568
+09/01/2025,Metro,Preschool,Households with all adults in the labor force,32222,27215,4548,2568
+09/01/2025,Metro,School Age,All households,171241,28452,35358,2367
+09/01/2025,Metro,School Age,Households with all adults in the labor force,203566,64235,32832,6670
+09/01/2025,Metro,Toddler,All households,29138,13227,6011,1333
+09/01/2025,Metro,Toddler,Households with all adults in the labor force,21592,10344,3362,1333
+09/01/2025,Metro Boston,Children Age 0-5,All households,40913,23097,15624,5574
+09/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,32769,18420,10783,5574
+09/01/2025,Metro Boston,Infant,All households,10096,2810,3826,638
+09/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8103,2309,2664,638
+09/01/2025,Metro Boston,Preschool,All households,18600,15015,7303,3096
+09/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,14772,11610,4947,3096
+09/01/2025,Metro Boston,School Age,All households,58623,9610,28514,2417
+09/01/2025,Metro Boston,School Age,Households with all adults in the labor force,78884,26118,31190,7991
+09/01/2025,Metro Boston,Toddler,All households,12217,5272,4495,1840
+09/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,9894,4501,3172,1840
+09/01/2025,Northeast MA,Children Age 0-5,All households,57527,33419,21563,7766
+09/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,42648,26255,14124,7766
+09/01/2025,Northeast MA,Infant,All households,14351,4105,5369,930
+09/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10661,3407,3518,930
+09/01/2025,Northeast MA,Preschool,All households,26034,21757,9780,4427
+09/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,19289,16581,6440,4427
+09/01/2025,Northeast MA,School Age,All households,99524,16147,35420,6103
+09/01/2025,Northeast MA,School Age,Households with all adults in the labor force,121436,39960,38749,13869
+09/01/2025,Northeast MA,Toddler,All households,17142,7557,6414,2409
+09/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12698,6267,4166,2409
+09/01/2025,Southeast and Cape MA,Children Age 0-5,All households,65036,31402,23241,5656
+09/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,49086,24431,14784,5656
+09/01/2025,Southeast and Cape MA,Infant,All households,16260,3377,5893,590
+09/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12277,2719,3809,590
+09/01/2025,Southeast and Cape MA,Preschool,All households,29307,21363,10443,3355
+09/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,22108,16288,6578,3355
+09/01/2025,Southeast and Cape MA,School Age,All households,115276,14638,41459,4258
+09/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,139764,36355,43041,9914
+09/01/2025,Southeast and Cape MA,Toddler,All households,19469,6662,6905,1711
+09/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14701,5424,4397,1711
+09/01/2025,Western MA,Children Age 0-5,All households,37170,20142,18935,4779
+09/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,26501,15593,11901,4779
+09/01/2025,Western MA,Infant,All households,9306,1971,4725,489
+09/01/2025,Western MA,Infant,Households with all adults in the labor force,6623,1700,2967,489
+09/01/2025,Western MA,Preschool,All households,16882,14280,8618,2848
+09/01/2025,Western MA,Preschool,Households with all adults in the labor force,12079,10549,5460,2848
+09/01/2025,Western MA,School Age,All households,68563,10052,34805,4299
+09/01/2025,Western MA,School Age,Households with all adults in the labor force,77489,24021,34578,9078
+09/01/2025,Western MA,Toddler,All households,10982,3891,5592,1442
+09/01/2025,Western MA,Toddler,Households with all adults in the labor force,7799,3344,3474,1442
+08/01/2025,Central MA,Children Age 0-5,All households,55124,24525,19481,4860
+08/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,40902,19409,12317,4860
+08/01/2025,Central MA,Infant,All households,11658,2317,4180,380
+08/01/2025,Central MA,Infant,Households with all adults in the labor force,8616,1942,2648,380
+08/01/2025,Central MA,Preschool,All households,29359,17620,10306,3234
+08/01/2025,Central MA,Preschool,Households with all adults in the labor force,21801,13580,6482,3234
+08/01/2025,Central MA,School Age,All households,74285,6675,26319,2463
+08/01/2025,Central MA,School Age,Households with all adults in the labor force,98485,24942,29388,7323
+08/01/2025,Central MA,Toddler,All households,14107,4588,4995,1246
+08/01/2025,Central MA,Toddler,Households with all adults in the labor force,10485,3887,3187,1246
+08/01/2025,Metro,Children Age 0-5,All households,115354,62888,23005,5391
+08/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,85762,48384,12929,5391
+08/01/2025,Metro,Infant,All households,24225,6710,4879,427
+08/01/2025,Metro,Infant,Households with all adults in the labor force,17983,5240,2744,427
+08/01/2025,Metro,Preschool,All households,61832,42899,12139,3553
+08/01/2025,Metro,Preschool,Households with all adults in the labor force,46064,32750,6812,3553
+08/01/2025,Metro,School Age,All households,152988,22168,31590,2675
+08/01/2025,Metro,School Age,Households with all adults in the labor force,203890,65212,32892,8066
+08/01/2025,Metro,Toddler,All households,29297,13279,5987,1411
+08/01/2025,Metro,Toddler,Households with all adults in the labor force,21715,10394,3373,1411
+08/01/2025,Metro Boston,Children Age 0-5,All households,47465,25370,17964,6640
+08/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,38090,20481,12481,6640
+08/01/2025,Metro Boston,Infant,All households,10159,2850,3855,652
+08/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8156,2372,2680,652
+08/01/2025,Metro Boston,Preschool,All households,25172,17270,9644,4096
+08/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,20106,13639,6647,4096
+08/01/2025,Metro Boston,School Age,All households,51372,8261,25716,2640
+08/01/2025,Metro Boston,School Age,Households with all adults in the labor force,78396,27208,30949,9280
+08/01/2025,Metro Boston,Toddler,All households,12134,5250,4465,1892
+08/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,9828,4470,3154,1892
+08/01/2025,Northeast MA,Children Age 0-5,All households,68157,37416,25447,9604
+08/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,50635,29761,16596,9604
+08/01/2025,Northeast MA,Infant,All households,14272,4178,5332,911
+08/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10605,3477,3483,911
+08/01/2025,Northeast MA,Preschool,All households,36651,25613,13615,6224
+08/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,27268,19926,8863,6224
+08/01/2025,Northeast MA,School Age,All households,89072,13098,31505,5672
+08/01/2025,Northeast MA,School Age,Households with all adults in the labor force,121650,41013,38672,15276
+08/01/2025,Northeast MA,Toddler,All households,17234,7625,6500,2469
+08/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12762,6358,4250,2469
+08/01/2025,Southeast and Cape MA,Children Age 0-5,All households,76750,34814,27413,7194
+08/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,57948,27342,17489,7194
+08/01/2025,Southeast and Cape MA,Infant,All households,16289,3414,5906,599
+08/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12300,2761,3791,599
+08/01/2025,Southeast and Cape MA,Preschool,All households,41045,24763,14609,4824
+08/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,30986,19174,9275,4824
+08/01/2025,Southeast and Cape MA,School Age,All households,103650,13795,37220,5122
+08/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,139915,38879,43034,12316
+08/01/2025,Southeast and Cape MA,Toddler,All households,19416,6637,6898,1771
+08/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14662,5407,4423,1771
+08/01/2025,Western MA,Children Age 0-5,All households,43804,22324,22219,5999
+08/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,31198,17526,13897,5999
+08/01/2025,Western MA,Infant,All households,9294,2061,4710,495
+08/01/2025,Western MA,Infant,Households with all adults in the labor force,6619,1789,2958,495
+08/01/2025,Western MA,Preschool,All households,23461,16364,11830,4028
+08/01/2025,Western MA,Preschool,Households with all adults in the labor force,16757,12389,7421,4028
+08/01/2025,Western MA,School Age,All households,61773,8839,31311,4255
+08/01/2025,Western MA,School Age,Households with all adults in the labor force,77328,25028,34362,10254
+08/01/2025,Western MA,Toddler,All households,11049,3899,5679,1476
+08/01/2025,Western MA,Toddler,Households with all adults in the labor force,7822,3348,3518,1476
+07/01/2025,Central MA,Children Age 0-5,All households,54269,24355,19155,4867
+07/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,40243,19267,12090,4867
+07/01/2025,Central MA,Infant,All households,11668,2551,4216,396
+07/01/2025,Central MA,Infant,Households with all adults in the labor force,8653,2113,2694,396
+07/01/2025,Central MA,Preschool,All households,28547,16972,9987,3183
+07/01/2025,Central MA,Preschool,Households with all adults in the labor force,21175,13094,6246,3183
+07/01/2025,Central MA,School Age,All households,75042,6685,26629,2457
+07/01/2025,Central MA,School Age,Households with all adults in the labor force,98391,24795,29355,7324
+07/01/2025,Central MA,Toddler,All households,14054,4832,4952,1288
+07/01/2025,Central MA,Toddler,Households with all adults in the labor force,10415,4060,3150,1288
+07/01/2025,Metro,Children Age 0-5,All households,113310,63107,22605,5437
+07/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,84291,48653,12725,5437
+07/01/2025,Metro,Infant,All households,24203,7043,4896,443
+07/01/2025,Metro,Infant,Households with all adults in the labor force,17987,5546,2759,443
+07/01/2025,Metro,Preschool,All households,59859,42350,11751,3559
+07/01/2025,Metro,Preschool,Households with all adults in the labor force,44608,32364,6583,3559
+07/01/2025,Metro,School Age,All households,154658,21863,31946,2541
+07/01/2025,Metro,School Age,Households with all adults in the labor force,203686,65293,32910,7978
+07/01/2025,Metro,Toddler,All households,29248,13714,5958,1435
+07/01/2025,Metro,Toddler,Households with all adults in the labor force,21696,10743,3383,1435
+07/01/2025,Metro Boston,Children Age 0-5,All households,47119,26001,17730,6631
+07/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,37805,20928,12320,6631
+07/01/2025,Metro Boston,Infant,All households,10209,3102,3833,695
+07/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8215,2561,2669,695
+07/01/2025,Metro Boston,Preschool,All households,24787,17379,9422,4031
+07/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,19765,13682,6506,4031
+07/01/2025,Metro Boston,School Age,All households,52064,7719,25991,2451
+07/01/2025,Metro Boston,School Age,Households with all adults in the labor force,78664,27246,30968,9082
+07/01/2025,Metro Boston,Toddler,All households,12123,5520,4475,1905
+07/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,9825,4685,3145,1905
+07/01/2025,Northeast MA,Children Age 0-5,All households,67315,37648,25167,9623
+07/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,49983,29956,16399,9623
+07/01/2025,Northeast MA,Infant,All households,14321,4307,5381,907
+07/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10658,3578,3513,907
+07/01/2025,Northeast MA,Preschool,All households,35729,25497,13296,6173
+07/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,26599,19837,8660,6173
+07/01/2025,Northeast MA,School Age,All households,89952,12682,31833,5700
+07/01/2025,Northeast MA,School Age,Households with all adults in the labor force,121644,40941,38701,15323
+07/01/2025,Northeast MA,Toddler,All households,17265,7844,6490,2543
+07/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12726,6541,4226,2543
+07/01/2025,Southeast and Cape MA,Children Age 0-5,All households,75826,34785,27038,7186
+07/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,57229,27384,17263,7186
+07/01/2025,Southeast and Cape MA,Infant,All households,16186,3640,5864,599
+07/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12227,2943,3781,599
+07/01/2025,Southeast and Cape MA,Preschool,All households,40159,24286,14238,4787
+07/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,30290,18820,9045,4787
+07/01/2025,Southeast and Cape MA,School Age,All households,104631,13389,37604,5028
+07/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,139923,38636,43042,12214
+07/01/2025,Southeast and Cape MA,Toddler,All households,19481,6859,6936,1800
+07/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14712,5621,4437,1800
+07/01/2025,Western MA,Children Age 0-5,All households,43192,22319,21924,6002
+07/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,30759,17489,13709,6002
+07/01/2025,Western MA,Infant,All households,9258,2194,4713,508
+07/01/2025,Western MA,Infant,Households with all adults in the labor force,6600,1872,2970,508
+07/01/2025,Western MA,Preschool,All households,22852,16056,11548,3982
+07/01/2025,Western MA,Preschool,Households with all adults in the labor force,16317,12105,7224,3982
+07/01/2025,Western MA,School Age,All households,62411,8581,31657,4259
+07/01/2025,Western MA,School Age,Households with all adults in the labor force,77351,24860,34410,10261
+07/01/2025,Western MA,Toddler,All households,11082,4069,5663,1512
+07/01/2025,Western MA,Toddler,Households with all adults in the labor force,7842,3512,3515,1512
+06/01/2025,Central MA,Children Age 0-5,All households,53540,24072,18952,4842
+06/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,39736,19095,11993,4842
+06/01/2025,Central MA,Infant,All households,11661,2527,4187,413
+06/01/2025,Central MA,Infant,Households with all adults in the labor force,8653,2105,2668,413
+06/01/2025,Central MA,Preschool,All households,27785,16705,9764,3123
+06/01/2025,Central MA,Preschool,Households with all adults in the labor force,20634,12940,6131,3123
+06/01/2025,Central MA,School Age,All households,75949,6020,27023,2462
+06/01/2025,Central MA,School Age,Households with all adults in the labor force,98591,24192,29546,7304
+06/01/2025,Central MA,Toddler,All households,14094,4840,5001,1306
+06/01/2025,Central MA,Toddler,Households with all adults in the labor force,10449,4050,3194,1306
+06/01/2025,Metro,Children Age 0-5,All households,111744,62590,22316,5443
+06/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,83086,48265,12551,5443
+06/01/2025,Metro,Infant,All households,24199,7017,4887,454
+06/01/2025,Metro,Infant,Households with all adults in the labor force,18034,5518,2781,454
+06/01/2025,Metro,Preschool,All households,58224,41852,11451,3523
+06/01/2025,Metro,Preschool,Households with all adults in the labor force,43334,31978,6402,3523
+06/01/2025,Metro,School Age,All households,156740,21864,32304,2781
+06/01/2025,Metro,School Age,Households with all adults in the labor force,204074,65041,32947,8224
+06/01/2025,Metro,Toddler,All households,29321,13721,5978,1466
+06/01/2025,Metro,Toddler,Households with all adults in the labor force,21718,10769,3368,1466
+06/01/2025,Metro Boston,Children Age 0-5,All households,46469,25687,17488,6599
+06/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,37315,20697,12160,6599
+06/01/2025,Metro Boston,Infant,All households,10217,3069,3838,695
+06/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8227,2521,2678,695
+06/01/2025,Metro Boston,Preschool,All households,24134,17130,9184,3979
+06/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,19302,13528,6361,3979
+06/01/2025,Metro Boston,School Age,All households,52536,7427,26278,2749
+06/01/2025,Metro Boston,School Age,Households with all adults in the labor force,78552,26900,31019,9348
+06/01/2025,Metro Boston,Toddler,All households,12118,5488,4466,1925
+06/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,9786,4648,3121,1925
+06/01/2025,Northeast MA,Children Age 0-5,All households,66261,37096,24733,9456
+06/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,49146,29489,16102,9456
+06/01/2025,Northeast MA,Infant,All households,14304,4201,5365,875
+06/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10627,3502,3498,875
+06/01/2025,Northeast MA,Preschool,All households,34779,25029,12932,6004
+06/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,25800,19412,8388,6004
+06/01/2025,Northeast MA,School Age,All households,90774,11941,32132,5717
+06/01/2025,Northeast MA,School Age,Households with all adults in the labor force,121432,39987,38584,15173
+06/01/2025,Northeast MA,Toddler,All households,17178,7866,6436,2577
+06/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12719,6575,4216,2577
+06/01/2025,Southeast and Cape MA,Children Age 0-5,All households,74741,34506,26655,7086
+06/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,56433,27163,17022,7086
+06/01/2025,Southeast and Cape MA,Infant,All households,16203,3598,5870,593
+06/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12242,2925,3763,593
+06/01/2025,Southeast and Cape MA,Preschool,All households,39100,24012,13863,4674
+06/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,29499,18610,8819,4674
+06/01/2025,Southeast and Cape MA,School Age,All households,105493,11991,37830,4561
+06/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,139721,37332,42889,11647
+06/01/2025,Southeast and Cape MA,Toddler,All households,19438,6896,6922,1819
+06/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14692,5628,4440,1819
+06/01/2025,Western MA,Children Age 0-5,All households,42490,22036,21543,5910
+06/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,30246,17291,13463,5910
+06/01/2025,Western MA,Infant,All households,9240,2153,4715,512
+06/01/2025,Western MA,Infant,Households with all adults in the labor force,6576,1837,2974,512
+06/01/2025,Western MA,Preschool,All households,22178,15824,11179,3864
+06/01/2025,Western MA,Preschool,Households with all adults in the labor force,15804,11920,6974,3864
+06/01/2025,Western MA,School Age,All households,63055,7997,31980,4083
+06/01/2025,Western MA,School Age,Households with all adults in the labor force,77291,24222,34355,9993
+06/01/2025,Western MA,Toddler,All households,11072,4059,5649,1534
+06/01/2025,Western MA,Toddler,Households with all adults in the labor force,7866,3534,3515,1534
+05/01/2025,Central MA,Children Age 0-5,All households,52080,23973,18756,4812
+05/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,38341,19282,11558,4812
+05/01/2025,Central MA,Infant,All households,11408,2571,4167,430
+05/01/2025,Central MA,Infant,Households with all adults in the labor force,8399,2171,2601,430
+05/01/2025,Central MA,Preschool,All households,26790,16571,9565,3052
+05/01/2025,Central MA,Preschool,Households with all adults in the labor force,19661,12965,5820,3052
+05/01/2025,Central MA,School Age,All households,75941,6118,27120,2498
+05/01/2025,Central MA,School Age,Households with all adults in the labor force,97754,24633,29256,7310
+05/01/2025,Central MA,Toddler,All households,13882,4831,5024,1330
+05/01/2025,Central MA,Toddler,Households with all adults in the labor force,10281,4146,3137,1330
+05/01/2025,Metro,Children Age 0-5,All households,110355,61816,23092,5440
+05/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,81248,48184,12800,5440
+05/01/2025,Metro,Infant,All households,24241,7073,5149,482
+05/01/2025,Metro,Infant,Households with all adults in the labor force,17864,5571,2844,482
+05/01/2025,Metro,Preschool,All households,56894,41048,11739,3458
+05/01/2025,Metro,Preschool,Households with all adults in the labor force,41934,31796,6498,3458
+05/01/2025,Metro,School Age,All households,157692,22177,33837,2799
+05/01/2025,Metro,School Age,Households with all adults in the labor force,201923,65344,34084,8239
+05/01/2025,Metro,Toddler,All households,29220,13695,6204,1500
+05/01/2025,Metro,Toddler,Households with all adults in the labor force,21450,10817,3458,1500
+05/01/2025,Metro Boston,Children Age 0-5,All households,47680,25387,18828,6536
+05/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,37864,20576,12750,6536
+05/01/2025,Metro Boston,Infant,All households,10655,3063,4206,693
+05/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8491,2538,2881,693
+05/01/2025,Metro Boston,Preschool,All households,24332,16831,9669,3868
+05/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,19251,13373,6505,3868
+05/01/2025,Metro Boston,School Age,All households,53869,7500,27500,2779
+05/01/2025,Metro Boston,School Age,Households with all adults in the labor force,79395,26943,31931,9315
+05/01/2025,Metro Boston,Toddler,All households,12693,5493,4953,1975
+05/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,10122,4665,3364,1975
+05/01/2025,Northeast MA,Children Age 0-5,All households,64872,36843,25344,9414
+05/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,47915,29838,16486,9414
+05/01/2025,Northeast MA,Infant,All households,14185,4234,5528,909
+05/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10491,3556,3586,909
+05/01/2025,Northeast MA,Preschool,All households,33501,24720,13097,5894
+05/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,24813,19610,8562,5894
+05/01/2025,Northeast MA,School Age,All households,90926,12157,34109,5725
+05/01/2025,Northeast MA,School Age,Households with all adults in the labor force,119618,40709,40138,15139
+05/01/2025,Northeast MA,Toddler,All households,17186,7889,6719,2611
+05/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12611,6672,4338,2611
+05/01/2025,Southeast and Cape MA,Children Age 0-5,All households,72916,34203,26964,7010
+05/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,55193,27594,17212,7010
+05/01/2025,Southeast and Cape MA,Infant,All households,16139,3574,6086,601
+05/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12229,2948,3916,601
+05/01/2025,Southeast and Cape MA,Preschool,All households,37664,23719,13879,4568
+05/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,28476,18872,8800,4568
+05/01/2025,Southeast and Cape MA,School Age,All households,105863,12021,39873,4580
+05/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,138260,38123,44061,11590
+05/01/2025,Southeast and Cape MA,Toddler,All households,19113,6910,6999,1841
+05/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14488,5774,4496,1841
+05/01/2025,Western MA,Children Age 0-5,All households,42609,21810,21427,5841
+05/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,30684,17478,13389,5841
+05/01/2025,Western MA,Infant,All households,9323,2203,4745,524
+05/01/2025,Western MA,Infant,Households with all adults in the labor force,6692,1898,2967,524
+05/01/2025,Western MA,Preschool,All households,21949,15526,10995,3754
+05/01/2025,Western MA,Preschool,Households with all adults in the labor force,15825,11983,6892,3754
+05/01/2025,Western MA,School Age,All households,62840,8127,32916,4101
+05/01/2025,Western MA,School Age,Households with all adults in the labor force,77539,24736,34811,9942
+05/01/2025,Western MA,Toddler,All households,11337,4081,5687,1563
+05/01/2025,Western MA,Toddler,Households with all adults in the labor force,8167,3597,3530,1563
+04/01/2025,Central MA,Children Age 0-5,All households,51230,23786,18475,4706
+04/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,37763,19055,11380,4706
+04/01/2025,Central MA,Infant,All households,11479,2578,4204,426
+04/01/2025,Central MA,Infant,Households with all adults in the labor force,8466,2169,2619,426
+04/01/2025,Central MA,Preschool,All households,25981,16375,9324,2944
+04/01/2025,Central MA,Preschool,Households with all adults in the labor force,19104,12764,5677,2944
+04/01/2025,Central MA,School Age,All households,76723,6326,27438,2529
+04/01/2025,Central MA,School Age,Households with all adults in the labor force,97721,24554,29275,7235
+04/01/2025,Central MA,Toddler,All households,13770,4833,4947,1336
+04/01/2025,Central MA,Toddler,Households with all adults in the labor force,10193,4122,3084,1336
+04/01/2025,Metro,Children Age 0-5,All households,108420,61298,22510,5417
+04/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,79878,47479,12572,5417
+04/01/2025,Metro,Infant,All households,24175,7035,5051,501
+04/01/2025,Metro,Infant,Households with all adults in the labor force,17840,5510,2842,501
+04/01/2025,Metro,Preschool,All households,55108,40519,11195,3386
+04/01/2025,Metro,Preschool,Households with all adults in the labor force,40654,31181,6253,3386
+04/01/2025,Metro,School Age,All households,159097,22600,34112,2891
+04/01/2025,Metro,School Age,Households with all adults in the labor force,201666,64768,34029,8308
+04/01/2025,Metro,Toddler,All households,29137,13744,6264,1530
+04/01/2025,Metro,Toddler,Households with all adults in the labor force,21384,10788,3477,1530
+04/01/2025,Metro Boston,Children Age 0-5,All households,47087,25289,18745,6467
+04/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,37356,20467,12574,6467
+04/01/2025,Metro Boston,Infant,All households,10575,3046,4212,687
+04/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8419,2531,2858,687
+04/01/2025,Metro Boston,Preschool,All households,23783,16692,9536,3746
+04/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,18792,13216,6334,3746
+04/01/2025,Metro Boston,School Age,All households,54664,7682,27837,2817
+04/01/2025,Metro Boston,School Age,Households with all adults in the labor force,79468,26924,31962,9284
+04/01/2025,Metro Boston,Toddler,All households,12729,5551,4997,2034
+04/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,10145,4720,3382,2034
+04/01/2025,Northeast MA,Children Age 0-5,All households,64114,36571,25040,9333
+04/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,47313,29475,16316,9333
+04/01/2025,Northeast MA,Infant,All households,14288,4299,5597,935
+04/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10559,3592,3631,935
+04/01/2025,Northeast MA,Preschool,All households,32735,24433,12770,5795
+04/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,24194,19277,8364,5795
+04/01/2025,Northeast MA,School Age,All households,91961,12641,34523,5949
+04/01/2025,Northeast MA,School Age,Households with all adults in the labor force,119772,40703,40252,15282
+04/01/2025,Northeast MA,Toddler,All households,17091,7839,6673,2603
+04/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12560,6606,4321,2603
+04/01/2025,Southeast and Cape MA,Children Age 0-5,All households,71904,33929,26570,6997
+04/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,54411,27311,16957,6997
+04/01/2025,Southeast and Cape MA,Infant,All households,16144,3568,6076,612
+04/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12217,2940,3899,612
+04/01/2025,Southeast and Cape MA,Preschool,All households,36576,23446,13422,4525
+04/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,27645,18584,8511,4525
+04/01/2025,Southeast and Cape MA,School Age,All households,107006,12345,40296,4679
+04/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,138335,38055,44072,11676
+04/01/2025,Southeast and Cape MA,Toddler,All households,19184,6915,7072,1860
+04/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14549,5787,4547,1860
+04/01/2025,Western MA,Children Age 0-5,All households,41973,21670,21101,5748
+04/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,30190,17349,13156,5748
+04/01/2025,Western MA,Infant,All households,9347,2179,4755,525
+04/01/2025,Western MA,Infant,Households with all adults in the labor force,6705,1893,2965,525
+04/01/2025,Western MA,Preschool,All households,21384,15379,10724,3624
+04/01/2025,Western MA,Preschool,Households with all adults in the labor force,15403,11829,6708,3624
+04/01/2025,Western MA,School Age,All households,63464,8302,33228,4178
+04/01/2025,Western MA,School Age,Households with all adults in the labor force,77527,24739,34800,9926
+04/01/2025,Western MA,Toddler,All households,11242,4112,5622,1599
+04/01/2025,Western MA,Toddler,Households with all adults in the labor force,8082,3627,3483,1599
+03/01/2025,Central MA,Children Age 0-5,All households,50489,23664,18215,4643
+03/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,37204,18897,11215,4643
+03/01/2025,Central MA,Infant,All households,11587,2628,4254,439
+03/01/2025,Central MA,Infant,Households with all adults in the labor force,8565,2209,2660,439
+03/01/2025,Central MA,Preschool,All households,25182,16204,9039,2871
+03/01/2025,Central MA,Preschool,Households with all adults in the labor force,18488,12568,5492,2871
+03/01/2025,Central MA,School Age,All households,77446,6433,27674,2520
+03/01/2025,Central MA,School Age,Households with all adults in the labor force,97706,24470,29259,7163
+03/01/2025,Central MA,Toddler,All households,13720,4832,4922,1333
+03/01/2025,Central MA,Toddler,Households with all adults in the labor force,10151,4120,3063,1333
+03/01/2025,Metro,Children Age 0-5,All households,106826,60469,22215,5311
+03/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,78669,46819,12397,5311
+03/01/2025,Metro,Infant,All households,24173,7028,5055,481
+03/01/2025,Metro,Infant,Households with all adults in the labor force,17798,5497,2821,481
+03/01/2025,Metro,Preschool,All households,53573,39760,10946,3292
+03/01/2025,Metro,Preschool,Households with all adults in the labor force,39526,30560,6130,3292
+03/01/2025,Metro,School Age,All households,160757,23117,34490,2896
+03/01/2025,Metro,School Age,Households with all adults in the labor force,201661,64501,34054,8207
+03/01/2025,Metro,Toddler,All households,29080,13681,6214,1538
+03/01/2025,Metro,Toddler,Households with all adults in the labor force,21345,10762,3446,1538
+03/01/2025,Metro Boston,Children Age 0-5,All households,46374,24890,18506,6330
+03/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,36804,20093,12452,6330
+03/01/2025,Metro Boston,Infant,All households,10612,3006,4199,646
+03/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8466,2498,2853,646
+03/01/2025,Metro Boston,Preschool,All households,23048,16349,9318,3654
+03/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,18228,12884,6236,3654
+03/01/2025,Metro Boston,School Age,All households,55349,7824,28064,2856
+03/01/2025,Metro Boston,School Age,Households with all adults in the labor force,79470,26649,32004,9186
+03/01/2025,Metro Boston,Toddler,All households,12714,5535,4989,2030
+03/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,10110,4711,3363,2030
+03/01/2025,Northeast MA,Children Age 0-5,All households,63066,36107,24694,9162
+03/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,46543,29064,16084,9162
+03/01/2025,Northeast MA,Infant,All households,14283,4335,5642,945
+03/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10571,3644,3674,945
+03/01/2025,Northeast MA,Preschool,All households,31732,23951,12388,5649
+03/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,23443,18870,8094,5649
+03/01/2025,Northeast MA,School Age,All households,92942,12893,34918,6001
+03/01/2025,Northeast MA,School Age,Households with all adults in the labor force,119735,40485,40286,15163
+03/01/2025,Northeast MA,Toddler,All households,17051,7821,6664,2568
+03/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12529,6550,4316,2568
+03/01/2025,Southeast and Cape MA,Children Age 0-5,All households,70866,33637,26181,6855
+03/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,53632,26992,16711,6855
+03/01/2025,Southeast and Cape MA,Infant,All households,16084,3523,6062,590
+03/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12172,2880,3902,590
+03/01/2025,Southeast and Cape MA,Preschool,All households,35523,23142,13007,4413
+03/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,26880,18305,8248,4413
+03/01/2025,Southeast and Cape MA,School Age,All households,108073,12565,40705,4687
+03/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,138370,37893,44101,11542
+03/01/2025,Southeast and Cape MA,Toddler,All households,19259,6972,7112,1852
+03/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14580,5807,4561,1852
+03/01/2025,Western MA,Children Age 0-5,All households,41365,21333,20820,5597
+03/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,29779,17053,13001,5597
+03/01/2025,Western MA,Infant,All households,9386,2185,4771,512
+03/01/2025,Western MA,Infant,Households with all adults in the labor force,6760,1890,3003,512
+03/01/2025,Western MA,Preschool,All households,20782,15084,10431,3513
+03/01/2025,Western MA,Preschool,Households with all adults in the labor force,15001,11595,6540,3513
+03/01/2025,Western MA,School Age,All households,64090,8320,33547,4184
+03/01/2025,Western MA,School Age,Households with all adults in the labor force,77547,24473,34840,9781
+03/01/2025,Western MA,Toddler,All households,11197,4064,5618,1572
+03/01/2025,Western MA,Toddler,Households with all adults in the labor force,8018,3568,3458,1572
+02/01/2025,Central MA,Children Age 0-5,All households,49752,23614,17906,4573
+02/01/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,36645,18846,11012,4573
+02/01/2025,Central MA,Infant,All households,11556,2610,4229,442
+02/01/2025,Central MA,Infant,Households with all adults in the labor force,8527,2191,2626,442
+02/01/2025,Central MA,Preschool,All households,24505,16185,8762,2804
+02/01/2025,Central MA,Preschool,Households with all adults in the labor force,18009,12537,5352,2804
+02/01/2025,Central MA,School Age,All households,78224,6646,27954,2546
+02/01/2025,Central MA,School Age,Households with all adults in the labor force,97718,24587,29223,7119
+02/01/2025,Central MA,Toddler,All households,13691,4819,4915,1327
+02/01/2025,Central MA,Toddler,Households with all adults in the labor force,10109,4118,3034,1327
+02/01/2025,Metro,Children Age 0-5,All households,105166,60671,21968,5217
+02/01/2025,Metro,Children Age 0-5,Households with all adults in the labor force,77438,46928,12264,5217
+02/01/2025,Metro,Infant,All households,24198,7027,5160,488
+02/01/2025,Metro,Infant,Households with all adults in the labor force,17754,5500,2891,488
+02/01/2025,Metro,Preschool,All households,51909,40002,10569,3201
+02/01/2025,Metro,Preschool,Households with all adults in the labor force,38287,30727,5880,3201
+02/01/2025,Metro,School Age,All households,162394,23800,34711,2922
+02/01/2025,Metro,School Age,Households with all adults in the labor force,201639,65072,34014,8139
+02/01/2025,Metro,Toddler,All households,29059,13642,6239,1528
+02/01/2025,Metro,Toddler,Households with all adults in the labor force,21397,10701,3493,1528
+02/01/2025,Metro Boston,Children Age 0-5,All households,45532,24839,18030,6178
+02/01/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,36168,20041,12139,6178
+02/01/2025,Metro Boston,Infant,All households,10675,3036,4232,660
+02/01/2025,Metro Boston,Infant,Households with all adults in the labor force,8462,2505,2847,660
+02/01/2025,Metro Boston,Preschool,All households,22183,16299,8856,3517
+02/01/2025,Metro Boston,Preschool,Households with all adults in the labor force,17564,12848,5933,3517
+02/01/2025,Metro Boston,School Age,All households,56059,8076,28451,2850
+02/01/2025,Metro Boston,School Age,Households with all adults in the labor force,79394,26786,31941,9028
+02/01/2025,Metro Boston,Toddler,All households,12674,5504,4942,2001
+02/01/2025,Metro Boston,Toddler,Households with all adults in the labor force,10142,4688,3359,2001
+02/01/2025,Northeast MA,Children Age 0-5,All households,62295,36298,24453,9014
+02/01/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,46000,29094,16009,9014
+02/01/2025,Northeast MA,Infant,All households,14316,4284,5638,929
+02/01/2025,Northeast MA,Infant,Households with all adults in the labor force,10621,3600,3692,929
+02/01/2025,Northeast MA,Preschool,All households,30956,24149,12179,5492
+02/01/2025,Northeast MA,Preschool,Households with all adults in the labor force,22883,18905,8038,5492
+02/01/2025,Northeast MA,School Age,All households,93893,13125,35244,5984
+02/01/2025,Northeast MA,School Age,Households with all adults in the labor force,119904,40695,40383,14998
+02/01/2025,Northeast MA,Toddler,All households,17023,7865,6636,2593
+02/01/2025,Northeast MA,Toddler,Households with all adults in the labor force,12496,6589,4279,2593
+02/01/2025,Southeast and Cape MA,Children Age 0-5,All households,69769,33731,25745,6727
+02/01/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,52798,27011,16388,6727
+02/01/2025,Southeast and Cape MA,Infant,All households,16064,3623,5981,611
+02/01/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12143,2983,3839,611
+02/01/2025,Southeast and Cape MA,Preschool,All households,34382,23103,12571,4271
+02/01/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,26025,18196,7940,4271
+02/01/2025,Southeast and Cape MA,School Age,All households,109111,12700,41126,4705
+02/01/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,138293,38013,44048,11432
+02/01/2025,Southeast and Cape MA,Toddler,All households,19323,7005,7193,1845
+02/01/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14630,5832,4609,1845
+02/01/2025,Western MA,Children Age 0-5,All households,40703,21169,20511,5496
+02/01/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,29308,16865,12844,5496
+02/01/2025,Western MA,Infant,All households,9443,2128,4782,510
+02/01/2025,Western MA,Infant,Households with all adults in the labor force,6787,1834,3001,510
+02/01/2025,Western MA,Preschool,All households,20091,14943,10111,3402
+02/01/2025,Western MA,Preschool,Households with all adults in the labor force,14510,11433,6350,3402
+02/01/2025,Western MA,School Age,All households,64745,8442,33827,4198
+02/01/2025,Western MA,School Age,Households with all adults in the labor force,77541,24368,34832,9694
+02/01/2025,Western MA,Toddler,All households,11169,4098,5618,1584
+02/01/2025,Western MA,Toddler,Households with all adults in the labor force,8011,3598,3493,1584
+01/02/2025,Central MA,Children Age 0-5,All households,49057,23525,17659,4431
+01/02/2025,Central MA,Children Age 0-5,Households with all adults in the labor force,36140,18734,10853,4431
+01/02/2025,Central MA,Infant,All households,11523,2589,4220,445
+01/02/2025,Central MA,Infant,Households with all adults in the labor force,8512,2168,2633,445
+01/02/2025,Central MA,Preschool,All households,23771,16056,8451,2695
+01/02/2025,Central MA,Preschool,Households with all adults in the labor force,17497,12429,5164,2695
+01/02/2025,Central MA,School Age,All households,78939,6845,28225,2566
+01/02/2025,Central MA,School Age,Households with all adults in the labor force,97738,24660,29237,6997
+01/02/2025,Central MA,Toddler,All households,13763,4880,4988,1291
+01/02/2025,Central MA,Toddler,Households with all adults in the labor force,10131,4137,3056,1291
+01/02/2025,Metro,Children Age 0-5,All households,103307,60044,21511,5151
+01/02/2025,Metro,Children Age 0-5,Households with all adults in the labor force,76099,46447,11988,5151
+01/02/2025,Metro,Infant,All households,24065,6962,5107,503
+01/02/2025,Metro,Infant,Households with all adults in the labor force,17695,5449,2859,503
+01/02/2025,Metro,Preschool,All households,50006,39447,10179,3106
+01/02/2025,Metro,Preschool,Households with all adults in the labor force,36903,30289,5666,3106
+01/02/2025,Metro,School Age,All households,163836,24443,35037,2937
+01/02/2025,Metro,School Age,Households with all adults in the labor force,201367,65098,33932,8088
+01/02/2025,Metro,Toddler,All households,29236,13635,6225,1542
+01/02/2025,Metro,Toddler,Households with all adults in the labor force,21501,10709,3463,1542
+01/02/2025,Metro Boston,Children Age 0-5,All households,45051,24882,17845,6076
+01/02/2025,Metro Boston,Children Age 0-5,Households with all adults in the labor force,35719,19994,12007,6076
+01/02/2025,Metro Boston,Infant,All households,10800,3290,4273,651
+01/02/2025,Metro Boston,Infant,Households with all adults in the labor force,8537,2681,2868,651
+01/02/2025,Metro Boston,Preschool,All households,21584,16099,8592,3418
+01/02/2025,Metro Boston,Preschool,Households with all adults in the labor force,17070,12620,5744,3418
+01/02/2025,Metro Boston,School Age,All households,56904,8580,28711,2866
+01/02/2025,Metro Boston,School Age,Households with all adults in the labor force,79638,27135,31998,8942
+01/02/2025,Metro Boston,Toddler,All households,12667,5493,4980,2007
+01/02/2025,Metro Boston,Toddler,Households with all adults in the labor force,10112,4693,3395,2007
+01/02/2025,Northeast MA,Children Age 0-5,All households,61332,36074,24062,8805
+01/02/2025,Northeast MA,Children Age 0-5,Households with all adults in the labor force,45271,28909,15748,8805
+01/02/2025,Northeast MA,Infant,All households,14223,4303,5585,916
+01/02/2025,Northeast MA,Infant,Households with all adults in the labor force,10525,3613,3628,916
+01/02/2025,Northeast MA,Preschool,All households,30043,23914,11778,5303
+01/02/2025,Northeast MA,Preschool,Households with all adults in the labor force,22177,18687,7754,5303
+01/02/2025,Northeast MA,School Age,All households,94799,13434,35609,6010
+01/02/2025,Northeast MA,School Age,Households with all adults in the labor force,119827,40756,40356,14815
+01/02/2025,Northeast MA,Toddler,All households,17066,7857,6699,2586
+01/02/2025,Northeast MA,Toddler,Households with all adults in the labor force,12569,6609,4366,2586
+01/02/2025,Southeast and Cape MA,Children Age 0-5,All households,68774,33557,25410,6619
+01/02/2025,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,52051,26881,16181,6619
+01/02/2025,Southeast and Cape MA,Infant,All households,15994,3612,5960,598
+01/02/2025,Southeast and Cape MA,Infant,Households with all adults in the labor force,12107,2950,3847,598
+01/02/2025,Southeast and Cape MA,Preschool,All households,33343,22980,12240,4178
+01/02/2025,Southeast and Cape MA,Preschool,Households with all adults in the labor force,25221,18115,7715,4178
+01/02/2025,Southeast and Cape MA,School Age,All households,110192,13117,41538,4715
+01/02/2025,Southeast and Cape MA,School Age,Households with all adults in the labor force,138370,38212,44102,11334
+01/02/2025,Southeast and Cape MA,Toddler,All households,19437,6965,7210,1843
+01/02/2025,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14723,5816,4619,1843
+01/02/2025,Western MA,Children Age 0-5,All households,40105,21009,20211,5343
+01/02/2025,Western MA,Children Age 0-5,Households with all adults in the labor force,28878,16728,12661,5343
+01/02/2025,Western MA,Infant,All households,9441,2139,4787,484
+01/02/2025,Western MA,Infant,Households with all adults in the labor force,6806,1845,3028,484
+01/02/2025,Western MA,Preschool,All households,19444,14791,9783,3288
+01/02/2025,Western MA,Preschool,Households with all adults in the labor force,14007,11288,6128,3288
+01/02/2025,Western MA,School Age,All households,65347,8657,34142,4262
+01/02/2025,Western MA,School Age,Households with all adults in the labor force,77549,24412,34850,9605
+01/02/2025,Western MA,Toddler,All households,11220,4079,5641,1571
+01/02/2025,Western MA,Toddler,Households with all adults in the labor force,8065,3595,3505,1571
+12/02/2024,Central MA,Children Age 0-5,All households,48366,23275,17395,4401
+12/02/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,35630,18532,10696,4401
+12/02/2024,Central MA,Infant,All households,11498,2599,4241,459
+12/02/2024,Central MA,Infant,Households with all adults in the labor force,8465,2193,2634,459
+12/02/2024,Central MA,Preschool,All households,23106,15808,8189,2619
+12/02/2024,Central MA,Preschool,Households with all adults in the labor force,17031,12205,5015,2619
+12/02/2024,Central MA,School Age,All households,79732,7002,28528,2586
+12/02/2024,Central MA,School Age,Households with all adults in the labor force,97813,24572,29278,6987
+12/02/2024,Central MA,Toddler,All households,13762,4868,4965,1323
+12/02/2024,Central MA,Toddler,Households with all adults in the labor force,10134,4134,3047,1323
+12/02/2024,Metro,Children Age 0-5,All households,101564,58757,21237,5114
+12/02/2024,Metro,Children Age 0-5,Households with all adults in the labor force,74863,45523,11898,5114
+12/02/2024,Metro,Infant,All households,24195,6829,5165,527
+12/02/2024,Metro,Infant,Households with all adults in the labor force,17770,5355,2920,527
+12/02/2024,Metro,Preschool,All households,48309,38358,9899,3020
+12/02/2024,Metro,Preschool,Households with all adults in the labor force,35637,29483,5514,3020
+12/02/2024,Metro,School Age,All households,165528,24977,35403,2949
+12/02/2024,Metro,School Age,Households with all adults in the labor force,201341,64554,34034,8063
+12/02/2024,Metro,Toddler,All households,29060,13570,6173,1567
+12/02/2024,Metro,Toddler,Households with all adults in the labor force,21456,10685,3464,1567
+12/02/2024,Metro Boston,Children Age 0-5,All households,44412,24430,17574,6008
+12/02/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,35227,19610,11815,6008
+12/02/2024,Metro Boston,Infant,All households,10835,3241,4273,675
+12/02/2024,Metro Boston,Infant,Households with all adults in the labor force,8575,2656,2868,675
+12/02/2024,Metro Boston,Preschool,All households,20952,15669,8381,3327
+12/02/2024,Metro Boston,Preschool,Households with all adults in the labor force,16586,12262,5615,3327
+12/02/2024,Metro Boston,School Age,All households,57588,8699,29003,2889
+12/02/2024,Metro Boston,School Age,Households with all adults in the labor force,79671,26842,31996,8897
+12/02/2024,Metro Boston,Toddler,All households,12625,5520,4920,2006
+12/02/2024,Metro Boston,Toddler,Households with all adults in the labor force,10066,4692,3332,2006
+12/02/2024,Northeast MA,Children Age 0-5,All households,60313,35405,23649,8743
+12/02/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,44502,28343,15445,8743
+12/02/2024,Northeast MA,Infant,All households,14221,4232,5597,958
+12/02/2024,Northeast MA,Infant,Households with all adults in the labor force,10512,3555,3622,958
+12/02/2024,Northeast MA,Preschool,All households,29014,23243,11376,5159
+12/02/2024,Northeast MA,Preschool,Households with all adults in the labor force,21383,18128,7487,5159
+12/02/2024,Northeast MA,School Age,All households,95747,13846,35956,6103
+12/02/2024,Northeast MA,School Age,Households with all adults in the labor force,119763,40525,40287,14846
+12/02/2024,Northeast MA,Toddler,All households,17078,7930,6676,2626
+12/02/2024,Northeast MA,Toddler,Households with all adults in the labor force,12607,6660,4336,2626
+12/02/2024,Southeast and Cape MA,Children Age 0-5,All households,67702,33219,25025,6549
+12/02/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,51221,26594,15938,6549
+12/02/2024,Southeast and Cape MA,Infant,All households,15957,3612,5929,634
+12/02/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12106,2988,3830,634
+12/02/2024,Southeast and Cape MA,Preschool,All households,32222,22607,11848,4057
+12/02/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,24353,17779,7471,4057
+12/02/2024,Southeast and Cape MA,School Age,All households,111249,13317,41923,4746
+12/02/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138365,38060,44118,11295
+12/02/2024,Southeast and Cape MA,Toddler,All households,19523,7000,7248,1858
+12/02/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14762,5827,4637,1858
+12/02/2024,Western MA,Children Age 0-5,All households,39480,20717,19882,5284
+12/02/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,28413,16517,12448,5284
+12/02/2024,Western MA,Infant,All households,9368,2130,4746,525
+12/02/2024,Western MA,Infant,Households with all adults in the labor force,6722,1835,2983,525
+12/02/2024,Western MA,Preschool,All households,18835,14504,9481,3180
+12/02/2024,Western MA,Preschool,Households with all adults in the labor force,13552,11081,5937,3180
+12/02/2024,Western MA,School Age,All households,65962,8753,34471,4319
+12/02/2024,Western MA,School Age,Households with all adults in the labor force,77536,24292,34848,9603
+12/02/2024,Western MA,Toddler,All households,11277,4083,5655,1579
+12/02/2024,Western MA,Toddler,Households with all adults in the labor force,8139,3601,3528,1579
+11/01/2024,Central MA,Children Age 0-5,All households,47554,23110,17119,4270
+11/01/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,35032,18370,10525,4270
+11/01/2024,Central MA,Infant,All households,11531,2608,4233,458
+11/01/2024,Central MA,Infant,Households with all adults in the labor force,8516,2195,2640,458
+11/01/2024,Central MA,Preschool,All households,22210,15644,7918,2509
+11/01/2024,Central MA,Preschool,Households with all adults in the labor force,16347,12041,4849,2509
+11/01/2024,Central MA,School Age,All households,80541,7245,28825,2594
+11/01/2024,Central MA,School Age,Households with all adults in the labor force,97787,24594,29280,6864
+11/01/2024,Central MA,Toddler,All households,13813,4858,4968,1303
+11/01/2024,Central MA,Toddler,Households with all adults in the labor force,10169,4134,3036,1303
+11/01/2024,Metro,Children Age 0-5,All households,99932,58063,20896,4952
+11/01/2024,Metro,Children Age 0-5,Households with all adults in the labor force,73678,44932,11741,4952
+11/01/2024,Metro,Infant,All households,24136,6793,5109,567
+11/01/2024,Metro,Infant,Households with all adults in the labor force,17784,5353,2912,567
+11/01/2024,Metro,Preschool,All households,46703,37841,9553,2865
+11/01/2024,Metro,Preschool,Households with all adults in the labor force,34435,29026,5330,2865
+11/01/2024,Metro,School Age,All households,167307,25670,35912,3006
+11/01/2024,Metro,School Age,Households with all adults in the labor force,201507,64475,34226,7958
+11/01/2024,Metro,Toddler,All households,29093,13429,6234,1520
+11/01/2024,Metro,Toddler,Households with all adults in the labor force,21459,10553,3499,1520
+11/01/2024,Metro Boston,Children Age 0-5,All households,43644,24061,17262,5766
+11/01/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,34581,19254,11606,5766
+11/01/2024,Metro Boston,Infant,All households,10771,3264,4238,668
+11/01/2024,Metro Boston,Infant,Households with all adults in the labor force,8574,2678,2870,668
+11/01/2024,Metro Boston,Preschool,All households,20183,15427,8100,3155
+11/01/2024,Metro Boston,Preschool,Households with all adults in the labor force,15949,12021,5432,3155
+11/01/2024,Metro Boston,School Age,All households,58254,8681,29249,2898
+11/01/2024,Metro Boston,School Age,Households with all adults in the labor force,79579,26489,31955,8664
+11/01/2024,Metro Boston,Toddler,All households,12690,5370,4924,1943
+11/01/2024,Metro Boston,Toddler,Households with all adults in the labor force,10058,4555,3304,1943
+11/01/2024,Northeast MA,Children Age 0-5,All households,59311,34947,23268,8496
+11/01/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,43761,27968,15173,8496
+11/01/2024,Northeast MA,Infant,All households,14148,4241,5574,969
+11/01/2024,Northeast MA,Infant,Households with all adults in the labor force,10452,3582,3610,969
+11/01/2024,Northeast MA,Preschool,All households,28005,22812,10982,4957
+11/01/2024,Northeast MA,Preschool,Households with all adults in the labor force,20625,17744,7195,4957
+11/01/2024,Northeast MA,School Age,All households,96660,14204,36291,6128
+11/01/2024,Northeast MA,School Age,Households with all adults in the labor force,119677,40415,40219,14624
+11/01/2024,Northeast MA,Toddler,All households,17158,7894,6712,2570
+11/01/2024,Northeast MA,Toddler,Households with all adults in the labor force,12684,6642,4368,2570
+11/01/2024,Southeast and Cape MA,Children Age 0-5,All households,66676,33088,24631,6377
+11/01/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,50456,26454,15681,6377
+11/01/2024,Southeast and Cape MA,Infant,All households,15948,3639,5935,637
+11/01/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12074,3000,3818,637
+11/01/2024,Southeast and Cape MA,Preschool,All households,31199,22362,11439,3882
+11/01/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,23603,17568,7223,3882
+11/01/2024,Southeast and Cape MA,School Age,All households,112328,13786,42333,4738
+11/01/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138405,38262,44124,11115
+11/01/2024,Southeast and Cape MA,Toddler,All households,19529,7087,7257,1858
+11/01/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14779,5886,4640,1858
+11/01/2024,Western MA,Children Age 0-5,All households,38825,20478,19550,5148
+11/01/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,27964,16320,12247,5148
+11/01/2024,Western MA,Infant,All households,9340,2170,4734,526
+11/01/2024,Western MA,Infant,Households with all adults in the labor force,6717,1873,2985,526
+11/01/2024,Western MA,Preschool,All households,18213,14246,9152,3054
+11/01/2024,Western MA,Preschool,Households with all adults in the labor force,13133,10861,5741,3054
+11/01/2024,Western MA,School Age,All households,66611,8927,34818,4293
+11/01/2024,Western MA,School Age,Households with all adults in the labor force,77534,24212,34865,9441
+11/01/2024,Western MA,Toddler,All households,11272,4062,5664,1568
+11/01/2024,Western MA,Toddler,Households with all adults in the labor force,8114,3586,3521,1568
+10/02/2024,Central MA,Children Age 0-5,All households,46857,22951,16781,3786
+10/02/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,34522,18184,10289,3786
+10/02/2024,Central MA,Infant,All households,11543,2589,4216,411
+10/02/2024,Central MA,Infant,Households with all adults in the labor force,8521,2186,2624,411
+10/02/2024,Central MA,Preschool,All households,21523,15468,7613,2205
+10/02/2024,Central MA,Preschool,Households with all adults in the labor force,15822,11861,4635,2205
+10/02/2024,Central MA,School Age,All households,81259,7403,29035,2461
+10/02/2024,Central MA,School Age,Households with all adults in the labor force,97813,24504,29158,6247
+10/02/2024,Central MA,Toddler,All households,13791,4894,4952,1170
+10/02/2024,Central MA,Toddler,Households with all adults in the labor force,10179,4137,3030,1170
+10/02/2024,Metro,Children Age 0-5,All households,98278,56968,20489,4673
+10/02/2024,Metro,Children Age 0-5,Households with all adults in the labor force,72456,44069,11473,4673
+10/02/2024,Metro,Infant,All households,24273,6651,5168,546
+10/02/2024,Metro,Infant,Households with all adults in the labor force,17845,5244,2933,546
+10/02/2024,Metro,Preschool,All households,45088,36819,9229,2670
+10/02/2024,Metro,Preschool,Households with all adults in the labor force,33231,28233,5141,2670
+10/02/2024,Metro,School Age,All households,168875,26083,36111,2855
+10/02/2024,Metro,School Age,Households with all adults in the labor force,201401,63922,33987,7528
+10/02/2024,Metro,Toddler,All households,28917,13498,6092,1457
+10/02/2024,Metro,Toddler,Households with all adults in the labor force,21380,10592,3399,1457
+10/02/2024,Metro Boston,Children Age 0-5,All households,43157,23739,17030,5458
+10/02/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,34205,18965,11424,5458
+10/02/2024,Metro Boston,Infant,All households,10753,3194,4243,675
+10/02/2024,Metro Boston,Infant,Households with all adults in the labor force,8542,2614,2862,675
+10/02/2024,Metro Boston,Preschool,All households,19724,15099,7882,2932
+10/02/2024,Metro Boston,Preschool,Households with all adults in the labor force,15574,11741,5266,2932
+10/02/2024,Metro Boston,School Age,All households,58844,8734,29406,2774
+10/02/2024,Metro Boston,School Age,Households with all adults in the labor force,79658,26230,31852,8232
+10/02/2024,Metro Boston,Toddler,All households,12680,5446,4905,1851
+10/02/2024,Metro Boston,Toddler,Households with all adults in the labor force,10089,4610,3296,1851
+10/02/2024,Northeast MA,Children Age 0-5,All households,58272,33300,22691,7933
+10/02/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,42972,26741,14754,7933
+10/02/2024,Northeast MA,Infant,All households,14243,4091,5591,921
+10/02/2024,Northeast MA,Infant,Households with all adults in the labor force,10508,3452,3613,921
+10/02/2024,Northeast MA,Preschool,All households,27012,21428,10534,4585
+10/02/2024,Northeast MA,Preschool,Households with all adults in the labor force,19904,16758,6883,4585
+10/02/2024,Northeast MA,School Age,All households,97564,14444,36474,5988
+10/02/2024,Northeast MA,School Age,Households with all adults in the labor force,119568,39384,39860,13921
+10/02/2024,Northeast MA,Toddler,All households,17017,7781,6566,2427
+10/02/2024,Northeast MA,Toddler,Households with all adults in the labor force,12560,6531,4258,2427
+10/02/2024,Southeast and Cape MA,Children Age 0-5,All households,65710,32619,24168,5878
+10/02/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,49718,26002,15355,5878
+10/02/2024,Southeast and Cape MA,Infant,All households,15970,3590,5950,585
+10/02/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12045,2930,3786,585
+10/02/2024,Southeast and Cape MA,Preschool,All households,30292,21997,11027,3558
+10/02/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,22900,17228,6947,3558
+10/02/2024,Southeast and Cape MA,School Age,All households,113390,13738,42641,4562
+10/02/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138513,37751,43986,10440
+10/02/2024,Southeast and Cape MA,Toddler,All households,19448,7032,7191,1735
+10/02/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14773,5844,4622,1735
+10/02/2024,Western MA,Children Age 0-5,All households,38220,20199,19200,4793
+10/02/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,27533,16050,12020,4793
+10/02/2024,Western MA,Infant,All households,9394,2113,4754,492
+10/02/2024,Western MA,Infant,Households with all adults in the labor force,6741,1810,2992,492
+10/02/2024,Western MA,Preschool,All households,17633,14001,8842,2816
+10/02/2024,Western MA,Preschool,Households with all adults in the labor force,12723,10645,5541,2816
+10/02/2024,Western MA,School Age,All households,67217,9089,35053,4215
+10/02/2024,Western MA,School Age,Households with all adults in the labor force,77536,24056,34751,9008
+10/02/2024,Western MA,Toddler,All households,11193,4085,5604,1485
+10/02/2024,Western MA,Toddler,Households with all adults in the labor force,8069,3595,3487,1485
+09/02/2024,Central MA,Children Age 0-5,All households,46107,22214,16474,3829
+09/02/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,33991,17580,10101,3829
+09/02/2024,Central MA,Infant,All households,11507,2441,4174,399
+09/02/2024,Central MA,Infant,Households with all adults in the labor force,8471,2061,2590,399
+09/02/2024,Central MA,Preschool,All households,20768,15068,7286,2214
+09/02/2024,Central MA,Preschool,Households with all adults in the labor force,15312,11504,4434,2214
+09/02/2024,Central MA,School Age,All households,82039,7796,29289,2518
+09/02/2024,Central MA,School Age,Households with all adults in the labor force,97845,24197,29122,6347
+09/02/2024,Central MA,Toddler,All households,13832,4705,5014,1216
+09/02/2024,Central MA,Toddler,Households with all adults in the labor force,10208,4015,3077,1216
+09/02/2024,Metro,Children Age 0-5,All households,96680,55767,20112,4357
+09/02/2024,Metro,Children Age 0-5,Households with all adults in the labor force,71275,43066,11251,4357
+09/02/2024,Metro,Infant,All households,24088,6589,5113,494
+09/02/2024,Metro,Infant,Households with all adults in the labor force,17747,5180,2878,494
+09/02/2024,Metro,Preschool,All households,43389,35715,8811,2440
+09/02/2024,Metro,Preschool,Households with all adults in the labor force,32003,27330,4911,2440
+09/02/2024,Metro,School Age,All households,170167,26850,36581,2425
+09/02/2024,Metro,School Age,Households with all adults in the labor force,201196,63401,34102,6782
+09/02/2024,Metro,Toddler,All households,29203,13463,6188,1423
+09/02/2024,Metro,Toddler,Households with all adults in the labor force,21525,10556,3462,1423
+09/02/2024,Metro Boston,Children Age 0-5,All households,42326,23030,16837,5417
+09/02/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,33571,18382,11280,5417
+09/02/2024,Metro Boston,Infant,All households,10705,3056,4239,610
+09/02/2024,Metro Boston,Infant,Households with all adults in the labor force,8501,2500,2867,610
+09/02/2024,Metro Boston,Preschool,All households,18944,14575,7693,2948
+09/02/2024,Metro Boston,Preschool,Households with all adults in the labor force,14988,11318,5122,2948
+09/02/2024,Metro Boston,School Age,All households,59882,9238,29658,2267
+09/02/2024,Metro Boston,School Age,Households with all adults in the labor force,79818,25856,31870,7684
+09/02/2024,Metro Boston,Toddler,All households,12677,5399,4905,1859
+09/02/2024,Metro Boston,Toddler,Households with all adults in the labor force,10082,4564,3291,1859
+09/02/2024,Northeast MA,Children Age 0-5,All households,57306,33020,22278,7682
+09/02/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,42224,26333,14472,7682
+09/02/2024,Northeast MA,Infant,All households,14262,4122,5597,897
+09/02/2024,Northeast MA,Infant,Households with all adults in the labor force,10536,3441,3623,897
+09/02/2024,Northeast MA,Preschool,All households,26035,21056,10131,4331
+09/02/2024,Northeast MA,Preschool,Households with all adults in the labor force,19153,16310,6585,4331
+09/02/2024,Northeast MA,School Age,All households,98600,15112,36932,5849
+09/02/2024,Northeast MA,School Age,Households with all adults in the labor force,119584,39396,39919,13531
+09/02/2024,Northeast MA,Toddler,All households,17009,7842,6550,2454
+09/02/2024,Northeast MA,Toddler,Households with all adults in the labor force,12535,6582,4264,2454
+09/02/2024,Southeast and Cape MA,Children Age 0-5,All households,64578,31526,23806,5577
+09/02/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,48864,25094,15134,5577
+09/02/2024,Southeast and Cape MA,Infant,All households,16053,3527,6005,545
+09/02/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12114,2893,3832,545
+09/02/2024,Southeast and Cape MA,Preschool,All households,29157,21148,10641,3338
+09/02/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,22042,16490,6704,3338
+09/02/2024,Southeast and Cape MA,School Age,All households,114486,13842,43164,4202
+09/02/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138474,36778,44132,9779
+09/02/2024,Southeast and Cape MA,Toddler,All households,19368,6851,7160,1694
+09/02/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14708,5711,4598,1694
+09/02/2024,Western MA,Children Age 0-5,All households,37683,19960,18952,4773
+09/02/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,27151,15814,11882,4773
+09/02/2024,Western MA,Infant,All households,9421,2033,4754,479
+09/02/2024,Western MA,Infant,Households with all adults in the labor force,6778,1743,2986,479
+09/02/2024,Western MA,Preschool,All households,17080,13904,8583,2786
+09/02/2024,Western MA,Preschool,Households with all adults in the labor force,12311,10534,5380,2786
+09/02/2024,Western MA,School Age,All households,67789,9658,35338,4147
+09/02/2024,Western MA,School Age,Households with all adults in the labor force,77572,24234,34791,8920
+09/02/2024,Western MA,Toddler,All households,11182,4023,5615,1508
+09/02/2024,Western MA,Toddler,Households with all adults in the labor force,8062,3537,3516,1508
+08/01/2024,Central MA,Children Age 0-5,All households,54482,24367,19519,4750
+08/01/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,40144,19570,12004,4750
+08/01/2024,Central MA,Infant,All households,11479,2363,4160,406
+08/01/2024,Central MA,Infant,Households with all adults in the labor force,8431,1992,2577,406
+08/01/2024,Central MA,Preschool,All households,29175,17291,10368,3108
+08/01/2024,Central MA,Preschool,Households with all adults in the labor force,21504,13550,6367,3108
+08/01/2024,Central MA,School Age,All households,73575,6330,26200,2307
+08/01/2024,Central MA,School Age,Households with all adults in the labor force,97736,24969,29066,7057
+08/01/2024,Central MA,Toddler,All households,13828,4713,4991,1236
+08/01/2024,Central MA,Toddler,Households with all adults in the labor force,10209,4028,3060,1236
+08/01/2024,Metro,Children Age 0-5,All households,115234,62923,24169,5324
+08/01/2024,Metro,Children Age 0-5,Households with all adults in the labor force,84938,48747,13495,5324
+08/01/2024,Metro,Infant,All households,24050,6475,5118,497
+08/01/2024,Metro,Infant,Households with all adults in the labor force,17702,5122,2848,497
+08/01/2024,Metro,Preschool,All households,61945,43194,12835,3412
+08/01/2024,Metro,Preschool,Households with all adults in the labor force,45687,33246,7150,3412
+08/01/2024,Metro,School Age,All households,152156,20282,32755,2563
+08/01/2024,Metro,School Age,Households with all adults in the labor force,201533,64259,34157,7887
+08/01/2024,Metro,Toddler,All households,29239,13254,6216,1415
+08/01/2024,Metro,Toddler,Households with all adults in the labor force,21549,10379,3497,1415
+08/01/2024,Metro Boston,Children Age 0-5,All households,49435,25447,19522,6366
+08/01/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,39183,20610,13111,6366
+08/01/2024,Metro Boston,Infant,All households,10707,2961,4215,617
+08/01/2024,Metro Boston,Infant,Households with all adults in the labor force,8468,2439,2836,617
+08/01/2024,Metro Boston,Preschool,All households,26083,17127,10406,3848
+08/01/2024,Metro Boston,Preschool,Households with all adults in the labor force,20640,13635,6955,3848
+08/01/2024,Metro Boston,School Age,All households,52324,8018,26603,2507
+08/01/2024,Metro Boston,School Age,Households with all adults in the labor force,79448,27214,31658,8873
+08/01/2024,Metro Boston,Toddler,All households,12645,5359,4901,1901
+08/01/2024,Metro Boston,Toddler,Households with all adults in the labor force,10075,4536,3320,1901
+08/01/2024,Northeast MA,Children Age 0-5,All households,67790,36729,26220,9315
+08/01/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,50135,29773,17011,9315
+08/01/2024,Northeast MA,Infant,All households,14327,4040,5617,906
+08/01/2024,Northeast MA,Infant,Households with all adults in the labor force,10593,3401,3650,906
+08/01/2024,Northeast MA,Preschool,All households,36515,24932,14027,5904
+08/01/2024,Northeast MA,Preschool,Households with all adults in the labor force,27069,19874,9107,5904
+08/01/2024,Northeast MA,School Age,All households,88267,12101,32901,5246
+08/01/2024,Northeast MA,School Age,Households with all adults in the labor force,119851,40384,39845,14561
+08/01/2024,Northeast MA,Toddler,All households,16948,7757,6576,2505
+08/01/2024,Northeast MA,Toddler,Households with all adults in the labor force,12473,6498,4254,2505
+08/01/2024,Southeast and Cape MA,Children Age 0-5,All households,76247,35111,28089,7003
+08/01/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,57692,28228,17878,7003
+08/01/2024,Southeast and Cape MA,Infant,All households,16191,3507,6064,564
+08/01/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12234,2888,3886,564
+08/01/2024,Southeast and Cape MA,Preschool,All households,40762,24775,14863,4719
+08/01/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,30826,19657,9393,4719
+08/01/2024,Southeast and Cape MA,School Age,All households,102779,12300,38772,4797
+08/01/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138468,38858,44045,11800
+08/01/2024,Southeast and Cape MA,Toddler,All households,19294,6829,7162,1720
+08/01/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14632,5683,4599,1720
+08/01/2024,Western MA,Children Age 0-5,All households,44460,22234,22260,5912
+08/01/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,32003,17876,13890,5912
+08/01/2024,Western MA,Infant,All households,9420,2009,4760,478
+08/01/2024,Western MA,Infant,Households with all adults in the labor force,6781,1732,2988,478
+08/01/2024,Western MA,Preschool,All households,23798,16217,11865,3891
+08/01/2024,Western MA,Preschool,Households with all adults in the labor force,17128,12611,7379,3891
+08/01/2024,Western MA,School Age,All households,60894,8599,31889,4012
+08/01/2024,Western MA,School Age,Households with all adults in the labor force,77453,25412,34643,9924
+08/01/2024,Western MA,Toddler,All households,11242,4008,5635,1543
+08/01/2024,Western MA,Toddler,Households with all adults in the labor force,8094,3533,3523,1543
+07/01/2024,Central MA,Children Age 0-5,All households,53633,24341,19227,4700
+07/01/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,39518,19455,11821,4700
+07/01/2024,Central MA,Infant,All households,11411,2446,4156,410
+07/01/2024,Central MA,Infant,Households with all adults in the labor force,8368,2062,2579,410
+07/01/2024,Central MA,Preschool,All households,28398,17148,10082,3061
+07/01/2024,Central MA,Preschool,Households with all adults in the labor force,20933,13356,6164,3061
+07/01/2024,Central MA,School Age,All households,74356,6320,26477,2306
+07/01/2024,Central MA,School Age,Households with all adults in the labor force,97696,24871,29053,7006
+07/01/2024,Central MA,Toddler,All households,13824,4747,4989,1229
+07/01/2024,Central MA,Toddler,Households with all adults in the labor force,10217,4037,3078,1229
+07/01/2024,Metro,Children Age 0-5,All households,113651,62848,23781,5226
+07/01/2024,Metro,Children Age 0-5,Households with all adults in the labor force,83734,48637,13236,5226
+07/01/2024,Metro,Infant,All households,24142,6747,5159,479
+07/01/2024,Metro,Infant,Households with all adults in the labor force,17796,5306,2869,479
+07/01/2024,Metro,Preschool,All households,60219,42683,12476,3310
+07/01/2024,Metro,Preschool,Households with all adults in the labor force,44358,32832,6902,3310
+07/01/2024,Metro,School Age,All households,153880,21430,33062,2450
+07/01/2024,Metro,School Age,Households with all adults in the labor force,201624,64991,34060,7676
+07/01/2024,Metro,Toddler,All households,29290,13418,6146,1437
+07/01/2024,Metro,Toddler,Households with all adults in the labor force,21580,10499,3465,1437
+07/01/2024,Metro Boston,Children Age 0-5,All households,48753,25383,19279,6310
+07/01/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,38628,20527,12967,6310
+07/01/2024,Metro Boston,Infant,All households,10656,3059,4188,643
+07/01/2024,Metro Boston,Infant,Households with all adults in the labor force,8440,2502,2832,643
+07/01/2024,Metro Boston,Preschool,All households,25374,16857,10117,3734
+07/01/2024,Metro Boston,Preschool,Households with all adults in the labor force,20074,13405,6763,3734
+07/01/2024,Metro Boston,School Age,All households,52876,7712,26911,2579
+07/01/2024,Metro Boston,School Age,Households with all adults in the labor force,79367,26931,31753,8889
+07/01/2024,Metro Boston,Toddler,All households,12723,5467,4974,1933
+07/01/2024,Metro Boston,Toddler,Households with all adults in the labor force,10114,4620,3372,1933
+07/01/2024,Northeast MA,Children Age 0-5,All households,66933,36697,25867,9216
+07/01/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,49500,29665,16801,9216
+07/01/2024,Northeast MA,Infant,All households,14245,4154,5582,934
+07/01/2024,Northeast MA,Infant,Households with all adults in the labor force,10563,3479,3641,934
+07/01/2024,Northeast MA,Preschool,All households,35524,24715,13620,5772
+07/01/2024,Northeast MA,Preschool,Households with all adults in the labor force,26346,19648,8887,5772
+07/01/2024,Northeast MA,School Age,All households,89133,12337,33269,5177
+07/01/2024,Northeast MA,School Age,Households with all adults in the labor force,119838,40477,39836,14393
+07/01/2024,Northeast MA,Toddler,All households,17164,7828,6665,2510
+07/01/2024,Northeast MA,Toddler,Households with all adults in the labor force,12591,6538,4273,2510
+07/01/2024,Southeast and Cape MA,Children Age 0-5,All households,75153,35412,27707,6918
+07/01/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,56866,28475,17636,6918
+07/01/2024,Southeast and Cape MA,Infant,All households,16240,3619,6071,567
+07/01/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12319,2956,3920,567
+07/01/2024,Southeast and Cape MA,Preschool,All households,39782,24918,14531,4633
+07/01/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,30106,19787,9204,4633
+07/01/2024,Southeast and Cape MA,School Age,All households,103901,12206,39157,4734
+07/01/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138489,39069,44052,11652
+07/01/2024,Southeast and Cape MA,Toddler,All households,19131,6875,7105,1718
+07/01/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14441,5732,4512,1718
+07/01/2024,Western MA,Children Age 0-5,All households,43854,22010,21952,5835
+07/01/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,31573,17716,13700,5835
+07/01/2024,Western MA,Infant,All households,9364,2100,4718,486
+07/01/2024,Western MA,Infant,Households with all adults in the labor force,6736,1798,2943,486
+07/01/2024,Western MA,Preschool,All households,23162,15847,11541,3812
+07/01/2024,Western MA,Preschool,Households with all adults in the labor force,16693,12351,7199,3812
+07/01/2024,Western MA,School Age,All households,61520,8314,32201,3988
+07/01/2024,Western MA,School Age,Households with all adults in the labor force,77475,25041,34651,9823
+07/01/2024,Western MA,Toddler,All households,11328,4063,5693,1537
+07/01/2024,Western MA,Toddler,Households with all adults in the labor force,8144,3567,3558,1537
+06/04/2024,Central MA,Children Age 0-5,All households,53012,24173,18998,4672
+06/04/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,39078,19338,11677,4672
+06/04/2024,Central MA,Infant,All households,11375,2508,4129,433
+06/04/2024,Central MA,Infant,Households with all adults in the labor force,8349,2123,2561,433
+06/04/2024,Central MA,Preschool,All households,27792,16908,9888,2981
+06/04/2024,Central MA,Preschool,Households with all adults in the labor force,20483,13171,6041,2981
+06/04/2024,Central MA,School Age,All households,75098,5949,26759,2188
+06/04/2024,Central MA,School Age,Households with all adults in the labor force,97841,24473,29109,6860
+06/04/2024,Central MA,Toddler,All households,13845,4757,4981,1258
+06/04/2024,Central MA,Toddler,Households with all adults in the labor force,10246,4044,3075,1258
+06/04/2024,Metro,Children Age 0-5,All households,112055,62257,23461,5121
+06/04/2024,Metro,Children Age 0-5,Households with all adults in the labor force,82503,48194,13047,5121
+06/04/2024,Metro,Infant,All households,24172,6810,5171,491
+06/04/2024,Metro,Infant,Households with all adults in the labor force,17788,5385,2888,491
+06/04/2024,Metro,Preschool,All households,58675,41933,12189,3189
+06/04/2024,Metro,Preschool,Households with all adults in the labor force,43173,32242,6715,3189
+06/04/2024,Metro,School Age,All households,155694,21509,33406,2608
+06/04/2024,Metro,School Age,Households with all adults in the labor force,201734,64684,34074,7729
+06/04/2024,Metro,Toddler,All households,29208,13514,6101,1441
+06/04/2024,Metro,Toddler,Households with all adults in the labor force,21542,10567,3444,1441
+06/04/2024,Metro Boston,Children Age 0-5,All households,48147,25162,19026,6293
+06/04/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,38211,20373,12821,6293
+06/04/2024,Metro Boston,Infant,All households,10631,3126,4166,671
+06/04/2024,Metro Boston,Infant,Households with all adults in the labor force,8436,2575,2817,671
+06/04/2024,Metro Boston,Preschool,All households,24750,16538,9843,3655
+06/04/2024,Metro Boston,Preschool,Households with all adults in the labor force,19611,13141,6610,3655
+06/04/2024,Metro Boston,School Age,All households,53438,7467,27144,2493
+06/04/2024,Metro Boston,School Age,Households with all adults in the labor force,79387,26605,31737,8786
+06/04/2024,Metro Boston,Toddler,All households,12766,5498,5017,1967
+06/04/2024,Metro Boston,Toddler,Households with all adults in the labor force,10164,4657,3394,1967
+06/04/2024,Northeast MA,Children Age 0-5,All households,66091,36195,25545,9172
+06/04/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,48861,29308,16580,9172
+06/04/2024,Northeast MA,Infant,All households,14228,4142,5546,960
+06/04/2024,Northeast MA,Infant,Households with all adults in the labor force,10543,3470,3614,960
+06/04/2024,Northeast MA,Preschool,All households,34646,24243,13286,5659
+06/04/2024,Northeast MA,Preschool,Households with all adults in the labor force,25692,19312,8677,5659
+06/04/2024,Northeast MA,School Age,All households,89809,11831,33503,5227
+06/04/2024,Northeast MA,School Age,Households with all adults in the labor force,119684,39769,39742,14399
+06/04/2024,Northeast MA,Toddler,All households,17217,7810,6713,2553
+06/04/2024,Northeast MA,Toddler,Households with all adults in the labor force,12626,6526,4289,2553
+06/04/2024,Southeast and Cape MA,Children Age 0-5,All households,74229,35103,27359,6881
+06/04/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,56162,28195,17427,6881
+06/04/2024,Southeast and Cape MA,Infant,All households,16269,3625,6076,611
+06/04/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12317,2978,3905,611
+06/04/2024,Southeast and Cape MA,Preschool,All households,38902,24520,14214,4526
+06/04/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,29434,19430,9013,4526
+06/04/2024,Southeast and Cape MA,School Age,All households,104709,11555,39385,4367
+06/04/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138379,38282,43942,11248
+06/04/2024,Southeast and Cape MA,Toddler,All households,19058,6958,7069,1744
+06/04/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14411,5787,4509,1744
+06/04/2024,Western MA,Children Age 0-5,All households,43252,21770,21656,5715
+06/04/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,31136,17494,13511,5715
+06/04/2024,Western MA,Infant,All households,9365,2065,4734,474
+06/04/2024,Western MA,Infant,Households with all adults in the labor force,6723,1774,2946,474
+06/04/2024,Western MA,Preschool,All households,22535,15598,11240,3682
+06/04/2024,Western MA,Preschool,Households with all adults in the labor force,16248,12112,7025,3682
+06/04/2024,Western MA,School Age,All households,62109,7685,32473,3784
+06/04/2024,Western MA,School Age,Households with all adults in the labor force,77464,24332,34626,9499
+06/04/2024,Western MA,Toddler,All households,11352,4107,5682,1559
+06/04/2024,Western MA,Toddler,Households with all adults in the labor force,8165,3608,3540,1559
+05/02/2024,Central MA,Children Age 0-5,All households,52166,23886,18704,4608
+05/02/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,38387,19090,11484,4608
+05/02/2024,Central MA,Infant,All households,11376,2432,4124,459
+05/02/2024,Central MA,Infant,Households with all adults in the labor force,8371,2064,2567,459
+05/02/2024,Central MA,Preschool,All households,26925,16697,9580,2878
+05/02/2024,Central MA,Preschool,Households with all adults in the labor force,19768,12981,5824,2878
+05/02/2024,Central MA,School Age,All households,75947,6062,27079,2210
+05/02/2024,Central MA,School Age,Households with all adults in the labor force,97805,24317,29126,6818
+05/02/2024,Central MA,Toddler,All households,13865,4757,5000,1271
+05/02/2024,Central MA,Toddler,Households with all adults in the labor force,10248,4045,3093,1271
+05/02/2024,Metro,Children Age 0-5,All households,110313,61419,23076,5003
+05/02/2024,Metro,Children Age 0-5,Households with all adults in the labor force,81255,47556,12852,5003
+05/02/2024,Metro,Infant,All households,24188,6767,5131,482
+05/02/2024,Metro,Infant,Households with all adults in the labor force,17868,5330,2899,482
+05/02/2024,Metro,Preschool,All households,56930,41148,11812,3088
+05/02/2024,Metro,Preschool,Households with all adults in the labor force,41917,31657,6536,3088
+05/02/2024,Metro,School Age,All households,157327,21832,33696,2618
+05/02/2024,Metro,School Age,Households with all adults in the labor force,201713,64290,34042,7621
+05/02/2024,Metro,Toddler,All households,29195,13504,6133,1433
+05/02/2024,Metro,Toddler,Households with all adults in the labor force,21470,10569,3417,1433
+05/02/2024,Metro Boston,Children Age 0-5,All households,47433,24894,18773,6237
+05/02/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,37646,20135,12632,6237
+05/02/2024,Metro Boston,Infant,All households,10674,3127,4200,691
+05/02/2024,Metro Boston,Infant,Households with all adults in the labor force,8470,2566,2826,691
+05/02/2024,Metro Boston,Preschool,All households,24061,16291,9580,3533
+05/02/2024,Metro Boston,Preschool,Households with all adults in the labor force,19072,12925,6416,3533
+05/02/2024,Metro Boston,School Age,All households,54129,7604,27463,2550
+05/02/2024,Metro Boston,School Age,Households with all adults in the labor force,79369,26476,31762,8787
+05/02/2024,Metro Boston,Toddler,All households,12698,5476,4993,2013
+05/02/2024,Metro Boston,Toddler,Households with all adults in the labor force,10104,4644,3390,2013
+05/02/2024,Northeast MA,Children Age 0-5,All households,65064,35740,25158,9100
+05/02/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,48090,28915,16347,9100
+05/02/2024,Northeast MA,Infant,All households,14209,4093,5542,1022
+05/02/2024,Northeast MA,Infant,Households with all adults in the labor force,10516,3436,3605,1022
+05/02/2024,Northeast MA,Preschool,All households,33634,23853,12918,5489
+05/02/2024,Northeast MA,Preschool,Households with all adults in the labor force,24924,18939,8439,5489
+05/02/2024,Northeast MA,School Age,All households,90940,12197,33901,5295
+05/02/2024,Northeast MA,School Age,Households with all adults in the labor force,119741,39663,39762,14395
+05/02/2024,Northeast MA,Toddler,All households,17221,7794,6698,2589
+05/02/2024,Northeast MA,Toddler,Households with all adults in the labor force,12650,6540,4303,2589
+05/02/2024,Southeast and Cape MA,Children Age 0-5,All households,73144,34606,26905,6749
+05/02/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,55359,27822,17117,6749
+05/02/2024,Southeast and Cape MA,Infant,All households,16169,3626,6055,596
+05/02/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12249,2993,3873,596
+05/02/2024,Southeast and Cape MA,Preschool,All households,37823,24137,13798,4384
+05/02/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,28606,19115,8728,4384
+05/02/2024,Southeast and Cape MA,School Age,All households,105788,11716,39799,4366
+05/02/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138371,38037,43882,11115
+05/02/2024,Southeast and Cape MA,Toddler,All households,19152,6843,7052,1769
+05/02/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14504,5714,4516,1769
+05/02/2024,Western MA,Children Age 0-5,All households,42594,21558,21328,5605
+05/02/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,30661,17289,13311,5605
+05/02/2024,Western MA,Infant,All households,9315,2027,4683,479
+05/02/2024,Western MA,Infant,Households with all adults in the labor force,6681,1750,2919,479
+05/02/2024,Western MA,Preschool,All households,21941,15422,10962,3541
+05/02/2024,Western MA,Preschool,Households with all adults in the labor force,15814,11932,6858,3541
+05/02/2024,Western MA,School Age,All households,62798,7918,32836,3769
+05/02/2024,Western MA,School Age,Households with all adults in the labor force,77490,24297,34659,9374
+05/02/2024,Western MA,Toddler,All households,11338,4109,5683,1585
+05/02/2024,Western MA,Toddler,Households with all adults in the labor force,8166,3607,3534,1585
+04/01/2024,Central MA,Children Age 0-5,All households,51368,23604,18410,4504
+04/01/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,37833,18854,11305,4504
+04/01/2024,Central MA,Infant,All households,11458,2493,4149,470
+04/01/2024,Central MA,Infant,Households with all adults in the labor force,8440,2123,2566,470
+04/01/2024,Central MA,Preschool,All households,26134,16365,9341,2777
+04/01/2024,Central MA,Preschool,Households with all adults in the labor force,19209,12694,5697,2777
+04/01/2024,Central MA,School Age,All households,76753,6242,27394,2200
+04/01/2024,Central MA,School Age,Households with all adults in the labor force,97825,24217,29141,6704
+04/01/2024,Central MA,Toddler,All households,13776,4746,4920,1257
+04/01/2024,Central MA,Toddler,Households with all adults in the labor force,10184,4037,3042,1257
+04/01/2024,Metro,Children Age 0-5,All households,108601,60645,22661,4855
+04/01/2024,Metro,Children Age 0-5,Households with all adults in the labor force,79968,46958,12604,4855
+04/01/2024,Metro,Infant,All households,24183,6869,5104,503
+04/01/2024,Metro,Infant,Households with all adults in the labor force,17853,5416,2877,503
+04/01/2024,Metro,Preschool,All households,55322,40234,11320,2937
+04/01/2024,Metro,Preschool,Households with all adults in the labor force,40745,30947,6267,2937
+04/01/2024,Metro,School Age,All households,158953,22613,34076,2631
+04/01/2024,Metro,School Age,Households with all adults in the labor force,201641,64289,34020,7486
+04/01/2024,Metro,Toddler,All households,29096,13542,6237,1415
+04/01/2024,Metro,Toddler,Households with all adults in the labor force,21370,10595,3460,1415
+04/01/2024,Metro Boston,Children Age 0-5,All households,46744,24733,18530,6173
+04/01/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,37115,20021,12486,6173
+04/01/2024,Metro Boston,Infant,All households,10605,3099,4191,724
+04/01/2024,Metro Boston,Infant,Households with all adults in the labor force,8424,2565,2848,724
+04/01/2024,Metro Boston,Preschool,All households,23408,16113,9342,3420
+04/01/2024,Metro Boston,Preschool,Households with all adults in the labor force,18558,12776,6245,3420
+04/01/2024,Metro Boston,School Age,All households,54873,8077,27718,2562
+04/01/2024,Metro Boston,School Age,Households with all adults in the labor force,79406,26724,31773,8735
+04/01/2024,Metro Boston,Toddler,All households,12731,5521,4997,2029
+04/01/2024,Metro Boston,Toddler,Households with all adults in the labor force,10133,4680,3393,2029
+04/01/2024,Northeast MA,Children Age 0-5,All households,64041,35487,24829,8956
+04/01/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,47310,28639,16129,8956
+04/01/2024,Northeast MA,Infant,All households,14245,4189,5562,1057
+04/01/2024,Northeast MA,Infant,Households with all adults in the labor force,10538,3500,3612,1057
+04/01/2024,Northeast MA,Preschool,All households,32683,23430,12597,5287
+04/01/2024,Northeast MA,Preschool,Households with all adults in the labor force,24181,18548,8227,5287
+04/01/2024,Northeast MA,School Age,All households,91917,12371,34264,5319
+04/01/2024,Northeast MA,School Age,Households with all adults in the labor force,119696,39526,39780,14275
+04/01/2024,Northeast MA,Toddler,All households,17113,7868,6670,2612
+04/01/2024,Northeast MA,Toddler,Households with all adults in the labor force,12591,6591,4290,2612
+04/01/2024,Southeast and Cape MA,Children Age 0-5,All households,72034,34188,26474,6580
+04/01/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,54526,27451,16843,6580
+04/01/2024,Southeast and Cape MA,Infant,All households,16176,3561,6047,565
+04/01/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12248,2932,3867,565
+04/01/2024,Southeast and Cape MA,Preschool,All households,36661,23692,13343,4223
+04/01/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,27725,18750,8429,4223
+04/01/2024,Southeast and Cape MA,School Age,All households,106958,11915,40226,4372
+04/01/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,138424,37818,43887,10952
+04/01/2024,Southeast and Cape MA,Toddler,All households,19197,6935,7084,1792
+04/01/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14553,5769,4547,1792
+04/01/2024,Western MA,Children Age 0-5,All households,41940,21294,21011,5553
+04/01/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,30159,17066,13095,5553
+04/01/2024,Western MA,Infant,All households,9341,2048,4704,498
+04/01/2024,Western MA,Infant,Households with all adults in the labor force,6703,1785,2933,498
+04/01/2024,Western MA,Preschool,All households,21359,15120,10686,3433
+04/01/2024,Western MA,Preschool,Households with all adults in the labor force,15374,11651,6667,3433
+04/01/2024,Western MA,School Age,All households,63461,8013,33155,3768
+04/01/2024,Western MA,School Age,Households with all adults in the labor force,77497,24135,34662,9321
+04/01/2024,Western MA,Toddler,All households,11240,4126,5621,1622
+04/01/2024,Western MA,Toddler,Households with all adults in the labor force,8082,3630,3495,1622
+03/01/2024,Central MA,Children Age 0-5,All households,51694,23268,18064,4393
+03/01/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,38199,18600,11264,4393
+03/01/2024,Central MA,Infant,All households,11766,2409,4182,457
+03/01/2024,Central MA,Infant,Households with all adults in the labor force,8650,2039,2628,457
+03/01/2024,Central MA,Preschool,All households,25789,16143,8932,2703
+03/01/2024,Central MA,Preschool,Households with all adults in the labor force,19110,12558,5561,2703
+03/01/2024,Central MA,School Age,All households,79770,6444,26759,2200
+03/01/2024,Central MA,School Age,Households with all adults in the labor force,100250,24091,28550,6593
+03/01/2024,Central MA,Toddler,All households,14139,4716,4950,1233
+03/01/2024,Central MA,Toddler,Households with all adults in the labor force,10439,4003,3075,1233
+03/01/2024,Metro,Children Age 0-5,All households,110156,59623,23317,4688
+03/01/2024,Metro,Children Age 0-5,Households with all adults in the labor force,80037,45830,12988,4688
+03/01/2024,Metro,Infant,All households,24964,6751,5334,488
+03/01/2024,Metro,Infant,Households with all adults in the labor force,18096,5337,2974,488
+03/01/2024,Metro,Preschool,All households,55138,39371,11575,2825
+03/01/2024,Metro,Preschool,Households with all adults in the labor force,40074,29897,6443,2825
+03/01/2024,Metro,School Age,All households,162634,22983,33909,2682
+03/01/2024,Metro,School Age,Households with all adults in the labor force,203583,63468,34137,7370
+03/01/2024,Metro,Toddler,All households,30054,13501,6408,1375
+03/01/2024,Metro,Toddler,Households with all adults in the labor force,21867,10596,3571,1375
+03/01/2024,Metro Boston,Children Age 0-5,All households,47293,24444,19626,6038
+03/01/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,37370,19699,13398,6038
+03/01/2024,Metro Boston,Infant,All households,10968,3188,4550,728
+03/01/2024,Metro Boston,Infant,Households with all adults in the labor force,8637,2612,3100,728
+03/01/2024,Metro Boston,Preschool,All households,23336,15778,9746,3326
+03/01/2024,Metro Boston,Preschool,Households with all adults in the labor force,18418,12441,6609,3326
+03/01/2024,Metro Boston,School Age,All households,57084,8241,29021,2569
+03/01/2024,Metro Boston,School Age,Households with all adults in the labor force,81266,26500,33369,8607
+03/01/2024,Metro Boston,Toddler,All households,12989,5478,5330,1984
+03/01/2024,Metro Boston,Toddler,Households with all adults in the labor force,10315,4646,3689,1984
+03/01/2024,Northeast MA,Children Age 0-5,All households,63966,34962,24662,8673
+03/01/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,46986,28159,16193,8673
+03/01/2024,Northeast MA,Infant,All households,14459,4169,5596,1027
+03/01/2024,Northeast MA,Infant,Households with all adults in the labor force,10654,3506,3720,1027
+03/01/2024,Northeast MA,Preschool,All households,32254,23015,12399,5091
+03/01/2024,Northeast MA,Preschool,Households with all adults in the labor force,23622,18120,8105,5091
+03/01/2024,Northeast MA,School Age,All households,94744,12796,34420,5316
+03/01/2024,Northeast MA,School Age,Households with all adults in the labor force,121433,39313,40127,13989
+03/01/2024,Northeast MA,Toddler,All households,17253,7778,6667,2555
+03/01/2024,Northeast MA,Toddler,Households with all adults in the labor force,12710,6533,4368,2555
+03/01/2024,Southeast and Cape MA,Children Age 0-5,All households,71033,33567,26079,6447
+03/01/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,53921,26905,16446,6447
+03/01/2024,Southeast and Cape MA,Infant,All households,16159,3581,6060,574
+03/01/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12281,2927,3874,574
+03/01/2024,Southeast and Cape MA,Preschool,All households,35628,23076,12876,4107
+03/01/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,27049,18248,8089,4107
+03/01/2024,Southeast and Cape MA,School Age,All households,110216,12180,40019,4356
+03/01/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,140151,37360,43041,10803
+03/01/2024,Southeast and Cape MA,Toddler,All households,19246,6910,7143,1766
+03/01/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14591,5730,4483,1766
+03/01/2024,Western MA,Children Age 0-5,All households,42463,21049,21040,5426
+03/01/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,30645,16821,13180,5426
+03/01/2024,Western MA,Infant,All households,9597,2096,4802,508
+03/01/2024,Western MA,Infant,Households with all adults in the labor force,6937,1808,3033,508
+03/01/2024,Western MA,Preschool,All households,21186,14803,10464,3308
+03/01/2024,Western MA,Preschool,Households with all adults in the labor force,15347,11391,6569,3308
+03/01/2024,Western MA,School Age,All households,64741,8163,33170,3808
+03/01/2024,Western MA,School Age,Households with all adults in the labor force,78299,23912,34130,9234
+03/01/2024,Western MA,Toddler,All households,11680,4150,5774,1610
+03/01/2024,Western MA,Toddler,Households with all adults in the labor force,8361,3622,3578,1610
+02/02/2024,Central MA,Children Age 0-5,All households,50912,22952,17807,4283
+02/02/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,37640,18339,11121,4283
+02/02/2024,Central MA,Infant,All households,11758,2399,4204,438
+02/02/2024,Central MA,Infant,Households with all adults in the labor force,8643,2028,2637,438
+02/02/2024,Central MA,Preschool,All households,24976,15844,8680,2622
+02/02/2024,Central MA,Preschool,Households with all adults in the labor force,18526,12314,5416,2622
+02/02/2024,Central MA,School Age,All households,80519,6510,27014,2185
+02/02/2024,Central MA,School Age,Households with all adults in the labor force,100234,23896,28563,6468
+02/02/2024,Central MA,Toddler,All households,14178,4709,4923,1223
+02/02/2024,Central MA,Toddler,Households with all adults in the labor force,10471,3997,3068,1223
+02/02/2024,Metro,Children Age 0-5,All households,108364,58607,22866,4511
+02/02/2024,Metro,Children Age 0-5,Households with all adults in the labor force,78685,44981,12753,4511
+02/02/2024,Metro,Infant,All households,24901,6673,5299,462
+02/02/2024,Metro,Infant,Households with all adults in the labor force,18046,5263,2963,462
+02/02/2024,Metro,Preschool,All households,53465,38498,11125,2701
+02/02/2024,Metro,Preschool,Households with all adults in the labor force,38864,29211,6169,2701
+02/02/2024,Metro,School Age,All households,164373,23418,34267,2658
+02/02/2024,Metro,School Age,Households with all adults in the labor force,203500,62926,34107,7169
+02/02/2024,Metro,Toddler,All households,29998,13436,6442,1348
+02/02/2024,Metro,Toddler,Households with all adults in the labor force,21775,10507,3621,1348
+02/02/2024,Metro Boston,Children Age 0-5,All households,46732,24111,19367,5850
+02/02/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,36909,19428,13178,5850
+02/02/2024,Metro Boston,Infant,All households,11008,3186,4557,714
+02/02/2024,Metro Boston,Infant,Households with all adults in the labor force,8655,2602,3096,714
+02/02/2024,Metro Boston,Preschool,All households,22713,15493,9459,3178
+02/02/2024,Metro Boston,Preschool,Households with all adults in the labor force,17925,12219,6401,3178
+02/02/2024,Metro Boston,School Age,All households,57649,8185,29339,2578
+02/02/2024,Metro Boston,School Age,Households with all adults in the labor force,81279,26202,33397,8428
+02/02/2024,Metro Boston,Toddler,All households,13011,5432,5351,1958
+02/02/2024,Metro Boston,Toddler,Households with all adults in the labor force,10329,4607,3681,1958
+02/02/2024,Northeast MA,Children Age 0-5,All households,63055,34428,24369,8385
+02/02/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,46339,27689,16009,8385
+02/02/2024,Northeast MA,Infant,All households,14471,4156,5586,996
+02/02/2024,Northeast MA,Infant,Households with all adults in the labor force,10684,3476,3721,996
+02/02/2024,Northeast MA,Preschool,All households,31293,22436,12093,4884
+02/02/2024,Northeast MA,Preschool,Households with all adults in the labor force,22955,17637,7934,4884
+02/02/2024,Northeast MA,School Age,All households,95742,12915,34813,5306
+02/02/2024,Northeast MA,School Age,Households with all adults in the labor force,121531,38931,40198,13691
+02/02/2024,Northeast MA,Toddler,All households,17291,7836,6690,2505
+02/02/2024,Northeast MA,Toddler,Households with all adults in the labor force,12700,6576,4354,2505
+02/02/2024,Southeast and Cape MA,Children Age 0-5,All households,70068,33054,25736,6245
+02/02/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,53177,26477,16225,6245
+02/02/2024,Southeast and Cape MA,Infant,All households,16090,3571,6021,584
+02/02/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12230,2935,3847,584
+02/02/2024,Southeast and Cape MA,Preschool,All households,34583,22632,12476,3908
+02/02/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,26276,17872,7826,3908
+02/02/2024,Southeast and Cape MA,School Age,All households,111194,11920,40406,4320
+02/02/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,140156,36753,43067,10565
+02/02/2024,Southeast and Cape MA,Toddler,All households,19395,6851,7239,1753
+02/02/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14671,5670,4552,1753
+02/02/2024,Western MA,Children Age 0-5,All households,41851,20755,20723,5233
+02/02/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,30216,16556,12990,5233
+02/02/2024,Western MA,Infant,All households,9658,2086,4845,497
+02/02/2024,Western MA,Infant,Households with all adults in the labor force,6969,1795,3047,497
+02/02/2024,Western MA,Preschool,All households,20605,14539,10177,3172
+02/02/2024,Western MA,Preschool,Households with all adults in the labor force,14932,11159,6394,3172
+02/02/2024,Western MA,School Age,All households,65335,8279,33487,3795
+02/02/2024,Western MA,School Age,Households with all adults in the labor force,78282,23727,34130,9028
+02/02/2024,Western MA,Toddler,All households,11588,4130,5701,1564
+02/02/2024,Western MA,Toddler,Households with all adults in the labor force,8315,3602,3549,1564
+01/02/2024,Central MA,Children Age 0-5,All households,50140,22601,17528,4135
+01/02/2024,Central MA,Children Age 0-5,Households with all adults in the labor force,37049,18054,10918,4135
+01/02/2024,Central MA,Infant,All households,11733,2370,4199,451
+01/02/2024,Central MA,Infant,Households with all adults in the labor force,8633,2020,2637,451
+01/02/2024,Central MA,Preschool,All households,24227,15540,8425,2496
+01/02/2024,Central MA,Preschool,Households with all adults in the labor force,17970,12056,5254,2496
+01/02/2024,Central MA,School Age,All households,81259,6629,27268,2164
+01/02/2024,Central MA,School Age,Households with all adults in the labor force,100209,23701,28528,6299
+01/02/2024,Central MA,Toddler,All households,14180,4691,4904,1188
+01/02/2024,Central MA,Toddler,Households with all adults in the labor force,10446,3978,3027,1188
+01/02/2024,Metro,Children Age 0-5,All households,106585,57871,22510,4319
+01/02/2024,Metro,Children Age 0-5,Households with all adults in the labor force,77366,44433,12551,4319
+01/02/2024,Metro,Infant,All households,25046,6686,5308,462
+01/02/2024,Metro,Infant,Households with all adults in the labor force,18165,5266,2966,462
+01/02/2024,Metro,Preschool,All households,51654,37861,10736,2559
+01/02/2024,Metro,Preschool,Households with all adults in the labor force,37542,28734,5962,2559
+01/02/2024,Metro,School Age,All households,166063,23800,34624,2637
+01/02/2024,Metro,School Age,Households with all adults in the labor force,203404,62677,34109,6956
+01/02/2024,Metro,Toddler,All households,29885,13324,6466,1298
+01/02/2024,Metro,Toddler,Households with all adults in the labor force,21659,10433,3623,1298
+01/02/2024,Metro Boston,Children Age 0-5,All households,46054,23814,19134,5636
+01/02/2024,Metro Boston,Children Age 0-5,Households with all adults in the labor force,36429,19175,13041,5636
+01/02/2024,Metro Boston,Infant,All households,10969,3194,4584,724
+01/02/2024,Metro Boston,Infant,Households with all adults in the labor force,8624,2595,3133,724
+01/02/2024,Metro Boston,Preschool,All households,22005,15214,9170,3003
+01/02/2024,Metro Boston,Preschool,Households with all adults in the labor force,17424,11977,6235,3003
+01/02/2024,Metro Boston,School Age,All households,58396,8211,29625,2535
+01/02/2024,Metro Boston,School Age,Households with all adults in the labor force,81373,25979,33439,8171
+01/02/2024,Metro Boston,Toddler,All households,13080,5406,5380,1909
+01/02/2024,Metro Boston,Toddler,Households with all adults in the labor force,10381,4603,3673,1909
+01/02/2024,Northeast MA,Children Age 0-5,All households,62080,34122,23958,8039
+01/02/2024,Northeast MA,Children Age 0-5,Households with all adults in the labor force,45599,27385,15729,8039
+01/02/2024,Northeast MA,Infant,All households,14502,4062,5606,938
+01/02/2024,Northeast MA,Infant,Households with all adults in the labor force,10731,3400,3746,938
+01/02/2024,Northeast MA,Preschool,All households,30271,22235,11692,4664
+01/02/2024,Northeast MA,Preschool,Households with all adults in the labor force,22177,17422,7658,4664
+01/02/2024,Northeast MA,School Age,All households,96689,13140,35198,5328
+01/02/2024,Northeast MA,School Age,Households with all adults in the labor force,121478,38830,40169,13367
+01/02/2024,Northeast MA,Toddler,All households,17307,7825,6660,2437
+01/02/2024,Northeast MA,Toddler,Households with all adults in the labor force,12691,6563,4325,2437
+01/02/2024,Southeast and Cape MA,Children Age 0-5,All households,68992,32727,25326,5982
+01/02/2024,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,52361,26151,15976,5982
+01/02/2024,Southeast and Cape MA,Infant,All households,16083,3565,6035,577
+01/02/2024,Southeast and Cape MA,Infant,Households with all adults in the labor force,12210,2908,3843,577
+01/02/2024,Southeast and Cape MA,Preschool,All households,33472,22348,12110,3720
+01/02/2024,Southeast and Cape MA,Preschool,Households with all adults in the labor force,25411,17587,7606,3720
+01/02/2024,Southeast and Cape MA,School Age,All households,112319,12185,40802,4345
+01/02/2024,Southeast and Cape MA,School Age,Households with all adults in the labor force,140207,36649,43076,10327
+01/02/2024,Southeast and Cape MA,Toddler,All households,19437,6814,7181,1685
+01/02/2024,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14740,5656,4527,1685
+01/02/2024,Western MA,Children Age 0-5,All households,41232,20573,20408,5114
+01/02/2024,Western MA,Children Age 0-5,Households with all adults in the labor force,29790,16453,12813,5114
+01/02/2024,Western MA,Infant,All households,9664,2075,4836,474
+01/02/2024,Western MA,Infant,Households with all adults in the labor force,6963,1784,3042,474
+01/02/2024,Western MA,Preschool,All households,20018,14387,9887,3077
+01/02/2024,Western MA,Preschool,Households with all adults in the labor force,14490,11075,6204,3077
+01/02/2024,Western MA,School Age,All households,65985,8277,33840,3781
+01/02/2024,Western MA,School Age,Households with all adults in the labor force,78312,23653,34168,8895
+01/02/2024,Western MA,Toddler,All households,11550,4111,5685,1563
+01/02/2024,Western MA,Toddler,Households with all adults in the labor force,8337,3594,3567,1563
+12/04/2023,Central MA,Children Age 0-5,All households,49431,22352,17564,4096
+12/04/2023,Central MA,Children Age 0-5,Households with all adults in the labor force,36527,17823,11038,4096
+12/04/2023,Central MA,Infant,All households,11673,2402,4179,466
+12/04/2023,Central MA,Infant,Households with all adults in the labor force,8602,2040,2632,466
+12/04/2023,Central MA,Preschool,All households,23567,15313,8349,2430
+12/04/2023,Central MA,Preschool,Households with all adults in the labor force,17489,11858,5262,2430
+12/04/2023,Central MA,School Age,All households,82000,6325,27733,2207
+12/04/2023,Central MA,School Age,Households with all adults in the labor force,100252,23228,29027,6303
+12/04/2023,Central MA,Toddler,All households,14191,4637,5036,1200
+12/04/2023,Central MA,Toddler,Households with all adults in the labor force,10436,3925,3144,1200
+12/04/2023,Metro,Children Age 0-5,All households,105124,56719,22375,4297
+12/04/2023,Metro,Children Age 0-5,Households with all adults in the labor force,76371,43474,12653,4297
+12/04/2023,Metro,Infant,All households,24977,6778,5336,459
+12/04/2023,Metro,Infant,Households with all adults in the labor force,18126,5335,3036,459
+12/04/2023,Metro,Preschool,All households,50135,36583,10535,2538
+12/04/2023,Metro,Preschool,Households with all adults in the labor force,36509,27706,5980,2538
+12/04/2023,Metro,School Age,All households,167766,20710,35251,2751
+12/04/2023,Metro,School Age,Households with all adults in the labor force,203674,59430,34727,7048
+12/04/2023,Metro,Toddler,All households,30012,13358,6504,1300
+12/04/2023,Metro,Toddler,Households with all adults in the labor force,21736,10433,3637,1300
+12/04/2023,Metro Boston,Children Age 0-5,All households,45150,22738,19014,5604
+12/04/2023,Metro Boston,Children Age 0-5,Households with all adults in the labor force,35662,18193,12988,5604
+12/04/2023,Metro Boston,Infant,All households,10983,3185,4602,731
+12/04/2023,Metro Boston,Infant,Households with all adults in the labor force,8637,2597,3135,731
+12/04/2023,Metro Boston,Preschool,All households,21170,14220,8980,2954
+12/04/2023,Metro Boston,Preschool,Households with all adults in the labor force,16720,11080,6090,2954
+12/04/2023,Metro Boston,School Age,All households,58938,7154,30201,2588
+12/04/2023,Metro Boston,School Age,Households with all adults in the labor force,81008,24219,33834,8192
+12/04/2023,Metro Boston,Toddler,All households,12997,5333,5432,1919
+12/04/2023,Metro Boston,Toddler,Households with all adults in the labor force,10305,4516,3763,1919
+12/04/2023,Northeast MA,Children Age 0-5,All households,61188,33202,24075,7992
+12/04/2023,Northeast MA,Children Age 0-5,Households with all adults in the labor force,44907,26566,15950,7992
+12/04/2023,Northeast MA,Infant,All households,14488,4045,5624,934
+12/04/2023,Northeast MA,Infant,Households with all adults in the labor force,10741,3391,3775,934
+12/04/2023,Northeast MA,Preschool,All households,29321,21480,11638,4587
+12/04/2023,Northeast MA,Preschool,Households with all adults in the labor force,21450,16761,7708,4587
+12/04/2023,Northeast MA,School Age,All households,97623,12483,36036,5526
+12/04/2023,Northeast MA,School Age,Households with all adults in the labor force,121536,37543,41139,13518
+12/04/2023,Northeast MA,Toddler,All households,17379,7677,6813,2471
+12/04/2023,Northeast MA,Toddler,Households with all adults in the labor force,12716,6414,4467,2471
+12/04/2023,Southeast and Cape MA,Children Age 0-5,All households,68066,32126,25404,5980
+12/04/2023,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,51622,25440,16113,5980
+12/04/2023,Southeast and Cape MA,Infant,All households,16086,3609,5999,614
+12/04/2023,Southeast and Cape MA,Infant,Households with all adults in the labor force,12214,2918,3828,614
+12/04/2023,Southeast and Cape MA,Preschool,All households,32573,21793,12124,3697
+12/04/2023,Southeast and Cape MA,Preschool,Households with all adults in the labor force,24661,16947,7644,3697
+12/04/2023,Southeast and Cape MA,School Age,All households,113259,10428,41617,4489
+12/04/2023,Southeast and Cape MA,School Age,Households with all adults in the labor force,140168,34585,43889,10469
+12/04/2023,Southeast and Cape MA,Toddler,All households,19407,6724,7281,1669
+12/04/2023,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14747,5575,4641,1669
+12/04/2023,Western MA,Children Age 0-5,All households,40638,20205,20356,5030
+12/04/2023,Western MA,Children Age 0-5,Households with all adults in the labor force,29350,16094,12870,5030
+12/04/2023,Western MA,Infant,All households,9689,2087,4834,486
+12/04/2023,Western MA,Infant,Households with all adults in the labor force,6964,1788,3039,486
+12/04/2023,Western MA,Preschool,All households,19480,14040,9812,2993
+12/04/2023,Western MA,Preschool,Households with all adults in the labor force,14091,10733,6228,2993
+12/04/2023,Western MA,School Age,All households,66611,8126,34427,3887
+12/04/2023,Western MA,School Age,Households with all adults in the labor force,78344,23201,34705,8917
+12/04/2023,Western MA,Toddler,All households,11469,4078,5710,1551
+12/04/2023,Western MA,Toddler,Households with all adults in the labor force,8295,3573,3603,1551
+11/01/2023,Central MA,Children Age 0-5,All households,48565,22098,17241,3985
+11/01/2023,Central MA,Children Age 0-5,Households with all adults in the labor force,35887,17586,10829,3985
+11/01/2023,Central MA,Infant,All households,11728,2384,4180,452
+11/01/2023,Central MA,Infant,Households with all adults in the labor force,8641,2018,2626,452
+11/01/2023,Central MA,Preschool,All households,22746,15088,8038,2345
+11/01/2023,Central MA,Preschool,Households with all adults in the labor force,16872,11642,5049,2345
+11/01/2023,Central MA,School Age,All households,82864,6579,28050,2247
+11/01/2023,Central MA,School Age,Households with all adults in the labor force,100251,23179,29020,6232
+11/01/2023,Central MA,Toddler,All households,14091,4626,5023,1188
+11/01/2023,Central MA,Toddler,Households with all adults in the labor force,10374,3926,3154,1188
+11/01/2023,Metro,Children Age 0-5,All households,103216,55875,21902,4109
+11/01/2023,Metro,Children Age 0-5,Households with all adults in the labor force,74883,42762,12326,4109
+11/01/2023,Metro,Infant,All households,24970,6783,5306,431
+11/01/2023,Metro,Infant,Households with all adults in the labor force,18119,5324,3002,431
+11/01/2023,Metro,Preschool,All households,48209,35788,10107,2437
+11/01/2023,Metro,Preschool,Households with all adults in the labor force,34966,27063,5711,2437
+11/01/2023,Metro,School Age,All households,169647,21110,35603,2709
+11/01/2023,Metro,School Age,Households with all adults in the labor force,203603,59014,34610,6818
+11/01/2023,Metro,Toddler,All households,30037,13304,6489,1241
+11/01/2023,Metro,Toddler,Households with all adults in the labor force,21798,10375,3613,1241
+11/01/2023,Metro Boston,Children Age 0-5,All households,44448,22442,18761,5406
+11/01/2023,Metro Boston,Children Age 0-5,Households with all adults in the labor force,35161,17929,12843,5406
+11/01/2023,Metro Boston,Infant,All households,10976,3168,4611,722
+11/01/2023,Metro Boston,Infant,Households with all adults in the labor force,8625,2578,3128,722
+11/01/2023,Metro Boston,Preschool,All households,20477,13985,8695,2862
+11/01/2023,Metro Boston,Preschool,Households with all adults in the labor force,16182,10877,5881,2862
+11/01/2023,Metro Boston,School Age,All households,59698,7285,30574,2553
+11/01/2023,Metro Boston,School Age,Households with all adults in the labor force,81092,24030,33955,7959
+11/01/2023,Metro Boston,Toddler,All households,12995,5289,5455,1822
+11/01/2023,Metro Boston,Toddler,Households with all adults in the labor force,10354,4474,3834,1822
+11/01/2023,Northeast MA,Children Age 0-5,All households,60070,32737,23641,7687
+11/01/2023,Northeast MA,Children Age 0-5,Households with all adults in the labor force,44092,26153,15673,7687
+11/01/2023,Northeast MA,Infant,All households,14478,4096,5624,935
+11/01/2023,Northeast MA,Infant,Households with all adults in the labor force,10684,3398,3761,935
+11/01/2023,Northeast MA,Preschool,All households,28261,21082,11202,4383
+11/01/2023,Northeast MA,Preschool,Households with all adults in the labor force,20669,16417,7409,4383
+11/01/2023,Northeast MA,School Age,All households,98693,12706,36450,5494
+11/01/2023,Northeast MA,School Age,Households with all adults in the labor force,121509,37276,41126,13181
+11/01/2023,Northeast MA,Toddler,All households,17331,7559,6815,2369
+11/01/2023,Northeast MA,Toddler,Households with all adults in the labor force,12739,6338,4503,2369
+11/01/2023,Southeast and Cape MA,Children Age 0-5,All households,66909,31923,24973,5782
+11/01/2023,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,50759,25221,15843,5782
+11/01/2023,Southeast and Cape MA,Infant,All households,16067,3621,5983,603
+11/01/2023,Southeast and Cape MA,Infant,Households with all adults in the labor force,12208,2941,3817,603
+11/01/2023,Southeast and Cape MA,Preschool,All households,31498,21548,11760,3531
+11/01/2023,Southeast and Cape MA,Preschool,Households with all adults in the labor force,23819,16711,7409,3531
+11/01/2023,Southeast and Cape MA,School Age,All households,114396,10663,42051,4438
+11/01/2023,Southeast and Cape MA,School Age,Households with all adults in the labor force,140152,34525,43885,10220
+11/01/2023,Southeast and Cape MA,Toddler,All households,19344,6754,7230,1648
+11/01/2023,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14732,5569,4617,1648
+11/01/2023,Western MA,Children Age 0-5,All households,39958,19976,20043,4833
+11/01/2023,Western MA,Children Age 0-5,Households with all adults in the labor force,28856,15850,12666,4833
+11/01/2023,Western MA,Infant,All households,9708,2109,4824,486
+11/01/2023,Western MA,Infant,Households with all adults in the labor force,6989,1805,3041,486
+11/01/2023,Western MA,Preschool,All households,18756,13828,9480,2838
+11/01/2023,Western MA,Preschool,Households with all adults in the labor force,13539,10546,6005,2838
+11/01/2023,Western MA,School Age,All households,67330,8172,34764,3883
+11/01/2023,Western MA,School Age,Households with all adults in the labor force,78376,22993,34725,8716
+11/01/2023,Western MA,Toddler,All households,11494,4039,5739,1509
+11/01/2023,Western MA,Toddler,Households with all adults in the labor force,8328,3499,3620,1509
+10/02/2023,Central MA,Children Age 0-5,All households,47847,21894,16958,3805
+10/02/2023,Central MA,Children Age 0-5,Households with all adults in the labor force,35349,17338,10659,3805
+10/02/2023,Central MA,Infant,All households,11729,2396,4180,445
+10/02/2023,Central MA,Infant,Households with all adults in the labor force,8631,2036,2624,445
+10/02/2023,Central MA,Preschool,All households,22035,14933,7742,2214
+10/02/2023,Central MA,Preschool,Households with all adults in the labor force,16302,11446,4846,2214
+10/02/2023,Central MA,School Age,All households,83621,6757,28331,2249
+10/02/2023,Central MA,School Age,Households with all adults in the labor force,100289,23071,29024,6054
+10/02/2023,Central MA,Toddler,All households,14083,4565,5036,1146
+10/02/2023,Central MA,Toddler,Households with all adults in the labor force,10416,3856,3189,1146
+10/02/2023,Metro,Children Age 0-5,All households,101403,54786,21557,3895
+10/02/2023,Metro,Children Age 0-5,Households with all adults in the labor force,73570,41913,12167,3895
+10/02/2023,Metro,Infant,All households,24915,6711,5333,423
+10/02/2023,Metro,Infant,Households with all adults in the labor force,18084,5253,3013,423
+10/02/2023,Metro,Preschool,All households,46418,35000,9769,2288
+10/02/2023,Metro,Preschool,Households with all adults in the labor force,33701,26442,5540,2288
+10/02/2023,Metro,School Age,All households,171360,21890,35984,2686
+10/02/2023,Metro,School Age,Households with all adults in the labor force,203549,58738,34665,6581
+10/02/2023,Metro,Toddler,All households,30070,13075,6455,1184
+10/02/2023,Metro,Toddler,Households with all adults in the labor force,21785,10218,3614,1184
+10/02/2023,Metro Boston,Children Age 0-5,All households,43926,22158,18461,5201
+10/02/2023,Metro Boston,Children Age 0-5,Households with all adults in the labor force,34717,17645,12606,5201
+10/02/2023,Metro Boston,Infant,All households,10988,3121,4550,689
+10/02/2023,Metro Boston,Infant,Households with all adults in the labor force,8642,2539,3070,689
+10/02/2023,Metro Boston,Preschool,All households,19890,13789,8455,2747
+10/02/2023,Metro Boston,Preschool,Households with all adults in the labor force,15697,10682,5720,2747
+10/02/2023,Metro Boston,School Age,All households,60344,7240,30821,2527
+10/02/2023,Metro Boston,School Age,Households with all adults in the labor force,81159,23725,33888,7728
+10/02/2023,Metro Boston,Toddler,All households,13048,5248,5456,1765
+10/02/2023,Metro Boston,Toddler,Households with all adults in the labor force,10378,4424,3816,1765
+10/02/2023,Northeast MA,Children Age 0-5,All households,59087,32156,23268,7363
+10/02/2023,Northeast MA,Children Age 0-5,Households with all adults in the labor force,43357,25571,15422,7363
+10/02/2023,Northeast MA,Infant,All households,14397,3967,5589,868
+10/02/2023,Northeast MA,Infant,Households with all adults in the labor force,10614,3301,3721,868
+10/02/2023,Northeast MA,Preschool,All households,27401,20641,10825,4196
+10/02/2023,Northeast MA,Preschool,Households with all adults in the labor force,20050,15971,7160,4196
+10/02/2023,Northeast MA,School Age,All households,99615,12952,36838,5525
+10/02/2023,Northeast MA,School Age,Households with all adults in the labor force,121449,36899,41134,12888
+10/02/2023,Northeast MA,Toddler,All households,17289,7548,6854,2299
+10/02/2023,Northeast MA,Toddler,Households with all adults in the labor force,12693,6299,4541,2299
+10/02/2023,Southeast and Cape MA,Children Age 0-5,All households,65946,31374,24584,5520
+10/02/2023,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,50030,24731,15590,5520
+10/02/2023,Southeast and Cape MA,Infant,All households,16082,3556,5981,581
+10/02/2023,Southeast and Cape MA,Infant,Households with all adults in the labor force,12249,2898,3835,581
+10/02/2023,Southeast and Cape MA,Preschool,All households,30472,21162,11315,3331
+10/02/2023,Southeast and Cape MA,Preschool,Households with all adults in the labor force,23074,16369,7120,3331
+10/02/2023,Southeast and Cape MA,School Age,All households,115346,11461,42425,4330
+10/02/2023,Southeast and Cape MA,School Age,Households with all adults in the labor force,140142,34556,43861,9850
+10/02/2023,Southeast and Cape MA,Toddler,All households,19392,6656,7288,1608
+10/02/2023,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14707,5464,4635,1608
+10/02/2023,Western MA,Children Age 0-5,All households,39334,19722,19727,4627
+10/02/2023,Western MA,Children Age 0-5,Households with all adults in the labor force,28412,15571,12469,4627
+10/02/2023,Western MA,Infant,All households,9718,2085,4823,489
+10/02/2023,Western MA,Infant,Households with all adults in the labor force,7024,1783,3049,489
+10/02/2023,Western MA,Preschool,All households,18131,13680,9146,2691
+10/02/2023,Western MA,Preschool,Households with all adults in the labor force,13128,10342,5806,2691
+10/02/2023,Western MA,School Age,All households,67964,8458,35099,3846
+10/02/2023,Western MA,School Age,Households with all adults in the labor force,78393,22907,34749,8473
+10/02/2023,Western MA,Toddler,All households,11485,3957,5758,1447
+10/02/2023,Western MA,Toddler,Households with all adults in the labor force,8260,3446,3614,1447
+09/01/2023,Central MA,Children Age 0-5,All households,47073,21377,16687,3771
+09/01/2023,Central MA,Children Age 0-5,Households with all adults in the labor force,34758,16924,10485,3771
+09/01/2023,Central MA,Infant,All households,11797,2304,4235,440
+09/01/2023,Central MA,Infant,Households with all adults in the labor force,8675,1951,2643,440
+09/01/2023,Central MA,Preschool,All households,21255,14582,7476,2194
+09/01/2023,Central MA,Preschool,Households with all adults in the labor force,15709,11160,4686,2194
+09/01/2023,Central MA,School Age,All households,84404,7349,28595,2254
+09/01/2023,Central MA,School Age,Households with all adults in the labor force,100301,23094,29024,6025
+09/01/2023,Central MA,Toddler,All households,14021,4491,4976,1137
+09/01/2023,Central MA,Toddler,Households with all adults in the labor force,10374,3813,3156,1137
+09/01/2023,Metro,Children Age 0-5,All households,99628,53255,21020,3857
+09/01/2023,Metro,Children Age 0-5,Households with all adults in the labor force,72314,40773,11874,3857
+09/01/2023,Metro,Infant,All households,24787,6336,5309,413
+09/01/2023,Metro,Infant,Households with all adults in the labor force,17983,4961,2982,413
+09/01/2023,Metro,Preschool,All households,44703,34377,9303,2264
+09/01/2023,Metro,Preschool,Households with all adults in the labor force,32465,25961,5288,2264
+09/01/2023,Metro,School Age,All households,173033,23161,36387,2671
+09/01/2023,Metro,School Age,Households with all adults in the labor force,203501,58524,34627,6528
+09/01/2023,Metro,Toddler,All households,30138,12542,6408,1180
+09/01/2023,Metro,Toddler,Households with all adults in the labor force,21866,9851,3604,1180
+09/01/2023,Metro Boston,Children Age 0-5,All households,43301,21763,18296,5173
+09/01/2023,Metro Boston,Children Age 0-5,Households with all adults in the labor force,34219,17333,12455,5173
+09/01/2023,Metro Boston,Infant,All households,11053,3091,4594,684
+09/01/2023,Metro Boston,Infant,Households with all adults in the labor force,8715,2517,3124,684
+09/01/2023,Metro Boston,Preschool,All households,19149,13542,8234,2724
+09/01/2023,Metro Boston,Preschool,Households with all adults in the labor force,15146,10515,5566,2724
+09/01/2023,Metro Boston,School Age,All households,61057,7483,31118,2512
+09/01/2023,Metro Boston,School Age,Households with all adults in the labor force,81235,23573,33927,7685
+09/01/2023,Metro Boston,Toddler,All households,13099,5130,5468,1765
+09/01/2023,Metro Boston,Toddler,Households with all adults in the labor force,10358,4301,3765,1765
+09/01/2023,Northeast MA,Children Age 0-5,All households,58095,31370,22859,7318
+09/01/2023,Northeast MA,Children Age 0-5,Households with all adults in the labor force,42614,24933,15164,7318
+09/01/2023,Northeast MA,Infant,All households,14389,3819,5591,862
+09/01/2023,Northeast MA,Infant,Households with all adults in the labor force,10584,3163,3707,862
+09/01/2023,Northeast MA,Preschool,All households,26354,20179,10383,4156
+09/01/2023,Northeast MA,Preschool,Households with all adults in the labor force,19285,15586,6876,4156
+09/01/2023,Northeast MA,School Age,All households,100594,13649,37219,5529
+09/01/2023,Northeast MA,School Age,Households with all adults in the labor force,121416,36785,41119,12847
+09/01/2023,Northeast MA,Toddler,All households,17352,7372,6885,2300
+09/01/2023,Northeast MA,Toddler,Households with all adults in the labor force,12745,6184,4581,2300
+09/01/2023,Southeast and Cape MA,Children Age 0-5,All households,64874,30620,24237,5507
+09/01/2023,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,49203,24099,15364,5507
+09/01/2023,Southeast and Cape MA,Infant,All households,16141,3499,6006,577
+09/01/2023,Southeast and Cape MA,Infant,Households with all adults in the labor force,12322,2840,3863,577
+09/01/2023,Southeast and Cape MA,Preschool,All households,29374,20671,10949,3321
+09/01/2023,Southeast and Cape MA,Preschool,Households with all adults in the labor force,22233,15936,6886,3321
+09/01/2023,Southeast and Cape MA,School Age,All households,116457,12376,42827,4338
+09/01/2023,Southeast and Cape MA,School Age,Households with all adults in the labor force,140154,34613,43890,9845
+09/01/2023,Southeast and Cape MA,Toddler,All households,19359,6450,7282,1609
+09/01/2023,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14648,5323,4615,1609
+09/01/2023,Western MA,Children Age 0-5,All households,38678,19367,19388,4629
+09/01/2023,Western MA,Children Age 0-5,Households with all adults in the labor force,27935,15271,12254,4629
+09/01/2023,Western MA,Infant,All households,9758,1980,4845,490
+09/01/2023,Western MA,Infant,Households with all adults in the labor force,7045,1709,3053,490
+09/01/2023,Western MA,Preschool,All households,17484,13521,8825,2676
+09/01/2023,Western MA,Preschool,Households with all adults in the labor force,12638,10173,5585,2676
+09/01/2023,Western MA,School Age,All households,68599,9099,35420,3837
+09/01/2023,Western MA,School Age,Households with all adults in the labor force,78374,23059,34734,8466
+09/01/2023,Western MA,Toddler,All households,11436,3866,5718,1463
+09/01/2023,Western MA,Toddler,Households with all adults in the labor force,8252,3389,3616,1463
+08/01/2023,Central MA,Children Age 0-5,All households,55520,23397,19745,4340
+08/01/2023,Central MA,Children Age 0-5,Households with all adults in the labor force,40987,18578,12406,4340
+08/01/2023,Central MA,Infant,All households,11695,2263,4169,383
+08/01/2023,Central MA,Infant,Households with all adults in the labor force,8628,1909,2633,383
+08/01/2023,Central MA,Preschool,All households,29681,16745,10552,2843
+08/01/2023,Central MA,Preschool,Households with all adults in the labor force,21920,12957,6631,2843
+08/01/2023,Central MA,School Age,All households,75776,5683,25481,2096
+08/01/2023,Central MA,School Age,Households with all adults in the labor force,100112,23410,28954,6436
+08/01/2023,Central MA,Toddler,All households,14144,4389,5024,1114
+08/01/2023,Central MA,Toddler,Households with all adults in the labor force,10439,3712,3142,1114
+08/01/2023,Metro,Children Age 0-5,All households,118806,59674,25156,4278
+08/01/2023,Metro,Children Age 0-5,Households with all adults in the labor force,86215,45643,14152,4278
+08/01/2023,Metro,Infant,All households,24836,6326,5313,357
+08/01/2023,Metro,Infant,Households with all adults in the labor force,18026,4997,2993,357
+08/01/2023,Metro,Preschool,All households,63825,40998,13508,2830
+08/01/2023,Metro,Preschool,Households with all adults in the labor force,46364,31015,7643,2830
+08/01/2023,Metro,School Age,All households,154240,16758,32388,2379
+08/01/2023,Metro,School Age,Households with all adults in the labor force,203764,58565,34607,6657
+08/01/2023,Metro,Toddler,All households,30145,12350,6335,1091
+08/01/2023,Metro,Toddler,Households with all adults in the labor force,21825,9631,3516,1091
+08/01/2023,Metro Boston,Children Age 0-5,All households,50667,23659,21460,5854
+08/01/2023,Metro Boston,Children Age 0-5,Households with all adults in the labor force,39971,19049,14659,5854
+08/01/2023,Metro Boston,Infant,All households,11041,3028,4650,605
+08/01/2023,Metro Boston,Infant,Households with all adults in the labor force,8691,2475,3172,605
+08/01/2023,Metro Boston,Preschool,All households,26603,15668,11370,3523
+08/01/2023,Metro Boston,Preschool,Households with all adults in the labor force,20985,12405,7753,3523
+08/01/2023,Metro Boston,School Age,All households,53435,6488,27830,2346
+08/01/2023,Metro Boston,School Age,Households with all adults in the labor force,80960,24459,33892,8200
+08/01/2023,Metro Boston,Toddler,All households,13023,4963,5440,1726
+08/01/2023,Metro Boston,Toddler,Households with all adults in the labor force,10295,4169,3734,1726
+08/01/2023,Northeast MA,Children Age 0-5,All households,68771,34414,26993,8256
+08/01/2023,Northeast MA,Children Age 0-5,Households with all adults in the labor force,50605,27681,17876,8256
+08/01/2023,Northeast MA,Infant,All households,14377,3725,5608,790
+08/01/2023,Northeast MA,Infant,Households with all adults in the labor force,10578,3071,3703,790
+08/01/2023,Northeast MA,Preschool,All households,37040,23468,14535,5216
+08/01/2023,Northeast MA,Preschool,Households with all adults in the labor force,27271,18563,9596,5216
+08/01/2023,Northeast MA,School Age,All households,90173,11020,33148,4858
+08/01/2023,Northeast MA,School Age,Households with all adults in the labor force,121718,37311,41153,13114
+08/01/2023,Northeast MA,Toddler,All households,17354,7221,6850,2250
+08/01/2023,Northeast MA,Toddler,Households with all adults in the labor force,12756,6047,4577,2250
+08/01/2023,Southeast and Cape MA,Children Age 0-5,All households,76443,33640,28549,6391
+08/01/2023,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,58001,26679,18156,6391
+08/01/2023,Southeast and Cape MA,Infant,All households,16190,3440,6049,513
+08/01/2023,Southeast and Cape MA,Infant,Households with all adults in the labor force,12350,2774,3883,513
+08/01/2023,Southeast and Cape MA,Preschool,All households,40890,23930,15223,4352
+08/01/2023,Southeast and Cape MA,Preschool,Households with all adults in the labor force,31001,18742,9660,4352
+08/01/2023,Southeast and Cape MA,School Age,All households,104666,9710,38481,4308
+08/01/2023,Southeast and Cape MA,School Age,Households with all adults in the labor force,140037,35141,43971,10699
+08/01/2023,Southeast and Cape MA,Toddler,All households,19363,6270,7277,1526
+08/01/2023,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14650,5163,4613,1526
+08/01/2023,Western MA,Children Age 0-5,All households,45804,21291,22980,5433
+08/01/2023,Western MA,Children Age 0-5,Households with all adults in the labor force,33097,16994,14535,5433
+08/01/2023,Western MA,Infant,All households,9718,1920,4828,462
+08/01/2023,Western MA,Infant,Households with all adults in the labor force,7002,1662,3030,462
+08/01/2023,Western MA,Preschool,All households,24634,15605,12405,3560
+08/01/2023,Western MA,Preschool,Households with all adults in the labor force,17835,12052,7862,3560
+08/01/2023,Western MA,School Age,All households,61493,7843,31842,3565
+08/01/2023,Western MA,School Age,Households with all adults in the labor force,78391,23743,34744,8998
+08/01/2023,Western MA,Toddler,All households,11452,3766,5747,1411
+08/01/2023,Western MA,Toddler,Households with all adults in the labor force,8260,3280,3643,1411
+07/03/2023,Central MA,Children Age 0-5,All households,54869,23309,19513,4243
+07/03/2023,Central MA,Children Age 0-5,Households with all adults in the labor force,40502,18515,12257,4243
+07/03/2023,Central MA,Infant,All households,11680,2272,4189,356
+07/03/2023,Central MA,Infant,Households with all adults in the labor force,8611,1903,2639,356
+07/03/2023,Central MA,Preschool,All households,28970,16594,10286,2764
+07/03/2023,Central MA,Preschool,Households with all adults in the labor force,21409,12863,6464,2764
+07/03/2023,Central MA,School Age,All households,76443,5535,25733,2054
+07/03/2023,Central MA,School Age,Households with all adults in the labor force,100115,23243,28962,6297
+07/03/2023,Central MA,Toddler,All households,14219,4443,5038,1123
+07/03/2023,Central MA,Toddler,Households with all adults in the labor force,10482,3749,3154,1123
+07/03/2023,Metro,Children Age 0-5,All households,117207,60044,24914,4205
+07/03/2023,Metro,Children Age 0-5,Households with all adults in the labor force,85087,45954,13959,4205
+07/03/2023,Metro,Infant,All households,24849,6406,5309,359
+07/03/2023,Metro,Infant,Households with all adults in the labor force,18013,5033,2987,359
+07/03/2023,Metro,Preschool,All households,62240,41021,13208,2737
+07/03/2023,Metro,Preschool,Households with all adults in the labor force,45250,31081,7419,2737
+07/03/2023,Metro,School Age,All households,155934,17400,32738,2404
+07/03/2023,Metro,School Age,Households with all adults in the labor force,203861,59392,34611,6609
+07/03/2023,Metro,Toddler,All households,30118,12617,6397,1109
+07/03/2023,Metro,Toddler,Households with all adults in the labor force,21824,9840,3553,1109
+07/03/2023,Metro Boston,Children Age 0-5,All households,49887,23729,21111,5809
+07/03/2023,Metro Boston,Children Age 0-5,Households with all adults in the labor force,39378,19127,14463,5809
+07/03/2023,Metro Boston,Infant,All households,10998,3038,4631,644
+07/03/2023,Metro Boston,Infant,Households with all adults in the labor force,8658,2480,3163,644
+07/03/2023,Metro Boston,Preschool,All households,25906,15663,11046,3450
+07/03/2023,Metro Boston,Preschool,Households with all adults in the labor force,20462,12421,7561,3450
+07/03/2023,Metro Boston,School Age,All households,54030,6281,28113,2351
+07/03/2023,Metro Boston,School Age,Households with all adults in the labor force,80825,24400,33890,8160
+07/03/2023,Metro Boston,Toddler,All households,12983,5028,5434,1715
+07/03/2023,Metro Boston,Toddler,Households with all adults in the labor force,10258,4226,3739,1715
+07/03/2023,Northeast MA,Children Age 0-5,All households,67970,34551,26651,8156
+07/03/2023,Northeast MA,Children Age 0-5,Households with all adults in the labor force,50009,27738,17675,8156
+07/03/2023,Northeast MA,Infant,All households,14438,3884,5625,813
+07/03/2023,Northeast MA,Infant,Households with all adults in the labor force,10647,3183,3722,813
+07/03/2023,Northeast MA,Preschool,All households,36117,23401,14131,5093
+07/03/2023,Northeast MA,Preschool,Households with all adults in the labor force,26573,18503,9331,5093
+07/03/2023,Northeast MA,School Age,All households,91005,11093,33507,4841
+07/03/2023,Northeast MA,School Age,Households with all adults in the labor force,121727,37403,41198,12997
+07/03/2023,Northeast MA,Toddler,All households,17415,7266,6895,2250
+07/03/2023,Northeast MA,Toddler,Households with all adults in the labor force,12789,6052,4622,2250
+07/03/2023,Southeast and Cape MA,Children Age 0-5,All households,75421,33526,28099,6345
+07/03/2023,Southeast and Cape MA,Children Age 0-5,Households with all adults in the labor force,57226,26594,17875,6345
+07/03/2023,Southeast and Cape MA,Infant,All households,16183,3461,6018,516
+07/03/2023,Southeast and Cape MA,Infant,Households with all adults in the labor force,12332,2800,3861,516
+07/03/2023,Southeast and Cape MA,Preschool,All households,39902,23735,14830,4258
+07/03/2023,Southeast and Cape MA,Preschool,Households with all adults in the labor force,30223,18596,9423,4258
+07/03/2023,Southeast and Cape MA,School Age,All households,105744,9610,38863,4210
+07/03/2023,Southeast and Cape MA,School Age,Households with all adults in the labor force,140074,34993,43926,10555
+07/03/2023,Southeast and Cape MA,Toddler,All households,19336,6330,7251,1571
+07/03/2023,Southeast and Cape MA,Toddler,Households with all adults in the labor force,14671,5198,4591,1571
+07/03/2023,Western MA,Children Age 0-5,All households,45172,21241,22675,5358
+07/03/2023,Western MA,Children Age 0-5,Households with all adults in the labor force,32627,16922,14334,5358
+07/03/2023,Western MA,Infant,All households,9646,1918,4796,458
+07/03/2023,Western MA,Infant,Households with all adults in the labor force,6926,1651,3001,458
+07/03/2023,Western MA,Preschool,All households,23989,15505,12109,3507
+07/03/2023,Western MA,Preschool,Households with all adults in the labor force,17344,11972,7668,3507
+07/03/2023,Western MA,School Age,All households,62112,7480,32136,3431
+07/03/2023,Western MA,School Age,Households with all adults in the labor force,78379,23390,34734,8789
+07/03/2023,Western MA,Toddler,All households,11537,3818,5770,1393
+07/03/2023,Western MA,Toddler,Households with all adults in the labor force,8357,3299,3665,1393

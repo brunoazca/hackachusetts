@@ -1,0 +1,814 @@
+{
+ "extent": {
+  "ymin": 777616.85759999999,
+  "xmin": 44757.2501000017,
+  "ymax": 957512.638099998,
+  "xmax": 330362.799400002,
+  "spatialReference": {
+   "falseM": -100000,
+   "xyTolerance": 0.001,
+   "mUnits": 10000,
+   "zUnits": 1,
+   "latestWkid": 26986,
+   "zTolerance": 2,
+   "wkid": 26986,
+   "xyUnits": 122610652.811951116,
+   "mTolerance": 0.001,
+   "falseX": -36530900,
+   "falseY": -28803200,
+   "falseZ": 0
+  }
+ },
+ "maxRecordCount": 2000,
+ "datesInUnknownTimezone": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "type": "Feature Layer",
+ "maxSelectionCount": 2000,
+ "subtypes": [],
+ "relationships": [],
+ "cimVersion": "3.7.0",
+ "isDataArchived": false,
+ "id": 0,
+ "archivingInfo": {
+  "startArchivingMoment": -1,
+  "supportsQueryWithHistoricMoment": false
+ },
+ "spatialReference": {
+  "falseM": -100000,
+  "xyTolerance": 0.001,
+  "mUnits": 10000,
+  "zUnits": 1,
+  "latestWkid": 26986,
+  "zTolerance": 2,
+  "wkid": 26986,
+  "xyUnits": 122610652.811951116,
+  "mTolerance": 0.001,
+  "falseX": -36530900,
+  "falseY": -28803200,
+  "falseZ": 0
+ },
+ "subtypeFieldName": null,
+ "supportsStatistics": true,
+ "hasLastEditTime": false,
+ "standardMaxRecordCount": 4000,
+ "isDataVersioned": false,
+ "hasGeometryProperties": true,
+ "supportsAdvancedQueries": true,
+ "parentLayer": null,
+ "subLayers": [],
+ "currentVersion": 12.1,
+ "canScaleSymbols": false,
+ "name": "Environmental Justice Populations 2020",
+ "displayField": "GEOGRAPHICAREANAME",
+ "fields": [
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "GEOGRAPHICAREANAME",
+   "length": 255,
+   "alias": "Geographic Area Name",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "GEOID",
+   "length": 12,
+   "alias": "GEO ID",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "SPLIT_FOR_MUNI",
+   "length": 1,
+   "alias": "Split for Municipality",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "MUNICIPALITY",
+   "length": 30,
+   "alias": "Municipality",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "TOTAL_POP",
+   "alias": "Total Poputation",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "NONHISPWHITE_ALONE",
+   "alias": "Non-Hispanic White Alone",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "PCT_MINORITY",
+   "alias": "Percent Minority",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "TOTALHH",
+   "alias": "Total Number of Households",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "LIMENGHH",
+   "alias": "Limited English Households",
+   "type": "esriFieldTypeSmallInteger"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "LIMENGHHPCT",
+   "alias": "Percent of Limited English Households",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "BG_MHHI",
+   "alias": "Block Group Median 2020 Household Income",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "BG_MHHI_PCT_MAHHI",
+   "alias": "Block Group 2020 MHHI as Pct. 2020 HH Income",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "BG_MHHI_IS_2019",
+   "alias": "BG_MHHI_is_2019",
+   "type": "esriFieldTypeSmallInteger"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "MUNI_MHHI",
+   "alias": "Municipality MHHI",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "MUNIMHHI_PCT_MAHHI",
+   "alias": "Municipality MHHI as Pct of MAHHI",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "MEDIANHHI",
+   "length": 1,
+   "alias": "Median Household Income",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "LIMITEDENGLISH",
+   "length": 1,
+   "alias": "Limited Household English",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "MINORITY_POPULATION",
+   "length": 1,
+   "alias": "Minority Population",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "EJ",
+   "length": 3,
+   "alias": "EJ",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "EJ_CRITERIA",
+   "length": 5,
+   "alias": "EJ Criteria",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "EJ_CRITERIA_COUNT",
+   "alias": "EJ Criteria Count",
+   "type": "esriFieldTypeSmallInteger"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "EJ_CRIT_DESC",
+   "length": 45,
+   "alias": "EJ Criteria Description",
+   "type": "esriFieldTypeString"
+  },
+  {
+   "nullable": false,
+   "domain": null,
+   "name": "OBJECTID",
+   "alias": "OBJECTID",
+   "type": "esriFieldTypeOID"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "SHAPE",
+   "alias": "SHAPE",
+   "type": "esriFieldTypeGeometry"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "SHAPE.AREA",
+   "alias": "SHAPE.AREA",
+   "type": "esriFieldTypeDouble"
+  },
+  {
+   "nullable": true,
+   "domain": null,
+   "name": "SHAPE.LEN",
+   "alias": "SHAPE.LEN",
+   "type": "esriFieldTypeDouble"
+  }
+ ],
+ "maxRecordCountFactor": 1,
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "useStandardizedQueries": true,
+ "sourceSpatialReference": {
+  "falseM": 0,
+  "xyTolerance": 0.001,
+  "mUnits": 1,
+  "zUnits": 1,
+  "latestWkid": 26986,
+  "zTolerance": 0.001,
+  "wkid": 26986,
+  "xyUnits": 10000,
+  "mTolerance": 0.001,
+  "falseX": -36530900,
+  "falseY": -28803200,
+  "falseZ": 0
+ },
+ "description": "",
+ "canModifyLayer": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "geometryProperties": {
+  "shapeAreaFieldName": "SHAPE.AREA",
+  "shapeLengthFieldName": "SHAPE.LEN",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "standardMaxRecordCountNoGeometry": 32000,
+ "indexes": [
+  {
+   "name": "R972308_SDE_ROWID_UK",
+   "isUnique": true,
+   "description": "",
+   "fields": "OBJECTID",
+   "isAscending": true
+  },
+  {
+   "name": "A39415_IX1",
+   "isUnique": true,
+   "description": "",
+   "fields": "SHAPE",
+   "isAscending": true
+  }
+ ],
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "supportsDatumTransformation": true,
+ "minScale": 3000000,
+ "supportsDynamicLegends": true,
+ "hasAttachments": false,
+ "advancedQueryCapabilities": {
+  "supportsSqlExpression": true,
+  "supportsQueryWithResultType": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsSqlFormat": false,
+  "useStandardizedQueries": true,
+  "supportsResultPaginationToken": false,
+  "supportsQueryWithCacheHint": false,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsCurrentUserQueries": true,
+  "supportsQueryWithLodSR": false,
+  "supportsPagination": true,
+  "supportsMaxRecordCountFactor": false,
+  "supportsStatistics": true,
+  "supportsTrueCurve": true,
+  "supportsOrderBy": true,
+  "supportsLod": false,
+  "supportsQueryWithDistance": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsReturningQueryExtent": true,
+  "supportsDistinct": true,
+  "supportsTimeRelation": true,
+  "supportsQueryAnalytic": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true
+ },
+ "subtypeField": null,
+ "supportsCoordinatesQuantization": true,
+ "capabilities": "Map,Query,Data",
+ "maxScale": 0,
+ "supportsExceedsLimitStatistics": true,
+ "defaultVisibility": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsAsync": false,
+  "supportsLinearRegression": true,
+  "supportsPercentileAnalytic": true
+ },
+ "hasMetadata": true,
+ "tileMaxRecordCount": 4000,
+ "typeIdField": null,
+ "defaultSubtypeCode": null,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "hasLabels": false,
+ "drawingInfo": {
+  "renderer": {
+   "uniqueValueGroups": [{
+    "heading": "EJ Criteria",
+    "classes": [
+     {
+      "symbol": {
+       "outline": null,
+       "color": [
+        255,
+        213,
+        0,
+        255
+       ],
+       "style": "esriSFSSolid",
+       "type": "esriSFS"
+      },
+      "values": [["M"]],
+      "description": "Minority",
+      "label": "Minority"
+     },
+     {
+      "symbol": {
+       "outline": null,
+       "color": [
+        85,
+        255,
+        0,
+        255
+       ],
+       "style": "esriSFSSolid",
+       "type": "esriSFS"
+      },
+      "values": [["I"]],
+      "description": "Income",
+      "label": "Income"
+     },
+     {
+      "symbol": {
+       "outline": null,
+       "color": [
+        115,
+        178,
+        255,
+        255
+       ],
+       "style": "esriSFSSolid",
+       "type": "esriSFS"
+      },
+      "values": [["E"]],
+      "description": "English isolation",
+      "label": "English isolation"
+     },
+     {
+      "symbol": {
+       "outline": null,
+       "color": [
+        148,
+        194,
+        56,
+        255
+       ],
+       "style": "esriSFSSolid",
+       "type": "esriSFS"
+      },
+      "values": [["MI"]],
+      "description": "Minority and Income",
+      "label": "Minority and Income"
+     },
+     {
+      "symbol": {
+       "outline": null,
+       "color": [
+        230,
+        0,
+        169,
+        255
+       ],
+       "style": "esriSFSSolid",
+       "type": "esriSFS"
+      },
+      "values": [["ME"]],
+      "description": "Minority and English isolation",
+      "label": "Minority and English isolation"
+     },
+     {
+      "symbol": {
+       "outline": null,
+       "color": [
+        0,
+        209,
+        209,
+        255
+       ],
+       "style": "esriSFSSolid",
+       "type": "esriSFS"
+      },
+      "values": [["IE"]],
+      "description": "Income and English isolation",
+      "label": "Income and English isolation"
+     },
+     {
+      "symbol": {
+       "outline": null,
+       "color": [
+        47,
+        45,
+        186,
+        255
+       ],
+       "style": "esriSFSSolid",
+       "type": "esriSFS"
+      },
+      "values": [["MIE"]],
+      "description": "Minority, Income and English isolation",
+      "label": "Minority, Income and English isolation"
+     }
+    ]
+   }],
+   "field1": "EJ_CRITERIA",
+   "authoringInfo": {"colorRamp": {
+    "colorRamps": [
+     {
+      "toColor": [
+       240,
+       252,
+       204,
+       255
+      ],
+      "fromColor": [
+       240,
+       252,
+       204,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       179,
+       252,
+       255
+      ],
+      "fromColor": [
+       252,
+       179,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       189,
+       223,
+       252,
+       255
+      ],
+      "fromColor": [
+       189,
+       223,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       190,
+       184,
+       255
+      ],
+      "fromColor": [
+       252,
+       190,
+       184,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       190,
+       184,
+       252,
+       255
+      ],
+      "fromColor": [
+       190,
+       184,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       179,
+       252,
+       222,
+       255
+      ],
+      "fromColor": [
+       179,
+       252,
+       222,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       215,
+       252,
+       255
+      ],
+      "fromColor": [
+       252,
+       215,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       215,
+       252,
+       251,
+       255
+      ],
+      "fromColor": [
+       215,
+       252,
+       251,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       200,
+       252,
+       189,
+       255
+      ],
+      "fromColor": [
+       200,
+       252,
+       189,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       226,
+       204,
+       255
+      ],
+      "fromColor": [
+       252,
+       226,
+       204,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       179,
+       217,
+       255
+      ],
+      "fromColor": [
+       252,
+       179,
+       217,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       252,
+       199,
+       222,
+       255
+      ],
+      "fromColor": [
+       252,
+       199,
+       222,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     },
+     {
+      "toColor": [
+       236,
+       194,
+       252,
+       255
+      ],
+      "fromColor": [
+       236,
+       194,
+       252,
+       255
+      ],
+      "type": "algorithmic",
+      "algorithm": "esriCIELabAlgorithm"
+     }
+    ],
+    "type": "multipart"
+   }},
+   "uniqueValueInfos": [
+    {
+     "symbol": {
+      "outline": null,
+      "color": [
+       255,
+       213,
+       0,
+       255
+      ],
+      "style": "esriSFSSolid",
+      "type": "esriSFS"
+     },
+     "label": "Minority",
+     "value": "M"
+    },
+    {
+     "symbol": {
+      "outline": null,
+      "color": [
+       85,
+       255,
+       0,
+       255
+      ],
+      "style": "esriSFSSolid",
+      "type": "esriSFS"
+     },
+     "label": "Income",
+     "value": "I"
+    },
+    {
+     "symbol": {
+      "outline": null,
+      "color": [
+       115,
+       178,
+       255,
+       255
+      ],
+      "style": "esriSFSSolid",
+      "type": "esriSFS"
+     },
+     "label": "English isolation",
+     "value": "E"
+    },
+    {
+     "symbol": {
+      "outline": null,
+      "color": [
+       148,
+       194,
+       56,
+       255
+      ],
+      "style": "esriSFSSolid",
+      "type": "esriSFS"
+     },
+     "label": "Minority and Income",
+     "value": "MI"
+    },
+    {
+     "symbol": {
+      "outline": null,
+      "color": [
+       230,
+       0,
+       169,
+       255
+      ],
+      "style": "esriSFSSolid",
+      "type": "esriSFS"
+     },
+     "label": "Minority and English isolation",
+     "value": "ME"
+    },
+    {
+     "symbol": {
+      "outline": null,
+      "color": [
+       0,
+       209,
+       209,
+       255
+      ],
+      "style": "esriSFSSolid",
+      "type": "esriSFS"
+     },
+     "label": "Income and English isolation",
+     "value": "IE"
+    },
+    {
+     "symbol": {
+      "outline": null,
+      "color": [
+       47,
+       45,
+       186,
+       255
+      ],
+      "style": "esriSFSSolid",
+      "type": "esriSFS"
+     },
+     "label": "Minority, Income and English isolation",
+     "value": "MIE"
+    }
+   ],
+   "type": "uniqueValue",
+   "fieldDelimiter": ","
+  },
+  "scaleSymbols": false,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "geometryField": {
+  "name": "SHAPE",
+  "alias": "SHAPE",
+  "type": "esriFieldTypeGeometry"
+ },
+ "copyrightText": "",
+ "geometryType": "esriGeometryPolygon"
+}

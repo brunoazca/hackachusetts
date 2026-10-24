@@ -1,0 +1,86 @@
+[
+  {
+    "id": "arcgis-fa5bd7b3b6d245a9af16063635dd5391",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/fa5bd7b3b6d245a9af16063635dd5391/data?f=json",
+    "name": "Boston bicycle dashboard web map",
+    "role": "additional_schema_or_data",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "arcgis-35b5008743be439096ceebd61cf1bc17",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/35b5008743be439096ceebd61cf1bc17/data?f=json",
+    "name": "Boston bicycle dashboard web map",
+    "role": "additional_schema_or_data",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "arcgis-b42f2c990f784716b320ae0499886591",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/b42f2c990f784716b320ae0499886591?f=json",
+    "name": "Crash map ArcGIS item",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background"
+  },
+  {
+    "id": "arcgis-19a74f37055b4fb9aad8269153ba82b0",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/19a74f37055b4fb9aad8269153ba82b0?f=json",
+    "name": "Crash map ArcGIS item",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background"
+  },
+  {
+    "id": "arcgis-bae68e65908f45e1bcc86fe5f089d266",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/bae68e65908f45e1bcc86fe5f089d266?f=json",
+    "name": "Crash map ArcGIS item",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background"
+  },
+  {
+    "id": "cpd-schema",
+    "url": "https://data.cambridgema.gov/api/views/h6fp-bp8s.json",
+    "name": "cpd schema",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background"
+  },
+  {
+    "id": "cpd-count",
+    "url": "https://data.cambridgema.gov/resource/h6fp-bp8s.json?$select=count(*)",
+    "name": "cpd source row count",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background"
+  },
+  {
+    "id": "somerville-crashes-schema",
+    "url": "https://data.somervillema.gov/api/views/mtik-28va.json",
+    "name": "somerville-crashes schema",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background"
+  },
+  {
+    "id": "somerville-crashes-count",
+    "url": "https://data.somervillema.gov/resource/mtik-28va.json?$select=count(*)",
+    "name": "somerville-crashes source row count",
+    "role": "additional_schema_or_data",
+    "parent": "crash-background"
+  },
+  {
+    "id": "e2c-2bxu-kf62-page-fallback",
+    "url": "https://educationtocareer.data.mass.gov/stories/s/2bxu-kf62",
+    "name": "Student Discipline Data Trends landing page",
+    "role": "additional_schema_or_data",
+    "parent": "e2c"
+  },
+  {
+    "id": "ckan-bdae89c8-d4ce-40e9-a6e1-a5203953a2e0-schema",
+    "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=bdae89c8-d4ce-40e9-a6e1-a5203953a2e0&limit=0",
+    "name": "Historical 311 empty datastore check",
+    "role": "additional_schema_or_data",
+    "parent": "boston-311"
+  },
+  {
+    "id": "ckan-94b499d9-712a-4d2a-b790-7ceec5c9c4b1-schema",
+    "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=94b499d9-712a-4d2a-b790-7ceec5c9c4b1&limit=0",
+    "name": "Historical 311 empty datastore check",
+    "role": "additional_schema_or_data",
+    "parent": "boston-311"
+  }
+]

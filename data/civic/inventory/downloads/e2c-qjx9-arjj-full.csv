@@ -1,0 +1,2025 @@
+SY,TEST,RACE_ETH,TAKE_CNT,PASS_PCT
+2022,01 Communication & Literacy Skills,Afr. Amer./Black,466,0.483
+2022,01 Communication & Literacy Skills,All Testers,7340,0.742
+2022,01 Communication & Literacy Skills,Amer. Ind. or Alaska Nat.,26,0.692
+2022,01 Communication & Literacy Skills,Asian/ Pacific Islander,282,0.741
+2022,01 Communication & Literacy Skills,Hispanic/Latino,624,0.563
+2022,01 Communication & Literacy Skills,No Response,97,0.722
+2022,01 Communication & Literacy Skills,Other,232,0.698
+2022,01 Communication & Literacy Skills,White,5613,0.786
+2022,02 Early Childhood,Afr. Amer./Black,34,0.265
+2022,02 Early Childhood,All Testers,928,0.489
+2022,02 Early Childhood,Amer. Ind. or Alaska Nat.,1,
+2022,02 Early Childhood,Asian/ Pacific Islander,31,0.548
+2022,02 Early Childhood,Hispanic/Latino,60,0.3
+2022,02 Early Childhood,No Response,10,0.4
+2022,02 Early Childhood,Other,27,0.222
+2022,02 Early Childhood,White,765,0.523
+2022,03 General Curriculum,Afr. Amer./Black,82,0.317
+2022,03 General Curriculum,All Testers,2699,0.485
+2022,03 General Curriculum,Amer. Ind. or Alaska Nat.,7,
+2022,03 General Curriculum,Asian/ Pacific Islander,84,0.619
+2022,03 General Curriculum,Hispanic/Latino,104,0.433
+2022,03 General Curriculum,No Response,39,0.436
+2022,03 General Curriculum,Other,63,0.429
+2022,03 General Curriculum,White,2320,0.491
+2022,03 General Curriculum - Mathematics,Afr. Amer./Black,73,0.274
+2022,03 General Curriculum - Mathematics,All Testers,2469,0.513
+2022,03 General Curriculum - Mathematics,Amer. Ind. or Alaska Nat.,6,
+2022,03 General Curriculum - Mathematics,Asian/ Pacific Islander,83,0.699
+2022,03 General Curriculum - Mathematics,Hispanic/Latino,101,0.426
+2022,03 General Curriculum - Mathematics,No Response,29,0.483
+2022,03 General Curriculum - Mathematics,Other,60,0.417
+2022,03 General Curriculum - Mathematics,White,2117,0.522
+2022,03 General Curriculum - Multi-Subject,Afr. Amer./Black,80,0.525
+2022,03 General Curriculum - Multi-Subject,All Testers,2421,0.649
+2022,03 General Curriculum - Multi-Subject,Amer. Ind. or Alaska Nat.,6,
+2022,03 General Curriculum - Multi-Subject,Asian/ Pacific Islander,75,0.733
+2022,03 General Curriculum - Multi-Subject,Hispanic/Latino,90,0.6
+2022,03 General Curriculum - Multi-Subject,No Response,29,0.655
+2022,03 General Curriculum - Multi-Subject,Other,51,0.549
+2022,03 General Curriculum - Multi-Subject,White,2090,0.656
+2022,06 History,Afr. Amer./Black,31,0.29
+2022,06 History,All Testers,590,0.646
+2022,06 History,Amer. Ind. or Alaska Nat.,7,
+2022,06 History,Asian/ Pacific Islander,21,0.81
+2022,06 History,Hispanic/Latino,36,0.5
+2022,06 History,No Response,15,0.6
+2022,06 History,Other,21,0.619
+2022,06 History,White,459,0.675
+2022,08 Reading Specialist,Afr. Amer./Black,7,
+2022,08 Reading Specialist,All Testers,348,0.698
+2022,08 Reading Specialist,Amer. Ind. or Alaska Nat.,2,
+2022,08 Reading Specialist,Asian/ Pacific Islander,5,
+2022,08 Reading Specialist,Hispanic/Latino,10,0.5
+2022,08 Reading Specialist,No Response,8,
+2022,08 Reading Specialist,Other,9,
+2022,08 Reading Specialist,White,307,0.713
+2022,10 General Science,Afr. Amer./Black,10,0.7
+2022,10 General Science,All Testers,198,0.823
+2022,10 General Science,Amer. Ind. or Alaska Nat.,1,
+2022,10 General Science,Asian/ Pacific Islander,10,0.8
+2022,10 General Science,Hispanic/Latino,12,0.667
+2022,10 General Science,No Response,2,
+2022,10 General Science,Other,4,
+2022,10 General Science,White,159,0.849
+2022,11 Physics,Afr. Amer./Black,4,
+2022,11 Physics,All Testers,83,0.627
+2022,11 Physics,Amer. Ind. or Alaska Nat.,,
+2022,11 Physics,Asian/ Pacific Islander,8,
+2022,11 Physics,Hispanic/Latino,4,
+2022,11 Physics,No Response,2,
+2022,11 Physics,Other,2,
+2022,11 Physics,White,63,0.635
+2022,12 Chemistry,Afr. Amer./Black,1,
+2022,12 Chemistry,All Testers,91,0.615
+2022,12 Chemistry,Amer. Ind. or Alaska Nat.,,
+2022,12 Chemistry,Asian/ Pacific Islander,10,0.8
+2022,12 Chemistry,Hispanic/Latino,2,
+2022,12 Chemistry,No Response,1,
+2022,12 Chemistry,Other,2,
+2022,12 Chemistry,White,75,0.587
+2022,13 Biology,Afr. Amer./Black,10,0.7
+2022,13 Biology,All Testers,208,0.721
+2022,13 Biology,Amer. Ind. or Alaska Nat.,,
+2022,13 Biology,Asian/ Pacific Islander,10,0.7
+2022,13 Biology,Hispanic/Latino,12,0.667
+2022,13 Biology,No Response,1,
+2022,13 Biology,Other,5,
+2022,13 Biology,White,170,0.729
+2022,14 Earth Science,Afr. Amer./Black,,
+2022,14 Earth Science,All Testers,33,0.515
+2022,14 Earth Science,Amer. Ind. or Alaska Nat.,,
+2022,14 Earth Science,Asian/ Pacific Islander,1,
+2022,14 Earth Science,Hispanic/Latino,1,
+2022,14 Earth Science,No Response,,
+2022,14 Earth Science,Other,,
+2022,14 Earth Science,White,31,0.548
+2022,15 Latin and Classical Humanities,Afr. Amer./Black,,
+2022,15 Latin and Classical Humanities,All Testers,12,0.917
+2022,15 Latin and Classical Humanities,Amer. Ind. or Alaska Nat.,,
+2022,15 Latin and Classical Humanities,Asian/ Pacific Islander,1,
+2022,15 Latin and Classical Humanities,Hispanic/Latino,,
+2022,15 Latin and Classical Humanities,No Response,,
+2022,15 Latin and Classical Humanities,Other,,
+2022,15 Latin and Classical Humanities,White,11,0.909
+2022,16 Music,Afr. Amer./Black,12,0.5
+2022,16 Music,All Testers,226,0.659
+2022,16 Music,Amer. Ind. or Alaska Nat.,,
+2022,16 Music,Asian/ Pacific Islander,11,0.545
+2022,16 Music,Hispanic/Latino,12,0.583
+2022,16 Music,No Response,6,
+2022,16 Music,Other,9,
+2022,16 Music,White,176,0.693
+2022,17 Visual Art,Afr. Amer./Black,7,
+2022,17 Visual Art,All Testers,200,0.89
+2022,17 Visual Art,Amer. Ind. or Alaska Nat.,1,
+2022,17 Visual Art,Asian/ Pacific Islander,7,
+2022,17 Visual Art,Hispanic/Latino,11,0.909
+2022,17 Visual Art,No Response,4,
+2022,17 Visual Art,Other,9,
+2022,17 Visual Art,White,161,0.913
+2022,19 Business,Afr. Amer./Black,1,
+2022,19 Business,All Testers,53,0.679
+2022,19 Business,Amer. Ind. or Alaska Nat.,,
+2022,19 Business,Asian/ Pacific Islander,,
+2022,19 Business,Hispanic/Latino,1,
+2022,19 Business,No Response,2,
+2022,19 Business,Other,3,
+2022,19 Business,White,46,0.739
+2022,190 Foundations of Reading,Afr. Amer./Black,126,0.484
+2022,190 Foundations of Reading,All Testers,2915,0.74
+2022,190 Foundations of Reading,Amer. Ind. or Alaska Nat.,7,
+2022,190 Foundations of Reading,Asian/ Pacific Islander,101,0.822
+2022,190 Foundations of Reading,Hispanic/Latino,142,0.613
+2022,190 Foundations of Reading,No Response,34,0.706
+2022,190 Foundations of Reading,Other,85,0.659
+2022,190 Foundations of Reading,White,2420,0.761
+2022,21 Health/Family and Consumer Sciences,Afr. Amer./Black,5,
+2022,21 Health/Family and Consumer Sciences,All Testers,180,0.683
+2022,21 Health/Family and Consumer Sciences,Amer. Ind. or Alaska Nat.,,
+2022,21 Health/Family and Consumer Sciences,Asian/ Pacific Islander,1,
+2022,21 Health/Family and Consumer Sciences,Hispanic/Latino,6,
+2022,21 Health/Family and Consumer Sciences,No Response,3,
+2022,21 Health/Family and Consumer Sciences,Other,2,
+2022,21 Health/Family and Consumer Sciences,White,163,0.718
+2022,22 Physical Education,Afr. Amer./Black,19,0.263
+2022,22 Physical Education,All Testers,368,0.451
+2022,22 Physical Education,Amer. Ind. or Alaska Nat.,,
+2022,22 Physical Education,Asian/ Pacific Islander,6,
+2022,22 Physical Education,Hispanic/Latino,13,0.462
+2022,22 Physical Education,No Response,6,
+2022,22 Physical Education,Other,8,
+2022,22 Physical Education,White,316,0.472
+2022,26 French,Afr. Amer./Black,9,
+2022,26 French,All Testers,43,0.581
+2022,26 French,Amer. Ind. or Alaska Nat.,,
+2022,26 French,Asian/ Pacific Islander,2,
+2022,26 French,Hispanic/Latino,2,
+2022,26 French,No Response,,
+2022,26 French,Other,4,
+2022,26 French,White,26,0.577
+2022,27 German,Afr. Amer./Black,,
+2022,27 German,All Testers,6,
+2022,27 German,Amer. Ind. or Alaska Nat.,,
+2022,27 German,Asian/ Pacific Islander,,
+2022,27 German,Hispanic/Latino,,
+2022,27 German,No Response,1,
+2022,27 German,Other,,
+2022,27 German,White,5,
+2022,28 Spanish,Afr. Amer./Black,3,
+2022,28 Spanish,All Testers,189,0.767
+2022,28 Spanish,Amer. Ind. or Alaska Nat.,1,
+2022,28 Spanish,Asian/ Pacific Islander,1,
+2022,28 Spanish,Hispanic/Latino,97,0.804
+2022,28 Spanish,No Response,2,
+2022,28 Spanish,Other,8,
+2022,28 Spanish,White,77,0.779
+2022,29 Chinese (Mandarin),Afr. Amer./Black,,
+2022,29 Chinese (Mandarin),All Testers,23,0.957
+2022,29 Chinese (Mandarin),Amer. Ind. or Alaska Nat.,,
+2022,29 Chinese (Mandarin),Asian/ Pacific Islander,21,1
+2022,29 Chinese (Mandarin),Hispanic/Latino,,
+2022,29 Chinese (Mandarin),No Response,1,
+2022,29 Chinese (Mandarin),Other,,
+2022,29 Chinese (Mandarin),White,1,
+2022,30 Italian,Afr. Amer./Black,,
+2022,30 Italian,All Testers,11,0.636
+2022,30 Italian,Amer. Ind. or Alaska Nat.,,
+2022,30 Italian,Asian/ Pacific Islander,,
+2022,30 Italian,Hispanic/Latino,1,
+2022,30 Italian,No Response,,
+2022,30 Italian,Other,,
+2022,30 Italian,White,10,0.7
+2022,32 Portuguese,Afr. Amer./Black,2,
+2022,32 Portuguese,All Testers,26,0.692
+2022,32 Portuguese,Amer. Ind. or Alaska Nat.,,
+2022,32 Portuguese,Asian/ Pacific Islander,,
+2022,32 Portuguese,Hispanic/Latino,7,
+2022,32 Portuguese,No Response,2,
+2022,32 Portuguese,Other,4,
+2022,32 Portuguese,White,11,0.636
+2022,33 Technology/Engineering,Afr. Amer./Black,3,
+2022,33 Technology/Engineering,All Testers,44,0.614
+2022,33 Technology/Engineering,Amer. Ind. or Alaska Nat.,,
+2022,33 Technology/Engineering,Asian/ Pacific Islander,1,
+2022,33 Technology/Engineering,Hispanic/Latino,1,
+2022,33 Technology/Engineering,No Response,1,
+2022,33 Technology/Engineering,Other,2,
+2022,33 Technology/Engineering,White,36,0.611
+2022,45 Theater,Afr. Amer./Black,2,
+2022,45 Theater,All Testers,50,0.86
+2022,45 Theater,Amer. Ind. or Alaska Nat.,,
+2022,45 Theater,Asian/ Pacific Islander,,
+2022,45 Theater,Hispanic/Latino,4,
+2022,45 Theater,No Response,3,
+2022,45 Theater,Other,2,
+2022,45 Theater,White,39,0.897
+2022,46 Dance,Afr. Amer./Black,3,
+2022,46 Dance,All Testers,21,0.333
+2022,46 Dance,Amer. Ind. or Alaska Nat.,,
+2022,46 Dance,Asian/ Pacific Islander,1,
+2022,46 Dance,Hispanic/Latino,3,
+2022,46 Dance,No Response,,
+2022,46 Dance,Other,,
+2022,46 Dance,White,14,0.429
+2022,48 Political Science/Political Philosophy,Afr. Amer./Black,1,
+2022,48 Political Science/Political Philosophy,All Testers,25,0.4
+2022,48 Political Science/Political Philosophy,Amer. Ind. or Alaska Nat.,,
+2022,48 Political Science/Political Philosophy,Asian/ Pacific Islander,1,
+2022,48 Political Science/Political Philosophy,Hispanic/Latino,,
+2022,48 Political Science/Political Philosophy,No Response,1,
+2022,48 Political Science/Political Philosophy,Other,,
+2022,48 Political Science/Political Philosophy,White,22,0.409
+2022,50 Middle School Humanities,Afr. Amer./Black,4,
+2022,50 Middle School Humanities,All Testers,95,0.347
+2022,50 Middle School Humanities,Amer. Ind. or Alaska Nat.,,
+2022,50 Middle School Humanities,Asian/ Pacific Islander,1,
+2022,50 Middle School Humanities,Hispanic/Latino,2,
+2022,50 Middle School Humanities,No Response,1,
+2022,50 Middle School Humanities,Other,3,
+2022,50 Middle School Humanities,White,84,0.357
+2022,51 Middle School Mathematics/Science,Afr. Amer./Black,1,
+2022,51 Middle School Mathematics/Science,All Testers,43,0.442
+2022,51 Middle School Mathematics/Science,Amer. Ind. or Alaska Nat.,,
+2022,51 Middle School Mathematics/Science,Asian/ Pacific Islander,3,
+2022,51 Middle School Mathematics/Science,Hispanic/Latino,2,
+2022,51 Middle School Mathematics/Science,No Response,2,
+2022,51 Middle School Mathematics/Science,Other,1,
+2022,51 Middle School Mathematics/Science,White,34,0.471
+2022,53 Elementary Mathematics,Afr. Amer./Black,20,0.3
+2022,53 Elementary Mathematics,All Testers,447,0.445
+2022,53 Elementary Mathematics,Amer. Ind. or Alaska Nat.,1,
+2022,53 Elementary Mathematics,Asian/ Pacific Islander,13,0.692
+2022,53 Elementary Mathematics,Hispanic/Latino,14,0.643
+2022,53 Elementary Mathematics,No Response,4,
+2022,53 Elementary Mathematics,Other,10,0.6
+2022,53 Elementary Mathematics,White,385,0.431
+2022,54 English as a Second Language,Afr. Amer./Black,57,0.246
+2022,54 English as a Second Language,All Testers,1020,0.425
+2022,54 English as a Second Language,Amer. Ind. or Alaska Nat.,3,
+2022,54 English as a Second Language,Asian/ Pacific Islander,58,0.431
+2022,54 English as a Second Language,Hispanic/Latino,164,0.171
+2022,54 English as a Second Language,No Response,31,0.419
+2022,54 English as a Second Language,Other,63,0.254
+2022,54 English as a Second Language,White,644,0.523
+2022,55 Adult Basic Education,Afr. Amer./Black,1,
+2022,55 Adult Basic Education,All Testers,11,0.727
+2022,55 Adult Basic Education,Amer. Ind. or Alaska Nat.,,
+2022,55 Adult Basic Education,Asian/ Pacific Islander,,
+2022,55 Adult Basic Education,Hispanic/Latino,,
+2022,55 Adult Basic Education,No Response,,
+2022,55 Adult Basic Education,Other,,
+2022,55 Adult Basic Education,White,10,0.8
+2022,56 Sheltered English Immersion,Afr. Amer./Black,14,0.214
+2022,56 Sheltered English Immersion,All Testers,562,0.607
+2022,56 Sheltered English Immersion,Amer. Ind. or Alaska Nat.,1,
+2022,56 Sheltered English Immersion,Asian/ Pacific Islander,20,0.65
+2022,56 Sheltered English Immersion,Hispanic/Latino,25,0.36
+2022,56 Sheltered English Immersion,No Response,7,
+2022,56 Sheltered English Immersion,Other,12,0.417
+2022,56 Sheltered English Immersion,White,483,0.636
+2022,61 English,Afr. Amer./Black,31,0.387
+2022,61 English,All Testers,708,0.685
+2022,61 English,Amer. Ind. or Alaska Nat.,2,
+2022,61 English,Asian/ Pacific Islander,17,0.941
+2022,61 English,Hispanic/Latino,44,0.477
+2022,61 English,No Response,8,
+2022,61 English,Other,26,0.654
+2022,61 English,White,580,0.707
+2022,63 Mathematics,Afr. Amer./Black,24,0.375
+2022,63 Mathematics,All Testers,373,0.708
+2022,63 Mathematics,Amer. Ind. or Alaska Nat.,1,
+2022,63 Mathematics,Asian/ Pacific Islander,35,0.943
+2022,63 Mathematics,Hispanic/Latino,29,0.621
+2022,63 Mathematics,No Response,6,
+2022,63 Mathematics,Other,14,0.643
+2022,63 Mathematics,White,264,0.727
+2022,64 General Science,Afr. Amer./Black,,
+2022,64 General Science,All Testers,5,
+2022,64 General Science,Amer. Ind. or Alaska Nat.,,
+2022,64 General Science,Asian/ Pacific Islander,,
+2022,64 General Science,Hispanic/Latino,1,
+2022,64 General Science,No Response,,
+2022,64 General Science,Other,,
+2022,64 General Science,White,4,
+2022,65 Middle School Mathematics,Afr. Amer./Black,39,0.103
+2022,65 Middle School Mathematics,All Testers,332,0.422
+2022,65 Middle School Mathematics,Amer. Ind. or Alaska Nat.,2,
+2022,65 Middle School Mathematics,Asian/ Pacific Islander,20,0.55
+2022,65 Middle School Mathematics,Hispanic/Latino,21,0.286
+2022,65 Middle School Mathematics,No Response,7,
+2022,65 Middle School Mathematics,Other,13,0.385
+2022,65 Middle School Mathematics,White,230,0.478
+2022,70 Technology/Engineering,Afr. Amer./Black,1,
+2022,70 Technology/Engineering,All Testers,2,
+2022,70 Technology/Engineering,Amer. Ind. or Alaska Nat.,,
+2022,70 Technology/Engineering,Asian/ Pacific Islander,,
+2022,70 Technology/Engineering,Hispanic/Latino,,
+2022,70 Technology/Engineering,No Response,,
+2022,70 Technology/Engineering,Other,,
+2022,70 Technology/Engineering,White,1,
+2022,71 Digital Literacy and Computer Science,Afr. Amer./Black,8,
+2022,71 Digital Literacy and Computer Science,All Testers,92,0.848
+2022,71 Digital Literacy and Computer Science,Amer. Ind. or Alaska Nat.,,
+2022,71 Digital Literacy and Computer Science,Asian/ Pacific Islander,6,
+2022,71 Digital Literacy and Computer Science,Hispanic/Latino,4,
+2022,71 Digital Literacy and Computer Science,No Response,3,
+2022,71 Digital Literacy and Computer Science,Other,,
+2022,71 Digital Literacy and Computer Science,White,71,0.845
+2022,79 Bilingual Education,Afr. Amer./Black,1,
+2022,79 Bilingual Education,All Testers,24,0.75
+2022,79 Bilingual Education,Amer. Ind. or Alaska Nat.,,
+2022,79 Bilingual Education,Asian/ Pacific Islander,3,
+2022,79 Bilingual Education,Hispanic/Latino,11,0.636
+2022,79 Bilingual Education,No Response,,
+2022,79 Bilingual Education,Other,1,
+2022,79 Bilingual Education,White,8,
+2022,801 CASA: Reading subtest,Afr. Amer./Black,11,0.909
+2022,801 CASA: Reading subtest,All Testers,121,0.917
+2022,801 CASA: Reading subtest,Amer. Ind. or Alaska Nat.,,
+2022,801 CASA: Reading subtest,Asian/ Pacific Islander,1,
+2022,801 CASA: Reading subtest,Hispanic/Latino,21,0.857
+2022,801 CASA: Reading subtest,No Response,3,
+2022,801 CASA: Reading subtest,Other,4,
+2022,801 CASA: Reading subtest,White,81,0.926
+2022,803 CASA: Writing subtest,Afr. Amer./Black,12,0.667
+2022,803 CASA: Writing subtest,All Testers,123,0.699
+2022,803 CASA: Writing subtest,Amer. Ind. or Alaska Nat.,1,
+2022,803 CASA: Writing subtest,Asian/ Pacific Islander,1,
+2021,17 Visual Art,White,187,0.936
+2022,803 CASA: Writing subtest,Hispanic/Latino,26,0.577
+2022,803 CASA: Writing subtest,No Response,3,
+2022,803 CASA: Writing subtest,Other,5,
+2022,803 CASA: Writing subtest,White,75,0.733
+2022,866 MoGEA: Reading Comprehension and Interpretation subtest,Afr. Amer./Black,2,
+2022,866 MoGEA: Reading Comprehension and Interpretation subtest,All Testers,52,0.712
+2022,866 MoGEA: Reading Comprehension and Interpretation subtest,Amer. Ind. or Alaska Nat.,,
+2022,866 MoGEA: Reading Comprehension and Interpretation subtest,Asian/ Pacific Islander,4,
+2022,866 MoGEA: Reading Comprehension and Interpretation subtest,Hispanic/Latino,11,0.636
+2022,866 MoGEA: Reading Comprehension and Interpretation subtest,No Response,,
+2022,866 MoGEA: Reading Comprehension and Interpretation subtest,Other,4,
+2022,866 MoGEA: Reading Comprehension and Interpretation subtest,White,31,0.742
+2022,867 MoGEA: Writing subtest,Afr. Amer./Black,6,
+2022,867 MoGEA: Writing subtest,All Testers,72,0.528
+2022,867 MoGEA: Writing subtest,Amer. Ind. or Alaska Nat.,1,
+2022,867 MoGEA: Writing subtest,Asian/ Pacific Islander,3,
+2022,867 MoGEA: Writing subtest,Hispanic/Latino,13,0.231
+2022,867 MoGEA: Writing subtest,No Response,1,
+2022,867 MoGEA: Writing subtest,Other,4,
+2022,867 MoGEA: Writing subtest,White,44,0.614
+2022,895 WEST-B: Reading subtest,Afr. Amer./Black,1,
+2022,895 WEST-B: Reading subtest,All Testers,10,0.9
+2022,895 WEST-B: Reading subtest,Amer. Ind. or Alaska Nat.,1,
+2022,895 WEST-B: Reading subtest,Asian/ Pacific Islander,,
+2022,895 WEST-B: Reading subtest,Hispanic/Latino,1,
+2022,895 WEST-B: Reading subtest,No Response,,
+2022,895 WEST-B: Reading subtest,Other,,
+2022,895 WEST-B: Reading subtest,White,7,
+2022,896 WEST-B: Writing subtest,Afr. Amer./Black,3,
+2022,896 WEST-B: Writing subtest,All Testers,13,0.769
+2022,896 WEST-B: Writing subtest,Amer. Ind. or Alaska Nat.,,
+2022,896 WEST-B: Writing subtest,Asian/ Pacific Islander,2,
+2022,896 WEST-B: Writing subtest,Hispanic/Latino,,
+2022,896 WEST-B: Writing subtest,No Response,,
+2022,896 WEST-B: Writing subtest,Other,,
+2022,896 WEST-B: Writing subtest,White,8,
+2022,900 MTEL-Flex English Objective 0014,Afr. Amer./Black,2,
+2022,900 MTEL-Flex English Objective 0014,All Testers,45,0.8
+2022,900 MTEL-Flex English Objective 0014,Amer. Ind. or Alaska Nat.,1,
+2022,900 MTEL-Flex English Objective 0014,Asian/ Pacific Islander,,
+2022,900 MTEL-Flex English Objective 0014,Hispanic/Latino,2,
+2022,900 MTEL-Flex English Objective 0014,No Response,,
+2022,900 MTEL-Flex English Objective 0014,Other,1,
+2022,900 MTEL-Flex English Objective 0014,White,39,0.821
+2022,901 MTEL-Flex English Objective 0015,Afr. Amer./Black,,
+2022,901 MTEL-Flex English Objective 0015,All Testers,5,
+2022,901 MTEL-Flex English Objective 0015,Amer. Ind. or Alaska Nat.,,
+2022,901 MTEL-Flex English Objective 0015,Asian/ Pacific Islander,,
+2022,901 MTEL-Flex English Objective 0015,Hispanic/Latino,,
+2022,901 MTEL-Flex English Objective 0015,No Response,,
+2022,901 MTEL-Flex English Objective 0015,Other,,
+2022,901 MTEL-Flex English Objective 0015,White,5,
+2022,902 MTEL-Flex English as a Second Language Objective 0005,Afr. Amer./Black,1,
+2022,902 MTEL-Flex English as a Second Language Objective 0005,All Testers,24,0.917
+2022,902 MTEL-Flex English as a Second Language Objective 0005,Amer. Ind. or Alaska Nat.,,
+2022,902 MTEL-Flex English as a Second Language Objective 0005,Asian/ Pacific Islander,3,
+2022,902 MTEL-Flex English as a Second Language Objective 0005,Hispanic/Latino,,
+2022,902 MTEL-Flex English as a Second Language Objective 0005,No Response,3,
+2022,902 MTEL-Flex English as a Second Language Objective 0005,Other,,
+2022,902 MTEL-Flex English as a Second Language Objective 0005,White,17,0.882
+2022,903 MTEL-Flex English as a Second Language Objective 0008,Afr. Amer./Black,1,
+2020,02 Early Childhood,White,607,0.557
+2022,903 MTEL-Flex English as a Second Language Objective 0008,All Testers,45,1
+2022,903 MTEL-Flex English as a Second Language Objective 0008,Amer. Ind. or Alaska Nat.,,
+2022,903 MTEL-Flex English as a Second Language Objective 0008,Asian/ Pacific Islander,,
+2022,903 MTEL-Flex English as a Second Language Objective 0008,Hispanic/Latino,5,
+2022,903 MTEL-Flex English as a Second Language Objective 0008,No Response,,
+2022,903 MTEL-Flex English as a Second Language Objective 0008,Other,6,
+2022,903 MTEL-Flex English as a Second Language Objective 0008,White,33,1
+2022,904 MTEL-Flex Foundations of Reading Objective 0010,Afr. Amer./Black,2,
+2022,904 MTEL-Flex Foundations of Reading Objective 0010,All Testers,54,0.741
+2022,904 MTEL-Flex Foundations of Reading Objective 0010,Amer. Ind. or Alaska Nat.,,
+2022,904 MTEL-Flex Foundations of Reading Objective 0010,Asian/ Pacific Islander,,
+2022,904 MTEL-Flex Foundations of Reading Objective 0010,Hispanic/Latino,1,
+2022,904 MTEL-Flex Foundations of Reading Objective 0010,No Response,1,
+2022,904 MTEL-Flex Foundations of Reading Objective 0010,Other,1,
+2022,904 MTEL-Flex Foundations of Reading Objective 0010,White,49,0.735
+2022,905 MTEL-Flex Foundations of Reading Objective 0011,Afr. Amer./Black,2,
+2022,905 MTEL-Flex Foundations of Reading Objective 0011,All Testers,32,0.781
+2022,905 MTEL-Flex Foundations of Reading Objective 0011,Amer. Ind. or Alaska Nat.,,
+2022,905 MTEL-Flex Foundations of Reading Objective 0011,Asian/ Pacific Islander,,
+2022,905 MTEL-Flex Foundations of Reading Objective 0011,Hispanic/Latino,1,
+2022,905 MTEL-Flex Foundations of Reading Objective 0011,No Response,,
+2022,905 MTEL-Flex Foundations of Reading Objective 0011,Other,2,
+2022,905 MTEL-Flex Foundations of Reading Objective 0011,White,27,0.778
+2022,906 MTEL-Flex Gen Curric Multisubject Objective 0006,Afr. Amer./Black,2,
+2022,906 MTEL-Flex Gen Curric Multisubject Objective 0006,All Testers,57,0.789
+2022,906 MTEL-Flex Gen Curric Multisubject Objective 0006,Amer. Ind. or Alaska Nat.,,
+2022,906 MTEL-Flex Gen Curric Multisubject Objective 0006,Asian/ Pacific Islander,2,
+2022,906 MTEL-Flex Gen Curric Multisubject Objective 0006,Hispanic/Latino,1,
+2022,906 MTEL-Flex Gen Curric Multisubject Objective 0006,No Response,3,
+2022,906 MTEL-Flex Gen Curric Multisubject Objective 0006,Other,,
+2022,906 MTEL-Flex Gen Curric Multisubject Objective 0006,White,49,0.796
+2022,907 MTEL-Flex Gen Curric Multisubject Objective 0010,Afr. Amer./Black,,
+2022,907 MTEL-Flex Gen Curric Multisubject Objective 0010,All Testers,71,0.732
+2022,907 MTEL-Flex Gen Curric Multisubject Objective 0010,Amer. Ind. or Alaska Nat.,1,
+2022,907 MTEL-Flex Gen Curric Multisubject Objective 0010,Asian/ Pacific Islander,5,
+2022,907 MTEL-Flex Gen Curric Multisubject Objective 0010,Hispanic/Latino,1,
+2022,907 MTEL-Flex Gen Curric Multisubject Objective 0010,No Response,3,
+2022,907 MTEL-Flex Gen Curric Multisubject Objective 0010,Other,3,
+2022,907 MTEL-Flex Gen Curric Multisubject Objective 0010,White,58,0.707
+2022,908 MTEL-Flex Gen Curric Mathematics Objective 0019,Afr. Amer./Black,3,
+2022,908 MTEL-Flex Gen Curric Mathematics Objective 0019,All Testers,100,0.57
+2022,908 MTEL-Flex Gen Curric Mathematics Objective 0019,Amer. Ind. or Alaska Nat.,1,
+2022,908 MTEL-Flex Gen Curric Mathematics Objective 0019,Asian/ Pacific Islander,3,
+2022,908 MTEL-Flex Gen Curric Mathematics Objective 0019,Hispanic/Latino,2,
+2022,908 MTEL-Flex Gen Curric Mathematics Objective 0019,No Response,1,
+2022,908 MTEL-Flex Gen Curric Mathematics Objective 0019,Other,3,
+2022,908 MTEL-Flex Gen Curric Mathematics Objective 0019,White,87,0.563
+2022,909 MTEL-Flex Gen Curric Mathematics Objective 0020,Afr. Amer./Black,1,
+2022,909 MTEL-Flex Gen Curric Mathematics Objective 0020,All Testers,18,0.611
+2022,909 MTEL-Flex Gen Curric Mathematics Objective 0020,Amer. Ind. or Alaska Nat.,,
+2022,909 MTEL-Flex Gen Curric Mathematics Objective 0020,Asian/ Pacific Islander,1,
+2022,909 MTEL-Flex Gen Curric Mathematics Objective 0020,Hispanic/Latino,1,
+2022,909 MTEL-Flex Gen Curric Mathematics Objective 0020,No Response,,
+2022,909 MTEL-Flex Gen Curric Mathematics Objective 0020,Other,,
+2022,909 MTEL-Flex Gen Curric Mathematics Objective 0020,White,15,0.667
+2022,91 Vocational Technical Literacy Skills Test (VTLST),Afr. Amer./Black,6,
+2022,91 Vocational Technical Literacy Skills Test (VTLST),All Testers,173,0.769
+2022,91 Vocational Technical Literacy Skills Test (VTLST),Amer. Ind. or Alaska Nat.,,
+2022,91 Vocational Technical Literacy Skills Test (VTLST),Asian/ Pacific Islander,3,
+2022,91 Vocational Technical Literacy Skills Test (VTLST),Hispanic/Latino,13,0.462
+2022,91 Vocational Technical Literacy Skills Test (VTLST),No Response,4,
+2022,91 Vocational Technical Literacy Skills Test (VTLST),Other,6,
+2022,91 Vocational Technical Literacy Skills Test (VTLST),White,141,0.823
+2022,910 MTEL-Flex History Objective 0002,Afr. Amer./Black,2,
+2022,910 MTEL-Flex History Objective 0002,All Testers,25,1
+2022,910 MTEL-Flex History Objective 0002,Amer. Ind. or Alaska Nat.,,
+2022,910 MTEL-Flex History Objective 0002,Asian/ Pacific Islander,,
+2022,910 MTEL-Flex History Objective 0002,Hispanic/Latino,1,
+2022,910 MTEL-Flex History Objective 0002,No Response,,
+2022,910 MTEL-Flex History Objective 0002,Other,,
+2022,910 MTEL-Flex History Objective 0002,White,22,1
+2022,911 MTEL-Flex History Objective 0014,Afr. Amer./Black,1,
+2022,911 MTEL-Flex History Objective 0014,All Testers,5,
+2022,911 MTEL-Flex History Objective 0014,Amer. Ind. or Alaska Nat.,1,
+2022,911 MTEL-Flex History Objective 0014,Asian/ Pacific Islander,,
+2022,911 MTEL-Flex History Objective 0014,Hispanic/Latino,,
+2022,911 MTEL-Flex History Objective 0014,No Response,1,
+2022,911 MTEL-Flex History Objective 0014,Other,,
+2022,911 MTEL-Flex History Objective 0014,White,2,
+2022,912 MTEL-Flex Spanish Objective 0013,Afr. Amer./Black,,
+2022,912 MTEL-Flex Spanish Objective 0013,All Testers,4,
+2022,912 MTEL-Flex Spanish Objective 0013,Amer. Ind. or Alaska Nat.,,
+2022,912 MTEL-Flex Spanish Objective 0013,Asian/ Pacific Islander,,
+2022,912 MTEL-Flex Spanish Objective 0013,Hispanic/Latino,3,
+2022,912 MTEL-Flex Spanish Objective 0013,No Response,,
+2022,912 MTEL-Flex Spanish Objective 0013,Other,,
+2022,912 MTEL-Flex Spanish Objective 0013,White,1,
+2022,913 MTEL-Flex Spanish Objective 0014,Afr. Amer./Black,,
+2022,913 MTEL-Flex Spanish Objective 0014,All Testers,3,
+2022,913 MTEL-Flex Spanish Objective 0014,Amer. Ind. or Alaska Nat.,,
+2022,913 MTEL-Flex Spanish Objective 0014,Asian/ Pacific Islander,,
+2022,913 MTEL-Flex Spanish Objective 0014,Hispanic/Latino,2,
+2022,913 MTEL-Flex Spanish Objective 0014,No Response,1,
+2022,913 MTEL-Flex Spanish Objective 0014,Other,,
+2022,913 MTEL-Flex Spanish Objective 0014,White,,
+2022,Comm & Lit: Reading,Afr. Amer./Black,451,0.636
+2022,Comm & Lit: Reading,All Testers,7079,0.816
+2022,Comm & Lit: Reading,Amer. Ind. or Alaska Nat.,24,0.75
+2022,Comm & Lit: Reading,Asian/ Pacific Islander,271,0.83
+2022,Comm & Lit: Reading,Hispanic/Latino,609,0.688
+2022,Comm & Lit: Reading,No Response,90,0.833
+2022,Comm & Lit: Reading,Other,227,0.771
+2022,Comm & Lit: Reading,White,5407,0.847
+2022,Comm & Lit: Writing,Afr. Amer./Black,436,0.548
+2022,Comm & Lit: Writing,All Testers,6902,0.799
+2022,Comm & Lit: Writing,Amer. Ind. or Alaska Nat.,22,0.727
+2022,Comm & Lit: Writing,Asian/ Pacific Islander,279,0.81
+2022,Comm & Lit: Writing,Hispanic/Latino,590,0.612
+2022,Comm & Lit: Writing,No Response,94,0.734
+2022,Comm & Lit: Writing,Other,210,0.738
+2022,Comm & Lit: Writing,White,5271,0.844
+2022,VTLST: Reading,Afr. Amer./Black,7,
+2022,VTLST: Reading,All Testers,162,0.944
+2022,VTLST: Reading,Amer. Ind. or Alaska Nat.,,
+2022,VTLST: Reading,Asian/ Pacific Islander,4,
+2022,VTLST: Reading,Hispanic/Latino,9,
+2022,VTLST: Reading,No Response,3,
+2022,VTLST: Reading,Other,6,
+2022,VTLST: Reading,White,133,0.955
+2020,11 Physics,Other,2,
+2022,VTLST: Writing,Afr. Amer./Black,6,
+2022,VTLST: Writing,All Testers,176,0.756
+2022,VTLST: Writing,Amer. Ind. or Alaska Nat.,,
+2022,VTLST: Writing,Asian/ Pacific Islander,3,
+2022,VTLST: Writing,Hispanic/Latino,16,0.375
+2022,VTLST: Writing,No Response,4,
+2022,VTLST: Writing,Other,6,
+2022,VTLST: Writing,White,141,0.823
+2021,01 Communication & Literacy Skills,Afr. Amer./Black,499,0.505
+2021,01 Communication & Literacy Skills,All Testers,8306,0.777
+2021,01 Communication & Literacy Skills,Amer. Ind. or Alaska Nat.,22,0.591
+2021,01 Communication & Literacy Skills,Asian/ Pacific Islander,369,0.824
+2021,01 Communication & Literacy Skills,Hispanic/Latino,675,0.622
+2021,01 Communication & Literacy Skills,No Response,117,0.744
+2021,01 Communication & Literacy Skills,Other,216,0.745
+2021,01 Communication & Literacy Skills,White,6408,0.814
+2021,02 Early Childhood,Afr. Amer./Black,25,0.36
+2021,02 Early Childhood,All Testers,985,0.572
+2021,02 Early Childhood,Amer. Ind. or Alaska Nat.,1,
+2021,02 Early Childhood,Asian/ Pacific Islander,29,0.655
+2021,02 Early Childhood,Hispanic/Latino,52,0.558
+2021,02 Early Childhood,No Response,12,0.5
+2021,02 Early Childhood,Other,22,0.5
+2021,02 Early Childhood,White,844,0.578
+2021,03 General Curriculum,Afr. Amer./Black,81,0.333
+2021,03 General Curriculum,All Testers,2519,0.556
+2021,03 General Curriculum,Amer. Ind. or Alaska Nat.,2,
+2021,03 General Curriculum,Asian/ Pacific Islander,69,0.783
+2021,03 General Curriculum,Hispanic/Latino,88,0.466
+2021,03 General Curriculum,No Response,29,0.552
+2021,03 General Curriculum,Other,67,0.403
+2021,03 General Curriculum,White,2183,0.566
+2021,03 General Curriculum - Mathematics,Afr. Amer./Black,78,0.346
+2021,03 General Curriculum - Mathematics,All Testers,2328,0.559
+2021,03 General Curriculum - Mathematics,Amer. Ind. or Alaska Nat.,1,
+2021,03 General Curriculum - Mathematics,Asian/ Pacific Islander,60,0.733
+2021,03 General Curriculum - Mathematics,Hispanic/Latino,84,0.405
+2021,03 General Curriculum - Mathematics,No Response,25,0.44
+2021,03 General Curriculum - Mathematics,Other,61,0.426
+2021,03 General Curriculum - Mathematics,White,2019,0.574
+2021,03 General Curriculum - Multi-Subject,Afr. Amer./Black,74,0.554
+2021,03 General Curriculum - Multi-Subject,All Testers,2367,0.724
+2021,03 General Curriculum - Multi-Subject,Amer. Ind. or Alaska Nat.,3,
+2021,03 General Curriculum - Multi-Subject,Asian/ Pacific Islander,60,0.867
+2021,03 General Curriculum - Multi-Subject,Hispanic/Latino,82,0.683
+2021,03 General Curriculum - Multi-Subject,No Response,18,0.833
+2021,03 General Curriculum - Multi-Subject,Other,59,0.644
+2021,03 General Curriculum - Multi-Subject,White,2071,0.729
+2021,06 History,Afr. Amer./Black,32,0.438
+2021,06 History,All Testers,719,0.762
+2021,06 History,Amer. Ind. or Alaska Nat.,1,
+2021,06 History,Asian/ Pacific Islander,19,0.737
+2021,06 History,Hispanic/Latino,39,0.718
+2021,06 History,No Response,21,0.714
+2021,06 History,Other,24,0.833
+2021,06 History,White,583,0.782
+2021,07 English,Afr. Amer./Black,41,0.341
+2021,07 English,All Testers,611,0.787
+2021,07 English,Amer. Ind. or Alaska Nat.,1,
+2021,07 English,Asian/ Pacific Islander,26,0.808
+2021,07 English,Hispanic/Latino,42,0.667
+2021,07 English,No Response,11,0.818
+2021,07 English,Other,18,0.944
+2021,07 English,White,472,0.828
+2021,08 Reading Specialist,Afr. Amer./Black,6,
+2021,08 Reading Specialist,All Testers,349,0.762
+2021,08 Reading Specialist,Amer. Ind. or Alaska Nat.,2,
+2021,08 Reading Specialist,Asian/ Pacific Islander,1,
+2021,08 Reading Specialist,Hispanic/Latino,12,0.5
+2021,08 Reading Specialist,No Response,7,
+2021,08 Reading Specialist,Other,7,
+2021,08 Reading Specialist,White,314,0.783
+2021,09 Mathematics,Afr. Amer./Black,16,0.313
+2021,09 Mathematics,All Testers,254,0.811
+2021,09 Mathematics,Amer. Ind. or Alaska Nat.,,
+2021,09 Mathematics,Asian/ Pacific Islander,16,0.938
+2021,09 Mathematics,Hispanic/Latino,19,0.737
+2021,09 Mathematics,No Response,4,
+2021,09 Mathematics,Other,6,
+2021,09 Mathematics,White,193,0.855
+2021,10 General Science,Afr. Amer./Black,11,0.545
+2021,10 General Science,All Testers,263,0.852
+2021,10 General Science,Amer. Ind. or Alaska Nat.,1,
+2021,10 General Science,Asian/ Pacific Islander,14,0.929
+2021,10 General Science,Hispanic/Latino,15,0.933
+2021,10 General Science,No Response,6,
+2021,10 General Science,Other,10,0.9
+2021,10 General Science,White,206,0.859
+2021,11 Physics,Afr. Amer./Black,4,
+2021,11 Physics,All Testers,73,0.644
+2021,11 Physics,Amer. Ind. or Alaska Nat.,,
+2021,11 Physics,Asian/ Pacific Islander,5,
+2021,11 Physics,Hispanic/Latino,2,
+2021,11 Physics,No Response,3,
+2021,11 Physics,Other,2,
+2021,11 Physics,White,57,0.684
+2021,12 Chemistry,Afr. Amer./Black,3,
+2021,12 Chemistry,All Testers,98,0.694
+2021,12 Chemistry,Amer. Ind. or Alaska Nat.,1,
+2021,12 Chemistry,Asian/ Pacific Islander,6,
+2021,12 Chemistry,Hispanic/Latino,3,
+2021,12 Chemistry,No Response,1,
+2021,12 Chemistry,Other,2,
+2021,12 Chemistry,White,82,0.671
+2021,13 Biology,Afr. Amer./Black,10,0.5
+2021,13 Biology,All Testers,206,0.728
+2021,13 Biology,Amer. Ind. or Alaska Nat.,,
+2021,13 Biology,Asian/ Pacific Islander,17,0.882
+2021,13 Biology,Hispanic/Latino,10,0.5
+2021,13 Biology,No Response,2,
+2021,13 Biology,Other,5,
+2021,13 Biology,White,162,0.735
+2021,14 Earth Science,Afr. Amer./Black,1,
+2021,14 Earth Science,All Testers,28,0.571
+2021,14 Earth Science,Amer. Ind. or Alaska Nat.,,
+2021,14 Earth Science,Asian/ Pacific Islander,,
+2021,14 Earth Science,Hispanic/Latino,,
+2021,14 Earth Science,No Response,,
+2021,14 Earth Science,Other,,
+2021,14 Earth Science,White,27,0.556
+2021,15 Latin and Classical Humanities,Afr. Amer./Black,,
+2021,15 Latin and Classical Humanities,All Testers,22,0.909
+2021,15 Latin and Classical Humanities,Amer. Ind. or Alaska Nat.,,
+2021,15 Latin and Classical Humanities,Asian/ Pacific Islander,1,
+2021,15 Latin and Classical Humanities,Hispanic/Latino,1,
+2021,15 Latin and Classical Humanities,No Response,2,
+2021,15 Latin and Classical Humanities,Other,,
+2021,15 Latin and Classical Humanities,White,18,0.944
+2021,16 Music,Afr. Amer./Black,17,0.294
+2021,16 Music,All Testers,257,0.72
+2021,16 Music,Amer. Ind. or Alaska Nat.,,
+2021,16 Music,Asian/ Pacific Islander,12,0.833
+2021,16 Music,Hispanic/Latino,15,0.667
+2021,16 Music,No Response,6,
+2021,16 Music,Other,6,
+2021,16 Music,White,201,0.761
+2021,17 Visual Art,Afr. Amer./Black,6,
+2021,17 Visual Art,All Testers,236,0.919
+2021,17 Visual Art,Amer. Ind. or Alaska Nat.,2,
+2021,17 Visual Art,Asian/ Pacific Islander,15,0.867
+2021,17 Visual Art,Hispanic/Latino,11,0.909
+2021,17 Visual Art,No Response,8,
+2021,17 Visual Art,Other,7,
+2021,19 Business,Afr. Amer./Black,,
+2021,19 Business,All Testers,46,0.609
+2021,19 Business,Amer. Ind. or Alaska Nat.,,
+2021,19 Business,Asian/ Pacific Islander,2,
+2021,19 Business,Hispanic/Latino,1,
+2021,19 Business,No Response,2,
+2021,19 Business,Other,1,
+2021,19 Business,White,40,0.625
+2021,190 Foundations of Reading,Afr. Amer./Black,79,0.468
+2021,190 Foundations of Reading,All Testers,1852,0.718
+2021,190 Foundations of Reading,Amer. Ind. or Alaska Nat.,4,
+2021,190 Foundations of Reading,Asian/ Pacific Islander,51,0.745
+2021,190 Foundations of Reading,Hispanic/Latino,87,0.724
+2021,190 Foundations of Reading,No Response,21,0.571
+2021,190 Foundations of Reading,Other,43,0.581
+2021,190 Foundations of Reading,White,1567,0.735
+2021,21 Health/Family and Consumer Sciences,Afr. Amer./Black,6,
+2021,21 Health/Family and Consumer Sciences,All Testers,202,0.723
+2021,21 Health/Family and Consumer Sciences,Amer. Ind. or Alaska Nat.,,
+2021,21 Health/Family and Consumer Sciences,Asian/ Pacific Islander,2,
+2021,21 Health/Family and Consumer Sciences,Hispanic/Latino,5,
+2021,21 Health/Family and Consumer Sciences,No Response,6,
+2021,21 Health/Family and Consumer Sciences,Other,3,
+2021,21 Health/Family and Consumer Sciences,White,180,0.728
+2021,22 Physical Education,Afr. Amer./Black,31,0.323
+2021,22 Physical Education,All Testers,374,0.487
+2021,22 Physical Education,Amer. Ind. or Alaska Nat.,2,
+2021,22 Physical Education,Asian/ Pacific Islander,8,
+2021,22 Physical Education,Hispanic/Latino,16,0.375
+2021,22 Physical Education,No Response,11,0.455
+2021,22 Physical Education,Other,12,0.417
+2021,22 Physical Education,White,294,0.517
+2021,26 French,Afr. Amer./Black,9,
+2021,26 French,All Testers,71,0.718
+2021,26 French,Amer. Ind. or Alaska Nat.,,
+2021,26 French,Asian/ Pacific Islander,3,
+2021,26 French,Hispanic/Latino,3,
+2021,26 French,No Response,,
+2021,26 French,Other,5,
+2021,26 French,White,51,0.804
+2021,27 German,Afr. Amer./Black,,
+2021,27 German,All Testers,5,
+2021,27 German,Amer. Ind. or Alaska Nat.,,
+2021,27 German,Asian/ Pacific Islander,,
+2021,27 German,Hispanic/Latino,,
+2021,27 German,No Response,,
+2021,27 German,Other,,
+2021,27 German,White,5,
+2021,28 Spanish,Afr. Amer./Black,4,
+2021,28 Spanish,All Testers,248,0.839
+2021,28 Spanish,Amer. Ind. or Alaska Nat.,,
+2021,28 Spanish,Asian/ Pacific Islander,,
+2021,28 Spanish,Hispanic/Latino,124,0.855
+2021,28 Spanish,No Response,8,
+2021,28 Spanish,Other,10,0.6
+2021,28 Spanish,White,102,0.843
+2021,29 Chinese (Mandarin),Afr. Amer./Black,,
+2021,29 Chinese (Mandarin),All Testers,23,0.913
+2021,29 Chinese (Mandarin),Amer. Ind. or Alaska Nat.,,
+2021,29 Chinese (Mandarin),Asian/ Pacific Islander,20,1
+2021,29 Chinese (Mandarin),Hispanic/Latino,,
+2021,29 Chinese (Mandarin),No Response,,
+2021,29 Chinese (Mandarin),Other,,
+2021,29 Chinese (Mandarin),White,3,
+2021,30 Italian,Afr. Amer./Black,,
+2021,30 Italian,All Testers,5,
+2021,30 Italian,Amer. Ind. or Alaska Nat.,,
+2021,30 Italian,Asian/ Pacific Islander,,
+2021,30 Italian,Hispanic/Latino,,
+2021,30 Italian,No Response,,
+2021,30 Italian,Other,,
+2021,30 Italian,White,5,
+2021,31 Russian,Afr. Amer./Black,,
+2021,31 Russian,All Testers,1,
+2021,31 Russian,Amer. Ind. or Alaska Nat.,,
+2021,31 Russian,Asian/ Pacific Islander,,
+2021,31 Russian,Hispanic/Latino,,
+2021,31 Russian,No Response,,
+2021,31 Russian,Other,,
+2021,31 Russian,White,1,
+2021,32 Portuguese,Afr. Amer./Black,5,
+2021,32 Portuguese,All Testers,22,0.727
+2021,32 Portuguese,Amer. Ind. or Alaska Nat.,,
+2021,32 Portuguese,Asian/ Pacific Islander,,
+2021,32 Portuguese,Hispanic/Latino,2,
+2021,32 Portuguese,No Response,,
+2021,32 Portuguese,Other,6,
+2021,32 Portuguese,White,9,
+2021,33 Technology/Engineering,Afr. Amer./Black,,
+2021,33 Technology/Engineering,All Testers,46,0.652
+2021,33 Technology/Engineering,Amer. Ind. or Alaska Nat.,,
+2021,33 Technology/Engineering,Asian/ Pacific Islander,1,
+2021,33 Technology/Engineering,Hispanic/Latino,4,
+2021,33 Technology/Engineering,No Response,2,
+2021,33 Technology/Engineering,Other,,
+2021,33 Technology/Engineering,White,39,0.667
+2021,44 Speech,Afr. Amer./Black,,
+2021,44 Speech,All Testers,3,
+2021,44 Speech,Amer. Ind. or Alaska Nat.,,
+2021,44 Speech,Asian/ Pacific Islander,,
+2021,44 Speech,Hispanic/Latino,,
+2021,44 Speech,No Response,,
+2021,44 Speech,Other,,
+2021,44 Speech,White,3,
+2021,45 Theater,Afr. Amer./Black,5,
+2021,45 Theater,All Testers,61,0.902
+2021,45 Theater,Amer. Ind. or Alaska Nat.,,
+2021,45 Theater,Asian/ Pacific Islander,1,
+2021,45 Theater,Hispanic/Latino,,
+2021,45 Theater,No Response,2,
+2021,45 Theater,Other,1,
+2021,45 Theater,White,52,0.962
+2021,46 Dance,Afr. Amer./Black,1,
+2021,46 Dance,All Testers,19,0.158
+2021,46 Dance,Amer. Ind. or Alaska Nat.,,
+2021,46 Dance,Asian/ Pacific Islander,,
+2021,46 Dance,Hispanic/Latino,3,
+2021,46 Dance,No Response,1,
+2021,46 Dance,Other,1,
+2021,46 Dance,White,13,0.154
+2021,47 Middle School Mathematics,Afr. Amer./Black,18,0.389
+2021,47 Middle School Mathematics,All Testers,224,0.656
+2021,47 Middle School Mathematics,Amer. Ind. or Alaska Nat.,,
+2021,47 Middle School Mathematics,Asian/ Pacific Islander,17,0.765
+2021,47 Middle School Mathematics,Hispanic/Latino,14,0.5
+2021,47 Middle School Mathematics,No Response,5,
+2021,47 Middle School Mathematics,Other,8,
+2021,47 Middle School Mathematics,White,162,0.698
+2021,48 Political Science/Political Philosophy,Afr. Amer./Black,3,
+2021,48 Political Science/Political Philosophy,All Testers,23,0.391
+2021,48 Political Science/Political Philosophy,Amer. Ind. or Alaska Nat.,,
+2021,48 Political Science/Political Philosophy,Asian/ Pacific Islander,,
+2021,48 Political Science/Political Philosophy,Hispanic/Latino,,
+2021,48 Political Science/Political Philosophy,No Response,2,
+2021,48 Political Science/Political Philosophy,Other,1,
+2021,48 Political Science/Political Philosophy,White,17,0.471
+2021,50 Middle School Humanities,Afr. Amer./Black,3,
+2021,50 Middle School Humanities,All Testers,120,0.508
+2021,50 Middle School Humanities,Amer. Ind. or Alaska Nat.,,
+2021,50 Middle School Humanities,Asian/ Pacific Islander,2,
+2021,50 Middle School Humanities,Hispanic/Latino,5,
+2021,50 Middle School Humanities,No Response,3,
+2021,50 Middle School Humanities,Other,4,
+2020,11 Physics,White,40,0.55
+2021,50 Middle School Humanities,White,103,0.515
+2021,51 Middle School Mathematics/Science,Afr. Amer./Black,4,
+2021,51 Middle School Mathematics/Science,All Testers,70,0.5
+2021,51 Middle School Mathematics/Science,Amer. Ind. or Alaska Nat.,,
+2021,51 Middle School Mathematics/Science,Asian/ Pacific Islander,4,
+2021,51 Middle School Mathematics/Science,Hispanic/Latino,2,
+2021,51 Middle School Mathematics/Science,No Response,,
+2021,51 Middle School Mathematics/Science,Other,1,
+2021,51 Middle School Mathematics/Science,White,59,0.525
+2021,53 Elementary Mathematics,Afr. Amer./Black,14,0.214
+2021,53 Elementary Mathematics,All Testers,368,0.473
+2021,53 Elementary Mathematics,Amer. Ind. or Alaska Nat.,,
+2021,53 Elementary Mathematics,Asian/ Pacific Islander,13,0.846
+2021,53 Elementary Mathematics,Hispanic/Latino,16,0.563
+2021,53 Elementary Mathematics,No Response,2,
+2021,53 Elementary Mathematics,Other,6,
+2021,53 Elementary Mathematics,White,317,0.461
+2021,54 English as a Second Language,Afr. Amer./Black,64,0.234
+2021,54 English as a Second Language,All Testers,805,0.47
+2021,54 English as a Second Language,Amer. Ind. or Alaska Nat.,,
+2021,54 English as a Second Language,Asian/ Pacific Islander,51,0.451
+2021,54 English as a Second Language,Hispanic/Latino,104,0.24
+2021,54 English as a Second Language,No Response,22,0.455
+2021,54 English as a Second Language,Other,37,0.324
+2021,54 English as a Second Language,White,527,0.556
+2021,55 Adult Basic Education,Afr. Amer./Black,1,
+2021,55 Adult Basic Education,All Testers,8,
+2021,55 Adult Basic Education,Amer. Ind. or Alaska Nat.,,
+2021,55 Adult Basic Education,Asian/ Pacific Islander,,
+2021,55 Adult Basic Education,Hispanic/Latino,,
+2021,55 Adult Basic Education,No Response,,
+2021,55 Adult Basic Education,Other,,
+2021,55 Adult Basic Education,White,7,
+2021,56 Sheltered English Immersion,Afr. Amer./Black,13,0.538
+2021,56 Sheltered English Immersion,All Testers,614,0.676
+2021,56 Sheltered English Immersion,Amer. Ind. or Alaska Nat.,,
+2021,56 Sheltered English Immersion,Asian/ Pacific Islander,11,0.727
+2021,56 Sheltered English Immersion,Hispanic/Latino,21,0.429
+2021,56 Sheltered English Immersion,No Response,8,
+2021,56 Sheltered English Immersion,Other,18,0.556
+2021,56 Sheltered English Immersion,White,543,0.696
+2021,61 English,Afr. Amer./Black,6,
+2021,61 English,All Testers,210,0.624
+2021,61 English,Amer. Ind. or Alaska Nat.,,
+2021,61 English,Asian/ Pacific Islander,6,
+2021,61 English,Hispanic/Latino,9,
+2021,61 English,No Response,3,
+2021,61 English,Other,2,
+2021,61 English,White,184,0.658
+2021,63 Mathematics,Afr. Amer./Black,7,
+2021,63 Mathematics,All Testers,116,0.647
+2021,63 Mathematics,Amer. Ind. or Alaska Nat.,,
+2021,63 Mathematics,Asian/ Pacific Islander,9,
+2021,63 Mathematics,Hispanic/Latino,9,
+2021,63 Mathematics,No Response,3,
+2021,63 Mathematics,Other,2,
+2021,63 Mathematics,White,86,0.64
+2021,65 Middle School Mathematics,Afr. Amer./Black,5,
+2021,65 Middle School Mathematics,All Testers,78,0.449
+2021,65 Middle School Mathematics,Amer. Ind. or Alaska Nat.,,
+2021,65 Middle School Mathematics,Asian/ Pacific Islander,11,0.727
+2021,65 Middle School Mathematics,Hispanic/Latino,5,
+2021,65 Middle School Mathematics,No Response,2,
+2021,65 Middle School Mathematics,Other,1,
+2021,65 Middle School Mathematics,White,54,0.463
+2021,79 Bilingual Education,Afr. Amer./Black,2,
+2021,79 Bilingual Education,All Testers,38,0.947
+2021,79 Bilingual Education,Amer. Ind. or Alaska Nat.,,
+2021,79 Bilingual Education,Asian/ Pacific Islander,1,
+2021,79 Bilingual Education,Hispanic/Latino,20,0.95
+2021,79 Bilingual Education,No Response,2,
+2021,79 Bilingual Education,Other,2,
+2021,79 Bilingual Education,White,11,0.909
+2021,90 Foundations of Reading,Afr. Amer./Black,105,0.295
+2021,90 Foundations of Reading,All Testers,1894,0.529
+2021,90 Foundations of Reading,Amer. Ind. or Alaska Nat.,1,
+2021,90 Foundations of Reading,Asian/ Pacific Islander,67,0.776
+2021,90 Foundations of Reading,Hispanic/Latino,106,0.481
+2021,90 Foundations of Reading,No Response,22,0.545
+2021,90 Foundations of Reading,Other,58,0.448
+2021,90 Foundations of Reading,White,1535,0.54
+2021,91 Vocational Technical Literacy Skills Test (VTLST),Afr. Amer./Black,9,
+2021,91 Vocational Technical Literacy Skills Test (VTLST),All Testers,212,0.745
+2021,91 Vocational Technical Literacy Skills Test (VTLST),Amer. Ind. or Alaska Nat.,1,
+2021,91 Vocational Technical Literacy Skills Test (VTLST),Asian/ Pacific Islander,1,
+2021,91 Vocational Technical Literacy Skills Test (VTLST),Hispanic/Latino,18,0.444
+2021,91 Vocational Technical Literacy Skills Test (VTLST),No Response,1,
+2021,91 Vocational Technical Literacy Skills Test (VTLST),Other,2,
+2021,91 Vocational Technical Literacy Skills Test (VTLST),White,180,0.761
+2021,Comm & Lit: Reading,Afr. Amer./Black,456,0.612
+2021,Comm & Lit: Reading,All Testers,8039,0.834
+2021,Comm & Lit: Reading,Amer. Ind. or Alaska Nat.,23,0.696
+2021,Comm & Lit: Reading,Asian/ Pacific Islander,363,0.868
+2021,Comm & Lit: Reading,Hispanic/Latino,626,0.714
+2021,Comm & Lit: Reading,No Response,110,0.818
+2021,Comm & Lit: Reading,Other,212,0.788
+2021,Comm & Lit: Reading,White,6249,0.863
+2021,Comm & Lit: Writing,Afr. Amer./Black,456,0.566
+2021,Comm & Lit: Writing,All Testers,7926,0.834
+2021,Comm & Lit: Writing,Amer. Ind. or Alaska Nat.,21,0.714
+2021,Comm & Lit: Writing,Asian/ Pacific Islander,354,0.856
+2021,Comm & Lit: Writing,Hispanic/Latino,638,0.677
+2021,Comm & Lit: Writing,No Response,115,0.8
+2021,Comm & Lit: Writing,Other,205,0.766
+2021,Comm & Lit: Writing,White,6137,0.872
+2021,VTLST: Reading,Afr. Amer./Black,10,0.8
+2021,VTLST: Reading,All Testers,177,0.932
+2021,VTLST: Reading,Amer. Ind. or Alaska Nat.,1,
+2021,VTLST: Reading,Asian/ Pacific Islander,1,
+2021,VTLST: Reading,Hispanic/Latino,14,0.714
+2021,VTLST: Reading,No Response,1,
+2021,VTLST: Reading,Other,1,
+2021,VTLST: Reading,White,149,0.96
+2021,VTLST: Writing,Afr. Amer./Black,9,
+2021,VTLST: Writing,All Testers,215,0.744
+2021,VTLST: Writing,Amer. Ind. or Alaska Nat.,1,
+2021,VTLST: Writing,Asian/ Pacific Islander,1,
+2021,VTLST: Writing,Hispanic/Latino,19,0.316
+2021,VTLST: Writing,No Response,1,
+2021,VTLST: Writing,Other,2,
+2021,VTLST: Writing,White,182,0.775
+2020,01 Communication & Literacy Skills,Afr. Amer./Black,306,0.461
+2020,01 Communication & Literacy Skills,All Testers,5914,0.755
+2020,01 Communication & Literacy Skills,Amer. Ind. or Alaska Nat.,4,
+2020,01 Communication & Literacy Skills,Asian/ Pacific Islander,245,0.637
+2020,01 Communication & Literacy Skills,Hispanic/Latino,457,0.584
+2020,01 Communication & Literacy Skills,No Response,91,0.714
+2020,01 Communication & Literacy Skills,Other,197,0.66
+2020,01 Communication & Literacy Skills,White,4614,0.803
+2020,02 Early Childhood,Afr. Amer./Black,22,0.409
+2020,02 Early Childhood,All Testers,716,0.536
+2020,02 Early Childhood,Amer. Ind. or Alaska Nat.,1,
+2020,02 Early Childhood,Asian/ Pacific Islander,32,0.438
+2020,02 Early Childhood,Hispanic/Latino,23,0.217
+2020,02 Early Childhood,No Response,10,0.4
+2020,02 Early Childhood,Other,21,0.619
+2020,03 General Curriculum,Afr. Amer./Black,63,0.381
+2020,03 General Curriculum,All Testers,1955,0.579
+2020,03 General Curriculum,Amer. Ind. or Alaska Nat.,5,
+2020,03 General Curriculum,Asian/ Pacific Islander,52,0.615
+2020,03 General Curriculum,Hispanic/Latino,91,0.505
+2020,03 General Curriculum,No Response,22,0.318
+2020,03 General Curriculum,Other,61,0.525
+2020,03 General Curriculum,White,1661,0.595
+2020,03 General Curriculum - Mathematics,Afr. Amer./Black,62,0.452
+2020,03 General Curriculum - Mathematics,All Testers,1810,0.595
+2020,03 General Curriculum - Mathematics,Amer. Ind. or Alaska Nat.,4,
+2020,03 General Curriculum - Mathematics,Asian/ Pacific Islander,48,0.75
+2020,03 General Curriculum - Mathematics,Hispanic/Latino,89,0.551
+2020,03 General Curriculum - Mathematics,No Response,24,0.417
+2020,03 General Curriculum - Mathematics,Other,54,0.519
+2020,03 General Curriculum - Mathematics,White,1529,0.604
+2020,03 General Curriculum - Multi-Subject,Afr. Amer./Black,53,0.585
+2020,03 General Curriculum - Multi-Subject,All Testers,1671,0.717
+2020,03 General Curriculum - Multi-Subject,Amer. Ind. or Alaska Nat.,4,
+2020,03 General Curriculum - Multi-Subject,Asian/ Pacific Islander,53,0.83
+2020,03 General Curriculum - Multi-Subject,Hispanic/Latino,72,0.681
+2020,03 General Curriculum - Multi-Subject,No Response,17,0.529
+2020,03 General Curriculum - Multi-Subject,Other,47,0.66
+2020,03 General Curriculum - Multi-Subject,White,1425,0.723
+2020,06 History,Afr. Amer./Black,27,0.444
+2020,06 History,All Testers,469,0.714
+2020,06 History,Amer. Ind. or Alaska Nat.,1,
+2020,06 History,Asian/ Pacific Islander,13,0.692
+2020,06 History,Hispanic/Latino,24,0.542
+2020,06 History,No Response,8,
+2020,06 History,Other,12,0.75
+2020,06 History,White,384,0.74
+2020,07 English,Afr. Amer./Black,23,0.565
+2020,07 English,All Testers,511,0.808
+2020,07 English,Amer. Ind. or Alaska Nat.,2,
+2020,07 English,Asian/ Pacific Islander,5,
+2020,07 English,Hispanic/Latino,25,0.68
+2020,07 English,No Response,9,
+2020,07 English,Other,20,0.9
+2020,07 English,White,427,0.827
+2020,08 Reading Specialist,Afr. Amer./Black,1,
+2020,08 Reading Specialist,All Testers,239,0.699
+2020,08 Reading Specialist,Amer. Ind. or Alaska Nat.,,
+2020,08 Reading Specialist,Asian/ Pacific Islander,4,
+2020,08 Reading Specialist,Hispanic/Latino,10,0.7
+2020,08 Reading Specialist,No Response,3,
+2020,08 Reading Specialist,Other,3,
+2020,08 Reading Specialist,White,218,0.697
+2020,09 Mathematics,Afr. Amer./Black,14,0.643
+2020,09 Mathematics,All Testers,265,0.743
+2020,09 Mathematics,Amer. Ind. or Alaska Nat.,1,
+2020,09 Mathematics,Asian/ Pacific Islander,20,0.8
+2020,09 Mathematics,Hispanic/Latino,14,0.643
+2020,09 Mathematics,No Response,8,
+2020,09 Mathematics,Other,8,
+2020,09 Mathematics,White,200,0.755
+2020,10 General Science,Afr. Amer./Black,9,
+2020,10 General Science,All Testers,136,0.816
+2020,10 General Science,Amer. Ind. or Alaska Nat.,,
+2020,10 General Science,Asian/ Pacific Islander,4,
+2020,10 General Science,Hispanic/Latino,5,
+2020,10 General Science,No Response,3,
+2020,10 General Science,Other,5,
+2020,10 General Science,White,110,0.845
+2020,11 Physics,Afr. Amer./Black,4,
+2020,11 Physics,All Testers,54,0.574
+2020,11 Physics,Amer. Ind. or Alaska Nat.,,
+2020,11 Physics,Asian/ Pacific Islander,4,
+2020,11 Physics,Hispanic/Latino,2,
+2020,11 Physics,No Response,2,
+2020,12 Chemistry,Afr. Amer./Black,4,
+2020,12 Chemistry,All Testers,64,0.672
+2020,12 Chemistry,Amer. Ind. or Alaska Nat.,,
+2020,12 Chemistry,Asian/ Pacific Islander,2,
+2020,12 Chemistry,Hispanic/Latino,4,
+2020,12 Chemistry,No Response,2,
+2020,12 Chemistry,Other,2,
+2020,12 Chemistry,White,50,0.76
+2020,13 Biology,Afr. Amer./Black,7,
+2020,13 Biology,All Testers,151,0.728
+2020,13 Biology,Amer. Ind. or Alaska Nat.,,
+2020,13 Biology,Asian/ Pacific Islander,7,
+2020,13 Biology,Hispanic/Latino,6,
+2020,13 Biology,No Response,3,
+2020,13 Biology,Other,3,
+2020,13 Biology,White,125,0.752
+2020,14 Earth Science,Afr. Amer./Black,,
+2020,14 Earth Science,All Testers,16,0.438
+2020,14 Earth Science,Amer. Ind. or Alaska Nat.,,
+2020,14 Earth Science,Asian/ Pacific Islander,1,
+2020,14 Earth Science,Hispanic/Latino,,
+2020,14 Earth Science,No Response,,
+2020,14 Earth Science,Other,,
+2020,14 Earth Science,White,15,0.467
+2020,15 Latin and Classical Humanities,Afr. Amer./Black,,
+2020,15 Latin and Classical Humanities,All Testers,6,
+2020,15 Latin and Classical Humanities,Amer. Ind. or Alaska Nat.,,
+2020,15 Latin and Classical Humanities,Asian/ Pacific Islander,,
+2020,15 Latin and Classical Humanities,Hispanic/Latino,2,
+2020,15 Latin and Classical Humanities,No Response,,
+2020,15 Latin and Classical Humanities,Other,,
+2020,15 Latin and Classical Humanities,White,4,
+2020,16 Music,Afr. Amer./Black,6,
+2020,16 Music,All Testers,142,0.655
+2020,16 Music,Amer. Ind. or Alaska Nat.,,
+2020,16 Music,Asian/ Pacific Islander,9,
+2020,16 Music,Hispanic/Latino,15,0.4
+2020,16 Music,No Response,3,
+2020,16 Music,Other,5,
+2020,16 Music,White,104,0.692
+2020,17 Visual Art,Afr. Amer./Black,4,
+2020,17 Visual Art,All Testers,179,0.939
+2020,17 Visual Art,Amer. Ind. or Alaska Nat.,1,
+2020,17 Visual Art,Asian/ Pacific Islander,10,0.9
+2020,17 Visual Art,Hispanic/Latino,14,0.929
+2020,17 Visual Art,No Response,4,
+2020,17 Visual Art,Other,3,
+2020,17 Visual Art,White,143,0.937
+2020,19 Business,Afr. Amer./Black,2,
+2020,19 Business,All Testers,40,0.675
+2020,19 Business,Amer. Ind. or Alaska Nat.,,
+2020,19 Business,Asian/ Pacific Islander,1,
+2020,19 Business,Hispanic/Latino,1,
+2020,19 Business,No Response,,
+2020,19 Business,Other,,
+2020,19 Business,White,36,0.694
+2020,21 Health/Family and Consumer Sciences,Afr. Amer./Black,6,
+2020,21 Health/Family and Consumer Sciences,All Testers,171,0.69
+2020,21 Health/Family and Consumer Sciences,Amer. Ind. or Alaska Nat.,,
+2020,21 Health/Family and Consumer Sciences,Asian/ Pacific Islander,,
+2020,21 Health/Family and Consumer Sciences,Hispanic/Latino,3,
+2020,21 Health/Family and Consumer Sciences,No Response,3,
+2020,21 Health/Family and Consumer Sciences,Other,1,
+2020,21 Health/Family and Consumer Sciences,White,158,0.696
+2020,22 Physical Education,Afr. Amer./Black,18,0.056
+2020,22 Physical Education,All Testers,321,0.405
+2020,22 Physical Education,Amer. Ind. or Alaska Nat.,1,
+2020,22 Physical Education,Asian/ Pacific Islander,6,
+2020,22 Physical Education,Hispanic/Latino,17,0.235
+2020,22 Physical Education,No Response,11,0.182
+2020,22 Physical Education,Other,8,
+2020,22 Physical Education,White,260,0.454
+2020,26 French,Afr. Amer./Black,8,
+2020,26 French,All Testers,46,0.609
+2020,26 French,Amer. Ind. or Alaska Nat.,,
+2020,26 French,Asian/ Pacific Islander,1,
+2020,26 French,Hispanic/Latino,,
+2020,26 French,No Response,,
+2020,26 French,Other,2,
+2020,26 French,White,35,0.657
+2020,27 German,Afr. Amer./Black,,
+2020,27 German,All Testers,2,
+2020,27 German,Amer. Ind. or Alaska Nat.,,
+2020,27 German,Asian/ Pacific Islander,,
+2020,27 German,Hispanic/Latino,,
+2020,27 German,No Response,1,
+2020,27 German,Other,,
+2020,27 German,White,1,
+2020,28 Spanish,Afr. Amer./Black,,
+2020,28 Spanish,All Testers,152,0.849
+2020,28 Spanish,Amer. Ind. or Alaska Nat.,,
+2020,28 Spanish,Asian/ Pacific Islander,1,
+2020,28 Spanish,Hispanic/Latino,85,0.835
+2020,28 Spanish,No Response,7,
+2020,28 Spanish,Other,4,
+2020,28 Spanish,White,55,0.873
+2020,29 Chinese (Mandarin),Afr. Amer./Black,,
+2020,29 Chinese (Mandarin),All Testers,30,0.967
+2020,29 Chinese (Mandarin),Amer. Ind. or Alaska Nat.,,
+2020,29 Chinese (Mandarin),Asian/ Pacific Islander,28,0.964
+2020,29 Chinese (Mandarin),Hispanic/Latino,,
+2020,29 Chinese (Mandarin),No Response,1,
+2020,29 Chinese (Mandarin),Other,1,
+2020,29 Chinese (Mandarin),White,,
+2020,30 Italian,Afr. Amer./Black,,
+2020,30 Italian,All Testers,13,0.692
+2020,30 Italian,Amer. Ind. or Alaska Nat.,,
+2020,30 Italian,Asian/ Pacific Islander,,
+2020,30 Italian,Hispanic/Latino,,
+2020,30 Italian,No Response,,
+2020,30 Italian,Other,,
+2020,30 Italian,White,13,0.692
+2020,31 Russian,Afr. Amer./Black,,
+2020,31 Russian,All Testers,1,
+2020,31 Russian,Amer. Ind. or Alaska Nat.,,
+2020,31 Russian,Asian/ Pacific Islander,,
+2020,31 Russian,Hispanic/Latino,,
+2020,31 Russian,No Response,,
+2020,31 Russian,Other,,
+2020,31 Russian,White,1,
+2020,32 Portuguese,Afr. Amer./Black,1,
+2020,32 Portuguese,All Testers,12,0.667
+2020,32 Portuguese,Amer. Ind. or Alaska Nat.,,
+2020,32 Portuguese,Asian/ Pacific Islander,1,
+2020,32 Portuguese,Hispanic/Latino,1,
+2020,32 Portuguese,No Response,,
+2020,32 Portuguese,Other,3,
+2020,32 Portuguese,White,6,
+2020,33 Technology/Engineering,Afr. Amer./Black,,
+2020,33 Technology/Engineering,All Testers,32,0.688
+2020,33 Technology/Engineering,Amer. Ind. or Alaska Nat.,,
+2020,33 Technology/Engineering,Asian/ Pacific Islander,2,
+2020,33 Technology/Engineering,Hispanic/Latino,2,
+2020,33 Technology/Engineering,No Response,1,
+2020,33 Technology/Engineering,Other,2,
+2020,33 Technology/Engineering,White,25,0.72
+2020,44 Speech,Afr. Amer./Black,,
+2020,44 Speech,All Testers,3,
+2020,44 Speech,Amer. Ind. or Alaska Nat.,,
+2020,44 Speech,Asian/ Pacific Islander,,
+2020,44 Speech,Hispanic/Latino,,
+2020,44 Speech,No Response,,
+2020,44 Speech,Other,1,
+2020,44 Speech,White,2,
+2020,45 Theater,Afr. Amer./Black,2,
+2020,45 Theater,All Testers,37,0.838
+2020,45 Theater,Amer. Ind. or Alaska Nat.,,
+2020,45 Theater,Asian/ Pacific Islander,,
+2020,45 Theater,Hispanic/Latino,1,
+2020,45 Theater,No Response,,
+2020,45 Theater,Other,2,
+2020,45 Theater,White,32,0.875
+2020,46 Dance,Afr. Amer./Black,2,
+2020,46 Dance,All Testers,14,0.5
+2020,46 Dance,Amer. Ind. or Alaska Nat.,,
+2020,46 Dance,Asian/ Pacific Islander,,
+2020,46 Dance,Hispanic/Latino,,
+2020,46 Dance,No Response,,
+2020,46 Dance,Other,2,
+2020,46 Dance,White,10,0.5
+2020,47 Middle School Mathematics,Afr. Amer./Black,23,0.435
+2020,47 Middle School Mathematics,All Testers,205,0.595
+2020,47 Middle School Mathematics,Amer. Ind. or Alaska Nat.,,
+2020,47 Middle School Mathematics,Asian/ Pacific Islander,13,0.462
+2020,47 Middle School Mathematics,Hispanic/Latino,16,0.5
+2020,47 Middle School Mathematics,No Response,5,
+2020,47 Middle School Mathematics,Other,9,
+2020,47 Middle School Mathematics,White,139,0.647
+2020,48 Political Science/Political Philosophy,Afr. Amer./Black,,
+2020,48 Political Science/Political Philosophy,All Testers,12,0.417
+2020,48 Political Science/Political Philosophy,Amer. Ind. or Alaska Nat.,,
+2020,48 Political Science/Political Philosophy,Asian/ Pacific Islander,,
+2020,48 Political Science/Political Philosophy,Hispanic/Latino,,
+2020,48 Political Science/Political Philosophy,No Response,,
+2020,48 Political Science/Political Philosophy,Other,1,
+2020,48 Political Science/Political Philosophy,White,11,0.364
+2020,50 Middle School Humanities,Afr. Amer./Black,2,
+2020,50 Middle School Humanities,All Testers,81,0.457
+2020,50 Middle School Humanities,Amer. Ind. or Alaska Nat.,,
+2020,50 Middle School Humanities,Asian/ Pacific Islander,,
+2020,50 Middle School Humanities,Hispanic/Latino,1,
+2020,50 Middle School Humanities,No Response,4,
+2020,50 Middle School Humanities,Other,,
+2020,50 Middle School Humanities,White,74,0.473
+2020,51 Middle School Mathematics/Science,Afr. Amer./Black,2,
+2020,51 Middle School Mathematics/Science,All Testers,46,0.304
+2020,51 Middle School Mathematics/Science,Amer. Ind. or Alaska Nat.,,
+2020,51 Middle School Mathematics/Science,Asian/ Pacific Islander,2,
+2020,51 Middle School Mathematics/Science,Hispanic/Latino,3,
+2020,51 Middle School Mathematics/Science,No Response,,
+2020,51 Middle School Mathematics/Science,Other,2,
+2020,51 Middle School Mathematics/Science,White,37,0.324
+2020,53 Elementary Mathematics,Afr. Amer./Black,9,
+2020,53 Elementary Mathematics,All Testers,263,0.452
+2020,53 Elementary Mathematics,Amer. Ind. or Alaska Nat.,,
+2020,53 Elementary Mathematics,Asian/ Pacific Islander,10,0.6
+2020,53 Elementary Mathematics,Hispanic/Latino,9,
+2020,53 Elementary Mathematics,No Response,2,
+2020,53 Elementary Mathematics,Other,7,
+2020,53 Elementary Mathematics,White,226,0.46
+2020,54 English as a Second Language,Afr. Amer./Black,37,0.243
+2020,54 English as a Second Language,All Testers,652,0.439
+2020,54 English as a Second Language,Amer. Ind. or Alaska Nat.,3,
+2020,54 English as a Second Language,Asian/ Pacific Islander,28,0.536
+2020,54 English as a Second Language,Hispanic/Latino,88,0.227
+2020,54 English as a Second Language,No Response,26,0.385
+2020,54 English as a Second Language,Other,38,0.368
+2020,54 English as a Second Language,White,432,0.498
+2020,55 Adult Basic Education,Afr. Amer./Black,2,
+2020,55 Adult Basic Education,All Testers,13,0.846
+2020,55 Adult Basic Education,Amer. Ind. or Alaska Nat.,,
+2020,55 Adult Basic Education,Asian/ Pacific Islander,,
+2020,55 Adult Basic Education,Hispanic/Latino,2,
+2020,55 Adult Basic Education,No Response,1,
+2020,55 Adult Basic Education,Other,,
+2020,55 Adult Basic Education,White,8,
+2020,56 Sheltered English Immersion,Afr. Amer./Black,11,0.273
+2020,56 Sheltered English Immersion,All Testers,650,0.682
+2020,56 Sheltered English Immersion,Amer. Ind. or Alaska Nat.,,
+2020,56 Sheltered English Immersion,Asian/ Pacific Islander,14,0.357
+2020,56 Sheltered English Immersion,Hispanic/Latino,13,0.385
+2020,56 Sheltered English Immersion,No Response,16,0.563
+2020,56 Sheltered English Immersion,Other,13,0.462
+2020,56 Sheltered English Immersion,White,583,0.712
+2020,90 Foundations of Reading,Afr. Amer./Black,115,0.365
+2020,90 Foundations of Reading,All Testers,2656,0.615
+2020,90 Foundations of Reading,Amer. Ind. or Alaska Nat.,5,
+2020,90 Foundations of Reading,Asian/ Pacific Islander,85,0.576
+2020,90 Foundations of Reading,Hispanic/Latino,108,0.491
+2020,90 Foundations of Reading,No Response,43,0.465
+2020,90 Foundations of Reading,Other,72,0.458
+2020,90 Foundations of Reading,White,2228,0.643
+2020,91 Vocational Technical Literacy Skills Test (VTLST),Afr. Amer./Black,4,
+2020,91 Vocational Technical Literacy Skills Test (VTLST),All Testers,148,0.709
+2020,91 Vocational Technical Literacy Skills Test (VTLST),Amer. Ind. or Alaska Nat.,,
+2020,91 Vocational Technical Literacy Skills Test (VTLST),Asian/ Pacific Islander,1,
+2020,91 Vocational Technical Literacy Skills Test (VTLST),Hispanic/Latino,9,
+2020,91 Vocational Technical Literacy Skills Test (VTLST),No Response,4,
+2020,91 Vocational Technical Literacy Skills Test (VTLST),Other,4,
+2020,91 Vocational Technical Literacy Skills Test (VTLST),White,126,0.722
+2020,Comm & Lit: Reading,Afr. Amer./Black,283,0.625
+2020,Comm & Lit: Reading,All Testers,5670,0.825
+2020,Comm & Lit: Reading,Amer. Ind. or Alaska Nat.,4,
+2020,Comm & Lit: Reading,Asian/ Pacific Islander,231,0.753
+2020,Comm & Lit: Reading,Hispanic/Latino,444,0.691
+2020,Comm & Lit: Reading,No Response,77,0.896
+2020,Comm & Lit: Reading,Other,194,0.753
+2020,Comm & Lit: Reading,White,4437,0.857
+2020,Comm & Lit: Writing,Afr. Amer./Black,273,0.564
+2020,Comm & Lit: Writing,All Testers,5499,0.816
+2020,Comm & Lit: Writing,Amer. Ind. or Alaska Nat.,4,
+2020,Comm & Lit: Writing,Asian/ Pacific Islander,233,0.695
+2020,Comm & Lit: Writing,Hispanic/Latino,425,0.631
+2020,Comm & Lit: Writing,No Response,87,0.747
+2020,Comm & Lit: Writing,Other,180,0.694
+2020,Comm & Lit: Writing,White,4297,0.863
+2020,VTLST: Reading,Afr. Amer./Black,4,
+2020,VTLST: Reading,All Testers,124,0.96
+2020,VTLST: Reading,Amer. Ind. or Alaska Nat.,,
+2020,VTLST: Reading,Asian/ Pacific Islander,1,
+2020,VTLST: Reading,Hispanic/Latino,6,
+2020,VTLST: Reading,No Response,5,
+2020,VTLST: Reading,Other,3,
+2020,VTLST: Reading,White,105,0.99
+2020,VTLST: Writing,Afr. Amer./Black,4,
+2020,VTLST: Writing,All Testers,150,0.713
+2020,VTLST: Writing,Amer. Ind. or Alaska Nat.,,
+2020,VTLST: Writing,Asian/ Pacific Islander,2,
+2020,VTLST: Writing,Hispanic/Latino,10,0.5
+2020,VTLST: Writing,No Response,4,
+2020,VTLST: Writing,Other,4,
+2020,VTLST: Writing,White,126,0.714
+2019,01 Communication & Literacy Skills,Afr. Amer./Black,513,0.585
+2019,01 Communication & Literacy Skills,All Testers,9094,0.797
+2019,01 Communication & Literacy Skills,Amer. Ind. or Alaska Nat.,20,0.7
+2019,01 Communication & Literacy Skills,Asian/ Pacific Islander,367,0.757
+2019,01 Communication & Literacy Skills,Hispanic/Latino,686,0.671
+2019,01 Communication & Literacy Skills,No Response,137,0.759
+2019,01 Communication & Literacy Skills,Other,290,0.71
+2019,01 Communication & Literacy Skills,White,7081,0.832
+2019,02 Early Childhood,Afr. Amer./Black,43,0.349
+2019,02 Early Childhood,All Testers,1237,0.593
+2019,02 Early Childhood,Amer. Ind. or Alaska Nat.,1,
+2019,02 Early Childhood,Asian/ Pacific Islander,30,0.633
+2019,02 Early Childhood,Hispanic/Latino,60,0.617
+2019,02 Early Childhood,No Response,19,0.684
+2019,02 Early Childhood,Other,35,0.4
+2019,02 Early Childhood,White,1049,0.605
+2019,03 General Curriculum,Afr. Amer./Black,104,0.385
+2019,03 General Curriculum,All Testers,2977,0.631
+2019,03 General Curriculum,Amer. Ind. or Alaska Nat.,7,
+2019,03 General Curriculum,Asian/ Pacific Islander,66,0.758
+2019,03 General Curriculum,Hispanic/Latino,130,0.538
+2019,03 General Curriculum,No Response,44,0.523
+2019,03 General Curriculum,Other,80,0.463
+2019,03 General Curriculum,White,2546,0.65
+2019,03 General Curriculum - Mathematics,Afr. Amer./Black,114,0.395
+2019,03 General Curriculum - Mathematics,All Testers,2873,0.627
+2019,03 General Curriculum - Mathematics,Amer. Ind. or Alaska Nat.,6,
+2019,03 General Curriculum - Mathematics,Asian/ Pacific Islander,60,0.817
+2019,03 General Curriculum - Mathematics,Hispanic/Latino,124,0.54
+2019,03 General Curriculum - Mathematics,No Response,39,0.487
+2019,03 General Curriculum - Mathematics,Other,73,0.466
+2019,03 General Curriculum - Mathematics,White,2457,0.645
+2019,03 General Curriculum - Multi-Subject,Afr. Amer./Black,87,0.552
+2019,03 General Curriculum - Multi-Subject,All Testers,2688,0.773
+2019,03 General Curriculum - Multi-Subject,Amer. Ind. or Alaska Nat.,7,
+2019,03 General Curriculum - Multi-Subject,Asian/ Pacific Islander,68,0.809
+2019,03 General Curriculum - Multi-Subject,Hispanic/Latino,130,0.685
+2019,03 General Curriculum - Multi-Subject,No Response,37,0.784
+2019,03 General Curriculum - Multi-Subject,Other,76,0.711
+2019,03 General Curriculum - Multi-Subject,White,2283,0.788
+2019,06 History,Afr. Amer./Black,36,0.389
+2019,06 History,All Testers,722,0.753
+2019,06 History,Amer. Ind. or Alaska Nat.,2,
+2019,06 History,Asian/ Pacific Islander,19,0.895
+2019,06 History,Hispanic/Latino,35,0.6
+2019,06 History,No Response,13,0.923
+2019,06 History,Other,22,0.773
+2019,06 History,White,595,0.776
+2019,07 English,Afr. Amer./Black,55,0.6
+2019,07 English,All Testers,829,0.812
+2019,07 English,Amer. Ind. or Alaska Nat.,2,
+2019,07 English,Asian/ Pacific Islander,21,0.952
+2019,07 English,Hispanic/Latino,54,0.741
+2019,07 English,No Response,13,0.846
+2019,07 English,Other,25,0.88
+2019,07 English,White,659,0.829
+2019,08 Reading Specialist,Afr. Amer./Black,4,
+2019,08 Reading Specialist,All Testers,400,0.7
+2019,08 Reading Specialist,Amer. Ind. or Alaska Nat.,,
+2019,08 Reading Specialist,Asian/ Pacific Islander,6,
+2019,08 Reading Specialist,Hispanic/Latino,12,0.583
+2019,08 Reading Specialist,No Response,7,
+2019,08 Reading Specialist,Other,6,
+2019,08 Reading Specialist,White,365,0.712
+2019,09 Mathematics,Afr. Amer./Black,25,0.4
+2019,09 Mathematics,All Testers,485,0.755
+2019,09 Mathematics,Amer. Ind. or Alaska Nat.,1,
+2019,09 Mathematics,Asian/ Pacific Islander,36,0.806
+2019,09 Mathematics,Hispanic/Latino,33,0.606
+2019,09 Mathematics,No Response,9,
+2019,09 Mathematics,Other,20,0.6
+2019,09 Mathematics,White,361,0.798
+2019,10 General Science,Afr. Amer./Black,13,0.538
+2019,10 General Science,All Testers,257,0.829
+2019,10 General Science,Amer. Ind. or Alaska Nat.,,
+2019,10 General Science,Asian/ Pacific Islander,5,
+2019,10 General Science,Hispanic/Latino,15,0.8
+2019,10 General Science,No Response,2,
+2019,10 General Science,Other,6,
+2019,10 General Science,White,216,0.852
+2019,11 Physics,Afr. Amer./Black,2,
+2019,11 Physics,All Testers,110,0.673
+2019,11 Physics,Amer. Ind. or Alaska Nat.,,
+2019,11 Physics,Asian/ Pacific Islander,12,0.583
+2019,11 Physics,Hispanic/Latino,4,
+2019,11 Physics,No Response,3,
+2019,11 Physics,Other,4,
+2019,11 Physics,White,85,0.694
+2019,12 Chemistry,Afr. Amer./Black,6,
+2019,12 Chemistry,All Testers,139,0.604
+2019,12 Chemistry,Amer. Ind. or Alaska Nat.,,
+2019,12 Chemistry,Asian/ Pacific Islander,13,0.769
+2019,12 Chemistry,Hispanic/Latino,9,
+2019,12 Chemistry,No Response,3,
+2019,12 Chemistry,Other,7,
+2019,12 Chemistry,White,101,0.624
+2019,13 Biology,Afr. Amer./Black,13,0.462
+2019,13 Biology,All Testers,295,0.763
+2019,13 Biology,Amer. Ind. or Alaska Nat.,1,
+2019,13 Biology,Asian/ Pacific Islander,20,0.85
+2019,13 Biology,Hispanic/Latino,18,0.611
+2019,13 Biology,No Response,8,
+2019,13 Biology,Other,11,0.636
+2019,13 Biology,White,224,0.795
+2019,14 Earth Science,Afr. Amer./Black,,
+2019,14 Earth Science,All Testers,48,0.479
+2019,14 Earth Science,Amer. Ind. or Alaska Nat.,,
+2019,14 Earth Science,Asian/ Pacific Islander,,
+2019,14 Earth Science,Hispanic/Latino,,
+2019,14 Earth Science,No Response,4,
+2019,14 Earth Science,Other,1,
+2019,14 Earth Science,White,43,0.465
+2019,15 Latin and Classical Humanities,Afr. Amer./Black,1,
+2019,15 Latin and Classical Humanities,All Testers,28,0.857
+2019,15 Latin and Classical Humanities,Amer. Ind. or Alaska Nat.,,
+2019,15 Latin and Classical Humanities,Asian/ Pacific Islander,2,
+2019,15 Latin and Classical Humanities,Hispanic/Latino,1,
+2019,15 Latin and Classical Humanities,No Response,,
+2019,15 Latin and Classical Humanities,Other,1,
+2019,15 Latin and Classical Humanities,White,23,0.826
+2019,16 Music,Afr. Amer./Black,21,0.476
+2019,16 Music,All Testers,240,0.763
+2019,16 Music,Amer. Ind. or Alaska Nat.,,
+2019,16 Music,Asian/ Pacific Islander,14,0.786
+2019,16 Music,Hispanic/Latino,13,0.692
+2019,16 Music,No Response,4,
+2019,16 Music,Other,6,
+2019,16 Music,White,182,0.802
+2019,17 Visual Art,Afr. Amer./Black,8,
+2019,17 Visual Art,All Testers,252,0.901
+2019,17 Visual Art,Amer. Ind. or Alaska Nat.,,
+2019,17 Visual Art,Asian/ Pacific Islander,12,0.583
+2019,17 Visual Art,Hispanic/Latino,19,0.789
+2019,17 Visual Art,No Response,7,
+2019,17 Visual Art,Other,9,
+2019,17 Visual Art,White,197,0.924
+2019,19 Business,Afr. Amer./Black,1,
+2019,19 Business,All Testers,65,0.754
+2019,19 Business,Amer. Ind. or Alaska Nat.,,
+2019,19 Business,Asian/ Pacific Islander,,
+2019,19 Business,Hispanic/Latino,2,
+2019,19 Business,No Response,1,
+2019,19 Business,Other,3,
+2019,19 Business,White,58,0.741
+2019,21 Health/Family and Consumer Sciences,Afr. Amer./Black,6,
+2019,21 Health/Family and Consumer Sciences,All Testers,246,0.74
+2019,21 Health/Family and Consumer Sciences,Amer. Ind. or Alaska Nat.,,
+2019,21 Health/Family and Consumer Sciences,Asian/ Pacific Islander,2,
+2019,21 Health/Family and Consumer Sciences,Hispanic/Latino,5,
+2019,21 Health/Family and Consumer Sciences,No Response,6,
+2019,21 Health/Family and Consumer Sciences,Other,5,
+2019,21 Health/Family and Consumer Sciences,White,222,0.757
+2019,22 Physical Education,Afr. Amer./Black,27,0.259
+2019,22 Physical Education,All Testers,466,0.549
+2019,22 Physical Education,Amer. Ind. or Alaska Nat.,,
+2019,22 Physical Education,Asian/ Pacific Islander,9,
+2019,22 Physical Education,Hispanic/Latino,18,0.278
+2019,22 Physical Education,No Response,6,
+2019,22 Physical Education,Other,13,0.154
+2019,22 Physical Education,White,393,0.606
+2019,26 French,Afr. Amer./Black,9,
+2019,26 French,All Testers,67,0.791
+2019,26 French,Amer. Ind. or Alaska Nat.,,
+2019,26 French,Asian/ Pacific Islander,3,
+2019,26 French,Hispanic/Latino,2,
+2019,26 French,No Response,3,
+2019,26 French,Other,2,
+2019,26 French,White,48,0.771
+2019,27 German,Afr. Amer./Black,,
+2019,27 German,All Testers,8,
+2019,27 German,Amer. Ind. or Alaska Nat.,,
+2019,27 German,Asian/ Pacific Islander,,
+2019,27 German,Hispanic/Latino,,
+2019,27 German,No Response,,
+2019,27 German,Other,,
+2019,27 German,White,8,
+2019,28 Spanish,Afr. Amer./Black,1,
+2019,28 Spanish,All Testers,200,0.835
+2019,28 Spanish,Amer. Ind. or Alaska Nat.,,
+2019,28 Spanish,Asian/ Pacific Islander,1,
+2019,28 Spanish,Hispanic/Latino,104,0.865
+2019,28 Spanish,No Response,2,
+2019,28 Spanish,Other,14,0.786
+2019,28 Spanish,White,78,0.808
+2019,29 Chinese (Mandarin),Afr. Amer./Black,,
+2019,29 Chinese (Mandarin),All Testers,48,0.979
+2019,29 Chinese (Mandarin),Amer. Ind. or Alaska Nat.,,
+2019,29 Chinese (Mandarin),Asian/ Pacific Islander,45,1
+2019,29 Chinese (Mandarin),Hispanic/Latino,,
+2019,29 Chinese (Mandarin),No Response,,
+2019,29 Chinese (Mandarin),Other,,
+2019,29 Chinese (Mandarin),White,3,
+2019,30 Italian,Afr. Amer./Black,,
+2019,30 Italian,All Testers,12,0.667
+2019,30 Italian,Amer. Ind. or Alaska Nat.,,
+2019,30 Italian,Asian/ Pacific Islander,1,
+2019,30 Italian,Hispanic/Latino,,
+2019,30 Italian,No Response,,
+2019,30 Italian,Other,,
+2019,30 Italian,White,11,0.636
+2019,31 Russian,Afr. Amer./Black,,
+2019,31 Russian,All Testers,1,
+2019,31 Russian,Amer. Ind. or Alaska Nat.,,
+2019,31 Russian,Asian/ Pacific Islander,,
+2019,31 Russian,Hispanic/Latino,,
+2019,31 Russian,No Response,,
+2019,31 Russian,Other,1,
+2019,31 Russian,White,,
+2019,32 Portuguese,Afr. Amer./Black,,
+2019,32 Portuguese,All Testers,21,0.571
+2019,32 Portuguese,Amer. Ind. or Alaska Nat.,,
+2019,32 Portuguese,Asian/ Pacific Islander,,
+2019,32 Portuguese,Hispanic/Latino,2,
+2019,32 Portuguese,No Response,,
+2019,32 Portuguese,Other,9,
+2019,32 Portuguese,White,10,0.6
+2019,33 Technology/Engineering,Afr. Amer./Black,2,
+2019,33 Technology/Engineering,All Testers,62,0.613
+2019,33 Technology/Engineering,Amer. Ind. or Alaska Nat.,,
+2019,33 Technology/Engineering,Asian/ Pacific Islander,,
+2019,33 Technology/Engineering,Hispanic/Latino,2,
+2019,33 Technology/Engineering,No Response,5,
+2019,33 Technology/Engineering,Other,4,
+2019,33 Technology/Engineering,White,49,0.592
+2019,44 Speech,Afr. Amer./Black,1,
+2019,44 Speech,All Testers,1,
+2019,44 Speech,Amer. Ind. or Alaska Nat.,,
+2019,44 Speech,Asian/ Pacific Islander,,
+2019,44 Speech,Hispanic/Latino,,
+2019,44 Speech,No Response,,
+2019,44 Speech,Other,,
+2019,44 Speech,White,,
+2019,45 Theater,Afr. Amer./Black,6,
+2019,45 Theater,All Testers,72,0.847
+2019,45 Theater,Amer. Ind. or Alaska Nat.,,
+2019,45 Theater,Asian/ Pacific Islander,,
+2019,45 Theater,Hispanic/Latino,6,
+2019,45 Theater,No Response,,
+2019,45 Theater,Other,4,
+2019,45 Theater,White,56,0.893
+2019,46 Dance,Afr. Amer./Black,3,
+2019,46 Dance,All Testers,19,0.316
+2019,46 Dance,Amer. Ind. or Alaska Nat.,,
+2019,46 Dance,Asian/ Pacific Islander,,
+2019,46 Dance,Hispanic/Latino,1,
+2019,46 Dance,No Response,1,
+2019,46 Dance,Other,1,
+2019,46 Dance,White,13,0.385
+2019,47 Middle School Mathematics,Afr. Amer./Black,36,0.333
+2019,47 Middle School Mathematics,All Testers,435,0.634
+2019,47 Middle School Mathematics,Amer. Ind. or Alaska Nat.,3,
+2019,47 Middle School Mathematics,Asian/ Pacific Islander,22,0.773
+2019,47 Middle School Mathematics,Hispanic/Latino,25,0.36
+2019,47 Middle School Mathematics,No Response,10,0.7
+2019,47 Middle School Mathematics,Other,20,0.3
+2019,47 Middle School Mathematics,White,319,0.702
+2019,48 Political Science/Political Philosophy,Afr. Amer./Black,1,
+2019,48 Political Science/Political Philosophy,All Testers,23,0.609
+2019,48 Political Science/Political Philosophy,Amer. Ind. or Alaska Nat.,,
+2019,48 Political Science/Political Philosophy,Asian/ Pacific Islander,,
+2019,48 Political Science/Political Philosophy,Hispanic/Latino,,
+2019,48 Political Science/Political Philosophy,No Response,2,
+2019,48 Political Science/Political Philosophy,Other,1,
+2019,48 Political Science/Political Philosophy,White,19,0.579
+2019,50 Middle School Humanities,Afr. Amer./Black,5,
+2019,50 Middle School Humanities,All Testers,128,0.43
+2019,50 Middle School Humanities,Amer. Ind. or Alaska Nat.,,
+2019,50 Middle School Humanities,Asian/ Pacific Islander,5,
+2019,50 Middle School Humanities,Hispanic/Latino,4,
+2019,50 Middle School Humanities,No Response,2,
+2019,50 Middle School Humanities,Other,5,
+2019,50 Middle School Humanities,White,107,0.467
+2019,51 Middle School Mathematics/Science,Afr. Amer./Black,3,
+2019,51 Middle School Mathematics/Science,All Testers,59,0.441
+2019,51 Middle School Mathematics/Science,Amer. Ind. or Alaska Nat.,,
+2019,51 Middle School Mathematics/Science,Asian/ Pacific Islander,3,
+2019,51 Middle School Mathematics/Science,Hispanic/Latino,3,
+2019,51 Middle School Mathematics/Science,No Response,1,
+2019,51 Middle School Mathematics/Science,Other,2,
+2019,51 Middle School Mathematics/Science,White,47,0.447
+2019,53 Elementary Mathematics,Afr. Amer./Black,15,0.333
+2019,53 Elementary Mathematics,All Testers,448,0.491
+2019,53 Elementary Mathematics,Amer. Ind. or Alaska Nat.,2,
+2019,53 Elementary Mathematics,Asian/ Pacific Islander,10,0.8
+2019,53 Elementary Mathematics,Hispanic/Latino,19,0.263
+2019,53 Elementary Mathematics,No Response,5,
+2019,53 Elementary Mathematics,Other,11,0.364
+2019,53 Elementary Mathematics,White,386,0.508
+2019,54 English as a Second Language,Afr. Amer./Black,70,0.343
+2019,54 English as a Second Language,All Testers,1011,0.526
+2019,54 English as a Second Language,Amer. Ind. or Alaska Nat.,2,
+2019,54 English as a Second Language,Asian/ Pacific Islander,59,0.559
+2019,54 English as a Second Language,Hispanic/Latino,127,0.307
+2019,54 English as a Second Language,No Response,42,0.571
+2019,54 English as a Second Language,Other,63,0.444
+2019,54 English as a Second Language,White,648,0.591
+2019,55 Adult Basic Education,Afr. Amer./Black,1,
+2019,55 Adult Basic Education,All Testers,12,0.75
+2019,55 Adult Basic Education,Amer. Ind. or Alaska Nat.,,
+2019,55 Adult Basic Education,Asian/ Pacific Islander,,
+2019,55 Adult Basic Education,Hispanic/Latino,1,
+2019,55 Adult Basic Education,No Response,,
+2019,55 Adult Basic Education,Other,2,
+2019,55 Adult Basic Education,White,8,
+2019,56 Sheltered English Immersion,Afr. Amer./Black,23,0.478
+2019,56 Sheltered English Immersion,All Testers,1235,0.752
+2019,56 Sheltered English Immersion,Amer. Ind. or Alaska Nat.,,
+2019,56 Sheltered English Immersion,Asian/ Pacific Islander,23,0.478
+2019,56 Sheltered English Immersion,Hispanic/Latino,35,0.657
+2019,56 Sheltered English Immersion,No Response,38,0.605
+2019,56 Sheltered English Immersion,Other,26,0.615
+2019,56 Sheltered English Immersion,White,1090,0.775
+2019,90 Foundations of Reading,Afr. Amer./Black,161,0.391
+2019,90 Foundations of Reading,All Testers,3833,0.634
+2019,90 Foundations of Reading,Amer. Ind. or Alaska Nat.,5,
+2019,90 Foundations of Reading,Asian/ Pacific Islander,101,0.693
+2019,90 Foundations of Reading,Hispanic/Latino,203,0.512
+2019,90 Foundations of Reading,No Response,68,0.603
+2019,90 Foundations of Reading,Other,107,0.533
+2019,90 Foundations of Reading,White,3188,0.656
+2019,91 Vocational Technical Literacy Skills Test (VTLST),Afr. Amer./Black,4,
+2019,91 Vocational Technical Literacy Skills Test (VTLST),All Testers,227,0.784
+2019,91 Vocational Technical Literacy Skills Test (VTLST),Amer. Ind. or Alaska Nat.,1,
+2019,91 Vocational Technical Literacy Skills Test (VTLST),Asian/ Pacific Islander,2,
+2019,91 Vocational Technical Literacy Skills Test (VTLST),Hispanic/Latino,14,0.5
+2019,91 Vocational Technical Literacy Skills Test (VTLST),No Response,2,
+2019,91 Vocational Technical Literacy Skills Test (VTLST),Other,12,1
+2019,91 Vocational Technical Literacy Skills Test (VTLST),White,192,0.786
+2019,Comm & Lit: Reading,Afr. Amer./Black,480,0.698
+2019,Comm & Lit: Reading,All Testers,8707,0.844
+2019,Comm & Lit: Reading,Amer. Ind. or Alaska Nat.,19,0.789
+2019,Comm & Lit: Reading,Asian/ Pacific Islander,355,0.811
+2019,Comm & Lit: Reading,Hispanic/Latino,661,0.741
+2019,Comm & Lit: Reading,No Response,114,0.904
+2019,Comm & Lit: Reading,Other,265,0.781
+2019,Comm & Lit: Reading,White,6813,0.868
+2019,Comm & Lit: Writing,Afr. Amer./Black,482,0.666
+2019,Comm & Lit: Writing,All Testers,8611,0.857
+2019,Comm & Lit: Writing,Amer. Ind. or Alaska Nat.,19,0.737
+2019,Comm & Lit: Writing,Asian/ Pacific Islander,353,0.807
+2019,Comm & Lit: Writing,Hispanic/Latino,644,0.731
+2019,Comm & Lit: Writing,No Response,130,0.785
+2019,Comm & Lit: Writing,Other,267,0.798
+2019,Comm & Lit: Writing,White,6716,0.889
+2019,VTLST: Reading,Afr. Amer./Black,3,
+2019,VTLST: Reading,All Testers,202,0.95
+2019,VTLST: Reading,Amer. Ind. or Alaska Nat.,1,
+2019,VTLST: Reading,Asian/ Pacific Islander,2,
+2019,VTLST: Reading,Hispanic/Latino,12,0.833
+2019,VTLST: Reading,No Response,2,
+2019,VTLST: Reading,Other,12,1
+2019,VTLST: Reading,White,170,0.953
+2019,VTLST: Writing,Afr. Amer./Black,6,
+2019,VTLST: Writing,All Testers,236,0.805
+2019,VTLST: Writing,Amer. Ind. or Alaska Nat.,1,
+2019,VTLST: Writing,Asian/ Pacific Islander,4,
+2019,VTLST: Writing,Hispanic/Latino,14,0.571
+2019,VTLST: Writing,No Response,2,
+2019,VTLST: Writing,Other,13,1
+2019,VTLST: Writing,White,196,0.801
+2018,01 Communication & Literacy Skills,Afr. Amer./Black,455,0.622
+2018,01 Communication & Literacy Skills,All Testers,9565,0.8
+2018,09 Mathematics,White,379,0.757
+2018,01 Communication & Literacy Skills,Amer. Ind. or Alaska Nat.,21,0.714
+2018,01 Communication & Literacy Skills,Asian/ Pacific Islander,359,0.758
+2018,01 Communication & Literacy Skills,Hispanic/Latino,635,0.613
+2018,01 Communication & Literacy Skills,No Response,194,0.809
+2018,01 Communication & Literacy Skills,Other,329,0.69
+2018,01 Communication & Literacy Skills,White,7572,0.833
+2018,02 Early Childhood,Afr. Amer./Black,49,0.449
+2018,02 Early Childhood,All Testers,1302,0.604
+2018,02 Early Childhood,Amer. Ind. or Alaska Nat.,3,
+2018,02 Early Childhood,Asian/ Pacific Islander,32,0.75
+2018,02 Early Childhood,Hispanic/Latino,80,0.513
+2018,02 Early Childhood,No Response,24,0.708
+2018,02 Early Childhood,Other,48,0.646
+2018,02 Early Childhood,White,1066,0.609
+2018,03 General Curriculum,Afr. Amer./Black,107,0.393
+2018,03 General Curriculum,All Testers,3320,0.657
+2018,03 General Curriculum,Amer. Ind. or Alaska Nat.,7,
+2018,03 General Curriculum,Asian/ Pacific Islander,90,0.778
+2018,03 General Curriculum,Hispanic/Latino,127,0.559
+2018,03 General Curriculum,No Response,71,0.634
+2018,03 General Curriculum,Other,96,0.625
+2018,03 General Curriculum,White,2822,0.669
+2018,03 General Curriculum - Mathematics,Afr. Amer./Black,107,0.374
+2018,03 General Curriculum - Mathematics,All Testers,3133,0.665
+2018,03 General Curriculum - Mathematics,Amer. Ind. or Alaska Nat.,6,
+2018,03 General Curriculum - Mathematics,Asian/ Pacific Islander,79,0.823
+2018,03 General Curriculum - Mathematics,Hispanic/Latino,125,0.544
+2018,03 General Curriculum - Mathematics,No Response,64,0.656
+2018,03 General Curriculum - Mathematics,Other,88,0.67
+2018,03 General Curriculum - Mathematics,White,2664,0.678
+2018,03 General Curriculum - Multi-Subject,Afr. Amer./Black,96,0.656
+2018,03 General Curriculum - Multi-Subject,All Testers,2963,0.776
+2018,03 General Curriculum - Multi-Subject,Amer. Ind. or Alaska Nat.,4,
+2018,03 General Curriculum - Multi-Subject,Asian/ Pacific Islander,78,0.782
+2018,03 General Curriculum - Multi-Subject,Hispanic/Latino,111,0.658
+2018,03 General Curriculum - Multi-Subject,No Response,64,0.828
+2018,03 General Curriculum - Multi-Subject,Other,80,0.775
+2018,03 General Curriculum - Multi-Subject,White,2530,0.785
+2018,06 History,Afr. Amer./Black,40,0.55
+2018,06 History,All Testers,827,0.771
+2018,06 History,Amer. Ind. or Alaska Nat.,1,
+2018,06 History,Asian/ Pacific Islander,14,0.857
+2018,06 History,Hispanic/Latino,35,0.686
+2018,06 History,No Response,20,0.75
+2018,06 History,Other,22,0.727
+2018,06 History,White,695,0.79
+2018,07 English,Afr. Amer./Black,38,0.5
+2018,07 English,All Testers,932,0.824
+2018,07 English,Amer. Ind. or Alaska Nat.,1,
+2018,07 English,Asian/ Pacific Islander,20,0.95
+2018,07 English,Hispanic/Latino,44,0.614
+2018,07 English,No Response,24,0.708
+2018,07 English,Other,37,0.649
+2018,07 English,White,768,0.861
+2018,08 Reading Specialist,Afr. Amer./Black,8,
+2018,08 Reading Specialist,All Testers,393,0.72
+2018,08 Reading Specialist,Amer. Ind. or Alaska Nat.,1,
+2018,08 Reading Specialist,Asian/ Pacific Islander,5,
+2018,08 Reading Specialist,Hispanic/Latino,14,0.714
+2018,08 Reading Specialist,No Response,5,
+2018,08 Reading Specialist,Other,4,
+2018,08 Reading Specialist,White,356,0.733
+2018,09 Mathematics,Afr. Amer./Black,30,0.433
+2018,09 Mathematics,All Testers,497,0.724
+2018,09 Mathematics,Amer. Ind. or Alaska Nat.,2,
+2018,09 Mathematics,Asian/ Pacific Islander,34,0.765
+2018,09 Mathematics,Hispanic/Latino,26,0.577
+2018,09 Mathematics,No Response,4,
+2018,09 Mathematics,Other,22,0.636
+2018,10 General Science,Afr. Amer./Black,10,0.3
+2018,10 General Science,All Testers,290,0.828
+2018,10 General Science,Amer. Ind. or Alaska Nat.,2,
+2018,10 General Science,Asian/ Pacific Islander,10,0.8
+2018,10 General Science,Hispanic/Latino,10,0.8
+2018,10 General Science,No Response,11,0.727
+2018,10 General Science,Other,16,0.688
+2018,10 General Science,White,231,0.866
+2018,11 Physics,Afr. Amer./Black,1,
+2018,11 Physics,All Testers,117,0.675
+2018,11 Physics,Amer. Ind. or Alaska Nat.,,
+2018,11 Physics,Asian/ Pacific Islander,4,
+2018,11 Physics,Hispanic/Latino,9,
+2018,11 Physics,No Response,4,
+2018,11 Physics,Other,4,
+2018,11 Physics,White,95,0.705
+2018,12 Chemistry,Afr. Amer./Black,7,
+2018,12 Chemistry,All Testers,137,0.62
+2018,12 Chemistry,Amer. Ind. or Alaska Nat.,,
+2018,12 Chemistry,Asian/ Pacific Islander,14,0.929
+2018,12 Chemistry,Hispanic/Latino,2,
+2018,12 Chemistry,No Response,6,
+2018,12 Chemistry,Other,4,
+2018,12 Chemistry,White,104,0.606
+2018,13 Biology,Afr. Amer./Black,21,0.524
+2018,13 Biology,All Testers,323,0.706
+2018,13 Biology,Amer. Ind. or Alaska Nat.,1,
+2018,13 Biology,Asian/ Pacific Islander,19,0.789
+2018,13 Biology,Hispanic/Latino,19,0.368
+2018,13 Biology,No Response,10,0.7
+2018,13 Biology,Other,13,0.538
+2018,13 Biology,White,240,0.75
+2018,14 Earth Science,Afr. Amer./Black,2,
+2018,14 Earth Science,All Testers,52,0.481
+2018,14 Earth Science,Amer. Ind. or Alaska Nat.,,
+2018,14 Earth Science,Asian/ Pacific Islander,2,
+2018,14 Earth Science,Hispanic/Latino,3,
+2018,14 Earth Science,No Response,5,
+2018,14 Earth Science,Other,2,
+2018,14 Earth Science,White,38,0.5
+2018,15 Latin and Classical Humanities,Afr. Amer./Black,,
+2018,15 Latin and Classical Humanities,All Testers,28,0.821
+2018,15 Latin and Classical Humanities,Amer. Ind. or Alaska Nat.,,
+2018,15 Latin and Classical Humanities,Asian/ Pacific Islander,2,
+2018,15 Latin and Classical Humanities,Hispanic/Latino,,
+2018,15 Latin and Classical Humanities,No Response,1,
+2018,15 Latin and Classical Humanities,Other,1,
+2018,15 Latin and Classical Humanities,White,24,0.792
+2018,16 Music,Afr. Amer./Black,14,0.5
+2018,16 Music,All Testers,267,0.749
+2018,16 Music,Amer. Ind. or Alaska Nat.,,
+2018,16 Music,Asian/ Pacific Islander,16,0.813
+2018,16 Music,Hispanic/Latino,12,0.5
+2018,16 Music,No Response,4,
+2018,16 Music,Other,6,
+2018,16 Music,White,215,0.777
+2018,17 Visual Art,Afr. Amer./Black,10,0.8
+2018,17 Visual Art,All Testers,249,0.932
+2018,17 Visual Art,Amer. Ind. or Alaska Nat.,1,
+2018,17 Visual Art,Asian/ Pacific Islander,7,
+2018,17 Visual Art,Hispanic/Latino,11,0.909
+2018,17 Visual Art,No Response,7,
+2018,17 Visual Art,Other,8,
+2018,17 Visual Art,White,205,0.941
+2018,19 Business,Afr. Amer./Black,4,
+2018,19 Business,All Testers,73,0.658
+2018,19 Business,Amer. Ind. or Alaska Nat.,1,
+2018,19 Business,Asian/ Pacific Islander,,
+2018,19 Business,Hispanic/Latino,1,
+2018,19 Business,No Response,1,
+2018,19 Business,Other,3,
+2018,19 Business,White,63,0.635
+2018,21 Health/Family and Consumer Sciences,Afr. Amer./Black,10,0.6
+2018,21 Health/Family and Consumer Sciences,All Testers,238,0.794
+2018,21 Health/Family and Consumer Sciences,Amer. Ind. or Alaska Nat.,,
+2018,21 Health/Family and Consumer Sciences,Asian/ Pacific Islander,2,
+2018,21 Health/Family and Consumer Sciences,Hispanic/Latino,5,
+2018,21 Health/Family and Consumer Sciences,No Response,6,
+2018,21 Health/Family and Consumer Sciences,Other,6,
+2018,21 Health/Family and Consumer Sciences,White,209,0.809
+2018,22 Physical Education,Afr. Amer./Black,26,0.154
+2018,22 Physical Education,All Testers,451,0.528
+2018,22 Physical Education,Amer. Ind. or Alaska Nat.,1,
+2018,22 Physical Education,Asian/ Pacific Islander,3,
+2018,22 Physical Education,Hispanic/Latino,17,0.412
+2018,22 Physical Education,No Response,9,
+2018,22 Physical Education,Other,14,0.214
+2018,22 Physical Education,White,381,0.57
+2018,26 French,Afr. Amer./Black,9,
+2018,26 French,All Testers,58,0.741
+2018,26 French,Amer. Ind. or Alaska Nat.,,
+2018,26 French,Asian/ Pacific Islander,,
+2018,26 French,Hispanic/Latino,3,
+2018,26 French,No Response,2,
+2018,26 French,Other,,
+2018,26 French,White,44,0.818
+2018,27 German,Afr. Amer./Black,,
+2018,27 German,All Testers,8,
+2018,27 German,Amer. Ind. or Alaska Nat.,,
+2018,27 German,Asian/ Pacific Islander,,
+2018,27 German,Hispanic/Latino,,
+2018,27 German,No Response,,
+2018,27 German,Other,,
+2018,27 German,White,8,
+2018,28 Spanish,Afr. Amer./Black,4,
+2018,28 Spanish,All Testers,202,0.886
+2018,28 Spanish,Amer. Ind. or Alaska Nat.,,
+2018,28 Spanish,Asian/ Pacific Islander,3,
+2018,28 Spanish,Hispanic/Latino,91,0.934
+2018,28 Spanish,No Response,10,0.8
+2018,28 Spanish,Other,4,
+2018,28 Spanish,White,90,0.856
+2018,29 Chinese (Mandarin),Afr. Amer./Black,,
+2018,29 Chinese (Mandarin),All Testers,42,1
+2018,29 Chinese (Mandarin),Amer. Ind. or Alaska Nat.,,
+2018,29 Chinese (Mandarin),Asian/ Pacific Islander,37,1
+2018,29 Chinese (Mandarin),Hispanic/Latino,,
+2018,29 Chinese (Mandarin),No Response,2,
+2018,29 Chinese (Mandarin),Other,1,
+2018,29 Chinese (Mandarin),White,2,
+2018,30 Italian,Afr. Amer./Black,,
+2018,30 Italian,All Testers,8,
+2018,30 Italian,Amer. Ind. or Alaska Nat.,,
+2018,30 Italian,Asian/ Pacific Islander,,
+2018,30 Italian,Hispanic/Latino,,
+2018,30 Italian,No Response,1,
+2018,30 Italian,Other,,
+2018,30 Italian,White,7,
+2018,31 Russian,Afr. Amer./Black,,
+2018,31 Russian,All Testers,3,
+2018,31 Russian,Amer. Ind. or Alaska Nat.,,
+2018,31 Russian,Asian/ Pacific Islander,,
+2018,31 Russian,Hispanic/Latino,,
+2018,31 Russian,No Response,,
+2018,31 Russian,Other,,
+2018,31 Russian,White,3,
+2018,32 Portuguese,Afr. Amer./Black,1,
+2018,32 Portuguese,All Testers,12,0.583
+2018,32 Portuguese,Amer. Ind. or Alaska Nat.,,
+2018,32 Portuguese,Asian/ Pacific Islander,,
+2018,32 Portuguese,Hispanic/Latino,,
+2018,32 Portuguese,No Response,1,
+2018,32 Portuguese,Other,5,
+2018,32 Portuguese,White,5,
+2018,33 Technology/Engineering,Afr. Amer./Black,2,
+2018,33 Technology/Engineering,All Testers,66,0.576
+2018,33 Technology/Engineering,Amer. Ind. or Alaska Nat.,,
+2018,33 Technology/Engineering,Asian/ Pacific Islander,2,
+2018,33 Technology/Engineering,Hispanic/Latino,3,
+2018,33 Technology/Engineering,No Response,3,
+2018,33 Technology/Engineering,Other,5,
+2018,33 Technology/Engineering,White,51,0.608
+2018,44 Speech,Afr. Amer./Black,,
+2018,44 Speech,All Testers,4,
+2018,44 Speech,Amer. Ind. or Alaska Nat.,,
+2018,44 Speech,Asian/ Pacific Islander,,
+2018,44 Speech,Hispanic/Latino,1,
+2018,44 Speech,No Response,,
+2018,44 Speech,Other,,
+2018,44 Speech,White,3,
+2018,45 Theater,Afr. Amer./Black,4,
+2018,45 Theater,All Testers,69,0.942
+2018,45 Theater,Amer. Ind. or Alaska Nat.,,
+2018,45 Theater,Asian/ Pacific Islander,1,
+2018,45 Theater,Hispanic/Latino,1,
+2018,45 Theater,No Response,1,
+2018,45 Theater,Other,2,
+2018,45 Theater,White,60,0.95
+2018,46 Dance,Afr. Amer./Black,3,
+2018,46 Dance,All Testers,24,0.5
+2018,46 Dance,Amer. Ind. or Alaska Nat.,,
+2018,46 Dance,Asian/ Pacific Islander,,
+2018,46 Dance,Hispanic/Latino,2,
+2018,46 Dance,No Response,2,
+2018,46 Dance,Other,1,
+2018,46 Dance,White,16,0.688
+2018,47 Middle School Mathematics,Afr. Amer./Black,36,0.361
+2018,47 Middle School Mathematics,All Testers,434,0.647
+2018,47 Middle School Mathematics,Amer. Ind. or Alaska Nat.,,
+2018,47 Middle School Mathematics,Asian/ Pacific Islander,24,0.792
+2018,47 Middle School Mathematics,Hispanic/Latino,23,0.609
+2018,47 Middle School Mathematics,No Response,13,0.385
+2018,47 Middle School Mathematics,Other,20,0.35
+2018,47 Middle School Mathematics,White,318,0.701
+2018,48 Political Science/Political Philosophy,Afr. Amer./Black,,
+2018,48 Political Science/Political Philosophy,All Testers,22,0.636
+2018,48 Political Science/Political Philosophy,Amer. Ind. or Alaska Nat.,,
+2018,48 Political Science/Political Philosophy,Asian/ Pacific Islander,,
+2018,48 Political Science/Political Philosophy,Hispanic/Latino,3,
+2018,48 Political Science/Political Philosophy,No Response,,
+2018,48 Political Science/Political Philosophy,Other,1,
+2018,48 Political Science/Political Philosophy,White,18,0.667
+2018,50 Middle School Humanities,Afr. Amer./Black,5,
+2018,50 Middle School Humanities,All Testers,132,0.439
+2018,50 Middle School Humanities,Amer. Ind. or Alaska Nat.,1,
+2018,50 Middle School Humanities,Asian/ Pacific Islander,3,
+2018,50 Middle School Humanities,Hispanic/Latino,5,
+2018,50 Middle School Humanities,No Response,3,
+2018,50 Middle School Humanities,Other,4,
+2018,50 Middle School Humanities,White,111,0.432
+2018,51 Middle School Mathematics/Science,Afr. Amer./Black,6,
+2018,51 Middle School Mathematics/Science,All Testers,68,0.5
+2018,51 Middle School Mathematics/Science,Amer. Ind. or Alaska Nat.,,
+2018,51 Middle School Mathematics/Science,Asian/ Pacific Islander,3,
+2018,51 Middle School Mathematics/Science,Hispanic/Latino,2,
+2018,51 Middle School Mathematics/Science,No Response,1,
+2018,51 Middle School Mathematics/Science,Other,1,
+2018,51 Middle School Mathematics/Science,White,55,0.564
+2018,52 Academically Advanced,Afr. Amer./Black,,
+2018,52 Academically Advanced,All Testers,2,
+2018,52 Academically Advanced,Amer. Ind. or Alaska Nat.,,
+2018,52 Academically Advanced,Asian/ Pacific Islander,,
+2018,52 Academically Advanced,Hispanic/Latino,,
+2018,52 Academically Advanced,No Response,1,
+2018,52 Academically Advanced,Other,,
+2018,52 Academically Advanced,White,1,
+2018,53 Elementary Mathematics,Afr. Amer./Black,17,0.412
+2018,53 Elementary Mathematics,All Testers,488,0.455
+2018,53 Elementary Mathematics,Amer. Ind. or Alaska Nat.,1,
+2018,53 Elementary Mathematics,Asian/ Pacific Islander,11,0.727
+2018,53 Elementary Mathematics,Hispanic/Latino,20,0.35
+2018,53 Elementary Mathematics,No Response,13,0.308
+2018,53 Elementary Mathematics,Other,15,0.133
+2018,53 Elementary Mathematics,White,411,0.472
+2018,54 English as a Second Language,Afr. Amer./Black,73,0.247
+2018,54 English as a Second Language,All Testers,1163,0.548
+2018,54 English as a Second Language,Amer. Ind. or Alaska Nat.,,
+2018,54 English as a Second Language,Asian/ Pacific Islander,74,0.554
+2018,54 English as a Second Language,Hispanic/Latino,137,0.299
+2018,54 English as a Second Language,No Response,39,0.385
+2018,54 English as a Second Language,Other,66,0.409
+2018,54 English as a Second Language,White,774,0.64
+2018,55 Adult Basic Education,Afr. Amer./Black,1,
+2018,55 Adult Basic Education,All Testers,12,0.833
+2018,55 Adult Basic Education,Amer. Ind. or Alaska Nat.,,
+2018,55 Adult Basic Education,Asian/ Pacific Islander,,
+2018,55 Adult Basic Education,Hispanic/Latino,1,
+2018,55 Adult Basic Education,No Response,2,
+2018,55 Adult Basic Education,Other,,
+2018,55 Adult Basic Education,White,8,
+2018,56 Sheltered English Immersion,Afr. Amer./Black,22,0.455
+2018,56 Sheltered English Immersion,All Testers,1386,0.734
+2018,56 Sheltered English Immersion,Amer. Ind. or Alaska Nat.,2,
+2018,56 Sheltered English Immersion,Asian/ Pacific Islander,25,0.84
+2018,56 Sheltered English Immersion,Hispanic/Latino,39,0.564
+2018,56 Sheltered English Immersion,No Response,26,0.769
+2018,56 Sheltered English Immersion,Other,36,0.611
+2018,56 Sheltered English Immersion,White,1236,0.745
+2018,90 Foundations of Reading,Afr. Amer./Black,188,0.399
+2018,90 Foundations of Reading,All Testers,4167,0.636
+2018,90 Foundations of Reading,Amer. Ind. or Alaska Nat.,11,0.545
+2018,90 Foundations of Reading,Asian/ Pacific Islander,106,0.698
+2018,90 Foundations of Reading,Hispanic/Latino,201,0.532
+2018,90 Foundations of Reading,No Response,90,0.611
+2018,90 Foundations of Reading,Other,120,0.55
+2018,90 Foundations of Reading,White,3451,0.657
+2018,91 Vocational Technical Literacy Skills Test (VTLST),Afr. Amer./Black,8,
+2018,91 Vocational Technical Literacy Skills Test (VTLST),All Testers,228,0.759
+2018,91 Vocational Technical Literacy Skills Test (VTLST),Amer. Ind. or Alaska Nat.,,
+2018,91 Vocational Technical Literacy Skills Test (VTLST),Asian/ Pacific Islander,1,
+2018,91 Vocational Technical Literacy Skills Test (VTLST),Hispanic/Latino,10,0.3
+2018,91 Vocational Technical Literacy Skills Test (VTLST),No Response,4,
+2018,91 Vocational Technical Literacy Skills Test (VTLST),Other,7,
+2018,91 Vocational Technical Literacy Skills Test (VTLST),White,198,0.773
+2018,Comm & Lit: Reading,Afr. Amer./Black,428,0.729
+2018,Comm & Lit: Reading,All Testers,9212,0.858
+2018,Comm & Lit: Reading,Amer. Ind. or Alaska Nat.,22,0.864
+2018,Comm & Lit: Reading,Asian/ Pacific Islander,354,0.836
+2018,Comm & Lit: Reading,Hispanic/Latino,579,0.736
+2018,Comm & Lit: Reading,No Response,180,0.906
+2018,Comm & Lit: Reading,Other,308,0.789
+2018,Comm & Lit: Reading,White,7341,0.878
+2018,Comm & Lit: Writing,Afr. Amer./Black,437,0.677
+2018,Comm & Lit: Writing,All Testers,9121,0.854
+2018,Comm & Lit: Writing,Amer. Ind. or Alaska Nat.,19,0.737
+2018,Comm & Lit: Writing,Asian/ Pacific Islander,350,0.789
+2018,Comm & Lit: Writing,Hispanic/Latino,603,0.67
+2018,Comm & Lit: Writing,No Response,188,0.851
+2018,Comm & Lit: Writing,Other,306,0.765
+2018,Comm & Lit: Writing,White,7218,0.888
+2018,VTLST: Reading,Afr. Amer./Black,8,
+2018,VTLST: Reading,All Testers,204,0.956
+2018,VTLST: Reading,Amer. Ind. or Alaska Nat.,,
+2018,VTLST: Reading,Asian/ Pacific Islander,1,
+2018,VTLST: Reading,Hispanic/Latino,7,
+2018,VTLST: Reading,No Response,4,
+2018,VTLST: Reading,Other,4,
+2018,VTLST: Reading,White,180,0.956
+2018,VTLST: Writing,Afr. Amer./Black,8,
+2018,VTLST: Writing,All Testers,231,0.775
+2018,VTLST: Writing,Amer. Ind. or Alaska Nat.,,
+2018,VTLST: Writing,Asian/ Pacific Islander,1,
+2018,VTLST: Writing,Hispanic/Latino,9,
+2018,VTLST: Writing,No Response,4,
+2018,VTLST: Writing,Other,7,
+2018,VTLST: Writing,White,202,0.787

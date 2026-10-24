@@ -1,0 +1,97 @@
+{
+  "id" : "hctd-j8zk",
+  "name" : "RADAR Special Education Dashboard",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "createdAt" : 1713818449,
+  "description" : "Assess and compare how schools and districts allocate resources and serve students with disabilities. This dashboard provides district and comparison data on special education enrollment, staffing, and placement trajectories over several years.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40533838,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1713819392,
+  "publicationGroup" : 19505923,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1713818449,
+  "tableId" : 19505923,
+  "totalTimesRated" : 0,
+  "viewCount" : 4407,
+  "viewLastModified" : 1776800522,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1725978724,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6545724,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1725978713,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1725978724,
+      "failureCount" : 0,
+      "startedAt" : 1725978724,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "Assess and compare how schools and districts allocate resources and serve students with disabilities. This dashboard provides district and comparison data on special education enrollment, staffing, and placement trajectories over several years. ",
+      "title" : "RADAR Special Education Dashboard"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

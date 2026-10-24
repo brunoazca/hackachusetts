@@ -1,0 +1,146 @@
+{
+  "id": "crash-sheet-1-1299925912",
+  "url": "https://docs.google.com/spreadsheets/d/1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs/edit",
+  "sheet": "maps",
+  "range": "A1:Z1000",
+  "grid": {
+    "rowCount": 1000,
+    "columnCount": 26
+  },
+  "retention": "full_tab_grid_values",
+  "rows": 1000,
+  "retrieved_at_utc": "2026-10-24T15:15:41.532Z",
+  "result": {
+    "range": "maps!A1:Z1000",
+    "majorDimension": "ROWS",
+    "values": [
+      [
+        "Boston Vision Zero map interface"
+      ],
+      [
+        "https://experience.arcgis.com/experience/bae68e65908f45e1bcc86fe5f089d266/page/"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "BCU Labs Crash Map"
+      ],
+      [
+        "https://bostoncyclistsunion.org/resources/interactive-crash-map"
+      ],
+      [
+        "https://github.com/BostonCyclistsUnion/crash_map"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "Hartford crash map"
+      ],
+      [
+        "https://datavizforall.org/hartford-crashes/"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "Boston area crash heat map (simple test)"
+      ],
+      [
+        "https://jackdougherty.github.io/boston-crashes-heatmap/"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "Mass DOT Impact also may have useful map interfaces, but still digging through their site"
+      ]
+    ]
+  }
+}

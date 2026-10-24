@@ -1,0 +1,1217 @@
+{
+  "id" : "4684-cw3t",
+  "name" : "Elementary and Secondary Teacher Data",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1706290996,
+  "description" : "This dataset contains data about Massachusetts public school teachers and their qualifications by subject since 2008, including the count of teacher full time equivalents (FTE), the ratio of students to teachers, teacher experience, and credentials.\n\nUnder Massachusetts state law, Commonwealth charter schools have different educator qualification requirements than traditional public schools and generally, as a matter of state law, are not required to be licensed. See the <a href=\"http://www.doe.mass.edu/charter/guidance\" target=\"_blank\" rel=\"noopener noreferrer\">Educator Qualifications in Commonwealth Charter Schools</a> technical advisory for more information.\n\nIn 2025 and earlier, unusually high student/teacher ratios were sometimes calculated for teacher FTEs between 0.0 and 0.1.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/teacherdata.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Teacher Data Report</a>\n\n<b>List of Subjects</b><ul><li>All Teachers</li><li>Arts</li><li>Civics/Government</li><li>Core-All Subjects</li><li>Economics</li><li>English/Language Arts</li><li>Foreign Language</li><li>Geography</li><li>History</li><li>Mathematics</li><li>Reading</li><li>Science</li><li>Social Studies/Social Sciences</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 78,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41521025,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1755013103,
+  "publicationGroup" : 19442175,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1772228296,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20011591,
+  "totalTimesRated" : 0,
+  "viewCount" : 1180,
+  "viewLastModified" : 1786392270,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1774039097,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7396128,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1774039083,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1774039097,
+      "failureCount" : 0,
+      "startedAt" : 1774039097,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 615753151,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107597,
+    "cachedContents" : {
+      "non_null" : "553581",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2014",
+        "count" : "29471"
+      }, {
+        "item" : "2015",
+        "count" : "29471"
+      }, {
+        "item" : "2016",
+        "count" : "29419"
+      }, {
+        "item" : "2008",
+        "count" : "29406"
+      }, {
+        "item" : "2017",
+        "count" : "29315"
+      }, {
+        "item" : "2018",
+        "count" : "29302"
+      }, {
+        "item" : "2013",
+        "count" : "29289"
+      }, {
+        "item" : "2019",
+        "count" : "29289"
+      }, {
+        "item" : "2020",
+        "count" : "29198"
+      }, {
+        "item" : "2022",
+        "count" : "29146"
+      }, {
+        "item" : "2021",
+        "count" : "29133"
+      }, {
+        "item" : "2009",
+        "count" : "29094"
+      }, {
+        "item" : "2023",
+        "count" : "29016"
+      }, {
+        "item" : "2012",
+        "count" : "28990"
+      }, {
+        "item" : "2024",
+        "count" : "28951"
+      }, {
+        "item" : "2010",
+        "count" : "28912"
+      }, {
+        "item" : "2011",
+        "count" : "28834"
+      }, {
+        "item" : "2025",
+        "count" : "28771"
+      }, {
+        "item" : "2026",
+        "count" : "28574"
+      } ],
+      "smallest" : "2008",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753152,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107598,
+    "cachedContents" : {
+      "non_null" : "553581",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "29601"
+      }, {
+        "item" : "02810000",
+        "count" : "14365"
+      }, {
+        "item" : "03480000",
+        "count" : "11414"
+      }, {
+        "item" : "01490000",
+        "count" : "7059"
+      }, {
+        "item" : "01630000",
+        "count" : "6617"
+      }, {
+        "item" : "02010000",
+        "count" : "6513"
+      }, {
+        "item" : "01600000",
+        "count" : "6396"
+      }, {
+        "item" : "00440000",
+        "count" : "6006"
+      }, {
+        "item" : "02070000",
+        "count" : "5681"
+      }, {
+        "item" : "02430000",
+        "count" : "4851"
+      }, {
+        "item" : "00950000",
+        "count" : "4563"
+      }, {
+        "item" : "01280000",
+        "count" : "4186"
+      }, {
+        "item" : "00490000",
+        "count" : "4173"
+      }, {
+        "item" : "00610000",
+        "count" : "3952"
+      }, {
+        "item" : "01000000",
+        "count" : "3614"
+      }, {
+        "item" : "02930000",
+        "count" : "3510"
+      }, {
+        "item" : "02390000",
+        "count" : "3471"
+      }, {
+        "item" : "07750000",
+        "count" : "3406"
+      }, {
+        "item" : "02360000",
+        "count" : "3393"
+      }, {
+        "item" : "03250000",
+        "count" : "3187"
+      } ],
+      "smallest" : "00000000",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753153,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107599,
+    "cachedContents" : {
+      "non_null" : "553581",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "29601"
+      }, {
+        "item" : "Springfield",
+        "count" : "14365"
+      }, {
+        "item" : "Worcester",
+        "count" : "11414"
+      }, {
+        "item" : "Lawrence",
+        "count" : "7059"
+      }, {
+        "item" : "Lynn",
+        "count" : "6617"
+      }, {
+        "item" : "New Bedford",
+        "count" : "6513"
+      }, {
+        "item" : "Lowell",
+        "count" : "6396"
+      }, {
+        "item" : "Brockton",
+        "count" : "6006"
+      }, {
+        "item" : "Newton",
+        "count" : "5681"
+      }, {
+        "item" : "Quincy",
+        "count" : "4851"
+      }, {
+        "item" : "Fall River",
+        "count" : "4563"
+      }, {
+        "item" : "Haverhill",
+        "count" : "4186"
+      }, {
+        "item" : "Cambridge",
+        "count" : "4173"
+      }, {
+        "item" : "Chicopee",
+        "count" : "3952"
+      }, {
+        "item" : "Framingham",
+        "count" : "3614"
+      }, {
+        "item" : "Taunton",
+        "count" : "3510"
+      }, {
+        "item" : "Plymouth",
+        "count" : "3471"
+      }, {
+        "item" : "Wachusett",
+        "count" : "3406"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "3393"
+      }, {
+        "item" : "Westfield",
+        "count" : "3187"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753154,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107600,
+    "cachedContents" : {
+      "non_null" : "553581",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01600000",
+        "count" : "247"
+      }, {
+        "item" : "03480512",
+        "count" : "247"
+      }, {
+        "item" : "00780005",
+        "count" : "247"
+      }, {
+        "item" : "00240505",
+        "count" : "247"
+      }, {
+        "item" : "00880000",
+        "count" : "247"
+      }, {
+        "item" : "01550010",
+        "count" : "247"
+      }, {
+        "item" : "08720605",
+        "count" : "247"
+      }, {
+        "item" : "01420505",
+        "count" : "247"
+      }, {
+        "item" : "00250315",
+        "count" : "247"
+      }, {
+        "item" : "02780000",
+        "count" : "247"
+      }, {
+        "item" : "01600315",
+        "count" : "247"
+      }, {
+        "item" : "00770000",
+        "count" : "247"
+      }, {
+        "item" : "00350262",
+        "count" : "247"
+      }, {
+        "item" : "00260005",
+        "count" : "247"
+      }, {
+        "item" : "01850000",
+        "count" : "247"
+      }, {
+        "item" : "03070002",
+        "count" : "247"
+      }, {
+        "item" : "03400000",
+        "count" : "247"
+      }, {
+        "item" : "01360305",
+        "count" : "247"
+      }, {
+        "item" : "02810100",
+        "count" : "247"
+      }, {
+        "item" : "00070000",
+        "count" : "247"
+      } ],
+      "smallest" : "00000000",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753155,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107601,
+    "cachedContents" : {
+      "non_null" : "553581",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "1482"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "1235"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "1105"
+      }, {
+        "item" : "South Elementary",
+        "count" : "988"
+      }, {
+        "item" : "Center",
+        "count" : "754"
+      }, {
+        "item" : "Franklin",
+        "count" : "754"
+      }, {
+        "item" : "Lawrence",
+        "count" : "741"
+      }, {
+        "item" : "Lincoln",
+        "count" : "741"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "741"
+      }, {
+        "item" : "Winthrop",
+        "count" : "741"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "728"
+      }, {
+        "item" : "Center School",
+        "count" : "689"
+      }, {
+        "item" : "South",
+        "count" : "624"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "494"
+      }, {
+        "item" : "John F Kennedy Middle School",
+        "count" : "494"
+      }, {
+        "item" : "East Middle School",
+        "count" : "494"
+      }, {
+        "item" : "West Elementary",
+        "count" : "494"
+      }, {
+        "item" : "Brookfield",
+        "count" : "494"
+      }, {
+        "item" : "Spring Street School",
+        "count" : "494"
+      }, {
+        "item" : "John F Kennedy Middle",
+        "count" : "494"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753156,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107602,
+    "cachedContents" : {
+      "non_null" : "553581",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "454573"
+      }, {
+        "item" : "District",
+        "count" : "98761"
+      }, {
+        "item" : "State",
+        "count" : "247"
+      } ],
+      "smallest" : "District",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753157,
+    "name" : "SUBJECT",
+    "dataTypeName" : "text",
+    "description" : "Subject",
+    "fieldName" : "subject",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107603,
+    "cachedContents" : {
+      "non_null" : "553581",
+      "largest" : "Social Studies/Social Sciences",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Teachers",
+        "count" : "42586"
+      }, {
+        "item" : "English/Language Arts",
+        "count" : "42585"
+      }, {
+        "item" : "Mathematics",
+        "count" : "42585"
+      }, {
+        "item" : "Science",
+        "count" : "42585"
+      }, {
+        "item" : "Arts",
+        "count" : "42584"
+      }, {
+        "item" : "Social Studies/Social Sciences",
+        "count" : "42583"
+      }, {
+        "item" : "Core-All Subjects",
+        "count" : "42583"
+      }, {
+        "item" : "History",
+        "count" : "42583"
+      }, {
+        "item" : "Reading",
+        "count" : "42583"
+      }, {
+        "item" : "Foreign Language",
+        "count" : "42581"
+      }, {
+        "item" : "Civics/Government",
+        "count" : "42581"
+      }, {
+        "item" : "Geography",
+        "count" : "42581"
+      }, {
+        "item" : "Economics",
+        "count" : "42581"
+      } ],
+      "smallest" : "All Teachers",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753158,
+    "name" : "TCHR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Teacher Full Time Equivalent (FTE) Count",
+    "fieldName" : "tchr_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107604,
+    "cachedContents" : {
+      "non_null" : "551616",
+      "largest" : "9999999.0",
+      "null" : "1965",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "227015"
+      }, {
+        "item" : "1.0",
+        "count" : "15724"
+      }, {
+        "item" : "2.0",
+        "count" : "12732"
+      }, {
+        "item" : "3.0",
+        "count" : "7579"
+      }, {
+        "item" : "0.2",
+        "count" : "5396"
+      }, {
+        "item" : "4.0",
+        "count" : "5310"
+      }, {
+        "item" : "0.5",
+        "count" : "4862"
+      }, {
+        "item" : "0.3",
+        "count" : "4815"
+      }, {
+        "item" : "0.8",
+        "count" : "4603"
+      }, {
+        "item" : "0.4",
+        "count" : "4216"
+      }, {
+        "item" : "5.0",
+        "count" : "4104"
+      }, {
+        "item" : "0.6",
+        "count" : "3785"
+      }, {
+        "item" : "1.5",
+        "count" : "3714"
+      }, {
+        "item" : "1.2",
+        "count" : "3457"
+      }, {
+        "item" : "1.8",
+        "count" : "3369"
+      }, {
+        "item" : "6.0",
+        "count" : "3361"
+      }, {
+        "item" : "2.5",
+        "count" : "3180"
+      }, {
+        "item" : "1.3",
+        "count" : "3021"
+      }, {
+        "item" : "0.7",
+        "count" : "3010"
+      }, {
+        "item" : "1.6",
+        "count" : "2986"
+      } ],
+      "smallest" : "0.0",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753159,
+    "name" : "TCHR_LIC_PCT",
+    "dataTypeName" : "number",
+    "description" : "Teachers Licensed Percent",
+    "fieldName" : "tchr_lic_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107605,
+    "cachedContents" : {
+      "non_null" : "551607",
+      "largest" : "9.99",
+      "null" : "1974",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "265533"
+      }, {
+        "item" : "0.0",
+        "count" : "228432"
+      }, {
+        "item" : "0.5",
+        "count" : "958"
+      }, {
+        "item" : "0.992",
+        "count" : "656"
+      }, {
+        "item" : "0.984",
+        "count" : "648"
+      }, {
+        "item" : "0.667",
+        "count" : "635"
+      }, {
+        "item" : "0.987",
+        "count" : "626"
+      }, {
+        "item" : "0.983",
+        "count" : "620"
+      }, {
+        "item" : "0.995",
+        "count" : "619"
+      }, {
+        "item" : "0.993",
+        "count" : "603"
+      }, {
+        "item" : "0.971",
+        "count" : "601"
+      }, {
+        "item" : "0.985",
+        "count" : "591"
+      }, {
+        "item" : "0.977",
+        "count" : "590"
+      }, {
+        "item" : "0.98",
+        "count" : "590"
+      }, {
+        "item" : "0.978",
+        "count" : "586"
+      }, {
+        "item" : "0.972",
+        "count" : "586"
+      }, {
+        "item" : "0.986",
+        "count" : "586"
+      }, {
+        "item" : "0.991",
+        "count" : "585"
+      }, {
+        "item" : "0.976",
+        "count" : "581"
+      }, {
+        "item" : "0.989",
+        "count" : "579"
+      } ],
+      "smallest" : "0.0",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 615753160,
+    "name" : "STU_TCHR_RATIO",
+    "dataTypeName" : "text",
+    "description" : "Student/Teacher Ratio",
+    "fieldName" : "stu_tchr_ratio",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107606,
+    "cachedContents" : {
+      "non_null" : "551605",
+      "largest" : "NR",
+      "null" : "1976",
+      "top" : [ {
+        "item" : "N/A",
+        "count" : "509171"
+      }, {
+        "item" : "12.9 to 1",
+        "count" : "732"
+      }, {
+        "item" : "12.8 to 1",
+        "count" : "731"
+      }, {
+        "item" : "13.2 to 1",
+        "count" : "721"
+      }, {
+        "item" : "13.3 to 1",
+        "count" : "708"
+      }, {
+        "item" : "12.5 to 1",
+        "count" : "703"
+      }, {
+        "item" : "12.1 to 1",
+        "count" : "698"
+      }, {
+        "item" : "13.1 to 1",
+        "count" : "696"
+      }, {
+        "item" : "12.3 to 1",
+        "count" : "694"
+      }, {
+        "item" : "12.6 to 1",
+        "count" : "686"
+      }, {
+        "item" : "12.4 to 1",
+        "count" : "684"
+      }, {
+        "item" : "13.5 to 1",
+        "count" : "683"
+      }, {
+        "item" : "13.6 to 1",
+        "count" : "681"
+      }, {
+        "item" : "12.7 to 1",
+        "count" : "677"
+      }, {
+        "item" : "11.9 to 1",
+        "count" : "676"
+      }, {
+        "item" : "12.2 to 1",
+        "count" : "671"
+      }, {
+        "item" : "13.4 to 1",
+        "count" : "669"
+      }, {
+        "item" : "13.7 to 1",
+        "count" : "651"
+      }, {
+        "item" : "13.0 to 1",
+        "count" : "645"
+      }, {
+        "item" : "12.0 to 1",
+        "count" : "632"
+      } ],
+      "smallest" : "0.0 to 1",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753161,
+    "name" : "EXP_TCHR_PCT",
+    "dataTypeName" : "number",
+    "description" : "Experienced Teachers Percent",
+    "fieldName" : "exp_tchr_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107607,
+    "cachedContents" : {
+      "non_null" : "17877",
+      "largest" : "1.0",
+      "null" : "535704",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "469"
+      }, {
+        "item" : "0.857",
+        "count" : "124"
+      }, {
+        "item" : "0.833",
+        "count" : "119"
+      }, {
+        "item" : "0.8",
+        "count" : "114"
+      }, {
+        "item" : "0.9",
+        "count" : "101"
+      }, {
+        "item" : "0.889",
+        "count" : "98"
+      }, {
+        "item" : "0.867",
+        "count" : "98"
+      }, {
+        "item" : "0.862",
+        "count" : "95"
+      }, {
+        "item" : "0.875",
+        "count" : "94"
+      }, {
+        "item" : "0.887",
+        "count" : "94"
+      }, {
+        "item" : "0.886",
+        "count" : "92"
+      }, {
+        "item" : "0.846",
+        "count" : "92"
+      }, {
+        "item" : "0.877",
+        "count" : "92"
+      }, {
+        "item" : "0.897",
+        "count" : "89"
+      }, {
+        "item" : "0.866",
+        "count" : "88"
+      }, {
+        "item" : "0.909",
+        "count" : "88"
+      }, {
+        "item" : "0.864",
+        "count" : "87"
+      }, {
+        "item" : "0.872",
+        "count" : "87"
+      }, {
+        "item" : "0.88",
+        "count" : "86"
+      }, {
+        "item" : "0.874",
+        "count" : "85"
+      } ],
+      "smallest" : "0.0",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 615753162,
+    "name" : "TCHR_WO_LIC",
+    "dataTypeName" : "number",
+    "description" : "Teachers Without Waiver or Provisional License",
+    "fieldName" : "tchr_wo_lic",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107608,
+    "cachedContents" : {
+      "non_null" : "17876",
+      "largest" : "100.0",
+      "null" : "535705",
+      "top" : [ {
+        "item" : "100.0",
+        "count" : "3741"
+      }, {
+        "item" : "97.0",
+        "count" : "189"
+      }, {
+        "item" : "96.7",
+        "count" : "180"
+      }, {
+        "item" : "97.5",
+        "count" : "177"
+      }, {
+        "item" : "97.2",
+        "count" : "175"
+      }, {
+        "item" : "96.6",
+        "count" : "173"
+      }, {
+        "item" : "97.1",
+        "count" : "168"
+      }, {
+        "item" : "97.3",
+        "count" : "163"
+      }, {
+        "item" : "96.2",
+        "count" : "158"
+      }, {
+        "item" : "95.7",
+        "count" : "154"
+      }, {
+        "item" : "96.9",
+        "count" : "154"
+      }, {
+        "item" : "97.4",
+        "count" : "153"
+      }, {
+        "item" : "96.8",
+        "count" : "151"
+      }, {
+        "item" : "97.8",
+        "count" : "150"
+      }, {
+        "item" : "94.7",
+        "count" : "148"
+      }, {
+        "item" : "96.3",
+        "count" : "144"
+      }, {
+        "item" : "95.0",
+        "count" : "143"
+      }, {
+        "item" : "95.2",
+        "count" : "140"
+      }, {
+        "item" : "96.0",
+        "count" : "140"
+      }, {
+        "item" : "96.1",
+        "count" : "139"
+      } ],
+      "smallest" : "0.0",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753163,
+    "name" : "TCHR_INFLD_PCT",
+    "dataTypeName" : "number",
+    "description" : "Teachers Teaching In-Field Percent",
+    "fieldName" : "tchr_infld_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107609,
+    "cachedContents" : {
+      "non_null" : "15616",
+      "largest" : "1.0",
+      "null" : "537965",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "3923"
+      }, {
+        "item" : "0.957",
+        "count" : "191"
+      }, {
+        "item" : "0.971",
+        "count" : "180"
+      }, {
+        "item" : "0.962",
+        "count" : "178"
+      }, {
+        "item" : "0.974",
+        "count" : "174"
+      }, {
+        "item" : "0.947",
+        "count" : "165"
+      }, {
+        "item" : "0.944",
+        "count" : "160"
+      }, {
+        "item" : "0.96",
+        "count" : "159"
+      }, {
+        "item" : "0.938",
+        "count" : "150"
+      }, {
+        "item" : "0.976",
+        "count" : "150"
+      }, {
+        "item" : "0.966",
+        "count" : "148"
+      }, {
+        "item" : "0.969",
+        "count" : "143"
+      }, {
+        "item" : "0.955",
+        "count" : "142"
+      }, {
+        "item" : "0.952",
+        "count" : "141"
+      }, {
+        "item" : "0.963",
+        "count" : "141"
+      }, {
+        "item" : "0.98",
+        "count" : "138"
+      }, {
+        "item" : "0.941",
+        "count" : "137"
+      }, {
+        "item" : "0.9",
+        "count" : "133"
+      }, {
+        "item" : "0.958",
+        "count" : "132"
+      }, {
+        "item" : "0.977",
+        "count" : "131"
+      } ],
+      "smallest" : "0.0",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 615753164,
+    "name" : "CORE_ACAD_CNT",
+    "dataTypeName" : "number",
+    "description" : "Classes in Core Academic Areas Count",
+    "fieldName" : "core_acad_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 160829236,
+    "cachedContents" : {
+      "non_null" : "319553",
+      "largest" : "355807",
+      "null" : "234028",
+      "top" : [ {
+        "item" : "0",
+        "count" : "146120"
+      }, {
+        "item" : "1",
+        "count" : "6504"
+      }, {
+        "item" : "2",
+        "count" : "5959"
+      }, {
+        "item" : "3",
+        "count" : "4156"
+      }, {
+        "item" : "4",
+        "count" : "4126"
+      }, {
+        "item" : "12",
+        "count" : "3589"
+      }, {
+        "item" : "6",
+        "count" : "3584"
+      }, {
+        "item" : "10",
+        "count" : "3395"
+      }, {
+        "item" : "5",
+        "count" : "3323"
+      }, {
+        "item" : "8",
+        "count" : "3138"
+      }, {
+        "item" : "24",
+        "count" : "3015"
+      }, {
+        "item" : "20",
+        "count" : "2991"
+      }, {
+        "item" : "15",
+        "count" : "2896"
+      }, {
+        "item" : "16",
+        "count" : "2841"
+      }, {
+        "item" : "18",
+        "count" : "2795"
+      }, {
+        "item" : "14",
+        "count" : "2450"
+      }, {
+        "item" : "7",
+        "count" : "2346"
+      }, {
+        "item" : "26",
+        "count" : "2291"
+      }, {
+        "item" : "30",
+        "count" : "2274"
+      }, {
+        "item" : "17",
+        "count" : "2258"
+      } ],
+      "smallest" : "0",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : { }
+  }, {
+    "id" : 615753165,
+    "name" : "CORE_ACAD_PCT",
+    "dataTypeName" : "number",
+    "description" : "Classes in Core Academic Areas Taught by Highly Qualified Teachers Percent",
+    "fieldName" : "core_acad_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 160829237,
+    "cachedContents" : {
+      "non_null" : "319319",
+      "largest" : "1.0",
+      "null" : "234262",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "164040"
+      }, {
+        "item" : "1.0",
+        "count" : "120487"
+      }, {
+        "item" : "0.5",
+        "count" : "743"
+      }, {
+        "item" : "0.667",
+        "count" : "611"
+      }, {
+        "item" : "0.75",
+        "count" : "473"
+      }, {
+        "item" : "0.8",
+        "count" : "465"
+      }, {
+        "item" : "0.833",
+        "count" : "459"
+      }, {
+        "item" : "0.9",
+        "count" : "361"
+      }, {
+        "item" : "0.857",
+        "count" : "360"
+      }, {
+        "item" : "0.938",
+        "count" : "358"
+      }, {
+        "item" : "0.909",
+        "count" : "358"
+      }, {
+        "item" : "0.917",
+        "count" : "358"
+      }, {
+        "item" : "0.955",
+        "count" : "354"
+      }, {
+        "item" : "0.957",
+        "count" : "350"
+      }, {
+        "item" : "0.923",
+        "count" : "349"
+      }, {
+        "item" : "0.933",
+        "count" : "343"
+      }, {
+        "item" : "0.952",
+        "count" : "342"
+      }, {
+        "item" : "0.986",
+        "count" : "340"
+      }, {
+        "item" : "0.875",
+        "count" : "335"
+      }, {
+        "item" : "0.889",
+        "count" : "335"
+      } ],
+      "smallest" : "0.0",
+      "count" : "553581",
+      "cardinality" : "553581"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "fte", "full time equivalent", "student", "teacher", "educator", "professional", "in field experience", "experience", "waiver", "licensure", "licensed", "provisional" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

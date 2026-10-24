@@ -1,0 +1,1306 @@
+{
+  "id" : "rg9w-dkpg",
+  "name" : "Pre-Kindergarten and Kindergarten Enrollment",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1681242501,
+  "description" : "This dataset contains pre-kindergarten and kindergarten enrollment data for all Massachusetts public and charter schools and districts since 2018. Both the number and percent of pre-kindergarten and full-day kindergarten students are reported by student group. The number of part-time, tuitioned, and full-time kindergarten students are also reported by the same student groups. \n\nEconomically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noopener noreferrer\">DESE Researcher's Guide</a> for more information.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/pkenrollment.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Enrollment by Pre-Kindergarten</a>\n<a href=\"https://profiles.doe.mass.edu/statereport/kgenrollment.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Enrollment by Kindergarten</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 664,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41289844,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745437347,
+  "publicationGroup" : 19122978,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1771969502,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19872136,
+  "totalTimesRated" : 0,
+  "viewCount" : 2612,
+  "viewLastModified" : 1786392921,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1741019439,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6861286,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1741019308,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1741019439,
+      "failureCount" : 0,
+      "startedAt" : 1741019439,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609205348,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148154113,
+    "cachedContents" : {
+      "non_null" : "258514",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "14608"
+      }, {
+        "item" : "2024",
+        "count" : "14562"
+      }, {
+        "item" : "2023",
+        "count" : "14521"
+      }, {
+        "item" : "2026",
+        "count" : "14479"
+      }, {
+        "item" : "2022",
+        "count" : "14468"
+      }, {
+        "item" : "2019",
+        "count" : "14461"
+      }, {
+        "item" : "2018",
+        "count" : "14437"
+      }, {
+        "item" : "2020",
+        "count" : "14418"
+      }, {
+        "item" : "2021",
+        "count" : "14220"
+      }, {
+        "item" : "2015",
+        "count" : "11740"
+      }, {
+        "item" : "2017",
+        "count" : "11723"
+      }, {
+        "item" : "2016",
+        "count" : "11649"
+      }, {
+        "item" : "2014",
+        "count" : "11601"
+      }, {
+        "item" : "2013",
+        "count" : "11417"
+      }, {
+        "item" : "2012",
+        "count" : "11197"
+      }, {
+        "item" : "2009",
+        "count" : "9950"
+      }, {
+        "item" : "2010",
+        "count" : "9891"
+      }, {
+        "item" : "2011",
+        "count" : "9888"
+      }, {
+        "item" : "2008",
+        "count" : "9868"
+      }, {
+        "item" : "2007",
+        "count" : "9789"
+      } ],
+      "smallest" : "2006",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205349,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146513539,
+    "cachedContents" : {
+      "non_null" : "258514",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "16889"
+      }, {
+        "item" : "03480000",
+        "count" : "7444"
+      }, {
+        "item" : "02810000",
+        "count" : "7099"
+      }, {
+        "item" : "02010000",
+        "count" : "4045"
+      }, {
+        "item" : "01630000",
+        "count" : "3786"
+      }, {
+        "item" : "01600000",
+        "count" : "3680"
+      }, {
+        "item" : "02070000",
+        "count" : "3298"
+      }, {
+        "item" : "00490000",
+        "count" : "2929"
+      }, {
+        "item" : "00440000",
+        "count" : "2912"
+      }, {
+        "item" : "00950000",
+        "count" : "2644"
+      }, {
+        "item" : "02430000",
+        "count" : "2602"
+      }, {
+        "item" : "00460000",
+        "count" : "2306"
+      }, {
+        "item" : "01000000",
+        "count" : "2082"
+      }, {
+        "item" : "01490000",
+        "count" : "2028"
+      }, {
+        "item" : "00610000",
+        "count" : "2001"
+      }, {
+        "item" : "02740000",
+        "count" : "1870"
+      }, {
+        "item" : "02360000",
+        "count" : "1862"
+      }, {
+        "item" : "01280000",
+        "count" : "1860"
+      }, {
+        "item" : "03360000",
+        "count" : "1849"
+      }, {
+        "item" : "02930000",
+        "count" : "1826"
+      } ],
+      "smallest" : "00000000",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205350,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146513540,
+    "cachedContents" : {
+      "non_null" : "258514",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "16889"
+      }, {
+        "item" : "Worcester",
+        "count" : "7444"
+      }, {
+        "item" : "Springfield",
+        "count" : "7099"
+      }, {
+        "item" : "New Bedford",
+        "count" : "4045"
+      }, {
+        "item" : "Lynn",
+        "count" : "3786"
+      }, {
+        "item" : "Lowell",
+        "count" : "3680"
+      }, {
+        "item" : "Newton",
+        "count" : "3298"
+      }, {
+        "item" : "Cambridge",
+        "count" : "2929"
+      }, {
+        "item" : "Brockton",
+        "count" : "2912"
+      }, {
+        "item" : "Fall River",
+        "count" : "2644"
+      }, {
+        "item" : "Quincy",
+        "count" : "2602"
+      }, {
+        "item" : "Brookline",
+        "count" : "2306"
+      }, {
+        "item" : "Framingham",
+        "count" : "2082"
+      }, {
+        "item" : "Lawrence",
+        "count" : "2028"
+      }, {
+        "item" : "Chicopee",
+        "count" : "2001"
+      }, {
+        "item" : "Somerville",
+        "count" : "1870"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "1862"
+      }, {
+        "item" : "Haverhill",
+        "count" : "1860"
+      }, {
+        "item" : "Weymouth",
+        "count" : "1849"
+      }, {
+        "item" : "Taunton",
+        "count" : "1826"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205351,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146513537,
+    "cachedContents" : {
+      "non_null" : "258514",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "264"
+      }, {
+        "item" : "00000000",
+        "count" : "264"
+      }, {
+        "item" : "00440000",
+        "count" : "263"
+      }, {
+        "item" : "02010000",
+        "count" : "258"
+      }, {
+        "item" : "02430000",
+        "count" : "254"
+      }, {
+        "item" : "02810000",
+        "count" : "253"
+      }, {
+        "item" : "00490000",
+        "count" : "251"
+      }, {
+        "item" : "00560000",
+        "count" : "251"
+      }, {
+        "item" : "03480000",
+        "count" : "251"
+      }, {
+        "item" : "01280000",
+        "count" : "250"
+      }, {
+        "item" : "00950000",
+        "count" : "250"
+      }, {
+        "item" : "02930000",
+        "count" : "250"
+      }, {
+        "item" : "02850000",
+        "count" : "249"
+      }, {
+        "item" : "02480000",
+        "count" : "248"
+      }, {
+        "item" : "00930000",
+        "count" : "248"
+      }, {
+        "item" : "00200000",
+        "count" : "247"
+      }, {
+        "item" : "01010000",
+        "count" : "247"
+      }, {
+        "item" : "01850000",
+        "count" : "247"
+      }, {
+        "item" : "03470000",
+        "count" : "247"
+      }, {
+        "item" : "01630000",
+        "count" : "247"
+      } ],
+      "smallest" : "00000000",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205352,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146513538,
+    "cachedContents" : {
+      "non_null" : "258514",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "961"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "941"
+      }, {
+        "item" : "South Elementary",
+        "count" : "715"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "715"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "645"
+      }, {
+        "item" : "Lincoln",
+        "count" : "626"
+      }, {
+        "item" : "Franklin",
+        "count" : "585"
+      }, {
+        "item" : "Winthrop",
+        "count" : "584"
+      }, {
+        "item" : "Center",
+        "count" : "547"
+      }, {
+        "item" : "Peabody",
+        "count" : "465"
+      }, {
+        "item" : "Center School",
+        "count" : "443"
+      }, {
+        "item" : "Washington",
+        "count" : "441"
+      }, {
+        "item" : "Lawrence",
+        "count" : "440"
+      }, {
+        "item" : "Roosevelt",
+        "count" : "420"
+      }, {
+        "item" : "Memorial School",
+        "count" : "407"
+      }, {
+        "item" : "Cold Spring",
+        "count" : "399"
+      }, {
+        "item" : "Williams",
+        "count" : "394"
+      }, {
+        "item" : "Downey",
+        "count" : "391"
+      }, {
+        "item" : "Gardner",
+        "count" : "391"
+      }, {
+        "item" : "Brookfield",
+        "count" : "389"
+      } ],
+      "smallest" : "Abbott Memorial",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205353,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 157091557,
+    "cachedContents" : {
+      "non_null" : "258514",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "193956"
+      }, {
+        "item" : "District",
+        "count" : "64294"
+      }, {
+        "item" : "State",
+        "count" : "264"
+      } ],
+      "smallest" : "District",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205354,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146513541,
+    "cachedContents" : {
+      "non_null" : "258514",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "27596"
+      }, {
+        "item" : "White",
+        "count" : "27213"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "26725"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "24946"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "22338"
+      }, {
+        "item" : "Black or African American",
+        "count" : "21018"
+      }, {
+        "item" : "Asian",
+        "count" : "20460"
+      }, {
+        "item" : "English Learners",
+        "count" : "19997"
+      }, {
+        "item" : "High Needs",
+        "count" : "19770"
+      }, {
+        "item" : "Low Income",
+        "count" : "17387"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "9197"
+      }, {
+        "item" : "Male",
+        "count" : "7490"
+      }, {
+        "item" : "Female",
+        "count" : "7464"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "4734"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "2179"
+      } ],
+      "smallest" : "All Students",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205355,
+    "name" : "PKG_PKENR_TOT",
+    "dataTypeName" : "number",
+    "description" : "Pre-K Enrolled Total Count",
+    "fieldName" : "pkg_pkenr_tot",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 157091556,
+    "cachedContents" : {
+      "non_null" : "79505",
+      "largest" : "32096",
+      "null" : "179009",
+      "top" : [ {
+        "item" : "40",
+        "count" : "1212"
+      }, {
+        "item" : "24",
+        "count" : "1167"
+      }, {
+        "item" : "18",
+        "count" : "1159"
+      }, {
+        "item" : "20",
+        "count" : "1142"
+      }, {
+        "item" : "27",
+        "count" : "1126"
+      }, {
+        "item" : "28",
+        "count" : "1121"
+      }, {
+        "item" : "23",
+        "count" : "1118"
+      }, {
+        "item" : "26",
+        "count" : "1104"
+      }, {
+        "item" : "39",
+        "count" : "1089"
+      }, {
+        "item" : "22",
+        "count" : "1070"
+      }, {
+        "item" : "25",
+        "count" : "1065"
+      }, {
+        "item" : "38",
+        "count" : "1040"
+      }, {
+        "item" : "46",
+        "count" : "1039"
+      }, {
+        "item" : "29",
+        "count" : "1019"
+      }, {
+        "item" : "31",
+        "count" : "1006"
+      }, {
+        "item" : "48",
+        "count" : "996"
+      }, {
+        "item" : "33",
+        "count" : "981"
+      }, {
+        "item" : "42",
+        "count" : "965"
+      }, {
+        "item" : "21",
+        "count" : "954"
+      }, {
+        "item" : "35",
+        "count" : "950"
+      } ],
+      "smallest" : "1",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205356,
+    "name" : "PK_STUGROUP_CNT",
+    "dataTypeName" : "number",
+    "description" : "Pre-K Student Group Count",
+    "fieldName" : "pk_subgroup_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146513528,
+    "cachedContents" : {
+      "non_null" : "78838",
+      "largest" : "32096",
+      "null" : "179676",
+      "top" : [ {
+        "item" : "1",
+        "count" : "6954"
+      }, {
+        "item" : "2",
+        "count" : "4610"
+      }, {
+        "item" : "3",
+        "count" : "3607"
+      }, {
+        "item" : "4",
+        "count" : "2952"
+      }, {
+        "item" : "5",
+        "count" : "2690"
+      }, {
+        "item" : "6",
+        "count" : "2436"
+      }, {
+        "item" : "7",
+        "count" : "2241"
+      }, {
+        "item" : "8",
+        "count" : "2147"
+      }, {
+        "item" : "9",
+        "count" : "2005"
+      }, {
+        "item" : "10",
+        "count" : "1844"
+      }, {
+        "item" : "11",
+        "count" : "1796"
+      }, {
+        "item" : "13",
+        "count" : "1660"
+      }, {
+        "item" : "12",
+        "count" : "1640"
+      }, {
+        "item" : "14",
+        "count" : "1505"
+      }, {
+        "item" : "16",
+        "count" : "1417"
+      }, {
+        "item" : "15",
+        "count" : "1412"
+      }, {
+        "item" : "17",
+        "count" : "1404"
+      }, {
+        "item" : "20",
+        "count" : "1326"
+      }, {
+        "item" : "18",
+        "count" : "1264"
+      }, {
+        "item" : "19",
+        "count" : "1219"
+      } ],
+      "smallest" : "1",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205357,
+    "name" : "PKENR_PCT",
+    "dataTypeName" : "number",
+    "description" : "Pre-K Student Group Percent",
+    "fieldName" : "pkenr_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146513529,
+    "cachedContents" : {
+      "non_null" : "78838",
+      "largest" : "1.0",
+      "null" : "179676",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "7878"
+      }, {
+        "item" : "0.5",
+        "count" : "1360"
+      }, {
+        "item" : "0.333",
+        "count" : "689"
+      }, {
+        "item" : "0.25",
+        "count" : "510"
+      }, {
+        "item" : "0.667",
+        "count" : "457"
+      }, {
+        "item" : "0.4",
+        "count" : "451"
+      }, {
+        "item" : "0.056",
+        "count" : "388"
+      }, {
+        "item" : "0.6",
+        "count" : "380"
+      }, {
+        "item" : "0.071",
+        "count" : "372"
+      }, {
+        "item" : "0.2",
+        "count" : "368"
+      }, {
+        "item" : "0.091",
+        "count" : "366"
+      }, {
+        "item" : "0.429",
+        "count" : "362"
+      }, {
+        "item" : "0.167",
+        "count" : "361"
+      }, {
+        "item" : "0.111",
+        "count" : "356"
+      }, {
+        "item" : "0.029",
+        "count" : "352"
+      }, {
+        "item" : "0.043",
+        "count" : "346"
+      }, {
+        "item" : "0.038",
+        "count" : "343"
+      }, {
+        "item" : "0.125",
+        "count" : "335"
+      }, {
+        "item" : "0.143",
+        "count" : "334"
+      }, {
+        "item" : "0.05",
+        "count" : "332"
+      } ],
+      "smallest" : "0.0",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609205358,
+    "name" : "KGR_STUGROUP_CNT",
+    "dataTypeName" : "number",
+    "description" : "Kindergarten Student Group Count",
+    "fieldName" : "kgr_subgroup_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146513530,
+    "cachedContents" : {
+      "non_null" : "234090",
+      "largest" : "69853",
+      "null" : "24424",
+      "top" : [ {
+        "item" : "1",
+        "count" : "25869"
+      }, {
+        "item" : "2",
+        "count" : "18022"
+      }, {
+        "item" : "3",
+        "count" : "14732"
+      }, {
+        "item" : "4",
+        "count" : "11788"
+      }, {
+        "item" : "5",
+        "count" : "10071"
+      }, {
+        "item" : "6",
+        "count" : "8848"
+      }, {
+        "item" : "7",
+        "count" : "7525"
+      }, {
+        "item" : "8",
+        "count" : "6394"
+      }, {
+        "item" : "9",
+        "count" : "5630"
+      }, {
+        "item" : "10",
+        "count" : "4903"
+      }, {
+        "item" : "11",
+        "count" : "4422"
+      }, {
+        "item" : "12",
+        "count" : "4110"
+      }, {
+        "item" : "13",
+        "count" : "3775"
+      }, {
+        "item" : "14",
+        "count" : "3514"
+      }, {
+        "item" : "15",
+        "count" : "3299"
+      }, {
+        "item" : "16",
+        "count" : "3058"
+      }, {
+        "item" : "17",
+        "count" : "2724"
+      }, {
+        "item" : "18",
+        "count" : "2605"
+      }, {
+        "item" : "19",
+        "count" : "2372"
+      }, {
+        "item" : "20",
+        "count" : "2356"
+      } ],
+      "smallest" : "0",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205359,
+    "name" : "KGR_STUGROUP_PT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Kindergarten Student Group Part-Time Count",
+    "fieldName" : "kgr_subgroup_pt_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146513531,
+    "cachedContents" : {
+      "non_null" : "153605",
+      "largest" : "26805",
+      "null" : "104909",
+      "top" : [ {
+        "item" : "0",
+        "count" : "129011"
+      }, {
+        "item" : "1",
+        "count" : "2338"
+      }, {
+        "item" : "2",
+        "count" : "1657"
+      }, {
+        "item" : "3",
+        "count" : "1477"
+      }, {
+        "item" : "6",
+        "count" : "1222"
+      }, {
+        "item" : "4",
+        "count" : "1133"
+      }, {
+        "item" : "7",
+        "count" : "1042"
+      }, {
+        "item" : "5",
+        "count" : "1026"
+      }, {
+        "item" : "8",
+        "count" : "817"
+      }, {
+        "item" : "9",
+        "count" : "704"
+      }, {
+        "item" : "10",
+        "count" : "602"
+      }, {
+        "item" : "11",
+        "count" : "528"
+      }, {
+        "item" : "12",
+        "count" : "469"
+      }, {
+        "item" : "13",
+        "count" : "416"
+      }, {
+        "item" : "14",
+        "count" : "400"
+      }, {
+        "item" : "15",
+        "count" : "387"
+      }, {
+        "item" : "17",
+        "count" : "349"
+      }, {
+        "item" : "16",
+        "count" : "341"
+      }, {
+        "item" : "18",
+        "count" : "324"
+      }, {
+        "item" : "19",
+        "count" : "285"
+      } ],
+      "smallest" : "0",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205360,
+    "name" : "KGR_STUGROUP_TUIT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Kindergarten Student Group Tuitioned Count",
+    "fieldName" : "kgr_subgroup_tuit_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146513532,
+    "cachedContents" : {
+      "non_null" : "153605",
+      "largest" : "9217",
+      "null" : "104909",
+      "top" : [ {
+        "item" : "0",
+        "count" : "134976"
+      }, {
+        "item" : "4",
+        "count" : "1131"
+      }, {
+        "item" : "5",
+        "count" : "1065"
+      }, {
+        "item" : "3",
+        "count" : "1008"
+      }, {
+        "item" : "6",
+        "count" : "1000"
+      }, {
+        "item" : "2",
+        "count" : "922"
+      }, {
+        "item" : "1",
+        "count" : "860"
+      }, {
+        "item" : "7",
+        "count" : "791"
+      }, {
+        "item" : "8",
+        "count" : "632"
+      }, {
+        "item" : "9",
+        "count" : "543"
+      }, {
+        "item" : "10",
+        "count" : "485"
+      }, {
+        "item" : "11",
+        "count" : "411"
+      }, {
+        "item" : "12",
+        "count" : "335"
+      }, {
+        "item" : "13",
+        "count" : "301"
+      }, {
+        "item" : "14",
+        "count" : "298"
+      }, {
+        "item" : "15",
+        "count" : "295"
+      }, {
+        "item" : "20",
+        "count" : "264"
+      }, {
+        "item" : "17",
+        "count" : "256"
+      }, {
+        "item" : "16",
+        "count" : "254"
+      }, {
+        "item" : "18",
+        "count" : "237"
+      } ],
+      "smallest" : "0",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205361,
+    "name" : "KGR_STUGROUP_FT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Kindergarten Student Group Full-Time Count",
+    "fieldName" : "kgr_subgroup_ft_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146513533,
+    "cachedContents" : {
+      "non_null" : "153605",
+      "largest" : "59473",
+      "null" : "104909",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10482"
+      }, {
+        "item" : "6",
+        "count" : "7922"
+      }, {
+        "item" : "7",
+        "count" : "6855"
+      }, {
+        "item" : "8",
+        "count" : "5767"
+      }, {
+        "item" : "9",
+        "count" : "5169"
+      }, {
+        "item" : "10",
+        "count" : "4397"
+      }, {
+        "item" : "11",
+        "count" : "4047"
+      }, {
+        "item" : "12",
+        "count" : "3687"
+      }, {
+        "item" : "13",
+        "count" : "3398"
+      }, {
+        "item" : "14",
+        "count" : "3189"
+      }, {
+        "item" : "15",
+        "count" : "3046"
+      }, {
+        "item" : "16",
+        "count" : "2805"
+      }, {
+        "item" : "1",
+        "count" : "2498"
+      }, {
+        "item" : "17",
+        "count" : "2471"
+      }, {
+        "item" : "18",
+        "count" : "2372"
+      }, {
+        "item" : "19",
+        "count" : "2194"
+      }, {
+        "item" : "20",
+        "count" : "2158"
+      }, {
+        "item" : "2",
+        "count" : "2075"
+      }, {
+        "item" : "21",
+        "count" : "2007"
+      }, {
+        "item" : "22",
+        "count" : "1919"
+      } ],
+      "smallest" : "0",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205362,
+    "name" : "KGR_STUGROUP_FUL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Kindergarten Student Group Full-Day Count",
+    "fieldName" : "kgr_subgroup_ful_cnt",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146513534,
+    "cachedContents" : {
+      "non_null" : "153605",
+      "largest" : "64142",
+      "null" : "104909",
+      "top" : [ {
+        "item" : "6",
+        "count" : "8310"
+      }, {
+        "item" : "7",
+        "count" : "7005"
+      }, {
+        "item" : "8",
+        "count" : "5969"
+      }, {
+        "item" : "9",
+        "count" : "5308"
+      }, {
+        "item" : "0",
+        "count" : "5233"
+      }, {
+        "item" : "10",
+        "count" : "4582"
+      }, {
+        "item" : "11",
+        "count" : "4250"
+      }, {
+        "item" : "12",
+        "count" : "3809"
+      }, {
+        "item" : "13",
+        "count" : "3561"
+      }, {
+        "item" : "14",
+        "count" : "3341"
+      }, {
+        "item" : "15",
+        "count" : "3195"
+      }, {
+        "item" : "16",
+        "count" : "3002"
+      }, {
+        "item" : "17",
+        "count" : "2647"
+      }, {
+        "item" : "18",
+        "count" : "2544"
+      }, {
+        "item" : "19",
+        "count" : "2366"
+      }, {
+        "item" : "20",
+        "count" : "2349"
+      }, {
+        "item" : "21",
+        "count" : "2205"
+      }, {
+        "item" : "22",
+        "count" : "2092"
+      }, {
+        "item" : "23",
+        "count" : "1950"
+      }, {
+        "item" : "24",
+        "count" : "1875"
+      } ],
+      "smallest" : "0",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609205363,
+    "name" : "KGR_STUGROUP_FUL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Kindergarten Student Group Full-Day Percent",
+    "fieldName" : "kgr_subgroup_ful_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146513535,
+    "cachedContents" : {
+      "non_null" : "153605",
+      "largest" : "1.0",
+      "null" : "104909",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "129012"
+      }, {
+        "item" : "0.0",
+        "count" : "5233"
+      }, {
+        "item" : "0.5",
+        "count" : "547"
+      }, {
+        "item" : "0.667",
+        "count" : "544"
+      }, {
+        "item" : "0.833",
+        "count" : "432"
+      }, {
+        "item" : "0.75",
+        "count" : "344"
+      }, {
+        "item" : "0.857",
+        "count" : "334"
+      }, {
+        "item" : "0.714",
+        "count" : "280"
+      }, {
+        "item" : "0.875",
+        "count" : "267"
+      }, {
+        "item" : "0.333",
+        "count" : "261"
+      }, {
+        "item" : "0.571",
+        "count" : "227"
+      }, {
+        "item" : "0.8",
+        "count" : "213"
+      }, {
+        "item" : "0.889",
+        "count" : "184"
+      }, {
+        "item" : "0.625",
+        "count" : "172"
+      }, {
+        "item" : "0.9",
+        "count" : "162"
+      }, {
+        "item" : "0.778",
+        "count" : "158"
+      }, {
+        "item" : "0.286",
+        "count" : "155"
+      }, {
+        "item" : "0.167",
+        "count" : "150"
+      }, {
+        "item" : "0.429",
+        "count" : "148"
+      }, {
+        "item" : "0.6",
+        "count" : "146"
+      } ],
+      "smallest" : "0.0",
+      "count" : "258514",
+      "cardinality" : "258514"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "rowLabel" : "School",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "prek", "kindergarten", "enrollment", "preschool", "daycare", "childcare", "tech" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,1078 @@
+{
+  "id" : "92x3-2qj9",
+  "name" : "Special Education Placement Trajectory",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1717435154,
+  "description" : "This dataset contains special education placement trajectory since 2018. It is a long file that contains multiple rows for each district, with rows for different years, gradespans, and placement types.\n\n“Placement trajectory” refers to the placement of a student at the end of the period compared to their original placement; students may either no longer have an IEP, have the same placement, or have a different placement. For details on how trajectory is determined, please visit the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">RADAR Special Education Dashboard</a>.\n\nResource Allocation and District Action Reports (RADAR) enable district leaders to compare their staffing, class size, special education services, school performance, and per-pupil spending data with similar districts. They are intended to support districts in making effective strategic decisions as they develop district plans and budgets.\n\nThis dataset is one of five containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">RADAR Special Education Dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Program-Characteristics-and-Stud/n62c-bx65/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Program Characteristics and Student Demographics</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Placement-Trajectory/92x3-2qj9/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Placement Trajectory</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Students-Moving-In-and-Out-of-Special-Education-Se/8aww-sugs/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Students Moving In and Out of Special Education Services</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Indicators/yamx-769q/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Indicators</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Student-Progression-from-High-Sc/cdfp-645n/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Student Progression from High School through Postsecondary Education</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 765,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40598167,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1717436440,
+  "publicationGroup" : 19538037,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1774026199,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19538037,
+  "totalTimesRated" : 0,
+  "viewCount" : 1334,
+  "viewLastModified" : 1774026191,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1725978699,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6545718,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1725978543,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1725978699,
+      "failureCount" : 0,
+      "startedAt" : 1725978699,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 593190447,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823425,
+    "cachedContents" : {
+      "non_null" : "14456",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026",
+        "count" : "1752"
+      }, {
+        "item" : "2022",
+        "count" : "1588"
+      }, {
+        "item" : "2024",
+        "count" : "1588"
+      }, {
+        "item" : "2018",
+        "count" : "1588"
+      }, {
+        "item" : "2020",
+        "count" : "1588"
+      }, {
+        "item" : "2019",
+        "count" : "1588"
+      }, {
+        "item" : "2025",
+        "count" : "1588"
+      }, {
+        "item" : "2023",
+        "count" : "1588"
+      }, {
+        "item" : "2021",
+        "count" : "1588"
+      } ],
+      "smallest" : "2018",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190449,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823427,
+    "cachedContents" : {
+      "non_null" : "14456",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00070000",
+        "count" : "36"
+      }, {
+        "item" : "01600000",
+        "count" : "36"
+      }, {
+        "item" : "03080000",
+        "count" : "36"
+      }, {
+        "item" : "08530000",
+        "count" : "36"
+      }, {
+        "item" : "07300000",
+        "count" : "36"
+      }, {
+        "item" : "08280000",
+        "count" : "36"
+      }, {
+        "item" : "04170000",
+        "count" : "36"
+      }, {
+        "item" : "03320000",
+        "count" : "36"
+      }, {
+        "item" : "02650000",
+        "count" : "36"
+      }, {
+        "item" : "00430000",
+        "count" : "36"
+      }, {
+        "item" : "02110000",
+        "count" : "36"
+      }, {
+        "item" : "01570000",
+        "count" : "36"
+      }, {
+        "item" : "06250000",
+        "count" : "36"
+      }, {
+        "item" : "01310000",
+        "count" : "36"
+      }, {
+        "item" : "01860000",
+        "count" : "36"
+      }, {
+        "item" : "03220000",
+        "count" : "36"
+      }, {
+        "item" : "00300000",
+        "count" : "36"
+      }, {
+        "item" : "03100000",
+        "count" : "36"
+      }, {
+        "item" : "06900000",
+        "count" : "36"
+      }, {
+        "item" : "03500000",
+        "count" : "36"
+      } ],
+      "smallest" : "00000000",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190450,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823428,
+    "cachedContents" : {
+      "non_null" : "14456",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Bellingham",
+        "count" : "36"
+      }, {
+        "item" : "Tisbury",
+        "count" : "36"
+      }, {
+        "item" : "Hancock",
+        "count" : "36"
+      }, {
+        "item" : "New Bedford",
+        "count" : "36"
+      }, {
+        "item" : "Worthington",
+        "count" : "36"
+      }, {
+        "item" : "Woburn",
+        "count" : "36"
+      }, {
+        "item" : "Southern Berkshire",
+        "count" : "36"
+      }, {
+        "item" : "Littleton",
+        "count" : "36"
+      }, {
+        "item" : "Norwood",
+        "count" : "36"
+      }, {
+        "item" : "Springfield",
+        "count" : "36"
+      }, {
+        "item" : "Norfolk",
+        "count" : "36"
+      }, {
+        "item" : "North Middlesex",
+        "count" : "36"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "36"
+      }, {
+        "item" : "Georgetown",
+        "count" : "36"
+      }, {
+        "item" : "Stoneham",
+        "count" : "36"
+      }, {
+        "item" : "Silver Lake",
+        "count" : "36"
+      }, {
+        "item" : "Northborough",
+        "count" : "36"
+      }, {
+        "item" : "Bourne",
+        "count" : "36"
+      }, {
+        "item" : "Dighton-Rehoboth",
+        "count" : "36"
+      }, {
+        "item" : "Ashburnham-Westminster",
+        "count" : "36"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190451,
+    "name" : "GRADESPAN",
+    "dataTypeName" : "text",
+    "description" : "Grade Span",
+    "fieldName" : "gradespan",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823429,
+    "cachedContents" : {
+      "non_null" : "14456",
+      "largest" : "K-2",
+      "null" : "0",
+      "top" : [ {
+        "item" : "K-2",
+        "count" : "7228"
+      }, {
+        "item" : "K-12",
+        "count" : "7228"
+      } ],
+      "smallest" : "K-12",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190452,
+    "name" : "PLCMT_BGN",
+    "dataTypeName" : "text",
+    "description" : "Initial Placement Four Years Earlier",
+    "fieldName" : "plcmt_bgn",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823430,
+    "cachedContents" : {
+      "non_null" : "14456",
+      "largest" : "Substantially Separate Classroom",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Inclusive Setting",
+        "count" : "7228"
+      }, {
+        "item" : "Substantially Separate Classroom",
+        "count" : "7228"
+      } ],
+      "smallest" : "Inclusive Setting",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190453,
+    "name" : "TOT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Count",
+    "fieldName" : "tot_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823431,
+    "cachedContents" : {
+      "non_null" : "14456",
+      "largest" : "83985",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3672"
+      }, {
+        "item" : "1",
+        "count" : "485"
+      }, {
+        "item" : "2",
+        "count" : "411"
+      }, {
+        "item" : "3",
+        "count" : "344"
+      }, {
+        "item" : "4",
+        "count" : "289"
+      }, {
+        "item" : "5",
+        "count" : "275"
+      }, {
+        "item" : "8",
+        "count" : "244"
+      }, {
+        "item" : "6",
+        "count" : "243"
+      }, {
+        "item" : "7",
+        "count" : "235"
+      }, {
+        "item" : "9",
+        "count" : "199"
+      }, {
+        "item" : "10",
+        "count" : "179"
+      }, {
+        "item" : "11",
+        "count" : "172"
+      }, {
+        "item" : "12",
+        "count" : "134"
+      }, {
+        "item" : "14",
+        "count" : "126"
+      }, {
+        "item" : "13",
+        "count" : "126"
+      }, {
+        "item" : "16",
+        "count" : "122"
+      }, {
+        "item" : "17",
+        "count" : "114"
+      }, {
+        "item" : "24",
+        "count" : "109"
+      }, {
+        "item" : "15",
+        "count" : "109"
+      }, {
+        "item" : "18",
+        "count" : "107"
+      } ],
+      "smallest" : "0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190454,
+    "name" : "NOIEP_CNT",
+    "dataTypeName" : "number",
+    "description" : "No IEP Count",
+    "fieldName" : "noiep_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823432,
+    "cachedContents" : {
+      "non_null" : "8980",
+      "largest" : "19370",
+      "null" : "5476",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2101"
+      }, {
+        "item" : "1",
+        "count" : "824"
+      }, {
+        "item" : "2",
+        "count" : "434"
+      }, {
+        "item" : "3",
+        "count" : "318"
+      }, {
+        "item" : "4",
+        "count" : "261"
+      }, {
+        "item" : "6",
+        "count" : "245"
+      }, {
+        "item" : "8",
+        "count" : "224"
+      }, {
+        "item" : "7",
+        "count" : "220"
+      }, {
+        "item" : "5",
+        "count" : "217"
+      }, {
+        "item" : "9",
+        "count" : "189"
+      }, {
+        "item" : "11",
+        "count" : "175"
+      }, {
+        "item" : "10",
+        "count" : "161"
+      }, {
+        "item" : "13",
+        "count" : "156"
+      }, {
+        "item" : "12",
+        "count" : "152"
+      }, {
+        "item" : "14",
+        "count" : "148"
+      }, {
+        "item" : "15",
+        "count" : "139"
+      }, {
+        "item" : "19",
+        "count" : "112"
+      }, {
+        "item" : "16",
+        "count" : "106"
+      }, {
+        "item" : "17",
+        "count" : "104"
+      }, {
+        "item" : "18",
+        "count" : "93"
+      } ],
+      "smallest" : "0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190448,
+    "name" : "NOIEP_PCT",
+    "dataTypeName" : "number",
+    "description" : "No IEP Percent",
+    "fieldName" : "noiep_pct",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823426,
+    "cachedContents" : {
+      "non_null" : "8980",
+      "largest" : "0.875",
+      "null" : "5476",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2101"
+      }, {
+        "item" : "0.167",
+        "count" : "113"
+      }, {
+        "item" : "0.25",
+        "count" : "113"
+      }, {
+        "item" : "0.143",
+        "count" : "97"
+      }, {
+        "item" : "0.333",
+        "count" : "86"
+      }, {
+        "item" : "0.125",
+        "count" : "85"
+      }, {
+        "item" : "0.2",
+        "count" : "79"
+      }, {
+        "item" : "0.222",
+        "count" : "69"
+      }, {
+        "item" : "0.111",
+        "count" : "61"
+      }, {
+        "item" : "0.286",
+        "count" : "58"
+      }, {
+        "item" : "0.182",
+        "count" : "55"
+      }, {
+        "item" : "0.091",
+        "count" : "53"
+      }, {
+        "item" : "0.231",
+        "count" : "49"
+      }, {
+        "item" : "0.188",
+        "count" : "46"
+      }, {
+        "item" : "0.1",
+        "count" : "46"
+      }, {
+        "item" : "0.214",
+        "count" : "45"
+      }, {
+        "item" : "0.3",
+        "count" : "43"
+      }, {
+        "item" : "0.071",
+        "count" : "43"
+      }, {
+        "item" : "0.083",
+        "count" : "42"
+      }, {
+        "item" : "0.211",
+        "count" : "42"
+      } ],
+      "smallest" : "0.0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 593190455,
+    "name" : "INCL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Inclusion Count",
+    "fieldName" : "incl_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823433,
+    "cachedContents" : {
+      "non_null" : "8980",
+      "largest" : "62574",
+      "null" : "5476",
+      "top" : [ {
+        "item" : "1",
+        "count" : "357"
+      }, {
+        "item" : "2",
+        "count" : "349"
+      }, {
+        "item" : "3",
+        "count" : "313"
+      }, {
+        "item" : "4",
+        "count" : "294"
+      }, {
+        "item" : "5",
+        "count" : "288"
+      }, {
+        "item" : "6",
+        "count" : "271"
+      }, {
+        "item" : "0",
+        "count" : "226"
+      }, {
+        "item" : "7",
+        "count" : "220"
+      }, {
+        "item" : "8",
+        "count" : "176"
+      }, {
+        "item" : "9",
+        "count" : "157"
+      }, {
+        "item" : "10",
+        "count" : "155"
+      }, {
+        "item" : "12",
+        "count" : "135"
+      }, {
+        "item" : "11",
+        "count" : "124"
+      }, {
+        "item" : "13",
+        "count" : "120"
+      }, {
+        "item" : "16",
+        "count" : "118"
+      }, {
+        "item" : "18",
+        "count" : "109"
+      }, {
+        "item" : "14",
+        "count" : "107"
+      }, {
+        "item" : "17",
+        "count" : "101"
+      }, {
+        "item" : "15",
+        "count" : "98"
+      }, {
+        "item" : "20",
+        "count" : "97"
+      } ],
+      "smallest" : "0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190446,
+    "name" : "INCL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Inclusion Percent",
+    "fieldName" : "incl_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823424,
+    "cachedContents" : {
+      "non_null" : "8980",
+      "largest" : "1.0",
+      "null" : "5476",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "226"
+      }, {
+        "item" : "0.667",
+        "count" : "135"
+      }, {
+        "item" : "1.0",
+        "count" : "134"
+      }, {
+        "item" : "0.5",
+        "count" : "122"
+      }, {
+        "item" : "0.167",
+        "count" : "116"
+      }, {
+        "item" : "0.333",
+        "count" : "114"
+      }, {
+        "item" : "0.75",
+        "count" : "109"
+      }, {
+        "item" : "0.25",
+        "count" : "92"
+      }, {
+        "item" : "0.143",
+        "count" : "79"
+      }, {
+        "item" : "0.125",
+        "count" : "75"
+      }, {
+        "item" : "0.833",
+        "count" : "75"
+      }, {
+        "item" : "0.7",
+        "count" : "65"
+      }, {
+        "item" : "0.8",
+        "count" : "65"
+      }, {
+        "item" : "0.714",
+        "count" : "64"
+      }, {
+        "item" : "0.2",
+        "count" : "61"
+      }, {
+        "item" : "0.857",
+        "count" : "61"
+      }, {
+        "item" : "0.625",
+        "count" : "55"
+      }, {
+        "item" : "0.286",
+        "count" : "54"
+      }, {
+        "item" : "0.222",
+        "count" : "52"
+      }, {
+        "item" : "0.111",
+        "count" : "50"
+      } ],
+      "smallest" : "0.0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 593190456,
+    "name" : "SUBSEP_CNT",
+    "dataTypeName" : "number",
+    "description" : "Substantially Separate Classroom Count",
+    "fieldName" : "subsep_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823434,
+    "cachedContents" : {
+      "non_null" : "8980",
+      "largest" : "10810",
+      "null" : "5476",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2010"
+      }, {
+        "item" : "1",
+        "count" : "769"
+      }, {
+        "item" : "2",
+        "count" : "604"
+      }, {
+        "item" : "3",
+        "count" : "486"
+      }, {
+        "item" : "4",
+        "count" : "468"
+      }, {
+        "item" : "5",
+        "count" : "455"
+      }, {
+        "item" : "6",
+        "count" : "409"
+      }, {
+        "item" : "7",
+        "count" : "274"
+      }, {
+        "item" : "8",
+        "count" : "242"
+      }, {
+        "item" : "9",
+        "count" : "214"
+      }, {
+        "item" : "11",
+        "count" : "199"
+      }, {
+        "item" : "10",
+        "count" : "198"
+      }, {
+        "item" : "12",
+        "count" : "187"
+      }, {
+        "item" : "13",
+        "count" : "153"
+      }, {
+        "item" : "16",
+        "count" : "128"
+      }, {
+        "item" : "14",
+        "count" : "128"
+      }, {
+        "item" : "15",
+        "count" : "118"
+      }, {
+        "item" : "17",
+        "count" : "110"
+      }, {
+        "item" : "18",
+        "count" : "97"
+      }, {
+        "item" : "20",
+        "count" : "97"
+      } ],
+      "smallest" : "0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190444,
+    "name" : "SUBSEP_PCT",
+    "dataTypeName" : "number",
+    "description" : "Substantially Separate Classroom Percent",
+    "fieldName" : "subsep_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823422,
+    "cachedContents" : {
+      "non_null" : "8980",
+      "largest" : "1.0",
+      "null" : "5476",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2010"
+      }, {
+        "item" : "0.5",
+        "count" : "121"
+      }, {
+        "item" : "0.667",
+        "count" : "109"
+      }, {
+        "item" : "0.75",
+        "count" : "78"
+      }, {
+        "item" : "0.024",
+        "count" : "75"
+      }, {
+        "item" : "0.714",
+        "count" : "73"
+      }, {
+        "item" : "0.022",
+        "count" : "72"
+      }, {
+        "item" : "0.833",
+        "count" : "71"
+      }, {
+        "item" : "0.029",
+        "count" : "70"
+      }, {
+        "item" : "0.043",
+        "count" : "67"
+      }, {
+        "item" : "0.048",
+        "count" : "67"
+      }, {
+        "item" : "0.333",
+        "count" : "64"
+      }, {
+        "item" : "0.014",
+        "count" : "63"
+      }, {
+        "item" : "0.026",
+        "count" : "63"
+      }, {
+        "item" : "0.063",
+        "count" : "62"
+      }, {
+        "item" : "0.038",
+        "count" : "60"
+      }, {
+        "item" : "0.037",
+        "count" : "60"
+      }, {
+        "item" : "0.03",
+        "count" : "59"
+      }, {
+        "item" : "0.625",
+        "count" : "57"
+      }, {
+        "item" : "1.0",
+        "count" : "57"
+      } ],
+      "smallest" : "0.0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 593190457,
+    "name" : "OOD_CNT",
+    "dataTypeName" : "number",
+    "description" : "Out of District Count",
+    "fieldName" : "ood_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823435,
+    "cachedContents" : {
+      "non_null" : "8980",
+      "largest" : "2157",
+      "null" : "5476",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3221"
+      }, {
+        "item" : "1",
+        "count" : "1368"
+      }, {
+        "item" : "2",
+        "count" : "938"
+      }, {
+        "item" : "3",
+        "count" : "646"
+      }, {
+        "item" : "4",
+        "count" : "460"
+      }, {
+        "item" : "5",
+        "count" : "364"
+      }, {
+        "item" : "6",
+        "count" : "287"
+      }, {
+        "item" : "7",
+        "count" : "225"
+      }, {
+        "item" : "9",
+        "count" : "196"
+      }, {
+        "item" : "8",
+        "count" : "184"
+      }, {
+        "item" : "10",
+        "count" : "142"
+      }, {
+        "item" : "11",
+        "count" : "137"
+      }, {
+        "item" : "12",
+        "count" : "110"
+      }, {
+        "item" : "13",
+        "count" : "88"
+      }, {
+        "item" : "15",
+        "count" : "71"
+      }, {
+        "item" : "14",
+        "count" : "62"
+      }, {
+        "item" : "19",
+        "count" : "39"
+      }, {
+        "item" : "18",
+        "count" : "37"
+      }, {
+        "item" : "16",
+        "count" : "37"
+      }, {
+        "item" : "17",
+        "count" : "32"
+      } ],
+      "smallest" : "0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : { }
+  }, {
+    "id" : 593190445,
+    "name" : "OOD_PCT",
+    "dataTypeName" : "number",
+    "description" : "Out of District Percent",
+    "fieldName" : "ood_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823423,
+    "cachedContents" : {
+      "non_null" : "8980",
+      "largest" : "0.906",
+      "null" : "5476",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "3221"
+      }, {
+        "item" : "0.019",
+        "count" : "125"
+      }, {
+        "item" : "0.018",
+        "count" : "123"
+      }, {
+        "item" : "0.014",
+        "count" : "113"
+      }, {
+        "item" : "0.023",
+        "count" : "103"
+      }, {
+        "item" : "0.021",
+        "count" : "102"
+      }, {
+        "item" : "0.167",
+        "count" : "99"
+      }, {
+        "item" : "0.125",
+        "count" : "97"
+      }, {
+        "item" : "0.016",
+        "count" : "97"
+      }, {
+        "item" : "0.026",
+        "count" : "96"
+      }, {
+        "item" : "0.017",
+        "count" : "96"
+      }, {
+        "item" : "0.027",
+        "count" : "92"
+      }, {
+        "item" : "0.024",
+        "count" : "92"
+      }, {
+        "item" : "0.022",
+        "count" : "91"
+      }, {
+        "item" : "0.02",
+        "count" : "88"
+      }, {
+        "item" : "0.025",
+        "count" : "82"
+      }, {
+        "item" : "0.029",
+        "count" : "81"
+      }, {
+        "item" : "0.031",
+        "count" : "80"
+      }, {
+        "item" : "0.143",
+        "count" : "80"
+      }, {
+        "item" : "0.015",
+        "count" : "78"
+      } ],
+      "smallest" : "0.0",
+      "count" : "14456",
+      "cardinality" : "14456"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "special education", "disability", "special population", "sped", "students with disabilities", "inclusion", "substantially separate", "in district", "out of district", "radar" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

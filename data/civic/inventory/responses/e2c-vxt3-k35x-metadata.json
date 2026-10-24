@@ -1,0 +1,531 @@
+{
+  "id" : "vxt3-k35x",
+  "name" : "Where Residents Go to School (Sending)",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1745952667,
+  "description" : "This dataset shows the number of residents in a town who attend school in each district since 2014. It includes the reason for enrollment, such as being a resident of the district, school choice, paying tuition, or selecting a charter school.\n\nThis dataset is one of two containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiYTY4ZWE3M2UtYWQ3ZS00MjFhLWJkZTAtNThhOGY0MzEwMDQ5IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noopener noreferrer\">RADAR Student Sending and Receiving Report</a> (dashboard only displays current year of data):\n<a href=\"https://educationtocareer.data.mass.gov/dataset/Where-Residents-Go-to-School-Sending-/vxt3-k35x/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Where Residents Go to School (Sending)</a>\n<a href=\"https://educationtocareer.data.mass.gov/dataset/Reasons-for-Student-Enrollment-by-Town-Receiving-/8xyg-59b2/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Reasons for Student Enrollment by Town (Receiving)</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 433,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41301978,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1746120837,
+  "publicationGroup" : 19877607,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1773950349,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19879435,
+  "totalTimesRated" : 0,
+  "viewCount" : 1155,
+  "viewLastModified" : 1786393483,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1773252519,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7386234,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1773252495,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1773252519,
+      "failureCount" : 0,
+      "startedAt" : 1773252519,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609579431,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158239055,
+    "cachedContents" : {
+      "non_null" : "74878",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2022",
+        "count" : "6156"
+      }, {
+        "item" : "2024",
+        "count" : "6066"
+      }, {
+        "item" : "2023",
+        "count" : "6063"
+      }, {
+        "item" : "2020",
+        "count" : "6061"
+      }, {
+        "item" : "2021",
+        "count" : "6005"
+      }, {
+        "item" : "2025",
+        "count" : "5993"
+      }, {
+        "item" : "2026",
+        "count" : "5950"
+      }, {
+        "item" : "2019",
+        "count" : "5661"
+      }, {
+        "item" : "2018",
+        "count" : "5556"
+      }, {
+        "item" : "2017",
+        "count" : "5499"
+      }, {
+        "item" : "2016",
+        "count" : "5456"
+      }, {
+        "item" : "2015",
+        "count" : "5316"
+      }, {
+        "item" : "2014",
+        "count" : "5096"
+      } ],
+      "smallest" : "2014",
+      "count" : "74878",
+      "cardinality" : "74878"
+    },
+    "format" : { }
+  }, {
+    "id" : 609579432,
+    "name" : "TOWN_NAME",
+    "dataTypeName" : "text",
+    "description" : "Town Name",
+    "fieldName" : "town_name",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158239056,
+    "cachedContents" : {
+      "non_null" : "74878",
+      "largest" : "Yarmouth",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "1375"
+      }, {
+        "item" : "Springfield",
+        "count" : "734"
+      }, {
+        "item" : "Worcester",
+        "count" : "731"
+      }, {
+        "item" : "Out of State",
+        "count" : "658"
+      }, {
+        "item" : "Brockton",
+        "count" : "600"
+      }, {
+        "item" : "Holyoke",
+        "count" : "588"
+      }, {
+        "item" : "Chicopee",
+        "count" : "558"
+      }, {
+        "item" : "Lynn",
+        "count" : "521"
+      }, {
+        "item" : "Haverhill",
+        "count" : "511"
+      }, {
+        "item" : "Randolph",
+        "count" : "500"
+      }, {
+        "item" : "Leominster",
+        "count" : "494"
+      }, {
+        "item" : "Framingham",
+        "count" : "493"
+      }, {
+        "item" : "Taunton",
+        "count" : "475"
+      }, {
+        "item" : "Lawrence",
+        "count" : "473"
+      }, {
+        "item" : "Methuen",
+        "count" : "471"
+      }, {
+        "item" : "Lowell",
+        "count" : "470"
+      }, {
+        "item" : "Marlborough",
+        "count" : "446"
+      }, {
+        "item" : "Fitchburg",
+        "count" : "442"
+      }, {
+        "item" : "Fall River",
+        "count" : "416"
+      }, {
+        "item" : "Greenfield",
+        "count" : "415"
+      } ],
+      "smallest" : "Abington",
+      "count" : "74878",
+      "cardinality" : "74878"
+    },
+    "format" : { }
+  }, {
+    "id" : 609579433,
+    "name" : "ENR_REASON",
+    "dataTypeName" : "text",
+    "description" : "Reason for Enrollment",
+    "fieldName" : "enr_reason",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158239057,
+    "cachedContents" : {
+      "non_null" : "74878",
+      "largest" : "Tuitioned Out - Private School or Collaborative Program",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School Choice Program",
+        "count" : "30187"
+      }, {
+        "item" : "Charter School",
+        "count" : "12850"
+      }, {
+        "item" : "Resident/Member",
+        "count" : "9450"
+      }, {
+        "item" : "Tuitioned In - Waived by Local Agreement",
+        "count" : "7405"
+      }, {
+        "item" : "Tuitioned In - Paid by Parent/Guardian",
+        "count" : "4437"
+      }, {
+        "item" : "Tuitioned In - Chapter 74",
+        "count" : "3483"
+      }, {
+        "item" : "Tuitioned In - Agreement With Another In-state District",
+        "count" : "3181"
+      }, {
+        "item" : "Out of District - Foster Care Student",
+        "count" : "2030"
+      }, {
+        "item" : "Foreign Exchange Student",
+        "count" : "965"
+      }, {
+        "item" : "METCO",
+        "count" : "485"
+      }, {
+        "item" : "Tuitioned - Out of State",
+        "count" : "404"
+      }, {
+        "item" : "Tuitioned Out - Private School or Collaborative Program",
+        "count" : "1"
+      } ],
+      "smallest" : "Charter School",
+      "count" : "74878",
+      "cardinality" : "74878"
+    },
+    "format" : { }
+  }, {
+    "id" : 609579434,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158239058,
+    "cachedContents" : {
+      "non_null" : "74878",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "39020000",
+        "count" : "3084"
+      }, {
+        "item" : "39010000",
+        "count" : "2511"
+      }, {
+        "item" : "09150000",
+        "count" : "986"
+      }, {
+        "item" : "04060000",
+        "count" : "695"
+      }, {
+        "item" : "08170000",
+        "count" : "650"
+      }, {
+        "item" : "00350000",
+        "count" : "582"
+      }, {
+        "item" : "04790000",
+        "count" : "526"
+      }, {
+        "item" : "03250000",
+        "count" : "506"
+      }, {
+        "item" : "04680000",
+        "count" : "500"
+      }, {
+        "item" : "04870000",
+        "count" : "492"
+      }, {
+        "item" : "06000000",
+        "count" : "488"
+      }, {
+        "item" : "04780000",
+        "count" : "483"
+      }, {
+        "item" : "08300000",
+        "count" : "482"
+      }, {
+        "item" : "04300000",
+        "count" : "482"
+      }, {
+        "item" : "09100000",
+        "count" : "439"
+      }, {
+        "item" : "03480000",
+        "count" : "431"
+      }, {
+        "item" : "03260000",
+        "count" : "423"
+      }, {
+        "item" : "06700000",
+        "count" : "421"
+      }, {
+        "item" : "07170000",
+        "count" : "417"
+      }, {
+        "item" : "04970000",
+        "count" : "412"
+      } ],
+      "smallest" : "00010000",
+      "count" : "74878",
+      "cardinality" : "74878"
+    },
+    "format" : { }
+  }, {
+    "id" : 609579435,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158239059,
+    "cachedContents" : {
+      "non_null" : "74878",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "TEC Connections Academy Commonwealth Virtual School District",
+        "count" : "3084"
+      }, {
+        "item" : "Greater Commonwealth Virtual District",
+        "count" : "2511"
+      }, {
+        "item" : "Norfolk County Agricultural",
+        "count" : "986"
+      }, {
+        "item" : "Northampton-Smith Vocational Agricultural",
+        "count" : "695"
+      }, {
+        "item" : "Essex North Shore Agricultural and Technical School District",
+        "count" : "650"
+      }, {
+        "item" : "Boston",
+        "count" : "582"
+      }, {
+        "item" : "Pioneer Valley Performing Arts Charter Public (District)",
+        "count" : "526"
+      }, {
+        "item" : "Westfield",
+        "count" : "506"
+      }, {
+        "item" : "Ma Academy for Math and Science",
+        "count" : "500"
+      }, {
+        "item" : "Prospect Hill Academy Charter (District)",
+        "count" : "492"
+      }, {
+        "item" : "Acton-Boxborough",
+        "count" : "488"
+      }, {
+        "item" : "Francis W. Parker Charter Essential (District)",
+        "count" : "483"
+      }, {
+        "item" : "Advanced Math and Science Academy Charter (District)",
+        "count" : "482"
+      }, {
+        "item" : "Minuteman Regional Vocational Technical",
+        "count" : "482"
+      }, {
+        "item" : "Bristol County Agricultural",
+        "count" : "439"
+      }, {
+        "item" : "Worcester",
+        "count" : "431"
+      }, {
+        "item" : "Westford",
+        "count" : "423"
+      }, {
+        "item" : "Frontier",
+        "count" : "421"
+      }, {
+        "item" : "Mohawk Trail",
+        "count" : "417"
+      }, {
+        "item" : "Pioneer Valley Chinese Immersion Charter (District)",
+        "count" : "412"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "74878",
+      "cardinality" : "74878"
+    },
+    "format" : { }
+  }, {
+    "id" : 609579437,
+    "name" : "ENR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students Enrolled Count",
+    "fieldName" : "enr_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158294331,
+    "cachedContents" : {
+      "non_null" : "74878",
+      "largest" : "54270",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "24900"
+      }, {
+        "item" : "2",
+        "count" : "10922"
+      }, {
+        "item" : "3",
+        "count" : "5811"
+      }, {
+        "item" : "4",
+        "count" : "3742"
+      }, {
+        "item" : "5",
+        "count" : "2586"
+      }, {
+        "item" : "6",
+        "count" : "1986"
+      }, {
+        "item" : "7",
+        "count" : "1600"
+      }, {
+        "item" : "8",
+        "count" : "1345"
+      }, {
+        "item" : "9",
+        "count" : "1165"
+      }, {
+        "item" : "10",
+        "count" : "913"
+      }, {
+        "item" : "11",
+        "count" : "790"
+      }, {
+        "item" : "12",
+        "count" : "638"
+      }, {
+        "item" : "13",
+        "count" : "552"
+      }, {
+        "item" : "14",
+        "count" : "516"
+      }, {
+        "item" : "15",
+        "count" : "482"
+      }, {
+        "item" : "16",
+        "count" : "431"
+      }, {
+        "item" : "18",
+        "count" : "396"
+      }, {
+        "item" : "17",
+        "count" : "379"
+      }, {
+        "item" : "19",
+        "count" : "368"
+      }, {
+        "item" : "20",
+        "count" : "320"
+      } ],
+      "smallest" : "1",
+      "count" : "74878",
+      "cardinality" : "74878"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "charter schools", "school choice", "tuition", "town", "sending district", "receiving district" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

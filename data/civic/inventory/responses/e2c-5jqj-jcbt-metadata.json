@@ -1,0 +1,977 @@
+{
+  "id" : "5jqj-jcbt",
+  "name" : "Student Mobility Rate",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1702566656,
+  "description" : "This dataset contains provides data on student mobility since 2008. Mobility is defined as those students transferring into or out of public schools, districts, or the state. Mobility rates are not reported for enrollments of fewer than 6.\n\nIntake rate measures the number of students that enroll in the state, a district, or school after the beginning of the school year. Churn rate measures the number students transferring into or out of a public school or district throughout the course of a school year. Stability rate measures how many students remain in a district or school throughout the school year. For further details and explanations see Information Service's <a href=\"http://www.doe.mass.edu/infoservices/reports/mobility\" target=\"_blank\" rel=\"noreferrer noopener\">Mobility Rates page</a>.\n\nEconomically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noopener noreferrer\">DESE Researcher's Guide</a> for more information.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/mobilityrates.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Mobility Rate Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 442,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40382380,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1705956932,
+  "publicationGroup" : 19398536,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1781552506,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19437925,
+  "totalTimesRated" : 0,
+  "viewCount" : 1692,
+  "viewLastModified" : 1786393367,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1714057513,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6286868,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1713989266,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1714057513,
+      "failureCount" : 0,
+      "startedAt" : 1714057513,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 588616759,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150463700,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024",
+        "count" : "20838"
+      }, {
+        "item" : "2022",
+        "count" : "20759"
+      }, {
+        "item" : "2023",
+        "count" : "20746"
+      }, {
+        "item" : "2019",
+        "count" : "20718"
+      }, {
+        "item" : "2025",
+        "count" : "20713"
+      }, {
+        "item" : "2020",
+        "count" : "20654"
+      }, {
+        "item" : "2018",
+        "count" : "20632"
+      }, {
+        "item" : "2017",
+        "count" : "20583"
+      }, {
+        "item" : "2021",
+        "count" : "20568"
+      }, {
+        "item" : "2016",
+        "count" : "20534"
+      }, {
+        "item" : "2015",
+        "count" : "20413"
+      }, {
+        "item" : "2014",
+        "count" : "20286"
+      }, {
+        "item" : "2013",
+        "count" : "20042"
+      }, {
+        "item" : "2012",
+        "count" : "19698"
+      }, {
+        "item" : "2011",
+        "count" : "17284"
+      }, {
+        "item" : "2010",
+        "count" : "17234"
+      }, {
+        "item" : "2008",
+        "count" : "17176"
+      }, {
+        "item" : "2009",
+        "count" : "17170"
+      } ],
+      "smallest" : "2008",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616760,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150463699,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "19834"
+      }, {
+        "item" : "02810000",
+        "count" : "9237"
+      }, {
+        "item" : "03480000",
+        "count" : "8129"
+      }, {
+        "item" : "01630000",
+        "count" : "4636"
+      }, {
+        "item" : "01600000",
+        "count" : "4429"
+      }, {
+        "item" : "02010000",
+        "count" : "4311"
+      }, {
+        "item" : "00440000",
+        "count" : "4178"
+      }, {
+        "item" : "01490000",
+        "count" : "4063"
+      }, {
+        "item" : "02070000",
+        "count" : "4047"
+      }, {
+        "item" : "02430000",
+        "count" : "3438"
+      }, {
+        "item" : "00950000",
+        "count" : "3096"
+      }, {
+        "item" : "00490000",
+        "count" : "3021"
+      }, {
+        "item" : "00610000",
+        "count" : "2618"
+      }, {
+        "item" : "01280000",
+        "count" : "2562"
+      }, {
+        "item" : "01000000",
+        "count" : "2531"
+      }, {
+        "item" : "02930000",
+        "count" : "2419"
+      }, {
+        "item" : "02360000",
+        "count" : "2244"
+      }, {
+        "item" : "07750000",
+        "count" : "2218"
+      }, {
+        "item" : "02390000",
+        "count" : "2161"
+      }, {
+        "item" : "00460000",
+        "count" : "2144"
+      } ],
+      "smallest" : "00010000",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616761,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150463698,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "19834"
+      }, {
+        "item" : "Springfield",
+        "count" : "9237"
+      }, {
+        "item" : "Worcester",
+        "count" : "8129"
+      }, {
+        "item" : "Lynn",
+        "count" : "4636"
+      }, {
+        "item" : "Lowell",
+        "count" : "4429"
+      }, {
+        "item" : "New Bedford",
+        "count" : "4311"
+      }, {
+        "item" : "Brockton",
+        "count" : "4178"
+      }, {
+        "item" : "Lawrence",
+        "count" : "4063"
+      }, {
+        "item" : "Newton",
+        "count" : "4047"
+      }, {
+        "item" : "Quincy",
+        "count" : "3438"
+      }, {
+        "item" : "Fall River",
+        "count" : "3096"
+      }, {
+        "item" : "Cambridge",
+        "count" : "3021"
+      }, {
+        "item" : "Chicopee",
+        "count" : "2618"
+      }, {
+        "item" : "Haverhill",
+        "count" : "2562"
+      }, {
+        "item" : "Framingham",
+        "count" : "2531"
+      }, {
+        "item" : "Taunton",
+        "count" : "2419"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "2244"
+      }, {
+        "item" : "Wachusett",
+        "count" : "2218"
+      }, {
+        "item" : "Plymouth",
+        "count" : "2161"
+      }, {
+        "item" : "Brookline",
+        "count" : "2144"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616762,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150463697,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01070000",
+        "count" : "212"
+      }, {
+        "item" : "02010000",
+        "count" : "212"
+      }, {
+        "item" : "00440000",
+        "count" : "212"
+      }, {
+        "item" : "02430000",
+        "count" : "212"
+      }, {
+        "item" : "00350000",
+        "count" : "211"
+      }, {
+        "item" : "02810000",
+        "count" : "211"
+      }, {
+        "item" : "01010000",
+        "count" : "210"
+      }, {
+        "item" : "02930000",
+        "count" : "210"
+      }, {
+        "item" : "00490000",
+        "count" : "209"
+      }, {
+        "item" : "00950000",
+        "count" : "209"
+      }, {
+        "item" : "00200000",
+        "count" : "208"
+      }, {
+        "item" : "02440000",
+        "count" : "207"
+      }, {
+        "item" : "00160000",
+        "count" : "207"
+      }, {
+        "item" : "03470000",
+        "count" : "206"
+      }, {
+        "item" : "01280000",
+        "count" : "206"
+      }, {
+        "item" : "02010505",
+        "count" : "206"
+      }, {
+        "item" : "02070000",
+        "count" : "206"
+      }, {
+        "item" : "00200505",
+        "count" : "205"
+      }, {
+        "item" : "02110000",
+        "count" : "205"
+      }, {
+        "item" : "02130000",
+        "count" : "205"
+      } ],
+      "smallest" : "00010000",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616763,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150463696,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "961"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "834"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "697"
+      }, {
+        "item" : "South Elementary",
+        "count" : "637"
+      }, {
+        "item" : "Franklin",
+        "count" : "559"
+      }, {
+        "item" : "Lawrence",
+        "count" : "541"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "522"
+      }, {
+        "item" : "Lincoln",
+        "count" : "514"
+      }, {
+        "item" : "Winthrop",
+        "count" : "492"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "467"
+      }, {
+        "item" : "Center",
+        "count" : "447"
+      }, {
+        "item" : "Center School",
+        "count" : "412"
+      }, {
+        "item" : "South",
+        "count" : "392"
+      }, {
+        "item" : "Peabody",
+        "count" : "365"
+      }, {
+        "item" : "Woodland",
+        "count" : "361"
+      }, {
+        "item" : "Hadley",
+        "count" : "358"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "358"
+      }, {
+        "item" : "John F Kennedy Middle School",
+        "count" : "355"
+      }, {
+        "item" : "Peirce",
+        "count" : "352"
+      }, {
+        "item" : "Washington",
+        "count" : "351"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616770,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151050051,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "School",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "289029"
+      }, {
+        "item" : "District",
+        "count" : "67019"
+      } ],
+      "smallest" : "District",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616764,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150463695,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "40332"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "40099"
+      }, {
+        "item" : "White",
+        "count" : "39758"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "37745"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "32620"
+      }, {
+        "item" : "Black or African American",
+        "count" : "31673"
+      }, {
+        "item" : "High Needs",
+        "count" : "31338"
+      }, {
+        "item" : "English Learners",
+        "count" : "29014"
+      }, {
+        "item" : "Asian",
+        "count" : "28988"
+      }, {
+        "item" : "Low Income",
+        "count" : "24235"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "15703"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "3388"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "1155"
+      } ],
+      "smallest" : "All Students",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616765,
+    "name" : "CHURN_ENROLL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Churn Enrollment Count",
+    "fieldName" : "churn_enroll_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150463694,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "59331",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6",
+        "count" : "6932"
+      }, {
+        "item" : "7",
+        "count" : "6460"
+      }, {
+        "item" : "8",
+        "count" : "6021"
+      }, {
+        "item" : "9",
+        "count" : "5558"
+      }, {
+        "item" : "10",
+        "count" : "5234"
+      }, {
+        "item" : "11",
+        "count" : "5097"
+      }, {
+        "item" : "12",
+        "count" : "4637"
+      }, {
+        "item" : "13",
+        "count" : "4358"
+      }, {
+        "item" : "14",
+        "count" : "4072"
+      }, {
+        "item" : "15",
+        "count" : "3755"
+      }, {
+        "item" : "17",
+        "count" : "3636"
+      }, {
+        "item" : "16",
+        "count" : "3608"
+      }, {
+        "item" : "18",
+        "count" : "3457"
+      }, {
+        "item" : "19",
+        "count" : "3286"
+      }, {
+        "item" : "20",
+        "count" : "3137"
+      }, {
+        "item" : "21",
+        "count" : "3023"
+      }, {
+        "item" : "22",
+        "count" : "2912"
+      }, {
+        "item" : "24",
+        "count" : "2688"
+      }, {
+        "item" : "23",
+        "count" : "2686"
+      }, {
+        "item" : "25",
+        "count" : "2544"
+      } ],
+      "smallest" : "6",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616766,
+    "name" : "CHURN_PCT",
+    "dataTypeName" : "number",
+    "description" : "Churn Percent",
+    "fieldName" : "churn_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150463693,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "1.0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "24837"
+      }, {
+        "item" : "0.167",
+        "count" : "5172"
+      }, {
+        "item" : "0.143",
+        "count" : "4581"
+      }, {
+        "item" : "0.125",
+        "count" : "4188"
+      }, {
+        "item" : "0.111",
+        "count" : "3851"
+      }, {
+        "item" : "0.1",
+        "count" : "3664"
+      }, {
+        "item" : "0.25",
+        "count" : "3388"
+      }, {
+        "item" : "0.2",
+        "count" : "3265"
+      }, {
+        "item" : "0.091",
+        "count" : "3213"
+      }, {
+        "item" : "0.333",
+        "count" : "3154"
+      }, {
+        "item" : "0.083",
+        "count" : "3098"
+      }, {
+        "item" : "0.071",
+        "count" : "2768"
+      }, {
+        "item" : "0.077",
+        "count" : "2624"
+      }, {
+        "item" : "0.063",
+        "count" : "2511"
+      }, {
+        "item" : "0.067",
+        "count" : "2409"
+      }, {
+        "item" : "0.056",
+        "count" : "2301"
+      }, {
+        "item" : "0.059",
+        "count" : "2266"
+      }, {
+        "item" : "0.182",
+        "count" : "2216"
+      }, {
+        "item" : "0.222",
+        "count" : "2206"
+      }, {
+        "item" : "0.053",
+        "count" : "2117"
+      } ],
+      "smallest" : "0.0",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588616767,
+    "name" : "INTAKE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Intake Percent",
+    "fieldName" : "intake_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150463692,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "1.0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "45008"
+      }, {
+        "item" : "0.167",
+        "count" : "3944"
+      }, {
+        "item" : "0.143",
+        "count" : "3836"
+      }, {
+        "item" : "0.125",
+        "count" : "3730"
+      }, {
+        "item" : "0.111",
+        "count" : "3604"
+      }, {
+        "item" : "0.091",
+        "count" : "3360"
+      }, {
+        "item" : "0.1",
+        "count" : "3342"
+      }, {
+        "item" : "0.083",
+        "count" : "3234"
+      }, {
+        "item" : "0.071",
+        "count" : "3162"
+      }, {
+        "item" : "0.063",
+        "count" : "3065"
+      }, {
+        "item" : "0.077",
+        "count" : "2930"
+      }, {
+        "item" : "0.067",
+        "count" : "2881"
+      }, {
+        "item" : "0.056",
+        "count" : "2868"
+      }, {
+        "item" : "0.029",
+        "count" : "2790"
+      }, {
+        "item" : "0.059",
+        "count" : "2698"
+      }, {
+        "item" : "0.048",
+        "count" : "2676"
+      }, {
+        "item" : "0.05",
+        "count" : "2657"
+      }, {
+        "item" : "0.053",
+        "count" : "2605"
+      }, {
+        "item" : "0.026",
+        "count" : "2568"
+      }, {
+        "item" : "0.042",
+        "count" : "2549"
+      } ],
+      "smallest" : "0.0",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588616768,
+    "name" : "STAB_ENROLL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Stability Enrollment Count",
+    "fieldName" : "stab_enroll_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150463691,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "56176",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6",
+        "count" : "7034"
+      }, {
+        "item" : "7",
+        "count" : "6650"
+      }, {
+        "item" : "8",
+        "count" : "6260"
+      }, {
+        "item" : "9",
+        "count" : "5652"
+      }, {
+        "item" : "10",
+        "count" : "5401"
+      }, {
+        "item" : "11",
+        "count" : "5076"
+      }, {
+        "item" : "12",
+        "count" : "4582"
+      }, {
+        "item" : "13",
+        "count" : "4346"
+      }, {
+        "item" : "14",
+        "count" : "4187"
+      }, {
+        "item" : "15",
+        "count" : "3929"
+      }, {
+        "item" : "16",
+        "count" : "3759"
+      }, {
+        "item" : "17",
+        "count" : "3680"
+      }, {
+        "item" : "18",
+        "count" : "3446"
+      }, {
+        "item" : "19",
+        "count" : "3350"
+      }, {
+        "item" : "20",
+        "count" : "3138"
+      }, {
+        "item" : "21",
+        "count" : "2998"
+      }, {
+        "item" : "22",
+        "count" : "2943"
+      }, {
+        "item" : "23",
+        "count" : "2779"
+      }, {
+        "item" : "24",
+        "count" : "2696"
+      }, {
+        "item" : "25",
+        "count" : "2588"
+      } ],
+      "smallest" : "0",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : { }
+  }, {
+    "id" : 588616769,
+    "name" : "STAB_PCT",
+    "dataTypeName" : "number",
+    "description" : "Stability Percent",
+    "fieldName" : "stab_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150463690,
+    "cachedContents" : {
+      "non_null" : "356048",
+      "largest" : "1.0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "45360"
+      }, {
+        "item" : "0.833",
+        "count" : "4082"
+      }, {
+        "item" : "0.857",
+        "count" : "4009"
+      }, {
+        "item" : "0.875",
+        "count" : "3976"
+      }, {
+        "item" : "0.889",
+        "count" : "3971"
+      }, {
+        "item" : "0.9",
+        "count" : "3881"
+      }, {
+        "item" : "0.909",
+        "count" : "3682"
+      }, {
+        "item" : "0.917",
+        "count" : "3653"
+      }, {
+        "item" : "0.929",
+        "count" : "3480"
+      }, {
+        "item" : "0.938",
+        "count" : "3352"
+      }, {
+        "item" : "0.923",
+        "count" : "3271"
+      }, {
+        "item" : "0.944",
+        "count" : "3158"
+      }, {
+        "item" : "0.933",
+        "count" : "3132"
+      }, {
+        "item" : "0.957",
+        "count" : "3127"
+      }, {
+        "item" : "0.941",
+        "count" : "3048"
+      }, {
+        "item" : "0.947",
+        "count" : "3030"
+      }, {
+        "item" : "0.952",
+        "count" : "2861"
+      }, {
+        "item" : "0.955",
+        "count" : "2807"
+      }, {
+        "item" : "0.8",
+        "count" : "2760"
+      }, {
+        "item" : "0.95",
+        "count" : "2727"
+      } ],
+      "smallest" : "0.0",
+      "count" : "356048",
+      "cardinality" : "356048"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "mobility", "enrollment", "intake", "churn", "stability", "race and ethnicity", "gender", "low income", "economically disadvantaged", "students with disabilities", "english learners", "high needs" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

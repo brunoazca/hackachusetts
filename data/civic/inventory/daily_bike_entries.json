@@ -1,0 +1,23 @@
+[
+  {
+    "id": "boston-daily-bike-full-0",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Daily_Bike_Counts/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=0&f=json",
+    "name": "Daily bicycle count records 0",
+    "role": "arcgis_full_page",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "boston-daily-bike-full-1000",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Daily_Bike_Counts/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=1000&f=json",
+    "name": "Daily bicycle count records 1000",
+    "role": "arcgis_full_page",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "boston-daily-bike-full-2000",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Daily_Bike_Counts/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=2000&f=json",
+    "name": "Daily bicycle count records 2000",
+    "role": "arcgis_full_page",
+    "parent": "boston-bike-dashboard"
+  }
+]

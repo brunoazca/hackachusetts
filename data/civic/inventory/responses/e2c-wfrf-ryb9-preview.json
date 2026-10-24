@@ -1,0 +1,45 @@
+[{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Central","program_type":"Adoption Agency","provider_count":"3"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Central","program_type":"Foster Care Agency","provider_count":"6"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Central","program_type":"Residential Care","provider_count":"60","licensed_capacity":"757"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Adoption Agency","provider_count":"3"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Foster Care Agency","provider_count":"3"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Residential Care","provider_count":"51","licensed_capacity":"812"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Northeast","program_type":"Adoption Agency","provider_count":"10"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Northeast","program_type":"Foster Care Agency","provider_count":"16"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Northeast","program_type":"Residential Care","provider_count":"74","licensed_capacity":"1173"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Adoption Agency","provider_count":"7"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Foster Care Agency","provider_count":"12"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Residential Care","provider_count":"87","licensed_capacity":"1591"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Western","program_type":"Adoption Agency","provider_count":"2"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Western","program_type":"Foster Care Agency","provider_count":"11"}
+,{"data_load_date":"2026-09-01T00:00:00.000","licensing_region":"Western","program_type":"Residential Care","provider_count":"50","licensed_capacity":"888"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Central","program_type":"Adoption Agency","provider_count":"3"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Central","program_type":"Foster Care Agency","provider_count":"6"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Central","program_type":"Residential Care","provider_count":"60","licensed_capacity":"757"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Adoption Agency","provider_count":"3"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Foster Care Agency","provider_count":"3"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Residential Care","provider_count":"51","licensed_capacity":"812"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Northeast","program_type":"Adoption Agency","provider_count":"10"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Northeast","program_type":"Foster Care Agency","provider_count":"16"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Northeast","program_type":"Residential Care","provider_count":"74","licensed_capacity":"1173"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Adoption Agency","provider_count":"7"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Foster Care Agency","provider_count":"12"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Residential Care","provider_count":"87","licensed_capacity":"1591"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Western","program_type":"Adoption Agency","provider_count":"2"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Western","program_type":"Foster Care Agency","provider_count":"11"}
+,{"data_load_date":"2026-08-01T00:00:00.000","licensing_region":"Western","program_type":"Residential Care","provider_count":"50","licensed_capacity":"888"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Central","program_type":"Adoption Agency","provider_count":"3"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Central","program_type":"Foster Care Agency","provider_count":"6"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Central","program_type":"Residential Care","provider_count":"60","licensed_capacity":"753"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Adoption Agency","provider_count":"3"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Foster Care Agency","provider_count":"3"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Metro Boston","program_type":"Residential Care","provider_count":"51","licensed_capacity":"812"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Northeast","program_type":"Adoption Agency","provider_count":"10"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Northeast","program_type":"Foster Care Agency","provider_count":"16"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Northeast","program_type":"Residential Care","provider_count":"74","licensed_capacity":"1173"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Adoption Agency","provider_count":"6"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Foster Care Agency","provider_count":"12"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Southeast and Cape","program_type":"Residential Care","provider_count":"89","licensed_capacity":"1609"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Western","program_type":"Adoption Agency","provider_count":"2"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Western","program_type":"Foster Care Agency","provider_count":"11"}
+,{"data_load_date":"2026-07-01T00:00:00.000","licensing_region":"Western","program_type":"Residential Care","provider_count":"51","licensed_capacity":"894"}]

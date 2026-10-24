@@ -1,0 +1,94 @@
+{
+  "id" : "kmvr-zict",
+  "name" : "MCAS Participation and Accommodation Data Trends",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1781277750,
+  "description" : "These interactive charts explore trends in MCAS participation by school and district since 2017. Use the filters to customize the charts for a specific school or district, grade level, test subject, and any combination of student groups.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 42210444,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1781278913,
+  "publicationGroup" : 20418954,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1781277750,
+  "tableId" : 20418954,
+  "totalTimesRated" : 0,
+  "viewCount" : 422,
+  "viewLastModified" : 1782741956,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1782741100,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7542442,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1782741089,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1782741100,
+      "failureCount" : 0,
+      "startedAt" : 1782741100,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

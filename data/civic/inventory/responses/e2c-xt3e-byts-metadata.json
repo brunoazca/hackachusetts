@@ -1,0 +1,2266 @@
+{
+  "id" : "xt3e-byts",
+  "name" : "Educator Preparation Program Staff by Race/Ethnicity and Gender",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1708979454,
+  "description" : "This dataset provides information regarding the educator preparation program faculty and staff by race/ethnicity and gender from 2012 onward. It includes the full-time equivalent (FTE) count of educator preparation program faculty and staff, as well as the number of students per faculty member in those programs.\n\nFaculty and staff may be reported in one or more racial groups. Blanks indicate that no information was reported.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/epppfacultybyracegender.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Educator Preparation Faculty by Race/Gender\n</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 10,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41390217,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1750275108,
+  "publicationGroup" : 19465206,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1776791462,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19928372,
+  "totalTimesRated" : 0,
+  "viewCount" : 341,
+  "viewLastModified" : 1786391384,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1770390197,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7343788,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1770390103,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1770390197,
+      "failureCount" : 0,
+      "startedAt" : 1770390197,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 612300362,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151577924,
+    "cachedContents" : {
+      "non_null" : "882",
+      "largest" : "2024",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2012",
+        "count" : "80"
+      }, {
+        "item" : "2013",
+        "count" : "80"
+      }, {
+        "item" : "2014",
+        "count" : "79"
+      }, {
+        "item" : "2016",
+        "count" : "75"
+      }, {
+        "item" : "2017",
+        "count" : "74"
+      }, {
+        "item" : "2015",
+        "count" : "69"
+      }, {
+        "item" : "2018",
+        "count" : "66"
+      }, {
+        "item" : "2020",
+        "count" : "64"
+      }, {
+        "item" : "2019",
+        "count" : "63"
+      }, {
+        "item" : "2021",
+        "count" : "63"
+      }, {
+        "item" : "2022",
+        "count" : "58"
+      }, {
+        "item" : "2023",
+        "count" : "57"
+      }, {
+        "item" : "2024",
+        "count" : "54"
+      } ],
+      "smallest" : "2012",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300363,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151577929,
+    "cachedContents" : {
+      "non_null" : "882",
+      "largest" : "30000066",
+      "null" : "0",
+      "top" : [ {
+        "item" : "30000049",
+        "count" : "13"
+      }, {
+        "item" : "30000001",
+        "count" : "13"
+      }, {
+        "item" : "30000037",
+        "count" : "13"
+      }, {
+        "item" : "30000023",
+        "count" : "13"
+      }, {
+        "item" : "30000046",
+        "count" : "13"
+      }, {
+        "item" : "30000018",
+        "count" : "13"
+      }, {
+        "item" : "30000056",
+        "count" : "13"
+      }, {
+        "item" : "30000019",
+        "count" : "13"
+      }, {
+        "item" : "30000003",
+        "count" : "13"
+      }, {
+        "item" : "30000012",
+        "count" : "13"
+      }, {
+        "item" : "00000000",
+        "count" : "13"
+      }, {
+        "item" : "30000014",
+        "count" : "13"
+      }, {
+        "item" : "30000016",
+        "count" : "13"
+      }, {
+        "item" : "30000052",
+        "count" : "13"
+      }, {
+        "item" : "20200001",
+        "count" : "13"
+      }, {
+        "item" : "30000051",
+        "count" : "13"
+      }, {
+        "item" : "30000031",
+        "count" : "13"
+      }, {
+        "item" : "30000005",
+        "count" : "13"
+      }, {
+        "item" : "30000044",
+        "count" : "13"
+      }, {
+        "item" : "30000030",
+        "count" : "13"
+      } ],
+      "smallest" : "00000000",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300364,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151577932,
+    "cachedContents" : {
+      "non_null" : "882",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Massachusetts College of Art",
+        "count" : "13"
+      }, {
+        "item" : "UMass/Dartmouth",
+        "count" : "13"
+      }, {
+        "item" : "Smith College",
+        "count" : "13"
+      }, {
+        "item" : "Stonehill College",
+        "count" : "13"
+      }, {
+        "item" : "Wellesley College",
+        "count" : "13"
+      }, {
+        "item" : "Worcester Polytechnic Institute",
+        "count" : "13"
+      }, {
+        "item" : "Catherine Leahy Brine Educational Consultants, Inc.",
+        "count" : "13"
+      }, {
+        "item" : "Harvard Graduate School of Education",
+        "count" : "13"
+      }, {
+        "item" : "Tufts University",
+        "count" : "13"
+      }, {
+        "item" : "UMass/Amherst",
+        "count" : "13"
+      }, {
+        "item" : "Cambridge College",
+        "count" : "13"
+      }, {
+        "item" : "American International College",
+        "count" : "13"
+      }, {
+        "item" : "Elms College",
+        "count" : "13"
+      }, {
+        "item" : "Wheaton College",
+        "count" : "13"
+      }, {
+        "item" : "Boston College",
+        "count" : "13"
+      }, {
+        "item" : "Boston University",
+        "count" : "13"
+      }, {
+        "item" : "Endicott College",
+        "count" : "13"
+      }, {
+        "item" : "Regis College",
+        "count" : "13"
+      }, {
+        "item" : "Springfield College",
+        "count" : "13"
+      }, {
+        "item" : "Emerson College",
+        "count" : "13"
+      } ],
+      "smallest" : "American International College",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300373,
+    "name" : "AIAN_CNT",
+    "dataTypeName" : "number",
+    "description" : "American Indian or Alaska Native Count",
+    "fieldName" : "aian_cnt",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577957,
+    "cachedContents" : {
+      "non_null" : "834",
+      "largest" : "7",
+      "null" : "48",
+      "top" : [ {
+        "item" : "0",
+        "count" : "762"
+      }, {
+        "item" : "1",
+        "count" : "51"
+      }, {
+        "item" : "2",
+        "count" : "9"
+      }, {
+        "item" : "5",
+        "count" : "4"
+      }, {
+        "item" : "7",
+        "count" : "3"
+      }, {
+        "item" : "6",
+        "count" : "3"
+      }, {
+        "item" : "3",
+        "count" : "1"
+      }, {
+        "item" : "4",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300374,
+    "name" : "AIAN_PCT",
+    "dataTypeName" : "number",
+    "description" : "American Indian or Alaska Native Percent",
+    "fieldName" : "aian_pct",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577956,
+    "cachedContents" : {
+      "non_null" : "832",
+      "largest" : "0.167",
+      "null" : "50",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "760"
+      }, {
+        "item" : "0.003",
+        "count" : "10"
+      }, {
+        "item" : "0.011",
+        "count" : "7"
+      }, {
+        "item" : "0.012",
+        "count" : "6"
+      }, {
+        "item" : "0.002",
+        "count" : "4"
+      }, {
+        "item" : "0.007",
+        "count" : "4"
+      }, {
+        "item" : "0.01",
+        "count" : "4"
+      }, {
+        "item" : "0.004",
+        "count" : "3"
+      }, {
+        "item" : "0.013",
+        "count" : "3"
+      }, {
+        "item" : "0.008",
+        "count" : "3"
+      }, {
+        "item" : "0.015",
+        "count" : "2"
+      }, {
+        "item" : "0.019",
+        "count" : "2"
+      }, {
+        "item" : "0.03",
+        "count" : "2"
+      }, {
+        "item" : "0.009",
+        "count" : "2"
+      }, {
+        "item" : "0.036",
+        "count" : "2"
+      }, {
+        "item" : "0.014",
+        "count" : "2"
+      }, {
+        "item" : "0.143",
+        "count" : "1"
+      }, {
+        "item" : "0.042",
+        "count" : "1"
+      }, {
+        "item" : "0.005",
+        "count" : "1"
+      }, {
+        "item" : "0.05",
+        "count" : "1"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300367,
+    "name" : "AS_CNT",
+    "dataTypeName" : "number",
+    "description" : "Asian Count",
+    "fieldName" : "as_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577941,
+    "cachedContents" : {
+      "non_null" : "842",
+      "largest" : "108",
+      "null" : "40",
+      "top" : [ {
+        "item" : "0",
+        "count" : "475"
+      }, {
+        "item" : "1",
+        "count" : "161"
+      }, {
+        "item" : "2",
+        "count" : "78"
+      }, {
+        "item" : "4",
+        "count" : "32"
+      }, {
+        "item" : "3",
+        "count" : "32"
+      }, {
+        "item" : "5",
+        "count" : "15"
+      }, {
+        "item" : "6",
+        "count" : "12"
+      }, {
+        "item" : "7",
+        "count" : "9"
+      }, {
+        "item" : "8",
+        "count" : "6"
+      }, {
+        "item" : "11",
+        "count" : "5"
+      }, {
+        "item" : "9",
+        "count" : "3"
+      }, {
+        "item" : "49",
+        "count" : "2"
+      }, {
+        "item" : "63",
+        "count" : "1"
+      }, {
+        "item" : "55",
+        "count" : "1"
+      }, {
+        "item" : "41",
+        "count" : "1"
+      }, {
+        "item" : "83",
+        "count" : "1"
+      }, {
+        "item" : "93",
+        "count" : "1"
+      }, {
+        "item" : "66",
+        "count" : "1"
+      }, {
+        "item" : "108",
+        "count" : "1"
+      }, {
+        "item" : "50",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300368,
+    "name" : "AS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Asian Percent",
+    "fieldName" : "as_pct",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577952,
+    "cachedContents" : {
+      "non_null" : "840",
+      "largest" : "1.0",
+      "null" : "42",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "473"
+      }, {
+        "item" : "0.25",
+        "count" : "17"
+      }, {
+        "item" : "0.143",
+        "count" : "14"
+      }, {
+        "item" : "0.019",
+        "count" : "10"
+      }, {
+        "item" : "0.071",
+        "count" : "10"
+      }, {
+        "item" : "0.05",
+        "count" : "9"
+      }, {
+        "item" : "0.053",
+        "count" : "8"
+      }, {
+        "item" : "0.059",
+        "count" : "7"
+      }, {
+        "item" : "0.083",
+        "count" : "7"
+      }, {
+        "item" : "0.091",
+        "count" : "7"
+      }, {
+        "item" : "0.028",
+        "count" : "7"
+      }, {
+        "item" : "0.045",
+        "count" : "7"
+      }, {
+        "item" : "0.029",
+        "count" : "7"
+      }, {
+        "item" : "0.016",
+        "count" : "7"
+      }, {
+        "item" : "0.043",
+        "count" : "7"
+      }, {
+        "item" : "0.167",
+        "count" : "6"
+      }, {
+        "item" : "0.063",
+        "count" : "6"
+      }, {
+        "item" : "0.048",
+        "count" : "6"
+      }, {
+        "item" : "0.032",
+        "count" : "6"
+      }, {
+        "item" : "0.024",
+        "count" : "6"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300365,
+    "name" : "BAA_CNT",
+    "dataTypeName" : "number",
+    "description" : "Black or African American Count",
+    "fieldName" : "baa_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577936,
+    "cachedContents" : {
+      "non_null" : "850",
+      "largest" : "180",
+      "null" : "32",
+      "top" : [ {
+        "item" : "0",
+        "count" : "382"
+      }, {
+        "item" : "1",
+        "count" : "158"
+      }, {
+        "item" : "2",
+        "count" : "98"
+      }, {
+        "item" : "3",
+        "count" : "48"
+      }, {
+        "item" : "4",
+        "count" : "35"
+      }, {
+        "item" : "5",
+        "count" : "25"
+      }, {
+        "item" : "6",
+        "count" : "19"
+      }, {
+        "item" : "7",
+        "count" : "19"
+      }, {
+        "item" : "12",
+        "count" : "9"
+      }, {
+        "item" : "13",
+        "count" : "7"
+      }, {
+        "item" : "8",
+        "count" : "6"
+      }, {
+        "item" : "11",
+        "count" : "6"
+      }, {
+        "item" : "15",
+        "count" : "4"
+      }, {
+        "item" : "17",
+        "count" : "4"
+      }, {
+        "item" : "14",
+        "count" : "3"
+      }, {
+        "item" : "72",
+        "count" : "3"
+      }, {
+        "item" : "16",
+        "count" : "3"
+      }, {
+        "item" : "164",
+        "count" : "2"
+      }, {
+        "item" : "18",
+        "count" : "2"
+      }, {
+        "item" : "137",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300366,
+    "name" : "BAA_PCT",
+    "dataTypeName" : "number",
+    "description" : "Black or African American Percent",
+    "fieldName" : "baa_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577949,
+    "cachedContents" : {
+      "non_null" : "849",
+      "largest" : "1.0",
+      "null" : "33",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "378"
+      }, {
+        "item" : "0.143",
+        "count" : "18"
+      }, {
+        "item" : "0.091",
+        "count" : "13"
+      }, {
+        "item" : "0.056",
+        "count" : "12"
+      }, {
+        "item" : "0.2",
+        "count" : "12"
+      }, {
+        "item" : "0.111",
+        "count" : "11"
+      }, {
+        "item" : "0.125",
+        "count" : "10"
+      }, {
+        "item" : "0.059",
+        "count" : "9"
+      }, {
+        "item" : "0.043",
+        "count" : "9"
+      }, {
+        "item" : "0.071",
+        "count" : "8"
+      }, {
+        "item" : "0.1",
+        "count" : "8"
+      }, {
+        "item" : "0.154",
+        "count" : "8"
+      }, {
+        "item" : "0.053",
+        "count" : "8"
+      }, {
+        "item" : "0.042",
+        "count" : "7"
+      }, {
+        "item" : "0.333",
+        "count" : "7"
+      }, {
+        "item" : "0.083",
+        "count" : "7"
+      }, {
+        "item" : "0.286",
+        "count" : "7"
+      }, {
+        "item" : "0.25",
+        "count" : "7"
+      }, {
+        "item" : "0.063",
+        "count" : "7"
+      }, {
+        "item" : "0.167",
+        "count" : "7"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300369,
+    "name" : "HL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Hispanic or Latino Count",
+    "fieldName" : "hl_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577948,
+    "cachedContents" : {
+      "non_null" : "843",
+      "largest" : "104",
+      "null" : "39",
+      "top" : [ {
+        "item" : "0",
+        "count" : "478"
+      }, {
+        "item" : "1",
+        "count" : "141"
+      }, {
+        "item" : "2",
+        "count" : "71"
+      }, {
+        "item" : "3",
+        "count" : "50"
+      }, {
+        "item" : "5",
+        "count" : "29"
+      }, {
+        "item" : "4",
+        "count" : "25"
+      }, {
+        "item" : "6",
+        "count" : "18"
+      }, {
+        "item" : "7",
+        "count" : "8"
+      }, {
+        "item" : "9",
+        "count" : "3"
+      }, {
+        "item" : "11",
+        "count" : "2"
+      }, {
+        "item" : "8",
+        "count" : "2"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "48",
+        "count" : "1"
+      }, {
+        "item" : "76",
+        "count" : "1"
+      }, {
+        "item" : "81",
+        "count" : "1"
+      }, {
+        "item" : "18",
+        "count" : "1"
+      }, {
+        "item" : "62",
+        "count" : "1"
+      }, {
+        "item" : "104",
+        "count" : "1"
+      }, {
+        "item" : "57",
+        "count" : "1"
+      }, {
+        "item" : "100",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300370,
+    "name" : "HL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Hispanic or Latino Percent",
+    "fieldName" : "hl_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577947,
+    "cachedContents" : {
+      "non_null" : "840",
+      "largest" : "1.0",
+      "null" : "42",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "475"
+      }, {
+        "item" : "0.143",
+        "count" : "17"
+      }, {
+        "item" : "0.031",
+        "count" : "11"
+      }, {
+        "item" : "0.053",
+        "count" : "11"
+      }, {
+        "item" : "0.048",
+        "count" : "10"
+      }, {
+        "item" : "0.125",
+        "count" : "10"
+      }, {
+        "item" : "0.024",
+        "count" : "9"
+      }, {
+        "item" : "0.033",
+        "count" : "8"
+      }, {
+        "item" : "0.029",
+        "count" : "8"
+      }, {
+        "item" : "0.045",
+        "count" : "8"
+      }, {
+        "item" : "0.019",
+        "count" : "8"
+      }, {
+        "item" : "0.05",
+        "count" : "7"
+      }, {
+        "item" : "0.067",
+        "count" : "7"
+      }, {
+        "item" : "0.036",
+        "count" : "7"
+      }, {
+        "item" : "0.025",
+        "count" : "7"
+      }, {
+        "item" : "0.032",
+        "count" : "7"
+      }, {
+        "item" : "0.02",
+        "count" : "7"
+      }, {
+        "item" : "0.04",
+        "count" : "6"
+      }, {
+        "item" : "0.091",
+        "count" : "6"
+      }, {
+        "item" : "0.022",
+        "count" : "6"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300377,
+    "name" : "MNHL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Multi-Race, Not Hispanic or Latino Count",
+    "fieldName" : "mnhl_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577960,
+    "cachedContents" : {
+      "non_null" : "834",
+      "largest" : "56",
+      "null" : "48",
+      "top" : [ {
+        "item" : "0",
+        "count" : "647"
+      }, {
+        "item" : "1",
+        "count" : "91"
+      }, {
+        "item" : "2",
+        "count" : "48"
+      }, {
+        "item" : "3",
+        "count" : "14"
+      }, {
+        "item" : "5",
+        "count" : "9"
+      }, {
+        "item" : "4",
+        "count" : "7"
+      }, {
+        "item" : "33",
+        "count" : "2"
+      }, {
+        "item" : "21",
+        "count" : "2"
+      }, {
+        "item" : "29",
+        "count" : "2"
+      }, {
+        "item" : "20",
+        "count" : "2"
+      }, {
+        "item" : "13",
+        "count" : "2"
+      }, {
+        "item" : "30",
+        "count" : "1"
+      }, {
+        "item" : "8",
+        "count" : "1"
+      }, {
+        "item" : "9",
+        "count" : "1"
+      }, {
+        "item" : "19",
+        "count" : "1"
+      }, {
+        "item" : "56",
+        "count" : "1"
+      }, {
+        "item" : "31",
+        "count" : "1"
+      }, {
+        "item" : "17",
+        "count" : "1"
+      }, {
+        "item" : "27",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300378,
+    "name" : "MNHL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Multi-Race, Not Hispanic or Latino Percent",
+    "fieldName" : "mnhl_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577958,
+    "cachedContents" : {
+      "non_null" : "832",
+      "largest" : "0.5",
+      "null" : "50",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "645"
+      }, {
+        "item" : "0.016",
+        "count" : "13"
+      }, {
+        "item" : "0.014",
+        "count" : "9"
+      }, {
+        "item" : "0.013",
+        "count" : "8"
+      }, {
+        "item" : "0.011",
+        "count" : "7"
+      }, {
+        "item" : "0.143",
+        "count" : "6"
+      }, {
+        "item" : "0.032",
+        "count" : "6"
+      }, {
+        "item" : "0.023",
+        "count" : "6"
+      }, {
+        "item" : "0.022",
+        "count" : "5"
+      }, {
+        "item" : "0.059",
+        "count" : "5"
+      }, {
+        "item" : "0.03",
+        "count" : "5"
+      }, {
+        "item" : "0.015",
+        "count" : "5"
+      }, {
+        "item" : "0.029",
+        "count" : "4"
+      }, {
+        "item" : "0.012",
+        "count" : "4"
+      }, {
+        "item" : "0.02",
+        "count" : "4"
+      }, {
+        "item" : "0.067",
+        "count" : "3"
+      }, {
+        "item" : "0.018",
+        "count" : "3"
+      }, {
+        "item" : "0.069",
+        "count" : "3"
+      }, {
+        "item" : "0.024",
+        "count" : "3"
+      }, {
+        "item" : "0.036",
+        "count" : "3"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300375,
+    "name" : "NHPI_CNT",
+    "dataTypeName" : "number",
+    "description" : "Native Hawaiian or Other Pacific Islander Count",
+    "fieldName" : "nhpi_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577959,
+    "cachedContents" : {
+      "non_null" : "833",
+      "largest" : "3",
+      "null" : "49",
+      "top" : [ {
+        "item" : "0",
+        "count" : "806"
+      }, {
+        "item" : "1",
+        "count" : "23"
+      }, {
+        "item" : "2",
+        "count" : "3"
+      }, {
+        "item" : "3",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300376,
+    "name" : "NHPI_PCT",
+    "dataTypeName" : "number",
+    "description" : "Native Hawaiian or Other Pacific Islander Percent",
+    "fieldName" : "nhpi_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577916,
+    "cachedContents" : {
+      "non_null" : "832",
+      "largest" : "0.071",
+      "null" : "50",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "810"
+      }, {
+        "item" : "0.001",
+        "count" : "6"
+      }, {
+        "item" : "0.004",
+        "count" : "2"
+      }, {
+        "item" : "0.043",
+        "count" : "2"
+      }, {
+        "item" : "0.042",
+        "count" : "2"
+      }, {
+        "item" : "0.036",
+        "count" : "2"
+      }, {
+        "item" : "0.04",
+        "count" : "1"
+      }, {
+        "item" : "0.016",
+        "count" : "1"
+      }, {
+        "item" : "0.01",
+        "count" : "1"
+      }, {
+        "item" : "0.011",
+        "count" : "1"
+      }, {
+        "item" : "0.038",
+        "count" : "1"
+      }, {
+        "item" : "0.029",
+        "count" : "1"
+      }, {
+        "item" : "0.071",
+        "count" : "1"
+      }, {
+        "item" : "0.017",
+        "count" : "1"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300371,
+    "name" : "WH_CNT",
+    "dataTypeName" : "number",
+    "description" : "White Count",
+    "fieldName" : "wh_cnt",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577951,
+    "cachedContents" : {
+      "non_null" : "855",
+      "largest" : "2034",
+      "null" : "27",
+      "top" : [ {
+        "item" : "0",
+        "count" : "73"
+      }, {
+        "item" : "6",
+        "count" : "50"
+      }, {
+        "item" : "3",
+        "count" : "50"
+      }, {
+        "item" : "2",
+        "count" : "40"
+      }, {
+        "item" : "4",
+        "count" : "38"
+      }, {
+        "item" : "5",
+        "count" : "35"
+      }, {
+        "item" : "14",
+        "count" : "29"
+      }, {
+        "item" : "7",
+        "count" : "27"
+      }, {
+        "item" : "9",
+        "count" : "26"
+      }, {
+        "item" : "13",
+        "count" : "25"
+      }, {
+        "item" : "11",
+        "count" : "22"
+      }, {
+        "item" : "8",
+        "count" : "19"
+      }, {
+        "item" : "10",
+        "count" : "19"
+      }, {
+        "item" : "1",
+        "count" : "18"
+      }, {
+        "item" : "17",
+        "count" : "17"
+      }, {
+        "item" : "20",
+        "count" : "16"
+      }, {
+        "item" : "19",
+        "count" : "14"
+      }, {
+        "item" : "23",
+        "count" : "12"
+      }, {
+        "item" : "16",
+        "count" : "11"
+      }, {
+        "item" : "12",
+        "count" : "11"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300372,
+    "name" : "WH_PCT",
+    "dataTypeName" : "number",
+    "description" : "White Percent",
+    "fieldName" : "wh_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577944,
+    "cachedContents" : {
+      "non_null" : "853",
+      "largest" : "1.0",
+      "null" : "29",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "184"
+      }, {
+        "item" : "0.0",
+        "count" : "71"
+      }, {
+        "item" : "0.75",
+        "count" : "29"
+      }, {
+        "item" : "0.667",
+        "count" : "23"
+      }, {
+        "item" : "0.8",
+        "count" : "22"
+      }, {
+        "item" : "0.5",
+        "count" : "16"
+      }, {
+        "item" : "0.857",
+        "count" : "16"
+      }, {
+        "item" : "0.833",
+        "count" : "16"
+      }, {
+        "item" : "0.714",
+        "count" : "12"
+      }, {
+        "item" : "0.909",
+        "count" : "11"
+      }, {
+        "item" : "0.929",
+        "count" : "9"
+      }, {
+        "item" : "0.944",
+        "count" : "9"
+      }, {
+        "item" : "0.938",
+        "count" : "8"
+      }, {
+        "item" : "0.889",
+        "count" : "8"
+      }, {
+        "item" : "0.875",
+        "count" : "7"
+      }, {
+        "item" : "0.952",
+        "count" : "7"
+      }, {
+        "item" : "0.778",
+        "count" : "7"
+      }, {
+        "item" : "0.9",
+        "count" : "6"
+      }, {
+        "item" : "0.571",
+        "count" : "6"
+      }, {
+        "item" : "0.824",
+        "count" : "6"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300379,
+    "name" : "RNR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Race Not Reported Count",
+    "fieldName" : "rnr_cnt",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577961,
+    "cachedContents" : {
+      "non_null" : "386",
+      "largest" : "424",
+      "null" : "496",
+      "top" : [ {
+        "item" : "0",
+        "count" : "201"
+      }, {
+        "item" : "1",
+        "count" : "39"
+      }, {
+        "item" : "2",
+        "count" : "15"
+      }, {
+        "item" : "6",
+        "count" : "11"
+      }, {
+        "item" : "3",
+        "count" : "10"
+      }, {
+        "item" : "12",
+        "count" : "9"
+      }, {
+        "item" : "4",
+        "count" : "8"
+      }, {
+        "item" : "10",
+        "count" : "8"
+      }, {
+        "item" : "13",
+        "count" : "8"
+      }, {
+        "item" : "9",
+        "count" : "6"
+      }, {
+        "item" : "7",
+        "count" : "6"
+      }, {
+        "item" : "5",
+        "count" : "6"
+      }, {
+        "item" : "14",
+        "count" : "5"
+      }, {
+        "item" : "8",
+        "count" : "5"
+      }, {
+        "item" : "34",
+        "count" : "4"
+      }, {
+        "item" : "24",
+        "count" : "3"
+      }, {
+        "item" : "26",
+        "count" : "3"
+      }, {
+        "item" : "17",
+        "count" : "3"
+      }, {
+        "item" : "11",
+        "count" : "3"
+      }, {
+        "item" : "30",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300380,
+    "name" : "RNR_PCT",
+    "dataTypeName" : "number",
+    "description" : "Race Not Reported Percent",
+    "fieldName" : "rnr_pct",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577953,
+    "cachedContents" : {
+      "non_null" : "384",
+      "largest" : "1.0",
+      "null" : "498",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "199"
+      }, {
+        "item" : "1.0",
+        "count" : "18"
+      }, {
+        "item" : "0.071",
+        "count" : "5"
+      }, {
+        "item" : "0.063",
+        "count" : "5"
+      }, {
+        "item" : "0.111",
+        "count" : "5"
+      }, {
+        "item" : "0.143",
+        "count" : "4"
+      }, {
+        "item" : "0.087",
+        "count" : "3"
+      }, {
+        "item" : "0.067",
+        "count" : "3"
+      }, {
+        "item" : "0.13",
+        "count" : "3"
+      }, {
+        "item" : "0.27",
+        "count" : "3"
+      }, {
+        "item" : "0.014",
+        "count" : "3"
+      }, {
+        "item" : "0.029",
+        "count" : "3"
+      }, {
+        "item" : "0.077",
+        "count" : "3"
+      }, {
+        "item" : "0.052",
+        "count" : "2"
+      }, {
+        "item" : "0.157",
+        "count" : "2"
+      }, {
+        "item" : "0.02",
+        "count" : "2"
+      }, {
+        "item" : "0.2",
+        "count" : "2"
+      }, {
+        "item" : "0.083",
+        "count" : "2"
+      }, {
+        "item" : "0.182",
+        "count" : "2"
+      }, {
+        "item" : "0.032",
+        "count" : "2"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300381,
+    "name" : "FE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Female Count",
+    "fieldName" : "fe_cnt",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577962,
+    "cachedContents" : {
+      "non_null" : "858",
+      "largest" : "1863",
+      "null" : "24",
+      "top" : [ {
+        "item" : "2",
+        "count" : "58"
+      }, {
+        "item" : "6",
+        "count" : "55"
+      }, {
+        "item" : "4",
+        "count" : "48"
+      }, {
+        "item" : "5",
+        "count" : "43"
+      }, {
+        "item" : "0",
+        "count" : "42"
+      }, {
+        "item" : "3",
+        "count" : "37"
+      }, {
+        "item" : "13",
+        "count" : "31"
+      }, {
+        "item" : "7",
+        "count" : "31"
+      }, {
+        "item" : "1",
+        "count" : "28"
+      }, {
+        "item" : "12",
+        "count" : "26"
+      }, {
+        "item" : "11",
+        "count" : "23"
+      }, {
+        "item" : "8",
+        "count" : "23"
+      }, {
+        "item" : "9",
+        "count" : "19"
+      }, {
+        "item" : "16",
+        "count" : "18"
+      }, {
+        "item" : "17",
+        "count" : "17"
+      }, {
+        "item" : "19",
+        "count" : "16"
+      }, {
+        "item" : "14",
+        "count" : "14"
+      }, {
+        "item" : "10",
+        "count" : "12"
+      }, {
+        "item" : "23",
+        "count" : "12"
+      }, {
+        "item" : "22",
+        "count" : "10"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300382,
+    "name" : "FE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Female Percent",
+    "fieldName" : "fe_pct",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577954,
+    "cachedContents" : {
+      "non_null" : "857",
+      "largest" : "1.0",
+      "null" : "25",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "76"
+      }, {
+        "item" : "0.667",
+        "count" : "59"
+      }, {
+        "item" : "0.0",
+        "count" : "41"
+      }, {
+        "item" : "0.75",
+        "count" : "38"
+      }, {
+        "item" : "0.8",
+        "count" : "26"
+      }, {
+        "item" : "0.5",
+        "count" : "26"
+      }, {
+        "item" : "0.833",
+        "count" : "22"
+      }, {
+        "item" : "0.6",
+        "count" : "19"
+      }, {
+        "item" : "0.857",
+        "count" : "17"
+      }, {
+        "item" : "0.714",
+        "count" : "15"
+      }, {
+        "item" : "0.778",
+        "count" : "14"
+      }, {
+        "item" : "0.571",
+        "count" : "12"
+      }, {
+        "item" : "0.875",
+        "count" : "12"
+      }, {
+        "item" : "0.636",
+        "count" : "9"
+      }, {
+        "item" : "0.727",
+        "count" : "8"
+      }, {
+        "item" : "0.929",
+        "count" : "8"
+      }, {
+        "item" : "0.867",
+        "count" : "7"
+      }, {
+        "item" : "0.733",
+        "count" : "7"
+      }, {
+        "item" : "0.821",
+        "count" : "6"
+      }, {
+        "item" : "0.625",
+        "count" : "6"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300383,
+    "name" : "MA_CNT",
+    "dataTypeName" : "number",
+    "description" : "Male Count",
+    "fieldName" : "ma_cnt",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577963,
+    "cachedContents" : {
+      "non_null" : "855",
+      "largest" : "677",
+      "null" : "27",
+      "top" : [ {
+        "item" : "1",
+        "count" : "113"
+      }, {
+        "item" : "2",
+        "count" : "105"
+      }, {
+        "item" : "0",
+        "count" : "102"
+      }, {
+        "item" : "3",
+        "count" : "71"
+      }, {
+        "item" : "4",
+        "count" : "62"
+      }, {
+        "item" : "6",
+        "count" : "47"
+      }, {
+        "item" : "5",
+        "count" : "45"
+      }, {
+        "item" : "7",
+        "count" : "30"
+      }, {
+        "item" : "8",
+        "count" : "28"
+      }, {
+        "item" : "9",
+        "count" : "27"
+      }, {
+        "item" : "11",
+        "count" : "15"
+      }, {
+        "item" : "13",
+        "count" : "14"
+      }, {
+        "item" : "12",
+        "count" : "12"
+      }, {
+        "item" : "24",
+        "count" : "12"
+      }, {
+        "item" : "17",
+        "count" : "10"
+      }, {
+        "item" : "18",
+        "count" : "10"
+      }, {
+        "item" : "14",
+        "count" : "9"
+      }, {
+        "item" : "20",
+        "count" : "9"
+      }, {
+        "item" : "16",
+        "count" : "9"
+      }, {
+        "item" : "22",
+        "count" : "7"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300384,
+    "name" : "MA_PCT",
+    "dataTypeName" : "number",
+    "description" : "Male Percent",
+    "fieldName" : "ma_pct",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577920,
+    "cachedContents" : {
+      "non_null" : "854",
+      "largest" : "1.0",
+      "null" : "28",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "101"
+      }, {
+        "item" : "0.333",
+        "count" : "61"
+      }, {
+        "item" : "0.25",
+        "count" : "37"
+      }, {
+        "item" : "0.2",
+        "count" : "27"
+      }, {
+        "item" : "0.5",
+        "count" : "24"
+      }, {
+        "item" : "0.167",
+        "count" : "23"
+      }, {
+        "item" : "0.143",
+        "count" : "21"
+      }, {
+        "item" : "0.4",
+        "count" : "19"
+      }, {
+        "item" : "1.0",
+        "count" : "14"
+      }, {
+        "item" : "0.286",
+        "count" : "14"
+      }, {
+        "item" : "0.222",
+        "count" : "13"
+      }, {
+        "item" : "0.429",
+        "count" : "12"
+      }, {
+        "item" : "0.125",
+        "count" : "12"
+      }, {
+        "item" : "0.364",
+        "count" : "11"
+      }, {
+        "item" : "0.071",
+        "count" : "8"
+      }, {
+        "item" : "0.273",
+        "count" : "8"
+      }, {
+        "item" : "0.267",
+        "count" : "7"
+      }, {
+        "item" : "0.294",
+        "count" : "7"
+      }, {
+        "item" : "0.154",
+        "count" : "7"
+      }, {
+        "item" : "0.133",
+        "count" : "7"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300385,
+    "name" : "NB_CNT",
+    "dataTypeName" : "number",
+    "description" : "Nonbinary Count",
+    "fieldName" : "nb_cnt",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577964,
+    "cachedContents" : {
+      "non_null" : "324",
+      "largest" : "11",
+      "null" : "558",
+      "top" : [ {
+        "item" : "0",
+        "count" : "292"
+      }, {
+        "item" : "1",
+        "count" : "22"
+      }, {
+        "item" : "3",
+        "count" : "3"
+      }, {
+        "item" : "5",
+        "count" : "1"
+      }, {
+        "item" : "6",
+        "count" : "1"
+      }, {
+        "item" : "8",
+        "count" : "1"
+      }, {
+        "item" : "10",
+        "count" : "1"
+      }, {
+        "item" : "11",
+        "count" : "1"
+      }, {
+        "item" : "2",
+        "count" : "1"
+      }, {
+        "item" : "4",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300386,
+    "name" : "NB_PCT",
+    "dataTypeName" : "number",
+    "description" : "Nonbinary Percent",
+    "fieldName" : "nb_pct",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577955,
+    "cachedContents" : {
+      "non_null" : "323",
+      "largest" : "0.429",
+      "null" : "559",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "290"
+      }, {
+        "item" : "0.006",
+        "count" : "2"
+      }, {
+        "item" : "0.02",
+        "count" : "2"
+      }, {
+        "item" : "0.071",
+        "count" : "2"
+      }, {
+        "item" : "0.038",
+        "count" : "2"
+      }, {
+        "item" : "0.012",
+        "count" : "2"
+      }, {
+        "item" : "0.015",
+        "count" : "2"
+      }, {
+        "item" : "0.002",
+        "count" : "2"
+      }, {
+        "item" : "0.004",
+        "count" : "2"
+      }, {
+        "item" : "0.032",
+        "count" : "1"
+      }, {
+        "item" : "0.034",
+        "count" : "1"
+      }, {
+        "item" : "0.043",
+        "count" : "1"
+      }, {
+        "item" : "0.048",
+        "count" : "1"
+      }, {
+        "item" : "0.083",
+        "count" : "1"
+      }, {
+        "item" : "0.091",
+        "count" : "1"
+      }, {
+        "item" : "0.1",
+        "count" : "1"
+      }, {
+        "item" : "0.125",
+        "count" : "1"
+      }, {
+        "item" : "0.429",
+        "count" : "1"
+      }, {
+        "item" : "0.001",
+        "count" : "1"
+      }, {
+        "item" : "0.003",
+        "count" : "1"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300387,
+    "name" : "GNR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Gender Not Reported Count",
+    "fieldName" : "gnr_cnt",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577965,
+    "cachedContents" : {
+      "non_null" : "389",
+      "largest" : "109",
+      "null" : "493",
+      "top" : [ {
+        "item" : "0",
+        "count" : "320"
+      }, {
+        "item" : "1",
+        "count" : "18"
+      }, {
+        "item" : "2",
+        "count" : "12"
+      }, {
+        "item" : "5",
+        "count" : "6"
+      }, {
+        "item" : "3",
+        "count" : "4"
+      }, {
+        "item" : "7",
+        "count" : "4"
+      }, {
+        "item" : "11",
+        "count" : "4"
+      }, {
+        "item" : "14",
+        "count" : "2"
+      }, {
+        "item" : "13",
+        "count" : "2"
+      }, {
+        "item" : "10",
+        "count" : "1"
+      }, {
+        "item" : "6",
+        "count" : "1"
+      }, {
+        "item" : "12",
+        "count" : "1"
+      }, {
+        "item" : "109",
+        "count" : "1"
+      }, {
+        "item" : "4",
+        "count" : "1"
+      }, {
+        "item" : "23",
+        "count" : "1"
+      }, {
+        "item" : "26",
+        "count" : "1"
+      }, {
+        "item" : "30",
+        "count" : "1"
+      }, {
+        "item" : "31",
+        "count" : "1"
+      }, {
+        "item" : "33",
+        "count" : "1"
+      }, {
+        "item" : "48",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300388,
+    "name" : "GNR_PCT",
+    "dataTypeName" : "number",
+    "description" : "Gender Not Reported Percent",
+    "fieldName" : "gnr_pct",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577950,
+    "cachedContents" : {
+      "non_null" : "390",
+      "largest" : "1.0",
+      "null" : "492",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "321"
+      }, {
+        "item" : "1.0",
+        "count" : "7"
+      }, {
+        "item" : "0.012",
+        "count" : "3"
+      }, {
+        "item" : "0.05",
+        "count" : "3"
+      }, {
+        "item" : "0.013",
+        "count" : "2"
+      }, {
+        "item" : "0.022",
+        "count" : "2"
+      }, {
+        "item" : "0.026",
+        "count" : "2"
+      }, {
+        "item" : "0.015",
+        "count" : "2"
+      }, {
+        "item" : "0.216",
+        "count" : "2"
+      }, {
+        "item" : "0.009",
+        "count" : "2"
+      }, {
+        "item" : "0.033",
+        "count" : "2"
+      }, {
+        "item" : "0.023",
+        "count" : "2"
+      }, {
+        "item" : "0.029",
+        "count" : "2"
+      }, {
+        "item" : "0.043",
+        "count" : "2"
+      }, {
+        "item" : "0.02",
+        "count" : "1"
+      }, {
+        "item" : "0.019",
+        "count" : "1"
+      }, {
+        "item" : "0.018",
+        "count" : "1"
+      }, {
+        "item" : "0.011",
+        "count" : "1"
+      }, {
+        "item" : "0.008",
+        "count" : "1"
+      }, {
+        "item" : "0.028",
+        "count" : "1"
+      } ],
+      "smallest" : "0.0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 612300389,
+    "name" : "TOTAL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Count",
+    "fieldName" : "total_cnt",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151577966,
+    "cachedContents" : {
+      "non_null" : "876",
+      "largest" : "2576",
+      "null" : "6",
+      "top" : [ {
+        "item" : "3",
+        "count" : "48"
+      }, {
+        "item" : "0",
+        "count" : "46"
+      }, {
+        "item" : "6",
+        "count" : "44"
+      }, {
+        "item" : "2",
+        "count" : "39"
+      }, {
+        "item" : "7",
+        "count" : "37"
+      }, {
+        "item" : "4",
+        "count" : "36"
+      }, {
+        "item" : "15",
+        "count" : "31"
+      }, {
+        "item" : "8",
+        "count" : "30"
+      }, {
+        "item" : "1",
+        "count" : "27"
+      }, {
+        "item" : "10",
+        "count" : "27"
+      }, {
+        "item" : "5",
+        "count" : "22"
+      }, {
+        "item" : "13",
+        "count" : "20"
+      }, {
+        "item" : "14",
+        "count" : "18"
+      }, {
+        "item" : "11",
+        "count" : "17"
+      }, {
+        "item" : "9",
+        "count" : "17"
+      }, {
+        "item" : "19",
+        "count" : "15"
+      }, {
+        "item" : "12",
+        "count" : "15"
+      }, {
+        "item" : "16",
+        "count" : "15"
+      }, {
+        "item" : "17",
+        "count" : "13"
+      }, {
+        "item" : "26",
+        "count" : "13"
+      } ],
+      "smallest" : "0",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  }, {
+    "id" : 612300390,
+    "name" : "STU_FAC_RATIO",
+    "dataTypeName" : "text",
+    "description" : "Student/Faculty Ratio",
+    "fieldName" : "stu_fac_ratio",
+    "position" : 29,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151577967,
+    "cachedContents" : {
+      "non_null" : "843",
+      "largest" : "9 to 1",
+      "null" : "39",
+      "top" : [ {
+        "item" : "5 to 1",
+        "count" : "67"
+      }, {
+        "item" : "4 to 1",
+        "count" : "60"
+      }, {
+        "item" : "8 to 1",
+        "count" : "59"
+      }, {
+        "item" : "6 to 1",
+        "count" : "51"
+      }, {
+        "item" : "12 to 1",
+        "count" : "50"
+      }, {
+        "item" : "3 to 1",
+        "count" : "47"
+      }, {
+        "item" : "7 to 1",
+        "count" : "45"
+      }, {
+        "item" : "10 to 1",
+        "count" : "44"
+      }, {
+        "item" : "9 to 1",
+        "count" : "43"
+      }, {
+        "item" : "2 to 1",
+        "count" : "43"
+      }, {
+        "item" : "15 to 1",
+        "count" : "35"
+      }, {
+        "item" : "14 to 1",
+        "count" : "35"
+      }, {
+        "item" : "1 to 1",
+        "count" : "30"
+      }, {
+        "item" : "13 to 1",
+        "count" : "28"
+      }, {
+        "item" : "20 to 1",
+        "count" : "25"
+      }, {
+        "item" : "11 to 1",
+        "count" : "23"
+      }, {
+        "item" : "16 to 1",
+        "count" : "17"
+      }, {
+        "item" : "18 to 1",
+        "count" : "16"
+      }, {
+        "item" : "0 to 1",
+        "count" : "12"
+      }, {
+        "item" : "25 to 1",
+        "count" : "11"
+      } ],
+      "smallest" : "0 to 1",
+      "count" : "882",
+      "cardinality" : "882"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "gender", "demographics", "ed prep", "staff", "fte", "faculty", "educator pipeline" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

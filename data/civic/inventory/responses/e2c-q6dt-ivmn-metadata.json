@@ -1,0 +1,94 @@
+{
+  "id" : "q6dt-ivmn",
+  "name" : "AP Performance Trends",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1766414573,
+  "description" : "View results statewide or select a public school district, a student group, and any number of Advanced Placement (AP) test subjects for the percent of students who passed each year from 2016 to 2025. Then examine a breakdown of the test results by scores of 1-5 in 2025.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 41832435,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1766414731,
+  "publicationGroup" : 20219075,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1766414573,
+  "tableId" : 20219075,
+  "totalTimesRated" : 0,
+  "viewCount" : 1296,
+  "viewLastModified" : 1778704713,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1772120654,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7371318,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1772119924,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1772120654,
+      "failureCount" : 0,
+      "startedAt" : 1772120654,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

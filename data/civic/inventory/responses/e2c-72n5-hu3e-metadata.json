@@ -1,0 +1,1785 @@
+{
+  "id" : "72n5-hu3e",
+  "name" : "ACCESS for ELLs Composite Proficiency Level",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1757971336,
+  "description" : "This dataset contains the number and percent of students at each proficiency level in four composite areas of the ACCESS for ELLs test (Oral Language, Literacy, Comprehension, Overall) from 2022 onward.\n\nMassachusetts administers the ACCESS for ELLs test annually to all English learners in publicly funded K-12 schools, as required by state and federal law.\n\nThe test evaluates students in the four subdomains of speaking, listening, reading, and writing. In addition to scores for each subdomain, results are reported in composite scores for comprehension, oral language, literacy, and overall English proficiency. Composite scores are created from two or more domain scores in listening, speaking, reading, and writing. Only students who complete all four domains of the standard test are included in composite scores.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/access.aspx\" rel=\"noopener noreferrer\">ACCESS for ELLs Composite Proficiency Level Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 41,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41624141,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1757971618,
+  "publicationGroup" : 20094223,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1787941548,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 20094223,
+  "totalTimesRated" : 0,
+  "viewCount" : 459,
+  "viewLastModified" : 1787941646,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1772224277,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7372555,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1772224259,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1772224277,
+      "failureCount" : 0,
+      "startedAt" : 1772224277,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 617485471,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 161764306,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "6576"
+      }, {
+        "item" : "2024",
+        "count" : "6528"
+      }, {
+        "item" : "2026",
+        "count" : "6464"
+      }, {
+        "item" : "2023",
+        "count" : "6284"
+      }, {
+        "item" : "2022",
+        "count" : "6088"
+      } ],
+      "smallest" : "2022",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485472,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 161764307,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "2084"
+      }, {
+        "item" : "02810000",
+        "count" : "1084"
+      }, {
+        "item" : "03480000",
+        "count" : "912"
+      }, {
+        "item" : "01490000",
+        "count" : "528"
+      }, {
+        "item" : "01630000",
+        "count" : "504"
+      }, {
+        "item" : "02010000",
+        "count" : "488"
+      }, {
+        "item" : "01600000",
+        "count" : "468"
+      }, {
+        "item" : "00440000",
+        "count" : "452"
+      }, {
+        "item" : "02070000",
+        "count" : "440"
+      }, {
+        "item" : "02430000",
+        "count" : "380"
+      }, {
+        "item" : "00950000",
+        "count" : "320"
+      }, {
+        "item" : "00490000",
+        "count" : "308"
+      }, {
+        "item" : "01000000",
+        "count" : "280"
+      }, {
+        "item" : "00610000",
+        "count" : "256"
+      }, {
+        "item" : "01280000",
+        "count" : "244"
+      }, {
+        "item" : "02480000",
+        "count" : "236"
+      }, {
+        "item" : "00570000",
+        "count" : "236"
+      }, {
+        "item" : "01370000",
+        "count" : "232"
+      }, {
+        "item" : "03080000",
+        "count" : "228"
+      }, {
+        "item" : "02930000",
+        "count" : "220"
+      } ],
+      "smallest" : "00000000",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485473,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 161764308,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "2084"
+      }, {
+        "item" : "Springfield",
+        "count" : "1084"
+      }, {
+        "item" : "Worcester",
+        "count" : "912"
+      }, {
+        "item" : "Lawrence",
+        "count" : "528"
+      }, {
+        "item" : "Lynn",
+        "count" : "504"
+      }, {
+        "item" : "New Bedford",
+        "count" : "488"
+      }, {
+        "item" : "Lowell",
+        "count" : "468"
+      }, {
+        "item" : "Brockton",
+        "count" : "452"
+      }, {
+        "item" : "Newton",
+        "count" : "440"
+      }, {
+        "item" : "Quincy",
+        "count" : "380"
+      }, {
+        "item" : "Fall River",
+        "count" : "320"
+      }, {
+        "item" : "Cambridge",
+        "count" : "308"
+      }, {
+        "item" : "Framingham",
+        "count" : "280"
+      }, {
+        "item" : "Chicopee",
+        "count" : "256"
+      }, {
+        "item" : "Haverhill",
+        "count" : "244"
+      }, {
+        "item" : "Revere",
+        "count" : "236"
+      }, {
+        "item" : "Chelsea",
+        "count" : "236"
+      }, {
+        "item" : "Holyoke",
+        "count" : "232"
+      }, {
+        "item" : "Waltham",
+        "count" : "228"
+      }, {
+        "item" : "Taunton",
+        "count" : "220"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485474,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 161764309,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "04540000",
+        "count" : "20"
+      }, {
+        "item" : "04290000",
+        "count" : "20"
+      }, {
+        "item" : "02010075",
+        "count" : "20"
+      }, {
+        "item" : "02840405",
+        "count" : "20"
+      }, {
+        "item" : "00490020",
+        "count" : "20"
+      }, {
+        "item" : "00960015",
+        "count" : "20"
+      }, {
+        "item" : "08760000",
+        "count" : "20"
+      }, {
+        "item" : "01110004",
+        "count" : "20"
+      }, {
+        "item" : "01780000",
+        "count" : "20"
+      }, {
+        "item" : "02430000",
+        "count" : "20"
+      }, {
+        "item" : "00140015",
+        "count" : "20"
+      }, {
+        "item" : "02510505",
+        "count" : "20"
+      }, {
+        "item" : "03480177",
+        "count" : "20"
+      }, {
+        "item" : "03140505",
+        "count" : "20"
+      }, {
+        "item" : "02710020",
+        "count" : "20"
+      }, {
+        "item" : "01450020",
+        "count" : "20"
+      }, {
+        "item" : "06050000",
+        "count" : "20"
+      }, {
+        "item" : "02070025",
+        "count" : "20"
+      }, {
+        "item" : "03360080",
+        "count" : "20"
+      }, {
+        "item" : "04200205",
+        "count" : "20"
+      } ],
+      "smallest" : "00000000",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485475,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 161764310,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "John F Kennedy",
+        "count" : "80"
+      }, {
+        "item" : "Memorial",
+        "count" : "68"
+      }, {
+        "item" : "Lawrence",
+        "count" : "60"
+      }, {
+        "item" : "Lincoln",
+        "count" : "60"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "60"
+      }, {
+        "item" : "South Elementary",
+        "count" : "56"
+      }, {
+        "item" : "Franklin",
+        "count" : "56"
+      }, {
+        "item" : "East Middle School",
+        "count" : "40"
+      }, {
+        "item" : "John F Kennedy Middle School",
+        "count" : "40"
+      }, {
+        "item" : "Massachusetts Connections Academy, Commonwealth Virtual School",
+        "count" : "40"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "40"
+      }, {
+        "item" : "Roosevelt",
+        "count" : "40"
+      }, {
+        "item" : "Highlands",
+        "count" : "40"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "40"
+      }, {
+        "item" : "Lincoln Street",
+        "count" : "40"
+      }, {
+        "item" : "Washington",
+        "count" : "40"
+      }, {
+        "item" : "Williams",
+        "count" : "40"
+      }, {
+        "item" : "Peirce",
+        "count" : "40"
+      }, {
+        "item" : "John F Kennedy Middle",
+        "count" : "40"
+      }, {
+        "item" : "Glover",
+        "count" : "40"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485476,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 161764311,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "25668"
+      }, {
+        "item" : "District",
+        "count" : "6252"
+      }, {
+        "item" : "State",
+        "count" : "20"
+      } ],
+      "smallest" : "District",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485477,
+    "name" : "COMPOSITE_DOMAIN",
+    "dataTypeName" : "text",
+    "description" : "Composite Domain",
+    "fieldName" : "composite_domain",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 161764312,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "Overall Score",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Literacy",
+        "count" : "7985"
+      }, {
+        "item" : "Comprehension",
+        "count" : "7985"
+      }, {
+        "item" : "Oral Language",
+        "count" : "7985"
+      }, {
+        "item" : "Overall Score",
+        "count" : "7985"
+      } ],
+      "smallest" : "Comprehension",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485484,
+    "name" : "TOTAL_TESTED",
+    "dataTypeName" : "number",
+    "description" : "Total Students Tested",
+    "fieldName" : "total_tested",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764319,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "120118",
+      "null" : "0",
+      "top" : [ {
+        "item" : "10",
+        "count" : "792"
+      }, {
+        "item" : "12",
+        "count" : "656"
+      }, {
+        "item" : "15",
+        "count" : "640"
+      }, {
+        "item" : "14",
+        "count" : "628"
+      }, {
+        "item" : "11",
+        "count" : "616"
+      }, {
+        "item" : "18",
+        "count" : "600"
+      }, {
+        "item" : "13",
+        "count" : "576"
+      }, {
+        "item" : "16",
+        "count" : "568"
+      }, {
+        "item" : "19",
+        "count" : "564"
+      }, {
+        "item" : "20",
+        "count" : "556"
+      }, {
+        "item" : "21",
+        "count" : "532"
+      }, {
+        "item" : "17",
+        "count" : "524"
+      }, {
+        "item" : "28",
+        "count" : "472"
+      }, {
+        "item" : "24",
+        "count" : "460"
+      }, {
+        "item" : "23",
+        "count" : "436"
+      }, {
+        "item" : "26",
+        "count" : "436"
+      }, {
+        "item" : "25",
+        "count" : "420"
+      }, {
+        "item" : "27",
+        "count" : "384"
+      }, {
+        "item" : "22",
+        "count" : "376"
+      }, {
+        "item" : "33",
+        "count" : "364"
+      } ],
+      "smallest" : "10",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485485,
+    "name" : "PART_RATE",
+    "dataTypeName" : "number",
+    "description" : "Participation Rate",
+    "fieldName" : "part_rate",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764320,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "19184"
+      }, {
+        "item" : "0.99",
+        "count" : "3628"
+      }, {
+        "item" : "0.98",
+        "count" : "2440"
+      }, {
+        "item" : "0.97",
+        "count" : "1484"
+      }, {
+        "item" : "0.96",
+        "count" : "1180"
+      }, {
+        "item" : "0.95",
+        "count" : "748"
+      }, {
+        "item" : "0.94",
+        "count" : "664"
+      }, {
+        "item" : "0.93",
+        "count" : "480"
+      }, {
+        "item" : "0.92",
+        "count" : "368"
+      }, {
+        "item" : "0.91",
+        "count" : "216"
+      }, {
+        "item" : "0.88",
+        "count" : "184"
+      }, {
+        "item" : "0.9",
+        "count" : "156"
+      }, {
+        "item" : "0.89",
+        "count" : "152"
+      }, {
+        "item" : "0.86",
+        "count" : "132"
+      }, {
+        "item" : "0.83",
+        "count" : "104"
+      }, {
+        "item" : "0.85",
+        "count" : "104"
+      }, {
+        "item" : "0.87",
+        "count" : "76"
+      }, {
+        "item" : "0.84",
+        "count" : "60"
+      }, {
+        "item" : "0.76",
+        "count" : "48"
+      }, {
+        "item" : "0.77",
+        "count" : "44"
+      } ],
+      "smallest" : "0.4",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 617485478,
+    "name" : "LEVEL_1_CNT",
+    "dataTypeName" : "number",
+    "description" : "Level 1 Count",
+    "fieldName" : "level_1_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764313,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "32292",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "2638"
+      }, {
+        "item" : "0",
+        "count" : "2507"
+      }, {
+        "item" : "2",
+        "count" : "2446"
+      }, {
+        "item" : "3",
+        "count" : "2234"
+      }, {
+        "item" : "4",
+        "count" : "1794"
+      }, {
+        "item" : "5",
+        "count" : "1461"
+      }, {
+        "item" : "6",
+        "count" : "1268"
+      }, {
+        "item" : "7",
+        "count" : "1105"
+      }, {
+        "item" : "8",
+        "count" : "1050"
+      }, {
+        "item" : "9",
+        "count" : "858"
+      }, {
+        "item" : "11",
+        "count" : "754"
+      }, {
+        "item" : "10",
+        "count" : "731"
+      }, {
+        "item" : "12",
+        "count" : "672"
+      }, {
+        "item" : "13",
+        "count" : "580"
+      }, {
+        "item" : "14",
+        "count" : "549"
+      }, {
+        "item" : "15",
+        "count" : "453"
+      }, {
+        "item" : "16",
+        "count" : "435"
+      }, {
+        "item" : "17",
+        "count" : "402"
+      }, {
+        "item" : "18",
+        "count" : "377"
+      }, {
+        "item" : "19",
+        "count" : "345"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485488,
+    "name" : "LEVEL_1_PCT",
+    "dataTypeName" : "number",
+    "description" : "Level 1 Percent",
+    "fieldName" : "level_1_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764323,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2507"
+      }, {
+        "item" : "0.13",
+        "count" : "1130"
+      }, {
+        "item" : "0.2",
+        "count" : "1123"
+      }, {
+        "item" : "0.1",
+        "count" : "1058"
+      }, {
+        "item" : "0.17",
+        "count" : "1035"
+      }, {
+        "item" : "0.18",
+        "count" : "1033"
+      }, {
+        "item" : "0.14",
+        "count" : "991"
+      }, {
+        "item" : "0.15",
+        "count" : "991"
+      }, {
+        "item" : "0.21",
+        "count" : "978"
+      }, {
+        "item" : "0.08",
+        "count" : "960"
+      }, {
+        "item" : "0.07",
+        "count" : "927"
+      }, {
+        "item" : "0.19",
+        "count" : "907"
+      }, {
+        "item" : "0.11",
+        "count" : "905"
+      }, {
+        "item" : "0.06",
+        "count" : "902"
+      }, {
+        "item" : "0.25",
+        "count" : "867"
+      }, {
+        "item" : "0.16",
+        "count" : "851"
+      }, {
+        "item" : "0.09",
+        "count" : "841"
+      }, {
+        "item" : "0.22",
+        "count" : "829"
+      }, {
+        "item" : "0.23",
+        "count" : "818"
+      }, {
+        "item" : "0.24",
+        "count" : "816"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 617485479,
+    "name" : "LEVEL_2_CNT",
+    "dataTypeName" : "number",
+    "description" : "Level 2 Count",
+    "fieldName" : "level_2_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764314,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "29053",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2",
+        "count" : "2372"
+      }, {
+        "item" : "3",
+        "count" : "2349"
+      }, {
+        "item" : "4",
+        "count" : "2105"
+      }, {
+        "item" : "1",
+        "count" : "1903"
+      }, {
+        "item" : "5",
+        "count" : "1851"
+      }, {
+        "item" : "6",
+        "count" : "1498"
+      }, {
+        "item" : "7",
+        "count" : "1303"
+      }, {
+        "item" : "0",
+        "count" : "1105"
+      }, {
+        "item" : "8",
+        "count" : "1101"
+      }, {
+        "item" : "9",
+        "count" : "986"
+      }, {
+        "item" : "10",
+        "count" : "886"
+      }, {
+        "item" : "11",
+        "count" : "808"
+      }, {
+        "item" : "12",
+        "count" : "671"
+      }, {
+        "item" : "14",
+        "count" : "601"
+      }, {
+        "item" : "13",
+        "count" : "592"
+      }, {
+        "item" : "15",
+        "count" : "558"
+      }, {
+        "item" : "16",
+        "count" : "487"
+      }, {
+        "item" : "17",
+        "count" : "453"
+      }, {
+        "item" : "18",
+        "count" : "404"
+      }, {
+        "item" : "19",
+        "count" : "395"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485489,
+    "name" : "LEVEL_2_PCT",
+    "dataTypeName" : "number",
+    "description" : "Level 2 Percent",
+    "fieldName" : "level_2_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764324,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "0.8",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.2",
+        "count" : "1577"
+      }, {
+        "item" : "0.17",
+        "count" : "1527"
+      }, {
+        "item" : "0.21",
+        "count" : "1508"
+      }, {
+        "item" : "0.18",
+        "count" : "1496"
+      }, {
+        "item" : "0.19",
+        "count" : "1374"
+      }, {
+        "item" : "0.13",
+        "count" : "1346"
+      }, {
+        "item" : "0.22",
+        "count" : "1294"
+      }, {
+        "item" : "0.15",
+        "count" : "1231"
+      }, {
+        "item" : "0.14",
+        "count" : "1231"
+      }, {
+        "item" : "0.16",
+        "count" : "1202"
+      }, {
+        "item" : "0.23",
+        "count" : "1177"
+      }, {
+        "item" : "0.25",
+        "count" : "1174"
+      }, {
+        "item" : "0",
+        "count" : "1105"
+      }, {
+        "item" : "0.24",
+        "count" : "1071"
+      }, {
+        "item" : "0.1",
+        "count" : "993"
+      }, {
+        "item" : "0.11",
+        "count" : "976"
+      }, {
+        "item" : "0.26",
+        "count" : "955"
+      }, {
+        "item" : "0.12",
+        "count" : "895"
+      }, {
+        "item" : "0.27",
+        "count" : "863"
+      }, {
+        "item" : "0.08",
+        "count" : "863"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 617485480,
+    "name" : "LEVEL_3_CNT",
+    "dataTypeName" : "number",
+    "description" : "Level 3 Count",
+    "fieldName" : "level_3_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764315,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "40550",
+      "null" : "0",
+      "top" : [ {
+        "item" : "5",
+        "count" : "1545"
+      }, {
+        "item" : "4",
+        "count" : "1542"
+      }, {
+        "item" : "6",
+        "count" : "1482"
+      }, {
+        "item" : "7",
+        "count" : "1477"
+      }, {
+        "item" : "3",
+        "count" : "1391"
+      }, {
+        "item" : "8",
+        "count" : "1333"
+      }, {
+        "item" : "9",
+        "count" : "1168"
+      }, {
+        "item" : "2",
+        "count" : "1098"
+      }, {
+        "item" : "10",
+        "count" : "1039"
+      }, {
+        "item" : "11",
+        "count" : "928"
+      }, {
+        "item" : "12",
+        "count" : "806"
+      }, {
+        "item" : "13",
+        "count" : "748"
+      }, {
+        "item" : "14",
+        "count" : "680"
+      }, {
+        "item" : "1",
+        "count" : "657"
+      }, {
+        "item" : "15",
+        "count" : "627"
+      }, {
+        "item" : "16",
+        "count" : "603"
+      }, {
+        "item" : "17",
+        "count" : "581"
+      }, {
+        "item" : "18",
+        "count" : "533"
+      }, {
+        "item" : "19",
+        "count" : "470"
+      }, {
+        "item" : "20",
+        "count" : "458"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485490,
+    "name" : "LEVEL_3_PCT",
+    "dataTypeName" : "number",
+    "description" : "Level 3 Percent",
+    "fieldName" : "level_3_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764325,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "0.9",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.33",
+        "count" : "1330"
+      }, {
+        "item" : "0.29",
+        "count" : "1185"
+      }, {
+        "item" : "0.3",
+        "count" : "1143"
+      }, {
+        "item" : "0.27",
+        "count" : "1115"
+      }, {
+        "item" : "0.25",
+        "count" : "1105"
+      }, {
+        "item" : "0.2",
+        "count" : "1047"
+      }, {
+        "item" : "0.21",
+        "count" : "1014"
+      }, {
+        "item" : "0.31",
+        "count" : "1003"
+      }, {
+        "item" : "0.24",
+        "count" : "999"
+      }, {
+        "item" : "0.22",
+        "count" : "980"
+      }, {
+        "item" : "0.28",
+        "count" : "972"
+      }, {
+        "item" : "0.23",
+        "count" : "961"
+      }, {
+        "item" : "0.26",
+        "count" : "947"
+      }, {
+        "item" : "0.32",
+        "count" : "932"
+      }, {
+        "item" : "0.36",
+        "count" : "913"
+      }, {
+        "item" : "0.35",
+        "count" : "898"
+      }, {
+        "item" : "0.38",
+        "count" : "867"
+      }, {
+        "item" : "0.19",
+        "count" : "841"
+      }, {
+        "item" : "0.18",
+        "count" : "777"
+      }, {
+        "item" : "0.4",
+        "count" : "726"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 617485481,
+    "name" : "LEVEL_4_CNT",
+    "dataTypeName" : "number",
+    "description" : "Level 4 Count",
+    "fieldName" : "level_4_cnt",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764316,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "26118",
+      "null" : "0",
+      "top" : [ {
+        "item" : "4",
+        "count" : "2230"
+      }, {
+        "item" : "3",
+        "count" : "2190"
+      }, {
+        "item" : "2",
+        "count" : "2174"
+      }, {
+        "item" : "5",
+        "count" : "1945"
+      }, {
+        "item" : "6",
+        "count" : "1710"
+      }, {
+        "item" : "1",
+        "count" : "1656"
+      }, {
+        "item" : "7",
+        "count" : "1458"
+      }, {
+        "item" : "8",
+        "count" : "1324"
+      }, {
+        "item" : "9",
+        "count" : "1149"
+      }, {
+        "item" : "10",
+        "count" : "1028"
+      }, {
+        "item" : "11",
+        "count" : "915"
+      }, {
+        "item" : "0",
+        "count" : "914"
+      }, {
+        "item" : "12",
+        "count" : "841"
+      }, {
+        "item" : "13",
+        "count" : "734"
+      }, {
+        "item" : "14",
+        "count" : "680"
+      }, {
+        "item" : "15",
+        "count" : "659"
+      }, {
+        "item" : "16",
+        "count" : "565"
+      }, {
+        "item" : "18",
+        "count" : "526"
+      }, {
+        "item" : "17",
+        "count" : "507"
+      }, {
+        "item" : "19",
+        "count" : "449"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485491,
+    "name" : "LEVEL_4_PCT",
+    "dataTypeName" : "number",
+    "description" : "Level 4 Percent",
+    "fieldName" : "level_4_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764326,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "0.8",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.13",
+        "count" : "1460"
+      }, {
+        "item" : "0.1",
+        "count" : "1393"
+      }, {
+        "item" : "0.11",
+        "count" : "1315"
+      }, {
+        "item" : "0.14",
+        "count" : "1281"
+      }, {
+        "item" : "0.15",
+        "count" : "1281"
+      }, {
+        "item" : "0.12",
+        "count" : "1270"
+      }, {
+        "item" : "0.09",
+        "count" : "1223"
+      }, {
+        "item" : "0.17",
+        "count" : "1190"
+      }, {
+        "item" : "0.2",
+        "count" : "1166"
+      }, {
+        "item" : "0.18",
+        "count" : "1163"
+      }, {
+        "item" : "0.08",
+        "count" : "1092"
+      }, {
+        "item" : "0.16",
+        "count" : "1035"
+      }, {
+        "item" : "0.19",
+        "count" : "1029"
+      }, {
+        "item" : "0.21",
+        "count" : "1016"
+      }, {
+        "item" : "0.07",
+        "count" : "924"
+      }, {
+        "item" : "0",
+        "count" : "917"
+      }, {
+        "item" : "0.25",
+        "count" : "860"
+      }, {
+        "item" : "0.24",
+        "count" : "816"
+      }, {
+        "item" : "0.22",
+        "count" : "804"
+      }, {
+        "item" : "0.06",
+        "count" : "757"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 617485482,
+    "name" : "LEVEL_5_CNT",
+    "dataTypeName" : "number",
+    "description" : "Level 5 Count",
+    "fieldName" : "level_5_cnt",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764317,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "16813",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "6259"
+      }, {
+        "item" : "1",
+        "count" : "4617"
+      }, {
+        "item" : "2",
+        "count" : "3419"
+      }, {
+        "item" : "3",
+        "count" : "2623"
+      }, {
+        "item" : "4",
+        "count" : "2075"
+      }, {
+        "item" : "5",
+        "count" : "1687"
+      }, {
+        "item" : "6",
+        "count" : "1326"
+      }, {
+        "item" : "7",
+        "count" : "1135"
+      }, {
+        "item" : "8",
+        "count" : "924"
+      }, {
+        "item" : "9",
+        "count" : "740"
+      }, {
+        "item" : "10",
+        "count" : "608"
+      }, {
+        "item" : "11",
+        "count" : "545"
+      }, {
+        "item" : "12",
+        "count" : "480"
+      }, {
+        "item" : "13",
+        "count" : "417"
+      }, {
+        "item" : "14",
+        "count" : "407"
+      }, {
+        "item" : "15",
+        "count" : "309"
+      }, {
+        "item" : "16",
+        "count" : "292"
+      }, {
+        "item" : "17",
+        "count" : "260"
+      }, {
+        "item" : "18",
+        "count" : "245"
+      }, {
+        "item" : "20",
+        "count" : "227"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485492,
+    "name" : "LEVEL_5_PCT",
+    "dataTypeName" : "number",
+    "description" : "Level 5 Percent",
+    "fieldName" : "level_5_pct",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764327,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "0.71",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "6497"
+      }, {
+        "item" : "0.02",
+        "count" : "2085"
+      }, {
+        "item" : "0.01",
+        "count" : "1843"
+      }, {
+        "item" : "0.03",
+        "count" : "1731"
+      }, {
+        "item" : "0.04",
+        "count" : "1372"
+      }, {
+        "item" : "0.05",
+        "count" : "1214"
+      }, {
+        "item" : "0.08",
+        "count" : "1198"
+      }, {
+        "item" : "0.1",
+        "count" : "1156"
+      }, {
+        "item" : "0.06",
+        "count" : "1144"
+      }, {
+        "item" : "0.13",
+        "count" : "1105"
+      }, {
+        "item" : "0.07",
+        "count" : "1090"
+      }, {
+        "item" : "0.09",
+        "count" : "1043"
+      }, {
+        "item" : "0.11",
+        "count" : "1008"
+      }, {
+        "item" : "0.12",
+        "count" : "864"
+      }, {
+        "item" : "0.14",
+        "count" : "858"
+      }, {
+        "item" : "0.17",
+        "count" : "817"
+      }, {
+        "item" : "0.15",
+        "count" : "810"
+      }, {
+        "item" : "0.18",
+        "count" : "741"
+      }, {
+        "item" : "0.19",
+        "count" : "626"
+      }, {
+        "item" : "0.16",
+        "count" : "619"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 617485483,
+    "name" : "LEVEL_6_CNT",
+    "dataTypeName" : "number",
+    "description" : "Level 6 Count",
+    "fieldName" : "level_6_cnt",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764318,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "13385",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "15612"
+      }, {
+        "item" : "1",
+        "count" : "3943"
+      }, {
+        "item" : "2",
+        "count" : "2210"
+      }, {
+        "item" : "3",
+        "count" : "1516"
+      }, {
+        "item" : "4",
+        "count" : "1225"
+      }, {
+        "item" : "5",
+        "count" : "975"
+      }, {
+        "item" : "6",
+        "count" : "751"
+      }, {
+        "item" : "7",
+        "count" : "707"
+      }, {
+        "item" : "8",
+        "count" : "575"
+      }, {
+        "item" : "9",
+        "count" : "477"
+      }, {
+        "item" : "10",
+        "count" : "389"
+      }, {
+        "item" : "11",
+        "count" : "353"
+      }, {
+        "item" : "12",
+        "count" : "320"
+      }, {
+        "item" : "13",
+        "count" : "275"
+      }, {
+        "item" : "15",
+        "count" : "235"
+      }, {
+        "item" : "14",
+        "count" : "222"
+      }, {
+        "item" : "16",
+        "count" : "183"
+      }, {
+        "item" : "17",
+        "count" : "165"
+      }, {
+        "item" : "18",
+        "count" : "156"
+      }, {
+        "item" : "19",
+        "count" : "130"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485493,
+    "name" : "LEVEL_6_PCT",
+    "dataTypeName" : "number",
+    "description" : "Level 6 Percent",
+    "fieldName" : "level_6_pct",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764328,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "0.82",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "16391"
+      }, {
+        "item" : "0.01",
+        "count" : "1365"
+      }, {
+        "item" : "0.03",
+        "count" : "1200"
+      }, {
+        "item" : "0.02",
+        "count" : "1106"
+      }, {
+        "item" : "0.05",
+        "count" : "1094"
+      }, {
+        "item" : "0.04",
+        "count" : "1058"
+      }, {
+        "item" : "0.06",
+        "count" : "985"
+      }, {
+        "item" : "0.07",
+        "count" : "926"
+      }, {
+        "item" : "0.08",
+        "count" : "890"
+      }, {
+        "item" : "0.09",
+        "count" : "703"
+      }, {
+        "item" : "0.1",
+        "count" : "699"
+      }, {
+        "item" : "0.11",
+        "count" : "533"
+      }, {
+        "item" : "0.13",
+        "count" : "506"
+      }, {
+        "item" : "0.12",
+        "count" : "445"
+      }, {
+        "item" : "0.14",
+        "count" : "406"
+      }, {
+        "item" : "0.15",
+        "count" : "345"
+      }, {
+        "item" : "0.17",
+        "count" : "331"
+      }, {
+        "item" : "0.18",
+        "count" : "272"
+      }, {
+        "item" : "0.2",
+        "count" : "263"
+      }, {
+        "item" : "0.16",
+        "count" : "236"
+      } ],
+      "smallest" : "0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 617485486,
+    "name" : "AVG_YEAR_MA",
+    "dataTypeName" : "number",
+    "description" : "Average Years in Massachusetts",
+    "fieldName" : "avg_year_ma",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764321,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "11.3",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2.7",
+        "count" : "1720"
+      }, {
+        "item" : "2.6",
+        "count" : "1672"
+      }, {
+        "item" : "2.8",
+        "count" : "1556"
+      }, {
+        "item" : "3.0",
+        "count" : "1484"
+      }, {
+        "item" : "2.9",
+        "count" : "1428"
+      }, {
+        "item" : "2.5",
+        "count" : "1388"
+      }, {
+        "item" : "2.4",
+        "count" : "1344"
+      }, {
+        "item" : "3.1",
+        "count" : "1312"
+      }, {
+        "item" : "3.2",
+        "count" : "1180"
+      }, {
+        "item" : "3.3",
+        "count" : "984"
+      }, {
+        "item" : "2.3",
+        "count" : "972"
+      }, {
+        "item" : "3.5",
+        "count" : "864"
+      }, {
+        "item" : "3.4",
+        "count" : "800"
+      }, {
+        "item" : "3.6",
+        "count" : "772"
+      }, {
+        "item" : "3.7",
+        "count" : "772"
+      }, {
+        "item" : "2.2",
+        "count" : "692"
+      }, {
+        "item" : "2.1",
+        "count" : "672"
+      }, {
+        "item" : "3.8",
+        "count" : "668"
+      }, {
+        "item" : "3.9",
+        "count" : "588"
+      }, {
+        "item" : "4.1",
+        "count" : "580"
+      } ],
+      "smallest" : "1.0",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  }, {
+    "id" : 617485487,
+    "name" : "AVG_OVRALL_COMP_LVL",
+    "dataTypeName" : "number",
+    "description" : "Average Overall Composition Level",
+    "fieldName" : "avg_ovrall_comp_lvl",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 161764322,
+    "cachedContents" : {
+      "non_null" : "31940",
+      "largest" : "5.4",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3.0",
+        "count" : "3276"
+      }, {
+        "item" : "3.1",
+        "count" : "3228"
+      }, {
+        "item" : "3.3",
+        "count" : "2824"
+      }, {
+        "item" : "3.2",
+        "count" : "2764"
+      }, {
+        "item" : "2.9",
+        "count" : "2676"
+      }, {
+        "item" : "3.4",
+        "count" : "2416"
+      }, {
+        "item" : "2.8",
+        "count" : "2252"
+      }, {
+        "item" : "3.5",
+        "count" : "2044"
+      }, {
+        "item" : "3.6",
+        "count" : "1736"
+      }, {
+        "item" : "2.7",
+        "count" : "1476"
+      }, {
+        "item" : "3.7",
+        "count" : "1344"
+      }, {
+        "item" : "3.8",
+        "count" : "1072"
+      }, {
+        "item" : "2.6",
+        "count" : "832"
+      }, {
+        "item" : "3.9",
+        "count" : "796"
+      }, {
+        "item" : "2.5",
+        "count" : "584"
+      }, {
+        "item" : "4.0",
+        "count" : "508"
+      }, {
+        "item" : "4.1",
+        "count" : "368"
+      }, {
+        "item" : "2.4",
+        "count" : "336"
+      }, {
+        "item" : "4.2",
+        "count" : "292"
+      }, {
+        "item" : "4.3",
+        "count" : "212"
+      } ],
+      "smallest" : "1.3",
+      "count" : "31940",
+      "cardinality" : "31940"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "literacy", "comprehension", "listening", "speaking", "reading", "writing", "access", "english learners", "el", "testing", "assessment", "standardized test", "language" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

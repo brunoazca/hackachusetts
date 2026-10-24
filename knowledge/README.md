@@ -6,6 +6,7 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 
 | Document | Use it for |
 |---|---|
+| [Complete Civic source inventory](CIVIC_INVENTORY.md) | All 74 portal resources, full small datasets, large-source previews, five challenge kits, nested subsets and access gaps |
 | [09 — Creative opportunity atlas](09_creative_civic_opportunity_atlas.md) | 15 ambitious concepts, small day-of demos, differentiation, users and measurable checks |
 | [10 — Public data and repositories](10_public_data_and_repositories.md) | Verified APIs/CSVs, 21 existing public repos, licenses, join recipes and a use for every starter dataset |
 | [11 — Public voices and competitive gaps](11_public_voices_and_competitive_gaps.md) | Resident criticism and positive accounts, current institutional signals, existing products and social/video access limits |

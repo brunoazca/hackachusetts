@@ -1,0 +1,1328 @@
+{
+  "id" : "sg4g-eg2n",
+  "name" : "Student Progression from High School through Postsecondary Education",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1698773493,
+  "description" : "The District Analysis and Review Tools (DARTs) offer snapshots of district and school performance, allowing users to easily track select data elements over time, and make sound, meaningful comparisons to the state or to \"comparable\" organizations. The waterfall data shows a cohort of high school students and their progression through high school graduation, college enrollment and persistence in higher education to a second year or college completion.\n\nThis is a companion dataset to the main <a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/DART-Success-After-High-School/adqe-6sht\" target=\"_blank\" rel=\"noreferrer noopener\">DART: Success After High School dataset</a>. It contains two indicators published separately from the main dataset since the data are in a different format: \"Student progression from high school through second year of postsecondary education\" and \"Student progression from high school through postsecondary degree completion\". For all other DART: Success After High School indicators, please visit the main <a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/DART-Success-After-High-School/adqe-6sht\" target=\"_blank\" rel=\"noreferrer noopener\">DART: Success After High School dataset</a>.\n\nThis dataset contains the same data that is also published on our DART Detail: \n<a href=\"https://app.powerbigov.us/view?r=eyJrIjoiY2E5YTI3MDctNTNkNi00OTRmLTkyNzEtMmMzODNmYzUyZmQxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">Success After High School Online Dashboard</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 908,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41278615,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745332623,
+  "publicationGroup" : 19346077,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1784838143,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19862612,
+  "totalTimesRated" : 0,
+  "viewCount" : 2493,
+  "viewLastModified" : 1784838140,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1703273952,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6851826,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1703273911,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1703273952,
+      "failureCount" : 0,
+      "startedAt" : 1703273952,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609140065,
+    "name" : "COHORTYR",
+    "dataTypeName" : "text",
+    "description" : "Cohort Year",
+    "fieldName" : "cohortyr",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 149758674,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "2024",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024",
+        "count" : "5747"
+      }, {
+        "item" : "2022",
+        "count" : "5704"
+      }, {
+        "item" : "2023",
+        "count" : "5696"
+      }, {
+        "item" : "2015",
+        "count" : "5353"
+      }, {
+        "item" : "2017",
+        "count" : "3551"
+      }, {
+        "item" : "2016",
+        "count" : "3514"
+      } ],
+      "smallest" : "2015",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140066,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 149758675,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "2329"
+      }, {
+        "item" : "02810000",
+        "count" : "853"
+      }, {
+        "item" : "03480000",
+        "count" : "531"
+      }, {
+        "item" : "01490000",
+        "count" : "423"
+      }, {
+        "item" : "00440000",
+        "count" : "387"
+      }, {
+        "item" : "01630000",
+        "count" : "312"
+      }, {
+        "item" : "01530000",
+        "count" : "227"
+      }, {
+        "item" : "02010000",
+        "count" : "216"
+      }, {
+        "item" : "00610000",
+        "count" : "215"
+      }, {
+        "item" : "01600000",
+        "count" : "214"
+      }, {
+        "item" : "00950000",
+        "count" : "205"
+      }, {
+        "item" : "01280000",
+        "count" : "201"
+      }, {
+        "item" : "00160000",
+        "count" : "190"
+      }, {
+        "item" : "02580000",
+        "count" : "189"
+      }, {
+        "item" : "02360000",
+        "count" : "179"
+      }, {
+        "item" : "02430000",
+        "count" : "163"
+      }, {
+        "item" : "02930000",
+        "count" : "162"
+      }, {
+        "item" : "02070000",
+        "count" : "160"
+      }, {
+        "item" : "01760000",
+        "count" : "157"
+      }, {
+        "item" : "03100000",
+        "count" : "156"
+      } ],
+      "smallest" : "00000000",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140067,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 149758676,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "2329"
+      }, {
+        "item" : "Springfield",
+        "count" : "853"
+      }, {
+        "item" : "Worcester",
+        "count" : "531"
+      }, {
+        "item" : "Lawrence",
+        "count" : "423"
+      }, {
+        "item" : "Brockton",
+        "count" : "387"
+      }, {
+        "item" : "Lynn",
+        "count" : "312"
+      }, {
+        "item" : "Leominster",
+        "count" : "227"
+      }, {
+        "item" : "New Bedford",
+        "count" : "216"
+      }, {
+        "item" : "Chicopee",
+        "count" : "215"
+      }, {
+        "item" : "Lowell",
+        "count" : "214"
+      }, {
+        "item" : "Fall River",
+        "count" : "205"
+      }, {
+        "item" : "Haverhill",
+        "count" : "201"
+      }, {
+        "item" : "Attleboro",
+        "count" : "190"
+      }, {
+        "item" : "Salem",
+        "count" : "189"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "179"
+      }, {
+        "item" : "Quincy",
+        "count" : "163"
+      }, {
+        "item" : "Taunton",
+        "count" : "162"
+      }, {
+        "item" : "Newton",
+        "count" : "160"
+      }, {
+        "item" : "Medford",
+        "count" : "157"
+      }, {
+        "item" : "Wareham",
+        "count" : "156"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140068,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 149758677,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "99"
+      }, {
+        "item" : "02430505",
+        "count" : "84"
+      }, {
+        "item" : "03470505",
+        "count" : "83"
+      }, {
+        "item" : "00200505",
+        "count" : "83"
+      }, {
+        "item" : "03360505",
+        "count" : "83"
+      }, {
+        "item" : "02010505",
+        "count" : "83"
+      }, {
+        "item" : "01010505",
+        "count" : "82"
+      }, {
+        "item" : "02120505",
+        "count" : "82"
+      }, {
+        "item" : "01070505",
+        "count" : "82"
+      }, {
+        "item" : "00440505",
+        "count" : "82"
+      }, {
+        "item" : "02930505",
+        "count" : "82"
+      }, {
+        "item" : "02480505",
+        "count" : "82"
+      }, {
+        "item" : "02070510",
+        "count" : "81"
+      }, {
+        "item" : "01280505",
+        "count" : "81"
+      }, {
+        "item" : "02810510",
+        "count" : "81"
+      }, {
+        "item" : "01630510",
+        "count" : "81"
+      }, {
+        "item" : "01650505",
+        "count" : "81"
+      }, {
+        "item" : "39020900",
+        "count" : "81"
+      }, {
+        "item" : "06450505",
+        "count" : "81"
+      }, {
+        "item" : "03260505",
+        "count" : "80"
+      } ],
+      "smallest" : "00000000",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140069,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 149758678,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "Worcester Technical High",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State",
+        "count" : "99"
+      }, {
+        "item" : "Quincy High",
+        "count" : "84"
+      }, {
+        "item" : "Barnstable High",
+        "count" : "83"
+      }, {
+        "item" : "Woburn High",
+        "count" : "83"
+      }, {
+        "item" : "Weymouth High School",
+        "count" : "83"
+      }, {
+        "item" : "New Bedford High",
+        "count" : "83"
+      }, {
+        "item" : "North Attleboro High",
+        "count" : "82"
+      }, {
+        "item" : "Taunton High",
+        "count" : "82"
+      }, {
+        "item" : "Brockton High",
+        "count" : "82"
+      }, {
+        "item" : "Franklin High",
+        "count" : "82"
+      }, {
+        "item" : "Gloucester High",
+        "count" : "82"
+      }, {
+        "item" : "Revere High",
+        "count" : "82"
+      }, {
+        "item" : "Newton South High",
+        "count" : "81"
+      }, {
+        "item" : "Malden High",
+        "count" : "81"
+      }, {
+        "item" : "Haverhill High",
+        "count" : "81"
+      }, {
+        "item" : "High School Of Commerce",
+        "count" : "81"
+      }, {
+        "item" : "Lynn English High",
+        "count" : "81"
+      }, {
+        "item" : "Dennis-Yarmouth Regional High",
+        "count" : "81"
+      }, {
+        "item" : "Billerica Memorial High School",
+        "count" : "80"
+      }, {
+        "item" : "Attleboro High",
+        "count" : "80"
+      } ],
+      "smallest" : "21st Century Skills Academy",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140070,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 149758679,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "2459"
+      }, {
+        "item" : "Low Income",
+        "count" : "2451"
+      }, {
+        "item" : "Male",
+        "count" : "2447"
+      }, {
+        "item" : "Non-English Learners",
+        "count" : "2444"
+      }, {
+        "item" : "Female",
+        "count" : "2424"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "2408"
+      }, {
+        "item" : "Students without Disabilities",
+        "count" : "2365"
+      }, {
+        "item" : "Non-Low Income",
+        "count" : "2351"
+      }, {
+        "item" : "English Learners",
+        "count" : "1861"
+      }, {
+        "item" : "White",
+        "count" : "1590"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "1576"
+      }, {
+        "item" : "Black or African American",
+        "count" : "1416"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "1363"
+      }, {
+        "item" : "Asian",
+        "count" : "1264"
+      }, {
+        "item" : "Nonbinary",
+        "count" : "480"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "445"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "221"
+      } ],
+      "smallest" : "All Students",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140071,
+    "name" : "CATEGORY",
+    "dataTypeName" : "text",
+    "description" : "Indicator Category",
+    "fieldName" : "category",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 149758680,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "Postsecondary Outcomes",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Postsecondary Outcomes",
+        "count" : "29565"
+      } ],
+      "smallest" : "Postsecondary Outcomes",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140072,
+    "name" : "INDICATOR",
+    "dataTypeName" : "text",
+    "description" : "Key Aspect of Schooling",
+    "fieldName" : "indicator",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 149758681,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "Students progression from high school through second year of postsecondary education",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Student progression from high school through second year of postsecondary education",
+        "count" : "11400"
+      }, {
+        "item" : "Student progression from high school through postsecondary degree completion",
+        "count" : "8867"
+      }, {
+        "item" : "Students progression from high school through second year of postsecondary education",
+        "count" : "5747"
+      }, {
+        "item" : "Students progression from high school through postsecondary degree completion",
+        "count" : "3551"
+      } ],
+      "smallest" : "Student progression from high school through postsecondary degree completion",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140073,
+    "name" : "COHORT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Students Included in the Cohort",
+    "fieldName" : "cohort_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758682,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "74045.0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "2174"
+      }, {
+        "item" : "2.0",
+        "count" : "1281"
+      }, {
+        "item" : "3.0",
+        "count" : "909"
+      }, {
+        "item" : "4.0",
+        "count" : "774"
+      }, {
+        "item" : "5.0",
+        "count" : "618"
+      }, {
+        "item" : "6.0",
+        "count" : "542"
+      }, {
+        "item" : "7.0",
+        "count" : "479"
+      }, {
+        "item" : "8.0",
+        "count" : "446"
+      }, {
+        "item" : "9.0",
+        "count" : "401"
+      }, {
+        "item" : "10.0",
+        "count" : "359"
+      }, {
+        "item" : "12.0",
+        "count" : "346"
+      }, {
+        "item" : "11.0",
+        "count" : "326"
+      }, {
+        "item" : "13.0",
+        "count" : "292"
+      }, {
+        "item" : "14.0",
+        "count" : "288"
+      }, {
+        "item" : "17.0",
+        "count" : "264"
+      }, {
+        "item" : "15.0",
+        "count" : "259"
+      }, {
+        "item" : "16.0",
+        "count" : "247"
+      }, {
+        "item" : "19.0",
+        "count" : "236"
+      }, {
+        "item" : "18.0",
+        "count" : "235"
+      }, {
+        "item" : "26.0",
+        "count" : "224"
+      } ],
+      "smallest" : "1.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140074,
+    "name" : "GRAD_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count Graduate within 5 Years",
+    "fieldName" : "grad_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758683,
+    "cachedContents" : {
+      "non_null" : "23809",
+      "largest" : "67914.0",
+      "null" : "5756",
+      "top" : [ {
+        "item" : "6.0",
+        "count" : "581"
+      }, {
+        "item" : "7.0",
+        "count" : "532"
+      }, {
+        "item" : "8.0",
+        "count" : "425"
+      }, {
+        "item" : "10.0",
+        "count" : "405"
+      }, {
+        "item" : "9.0",
+        "count" : "386"
+      }, {
+        "item" : "11.0",
+        "count" : "375"
+      }, {
+        "item" : "5.0",
+        "count" : "361"
+      }, {
+        "item" : "12.0",
+        "count" : "346"
+      }, {
+        "item" : "13.0",
+        "count" : "316"
+      }, {
+        "item" : "17.0",
+        "count" : "270"
+      }, {
+        "item" : "15.0",
+        "count" : "262"
+      }, {
+        "item" : "14.0",
+        "count" : "261"
+      }, {
+        "item" : "16.0",
+        "count" : "230"
+      }, {
+        "item" : "4.0",
+        "count" : "226"
+      }, {
+        "item" : "18.0",
+        "count" : "223"
+      }, {
+        "item" : "24.0",
+        "count" : "218"
+      }, {
+        "item" : "19.0",
+        "count" : "215"
+      }, {
+        "item" : "21.0",
+        "count" : "204"
+      }, {
+        "item" : "23.0",
+        "count" : "202"
+      }, {
+        "item" : "28.0",
+        "count" : "193"
+      } ],
+      "smallest" : "0.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140075,
+    "name" : "IMMEDIATEENR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count Enrolled in College (Immediate Fall)",
+    "fieldName" : "immediateenr_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758684,
+    "cachedContents" : {
+      "non_null" : "23809",
+      "largest" : "45980.0",
+      "null" : "5756",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "770"
+      }, {
+        "item" : "1.0",
+        "count" : "748"
+      }, {
+        "item" : "4.0",
+        "count" : "660"
+      }, {
+        "item" : "3.0",
+        "count" : "616"
+      }, {
+        "item" : "2.0",
+        "count" : "603"
+      }, {
+        "item" : "5.0",
+        "count" : "603"
+      }, {
+        "item" : "6.0",
+        "count" : "561"
+      }, {
+        "item" : "7.0",
+        "count" : "519"
+      }, {
+        "item" : "8.0",
+        "count" : "422"
+      }, {
+        "item" : "9.0",
+        "count" : "406"
+      }, {
+        "item" : "10.0",
+        "count" : "353"
+      }, {
+        "item" : "13.0",
+        "count" : "336"
+      }, {
+        "item" : "11.0",
+        "count" : "335"
+      }, {
+        "item" : "12.0",
+        "count" : "331"
+      }, {
+        "item" : "14.0",
+        "count" : "312"
+      }, {
+        "item" : "15.0",
+        "count" : "298"
+      }, {
+        "item" : "16.0",
+        "count" : "288"
+      }, {
+        "item" : "17.0",
+        "count" : "277"
+      }, {
+        "item" : "18.0",
+        "count" : "274"
+      }, {
+        "item" : "20.0",
+        "count" : "271"
+      } ],
+      "smallest" : "0.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140076,
+    "name" : "PERSIST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count Persistently Enrolled in College",
+    "fieldName" : "persist_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758685,
+    "cachedContents" : {
+      "non_null" : "23809",
+      "largest" : "40439.0",
+      "null" : "5756",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1324"
+      }, {
+        "item" : "1.0",
+        "count" : "874"
+      }, {
+        "item" : "4.0",
+        "count" : "701"
+      }, {
+        "item" : "2.0",
+        "count" : "696"
+      }, {
+        "item" : "3.0",
+        "count" : "690"
+      }, {
+        "item" : "5.0",
+        "count" : "631"
+      }, {
+        "item" : "6.0",
+        "count" : "561"
+      }, {
+        "item" : "7.0",
+        "count" : "518"
+      }, {
+        "item" : "8.0",
+        "count" : "437"
+      }, {
+        "item" : "9.0",
+        "count" : "406"
+      }, {
+        "item" : "10.0",
+        "count" : "389"
+      }, {
+        "item" : "11.0",
+        "count" : "388"
+      }, {
+        "item" : "12.0",
+        "count" : "353"
+      }, {
+        "item" : "13.0",
+        "count" : "343"
+      }, {
+        "item" : "16.0",
+        "count" : "329"
+      }, {
+        "item" : "14.0",
+        "count" : "314"
+      }, {
+        "item" : "15.0",
+        "count" : "309"
+      }, {
+        "item" : "18.0",
+        "count" : "308"
+      }, {
+        "item" : "17.0",
+        "count" : "293"
+      }, {
+        "item" : "19.0",
+        "count" : "255"
+      } ],
+      "smallest" : "0.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140077,
+    "name" : "OBTAINDEGREE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count Obtained a Degree within 6 Years",
+    "fieldName" : "obtaindegree_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758686,
+    "cachedContents" : {
+      "non_null" : "10497",
+      "largest" : "32491.0",
+      "null" : "19068",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "907"
+      }, {
+        "item" : "1.0",
+        "count" : "452"
+      }, {
+        "item" : "2.0",
+        "count" : "356"
+      }, {
+        "item" : "3.0",
+        "count" : "323"
+      }, {
+        "item" : "4.0",
+        "count" : "293"
+      }, {
+        "item" : "6.0",
+        "count" : "234"
+      }, {
+        "item" : "5.0",
+        "count" : "226"
+      }, {
+        "item" : "7.0",
+        "count" : "214"
+      }, {
+        "item" : "8.0",
+        "count" : "212"
+      }, {
+        "item" : "9.0",
+        "count" : "177"
+      }, {
+        "item" : "12.0",
+        "count" : "175"
+      }, {
+        "item" : "11.0",
+        "count" : "163"
+      }, {
+        "item" : "10.0",
+        "count" : "161"
+      }, {
+        "item" : "14.0",
+        "count" : "147"
+      }, {
+        "item" : "13.0",
+        "count" : "142"
+      }, {
+        "item" : "15.0",
+        "count" : "141"
+      }, {
+        "item" : "21.0",
+        "count" : "131"
+      }, {
+        "item" : "17.0",
+        "count" : "129"
+      }, {
+        "item" : "20.0",
+        "count" : "128"
+      }, {
+        "item" : "19.0",
+        "count" : "124"
+      } ],
+      "smallest" : "0.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : { }
+  }, {
+    "id" : 609140078,
+    "name" : "COHORT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Students Included in the Cohort",
+    "fieldName" : "cohort_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758687,
+    "cachedContents" : {
+      "non_null" : "29565",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "29565"
+      } ],
+      "smallest" : "1",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609140079,
+    "name" : "GRAD_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent Graduate within 5 Years",
+    "fieldName" : "grad_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758688,
+    "cachedContents" : {
+      "non_null" : "23809",
+      "largest" : "1.0",
+      "null" : "5756",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "3379"
+      }, {
+        "item" : "0.833",
+        "count" : "257"
+      }, {
+        "item" : "0.857",
+        "count" : "243"
+      }, {
+        "item" : "0.875",
+        "count" : "229"
+      }, {
+        "item" : "0.986",
+        "count" : "215"
+      }, {
+        "item" : "0.981",
+        "count" : "204"
+      }, {
+        "item" : "0.889",
+        "count" : "203"
+      }, {
+        "item" : "0.978",
+        "count" : "201"
+      }, {
+        "item" : "0.988",
+        "count" : "197"
+      }, {
+        "item" : "0.976",
+        "count" : "189"
+      }, {
+        "item" : "0.971",
+        "count" : "188"
+      }, {
+        "item" : "0.966",
+        "count" : "183"
+      }, {
+        "item" : "0.977",
+        "count" : "183"
+      }, {
+        "item" : "0.944",
+        "count" : "182"
+      }, {
+        "item" : "0.929",
+        "count" : "181"
+      }, {
+        "item" : "0.917",
+        "count" : "180"
+      }, {
+        "item" : "0.969",
+        "count" : "178"
+      }, {
+        "item" : "0.923",
+        "count" : "178"
+      }, {
+        "item" : "0.982",
+        "count" : "177"
+      }, {
+        "item" : "0.9",
+        "count" : "175"
+      } ],
+      "smallest" : "0.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609140080,
+    "name" : "IMMEDIATEENR_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent Enrolled in College (Immediate Fall)",
+    "fieldName" : "immediateenr_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758689,
+    "cachedContents" : {
+      "non_null" : "23809",
+      "largest" : "1.0",
+      "null" : "5756",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "770"
+      }, {
+        "item" : "0.5",
+        "count" : "513"
+      }, {
+        "item" : "0.667",
+        "count" : "351"
+      }, {
+        "item" : "0.333",
+        "count" : "249"
+      }, {
+        "item" : "0.75",
+        "count" : "201"
+      }, {
+        "item" : "0.571",
+        "count" : "180"
+      }, {
+        "item" : "0.833",
+        "count" : "176"
+      }, {
+        "item" : "0.714",
+        "count" : "149"
+      }, {
+        "item" : "0.8",
+        "count" : "147"
+      }, {
+        "item" : "0.25",
+        "count" : "144"
+      }, {
+        "item" : "0.167",
+        "count" : "144"
+      }, {
+        "item" : "0.429",
+        "count" : "135"
+      }, {
+        "item" : "0.6",
+        "count" : "132"
+      }, {
+        "item" : "0.4",
+        "count" : "131"
+      }, {
+        "item" : "0.625",
+        "count" : "126"
+      }, {
+        "item" : "0.286",
+        "count" : "124"
+      }, {
+        "item" : "0.778",
+        "count" : "114"
+      }, {
+        "item" : "0.556",
+        "count" : "114"
+      }, {
+        "item" : "1.0",
+        "count" : "112"
+      }, {
+        "item" : "0.857",
+        "count" : "110"
+      } ],
+      "smallest" : "0.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609140081,
+    "name" : "PERSIST_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent Persistently Enrolled in College",
+    "fieldName" : "persist_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758690,
+    "cachedContents" : {
+      "non_null" : "23809",
+      "largest" : "1.0",
+      "null" : "5756",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1324"
+      }, {
+        "item" : "0.5",
+        "count" : "501"
+      }, {
+        "item" : "0.333",
+        "count" : "304"
+      }, {
+        "item" : "0.667",
+        "count" : "298"
+      }, {
+        "item" : "0.25",
+        "count" : "196"
+      }, {
+        "item" : "0.286",
+        "count" : "166"
+      }, {
+        "item" : "0.4",
+        "count" : "153"
+      }, {
+        "item" : "0.429",
+        "count" : "153"
+      }, {
+        "item" : "0.167",
+        "count" : "151"
+      }, {
+        "item" : "0.571",
+        "count" : "148"
+      }, {
+        "item" : "0.75",
+        "count" : "142"
+      }, {
+        "item" : "0.143",
+        "count" : "124"
+      }, {
+        "item" : "0.6",
+        "count" : "119"
+      }, {
+        "item" : "0.833",
+        "count" : "119"
+      }, {
+        "item" : "0.556",
+        "count" : "119"
+      }, {
+        "item" : "0.2",
+        "count" : "118"
+      }, {
+        "item" : "0.714",
+        "count" : "116"
+      }, {
+        "item" : "0.375",
+        "count" : "103"
+      }, {
+        "item" : "0.444",
+        "count" : "102"
+      }, {
+        "item" : "0.625",
+        "count" : "99"
+      } ],
+      "smallest" : "0.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "noCommas" : "false",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609140082,
+    "name" : "OBTAINDEGREE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent Obtained a Degree within 6 Years",
+    "fieldName" : "obtaindegree_pct",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 149758691,
+    "cachedContents" : {
+      "non_null" : "10497",
+      "largest" : "1.0",
+      "null" : "19068",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "907"
+      }, {
+        "item" : "0.333",
+        "count" : "135"
+      }, {
+        "item" : "0.5",
+        "count" : "130"
+      }, {
+        "item" : "0.25",
+        "count" : "94"
+      }, {
+        "item" : "0.667",
+        "count" : "81"
+      }, {
+        "item" : "0.143",
+        "count" : "80"
+      }, {
+        "item" : "0.167",
+        "count" : "71"
+      }, {
+        "item" : "0.2",
+        "count" : "62"
+      }, {
+        "item" : "0.375",
+        "count" : "55"
+      }, {
+        "item" : "0.4",
+        "count" : "55"
+      }, {
+        "item" : "0.286",
+        "count" : "53"
+      }, {
+        "item" : "0.571",
+        "count" : "51"
+      }, {
+        "item" : "0.222",
+        "count" : "50"
+      }, {
+        "item" : "0.125",
+        "count" : "49"
+      }, {
+        "item" : "0.429",
+        "count" : "47"
+      }, {
+        "item" : "0.111",
+        "count" : "42"
+      }, {
+        "item" : "0.077",
+        "count" : "40"
+      }, {
+        "item" : "0.625",
+        "count" : "39"
+      }, {
+        "item" : "0.1",
+        "count" : "39"
+      }, {
+        "item" : "0.182",
+        "count" : "38"
+      } ],
+      "smallest" : "0.0",
+      "count" : "29565",
+      "cardinality" : "29565"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "grade", "race", "ethnicity", "gender", "enrollment", "low income", "economically disadvantaged", "special education", "high needs", "disability", "sgp", "student growth percentile", "dropout", "sat", "fafsa", "ela", "math", "science", "ap", "test", "performance", "demographic", "assessment", "dropout rates", "advanced placement", "special population", "sped", "students with disabilities" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

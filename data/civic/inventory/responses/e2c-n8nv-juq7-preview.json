@@ -1,0 +1,28 @@
+[{"segment":"Community Colleges","institution":"Berkshire Community College","ceeb_code":"3102","latitude":"42.459750","longitude":"-73.314704"}
+,{"segment":"Community Colleges","institution":"Bristol Community College","ceeb_code":"3110","latitude":"41.721994","longitude":"-71.119133"}
+,{"segment":"Community Colleges","institution":"Bunker Hill Community College","ceeb_code":"3123","latitude":"42.374806","longitude":"-71.069263"}
+,{"segment":"Community Colleges","institution":"Cape Cod Community College","ceeb_code":"3289","latitude":"41.691911","longitude":"-70.337334"}
+,{"segment":"Community Colleges","institution":"Greenfield Community College","ceeb_code":"3420","latitude":"42.599512","longitude":"-72.630977"}
+,{"segment":"Community Colleges","institution":"Holyoke Community College","ceeb_code":"3437","latitude":"42.194781","longitude":"-72.651252"}
+,{"segment":"Community Colleges","institution":"MassBay Community College","ceeb_code":"3294","latitude":"42.312292","longitude":"-71.263821"}
+,{"segment":"Community Colleges","institution":"Massasoit Community College","ceeb_code":"3549","latitude":"42.075070","longitude":"-70.989799"}
+,{"segment":"Community Colleges","institution":"Middlesex Community College","ceeb_code":"3554","latitude":"42.524328","longitude":"-71.274931"}
+,{"segment":"Community Colleges","institution":"Mt. Wachusett Community College","ceeb_code":"3545","latitude":"42.593142","longitude":"-71.984148"}
+,{"segment":"Community Colleges","institution":"North Shore Community College","ceeb_code":"3651","latitude":"42.590103","longitude":"-70.968044"}
+,{"segment":"Community Colleges","institution":"Northern Essex Community College","ceeb_code":"3674","latitude":"42.796634","longitude":"-71.049040"}
+,{"segment":"Community Colleges","institution":"Quinsigamond Community College","ceeb_code":"3714","latitude":"42.313790","longitude":"-71.795030"}
+,{"segment":"Community Colleges","institution":"Roxbury Community College","ceeb_code":"3740","latitude":"42.329249","longitude":"-71.095490"}
+,{"segment":"Community Colleges","institution":"Springfield Technical Community College","ceeb_code":"3791","latitude":"42.108827","longitude":"-72.578514"}
+,{"segment":"State Universities","institution":"Bridgewater State University","ceeb_code":"3517","latitude":"41.987490","longitude":"-70.974553"}
+,{"segment":"State Universities","institution":"Fitchburg State University","ceeb_code":"3518","latitude":"42.588298","longitude":"-71.789666"}
+,{"segment":"State Universities","institution":"Framingham State University","ceeb_code":"3519","latitude":"42.297116","longitude":"-71.437565"}
+,{"segment":"State Universities","institution":"Massachusetts College of Art and Design","ceeb_code":"3516","latitude":"42.336862","longitude":"-71.099275"}
+,{"segment":"State Universities","institution":"Massachusetts College of Liberal Arts","ceeb_code":"3521","latitude":"42.691361","longitude":"-73.102817"}
+,{"segment":"State Universities","institution":"Massachusetts Maritime Academy","ceeb_code":"3515","latitude":"41.739072","longitude":"-70.624084"}
+,{"segment":"State Universities","institution":"Salem State University","ceeb_code":"3522","latitude":"42.503575","longitude":"-70.890234"}
+,{"segment":"State Universities","institution":"Westfield State University","ceeb_code":"3523","latitude":"42.132698","longitude":"-72.796503"}
+,{"segment":"State Universities","institution":"Worcester State University","ceeb_code":"3524","latitude":"42.267526","longitude":"-71.844018"}
+,{"segment":"University of Massachusetts","institution":"University of Massachusetts Amherst","ceeb_code":"3917","latitude":"42.385999","longitude":"-72.526728"}
+,{"segment":"University of Massachusetts","institution":"University of Massachusetts Boston","ceeb_code":"3924","latitude":"42.312881","longitude":"-71.036865"}
+,{"segment":"University of Massachusetts","institution":"University of Massachusetts Dartmouth","ceeb_code":"3786","latitude":"41.628690","longitude":"-71.004552"}
+,{"segment":"University of Massachusetts","institution":"University of Massachusetts Lowell","ceeb_code":"3911","latitude":"42.652864","longitude":"-71.326809"}]

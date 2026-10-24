@@ -1,0 +1,17 @@
+{
+  "id": "crash-sheet-0-1260855922",
+  "url": "https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit",
+  "sheet": "notes ",
+  "range": "A1:Z1001",
+  "grid": {
+    "rowCount": 1001,
+    "columnCount": 26
+  },
+  "retention": "full_tab_grid_values",
+  "rows": 1001,
+  "retrieved_at_utc": "2026-10-24T15:15:41.496Z",
+  "result": {
+    "error": "HTTPError: 400: \n\n\n\nBad Request\n\nContent:\n{'code': 400,\n 'message': 'Unable to parse range: notes!A1:Z1001',\n 'status': 'INVALID_ARGUMENT'}\n\nRequest URL:\nhttps://sheets.googleapis.com/v4/spreadsheets/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/values/notes%21A1%3AZ1001?valueRenderOption=FORMATTED_VALUE (Response: {'error': {'code': 400, 'message': 'Unable to parse range: notes!A1:Z1001', 'status': 'INVALID_ARGUMENT'}})",
+    "error_code": "INVALID_ARGUMENT"
+  }
+}

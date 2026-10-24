@@ -1,0 +1,103 @@
+{
+  "id" : "jzmw-ccc4",
+  "name" : "Massachusetts Educator License Mapping Tool: Dashboard",
+  "assetType" : "href",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1698802729,
+  "description" : "The Massachusetts Educator License Mapping Tool links educator licenses to courses. The current version of the mapping tool reflects several important changes from the 2018-19 pilot version, including:\n<ul><li>Educators with a moderate disabilities and/or severe disabilities license are considered \"in-field\" for all courses within the grade span and content areas for the license. (e.g. a teacher with a PreK-8 Moderate Disabilities license will be \"in-field\" when teaching a grade 5 math course but is considered \"out-of-field\" if teaching grade 4 music).</li><li>Legacy licenses are appropriately reflected in the crosswalk.</li><li>Some specific courses were updated with additional licensure fields deemed appropriate. (e.g. a teacher with a Business license will be \"in-field\" when teaching a marketing course).</li><li>Updates to the courses that an Early Childhood or Elementary teacher is \"in-field\" for teaching (e.g. an Elementary teacher is not \"in-field\" when teaching Music).</li></ul>Please note that while the mapping tool can serve as guidance to districts in considering hiring and assignment of individual educators, it does not prohibit a district from assigning an out-of-field educator to a course.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40125735,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1698802747,
+  "publicationGroup" : 19346872,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1698802729,
+  "tableId" : 19346872,
+  "totalTimesRated" : 0,
+  "viewCount" : 1187,
+  "viewLastModified" : 1775491529,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1715368236,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6308915,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1715368214,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1715368236,
+      "failureCount" : 0,
+      "startedAt" : 1715368236,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "Power BI" : "https://app.powerbigov.us/view?r=eyJrIjoiNzBhODQwMzQtYjE1YS00MGU3LWE0YWMtMjVlYWNiZDFlYTk0IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+      },
+      "title" : "MA Educator Courses for Licensure"
+    } ],
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "accessPoints" : {
+      "Power BI" : "https://app.powerbigov.us/view?r=eyJrIjoiNzBhODQwMzQtYjE1YS00MGU3LWE0YWMtMjVlYWNiZDFlYTk0IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "disability", "licensed", "workforce", "in-field", "teachers", "teacher credentials" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}
