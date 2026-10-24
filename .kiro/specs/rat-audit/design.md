@@ -83,6 +83,9 @@ for cron; button calls allowed if the last run is ≥ 5 min old [R1.5]. `vercel.
 - **Correlations** → `correlations` (one row each; method per `docs/rat-audit/CONTRACT.md` table). Cell-level rates use
   rodent reports per 100 total 311 reports in the cell (controls for reporting propensity). Spearman with permutation p;
   event studies with matched random control points; strength: |ρ| ≥ .5 strong, ≥ .3 moderate, ≥ .1 weak, else none.
+  Pre-tested results (Oct 24) are in `data-validation.md` and `knowledge/sources/rats/validation/*_results.txt`:
+  rain, snow, demolitions, events, restaurants and Big Belly are honest nulls; season (+0.87), dead animal, indoor pest,
+  trash storage (311 and code enforcement) and move-out are the positive findings; tract-level 311 under-reporting replaces asthma.
 - **Three-city comparison** [R5.6]: monthly rodent reports per 1,000 residents per city (ACS population); Somerville program requests vs Rats requests over time; Cambridge sightings within 200 m of smart boxes before/after the box's first nonzero month vs other sightings. Caveat: three different reporting systems.
 - **Price impact** → `price_impact`: assessed-value % change FY25→FY26 for residential parcels within 100 m of top-50 sites vs
   matched parcels (same ZIP, land-use code, year-built decade) — difference in medians with bootstrap CI; listings: median
@@ -93,13 +96,16 @@ for cron; button calls allowed if the last run is ≥ 5 min old [R1.5]. `vercel.
 
 **cell_week_poisson_gbm** — target: rodent reports per cell per ISO week.
 Features (all known at prediction time):
-- lags: reports t-1, mean t-1..t-4, mean t-1..t-12, same week last year;
-- nearby food signals: trash storage / out early / dumping / litter / dumpster counts in cell + ring, t-1..t-4;
-- displacement: demolitions/excavations/work zones within 300 m started in the last 90 days;
-- restaurants with rodent citations in the last 180 days within 300 m;
-- static: median year built, share owner-occupied, units, Big Belly count, vacant parcels;
-- calendar: week of year (sin/cos), move-out week flag, holiday-shift flag;
-- weather: rain last 7 days (inches), heavy-rain days, mean temperature; for future weeks NWS forecast rain / climatology.
+Feature set follows `data-validation.md` (tested Oct 24; nulls removed):
+- lags: reports t-1, mean t-1..t-4, mean t-1..t-12, same week last year (strongest signal);
+- leading 311 signals in cell + ring, t-1..t-12: dead animal pickups, indoor pest, improper trash storage, overflowing,
+  trash out early, weeds, litter, student move-in trash;
+- code enforcement tickets (`90ed3816-5e70-443c-803d-9a71f44470be`): residential trash storage, overfilling, dumping, t-1..t-12;
+- static: non-rodent 311 volume and address count (reporting/density controls), median year built, units;
+- calendar: week of year (sin/cos), move-out week flag;
+- weather: mean temperature last 4 weeks; for future weeks, climatology.
+Not used (no effect in tests): rain, snow, demolitions/excavations/work zones, restaurants and food licenses, Big Belly,
+events, holiday shifts.
 Scope: Boston cells (the richest drivers); Cambridge cells as P2 if time allows. Model: `HistGradientBoostingRegressor(loss="poisson")`. Backtest: rolling origin over the last 26 weeks, train on all
 earlier weeks. Metrics: MAE vs baseline (mean of last 4 weeks), top-10% cell capture vs baseline. Explanations:
 permutation importance (global) and per-cell drivers = prediction change when each feature group is set to its city

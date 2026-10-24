@@ -1,0 +1,8 @@
+EMPLOYEE EARNINGS (latest table, rodent/pest/environmental titles)
+  {'d': 'Inspectional Services Dept', 't': 'Prin Environment Health Insp', 'n': 1, 'lo': '114,594.79', 'hi': '114,594.79'}
+
+SCHOOLS NEAR RAT HOT SPOTS
+  top-10% rodent cells: 148 (>= 25 reports 2024-26); schools in or next to one: 66 of 134
+
+SOMERVILLE 311
+  [{'type': 'Consideration request', 'count': '7273'}, {'type': 'People Operations', 'count': '6782'}, {'type': 'People Operations feedback ', 'count': '24'}, {'type': 'Rats', 'count': '8770'}, {'type': 'Rodent Assistance Program inquiry', 'count': '2052'}, {'type': 'Rodent Assistance Program request', 'count': '3760'}, {'type': 'School Rodent Control ', 'count': '139'}, {'type': 'Strategy and Development Division', 'count': '12669'}, {'type': 'Strategy and Development Division - Historic feedback', 'count': '13'}, {'type': 'Strategy and Development Division - Planning and Zoning feedback', 'count': '63'}]

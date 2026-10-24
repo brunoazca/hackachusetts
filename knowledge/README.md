@@ -26,6 +26,7 @@ Docs are grouped: **00–03 competition & event**, **10–18 strategy, evidence 
 | [14 — Creative opportunity atlas](14_creative_civic_opportunity_atlas.md) | 15 ambitious concepts, small day-of demos, differentiation, users and measurable checks |
 | [15 — Boston Rat Audit](15_boston_rat_audit.md) | Lead idea: every rat-related dataset, verified counts, drivers, impact, property-value evidence and product shape |
 | [Rat signals brainstorm](10_rat_signals_brainstorm.md) | Causes to predict rat reports, measurable impacts, actions, and a ranked list of data to retrieve |
+| [19 — Rat data validation](19_rat_data_validation.md) | Every candidate dataset tested on live data: what predicts rodent reports, the honest nulls (rain, demolitions, restaurants), under-reporting by tract, verdicts |
 | [16 — Creative rodent-control playbook](16_rodent_control_creative_playbook.md) | RodentOps plus seven alternatives, actual Boston/Cambridge rodent data, hearing captions and a small demo scope |
 | [17 — Hidden ledgers: five new concepts](17_hidden_ledgers_deep_concepts.md) | CurbCheck, Three Hours, 311 outcome layer, hearing ledger, town-meeting decoder; live-verified Boston sources and numbers from Oct 24 noon |
 | [18 — Build decision guide](18_idea_shortlist_and_build_recommendation.md) | Updated creative choices and three conservative fallback scopes |

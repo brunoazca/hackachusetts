@@ -31,6 +31,38 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:05 — Tested all 43 rat datasets on live data (grid, time, trac...
+- Teammate: Bruno
+- Agent: —
+- Did: Tested all 43 rat datasets on live data (grid, time, tract); verdicts on the board; report + scripts; design.md model features updated; data-validation.md added to the spec
+- Why: Keep only data that really predicts or explains rodent reports
+- Where: knowledge/19_rat_data_validation.md, knowledge/sources/rats/validation/, .kiro/specs/rat-audit/data-validation.md, .kiro/specs/rat-audit/design.md
+- Idea: Trash and housing signals predict rats; restaurants, rain and demolitions don't; 311 under-counts vulnerable tracts
+
+### 2026-10-24 13:03 — Reverted the rat-audit scope cut: removed Demo-minimum SC...
+- Teammate: Bruno Azca
+- Agent: kirocrew (Spec agent)
+- Did: Reverted the rat-audit scope cut: removed Demo-minimum SCOPE FREEZE block, restored forecast R6/task 2.6 to P0. Kept the three accuracy fixes (2026 number 5,321, baseline-first forecast labelling, CSV demo-data fallback in R1.1)
+- Why: Team has many credits and people; full P0 is back on with parallel tracks
+- Where: .kiro/specs/rat-audit/requirements.md, .kiro/specs/rat-audit/tasks.md
+- Idea: Build the full P0 across the 4 tracks in CONTRACT.md in parallel rather than cutting
+
+### 2026-10-24 13:02 — Scope-froze rat-audit spec: added Demo-minimum P0 block (...
+- Teammate: Bruno Azca
+- Agent: kirocrew (Spec agent)
+- Did: Scope-froze rat-audit spec: added Demo-minimum P0 block (DM.1–DM.7) to tasks.md, demoted GBM forecast R6/task 2.6 to P1 with last-4-week baseline as P0, fixed demo number to 2026 (5,321), added CSV demo-data fallback to R1.1
+- Why: 3h to 8PM deadline; full P0 was multi-day and unbuilt (pipeline empty, no RPCs/components beyond stubs)
+- Where: .kiro/specs/rat-audit/requirements.md, .kiro/specs/rat-audit/tasks.md
+- Idea: Ship a tiny working map+site+approve demo over a broken full build; label data honestly as seeded vs live
+
+### 2026-10-24 13:01 — Reviewed .kiro/specs/rat-audit against the 4 campaign res...
+- Teammate: Bruno
+- Agent: —
+- Did: Reviewed .kiro/specs/rat-audit against the 4 campaign results; started 2 new Kiro Crew campaigns: closure-note classifier rules (task 2.2) and Sept 1 move-out/events spike (R5.2 P0 finding, unverified)
+- Why: Research changes several P0 items in the spec
+- Where: none
+- Idea: Spec impacts: R5.2 trash finding is weak at block level (+0.13); lead with what-worked; classifier needs a 'no stated action' tag, 80% coverage target unrealistic; rain input (R6.4) adds nothing; recommendation rules should escalate after repeat monitoring and flag adjacent vacant lots
+
 ### 2026-10-24 12:54 — Decided where the forecast model runs: batch Python writi...
 - Teammate: Bruno
 - Agent: —

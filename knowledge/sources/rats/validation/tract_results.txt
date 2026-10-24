@@ -1,0 +1,11 @@
+tracts: 167 (pop >= 500); rodent reports 2024-26 per 1,000 residents
+  Low or no income share       raw -0.11   controlling 311 volume +0.06
+  Older adult share            raw +0.03   controlling 311 volume -0.06
+  Children share               raw -0.30   controlling 311 volume -0.24
+  Limited English share        raw -0.12   controlling 311 volume +0.02
+  People of color share        raw -0.35   controlling 311 volume -0.23
+  Disability share             raw -0.25   controlling 311 volume -0.18
+  Displacement risk score      raw -0.23   controlling 311 volume -0.14   (147 tracts)
+  Adult asthma % (CDC PLACES)  raw -0.41   controlling 311 volume -0.24   controlling volume+income -0.29  (147 tracts; tract IDs are 2020 vs 2010 boundaries)
+
+  iNaturalist rat sightings vs 311 rodent rate (tract): +0.12

@@ -1,0 +1,58 @@
+cells analysed: 1319  (≥50 non-rodent 311 reports and ≥20 addresses in 2024)
+rodent reports in these cells: 2024 4842, 2025-26 10093
+baseline: 2024 rodent -> 2025-26 rodent, partial on volume+addresses: +0.32
+
+feature                              total  cells    raw  assoc  predict
+pest_residential_311                  1915    673  +0.46  +0.26    +0.11
+dead_animal_311                       7827   1203  +0.49  +0.26    +0.14
+ce_trash_res                         39488   1162  +0.52  +0.17    +0.09
+improper_trash_311                   20221   1130  +0.50  +0.14    +0.03
+improper_trash_new                    3444    719  +0.45  +0.13    +0.18
+missed_trash_311                      9987   1180  +0.31  +0.13    -0.01
+props_pre1920                        94673   1198  +0.41  +0.12    +0.06
+props                               100548   1211  +0.42  +0.12    +0.06
+ce_dumping                            2011    550  +0.32  +0.10    +0.04
+ce_weeds                              4984    842  +0.22  +0.09    -0.01
+overflowing_trash_new                 1992    529  +0.37  +0.09    +0.09
+out_early_new                         3034    424  +0.37  +0.08    +0.09
+park_features                         1279    250  +0.15  +0.08    +0.05
+weeds_new                             1133    467  +0.16  +0.07    +0.10
+ce_overfill                          12689    926  +0.41  +0.07    +0.04
+PLACEBO_abandoned_vehicles            4620   1013  +0.21  +0.07    +0.01
+ce_dumpster_noperm                     300    115  +0.21  +0.05    +0.06
+construction_debris_311                188    148  +0.19  +0.05    +0.05
+schools                                117    101  +0.09  +0.05    +0.09
+student_movein_new                     270    144  +0.24  +0.04    +0.13
+illegal_dumping_311                   2920    827  +0.35  +0.04    +0.06
+litter_basket_311                     2464    541  +0.32  +0.03    +0.04
+permits_newcon_23_25                  1536    557  +0.12  +0.03    +0.04
+abandoned_building_311                  75     59  +0.07  +0.03    -0.01
+litter_new                           10013   1114  +0.40  +0.02    +0.09
+overflow_dumpster_311                   90     70  +0.11  +0.02    -0.03
+inaturalist_rats                       215    133  +0.09  +0.02    +0.06
+city_lots                             1016    308  +0.05  +0.01    -0.03
+permits_demo_23_25                     416    319  +0.09  +0.01    -0.02
+vacant_lot_trash_311                    66     51  +0.05  +0.01    -0.05
+trees                                48493   1270  +0.23  -0.00    +0.09
+oneday_entertainment_events           6971    476  +0.18  -0.01    -0.02
+ce_trash_com                          5426    547  +0.25  -0.01    -0.01
+big_belly                              508    151  +0.19  -0.01    -0.00
+colleges                                42     32  -0.00  -0.04    -0.02
+food_trucks                             96     15  -0.02  -0.04    -0.01
+oneday_alcohol_events                 1777    230  +0.07  -0.04    -0.04
+restaurant_rodent_cites_24            1614    236  +0.14  -0.04    +0.00
+unsanitary_estab_311                   516    249  +0.12  -0.04    -0.00
+liquor_licenses                       1277    405  +0.17  -0.09    +0.03
+entertainment_licenses                1073    314  +0.15  -0.09    +0.01
+food_licenses                         2772    507  +0.15  -0.10    +0.05
+dog_parks                                7      7    n/a    n/a      n/a
+
+Mean rodent residual (rank units, + = more rodents than volume predicts) by main trash day:
+  td_MTH   cells  126    +71.8  (se 27.2)
+  td_F     cells  165    +38.5  (se 22.7)
+  td_T     cells  198    +12.0  (se 21.2)
+  td_M     cells  186     +6.9  (se 21.3)
+  td_TH    cells  250     +2.3  (se 20.4)
+  td_W     cells  221    -31.9  (se 19.8)
+  td_TF    cells  111    -33.2  (se 33.1)
+  td_MF    cells   53   -145.0  (se 47.8)
