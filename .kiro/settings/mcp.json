@@ -31,7 +31,7 @@
       ],
       "env": { "OPENCONTEXT_CONFIG": ".kiro/mcp/opencontext/cambridge-socrata.yaml" },
       "timeout": 120000,
-      "disabled": true
+      "disabled": false
     },
     "somerville-opendata": {
       "command": "uv",
@@ -42,7 +42,7 @@
       ],
       "env": { "OPENCONTEXT_CONFIG": ".kiro/mcp/opencontext/somerville-socrata.yaml" },
       "timeout": 120000,
-      "disabled": true
+      "disabled": false
     },
     "civic-snapshots": {
       "command": "python3",

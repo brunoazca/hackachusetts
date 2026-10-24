@@ -29,7 +29,11 @@ PROBES = {
     "mbta": ("alerts", {"route": "Red", "limit": 1}),
     "boston-opendata": ("ckan__search_datasets", {"query": "311", "limit": 1}),
     "massgis": ("arcgis__search_datasets", {"q": "environmental justice", "limit": 1}),
+    "cambridge-opendata": ("socrata__search_datasets", {"query": "crash", "limit": 1}),
+    "somerville-opendata": ("socrata__search_datasets", {"query": "311", "limit": 1}),
 }
+# Servers that need a secret; SKIP (not FAIL) when a teammate has not set it.
+NEEDS_ENV = {"cambridge-opendata": "SOCRATA_APP_TOKEN", "somerville-opendata": "SOCRATA_APP_TOKEN"}
 TIMEOUT_S = 180  # first uv/npx run downloads packages
 
 
@@ -82,11 +86,24 @@ def check(name: str, spec: dict) -> tuple[bool, str]:
         proc.kill()
 
 
+def _has_env(var: str) -> bool:
+    if os.environ.get(var):
+        return True
+    env_file = ROOT / ".env.local"
+    return env_file.exists() and any(
+        l.strip().startswith(f"{var}=") and l.split("=", 1)[1].strip()
+        for l in env_file.read_text().splitlines())
+
+
 def main() -> int:
     servers = json.loads(CONFIG.read_text())["mcpServers"]
     wanted = sys.argv[1:] or [n for n, s in servers.items() if not s.get("disabled")]
     failed = 0
     for name in wanted:
+        var = NEEDS_ENV.get(name)
+        if var and not _has_env(var):
+            print(f"SKIP  {name:16} {var} not set (see knowledge/live_data_sources.md)")
+            continue
         ok, detail = check(name, servers[name])
         failed += not ok
         print(f"{'PASS' if ok else 'FAIL'}  {name:16} {detail}")

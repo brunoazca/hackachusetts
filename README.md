@@ -29,6 +29,8 @@ This project is spec-driven with Kiro. Real work lives in `/.kiro`:
   (data.boston.gov and MassGIS, through a small stdio bridge), SQL over our committed
   data snapshots, live MBTA, AWS docs, and Playwright for UI checks.
   Check them all with `python3 .kiro/scripts/check_mcp.py` (needs `python3`, `uv`, `node`).
+  Cambridge/Somerville need a free token in `.env.local` (copy `.env.example`);
+  all sources are listed in `knowledge/live_data_sources.md`.
 
 Full write-up: `docs/submission/kiro-usage.md`.
 

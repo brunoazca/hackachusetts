@@ -31,7 +31,21 @@ from core.mcp_server import MCPServer  # noqa: E402  (OpenContext package)
 from core.plugin_manager import PluginManager  # noqa: E402
 
 
+def _load_dotenv() -> None:
+    """Fill missing env vars from the repo's git-ignored .env.local, if present."""
+    env_file = Path(__file__).resolve().parents[2] / ".env.local"
+    if not env_file.exists():
+        return
+    for line in env_file.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+
 def _load_config() -> dict:
+    _load_dotenv()
     path = os.environ.get("OPENCONTEXT_CONFIG")
     if not path:
         sys.exit("OPENCONTEXT_CONFIG is not set")

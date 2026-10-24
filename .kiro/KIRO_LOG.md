@@ -71,6 +71,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: knowledge/08_boston_rat_audit.md, knowledge/README.md, knowledge/sources/rats/*.py
 - Idea: Airbnb: 212 of 267,731 reviews mention rats/mice (Bay Village 0.39%); Zillow vs rodent rate weak (ZHVI -0.18, ZORI +0.30): do not claim value loss
 
+### 2026-10-24 12:16 — Turned on Cambridge + Somerville OpenContext servers with...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Turned on Cambridge + Somerville OpenContext servers with Socrata token in git-ignored .env.local; bridge reads .env.local; check_mcp SKIPs token servers when unset; added .env.example + knowledge/live_data_sources.md; 8/8 PASS
+- Why: All live civic sources ready, secrets kept out of git
+- Where: .kiro/mcp/opencontext_stdio.py, .kiro/scripts/check_mcp.py, .kiro/settings/mcp.json, .kiro/steering/mcp-tools.md, .env.example, knowledge/live_data_sources.md, README.md
+- Idea: Share .env.local only via private channel
+
 ### 2026-10-24 11:58 — Finished MCP setup: env-var expansion in OpenContext brid...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
