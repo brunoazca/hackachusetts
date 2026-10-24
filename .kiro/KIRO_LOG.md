@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:45 — Model public interface train/score/simulate + explain (dr...
+- Teammate: Bruno
+- Agent: —
+- Did: Model public interface train/score/simulate + explain (drivers, risk bands, p_any, emerging hotspots); ran train+score live
+- Why: Kiro tasks 9, 12, 14 done directly (Kiro paused, too slow). Live: run risk-v1-20261024T184358, 89k backtest + 13.7k forecast predictions (Oct 26-Nov 16), 133 emerging + 120 early-warning cells; grid_cells seeded with 3442 fallback cells because it was empty
+- Where: pipeline/rat_audit/model/__init__.py, explain.py, tests/test_model_explain.py
+- Idea: grid_cells seeding only runs while the table is empty; Carol can replace it
+
 ### 2026-10-24 14:41 — Umbrella campaign 947e85a6 finished; added its 13-track r...
 - Teammate: Carol
 - Agent: —
