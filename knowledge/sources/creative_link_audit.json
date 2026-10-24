@@ -1,0 +1,930 @@
+{
+  "checked_at_utc": "2026-10-24T15:12:25.745840+00:00",
+  "scope": "Unique public URLs in selected knowledge Markdown, excluding fragments. HTTP reachability only; not link content or API validation.",
+  "documents": [
+    "09_creative_civic_opportunity_atlas.md",
+    "10_public_data_and_repositories.md",
+    "11_public_voices_and_competitive_gaps.md"
+  ],
+  "status_counts": {
+    "200": 68,
+    "429": 2,
+    "406": 1,
+    "403": 2
+  },
+  "results": [
+    {
+      "url": "https://api-v3.mbta.com/docs/swagger/index.html",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/docs/swagger/index.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://api-v3.mbta.com/docs/swagger/swagger.json",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/docs/swagger/swagger.json",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://api.census.gov/data/2024/acs/acs5.html",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api.census.gov/data/2024/acs/acs5.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api.tidesandcurrents.noaa.gov/api/prod/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://api.weather.gov/points/42.3601,-71.0589",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api.weather.gov/points/42.3601,-71.0589",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://assets.ctfassets.net/p6ae3zqfb1e3/3BswRZgQMp0f8XWBLY6T19/60da57a4630102788a127902bfda9888/-External-_Bluebikes_Station_List__updated_08.21.26_.csv",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://assets.ctfassets.net/p6ae3zqfb1e3/3BswRZgQMp0f8XWBLY6T19/60da57a4630102788a127902bfda9888/-External-_Bluebikes_Station_List__updated_08.21.26_.csv",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://bluebikes.com/bike-angels",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://bluebikes.com/bike-angels",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://bluebikes.com/data-license-agreement",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://bluebikes.com/data-license-agreement",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://bluebikes.com/system-data",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "429",
+      "final_url": "https://bluebikes.com/system-data",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://company.findhelp.com/products/platform/",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://company.findhelp.com/products/platform/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=6ddcd912-32a0-43df-9908-63574f8c7e77&limit=0",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=6ddcd912-32a0-43df-9908-63574f8c7e77&limit=0",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=800a2663-1d6a-46e7-9356-bedb70f5332c&limit=0",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=800a2663-1d6a-46e7-9356-bedb70f5332c&limit=0",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://gbfs.bluebikes.com/gbfs/gbfs.json",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://gbfs.bluebikes.com/gbfs/gbfs.json",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://gisportal.boston.gov/arcgis/rest/services/StoryMaps/CoolingCenters/FeatureServer/0",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://gisportal.boston.gov/arcgis/rest/services/StoryMaps/CoolingCenters/FeatureServer/0",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/AccessMap/accessmap",
+      "documents": [
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/AccessMap/accessmap",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/CityOfBoston/OpenContext",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/CityOfBoston/OpenContext",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/OETBoston/BidBot",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/OETBoston/BidBot",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/OETBoston/Coastmix",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/OETBoston/Coastmix",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/OETBoston/blue",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/OETBoston/blue",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/OETBoston/boston-parking-pwa",
+      "documents": [
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/OETBoston/boston-parking-pwa",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/OETBoston/cds_translator",
+      "documents": [
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/OETBoston/cds_translator",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/OETBoston/curb-atlas",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/OETBoston/curb-atlas",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/ProjectSidewalk/SidewalkWebpage",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/ProjectSidewalk/SidewalkWebpage",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/TaskarCenterAtUW/AccessMapBeyondTheCurb",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/TaskarCenterAtUW/AccessMapBeyondTheCurb",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/cambridgegis/cambridgegis_data",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/cambridgegis/cambridgegis_data",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/codeforamerica/ohana-api",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/codeforamerica/ohana-api",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/jhpyle/docassemble",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/jhpyle/docassemble",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/maplibre/maplibre-gl-js",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/maplibre/maplibre-gl-js",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/mbta/gtfs-documentation",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/mbta/gtfs-documentation",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/mysociety/fixmystreet",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/mysociety/fixmystreet",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/natcap/invest",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/natcap/invest",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/openreferral/api-specification",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/openreferral/api-specification",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/openreferral/specification",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/openreferral/specification",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/opentripplanner/OpenTripPlanner",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/opentripplanner/OpenTripPlanner",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/streetmix/streetmix",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/streetmix/streetmix",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/transitmatters/t-performance-dash",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/transitmatters/t-performance-dash",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://go.findhelp.com/findhelp/closing-the-referral-loop",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://go.findhelp.com/findhelp/closing-the-referral-loop",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://go.findhelp.com/findhelp/integrating-findhelp-with-your-system",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://go.findhelp.com/findhelp/integrating-findhelp-with-your-system",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://help.openalex.org/api/",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://help.openalex.org/api/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://help.openalex.org/api/authentication/",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://help.openalex.org/api/authentication/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/DPW/Pedestrian_Ramps/DPW_PedestrianRamps.geojson",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/DPW/Pedestrian_Ramps/DPW_PedestrianRamps.geojson",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://s3.amazonaws.com/hubway-data/index.html",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://s3.amazonaws.com/hubway-data/index.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://sr.ithaka.org/publications/toward-a-student-centered-understanding-of-basic-needs-insecurity/",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://sr.ithaka.org/publications/toward-a-student-centered-understanding-of-basic-needs-insecurity/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://wbznewsradio.iheart.com/content/ai-beta-looks-to-simplify-boston-permitting-process/",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "406",
+      "final_url": "https://wbznewsradio.iheart.com/content/ai-beta-looks-to-simplify-boston-permitting-process/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.bhcc.edu/dishfoodpantry/reports/",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.bhcc.edu/dishfoodpantry/reports/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/emergency-management/keeping-cool-heat",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/emergency-management/keeping-cool-heat",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/parks-and-recreation/urban-forest-plan",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/parks-and-recreation/urban-forest-plan",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/boston-launches-curb-lab-bringing-new-solutions-old-streets",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/boston-launches-curb-lab-bringing-new-solutions-old-streets",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/city-boston-launches-coastmix",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/city-boston-launches-coastmix",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/request-public-comment-py25-consolidated-annual-performance-and-evaluation-report",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/request-public-comment-py25-consolidated-annual-performance-and-evaluation-report",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/ride-your-life",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/ride-your-life",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/public-notices/16632881",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/public-notices/16632881",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.cambridgema.gov/gis/gisdatadictionary/dpw/dpw_pedestrianramps",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.cambridgema.gov/gis/gisdatadictionary/dpw/dpw_pedestrianramps",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.civicplus.com/seeclickfix-311-crm/",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://www.civicplus.com/seeclickfix-311-crm/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.dol.gov/newsroom/releases/eta/eta20201216",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://www.dol.gov/newsroom/releases/eta/eta20201216",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.foodhelpline.org/resources/umass-boston-u-access-food-pantry",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "429",
+      "final_url": "https://www.foodhelpline.org/resources/umass-boston-u-access-food-pantry",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.hks.harvard.edu/faculty-research/policy-topics/cities-communities/each-year-boston-student-move-ins-lead-loads",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.hks.harvard.edu/faculty-research/policy-topics/cities-communities/each-year-boston-student-move-ins-lead-loads",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/doc/2026-barriers-to-employment-report/download",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/doc/2026-barriers-to-employment-report/download",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.mass.gov/information-for-workforce-training-providers",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.mass.gov/information-for-workforce-training-providers",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.onetcenter.org/database.html",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.onetcenter.org/database.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/essential_skills.csv",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/essential_skills.csv",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.reddit.com/r/boston/comments/1r1iy2g/311_isnt_useless_submitted_a_ticket_about/",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.reddit.com/r/boston/comments/1r1iy2g/311_isnt_useless_submitted_a_ticket_about/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.reddit.com/r/boston/comments/1tc6g6l/anyone_else_feel_like_bluebikes_completely_fails/",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.reddit.com/r/boston/comments/1tc6g6l/anyone_else_feel_like_bluebikes_completely_fails/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.reddit.com/r/boston/comments/1woezas/report_rats_to_311/",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.reddit.com/r/boston/comments/1woezas/report_rats_to_311/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.reddit.com/r/boston/comments/1x8kctm/who_do_i_blame_for_this_atrocious_311_update/",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.reddit.com/r/boston/comments/1x8kctm/who_do_i_blame_for_this_atrocious_311_update/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.tbf.org/news-and-insights/press-releases/2026/september/indicators-permitting-reform-report-20260915",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.tbf.org/news-and-insights/press-releases/2026/september/indicators-permitting-reform-report-20260915",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.trainingproviderresults.gov/assets/ETP_Data_Dictionary.pdf",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.trainingproviderresults.gov/assets/ETP_Data_Dictionary.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.umb.edu/campus-life/current-students/u-access/food-pantry/",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "10_public_data_and_repositories.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.umb.edu/campus-life/current-students/u-access/food-pantry/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.weather.gov/documentation/services-web-api",
+      "documents": [
+        "10_public_data_and_repositories.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.weather.gov/documentation/services-web-api",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.wgbh.org/news/local/2025-12-10/much-much-better-disabled-mbta-riders-see-a-new-t-20-years-after-suing-for-change",
+      "documents": [
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.wgbh.org/news/local/2025-12-10/much-much-better-disabled-mbta-riders-see-a-new-t-20-years-after-suing-for-change",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.wgbh.org/news/local/2026-08-06/allston-christmas-isnt-just-in-allston-anymore-heres-how-to-dispose-of-bulky-items-when-moving",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.wgbh.org/news/local/2026-08-06/allston-christmas-isnt-just-in-allston-anymore-heres-how-to-dispose-of-bulky-items-when-moving",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.wgbh.org/news/politics/2026-03-03/commuters-disability-advocates-blast-bostons-snow-response",
+      "documents": [
+        "09_creative_civic_opportunity_atlas.md",
+        "11_public_voices_and_competitive_gaps.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.wgbh.org/news/politics/2026-03-03/commuters-disability-advocates-blast-bostons-snow-response",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    }
+  ]
+}

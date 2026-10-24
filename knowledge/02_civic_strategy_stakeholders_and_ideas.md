@@ -6,7 +6,7 @@ Research checked: **October 24, 2026**, Eastern. Read alongside the [rules playb
 
 Build **one useful Massachusetts civic workflow with authoritative evidence, accessible interaction, a clear human decision point, and demonstrable Kiro development**. Let a judge watch a person finish a task. A broad chatbot, a map without a next action, or an unsupported claim of citywide transformation will be harder to defend.
 
-**Updated after reviewing recent Boston statements:** start with a neighborhood service evidence-to-action workflow using the provided 311 snapshot, or a narrowly scoped transit-access workflow if the required feeds work. A resident task navigator remains viable only after identifying a specific gap in existing City tools; Boston already has a task-oriented AI permitting beta. An accessibility review assistant remains an alternative for a team with document-processing experience. These are research-based recommendations, not organizer preferences or a claim of guaranteed competitive advantage. See the [recent priorities and dataset mapping](04_recent_boston_priorities_and_data_opportunities.md) for dated evidence, missing data, and revised tradeoffs.
+**Updated after the deeper public-data and public-voices research:** consider **Last 100 Feet** (journey barriers and repair scenarios), **ShiftFits** (program/schedule feasibility), or **OpenDoor** (conflicting service instructions and preparation). See the [15-idea atlas](09_creative_civic_opportunity_atlas.md), [verified resource catalog](10_public_data_and_repositories.md), and [public criticism/competitive landscape](11_public_voices_and_competitive_gaps.md). A neighborhood evidence brief remains a conservative fallback. These are research-based recommendations, not organizer preferences or guaranteed competitive advantage.
 
 The strongest direct signals are the published rubric's community value and accessibility requirements, meaningful Kiro usage, and the civic challenge materials. Sponsorship alone is weaker evidence of what an individual judge wants. [Official rules][S1]
 
@@ -111,7 +111,7 @@ Accessibility is in the judging rubric. The portal links a resource sheet contai
 
 ## 6. Candidate ideas and tradeoffs
 
-These concepts are original proposals informed by the sources, not official prompts or existing winners. Feasibility assumes a team that can already build a small web app; no numerical win probability is implied.
+These earlier concepts remain useful foundations. The [expanded atlas](09_creative_civic_opportunity_atlas.md#how-the-earlier-ideas-evolve) maps each to more distinctive directions and supersedes their earlier ranking. They are original proposals informed by the sources, not official prompts or existing winners. Feasibility assumes a team that can already build a small web app; no numerical win probability is implied.
 
 | Concept | Beneficiary and finished task | Potential strength | Main limitation | Build outlook |
 |---|---|---|---|---|
@@ -122,7 +122,7 @@ These concepts are original proposals informed by the sources, not official prom
 | **ReadyTogether: preparedness handoff** | Household gets a source-linked preparation checklist and official referral contacts | Community resilience and language access | Must not invent live alerts, shelter capacity or emergency advice | **Moderate** |
 | **Opportunity Map: education/career comparison** | Student compares two documented pathways under stated constraints | Scorecard/IPEDS/O*NET available; equity and workforce fit | Observational data, missing values, crowded recommendation market | **Moderate** |
 
-### A. CivicBridge — recommended starting hypothesis
+### A. CivicBridge — earlier resident-navigation hypothesis
 
 **Problem hypothesis:** residents understand their goal but not which agency, form, deadline, and evidence apply. Validate this with a few actual task attempts before expanding scope.
 

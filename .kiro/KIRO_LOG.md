@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 11:14 — Expanded Civic research with 15 creative concepts and ver...
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Expanded Civic research with 15 creative concepts and verified public resources
+- Why: Connect public priorities and resident friction to distinctive feasible demos
+- Where: knowledge/02,04,07,08,09,10,11,README; knowledge/sources; data/civic/CATALOG.md
+- Idea: Prioritize Last 100 Feet, ShiftFits or OpenDoor after proving one dependency; retain BlockBrief as fallback
+
 ### 2026-10-24 10:51 — Full repo review; shortlisted 5 build ideas, recommend Bl...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

@@ -4,11 +4,11 @@ Research cutoff: **October 24, 2026, Eastern Time.** Prepared for Hackachusetts 
 
 This brief connects public statements by Boston City Hall, agencies, community partners, and event stakeholders to feasible uses of the hackathon datasets. **Yes, this is a useful way to choose the project:** identify a documented problem, check whether the data can answer it, and demonstrate a useful next action. Public priorities are evidence of relevance, not proof of judges' private preferences or an endorsement.
 
-**Deeper follow-up:** [document 06](06_deep_evidence_transcripts_and_city_priorities.md) adds October 23 City statements, timestamped caption reviews, municipal award winners and existing-product checks. [Document 07](07_civic_dataset_verification.md) directly audits all 22 starter CSVs and supersedes earlier catalog-only data observations.
+**Deeper follow-up:** [document 06](06_deep_evidence_transcripts_and_city_priorities.md) adds October 23 City statements, timestamped caption reviews, municipal award winners and existing-product checks. [Document 07](07_civic_dataset_verification.md) directly audits all 22 starter CSVs. The later [creative atlas](09_creative_civic_opportunity_atlas.md), [public-resource catalog](10_public_data_and_repositories.md), and [resident/competitive evidence](11_public_voices_and_competitive_gaps.md) broaden the options and supersede the earlier conservative ranking below.
 
 ## 1. Decision first
 
-**Best default with the supplied data: a neighborhood service evidence-to-action workflow.** Use a defined 311 time window to help a resident organization or staff reviewer understand one service category, inspect the supporting records/aggregates, and prepare a sourced follow-up brief. The differentiator must be the completed workflow and trustworthy analysis; Boston already has open-data AI tooling.
+**Conservative fallback using only supplied data: a neighborhood service evidence-to-action workflow.** Use a defined 311 time window to help a resident organization or staff reviewer understand one service category, inspect the supporting records/aggregates, and prepare a sourced follow-up brief. The newer recommendation for originality is Last 100 Feet, ShiftFits or OpenDoor, after proving the required dependency. See [the updated decision guide](08_idea_shortlist_and_build_recommendation.md).
 
 **Strong alternative: transit access to one essential destination.** A resident sees relevant disruptions and official next steps for reaching a campus, training provider, or civic service. This connects to recent transportation and workforce priorities. Choose it only if route/stop coverage and current feeds can be validated; the starter rail-route query is not an all-transit dataset.
 
@@ -70,7 +70,7 @@ The event's sponsor/partner categories are in [document 02](02_civic_strategy_st
 
 Dataset fields below come from the organizer-linked [Civic portal][D1], reviewed in the first research pass. Its starter ZIP is a snapshot, not proof of live access. See document 02 for all 22 datasets and their source links.
 
-**Access check in this follow-up:** attempts to read Boston's CKAN API/schema and dataset pages through the research tools were unsuccessful; dataset pages returned 403 and the browser blocked the API navigation. The MBTA JSON probe was also unavailable through the research tool. These are access limits of this research session, **not proof that the public APIs are down**. No production connection, credentials, ingestion job, or database has been created. Validate actual responses in the project environment before committing to a live-data promise.
+**Access update, later October 24 research:** the initial web/browser attempts below encountered access limits. Subsequent bounded public GETs successfully inspected Boston permit/violation schemas, MBTA facilities/stops/alerts, Bluebikes feeds, MassGIS geometry and other sources. See [document 10](10_public_data_and_repositories.md) and its audit for actual fields, failed queries and corrected requests. This establishes research access, not a production connection or a validated application join. No credentials or production database were created.
 
 | Public problem | Supplied data that can help | Valid connection / useful output | Missing data or inference to avoid |
 |---|---|---|---|

@@ -1,16 +1,25 @@
-# What we should build: Civic Action shortlist
+# What we should build: creative choices and fallback scopes
 
 Prepared October 24, 2026. This is a recommendation, **not a team decision or implementation claim**. It synthesizes [the rules](01_rules_judging_and_event_playbook.md), [winner patterns](03_past_winners_and_patterns.md), [recent City evidence](06_deep_evidence_transcripts_and_city_priorities.md), and [dataset verification](07_civic_dataset_verification.md).
 
-## Recommendation
+## Updated recommendation after the deeper research
 
-**Build BlockBrief: turn a neighborhood concern into a short, verifiable request for follow-up.** Start with trash storage, overflowing trash, or missed waste pickup in Boston. Work at neighborhood level; the supplied file cannot locate cases at a particular block or address.
+**For originality, start with Last 100 Feet, ShiftFits, or OpenDoor.** The [15-idea atlas](09_creative_civic_opportunity_atlas.md) supersedes this document's earlier default recommendation of BlockBrief. It adds real public-data/code connections and checks proposed novelty against existing products.
 
-This has the best immediate fit with verified data and a modest build budget. Choose **Notice to Action** instead if the team prefers a more visual accessibility demonstration. **MoveReady** offers a clear student-facing task if we can validate a specific gap in existing City navigation.
+| Choose | Demonstrate | First dependency to prove |
+|---|---|---|
+| **Last 100 Feet** | One broken journey segment removes access; a verified repair scenario reconnects destinations | One small, manually verified corridor graph |
+| **ShiftFits** | A training option fails a person's schedule; one changed condition makes it feasible | Three real program schedules and a bounded travel assumption |
+| **OpenDoor** | Conflicting resource instructions become a reviewed, source-linked preparation card | One actual source conflict; UMass Boston pantry pages provide a candidate |
+| **CityHandshake** | A resident keeps one factual receipt through an uncertain agency handoff | Responsibility sources for three curated examples |
+
+The [data/repository catalog](10_public_data_and_repositories.md) supplies concrete inputs; the [public-voices brief](11_public_voices_and_competitive_gaps.md) explains the reported problems and existing alternatives. These are research recommendations, not a team decision. Choose one concept and prove its hardest dependency in the first 20 minutes.
+
+**BlockBrief remains the conservative fallback** for the strongest connection to already committed data. Notice to Action and MoveReady remain bounded alternatives below. Each can also become a component of a more distinctive concept.
 
 The shared strategy is one person completing one useful task, with evidence they can inspect. The official categories are Potential Value, Implementation, and Quality and Design; no numerical weights were found. Meaningful Kiro use and a clear working demonstration matter across the shortlist.
 
-## 1. BlockBrief — recommended for the strongest data connection
+## 1. BlockBrief — fallback with the strongest immediate data connection
 
 **User:** a neighborhood association volunteer preparing to discuss a service concern with a relevant City team.
 
@@ -82,4 +91,4 @@ Use Kiro for the actual build and attribute this Codex research separately. Reta
 
 Suggested 2:50 video: 20 seconds problem; 90 seconds completed workflow; 25 seconds actual Kiro evidence; 20 seconds measured checks and boundaries; 15 seconds intended next pilot. Kiro screen footage is a recommendation, not a separately stated requirement.
 
-The final concept remains for the team to choose. My preference is **BlockBrief for the strongest available-data story; Notice to Action for the clearest visual accessibility story**.
+The final concept remains for the team to choose. For the current request's emphasis on creativity, prefer **Last 100 Feet, ShiftFits, or OpenDoor**, contingent on their data checks. Use **BlockBrief** if the available time or unresolved dependencies require a smaller build.

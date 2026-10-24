@@ -14,7 +14,7 @@ Mirror of the **Civic Action** track from the official Hackachusetts data portal
 data/civic/
 ├── CATALOG.md              # this file
 ├── kits/                   # original downloaded .zip starter kits (as served)
-│   ├── tracks-civic.zip    # full civic track: all 23 datasets (superset)
+│   ├── tracks-civic.zip    # full civic track: all 22 inspected datasets (superset)
 │   ├── challenges-v1.zip   # V1 "Simplified public services" subset
 │   ├── challenges-v2.zip   # V2 "Responsive and resilient communities" subset
 │   ├── challenges-v3.zip   # V3 "Safer and connected places" subset
@@ -54,7 +54,10 @@ challenge; they are kept zipped to avoid duplicating files.
 | V4 | Better college experiences | Create more supportive college experiences. | Show the campus, the engagement, and the research. |
 | V5 | Pathways to education and opportunity | Expand access to life-changing opportunities. | Cost, wages, and the next step. |
 
-## Datasets (23)
+## Datasets (22 verified CSVs)
+
+The earlier count of 23 was a catalog discrepancy. The table and inspected full
+track ZIP contain 22 CSV datasets; see [the verification](../../knowledge/07_civic_dataset_verification.md).
 
 Row counts are rows in the saved `data.csv` (the live API call usually returns only ~100 rows).
 
