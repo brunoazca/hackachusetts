@@ -94,6 +94,37 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: ideas are our strongest Kiro story; must be captured even with no code
 - Where: .kiro/steering/kiro-log.md, .kiro/KIRO_LOG.md
 - Idea: log a brainstorm with Where: none
+### 2026-10-24 10:16 — Correction: the three '— (unconfirmed)' entries from 10:1...
+- Teammate: Bruno
+- Agent: default (kiro-cli chat)
+- Did: Correction: the three '— (unconfirmed)' entries from 10:13–10:14 were driven by Bruno
+- Why: attribute the app-enable, catch-all logging hook, and decisions to the right teammate
+- Where: none (attribution correction)
+- Idea: —
+
+### 2026-10-24 10:14 — Replaced spec-only hook with catch-all log-all-work hook ...
+- Teammate: — (unconfirmed)
+- Agent: default (kiro-cli chat)
+- Did: Replaced spec-only hook with catch-all log-all-work hook covering all apps/files
+- Why: every app's work product should auto-log, not just two apps
+- Where: .kiro/hooks/log-all-work.kiro.hook (added), .kiro/hooks/spec-log.kiro.hook (removed)
+- Idea: hooks fire on repo file changes, not on in-dashboard app clicks — logging follows the files any app writes
+
+### 2026-10-24 10:13 — Added spec-log hook to auto-log spec changes
+- Teammate: — (unconfirmed)
+- Agent: default (kiro-cli chat)
+- Did: Added spec-log hook to auto-log spec changes
+- Why: make Spec Builder work self-logging so it is visible to judges
+- Where: .kiro/hooks/spec-log.kiro.hook
+- Idea: Design Critique work already logged by existing accessibility-check hook on src/**
+
+### 2026-10-24 10:13 — Enabled Spec Builder + Design Critique in Crew; dropped C...
+- Teammate: — (unconfirmed)
+- Agent: default (kiro-cli chat)
+- Did: Enabled Spec Builder + Design Critique in Crew; dropped Code Review Sage (no PRs) and others (1-day scope)
+- Why: focus on apps that feed required artifacts: spec = meaningful .kiro usage, design critique = scored a11y
+- Where: none (Crew app state)
+- Idea: Crew is single-user/local; real team sharing stays on GitHub
 
 ### 2026-10-24 10:13 — Mirrored the Civic Action datasets into the repo
 - Teammate: Guilherme
