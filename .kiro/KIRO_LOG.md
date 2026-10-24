@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:24 — Revised Carol's insights spec (severity = last 12w observ...
+- Teammate: Bruno
+- Agent: —
+- Did: Revised Carol's insights spec (severity = last 12w observed + next 4w forecast; region solution by AI grounded in a new per-record model; nearby-causes evidence by distance; grid-cut fix via 3x3 smoothing + cluster merge + NMS; agent tools get_insights/get_insight); built record_solution_gbm and filled record_solutions (10,526 reports)
+- Why: Align the Insights spec with Bruno's direction so Carol's agents build the right structures; give the AI layer real per-record grounding
+- Where: .kiro/specs/rat-audit/insights-severity-ranking.md, pipeline/rat_audit/model/solution.py, supabase/migrations/20261024500004_record_solutions.sql
+- Idea: Action barely adds AUC over context (0.693 vs 0.699): per-action return chances are a weak, confounded signal, so AI must treat them as one input, not an effect
+
 ### 2026-10-24 17:17 — Escrevi a spec completa da aba Insights (ranking por seve...
 - Teammate: Carol
 - Agent: kirocrew (default)
