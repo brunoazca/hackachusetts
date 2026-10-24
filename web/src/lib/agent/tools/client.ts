@@ -1,5 +1,7 @@
 import { tool } from "ai";
 import { z } from "zod";
+import categories from "../../categories.json";
+import type { MapDisplay } from "../../map-store";
 import type { LayerId, Mode, Selection } from "../../map-store";
 
 // Client-side map tools (task 4.3). The route declares them without `execute`,
@@ -16,6 +18,8 @@ type _AllLayers = Exclude<LayerId, (typeof LAYER_IDS)[number]> extends never ? t
 const _allLayers: _AllLayers = true;
 void _allLayers;
 
+const CATEGORY_IDS = Object.keys(categories.incident_categories) as [string, ...string[]];
+const TOGGLE_IDS = [...CATEGORY_IDS, "ctx_housing", "ctx_buildings"] as [string, ...string[]];
 const SELECT_KINDS = ["incident", "place", "event", "site", "cell", "listing", "tract"] as const;
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 
@@ -34,6 +38,14 @@ export const clientTools = {
       zoom: z.number().min(10).max(19).optional().describe("15 for a block, 13 for a neighborhood"),
     }),
   }),
+  map_set_categories: tool({
+    description: "Change the exact category toggles in the map dock. on/off preserve all other toggles; only replaces the incident selection ([] hides all incidents). Use category ids from the catalog in the system prompt. Context toggles ctx_housing and ctx_buildings support on/off. When enabling food/shelter/displacement, also set causes:true using map_set_display so they appear at city zoom.",
+    inputSchema: z.object({ on: z.array(z.enum(TOGGLE_IDS)).optional(), off: z.array(z.enum(TOGGLE_IDS)).optional(), only: z.array(z.enum(CATEGORY_IDS)).optional() }).strict(),
+  }),
+  map_set_display: tool({
+    description: "Change map presentation: heat (Hot spots), points (Each report), both, and whether possible causes appear at city zoom. Preserves unspecified options.",
+    inputSchema: z.object({ viewMode: z.enum(["points", "heat", "both"]).optional(), causes: z.boolean().optional() }).strict(),
+  }),
   map_set_layers: tool({
     description: "Turn map layers on or off.",
     inputSchema: z.object({
@@ -46,7 +58,7 @@ export const clientTools = {
     inputSchema: z.object({
       since: isoDate.optional(),
       until: isoDate.optional(),
-      categories: z.array(z.string()).optional().describe("Incident category ids; [] = all"),
+      categories: z.array(z.enum(CATEGORY_IDS)).optional().describe("Exact incident category selection; [] hides all incidents. Omit to preserve. Prefer map_set_categories for individual toggles."),
       status: z.enum(["all", "open", "closed"]).optional(),
     }),
   }),
@@ -73,6 +85,8 @@ export const CLIENT_TOOL_NAMES = Object.keys(clientTools) as ClientToolName[];
 
 /** The map-store actions the client tools need (a subset of useMap's state). */
 export type MapActions = {
+  setEnabled: (patch: Record<string, boolean>) => void;
+  setDisplay: (patch: Partial<MapDisplay>) => void;
   setMode: (mode: Mode) => void;
   flyTo: (v: { lat: number; lon: number; zoom?: number }) => void;
   setLayers: (patch: Partial<Record<LayerId, boolean>>) => void;
@@ -106,23 +120,41 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
       map.flyTo(zoom == null ? { lat, lon } : { lat, lon, zoom });
       return { ok: true, done: `Moved the map to ${lat.toFixed(4)}, ${lon.toFixed(4)}` };
     }
+    case "map_set_categories": {
+      const { on = [], off = [], only } = v as { on?: string[]; off?: string[]; only?: string[] };
+      const patch: Record<string, boolean> = only ? Object.fromEntries(CATEGORY_IDS.map(id => [id, only.includes(id)])) : {};
+      for (const id of off) patch[id] = false;
+      for (const id of on) patch[id] = true;
+      map.setEnabled(patch);
+      const catalog = categories.incident_categories as Record<string, { group: string }>;
+      if (Object.entries(patch).some(([id, on]) => on && catalog[id] && catalog[id].group !== "rats")) map.setDisplay({ causes: true });
+      return { ok: true, done: "Map category toggles updated" };
+    }
+    case "map_set_display": {
+      map.setDisplay(v);
+      return { ok: true, done: "Map presentation updated" };
+    }
     case "map_set_layers": {
       const { on = [], off = [] } = v as { on?: LayerId[]; off?: LayerId[] };
       const patch: Partial<Record<LayerId, boolean>> = {};
       for (const l of off) patch[l] = false;
       for (const l of on) patch[l] = true;
-      map.setLayers(patch);
-      if ([...on, ...off].some(layer => layer !== "forecast")) {
-        return { ok: true, done: "Layer request recorded", rendered: false, caveat: "Only the forecast layer can currently be changed from chat. Use the map controls for the other requested layers; do not claim they changed." };
+      const unsupported = [...on, ...off].filter(id => !["rodent", "rats_other", "food", "shelter", "displace", "forecast", "heatmap"].includes(id));
+      if (unsupported.length) return { ok: false, error: `Unsupported layers: ${unsupported.join(", ")}. Use map_set_categories for individual dock toggles.` };
+      const enabled: Record<string, boolean> = {};
+      for (const [layer, value] of Object.entries(patch)) {
+        for (const [id, category] of Object.entries(categories.incident_categories)) {
+          if ((layer === "rodent" && id === "rodent") || (layer === "rats_other" && category.group === "rats" && id !== "rodent") || category.group === layer) enabled[id] = value;
+        }
+        if (layer === "heatmap") map.setDisplay({ viewMode: value ? "heat" : "points" });
+        if (value && ["food", "shelter", "displace"].includes(layer)) map.setDisplay({ causes: true });
       }
+      map.setEnabled(enabled);
+      map.setLayers(patch);
       return { ok: true, done: `Layers on: ${on.join(", ") || "—"}; off: ${off.join(", ") || "—"}` };
     }
     case "map_set_filters": {
       map.setFilters(v);
-      const filters = v as { categories?: string[]; status?: string };
-      if (filters.categories != null || filters.status != null) {
-        return { ok: true, done: "Filter request recorded", rendered: false, caveat: "Category and status filters cannot currently be changed from chat. Any supplied date range was applied; do not claim the category or status filter changed." };
-      }
       return { ok: true, done: "Filters updated" };
     }
     case "map_highlight": {

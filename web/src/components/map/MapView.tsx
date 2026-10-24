@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Map, { Layer, NavigationControl, Source, type MapLayerMouseEvent, type MapRef } from "react-map-gl/maplibre";
 import type { FeatureCollection, Point } from "geojson";
 import { setWorkerUrl, type ExpressionSpecification, type HeatmapLayerSpecification } from "maplibre-gl";
+import { filterIncidentStatus } from "@/lib/map-filters";
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { fetchCoverage, fetchIncidentBins, fetchIncidents, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
@@ -107,20 +108,21 @@ export default function MapView() {
   const flyToTarget = useMap((s) => s.flyToTarget);
   const select = useMap((s) => s.select);
   const selection = useMap((s) => s.selection);
-  // All data by default: every incident layer on, shown as heatmaps (icons appear from zoom 15).
-  const [enabled, setEnabled] = useState<Record<string, boolean>>(
-    () => Object.fromEntries(Object.keys(CATS).map((c) => [c, true])),
-  );
-  const [mode, setMode] = useState<ViewMode>("heat");
-  // Causes (trash, vacant lots, works) are context for rats, not the headline: off until asked for.
-  const [causes, setCauses] = useState(false);
-  // Block profile (demographics, building age per 250 m cell): off until picked in "Buildings & people".
-  const [cellMetric, setCellMetric] = useState<string | null>(null);
+  const enabled = useMap(s => s.enabled);
+  const setEnabled = useMap(s => s.setEnabled);
+  const { viewMode: mode, causes, cellMetric } = useMap(s => s.display);
+  const setDisplay = useMap(s => s.setDisplay);
+  const setMode = (viewMode: ViewMode) => setDisplay({ viewMode });
+  const setCauses = (causes: boolean) => setDisplay({ causes });
+  const setCellMetric = (cellMetric: string | null) => setDisplay({ cellMetric });
   const [coverage, setCoverage] = useState<CoverageRow[]>([]);
   const [bbox, setBbox] = useState<BBox | null>(null);
   const [zoom, setZoom] = useState(view.zoom);
   useEffect(() => { fetchCoverage().then(setCoverage).catch(() => {}); }, []);
-  const [data, setData] = useState<FC>(EMPTY);
+  const [rawData, setData] = useState<FC>(EMPTY);
+  const data = useMemo(() => filterIncidentStatus({
+    ...rawData, features: rawData.features.filter(f => enabled[f.properties.category]),
+  }, filters.status), [rawData, filters.status, enabled]);
   const [iconsReady, setIconsReady] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -211,7 +213,7 @@ export default function MapView() {
     const padX = (view[2] - view[0]) * 0.35, padY = (view[3] - view[1]) * 0.35;
     const box: BBox = [view[0] - padX, view[1] - padY, view[2] + padX, view[3] + padY];
     const id = ++reqId.current;
-    if (cats.length === 0) { setData(EMPTY); fetched.current = null; return; }
+    if (cats.length === 0) { setData(EMPTY); setLoading(false); setError(null); fetched.current = null; return; }
     setLoading(true);
     try {
       const fc = key === "pts"

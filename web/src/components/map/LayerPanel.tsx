@@ -347,6 +347,12 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
 
           {current.id === "view" && (
             <div className="space-y-2">
+              <label className="flex items-center justify-between gap-2 text-sm text-fg">
+                Report status
+                <select aria-label="Report status" value={filters.status} onChange={e => setFilters({ status: e.target.value as "all" | "open" | "closed" })} className="min-h-10 rounded-md border border-edge bg-card px-3 text-fg">
+                  <option value="all">All</option><option value="open">Open</option><option value="closed">Closed</option>
+                </select>
+              </label>
               <div role="radiogroup" aria-label="How to show reports" className="flex flex-col gap-1">
                 {MODES.map((m) => (
                   <button key={m.id} type="button" role="radio" aria-checked={mode === m.id} onClick={() => onModeChange(m.id)}

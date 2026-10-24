@@ -41,6 +41,8 @@ export type ToolFailure = {
 
 /** Map context sent with each chat message (R8.5). */
 export type MapContext = {
+  enabled?: Record<string, boolean>;
+  display?: { viewMode: "points" | "heat" | "both"; causes: boolean; cellMetric: string | null };
   mode?: "assess" | "act";
   selection: { kind: string; id: string } | { kind: "area" } | null;
   view: { lat: number; lon: number; zoom: number } | null;

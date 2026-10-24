@@ -208,3 +208,15 @@ edits, migration execution, shared DB writes, push or deployment were introduced
 - Provisional `get_site` timelines use exact report IDs from `site_detail`; Analytics timelines use `summary.timeline` IDs. Only legacy Analytics rows without that list retain the explicit street-block grouping caveat.
 - Populated v2 sites/recommendations and real action outcomes await the Analytics refresh. Provisional sites work now. Forecast rows exist, but P1 forecast tools are outside this front’s current implementation.
 - `closure_note` is never sent to the model until the name scrub (1.11) lands.
+
+
+## Dock filter integration (October 24)
+
+The dock and chat now share `map-store.enabled`, `filters`, and `display`.
+`map_set_categories` patches individual toggles or replaces incident selection with
+`only` (an empty list hides all incidents). Unknown IDs are rejected. The prompt
+includes the category labels/groups and every request carries the actual dock state.
+`map_set_display` controls heat/points/both and nearby causes; date and status filters
+apply to rendered points and aggregate counts. The legacy family layer tool maps to
+the same toggles and rejects unsupported layers. This supersedes the category/status
+and family-layer integration blockers above; highlighting remains unsupported.

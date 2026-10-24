@@ -11,6 +11,8 @@ type StoreLike = {
   view: { lat: number; lon: number; zoom: number };
   filters: { since: string; until: string; categories: string[]; status: string };
   layers: Record<string, boolean>;
+  enabled?: Record<string, boolean>;
+  display?: { viewMode: "points" | "heat" | "both"; causes: boolean; cellMetric: string | null };
   /** Proposed map-store field (not in the store yet): [minLon, minLat, maxLon, maxLat] set by MapView on moveend. */
   bounds?: BBox | null;
 };
@@ -23,12 +25,16 @@ export function buildMapContext(s: StoreLike): MapContext {
     view: s.view,
     bbox: s.bounds ?? null,
     filters: s.filters,
+    ...(s.enabled ? { enabled: s.enabled } : {}),
+    ...(s.display ? { display: s.display } : {}),
     layers: Object.entries(s.layers).filter(([, on]) => on).map(([id]) => id),
   };
 }
 
 const num = z.number().finite();
 export const mapContextSchema = z.object({
+  enabled: z.record(z.string().max(50), z.boolean()).optional(),
+  display: z.object({ viewMode: z.enum(["points", "heat", "both"]), causes: z.boolean(), cellMetric: z.string().max(60).nullable() }).optional(),
   mode: z.enum(["assess", "act"]).optional(),
   selection: z.union([z.object({ kind: z.string().max(20), id: z.string().max(200) }), z.object({ kind: z.literal("area") }), z.null()]),
   view: z.object({ lat: num, lon: num, zoom: num }).nullable(),

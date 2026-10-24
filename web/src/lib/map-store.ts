@@ -1,5 +1,6 @@
 "use client";
 import { create } from "zustand";
+import categories from "./categories.json";
 import type { Polygon } from "geojson";
 
 // Single source of truth for what the map shows. The UI and the agent's
@@ -18,7 +19,7 @@ export type Selection =
 export type Filters = {
   since: string;          // ISO date
   until: string;          // ISO date
-  categories: string[];   // incident category ids (contracts/categories.json); [] = all in enabled layers
+  categories: string[];   // incident category ids (contracts/categories.json); [] = no incident categories enabled
   status: "all" | "open" | "closed";
 };
 
@@ -34,7 +35,14 @@ export type SiteRow = {
   last_note: string | null; due: boolean;
 };
 
+export type MapDisplay = { viewMode: "points" | "heat" | "both"; causes: boolean; cellMetric: string | null };
+const categoryIds = Object.keys(categories.incident_categories);
+
 type MapState = {
+  enabled: Record<string, boolean>;
+  display: MapDisplay;
+  setEnabled: (patch: Record<string, boolean>) => void;
+  setDisplay: (patch: Partial<MapDisplay>) => void;
   mode: Mode;
   sites: SiteRow[];
   setMode: (m: Mode) => void;
@@ -62,6 +70,13 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 const daysAgo = (n: number) => iso(new Date(today.getTime() - n * 86400000));
 
 export const useMap = create<MapState>((set) => ({
+  enabled: Object.fromEntries(categoryIds.map(id => [id, true])),
+  display: { viewMode: "heat", causes: false, cellMetric: null },
+  setEnabled: (patch) => set(s => {
+    const enabled = { ...s.enabled, ...patch };
+    return { enabled, filters: { ...s.filters, categories: categoryIds.filter(id => enabled[id]) } };
+  }),
+  setDisplay: (patch) => set(s => ({ display: { ...s.display, ...patch } })),
   mode: "act",
   sites: [],
   setMode: (mode) => set({ mode }),
@@ -73,7 +88,7 @@ export const useMap = create<MapState>((set) => ({
     restaurants: false, bigbelly: false, events: false, sites: true, forecast: false,
     heatmap: false, tracts_svi: false, tracts_asthma: false, listings: false, prices: false,
   },
-  filters: { since: daysAgo(90), until: iso(today), categories: [], status: "all" },
+  filters: { since: daysAgo(90), until: iso(today), categories: categoryIds, status: "all" },
   highlight: [],
   selection: null,
   panel: "inspector",
@@ -81,7 +96,10 @@ export const useMap = create<MapState>((set) => ({
   flyTo: (v) => set((s) => ({ flyToTarget: { zoom: s.view.zoom, ...v, nonce: Date.now() } })),
   setView: (view) => set({ view }),
   setLayers: (patch) => set((s) => ({ layers: { ...s.layers, ...patch } })),
-  setFilters: (patch) => set((s) => ({ filters: { ...s.filters, ...patch } })),
+  setFilters: (patch) => set((s) => ({
+    filters: { ...s.filters, ...patch },
+    ...(patch.categories ? { enabled: { ...s.enabled, ...Object.fromEntries(categoryIds.map(id => [id, patch.categories!.includes(id)])) } } : {}),
+  })),
   setHighlight: (highlight) => set({ highlight }),
   select: (selection) => set({ selection, panel: selection ? "inspector" : "inspector" }),
   setPanel: (panel) => set({ panel }),
