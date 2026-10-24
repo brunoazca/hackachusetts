@@ -285,6 +285,24 @@ def _baseline(pts: np.ndarray, others: pd.DataFrame, labels: dict, key: str) -> 
     return {c["kind"]: c["per_report_within_150m"] for c in _near_counts(pts, others, labels, key)}
 
 
+def _locations(recent: pd.DataFrame, two_y: pd.DataFrame) -> tuple[list[dict], dict]:
+    """Clickable places for the card: one per block in the region's recent reports or 2-year histories.
+    The AI links them as [label](L<n>); the front end flies the map to lat/lon."""
+    pool = pd.concat([recent, two_y]).drop_duplicates("id")
+    pool = pool[pool["address_block"].notna()]
+    order = (list(dict.fromkeys(recent["address_block"].dropna()))
+             + [b for b in pool["address_block"].value_counts().index if b not in set(recent["address_block"])])
+    out, of = [], {}
+    for i, blk in enumerate(order[:25], 1):
+        g = pool[pool["address_block"] == blk]
+        lid = f"L{i}"
+        of[blk] = lid
+        out.append({"id": lid, "label": str(blk).split(",")[0].strip(), "block": blk,
+                    "lat": round(float(g["lat"].mean()), 6), "lon": round(float(g["lon"].mean()), 6),
+                    "incident_ids": g.sort_values("opened_at", ascending=False)["id"].head(5).tolist()})
+    return out, of
+
+
 def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
     data_end = rec["opened_at"].max()
     places = pd.DataFrame(conn.execute(
@@ -326,11 +344,14 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
                      _near_counts(pts, sig_k, NEAR_311, "kind", base_311)])
         causes.sort(key=lambda d: -(d.get("times_boston") or 0))
 
+        two_y = mine[mine["opened_at"] > data_end - pd.Timedelta(days=730)]
+        locations, loc_of = _locations(recent.head(MAX_RECORDS), two_y)
         records = []
         for x in recent.head(MAX_RECORDS).itertuples():
             s = rs.get(x.id)
             records.append({
                 "incident_id": x.id, "opened": x.opened_at.date().isoformat(), "block": x.address_block,
+                "location_id": loc_of.get(x.address_block), "lat": round(float(x.lat), 6), "lon": round(float(x.lon), 6),
                 "status": "closed" if pd.notna(x.closed_at) else "open",
                 "city_did": _shown(x.action), "closure_note": _scrub(x.closure_note),
                 "earlier_reports_at_address": int(x.prior_reports), "situation": x.situation,
@@ -342,7 +363,6 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
             })
         # Per-address action ladder in the last 2 years: what was tried, did reports come back.
         hist = []
-        two_y = mine[mine["opened_at"] > data_end - pd.Timedelta(days=730)]
         for blk, g in two_y.groupby("address_block"):
             if len(g) < 2:
                 continue
@@ -351,6 +371,8 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
                          "returns_within_60d": int(g["y"].sum()),
                          "actions_in_order": [_shown(a) for a in g["action"] if a not in ("duplicate", "open")][-8:]})
         hist = sorted(hist, key=lambda h: -h["reports_2y"])[:8]
+        for h in hist:
+            h["location_id"] = loc_of.get(h["block"])
         sits = recent["situation"].value_counts().head(3).index.tolist() or mine["situation"].value_counts().head(2).index.tolist()
         sv = r["severity"]
         p1 = _pct(float(1 - np.prod(1 - w1["p_any"].astype(float)))) if len(w1) else None
@@ -381,6 +403,7 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
                 "drivers": [{"label": k, "contribution": round(v, 2)} for k, v in
                             sorted(drivers.items(), key=lambda kv: -abs(kv[1]))[:5]],
             },
+            "locations": locations,
             "records_last_12_weeks": records,
             "address_histories": hist,
             "possible_causes_within_150m": causes[:10],
@@ -398,11 +421,12 @@ Decide ONE solution for the region and one short line per record.
 
 How to decide:
 - Compare monitoring/inspection with interventions (abatement order, citation, warning, cleanup, rat-resistant barrels, referral) in the statistics for the situations that match this region's records. Prefer what is not yet tried at addresses where the same action was repeated and reports came back.
+- Places: name streets exactly as their "label" in the "locations" list (e.g. "W Fourth St"), so the card can link them; do not name places that are not in that list.
 - Lead with what is specific to THIS region (region.what_is_specific_here: causes well above the Boston level, the named repeat addresses, sewer notes). Avoid generic advice that would fit any region.
 - Tie the action to the strongest nearby cause (e.g. trash 311 or restaurants -> containers/compliance; vacant parcel -> notice to owner, joint visit; sewer in notes -> BWSC referral).
 - Use the forecast: say whether reports are expected to stay high in the next 4 weeks.
 - For severity and forecast numbers, copy the phrases in region.headline_facts word for word (e.g. "3.5 expected reports in the next 4 weeks"); never attach a number to a different meaning.
-- For nearby causes cite per_report_within_150m and times_boston, not the raw count. Call a cause "well above" Boston only when times_boston is 2 or more; below 2 say "near the Boston level".
+- For nearby causes cite per_report_within_150m and times_boston, not the raw count, worded as "<n> <cause> per report within 150 m" (e.g. "17.0 vacant parcels per report within 150 m"); these are counts of places or 311 reports, never "expected reports". Call a cause "well above" Boston only when times_boston is 2 or more; below 2 say "near the Boston level".
 - When the city's last step was an earlier ISD visit, the todo is the next sanitation, exclusion, enforcement or referral step; do not comment on the visit itself.
 - Only propose an intervention that is listed in proposable_actions_with_lower_return_than_monitoring for the matching situation. Never propose an action marked "same or higher than monitoring" for the region's situations; if none is lower, propose inspecting and recording the cause.
 - The statistics are observational: inspectors choose actions by situation, so a lower return rate is not proof the action works. Say "in past cases", never "reduces" or "works". The model's action differences are weak; use them as one input.
@@ -506,6 +530,10 @@ def check(out: dict, inp: dict, input_text: str) -> list[str]:
         errs.append(f"numbers not in the input: {bad[:8]}")
     errs += _worse_than_monitoring(str(out.get("action", "")), inp)
     errs += _too_long(out)
+    ids = {l["id"] for l in inp.get("locations", [])}
+    bad_ids = sorted(set(re.findall(r"\]\((L\d+)\)", text)) - ids)
+    if bad_ids:
+        errs.append(f"unknown location ids {bad_ids}; use only ids from locations")
     want = {r["incident_id"] for r in inp["records_last_12_weeks"]}
     got = {r.get("incident_id") for r in out.get("records", [])}
     if want - got:
@@ -532,6 +560,24 @@ def ask(inp: dict) -> tuple[dict | None, list[str]]:
     return None, errs
 
 
+def link_places(out: dict, locations: list[dict]) -> dict:
+    """Turn every unlinked mention of a location label into [label](id), longest labels first."""
+    labels = {l["label"]: l["id"] for l in locations if l.get("label")}
+    if not labels:
+        return out
+    rx = re.compile(r"(?<!\[)\b(" + "|".join(re.escape(k) for k in sorted(labels, key=len, reverse=True))
+                    + r")\b(?!\]\()")
+    link = lambda t: rx.sub(lambda m: f"[{m.group(1)}]({labels[m.group(1)]})", str(t))
+    return {**out, "action": link(out.get("action", "")), "because": link(out.get("because", "")),
+            "unknowns": [link(u) for u in out.get("unknowns", [])],
+            "records": [{**r, "todo": link(r.get("todo", ""))} for r in out.get("records", [])]}
+
+
+def _link(h: dict, inp: dict) -> str:
+    loc = next((l for l in inp.get("locations", []) if l["id"] == h.get("location_id")), None)
+    return f"[{loc['label']}]({loc['id']})" if loc else str(h["block"])
+
+
 def rules(inp: dict) -> dict:
     """Spec §5.2 fallback, first match wins."""
     recs = inp["records_last_12_weeks"]
@@ -542,7 +588,7 @@ def rules(inp: dict) -> dict:
     if tried:
         h = tried[0]
         out = ("Escalate at the repeat address: an option not tried there yet (citation or abatement order)", "enforcement", 1,
-               f"Monitoring/inspection repeated at {h['block']} and reports came back {h['returns_within_60d']} times.")
+               f"Monitoring/inspection repeated at {_link(h, inp)} and reports came back {h['returns_within_60d']} times.")
     elif "vacant_parcel" in causes and causes["vacant_parcel"]["nearest_m"] <= 40:
         out = ("Joint block visit; notice to the vacant lot's owner or managing agency", "enforcement", 2,
                "Vacant parcel next to the reports.")
@@ -608,20 +654,23 @@ def region_solution(conn: psycopg.Connection, n: int = N_REGIONS, use_ai: bool =
     now = datetime.now(timezone.utc)
     rows = []
     for inp, (out, source, errs) in zip(inputs, results):
+        out = link_places(out, inp.get("locations", []))
         text = json.dumps(inp, default=str, sort_keys=True)
         rows.append((inp["region"]["region_id"], run_id, inp["region"]["rank"], inp["region"]["cell_ids"],
                      out["action"], out["lane"], out["because"], json.dumps(out.get("cites", [])),
                      json.dumps(out.get("records", [])), json.dumps(out.get("unknowns", [])),
                      out.get("rule_id"), source, LLM_MODEL if source == "ai" else None,
-                     hashlib.sha256(text.encode()).hexdigest()[:16], text, json.dumps(errs), CAVEAT, now))
+                     hashlib.sha256(text.encode()).hexdigest()[:16], text, json.dumps(errs), CAVEAT, now,
+                     json.dumps(inp.get("locations", []))))
     write_cell_severity(conn, cells, run_id, now)
     with conn.cursor() as cur:
         cur.execute("delete from region_solutions")
         cur.executemany(
             """
             insert into region_solutions (region_id, forecast_run_id, rank, cell_ids, action, lane, because, cites,
-                records, unknowns, rule_id, source, llm_model, input_hash, input, guard_errors, caveat, computed_at)
-            values (%s,%s,%s,%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s::jsonb,%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s,%s)
+                records, unknowns, rule_id, source, llm_model, input_hash, input, guard_errors, caveat, computed_at,
+                locations)
+            values (%s,%s,%s,%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s::jsonb,%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s,%s,%s::jsonb)
             """, rows)
     return {"forecast_run_id": run_id, "regions": len(rows),
             "sources": pd.Series([s for _, s, _ in results]).value_counts().to_dict(),

@@ -40,6 +40,13 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: agent/prompt.ts, agent/tools/server.ts, agent/__tests__/viewport-context.test.ts
 - Validation: 26 tests passed, TypeScript and scoped ESLint passed.
 - Idea: none
+### 2026-10-24 18:20 — Clickable places in AI region cards: region_solutions.loc...
+- Teammate: Bruno
+- Agent: —
+- Did: Clickable places in AI region cards: region_solutions.locations (block, lat/lon, incident ids), place names auto-linked as [label](L<n>) in code after the AI answers, PlaceText renders them as underlined buttons that fly the map to zoom 17 and select the latest report; record block headers linked too; test added
+- Why: Bruno asked for locations to be underlined and clickable to zoom the map
+- Where: pipeline/rat_audit/model/region_solution.py, supabase/migrations/20261024500007_region_solutions_locations.sql, web/src/components/insights/regions/{PlaceText,RegionSolutionCard,RegionSolutions,parse}.tsx
+- Idea: Haiku ignored the link markup (1/20); deterministic linking of known labels in code made it 20/20
 
 ### 2026-10-24 18:16 — Ground chat questions in the current viewport
 - Teammate: Carol

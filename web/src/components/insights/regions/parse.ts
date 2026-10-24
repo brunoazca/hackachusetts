@@ -7,7 +7,9 @@ const percent = text.regex(/^(?:100|\d{1,2})(?:\.\d+)?%$/).nullable().catch(null
 const banned = /\b(bait\w*|poison\w*|rodenticide\w*|toxicant\w*)/i;
 const safe = (s: string) => banned.test(s) ? "Inspect and record the cause" : s;
 const model = z.object({ best_action: text.transform(safe), return_if_best: percent, return_if_monitoring: percent, confident: z.boolean().catch(false) }).nullable().catch(null);
-const record = z.object({ incident_id: text, opened: text, block: text.nullable().catch(null), status: text, city_did: text.catch("Not recorded"), model });
+const record = z.object({ incident_id: text, opened: text, block: text.nullable().catch(null), location_id: text.nullable().catch(null), status: text, city_did: text.catch("Not recorded"), model });
+const coord = z.number().finite();
+const location = z.object({ id: text, label: text, block: text.nullable().catch(null), lat: coord.min(-90).max(90), lon: coord.min(-180).max(180), incident_ids: strings });
 const cause = z.object({ kind: text, label: text, count, nearest_m: count, source_ids: strings });
 const statistic = z.object({ cases: count, returned_within_60d: percent, by_action: z.array(z.object({
   action: text, cases: count, share_of_cases: percent, returned_within_60d: percent,
@@ -17,7 +19,7 @@ const schema = z.object({
   region_id: text, forecast_run_id: text, rank: z.number().int().positive(), cell_ids: strings,
   action: text, lane: z.enum(["sanitation", "exclusion", "enforcement", "referral", "inspect"]).catch("inspect"), because: text,
   source: z.enum(["ai", "rules"]), llm_model: text.nullable().catch(null), computed_at: text, caveat: text.catch("Model estimate, not a measured effect."),
-  cites: strings, unknowns: strings, records: z.array(z.object({ incident_id: text, todo: text.transform(safe) })).catch([]),
+  cites: strings, unknowns: strings, locations: z.array(location).catch([]), records: z.array(z.object({ incident_id: text, todo: text.transform(safe) })).catch([]),
   input: z.object({
     region: z.object({ region_id: text, neighborhood: text.nullable().catch(null), severity: z.object({ observed_12w: count, expected_4w: count, expected_returns_60d: count, score: count }) }),
     forecast: z.object({ model_run_id: text, next_4_weeks_expected_reports: z.record(text, z.number().finite().nonnegative()).catch({}),
@@ -49,3 +51,4 @@ export function parseRegionSolutions(raw: unknown) {
   }).sort((a,b) => a.rank - b.rank);
 }
 export type RegionSolution = ReturnType<typeof parseRegionSolutions>[number];
+export type RegionLocation = z.infer<typeof location>;
