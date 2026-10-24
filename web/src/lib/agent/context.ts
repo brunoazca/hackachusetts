@@ -30,9 +30,9 @@ export function buildMapContext(s: StoreLike): MapContext {
     siteNeighborhood: s.siteNeighborhood ?? "",
     blockMetric: s.cellMetric ?? null,
     selection: sel == null ? null : sel.kind === "area" ? { kind: "area" } : { kind: sel.kind, id: sel.id ?? "" },
-    view: s.view,
-    bbox: s.bounds ?? null,
-    filters: s.filters,
+    view: { ...s.view },
+    bbox: s.bounds ? [...s.bounds] : null,
+    filters: { ...s.filters, categories: [...s.filters.categories] },
     layers: Object.entries(s.layers).filter(([, on]) => on).map(([id]) => id),
   };
 }

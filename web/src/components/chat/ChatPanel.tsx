@@ -18,6 +18,7 @@ export default function ChatPanel() {
   const [status, setStatus] = useState<Status>(null);
   const [input, setInput] = useState("");
   const [announce, setAnnounce] = useState("");
+  const questionContext = useRef<ReturnType<typeof buildMapContext> | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,14 +30,18 @@ export default function ChatPanel() {
     return () => { live = false; };
   }, []);
 
-  const { messages, sendMessage, addToolOutput, status: chatStatus, error, regenerate, stop, clearError } = useChat({
-    transport: new DefaultChatTransport({
-      api: "/api/chat",
-      // Read the store at send time so automatic follow-ups carry fresh context too.
-      prepareSendMessagesRequest: ({ messages, body }) => ({
-        body: { ...body, messages, context: buildMapContext(useMap.getState()) },
-      }),
+  // The transport constructor only stores this callback; the SDK calls it on send.
+  // eslint-disable-next-line react-hooks/refs
+  const [transport] = useState(() => new DefaultChatTransport({
+    api: "/api/chat",
+    // Invoked by the SDK at request time, never during rendering.
+    prepareSendMessagesRequest: ({ messages, body }) => ({
+      body: { ...body, messages, context: questionContext.current ?? buildMapContext(useMap.getState()) },
     }),
+  }));
+
+  const { messages, sendMessage, addToolOutput, status: chatStatus, error, regenerate, stop, clearError } = useChat({
+    transport,
     sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithToolCalls,
     onToolCall({ toolCall }) {
       if (toolCall.dynamic || !isClientTool(toolCall.toolName)) return;
@@ -62,6 +67,7 @@ export default function ChatPanel() {
   const send = (text: string) => {
     const t = text.trim();
     if (!t || busy || disabled) return;
+    questionContext.current = buildMapContext(useMap.getState());
     void sendMessage({ text: t });
     setInput("");
   };
@@ -89,7 +95,7 @@ export default function ChatPanel() {
 
         {messages.length === 0 && status?.configured && (
           <div className="space-y-2">
-            <p className="text-sm text-fg-2">Ask me to move the map, change any filter, compare reports or explain Insights. I use the current map settings and cite the evidence.</p>
+            <p className="text-sm text-fg-2">Ask me to move the map, change any filter, compare reports or explain Insights. “Here” means the area visible when you send your question. I use its filters and cite the evidence.</p>
             <ul aria-label="Suggested questions" className="space-y-1">
               {STARTERS.map((q) => (
                 <li key={q}>

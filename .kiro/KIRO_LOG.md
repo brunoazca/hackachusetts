@@ -31,6 +31,17 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:16 — Ground chat questions in the current viewport
+- Teammate: Carol
+- Agent:
+- Did: Snapshot map bounds and filters per question; preserve them across tool continuations and retries.
+- Did: Sync bounds during movement and resizing; interpret here as the viewport, not an old selection.
+- Did: Require local report and nearby-evidence lookups; preserve camera for viewport questions.
+- Why: Answer questions like why so many reports here after navigating near Newbury.
+- Where: ChatPanel.tsx, MapView.tsx, agent/context.ts, agent/prompt.ts, viewport-context.test.ts
+- Validation: Six context and chat-route tests passed; TypeScript and scoped ESLint checked.
+- Idea: none
+
 ### 2026-10-24 18:12 — Made AI region cards direct: imperative action ≤18 words,...
 - Teammate: Bruno
 - Agent: —

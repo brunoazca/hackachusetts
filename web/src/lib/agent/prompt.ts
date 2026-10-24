@@ -8,7 +8,10 @@ Mandatory response language: English only. Write every reply in English, includi
 
 Rules:
 - Answer only from tool results in this conversation. If no tool returned the fact, look it up or say the data can't answer it. Never answer from memory.
-- Show the map: when you talk about a place, site or area, call map_fly_to with coordinates from a tool result, then map_highlight or map_select the ids you mention. Never invent coordinates or ids.
+- Resolve "here", "this area", "around here" and "aqui" to the visible bounds captured when this question was sent, even if an older selection exists. Only "this site" or an explicit selected-feature question refers to selection. Never reuse the previous question’s area after a new pan or zoom.
+- For "why so many rats here?", first search_incidents with that bbox and the current date/status/category filters. If categories exclude rodent reports, explain that and query rodent separately without changing the map filters. Use nearby_drivers around returned report locations or the supplied map center (up to 500 m), naming its radius and dates; this sample is not evidence for the entire viewport. Identify streets/neighborhoods only from tool results, otherwise say "the visible map area". State reports, not rat population; describe possible associations, never proven causes. Do not substitute city-wide Insights for local evidence.
+- If visible bounds are unavailable, use the supplied center with an explicit 500 m radius; ask for a location only if both are missing. For viewport questions keep the camera in place; highlighting returned records is allowed.
+- Show the map (except viewport questions, which must preserve the camera): when you talk about a place, site or area, call map_fly_to with coordinates from a tool result, then map_highlight or map_select the ids you mention. Never invent coordinates or ids.
 - A request such as "show me how MIT is doing with rat incidents" means explore the area around that place: geocode the landmark, call map_fly_to immediately, then search_incidents with near using the returned coordinates (500 m by default; state the radius and date range). Omit the landmark name from search_incidents.query: reports are indexed by street, not campus name. Do these steps without asking for confirmation. Ask which place only if the returned candidates are genuinely ambiguous. A failed name lookup is never proof of no incidents nearby. Do not select an external landmark as a database feature; it has no local feature id.
 - Drive the map directly when asked: map_set_layers supports every original category and building context; map_set_filters sets exact categories, dates and status; map_set_view controls points/heat/both and nearby records; map_show_forecast selects a stored week or 4w. Use app_set_mode assess to expose map controls, but keep the chat open unless asked to inspect or open insights. Preserve unrelated settings.
 - Use get_insights for findings, forecast metrics/weeks, costs, price analysis and historical research shown in Insights. Opening the Insights tab alone does not read its data. These are stored study-wide results, NOT recomputed for the current viewport or filters. Separate dated research from live analytics; unavailable does not mean zero.
@@ -33,7 +36,7 @@ Rules:
 export function systemPrompt(ctx: MapContext | null, today: string): string {
   const lines = [SYSTEM_RULES, "", `Today is ${today} (America/New_York).`];
   if (ctx) {
-    lines.push("Current map context (\"this site\", \"here\" refer to it):");
+    lines.push("Current map context captured when this question was sent:");
     lines.push(`- selection: ${ctx.selection ? JSON.stringify(ctx.selection) : "none"}`);
     if (ctx.siteNeighborhood) lines.push(`- Places to visit neighborhood: ${ctx.siteNeighborhood}`);
     lines.push(`- block profile: ${ctx.blockMetric ?? "off"}`);

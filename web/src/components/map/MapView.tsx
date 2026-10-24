@@ -238,16 +238,19 @@ export default function MapView() {
   // Layers or dates changed: the cached box no longer matches, fetch again.
   useEffect(() => { load(); }, [load]);
   const moveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const onMoveEnd = useCallback(() => {
+  const syncViewport = useCallback(() => {
     const map = mapRef.current;
     if (map) {
       const b = map.getBounds(), c = map.getCenter();
       useMap.getState().setView({ lat: c.lat, lon: c.lng, zoom: map.getZoom() });
       useMap.getState().setBounds([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()]);
     }
+  }, []);
+  const onMoveEnd = useCallback(() => {
+    syncViewport();
     if (moveTimer.current) clearTimeout(moveTimer.current);
     moveTimer.current = setTimeout(() => load(), 120);
-  }, [load]);
+  }, [load, syncViewport]);
 
   useEffect(() => () => { if (moveTimer.current) clearTimeout(moveTimer.current); }, []);
 
@@ -359,6 +362,8 @@ export default function MapView() {
         initialViewState={{ latitude: view.lat, longitude: view.lon, zoom: view.zoom }}
         mapStyle={STYLE}
         onLoad={onLoad}
+        onMove={syncViewport}
+        onResize={syncViewport}
         onMoveEnd={onMoveEnd}
         onClick={onClick}
         interactiveLayerIds={interactive}
