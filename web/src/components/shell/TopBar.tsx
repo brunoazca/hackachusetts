@@ -82,7 +82,7 @@ export default function TopBar() {
     <header className="pointer-events-none absolute inset-x-3 top-3 z-40 flex h-11 items-center gap-3">
       <div className="glass pointer-events-auto flex h-11 items-center gap-2.5 rounded-[12px] pl-3 pr-2">
         <LineRat width={36} className="text-fg" />
-        <h1 className="font-display text-[24px] font-medium italic leading-none text-accent">Piper</h1>
+        <h1 className="text-[18px] font-bold leading-none tracking-[-0.02em] text-fg">Piper<span className="text-return">.</span></h1>
         <span className="hidden text-[13px] text-fg-3 xl:inline">Boston · Cambridge · Somerville</span>
         <span className="ml-1 flex h-7 items-center gap-2 rounded-full border border-line bg-card px-2.5 font-mono text-xs text-fg-2">
           <span aria-hidden className="h-1.5 w-1.5 animate-live rounded-full bg-return" />

@@ -3,6 +3,7 @@ import { useMap } from "@/lib/map-store";
 import InspectorPanel from "@/components/inspector/InspectorPanel";
 import InsightsPanel from "@/components/insights/InsightsPanel";
 import ChatPanel from "@/components/chat/ChatPanel";
+import { CollapseButton } from "./Collapse";
 
 const TABS = [
   { id: "inspector", label: "Inspect" },
@@ -10,12 +11,12 @@ const TABS = [
   { id: "chat", label: "Ask" },
 ] as const;
 
-export default function SidePanel() {
+export default function SidePanel({ onCollapse }: { onCollapse?: () => void }) {
   const panel = useMap((s) => s.panel);
   const setPanel = useMap((s) => s.setPanel);
   return (
     <>
-      <div className="px-4 pt-3">
+      <div className="flex items-center justify-between border-b border-line px-3 py-2">
         <div role="tablist" aria-label="Side panel" className="inline-flex h-8 gap-0.5 rounded-md border border-line bg-card p-0.5">
           {TABS.map((t) => (
             <button
@@ -29,6 +30,7 @@ export default function SidePanel() {
             </button>
           ))}
         </div>
+        {onCollapse && <CollapseButton onClick={onCollapse} label="Hide panel (])" dir="right" />}
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto">
         {/* Chat stays mounted so the conversation survives tab switches. */}

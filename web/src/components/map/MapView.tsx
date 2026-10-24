@@ -11,11 +11,46 @@ import ContextLayers from "./ContextLayers";
 import LayerPanel, { activeCategories, HEAT_RAMPS, SIMPLE_LAYERS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
 import { addCategoryIcons, iconId } from "./icons";
+import { useTheme } from "@/lib/theme-store";
+import { basemap, BASEMAP_STYLE_URL, themes, type ThemeName } from "@/lib/design-tokens";
 
 // Draft map. Each category is its own clustered source, so a cluster only ever counts one kind
 // of signal and wears that category's color; individual reports are icons. Owner: map track.
 
-const STYLE = "https://tiles.openfreemap.org/styles/positron";
+// Piper basemap: OpenFreeMap "dark", recolored per theme (Night / Bone) so roads, water and parks
+// read clearly and the data keeps its color. Values: web/src/lib/design-tokens.ts (basemap).
+const STYLE = BASEMAP_STYLE_URL;
+
+type MlMapLike = NonNullable<ReturnType<MapRef["getMap"]>>;
+function recolorBasemap(map: MlMapLike, theme: ThemeName) {
+  const c = basemap[theme];
+  const set = (id: string, prop: string, v: unknown) => { try { (map.setPaintProperty as (a: string, b: string, c: unknown) => void).call(map, id, prop, v); } catch { /* layer lacks prop */ } };
+  for (const l of map.getStyle()?.layers ?? []) {
+    // Only basemap layers; our data layers sit on GeoJSON sources.
+    const src = "source" in l && typeof l.source === "string" ? map.getSource(l.source) : undefined;
+    if (src?.type === "geojson") continue;
+    const id = l.id.toLowerCase();
+    if (l.type === "background") set(l.id, "background-color", c.background);
+    else if (l.type === "fill") {
+      if (/water|ocean|lake|river/.test(id)) set(l.id, "fill-color", c.water);
+      else if (/building/.test(id)) { set(l.id, "fill-color", c.building); set(l.id, "fill-outline-color", c.buildingOutline); }
+      else if (/park|wood|grass|landcover|landuse|forest|cemetery|pitch|golf/.test(id)) set(l.id, "fill-color", c.park);
+      else set(l.id, "fill-color", c.background);
+    } else if (l.type === "fill-extrusion") set(l.id, "fill-extrusion-color", c.building);
+    else if (l.type === "line") {
+      if (/water|river|stream|canal/.test(id)) set(l.id, "line-color", c.water);
+      else if (/boundary|admin/.test(id)) set(l.id, "line-color", c.boundary);
+      else if (/rail|transit/.test(id)) set(l.id, "line-color", c.rail);
+      else if (/motorway|trunk|primary|major/.test(id)) set(l.id, "line-color", c.roadMajor);
+      else set(l.id, "line-color", c.roadMinor);
+    } else if (l.type === "symbol") {
+      if (/poi/.test(id)) { try { map.setLayoutProperty(l.id, "visibility", "none"); } catch { /* */ } continue; }
+      set(l.id, "text-color", /road|street|highway|transportation/.test(id) ? c.labelStreet : c.labelPlace);
+      set(l.id, "text-halo-color", c.labelHalo);
+      set(l.id, "text-halo-width", 1.2);
+    }
+  }
+}
 // MapLibre 6's ESM worker can't be resolved by the Next bundler; serve it from /public (postinstall copies it).
 if (typeof window !== "undefined") setWorkerUrl("/maplibre-gl-worker.js");
 
@@ -60,6 +95,8 @@ export default function MapView() {
   const reqId = useRef(0);
 
   const appMode = useMap((s) => s.mode);
+  const theme = useTheme((s) => s.theme);
+  const T = themes[theme];
   const explore = useMap((s) => s.depth) === "explore";
   const sites = useMap((s) => s.sites);
   // Simple depth: only the outcome + tested-predictive layers, points only (heatmap is an Explore tool).
@@ -125,7 +162,7 @@ export default function MapView() {
   const onLoad = useCallback(async () => {
     const map = mapRef.current?.getMap();
     if (process.env.NODE_ENV !== "production" && map) (window as unknown as { __ratmap: unknown }).__ratmap = map;
-    if (map) { await addCategoryIcons(map); setIconsReady(true); }
+    if (map) { recolorBasemap(map, useTheme.getState().theme); await addCategoryIcons(map); setIconsReady(true); }
     load();
   }, [load]);
 
@@ -133,9 +170,16 @@ export default function MapView() {
     // In Act the queue covers the left of the map; offset so the target lands in the visible part.
     if (flyToTarget) mapRef.current?.flyTo({
       center: [flyToTarget.lon, flyToTarget.lat], zoom: flyToTarget.zoom, duration: 1200,
-      padding: { left: appMode === "act" ? 400 : 0, top: 0, right: 0, bottom: 0 },
+      // Land between the floating panels.
+      padding: { left: appMode === "act" ? 420 : 300, top: 80, right: 424, bottom: 24 },
     });
   }, [flyToTarget, appMode]);
+
+  // Theme switch: recolor the basemap in place.
+  useEffect(() => {
+    const map = mapRef.current?.getMap();
+    if (map && iconsReady) recolorBasemap(map, theme);
+  }, [theme, iconsReady]);
 
   const interactive = useMemo(
     () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : [])],
@@ -198,8 +242,8 @@ export default function MapView() {
                     "circle-color": color,
                     "circle-opacity": 0.92,
                     "circle-radius": ["step", ["get", "point_count"], 13, 25, 17, 100, 22, 500, 28],
-                    "circle-stroke-color": "#ffffff",
-                    "circle-stroke-width": 2,
+                    "circle-stroke-color": T.bg,
+                    "circle-stroke-width": 1.5,
                   }}
                 />
                 <Layer
@@ -219,7 +263,7 @@ export default function MapView() {
                   id={`${c}-selected`}
                   type="circle"
                   filter={["==", ["get", "id"], selectedId]}
-                  paint={{ "circle-radius": 19, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": "#111827", "circle-stroke-width": 3 }}
+                  paint={{ "circle-radius": 19, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": T.fg, "circle-stroke-width": 2.5 }}
                 />
                 <Layer
                   id={`${c}-points`}
@@ -244,9 +288,9 @@ export default function MapView() {
               type="circle"
               paint={{
                 "circle-radius": ["interpolate", ["linear"], ["get", "returns"], 0, 9, 10, 15, 20, 20],
-                "circle-color": ["case", ["get", "due"], "#b91c1c", "#1f2937"],
-                "circle-opacity": 0.9,
-                "circle-stroke-color": ["case", ["==", ["get", "id"], selectedId], "#f59e0b", "#ffffff"],
+                "circle-color": ["case", ["get", "due"], T.returned, T.fg3],
+                "circle-opacity": 0.95,
+                "circle-stroke-color": ["case", ["==", ["get", "id"], selectedId], T.fg, T.bg],
                 "circle-stroke-width": ["case", ["==", ["get", "id"], selectedId], 4, 2],
               }}
             />
@@ -254,7 +298,7 @@ export default function MapView() {
               id="sites-rank"
               type="symbol"
               layout={{ "text-field": ["to-string", ["get", "rank"]], "text-size": 12, "text-font": ["Noto Sans Bold"], "text-allow-overlap": true }}
-              paint={{ "text-color": "#ffffff" }}
+              paint={{ "text-color": T.bg }}
             />
           </Source>
         )}

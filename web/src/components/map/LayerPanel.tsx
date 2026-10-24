@@ -5,6 +5,8 @@ import { markerDataUrl } from "./icons";
 import { STRENGTH_STYLE, testedFor } from "./tested";
 import { ERA_STOPS, HOUSING_RAMP } from "./ContextLayers";
 import type { CoverageRow } from "@/lib/queries";
+import { useState } from "react";
+import { CollapseButton, CollapsedTab } from "@/components/shell/Collapse";
 
 // Floating layer + date controls for the draft map.
 
@@ -87,12 +89,15 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
   const explore = useMap((s) => s.depth) === "explore";
+  const [open, setOpen] = useState(true);
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
 
+  const on = Object.values(enabled).filter(Boolean).length;
+  if (!open) return <CollapsedTab side="left" label="Layers" meta={`${on} on · ${count.toLocaleString()}`} onOpen={() => setOpen(true)} />;
   return (
-    <div className="absolute left-3 top-3 max-h-[calc(100%-1.5rem)] w-72 overflow-y-auto rounded-lg border border-neutral-200 bg-white/95 p-3 text-sm shadow-lg backdrop-blur">
+    <div className="glass absolute left-3 top-[68px] z-20 max-h-[calc(100%-80px)] w-72 overflow-y-auto rounded-lg p-3 text-sm">
       <div className="mb-2 flex items-center justify-between">
-        <h2 className="font-semibold">Layers</h2>
+        <h2 className="flex items-center gap-1 font-semibold"><CollapseButton onClick={() => setOpen(false)} label="Hide layers" dir="left" />Layers</h2>
         <span className="text-xs text-neutral-700" aria-live="polite">
           {loading ? "Loading…" : `${count.toLocaleString()} in view`}
         </span>

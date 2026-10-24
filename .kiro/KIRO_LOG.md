@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:05 — Design v2 'Transit' on feat/piper-ui (rebased on latest m...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Design v2 'Transit' on feat/piper-ui (rebased on latest main): researched AI-design tells (cream+serif+muted = 2026 tell), switched to MBTA-derived colors, dropped Bodoni, neutral surfaces, small radii, compact site panel (answer first, dot timeline, top 5, last 5, show all), collapsible Layers/Site queue/right panel, Tailwind palette mapped to Piper tokens so team components theme
+- Why: Guilherme found v1 ugly, inefficient, too AI-ish and short on color; wanted it on top of the current app
+- Where: web/src/**, docs/design/research/less-ai-ish.md, docs/design/README.md, docs/design/tokens/tokens.json
+- Idea: Map team palette (neutral/red/amber/emerald) to tokens instead of rewriting every component
+
 ### 2026-10-24 14:51 — Cambridge + Somerville evidence loaded (Cambridge 2z9k-mv...
 - Teammate: Bruno
 - Agent: —

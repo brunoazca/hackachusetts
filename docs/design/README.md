@@ -1,4 +1,4 @@
-# Piper design standards (v1.2.0)
+# Piper design standards (v2.0.0)
 
 How Piper looks, moves, reads and behaves. Brand and naming:
 [`docs/rat-audit/brand.md`](../rat-audit/brand.md). See it applied:
@@ -88,6 +88,13 @@ Accessibility → truthful data → equity → clarity → brand flourish. A flo
 - [ ] `python3 scripts/check-design-tokens.py` prints `tokens OK`.
 
 ## Changelog
+
+- **2.0.0 — Oct 24, 2026. "Transit."** Research in [research/less-ai-ish.md](research/less-ai-ish.md):
+  v1 matched the 2026 AI tell (cream + editorial serif + muted accent). Now: MBTA-derived
+  color (red / orange / green / blue), no Bodoni (Atkinson bold headlines), neutral
+  surfaces, ink buttons, 2–8 px radii, compact site panel, collapsible panels, glass kept.
+  Tailwind's stock scales map to Piper tokens so all components theme. Some foundation
+  pages below still describe v1 visuals; tokens.json and the app are authoritative.
 
 - **1.2.0 — Oct 24, 2026.** Frosted glass is back as the default panel over the map
   (Guilherme's call): `glass` = `panel` + blur 20 + saturate 1.15 + hairline + small

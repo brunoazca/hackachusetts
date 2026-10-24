@@ -26,6 +26,7 @@
   --p-return: #FF5A4E;
   --p-forecast: #6FA0FF;
   --p-held: #3DBE7A;
+  --p-warn: #FFA23A;
   --p-seal: #7A1E2C;
   --p-danger: #FF7A6B;
   --p-scrim: rgb(17 19 21 / 0.48);
@@ -55,6 +56,7 @@
   --p-return: #C8241A;
   --p-forecast: #003DA5;
   --p-held: #00733A;
+  --p-warn: #A95A00;
   --p-seal: #7A1E2C;
   --p-danger: #B3261E;
   --p-scrim: rgb(17 19 21 / 0.24);
@@ -83,6 +85,7 @@
     --p-return: #C8241A;
     --p-forecast: #003DA5;
     --p-held: #00733A;
+  --p-warn: #A95A00;
     --p-danger: #B3261E;
     --p-scrim: rgb(17 19 21 / 0.24);
     --p-water: #C9DDF0;
@@ -125,7 +128,8 @@
   --color-water: var(--p-water);
 
   /* fonts (variables set by next/font in layout.tsx) */
-  --font-display: var(--font-bodoni), "Didot", "Bodoni 72", Georgia, serif;
+  /* v2: no editorial serif (a 2026 "AI tasteful default" tell). Headlines are Atkinson bold. */
+  --font-display: var(--font-atkinson), system-ui, sans-serif;
   --font-sans: var(--font-atkinson), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-atkinson-mono), ui-monospace, "SF Mono", monospace;
 
@@ -157,11 +161,40 @@
   --text-data-lg--letter-spacing: -0.01em;
 
   /* radius -> rounded-xs ... rounded-xl */
-  --radius-xs: 6px;
-  --radius-sm: 8px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+
+  /* Map Tailwind's stock palette onto Piper tokens, so every component (ours and the team's,
+     written with the neutral, red, amber and emerald scales) follows Night/Bone automatically. */
+  --color-white: var(--p-panel-solid);
+  --color-black: var(--p-fg);
+  --color-neutral-50: var(--p-card);
+  --color-neutral-100: var(--p-card-hover);
+  --color-neutral-200: var(--p-line);
+  --color-neutral-300: var(--p-edge);
+  --color-neutral-400: var(--p-fg-3);
+  --color-neutral-500: var(--p-fg-3);
+  --color-neutral-600: var(--p-fg-3);
+  --color-neutral-700: var(--p-fg-2);
+  --color-neutral-800: var(--p-fg);
+  --color-neutral-900: var(--p-fg);
+  --color-neutral-950: var(--p-fg);
+  --color-red-50: color-mix(in srgb, var(--p-return) 10%, var(--p-card));
+  --color-red-100: color-mix(in srgb, var(--p-return) 16%, var(--p-card));
+  --color-red-700: var(--p-return);
+  --color-red-800: var(--p-return);
+  --color-red-900: var(--p-return);
+  --color-red-950: var(--p-fg);
+  --color-amber-50: color-mix(in srgb, var(--p-warn) 12%, var(--p-card));
+  --color-amber-800: var(--p-warn);
+  --color-amber-950: var(--p-fg);
+  --color-emerald-50: color-mix(in srgb, var(--p-held) 12%, var(--p-card));
+  --color-emerald-500: var(--p-held);
+  --color-emerald-800: var(--p-held);
+  --color-warn: var(--p-warn);
 
   /* elevation */
   --shadow-panel: 0 1px 2px rgb(var(--p-shadow-rgb) / calc(0.25 * var(--p-shadow-a)));
@@ -238,7 +271,7 @@
   }
   /* a themed subtree (work order) must set its own color, or it inherits the parent theme's computed text color */
   [data-theme], .theme-bone { color: var(--p-fg); }
-  .font-display { font-optical-sizing: auto; font-weight: 500; }
+  .font-display { font-weight: 700; letter-spacing: -0.02em; }
   .font-mono, [data-numeric] { font-variant-numeric: tabular-nums; }
   :focus-visible {
     outline: 2px solid var(--p-accent);

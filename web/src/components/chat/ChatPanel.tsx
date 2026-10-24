@@ -11,7 +11,7 @@ export default function ChatPanel() {
     <div className="flex h-full flex-col gap-4 px-5 pb-5 pt-4">
       <div>
         <span className="eyebrow">Ask Piper</span>
-        <h2 className="mt-1 font-display text-[28px] font-medium leading-8 tracking-[-0.01em] text-fg">Answers from the data, with sources.</h2>
+        <h2 className="mt-1 text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">Answers from the data, with sources.</h2>
       </div>
       <div className="flex items-center gap-3 rounded-lg border border-line bg-card p-4 text-fg-3">
         <LineRat width={36} />

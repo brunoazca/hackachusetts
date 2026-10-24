@@ -28,7 +28,7 @@ export default function InsightsPanel() {
     <div className="space-y-3 px-5 pb-5 pt-4">
       <article className="space-y-3 rounded-lg border border-line bg-card p-5">
         <span className="eyebrow">Finding 01 · What worked</span>
-        <h2 className="font-display text-[28px] font-medium leading-8 tracking-[-0.01em] text-fg">Monitoring changes nothing. Violations do.</h2>
+        <h2 className="text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">Monitoring changes nothing. Violations do.</h2>
         <p className="text-[13px] leading-[18px] text-fg-2">Share of addresses with a new report within 60 days, before and after each closure type (2025).</p>
         <div className="flex gap-4 pt-1" role="img" aria-label="Monitoring: 14.1% before, 14.2% after. Violation: 15.3% before, 12.2% after.">
           <Bar label="monitoring" before={14.1} after={14.2} />
@@ -42,7 +42,7 @@ export default function InsightsPanel() {
       </article>
       <article className="space-y-2 rounded-lg border border-line bg-card p-5">
         <span className="eyebrow">Finding · Weather</span>
-        <h2 className="font-display text-[28px] font-medium leading-8 tracking-[-0.01em] text-fg">Rain: no effect.</h2>
+        <h2 className="text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">Rain: no effect.</h2>
         <p className="text-xs text-fg-3">Null results get the same card.</p>
       </article>
     </div>
