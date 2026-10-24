@@ -21,14 +21,14 @@ export function CollapseButton({ onClick, label, dir }: { onClick: () => void; l
 }
 
 /** The tab a collapsed panel leaves behind. */
-export function CollapsedTab({ side, label, meta, onOpen, top = 68 }: { side: "left" | "right"; label: string; meta?: ReactNode; onOpen: () => void; top?: number }) {
+export function CollapsedTab({ side, label, meta, onOpen, top }: { side: "left" | "right"; label: string; meta?: ReactNode; onOpen: () => void; top?: number }) {
   return (
     <button
       type="button"
       onClick={onOpen}
       aria-expanded={false}
-      style={{ top }}
-      className={`glass absolute z-30 flex h-10 items-center gap-2 rounded-lg px-3 text-[13px] font-semibold text-fg transition-colors duration-150 hover:bg-card-hover ${side === "left" ? "left-3" : "right-3"}`}
+      style={{ top: top ?? "var(--shell-top, 68px)" }}
+      className={`map-secondary-panel glass absolute z-30 flex h-10 items-center gap-2 rounded-lg px-3 text-[13px] font-semibold text-fg transition-colors duration-150 hover:bg-card-hover ${side === "left" ? "left-3" : "right-3"}`}
     >
       {side === "right" && (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden><path d="m15 18-6-6 6-6" /></svg>

@@ -22,3 +22,15 @@ test("new ranking replaces older focus and empty ranking clears it", () => {
   assert.deepEqual(rankingFocusFallback([{ type: "tool-map_focus_regions", output: { ok: true } }, ranking]), regions);
   assert.deepEqual(rankingFocusFallback([ranking, { type: "tool-rank_regions", output: { ok: true, data: { regions: [] } } }]), []);
 });
+
+test("new Insight ranking keeps complete hotspot geometry and respects explicit card navigation", () => {
+  const current = { type: "tool-get_ranking", output: { ok: true, data: { entries: [
+    { cell_id: "hotspot", position: 8, cell_ids: ["a", "b"] },
+    { cell_id: "block", position: 9, cell_ids: ["block"] },
+  ] } } };
+  assert.deepEqual(rankingFocusFallback([current, fly]), [
+    { region_id: "hotspot", rank: 8, cell_ids: ["a", "b"] },
+    { region_id: "block", rank: 9, cell_ids: ["block"] },
+  ]);
+  assert.equal(rankingFocusFallback([current, { type: "tool-open_insight", output: { ok: true } }]), null);
+});

@@ -4,6 +4,7 @@ import type {
   AgentData,
   ActionOutcomeRow,
   IncidentRow,
+  InsightRpc,
   PlaceRow,
   SiteRow,
 } from "./types";
@@ -12,9 +13,10 @@ import type {
 // (with fixtures that live under __tests__) — never wired into the route.
 
 export type MemoryTables = {
-  insights?: unknown;
   regions?: unknown;
   regionLocations?: Record<string, unknown>;
+  insights?: unknown;
+  insightRpc?: (fn: InsightRpc, args: Record<string, unknown>) => unknown;
   incidents?: IncidentRow[];
   places?: PlaceRow[];
   sites?: SiteRow[];
@@ -33,6 +35,7 @@ export function createMemoryData(t: MemoryTables): AgentData {
   return {
     async regionInsights() { return t.regions ?? { regions: [] }; },
     async regionLocation(id) { return t.regionLocations?.[id] ?? null; },
+    async insightRpc(fn, args) { return t.insightRpc?.(fn, args) ?? null; },
     async insightsSummary() { return t.insights ?? { correlations: [], price_impact: [], forecast: null }; },
     async incidents(q) {
       const rows = incidents

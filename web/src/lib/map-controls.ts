@@ -2,7 +2,7 @@ import categories from "./categories.json";
 
 export type CategoryId = keyof typeof categories.incident_categories;
 export const CATEGORY_IDS = Object.keys(categories.incident_categories) as CategoryId[];
-export const CONTEXT_LAYER_IDS = ["ctx_housing", "ctx_buildings", "sites", "forecast"] as const;
+export const CONTEXT_LAYER_IDS = ["ctx_housing", "ctx_buildings", "sites", "forecast", "priority"] as const;
 export type LayerId = CategoryId | (typeof CONTEXT_LAYER_IDS)[number];
 export type ViewMode = "points" | "heat" | "both";
 export type Bounds = [number, number, number, number];

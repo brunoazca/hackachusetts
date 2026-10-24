@@ -158,8 +158,9 @@ segs.append(('S02', segment('S02', d, last, 'png', overlays=[(CARDS/'wm_tag.png'
 
 # S03/S04: real app, Act mode context (DPR2 still); cursor appears at rest in S04
 ctx_png = RAW / 'app/act_context.png'; FULL = [0, 0, 1920, 1080]
-t0, t1, d = T('S03'); segs.append(('S03', segment('S03', d + 0.4, ctx_png, 'png', dpr=2)))
-t0, t1, d = T('S04'); segs.append(('S04', segment('S04', d, ctx_png, 'png', dpr=2, cursor=[(0.3, 0.31, (1100, 600), (1100, 600))])))
+ctx2_png = RAW / 'app2/places_context.png'   # redesigned Piper deployment (captured after the first render started)
+t0, t1, d = T('S03'); segs.append(('S03', segment('S03', d + 0.4, ctx2_png, 'png', dpr=2)))
+t0, t1, d = T('S04'); segs.append(('S04', segment('S04', d, ctx2_png, 'png', dpr=2, cursor=[(0.3, 0.31, (1100, 600), (1100, 600))])))
 # S05: news wall slate (screenshots not available in the repo)
 t0, t1, d = T('S05'); segs.append(('S05', segment('S05', d, CARDS/'S05_newswall_slate.png', 'png')))
 # S06: paradox slice (stops at 7.8 s)

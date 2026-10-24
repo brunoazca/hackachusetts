@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8"><title>News wall</title><style>
+html,body{margin:0;width:1920px;height:1080px;background:#0F0D0C;overflow:hidden}
+.g{position:absolute;left:40px;top:40px;width:1840px;display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+.c{opacity:0;transform:translateY(14px);animation:in .45s cubic-bezier(.22,1,.36,1) forwards;border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.c img{display:block;width:910px;height:184px;object-fit:cover;object-position:left top}
+@keyframes in{to{opacity:1;transform:none}}
+</style></head><body><div class="g" id="g"><div class="c" style="animation-delay:0.15s"><img src="news/00.png"></div><div class="c" style="animation-delay:0.29s"><img src="news/01.png"></div><div class="c" style="animation-delay:0.43s"><img src="news/02.png"></div><div class="c" style="animation-delay:0.57s"><img src="news/03.png"></div><div class="c" style="animation-delay:0.71s"><img src="news/04.png"></div><div class="c" style="animation-delay:0.85s"><img src="news/05.png"></div><div class="c" style="animation-delay:0.99s"><img src="news/06.png"></div><div class="c" style="animation-delay:1.13s"><img src="news/07.png"></div><div class="c" style="animation-delay:1.27s"><img src="news/08.png"></div><div class="c" style="animation-delay:1.41s"><img src="news/09.png"></div></div>
+<script>function replay(){const g=document.getElementById('g');const h=g.innerHTML;g.innerHTML='';void g.offsetWidth;g.innerHTML=h;}
+addEventListener('keydown',e=>{if(e.code==='Space'||e.key==='r'){e.preventDefault();replay();}});addEventListener('click',replay);</script></body></html>

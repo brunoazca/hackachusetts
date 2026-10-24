@@ -6,7 +6,7 @@ import { CELL_METRICS } from "../cell-metrics";
 // server-side validation. Bounds are the actual viewport, never the padded fetch box.
 
 type StoreLike = {
-  mode?: "assess" | "act";
+  mode?: "assess" | "act" | "inspect";
   selection: { kind: string; id?: string } | null;
   view: { lat: number; lon: number; zoom: number };
   filters: { since: string; until: string; categories: string[]; status: string };
@@ -41,13 +41,13 @@ export function buildMapContext(s: StoreLike): MapContext {
 
 const num = z.number().finite();
 export const mapContextSchema = z.object({
-  mode: z.enum(["assess", "act"]).optional(),
+  mode: z.enum(["assess", "act", "inspect"]).optional(),
   viewMode: z.enum(["points", "heat", "both"]).optional(),
   nearbyRecords: z.boolean().optional(),
   forecastPeriod: z.string().max(10).optional(),
   siteNeighborhood: z.string().max(100).optional(),
   blockMetric: z.enum(CELL_METRICS.map(metric => metric.key)).nullable().optional(),
-  focusedRegions: z.array(z.object({ id: z.string().max(200), rank: z.number().int().positive(), position: z.number().int().positive().optional() })).max(20).optional(),
+  focusedRegions: z.array(z.object({ id: z.string().max(200), rank: z.number().int().positive(), position: z.number().int().positive().optional() })).max(30).optional(),
   selection: z.union([z.object({ kind: z.string().max(20), id: z.string().max(200) }), z.object({ kind: z.literal("area") }), z.null()]),
   view: z.object({ lat: num, lon: num, zoom: num }).nullable(),
   bbox: z.tuple([num, num, num, num]).nullable(),

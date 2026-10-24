@@ -5,7 +5,6 @@ import Sources from "../Sources";
 import type { SourceRow } from "../types";
 import type { RegionLocation, RegionSolution } from "./parse";
 import PlaceText from "./PlaceText";
-import RegionProfile from "./RegionProfile";
 
 const actionLabels = { sanitation: "Clean up & contain waste", exclusion: "Seal entry points", enforcement: "Follow up with property owners", referral: "Coordinate with city agencies", inspect: "Inspect & identify causes" };
 
@@ -21,6 +20,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(false);
   const input = r.input;
+  const sev = input.region.severity;
   const weeks = Object.entries(input.forecast.next_4_weeks_expected_reports).sort(([a],[b]) => a.localeCompare(b));
   async function show() {
     setBusy(true); setError(false);
@@ -33,7 +33,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card-hover text-sm font-semibold tabular-nums text-fg" aria-label={`Priority ${r.rank}`}>{r.rank}</span>
       <div className="min-w-0">
         <h3 id={heading} className="text-lg font-semibold leading-tight text-fg">{input.region.neighborhood ?? "Boston"}</h3>
-        <p className="mt-0.5 text-xs text-fg-3">{r.cell_ids.length} blocks · priority region</p>
+        <p className="mt-0.5 text-xs text-fg-3">{r.cell_ids.length} blocks · priority region{!!sev.residents && <> · <span title="Census tract population (ACS) split by area across these blocks">~{fmtNumber(sev.residents)} residents</span></>}</p>
       </div>
     </header>
     <dl className="my-4 grid grid-cols-2 gap-4 border-y border-line py-3">
@@ -60,7 +60,7 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
         <div className="space-y-2"><h4 className="font-medium text-fg">Recommended action</h4><p>{place(r.action)}</p></div>
         <div className="space-y-2"><h4 className="font-medium text-fg">Why this region</h4><p>{place(r.because)}</p></div>
         {r.unknowns.length > 0 && <div><h4 className="mb-2 font-medium text-fg">Check on site</h4><ul className="list-disc space-y-2 pl-4">{r.unknowns.map((u,i) => <li key={i}>{place(u)}</li>)}</ul></div>}
-        {input.region.severity.expected_returns_60d !== null && <p className="text-xs">Expected returns within 60 days: {number(input.region.severity.expected_returns_60d)} · severity total: {number(input.region.severity.score)}. Model estimate from active addresses.</p>}
+        {input.region.severity.expected_returns_60d !== null && <p className="text-xs">Expected returns within 60 days: {number(input.region.severity.expected_returns_60d)} · severity total: {number(sev.score)}{sev.people_weight !== null && sev.weighted_score !== null && <> × {fmtNumber(sev.people_weight)} residents weight = {number(sev.weighted_score)}, the ranking score</>}. Model estimate from active addresses; residents weight = 1 + log10(1 + residents / 1,000).</p>}
         <p className="text-xs text-fg-3">{r.caveat} Action comparisons are observational and subject to selection bias; a lower predicted return rate is not proof an intervention works.</p>
     <details><summary className="min-h-10 cursor-pointer py-2 text-sm font-medium text-fg">Forecast & possible causes</summary>
       <ul className="space-y-1">{weeks.map(([week,expected]) => <li key={week}>{fmtDate(week)}: {fmtNumber(expected)} expected reports</li>)}</ul>
@@ -68,7 +68,6 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
       <p className="mt-3 font-semibold text-fg">Model drivers</p>{input.forecast.drivers.length ? <ul>{input.forecast.drivers.map((d,i) => <li key={i}>{d.label}: {d.contribution > 0 ? "+" : ""}{fmtNumber(d.contribution)} expected reports</li>)}</ul> : <p>Drivers not available.</p>}
       <p className="mt-3 font-semibold text-fg">Nearby evidence</p>{input.possible_causes_within_150m.length ? <ul className="space-y-2">{input.possible_causes_within_150m.map((c,i) => <li key={i}>{c.label}: {number(c.count)} · nearest {number(c.nearest_m)} m<Sources ids={c.source_ids} details={sources}/></li>)}</ul> : <p>Nearby causes not available.</p>}
     </details>
-    <RegionProfile cellIds={r.cell_ids} />
     <details><summary className="min-h-10 cursor-pointer py-2 text-sm font-medium text-fg">Records · what to do next</summary>
       {!r.records.length && <p>Record-level recommendations pending.</p>}
       <ul className="space-y-3">{r.records.slice(0, all ? undefined : 10).map(record => <li key={record.incident_id} className="border-l-2 border-edge pl-3"><p className="font-semibold text-fg">{record.location_id && locOf.get(record.location_id) ? <PlaceText text={`[${record.block ?? "Block"}](${record.location_id})`} locations={r.locations} onLocate={onLocate} /> : record.block ?? "Block unavailable"} · {record.status}</p><p>{fmtDate(record.opened)} · City action: {record.city_did}</p><p className="mt-1">Next: {place(record.todo)}</p>{record.model?.confident && <p className="text-xs text-fg-3">Per-record model ({record.model.best_action}): {record.model.return_if_best ?? "unavailable"} predicted return within 60 days, versus {record.model.return_if_monitoring ?? "unavailable"} under monitoring. This compares the record model’s best action, which may differ from the region proposal.</p>}<p className="break-all text-xs text-fg-3">Record: {record.incident_id}</p></li>)}</ul>
@@ -83,3 +82,4 @@ export default function RegionSolutionCard({ solution: r, sources, onShowMap, on
     </details>
   </section>;
 }
+

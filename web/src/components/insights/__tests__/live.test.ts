@@ -92,9 +92,9 @@ for (const model of ["cell_week_poisson_gbm", "cell_week_baseline_mean4"]) {
     const html = renderToStaticMarkup(createElement(ForecastSummary, { forecast: f }));
     assert.ok(html.includes(`>${fmtNumber(m.mae as number, 3)}<`));
     assert.ok(html.includes(`>${fmtPct(m.top10pct_capture as number)}<`));
-    if (baseline) assert.match(html, /Baseline only/);
+    if (baseline) assert.match(html, /Simple guess only/);
     else if (typeof m.baseline_mae === "number" && (m.mae as number) > m.baseline_mae) {
-      assert.match(html, /Worse than baseline/);
+      assert.match(html, /Worse than the simple guess/);
     }
     t.diagnostic(`${run.id}: MAE=${m.mae}, top10pct_capture=${m.top10pct_capture}; raw stored rows, no fixtures.`);
   });

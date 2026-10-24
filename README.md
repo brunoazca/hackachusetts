@@ -6,6 +6,8 @@ Piper helps Boston rodent inspectors review places with repeated 311 reports, re
 
 The app opens in **Places to visit**. Choose an address to see its report timeline, closure notes, reports after earlier closures, and nearby records. Switch to **Map** to explore available Boston, Cambridge, and Somerville layers and the four-week Boston report forecast. The Insights panel presents a dated research snapshot, not a live treatment-effect estimate.
 
+Place summaries count distinct **report days**, **closure days**, and **return days**; the response history lists individual records. Open **Inspection brief** from a place to print/save a PDF or download a standalone HTML snapshot with the full history, source links, and field questions. See [brief setup and verification](docs/rat-audit/inspection-brief.md), including the database migration needed for nearby-source citations.
+
 “Review suggested” flags a recently closed place with a prior report after closure. It is a heuristic for human review, not an inspection deadline or a prediction that rats will return. The available records do not establish which treatment works better or whether a nearby parcel caused the reports.
 
 The Ask assistant, recommendations, approval/work-order flow, and trial designer are unfinished. No civic submission is sent by the current interface. The strongest completed workflow is **review a place and its evidence**; the prototype does not yet finish a resident service request end to end.
@@ -32,6 +34,7 @@ The Python ingestion/model worker has separate setup and credentials in [pipelin
 
 ```bash
 cd web
+pnpm test
 pnpm lint
 pnpm exec tsc --noEmit
 pnpm build

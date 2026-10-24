@@ -2,21 +2,22 @@
 import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, lastAssistantMessageIsCompleteWithToolCalls } from "ai";
-import { useUi } from "@/lib/ui-store";
 import { useMap } from "@/lib/map-store";
 import { buildMapContext } from "@/lib/agent/context";
 import { executeClientTool, isClientTool } from "@/lib/agent/tools/client";
 import { messageText, STARTERS } from "@/lib/agent/ui";
-import Message from "./Message";
 import { rankingFocusFallback } from "@/lib/agent/ranking-focus";
 import { focusRegions } from "@/lib/agent/tools/focus-regions";
+import Message from "./Message";
+import { CollapseButton } from "@/components/shell/Collapse";
+import "./Markdown.css";
 
 // "Ask" panel (task 4.4). Streams from /api/chat, runs the map tools on the
 // shared store, and sends the current map context with every request.
 
 type Status = { configured: boolean; data?: string; reason?: string } | null;
 
-export default function ChatPanel() {
+export default function ChatPanel({ onCollapse }: { onCollapse?: () => void }) {
   const [status, setStatus] = useState<Status>(null);
   const [input, setInput] = useState("");
   const [announce, setAnnounce] = useState("");
@@ -50,18 +51,15 @@ export default function ChatPanel() {
       const out = toolCall.toolName === "map_focus_regions"
         ? await focusRegions(toolCall.input)
         : executeClientTool(toolCall.toolName, toolCall.input, useMap.getState());
-      if (out.ok && (toolCall.toolName === "open_panel" || toolCall.toolName === "map_select")) useUi.getState().setRightOpen(true);
       // No await: avoids deadlocks with the automatic resend.
       if (out.ok) void addToolOutput({ tool: toolCall.toolName, toolCallId: toolCall.toolCallId, output: out });
       else void addToolOutput({ tool: toolCall.toolName, toolCallId: toolCall.toolCallId, state: "output-error", errorText: out.error });
     },
     onFinish({ message }) {
       const regions = rankingFocusFallback(message.parts);
-      if (regions) {
-        void focusRegions({ regions }).then(result => {
-          if (!result.ok) setAnnounce(`Could not highlight ranked regions: ${result.error}`);
-        });
-      }
+      if (regions) void focusRegions({ regions }).then(result => {
+        if (!result.ok) setAnnounce(`Could not highlight ranked regions: ${result.error}`);
+      });
       const text = messageText(message);
       if (text) setAnnounce(text);
     },
@@ -83,38 +81,39 @@ export default function ChatPanel() {
   };
 
   return (
-    <div className="flex h-full flex-col">
-      <div className="px-4 pt-4">
-        <span className="eyebrow">Ask Piper</span>
-        <h2 className="mt-1 text-xl font-bold text-fg">Explore the map. Follow the evidence.</h2>
+    <div className="flex h-full min-w-0 flex-col">
+      <div className="flex shrink-0 items-center justify-between border-b border-line py-2 pl-4 pr-3">
+        <h2 className="text-[15px] font-semibold text-fg">Ask Piper</h2>
+        {onCollapse && <CollapseButton onClick={onCollapse} label="Hide panel (])" dir="right" />}
       </div>
       {/* Screen readers hear each finished answer once, not every streamed token (R9.2). */}
       <div aria-live="polite" className="sr-only">{announce}</div>
 
-      <div role="log" aria-label="Conversation" className="min-h-0 flex-1 space-y-4 overflow-y-auto p-4">
+      <div role="log" aria-label="Conversation" aria-live="off" className="min-h-0 min-w-0 flex-1 space-y-6 overflow-x-hidden overflow-y-auto p-4">
         {status && !status.configured && (
           <p role="status" className="rounded-md border border-edge bg-card p-3 text-sm text-fg-2">
-            Assistant not configured. The map, Inspect and Insights still work.
+            Ask is turned off right now. The map, Inspect and Insights still work.
           </p>
         )}
         {status?.configured && status.data === "not_configured" && (
           <p role="status" className="rounded-md border border-accent bg-card p-3 text-sm text-fg">
-            Live data is not connected, so the assistant can&apos;t look anything up.
+            Ask can&apos;t reach the city data right now. Please try again later.
           </p>
         )}
 
         {messages.length === 0 && status?.configured && (
           <div className="space-y-2">
-            <p className="text-sm text-fg-2">Ask me to move the map, change any filter, compare reports or explain Insights. “Here” means the area visible when you send your question. I use its filters and cite the evidence.</p>
+            <p className="pb-1 text-sm text-fg-3">Ask about the area on screen. Answers cite their sources.</p>
             <ul aria-label="Suggested questions" className="space-y-1">
               {STARTERS.map((q) => (
                 <li key={q}>
                   <button
                     type="button"
                     onClick={() => send(q)}
-                    className="w-full rounded-md border border-edge px-3 py-2 text-left text-sm text-fg hover:bg-card focus-visible:outline-2 focus-visible:outline-accent"
+                    className="group flex w-full items-center justify-between gap-2 rounded-lg border border-line bg-card px-3 py-2.5 text-left text-sm text-fg transition-colors hover:border-edge hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent"
                   >
-                    {q}
+                    <span>{q}</span>
+                    <span aria-hidden className="text-fg-3 transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none">→</span>
                   </button>
                 </li>
               ))}
@@ -128,7 +127,7 @@ export default function ChatPanel() {
 
         {error && (
           <div role="alert" className="rounded-md border border-return bg-card p-3 text-sm text-return">
-            <p>{error.message.includes("not_configured") ? "Assistant not configured." : "Something went wrong answering that."}</p>
+            <p>{error.message.includes("not_configured") ? "Ask is turned off right now." : "Something went wrong. Please try again."}</p>
             <div className="mt-2 flex gap-2">
               <button type="button" onClick={() => { clearError(); void regenerate(); }} className="rounded border border-return bg-card px-2 py-0.5 text-xs font-medium hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-return">
                 Retry
@@ -144,7 +143,7 @@ export default function ChatPanel() {
 
       <form
         onSubmit={(e) => { e.preventDefault(); send(input); }}
-        className="flex items-end gap-2 border-t border-line p-3"
+        className="flex shrink-0 items-end gap-2 border-t border-line bg-panel-solid p-3"
       >
         <label htmlFor="chat-input" className="sr-only">Ask the assistant</label>
         <textarea
@@ -154,17 +153,17 @@ export default function ChatPanel() {
           disabled={disabled}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(input); }
+            if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); send(input); }
           }}
           placeholder={status === null ? "Connecting…" : disabled ? "Assistant not configured" : "Ask about this map…"}
-          className="min-h-[2.5rem] flex-1 resize-none rounded-md border border-edge px-3 py-2 text-sm placeholder:text-fg-3 focus-visible:outline-2 focus-visible:outline-accent disabled:bg-card"
+          className="min-h-12 min-w-0 flex-1 resize-none rounded-lg border border-edge bg-card px-3 py-2 text-sm text-fg placeholder:text-fg-3 focus-visible:outline-2 focus-visible:outline-accent disabled:opacity-50"
         />
         {busy ? (
-          <button type="button" onClick={() => void stop()} className="rounded-md border border-edge px-3 py-2 text-sm font-medium focus-visible:outline-2 focus-visible:outline-accent">
+          <button type="button" onClick={() => void stop()} className="min-h-10 shrink-0 rounded-md border border-edge bg-card px-3 py-2 text-sm font-medium text-fg hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent">
             Stop
           </button>
         ) : (
-          <button type="submit" disabled={disabled || !input.trim()} className="rounded-md bg-accent px-3 py-2 text-sm font-medium text-accent-fg disabled:bg-card-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+          <button type="submit" disabled={disabled || !input.trim()} className="min-h-10 shrink-0 rounded-md bg-accent px-3 py-2 text-sm font-medium text-accent-fg enabled:hover:bg-accent-hover disabled:bg-card-hover disabled:text-fg-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
             Send
           </button>
         )}

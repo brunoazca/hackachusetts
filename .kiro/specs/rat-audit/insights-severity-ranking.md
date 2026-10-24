@@ -380,6 +380,16 @@ silently:
 Add to the region object (§7.1): `population: { pop: number; tract_ids: string[];
 reports_per_1k: number | null; source_ids: string[] } | null`.
 
+**Decision (Bruno, Oct 24) — supersedes "not folded into the severity score" above.**
+Residents *are* a weight on the region ranking: `weighted_score = score × (1 + log10(1 +
+residents / 1000))`, where `score` stays in reports (observed 12 w + expected 4 w + expected
+returns 60 d) and `residents` is Σ `cell_population.pop` over the region's cells. Log so a
+dense block cannot swamp the report counts (weight ≈ 1.3 at 1k, 2.0 at 9k, 2.3 at 20k).
+Stored in `input.region.severity.{residents, people_weight, weighted_score}`; regions are
+ranked by `weighted_score` (`region_solution.py`). The card shows "~N residents" and the
+weight in the analysis. No other demographic is used on the Insights cards; the full block
+profile (`grid_cell_context`) lives on the map only.
+
 ### 5.5 Grid cuts — keep hotspots whole (Carol, SQL)
 
 A fixed 250 m lattice splits a hotspot that sits on a cell corner into up to 4 cells.
@@ -727,3 +737,39 @@ Chat navigation clears stale outlines; repeated rankings and best/worst changes
 refresh them. Published ranks remain stable internally. See
 `web/src/lib/agent/README.md` for compatibility and validation limits.
 No database schema deployment is required.
+---
+
+## 12. Rev. 3 — one Insight panel, behaviour by what is clicked (Bruno, Oct 24)
+
+**Inspect and Insights merge into one panel.** Layout (to build on the new UI main, not before):
+the **Insight panel on the left**, **chat (Ask) on the right**, **filters at the bottom** of the page.
+The panel shows the ranking when nothing is selected and changes with each click. Same card skeleton
+for every kind: **Where/what → Outlook → What to do → Evidence → Related records → Sources & caveat**.
+Place names are links (§5.7 `locations`), report ids are links; Back returns to the previous
+selection, Esc clears to the ranking (`map-store.history` / `back()`).
+
+| Selection (`map-store.selection`) | Call | Panel | Map |
+|---|---|---|---|
+| nothing | `region_solutions` by rank | ranked region cards (AI, top 100) | forecast layer |
+| `cell` | `area_insight([cell_id])` | the cell's region card if it is in a ranked region, else its own cell card (`cell_solutions`, rules + "Generate AI analysis" → `POST /api/insight-ai` → Modal `insight_ai`, cached) | fly to it, outline cells, highlight its reports |
+| `area` (drawn polygon) | `area_insight_polygon(geojson)` | summed severity + forecast, the ranked regions and worst cells it touches | outline |
+| `incident`, rodent | `record_insight(id)` | **Outlook:** chance a report comes back within 60 days if monitored vs with the best action, cell forecast · **What to do:** the area card's line for this report, else the per-record model · **Evidence:** causes within 150 m (×Boston), address action history | fly to it (z17), highlight address history |
+| `incident`, any other 311 / `place` | `record_insight` routes non-rodent ids to `evidence_insight('incident', id)`; places → `evidence_insight('place', id)` | what it is; rodent reports within 150 m 90 days before vs after (fixed places: last 12 months); the list of those reports (clickable → their record insight); same-kind density vs Boston; caveat "near, not proven caused" | fly to it, highlight related reports |
+| `site`, parcel, event, listing, tract | existing detail views (unchanged) | — | — |
+
+Backend (Bruno, live): RPCs `area_insight`, `area_insight_polygon`, `record_insight`, `evidence_insight`
+(+ helpers `cell_of`, `nearby_causes`, `cells_forecast`, `cause_label`) in
+`20261024500009_insight_rpcs.sql`; tables `cell_solutions`, `cause_baselines`
+(`20261024500008`); `record_solutions` now covers every rodent report since 2023; AI cards for the
+top **100** regions; Modal `solutions` runs after every scoring and `insight_ai` serves on-demand AI
+(needs `AI_GATEWAY_API_KEY` in the `rat-audit` secret and `MODAL_INSIGHT_AI_URL` in the web env).
+Front logic (Bruno, local until the new UI lands): `web/src/lib/insight.ts` (`routeSelection`,
+`loadInsight`, `highlightIds`, `focusOf`, `generateAreaAi`), `map-store.history/back()`,
+`web/src/app/api/insight-ai/route.ts`, tests `web/tests/insight.test.ts`.
+
+**Built (Oct 24, rev. 3 UI):** left `components/insight/InsightPanel.tsx` (ranking with infinite scroll via
+`insight_ranking(lim, off)`, then Area / Report / Evidence views; Back + Esc), right panel = Ask only,
+layer + filter bar along the bottom (`LayerPanel`, `Timeline` open upward), top-bar mode selector removed.
+Deleted: Blocks list (`map/BlockQueue`), Places to visit (`act/SiteQueue`), the old Insights tab
+(`insights/InsightsPanel`, `regions/RegionSolutions`). "act" mode now renders the same map; the agent's
+`map_filter_sites` / `app_set_mode act` no longer show a queue (chat track to update).

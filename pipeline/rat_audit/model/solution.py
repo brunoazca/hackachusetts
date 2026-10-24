@@ -308,7 +308,7 @@ def propose(res: dict, rec: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def record_solution(conn: psycopg.Connection, since: str = "2025-01-01") -> dict:
+def record_solution(conn: psycopg.Connection, since: str = "2000-01-01") -> dict:
     """Fit, write a `model_runs` row and `record_solutions` for records opened since `since`. Caller commits."""
     rodent, cosig, places = _load(conn)
     rec = build_records(rodent, cosig, places)

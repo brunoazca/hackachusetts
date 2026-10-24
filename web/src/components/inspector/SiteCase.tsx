@@ -5,8 +5,9 @@ import categories from "@/lib/categories.json";
 import { fetchSiteDetail, type SiteDetail } from "@/lib/queries";
 import { markerDataUrl } from "@/components/map/icons";
 import { formatDate } from "@/lib/dates";
-import { COUNT_EXPLANATION, reportDays, sourcesFor } from "@/lib/evidence";
+import { reportDays, sourcesFor } from "@/lib/evidence";
 import SourceList from "@/components/evidence/SourceList";
+import { NextHere } from "./HereSections";
 
 // Site case (R3.2), compact: the answer first (returns vs closures), one strip of numbers,
 // a report timeline, nearby records, and the last few recorded responses. Long closure notes are
@@ -71,28 +72,28 @@ export default function SiteCase({ id }: { id: string }) {
       {/* 1. The answer */}
       <header className="pb-3">
         <div className="flex flex-wrap items-center gap-2 text-[12px] text-fg-3">
-          <span>Repeat-report place</span>
+          <span>Repeat place</span>
           <span aria-hidden>·</span>
           <span>{s.neighborhood ?? s.city}</span>
-          {s.due && <span className="ml-auto rounded-sm bg-return px-1.5 py-px text-[11px] font-semibold text-bg">Review suggested</span>}
+          {s.due && <span className="ml-auto rounded-sm bg-return px-1.5 py-px text-[11px] font-semibold text-bg">Recheck now</span>}
         </div>
         <h2 className="mt-1 text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">{s.address_block ?? "Unnamed block"}</h2>
         <p className="mt-0.5 text-[14px] leading-5 text-fg-2">
           {s.returns > 0
-            ? <><b className="font-bold text-return">{s.returns}</b> report days after an earlier closure, within the 60-day window.</>
-            : <>No later report recorded within 60 days of a closure.</>}
+            ? <><b className="font-bold text-return">{s.returns}</b> times reports came back within 60 days of the city closing the case.</>
+            : <>No reports came back within 60 days of a closure.</>}
         </p>
         <Link href={`/brief/${encodeURIComponent(id)}`} className="mt-3 inline-flex rounded-md bg-fg px-3 py-2 text-[13px] font-semibold text-bg hover:opacity-80">Open inspection brief</Link>
       </header>
 
       {/* 2. One strip of numbers */}
       <div className="flex divide-x divide-line border-y border-line">
-        <Stat value={s.reports} label="report days" />
-        <Stat value={s.closures} label="closure days" />
-        <Stat value={s.returns} label="return days" tone={s.returns ? "text-return" : undefined} />
-        <Stat value={s.days_since_close ?? "—"} label="days since close" />
+        <Stat value={s.reports} label="days reported" />
+        <Stat value={s.closures} label="days closed" />
+        <Stat value={s.returns} label="comebacks" tone={s.returns ? "text-return" : undefined} />
+        <Stat value={s.days_since_close ?? "—"} label="days since closed" />
       </div>
-      <p className="mt-2 text-[11px] leading-4 text-fg-3">{d.reports.length} individual records across {s.reports} report days. {COUNT_EXPLANATION}</p>
+      <p className="mt-2 text-[11px] leading-4 text-fg-3">{d.reports.length} reports on {s.reports} different days. We count days, so several reports on one day count once.</p>
 
       {/* 3. Return timeline: one tick per report, red = came back within 60 days of a closure */}
       <section className="pt-4">
@@ -100,20 +101,20 @@ export default function SiteCase({ id }: { id: string }) {
           <h3 className="text-[12px] font-semibold text-fg-2">Reports over time</h3>
           <span className="font-mono text-[11px] text-fg-3">{fmt(s.first_at)} → {fmt(s.last_at)}</span>
         </div>
-        <div className="relative mt-2 h-7" role="img" aria-label={`${d.reports.length} records on ${s.reports} report days from ${fmt(s.first_at)} to ${fmt(s.last_at)}; ${s.returns} return days.`}>
+        <div className="relative mt-2 h-7" role="img" aria-label={`${d.reports.length} reports on ${s.reports} days from ${fmt(s.first_at)} to ${fmt(s.last_at)}; ${s.returns} comebacks.`}>
           <div className="absolute inset-x-0 top-1/2 h-px bg-line" />
           {view.days.map((day) => (
             <span
               key={day.date}
-              title={`${fmt(day.date)} · ${day.records.length} records${day.records.some((r) => r.back) ? " · after an earlier closure" : ""}`}
+              title={`${fmt(day.date)} · ${day.records.length} reports${day.records.some((r) => r.back) ? " · came back after a closure" : ""}`}
               className={`absolute top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full ${day.records.some((r) => r.back) ? "h-3 w-3 bg-return ring-2 ring-bg" : "h-2 w-2 bg-fg-3"}`}
               style={{ left: `${x(day.date)}%` }}
             />
           ))}
         </div>
         <div className="mt-1 flex gap-4 text-[11px] text-fg-3">
-          <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-fg-3" />report day</span>
-          {d.evidence && <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-return" />return day</span>}
+          <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-fg-3" />day with reports</span>
+          {d.evidence && <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-return" />comeback</span>}
         </div>
         <SourceList sources={d.report_sources ?? []} unavailable={!d.report_sources?.length} />
       </section>
@@ -121,7 +122,7 @@ export default function SiteCase({ id }: { id: string }) {
       {/* 4. What is around it */}
       <section className="pt-4">
         <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-          <h3 className="text-[12px] font-semibold text-fg-2">Nearby records · 100 m · last 12 months</h3>
+          <h3 className="text-[12px] font-semibold text-fg-2">Nearby problems · within 100 m · past year</h3>
           {d.adjacent_vacant_parcels > 0 && (
             <span className="flex items-center gap-1.5 whitespace-nowrap text-[12px] font-semibold text-warn">
               <span aria-hidden className="h-2 w-2 rotate-45 bg-warn" />
@@ -129,9 +130,9 @@ export default function SiteCase({ id }: { id: string }) {
             </span>
           )}
         </div>
-        <p className="mt-1 text-[11px] text-fg-3">Nearby records provide context. Proximity does not establish a cause.</p>
+        <p className="mt-1 text-[11px] text-fg-3">These are near this place. Being nearby does not prove they cause it.</p>
         {view.drivers.length === 0 ? (
-          <p className="mt-2 text-fg-3">No other records within 100 m.</p>
+          <p className="mt-2 text-fg-3">Nothing else reported within 100 m.</p>
         ) : (
           <ul className="mt-1.5">
             {shownDrivers.map(([cat, n]) => (
@@ -154,14 +155,17 @@ export default function SiteCase({ id }: { id: string }) {
         )}
         <SourceList sources={d.evidence ? sourcesFor(d.evidence.nearby.flatMap((n) => n.source_ids), d.evidence.sources) : []} unavailable={d.evidence_unavailable} />
         {d.adjacent_vacant_parcels > 0 && <div className="mt-2">
-          <p className="text-[11px] font-semibold text-fg-2">Vacant parcel evidence · within 40 m · source snapshot</p>
+          <p className="text-[11px] font-semibold text-fg-2">Empty lots · within 40 m</p>
           <SourceList sources={d.evidence ? sourcesFor(d.evidence.vacant.source_ids, d.evidence.sources) : []} unavailable={d.evidence_unavailable} />
         </div>}
       </section>
 
+      {/* 4b. What the model expects for the block around this place */}
+      <div className="pt-3"><NextHere lon={s.lon} lat={s.lat} /></div>
+
       {/* 5. What the city did, newest first */}
       <section className="pt-4">
-        <h3 className="text-[12px] font-semibold text-fg-2">Recorded responses · {d.reports.length} individual records</h3>
+        <h3 className="text-[12px] font-semibold text-fg-2">What the city did · {d.reports.length} reports</h3>
         <ol className="mt-1.5 divide-y divide-line">
           {shownReports.map((r) => (
             <li key={r.id} className="grid grid-cols-[64px_minmax(0,1fr)] gap-2 py-2">
@@ -169,7 +173,7 @@ export default function SiteCase({ id }: { id: string }) {
               <span className="min-w-0">
                 <span className="flex flex-wrap items-center gap-2">
                   <span className="text-[13px] font-semibold capitalize text-fg">{(r.action ?? (r.closed ? "closed" : "open")).replace(/_/g, " ")}</span>
-                  {r.back && <span className="rounded-sm bg-return/15 px-1.5 text-[11px] font-semibold text-return" title="This report followed an earlier closure; this does not evaluate the response shown here.">Report after earlier closure</span>}
+                  {r.back && <span className="rounded-sm bg-return/15 px-1.5 text-[11px] font-semibold text-return" title="This report came after the city closed an earlier one. It does not judge the response shown here.">Came back after a closure</span>}
                 </span>
                 <span className="block truncate text-[12px] leading-[18px] text-fg-3" title={r.note ?? undefined}>{gist(r.note)}</span>
                 {r.closed && <span className="block text-[11px] text-fg-3">Closed {fmt(r.closed)}</span>}
@@ -179,7 +183,7 @@ export default function SiteCase({ id }: { id: string }) {
         </ol>
         {recent.length > 5 && (
           <button type="button" onClick={() => setAllReports((v) => !v)} className="mt-1 text-[12px] font-semibold text-fg-2 underline-offset-2 hover:text-fg hover:underline">
-            {allReports ? "Show latest 5 records" : `Show all ${recent.length} records`}
+            {allReports ? "Show latest 5" : `Show all ${recent.length} reports`}
           </button>
         )}
         <SourceList sources={d.report_sources ?? []} unavailable={!d.report_sources?.length} />
@@ -188,11 +192,11 @@ export default function SiteCase({ id }: { id: string }) {
       {/* 6. Next action */}
       <section className="mt-4 rounded-md border border-line bg-card p-3">
         <h3 className="text-[12px] font-semibold text-fg-2">Next action</h3>
-        <p className="mt-0.5 text-[13px] text-fg-2">Recommendation, approve / edit / reject and the work order arrive with the analytics site model.</p>
+        <p className="mt-0.5 text-[13px] text-fg-2">Coming soon: a suggested next step you can approve, edit or reject.</p>
       </section>
 
       <footer className="mt-4 text-[11px] text-fg-3">
-        A place is one address with repeat reports since January 2024. Reports are not rat counts; a closed case does not confirm resolution. Source retrieval and successful import times describe Piper’s copy, not the date of conditions on the ground.
+        A place is one address with repeat reports since January 2024. Reports come from people, not rat counts. A closed case does not mean the problem is gone. “Updated” dates show when we last got the data, not when things happened on the street.
       </footer>
     </article>
   );

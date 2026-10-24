@@ -11,9 +11,9 @@ function fakeMap() {
   const rec = (name: string) => (v: unknown) => { calls.push([name, v]); };
   const map: MapActions = {
     setRegionFocus: rec("setRegionFocus"),
-    setMode: rec("setMode"), setSiteNeighborhood: rec("setSiteNeighborhood"), setViewMode: rec("setViewMode"), setCauses: rec("setCauses"), setCellMetric: rec("setCellMetric"),
+    setMode: rec("setMode"), setViewMode: rec("setViewMode"), setCauses: rec("setCauses"), setCellMetric: rec("setCellMetric"),
     flyTo: rec("flyTo"), setLayers: rec("setLayers"), setFilters: rec("setFilters"), setHighlight: rec("setHighlight"),
-    select: rec("select"), setPanel: rec("setPanel"), setForecastWeek: rec("setForecastWeek"),
+    select: rec("select"), setForecastWeek: rec("setForecastWeek"),
   };
   return { map, calls };
 }
@@ -27,13 +27,13 @@ test("map_fly_to drives the store; coordinates outside the region are rejected",
   assert.equal(calls.length, 2);
 });
 
-test("layers, highlight, select, forecast, panel, filters", () => {
+test("layers, highlight, select, forecast, insight, filters", () => {
   const { map, calls } = fakeMap();
   executeClientTool("map_set_layers", { on: ["food"], off: ["rodent"] }, map);
   executeClientTool("map_highlight", { ids: ["a", "b"] }, map);
   executeClientTool("map_select", { kind: "site", id: "s1" }, map);
   executeClientTool("map_show_forecast", { week_start: "2026-10-26" }, map);
-  executeClientTool("open_panel", { panel: "insights" }, map);
+  executeClientTool("open_insight", { target: "report", id: "311:1" }, map);
   executeClientTool("map_set_filters", { status: "open" }, map);
   assert.deepEqual(calls, [
     ["setLayers", { rodent: false, ...Object.fromEntries(LAYER_GROUPS.food.map(id => [id, true])) }],
@@ -45,7 +45,8 @@ test("layers, highlight, select, forecast, panel, filters", () => {
     ["setMode", "assess"],
     ["setLayers", { forecast: true }],
     ["setForecastWeek", "2026-10-26"],
-    ["setPanel", "insights"],
+    ["setRegionFocus", null],
+    ["select", { kind: "incident", id: "311:1" }],
     ["setFilters", { status: "open" }],
     ["setMode", "assess"],
   ]);
@@ -76,12 +77,12 @@ test("map context: bbox stays null without store bounds; round-trips validation"
 });
 
 
-test("app_set_mode changes modes and rejects removed depth options", () => {
+test("app_set_mode changes modes and rejects removed ones (act / Places to visit is gone)", () => {
   const { map, calls } = fakeMap();
-  assert.equal(executeClientTool("app_set_mode", { mode: "act" }, map).ok, true);
+  assert.equal(executeClientTool("app_set_mode", { mode: "inspect" }, map).ok, true);
   assert.equal(executeClientTool("app_set_mode", { mode: "assess" }, map).ok, true);
-  assert.deepEqual(calls, [["setMode", "act"], ["setMode", "assess"]]);
-  for (const input of [{}, { mode: "delete" }, { mode: "act", depth: "explore" }, { depth: "simple" }]) {
+  assert.deepEqual(calls, [["setMode", "inspect"], ["setMode", "assess"]]);
+  for (const input of [{}, { mode: "delete" }, { mode: "act" }, { mode: "assess", depth: "explore" }, { depth: "simple" }]) {
     assert.equal(executeClientTool("app_set_mode", input, map).ok, false);
   }
   assert.equal(calls.length, 2, "invalid input must not partially change the store");
@@ -91,8 +92,8 @@ test("app_set_mode uses the current real store and preserves selection", () => {
   const before = useMap.getState();
   try {
     before.select({ kind: "site", id: "fixture-selected" });
-    assert.equal(executeClientTool("app_set_mode", { mode: "act" }, useMap.getState()).ok, true);
-    assert.equal(useMap.getState().mode, "act");
+    assert.equal(executeClientTool("app_set_mode", { mode: "inspect" }, useMap.getState()).ok, true);
+    assert.equal(useMap.getState().mode, "inspect");
     assert.deepEqual(useMap.getState().selection, { kind: "site", id: "fixture-selected" });
   } finally {
     useMap.setState(before, true);
@@ -184,91 +185,39 @@ test("highlight reaches the renderer state; context contains actual bounds and d
   } finally { useMap.setState(before, true); }
 });
 
-test("Places neighborhood filter shares the queue state and opens Act", () => {
+test("open_insight drives the Insight panel through the selection", () => {
   const before = useMap.getState();
   try {
-    executeClientTool("map_filter_sites", { neighborhood: "Roxbury" }, useMap.getState());
-    assert.equal(useMap.getState().siteNeighborhood, "Roxbury");
-    assert.equal(buildMapContext(useMap.getState()).siteNeighborhood, "Roxbury");
-    assert.equal(useMap.getState().mode, "act");
-    executeClientTool("map_set_filters", { status: "open" }, useMap.getState());
-    assert.equal(useMap.getState().mode, "assess", "map commands expose the original map controls");
+    assert.equal(executeClientTool("open_insight", { target: "block", id: "g250_948_3594" }, useMap.getState()).ok, true);
+    assert.deepEqual(useMap.getState().selection, { kind: "cell", id: "g250_948_3594" });
+    assert.equal(executeClientTool("open_insight", { target: "place", id: "food:9" }, useMap.getState()).ok, true);
+    assert.deepEqual(useMap.getState().selection, { kind: "place", id: "food:9" });
+    assert.equal(executeClientTool("open_insight", { target: "report" }, useMap.getState()).ok, false, "an id is required");
+    assert.equal(executeClientTool("open_insight", { target: "ranking" }, useMap.getState()).ok, true);
+    assert.equal(useMap.getState().selection, null);
+    assert.equal(executeClientTool("map_filter_sites", { neighborhood: "Roxbury" }, useMap.getState()).ok, false, "Places to visit tool removed");
   } finally { useMap.setState(before, true); }
 });
 
-test("select with focus centers a real point and opens the same Inspect state as a click", () => {
-  const before = useMap.getState();
-  try {
-    useMap.setState({ panel: "chat", selection: null });
-    const filters = useMap.getState().filters;
-    const result = executeClientTool("map_select", {
-      kind: "incident", id: "fixture-incident-1", focus: { lat: 42.35, lon: -71.08 },
-    }, useMap.getState());
-    assert.equal(result.ok, true);
-    assert.deepEqual(useMap.getState().selection, { kind: "incident", id: "fixture-incident-1" });
-    assert.equal(useMap.getState().panel, "inspector");
-    assert.equal(useMap.getState().flyToTarget?.lat, 42.35);
-    assert.equal(useMap.getState().flyToTarget?.lon, -71.08);
-    assert.equal(useMap.getState().flyToTarget?.zoom, 17);
-    assert.deepEqual(useMap.getState().filters, filters);
-    useMap.getState().select({ kind: "incident", id: "fixture-incident-1" });
-    assert.equal(useMap.getState().panel, "inspector");
-  } finally { useMap.setState(before); }
-});
 
-test("invalid point focus is rejected before moving or selecting", () => {
-  const { map, calls } = fakeMap();
-  assert.equal(executeClientTool("map_select", {
-    kind: "incident", id: "fixture-incident-1", focus: { lat: 0, lon: 0 },
-  }, map).ok, false);
-  assert.deepEqual(calls, []);
-});
-
-test("region focus survives exploration but clears on chat navigation or unrelated selection", () => {
+test("new Insight navigation retains ranked blocks and clears unrelated focus", () => {
   const before = useMap.getState();
-  const focus = {
-    regions: { type: "FeatureCollection" as const, features: [] }, mask: null,
-    labels: [{ id: "ranked-cell", rank: 1, lon: -71.08, lat: 42.35 }],
-    bounds: [-71.09, 42.34, -71.07, 42.36] as [number, number, number, number],
-  };
+  const focus = { regions: { type: "FeatureCollection" as const, features: [] }, mask: null,
+    labels: [{ id: "r27", rank: 27, lat: 42.35, lon: -71.08 }],
+    bounds: [-71.09, 42.34, -71.07, 42.36] as [number, number, number, number] };
   try {
     useMap.getState().setRegionFocus(focus);
-    const filters = useMap.getState().filters;
-    useMap.getState().setView({ lat: 42.35, lon: -71.08, zoom: 16 });
-    assert.equal(useMap.getState().regionFocus, focus, "manual exploration retains outlines");
-    executeClientTool("open_panel", { panel: "chat" }, useMap.getState());
-    executeClientTool("map_select", { kind: "cell", id: "ranked-cell", focus: { lat: 42.35, lon: -71.08 } }, useMap.getState());
-    assert.equal(useMap.getState().regionFocus, focus, "opening a ranked region retains context");
-    for (const target of [{ kind: "incident", id: "a" }, { kind: "cell", id: "other" }]) {
-      useMap.getState().setRegionFocus(focus);
-      executeClientTool("map_select", target, useMap.getState());
-      assert.equal(useMap.getState().regionFocus, null);
-    }
+    assert.deepEqual(buildMapContext(useMap.getState()).focusedRegions, [{ id: "r27", rank: 27, position: 1 }]);
+    executeClientTool("open_insight", { target: "block", id: "r27" }, useMap.getState());
+    assert.equal(useMap.getState().regionFocus, focus);
+    assert.deepEqual(useMap.getState().selection, { kind: "cell", id: "r27" });
+    useMap.getState().setView({ lat: 42.35, lon: -71.08, zoom: 14 });
+    assert.equal(useMap.getState().regionFocus, focus);
+    executeClientTool("open_insight", { target: "report", id: "report1" }, useMap.getState());
+    assert.equal(useMap.getState().regionFocus, null);
     useMap.getState().setRegionFocus(focus);
-    const revision = useMap.getState().regionFocusRevision;
     executeClientTool("map_fly_to", { lat: 42.3512, lon: -71.0767 }, useMap.getState());
     assert.equal(useMap.getState().regionFocus, null);
-    assert.ok(useMap.getState().regionFocusRevision > revision, "navigation invalidates pending boundary loads");
-    assert.equal(useMap.getState().filters, filters);
-    const clearedRevision = useMap.getState().regionFocusRevision;
-    useMap.getState().setRegionFocus(null);
-    assert.ok(useMap.getState().regionFocusRevision > clearedRevision, "clear cancels loading even without a visible overlay");
-  } finally { useMap.setState(before, true); }
-});
-
-test("each question captures currently outlined regions, not historical ranking actions", () => {
-  const before = useMap.getState();
-  try {
-    useMap.getState().setRegionFocus({
-      regions: { type: "FeatureCollection", features: [] }, mask: null,
-      labels: [{ id: "r1", rank: 1, lat: 42.35, lon: -71.08 }],
-      bounds: [-71.09, 42.34, -71.07, 42.36],
-    });
-    const ranked = buildMapContext(useMap.getState());
-    assert.deepEqual(parseMapContext(ranked)?.focusedRegions, [{ id: "r1", rank: 1, position: 1 }]);
-    executeClientTool("map_fly_to", { lat: 42.3512, lon: -71.0767 }, useMap.getState());
-    const navigated = buildMapContext(useMap.getState());
-    assert.deepEqual(navigated.focusedRegions, []);
-    assert.deepEqual(ranked.focusedRegions, [{ id: "r1", rank: 1, position: 1 }], "prior question snapshot remains immutable");
+    assert.equal(useMap.getState().filters, before.filters);
   } finally { useMap.setState(before, true); }
 });

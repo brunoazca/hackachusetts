@@ -39,9 +39,9 @@ test("question context snapshots viewport and filters independently of later nav
 
 test("main-point requests open Inspect while explanation requests preserve the camera", () => {
   const prompt = systemPrompt(null, "2026-10-24");
-  assert.match(prompt, /For explanatory viewport questions keep the camera in place/);
+  assert.match(prompt, /For explanatory viewport questions preserve the camera/);
   assert.match(prompt, /principal ponto/);
-  assert.match(prompt, /call map_select with the returned kind, id and focus coordinates/);
-  assert.match(prompt, /not a severity ranking/);
-  assert.match(prompt, /leave the selection unchanged/);
+  assert.match(prompt, /Use open_insight target report with its returned ID/);
+  assert.match(prompt, /Without a supported severity rank/);
+
 });

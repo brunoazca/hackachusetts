@@ -41,7 +41,7 @@ export type ToolFailure = {
 
 /** Map context sent with each chat message (R8.5). */
 export type MapContext = {
-  mode?: "assess" | "act";
+  mode?: "assess" | "act" | "inspect";
   viewMode?: "points" | "heat" | "both";
   nearbyRecords?: boolean;
   forecastPeriod?: string;

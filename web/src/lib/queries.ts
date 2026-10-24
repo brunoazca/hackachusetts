@@ -20,6 +20,8 @@ export type IncidentProps = {
   spot?: boolean;
   /** Client-side: family (rats, food, shelter, displace) for cluster colors. */
   group?: string;
+  /** Client-side: days between the report (or the newest in a cell) and the end of the period. */
+  age?: number;
 };
 
 export type BBox = [minLon: number, minLat: number, maxLon: number, maxLat: number];

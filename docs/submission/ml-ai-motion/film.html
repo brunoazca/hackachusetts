@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piper ML and AI Film</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap">
+<style>
+/* Film segment for a larger video: See → Act → Predict, very little text per scene.
+   1920×1080 stage scaled to the window; every frame is render(t) (?t=12.3 to scrub). Blue = model, red = what happened. */
+:root {
+  --bg: #111315; --panel: #181B1E; --card: #1F2327; --line: #2F353B;
+  --fg: #F2F3F1; --fg2: #AEB5BC; --fg3: #8A929A;
+  --model: #6FA0FF; --actual: #FF5A4E; --held: #3DBE7A; --warn: #FFA23A;
+  --display: "Bodoni Moda", "Bodoni 72", Didot, serif;
+  --sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --mono: "Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+#stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; background: var(--bg); color: var(--fg); font-family: var(--sans); transform-origin: 0 0; overflow: hidden; }
+.scene { position: absolute; inset: 0; opacity: 0; }
+.h { position: absolute; left: 120px; top: 96px; font: 700 64px/1.1 var(--sans); letter-spacing: -0.01em; margin: 0; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.blue { color: var(--model); } .red { color: var(--actual); } .green { color: var(--held); }
+canvas { position: absolute; }
+.chip { position: absolute; display: flex; align-items: center; gap: 12px; padding: 12px 22px 12px 18px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--card); font: 500 28px var(--sans); white-space: nowrap; }
+.chip .ic { display: flex; color: var(--fg2); } .chip .ck { color: var(--model); font-weight: 700; }
+.panel { position: absolute; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
+.lbl { font: 600 22px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg3); }
+.bar { position: absolute; height: 18px; border-radius: 9px; background: var(--model); }
+.check { color: var(--held); font-weight: 700; margin-right: 12px; }
+.note { font: 500 18px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--fg3); }
+#journey { position: absolute; right: 120px; top: 60px; display: flex; gap: 10px; align-items: center; font: 600 24px var(--sans); opacity: 0; z-index: 5; }
+#journey span.s { padding: 6px 16px; border-radius: 999px; color: var(--fg3); border: 1px solid transparent; }
+#journey span.on { color: var(--bg); background: var(--fg); }
+#journey span.done { color: var(--fg2); border-color: var(--line); }
+#journey i { width: 26px; height: 2px; background: var(--line); display: inline-block; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="journey"><span class="s" data-k="see">See</span><i></i><span class="s" data-k="act">Act</span><i></i><span class="s" data-k="predict">Predict</span></div>
+
+  <!-- Section intro -->
+  <section class="scene" id="s0">
+    <div id="s0t" style="position:absolute;left:0;right:0;top:330px;text-align:center;font:italic 500 120px var(--display)">Data, from start to finish</div>
+    <svg id="s0p" width="1200" height="160" viewBox="0 0 1200 160" style="position:absolute;left:360px;top:560px;overflow:visible">
+      <line id="s0line" x1="150" y1="50" x2="1050" y2="50" stroke="#2F353B" stroke-width="4" stroke-linecap="round"/>
+      <line id="s0fill" x1="150" y1="50" x2="150" y2="50" stroke="#6FA0FF" stroke-width="4" stroke-linecap="round"/>
+      <g id="s0dots"></g>
+      <g class="s0n" data-i="0"><circle cx="150" cy="50" r="16" fill="#111315" stroke="#F2F3F1" stroke-width="4"/><text x="150" y="122" text-anchor="middle" fill="#F2F3F1" font-size="40" font-weight="600" font-family="Atkinson Hyperlegible Next">See</text></g>
+      <g class="s0n" data-i="1"><circle cx="600" cy="50" r="16" fill="#111315" stroke="#F2F3F1" stroke-width="4"/><text x="600" y="122" text-anchor="middle" fill="#F2F3F1" font-size="40" font-weight="600" font-family="Atkinson Hyperlegible Next">Act</text></g>
+      <g class="s0n" data-i="2"><circle cx="1050" cy="50" r="16" fill="#111315" stroke="#F2F3F1" stroke-width="4"/><text x="1050" y="122" text-anchor="middle" fill="#F2F3F1" font-size="40" font-weight="600" font-family="Atkinson Hyperlegible Next">Predict</text></g>
+    </svg>
+  </section>
+
+  <!-- Data -->
+  <section class="scene" id="s2">
+    <h1 class="h">What predicts rodent reports?</h1>
+    <div id="s2chips"></div>
+    <div class="num" id="s2n" style="position:absolute;left:0;right:0;text-align:center;font-size:30px;color:var(--fg2)"><span style="color:var(--fg);font-size:44px">43</span> datasets tested</div>
+  </section>
+
+  <!-- SEE -->
+  <section class="scene" id="s3">
+    <h1 class="h">Every report, one live map</h1>
+    <canvas id="s3c" width="1100" height="880" style="left:410px;top:190px"></canvas>
+    <div id="s3leg" style="position:absolute;left:120px;bottom:90px;font-size:26px;color:var(--fg2)"><i style="display:inline-block;width:18px;height:18px;background:#FF5A4E;border-radius:3px;margin-right:12px;vertical-align:-2px"></i>Rodent reports · last 12 weeks</div>
+  </section>
+
+  <!-- ACT: Boston records -->
+  <section class="scene" id="s4">
+    <h1 class="h">What worked?</h1>
+    <canvas id="s4c" width="1000" height="600" style="left:120px;top:260px"></canvas>
+    <div id="s4call" style="position:absolute;left:1240px;top:330px;width:560px"></div>
+  </section>
+
+  <!-- ACT: other cities -->
+  <section class="scene" id="s5">
+    <h1 class="h">Learning from our neighbours</h1>
+    <div id="s5cols" style="position:absolute;left:160px;right:160px;top:360px;display:grid;grid-template-columns:1fr 1fr;gap:140px"></div>
+  </section>
+
+  <!-- ACT: per site + region solution -->
+  <section class="scene" id="s6">
+    <h1 class="h">Will it come back?</h1>
+    <canvas id="s6c" width="820" height="520" style="left:120px;top:280px"></canvas>
+    <div class="panel" id="s6sol" style="left:1020px;top:280px;width:780px;padding:34px 38px;background:#1F2327"></div>
+  </section>
+
+  <!-- PREDICT: forecast -->
+  <section class="scene" id="s7">
+    <h1 class="h">Every block, every week</h1>
+    <canvas id="s7c" width="1000" height="880" style="left:880px;top:170px"></canvas>
+    <div class="panel" id="s7card" style="left:120px;top:420px;width:680px;padding:30px 34px;opacity:0"></div>
+  </section>
+
+  <!-- PREDICT: three maps -->
+  <section class="scene" id="s8">
+    <h1 class="h">Where the model looked</h1>
+    <svg id="s8tl" width="1680" height="100" viewBox="0 0 1680 100" style="position:absolute;left:120px;top:214px;overflow:visible"></svg>
+    <div class="lbl" style="position:absolute;left:120px;top:350px">Actual</div>
+    <div class="lbl" style="position:absolute;left:688px;top:350px">Model</div>
+    <div class="lbl" style="position:absolute;left:1256px;top:350px">Both</div>
+    <canvas id="s8a" width="544" height="580" style="left:120px;top:390px"></canvas>
+    <canvas id="s8b" width="544" height="580" style="left:688px;top:390px"></canvas>
+    <canvas id="s8c" width="544" height="580" style="left:1256px;top:390px"></canvas>
+  </section>
+
+  <!-- PREDICT: 146 weeks -->
+  <section class="scene" id="s9">
+    <h1 class="h">146 weeks it never saw</h1>
+    <div id="s9k1" style="position:absolute;left:120px;top:226px;display:flex;gap:34px;font-size:24px;color:var(--fg2)"></div>
+    <canvas id="s9a" width="1100" height="330" style="left:120px;top:280px"></canvas>
+    <canvas id="s9b" width="1100" height="290" style="left:120px;top:720px"></canvas>
+    <div class="lbl" style="position:absolute;left:190px;top:668px">Reports caught in top 10% of blocks</div>
+    <div id="s9call" style="position:absolute;left:1340px;top:330px;width:480px;opacity:0"></div>
+  </section>
+
+  <!-- In the platform (simulation) -->
+  <section class="scene" id="s10">
+    <div id="app" style="position:absolute;left:60px;top:60px;width:1800px;height:960px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0D1A26">
+      <canvas id="s10map" width="1800" height="960" style="left:0;top:0"></canvas>
+      <div style="position:absolute;left:0;right:0;top:0;height:64px;background:rgba(17,19,21,.92);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:26px;padding:0 26px">
+        <span style="font:italic 500 34px var(--display);color:var(--fg)">Piper</span>
+        <span style="display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:20px">
+          <span style="padding:7px 16px;background:var(--fg);color:var(--bg);font-weight:600">Assess</span><span style="padding:7px 16px;color:var(--fg2)">Act</span></span>
+        <span style="margin-left:auto;font-size:20px;color:var(--fg2)"><span style="display:inline-block;width:10px;height:10px;border-radius:5px;background:var(--held);margin-right:8px"></span>Live</span>
+      </div>
+      <div id="fcCtl" class="panel" style="left:24px;top:88px;width:360px;padding:18px 20px;font-size:20px"></div>
+      <div id="rp" class="panel" style="right:0;top:64px;bottom:0;width:560px;border-radius:0;border-width:0 0 0 1px;background:rgba(24,27,30,.96)"></div>
+      <svg id="cursor" width="34" height="40" viewBox="0 0 34 40" style="position:absolute;left:0;top:0;filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))"><path d="M3 2 L3 33 L11 25 L17 38 L23 35 L17 23 L29 23 Z" fill="#F2F3F1" stroke="#111315" stroke-width="2"/></svg>
+      <div id="s10tag" style="position:absolute;left:24px;bottom:22px;padding:10px 16px;border-radius:10px;background:rgba(17,19,21,.88);border:1px solid var(--line);font:600 22px var(--sans)">Ask Piper · <span class="blue">Claude Sonnet 5.5</span></div>
+    </div>
+    <div class="note" style="position:absolute;right:76px;bottom:28px">Simulated · real numbers</div>
+  </section>
+
+  <!-- Close -->
+  <section class="scene" id="s11">
+    <div id="s11w" style="position:absolute;left:0;right:0;top:420px;text-align:center;font:italic 500 150px var(--display)"></div>
+  </section>
+</div>
+
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const seg = (t, a, b) => clamp((t - a) / (b - a));
+const ease = x => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const out = x => 1 - Math.pow(1 - x, 3);
+const lerp = (a, b, x) => a + (b - a) * x;
+const fmtW = s => new Date(s + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+const mix = (a, b, x) => `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * x)).join(",")})`;
+const pop = (el, p, dy = 20) => { el.style.opacity = p; el.style.transform = `translateY(${(1 - p) * dy}px)`; };
+
+/* color scales: blue = model, red = what happened */
+const NAVY = hex("#1E2E4C"), BLUE = hex("#6FA0FF"), ICE = hex("#DCE8FF"), RED1 = hex("#8E2F28"), RED = hex("#FF5A4E"), ROSE = hex("#FFC2BA");
+function blueFor(v, lo = 0.1) { if (!(v >= lo)) return null; const u = clamp(Math.log10(v / lo) / 2); return u < 0.5 ? mix(NAVY, BLUE, u / 0.5) : mix(BLUE, ICE, (u - 0.5) / 0.5); }
+function redFor(n, hi = 4) { return n <= 0 ? null : n >= hi ? mix(RED, ROSE, clamp((n - hi) / (hi * 1.5))) : mix(RED1, RED, (n - 1) / Math.max(1, hi - 1)); }
+
+/* the Boston grid */
+const G = D.grid;
+const C0 = Math.min(...G.map(g => g[0])), R1 = Math.max(...G.map(g => g[1]));
+const NC = Math.max(...G.map(g => g[0])) - C0 + 1, NR = R1 - Math.min(...G.map(g => g[1])) + 1;
+const key = (c, r) => c * 100000 + r;
+const FC = new Map(D.fc.map(([c, r, v]) => [key(c, r), v]));
+const NOW = new Map(D.now.map(([c, r, a]) => [key(c, r), a]));
+const order = [...D.fc].sort((a, b) => a[2] - b[2]);
+function gridGeom(w, h, pad = 8) { const s = Math.min((w - 2 * pad) / NC, (h - 2 * pad) / NR); const ox = (w - s * NC) / 2, oy = (h - s * NR) / 2;
+  return { s, xy: (c, r) => [ox + (c - C0) * s, oy + (R1 - r) * s] }; }
+function drawGrid(ctx, w, h, fill) { const { s, xy } = gridGeom(w, h); ctx.clearRect(0, 0, w, h);
+  for (const [c, r] of G) { const [x, y] = xy(c, r); ctx.fillStyle = fill(c, r) || "#1B1F23"; ctx.fillRect(x + 0.4, y + 0.4, s - 0.8, s - 0.8); } return { s, xy }; }
+
+/* scenes */
+const S = []; let at = 0;
+function scene(id, dur, stage, draw, fade = 0.45) { S.push({ el: $(id), a: at, b: at + dur, stage, draw, fade }); at += dur; }
+
+/* Section intro: data from start to finish, See → Act → Predict */
+const s0nodes = [...document.querySelectorAll(".s0n")];
+scene("s0", 3.8, null, lt => {
+  pop($("s0t"), out(seg(lt, 0.1, 0.8)), 24);
+  const g = ease(seg(lt, 0.9, 2.6)), x = 150 + 900 * g;
+  $("s0fill").setAttribute("x2", x);
+  s0nodes.forEach((n, i) => { const on = seg(lt, 0.9 + i * 0.85, 1.25 + i * 0.85); n.style.opacity = 0.25 + 0.75 * on;
+    n.querySelector("circle").setAttribute("fill", on > 0.5 ? "#6FA0FF" : "#111315"); n.querySelector("circle").setAttribute("stroke", on > 0.5 ? "#6FA0FF" : "#F2F3F1"); });
+  // data points flowing along the path
+  let dots = ""; for (let k = 0; k < 14; k++) { const u = ((lt * 0.55 + k / 14) % 1), dx = 150 + 900 * u;
+    if (dx <= x) dots += `<circle cx="${dx}" cy="50" r="5" fill="#DCE8FF" opacity="${0.35 + 0.5 * Math.sin(u * Math.PI)}"/>`; }
+  $("s0dots").innerHTML = dots;
+});
+
+/* Data */
+const KEPT = ["Past rodent reports", "Dead animals", "Indoor pests", "Trash storage", "Move-in trash", "Litter", "Temperature", "Season"];
+const DROP = ["Rain", "Snow", "Restaurants", "Red Sox games", "Demolitions", "Big Belly bins", "Permits", "Demographics", "Food inspections", "City lots"];
+const CHIPS = [...KEPT.map(t => ({ t, k: 1 })), ...DROP.map(t => ({ t, k: 0 }))].sort((a, b) => ((a.t.length * 7919) % 13) - ((b.t.length * 7919) % 13));
+CHIPS.forEach(c => { const el = document.createElement("div"); el.className = "chip";
+  el.innerHTML = `<span class="ic">${D.icons[c.t] || ""}</span><span class="tx">${c.t}</span>${c.k ? `<span class="ck" style="opacity:0">✓</span>` : ""}`;
+  $("s2chips").appendChild(el); c.el = el; c.ic = el.querySelector(".ic"); c.ck = el.querySelector(".ck"); c.tx = el.querySelector(".tx"); });
+function layoutChips() {  // rows packed left to right, then the whole block centered on the stage
+  const rows = [[]]; let x = 0;
+  CHIPS.forEach(c => { const w = c.el.offsetWidth; if (x + w > 1560 && rows.at(-1).length) { rows.push([]); x = 0; } rows.at(-1).push([c, x]); x += w + 20; });
+  const top = 540 - (rows.length * 92) / 2 + 20;
+  rows.forEach((row, i) => { const last = row.at(-1), rw = last[1] + last[0].el.offsetWidth, x0 = (1920 - rw) / 2;
+    row.forEach(([c, cx]) => { c.el.style.left = x0 + cx + "px"; c.el.style.top = top + i * 92 + "px"; }); });
+  $("s2n").style.top = top + rows.length * 92 + 40 + "px"; }
+scene("s2", 5.6, null, lt => {
+  CHIPS.forEach((c, i) => {
+    const p = out(seg(lt, 0.3 + i * 0.05, 0.8 + i * 0.05)); pop(c.el, p, 16);
+    const v = seg(lt, 1.9 + i * 0.06, 2.3 + i * 0.06) > 0.5;
+    if (c.k) { c.el.style.borderColor = v ? "#6FA0FF" : "#2F353B"; c.el.style.background = v ? "rgba(111,160,255,.16)" : "#1F2327";
+      c.ck.style.opacity = v ? 1 : 0; c.ic.style.color = v ? "#6FA0FF" : "#AEB5BC"; }
+    else { c.el.style.opacity = p * (v ? 0.55 : 1); c.tx.style.textDecoration = v ? "line-through" : "none"; c.el.style.color = v ? "#8A929A" : "#F2F3F1"; c.ic.style.color = v ? "#68717A" : "#AEB5BC"; }
+  });
+  $("s2n").style.opacity = seg(lt, 3.4, 4.0);
+});
+
+/* SEE */
+scene("s3", 5.6, "see", lt => {
+  const ctx = $("s3c").getContext("2d"), W = 1100, H = 880, sweep = seg(lt, 0.2, 2.2) * (NR + 6);
+  const { s, xy } = gridGeom(W, H); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, W, H);
+  const k = 1 + 0.08 * ease(seg(lt, 1.8, 5.6)); ctx.setTransform(k, 0, 0, k, W / 2 * (1 - k), H / 2 * (1 - k));
+  for (const [c, r] of G) { if ((R1 - r) > sweep) continue; const [x, y] = xy(c, r); const a = NOW.get(key(c, r)) || 0;
+    ctx.fillStyle = (a && redFor(a, 6)) || "#1B1F23"; ctx.fillRect(x + 0.4, y + 0.4, s - 0.8, s - 0.8); }
+  $("s3leg").style.opacity = seg(lt, 1.6, 2.2);
+});
+
+/* ACT: Boston records */
+const BA = D.act.byAction, M = D.act.matched;
+$("s4call").innerHTML = `<div style="display:flex;gap:40px;align-items:flex-end">
+    <div><div class="num" style="font-size:110px;line-height:1">${Math.round(M.enf * 100)}%</div><div style="font-size:26px;color:var(--fg2);margin-top:8px">enforcement</div></div>
+    <div><div class="num" style="font-size:110px;line-height:1;color:var(--fg2)">${Math.round(M.mon * 100)}%</div><div style="font-size:26px;color:var(--fg2);margin-top:8px">monitoring</div></div></div>
+  <div style="font-size:30px;margin-top:34px;font-weight:600">No clear difference</div>
+  <div class="note" style="margin-top:14px">Matched · ${M.pairs} pairs</div>`;
+// Removed from the cut: no single clear takeaway for the viewer (kept for reference).
+const unused = (..._) => {};
+unused("s4", 6.4, "act", lt => {
+  const ctx = $("s4c").getContext("2d"), W = 1000, H = 600, L = 270, rowH = 86; ctx.clearRect(0, 0, W, H);
+  ctx.font = "500 22px 'Atkinson Hyperlegible Next'"; ctx.fillStyle = "#8A929A"; ctx.textAlign = "left"; ctx.fillText("Came back within 60 days", L, 24);
+  BA.forEach(([name, n, pct], i) => {
+    const g = out(seg(lt, 0.3 + i * 0.15, 1.0 + i * 0.15)), y = 50 + i * rowH, w = (W - L - 120) * pct / 100 * g;
+    ctx.fillStyle = "#F2F3F1"; ctx.font = "500 28px 'Atkinson Hyperlegible Next'"; ctx.textAlign = "right"; ctx.fillText(name, L - 24, y + 36);
+    ctx.fillStyle = name === "Monitoring" ? "#68717A" : "#FFA23A"; ctx.fillRect(L, y + 12, w, 36);
+    ctx.fillStyle = "#F2F3F1"; ctx.textAlign = "left"; ctx.font = "500 26px 'Atkinson Hyperlegible Mono'"; if (g > 0.05) ctx.fillText(Math.round(pct * g) + "%", L + w + 14, y + 40);
+  });
+  const p = out(seg(lt, 2.2, 3.0)); $("s4call").style.opacity = p; $("s4call").style.transform = `translateX(${(1 - p) * 30}px)`;
+});
+
+/* ACT: other cities */
+const CT = D.act.cities, nearX = CT.nearAfter / CT.nearBefore, otherX = CT.otherAfter / CT.otherBefore;
+$("s5cols").innerHTML = `
+  <div><div class="lbl">Cambridge · smart rat boxes</div>
+    <div style="font-size:32px;color:var(--fg2);margin-top:30px">Rodent sightings after a box</div>
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:18px 22px;align-items:center;margin-top:22px">
+      <span style="font-size:34px">Near box</span><div style="display:flex;align-items:center;gap:18px"><div class="s5b" data-w="${nearX / 1.8}" style="height:48px;border-radius:8px;background:#3DBE7A;width:0"></div><span class="num" style="font-size:44px">×${nearX.toFixed(2)}</span></div>
+      <span style="font-size:34px">Elsewhere</span><div style="display:flex;align-items:center;gap:18px"><div class="s5b" data-w="${otherX / 1.8}" style="height:48px;border-radius:8px;background:#68717A;width:0"></div><span class="num" style="font-size:44px">×${otherX.toFixed(2)}</span></div>
+    </div>
+    <div class="note" style="margin-top:22px">Descriptive</div></div>
+  <div><div class="lbl">Somerville · Rodent Assistance Program</div>
+    <div class="num" style="font-size:200px;line-height:1;margin-top:20px">${CT.somervilleProgram}</div>
+    <div style="font-size:34px;color:var(--fg2);margin-top:8px">requests in 12 months</div></div>`;
+scene("s5", 5.0, "act", lt => {
+  [...$("s5cols").children].forEach((el, i) => pop(el, out(seg(lt, 0.3 + i * 0.5, 0.9 + i * 0.5))));
+  document.querySelectorAll(".s5b").forEach((b, i) => { b.style.width = (60 * +b.dataset.w * out(seg(lt, 0.9 + i * 0.25, 1.7 + i * 0.25))) + "%"; });
+});
+
+/* ACT: per site + region solution */
+const RC = D.recur.cal;
+const SOL = "Cite owners for trash storage on Commonwealth Ave and Carol Ave; refer catch basins on Melvin Ave to BWSC.";
+const GUARDS = ["Allowed actions only", "No poison", "Every number from the data"];
+$("s6sol").innerHTML = `<div class="lbl">Region solution · <span class="blue">Claude Haiku</span></div>
+  <div style="font-size:32px;font-weight:600;line-height:1.3;margin-top:18px">${SOL}</div>
+  <div style="display:grid;gap:12px;margin-top:26px;font-size:26px">${GUARDS.map(x => `<div class="g"><span class="check">✓</span>${x}</div>`).join("")}</div>`;
+scene("s6", 7.2, "act", lt => {
+  const ctx = $("s6c").getContext("2d"), W = 820, H = 520, L = 70, B = 56, T = 50, iw = W - L - 10, ih = H - B - T, mx = 0.55;
+  ctx.clearRect(0, 0, W, H); ctx.font = "400 18px 'Atkinson Hyperlegible Mono'";
+  [0, 0.25, 0.5].forEach(v => { const y = T + ih - v / mx * ih; ctx.strokeStyle = "#2A2F34"; ctx.beginPath(); ctx.moveTo(L, y); ctx.lineTo(W - 10, y); ctx.stroke();
+    ctx.fillStyle = "#8A929A"; ctx.textAlign = "right"; ctx.fillText(Math.round(v * 100) + "%", L - 10, y + 6); });
+  const bw = iw / RC.length;
+  RC.forEach(([d, p, a], i) => { const x = L + i * bw;
+    const hp = p / mx * ih * out(seg(lt, 0.3 + i * 0.09, 1.0 + i * 0.09)), ha = a / mx * ih * out(seg(lt, 0.9 + i * 0.09, 1.6 + i * 0.09));
+    ctx.fillStyle = "#6FA0FF"; ctx.fillRect(x + bw * 0.12, T + ih - hp, bw * 0.36, hp);
+    ctx.fillStyle = "#F2F3F1"; ctx.fillRect(x + bw * 0.52, T + ih - ha, bw * 0.36, ha); });
+  ctx.fillStyle = "#8A929A"; ctx.font = "500 22px 'Atkinson Hyperlegible Next'"; ctx.textAlign = "left"; ctx.fillText("lowest risk", L, H - 16); ctx.textAlign = "right"; ctx.fillText("highest risk", W - 10, H - 16);
+  ctx.textAlign = "left"; ctx.font = "500 22px 'Atkinson Hyperlegible Next'";
+  ctx.fillStyle = "#6FA0FF"; ctx.fillRect(L, 6, 18, 18); ctx.fillText("predicted", L + 28, 23);
+  ctx.fillStyle = "#F2F3F1"; ctx.fillRect(L + 170, 6, 18, 18); ctx.fillText("came back", L + 198, 23);
+  const sp = out(seg(lt, 2.6, 3.2)); $("s6sol").style.opacity = sp; $("s6sol").style.transform = `translateX(${(1 - sp) * 30}px)`;
+  document.querySelectorAll("#s6sol .g").forEach((g, i) => g.style.opacity = seg(lt, 3.6 + i * 0.35, 4.0 + i * 0.35));
+});
+
+/* PREDICT: forecast */
+const TOP = D.top[0];
+const s7ctx = $("s7c").getContext("2d");
+const SHORT = { "Recent rodent reports here": "Past rodent reports", "Dead animal reports (here and nearby)": "Dead animals nearby", "Indoor pest reports (here and nearby)": "Indoor pests nearby" };
+const maxC = Math.max(...TOP.d.map(d => d[1]));
+$("s7card").innerHTML = `<div style="display:flex;align-items:baseline;gap:16px"><span class="num" style="font-size:96px;line-height:1">${TOP.t.toFixed(1)}</span><span style="font-size:28px;color:var(--fg2)">expected reports<br>next 4 weeks</span></div>
+  <div style="display:grid;gap:18px;margin-top:30px">${TOP.d.map(([l, k]) => `<div><div style="font-size:26px">${SHORT[l] || l}</div>
+  <div style="position:relative;height:16px;margin-top:8px;background:#262B30;border-radius:8px"><div class="bar s7bar" data-w="${k / maxC}" style="left:0;top:0;height:16px;width:0"></div></div></div>`).join("")}</div>`;
+scene("s7", 7.6, "predict", lt => {
+  const appear = seg(lt, 0.2, 1.4), fill = seg(lt, 1.2, 3.6), nFill = Math.floor(ease(fill) * order.length), lit = new Set();
+  for (let i = order.length - nFill; i < order.length; i++) lit.add(key(order[i][0], order[i][1]));
+  const z = ease(seg(lt, 4.0, 5.2)), W = 1000, H = 880;
+  s7ctx.save(); s7ctx.clearRect(0, 0, W, H);
+  const geo = gridGeom(W, H); const [tx, ty] = geo.xy(TOP.c, TOP.r);
+  const zoom = lerp(1, 2.6, z); s7ctx.translate(W / 2, H / 2); s7ctx.scale(zoom, zoom); s7ctx.translate(-lerp(W / 2, tx + geo.s / 2, z), -lerp(H / 2, ty + geo.s / 2, z));
+  for (const [c, r] of G) { if ((R1 - r) > appear * (NR + 10)) continue; const [x, y] = geo.xy(c, r);
+    s7ctx.fillStyle = (lit.has(key(c, r)) && blueFor(FC.get(key(c, r)))) || "#1B1F23"; s7ctx.fillRect(x + 0.4, y + 0.4, geo.s - 0.8, geo.s - 0.8); }
+  if (z > 0) { s7ctx.strokeStyle = "#F2F3F1"; s7ctx.lineWidth = 2.5 / zoom; s7ctx.globalAlpha = z; s7ctx.strokeRect(tx - 1, ty - 1, geo.s + 2, geo.s + 2); s7ctx.globalAlpha = 1; }
+  s7ctx.restore();
+  pop($("s7card"), out(seg(lt, 4.6, 5.4)));
+  document.querySelectorAll(".s7bar").forEach((b, i) => { b.style.width = (100 * +b.dataset.w * out(seg(lt, 5.3 + i * 0.25, 6.2 + i * 0.25))) + "%"; });
+});
+
+/* PREDICT: three maps */
+const BT = new Map(D.bt.map(([c, r, y, g]) => [key(c, r), { y, g }]));
+const WK = D.btWeeks, NW = WK.length, WEEKLY = D.weekly, LASTW = WEEKLY.slice(-NW), TOPN = Math.round(G.length * 0.1);
+const topSets = WK.map((_, wi) => new Set([...BT.entries()].sort((a, b) => b[1].g[wi] - a[1].g[wi]).slice(0, TOPN).map(e => e[0])));
+scene("s8", 7.2, "predict", lt => {
+  const wi = clamp(Math.floor((lt - 0.8) / 0.4), 0, NW - 1), top = topSets[wi], outline = seg(lt, 1.4, 2.0);
+  // timeline: one bar per week (height = share of that week's reports in the model's top 10%), playhead moves along it
+  const pos = clamp((lt - 0.8) / 0.4, 0, NW - 1), TW = 1680, x0 = 40, x1 = TW - 40, X = i => x0 + (x1 - x0) * i / (NW - 1);
+  let tl = `<line x1="${x0}" y1="62" x2="${x1}" y2="62" stroke="#2F353B" stroke-width="2"/>`;
+  WK.forEach((w, i) => { const h = 44 * LASTW[i][4], past = i <= wi;
+    tl += `<rect x="${X(i) - 14}" y="${62 - h}" width="28" height="${h}" rx="3" fill="${past ? "#6FA0FF" : "#2A2F34"}" opacity="${i === wi ? 1 : past ? 0.55 : 1}"/>`;
+    const d = new Date(w + "T12:00:00"); if (i === 0 || d.getDate() <= 7) tl += `<text x="${X(i)}" y="92" text-anchor="middle" fill="#8A929A" font-size="20" font-family="Atkinson Hyperlegible Mono">${d.toLocaleDateString("en-US", { month: "short" })}</text>`; });
+  const px = X(pos);
+  tl += `<line x1="${px}" y1="4" x2="${px}" y2="70" stroke="#F2F3F1" stroke-width="2"/><circle cx="${px}" cy="62" r="8" fill="#F2F3F1"/>
+    <text x="${clamp(px, 120, TW - 120)}" y="-4" text-anchor="middle" fill="#F2F3F1" font-size="26" font-family="Atkinson Hyperlegible Next" font-weight="600">${Math.round(LASTW[wi][4] * 100)}% in top 10%</text>`;
+  $("s8tl").innerHTML = tl; $("s8tl").style.opacity = seg(lt, 0.3, 0.9);
+  const get = (c, r) => BT.get(key(c, r)), W = 544, H = 580;
+  const a = $("s8a").getContext("2d"), b = $("s8b").getContext("2d"), cc = $("s8c").getContext("2d");
+  const ga = drawGrid(a, W, H, (c, r) => { const d = get(c, r); return d && redFor(d.y[wi]); });
+  if (outline > 0) { a.strokeStyle = `rgba(242,243,241,${0.4 * outline})`; a.lineWidth = 1;
+    for (const k of top) { const [x, y] = ga.xy(Math.floor(k / 100000), k % 100000); a.strokeRect(x + 0.7, y + 0.7, ga.s - 1.4, ga.s - 1.4); } }
+  drawGrid(b, W, H, (c, r) => { const d = get(c, r); return d && blueFor(d.g[wi], 0.05); });
+  const gc = drawGrid(cc, W, H, (c, r) => { const d = get(c, r); return d && blueFor(d.g[wi], 0.05); });
+  cc.fillStyle = "#FF5A4E";
+  for (const [k, d] of BT) { const n = d.y[wi]; if (!n) continue; const [x, y] = gc.xy(Math.floor(k / 100000), k % 100000);
+    cc.beginPath(); cc.arc(x + gc.s / 2, y + gc.s / 2, Math.max(1.6, gc.s * Math.min(0.62, 0.22 * Math.sqrt(n))), 0, 7); cc.fill(); }
+});
+
+/* PREDICT: 146 weeks */
+$("s9k1").innerHTML = `<span><i style="display:inline-block;width:28px;border-top:3px solid #F2F3F1;margin-right:10px;vertical-align:5px"></i>Actual</span>
+  <span><i style="display:inline-block;width:28px;border-top:3px solid #6FA0FF;margin-right:10px;vertical-align:5px"></i>Model</span>
+  <span><i style="display:inline-block;width:28px;border-top:3px dashed #8A929A;margin-right:10px;vertical-align:5px"></i>No model</span>`;
+function lineChart(ctx, W, H, series, yMax, p, yFmt, ticks) {
+  const L = 70, R = 14, T = 12, B = 34, iw = W - L - R, ih = H - T - B, n = series[0].v.length;
+  const X = i => L + i / (n - 1) * iw, Y = v => T + ih - v / yMax * ih;
+  ctx.clearRect(0, 0, W, H); ctx.font = "400 18px 'Atkinson Hyperlegible Mono'"; ctx.fillStyle = "#8A929A";
+  ticks.forEach(v => { ctx.strokeStyle = "#2A2F34"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(L, Y(v)); ctx.lineTo(W - R, Y(v)); ctx.stroke(); ctx.textAlign = "right"; ctx.fillText(yFmt(v), L - 10, Y(v) + 6); });
+  ctx.textAlign = "center"; ["2024-01-01", "2025-01-06", "2026-01-05"].forEach(d => { const i = WEEKLY.findIndex(w => w[0] >= d); if (i >= 0) ctx.fillText(d.slice(0, 4), X(i), H - 8); });
+  const upto = p * (n - 1);
+  for (const s of series) { ctx.strokeStyle = s.color; ctx.lineWidth = s.w || 2.4; ctx.setLineDash(s.dash ? [7, 6] : []); ctx.lineJoin = "round"; ctx.beginPath();
+    for (let i = 0; i <= Math.min(n - 1, Math.floor(upto)); i++) { const x = X(i), y = Y(s.v[i]); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+    const f = upto - Math.floor(upto), i0 = Math.floor(upto); if (i0 < n - 1 && f > 0) ctx.lineTo(lerp(X(i0), X(i0 + 1), f), lerp(Y(s.v[i0]), Y(s.v[i0 + 1]), f));
+    ctx.stroke(); ctx.setLineDash([]); }
+}
+const sumY = WEEKLY.reduce((a, w) => a + w[1], 0);
+const capM = WEEKLY.reduce((a, w) => a + w[4] * w[1], 0) / sumY, capB = WEEKLY.reduce((a, w) => a + w[5] * w[1], 0) / sumY, better = WEEKLY.filter(w => w[4] > w[5]).length;
+$("s9call").innerHTML = `<div class="num" style="font-size:150px;line-height:1"><span class="blue">${Math.round(capM * 100)}%</span></div>
+  <div class="num" style="font-size:40px;color:var(--fg2);margin-top:10px">vs ${Math.round(capB * 100)}% no model</div>
+  <div class="num" style="font-size:40px;margin-top:60px">${better} / ${WEEKLY.length} <span style="font-size:28px;color:var(--fg2);font-family:var(--sans)">weeks better</span></div>`;
+scene("s9", 6.6, "predict", lt => {
+  lineChart($("s9a").getContext("2d"), 1100, 330, [{ v: WEEKLY.map(w => w[3]), color: "#8A929A", dash: 1, w: 2 }, { v: WEEKLY.map(w => w[2]), color: "#6FA0FF", w: 2.6 }, { v: WEEKLY.map(w => w[1]), color: "#F2F3F1", w: 2.2 }],
+    250, ease(seg(lt, 0.3, 2.6)), v => v, [0, 100, 200]);
+  lineChart($("s9b").getContext("2d"), 1100, 290, [{ v: WEEKLY.map(w => w[5]), color: "#8A929A", dash: 1, w: 2 }, { v: WEEKLY.map(w => w[4]), color: "#6FA0FF", w: 2.6 }],
+    1, ease(seg(lt, 2.0, 4.0)), v => Math.round(v * 100) + "%", [0, 0.5, 1]);
+  const cp = out(seg(lt, 3.8, 4.6)); $("s9call").style.opacity = cp; $("s9call").style.transform = `translateX(${(1 - cp) * 30}px)`;
+});
+
+/* In the platform (simulation) */
+const top4 = D.top.slice(0, 4);
+const Q = "Where should we look next?";
+const ANS = `Most expected reports in the next 4 weeks: ${top4[0].n.split(" /")[0]} (${top4[0].t.toFixed(1)}), ${top4[1].n} (${top4[1].t.toFixed(1)}), ${top4[2].n} (${top4[2].t.toFixed(1)}), ${top4[3].n} (${top4[3].t.toFixed(1)}).`;
+const TOOLS = ["get_insights", "map_show_forecast", "map_highlight"];
+const mapCtx = $("s10map").getContext("2d"), MAPW = 1240, MAPH = 896;
+function drawApp(lt) {
+  mapCtx.fillStyle = "#0D1A26"; mapCtx.fillRect(0, 0, 1800, 960);
+  const surf = seg(lt, 1.0, 1.8), fly = ease(seg(lt, 4.4, 5.4));
+  const geo = gridGeom(MAPW, MAPH); const [tx, ty] = geo.xy(TOP.c, TOP.r);
+  mapCtx.save(); mapCtx.translate(0, 64);
+  const zoom = lerp(1, 1.9, fly); mapCtx.translate(MAPW / 2, MAPH / 2); mapCtx.scale(zoom, zoom); mapCtx.translate(-lerp(MAPW / 2, tx, fly), -lerp(MAPH / 2, ty, fly));
+  for (const [c, r] of G) { const [x, y] = geo.xy(c, r); mapCtx.fillStyle = "#1A1D20"; mapCtx.fillRect(x, y, geo.s + 0.6, geo.s + 0.6); }
+  if (surf > 0) for (const [c, r, v] of D.fc) { if (v < 1) continue; const [x, y] = geo.xy(c, r); mapCtx.fillStyle = blueFor(v, 0.5); mapCtx.globalAlpha = surf * 0.85;
+    mapCtx.fillRect(x - geo.s * 0.15, y - geo.s * 0.15, geo.s * 1.3, geo.s * 1.3); }
+  mapCtx.globalAlpha = 1;
+  const hl = seg(lt, 5.0, 5.6);
+  if (hl > 0) top4.forEach(b => { const [x, y] = geo.xy(b.c, b.r); mapCtx.strokeStyle = `rgba(242,243,241,${hl})`; mapCtx.lineWidth = 3 / zoom; mapCtx.beginPath(); mapCtx.arc(x + geo.s / 2, y + geo.s / 2, geo.s * 2.2, 0, 7); mapCtx.stroke(); });
+  mapCtx.restore();
+}
+const typed = (s, p) => s.slice(0, Math.floor(s.length * clamp(p)));
+const tabs = a => `<div style="display:flex;gap:28px;padding:18px 26px 0;border-bottom:1px solid #2F353B;font-size:21px">${["Inspect", "Insights", "Ask"].map(x => `<span style="padding-bottom:14px;${x === a ? "color:#F2F3F1;border-bottom:2px solid #F2F3F1" : "color:#8A929A"}">${x}</span>`).join("")}</div>`;
+scene("s10", 7.6, null, lt => {
+  drawApp(lt);
+  const on = lt > 0.9;
+  $("fcCtl").innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;font-weight:600">Forecast
+    <span style="width:46px;height:26px;border-radius:13px;background:${on ? "#6FA0FF" : "#2F353B"};position:relative;display:inline-block"><span style="position:absolute;top:3px;left:${on ? 23 : 3}px;width:20px;height:20px;border-radius:10px;background:#F2F3F1"></span></span></div>
+    ${on ? `<div style="height:10px;border-radius:5px;margin-top:14px;background:linear-gradient(90deg,#1E2E4C,#6FA0FF,#DCE8FF)"></div>` : ""}`;
+  const P = [[700, 560], [370, 108], [1500, 900]], m1 = ease(seg(lt, 0.2, 0.85)), m2 = ease(seg(lt, 1.6, 2.3));
+  $("cursor").style.transform = `translate(${lerp(lerp(P[0][0], P[1][0], m1), P[2][0], m2)}px, ${lerp(lerp(P[0][1], P[1][1], m1), P[2][1], m2)}px)`;
+  const q = typed(Q, seg(lt, 2.4, 3.2)), tools = TOOLS.filter((_, i) => lt > 3.5 + i * 0.3), ans = typed(ANS, seg(lt, 5.0, 6.6));
+  $("rp").innerHTML = tabs("Ask") + `<div style="padding:24px 26px;display:grid;gap:18px;font-size:23px;line-height:1.45">
+    ${q.length === Q.length ? `<div style="justify-self:end;max-width:420px;background:#F2F3F1;color:#111315;padding:12px 16px;border-radius:14px">${Q}</div>` : ""}
+    ${tools.length ? `<div style="display:flex;flex-wrap:wrap;gap:8px">${tools.map(x => `<span class="num" style="font-size:16px;padding:5px 10px;border-radius:8px;border:1px solid #2F353B;color:#6FA0FF">${x} ✓</span>`).join("")}</div>` : ""}
+    ${ans ? `<div>${ans}</div>` : ""}
+    ${ans.length === ANS.length ? `<div style="font-size:17px;color:#8A929A">Sources ▸</div>` : ""}</div>
+    <div style="position:absolute;left:26px;right:26px;bottom:24px;border:1px solid #2F353B;border-radius:12px;padding:14px 16px;font-size:20px;color:${q && q.length < Q.length ? "#F2F3F1" : "#68717A"}">${q && q.length < Q.length ? q + "▍" : "Ask Piper"}</div>`;
+});
+
+/* Close */
+scene("s11", 3.4, null, lt => {
+  const w = ["See", "Act", "Predict"];
+  $("s11w").innerHTML = w.map((x, i) => `<span style="opacity:${seg(lt, 0.2 + i * 0.35, 0.6 + i * 0.35)}">${x}</span>`).join(`<span style="color:var(--fg3);font-size:90px;margin:0 30px;vertical-align:20px">·</span>`);
+}, 0.4);
+const DUR = at;
+
+/* timeline */
+const ORDER = ["see", "act", "predict"];
+function render(t) {
+  let stage = null, jv = 0;
+  for (const s of S) {
+    // dip: the outgoing scene fades out before the boundary, the incoming one fades in after it (never overlapping)
+    const fadeIn = s.a === 0 ? 1 : seg(t, s.a, s.a + 0.35);
+    const vis = s === S[S.length - 1] ? fadeIn : Math.min(fadeIn, 1 - seg(t, s.b - 0.3, s.b));
+    s.el.style.opacity = vis;
+    if (vis > 0) s.draw(t - s.a);
+    if (s.stage && t >= s.a && t < s.b) { stage = s.stage; jv = Math.max(jv, 1); }
+  }
+  const j = $("journey"); j.style.opacity = jv;
+  if (stage) j.querySelectorAll(".s").forEach(el => { const k = ORDER.indexOf(el.dataset.k), c = ORDER.indexOf(stage); el.className = "s" + (k === c ? " on" : k < c ? " done" : ""); });
+}
+window.render = render; window.DUR = DUR;
+function fit() { const k = Math.min(innerWidth / 1920, innerHeight / 1080); $("stage").style.transform = `translate(${(innerWidth - 1920 * k) / 2}px,${(innerHeight - 1080 * k) / 2}px) scale(${k})`; }
+addEventListener("resize", fit); fit();
+const qs = new URLSearchParams(location.search);
+document.fonts.ready.then(() => {
+  layoutChips();
+  if (qs.has("t")) render(+qs.get("t"));
+  else if (!qs.has("capture")) { const t0 = performance.now(); const loop = () => { render(((performance.now() - t0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+  window.ready = true;
+});
+</script>
+</body>
+</html>

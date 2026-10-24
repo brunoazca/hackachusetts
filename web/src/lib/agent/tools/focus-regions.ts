@@ -26,6 +26,7 @@ export async function focusRegions(input: unknown): Promise<ClientToolOutput> {
     const focus = buildRegionFocus(parsed.data.regions, cells);
     if (current !== request || revision !== useMap.getState().regionFocusRevision) return { ok: false, error: "Superseded by a newer region focus request." };
     useMap.getState().setMode("assess");
+    useMap.getState().select(null); // The left Insight panel returns to its ranking.
     useMap.getState().setRegionFocus(focus);
     return { ok: true, done: `Prepared ${focus.labels.length} numbered region boundaries and outside shading. Map will fit these regions; filters preserved.` };
   } catch (error) {

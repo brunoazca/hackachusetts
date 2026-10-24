@@ -74,19 +74,19 @@ export default function Timeline() {
     <section
       id="timeline"
       ref={boxRef}
-      aria-label="Time window"
+      aria-label="Dates"
       inert={!open}
-      className="glass absolute left-[60px] top-0 w-[320px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
+      className="glass absolute bottom-[60px] left-0 w-[320px] overflow-hidden rounded-lg will-change-[transform,clip-path]"
     >
       <div className="p-3">
         <header className="flex items-start justify-between gap-2">
           <div>
-            <h2 className="text-[14px] font-bold text-fg">Time window</h2>
+            <h2 className="text-[14px] font-bold text-fg">Dates</h2>
             <p className="mt-0.5 text-[13px] text-fg-2" aria-live="polite">
               {nice(START + lo * DAY, false)} – {nice(START + hi * DAY)} <span className="text-fg-3">· {hi - lo + 1} days</span>
             </p>
           </div>
-          <button type="button" onClick={close} aria-label="Close time window" className="grid h-7 w-7 place-items-center rounded-sm text-fg-3 hover:bg-card-hover hover:text-fg">
+          <button type="button" onClick={close} aria-label="Close dates" className="grid h-7 w-7 place-items-center rounded-sm text-fg-3 hover:bg-card-hover hover:text-fg">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden><path d="M18 6 6 18M6 6l12 12" /></svg>
           </button>
         </header>
@@ -106,7 +106,7 @@ export default function Timeline() {
           ))}
         </div>
 
-        <p className="mt-3 text-[11px] font-semibold text-fg-3">Or drag to pick any window</p>
+        <p className="mt-3 text-[11px] font-semibold text-fg-3">Or drag to pick your own dates</p>
         <div className="relative mt-1 h-9">
           <div className="absolute inset-x-0 top-[13px] h-1.5 rounded-full bg-card" />
           <div className="absolute top-[13px] h-1.5 rounded-full bg-fg" style={{ left: `${pct(lo)}%`, width: `${Math.max(1, pct(hi) - pct(lo))}%` }} />
@@ -120,7 +120,8 @@ export default function Timeline() {
             type="range" min={0} max={TOTAL} value={lo}
             aria-label="From" aria-valuetext={nice(START + lo * DAY)}
             onChange={(e) => { const v = Math.min(Number(e.target.value), hi - 1); setLo(v); commit(v, hi); }}
-            className="piper-range absolute inset-x-0 top-0 h-7 w-full"
+            // Short windows put both thumbs on the same pixel; near the end only "From" can move, so it must be the one on top.
+            className={`piper-range absolute inset-x-0 top-0 h-7 w-full ${lo > TOTAL / 2 ? "z-10" : ""}`}
           />
           <input
             type="range" min={0} max={TOTAL} value={hi}

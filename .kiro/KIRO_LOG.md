@@ -31,6 +31,16 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 — Integrate region outlines with the new Insight architecture
+- Teammate: Carolina
+- Agent:
+- Did: Integrated origin/main ea6c53e locally, preserving the new left Insight/right Ask layout, Markdown, filters and card routes. get_ranking now retains complete hotspot member cells; both ranking tools feed shared outlines, exterior shading, 1–N markers and camera fit. open_insight retains highlighted blocks and clears unrelated selections. Ranking focus restores the left ranking view.
+- Why: The previously published contour branch had never been merged into main; the redesigned app lacked the feature.
+- Where: MapView, RegionFocusLayer, ChatPanel, map-store, agent ranking/client tools, context, prompt and regression tests.
+- Validation: 101 agent tests passed, 7 external integration tests skipped; 8 panel/evidence tests passed via tsx with fixture client configuration. TypeScript and scoped ESLint passed. Browser verified top five, top three, least-severe five, correct Dorchester card via first marker, Newbury clearing and ranking restoration.
+- Notes: Added the missing resolvedCells/toggleResolved state already referenced by the upstream Insight panel; allowed inspect mode in chat context validation. Plain npm test cannot resolve aliases in the upstream insight test, so used its documented tsx executor. AGENTS.md remains empty.
+- Idea: Local integration only; no push. Tested in a separate browser tab to preserve the user's existing conversation.
+
 ### 2026-10-24 — Investigate missing region outlines after pulls
 - Teammate: Carolina
 - Agent:
@@ -142,6 +152,211 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: web/src/lib/map-store.ts
 - Status: Local change only; user explicitly requested no push.
 - Idea: none
+### 2026-10-24 19:28 — Agent drives the Insight panel: new server tools get_rank...
+- Teammate: Bruno
+- Agent: —
+- Did: Agent drives the Insight panel: new server tools get_ranking (paged ranking) and get_insight (block / report / place card, compact) via AgentData.insightRpc; client tool open_insight selects ranking/block/report/place so the left panel opens the card; map_select now opens insights; removed map_filter_sites, open_panel and act mode; prompt rules updated. Insight panel header: single 'All insights' button (clears selection, Esc too)
+- Why: Bruno asked the agent to work with the new selection model and open the insight panel automatically, and for Back to go to all insights
+- Where: web/src/lib/agent/{tools/insights.ts,tools/client.ts,data/*,prompt.ts,ui.ts}, web/src/components/chat/ChatPanel.tsx, web/src/components/insight/InsightPanel.tsx, tests
+- Idea: A live DB agent test (site tools) is timing-flaky under the full suite but passes alone
+
+### 2026-10-24 19:24 — Removed the 'Methodology & city-wide evidence' collapsibl...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed the 'Methodology & city-wide evidence' collapsible from the ranking list
+- Why: Clutter under 'Where to act first'; the list should be just the ranked places
+- Where: web/src/components/insight/RankingList.tsx
+- Idea: —
+
+### 2026-10-24 19:24 — Map: centered the bottom filter bar
+- Teammate: Bruno
+- Agent: —
+- Did: Map: centered the bottom filter bar
+- Why: user asked to center the filters at the bottom
+- Where: web/src/components/map/LayerPanel.tsx
+- Idea: —
+
+### 2026-10-24 19:24 — Chat: red rail button, removed the 'Ask' header row, shor...
+- Teammate: Bruno
+- Agent: —
+- Did: Chat: red rail button, removed the 'Ask' header row, shorter intro text
+- Why: Chat entry point had no emphasis; header and intro were cluttered
+- Where: web/src/components/shell/RightPanel.tsx, SidePanel.tsx, web/src/components/chat/ChatPanel.tsx
+- Idea: —
+
+### 2026-10-24 19:23 — On-demand AI live: Modal secret rat-audit-ai (AI_GATEWAY_...
+- Teammate: Bruno
+- Agent: —
+- Did: On-demand AI live: Modal secret rat-audit-ai (AI_GATEWAY_API_KEY), Modal redeployed with insight_ai endpoint, MODAL_INSIGHT_AI_URL in Vercel (prod+preview) and .env.local; block cards now write their AI analysis automatically on open with a loading state; empty-map clicks open the 250 m block under the tap (cell_at RPC) instead of the nearest hidden report
+- Why: Bruno supplied the gateway key and asked for automatic generation with loading, and reported that clicking empty map opened a report that was not drawn
+- Where: pipeline/modal_app.py, supabase/migrations/20261024500010_insight_ranking_paged.sql, web/src/components/insight/AreaView.tsx, web/src/components/map/MapView.tsx, web/src/lib/insight.ts
+- Idea: cell_at params named lat/lon silently matched grid_cells columns and returned the wrong block; qualify plpgsql/sql params
+
+### 2026-10-24 19:22 — Map: removed the Buildings & people dock button and the h...
+- Teammate: Bruno
+- Agent: —
+- Did: Map: removed the Buildings & people dock button and the heat-scale legend
+- Why: declutter the map; List button was already removed
+- Where: web/src/components/map/LayerPanel.tsx, web/src/components/map/MapView.tsx
+- Idea: —
+
+### 2026-10-24 19:19 — Integrate chat Markdown fix with the current main for the...
+- Teammate: Carol
+- Agent: Codex
+- Did: Integrate chat Markdown fix with the current main for the authorized release
+- Why: Preserve the new chat-only shell and all teammate changes before pushing
+- Where: web/src/components/chat; web/package.json; web/pnpm-lock.yaml; .kiro/KIRO_LOG.md
+- Idea: Only the append-only Kiro log collided; keep both histories and validate the combined frontend
+
+### 2026-10-24 19:11 — Render Ask answers as safe Markdown; match the latest cha...
+- Teammate: Carol
+- Agent: Codex
+- Did: Render Ask answers as safe Markdown; match the latest chat theme and compact layout
+- Why: Tables and lists were shown as raw text and crowded the panel
+- Where: web/src/components/chat; web/package.json; web/pnpm-lock.yaml
+- Idea: Keep wide tables keyboard-scrollable inside each answer and sources collapsed; validate with mocked chat responses without sending map context to AI
+### 2026-10-24 19:21 — Ranking cards: severity tier chip + colored side bar (Cri...
+- Teammate: Bruno
+- Agent: —
+- Did: Ranking cards: severity tier chip + colored side bar (Critical/High severity/Moderate/Low by score), dropped internal numbers and AI/Rules badge, shorter header
+- Why: Reduce noise in Where to act first; make urgency readable at a glance
+- Where: web/src/components/insight/RankingList.tsx
+- Idea: —
+
+### 2026-10-24 19:16 — Removed the List button from the map's bottom-left stack
+- Teammate: Bruno
+- Agent: —
+- Did: Removed the List button from the map's bottom-left stack
+- Why: Left panel already lists what is on the map; the button was redundant clutter
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
+### 2026-10-24 19:16 — 3D map opens less tilted: pitch 52 → 35
+- Teammate: Bruno
+- Agent: —
+- Did: 3D map opens less tilted: pitch 52 → 35
+- Why: Map looked too inclined on open
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
+### 2026-10-24 19:15 — One Insight panel UI: left panel follows the map selectio...
+- Teammate: Bruno
+- Agent: —
+- Did: One Insight panel UI: left panel follows the map selection (ranking with infinite scroll → area / rodent report / evidence views, Back + Esc), chat-only right panel, filters moved to a bottom bar, top-bar mode selector removed; deleted Blocks list, Places to visit and the old Insights tab; paged insight_ranking RPC, evidence after-window fix, code-enforcement labels; checked in the browser
+- Why: Bruno asked to merge Inspect and Insights into one, drop Blocks and Places to visit, keep only the map with click behaviours, infinite scrolling, filters at the bottom
+- Where: web/src/components/insight/*, web/src/components/shell/{RightPanel,SidePanel,TopBar}.tsx, web/src/components/map/{MapView,LayerPanel,Timeline}.tsx, web/src/lib/{insight,map-store}.ts, web/src/app/api/insight-ai, supabase/migrations/20261024500009-10
+- Idea: A 90-day before/after comparison is misleading for items filed days ago; the RPC now returns after_days and the card says it is too recent to compare
+
+### 2026-10-24 19:11 — Default date window is last week; fixed range slider so F...
+- Teammate: Bruno
+- Agent: —
+- Did: Default date window is last week; fixed range slider so From thumb is draggable when thumbs overlap
+- Why: Short windows stacked both thumbs and the To thumb swallowed drags, so the slider looked stuck
+- Where: web/src/lib/map-store.ts, web/src/components/map/Timeline.tsx
+- Idea: —
+
+### 2026-10-24 19:10 — Removed week selectors from the Next forecast panel; it o...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed week selectors from the Next forecast panel; it only shows the next 4 weeks
+- Why: Simpler panel, one clear forecast period
+- Where: web/src/components/map/ForecastControl.tsx
+- Idea: —
+
+### 2026-10-24 19:08 — Motion graphic v3: section intro, dataset icons, timeline...
+- Teammate: Bruno
+- Agent: —
+- Did: Motion graphic v3: section intro, dataset icons, timeline in the backtest maps, dip transitions, removed unclear 'What worked?' slide; reviewed in 3 passes (contact sheets + MP4 frames)
+- Why: Feedback: fewer words, clear goal per slide, timeline instead of a changing date
+- Where: docs/submission/ml-ai-motion/
+- Idea: —
+
+### 2026-10-24 19:05 — Region severity now weighted by residents: weighted_score...
+- Teammate: Bruno
+- Agent: —
+- Did: Region severity now weighted by residents: weighted_score = score × (1 + log10(1 + residents/1000)); ranking by weighted_score in region_solution.py; live region_solutions re-ranked in SQL with the same formula (no AI rerun); card shows ~N residents and the weight; spec §5.4a decision recorded
+- Why: Bruno chose to weight severity by people affected (overrides spec's no-composite rule)
+- Where: pipeline/rat_audit/model/region_solution.py, web/src/components/insights/regions/*, .kiro/specs/rat-audit/insights-severity-ranking.md
+- Idea: Effect is small (hot regions all 5-10k residents, weights 1.8-2.0); stronger weight if wanted. site_queue RPC times out for anon (~2.6 s), unrelated
+
+### 2026-10-24 19:01 — Unified Insight backend: RPCs area_insight / area_insight...
+- Teammate: Bruno
+- Agent: —
+- Did: Unified Insight backend: RPCs area_insight / area_insight_polygon / record_insight / evidence_insight / insight_ranking (+ cell_of, nearby_causes, cells_forecast, cause_label); cell_solutions (rules card + AI input for 1,064 lone cells, on-demand AI via solve_cell, 7 s then cached) and cause_baselines; record_solutions for all 19,461 rodent reports; 27 AI region cards + 70 AI lone cells = 97/100 ranked entries with AI; Modal solutions job after scoring + insight_ai endpoint; spec §12
+- Why: Bruno asked to merge Inspect and Insights into one panel whose content depends on what is clicked, with on-demand AI; behaviour first, UI later
+- Where: supabase/migrations/20261024500008_cell_solutions.sql, 20261024500009_insight_rpcs.sql, pipeline/rat_audit/model/region_solution.py, pipeline/rat_audit/jobs.py, pipeline/modal_app.py, .kiro/specs/rat-audit/insights-severity-ranking.md §12
+- Idea: Boston has ~27 real hotspots however wide the pool; reaching 100 ranked entries honestly means adding lone cells, not splitting clusters. Front logic (web/src/lib/insight.ts, map-store back(), /api/insight-ai) kept local until the new UI lands.
+
+### 2026-10-24 18:59 — Merged the in-progress a11y branch (priority layer, inspe...
+- Teammate: Guilherme
+- Agent: Claude Code
+- Did: Merged the in-progress a11y branch (priority layer, inspect mode, block queue, grid-cell labels migration, video pipeline scripts) into main at Guilherme's request; priority layer registered in map-controls, off by default.
+- Why: Guilherme asked for everything on main
+- Where: web/src/components/map/{MapView,LayerPanel,MapLegend,PriorityLayer,BlockQueue}.tsx; web/src/lib/{map-store,map-controls,priority}.ts; supabase/migrations/20261024700001_grid_cell_labels.sql
+- Idea: tsc, eslint, 5 node tests and 137 tsx tests pass (region-solutions still needs SUPABASE env). Production build passes. The grid_cell_labels migration is NOT applied to the live database; the map opens tilted (three=true) now.
+### 2026-10-24 18:57 — Insights region cards: dropped the full demographic profi...
+- Teammate: Bruno
+- Agent: —
+- Did: Insights region cards: dropped the full demographic profile (noise); cards show only residents (~N residents) from new cell_population table (spec §5.4a, area-weighted tract pop per 250 m cell) via region_population(cell_ids)
+- Why: Bruno: most demographics were useless for insights; population is the one that matters (people affected, candidate for severity)
+- Where: supabase/migrations/20261025100003_data_cell_population.sql, web/src/components/insights/regions/RegionSolutionCard.tsx, web/src/lib/cell-context.ts
+- Idea: Decide how population enters severity (tie-break vs weight)
+
+### 2026-10-24 18:57 — Removed the import status, refresh, theme and motion butt...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed the import status, refresh, theme and motion buttons from the top bar; new reports now load automatically every 5 minutes
+- Why: Bruno wanted a cleaner top bar and no manual refresh
+- Where: web/src/components/shell/TopBar.tsx
+- Idea: —
+
+### 2026-10-24 18:54 — Motion graphic v2: no opening, one short headline per sce...
+- Teammate: Bruno
+- Agent: —
+- Did: Motion graphic v2: no opening, one short headline per scene, 63 s; copied to Downloads
+- Why: It will be cut into a bigger video; text per slide must be minimal
+- Where: docs/submission/ml-ai-motion/
+- Idea: —
+
+### 2026-10-24 18:52 — Merged the finished accessibility and plain-language UI w...
+- Teammate: Guilherme
+- Agent: Claude Code
+- Did: Merged the finished accessibility and plain-language UI work into main (a11y/map-twin-skip-motion through d7be311 plus the log and copy commits; 246309b's unfinished priority-layer wiring left out). Resolved 17 conflicted files against main's Insights v2, chat map controls and block profiles; List button now stacks above the map key; focus ring no longer sets state in an effect.
+- Why: Guilherme asked to commit and merge everything finished, kept separate from in-progress work
+- Where: web/src/components/{map,insights,inspector,chat,shell}; web/src/lib/map-store.ts; .kiro/KIRO_LOG.md; README.md; web/README.md
+- Idea: tsc, eslint, 5 node tests and 136/137 tsx tests pass (region-solutions needs SUPABASE env, same as main). Production build passes. Still pending in the working folder: priority layer, inspect mode, grid-cell labels migration, video render.
+
+### 2026-10-24 18:43 — ML/AI motion graphic (80 s, See → Act → Predict): real-da...
+- Teammate: Bruno
+- Agent: —
+- Did: ML/AI motion graphic (80 s, See → Act → Predict): real-data maps and charts + JS simulation of the Piper UI; rendered to MP4 deterministically
+- Why: Presentation needs a short explainer of how Piper uses intelligence from today's map to action to forecast
+- Where: docs/submission/ml-ai-motion/
+- Idea: Act includes Boston matched comparison and Cambridge/Somerville program evidence, labelled descriptive
+
+### 2026-10-24 18:41 — Kept rendered video out of git: ignore *.mp4/*.mov/clips/...
+- Teammate: Guilherme
+- Agent: Claude Code
+- Did: Kept rendered video out of git: ignore *.mp4/*.mov/clips/assets, untracked docs/submission/video/piper-demo.mp4 (602 MB render in progress), 50 MB blob guard in .githooks/pre-commit; pushed to main (193ca96) and a11y/map-twin-skip-motion (399912e)
+- Why: GitHub rejects files over 100 MB; an autopush or git add -A would have staged the render and blocked every push
+- Where: .gitignore; .githooks/pre-commit; docs/submission/video/piper-demo.mp4
+- Idea: Share renders via Drive and link them from docs/submission/video/README.md; the local backup/main-before-sync-1620 branch holds 1.3 GB of .mov and must never be pushed
+
+### 2026-10-24 18:37 — Ran per-evidence-layer ablation of the cell-week Poisson ...
+- Teammate: Bruno
+- Agent: —
+- Did: Ran per-evidence-layer ablation of the cell-week Poisson GBM (train < 2026-04-20, test last 26 weeks): all evidence features together add +0.3 pt top-10% capture (0.655 -> 0.658); pest, dead animal, trash storage help a little; litter and dumping slightly hurt; trash_early, weeds, move_in_trash, ce_* have data only from mid-2026 so the model cannot use them
+- Why: Decide which evidence layers to keep in the panel from the current ML model instead of the hand-copied audit labels
+- Where: pipeline/rat_audit/model (scratch script, not committed)
+- Idea: Keep pest/dead animal/trash storage; hide ce_dumping, ce_dumpster, ce_weeds (no model feature); revisit the 2026-only 311 types after a year of data
+
+### 2026-10-24 18:30 — Chat switched to Claude Sonnet 5.5 via AI Gateway: produc...
+- Teammate: Bruno
+- Agent: —
+- Did: Chat switched to Claude Sonnet 5.5 via AI Gateway: production MODEL_ID updated, redeployed, verified with a live answer; code default, .env.example, agent README and audit updated
+- Why: Claude access on the Gateway now works
+- Where: web/src/lib/agent/provider.ts, web/.env.example, web/src/lib/agent/README.md, provider.test.ts, docs/rat-audit/AUDIT.md
+- Idea: —
 
 ### 2026-10-24 18:20 — Distinguish viewport reports from surrounding evidence
 - Teammate: Carol
@@ -152,6 +367,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: agent/prompt.ts, agent/tools/server.ts, agent/__tests__/viewport-context.test.ts
 - Validation: 26 tests passed, TypeScript and scoped ESLint passed.
 - Idea: none
+### 2026-10-24 18:25 — Removed hardcoded 'tested' association labels from layer ...
+- Teammate: Bruno
+- Agent: —
+- Did: Removed hardcoded 'tested' association labels from layer panel toggles; deleted web/src/components/map/tested.ts; marked task 3.18 dropped
+- Why: Labels were hand-copied audit numbers, not output of the current ML model, and several tested layers showed 'not tested'
+- Where: web/src/components/map/LayerPanel.tsx, .kiro/specs/rat-audit/tasks.md
+- Idea: Use the model's feature importance to decide which evidence layers to drop (e.g. missed trash, unsanitary conditions)
+
 ### 2026-10-24 18:20 — Clickable places in AI region cards: region_solutions.loc...
 - Teammate: Bruno
 - Agent: —
@@ -419,6 +642,29 @@ If the agent does not know the teammate's name, it asks before logging.
 - Decision: Local worktree preview on port 3046; no push/deploy, credentials changed, migrations or shared database writes.
 - Decision: Keep Agent empty in this chat's log entries, as requested by Carol; record each substantive piece of work here.
 - Idea: Chat and visual controls should share one state; analytical verdicts should use the same calculations as the panel.
+### 2026-10-24 17:30 — Refreshed remaining backlog against origin/main and live ...
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Refreshed remaining backlog against origin/main and live app-visible data at 17:29 EDT. Production Ask configured; site_evidence still PGRST202; sites, base_rates, action_outcomes and correlations expose zero rows; record_solutions exposes 10,526. Quality commit d7be311 is on the remote feature branch only.
+- Why: Avoid repeating completed work or claiming a migration was never applied when only API availability is known.
+- Where: none
+- Idea: Prioritize citation API recovery and integration of the pushed quality branch, then map-tool wiring, populated analytics, saved follow-ups and grounded region cards. Validate intervention benefit separately from observational predictions.
+
+### 2026-10-24 17:25 — Prepared the requested commit and push of the item 4 qual...
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Prepared the requested commit and push of the item 4 quality fixes on a11y/map-twin-skip-motion.
+- Why: Guilherme explicitly asked to commit and push the completed work.
+- Where: .kiro/KIRO_LOG.md; branch a11y/map-twin-skip-motion; quality-fix commit d7be311
+- Idea: Fetched origin and confirmed the target branch. Publish the existing quality commits and their verification log; keep concurrent uncommitted implementation work with its owners.
+
+### 2026-10-24 17:23 — Completed item 4: repaired blank PDFs, mobile panels, key...
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Completed item 4: repaired blank PDFs, mobile panels, keyboard focus, and parcel-layer lint; committed d7be311.
+- Why: The brief printed eight blank pages; mobile controls clipped and keyboard focus was lost during panel visibility changes.
+- Where: web shell, map ContextLayers, inspection-brief CSS; .kiro/scripts/check_ui_quality.playwright.js; docs/rat-audit/inspection-brief.md and quality-proof/
+- Idea: Verified 320–1280px, live queue to brief, normal/reduced motion, all 31 records in eight-page Letter/A4 PDFs, offline HTML, full lint/types/tests/build. Migration is in main/origin/main; live API still PGRST202 at 5:22 PM, so DB catalog state remains unconfirmed.
 
 ### 2026-10-24 17:25 — Adicionei a secao 5.4a na spec de Insights: agregar popul...
 - Teammate: Carol
@@ -463,6 +709,22 @@ If the agent does not know the teammate's name, it asks before logging.
 - Evidence: Public Piper /api/chat GET returned configured=false/data=live and missing AI_GATEWAY_API_KEY. Vercel project prj_rJiVrRy5Uwo9OiFa3HId0Sxe6ULx in bruno-team3 returns 403; consent helper returns 404 for known team id and slug. Deployed-model conversation blocked before sending a prompt.
 - Decision: This validated branch is ready for the authorized fast-forward into local main. Keep the human-push workflow; no push/deploy, production env mutation, migration or DB write here. Production needs its Gateway key and redeployment; populated Analytics still depends on its separate refresh.
 - Idea: Local chat/model success, published provider configuration and persisted Analytics outputs are separate checks.
+
+### 2026-10-24 16:54 — Refreshed remaining work, ordered from easiest to hardest
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Refreshed remaining work, ordered from easiest to hardest
+- Why: Prioritize finishing the deployed review workflow against the civic-action judging requirements
+- Where: none (read-only product audit; this log entry only)
+- Idea: Order: apply source migration; remove unfinished placeholders; configure deployed Ask; finish PDF/mobile/keyboard/lint QA; connect assistant map actions; populate and integrate analytics; save inspector decisions and follow-ups; validate recurrence ranking; evaluate interventions. Live checks: site_evidence missing, Ask key unset, sites/action_outcomes/correlations empty. Finish the accurate public demo video before submission.
+
+### 2026-10-24 16:42 — Implemented calendar-date fixes, distinct-day count label...
+- Teammate: Guilherme
+- Agent: Codex (not Kiro build activity)
+- Did: Implemented calendar-date fixes, distinct-day count labels, source freshness, and printable inspection briefs
+- Why: Make evidence consistent and portable for an inspector to review
+- Where: web/src/lib/{dates,evidence,queries,inspection-brief}.ts; web/src/components/{act,inspector,evidence,brief,shell}; web/src/app/brief; web/tests; supabase/migrations/20261024202722_site_evidence_provenance.sql; supabase/tests/site_evidence.sql; docs/rat-audit/inspection-brief.md; README.md
+- Idea: Exact nearby-source citations require the tested read-only migration; live production currently lacks it. Direct Node build, TypeScript, targeted lint, five unit tests, PostGIS/RLS tests and live HTML download checks passed; native print preview remained unverified.
 
 ### 2026-10-24 16:46 — Prepare Agent for v2 data and validate the real chat
 - Teammate: Carol

@@ -83,3 +83,20 @@ def score() -> dict:
 
 def simulate(request: dict) -> dict:
     return _call("model", "simulate", request)
+
+
+def solutions() -> dict:
+    """After scoring: per-record solutions, then cell severity + AI region cards + cell cards."""
+    from .model import region_solution, solution
+    with db.connect() as conn:
+        rec = solution.record_solution(conn)
+        conn.commit()
+        reg = region_solution.region_solution(conn)
+    return {"records": rec["records_scored"], "regions": reg["regions"], "sources": reg["sources"]}
+
+
+def solve_cell(cell_id: str) -> dict:
+    """On-demand AI card for one cell outside the ranked regions (cached in cell_solutions)."""
+    from .model import region_solution
+    with db.connect() as conn:
+        return region_solution.solve_cell(conn, cell_id)

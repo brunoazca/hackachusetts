@@ -103,7 +103,7 @@ test("no provider → 503 not_configured; bad body → 400", async () => {
 test("v2 route exposes due_sites and streams app_set_mode with the recommendation rule", async () => {
   const model = fakeModel([
     [toolCall("due", "due_sites", { limit: 1 }), finish("tool-calls")],
-    [toolCall("mode", "app_set_mode", { mode: "act" }), finish("tool-calls")],
+    [toolCall("mode", "app_set_mode", { mode: "inspect" }), finish("tool-calls")],
   ]);
   const data = createMemoryData({ ...tables, sites: tables.sites!.map((s) => ({ ...s, summary: { ...s.summary, due: true } })) });
   const POST = createChatHandler({ getModel: () => model, getData: () => data, now: () => NOW });
