@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 11:58 — Finished MCP setup: env-var expansion in OpenContext brid...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Finished MCP setup: env-var expansion in OpenContext bridge, Cambridge + Somerville Socrata servers (off until SOCRATA_APP_TOKEN), README MCP section; all 6 enabled servers PASS
+- Why: Have every civic data source ready before the idea is picked
+- Where: .kiro/mcp/opencontext_stdio.py, .kiro/mcp/opencontext/*-socrata.yaml, .kiro/settings/mcp.json, .kiro/steering/mcp-tools.md, README.md
+- Idea: none
+
 ### 2026-10-24 11:57 — Set up 6 MCP servers for Kiro: City of Boston OpenContext...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

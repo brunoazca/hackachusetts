@@ -38,8 +38,11 @@ def _load_config() -> dict:
     cfg_path = Path(path)
     if not cfg_path.is_absolute():
         cfg_path = Path(__file__).resolve().parents[2] / cfg_path
-    with cfg_path.open() as f:
-        return yaml.safe_load(f)
+    # Expand ${VAR} so tokens live in the shell env, never in the repo.
+    text = os.path.expandvars(cfg_path.read_text())
+    if "${" in text:
+        sys.exit(f"{cfg_path.name}: a required env var is not set (see the comment at the top of the file)")
+    return yaml.safe_load(text)
 
 
 def _quiet_stdout_logging() -> None:
