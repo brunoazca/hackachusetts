@@ -1,0 +1,33 @@
+/* Scale around the haunch so the rat stays connected to its tail. */
+.piper-logo-mark .piper-rat {
+  transform: translate(9.8px, 14px) scale(0.65);
+  stroke-width: 1.7;
+}
+
+.piper-logo-mark .piper-eye,
+.piper-logo-mark .piper-nose {
+  stroke-width: 2.5;
+}
+
+.piper-logo-mark .piper-tail {
+  /* Shorten horizontally around the haunch; leave the vertical sweep intact. */
+  transform: translateX(2.8px) scaleX(0.9);
+  stroke-width: 1.4;
+}
+
+.piper-logo-mark circle {
+  stroke-width: 1.1;
+}
+
+/* Move the holes with the shortened pipe while keeping them circular. */
+.piper-logo-mark circle:nth-of-type(1) {
+  transform: translateX(-4.4px);
+}
+
+.piper-logo-mark circle:nth-of-type(2) {
+  transform: translateX(-5.3px);
+}
+
+.piper-logo-mark circle:nth-of-type(3) {
+  transform: translateX(-6.2px);
+}
