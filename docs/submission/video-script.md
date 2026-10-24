@@ -50,7 +50,7 @@
   - Caption, bottom left, once: **"Every count is a 311 report, not a rat."**
   - Queue: "Due". Badge: "Live · updated …" or "seeded".
   - Animation (as built): "5,321 rodent reports · 2026", "More than all of 2025.", "99%", "but 407 addresses came back", "a new report 30+ days after an earlier one", "Boston's chronic addresses · 5+ reports", "46", "237 of ~280 recorded actions were "monitoring"", "14", "Monitoring does not reduce recurrence. Escalation does."
-- **Voiceover:** "This is Piper. Every rodent report in Boston, live from the city's own 311, ranked by the sites that keep coming back. Rats are in the news every week. This year Boston logged 5,321 rodent reports. Almost all are marked closed. But 407 addresses came back. At the worst sites, the city mostly monitors. The top site in the queue is due again."
+- **Voiceover:** "This is Piper. Every rodent report in Boston, live from the city's own 311, ranked by the sites that keep coming back. Rats are in the news every week. This year Boston has logged 5,321 rodent reports, more than all of last year. Last year, almost every case was marked closed. Yet 407 addresses came back. At the worst sites, the city mostly monitors. The top site in the queue is due again."
 - **Why this beat:** it shows the product's front door and the paradox that justifies it.
 
 ### Beat 2 — Analyze (0:42–1:15)
@@ -105,7 +105,7 @@
   3. `.kiro/agents/civic-judge.json` and its review output (4 s).
   4. MCP live (5 s): a `boston-opendata` (City of Boston OpenContext bridge) tool call returning data.boston.gov rows. See footnote 6 for Supabase.
 - **Evidence:** counts card (6 s).
-- **On-screen text (counts card only, Atkinson Mono on soot):** **"8 hooks · 5 custom agents · 7 steering files · 5 spec files · 8 MCP servers · 14 migrations · 140 logged work entries"**
+- **On-screen text (counts card only, Atkinson Mono on soot):** **"8 hooks · 6 custom agents · 7 steering files · 5 spec files · 8 MCP servers · 14 migrations · 141 logged work entries"**
 - **Voiceover:** "We built Piper with Kiro, spec first. Specs drove the tasks. Hooks check accessibility and secrets on every save. A judge agent reviewed our own build. And Boston's open data comes in live through MCP."
 - **Why this beat:** the rules require specific, provable Kiro use; real files on screen prove it.
 
@@ -149,7 +149,7 @@
 | S25 | 2:25 | 5 s | Kiro: hook firing on save | `accessibility-check` |
 | S26 | 2:30 | 4 s | Kiro: `civic-judge.json` | Judge agent |
 | S27 | 2:34 | 5 s | Kiro: `boston-opendata` MCP call | Live data.boston.gov rows |
-| S28 | 2:39 | 6 s | Counts card | "8 hooks · 5 custom agents …" |
+| S28 | 2:39 | 6 s | Counts card | "8 hooks · 6 custom agents …" |
 | S29 | 2:45 | 6 s | Product: map, pin, approved action | The approved action |
 | S30 | 2:51 | 4 s | Title card | "Piper — Rat Audit Boston" |
 
@@ -162,14 +162,14 @@ Ends at **2:55**.
 | Beat | Seconds | Words | Ceiling at 150 wpm | OK |
 |---|---:|---:|---:|---|
 | 0 | 12 | 30 | 30 | yes (150 wpm) |
-| 1 | 30 | 63 | 75 | yes (126 wpm) |
+| 1 | 30 | 73 | 75 | yes (146 wpm) |
 | 2 | 33 | 70 | 82 | yes (127 wpm) |
 | 3 | 25 | 61 | 62 | yes (146 wpm) |
 | 4 | 25 | 53 | 62 | yes (127 wpm) |
 | 5 | 15 | 35 | 37 | yes (140 wpm) |
 | 6 | 25 | 35 | 62 | yes (84 wpm) |
 | Close | 10 | 9 | 25 | yes (54 wpm) |
-| **Total** | **175** | **356** | **430** | yes (122 wpm avg) |
+| **Total** | **175** | **366** | **430** | yes (125 wpm avg) |
 
 Counted on written words. "5,321" and "2025" count as one word each but take longer to say; Beats 1 and 2 have room for that.
 
@@ -207,7 +207,8 @@ Counted on written words. "5,321" and "2025" count as one word each but take lon
 7. **Normandy St = 18:** the approved address-level count (`docs/rat-audit/demo_site.md`). v2-spec §10 notes the count under the new 50 m site rule is not verified yet.
 8. **Recommendation rule:** v2-spec §6 is first-match-wins. Rule 1 (monitoring at least twice, return after each) matches first, but its options (citation, abatement order) were already tried here. The script shows the Rule 2 output (vacant parcel within 40 m). See open question 2.
 9. **Animation vs Piper brand:** the animation is final and uses its own palette (`#0e1116` background, amber, teal, red) and ends on the caption "Rat Audit Boston". The Piper UI uses the Hamelin palette above. In Beat 0, the "Piper" wordmark is overlaid in the edit over the collapse.
-10. **Kiro counts** (checked 2026-10-24 after pulling `main`): 8 hooks, 5 agents, 7 steering files, 5 spec files, 8 MCP servers, 14 migrations, 140 work entries in `KIRO_LOG.md`.
+10. **Kiro counts** (re-checked 2026-10-24, `main` at `847218f`): 8 hooks, **6 agents** (`a11y-auditor` was added in `43eda6a`), 7 steering files, 5 spec files, 8 MCP servers, 14 migrations, **141** `###` work entries in `KIRO_LOG.md` (1,146 lines).
+11. **Which year each paradox number belongs to.** 5,321 is **2026** (through Oct 23). 99% closed, 407 recurring addresses and 46 chronic addresses are **2025** full-year figures (`knowledge/15_boston_rat_audit.md` §2: 5,167 closed of 5,225; 407 addresses with a new report 30+ days after an earlier one; 46 addresses with 5+ reports). The animation shows them without a year, which is accurate; the Beat 1 voiceover now says "last year" for the 2025 figures so the two are not conflated.
 
 ---
 
