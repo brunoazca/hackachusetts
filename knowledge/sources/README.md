@@ -12,6 +12,7 @@ Each `scripts/*.py` writes its output into `artifacts/`. Run a script from anywh
 
 ## scripts/
 
+- `audit_rodentops_expansion.py` checks ten Boston catalog packages and their active DataStore schemas, NYC rodent-inspection metadata/sample/count and NOAA daily weather. It saves metadata and aggregate checks without retaining individual source records. Run with `python3 -B knowledge/sources/scripts/audit_rodentops_expansion.py`.
 - `audit_civic_kit.py` reproduces the starter-ZIP CSV checks using Python's standard library. It never executes the downloaded kit's scripts. Writes `artifacts/civic_dataset_audit.json`.
 - `check_research_links.py` performs bounded HEAD requests with ordinary TLS verification and no credentials over `knowledge/*.md`. Some publishers reject automated HEAD requests even when browser access works. Writes `artifacts/<--output>` (default `link_audit.json`).
 - `audit_public_resources.py` reproduces the public-resource inventory. It does not execute downloaded code, create accounts, submit forms or save individual data rows. It retains failed probes and follows the GBFS discovery document for station feeds. Writes `artifacts/public_resource_audit.json` and `artifacts/public_resource_inventory.csv`.
@@ -21,6 +22,11 @@ Each `scripts/*.py` writes its output into `artifacts/`. Run a script from anywh
 
 ## artifacts/
 
+- `rodentops_expansion_audit.json` and `rodentops_expansion_inventory.csv` cover 10 catalog packages with 35 resource entries, including dictionaries and historical snapshots. The CSV is a resource catalog, not 35 cleaned datasets. Live query counts and freshness are dated observations; property joins and full-data quality are not established.
+- `rodentops_media_audit.json` records three official-video metadata checks, selected automatic-caption windows from two recordings, caption hashes and two community-slide PDF references. Community slides are from 2025; Summit uploads are from 2026. Summit Day 2 had no usable captions in the probe and was not content-reviewed. No complete transcript or media is redistributed.
+- `rodentops_expansion_link_audit.json` records bounded reachability checks for documents 19 and 24. Reachability is not source/claim verification.
+
+The final RodentOps expansion pass checked **65 unique URLs**: 59 returned HTTP 200, five returned 403, and `rats.boston` timed out. The map's historical existence is supported by its creator's public post; current availability is unverified. Restricted publisher/news pages were readable through the research service or retained with the stated access limits. An initially incorrect violations landing-page URL was replaced with the previously verified CKAN resource endpoint; the final set has no 404/410 responses. The new schema audit contains **13 Boston DataStore probes**, plus NYC and NOAA checks. It does not verify every row or an application integration.
 - `civic_dataset_audit.json` records direct inspection of all 22 CSVs in the organizer's Civic starter ZIP. Source URLs are copied from the included READMEs; availability and semantic correctness are separate questions.
 - `link_audit.json` records HTTP HEAD status, redirects, timestamp, referring documents and request failures for public links in `knowledge/*.md`.
 - `public_resource_audit.json` records the deeper expansion's bounded GETs: **25 data/discovery/schema probes** (21 HTTP 200, three HTTP 400, one redirect followed by timeout) and **22 repository metadata probes** (21 existing repositories, one incorrect InVEST path corrected to `natcap/invest`). Six actual license files were also inspected.

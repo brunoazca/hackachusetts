@@ -1,0 +1,92 @@
+{
+  "checked_at_utc": "2026-10-24T17:01:54.988496+00:00",
+  "videos": [
+    {
+      "id": "JWZ90tmPptY",
+      "title": "Boston Rodent Action Plan Community Meeting",
+      "channel": "Boston City TV",
+      "upload_date": "20251020",
+      "duration": 3435,
+      "webpage_url": "https://www.youtube.com/watch?v=JWZ90tmPptY",
+      "human_caption_languages": [],
+      "english_auto_captions_available": true,
+      "review_method": "Selected automatic-caption windows, not independently checked against audio",
+      "reviewed_windows": [
+        {
+          "start_seconds": 1180,
+          "end_seconds": 1300,
+          "topic": "trash timing"
+        },
+        {
+          "start_seconds": 1550,
+          "end_seconds": 1700,
+          "topic": "cost and construction concerns"
+        }
+      ],
+      "caption_bytes": 1009980,
+      "caption_sha256": "dd18c3f95454f280e6c99ecff43ee8929e12b597a1ba3dc75eb8e485800e0e56"
+    },
+    {
+      "id": "bCHkCVaHFp0",
+      "title": "National Rat Summit Day 1 Sept 23rd",
+      "channel": "Boston City TV",
+      "upload_date": "20261002",
+      "duration": 31741,
+      "webpage_url": "https://www.youtube.com/watch?v=bCHkCVaHFp0",
+      "human_caption_languages": [],
+      "english_auto_captions_available": true,
+      "review_method": "Selected automatic-caption windows, not independently checked against audio",
+      "reviewed_windows": [
+        {
+          "start_seconds": 4420,
+          "end_seconds": 4650,
+          "topic": "sensor maintenance and evaluation"
+        },
+        {
+          "start_seconds": 5500,
+          "end_seconds": 5680,
+          "topic": "BHA workforce"
+        },
+        {
+          "start_seconds": 24830,
+          "end_seconds": 24980,
+          "topic": "collection operations"
+        },
+        {
+          "start_seconds": 25380,
+          "end_seconds": 25700,
+          "topic": "resident input and feasibility"
+        }
+      ],
+      "caption_bytes": 6797533,
+      "caption_sha256": "3335142e984a193cf4f8f71b14f158d1b928d87b99084b42d8c02e566a3826e6"
+    },
+    {
+      "id": "4-lV2nGwLvM",
+      "title": "National Rat Summit Day 2 Sept 24th",
+      "channel": "Boston City TV",
+      "upload_date": "20261002",
+      "duration": 35001,
+      "webpage_url": "https://www.youtube.com/watch?v=4-lV2nGwLvM",
+      "human_caption_languages": [],
+      "english_auto_captions_available": false,
+      "review_method": "Metadata only; no captions available in probe; content not reviewed",
+      "reviewed_windows": []
+    }
+  ],
+  "slides": [
+    {
+      "url": "https://drive.google.com/file/d/1RD5FHqW1U9sIvgBkG38slLcJv-rPsRtU/view",
+      "title": "BRAP Community Meeting #2 - 10.16.2025.pdf",
+      "meeting_date": "2025-10-16",
+      "method": "PDF metadata and full extracted text read through Google Drive connector; not a 2026 meeting"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1UzeuyJU5FqTb7zeDKBTncNUpeVPS9lSj/view",
+      "title": "BRAP Community Meeting #1 - 8.12.2025 (1).pdf",
+      "meeting_date": "2025-08-12",
+      "method": "PDF metadata and full extracted text read through Google Drive connector"
+    }
+  ],
+  "retention": "Source PDFs, recordings and full captions are not copied into the repository."
+}

@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:12 — Expanded RodentOps evidence: public data, complaints and ...
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Expanded RodentOps evidence: public data, complaints and government priorities
+- Why: Make the selected tool more useful with verified sources and realistic limits
+- Where: knowledge/19_*, knowledge/24_*, knowledge/15_*, knowledge/16_*, knowledge/README.md, knowledge/sources/
+- Idea: Prioritize sourced case reconstruction, missing inspection questions and reviewed follow-up; sensor coverage and bin feasibility are later extensions
+
 ### 2026-10-24 12:48 — Set up RodentOps-specific Kiro automation: rodent-honesty...
 - Teammate: Guilherme
 - Agent: kirocrew

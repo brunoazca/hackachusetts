@@ -1,0 +1,797 @@
+{
+  "checked_at_utc": "2026-10-24T17:11:28.037786+00:00",
+  "scope": "Unique public URLs in selected knowledge Markdown, excluding fragments. HTTP reachability only; not link content or API validation.",
+  "documents": [
+    "19_rodentops_government_and_public_voices.md",
+    "24_rodentops_data_and_research_catalog.md"
+  ],
+  "status_counts": {
+    "200": 59,
+    "403": 5,
+    "000": 1
+  },
+  "results": [
+    {
+      "url": "https://a816-dohbesp.nyc.gov/IndicatorPublic/data-features/rat-report/",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md",
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://a816-dohbesp.nyc.gov/IndicatorPublic/data-features/rat-report/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://academic.oup.com/jue/article/12/1/juag001/8467206",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://academic.oup.com/jue/article/12/1/juag001/8467206",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://api.census.gov/data.html",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://api.census.gov/data.html",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=800a2663-1d6a-46e7-9356-bedb70f5332c&limit=0",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=800a2663-1d6a-46e7-9356-bedb70f5332c&limit=0",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/311-service-requests",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/311-service-requests",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/active-food-establishment-licenses",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/active-food-establishment-licenses",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/approved-building-permits",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/approved-building-permits",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/big-belly-locations",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/big-belly-locations",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/climate-ready-boston-social-vulnerability",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/climate-ready-boston-social-vulnerability",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/dnd-managed-city-property-inventory-all",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/dnd-managed-city-property-inventory-all",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/food-establishment-inspections",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/food-establishment-inspections",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/park-features",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/park-features",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/property-assessment",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/property-assessment",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/public-works-violations",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/public-works-violations",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/rainfall-data",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/rainfall-data",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/rentsmart",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/rentsmart",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/street-sweeping-schedules",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/street-sweeping-schedules",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/trash-schedules-by-address",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/trash-schedules-by-address",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/Inspectional-Services/Rodent-Sightings/uz4w-baz5",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/Public-Works/Commonwealth-Connect-Service-Requests-Rodent-Sight/uz4w-baz5",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/Inspectional-Services/Smart-Rat-Boxes/78bs-b5ig",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md",
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/Public-Works/Smart-Rat-Boxes/78bs-b5ig",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cdc.gov/resource/cwsq-ngmh.json?stateabbr=MA",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cdc.gov/resource/cwsq-ngmh.json?stateabbr=MA",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj/about_data",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj/about_data",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.3xsj3txrq",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://datadryad.org/dataset/doi:10.5061/dryad.3xsj3txrq",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://datadryad.org/terms",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://datadryad.org/terms",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://doi.org/10.1126/sciadv.ads6782",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://www.science.org/doi/10.1126/sciadv.ads6782",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1RD5FHqW1U9sIvgBkG38slLcJv-rPsRtU/view",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://drive.google.com/file/d/1RD5FHqW1U9sIvgBkG38slLcJv-rPsRtU/view",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1UzeuyJU5FqTb7zeDKBTncNUpeVPS9lSj/view",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://drive.google.com/file/d/1UzeuyJU5FqTb7zeDKBTncNUpeVPS9lSj/view",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/CityOfBoston/OpenContext",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/CityOfBoston/OpenContext",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/cambridgegis/cambridgegis_data",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/cambridgegis/cambridgegis_data",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/harvardinformatics/llm-workshop-smart-rat",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/harvardinformatics/llm-workshop-smart-rat",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/ishana-s/Invasive_Rats_Refuse",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/ishana-s/Invasive_Rats_Refuse",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/maplibre/maplibre-gl-js",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/maplibre/maplibre-gl-js",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/mysociety/fixmystreet",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/mysociety/fixmystreet",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0012966",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0012966",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296920",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296920",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308917",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308917",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://opentowns.org/towns/boston-ma/bc170e7a-6c2c-42f9-98e8-0ccd7884e42c/transcript/",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://opentowns.org/towns/boston-ma/bc170e7a-6c2c-42f9-98e8-0ccd7884e42c/transcript/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://rats.boston",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "000",
+      "final_url": "https://rats.boston/",
+      "curl_exit_code": 28,
+      "error": "curl: (28) Failed to connect to rats.boston port 443 after 8003 ms: Timeout was reached",
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.70052",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.70052",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.boston.gov/departments/inspectional-services/boston-rodent-action-plan-brap",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/inspectional-services/boston-rodent-action-plan-brap",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/participatory-budgeting/rat-prevention-initiatives-dense-residential-areas",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/participatory-budgeting/rat-prevention-initiatives-dense-residential-areas",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/government/cabinets/operations-cabinet/2026-national-urban-rat-summit",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/government/cabinets/operations-cabinet/2026-national-urban-rat-summit",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/government/cabinets/operations-cabinet/community-feedback-guiding-potential-trash-changes",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/government/cabinets/operations-cabinet/community-feedback-guiding-potential-trash-changes",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/news/city-boston-host-second-ever-national-urban-rat-summit",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/news/city-boston-host-second-ever-national-urban-rat-summit",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/public-notices/16632881",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/public-notices/16632881",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2026/05/Operations%20FY27%20City%20Council%20Hearing.pdf",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/sites/default/files/file/2026/05/Operations%20FY27%20City%20Council%20Hearing.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.bwsc.org/environment-education/rainfall-garden",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.bwsc.org/environment-education/rainfall-garden",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6137a1.htm",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6137a1.htm",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2019.00013/full",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2019.00013/full",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1080226",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1080226",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.ncei.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND%3AUSW00014739/detail",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.ncei.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND%3AUSW00014739/detail",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.openpublica.com/meetings/boston-massachusetts-city-council-2026-10-23-6adbf461328dc7b98fa7fa0f",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.openpublica.com/meetings/boston-massachusetts-city-council-2026-10-23-6adbf461328dc7b98fa7fa0f",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.reddit.com/r/Somerville/comments/1x117sd/what_are_you_doing_to_tackle_the_rats/",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.reddit.com/r/Somerville/comments/1x117sd/what_are_you_doing_to_tackle_the_rats/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.reddit.com/r/boston/comments/1ecl605",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.reddit.com/r/boston/comments/1ecl605/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.reddit.com/r/boston/comments/1woezas/report_rats_to_311/",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.reddit.com/r/boston/comments/1woezas/report_rats_to_311/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.reddit.com/r/boston/comments/1wxve3e/rats_when_is_enough_enough/",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.reddit.com/r/boston/comments/1wxve3e/rats_when_is_enough_enough/",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/07352166.2022.2091995",
+      "documents": [
+        "24_rodentops_data_and_research_catalog.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://www.tandfonline.com/doi/abs/10.1080/07352166.2022.2091995",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.universalhub.com/2026/allston-rat-city-more-boston-rat-city-rat-amusement-parks-rat-buffets",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://www.universalhub.com/2026/allston-rat-city-more-boston-rat-city-rat-amusement-parks-rat-buffets",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JWZ90tmPptY&t=1180s",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=JWZ90tmPptY&t=1180s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JWZ90tmPptY&t=1550s",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=JWZ90tmPptY&t=1550s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=bCHkCVaHFp0&t=24830s",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=bCHkCVaHFp0&t=24830s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=bCHkCVaHFp0&t=25380s",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=bCHkCVaHFp0&t=25380s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=bCHkCVaHFp0&t=4420s",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=bCHkCVaHFp0&t=4420s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=bCHkCVaHFp0&t=5500s",
+      "documents": [
+        "19_rodentops_government_and_public_voices.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=bCHkCVaHFp0&t=5500s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    }
+  ]
+}

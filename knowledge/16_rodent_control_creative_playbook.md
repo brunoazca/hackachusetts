@@ -1,6 +1,6 @@
 # RodentOps and seven other tools for Boston's rat problem
 
-Research and original proposals: **October 24, 2026**. This extends the [creative atlas](14_creative_civic_opportunity_atlas.md). These are proposed products, not a selected project, validated pest-control methods, or promises of municipal adoption.
+Research and original proposals: **October 24, 2026**. This extends the [creative atlas](14_creative_civic_opportunity_atlas.md). The team subsequently selected RodentOps; other concepts remain alternatives. These are not validated pest-control methods or promises of municipal adoption. For the latest expansion, read [government and public voices](19_rodentops_government_and_public_voices.md) and [data and research](24_rodentops_data_and_research_catalog.md).
 
 **Recommended tool: RodentOps. Help an environmental-services coordinator turn recurring rodent complaints into a reviewed inspection and follow-up plan.** Its central question is: *Which recurring problems need attention, what do we actually know, and what should the next inspection establish?*
 
@@ -112,7 +112,7 @@ For scheduling, use the [official waste guidance](https://www.boston.gov/trash-a
 
 ## 3. Real data and code: what we actually checked
 
-The [machine-readable audit](sources/rodent_resource_audit.json) records URLs, response hashes, fields, counts and limits. Reproduce it with [audit_rodent_resources.py](sources/audit_rodent_resources.py). Individual complaint descriptions and addresses are not retained in that audit.
+The [machine-readable audit](sources/artifacts/rodent_resource_audit.json) records URLs, response hashes, fields, counts and limits. Reproduce it with [audit_rodent_resources.py](sources/scripts/audit_rodent_resources.py). Individual complaint descriptions and addresses are not retained in that audit.
 
 | Resource | Verified on October 24 | Best use and limits |
 |---|---|---|
@@ -181,7 +181,7 @@ Suggested work sequence:
 ## 7. Research access and remaining uncertainty
 
 - Opened official City materials, the primary research paper, the movement review, the October 23 local hearing report, public API metadata and repository text. Bounded API requests and workshop CSV parsing are preserved in the audit; no external repository code was executed.
-- The [official Boston City Council hearing recording](https://www.youtube.com/watch?v=Fn4cGj8xxBs) was identified through the report and its metadata verified: *City Services on October 23, 2026*, Boston City Council, 2:38:34. Selected caption windows were read; audio and the complete hearing were not independently reviewed. [Caption provenance](sources/rodent_hearing_caption_audit.json) records the track hashes and inspected intervals without copying the transcript.
+- The [official Boston City Council hearing recording](https://www.youtube.com/watch?v=Fn4cGj8xxBs) was identified through the report and its metadata verified: *City Services on October 23, 2026*, Boston City Council, 2:38:34. Selected caption windows were read; audio and the complete hearing were not independently reviewed. [Caption provenance](sources/artifacts/rodent_hearing_caption_audit.json) records the track hashes and inspected intervals without copying the transcript.
 - TikTok and X searches did not produce an original rodent post verified in this pass. Do not claim a social-media consensus or convert a viral allegation into a business risk score. Existing qualitative Reddit evidence is in [document 11](13_public_voices_and_competitive_gaps.md).
 - No Boston sensor API, vendor API, reliable rat-population denominator, current bin inventory or actual collection timestamp feed was established. These are potential pilot inputs, not features already connected.
 
