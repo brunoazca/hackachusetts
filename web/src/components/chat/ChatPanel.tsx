@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, lastAssistantMessageIsCompleteWithToolCalls } from "ai";
-import { useUi } from "@/lib/ui-store";
 import { useMap } from "@/lib/map-store";
 import { buildMapContext } from "@/lib/agent/context";
 import { executeClientTool, isClientTool } from "@/lib/agent/tools/client";
@@ -48,7 +47,6 @@ export default function ChatPanel({ onCollapse }: { onCollapse?: () => void }) {
     onToolCall({ toolCall }) {
       if (toolCall.dynamic || !isClientTool(toolCall.toolName)) return;
       const out = executeClientTool(toolCall.toolName, toolCall.input, useMap.getState());
-      if (out.ok && toolCall.toolName === "open_panel") useUi.getState().setRightOpen(true);
       // No await: avoids deadlocks with the automatic resend.
       if (out.ok) void addToolOutput({ tool: toolCall.toolName, toolCallId: toolCall.toolCallId, output: out });
       else void addToolOutput({ tool: toolCall.toolName, toolCallId: toolCall.toolCallId, state: "output-error", errorText: out.error });

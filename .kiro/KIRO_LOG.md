@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:28 — Agent drives the Insight panel: new server tools get_rank...
+- Teammate: Bruno
+- Agent: —
+- Did: Agent drives the Insight panel: new server tools get_ranking (paged ranking) and get_insight (block / report / place card, compact) via AgentData.insightRpc; client tool open_insight selects ranking/block/report/place so the left panel opens the card; map_select now opens insights; removed map_filter_sites, open_panel and act mode; prompt rules updated. Insight panel header: single 'All insights' button (clears selection, Esc too)
+- Why: Bruno asked the agent to work with the new selection model and open the insight panel automatically, and for Back to go to all insights
+- Where: web/src/lib/agent/{tools/insights.ts,tools/client.ts,data/*,prompt.ts,ui.ts}, web/src/components/chat/ChatPanel.tsx, web/src/components/insight/InsightPanel.tsx, tests
+- Idea: A live DB agent test (site tools) is timing-flaky under the full suite but passes alone
+
 ### 2026-10-24 19:24 — Removed the 'Methodology & city-wide evidence' collapsibl...
 - Teammate: Bruno
 - Agent: —

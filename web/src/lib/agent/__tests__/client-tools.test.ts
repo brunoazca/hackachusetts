@@ -10,9 +10,9 @@ function fakeMap() {
   const calls: [string, unknown][] = [];
   const rec = (name: string) => (v: unknown) => { calls.push([name, v]); };
   const map: MapActions = {
-    setMode: rec("setMode"), setSiteNeighborhood: rec("setSiteNeighborhood"), setViewMode: rec("setViewMode"), setCauses: rec("setCauses"), setCellMetric: rec("setCellMetric"),
+    setMode: rec("setMode"), setViewMode: rec("setViewMode"), setCauses: rec("setCauses"), setCellMetric: rec("setCellMetric"),
     flyTo: rec("flyTo"), setLayers: rec("setLayers"), setFilters: rec("setFilters"), setHighlight: rec("setHighlight"),
-    select: rec("select"), setPanel: rec("setPanel"), setForecastWeek: rec("setForecastWeek"),
+    select: rec("select"), setForecastWeek: rec("setForecastWeek"),
   };
   return { map, calls };
 }
@@ -26,13 +26,13 @@ test("map_fly_to drives the store; coordinates outside the region are rejected",
   assert.equal(calls.length, 1);
 });
 
-test("layers, highlight, select, forecast, panel, filters", () => {
+test("layers, highlight, select, forecast, insight, filters", () => {
   const { map, calls } = fakeMap();
   executeClientTool("map_set_layers", { on: ["food"], off: ["rodent"] }, map);
   executeClientTool("map_highlight", { ids: ["a", "b"] }, map);
   executeClientTool("map_select", { kind: "site", id: "s1" }, map);
   executeClientTool("map_show_forecast", { week_start: "2026-10-26" }, map);
-  executeClientTool("open_panel", { panel: "insights" }, map);
+  executeClientTool("open_insight", { target: "report", id: "311:1" }, map);
   executeClientTool("map_set_filters", { status: "open" }, map);
   assert.deepEqual(calls, [
     ["setLayers", { rodent: false, ...Object.fromEntries(LAYER_GROUPS.food.map(id => [id, true])) }],
@@ -43,7 +43,7 @@ test("layers, highlight, select, forecast, panel, filters", () => {
     ["setMode", "assess"],
     ["setLayers", { forecast: true }],
     ["setForecastWeek", "2026-10-26"],
-    ["setPanel", "insights"],
+    ["select", { kind: "incident", id: "311:1" }],
     ["setFilters", { status: "open" }],
     ["setMode", "assess"],
   ]);
@@ -74,12 +74,12 @@ test("map context: bbox stays null without store bounds; round-trips validation"
 });
 
 
-test("app_set_mode changes modes and rejects removed depth options", () => {
+test("app_set_mode changes modes and rejects removed ones (act / Places to visit is gone)", () => {
   const { map, calls } = fakeMap();
-  assert.equal(executeClientTool("app_set_mode", { mode: "act" }, map).ok, true);
+  assert.equal(executeClientTool("app_set_mode", { mode: "inspect" }, map).ok, true);
   assert.equal(executeClientTool("app_set_mode", { mode: "assess" }, map).ok, true);
-  assert.deepEqual(calls, [["setMode", "act"], ["setMode", "assess"]]);
-  for (const input of [{}, { mode: "delete" }, { mode: "act", depth: "explore" }, { depth: "simple" }]) {
+  assert.deepEqual(calls, [["setMode", "inspect"], ["setMode", "assess"]]);
+  for (const input of [{}, { mode: "delete" }, { mode: "act" }, { mode: "assess", depth: "explore" }, { depth: "simple" }]) {
     assert.equal(executeClientTool("app_set_mode", input, map).ok, false);
   }
   assert.equal(calls.length, 2, "invalid input must not partially change the store");
@@ -89,8 +89,8 @@ test("app_set_mode uses the current real store and preserves selection", () => {
   const before = useMap.getState();
   try {
     before.select({ kind: "site", id: "fixture-selected" });
-    assert.equal(executeClientTool("app_set_mode", { mode: "act" }, useMap.getState()).ok, true);
-    assert.equal(useMap.getState().mode, "act");
+    assert.equal(executeClientTool("app_set_mode", { mode: "inspect" }, useMap.getState()).ok, true);
+    assert.equal(useMap.getState().mode, "inspect");
     assert.deepEqual(useMap.getState().selection, { kind: "site", id: "fixture-selected" });
   } finally {
     useMap.setState(before, true);
@@ -182,14 +182,17 @@ test("highlight reaches the renderer state; context contains actual bounds and d
   } finally { useMap.setState(before, true); }
 });
 
-test("Places neighborhood filter shares the queue state and opens Act", () => {
+test("open_insight drives the Insight panel through the selection", () => {
   const before = useMap.getState();
   try {
-    executeClientTool("map_filter_sites", { neighborhood: "Roxbury" }, useMap.getState());
-    assert.equal(useMap.getState().siteNeighborhood, "Roxbury");
-    assert.equal(buildMapContext(useMap.getState()).siteNeighborhood, "Roxbury");
-    assert.equal(useMap.getState().mode, "act");
-    executeClientTool("map_set_filters", { status: "open" }, useMap.getState());
-    assert.equal(useMap.getState().mode, "assess", "map commands expose the original map controls");
+    assert.equal(executeClientTool("open_insight", { target: "block", id: "g250_948_3594" }, useMap.getState()).ok, true);
+    assert.deepEqual(useMap.getState().selection, { kind: "cell", id: "g250_948_3594" });
+    assert.equal(executeClientTool("open_insight", { target: "place", id: "food:9" }, useMap.getState()).ok, true);
+    assert.deepEqual(useMap.getState().selection, { kind: "place", id: "food:9" });
+    assert.equal(executeClientTool("open_insight", { target: "report" }, useMap.getState()).ok, false, "an id is required");
+    assert.equal(executeClientTool("open_insight", { target: "ranking" }, useMap.getState()).ok, true);
+    assert.equal(useMap.getState().selection, null);
+    assert.equal(executeClientTool("map_filter_sites", { neighborhood: "Roxbury" }, useMap.getState()).ok, false, "Places to visit tool removed");
   } finally { useMap.setState(before, true); }
 });
+

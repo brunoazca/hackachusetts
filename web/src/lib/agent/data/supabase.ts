@@ -190,6 +190,11 @@ export function createSupabaseData(env: Env = process.env, now: () => Date = () 
   }
 
   return {
+    async insightRpc(fn, args) {
+      const { data, error } = await db.rpc(fn, args);
+      fail(fn, error);
+      return data;
+    },
     async insightsSummary() {
       const { data, error } = await db.rpc("insights_summary", undefined, { get: true });
       fail("insights_summary", error);

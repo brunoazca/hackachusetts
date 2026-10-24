@@ -9,7 +9,6 @@ type ToolPart = Extract<UIMessage["parts"][number], { toolCallId: string }>;
 const RUNNING: Record<string, string> = {
   get_insights: "Reading Insights and evidence",
   map_set_view: "Changing map display",
-  map_filter_sites: "Filtering places to visit",
   geocode: "Finding the place",
   search_incidents: "Looking up reports",
   top_sites: "Ranking chronic sites",
@@ -25,7 +24,9 @@ const RUNNING: Record<string, string> = {
   map_highlight: "Highlighting features",
   map_select: "Selecting a feature",
   map_show_forecast: "Showing the forecast",
-  open_panel: "Switching panel",
+  open_insight: "Opening the insight",
+  get_ranking: "Reading the ranking",
+  get_insight: "Reading the insight",
 };
 
 type Ok = { ok: true; data?: Record<string, unknown>; done?: string; sources?: SourceRef[]; features?: FeatureRef[] };

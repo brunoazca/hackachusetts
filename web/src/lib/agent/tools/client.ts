@@ -16,14 +16,10 @@ const isoDate = z.iso.date();
 
 export const clientTools = {
   app_set_mode: tool({
-    description: "Switch the app between Assess (the map), Act (places to visit) and Inspect (every block ranked by expected reports; tap one for detail). Keeps the selected site. All layers are already available; there is no separate depth mode.",
+    description: "Map display: assess (normal map) or inspect (every 250 m block shaded by priority). Keeps the selection. There is one map; there is no Places to visit queue.",
     inputSchema: z.object({
-      mode: z.enum(["assess", "act", "inspect"]),
+      mode: z.enum(["assess", "inspect"]),
     }).strict(),
-  }),
-  map_filter_sites: tool({
-    description: "Filter Places to visit by neighborhood, matching the original queue filter. Use a neighborhood returned by a site lookup or the current map context. Empty string clears. Opens Act mode.",
-    inputSchema: z.object({ neighborhood: z.string().max(100) }).strict(),
   }),
   map_fly_to: tool({
     description: "Move the map to a point. Only use coordinates returned by a data tool (geocode, get_site, search_incidents…), never guessed ones.",
@@ -62,16 +58,16 @@ export const clientTools = {
     inputSchema: z.object({ ids: z.array(z.string()).max(200) }),
   }),
   map_select: tool({
-    description: "Select one feature by id and open it in the Inspect panel.",
+    description: "Select one feature by id; the Insight panel (left) opens its card: cell -> block/hotspot insight, incident -> report insight (rodent) or evidence (other 311), place -> evidence, site -> address case.",
     inputSchema: z.object({ kind: z.enum(SELECT_KINDS), id: z.string().min(1) }),
   }),
   map_show_forecast: tool({
     description: "Show the forecast layer, optionally for a given week (ISO date of the week's Monday).",
     inputSchema: z.object({ week_start: z.union([isoDate, z.literal("4w")]).optional() }),
   }),
-  open_panel: tool({
-    description: "Switch the side panel tab.",
-    inputSchema: z.object({ panel: z.enum(["inspector", "insights", "chat"]) }),
+  open_insight: tool({
+    description: "Show something in the Insight panel (left) and fly the map there: target 'ranking' (nothing selected, the ranked list), 'block' (cell id), 'report' (incident id) or 'place' (place id). Use ids from get_ranking, get_insight or search tools only. Chat stays open.",
+    inputSchema: z.object({ target: z.enum(["ranking", "block", "report", "place"]), id: z.string().min(1).max(120).optional() }).strict(),
   }),
 };
 
@@ -81,7 +77,6 @@ export const CLIENT_TOOL_NAMES = Object.keys(clientTools) as ClientToolName[];
 /** The map-store actions the client tools need (a subset of useMap's state). */
 export type MapActions = {
   setMode: (mode: Mode) => void;
-  setSiteNeighborhood: (neighborhood: string) => void;
   setViewMode: (mode: ViewMode) => void;
   setCauses: (on: boolean) => void;
   setCellMetric: (metric: string | null) => void;
@@ -91,7 +86,6 @@ export type MapActions = {
   setFilters: (patch: Partial<{ since: string; until: string; categories: string[]; status: "all" | "open" | "closed" }>) => void;
   setHighlight: (ids: string[]) => void;
   select: (s: Selection) => void;
-  setPanel: (p: "inspector" | "insights" | "chat") => void;
   setForecastWeek: (w: string | null) => void;
 };
 
@@ -113,13 +107,6 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
       map.setMode(mode);
       return { ok: true, done: `App view updated: ${mode}` };
     }
-    case "map_filter_sites": {
-      const { neighborhood } = v as { neighborhood: string };
-      map.setSiteNeighborhood(neighborhood);
-      map.setLayers({ sites: true });
-      map.setMode("act");
-      return { ok: true, done: neighborhood ? `Places filtered to ${neighborhood}` : "Showing all neighborhoods" };
-    }
     case "map_fly_to": {
       const { lat, lon, zoom } = v as { lat: number; lon: number; zoom?: number };
       map.flyTo(zoom == null ? { lat, lon } : { lat, lon, zoom });
@@ -136,7 +123,7 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
         }
       }
       map.setLayers(patch);
-      map.setMode(patch.sites === true ? "act" : "assess");
+      map.setMode("assess");
       if (Object.entries(patch).some(([id, on]) => on && isNearbyCategory(id))) map.setCauses(true);
       return { ok: true, done: `Layers on: ${on.join(", ") || "—"}; off: ${off.join(", ") || "—"}` };
     }
@@ -174,10 +161,13 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
       map.setForecastWeek(week_start ?? null);
       return { ok: true, done: `Forecast layer on${week_start ? ` for week of ${week_start}` : ""}` };
     }
-    case "open_panel": {
-      const { panel } = v as { panel: "inspector" | "insights" | "chat" };
-      map.setPanel(panel);
-      return { ok: true, done: `Opened ${panel}` };
+    case "open_insight": {
+      const { target, id } = v as { target: "ranking" | "block" | "report" | "place"; id?: string };
+      if (target === "ranking") { map.select(null); return { ok: true, done: "Insight panel shows the ranking" }; }
+      if (!id) return { ok: false, error: `open_insight ${target} needs an id` };
+      const kind = target === "block" ? "cell" : target === "report" ? "incident" : "place";
+      map.select({ kind, id });
+      return { ok: true, done: `Insight panel shows ${target} ${id}` };
     }
   }
 }

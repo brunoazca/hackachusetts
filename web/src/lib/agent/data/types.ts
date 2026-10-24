@@ -93,9 +93,13 @@ export type PlaceQuery = { bbox: BBox; kinds?: string[]; limit: number };
 
 export type SiteQuery = { due?: boolean; limit: number; neighborhood?: string; bbox?: BBox; city?: string };
 
+export type InsightRpc = "insight_ranking" | "area_insight" | "record_insight" | "evidence_insight";
+
 export interface AgentData {
   /** Same read-only summary used by the Insights panel. */
   insightsSummary(): Promise<unknown>;
+  /** Read-only insight RPCs shared with the Insight panel (insight_ranking, area_insight, record_insight, evidence_insight). */
+  insightRpc(fn: InsightRpc, args: Record<string, unknown>): Promise<unknown>;
   /** Incidents matching the query, newest first, at most `limit`; `total` is the full match count when known. */
   incidents(q: IncidentQuery): Promise<{ rows: IncidentRow[]; total: number | null }>;
   /** Incidents by primary key (public columns), any order. */
