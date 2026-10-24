@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:24 — Shipped Piper UI to main via PR #3 (clean branch without ...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Shipped Piper UI to main via PR #3 (clean branch without 1.3 GB of .mov over GitHub's limit) and PR #4 (copy pass); reset local main to origin (backup branch kept, videos kept on disk and git-excluded, stale index.lock removed); removed extra worktrees so only hackachusetts/ remains
+- Why: Guilherme: everything on main, no local diff, one folder
+- Where: PR #3, PR #4, .git/info/exclude
+- Idea: Video assets need Git LFS or external storage, not the repo
+
 ### 2026-10-24 16:23 — Filled the three empty submission docs: description.md (j...
 - Teammate: Guilherme
 - Agent: kirocrew (default)
