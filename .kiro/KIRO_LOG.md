@@ -31,6 +31,85 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:43 — Scaffolded Rat Audit: Supabase project + PostGIS schema, ...
+- Teammate: Bruno
+- Agent: —
+- Did: Scaffolded Rat Audit: Supabase project + PostGIS schema, Next.js app shell, build contract
+- Why: Foundation so four parallel build tracks (data, analytics, map, agent) can work without colliding
+- Where: supabase/migrations/, contracts/categories.json, web/, docs/build/CONTRACT.md
+- Idea: Correlation list + cell-week Poisson forecast + site recurrence model; price impact as exploratory; events layer
+
+### 2026-10-24 12:42 — Tested electrical fires vs rodent reports by ZIP (2023–24...
+- Teammate: Bruno
+- Agent: —
+- Did: Tested electrical fires vs rodent reports by ZIP (2023–24 and 2026): no link after controlling for fire-call volume
+- Why: Check whether fires are a defensible rat impact
+- Where: knowledge/sources/rats/fire_pull.py, knowledge/sources/rats/fire_rats.py, knowledge/10_rat_signals_brainstorm.md
+- Idea: Drop fires from the pitch; fire data has no cause or coordinates
+
+### 2026-10-24 12:35 — Revised Rat Audit plan: map-first app with integrated age...
+- Teammate: Bruno
+- Agent: —
+- Did: Revised Rat Audit plan: map-first app with integrated agent chat
+- Why: Bruno asked for an interactive map of all rat-related problems, clickable incidents, deep inspection and an agent chat
+- Where: none
+- Idea: MapLibre+deck.gl layers over a full 2024-2026 snapshot; Claude agent whose tools query the data and drive the map (fly to, filter, highlight); Next.js on Vercel for the chat route
+
+### 2026-10-24 12:29 — Drafted implementation plan for Rat Audit (inspector tool)
+- Teammate: Bruno
+- Agent: —
+- Did: Drafted implementation plan for Rat Audit (inspector tool)
+- Why: Turn the rat research (docs 09/10, demo_site) into a buildable 7-hour plan
+- Where: none
+- Idea: Static snapshot from offline Python pipeline + React inspector UI; closure-note classification precomputed; block-level masking; 4 parallel workstreams against a shared snapshot schema
+
+### 2026-10-24 12:27 — Published an editable Rat Audit Data Plan board (43 datas...
+- Teammate: Bruno
+- Agent: —
+- Did: Published an editable Rat Audit Data Plan board (43 datasets by tier, status, driver group)
+- Why: Let the team see and change what data we retrieve
+- Where: claude.ai/artifact/6bCS5853Lo3fcDvkGqqXid
+- Idea: Board edits save to a shared store, so the plan can be read back and turned into retrieval scripts
+
+### 2026-10-24 12:26 — Kiro Crew campaign 2b8f7f81 finished: demo site = Normand...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew campaign 2b8f7f81 finished: demo site = Normandy St block, Dorchester 02121 (18 rodent reports 2025-26, full escalation failed, adjacent vacant lot); saved to knowledge/sources/rats/demo_site.md; campaign 2 (93c1ad29) started
+- Why: Demo needs one real chronic site
+- Where: knowledge/sources/rats/demo_site.md
+- Idea: Pitch line: 'the city did everything right at the address; the problem is the lot next door' -> treat blocks, not addresses. Use block, not house number, in public demo
+
+### 2026-10-24 12:22 — Dropped the COVID 2020 test from the rat brainstorm; limi...
+- Teammate: Bruno
+- Agent: —
+- Did: Dropped the COVID 2020 test from the rat brainstorm; limited 311 history to 2023–2026
+- Why: Team wants signals that lead to action now, not historical one-offs
+- Where: knowledge/10_rat_signals_brainstorm.md
+- Idea: Only use predictors the city can act on this year
+
+### 2026-10-24 12:18 — Queued remaining Rat Audit campaigns in Kiro Crew Researc...
+- Teammate: Bruno
+- Agent: —
+- Did: Queued remaining Rat Audit campaigns in Kiro Crew Research Lab: 'what actually worked' (closure notes), 'block-level drivers', 'the cost of rats'; each starts when the previous finishes
+- Why: Run all research campaigns inside Kiro Crew
+- Where: .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Reports saved as they finish, then copied into knowledge/09_boston_rat_audit.md
+
+### 2026-10-24 12:17 — Brainstormed rat causes, impacts and actions; checked whi...
+- Teammate: Bruno
+- Agent: —
+- Did: Brainstormed rat causes, impacts and actions; checked which datasets exist on Analyze Boston; pulled city pest-control spending
+- Why: Decide what data to retrieve next for the Rat Audit
+- Where: knowledge/10_rat_signals_brainstorm.md, knowledge/README.md
+- Idea: Rats move when something changes: food, shelter, displacement. Forecast 'rat weather' from rain, demolitions, move-out week and events
+
+### 2026-10-24 12:16 — Started Kiro Crew Research Lab campaign 2b8f7f81 'Rat Aud...
+- Teammate: Bruno
+- Agent: —
+- Did: Started Kiro Crew Research Lab campaign 2b8f7f81 'Rat Audit — pick the demo address' via the local API (agent mode, 10 cycles, 3 workers, unattended)
+- Why: Run the rat research inside Kiro Crew
+- Where: .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Research Lab allows one active campaign at a time; run 2, 1, 3 after this one
 ### 2026-10-24 12:37 — Pulled origin/main (Guilherme's secret-scan + knowledge r...
 - Teammate: Carol
 - Agent: kirocrew (default)
