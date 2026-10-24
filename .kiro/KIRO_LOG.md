@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:31 — Collapse chat sources and map records by default
+- Teammate: Carol
+- Agent: Codex
+- Did: Added one native disclosure per assistant answer for source links and map records. Browser preview verified initial collapse, click expansion, Enter collapse and record selection; TypeScript, scoped ESLint and diff checks passed. Temporary preview removed.
+- Why: Carol reported that the reference chips overwhelm the chat and requested a toggle, then authorized a push.
+- Where: web/src/components/chat/Message.tsx
+- Idea: Keep evidence accessible on demand while the answer stays readable.
+
 ### 2026-10-24 17:25 — Adicionei a secao 5.4a na spec de Insights: agregar popul...
 - Teammate: Carol
 - Agent: kirocrew (default)

@@ -63,8 +63,21 @@ export default function Message({ message }: { message: UIMessage }) {
         ) : null,
       )}
       <DraftCards message={message} />
-      <FeatureChips features={features} />
-      <SourceChips sources={sources} />
+      {(sources.length > 0 || features.length > 0) && (
+        <details className="group/refs rounded-md border border-edge">
+          <summary className="flex min-h-10 cursor-pointer list-none items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-fg-2 hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden className="shrink-0 group-open/refs:rotate-90">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+            <span className="group-open/refs:hidden">Show sources and records</span>
+            <span className="hidden group-open/refs:inline">Hide sources and records</span>
+          </summary>
+          <div className="space-y-3 border-t border-line p-3">
+            <FeatureChips features={features} />
+            <SourceChips sources={sources} />
+          </div>
+        </details>
+      )}
     </article>
   );
 }
