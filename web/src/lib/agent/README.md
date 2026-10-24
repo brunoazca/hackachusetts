@@ -61,7 +61,7 @@ still follows the repository's human-push workflow. Local env values are not dep
 
 Evidence inherited from the main integrator; current Agent validation follows.
 
-- Gateway default: `openai/gpt-4.1-mini`, verified with the configured API key and free credits. `MODEL_ID` still overrides it. Sonnet 5.5 returned HTTP 403 for that free-credit account.
+- Gateway default: `anthropic/claude-sonnet-5.5` (Oct 24 evening: production `MODEL_ID` switched to it and verified with a live chat turn; earlier the free-credit account returned HTTP 403 for Sonnet, so `openai/gpt-4.1-mini` was used). `MODEL_ID` still overrides it.
 - A real browser conversation called `search_incidents`, streamed a Portuguese answer and rendered source links. For October 1–24, the answer was 658 rodent reports: 563 Boston, 54 Somerville, 41 Cambridge; 78 open and 580 closed. An independent query fetched all 658 unique IDs and matched the total. The corresponding Boston local-day window also counted 658 at validation time.
 - One recent report from each city was checked against its official public API: `311:101006765523`, `som311:1646106`, `camrod:23087338`. IDs, status and opening timestamps matched after local-to-UTC conversion. This is a source sample, not certification of every upstream record.
 - Search status/category/action breakdowns cover the fetched sample, not necessarily every match. The tool now labels that scope and the prompt requires separate status-filtered searches for exact population totals.
@@ -164,7 +164,7 @@ The temporary verifier is `/tmp/rat-agent-a-readonly-check.mts`; no repository f
 ## Env (server)
 
 - `MODEL_PROVIDER`: `gateway` | `anthropic` | `bedrock`
-- `MODEL_ID`: optional. Defaults: `openai/gpt-4.1-mini` (gateway), `claude-sonnet-5-5` (anthropic), `us.anthropic.claude-sonnet-5-5` (bedrock).
+- `MODEL_ID`: optional. Defaults: `anthropic/claude-sonnet-5.5` (gateway), `claude-sonnet-5-5` (anthropic), `us.anthropic.claude-sonnet-5-5` (bedrock).
 - gateway: `AI_GATEWAY_API_KEY` locally. On Vercel, `VERCEL_OIDC_TOKEN` is injected.
 - anthropic: `ANTHROPIC_API_KEY`
 - bedrock: `AWS_REGION` plus either `AWS_ACCESS_KEY_ID` + `AWS_SECRET_ACCESS_KEY` or `AWS_BEARER_TOKEN_BEDROCK`

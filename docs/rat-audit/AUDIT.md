@@ -13,7 +13,7 @@ Model detail: [`model-report/README.md`](model-report/README.md) (interactive: `
   - Forecast: its top 10% of blocks hold **65% of rodent reports vs 50%** for a 4-week average (146 weeks, 2024–2026, better in 145 of 146 weeks).
   - Return after closure: **AUC 0.71** on 2,964 later cases.
 - **AI (LLM), two places only:**
-  1. **Ask Piper** chat agent: answers from database tools only, drives the map, cites sources. Model: GPT-4.1-mini via Vercel AI Gateway (Claude Sonnet / Bedrock supported by config).
+  1. **Ask Piper** chat agent: answers from database tools only, drives the map, cites sources. Model: Claude Sonnet 5.5 via Vercel AI Gateway (Anthropic direct and Bedrock supported by config).
   2. **Region solutions:** Claude Haiku writes one recommended action per high-severity region from the evidence, behind hard guards (allowed actions only, no poison, every number must come from the input, fallback to rules).
 - **Not AI:** the closure-note classifier (rules, 99% of rodent cases tagged), sites (DBSCAN clustering), the inspection brief (template).
 - **Always "expected reports", never rats.** 311 measures who reports; the audit shows where that bias comes from and how it is handled.
@@ -38,7 +38,7 @@ Status: **Live** = on `main`, deployed (Vercel + Supabase + Modal). **DB only** 
 | Approve / work order | Approve an action, write a decision | `decisions` | — | — | **Not built** (table empty) |
 | Insights | Findings, forecast summary, what worked, costs, model "why" | `insights_summary` RPC, `correlations`, `action_outcomes`, `price_impact` | Forecast metrics | — | DB only (RPC deployed, migration not on `main`) |
 | Insights: region solutions | One recommended action per high-severity region | `cell_severity`, `region_solutions` (20), `record_solutions` (10,526) | Per-record solution GBM, severity | Claude Haiku | DB only; **no UI reader on `main`** (branch) |
-| Ask Piper (chat) | Asks questions; map moves, sites highlighted, sources shown | 8 server tools over Supabase (read-only) + Insights | reads model outputs | GPT-4.1-mini (Gateway) | Live (`/api/chat` configured) |
+| Ask Piper (chat) | Asks questions; map moves, sites highlighted, sources shown | 8 server tools over Supabase (read-only) + Insights | reads model outputs | Claude Sonnet 5.5 (Gateway) | Live (`/api/chat` configured) |
 | What-if | "Store trash correctly / clear the lot / pest follow-up" → change in expected reports | features of one block | Forecast GBM | — | Endpoint live on Modal; **no UI or agent caller** |
 | Prove: trials | Design matched-pair trial, measure returns in 60 days | `trials`, `trial_pairs` | — | — | DB only (RPCs deployed, 0 trials, no UI) |
 
@@ -123,7 +123,7 @@ Cambridge and Somerville forecasts are weaker (35–46% capture) and not shown; 
 
 ### Ask Piper (chat agent), live
 
-- Vercel AI SDK; provider switch: AI Gateway (default `openai/gpt-4.1-mini`, verified), Anthropic `claude-sonnet-5-5`, Bedrock. Production `/api/chat` reports configured, gateway, live data.
+- Vercel AI SDK; provider switch: AI Gateway (default `anthropic/claude-sonnet-5.5`), Anthropic direct, Bedrock. Production runs Claude Sonnet 5.5 through the Gateway (verified with a live answer on Oct 24); earlier builds used GPT-4.1-mini while Claude was blocked on the free-credit account.
 - **Answers only from tools**, never from memory; says when a lookup failed. 8 server tools (geocode, search reports, top sites, due sites, site detail, nearby drivers, what worked, draft work order) + Insights + 10 map tools (fly, filter, layers, highlight, forecast, mode).
 - Every tool returns sources and caveats; the UI shows them under each answer.
 - Guardrails in the prompt **and in code**: "expected reports", never rats; nearby ≠ caused; no owner/staff names or house numbers;
@@ -163,5 +163,4 @@ Claude Code and Codex for code. Every entry in `.kiro/KIRO_LOG.md` names the per
 | Approve / decisions never written; trials 0 | Act and Prove loops not closed | present as next step |
 | What-if endpoint has no caller | not demoable in the UI | call it from the block card or the agent, or skip |
 | `record_solution` and `region_solution` not wired into Modal jobs | run by hand | fine for the demo; note it |
-| Chat runs on GPT-4.1-mini, not Claude | — | say it plainly; Claude Haiku writes region solutions |
 | Spending FY2026: $776K (validation) vs $783K (ingest) | inconsistent number | use one, cite the source |

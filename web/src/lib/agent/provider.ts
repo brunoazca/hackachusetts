@@ -11,7 +11,7 @@ import { createAmazonBedrock } from "@ai-sdk/amazon-bedrock";
 export type ProviderName = "gateway" | "anthropic" | "bedrock";
 
 const DEFAULT_MODEL: Record<ProviderName, string> = {
-  gateway: "openai/gpt-4.1-mini",
+  gateway: "anthropic/claude-sonnet-5.5",
   anthropic: "claude-sonnet-5-5",
   bedrock: "us.anthropic.claude-sonnet-5-5",
 };

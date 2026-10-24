@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:30 — Chat switched to Claude Sonnet 5.5 via AI Gateway: produc...
+- Teammate: Bruno
+- Agent: —
+- Did: Chat switched to Claude Sonnet 5.5 via AI Gateway: production MODEL_ID updated, redeployed, verified with a live answer; code default, .env.example, agent README and audit updated
+- Why: Claude access on the Gateway now works
+- Where: web/src/lib/agent/provider.ts, web/.env.example, web/src/lib/agent/README.md, provider.test.ts, docs/rat-audit/AUDIT.md
+- Idea: —
+
 ### 2026-10-24 18:20 — Distinguish viewport reports from surrounding evidence
 - Teammate: Carol
 - Agent:
