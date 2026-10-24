@@ -111,6 +111,10 @@ on one live map, in minutes.
 5. **P1** THE SYSTEM SHALL estimate, for each chronic site, the probability of a new report within 60 days after a closure.
 6. **P0** THE SYSTEM SHALL label forecasts as "expected reports", not rats, and SHALL state next to the layer whether it is the baseline or the backtested model.
 
+7. **P1** THE SYSTEM SHALL flag emerging hotspots: cells with high forecast risk but little recent history, with the leading signals that raised them.
+8. **P2** WHEN the inspector picks interventions for a cell or site THE SYSTEM SHALL return the model's expected change in reports over 4 weeks, labelled as a model estimate.
+9. **P0** THE SYSTEM SHALL run ingestion, analytics, training and scoring in a scheduled Python worker (Modal) that writes to the database, and SHALL re-score after every refresh.
+
 ## R7 Price and cost impact
 
 1. **P1** THE SYSTEM SHALL show assessed-value change FY2025→FY2026 near chronic sites against matched parcels (same ZIP, land use, year-built bucket), labelled exploratory.

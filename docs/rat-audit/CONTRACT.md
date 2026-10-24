@@ -17,8 +17,8 @@ agent answers questions and drives the map.
 | App | Next.js 16 (App Router, TS, Tailwind 4) in `web/`, deployed on Vercel (root dir `web`) |
 | Map | MapLibre GL via `react-map-gl/maplibre`, basemap `https://tiles.openfreemap.org/styles/positron` |
 | Data | Supabase Postgres + PostGIS, project (ref in `.env.local` → `SUPABASE_PROJECT_REF`) (us-east-1) |
-| Pipeline | Python 3.12 via `uv` in `pipeline/` (bulk backfill, analytics, model) |
-| Live refresh | `web/src/app/api/refresh/route.ts` (Vercel cron + "Refresh" button) pulls new 311 rows from Analyze Boston into Supabase |
+| Worker | Python 3.12 package `pipeline/rat_audit`, deployed on **Modal** (`pipeline/modal_app.py`): ingest, analytics, model, crons, `refresh` + `simulate` endpoints. See `pipeline/README.md` |
+| Live refresh | Vercel `/api/refresh` proxies to Modal `refresh` (bearer `RAT_AUDIT_WORKER_TOKEN`) |
 | Agent | Vercel AI SDK v7 (`ai`, `@ai-sdk/react`), provider switch by `MODEL_PROVIDER` = `gateway` \| `anthropic` \| `bedrock` |
 
 Secrets live in the repo-root `.env.local` (git-ignored; `web/.env.local` is a symlink to it):
@@ -29,11 +29,11 @@ Secrets live in the repo-root `.env.local` (git-ignored; `web/.env.local` is a s
 
 | Track | Owns |
 |---|---|
-| **data** | `pipeline/ingest/**`, `supabase/migrations/*_data_*.sql`, `web/src/app/api/refresh/**`, `web/vercel.json` |
-| **analytics** | `pipeline/analytics/**`, `pipeline/model/**`, `supabase/migrations/*_analytics_*.sql`, `web/src/components/insights/**` |
+| **data** | `pipeline/rat_audit/ingest/**`, `supabase/migrations/*_data_*.sql`, `web/src/app/api/refresh/**` |
+| **analytics** | `pipeline/rat_audit/analytics/**`, `pipeline/rat_audit/model/**`, `web/src/app/api/simulate/**`, `supabase/migrations/*_analytics_*.sql`, `web/src/components/insights/**` |
 | **map** | `web/src/components/map/**`, `web/src/components/inspector/**`, `web/src/components/shell/TopBar.tsx`, `web/src/lib/queries.ts`, `supabase/migrations/*_api_*.sql` |
 | **agent** | `web/src/app/api/chat/**`, `web/src/components/chat/**`, `web/src/lib/agent/**`, `supabase/migrations/*_agent_*.sql` |
-| shared (integrator only) | `web/src/app/page.tsx`, `web/src/components/shell/SidePanel.tsx`, `web/src/lib/map-store.ts`, `web/src/lib/supabase.ts`, `contracts/**`, `web/package.json` |
+| shared (integrator only) | `pipeline/modal_app.py`, `pipeline/rat_audit/{db,jobs}.py`, `pipeline/pyproject.toml`, `web/src/app/page.tsx`, `web/src/components/shell/SidePanel.tsx`, `web/src/lib/map-store.ts`, `web/src/lib/supabase.ts`, `contracts/**`, `web/package.json` |
 
 A track that needs a package: install it, and list it in its final report (the integrator merges `package.json`).
 

@@ -12,10 +12,11 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [x] 0.2 Next.js 16 shell in `web/`: map / Inspect / Insights / Ask layout, shared map store, Supabase client. (R2.1)
 - [x] 0.3 Shared category map `contracts/categories.json`; build contract. (R1.2)
 
-## 1. Data track — `pipeline/ingest`, `/api/refresh`
-- [ ] 1.1 **P0** `pipeline/pyproject.toml` (uv, py3.12), db helper (COPY + upsert, never overwrite action_tag), `sources` + `ingest_runs` writers. (R1.3)
+## 1. Data track — `pipeline/rat_audit/ingest`, Modal worker, `/api/refresh` proxy
+- [x] 1.0 **P0** Modal worker deployed (`pipeline/modal_app.py`): backfill fan-out, daily/weekly crons, `refresh` + `simulate` endpoints with bearer token; secret `rat-audit`. (R6.9)
+- [ ] 1.1 **P0** db helper COPY + upsert (never overwrite action_tag); `sources` + `ingest_runs` writers exist in `rat_audit/db.py`. (R1.3)
 - [ ] 1.2 **P0** 311 yearly 2023–2026 + new-system trash types → `incidents`; address_block/address_key; drop placeholder coords. Verify 2026 rodent ≈ 5,321 (already past 2025's 5,225) — use the 2026 figure in the demo; Normandy St 02121 grouped. (R1.2, R1.11)
-- [ ] 1.3 **P0** `/api/refresh` route + `vercel.json` cron + 5-minute guard. (R1.4–R1.6)
+- [ ] 1.3 **P0** Vercel `/api/refresh` proxy → Modal `refresh` (token server-side) + 5-minute guard. (R1.4–R1.6)
 - [ ] 1.4 **P1** Parcels FY25/FY26 with coordinates; vacant parcels → places. (R1.8)
 - [ ] 1.5 **P1** Food inspections rodent violations → places(restaurant). (R1.7)
 - [ ] 1.6 **P1** Permits (demolition, excavation), PW work zones, Big Belly, city lots, schools → places. (R1.7)
@@ -25,7 +26,7 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 1.11 **P1** Load owner names, mailing and full addresses, raw closure notes into `private.*`; scrub names from public `closure_note`. (R3.9)
 - [ ] 1.9 **P0** `pipeline/ingest/README.md` with run commands.
 
-## 2. Analytics + prediction track — `pipeline/analytics`, `pipeline/model`, Insights UI
+## 2. Analytics + prediction track — `pipeline/rat_audit/{analytics,model}` (run on Modal), Insights UI
 - [ ] 2.1 **P0** grid_cells (250 m, clipped to Boston). (R6.1)
 - [ ] 2.2 **P0** Closure classifier → action_tag; coverage report; unit tests. (R3.1, R10.4)
 - [ ] 2.3 **P0** sites (score, recurrence, drivers, building, adjacent vacant, recommended); Normandy St rank check; property tests. (R3.2, R10.4)
@@ -36,6 +37,8 @@ and deployed · **4:30** scope freeze · **5:30** release candidate · **6:00** 
 - [ ] 2.8 **P0** InsightsPanel: forecast summary, finding cards with charts + caveats, price & cost. (R5.1, R6.2, R7)
 - [ ] 2.9 **P1** Remaining correlations (demolition, rain lag, trash day, building age×owner, restaurants, Big Belly, events, under-reporting, asthma, seasonality). (R5.3)
 - [ ] 2.10 **P1** NWS live rain for future weeks. (R6.4)
+- [ ] 2.15 **P1** Emerging hotspots flag + agent/map support. (R6.7)
+- [ ] 2.16 **P2** `simulate(conn, request)` in `rat_audit/model` + `/api/simulate` proxy + simulator UI in CellCard/SiteCard. (R6.8)
 - [ ] 2.11 **P1** site_recurrence_logit → sites.summary.recur_p. (R6.5)
 - [ ] 2.12 **P1** Price impact: assessed-value matched comparison, listings, Zillow. (R7.1–R7.3, R7.5)
 - [ ] 2.14 **P1** Three-city comparison finding. (R5.6)

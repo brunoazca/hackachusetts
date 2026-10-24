@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:13 — Modal worker deployed (rat-audit on harvard workspace): b...
+- Teammate: Bruno
+- Agent: —
+- Did: Modal worker deployed (rat-audit on harvard workspace): backfill fan-out, daily/weekly crons, refresh + simulate endpoints; spec updated
+- Why: Bruno approved Modal as the single Python worker that fetches data and predicts where reports will appear
+- Where: pipeline/, .kiro/specs/rat-audit/*, docs/rat-audit/CONTRACT.md
+- Idea: Emerging-hotspot flag (high forecast, little history) and what-if simulator (model estimate) added to spec as R6.7/R6.8
+
 ### 2026-10-24 13:11 — Wrote docs/rat-audit/TEAM.md: Bruno=data+models, Carol=an...
 - Teammate: Bruno Azca
 - Agent: kirocrew (Spec agent)
