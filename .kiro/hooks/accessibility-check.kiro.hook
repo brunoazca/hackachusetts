@@ -1,0 +1,10 @@
+{
+  "name": "Accessibility check on UI save",
+  "description": "When a UI component file is saved, review it for the scored accessibility requirements before it drifts.",
+  "trigger": {
+    "type": "fileEdited",
+    "patterns": ["src/**/*.tsx", "src/**/*.jsx", "src/**/*.html", "src/**/*.vue"]
+  },
+  "prompt": "A UI file was just saved. Review ONLY that file against the accessibility requirements in .kiro/steering/product.md and the active spec: semantic HTML landmarks, a single h1, labels on every interactive control, visible and logical focus order, aria-describedby on error messages, and WCAG AA contrast. Report concrete fixes as a short checklist. Do not rewrite unrelated code. If the file is already compliant, say so in one line.",
+  "enabled": true
+}

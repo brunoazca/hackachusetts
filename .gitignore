@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Env & secrets — never commit
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Kiro local settings (keep steering/specs/hooks/agents; ignore local locks)
+.kiro/settings/.kirocrew-cli-settings.lock
