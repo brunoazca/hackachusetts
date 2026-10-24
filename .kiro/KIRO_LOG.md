@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:32 — Centered map filter bar on the viewport (fixed left-1/2) ...
+- Teammate: Bruno
+- Agent: —
+- Did: Centered map filter bar on the viewport (fixed left-1/2) instead of the map area
+- Why: user wants filters centered relative to the screen
+- Where: web/src/components/map/LayerPanel.tsx
+- Idea: —
+
 ### 2026-10-24 19:30 — Priority map: top-20 blocks drawn dark red with an alert ...
 - Teammate: Bruno
 - Agent: —
