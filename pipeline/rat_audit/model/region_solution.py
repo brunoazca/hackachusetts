@@ -44,8 +44,9 @@ from . import solution as sol
 
 LLM_MODEL = "anthropic/claude-haiku-5.5"
 GATEWAY_URL = "https://ai-gateway.vercel.sh/v1/chat/completions"
-N_REGIONS = 20
-TOP_SHARE = 0.05
+N_REGIONS = 100  # ranked entries with an AI card: all regions + the worst cells outside them
+HISTORY_DAYS = 730  # cells with a rodent report in this window get a cell card (cell_solutions)
+TOP_SHARE = 0.10  # top 10 % of cells feed the clusters (~27 hotspots; wider pools only merge more)
 RING_WEIGHT = 0.5
 MAX_CELLS = 9
 CELL_M = 250
@@ -161,6 +162,7 @@ def build_regions(conn, rec: pd.DataFrame, run_id: str, rs: dict, n: int = N_REG
     for i, r in enumerate(regions, 1):
         r["rank"] = i
         r["rank_of"] = len(cells)
+    cells["rank"] = cells["smoothed"].rank(ascending=False, method="first").astype(int)
     cells["region_id"] = None
     for r in regions:
         cells.loc[cells["cell_id"].isin(r["cell_ids"]), "region_id"] = r["region_id"]
@@ -303,7 +305,7 @@ def _locations(recent: pd.DataFrame, two_y: pd.DataFrame) -> tuple[list[dict], d
     return out, of
 
 
-def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
+def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> tuple[list[dict], dict]:
     data_end = rec["opened_at"].max()
     places = pd.DataFrame(conn.execute(
         "select kind, lat, lon, source_id from places where lat is not null and kind = any(%s)",
@@ -410,7 +412,7 @@ def build_inputs(conn, regions, fut, rec, rs, stats, run_id) -> list[dict]:
             "solution_statistics": {s: stats[s] for s in ["all Boston closed rodent cases"] + sits if s in stats},
             "source_ids": sorted(set(mine["source_id"].dropna()) | {s for c in causes for s in c["source_ids"]}),
         })
-    return inputs
+    return inputs, {**base_places, **base_311}
 
 
 # ── 4. AI + guards + rules fallback ───────────────────────────────────────────
@@ -607,7 +609,6 @@ def rules(inp: dict) -> dict:
 
 def write_cell_severity(conn, cells: pd.DataFrame, run_id: str, now) -> None:
     """All Boston cells with the three severity terms, the smoothed score and the region they fall in."""
-    cells = cells.assign(rank=cells["smoothed"].rank(ascending=False, method="first").astype(int))
     with conn.cursor() as cur:
         cur.execute("delete from cell_severity")
         cur.executemany(
@@ -619,6 +620,97 @@ def write_cell_severity(conn, cells: pd.DataFrame, run_id: str, now) -> None:
             [(c.cell_id, run_id, int(c.observed_12w), round(float(c.expected_4w), 4),
               round(float(c.expected_returns_60d), 4), round(float(c.severity), 4), round(float(c.smoothed), 4),
               int(c.rank), c.region_id, now) for c in cells.itertuples()])
+
+
+def single_cells(cells: pd.DataFrame, rec: pd.DataFrame) -> list[dict]:
+    """Every cell with rodent history outside the ranked regions, as a one-cell region."""
+    since = rec["opened_at"].max() - pd.Timedelta(days=HISTORY_DAYS)
+    active = set(rec.loc[rec["opened_at"] > since, "cell_id"])
+    out = []
+    for c in cells[cells["region_id"].isna() & cells["cell_id"].isin(active)].itertuples():
+        out.append({"region_id": c.cell_id, "cell_id": c.cell_id, "cell_ids": [c.cell_id],
+                    "neighborhood": c.neighborhood, "lat": float(c.lat), "lon": float(c.lon),
+                    "rank": int(c.rank), "rank_of": len(cells),
+                    "severity": {"observed_12w": int(c.observed_12w), "expected_4w": round(float(c.expected_4w), 1),
+                                 "expected_returns_60d": round(float(c.expected_returns_60d), 1),
+                                 "score": round(float(c.severity), 1)}})
+    return out
+
+
+def _clean(o):
+    """JSON-safe: pandas NaN/NaT become null (Postgres jsonb rejects NaN)."""
+    if isinstance(o, dict):
+        return {k: _clean(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [_clean(v) for v in o]
+    if isinstance(o, float) and not np.isfinite(o):
+        return None
+    if o is pd.NaT:
+        return None
+    return o
+
+
+def _row(inp: dict, out: dict, source: str, errs: list, run_id: str, now) -> tuple:
+    inp, out = _clean(inp), _clean(out)
+    text = json.dumps(inp, default=str, sort_keys=True, allow_nan=False)
+    return (inp["region"]["region_id"], run_id, inp["region"]["rank"], inp["region"]["cell_ids"],
+            out["action"], out["lane"], out["because"], json.dumps(out.get("cites", [])),
+            json.dumps(out.get("records", [])), json.dumps(out.get("unknowns", [])),
+            out.get("rule_id"), source, LLM_MODEL if source == "ai" else None,
+            hashlib.sha256(text.encode()).hexdigest()[:16], text, json.dumps(errs), CAVEAT, now,
+            json.dumps(inp.get("locations", [])))
+
+
+SOLUTION_COLS = """(%s, forecast_run_id, rank, cell_ids, action, lane, because, cites, records, unknowns, rule_id,
+    source, llm_model, input_hash, input, guard_errors, caveat, computed_at, locations)"""
+SOLUTION_VALS = "(%s,%s,%s,%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s::jsonb,%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s,%s,%s::jsonb)"
+
+
+def write_cell_solutions(conn, cell_inputs: list[dict], run_id: str, now) -> None:
+    """Rules card + stored AI input for every non-region cell; on-demand AI fills them later (solve_cell)."""
+    rows = [_row(inp, link_places(rules(inp), inp.get("locations", [])), "rules", [], run_id, now)
+            for inp in cell_inputs]
+    with conn.cursor() as cur:
+        cur.execute("delete from cell_solutions")
+        cur.executemany(f"insert into cell_solutions {SOLUTION_COLS % 'cell_id'} values {SOLUTION_VALS}", rows)
+
+
+def write_baselines(conn, baselines: dict, now) -> None:
+    with conn.cursor() as cur:
+        cur.execute("delete from cause_baselines")
+        cur.executemany("insert into cause_baselines (kind, per_report_within_150m, computed_at) values (%s,%s,%s)",
+                        [(k, float(v), now) for k, v in baselines.items()])
+
+
+def _solve_own_conn(cell_id: str) -> dict:
+    """solve_cell on its own connection (threads must not share one)."""
+    with psycopg.connect(os.environ["SUPABASE_DB_URL"]) as c:
+        return solve_cell(c, cell_id)
+
+
+def solve_cell(conn: psycopg.Connection, cell_id: str) -> dict:
+    """On-demand AI for one cell. Region cells return their region card. Caller commits."""
+    reg = conn.execute("select region_id from cell_severity where cell_id = %s", (cell_id,)).fetchone()
+    if reg and reg[0]:
+        return {"table": "region_solutions", "id": reg[0], "source": "region"}
+    row = conn.execute("select input, forecast_run_id, source from cell_solutions where cell_id = %s",
+                       (cell_id,)).fetchone()
+    if row is None:
+        return {"table": None, "id": cell_id, "source": "none", "reason": "no rodent reports in the last 2 years"}
+    inp, run_id, source = row
+    if source == "ai":
+        return {"table": "cell_solutions", "id": cell_id, "source": "ai", "cached": True}
+    out, errs = ask(inp)
+    if out is None:
+        conn.execute("update cell_solutions set guard_errors = %s::jsonb where cell_id = %s", (json.dumps(errs), cell_id))
+        return {"table": "cell_solutions", "id": cell_id, "source": "rules", "errors": errs}
+    r = _row(inp, link_places(out, inp.get("locations", [])), "ai", [], run_id, datetime.now(timezone.utc))
+    conn.execute(
+        """update cell_solutions set action=%s, lane=%s, because=%s, cites=%s::jsonb, records=%s::jsonb,
+           unknowns=%s::jsonb, rule_id=null, source='ai', llm_model=%s, guard_errors='[]'::jsonb, computed_at=%s
+           where cell_id=%s""",
+        (r[4], r[5], r[6], r[7], r[8], r[9], LLM_MODEL, r[17], cell_id))
+    return {"table": "cell_solutions", "id": cell_id, "source": "ai", "cached": False}
 
 
 def region_solution(conn: psycopg.Connection, n: int = N_REGIONS, use_ai: bool = True) -> dict:
@@ -637,7 +729,9 @@ def region_solution(conn: psycopg.Connection, n: int = N_REGIONS, use_ai: bool =
                                 "alternatives, because from record_solutions").fetchall()}
     run_id = _forecast_run(conn)
     regions, fut, cells = build_regions(conn, rec, run_id, rs, n)
-    inputs = build_inputs(conn, regions, fut, rec, rs, stats, run_id)
+    singles = single_cells(cells, rec)
+    inputs, baselines = build_inputs(conn, regions + singles, fut, rec, rs, stats, run_id)
+    inputs, cell_inputs = inputs[:len(regions)], inputs[len(regions):]
 
     def solve(inp):
         if use_ai:
@@ -652,17 +746,17 @@ def region_solution(conn: psycopg.Connection, n: int = N_REGIONS, use_ai: bool =
         results = list(ex.map(solve, inputs))
 
     now = datetime.now(timezone.utc)
-    rows = []
-    for inp, (out, source, errs) in zip(inputs, results):
-        out = link_places(out, inp.get("locations", []))
-        text = json.dumps(inp, default=str, sort_keys=True)
-        rows.append((inp["region"]["region_id"], run_id, inp["region"]["rank"], inp["region"]["cell_ids"],
-                     out["action"], out["lane"], out["because"], json.dumps(out.get("cites", [])),
-                     json.dumps(out.get("records", [])), json.dumps(out.get("unknowns", [])),
-                     out.get("rule_id"), source, LLM_MODEL if source == "ai" else None,
-                     hashlib.sha256(text.encode()).hexdigest()[:16], text, json.dumps(errs), CAVEAT, now,
-                     json.dumps(inp.get("locations", []))))
+    rows = [_row(inp, link_places(out, inp.get("locations", [])), source, errs, run_id, now)
+            for inp, (out, source, errs) in zip(inputs, results)]
     write_cell_severity(conn, cells, run_id, now)
+    write_cell_solutions(conn, cell_inputs, run_id, now)
+    conn.commit()
+    # Precompute AI for the worst lone cells so the first N ranked entries all have an AI card.
+    top_cells = [i["region"]["region_id"] for i in sorted(cell_inputs, key=lambda i: i["region"]["rank"])
+                 ][:max(0, n - len(regions))] if use_ai else []
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        list(ex.map(lambda cid: _solve_own_conn(cid), top_cells))
+    write_baselines(conn, baselines, now)
     with conn.cursor() as cur:
         cur.execute("delete from region_solutions")
         cur.executemany(

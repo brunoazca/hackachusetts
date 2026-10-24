@@ -3,7 +3,8 @@
 Deploy:  cd pipeline && MODAL_PROFILE=harvard uv run modal deploy modal_app.py
 Run one: MODAL_PROFILE=harvard uv run modal run modal_app.py::backfill
 Secret `rat-audit` holds SUPABASE_DB_URL, SUPABASE_SERVICE_ROLE_KEY, NEXT_PUBLIC_SUPABASE_URL,
-SOCRATA_APP_TOKEN and RAT_AUDIT_WORKER_TOKEN (the bearer token the web app sends).
+SOCRATA_APP_TOKEN, RAT_AUDIT_WORKER_TOKEN (the bearer token the web app sends) and
+AI_GATEWAY_API_KEY (Vercel AI Gateway, for the Insights AI cards).
 """
 from __future__ import annotations
 
@@ -47,7 +48,16 @@ def backfill() -> list[dict]:
 @app.function(timeout=3600, cpu=4.0, memory=16384)  # panel from 2016 (~1.9M rows)
 def analytics_and_score() -> dict:
     from rat_audit import jobs
-    return {"analytics": jobs.analytics(), "score": jobs.score()}
+    out = {"analytics": jobs.analytics(), "score": jobs.score()}
+    solutions.spawn()  # Insights cards follow every scoring run
+    return out
+
+
+@app.function(timeout=3600, cpu=4.0, memory=16384)
+def solutions() -> dict:
+    """record_solutions -> cell_severity + region_solutions (AI, top 100) + cell_solutions (rules + AI input)."""
+    from rat_audit import jobs
+    return jobs.solutions()
 
 
 @app.function(timeout=3600)  # manual: refresh fast sources → analytics + score (no cron: one-day hackathon)
@@ -86,3 +96,16 @@ def simulate(request: dict, authorization: str | None = Header(default=None)) ->
     if not _authorized(authorization):
         raise HTTPException(status_code=401, detail="unauthorized")
     return jobs.simulate(request)
+
+
+@app.function(timeout=300, cpu=1.0, memory=1024)
+@modal.fastapi_endpoint(method="POST")
+def insight_ai(request: dict, authorization: str | None = Header(default=None)) -> dict:
+    """On-demand AI card for one cell: {cell_id} -> where it was written (cell_solutions, cached after the first call)."""
+    from rat_audit import jobs
+    if not _authorized(authorization):
+        raise HTTPException(status_code=401, detail="unauthorized")
+    cell_id = str(request.get("cell_id", ""))
+    if not cell_id.startswith("g250_"):
+        raise HTTPException(status_code=400, detail="cell_id required")
+    return jobs.solve_cell(cell_id)
