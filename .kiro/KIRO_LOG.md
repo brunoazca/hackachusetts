@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:22 — Map: removed the Buildings & people dock button and the h...
+- Teammate: Bruno
+- Agent: —
+- Did: Map: removed the Buildings & people dock button and the heat-scale legend
+- Why: declutter the map; List button was already removed
+- Where: web/src/components/map/LayerPanel.tsx, web/src/components/map/MapView.tsx
+- Idea: —
+
 ### 2026-10-24 19:19 — Integrate chat Markdown fix with the current main for the...
 - Teammate: Carol
 - Agent: Codex

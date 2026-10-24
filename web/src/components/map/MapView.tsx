@@ -12,7 +12,6 @@ import { circle as turfCircle } from "@turf/turf";
 import { fetchCellDetail } from "@/lib/forecast";
 import { formatDate } from "@/lib/dates";
 import ContextLayers from "./ContextLayers";
-import MapLegend from "./MapLegend";
 import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
 import PriorityLayer, { PRIORITY_LAYER_IDS } from "./PriorityLayer";
 import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
@@ -165,9 +164,8 @@ export default function MapView() {
   const setCauses = useMap((s) => s.setCauses);
   const highlight = useMap((s) => s.highlight);
   const setFeaturesInView = useMap((s) => s.setFeaturesInView);
-  // Block profile remains off until selected in Buildings & people.
+  // Block profile layer (no longer has a picker; stays off).
   const cellMetric = useMap((s) => s.cellMetric);
-  const setCellMetric = useMap((s) => s.setCellMetric);
   const [coverage, setCoverage] = useState<CoverageRow[]>([]);
   const [bbox, setBbox] = useState<BBox | null>(null);
   const [zoom, setZoom] = useState(view.zoom);
@@ -877,20 +875,11 @@ export default function MapView() {
       {/* One map: the Insight panel on the left (ranking, or whatever is selected), the layer and
           filter bar along the bottom. Spec: insights-severity-ranking.md §12. */}
       <InsightPanel />
-      <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} cellMetric={cellMetric} onCellMetricChange={setCellMetric} onOpenChange={setFlyoutOpen} />
+      <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} causes={causes} onCausesChange={setCauses} count={total} loading={loading} coverage={coverage} zoom={zoom} onOpenChange={setFlyoutOpen} />
 
       {/* Keyboard twin of the map (R2.11 / R9.1). In Act, the Places queue is already the list
           twin, so this only appears in Assess/Map mode. Reachable by Tab and by the "L" shortcut. */}
       {appMode !== "act" && listOpen && <FeatureList onClose={() => setListOpen(false)} />}
-      {/* Bottom-left map key, offset right of the 384 px left panel. */}
-      {appMode !== "act" && (
-        <div
-          className="absolute z-20 flex flex-col items-start gap-2 transition-[left,bottom] duration-300 ease-[var(--ease-spring)]"
-          style={{ left: 12 + 384 + 8, bottom: "calc(var(--ctrl-bottom, 4px) + 72px)" }}
-        >
-          <MapLegend mode={viewMode} causes={causes} zoom={zoom} priority={priorityFull} />
-        </div>
-      )}
 
       {error && (
         <div role="alert" className="absolute bottom-4 left-4 rounded-md bg-red-50 px-3 py-2 text-sm font-medium text-red-900 shadow">
