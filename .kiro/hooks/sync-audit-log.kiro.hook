@@ -1,0 +1,18 @@
+{
+  "name": "Sync the Kiro audit log into the repo",
+  "description": "Whenever repo work happens (a file changes), copy the host audit log (~/.kiro/crew/audit.log, every tool call, HMAC-protected) into .kiro/audit/audit.log so our proof of Kiro usage travels with the repo to GitHub and teammates.",
+  "trigger": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*",
+      ".kiro/specs/**/*",
+      "docs/**/*",
+      "knowledge/**/*",
+      "data/**/*",
+      "*.md",
+      "*.json"
+    ]
+  },
+  "prompt": "Repo work just happened. Sync the audit log by running exactly this from the repo root, and nothing else: `bash .kiro/audit/sync-audit-log.sh`. Do NOT modify the changed file. Do NOT commit. Report the one-line result the script prints. If the script reports no audit log found, say so and stop.",
+  "enabled": true
+}
