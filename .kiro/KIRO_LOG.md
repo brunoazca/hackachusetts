@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:37 — Motion graphic v4: 5-step data timeline (Data, Evidence, ...
+- Teammate: Bruno
+- Agent: —
+- Did: Motion graphic v4: 5-step data timeline (Data, Evidence, Severity, Action, Prevention), 3D Boston map for evidence, severity equation + top regions, AI action from nearby evidence + past cases, forecast + emerging hotspots
+- Why: Presentation feedback: make the data-to-prevention flow explicit
+- Where: docs/submission/ml-ai-motion/
+- Idea: What-if on the top block raised expected reports (+0.28), so prevention shows forecast + early warning, not a simulated effect
+
 ### 2026-10-24 19:35 — Priority blocks always load: map_forecast gets an explici...
 - Teammate: Bruno
 - Agent: —
