@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:26 — site_recurrence_logit: P(rodent report returns to same ad...
+- Teammate: Bruno
+- Agent: —
+- Did: site_recurrence_logit: P(rodent report returns to same address within 60 days of closure); writes model_runs + sites.summary.recur_p
+- Why: Kiro task 10, done in parallel to unblock the model DAG; time-split AUC 0.71 vs 0.50 base rate on live data
+- Where: pipeline/rat_audit/model/recurrence.py, pipeline/tests/test_model_recurrence.py
+- Idea: action_tag is null for all rodent cases today; constant columns are dropped, re-fit once tags land
+
+### 2026-10-24 14:23 — 3 more Kiro Crew campaigns done and in the knowledge libr...
+- Teammate: Bruno
+- Agent: —
+- Did: 3 more Kiro Crew campaigns done and in the knowledge library: matched escalation test (4fb70394), forecast backtest (072d5a66), competitive gap (20630275); spec, knowledge/15 and Data Atlas card updated
+- Why: Stress-test the lead finding, the P0 forecast and the market gap
+- Where: .kiro/specs/rat-audit/requirements.md, .kiro/specs/rat-audit/tasks.md, knowledge/15_boston_rat_audit.md, .kiro/campaigns/rat-audit-research-campaigns.md
+- Idea: Lead finding REVERSED: matched RR enforcement vs monitoring 1.03 (CI 0.89-1.20), null every year; history drives returns (8-12% -> 56-75%); naive before/after is regression to the mean. Forecast: trash/dumping features lift top-10% capture 0.229->0.257, MAE worse. Gap: no tool closes the per-address what-worked loop
+
 ### 2026-10-24 14:23 — Model artifact persistence: save/load pickled models in m...
 - Teammate: Bruno
 - Agent: —
