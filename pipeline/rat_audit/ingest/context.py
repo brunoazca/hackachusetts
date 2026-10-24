@@ -230,7 +230,7 @@ def _scrub_names(text: str, names: list[str | None]) -> str:
 def airbnb(conn: psycopg.Connection) -> int:
     sid = "inside-airbnb-boston"
     db.upsert_source(conn, sid, "Inside Airbnb Boston (snapshot 2026-09-19)", "https://insideairbnb.com/get-the-data/",
-                     "listings + reviews; rat mentions by keyword with a noise filter; no reviewer names kept")
+                     "listings with a rat review + stable 10% sample of the rest (md5(id) % 10 == 0); keyword match with noise filter; names scrubbed")
     with db.ingest_run(conn, sid) as run:
         lpath = _cached(f"{ABNB_BASE}/listings.csv.gz", "airbnb/listings.csv.gz")
         rpath = _cached(f"{ABNB_BASE}/reviews.csv.gz", "airbnb/reviews.csv.gz")

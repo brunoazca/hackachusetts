@@ -22,7 +22,7 @@ only what changed. That keeps WAL and disk use down on the free-tier DB.
   `.cache/raw/somerville_block_centroids.json`. `geo_precision='block_centroid'`, `address_block`,
   `address_key` and `zip` are null.
 - Status values are `Closed`, `In Progress`, `Open`. Closed → `closed`, and `closed_at` = `most_recent_status_date`.
-- 5,832 rows (rodent 2,586; rodent_program 3,246), 2023-01-02 → 2026-10-24. 13 rows have no centroid (blank block code).
+- 5,832 rows (rodent 2,586; rodent_program 3,246), 2023-01-02 → 2026-10-24. 13 rows have no point (no block code or no TIGERweb match).
 - Caveat: a block centroid is not the report location. Many requests share one point. Don't use these for address-level recurrence.
 
 ### Cambridge rodent sightings — `cambridge-rodent-sightings`
@@ -59,10 +59,16 @@ only what changed. That keeps WAL and disk use down on the free-tier DB.
 - One row per ticket × violation code. id `ce:<ticket_no>:<code>`. The source repeats some ticket × code rows exactly, and those are de-duplicated.
 - Date: the dataset has only `status_dttm`, which is used as `opened_at`. There's no separate issue or close date, so
   `closed_at` is null. `Void` tickets are dropped. Closed/Open come from `status`.
-- Fields: ticket_no, code, status_dttm, status, description, violation_stno/sthigh/street/suffix/city/zip, latitude, longitude.
+- Fields: ticket_no, code, status_dttm, status, description, violation_street/suffix/city/zip, latitude, longitude.
   `violation_city` (Dorchester, Roxbury, …) → `neighborhood`. The owner contact address (`contact_*`) is never read.
-- **Window is 2025-01-01 on** (`START`): 116,386 rows, 2025-01-02 → 2026-10-23. 2023+ would be ~245k rows, which
-  would push the free-tier DB past 500 MB (read-only). Widen `START` only after a disk upgrade.
+  No private details are stored and `address_key` is null; the street block is enough.
+- Two outputs, to fit the DB size budget:
+  - `signal_volume` (city, category, lat_bin, lon_bin, month, n): every 2023+ ticket, same ~100 m bins as `report_volume`.
+    One CKAN GROUP BY per month via `ckan_sql_all`, so the portal's 32k-row cap can't truncate it. No rows are downloaded.
+    Expected size is ~110k bin-months (~20 MB) for ~245k tickets.
+  - `incidents`: individual tickets for the last `ROW_MONTHS` = 6 months (~38k rows), for the map and inspector card.
+    Older rows are deleted on every run.
+- Refresh (`since="14d"`) recomputes the previous and current month of `signal_volume` and upserts rows for the window.
 - Caveat: tickets measure inspector activity as much as conditions. Their routes and sweeps drive the counts.
 
 ## weather.py — `noaa-ghcnd-logan` → `weather_daily`
@@ -78,3 +84,73 @@ only what changed. That keeps WAL and disk use down on the free-tier DB.
   Postponed and cancelled games are skipped. `redsox:<gamePk>`, 3 h window, point at Fenway. 323 rows, 2023-03-30 → 2026-09-25.
 - Marathon and Red Sox rows have `attrs.note` = display only: validation found no effect.
 - The module is small and fully re-read each run; `since` is ignored.
+
+## context.py — context only, not used by the forecast
+
+Raw downloads cache to `<repo>/.cache/raw/` (override with `RAW_CACHE`). Order: tracts → Zillow → Airbnb →
+iNaturalist → spending. ≈ 20 s with a warm cache; DB footprint ≈ 3 MB.
+
+### Census tracts — `climate-ready-boston-svi`, `census-tigerweb-2020`, `cdc-places` → `tracts` (238)
+- Boston 180: Climate Ready Boston SVI GeoJSON (2010 tracts). `attrs`: `pop`, `housing_units`, `neighborhood`, `tract`,
+  `area_acres`, `svi_disability`, `svi_children`, `svi_older_adults`, `svi_low_income`, `svi_limited_english`,
+  `svi_people_of_color`, `svi_medical_illness` (counts) and each as `*_pct` of pop.
+- Cambridge 33 / Somerville 25: TIGERweb 2020 tracts (Middlesex 3521–3550 + 3594 = Cambridge, 3501–3515 = Somerville);
+  `pop`/`housing_units` from 2020 Census (sums match city totals 118,403 / 81,045). No SVI fields.
+- `asthma_pct` on all 238: CDC PLACES CASTHMA (adult crude %, data year 2023, 2020 tracts). 208 exact GEOID matches;
+  30 redrawn Boston 2010 tracts take the area-weighted value of overlapping 2020 tracts (`asthma_method`). Model-based.
+- Geometry simplified with `ST_SimplifyPreserveTopology(…, 0.00005)` (~5 m), then MakeValid/Multi; all valid.
+
+### Zillow — `zillow-zhvi`, `zillow-zori` → `zip_prices` (4,131)
+MA ZIPs starting `021`, 2020-01 → 2026-09; 51 ZIPs (49 with ZORI). Month = first of month. Includes inner-ring towns
+(Chelsea, Quincy, Medford…) that share the prefix.
+
+### Inside Airbnb — `inside-airbnb-boston` → `listings` (518)
+Snapshot 2026-09-19 (267,731 reviews on 3,579 reviewed listings). Slim: all 161 listings with a rat review plus a stable
+10% sample (`md5(id) % 10 == 0`) of the rest (357). **Rates over this table must weight non-rat rows ×10** (or use the
+totals above). `rat_review_count` = reviews matching `\b(rats?|mice|mouse|rodents?)\b` after removing noise phrases
+(computer/laptop mouse, rat race, gym rat, German "Rat" = advice, "really mice" typos, negations like "no mice"):
+200 reviews (0.07%). `rat_review_samples`: ≤ 3 newest excerpts, ≤ 200 chars, reviewer and host names → `[name]`
+(a co-host name in free text can remain). Spot-check of 20 random matches: 20/20 real.
+
+### iNaturalist — `inaturalist` → `incidents` (`category='inat_rat'`, 535)
+Rattus in bbox 42.22–42.42 N, −71.20 to −70.98 W; `inat:<id>`, `closed`, `opened_at` = observed_on (2007-07-27 →
+2026-10-16). `subtype` = "taxon (quality_grade)", 380 research grade. `geo_precision='obscured'` for 16 fuzzed points.
+`city` from the containing tract: boston 311, cambridge 61, somerville 49, region 114. No observer names or place text.
+
+### City spending — `boston-checkbook` → `spending` (58; migration `20261024100002_data_spending.sql`)
+Checkbook Explorer payments to vendors matching `pest|exterminat*|Terminix|Orkin`, by fiscal year × department × vendor.
+FY from `Entered` (the FY2023 table labels Jul–Oct 2022 as FY2022). FY2023 $415K, FY2024 $39K, FY2025 $1.60M,
+FY2026 $783K; BPS is most of it. Lower bound (vendor-name match). The portal's FY2024 table holds only July 2023, so
+FY2024 is incomplete, not a drop.
+
+## parcels.py — `boston-assessment-fy26`
+- Assessment FY2026 `ee73430d-96c0-423e-ad21-c4cfb54c8961` (184,552 PIDs, condo units included) + FY2025 `6b7e460e-33f6-4e61-80bc-1bef2e73ac54` (`TOTAL_VALUE` joined on PID → `value_fy25`).
+- `parcels`: pid, address_block (street + ZIP, no number), zip, land_use (`LU_DESC`), yr_built, own_occ, units (`RES_UNITS`; null for R1/R2/R3/CD, filled with 1/2/3/1), value_fy25, value_fy26, lat/lon.
+- Coordinates (the assessment has none), first hit wins: (1) shoelace centroid of the Parcels25 polygon from the city GIS MapServer `gisportal.boston.gov/arcgis/rest/services/Parcels/Parcels25/MapServer/0` (98.5k polygons, `MAP_PAR_ID` = PID, assessment `GIS_ID` maps condo units to their lot); (2) RentSmart property table `f6b5aee9-…` (`rs_prop_pid`); (3) SAM address points `fee8ee07-…` matched on number + street + ZIP (suffixes normalised, AVE→AV, TER→TE, …); (4) condo main point via `CM_ID`; (5) nearest same-parity number on the street within 20.
+- Coverage: 184,520 / 184,552 = 100.0% (184,495 polygon, 25 SAM). Polygon centroid vs RentSmart point: median 10 m, p90 28 m.
+- Owner, mailing address and full address → `private.parcel_owners` only.
+- Vacant land → `places` kind `vacant_parcel` (id `vacant:<pid>`), `LU_DESC` in RES LAND (Unusable) / RESIDENTIAL LAND / RES LAND (Secondary) / COMMERCIAL LAND / COM LAND (Unusable|Secondary) / INDUSTRIAL LAND / IND LAND (Secondary|Unusable). Parking lots, ancillary and underwater land excluded. 6,046 rows, 6,038 located.
+- Re-runs write only rows that changed (`_changed`), so the 100 MB tables don't double with dead tuples. No dates, so `since` is ignored.
+- Caveat: the centroid of an irregular lot can fall outside it. Condo units share their building's point.
+
+## food.py — `boston-food-inspections` → `places` kind `restaurant`
+- Food establishment inspections `4582bec6-2b4f-4f9e-bc55-cbaa73117f4c`, `resultdttm >= 2024-01-01`. Filter = validation's (pull_grid.py): violdesc ILIKE rodent/mice, or comments ILIKE rodent/mouse/mice/' rat '.
+- One row per license: id `food:<licenseno>`, name = businessname, address_block from `address`, lat/lon from `location` "(lat, lon)", starts_at = first rodent citation.
+- attrs: license, business_type, n_rodent_violations, n_explicit, last_result, last_citation, rodent_violations (last 20: date, desc, comment (scrubbed), result, status, explicit). Re-inspection rows are collapsed to one per day × violation code.
+- `explicit` = the comment names rodents/mice/rats/droppings. The violdesc filter also catches generic pest codes (fly paper under "Removing Dead or Trapped Birds, Insects, Rodents"), so use `n_explicit` when you need rodent-only.
+- `since`: licenses with a citation in the window get their whole 2024→ history re-aggregated (a 30d run touched 64).
+- 1,157 businesses, 1,112 located. Licensee person names (`namefirst`, `namelast`, `legalowner`) are never read. Comments mention "the inspector" but no names were found.
+
+## permits.py — `boston-building-permits` → `places` kinds `demolition`, `excavation`
+- Approved building permits `6ddcd912-32a0-43df-9908-63574f8c7e77`, `issued_date >= 2023-01-01`, coords `y_latitude`/`x_longitude`.
+- demolition: worktype RAZE (291), EXTDEM (158). excavation: SITE ("Excavation Borings Test Pits", 219) and new construction (ERECT with permittypedescr "Erect/New Construction", NEWCON), attrs.subtype `site_work` | `new_construction`. The dataset has no separate excavation worktype.
+- id `permit:<permitnumber>`, name = work description (≤80 chars), starts_at = issued, ends_at = expiration. attrs: permit, worktype, subtype, permit_type, status, declared_valuation, `display_only: true`, note.
+- Display only: validation found no effect, so the model doesn't use them. Applicant and comments are never stored (comments carry house numbers).
+- 1,460 rows (449 demolition, 1,011 excavation), 1,455 located.
+
+## places_misc.py — static layers → `places`
+- `boston-bigbelly` (`15e7fa44-…`): kind `bigbelly`, 542 rows, 525 located. Location "(lat, lon)". Description stripped of house numbers and parentheses. id `bigbelly:<lat>,<lon>`.
+- `boston-city-lots` (`93481af5-…`): kind `city_lot`, 1,340 rows (unique PARCELID), 1,339 located. Point = centroid of the first ring of `the_geom`. address_block = STREETNAME only.
+- `boston-public-schools` (`6ceeff38-…`): kind `school`, 134 buildings (id `school:<SCH_ID>-<BLDG_ID>`), name = SCH_LABEL, attrs school_type/school/building.
+- `boston-colleges` (`f59456d7-…`): kind `college` (added to place_kinds in contracts + web categories.json), 60 rows, 57 located. attrs students (2013 count), campus_housing.
+- Each load deletes and rewrites its own kind. `since` is ignored.

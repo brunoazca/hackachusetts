@@ -61,6 +61,18 @@ def ckan_sql(sql: str) -> list[dict]:
     return d["result"]["records"]
 
 
+def ckan_sql_all(sql: str, order_by: str, page: int = 30000) -> list[dict]:
+    """Run an aggregate query in pages (the portal caps each response at 32,000 rows)."""
+    out: list[dict] = []
+    offset = 0
+    while True:
+        rows = ckan_sql(f"{sql} ORDER BY {order_by} LIMIT {page} OFFSET {offset}")
+        out.extend(rows)
+        if len(rows) < page:
+            return out
+        offset += page
+
+
 def ckan_paged(table: str, columns: str, where: str, page: int = 30000):
     """Yield pages of rows from an Analyze Boston datastore table, ordered by _id."""
     offset = 0

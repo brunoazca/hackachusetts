@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:33 — Fixed truncated 311 volume (CKAN caps SQL at 32k rows): c...
+- Teammate: Bruno
+- Agent: —
+- Did: Fixed truncated 311 volume (CKAN caps SQL at 32k rows): ckan_sql_all pages aggregates; report_volume now ~300k reports/year; enforcement hybrid (signal_volume 2023+ + 6 months of rows); VACUUM back to 408 MB
+- Why: report_volume feeds the model's who-reports control; every year was capped at exactly 32,000 bins
+- Where: pipeline/rat_audit/ingest/{common,t311,enforcement}.py
+- Idea: Supabase free tier near cap: upgrade to Pro before demo
+
+### 2026-10-24 13:33 — Parcels/food/permits/places_misc loaders written and load...
+- Teammate: Bruno
+- Agent: —
+- Did: Parcels/food/permits/places_misc loaders written and loaded: 184,552 parcels with 100% coordinates (Parcels25 polygon centroids), 6,046 vacant parcels, 1,157 restaurants with rodent violations, 1,460 demolition/excavation permits, Big Belly bins, city lots, schools, colleges
+- Why: Context layers for the map and the model; owners kept private
+- Where: pipeline/rat_audit/ingest/{parcels,food,permits,places_misc}.py, ingest/README.md, contracts + web categories.json (college)
+- Idea: Supabase is near its 500 MB cap (494 MB); VACUUM FULL parcels (~50 MB of dead tuples) once there's headroom
+
 ### 2026-10-24 13:30 — Context data loaded: 238 tracts (Boston SVI + Cambridge/S...
 - Teammate: Bruno
 - Agent: —

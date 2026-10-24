@@ -10,6 +10,8 @@ description; applicant, owner and the free-text comments (which carry house numb
 """
 from __future__ import annotations
 
+import re
+
 import psycopg
 
 from .. import db
@@ -21,6 +23,7 @@ START = "2023-01-01"
 KIND = {"RAZE": ("demolition", "raze"), "EXTDEM": ("demolition", "exterior_demolition"),
         "SITE": ("excavation", "site_work"), "ERECT": ("excavation", "new_construction"),
         "NEWCON": ("excavation", "new_construction")}
+_LEAD_NUM = re.compile(r"^\s*\d[\w/-]*\s+")  # '257RA-257RC Market St' (common's street_only misses these)
 NOTE = "Display only: no measurable effect on rodent reports in validation; not a model feature."
 
 
@@ -51,7 +54,7 @@ def run(conn: psycopg.Connection, since: str | None = None) -> int:
                      "permit_type": r["permittypedescr"], "status": r["status"],
                      "declared_valuation": to_float((r["declared_valuation"] or "").replace("$", "").replace(",", "")),
                      "display_only": True, "note": NOTE}
-            rows.append((f"permit:{r['permitnumber']}", sid, kind, desc[:80], address_block(r["address"], z),
+            rows.append((f"permit:{r['permitnumber']}", sid, kind, desc[:80], address_block(_LEAD_NUM.sub("", r["address"] or ""), z),
                          issued, parse_local_ts(r["expiration_date"]), jsonb(attrs), lat, lon, "boston"))
             newest = max(newest, issued) if newest else issued
     with db.ingest_run(conn, sid) as run_:

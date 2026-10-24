@@ -12,7 +12,7 @@ import psycopg
 
 from .. import db
 from .common import (
-    address_block, address_key, ckan_paged, ckan_sql, clean_note, in_region, parse_local_ts, scrub_note,
+    address_block, address_key, ckan_paged, ckan_sql, ckan_sql_all, clean_note, in_region, parse_local_ts, scrub_note,
     since_cutoff, to_float, type_map, upsert_generic, upsert_incidents, upsert_private_details, zip5,
 )
 
@@ -120,9 +120,9 @@ def _volume(conn: psycopg.Connection, years: list[int]) -> int:
     specs = [(YEARLY[y], "open_dt") for y in years] + [(NEW_SYSTEM, "open_date")]
     acc: dict[tuple[int, int, str], int] = {}
     for table, col in specs:
-        recs = ckan_sql(
+        recs = ckan_sql_all(
             f'SELECT floor(latitude::numeric*1000) a, floor(longitude::numeric*1000) b, left({col}::text,7) m, count(*) n '
-            f'FROM "{table}" WHERE latitude IS NOT NULL GROUP BY 1,2,3'
+            f'FROM "{table}" WHERE latitude IS NOT NULL GROUP BY 1,2,3', order_by="1,2,3"
         )
         for r in recs:
             if r["a"] is None or not r["m"] or r["m"] < first_month:
