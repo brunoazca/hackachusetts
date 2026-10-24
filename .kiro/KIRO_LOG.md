@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:17 — Escrevi a spec completa da aba Insights (ranking por seve...
+- Teammate: Carol
+- Agent: kirocrew (default)
+- Did: Escrevi a spec completa da aba Insights (ranking por severidade x beneficio + cards top-N de regiao 250m) em .kiro/specs/rat-audit/insights-severity-ranking.md, mapeando cada campo do card para dados ja existentes (grid_cells, predictions, drivers, risk_band, forecast, correlations, base_rates, site_recurrence) e definindo o que falta construir: severity score, recommendation por celula (regras v2 §6), after-fix, e a RPC insights_regions().
+- Why: Bruno (modelo) e Gui (front) vao implementar a partir deste doc; precisa estar preciso.
+- Where: .kiro/specs/rat-audit/insights-severity-ranking.md
+- Idea: Minimum viable: insights_summary.forecast.top_cells ja da os 5 primeiros cards hoje, sem RPC nova — fallback demo-safe.
+
 ### 2026-10-24 17:16 — Rebase and validate Agent for authorized main integration
 - Teammate: Carol
 - Agent:
