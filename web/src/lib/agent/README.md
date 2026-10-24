@@ -2,6 +2,22 @@
 
 This worktree owns tasks 4.1–4.6. Core tasks 4.1–4.4 and 4.6 are implemented with the validation limits below, including v2 `due_sites` and `app_set_mode`. Task 4.5 remains unimplemented P1 work; the whole Agent track is not being marked complete.
 
+## Final integration check — October 24, 2026
+
+Rebased the Agent follow-up onto local main `7d74d6b`, retaining the working Gateway
+default, exact-count/breakdown safeguards, Piper chat UI and Insights improvements.
+Only documentation conflicted; every existing main/Agent log entry was preserved.
+
+- **62 local tests passed**, 7 live checks skipped in that no-env run. Mocks/fixtures/store only.
+- **6 shared-DB checks passed, 0 failed, 1 skipped** in the post-rebase run. `what_worked` remains blocked by empty `action_outcomes`; no retry was needed in this final run. Earlier timeout evidence below remains historical.
+- TypeScript, scoped ESLint and production build passed. Build retains the existing Atkinson font-fallback warning.
+- Current SELECT snapshot: sites, active sites, action_outcomes, base_rates and correlations all zero. Analytics A's latest log (`62b22c1`) reports its Python refresh blocked by pooler password authentication. This front did not run writers or migrations.
+- Public `https://piper-app.vercel.app/api/chat` returned HTTP 200 with `configured:false`, `data:live`, and `AI_GATEWAY_API_KEY is not set`. The deployed chat is **not operational** until its environment is configured and redeployed.
+- The configured deployment project is `piper` under team `bruno-team3`. Vercel project access returned 403; the team-consent helper returned 404 by both known id and slug. No production configuration could be changed from this connection.
+
+The validated Agent code is ready for the authorized local main integration. Publication
+still follows the repository's human-push workflow. Local env values are not deployed by Git.
+
 ## Other integrated validation — October 24, 2026
 
 Evidence inherited from the main integrator; current Agent validation follows.
@@ -153,9 +169,9 @@ failures remain errors, not an empty successful answer.
 ignored. Next loads it from `web/`; standalone live tests require `--env-file=.env.local`.
 The earlier no-key blocker is resolved **locally**; historical log entries remain unchanged.
 
-These follow-up changes are uncommitted on `feat/rat-audit-agent`, based on `8a1caaa`.
-No new repository files, dependencies, shared-file edits, migration execution, shared DB writes,
-new main merge, push or deployment. Other chats' main integration was left untouched.
+The first validation above used the Agent worktree based on `8a1caaa`; the final integration
+check at the top supersedes its Git/test status. No new repository files, dependencies, shared-file
+edits, migration execution, shared DB writes, push or deployment were introduced by this follow-up.
 
 ## Remaining blockers (exact change → owner)
 

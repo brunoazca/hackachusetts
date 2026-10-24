@@ -31,6 +31,18 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:16 — Rebase and validate Agent for authorized main integration
+- Teammate: Carol
+- Agent:
+- Did: Committed the v2 Agent follow-up and rebased it onto clean main 7d74d6b; retained Gateway default, exact-count safeguards, Piper UI and Insights. Resolved only two documentation conflicts and verified preservation of all old log entries.
+- Why: Carol requested immediate integration and a check of the remaining real-data/deployment blockers.
+- Where: Existing web/src/lib/agent/** and .kiro/KIRO_LOG.md; no new files or shared frontend changes.
+- Evidence: Rebased code 73c4e73: 62 local mock/fixture/store tests pass, 7 live skipped in that invocation; separate shared-DB suite 6 pass, 0 fail, 1 skip (empty action_outcomes), no retry. TypeScript, scoped lint and production build pass; existing font-fallback warning retained.
+- Evidence: Current SELECT counts sites/active_sites/action_outcomes/base_rates/correlations all zero. Analytics A log at 62b22c1 reports shared migrations done but Python refresh blocked by pooler password authentication; not reclassified as completed population.
+- Evidence: Public Piper /api/chat GET returned configured=false/data=live and missing AI_GATEWAY_API_KEY. Vercel project prj_rJiVrRy5Uwo9OiFa3HId0Sxe6ULx in bruno-team3 returns 403; consent helper returns 404 for known team id and slug. Deployed-model conversation blocked before sending a prompt.
+- Decision: This validated branch is ready for the authorized fast-forward into local main. Keep the human-push workflow; no push/deploy, production env mutation, migration or DB write here. Production needs its Gateway key and redeployment; populated Analytics still depends on its separate refresh.
+- Idea: Local chat/model success, published provider configuration and persisted Analytics outputs are separate checks.
+
 ### 2026-10-24 16:46 — Prepare Agent for v2 data and validate the real chat
 - Teammate: Carol
 - Agent:
