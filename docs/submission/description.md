@@ -1,5 +1,7 @@
 # Piper — review the places behind repeated rodent reports
 
+**Challenge track: Civic Action (Civic Services).**
+
 Piper helps Boston rodent inspectors and the Boston Rodent Action Plan coordinator review repeated 311 reports at one place, examine recorded responses, and identify nearby records worth investigating.
 
 ## The problem
