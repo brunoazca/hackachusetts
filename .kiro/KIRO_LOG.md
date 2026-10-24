@@ -801,6 +801,77 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Research Lab allows one active campaign at a time; 5 researchers is the app's cap
 - Where: .kiro/campaigns/rat-platform/build_umbrella.py, umbrella.json, runs.json, .kiro/KIRO_LOG.md
 - Idea: Per-track reports land in knowledge/research/R##_*.md
+### 2026-10-24 13:56 — Agent handoff notes + map-store bounds proposal
+- Teammate: Carol
+- Agent: —
+- Did: Wrote the integrator handoff: env vars, test commands, and the minimal map-store change (`bounds` + `setBounds`, set by MapView on moveend) so the agent knows the visible area. Did not edit map-store.ts.
+- Why: map-store has no bbox; the agent must not guess coordinates from center + zoom
+- Where: web/src/lib/agent/README.md
+- Idea: integrator could add tsx + a `test:agent` script to package.json
+
+### 2026-10-24 13:55 — Agent build + runtime smoke check
+- Teammate: Carol
+- Agent: —
+- Did: `next build` passed (/api/chat dynamic). Smoke test with `next start` and no credentials: GET /api/chat → configured:false; POST → 503 not_configured; the panel shows "Assistant not configured" and the rest of the app works.
+- Why: check R8.9 for real, not only in unit tests
+- Where: none
+- Idea: none
+
+### 2026-10-24 13:53 — Agent tests: fake model loop + tools on fixtures
+- Teammate: Carol
+- Agent: —
+- Did: 26 tests pass (node:test via tsx): fake model runs a server tool, then a client tool (map_fly_to) streamed to the browser, then answers; provider switch; each server tool on in-memory fixtures; client tools on a fake store; UI labels. Live read-only test written but skipped: no Supabase credentials in this workspace.
+- Why: task 4.6; vitest is not installed and adding it would change package.json
+- Where: web/src/lib/agent/__tests__/*
+- Idea: run live.test.ts once Supabase keys are available
+
+### 2026-10-24 13:48 — ChatPanel: streaming, tool steps, chips, starters
+- Teammate: Carol
+- Agent: —
+- Did: Built the Ask panel: streamed answers, compact tool steps ("Looked up 16 reports on Normandy St"), source chips (links), feature chips (select + fly on the map), draft work order card with "Review in Inspect", starter questions, error + retry, stop, aria-live for finished answers.
+- Why: task 4.4 (R8.3, R8.4, R8.10, R9.2)
+- Where: web/src/components/chat/ChatPanel.tsx, Message.tsx, Chips.tsx, web/src/lib/agent/ui.ts
+- Idea: none
+
+### 2026-10-24 13:40 — Client map tools for the agent
+- Teammate: Carol
+- Agent: —
+- Did: 7 browser tools (fly_to, set_layers, set_filters, highlight, select, show_forecast, open_panel) that run the existing map-store actions; coordinates outside the Boston area are rejected. Each message sends selection, view, filters and layers.
+- Why: task 4.3: the agent drives the map (R8.2, R8.5)
+- Where: web/src/lib/agent/tools/client.ts, web/src/lib/agent/context.ts
+- Idea: none
+
+### 2026-10-24 13:32 — Agent server tools (read-only)
+- Teammate: Carol
+- Agent: —
+- Did: 7 tools: geocode (only places that exist in the data), search_incidents, top_sites, get_site, nearby_drivers, what_worked, draft_work_order (draft only, never saved or approved). Every result carries sources, map features and caveats; house numbers are stripped and closure notes are not sent.
+- Why: task 4.2: answers come from data with sources (R8.1, R8.7, R8.8)
+- Where: web/src/lib/agent/tools/server.ts, web/src/lib/agent/data/*, web/src/lib/agent/geo.ts
+- Idea: add agent_* RPCs later behind the same AgentData interface
+
+### 2026-10-24 13:25 — /api/chat route + system prompt
+- Teammate: Carol
+- Agent: —
+- Did: Chat endpoint streams the AI SDK v7 tool loop (max 8 steps) with the map context in the system prompt; GET reports whether a model is configured.
+- Why: task 4.2
+- Where: web/src/app/api/chat/route.ts, web/src/lib/agent/chat.ts, web/src/lib/agent/prompt.ts
+- Idea: none
+
+### 2026-10-24 13:20 — Model provider switch for the assistant
+- Teammate: Carol
+- Agent: —
+- Did: MODEL_PROVIDER = gateway | anthropic | bedrock (+ optional MODEL_ID); without credentials it reports "not configured" instead of crashing.
+- Why: task 4.1 (R8.9)
+- Where: web/src/lib/agent/provider.ts
+- Idea: none
+
+### 2026-10-24 13:15 — Started the agent track in its own worktree
+- Teammate: Carol
+- Agent: —
+- Did: Read TEAM, CONTRACT, the rat-audit spec and the installed Next.js 16 + AI SDK v7 docs; created branch feat/rat-audit-agent in ../hackachusetts-agent so main and teammates' files stay untouched.
+- Why: isolated execution for tasks 4.1–4.4 and 4.6
+- Where: none
+- Idea: none
 
 ### 2026-10-24 13:17 — Data section: ingest helpers + Boston 311 loader (2023–20...
 - Teammate: Bruno
