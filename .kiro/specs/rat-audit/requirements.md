@@ -81,7 +81,7 @@ follow up, prove).
 2. **P0** Details (site case, report, place, cell, finding, work order, trial) SHALL open in side panels or popovers when the user interacts, not as more top-level tabs.
 3. **P0** A site selected in one mode SHALL stay selected when the user switches modes.
 4. The exact layout, panel placement and visual design are decided in the UI design pass (Gui) and are not fixed here. Requirements below say what must be reachable, not where it sits.
-5. **P0** THE SYSTEM SHALL offer two depths. **Simple** (default): the loop queue → case → approve with only the controls it needs. **Explore** (one toggle): every layer, filter, timeline, heatmap, area stats and the full assistant. The landing view (Act queue or Assess map) is decided in the UI pass; the Act queue tells the demo story fastest.
+5. **P0** THE SYSTEM SHALL show all data by default (every layer on, rat and evidence heatmaps, icons from street zoom), with no separate depth modes. (Decided Oct 24 15:05: Simple/Explore removed.)
 
 ---
 

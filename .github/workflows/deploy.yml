@@ -1,4 +1,4 @@
-# Deploy web/ to Vercel (project rat-ops -> https://rat-ops.vercel.app) on every push to main.
+# Deploy web/ to Vercel (project piper -> https://piper-app.vercel.app) on every push to main.
 # Needs repo secret VERCEL_TOKEN (Vercel account settings -> Tokens).
 name: Deploy web
 

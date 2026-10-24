@@ -3,6 +3,8 @@ import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { markerDataUrl } from "./icons";
 import { STRENGTH_STYLE, testedFor } from "./tested";
+import { ERA_STOPS, HOUSING_RAMP } from "./ContextLayers";
+import type { CoverageRow } from "@/lib/queries";
 
 // Floating layer + date controls for the draft map.
 
@@ -12,13 +14,6 @@ const GROUPS: { id: string; label: string }[] = [
   { id: "food", label: "Food & trash" },
   { id: "shelter", label: "Shelter" },
   { id: "displace", label: "Displacement" },
-];
-
-// Simple depth (R0.5): every rat signal, plus each driver that showed an effect in the block-level
-// tests (leading or weak). Drivers with no effect or not tested stay in Explore.
-export const SIMPLE_LAYERS = [
-  "rodent", "pest", "dead_animal", "bite", "rodent_program", "inat_rat",
-  "trash_storage", "trash_early", "litter", "dumpster", "move_in_trash", "ce_trash_storage", "weeds",
 ];
 
 export function activeCategories(enabled: Record<string, boolean>) {
@@ -53,7 +48,24 @@ type Props = {
   onModeChange: (m: ViewMode) => void;
   count: number;
   loading: boolean;
+  coverage: CoverageRow[];
+  zoom: number;
 };
+
+const CITY_ABBR: [string, string][] = [["boston", "BOS"], ["cambridge", "CAM"], ["somerville", "SOM"]];
+
+/** Which of the three cities have data for a layer (R: coverage registry). */
+function CityBadges({ layer, coverage }: { layer: string; coverage: CoverageRow[] }) {
+  if (!coverage.length) return null;
+  const has = new Set(coverage.filter((c) => c.kind === "incident" && c.layer === layer).map((c) => c.city));
+  return (
+    <span className="ml-1 inline-flex gap-0.5 align-middle" aria-label={`Data in: ${CITY_ABBR.filter(([c]) => has.has(c)).map(([, a]) => a).join(", ") || "none"}`}>
+      {CITY_ABBR.map(([c, a]) => (
+        <span key={c} className={`rounded px-1 text-[10px] font-semibold leading-4 ${has.has(c) ? "bg-neutral-800 text-white" : "bg-neutral-100 text-neutral-500 line-through"}`}>{a}</span>
+      ))}
+    </span>
+  );
+}
 
 function Ramp({ colors, label }: { colors: string[]; label: string }) {
   return (
@@ -64,10 +76,9 @@ function Ramp({ colors, label }: { colors: string[]; label: string }) {
   );
 }
 
-export default function LayerPanel({ enabled, onChange, mode, onModeChange, count, loading }: Props) {
+export default function LayerPanel({ enabled, onChange, mode, onModeChange, count, loading, coverage, zoom }: Props) {
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
-  const explore = useMap((s) => s.depth) === "explore";
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
 
   return (
@@ -79,7 +90,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
         </span>
       </div>
 
-      {explore && <fieldset className="mb-3">
+      <fieldset className="mb-3">
         <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">View</legend>
         <div className="flex gap-1">
           {MODES.map((m) => (
@@ -102,7 +113,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
             <Ramp colors={HEAT_RAMPS.evidence} label="Evidence (trash, shelter, displacement)" />
           </div>
         )}
-      </fieldset>}
+      </fieldset>
 
       <fieldset className="mb-3">
         <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Period</legend>
@@ -124,7 +135,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
       </fieldset>
 
       {GROUPS.map((g) => {
-        const ids = Object.entries(CATS).filter(([id, c]) => c.group === g.id && (explore || SIMPLE_LAYERS.includes(id)));
+        const ids = Object.entries(CATS).filter(([id, c]) => c.group === g.id);
         if (!ids.length) return null;
         return (
           <fieldset key={g.id} className="mb-2">
@@ -141,6 +152,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
                 <img src={markerDataUrl(id)} alt="" aria-hidden className="mt-0.5 h-5 w-5 shrink-0" />
                 <span className="min-w-0">
                   <span className="block truncate text-neutral-900">{c.label}</span>
+                  <CityBadges layer={id} coverage={coverage} />
                   <span className={`block text-xs ${STRENGTH_STYLE[testedFor(id).strength]}`}>{testedFor(id).text}</span>
                 </span>
               </label>
@@ -148,8 +160,32 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
           </fieldset>
         );
       })}
+      <fieldset className="mb-2">
+        <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Buildings &amp; people</legend>
+        <label className="flex cursor-pointer items-start gap-2 rounded px-1 py-0.5 hover:bg-neutral-50">
+          <input type="checkbox" checked={!!enabled.ctx_housing} onChange={(e) => onChange({ ...enabled, ctx_housing: e.target.checked })} className="mt-1 accent-neutral-900" />
+          <span aria-hidden className="mt-1 h-3 w-5 shrink-0 rounded-sm" style={{ background: `linear-gradient(to right, ${HOUSING_RAMP.join(", ")})` }} />
+          <span className="min-w-0">
+            <span className="block text-neutral-900">Old housing (% built before 1940)</span>
+            <span className="block text-xs text-neutral-700">per census tract · ACS 2024 · BOS CAM SOM</span>
+          </span>
+        </label>
+        <label className="flex cursor-pointer items-start gap-2 rounded px-1 py-0.5 hover:bg-neutral-50">
+          <input type="checkbox" checked={!!enabled.ctx_buildings} onChange={(e) => onChange({ ...enabled, ctx_buildings: e.target.checked })} className="mt-1 accent-neutral-900" />
+          <span aria-hidden className="mt-1 flex h-3 w-5 shrink-0 overflow-hidden rounded-sm">
+            {ERA_STOPS.map(([, c]) => <span key={c} className="flex-1" style={{ background: c }} />)}
+          </span>
+          <span className="min-w-0">
+            <span className="block text-neutral-900">Buildings by year built</span>
+            <span className="block text-xs text-neutral-700">
+              {enabled.ctx_buildings && zoom < 15 ? "zoom in to see buildings · " : ""}assessor parcels BOS CAM SOM · {ERA_STOPS.map(([, , l]) => l).join(" / ")}
+            </span>
+          </span>
+        </label>
+      </fieldset>
+
       <p className="mt-2 text-xs text-neutral-700">
-        {explore ? "Each layer clusters on its own. " : "Simple view: rat signals and the drivers that showed an effect in our tests. Explore adds every other layer and the heatmaps. "}
+        Each layer clusters on its own.{" "}
         Solid icon = open, faded = closed. Tested values: block-level partial correlation with rodent reports.
       </p>
     </div>

@@ -24,6 +24,8 @@ YEARLY = {
 }
 NEW_SYSTEM = "254adca6-64ab-4c5c-9fc0-a6da622be185"
 PAGE_URL = "https://data.boston.gov/dataset/311-service-requests"
+# Full address + raw note (behind the reveal) are kept only for rat signals, to fit the database budget.
+PRIVATE_CATEGORIES = {"rodent", "pest", "bite"}
 CITY_HALL = (42.3594, -71.0587)  # 311 default location; drop rows that sit exactly on it
 
 
@@ -64,7 +66,8 @@ def _yearly(conn: psycopg.Connection, year: int, table: str, tmap: dict[str, str
                     address_block(r["location_street_name"], z), address_key(r["location"]),
                     z, r["neighborhood"] or None, scrub_note(note_raw), lat, lon, "boston", "point",
                 ))
-                private.append((iid, r["location"], note_raw, sid))
+                if tmap[r["type"]] in PRIVATE_CATEGORIES:
+                    private.append((iid, r["location"], note_raw, sid))
                 newest = max(newest, opened) if newest else opened
             total += upsert_incidents(conn, rows)
             upsert_private_details(conn, private)
@@ -102,7 +105,8 @@ def _new_system(conn: psycopg.Connection, tmap: dict[str, str], cutoff) -> int:
                     address_block(r["street_name"], z), address_key(r["full_address"]),
                     z, r["neighborhood"] or None, scrub_note(note_raw), lat, lon, "boston", "point",
                 ))
-                private.append((iid, r["full_address"], note_raw, sid))
+                if tmap[r["service_name"]] in PRIVATE_CATEGORIES:
+                    private.append((iid, r["full_address"], note_raw, sid))
             total += upsert_incidents(conn, rows)
             upsert_private_details(conn, private)
             conn.commit()

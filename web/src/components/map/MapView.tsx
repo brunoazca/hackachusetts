@@ -3,11 +3,14 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Map, { Layer, NavigationControl, Source, type MapLayerMouseEvent, type MapRef } from "react-map-gl/maplibre";
 import type { FeatureCollection, Point } from "geojson";
-import { setWorkerUrl, type HeatmapLayerSpecification } from "maplibre-gl";
+import { setWorkerUrl, type ExpressionSpecification, type HeatmapLayerSpecification } from "maplibre-gl";
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
-import { fetchIncidents, type BBox, type IncidentProps } from "@/lib/queries";
-import LayerPanel, { activeCategories, HEAT_RAMPS, SIMPLE_LAYERS, type ViewMode } from "./LayerPanel";
+import { fetchCoverage, fetchIncidentBins, fetchIncidents, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
+import ContextLayers from "./ContextLayers";
+import ForecastLayer, { FORECAST_LAYER_IDS } from "./ForecastLayer";
+import ForecastControl from "./ForecastControl";
+import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
 import SiteQueue from "@/components/act/SiteQueue";
 import { addCategoryIcons, iconId } from "./icons";
 
@@ -21,14 +24,18 @@ if (typeof window !== "undefined") setWorkerUrl("/maplibre-gl-worker.js");
 const CATS = categories.incident_categories as Record<string, { label: string; color: string; group: string }>;
 type FC = FeatureCollection<Point, IncidentProps>;
 const EMPTY: FC = { type: "FeatureCollection", features: [] };
+// Below this zoom the server aggregates into cells (~12 px), so nothing is truncated; at or above it, raw points.
+const POINTS_ZOOM = 15;
+const cellFor = (zoom: number) => (12 * 360) / (512 * 2 ** zoom);
+const N = ["coalesce", ["get", "n"], 1] as unknown as ExpressionSpecification;
 
 // Heatmap paint for one family of signals: transparent at zero density, then the family's ramp.
 // Each point weighs ~1500/n so a family with many reports (dead animals, trash) doesn't drown the
 // other: the map shows where each family concentrates, not which family is bigger.
 function heatPaint(ramp: string[], opacity: number, n: number) {
-  const w = Math.min(1, Math.max(0.04, 1500 / Math.max(n, 1)));
+  const w = Math.min(1, Math.max(0.01, 1500 / Math.max(n, 1)));
   return {
-    "heatmap-weight": ["*", w, ["case", ["==", ["get", "status"], "open"], 1, 0.7]],
+    "heatmap-weight": ["*", w, N],
     "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 13, 1, 16, 2],
     "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 10, 8, 13, 16, 16, 30],
     "heatmap-color": [
@@ -46,8 +53,15 @@ export default function MapView() {
   const flyToTarget = useMap((s) => s.flyToTarget);
   const select = useMap((s) => s.select);
   const selection = useMap((s) => s.selection);
-  const [enabled, setEnabled] = useState<Record<string, boolean>>({ rodent: true });
-  const [mode, setMode] = useState<ViewMode>("points");
+  // All data by default: every incident layer on, shown as heatmaps (icons appear from zoom 15).
+  const [enabled, setEnabled] = useState<Record<string, boolean>>(
+    () => Object.fromEntries(Object.keys(CATS).map((c) => [c, true])),
+  );
+  const [mode, setMode] = useState<ViewMode>("heat");
+  const [coverage, setCoverage] = useState<CoverageRow[]>([]);
+  const [bbox, setBbox] = useState<BBox | null>(null);
+  const [zoom, setZoom] = useState(view.zoom);
+  useEffect(() => { fetchCoverage().then(setCoverage).catch(() => {}); }, []);
   const [data, setData] = useState<FC>(EMPTY);
   const [iconsReady, setIconsReady] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -55,14 +69,11 @@ export default function MapView() {
   const reqId = useRef(0);
 
   const appMode = useMap((s) => s.mode);
-  const explore = useMap((s) => s.depth) === "explore";
+  const forecastOn = useMap((s) => s.layers.forecast);
+  const forecastWeek = useMap((s) => s.forecastWeek);
   const sites = useMap((s) => s.sites);
-  // Simple depth: only the outcome + tested-predictive layers, points only (heatmap is an Explore tool).
-  const cats = useMemo(
-    () => activeCategories(enabled).filter((c) => explore || SIMPLE_LAYERS.includes(c)),
-    [enabled, explore],
-  );
-  const viewMode: ViewMode = explore ? mode : "points";
+  const cats = useMemo(() => activeCategories(enabled), [enabled]);
+  const viewMode: ViewMode = mode;
   const sitesFC = useMemo(() => ({
     type: "FeatureCollection" as const,
     features: sites.map((r, i) => ({
@@ -84,9 +95,15 @@ export default function MapView() {
   const heat = useMemo(() => {
     const rats: FC = { type: "FeatureCollection", features: [] };
     const evidence: FC = { type: "FeatureCollection", features: [] };
-    for (const f of data.features) (CATS[f.properties.category]?.group === "rats" ? rats : evidence).features.push(f);
-    return { rats, evidence };
+    let nRats = 0, nEvidence = 0;
+    for (const f of data.features) {
+      const n = f.properties.n ?? 1;
+      if (CATS[f.properties.category]?.group === "rats") { rats.features.push(f); nRats += n; }
+      else { evidence.features.push(f); nEvidence += n; }
+    }
+    return { rats, evidence, nRats, nEvidence };
   }, [data]);
+  const total = useMemo(() => data.features.reduce((a, f) => a + (f.properties.n ?? 1), 0), [data]);
   const showHeat = viewMode !== "points";
   const showClusters = viewMode === "points" || viewMode === "both";
 
@@ -95,11 +112,16 @@ export default function MapView() {
     if (!map) return;
     const b = map.getBounds();
     const bbox: BBox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
+    setBbox(bbox);
+    setZoom(map.getZoom());
     const id = ++reqId.current;
     if (cats.length === 0) { setData(EMPTY); return; }
     setLoading(true);
     try {
-      const fc = await fetchIncidents(bbox, cats, filters.since, filters.until);
+      const z = map.getZoom();
+      const fc = z >= POINTS_ZOOM
+        ? await fetchIncidents(bbox, cats, filters.since, filters.until)
+        : await fetchIncidentBins(bbox, cats, filters.since, filters.until, cellFor(Math.floor(z)));
       if (id === reqId.current) { setData(fc); setError(null); }
     } catch (e) {
       if (id === reqId.current) setError(e instanceof Error ? e.message : String(e));
@@ -117,6 +139,7 @@ export default function MapView() {
 
   const onLoad = useCallback(async () => {
     const map = mapRef.current?.getMap();
+    if (process.env.NODE_ENV !== "production" && map) (window as unknown as { __ratmap: unknown }).__ratmap = map;
     if (map) { await addCategoryIcons(map); setIconsReady(true); }
     load();
   }, [load]);
@@ -130,15 +153,23 @@ export default function MapView() {
   }, [flyToTarget, appMode]);
 
   const interactive = useMemo(
-    () => [...(appMode === "act" ? ["sites"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : [])],
-    [cats, iconsReady, appMode],
+    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
+    [cats, iconsReady, appMode, enabled.ctx_buildings, zoom, forecastOn],
   );
 
   const onClick = useCallback((e: MapLayerMouseEvent) => {
     const f = e.features?.[0];
     if (!f) return;
-    if (f.layer.id.endsWith("-clusters")) {
+    if (f.layer.id === "forecast-hit") {
+      select({ kind: "cell", id: String(f.properties?.id) });
+      return;
+    }
+    if (f.layer.id.endsWith("-clusters") || !f.properties?.id) {
       mapRef.current?.easeTo({ center: (f.geometry as Point).coordinates as [number, number], zoom: (mapRef.current?.getZoom() ?? 12) + 2 });
+      return;
+    }
+    if (f.layer.id === "ctx-buildings") {
+      select({ kind: "place", id: `parcel:${f.properties?.pid}` });
       return;
     }
     if (f.layer.id === "sites") {
@@ -164,27 +195,33 @@ export default function MapView() {
         attributionControl={{ compact: true }}
       >
         <NavigationControl position="bottom-right" />
+        <ContextLayers cats={cats} coverage={coverage} housing={!!enabled.ctx_housing} buildings={!!enabled.ctx_buildings} bbox={bbox} zoom={zoom} />
+        <ForecastLayer visible={forecastOn} period={forecastWeek ?? "4w"} bbox={bbox} selectedId={selectedId} />
         {/* Evidence first so the rat heatmap draws on top. */}
         <Source id="heat-evidence" type="geojson" data={heat.evidence}>
-          <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.evidence.features.length)} />
+          <Layer id="heat-evidence" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.evidence, 0.7, heat.nEvidence)} />
         </Source>
         <Source id="heat-rats" type="geojson" data={heat.rats}>
-          <Layer id="heat-rats" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.rats, 0.7, heat.rats.features.length)} />
+          <Layer id="heat-rats" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.rats, 0.7, heat.nRats)} />
         </Source>
         {iconsReady && cats.map((c) => {
           const color = CATS[c]?.color ?? "#555";
           return (
             <Fragment key={c}>
-              <Source id={`src-${c}`} type="geojson" data={byCategory[c] ?? EMPTY} cluster clusterMaxZoom={15} clusterRadius={45}>
+              <Source
+                id={`src-${c}`} type="geojson" data={byCategory[c] ?? EMPTY}
+                cluster clusterMaxZoom={16} clusterRadius={45}
+                clusterProperties={{ total: ["+", N] }}
+              >
                 <Layer
                   id={`${c}-clusters`}
                   type="circle"
                   layout={{ visibility: showClusters ? "visible" : "none" }}
-                  filter={["has", "point_count"]}
+                  filter={["any", ["has", "point_count"], [">", N, 1]]}
                   paint={{
                     "circle-color": color,
                     "circle-opacity": 0.92,
-                    "circle-radius": ["step", ["get", "point_count"], 13, 25, 17, 100, 22, 500, 28],
+                    "circle-radius": ["step", ["coalesce", ["get", "total"], N], 13, 25, 17, 100, 22, 500, 28],
                     "circle-stroke-color": "#ffffff",
                     "circle-stroke-width": 2,
                   }}
@@ -192,10 +229,10 @@ export default function MapView() {
                 <Layer
                   id={`${c}-cluster-count`}
                   type="symbol"
-                  filter={["has", "point_count"]}
+                  filter={["any", ["has", "point_count"], [">", N, 1]]}
                   layout={{
                     visibility: showClusters ? "visible" : "none",
-                    "text-field": ["get", "point_count_abbreviated"],
+                    "text-field": ["to-string", ["coalesce", ["get", "total"], N]],
                     "text-size": 13,
                     "text-font": ["Noto Sans Bold"],
                     "text-allow-overlap": true,
@@ -212,13 +249,13 @@ export default function MapView() {
                   id={`${c}-points`}
                   type="symbol"
                   minzoom={showClusters ? 0 : 15}
-                  filter={["!", ["has", "point_count"]]}
+                  filter={["all", ["!", ["has", "point_count"]], ["==", N, 1]]}
                   layout={{
                     "icon-image": iconId(c),
                     "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.75, 17, 1.1],
                     "icon-allow-overlap": true,
                   }}
-                  paint={{ "icon-opacity": ["case", ["==", ["get", "status"], "open"], 1, 0.6] }}
+                  paint={{ "icon-opacity": ["case", ["any", ["==", ["get", "status"], "open"], [">", ["coalesce", ["get", "n_open"], 0], 0]], 1, 0.6] }}
                 />
               </Source>
             </Fragment>
@@ -247,10 +284,11 @@ export default function MapView() {
         )}
       </Map>
 
+      {appMode !== "act" && <ForecastControl />}
       {appMode === "act" ? (
         <SiteQueue />
       ) : (
-        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} count={data.features.length} loading={loading} />
+        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} count={total} loading={loading} coverage={coverage} zoom={zoom} />
       )}
 
       {error && (
@@ -258,7 +296,7 @@ export default function MapView() {
           Could not load reports: {error}
         </div>
       )}
-      {data.features.length >= 20000 && (
+      {zoom >= POINTS_ZOOM && data.features.length >= 20000 && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-md bg-amber-50 px-3 py-1.5 text-sm text-amber-950 shadow">
           Showing the newest 20,000 reports — zoom in or shorten the period to see all of them.
         </div>

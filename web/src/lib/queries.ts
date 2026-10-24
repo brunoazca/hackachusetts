@@ -1,16 +1,20 @@
 import { supabase } from "@/lib/supabase";
 import type { SiteRow } from "@/lib/map-store";
-import type { FeatureCollection, Point } from "geojson";
+import type { FeatureCollection, FeatureCollection as AnyFC, Point } from "geojson";
 
 // Draft typed wrappers over the read-only RPCs (supabase/migrations/*_api_*.sql).
 
 export type IncidentProps = {
-  id: string;
+  id?: string;
   category: string;
-  status: "open" | "closed";
-  opened: string;
-  city: string;
-  approx: boolean;
+  status?: "open" | "closed";
+  opened?: string;
+  city?: string;
+  approx?: boolean;
+  // present on aggregated features (zoomed out)
+  n?: number;
+  n_open?: number;
+  newest?: string;
 };
 
 export type BBox = [minLon: number, minLat: number, maxLon: number, maxLat: number];
@@ -73,4 +77,45 @@ export async function fetchSiteDetail(id: string): Promise<SiteDetail | null> {
   const { data, error } = await supabase.rpc("site_detail", { site_id: id });
   if (error) throw error;
   return data as SiteDetail | null;
+}
+
+// ---- Coverage + context layers ----
+
+export type CoverageRow = { kind: string; layer: string; city: string; rows: number; first_date: string | null; last_date: string | null; update_mode: string };
+
+export async function fetchCoverage(): Promise<CoverageRow[]> {
+  const { data, error } = await supabase.rpc("coverage_matrix");
+  if (error) throw error;
+  return (data ?? []) as CoverageRow[];
+}
+
+export async function fetchCityBoundaries(): Promise<AnyFC> {
+  const { data, error } = await supabase.rpc("city_boundaries");
+  if (error) throw error;
+  return data as AnyFC;
+}
+
+export async function fetchTracts(): Promise<AnyFC> {
+  const { data, error } = await supabase.rpc("map_tracts");
+  if (error) throw error;
+  return data as AnyFC;
+}
+
+export async function fetchParcels(bbox: BBox): Promise<AnyFC> {
+  const [min_lon, min_lat, max_lon, max_lat] = bbox;
+  const { data, error } = await supabase.rpc("map_parcels", { min_lon, min_lat, max_lon, max_lat, max_rows: 6000 });
+  if (error) throw error;
+  return data as AnyFC;
+}
+
+/** Zoomed-out data: one feature per (category, cell) with n / n_open — never truncated. */
+export async function fetchIncidentBins(
+  bbox: BBox, categories: string[], since: string, until: string, cell: number,
+): Promise<FeatureCollection<Point, IncidentProps>> {
+  const [min_lon, min_lat, max_lon, max_lat] = bbox;
+  const { data, error } = await supabase.rpc("map_incident_bins", {
+    min_lon, min_lat, max_lon, max_lat, categories, since, until, cell,
+  });
+  if (error) throw error;
+  return data as FeatureCollection<Point, IncidentProps>;
 }
