@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:46 — Permanent host redirect rat-ops.vercel.app -> piper-app.v...
+- Teammate: Bruno
+- Agent: —
+- Did: Permanent host redirect rat-ops.vercel.app -> piper-app.vercel.app (path + query kept)
+- Why: Old links land on the renamed Piper URL
+- Where: web/next.config.ts
+- Idea: —
+
 ### 2026-10-24 15:41 — Removed Modal crons (daily, weekly_retrain); both stay as...
 - Teammate: Bruno
 - Agent: —
