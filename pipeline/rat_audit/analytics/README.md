@@ -4,46 +4,54 @@ Front A / Carol, branch `feat/rat-audit-analytics-core`. This front produces the
 numbers consumed by Insights, the site inspector and the agent. It does not build
 the UI or train Bruno's forecast models.
 
-## Current shared status — migrations applied (2026-10-24)
+## Current shared status — real analytics populated (2026-10-24)
 
-The three analytics migrations below are installed in shared project `rat-audit`
-(`vfizpwajekykmbcrport`) through the authorized Supabase connection. This supersedes
-older access-blocked statements. The Python refresh has **not** run: the supplied
-session-pooler connection reaches Supabase but returns `password authentication failed`.
-The dotenv was parsed in memory; no credential was printed, copied or committed.
-The standard dotenv parser agrees with the loader; keyword-parameter connections
-rule out URI escaping. Session and transaction pooler endpoints both reject
-authentication; the postgres role is enabled and not expired. Direct connection
-could not resolve its hostname here, so it cannot establish password validity.
-The user confirms the database password; comparison with the dashboard pooler host
-is pending. A transient pooler credential cache is possible but unconfirmed.
+The authorized refresh ran against `rat-audit` through the Supabase zebra plugin
+using a temporary local Python transport. Direct PostgreSQL authentication remains
+unverified; this is not validation of the deployed worker or browser UI. No secrets
+were printed or committed. The temporary transport is not part of the repository.
 
-- Migration history now records `20261024194305`, `20261025000000` and
-  `20261025000001` with their analytics names. Existing baseline tables had no
-  migration-history rows. Only these three analytics entries were reconciled;
-  the integrator must reconcile the baseline before using a blanket migration push.
-- Exact before/after checks across all three migrations preserved **206,520
-  predictions, 39 model runs and 2 model artifacts**. Predictions checksum:
-  `5faa3115a1b526bfc25714834ec10f94`; artifacts checksum:
-  `e698a89253cbd456dcdc497da7890c52`. Both still matched at 20:43 UTC.
-  The model-runs checksum changed in a later read while its count stayed 39;
-  the cause is not established, and no analytics refresh had run. Do not describe
-  that later model metadata as unchanged.
-- Real shared, read-only `anon` RPC checks passed: Insights returns forecast run
-  `risk-v1-20261024T185032` and four future weeks; queue returns legacy rows;
-  supporting RPCs execute. Findings/costs are still empty pending refresh.
-- A **synthetic, rolled-back** shared transaction exercised `design_trial` as
-  `anon`: one pair and a pending result. Confirmed zero test sites, trials and
-  trial pairs afterward. This is public-role/transaction validation, not a real trial.
-- Carol explicitly authorized public demo trial writes and termination of the
-  three identified idle sessions that blocked DDL. No other sessions were terminated.
-- Existing out-of-scope issue: `model_artifacts` has RLS disabled and `anon` has
-  SELECT/INSERT privileges. The data/model owner should review this before main
-  integration ([Supabase advisory](https://supabase.com/docs/guides/database/database-linter?lint=0013_rls_disabled_in_public)).
-- Local evidence remains 141 unit/property/mock tests, five read-only PostGIS
-  fixture tests, five disposable migration/runtime tests, and a passing production
-  build/TypeScript check. These do not establish a successful shared Python refresh
-  or deployed UI flow. Regional-input and real AI-check-provider gaps remain explicit.
+- Real data: 3,586 grid cells; 19,263 closed cases classified; 2025 coverage
+  90.52%, 2026 coverage 90.24%; cause tags populated. Historical 2023/2024 action
+  coverage is 86.98%/89.39%, outside the Spec v2 2025/2026 quality gate.
+- 13 action outcomes, four base-rate buckets, 1,073 DBSCAN 50 m sites from
+  11,530 retained reports; 228 due. Normandy Street demo site ranks 44.
+  All active sites have object summaries, array recommendations and legal lanes.
+- An actual `anon` call to `insights_summary()` returns 14 findings, seven
+  cost/impact rows and four forecast weeks. Shared database writes can affect the
+  already deployed site independently of merging frontend code.
+- Refresh resumed across runs: grid (2), research/regional (4), classification,
+  outcomes and correlations (5), sites/costs/unknowns (6), impact outputs (10),
+  final building finding (11). Run 11 explicitly records a building-only resume;
+  it is not evidence of a single successful full refresh. Failed runs remain.
+- Fixed two real-data SQL performance issues in `impact.py`: materialize school
+  cell counts/ranks once; collect distinct nearby parcel IDs before aggregating
+  building groups. Original queries exceeded plugin timeouts; corrected SQL ran
+  successfully against shared data, followed by persisted outputs.
+- Temporary adapter failures required paging and retries. Its initial site COPY
+  conversion double-encoded JSON on 29 rows; those rows were repaired, subsequent
+  batches corrected, and all 1,073 rows checked. Writes were idempotent batches,
+  not one atomic refresh. No-op cleanup checks found zero open tags to clear.
+- 26 content/schema checks from `validate.sql` passed. The run-status check failed
+  at that checkpoint because impact had timed out; the final building-only retry
+  then succeeded. Do not interpret its latest-run success as full-pipeline coverage.
+- Latest local run: **141 unit/property/mock tests passed, 10 opt-in DB tests
+  skipped, 37 existing Shapely warnings** after both SQL fixes. Earlier separate
+  five read-only PostGIS fixtures, five disposable integration tests and frontend
+  production build were not rerun in this refresh. No browser end-to-end claim.
+- Still partial: regional ACS population denominator missing (2010/2020 census
+  inputs exist); unknown-question drafter unavailable for all 1,073 sites. No AI
+  questions were fabricated. These are explicit missing inputs, not passing tests.
+- Forecast writes are excluded from this transport. Before refresh: 413,040 rows
+  across four runs. After: 413,616; three run fingerprints matched exactly, while
+  `risk-v1-20261024T210943` increased from 103,260 to 103,836 and its hash changed.
+  The writer is not established; do not claim all forecasts were unchanged.
+  Immediate before/after migration snapshots previously matched exactly.
+- Installed migration versions remain `20261024194305`, `20261025000000`,
+  `20261025000001`. Baseline migration history still requires integrator review
+  before any blanket migration push. No migrations were reapplied here.
+- Existing out-of-scope issue: `model_artifacts` has RLS disabled and `anon`
+  SELECT/INSERT privileges; data/model ownership must review before main integration.
 
 No main merge/push or deploy was performed. The feature branch is the handoff target.
 

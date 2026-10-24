@@ -77,10 +77,13 @@ def three_city_rates(monthly,populations):
 
 
 def finding_buildings(conn):
-    rows=conn.execute("""select p.yr_built,p.own_occ,count(*)::int,
-      count(*) filter(where exists(select 1 from incidents i where i.city='boston' and i.category='rodent'
-        and i.opened_at>='2024-01-01' and st_dwithin(p.geom,i.geom,30)))::int,array_agg(distinct p.source_id)
-      from parcels p where p.city='boston' and p.geom is not null and p.yr_built is not null and p.own_occ is not null
+    rows=conn.execute("""with near as materialized (
+      select distinct p.pid from incidents i join parcels p
+        on p.city='boston' and st_dwithin(p.geom,i.geom,30)
+      where i.city='boston' and i.category='rodent' and i.opened_at>='2024-01-01')
+      select p.yr_built,p.own_occ,count(*)::int,count(near.pid)::int,array_agg(distinct p.source_id)
+      from parcels p left join near on near.pid=p.pid
+      where p.city='boston' and p.geom is not null and p.yr_built is not null and p.own_occ is not null
       group by 1,2""").fetchall()
     if not rows: raise MissingInput({'table':'parcels','why':'year built and owner occupancy'})
     grouped=defaultdict(lambda:[0,0,set()])
@@ -146,11 +149,11 @@ def run(conn):
              {r[4] for r in zips}|{s for r in zips for s in r[5]}|
              {r[0] for r in conn.execute("select distinct source_id from parcels where city='boston'").fetchall()})
     else: missing.append({'table':'zip_prices / parcels','need':'≥3 ZIPs with denominators'})
-    schools=conn.execute("""with counts as (
+    schools=conn.execute("""with counts as materialized (
       select g.id,g.geom,count(i.id) as n from grid_cells g left join incidents i on i.city='boston'
         and i.category='rodent' and i.opened_at>='2024-01-01' and i.geom && g.geom
         and st_covers(g.geom::geometry,i.geom::geometry)
-      where g.city='boston' group by g.id), ranked as (
+      where g.city='boston' group by g.id), ranked as materialized (
       select *,row_number() over(order by n desc,id) as rn,count(*) over() as total from counts)
       select p.id,p.source_id,exists(select 1 from ranked g where rn<=greatest(1,ceil(total*.1)) and n>0
         and st_dwithin(p.geom,g.geom,250)) as near

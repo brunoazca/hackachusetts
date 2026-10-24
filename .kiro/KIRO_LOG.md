@@ -31,6 +31,21 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 18:29 — Shared analytics populated through plugin; spatial queries optimized
+- Teammate: Carol
+- Agent:
+- Did: Ran authorized analytics against real shared data through temporary Python/plugin transport; fixed repeated school-grid work and building proximity aggregation in impact.py.
+- Why: Unblock Insights and site evidence despite rejected direct DB authentication.
+- Where: pipeline/rat_audit/analytics/impact.py; pipeline/rat_audit/analytics/README.md; .kiro/KIRO_LOG.md; shared analytics tables.
+- Evidence: 3,586 grid cells; 19,263 classified cases; 2025/2026 coverage 90.52%/90.24%; 13 outcomes; four base rates; 1,073 sites, 228 due; Normandy rank 44. All active site JSON types and legal recommendations checked.
+- Evidence: Real anon Insights returns 14 findings, seven cost/impact rows and four forecast weeks. 26 schema/content checks passed; run-status check failed before the final impact retry. Run 11 succeeded explicitly for building-only resume, not an entire fresh pipeline.
+- Evidence: Runs 2/4/5/6/10/11 provide completed phases. Failed attempts remain recorded; transport paging, named bindings and COPY conversion required repairs. The first 29 site JSON summaries were double-encoded, repaired, and all 1,073 rows verified afterward. Batch writes were not globally atomic.
+- Evidence: Both optimized spatial queries passed on real data after original timeout failures. Latest tests: 141 unit/property/mock passed, 10 opt-in DB skipped, 37 existing warnings. Earlier five SQL fixtures/five disposable integration tests/build were not repeated; deployed browser flow not verified.
+- Evidence: Forecast transport writes prohibited. Three pre-refresh run fingerprints match exactly. Fourth run risk-v1-20261024T210943 grew 103,260 to 103,836 rows; total 413,040 to 413,616. Writer/cause unestablished; no blanket preservation claim. Migration-time snapshots previously matched.
+- Remaining: Missing ACS denominator and real unknown-question drafter (1,073 unavailable). Existing model_artifacts RLS/grants belong to data/model owner. Baseline migration history needs integrator reconciliation.
+- Decision: No additional migrations, main merge/push or deploy. Shared data changes can affect the published site now. Only scoped code/log changes go to the feature branch; temporary adapter stays outside repo. Env values private.
+- Idea: none.
+
 ### 2026-10-24 16:45 — Shared analytics migrations applied; Python refresh blocked by database authentication
 - Teammate: Carol
 - Agent:
