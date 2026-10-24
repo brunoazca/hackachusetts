@@ -95,6 +95,20 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: none
 - Idea: Uses: recommendation prior, Prove decay baseline, 'nobody asked' adjustment, forecast benchmark
 
+### 2026-10-24 15:39 — 2.8: final scope audit, citation fix and honest integration gate
+- Teammate: Carol
+- Agent:
+- Did: Re-read repository/steering instructions, TEAM, CONTRACT, local spec, current local-main spec and front/log history. Confirmed this worktree's assignment is 2.8, a subset of Carol's analytics/agent ownership. Added a current responsibility/evidence matrix to the front README; kept prior log history unchanged.
+- Did: Completed client citation rendering from optional RPC source metadata (name, HTTP(S) URL, retrieved time; explicit missing/unsafe-link fallback). Extended only the unexecuted RPC proposal. Fixed invalid date-like chart labels producing NaN; updated live comparisons for metadata.
+- Why: Sources were IDs only despite R5.1/steering requirements; a successful local build must not be mistaken for full v2/live/mobile acceptance.
+- Where: `web/src/components/insights/{Sources,FindingCard,PriceImpact,FindingChart}.tsx`, `{types,payload,parse}.ts`, `__tests__/*`, `README.md`, `RPC_PROPOSAL.md`, `.kiro/KIRO_LOG.md`.
+- Evidence: Correct web-directory run: 3 new regressions failed before fixes, final synthetic/mock/SSR suite 49/49. A preliminary root-directory invocation lacked the web JSX config and was discarded. TypeScript, scoped ESLint and production build passed after fixes; no package changes.
+- Evidence: Real local SELECT export under BEGIN READ ONLY/default_transaction_read_only=on: 5/5 checks; 3 findings, 3 costs, 13 action groups, 40 department rows, 10/10 source IDs resolved. Browser replay (response intercepted) passed with 18 citation links, retrieval times, keyboard details/table/link access, no page errors and 419/419 px panel width. No pipeline recomputation.
+- Evidence: Shared live suite 3 pass, 4 SKIP; RPC 404/PGRST202, correlations=0, price_impact=0. Skips are findings, costs, forecast aggregates and source metadata. Availability plus stored GBM/baseline SSR pass; this is not a live successful panel.
+- Decision: Keep 2.8 acceptance pending real RPC/data/citations. Report mobile R9.4 failure to integrator: shared page.tsx aside fixes 420 px/shrink-0; document width 420 at viewport 390. No shell changes. A's partial v2/matched output remains upstream; do not claim 2.13, school proximity, agent tasks or app-wide E2E here.
+- Evidence: Secret scan with the real env reference and whitespace checks (including untracked front files) passed. Existing branch/HEAD and all earlier files retained; initial logs preserved, Agent empty for this entry. Backups and final evidence: `/private/tmp/insights-final-audit-20261024/`. Existing env symlink retained, values hidden.
+- Idea: Integrator supplies the RPC with sources, publishes compatible analytics output and fixes the shared mobile shell; rerun real comparisons and app-wide E2E before accepting the full task. Main integration is a later step: no commit, merge, push, deploy or migration executed here.
+
 ### 2026-10-24 15:38 — Loaded Cambridge equivalents of Boston-only layers: sanit...
 - Teammate: Bruno
 - Agent: —
@@ -134,6 +148,18 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: catch UI regressions continuously during the hackathon
 - Where: docs/design-critique/
 - Idea: fix mobile layout + touch target sizes (top 2 findings)
+
+### 2026-10-24 15:30 — 2.8: consume A's real local outputs; expose action samples and department costs
+- Teammate: Carol
+- Agent:
+- Did: Verified uploaded analytics branch `f410efe` (implementation `3884561`); kept Insights branch/HEAD `feat/rat-audit-insights`/`1af6bcd` and all earlier changes. Added per-action n, censoring, rates/CIs; labelled the current contrast unadjusted; retained fiscal-year department payments; distinguished insufficient data from a measured null.
+- Why: The real A payload exposed hidden per-action denominators and dropped nested department spending. A's uploaded code does not create the missing RPC.
+- Where: `web/src/components/insights/{ActionSamples,FindingCard}.tsx`, `{parse,types}.ts`, `__tests__/*`, `README.md`, `RPC_PROPOSAL.md`, `.kiro/KIRO_LOG.md`.
+- Evidence: Six regressions failed before fixes; final synthetic suite 46/46. Real local SELECT export: 4/4 adapter/SSR checks across 3 findings, 3 costs, 13 action groups and 40 department rows. Local data was computed 18:40:16–17 UTC; no pipeline rerun. PostgreSQL default_transaction_read_only=on; no writes.
+- Evidence: Browser replay of the real local export passed (3 findings/charts/costs, action counts/CIs and FY2026 school payments); response intercepted, so not live RPC success. Initial browser assertion exposed percentage rounding; retained two-decimal rate precision and reran successfully. No uncaught page errors or panel overflow. TypeScript, scoped ESLint and next build passed.
+- Evidence: Shared public-key live rerun: 3 pass (availability and stored GBM/baseline SSR), 3 SKIP (RPC finding/cost/forecast comparisons); correlations=0, price_impact=0, four cell-week model runs, RPC 404/PGRST202. Existing ignored env symlink reused; values hidden. Evidence/backups in `/private/tmp/insights-analytics-handoff-20261024/`.
+- Decision: Keep A's persisted caveats/titles, including the repeat-cost title predating its wording fix; regeneration belongs to A. Its README reports partial v2 work, and the currently available action contrast is unadjusted. Matched output, source citation metadata and real RPC integration remain pending.
+- Idea: Integrator creates/applies the RPC and loads/recomputes compatible outputs, then rerun live comparisons without interception. No commit, merge, push, deploy or migration was performed here.
 
 ### 2026-10-24 15:29 — Audited Boston-only layers vs Cambridge/Somerville portal...
 - Teammate: Bruno
@@ -183,6 +209,26 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: web/src/components/{map,shell}, web/src/lib/map-store.ts, .kiro/specs/rat-audit/{requirements,design}.md
 - Idea: none
 
+### 2026-10-24 15:16 — 2.8: forecast dependency available; RPC migration assigned outside Insights
+- Teammate: Carol
+- Agent:
+- Did: Recorded Carol's update that the forecast is committed on main and A or the integrator must create the insights_summary migration. Clarified the handoff: forecast validation can proceed as soon as the RPC exists, independently of empty correlations/costs.
+- Why: Separate the available model dependency from the missing read endpoint; keep the current unavailable state until the endpoint exists.
+- Where: `web/src/components/insights/README.md`, `.kiro/KIRO_LOG.md`.
+- Evidence: Local main history contains model commits `8d92dd9` and `0418b43`; Insights remains on `feat/rat-audit-insights` at `1af6bcd`. Database state and tests were not rerun for this documentation-only update; prior evidence remains dated in the handoff.
+- Idea: After the integrator supplies the RPC, run the existing real-data comparisons and browser success path without interception. No branch integration or migration was performed here.
+
+### 2026-10-24 15:12 — 2.8: handoff, baseline fix and explicit live-test blockers
+- Teammate: Carol
+- Agent:
+- Did: Preserved `feat/rat-audit-insights` at `1af6bcd` and all existing tracked/untracked work; saved 17 original files under `/private/tmp/insights-codex-handoff-20261024/before`. Fixed real baseline metric names, validated malformed RPC envelopes, and switched the read RPC to GET. Added the front README and refined the unexecuted RPC proposal.
+- Why: Real baseline rows stored `mae`/`top10pct_capture` but rendered n/a; malformed payloads could reject loading or look empty. Missing RPC must not count as successful live-result validation.
+- Where: `web/src/components/insights/{parse,load,payload,useInsights}.ts`, `__tests__/*`, `README.md`, `RPC_PROPOSAL.md`, `.kiro/KIRO_LOG.md`.
+- Evidence: Original 37 tests passed; 3 new regressions failed before fixes; final synthetic suite 40/40. tsc, scoped eslint, next build and secret scan (real env reference, values hidden) passed. Existing `web/.env.local` symlink loads the supplied env; no env copies or package changes.
+- Evidence: LIVE GET/HEAD only: RPC 404/PGRST202; correlations=0, price_impact=0, model_runs=6, predictions=206520, grid_cells=3442. Live suite: 3 pass (availability; stored GBM and baseline scores + SSR), 3 SKIP (RPC finding/cost/forecast comparisons). GBM MAE 0.07518 vs 0.07132 baseline; capture 0.6429 vs 0.5433. These are stored metrics, not model retraining or browser success-path validation.
+- Evidence: Browser: real GET 404/unavailable passed; six simulated/synthetic scenarios passed (network failure + Retry, DB timeout + Retry, malformed, loading/full fixture, baseline, empty). Initial harness hydration race fixed; screenshots and sanitized results in scratch. Shared DB received no writes; no migration, merge, push or deploy.
+- Idea: Integrator supplies `insights_summary`; analytics writes findings/costs; rerun live comparisons and browser success without interception. Source-name/URL/retrieved-at resolution also remains an integration gap; do not mark 2.8 fully live-validated yet.
+
 ### 2026-10-24 15:04 — Map: zoomed-out data now aggregated server-side (map_inci...
 - Teammate: Bruno
 - Agent: —
@@ -190,6 +236,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Bruno: West End looked empty of evidence — it had 782 trash tickets + 404 out-early + 299 litter in 90 days, hidden by the 20k newest-rows cap across 51k city reports
 - Where: supabase/migrations/20261024300004_api_map_bins.sql, web/src/components/map/MapView.tsx, web/src/lib/queries.ts
 - Idea: none
+
+### 2026-10-24 14:58 — 2.8: browser check of all panel states on the real project
+- Teammate: Carol
+- Agent: —
+- Did: `next dev` on free port 3038 with the real `.env.local`; drove Chrome over CDP. REAL (no interception): the call goes out with the public key → HTTP 404 → "Results not available yet… insights_summary is not deployed yet". LOADING: the real request held → skeleton + "Loading…", then released → unavailable. ERROR (SIMULATED, request blocked in the browser): alert + Retry; with the network back, Retry makes a new real call and recovers with no reload. SUCCESS and EMPTY (FIXTURE response injected by the test harness, not by the app): 4 findings, 4 charts, 1 CI, 3 price/cost cards; empty → "Analytics… not written yet".
+- Why: Show every state in the real browser and keep real vs fixture apart.
+- Where: none (preview + scripts in scratch)
+- Idea: Once the RPC and the rows exist, rerun the same harness without interception for the real "success" case.
 
 ### 2026-10-24 14:56 — Map: coverage fog (outside the 3 cities always; over any ...
 - Teammate: Bruno
@@ -199,6 +253,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: web/src/components/map/{ContextLayers,LayerPanel,MapView}.tsx, web/src/components/inspector/ParcelCard.tsx, supabase/migrations/20261024300003_api_context_layers.sql, supabase/migrations/20261024100005_data_coverage.sql
 - Idea: Tract union left sliver holes; buffer out/in + exterior rings fixes the outline
 
+### 2026-10-24 14:55 — 2.8: live read-only test + build with the real env
+- Teammate: Carol
+- Agent: —
+- Did: Added `__tests__/live.test.ts` (no fixtures; skipped without env). It calls the RPC with the public key the same way the panel does and compares to the raw tables (ids/order/strength/stat/caveat of findings; caveat/figures of each cost; run and MAE of the forecast). Today: passes on the "RPC missing → unavailable" branch, 0 rows in the tables. Fixture tests: 37/37. tsc, eslint and `next build` (Environments: .env.local) OK.
+- Why: The value comparison runs automatically as soon as the RPC and data exist.
+- Where: `web/src/components/insights/__tests__/live.test.ts`
+- Idea: Command: `npx tsx --env-file=.env.local --test src/components/insights/__tests__/live.test.ts`.
+
 ### 2026-10-24 14:51 — Cambridge + Somerville evidence loaded (Cambridge 2z9k-mv...
 - Teammate: Bruno
 - Agent: —
@@ -206,6 +268,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Bruno: evidence missing outside Boston (it existed, we hadn't fetched it); register where every dataset has coverage; population useful for the model
 - Where: pipeline/rat_audit/ingest/{regional,demographics,update_modes}.py, supabase/migrations/20261024100005_data_coverage.sql, contracts/categories.json, docs/rat-audit/prompts/model-section.md
 - Idea: Census API now needs a key; Census Reporter serves ACS without one
+
+### 2026-10-24 14:50 — 2.8: read-only check on the real project — RPC missing, analysis tables empty
+- Teammate: Carol
+- Agent: —
+- Did: Linked the worktree's `web/.env.local` to the root `.env.local` (symlink, git-ignored, nothing copied or printed). With the public key, the same way the browser calls it: `POST /rest/v1/rpc/insights_summary` → 404 `PGRST202` "Could not find the function public.insights_summary without parameters". Through the read-only Supabase MCP (project `rat-audit`): the function isn't in `pg_proc`; `list_migrations` is empty; `correlations`, `model_runs`, `predictions`, `price_impact`, `grid_cells`, `sites` = 0 rows; `incidents` = 267,720.
+- Why: Validate 2.8 against real data before calling it done. Nothing written to the DB.
+- Where: `web/.env.local` (symlink, untracked)
+- Idea: The integrator applies the RPC from `RPC_PROPOSAL.md`; the panel stays "not available" until analytics/model write rows.
 
 ### 2026-10-24 14:45 — Model public interface train/score/simulate + explain (dr...
 - Teammate: Bruno
@@ -253,6 +323,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: web/public/maplibre-gl-worker.js, web/package.json, web/src/components/map/MapView.tsx
 - Idea: none
 
+### 2026-10-24 14:32 — 2.8: second visual check, 2 more fixes
+- Teammate: Carol
+- Agent: —
+- Did: Took a screenshot of the cards with the analytics-shaped payloads. Fixed "Year 2,025" in cost details and long axis titles being cut mid-word (now shortened with "…"; the full text stays in the description and the table). 37 tests, tsc, eslint, next build pass.
+- Why: The real payloads have long labels and year fields.
+- Where: `web/src/components/insights/parse.ts`, `FindingChart.tsx`, `__tests__/*`
+- Idea: none
+
 ### 2026-10-24 14:31 — Feature engineering: per-cell per-ISO-week panel (CORE va...
 - Teammate: Bruno
 - Agent: —
@@ -284,6 +362,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Kiro task 10, done in parallel to unblock the model DAG; time-split AUC 0.71 vs 0.50 base rate on live data
 - Where: pipeline/rat_audit/model/recurrence.py, pipeline/tests/test_model_recurrence.py
 - Idea: action_tag is null for all rodent cases today; constant columns are dropped, re-fit once tags land
+
+### 2026-10-24 14:25 — 2.8: panel now reads the payloads analytics actually writes
+- Teammate: Carol
+- Agent: —
+- Did: Read the uncommitted analytics code (`correlations.py`, `costs.py`) and found 4 mismatches with the panel. Fixed: (1) trash finding uses `rho_partial` + `p_perm` → shown as "partial ρ · permutation p"; (2) what-worked has no `n` → sum of `by_tag[*].n`; (3) its "95% CI low/high" series were drawn as 2 extra bars → now error bars; (4) cost values had no headline key → labelled details + a table for `by_fiscal_year`. Secondary stats go under "More statistics"; years no longer show as "2,025". 35 tests pass.
+- Why: Without this, real data would have shown a misleading chart and unlabelled numbers.
+- Where: `web/src/components/insights/parse.ts`, `FindingChart.tsx`, `FindingCard.tsx`, `PriceImpact.tsx`, `types.ts`, `__tests__/*`
+- Idea: In analytics, send CIs as a field (`ci` per point) instead of extra series — cleaner contract.
 
 ### 2026-10-24 14:23 — 3 more Kiro Crew campaigns done and in the knowledge libr...
 - Teammate: Bruno
@@ -340,6 +426,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Keep full scope; take v2's sharper loop and defensible numbers
 - Where: .kiro/specs/rat-audit/{requirements,design,tasks}.md, .spec-state.json
 - Idea: Two top-level modes Assess / Act (R0); 50 m sites; counts not score; base rates + Due queue; escalation ladder; cause tag; 5 recommendation rules + legal lane; reject reason; revisit P0; trial designer P0 (R11); practice card; layout left to Gui
+
+### 2026-10-24 14:10 — 2.8: browser preview runs; real-data demo blocked on credentials
+- Teammate: Carol
+- Agent: —
+- Did: Started `next dev` in the worktree (port 3018) and drove it with headless Chrome: opened the page, clicked the Insights tab, took a screenshot. With no Supabase keys the panel correctly shows "Could not load insights" + Retry, with no fake data. A real-data demo needs the Supabase URL + anon key, the `insights_summary()` RPC deployed, and rows written by analytics/model.
+- Why: Carol asked for a browser demo with real data and no "done" before validation.
+- Where: none (preview only)
+- Idea: Once the keys are in `web/.env.local` in the worktree, re-run the same screenshot script to get evidence.
 
 ### 2026-10-24 14:04 — Picked the ideas from Spec v2 worth merging into v1 witho...
 - Teammate: Bruno
@@ -412,6 +506,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: docs/rat-audit/brand.md
 - Idea: Rule: plague aesthetic for the brand only, never for places (1900 SF Chinatown quarantine precedent)
 
+### 2026-10-24 13:55 — 2.8: no real-data check yet (no Supabase credentials)
+- Teammate: Carol
+- Agent: —
+- Did: Tried a read-only check of `correlations`, `model_runs`, `predictions`, `price_impact` and the RPC on the shared project. Could not run it: `.env.local` has only the MBTA and Socrata keys. The panel is tested with fixtures only.
+- Why: Keep "tested locally" and "validated on real data" apart.
+- Where: none
+- Idea: Run the same read-only check once someone shares the Supabase keys privately.
+
 ### 2026-10-24 13:53 — Brand v2: renamed to Undertow, tagline 'Closed isn't gone...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
@@ -420,6 +522,30 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: docs/rat-audit/brand.md
 - Idea: Listening-gap texture for under-reporting tracts; Two voices (resident words vs closure note); Day mode required for field use
 
+### 2026-10-24 13:53 — 2.8: tested the insights_summary() RPC in a throwaway Postgres
+- Teammate: Carol
+- Agent: —
+- Did: Ran the analysis migration + seed rows + the proposed RPC in a local PostGIS container (deleted afterwards). The RPC returns the latest run, only future weeks, findings in `sort` order, and `forecast: null` on an empty DB. Calling it as `anon` failed locally because plain Postgres lacks Supabase's default grants; this still needs a check on Supabase.
+- Why: Hand the integrator SQL that has actually run, without touching the shared DB.
+- Where: `web/src/components/insights/RPC_PROPOSAL.md`
+- Idea: none
+
+### 2026-10-24 13:50 — 2.8: proposed the insights_summary() read RPC
+- Teammate: Carol
+- Agent: —
+- Did: No read RPC existed for Insights. Wrote the signature, SQL and payload for the integrator, plus the conventions the panel expects (`model_runs.metrics` keys, how a baseline run is marked, `price_impact.value.kind = "cost"`).
+- Why: The contract says the browser reads through RPCs. `queries.ts` and other tracks' migrations are not mine to edit.
+- Where: `web/src/components/insights/RPC_PROPOSAL.md`
+- Idea: The integrator adds it as `*_analytics_insights_rpc.sql`.
+
+### 2026-10-24 13:48 — 2.8: visual check, fixed layout bugs
+- Teammate: Carol
+- Agent: —
+- Did: Rendered the panel from test fixtures and took a headless-Chrome screenshot. Fixed a `<ul>` inside `<p>` that broke the source line, a clipped last x-axis label, squashed table headers, and unclear "Ci"/"N" labels (now "95% CI"/"Sample size").
+- Why: Passing tests don't catch layout problems; the screenshot did.
+- Where: `FindingCard.tsx`, `PriceImpact.tsx`, `FindingChart.tsx`, `ForecastSummary.tsx`, `parse.ts`
+- Idea: none
+
 ### 2026-10-24 13:47 — Defined brand + product design: name Ratio, Nocturne pale...
 - Teammate: Guilherme
 - Agent: default (kirocrew)
@@ -427,6 +553,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Make the rat product feel refined and YC-chic, not gross or scrappy
 - Where: docs/rat-audit/brand.md
 - Idea: Echo rings = recurrence; Source Line to adjacent vacant lot; closed is grey not green; tagline: Stop closing cases. Start closing blocks.
+
+### 2026-10-24 13:45 — 2.8: tests for charts, empty data, accessibility, errors
+- Teammate: Carol
+- Agent: —
+- Did: 27 tests (node:test + tsx, server-side render). They cover all four chart types, flat/single/negative data with no NaN, unsupported charts, null results shown as fully as positive ones, model-vs-baseline verdicts, loading/error/unavailable/empty states, aria references, and a guard that app code never imports fixtures. tsc, eslint and next build pass.
+- Why: Prove 2.8 works without depending on real data.
+- Where: `web/src/components/insights/__tests__/*`
+- Idea: Add a test runner to `package.json` (integrator); for now `npx tsx --test`.
 
 ### 2026-10-24 13:44 — Added Supabase MCP (local scope, project rat-audit) and l...
 - Teammate: Bruno
@@ -443,6 +577,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Decide whether to move Supabase/Vercel to personal Free account; kept rat-audit on bone@blackbone.ai since Free caps at 500 MB and no data will be cut
 - Where: supabase (rat-audit)
 - Idea: Boston 2026 has ~2x incidents (ce_* 36k only in 2026, litter 12k) — possible date bug in enforcement loader
+
+### 2026-10-24 13:40 — 2.8: price and cost cards
+- Teammate: Carol
+- Agent: —
+- Did: Split `price_impact` into "Costs we can count" and "Prices near hot spots (exploratory)". Every figure has its caveat right next to it, and the page says it does not show that rodents lower property values.
+- Why: R7.4, R7.5.
+- Where: `web/src/components/insights/PriceImpact.tsx`, `parse.ts`
+- Idea: none
 
 ### 2026-10-24 13:36 — Marked every source live/daily/static: update_modes.py re...
 - Teammate: Bruno
@@ -468,6 +610,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: .kiro/steering/tech.md
 - Idea: Left partner's in-flight uncommitted knowledge/design changes untouched - not mine to commit
 
+### 2026-10-24 13:35 — 2.8: forecast summary with explicit baseline comparison
+- Teammate: Carol
+- Agent: —
+- Did: Summary from `model_runs` + `predictions`: MAE and top-10% capture, model vs "mean of last 4 weeks" baseline, with a "better/worse than baseline" verdict (no hiding when it's worse). Also shows the next weeks, the top cells with their drivers, and the top features. Labels the run as baseline or model and says "expected reports", not rats.
+- Why: R6.2, R6.3, R6.6.
+- Where: `web/src/components/insights/ForecastSummary.tsx`
+- Idea: none
+
 ### 2026-10-24 13:34 — All loaders done: parcels 184,552 (100% coords via Parcel...
 - Teammate: Bruno
 - Agent: —
@@ -483,6 +633,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: The readiness cron would have reported 'no working project' forever since the app is in web/, not src/
 - Where: .kiro/scripts/check_submission_ready.py
 - Idea: The checker is now an honest 8PM safety net: it goes green only when description.md and kiro-usage.md lose their placeholders
+
+### 2026-10-24 13:30 — 2.8: finding cards and charts
+- Teammate: Carol
+- Agent: —
+- Did: Finding cards (question, result, method, sample, strength, caveat, source, computed date). Null results get the same card. SVG charts for scatter, bar, line and event_study, colour-blind-safe colours, each with a screen-reader description and a data table.
+- Why: R5.1, R5.4.
+- Where: `web/src/components/insights/FindingCard.tsx`, `FindingChart.tsx`, `parse.ts`, `format.ts`, `types.ts`
+- Idea: 2.13 makes a card click set the map layers.
 
 ### 2026-10-24 13:29 — Made rat-audit-research-campaigns.md the single home for ...
 - Teammate: Carol
@@ -555,6 +713,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Data section: everything downstream waits on 311; privacy leaks found in sample notes; Supabase free tier went read-only at 465 MB from reload bloat
 - Where: pipeline/rat_audit/ingest/common.py
 - Idea: VACUUM FULL brought DB 465→300 MB; free tier is tight — consider Supabase Pro
+
+### 2026-10-24 13:25 — 2.8: Insights panel shell, data loading and states
+- Teammate: Carol
+- Agent: —
+- Did: Started 2.8 in an isolated worktree (`feat/rat-audit-insights`). Replaced the placeholder `InsightsPanel` (same default export) with a hook that reads the `insights_summary` RPC, plus loading, error + retry, not-yet-available and empty states.
+- Why: R5.1. The SQL schemas are the contract; fixtures stay in tests only.
+- Where: `web/src/components/insights/InsightsPanel.tsx`, `InsightsView.tsx`, `useInsights.ts`, `load.ts`
+- Idea: none
 
 ### 2026-10-24 13:21 — Sent guidance to umbrella campaign 947e85a6: reuse the te...
 - Teammate: Carol

@@ -1,6 +1,9 @@
 "use client";
+import InsightsView from "./InsightsView";
+import { useInsights } from "./useInsights";
 
-// Placeholder. Owned by its track; replace freely, keep the export name.
+// Insights tab: forecast summary, findings with charts and caveats, price & cost (R5.1, R6.2, R7).
 export default function InsightsPanel() {
-  return <div className="p-4 text-sm text-neutral-500">InsightsPanel</div>;
+  const { state, retry } = useInsights();
+  return <InsightsView state={state} onRetry={retry} />;
 }
