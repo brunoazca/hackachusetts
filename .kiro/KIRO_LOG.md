@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:52 — report_volume now covers Cambridge (13–18k requests/yr, b...
+- Teammate: Bruno
+- Agent: —
+- Did: report_volume now covers Cambridge (13–18k requests/yr, by point) and Somerville (~80k/yr, block centroids) — the who-reports control for all three cities; daily refresh
+- Why: Model can only be fair outside Boston with a reporting-volume control
+- Where: pipeline/rat_audit/ingest/volume_regional.py, pipeline/rat_audit/{jobs,ingest/update_modes}.py
+- Idea: Somerville date_created is text: SoQL date functions fail, count locally
+
 ### 2026-10-24 15:46 — Permanent host redirect rat-ops.vercel.app -> piper-app.v...
 - Teammate: Bruno
 - Agent: —

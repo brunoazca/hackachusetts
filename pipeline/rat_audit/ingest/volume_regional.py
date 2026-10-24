@@ -11,12 +11,10 @@ from __future__ import annotations
 from collections import Counter
 from datetime import date, timedelta
 
-import os
-
 import psycopg
 
 from .. import db
-from .common import _get_json, in_region, since_cutoff, socrata_paged, to_float
+from .common import in_region, since_cutoff, socrata_paged, to_float
 from .regional import CAM_ALL, CAM_DOMAIN, SOM_DATASET, SOM_DOMAIN, START, _block_centroids
 
 
@@ -63,19 +61,15 @@ def _somerville(conn: psycopg.Connection, first_month: str) -> int:
 
 
 def _som_grouped(first_month: str) -> list[dict]:
-    """Server-side GROUP BY block x month (SoQL); paged with $order on the group keys."""
-    headers = {"X-App-Token": os.environ["SOCRATA_APP_TOKEN"]} if os.environ.get("SOCRATA_APP_TOKEN") else None
-    out, offset = [], 0
-    while True:
-        page = _get_json(f"https://{SOM_DOMAIN}/resource/{SOM_DATASET}.json", {
-            "$select": "block_code, date_trunc_ym(date_created) as m, count(*) as n",
-            "$where": f"date_created >= '{first_month}-01T00:00:00' and block_code is not null",
-            "$group": "block_code, m", "$order": "block_code, m", "$limit": 50000, "$offset": offset,
-        }, headers)
-        out.extend(page)
-        if len(page) < 50000:
-            return out
-        offset += 50000
+    """Block x month counts. `date_created` is text in this dataset, so SoQL date functions fail; count locally."""
+    acc: Counter = Counter()
+    for page in socrata_paged(SOM_DOMAIN, SOM_DATASET,
+                              f"date_created >= '{first_month}-01' and block_code is not null", "block_code,date_created"):
+        for r in page:
+            m = (r.get("date_created") or "")[:7]
+            if len(m) == 7:
+                acc[(r["block_code"], m)] += 1
+    return [{"block_code": b, "m": m, "n": n} for (b, m), n in acc.items()]
 
 
 def run(conn: psycopg.Connection, since: str | None = None) -> int:
