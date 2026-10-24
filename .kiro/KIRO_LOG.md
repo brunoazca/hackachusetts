@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:23 — Model artifact persistence: save/load pickled models in m...
+- Teammate: Bruno
+- Agent: —
+- Did: Model artifact persistence: save/load pickled models in model_artifacts
+- Why: Modal has no shared disk; score/simulate must reload the trained model from Postgres (Kiro task 11, done in parallel)
+- Where: pipeline/rat_audit/model/artifacts.py, pipeline/tests/test_model_artifacts.py
+- Idea: load_latest(conn, model) picks newest model_runs row with a blob
+
 ### 2026-10-24 14:19 — Set VERCEL_TOKEN repo secret; GitHub Actions deploy-on-pu...
 - Teammate: Bruno
 - Agent: —
