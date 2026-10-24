@@ -126,4 +126,4 @@ python3 knowledge/sources/audit_civic_kit.py /path/to/civic.zip
 
 The script parses CSVs in memory and records source links without executing bundled scripts. It checks blank strings and lexical date ranges, not all numeric sentinel values, duplicate semantics, licenses, source completeness, timezone interpretation, or original-system correctness. Those checks should be selected for the actual use case.
 
-The repository stores the audit and reproducible script. It does not vendor the full source archive, City poster collection, or third-party transcripts. Preserve the exact application dataset and its license/attribution when a subset is selected for the demo.
+The repository stores the audit and reproducible script. A later merged change also added the [Civic data mirror](../data/civic/CATALOG.md), including extracted datasets and starter kits. City posters and third-party transcripts remain linked at their sources. Preserve the exact application subset and its license/attribution when selecting data for the demo.

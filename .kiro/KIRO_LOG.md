@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 10:35 — Recommended three scoped Civic MVPs; team choice remains ...
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Recommended three scoped Civic MVPs; team choice remains open
+- Why: Connect creativity to the rubric and verified available data
+- Where: knowledge/08_idea_shortlist_and_build_recommendation.md
+- Idea: Prefer BlockBrief for waste-service evidence briefs; Notice to Action for accessible public notices; MoveReady for a narrow preparation flow
+
 ### 2026-10-24 10:31 — Made pure-talk ideas/brainstorm loggable
 - Teammate: Guilherme
 - Agent: default

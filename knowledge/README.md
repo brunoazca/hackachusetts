@@ -6,6 +6,7 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 
 | Document | Use it for |
 |---|---|
+| [08 — What we should build](08_idea_shortlist_and_build_recommendation.md) | Three scoped ideas, recommended choice, demo moments and build priorities |
 | [01 — Rules, judging and submission playbook](01_rules_judging_and_event_playbook.md) | Required deliverables, judging, conflicts to resolve, and the under-three-minute demo |
 | [00 — Full official rules reference](00_official_rules_full.md) | Detailed rule text retained in the repository |
 | [05 — Event logistics](05_event_info_and_logistics.md) | Setup, schedule, campus and event details |
@@ -29,4 +30,4 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 - [Link audit JSON](sources/link_audit.json): bounded HTTP HEAD checks of URLs in this folder, with redirects and failures retained.
 - [Link-check script](sources/check_research_links.py): reproduces reachability checks. A successful HTTP response is not content verification; a blocked request is not proof a page is gone.
 
-Sources are linked beside claims and in each document's source register. Full third-party media/transcripts and large original datasets remain at the source links; the repository contains our notes and verification artifacts. Consult [verification notes](sources/README.md) for access limits.
+Sources are linked beside claims and in each document's source register. Full third-party media/transcripts remain linked at their sources. The repository also contains a [Civic data mirror](../data/civic/CATALOG.md), alongside our notes and verification artifacts. Consult [verification notes](sources/README.md) for access limits.
