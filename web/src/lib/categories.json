@@ -190,6 +190,70 @@
           "Student Move-In (Trash Collection)"
         ]
       }
+    },
+    "ce_trash_storage": {
+      "label": "Code enforcement: improper trash storage",
+      "group": "food",
+      "color": "#cc8b2c",
+      "sources": {
+        "code-enforcement": [
+          "Improper storage trash: res",
+          "Improper storage trash: com"
+        ]
+      }
+    },
+    "ce_overfill": {
+      "label": "Code enforcement: overfilled barrel/dumpster",
+      "group": "food",
+      "color": "#8c4a1e",
+      "sources": {
+        "code-enforcement": [
+          "Overfilling of barrel/dumpster"
+        ]
+      }
+    },
+    "ce_weeds": {
+      "label": "Code enforcement: overgrown weeds",
+      "group": "shelter",
+      "color": "#3a8f63",
+      "sources": {
+        "code-enforcement": [
+          "Overgrown Weeds On Property"
+        ]
+      }
+    },
+    "ce_dumping": {
+      "label": "Code enforcement: illegal dumping",
+      "group": "food",
+      "color": "#93501a",
+      "sources": {
+        "code-enforcement": [
+          "Illegal dumping < 1 cubic yd",
+          "Illegal dumping 1-5 cubic yd.:",
+          "Illegal dumping 5+ cubic yd",
+          "Trash illegally dump container"
+        ]
+      }
+    },
+    "ce_dumpster": {
+      "label": "Code enforcement: dumpster without permit",
+      "group": "food",
+      "color": "#6e3b17",
+      "sources": {
+        "code-enforcement": [
+          "Maint a dumpster wopermit"
+        ]
+      }
+    },
+    "inat_rat": {
+      "label": "iNaturalist rat observation",
+      "group": "rats",
+      "color": "#6d597a",
+      "sources": {
+        "inaturalist": [
+          "*"
+        ]
+      }
     }
   },
   "place_kinds": {
@@ -318,11 +382,11 @@
     },
     "closed_no_action": {
       "label": "Closed with no note",
-      "owner": "\u2014"
+      "owner": "—"
     },
     "unknown": {
       "label": "Unclassified",
-      "owner": "\u2014"
+      "owner": "—"
     }
   },
   "cities": {

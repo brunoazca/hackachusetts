@@ -158,6 +158,17 @@ def _nearest(by_street: dict, st: str, z: str | None, n: int) -> tuple | None:
     return best[1:] if best else None
 
 
+def _same(a, b) -> bool:
+    if isinstance(a, float) or isinstance(b, float):
+        return a is not None and b is not None and abs(float(a) - float(b)) < 1e-7
+    return a == b
+
+
+def _changed(conn: psycopg.Connection, table: str, cols: list[str], rows: list[tuple]) -> list[tuple]:
+    have = {r[0]: r for r in conn.execute(f"select {', '.join(cols)} from {table}").fetchall()}
+    return [r for r in rows if r[0] not in have or not all(_same(a, b) for a, b in zip(r, have[r[0]]))]
+
+
 def run(conn: psycopg.Connection, since: str | None = None) -> int:  # noqa: ARG001 - assessment has no dates
     sid = "boston-assessment-fy26"
     db.upsert_source(conn, sid, "Boston property assessment FY2026 (FY2025 values joined)", PAGE_URL,
@@ -236,11 +247,15 @@ def run(conn: psycopg.Connection, since: str | None = None) -> int:  # noqa: ARG
     with db.ingest_run(conn, sid) as run_:
         pcols = ["pid", "source_id", "address_block", "zip", "land_use", "yr_built", "own_occ", "units",
                  "value_fy25", "value_fy26", "lat", "lon", "city"]
-        for i in range(0, len(parcels), 20000):
-            upsert_generic(conn, "parcels", pcols, parcels[i:i + 20000], key="pid")
-            upsert_generic(conn, "private.parcel_owners", ["pid", "owner", "mail_address", "full_address", "source_id"],
-                           owners[i:i + 20000], key="pid", geom=False)
+        ocols = ["pid", "owner", "mail_address", "full_address", "source_id"]
+        # Only write rows that changed: a full rewrite doubles these tables with dead tuples (DB size cap).
+        parcels_new = _changed(conn, "parcels", pcols, parcels)
+        owners_new = _changed(conn, "private.parcel_owners", ocols, owners)
+        for i in range(0, max(len(parcels_new), len(owners_new)), 20000):
+            upsert_generic(conn, "parcels", pcols, parcels_new[i:i + 20000], key="pid")
+            upsert_generic(conn, "private.parcel_owners", ocols, owners_new[i:i + 20000], key="pid", geom=False)
             conn.commit()
+        print(f"parcels changed {len(parcels_new)}, owners changed {len(owners_new)}")
         conn.execute("delete from places where kind = 'vacant_parcel' and source_id = %s", (sid,))
         upsert_generic(conn, "places", ["id", "source_id", "kind", "name", "address_block", "starts_at", "ends_at",
                                         "attrs", "lat", "lon", "city"], vacant)

@@ -1,4 +1,4 @@
-"""Boston code enforcement tickets (trash storage, overfilling, weeds, dumping, dumpster permits), 2023 on.
+"""Boston code enforcement tickets (trash storage, overfilling, weeds, dumping, dumpster permits), 2025 on (see START).
 
 One source row per ticket x violation code; a ticket can carry several codes. The dataset has a
 single date, `status_dttm`, used as opened_at (it is the ticket date for open tickets; no separate
@@ -17,7 +17,7 @@ from .common import (
 
 RESOURCE = "90ed3816-5e70-443c-803d-9a71f44470be"
 PAGE_URL = "https://data.boston.gov/dataset/public-works-violations"
-START = "2023-01-01"
+START = "2025-01-01"  # 2023+ is ~245k rows; widened only once the DB has disk headroom
 
 
 def _sql_list(values) -> str:

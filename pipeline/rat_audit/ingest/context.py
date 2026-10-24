@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import csv
 import gzip
+import hashlib
 import html
 import json
 import os
@@ -68,7 +69,8 @@ def _upsert_tracts(conn: psycopg.Connection, rows: list[tuple]) -> None:
         cur.executemany(
             """insert into tracts (geoid, source_id, name, attrs, geom, city)
                values (%s, %s, %s, %s::jsonb,
-                 st_multi(st_collectionextract(st_makevalid(st_setsrid(st_geomfromgeojson(%s), 4326)), 3))::geography, %s)
+                 st_multi(st_collectionextract(st_makevalid(st_simplifypreservetopology(
+                   st_setsrid(st_geomfromgeojson(%s), 4326), 0.00005)), 3))::geography, %s)  -- ~5 m
                on conflict (geoid) do update set source_id = excluded.source_id, name = excluded.name,
                  attrs = excluded.attrs, geom = excluded.geom, city = excluded.city""",
             rows,
@@ -190,6 +192,7 @@ NOISE_RE = re.compile(
     r"rat ?race|rat pack|gym rats?|mall rats?|lab rats?|museum rats?|beach rats?|"
     r"rat und tat|guten rat|einen rat|dem rat|ihren rat|seinen rat|"  # German "Rat" = advice
     r"cat and mouse|church mouse|quiet as a mouse|mouse ?click|"
+    r"(?:laptop|usb) mouse|(?:very|really|so|super) mice|"  # typo for "nice"
     r"(?:no|never (?:saw|seen|had)|without)\s+(?:\w+\s+(?:or|and)\s+)?(?:rats?|mice|mouse|rodents?))\b",  # "no mice"
     re.I,
 )
@@ -215,6 +218,15 @@ def _excerpt(text: str, limit: int = 200) -> str:
     return s
 
 
+def _scrub_names(text: str, names: list[str | None]) -> str:
+    """Replace the reviewer's and host's names (each word of them) with [name]."""
+    for n in names:
+        for w in re.findall(r"[^\W\d_]{2,}", n or ""):
+            if w.lower() not in ("and", "the", "by", "host", "inn", "home", "suites", "stay"):
+                text = re.sub(rf"\b{re.escape(w)}\b", "[name]", text)
+    return text
+
+
 def airbnb(conn: psycopg.Connection) -> int:
     sid = "inside-airbnb-boston"
     db.upsert_source(conn, sid, "Inside Airbnb Boston (snapshot 2026-09-19)", "https://insideairbnb.com/get-the-data/",
@@ -222,6 +234,8 @@ def airbnb(conn: psycopg.Connection) -> int:
     with db.ingest_run(conn, sid) as run:
         lpath = _cached(f"{ABNB_BASE}/listings.csv.gz", "airbnb/listings.csv.gz")
         rpath = _cached(f"{ABNB_BASE}/reviews.csv.gz", "airbnb/reviews.csv.gz")
+        with gzip.open(lpath, "rt", newline="") as fh:
+            listings = {r["id"]: r for r in csv.DictReader(fh)}
         counts: dict[str, int] = {}
         hits: dict[str, list[tuple[str, str]]] = {}
         newest = None
@@ -232,20 +246,21 @@ def airbnb(conn: psycopg.Connection) -> int:
                 newest = max(newest or r["date"], r["date"])
                 text = _review_text(r["comments"])
                 if _is_rat_review(text):
-                    hits.setdefault(lid, []).append((r["date"], _excerpt(text)))
+                    names = [r["reviewer_name"], (listings.get(lid) or {}).get("host_name")]
+                    hits.setdefault(lid, []).append((r["date"], _scrub_names(_excerpt(text), names)))
         rows = []
-        with gzip.open(lpath, "rt", newline="") as fh:
-            for r in csv.DictReader(fh):
-                lid = r["id"]
-                if not counts.get(lid):
-                    continue
-                h = sorted(hits.get(lid, []), reverse=True)
-                price = to_float(re.sub(r"[$,]", "", r.get("price") or ""))
-                rows.append((
-                    f"abnb:{lid}", sid, r.get("neighbourhood_cleansed") or None, price, counts[lid], len(h),
-                    jsonb([{"date": d, "excerpt": e} for d, e in h[:3]]),
-                    to_float(r["latitude"]), to_float(r["longitude"]),
-                ))
+        for lid, r in listings.items():
+            h = sorted(hits.get(lid, []), reverse=True)
+            # Keep the table slim: every listing with a rat review, plus a stable 10% sample of the rest.
+            if not counts.get(lid) or (not h and int(hashlib.md5(lid.encode()).hexdigest(), 16) % 10):
+                continue
+            price = to_float(re.sub(r"[$,]", "", r.get("price") or ""))
+            rows.append((
+                f"abnb:{lid}", sid, r.get("neighbourhood_cleansed") or None, price, counts[lid], len(h),
+                jsonb([{"date": d, "excerpt": e} for d, e in h[:3]]),
+                to_float(r["latitude"]), to_float(r["longitude"]),
+            ))
+        conn.execute("delete from listings where source_id = %s and not (id = any(%s))", (sid, [r[0] for r in rows]))
         n = upsert_generic(conn, "listings", ["id", "source_id", "neighbourhood", "price", "review_count",
                                               "rat_review_count", "rat_review_samples", "lat", "lon"], rows)
         conn.commit()

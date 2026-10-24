@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:30 — Context data loaded: 238 tracts (Boston SVI + Cambridge/S...
+- Teammate: Bruno
+- Agent: —
+- Did: Context data loaded: 238 tracts (Boston SVI + Cambridge/Somerville 2020) with asthma, Zillow 4,131 ZIP-months, 3,579 Airbnb listings (200 rat reviews), 535 iNaturalist rats, city pest spending FY23–26; regional Cambridge 1,872 + Somerville 2,586 rodent + 3,246 program requests
+- Why: Data section: R1.10, R1.13, R7.4
+- Where: pipeline/rat_audit/ingest/context.py, supabase/migrations/20261024100002_data_spending.sql, contracts/categories.json
+- Idea: FY2024 spending table only has July 2023 — show as missing, not a drop
+
 ### 2026-10-24 13:27 — Live refresh path working: Vercel /api/refresh (status + ...
 - Teammate: Bruno
 - Agent: —
