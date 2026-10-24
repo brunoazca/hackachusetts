@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:04 — Picked the ideas from Spec v2 worth merging into v1 witho...
+- Teammate: Bruno
+- Agent: —
+- Did: Picked the ideas from Spec v2 worth merging into v1 without cutting scope
+- Why: Team keeps full v1 scope (compute available); v2 has a sharper loop and more defensible numbers
+- Where: .kiro/specs/rat-audit/*
+- Idea: Merge: queue landing + Prove screen, trial designer, base-rate Due list as GBM baseline, escalation ladder, cause tag, legal lane, bias caveat with CI, reject reason, revisit P0, counts over score
+
+### 2026-10-24 14:03 — Queued 3 more Kiro Crew campaigns: matched test of 'escal...
+- Teammate: Bruno
+- Agent: —
+- Did: Queued 3 more Kiro Crew campaigns: matched test of 'escalation works', forecast vs 4-week baseline backtest (R6), competitive gap of existing rodent tools
+- Why: Protect the lead finding, the P0 forecast and the Potential Value pitch
+- Where: none
+- Idea: Session cookie expires ~14:10; a 4th campaign would need a new kirocrew token
+
 ### 2026-10-24 14:03 — Deployed web/ to Vercel project rat-ops (https://rat-ops....
 - Teammate: Bruno
 - Agent: —
