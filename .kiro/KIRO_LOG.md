@@ -47,7 +47,53 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: docs/rat-audit/model-report/, pipeline/scripts/model_report.py
 - Idea: Long backtest being rerun on the current model; will update index.html and the long-test table
 
-<<<<<<< Updated upstream
+### 2026-10-24 17:45 — Published all completed work from this chat
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: After explicit user authorization, pushed codex/chat-map-filters (f8bb2fa) and codex/insights-region-solutions (c4eb6db, including caf9528); confirmed codex/insights-severity-ranking (5c2aed9) was already published.
+- Why: Make the chat filter integration, proposed-solution cards, work log and empty web/AGENTS.md available to the team.
+- Where: origin on github.com/brunoazca/hackachusetts; .kiro/KIRO_LOG.md
+- Verification: Git push succeeded; working tree was clean before this publication record.
+- Idea: These are separate feature branches; publishing does not merge them into main.
+
+### 2026-10-24 17:44 — Backfilled this chat's work log and emptied AGENTS.md
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: Recorded the three completed changes below retroactively; emptied web/AGENTS.md as requested.
+- Why: Keep the team work history complete and record future changes before ending each task.
+- Where: .kiro/KIRO_LOG.md; web/AGENTS.md
+- Idea: Log verification and publication status explicitly; do not present Codex work as Kiro usage.
+
+### 2026-10-24 17:44 — Backfill: model-proposed solutions in Insights cards
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: Read region_solution.py; added ranked region cards with stored AI/rules proposals, reasons, per-record actions, nearby evidence, historical statistics and provenance.
+- Why: Surface the existing region_solutions output without inventing an after-fix estimate.
+- Where: web/src/components/insights/regions/*; InsightsPanel.tsx; Sources.tsx; __tests__/region-solutions.test.tsx
+- Verification: 62 tests passed; TypeScript and scoped ESLint passed; read-only live check parsed five AI regions with 30 records each.
+- Publication: Local commit caf9528 on codex/insights-region-solutions; not pushed.
+- Idea: Historical action comparisons are observational, not measured intervention effects.
+
+### 2026-10-24 17:44 — Backfill: chat controls the map's actual filters
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: Shared dock category and display state with chat; added category tools, actual state context, and status filtering for points and aggregate counts.
+- Why: Natural-language commands must modify the same toggles shown in the map UI.
+- Where: web/src/lib/map-store.ts; map-filters.ts; agent/{context,prompt,types}.ts; agent/tools/client.ts; components/map/{MapView,LayerPanel}.tsx; agent/__tests__/*
+- Verification: 65 tests passed, seven skipped; TypeScript and scoped ESLint passed.
+- Publication: Local commit f8bb2fa on codex/chat-map-filters; push blocked by approval review, awaiting explicit branch publication authorization.
+- Idea: Keep unsupported visual actions honest; highlighting remains unsupported.
+
+### 2026-10-24 17:44 — Backfill: severity-ranked Insights UI
+- Teammate: — (not confirmed)
+- Agent: Codex (not Kiro build activity)
+- Did: Implemented region action cards from insights-severity-ranking.md, with 5/10/20 controls, sources, map actions, defensive parsing and insights_summary fallback.
+- Why: Present where to act, supporting evidence and pending model fields without placeholder numbers.
+- Where: web/src/components/insights/{InsightsPanel,RegionCard}.tsx; load.ts; parse.ts
+- Verification: TypeScript, scoped ESLint and parser checks passed; live database verification failed due to connection at that time.
+- Publication: Commit 5c2aed9 pushed to origin/codex/insights-severity-ranking after explicit authorization; not merged here.
+- Idea: Keep fallback forecast-only ranking distinct from full observed-plus-forecast severity.
+
 ### 2026-10-24 17:40 — Make English the fixed chat response language
 - Teammate: Carol
 - Agent: Codex
@@ -55,7 +101,6 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Carol requested English always, with commit and push to the running application.
 - Where: web/src/lib/agent/prompt.ts
 - Idea: State the response language independently of the user's input language and do not expose policy explanations in replies.
-=======
 ### 2026-10-24 17:40 — Ran hourly design critique of Piper (/) at 1280x900 + 390...
 - Teammate: —
 - Agent: da-vinci
@@ -63,7 +108,6 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: scored civic accessibility criterion; keep a current read of the inspector UI
 - Where: docs/design-critique/latest.md
 - Idea: Collapse the two header icon-buttons into the row below ~420px so refresh/theme aren't clipped on a phone
->>>>>>> Stashed changes
 
 ### 2026-10-24 17:36 — Built the AI region solution job (region_solution.py + re...
 - Teammate: Bruno
