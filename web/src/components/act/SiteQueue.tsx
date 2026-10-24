@@ -1,0 +1,95 @@
+"use client";
+import { useEffect, useMemo, useState } from "react";
+import { useMap, type SiteRow } from "@/lib/map-store";
+import { fetchSiteQueue } from "@/lib/queries";
+
+// Act mode: Due sites first, then by returns (R4.0). Draft: sites are repeat-report addresses
+// from the `site_queue` RPC until the analytics `sites` table (50 m clusters) lands.
+
+export default function SiteQueue() {
+  const setSites = useMap((s) => s.setSites);
+  const select = useMap((s) => s.select);
+  const flyTo = useMap((s) => s.flyTo);
+  const selection = useMap((s) => s.selection);
+  const [rows, setRows] = useState<SiteRow[] | null>(null);
+  const [hood, setHood] = useState<string>("");
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetchSiteQueue(300)
+      .then((r) => { setRows(r); setSites(r); })
+      .catch((e) => setError(String(e)));
+  }, [setSites]);
+
+  const hoods = useMemo(
+    () => [...new Set((rows ?? []).map((r) => r.neighborhood).filter(Boolean) as string[])].sort(),
+    [rows],
+  );
+  const shown = useMemo(() => (rows ?? []).filter((r) => !hood || r.neighborhood === hood).slice(0, 60), [rows, hood]);
+  const due = (rows ?? []).filter((r) => r.due && (!hood || r.neighborhood === hood)).length;
+
+  useEffect(() => { if (rows) setSites(shown); }, [shown, rows, setSites]);
+
+  const open = (r: SiteRow) => {
+    select({ kind: "site", id: r.id });
+    flyTo({ lat: r.lat, lon: r.lon, zoom: 16.5 });
+  };
+
+  return (
+    <div className="absolute left-3 top-3 flex max-h-[calc(100%-1.5rem)] w-96 flex-col rounded-lg border border-neutral-200 bg-white/95 text-sm shadow-lg backdrop-blur">
+      <div className="border-b border-neutral-200 p-3">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-base font-semibold">Site queue</h2>
+          <span className="text-xs text-neutral-700">{due} due · {shown.length} shown</span>
+        </div>
+        <p className="mt-0.5 text-xs text-neutral-700">
+          Due = closed in the last 60 days at a site that has come back before. Then most returns.
+        </p>
+        <label className="mt-2 flex items-center gap-2 text-xs text-neutral-800">
+          Neighborhood
+          <select
+            value={hood}
+            onChange={(e) => setHood(e.target.value)}
+            className="min-w-0 flex-1 rounded border border-neutral-300 bg-white px-1.5 py-1 text-xs"
+          >
+            <option value="">All</option>
+            {hoods.map((h) => <option key={h} value={h}>{h}</option>)}
+          </select>
+        </label>
+      </div>
+
+      {error && <p role="alert" className="p-3 text-red-800">Could not load the queue: {error}</p>}
+      {!rows && !error && <p className="p-3 text-neutral-700">Loading sites…</p>}
+
+      <ol className="min-h-0 flex-1 overflow-y-auto" aria-label="Sites, most urgent first">
+        {shown.map((r, i) => {
+          const active = selection?.kind === "site" && selection.id === r.id;
+          return (
+            <li key={r.id}>
+              <button
+                type="button"
+                onClick={() => open(r)}
+                aria-current={active ? "true" : undefined}
+                className={`grid w-full grid-cols-[1.5rem_1fr_auto] items-start gap-2 border-b border-neutral-100 px-3 py-2 text-left hover:bg-neutral-50 ${active ? "bg-amber-50" : ""}`}
+              >
+                <span className="pt-0.5 text-xs font-semibold text-neutral-600">{i + 1}</span>
+                <span className="min-w-0">
+                  <span className="block truncate font-medium text-neutral-900">{r.address_block ?? "Unnamed block"}</span>
+                  <span className="block truncate text-xs text-neutral-700">
+                    {r.neighborhood ?? r.city} · last closed {r.days_since_close ?? "—"} d ago
+                  </span>
+                  <span className="mt-0.5 flex gap-3 text-xs text-neutral-800">
+                    <span><b>{r.reports}</b> reports</span>
+                    <span><b>{r.returns}</b> returns</span>
+                    <span><b>{r.closures}</b> closures</span>
+                  </span>
+                </span>
+                {r.due && <span className="rounded bg-red-700 px-1.5 py-0.5 text-xs font-semibold text-white">Due</span>}
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  );
+}

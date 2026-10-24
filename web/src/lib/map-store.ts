@@ -24,7 +24,24 @@ export type Filters = {
 
 export type View = { lat: number; lon: number; zoom: number };
 
+export type Mode = "assess" | "act";
+export type Depth = "simple" | "explore";
+
+/** Sites currently listed in the Act queue, so the map can draw and fly to them. */
+export type SiteRow = {
+  id: string; address_block: string | null; neighborhood: string | null; city: string;
+  lat: number; lon: number; reports: number; closures: number; returns: number;
+  first_at: string; last_at: string; last_closed: string | null; days_since_close: number | null;
+  last_note: string | null; due: boolean;
+};
+
 type MapState = {
+  mode: Mode;
+  depth: Depth;
+  sites: SiteRow[];
+  setMode: (m: Mode) => void;
+  setDepth: (d: Depth) => void;
+  setSites: (s: SiteRow[]) => void;
   view: View;
   flyToTarget: (View & { nonce: number }) | null;
   layers: Record<LayerId, boolean>;
@@ -48,6 +65,12 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 const daysAgo = (n: number) => iso(new Date(today.getTime() - n * 86400000));
 
 export const useMap = create<MapState>((set) => ({
+  mode: "assess",
+  depth: "simple",
+  sites: [],
+  setMode: (mode) => set({ mode }),
+  setDepth: (depth) => set({ depth }),
+  setSites: (sites) => set({ sites }),
   view: { lat: 42.32, lon: -71.08, zoom: 11.5 },
   flyToTarget: null,
   layers: {

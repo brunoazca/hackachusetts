@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import type { SiteRow } from "@/lib/map-store";
 import type { FeatureCollection, Point } from "geojson";
 
 // Draft typed wrappers over the read-only RPCs (supabase/migrations/*_api_*.sql).
@@ -50,4 +51,26 @@ export async function fetchLiveStatus(): Promise<LiveStatus> {
   const res = await fetch("/api/refresh", { cache: "no-store" });
   if (!res.ok) return { updatedAt: null };
   return res.json();
+}
+
+// ---- Act mode (draft site RPCs; switch to the analytics `sites` table when it lands) ----
+
+export async function fetchSiteQueue(limit = 50, neighborhood: string | null = null): Promise<SiteRow[]> {
+  const { data, error } = await supabase.rpc("site_queue", { lim: limit, hood: neighborhood });
+  if (error) throw error;
+  return (data ?? []) as SiteRow[];
+}
+
+export type SiteDetail = {
+  site: SiteRow;
+  reports: { id: string; opened: string; closed: string | null; status: string; note: string | null; action: string | null }[];
+  drivers_100m_12mo: Record<string, number>;
+  adjacent_vacant_parcels: number;
+  source_ids: string[];
+};
+
+export async function fetchSiteDetail(id: string): Promise<SiteDetail | null> {
+  const { data, error } = await supabase.rpc("site_detail", { site_id: id });
+  if (error) throw error;
+  return data as SiteDetail | null;
 }

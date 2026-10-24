@@ -166,6 +166,46 @@ Non-unknown coverage: 95.5% (2025), 92.7% (2026). In 2026 the city's notes shift
 - **Rodent lag: none.** Rodent reports do not rise 1–4 weeks after Sept 1 in any year; they decline through the fall.
 - **Red Sox home games: weak.** Trash reports within 500 m of Fenway the day after a home game: 1.28× (0.65 vs 0.51 per day, 79 games, permutation p = 0.18). Not a finding to show.
 
+### Does escalation really work? Matched test (Kiro Crew campaign `4fb70394`) — supersedes the "what worked" headline above
+
+19,496 Rodent Activity cases 2023–2026, 60-day return at the same address, closure notes tagged with the classifier rules.
+
+- **Unmatched, the earlier result does not even reproduce:** monitoring 11.5% (n = 4,339), abatement 12.1% (2,729), citation 13.5% (326), inspection 13.0% (5,764), baiting 16.7% (3,310). Inspectors bait and cite where activity is already high.
+- **Matched on prior reports (180 days), neighborhood and month** (398 strata): enforcement (citation + abatement, n = 3,055) vs monitoring, Mantel-Haenszel risk ratio **1.03 (95% CI 0.89–1.20)**. No difference. Null in every year: 2023 0.87, 2024 1.16, 2025 0.84, 2026 1.16, all intervals cross 1.
+- **History is what predicts a return:** about 8–12% with no prior reports, 56–75% with 5 or more, for every action.
+- **Within-address before/after is a trap:** at 218 addresses that went from monitoring to escalation, returns fell 40% → 16%. But at 431 addresses with two monitoring visits and no escalation, returns fell the same way, 40% → 18%. Infestations fade with time, so any naive before/after makes the last action look effective.
+
+**Verdict: "violations work, monitoring does not" does not hold (strong evidence).** Revised pitch: nobody can currently tell which fix works; the naive numbers mislead; the audit tracks history and sets up the matched comparison that can show what works.
+
+### Can a forecast beat the baseline? (Kiro Crew campaign `072d5a66`)
+
+1,140 cells of ~250 m with a rodent report, 26-week rolling backtest (data through Dec 2025).
+
+| Method | Top-10% capture | MAE |
+|---|---|---|
+| Baseline: mean of last 4 weeks | 0.229 | **0.0447** |
+| Static map of chronic cells | 0.232 | 0.0522 |
+| Gradient boosting, lags and calendar only | 0.225 | 0.0512 |
+| Gradient boosting + trash-storage and dumping reports | **0.257** | 0.0527 |
+
+- Chronic cells (top 10% by volume) hold about 50% of all reports, and the top cells are stable week to week (Jaccard 0.62). "Where" is mostly a fixed set.
+- The only gain over the baseline (+12% capture) comes from nearby trash-storage and illegal-dumping reports. History alone adds nothing over a static map.
+- MAE is worse for every model because most cells have zero reports in a week. Rank by capture; do not claim MAE gains.
+
+### What already exists (Kiro Crew campaign `20630275`)
+
+| Tool | Users | Shows what worked per address | Adjacent lot / block drivers | When to escalate | Measures results |
+|---|---|---|---|---|---|
+| Rat Radar (ratradar.com) | residents, ~48 US cities incl. Boston | no | no | no | no |
+| Boston BRAP | city program and report | no | no | no | no published result |
+| NYC Rat Information Portal + Rat Mitigation Zones | public + DOHMH | partial (inspection history) | partial (zones) | policy ladder, not per address | partial (failure rates) |
+| Anticimex SMART, Rentokil PestConnect, Bell Sensing | single property owners | device level only | no | device alerts | yes, inside one property |
+| Cambridge smart boxes | city | no | no | no | trap captures (929 in 2023) |
+| Somerville SMART boxes | city, public map | no | no | no | 311 rodent calls down ≥ 11%/yr, ~15% in 2025 (vendor-reported) |
+| Chicago (311 models since 2013) | city | no | no | no | July 2026 Inspector General: reactive, does not track whether root-cause actions worked |
+
+**Gap statement:** existing tools either map where rats are reported or monitor one property's traps. None gives an inspector, per address, which city action worked, the adjacent lot and block drivers, when to stop monitoring and escalate, and a measured result in one loop.
+
 ## 5. Impact possibilities
 
 | Area | What rats cost | Evidence we have | Strength |

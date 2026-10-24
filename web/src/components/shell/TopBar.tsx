@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { fetchLiveStatus } from "@/lib/queries";
+import { useMap, type Depth, type Mode } from "@/lib/map-store";
 
 // Draft top bar: name + live-data badge + Refresh (Vercel /api/refresh -> Modal worker).
 
@@ -13,7 +14,33 @@ function ago(iso: string | null) {
   return h < 24 ? `${h} h ago` : `${Math.round(h / 24)} d ago`;
 }
 
+function Segmented<T extends string>({ label, value, options, onChange }: {
+  label: string; value: T; options: { id: T; label: string }[]; onChange: (v: T) => void;
+}) {
+  return (
+    <div role="radiogroup" aria-label={label} className="flex rounded-md border border-neutral-300 p-0.5">
+      {options.map((o) => (
+        <button
+          key={o.id}
+          type="button"
+          role="radio"
+          aria-checked={value === o.id}
+          onClick={() => onChange(o.id)}
+          className={`rounded px-2.5 py-0.5 text-sm font-medium ${value === o.id ? "bg-neutral-900 text-white" : "text-neutral-800 hover:bg-neutral-100"}`}
+        >
+          {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export default function TopBar() {
+  const mode = useMap((s) => s.mode);
+  const setMode = useMap((s) => s.setMode);
+  const depth = useMap((s) => s.depth);
+  const setDepth = useMap((s) => s.setDepth);
+  const setPanel = useMap((s) => s.setPanel);
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
@@ -43,8 +70,20 @@ export default function TopBar() {
   return (
     <header className="flex h-12 shrink-0 items-center gap-3 border-b border-neutral-200 bg-white px-4">
       <h1 className="text-base font-semibold tracking-tight">
-        Rat Audit <span className="font-normal text-neutral-700">· Boston, Cambridge, Somerville</span>
+        Rat Audit <span className="hidden font-normal text-neutral-700 xl:inline">· Boston, Cambridge, Somerville</span>
       </h1>
+      <Segmented<Mode>
+        label="Mode"
+        value={mode}
+        options={[{ id: "assess", label: "Assess" }, { id: "act", label: "Act" }]}
+        onChange={(m) => { setMode(m); setPanel("inspector"); }}
+      />
+      <Segmented<Depth>
+        label="Depth"
+        value={depth}
+        options={[{ id: "simple", label: "Simple" }, { id: "explore", label: "Explore" }]}
+        onChange={setDepth}
+      />
       <div className="ml-auto flex items-center gap-2 text-sm">
         <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-emerald-800">
           <span aria-hidden className="h-2 w-2 rounded-full bg-emerald-500" />

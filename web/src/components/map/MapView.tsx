@@ -7,7 +7,8 @@ import { setWorkerUrl, type HeatmapLayerSpecification } from "maplibre-gl";
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { fetchIncidents, type BBox, type IncidentProps } from "@/lib/queries";
-import LayerPanel, { activeCategories, HEAT_RAMPS, type ViewMode } from "./LayerPanel";
+import LayerPanel, { activeCategories, HEAT_RAMPS, SIMPLE_LAYERS, type ViewMode } from "./LayerPanel";
+import SiteQueue from "@/components/act/SiteQueue";
 import { addCategoryIcons, iconId } from "./icons";
 
 // Draft map. Each category is its own clustered source, so a cluster only ever counts one kind
@@ -53,7 +54,23 @@ export default function MapView() {
   const [error, setError] = useState<string | null>(null);
   const reqId = useRef(0);
 
-  const cats = useMemo(() => activeCategories(enabled), [enabled]);
+  const appMode = useMap((s) => s.mode);
+  const explore = useMap((s) => s.depth) === "explore";
+  const sites = useMap((s) => s.sites);
+  // Simple depth: only the outcome + tested-predictive layers, points only (heatmap is an Explore tool).
+  const cats = useMemo(
+    () => activeCategories(enabled).filter((c) => explore || SIMPLE_LAYERS.includes(c)),
+    [enabled, explore],
+  );
+  const viewMode: ViewMode = explore ? mode : "points";
+  const sitesFC = useMemo(() => ({
+    type: "FeatureCollection" as const,
+    features: sites.map((r, i) => ({
+      type: "Feature" as const,
+      geometry: { type: "Point" as const, coordinates: [r.lon, r.lat] },
+      properties: { id: r.id, rank: i + 1, reports: r.reports, returns: r.returns, due: r.due },
+    })),
+  }), [sites]);
 
   // Split one fetch into one collection per category (one clustered source each).
   const byCategory = useMemo(() => {
@@ -70,8 +87,8 @@ export default function MapView() {
     for (const f of data.features) (CATS[f.properties.category]?.group === "rats" ? rats : evidence).features.push(f);
     return { rats, evidence };
   }, [data]);
-  const showHeat = mode !== "points";
-  const showClusters = mode === "points" || mode === "both";
+  const showHeat = viewMode !== "points";
+  const showClusters = viewMode === "points" || viewMode === "both";
 
   const load = useCallback(async () => {
     const map = mapRef.current;
@@ -109,8 +126,8 @@ export default function MapView() {
   }, [flyToTarget]);
 
   const interactive = useMemo(
-    () => (iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : []),
-    [cats, iconsReady],
+    () => [...(appMode === "act" ? ["sites"] : []), ...(iconsReady ? cats.flatMap((c) => [`${c}-clusters`, `${c}-points`]) : [])],
+    [cats, iconsReady, appMode],
   );
 
   const onClick = useCallback((e: MapLayerMouseEvent) => {
@@ -118,6 +135,10 @@ export default function MapView() {
     if (!f) return;
     if (f.layer.id.endsWith("-clusters")) {
       mapRef.current?.easeTo({ center: (f.geometry as Point).coordinates as [number, number], zoom: (mapRef.current?.getZoom() ?? 12) + 2 });
+      return;
+    }
+    if (f.layer.id === "sites") {
+      select({ kind: "site", id: String(f.properties?.id) });
       return;
     }
     select({ kind: "incident", id: String(f.properties?.id) });
@@ -199,9 +220,34 @@ export default function MapView() {
             </Fragment>
           );
         })}
+        {appMode === "act" && (
+          <Source id="sites" type="geojson" data={sitesFC}>
+            <Layer
+              id="sites"
+              type="circle"
+              paint={{
+                "circle-radius": ["interpolate", ["linear"], ["get", "returns"], 0, 9, 10, 15, 20, 20],
+                "circle-color": ["case", ["get", "due"], "#b91c1c", "#1f2937"],
+                "circle-opacity": 0.9,
+                "circle-stroke-color": ["case", ["==", ["get", "id"], selectedId], "#f59e0b", "#ffffff"],
+                "circle-stroke-width": ["case", ["==", ["get", "id"], selectedId], 4, 2],
+              }}
+            />
+            <Layer
+              id="sites-rank"
+              type="symbol"
+              layout={{ "text-field": ["to-string", ["get", "rank"]], "text-size": 12, "text-font": ["Noto Sans Bold"], "text-allow-overlap": true }}
+              paint={{ "text-color": "#ffffff" }}
+            />
+          </Source>
+        )}
       </Map>
 
-      <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} count={data.features.length} loading={loading} />
+      {appMode === "act" ? (
+        <SiteQueue />
+      ) : (
+        <LayerPanel enabled={enabled} onChange={setEnabled} mode={mode} onModeChange={setMode} count={data.features.length} loading={loading} />
+      )}
 
       {error && (
         <div role="alert" className="absolute bottom-4 left-4 rounded-md bg-red-50 px-3 py-2 text-sm font-medium text-red-900 shadow">

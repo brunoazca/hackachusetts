@@ -2,6 +2,7 @@
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { markerDataUrl } from "./icons";
+import { STRENGTH_STYLE, testedFor } from "./tested";
 
 // Floating layer + date controls for the draft map.
 
@@ -12,6 +13,9 @@ const GROUPS: { id: string; label: string }[] = [
   { id: "shelter", label: "Shelter" },
   { id: "displace", label: "Displacement" },
 ];
+
+// Simple depth shows only the outcome and the signals that tested as predictive (R0.5).
+export const SIMPLE_LAYERS = ["rodent", "dead_animal", "pest", "trash_storage"];
 
 export function activeCategories(enabled: Record<string, boolean>) {
   return Object.keys(CATS).filter((id) => enabled[id]);
@@ -59,6 +63,7 @@ function Ramp({ colors, label }: { colors: string[]; label: string }) {
 export default function LayerPanel({ enabled, onChange, mode, onModeChange, count, loading }: Props) {
   const filters = useMap((s) => s.filters);
   const setFilters = useMap((s) => s.setFilters);
+  const explore = useMap((s) => s.depth) === "explore";
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
 
   return (
@@ -70,7 +75,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
         </span>
       </div>
 
-      <fieldset className="mb-3">
+      {explore && <fieldset className="mb-3">
         <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">View</legend>
         <div className="flex gap-1">
           {MODES.map((m) => (
@@ -93,7 +98,7 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
             <Ramp colors={HEAT_RAMPS.evidence} label="Evidence (trash, shelter, displacement)" />
           </div>
         )}
-      </fieldset>
+      </fieldset>}
 
       <fieldset className="mb-3">
         <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Period</legend>
@@ -115,28 +120,34 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, coun
       </fieldset>
 
       {GROUPS.map((g) => {
-        const ids = Object.entries(CATS).filter(([, c]) => c.group === g.id);
+        const ids = Object.entries(CATS).filter(([id, c]) => c.group === g.id && (explore || SIMPLE_LAYERS.includes(id)));
         if (!ids.length) return null;
         return (
           <fieldset key={g.id} className="mb-2">
             <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">{g.label}</legend>
             {ids.map(([id, c]) => (
-              <label key={id} className="flex cursor-pointer items-center gap-2 rounded px-1 py-0.5 hover:bg-neutral-50">
+              <label key={id} className="flex cursor-pointer items-start gap-2 rounded px-1 py-0.5 hover:bg-neutral-50">
                 <input
                   type="checkbox"
                   checked={!!enabled[id]}
                   onChange={(e) => onChange({ ...enabled, [id]: e.target.checked })}
-                  className="accent-neutral-900"
+                  className="mt-1 accent-neutral-900"
                 />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={markerDataUrl(id)} alt="" aria-hidden className="h-5 w-5 shrink-0" />
-                <span className="truncate text-neutral-900">{c.label}</span>
+                <img src={markerDataUrl(id)} alt="" aria-hidden className="mt-0.5 h-5 w-5 shrink-0" />
+                <span className="min-w-0">
+                  <span className="block truncate text-neutral-900">{c.label}</span>
+                  <span className={`block text-xs ${STRENGTH_STYLE[testedFor(id).strength]}`}>{testedFor(id).text}</span>
+                </span>
               </label>
             ))}
           </fieldset>
         );
       })}
-      <p className="mt-2 text-xs text-neutral-700">Each layer clusters on its own. Solid icon = open, faded = closed. Somerville points are block centroids.</p>
+      <p className="mt-2 text-xs text-neutral-700">
+        {explore ? "Each layer clusters on its own. " : "Simple view: the outcome and the signals that tested as predictive. Switch to Explore for every layer. "}
+        Solid icon = open, faded = closed. Tested values: block-level partial correlation with rodent reports.
+      </p>
     </div>
   );
 }

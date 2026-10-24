@@ -6,7 +6,7 @@ Settings for all four: **Agent (adaptive)**, max cycles **20**, parallel workers
 
 Run order: Campaign 4 first (the demo depends on it), then 2 (it is what makes the product different). 1 and 3 can run in parallel.
 
-Status: all four ran in Kiro Crew Research Lab on 2026-10-24 and were exported to the knowledge library: Campaign 4 = `2b8f7f81`, Campaign 2 = `93c1ad29`, Campaign 1 = `e241ffc6`, Campaign 3 = `b6ba6312`. Follow-ups after the spec review: closure-note classifier rules = `d19b46b7`, Sept 1 move-out and events = `ebc7405e`. Results are in `knowledge/15_boston_rat_audit.md` and `knowledge/sources/rats/demo_site.md`.
+Status: all four ran in Kiro Crew Research Lab on 2026-10-24 and were exported to the knowledge library: Campaign 4 = `2b8f7f81`, Campaign 2 = `93c1ad29`, Campaign 1 = `e241ffc6`, Campaign 3 = `b6ba6312`. Follow-ups after the spec review: closure-note classifier rules = `d19b46b7`, Sept 1 move-out and events = `ebc7405e`. Third round: matched test of escalation = `4fb70394` (verdict: does not hold), forecast vs baseline = `072d5a66`, competitive gap = `20630275`. Results are in `knowledge/15_boston_rat_audit.md` and `knowledge/sources/rats/demo_site.md`.
 
 ---
 

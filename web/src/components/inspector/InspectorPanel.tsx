@@ -4,6 +4,7 @@ import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
 import { fetchIncidentDetail, type IncidentDetail } from "@/lib/queries";
 import { markerDataUrl } from "@/components/map/icons";
+import SiteCase from "./SiteCase";
 
 // Draft inspector: details of a selected report + other reports at the same address.
 // Owner: map/inspector track — replace with the full site card later.
@@ -31,6 +32,7 @@ export default function InspectorPanel() {
     return () => { live = false; };
   }, [id]);
 
+  if (selection?.kind === "site") return <SiteCase id={selection.id} />;
   if (!id) {
     return (
       <div className="p-4 text-sm text-neutral-800">
