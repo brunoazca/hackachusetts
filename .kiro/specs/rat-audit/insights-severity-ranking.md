@@ -1,10 +1,39 @@
 # Insights tab — Severity Ranking & Region Action Cards
 
-Status: **spec, Oct 24.** Owners: **Gui** (front, `web/src/components/insights/**`),
-**Bruno** (model + recommendation payload, `pipeline/rat_audit/model/**` +
-`supabase/migrations/*_analytics_*.sql`). Builds on `CONTRACT.md`, `FORECAST_MAP.md`,
+Status: **spec, Oct 24 (rev. 2 — Bruno's direction merged, see §0).** Owners:
+**Carol** (insight structures: ranking SQL, region/cluster assembly, evidence, the
+`insights_regions` RPC, the `insights` table and the AI-agent tool — `supabase/migrations/*_analytics_*.sql`,
+`web/src/lib/agent/**`), **Gui** (front, `web/src/components/insights/**`),
+**Bruno** (models only: forecast `predictions` + the per-record solution model
+`record_solutions`, `pipeline/rat_audit/model/**`). Builds on `CONTRACT.md`, `FORECAST_MAP.md`,
 `v2-spec.md`, `RPC_PROPOSAL.md`. Nothing in those is deleted here — this file says
 exactly what the Insights tab becomes and which existing data feeds it.
+
+---
+
+## 0. Product direction (Bruno, Oct 24) — overrides anything below that disagrees
+
+1. **Rank 250 m cells by severity**, where severity = the problems already in the cell
+   **plus** the severity forecast for the future (§5.1). Not the forecast alone.
+2. **One card per ranked region** with: (a) the problems and the estimated future,
+   (b) the proposed solution, (c) evidence of possible causes around it (§4).
+3. **Proposed solution is per region (cell/cluster), written by AI, grounded in a
+   per-record model.** Two layers (§5.2):
+   - **Model, per record** (`record_solutions`, Bruno, done): for each rodent report,
+     the action the city took (read from the closure note) and the predicted chance of a
+     return within 60 days under every legal action. This is the AI's grounding data.
+   - **AI, per region** (`region_solutions`, Bruno's batch job, small model): reads the
+     region's records + their model rows + drivers + nearby evidence, and writes
+     **one solution for the region** and **one short line per record** ("what to do with
+     this report"). It may only use numbers present in its input; output is schema-checked
+     and legal-lane filtered. Without AI the card falls back to the §5.2 rules.
+4. **Cards are ordered** in the Insights tab, worst first, **and the AI agent can read
+   them** (§7.2).
+5. **Grid cuts.** A hotspot split across 2–4 cells must not lose rank or appear as
+   several cards; evidence must not stop at the cell border (§5.5).
+6. Split of work: **Carol** builds the insight structures (table, RPC, clustering,
+   evidence, agent tool); **Bruno** builds the models (forecast, `record_solutions`,
+   the AI `region_solutions` job); **Gui** builds the cards.
 
 Read this whole file before touching front or model. Every number shown must cite a
 `sources` row. Language rule stands everywhere: **"expected reports", never "rats".**
@@ -57,20 +86,23 @@ already in the database. Confirmed against the migrations and model code.
 | **Sources** | `sources` (name, url, retrieved_at, update_mode) referenced by id everywhere | `insights_summary.sources` |
 
 **What does NOT exist yet and must be built:**
-1. A **severity-×-benefit ranking** over the 250 m cells (§5). — Bruno
-2. A **proposed solution** per region (recommendation rules already drafted in
-   `v2-spec.md` §6; needs to be computed per cell and returned). — Bruno
-3. A **"how it would look after the fix"** estimate per region (expected-report
-   reduction if the recommended action is applied). — Bruno
-4. The **region cards UI** and the ranked list. — Gui
-5. One **RPC** that returns the ranked regions with everything a card needs (§7). — Bruno
+1. A **severity ranking** over the 250 m cells, past + future, edge-safe (§5.1, §5.5). — Carol (SQL over Bruno's `predictions`)
+2. A **per-record solution model** (`record_solutions`, §5.2). — Bruno (`pipeline/rat_audit/model/solution.py`)
+3. The **AI region solution** + per-record lines (`region_solutions`, §5.2, §5.6). — Bruno (batch job; reads Carol's region rows)
+4. **Evidence of possible causes nearby** per region (§4.1). — Carol
+5. A **"how it would look after the fix"** estimate per region (§5.3). — Carol (arithmetic on Bruno's outputs)
+6. The **region cards UI** and the ranked list. — Gui
+7. One **RPC** that returns the ranked regions with everything a card needs (§7) + agent tool (§7.2). — Carol
 
 ---
 
 ## 4. The card — exactly what each one shows
 
-One card = one 250 m region (one `cell_id`). Top N regions, N = 5 by default, with a
-control to show 10 / 20. The card maps 1:1 to the five questions:
+One card = one region: a 250 m cell, or a cluster of adjacent hot cells merged by §5.5
+(`region_id`, with its `cell_ids`). Top N regions, N = 5 by default, with a control to
+show 10 / 20. The card maps 1:1 to the five questions (sketch below is the original;
+rev. 2 adds the SEVERITY "now vs next 4 weeks" split, NEARBY CAUSES and the RECORDS list —
+see §4.1):
 
 ```
 ┌─ #1 · Dorchester · g250_142_88 ──────────── VERY HIGH ──┐
@@ -106,11 +138,12 @@ control to show 10 / 20. The card maps 1:1 to the five questions:
 
 | Block | Fields | Source |
 |---|---|---|
-| **Severity now** | `expected` (reports/week), `p_any` (% chance ≥1), `risk_band` badge, `rank` of 3,442 | `predictions` current week |
+| **Severity (problems + future)** | `observed_12w` (rodent reports in the last 12 weeks, the problems already here), `expected_4w` (forecast, next 4 weeks), `severity` = their sum (§5.1), `p_any`, `risk_band` badge, `rank` | `incidents` + `predictions` |
 | **The problem** | top 3–5 `drivers`: plain `label`, signed `contribution`, optional `value`. Sort by `|contribution|` desc | `predictions.drivers` |
-| **What you can do** | `recommendation.action` + `recommendation.because` + legal-lane tag (sanitation / exclusion / enforcement / referral) | new, §5.2 (Bruno) |
-| **Evidence** | 1–3 bullets: relevant `correlations` row (strength + stat + caveat + source), this region's own closure history (returns), `base_rate` for its bucket | `insights_summary.correlations`, `site_detail`, `base_rates` |
-| **After the fix** | `expected` now → `expected_after`, delta over 4 weeks, `recur_p` (chance of return in 60 d) | new, §5.3 (Bruno) + `sites.summary.recur_p` |
+| **What you can do** | region solution: `action`, `because` (cites records/evidence), legal lane, `source` = `ai` or `rules`; + the model's per-action return chances for the region (mean of its records) | `region_solutions` (§5.2) |
+| **Records** | the region's rodent reports, last 12 weeks, newest first (max 10, "show all"): date, block, status, what the city did (`done_action`), **what to do with this report** (AI line, else model's best action), P(return 60 d) | `incidents` + `record_solutions` + `region_solutions.records` |
+| **Evidence — possible causes nearby** | within **150 m of the region's records** (not the cell border, §5.5): vacant parcels (40 m), restaurants, dumpsters / trash-storage / dumping / missed-trash 311 in the last 90 days, excavation & demolition permits, city lots, schools; each with count + distance to the nearest record + `source_ids`. Plus 1–2 `correlations` rows that test that cause (strength + stat + caveat), the region's own closure history (returns), `base_rate` | `places`, `incidents`, `correlations`, `base_rates`, `sources` |
+| **After the fix** | `expected` now → `expected_after`, delta over 4 weeks, `recur_p` (chance of return in 60 d) | §5.3 + `record_solutions` |
 
 ### 4.2 Hard rules on the card
 
@@ -131,30 +164,77 @@ control to show 10 / 20. The card maps 1:1 to the five questions:
 
 ---
 
-## 5. The ranking & the two new model outputs (Bruno)
+## 5. The ranking & the new outputs
 
-This is the only genuinely new modelling work. Three pieces: a severity score, a
-recommendation per cell, and an after-fix estimate. The rank is severity × benefit.
+Four pieces: a severity score (past + future), edge-safe regions, a solution per region
+(AI over a per-record model), and an after-fix estimate.
 
-### 5.1 Severity score per cell
+### 5.1 Severity score per cell — problems now + forecast future (Carol, SQL)
 
-Severity is already latent in `predictions`. Define a single ordered score per cell for
-the **current/next forecast week** so cards can be ranked:
+Severity must include **the problems already in the cell** and **the predicted future**.
+Both are counted in the same unit (rodent reports), so the sum is a count over a 16-week
+window, not a weighted composite (this keeps `v2-spec.md` §5.1 intact: no arbitrary weights):
 
 ```
-severity_score(cell) = expected          # expected reports/week, the primary sort key
-tie-breakers, in order:  p_any  →  risk_band rank  →  cell_id   # deterministic
+observed_12w(cell) = rodent reports opened in the cell in the last 12 weeks   # incidents, category='rodent'
+expected_4w(cell)  = Σ predictions.expected over the next 4 forecast weeks     # actual is null
+severity(cell)     = observed_12w + expected_4w                                # reports, 16-week window
+ranked on smoothed_severity (§5.5); tie-breakers: expected_4w → p_any (week 1) → cell_id
 ```
 
-- Primary = `expected` (continuous, already stored). `risk_band` is the badge, not the
-  sort key, because many cells share a band.
-- Keep it this simple for the demo. Do **not** invent a weighted composite — `v2-spec.md`
-  §5.1 forbids a composite score. `expected` is a raw model output, defensible.
+- Show both parts on the card ("12 reports in the last 12 weeks · 6.1 expected in the
+  next 4"), so the reader sees whether it is ranked for its past or its future.
+- `risk_band` stays the badge (week 1), never the sort key.
+- Optional P1: also rank by return history (`sites.recurrence_count` in the cell) as a
+  tie-breaker. Do not add weights.
 
-### 5.2 Recommendation per cell
+### 5.2 Solution per region — AI over a per-record model (Bruno)
 
-Apply the **recommendation rules already written in `v2-spec.md` §6** (first match
-wins) to each ranked cell, using that cell's drivers + nearby records:
+**Layer 1 — per-record model, `record_solutions` (built: `pipeline/rat_audit/model/solution.py`).**
+One row per Boston rodent report since 2025-01-01:
+
+| Column | Meaning |
+|---|---|
+| `incident_id` | `incidents.id` |
+| `done_action` | what the city did, read from the closure note by rules (`monitoring`, `inspection`, `abatement_order`, `citation`, `warning`, `referral`, `cleanup`, `barrels`, `baiting`, `carcass`, `no_violation`, `duplicate`, `unknown`, `open`…). Analytics' `incidents.action_tag` is not touched. |
+| `action`, `label`, `owner` | the legal action with the lowest predicted return; `inspection` ("inspect and record the cause") when nothing beats monitoring by ≥ 2 points |
+| `p_return`, `p_return_monitoring`, `gain`, `confident` | P(rodent report at the same address within 60 days) under that action vs under monitoring |
+| `alternatives` | `[{action, label, p_return, n_cases}]` for every allowed action, sorted |
+| `because` | up to 3 context facts above the city median (e.g. "4 earlier rodent reports at this address", "2 vacant parcels within 40 m") |
+| `model_run_id`, `caveat` | `model_runs` row (`record_solution_gbm`); "not a measured effect" caveat |
+
+Model: gradient-boosted classifier, y = return within 60 days at the same address,
+features = action + context known at closure (earlier reports at the address, 311
+co-signals on the block in the last 90 days, places within 40/100 m, season). Time split,
+last 26 weeks held out: **AUC 0.69 vs 0.50 base rate; context-only AUC 0.70**, i.e.
+the action adds almost no predictive power. The per-action differences are therefore a
+**weak, confounded signal** (inspectors choose actions by situation). Never call them
+an effect; use them as one input among the evidence. Legal lane only: baiting and carcass
+removal are never proposed.
+
+**Layer 2 — AI, per region, `region_solutions` (Bruno's batch job, runs after Carol builds the regions).**
+Input per region (JSON, nothing else): drivers, severity parts, the evidence list
+(§4.1), the region's records (last 12 weeks; max 30, worst first) with their
+`record_solutions` rows and scrubbed closure notes, and the §5.2 rule result below.
+Model: small and cheap (Claude Haiku), temperature 0, cached by a hash of the input.
+Output (JSON schema, validated):
+
+```ts
+{ action: string; lane: "sanitation"|"exclusion"|"enforcement"|"referral"|"inspect";
+  because: string;            // ≤ 2 sentences, every number must appear in the input
+  cites: string[];            // evidence ids / incident ids / source ids used
+  records: { incident_id: string; todo: string }[];   // ≤ 1 line per record
+  unknowns: string[] }        // 1–3 checks to do on site (R3.11)
+```
+
+Guards: reject output whose numbers are not in the input, whose lane is outside the
+legal lane, or that mentions bait/poison/rodenticide → fall back to the rules. Store
+`source = 'ai' | 'rules'` and the model id. Per-record `todo` lines are only generated
+for the region's records (≈ 5–20 regions × ≤ 30 records), not for all 10k reports;
+records outside the ranked regions show the Layer-1 `label`.
+
+**Fallback — rules** (when there is no AI output), from `v2-spec.md` §6, first match
+wins, using the region's drivers + nearby records:
 
 | # | When (computed from existing data) | Recommend | Because line |
 |---|---|---|---|
@@ -172,7 +252,7 @@ Return shape per cell: `{ action, because, lane, rule_id }` where `lane ∈
 > `draft_sites` logic joined to the cell. State in the payload which site the
 > recommendation came from (`recommendation.site_id`) so the card's "Open case" works.
 
-### 5.3 After-the-fix estimate per cell
+### 5.3 After-the-fix estimate per region
 
 The simplest honest estimate, labelled as a model estimate:
 
@@ -193,11 +273,47 @@ Rules:
   intercept/seasonal floor, stop at the floor and say "floor reached".
 - This is a **counterfactual on the model's own attributions**, not a measured
   intervention effect. The card label says exactly that.
+- Second number, from `record_solutions`: mean `p_return` of the region's records under
+  the proposed action vs under monitoring ("chance a report comes back: 18% → 14%").
+  Same caveat; hide it when `confident` is false for most records.
 
 ### 5.4 Equity cut (P1, optional)
 
 Offer a second ranking "worst within each neighborhood" (top region per hood) so a big
 hood doesn't crowd out a small one — reuses `grid_cells.neighborhood`. Same card shape.
+
+### 5.5 Grid cuts — keep hotspots whole (Carol, SQL)
+
+A fixed 250 m lattice splits a hotspot that sits on a cell corner into up to 4 cells.
+Each looks medium, so the hotspot drops in rank, or it shows as 3 near-duplicate cards,
+and evidence stops at the border. Fixes, all cheap and done in SQL over `grid_cells`
+(`col`, `row`):
+
+1. **Smooth before ranking.** `smoothed_severity(c) = severity(c) + 0.5 × Σ severity(n)`
+   over the 8 neighbours `n` (3×3 kernel, centre 1, ring 0.5). A hotspot split across
+   cells now scores like a hotspot. The card still shows the cell's own raw numbers.
+2. **Merge into regions.** Take cells in the top 5% of `smoothed_severity`; join
+   8-connected neighbours into clusters (connected components). One cluster = one card
+   (`region_id` = its top cell's id, `cell_ids` = all members, capped at 9 cells /
+   ~750 m; bigger clusters split at their local maxima). Region severity = sum of the
+   members' raw severity; rank regions by it.
+3. **Non-max suppression for singletons.** A lone cell becomes a card only if it is the
+   local maximum of `smoothed_severity` in its 3×3 neighbourhood; otherwise it is folded
+   into the neighbour's card.
+4. **Evidence by distance, not by cell.** Nearby causes (§4.1) are counted within 150 m
+   of the region's records (PostGIS `ST_DWithin` on `geography`), so a vacant lot 20 m
+   across the border counts.
+5. **Sanity check (P1).** Re-run the ranking on the lattice shifted by 125 m (half a
+   cell) in x and y; report how many of the top 10 regions overlap. If < 7 of 10, raise
+   the smoothing ring weight. Report the number in the methodology area.
+
+### 5.6 AI layer — rules (Bruno's job, Carol's agent reads the result)
+
+- The AI writes, it does not decide numbers: every number in its text must exist in its
+  input JSON (checked). It sees scrubbed notes only (no names, no full addresses).
+- It must say when the evidence is thin ("2 reports, no closure notes: inspect first").
+- Output is stored, not generated on page load: `region_solutions` is recomputed after
+  each forecast scoring run, so the tab and the agent read the same text.
 
 ---
 
@@ -220,7 +336,7 @@ caveat. Build on it.
 
 ---
 
-## 7. The RPC (Bruno) — `insights_regions()`
+## 7. The RPC (Carol) — `insights_regions()`
 
 One read-only RPC, same conventions as `insights_summary` (STABLE, security definer /
 invoker per track convention, `GET`, anon key, every number joinable to `sources`).
@@ -254,15 +370,36 @@ $$;
 ```ts
 type InsightsRegion = {
   rank: number;                 // 1-based
-  cell_id: string;              // g250_<col>_<row>
+  region_id: string;            // = top cell id of the cluster (§5.5)
+  cell_id: string;              // top cell, g250_<col>_<row>
+  cell_ids: string[];           // all cells merged into this region (1..9)
   neighborhood: string | null;
   lat: number; lon: number;     // for "Show on map" flyTo
   severity: {
+    observed_12w: number;       // rodent reports in the region, last 12 weeks
+    expected_4w: number;        // forecast, next 4 weeks
+    score: number;              // observed_12w + expected_4w (§5.1)
     expected: number;           // reports/week, current forecast week
     p_any: number;              // 0..1
     band: "low" | "elevated" | "high" | "very_high";
     rank_of: number;            // = total_cells, for "rank 1 of 3,442"
   };
+  records: {                    // last 12 weeks, newest first, max 30
+    incident_id: string;
+    opened_at: string;
+    address_block: string | null;
+    status: "open" | "closed";
+    done_action: string;        // from record_solutions
+    todo: string;               // AI line (region_solutions) else record_solutions.label
+    p_return: number | null;    // under the proposed action
+  }[];
+  nearby_causes: {              // §4.1, within 150 m of the region's records
+    kind: string;               // vacant_parcel | restaurant | trash_storage_311 | dumping_311 | excavation | ...
+    label: string;
+    count: number;
+    nearest_m: number;
+    source_ids: string[];
+  }[];
   problems: {                   // from predictions.drivers, sorted |contribution| desc
     label: string;              // plain language, e.g. "Trash reports nearby"
     contribution: number;       // signed, in expected-report units
@@ -272,8 +409,13 @@ type InsightsRegion = {
     action: string;
     because: string;
     lane: "sanitation" | "exclusion" | "enforcement" | "referral" | "inspect";
-    rule_id: number;
-    site_id: string | null;     // worst site in the cell, for "Open case"
+    source: "ai" | "rules";
+    rule_id: number | null;     // when source = rules
+    cites: string[];            // evidence / incident / source ids
+    unknowns: string[];         // 1-3 on-site checks
+    p_return_proposed: number | null;   // mean over records, record_solutions
+    p_return_monitoring: number | null;
+    site_id: string | null;     // worst site in the region, for "Open case"
   } | null;
   evidence: {                   // 1-3 bullets, each cited
     kind: "correlation" | "site_history" | "base_rate";
@@ -304,6 +446,27 @@ type InsightsRegionsPayload = {
 Add `sources` to the envelope exactly like `insights_summary` so the card can render
 name + link + retrieved date. Keep all JSONB intact; narrow in `parse.ts`, never trust
 raw (follow the existing `types.ts` note).
+
+Storage: Carol materialises the ranked regions into an `insights` table (one row per
+region per forecast run: `region_id`, `rank`, `cell_ids`, `payload jsonb` = the region
+object minus the AI fields, `run_id`, `computed_at`). Bruno's AI job reads `insights`,
+writes `region_solutions (region_id, run_id, action, lane, because, cites, records,
+unknowns, source, llm_model, input_hash, computed_at)`. `insights_regions()` joins the
+two. Recompute order after each scoring run: `predictions` → `record_solutions` →
+`insights` → `region_solutions`.
+
+### 7.2 AI agent access (Carol)
+
+The assistant (`web/src/lib/agent/**`) gets two server tools over the same RPC, so the
+agent and the tab always agree:
+
+- `get_insights({ limit?, neighborhood? })` → `insights_regions(lim, hood)`, returns the
+  ranked cards (compact: rank, region, severity parts, recommendation, top 3 causes).
+- `get_insight({ region_id })` → one full card incl. records and their `todo` lines.
+
+Plus a client tool `show_insight(region_id)` → map-store `flyTo` + select the region.
+The agent prompt says: answer "where should we act / what should we do here" from these
+tools first, quote the card's numbers and caveat, never invent a recommendation.
 
 ---
 
@@ -342,11 +505,14 @@ the store only). "Open case" uses `select({kind:'site', id: recommendation.site_
 | Step | Owner | Done when |
 |---|---|---|
 | 1. `RegionCard` + `RegionList` render from `insights_summary.forecast.top_cells` (severity + drivers only) | Gui | Top 5 cells show as ranked cards today, no new RPC |
-| 2. Rule engine §5.2 computed per cell | Bruno | Each top cell has a recommendation + lane, rodenticide impossible |
-| 3. After-fix arithmetic §5.3 | Bruno | Each non-inspect cell has `expected_after` + `delta_4w` |
-| 4. `insights_regions()` RPC §7 returns the full region object | Bruno | One GET returns N cards' data incl. evidence + sources |
+| 2a. `record_solutions` model §5.2 layer 1 | Bruno | Table filled for every rodent report since 2025-01-01 (model written) |
+| 2b. Severity §5.1 + regions §5.5 + nearby causes §4.1 → `insights` table | Carol | Top regions materialised, hotspots on corners appear once |
+| 2c. Rule engine fallback §5.2 | Carol | Each region has a rules recommendation, rodenticide impossible |
+| 3. After-fix arithmetic §5.3 | Carol | Each non-inspect region has `expected_after` + `delta_4w` |
+| 3b. AI `region_solutions` §5.2 layer 2 | Bruno | Each ranked region has an AI solution + per-record lines, guards pass |
+| 4. `insights_regions()` RPC §7 + agent tools §7.2 | Carol | One GET returns N cards; agent answers "where to act" from it |
 | 5. Front switches to `insights_regions`, collapses old sections into methodology | Gui | Tab is the §4 ranked action list end to end |
-| 6. Equity toggle §5.4 | Gui + Bruno | "Within neighborhood" re-ranks |
+| 6. Equity toggle §5.4 | Gui + Carol | "Within neighborhood" re-ranks |
 
 Step 1 is shippable **now** against existing data and is the demo-safe fallback. Steps
 2–5 are the real feature. Step 6 is P1.
@@ -366,6 +532,12 @@ Step 1 is shippable **now** against existing data and is the demo-safe fallback.
    degrades per §6 — it never blanks and never shows placeholder numbers.
 7. Keyboard operable, AA contrast, rank conveyed in text, 1280×800 (§8.1).
 8. One read-only RPC call powers the tab (`insights_regions`), GET + anon key, STABLE.
+9. Severity shows both parts (last 12 weeks observed + next 4 weeks expected).
+10. A hotspot on a cell corner appears as **one** card, not several (§5.5); nearby causes
+    are counted by distance, not by cell membership.
+11. Each card lists its records with "what to do" per record; the region solution is AI
+    (grounded, guarded) or rules, and says which.
+12. The AI agent can list and open the same cards (§7.2) and gives the same answer as the tab.
 
 ---
 
@@ -374,6 +546,9 @@ Step 1 is shippable **now** against existing data and is the demo-safe fallback.
 - Default N: 5 confirmed. Keep 10/20 controls? (assumed yes)
 - After-fix estimate: driver-contribution arithmetic (§5.3) is the honest minimum. OK to
   ship that, or hold the "After the fix" block until a measured trial exists?
+  (Bruno: ship it, with the caveat, plus the `record_solutions` return-chance line.)
+- Severity: resolved — past 12 weeks + next 4 weeks, in reports (§5.1).
+- Solution: resolved — per region by AI, grounded in the per-record model (§5.2).
 - Does the ranked region card **replace** the city-wide findings view, or sit above it
   with findings collapsed below? (spec assumes: replace as the lead, findings collapse
   into "Methodology & evidence")
