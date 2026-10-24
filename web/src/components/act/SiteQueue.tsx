@@ -13,7 +13,8 @@ export default function SiteQueue() {
   const flyTo = useMap((s) => s.flyTo);
   const selection = useMap((s) => s.selection);
   const [rows, setRows] = useState<SiteRow[] | null>(null);
-  const [hood, setHood] = useState<string>("");
+  const hood = useMap((s) => s.siteNeighborhood);
+  const setHood = useMap((s) => s.setSiteNeighborhood);
   const [error, setError] = useState<string | null>(null);
   const [panelOpen, setPanelOpen] = useState(true);
 
@@ -60,6 +61,7 @@ export default function SiteQueue() {
             className="min-w-0 flex-1 rounded border border-neutral-300 bg-white px-1.5 py-1 text-xs"
           >
             <option value="">All</option>
+            {hood && !hoods.includes(hood) && <option value={hood}>{hood}</option>}
             {hoods.map((h) => <option key={h} value={h}>{h}</option>)}
           </select>
         </label>

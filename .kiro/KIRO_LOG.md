@@ -31,6 +31,18 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:48 — Integrate all chat/map changes for the requested push
+- Teammate: Carol
+- Agent:
+- Did: Committed this chat's map controls and Insights work, integrated remote main eed900a, and connected its new 24 block-profile choices to the same map/chat state.
+- Did: Preserved the English-only policy, collapsed source disclosure and every log line from both histories; removed upstream conflict-marker artifacts without losing either entry.
+- Why: Carol requested commit and push of these changes and the earlier work from this chat.
+- Where: .kiro/KIRO_LOG.md; web/src/lib/agent/**; web/src/lib/{map-store,cell-context,cell-metrics}.ts; web/src/components/map/MapView.tsx.
+- Evidence: Integrated Agent/Insights suite 131 pass, 0 fail, 19 conditional skips; repository suite 5 pass. Build/TypeScript, scoped lint, secret scan and whitespace checks passed.
+- Evidence: Real-model browser turn selected People per km² in the original map, retained points plus heatmap, read Insights and answered in English with sources collapsed; no console errors. Screenshot: /private/tmp/piper-map-chat-integrated.jpg.
+- Decision: Publish the validated commits to origin/main under Carol's explicit request; keep Agent empty. Deployment status is separate from Git publication.
+- Idea: New map controls should reuse the shared state and tool catalog, so chat and manual controls stay synchronized.
+
 ### 2026-10-24 17:45 — Added per-site return chance as the third severity term (...
 - Teammate: Bruno
 - Agent: —
@@ -147,6 +159,18 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Carol reported that the reference chips overwhelm the chat and requested a toggle, then authorized a push.
 - Where: web/src/components/chat/Message.tsx
 - Idea: Keep evidence accessible on demand while the answer stays readable.
+### 2026-10-24 17:43 — Connect chat to all map controls and Insights
+- Teammate: Carol
+- Agent:
+- Did: Shared the original map's real layers, dates/status, display, nearby records, forecast, neighborhood and viewport with chat; connected highlights and automatic panel visibility.
+- Did: Added get_insights using the panel's RPC/parser and historical sources; shared deterministic forecast comparisons to prevent inverted MAE claims.
+- Why: Carol requested chat control of the original map and access to Insights.
+- Where: web/src/lib/agent/**, web/src/lib/{map-controls,map-store,insights-history,forecast-comparison}.ts, map/chat/act/insights components, and this log.
+- Evidence: Agent/Insights tests 130 pass, 0 fail, 19 conditional skips; repository tests 5 pass. Scoped lint, production build/TypeScript, secret scanner and diff checks passed.
+- Evidence: Real-model local browser flow applied map filters, recognized a manual status change, read live Insights and correctly separated better hotspot ranking from worse count MAE. Screenshot: /private/tmp/piper-map-chat-verified.jpg.
+- Decision: Local worktree preview on port 3046; no push/deploy, credentials changed, migrations or shared database writes.
+- Decision: Keep Agent empty in this chat's log entries, as requested by Carol; record each substantive piece of work here.
+- Idea: Chat and visual controls should share one state; analytical verdicts should use the same calculations as the panel.
 
 ### 2026-10-24 17:25 — Adicionei a secao 5.4a na spec de Insights: agregar popul...
 - Teammate: Carol
