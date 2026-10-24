@@ -36,6 +36,22 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: data/civic/CATALOG.md, data/civic/datasets/* (23 datasets: data.csv + README + fetch.py/js), data/civic/kits/*.zip
 - Idea: permits + boston-311 + neighborhoods + violations are the snapshots to wire into the parking-permit-navigator demo.
 
+### 2026-10-24 10:07 — Expanded sourced Civic research and dataset audit
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Added caption notes, recent City sources, municipal awards, and all 22 CSV audits.
+- Why: Ground the project choice in verified needs, existing tools, and usable data.
+- Where: knowledge/02–04, knowledge/06–07, knowledge/README.md, knowledge/sources/
+- Idea: Show one completed service task with measured results and explicit data limits.
+
+### 2026-10-24 10:04 — Pushed self-logging rule + historian agent
+- Teammate: Guilherme
+- Agent: default
+- Did: Pushed self-logging rule + historian agent
+- Why: team gets auto-logging on pull
+- Where: .kiro/steering/kiro-log.md, .kiro/agents/kiro-historian.json
+- Idea: run kiro-historian at the end to write kiro-usage.md
+
 ### 2026-10-24 10:00 — Scaffolded full .kiro structure, submission docs, and ver...
 - Teammate: Guilherme
 - Agent: default (kirocrew)

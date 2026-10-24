@@ -1,0 +1,798 @@
+{
+  "checked_at_utc": "2026-10-24T14:05:42.963283+00:00",
+  "source": "https://hackachusetts2026.vercel.app/kits/tracks/civic.zip",
+  "archive_sha256": "b4a28b2b86e334257ec444e6cd5910d5cbe9e6e1189f739579834eeecc819e90",
+  "method": "CSV parsing, blank-string counts, lexical date ranges, exact string joins. Not a completeness, source authenticity, numeric-sentinel or live API audit.",
+  "datasets": [
+    {
+      "dataset": "boston-311",
+      "rows": 5000,
+      "columns": [
+        "open_date",
+        "case_topic",
+        "service_name",
+        "assigned_department",
+        "case_status",
+        "neighborhood",
+        "zip_code",
+        "on_time",
+        "city_council_district",
+        "ward"
+      ],
+      "bytes": 676710,
+      "sha256": "baf1a7f0f19e168db2d8d1f3c903998a26304252dfd705356113a7fc735b20c4",
+      "source_urls_from_kit_readme": [
+        "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&fields=open_date,case_topic,service_name,assigned_department,case_status,neighborhood,zip_code,on_time,city_council_district,ward&sort=open_date%20desc&limit=100"
+      ],
+      "blank_cells": {
+        "open_date": 0,
+        "case_topic": 0,
+        "service_name": 0,
+        "assigned_department": 3,
+        "case_status": 0,
+        "neighborhood": 7,
+        "zip_code": 10,
+        "on_time": 0,
+        "city_council_district": 10,
+        "ward": 10
+      },
+      "date_ranges": {
+        "open_date": {
+          "min_lexical": "2026-10-08 07:34:35.517+00",
+          "max_lexical": "2026-10-18 10:15:57.490548+00",
+          "distinct": 5000
+        }
+      }
+    },
+    {
+      "dataset": "mbta-alerts",
+      "rows": 130,
+      "columns": [
+        "updated",
+        "effect",
+        "severity",
+        "routes",
+        "header"
+      ],
+      "bytes": 26265,
+      "sha256": "f7c5b3bd957c7781632f9755c8de98814238119df5c5994559479daeea5f88d5",
+      "source_urls_from_kit_readme": [
+        "https://api-v3.mbta.com/alerts?page%5Blimit%5D=50"
+      ],
+      "blank_cells": {
+        "updated": 0,
+        "effect": 0,
+        "severity": 0,
+        "routes": 0,
+        "header": 0
+      },
+      "date_ranges": {
+        "updated": {
+          "min_lexical": "2026-04-28T14:08:17",
+          "max_lexical": "2026-10-18T16:14:02",
+          "distinct": 130
+        }
+      }
+    },
+    {
+      "dataset": "mbta-routes",
+      "rows": 8,
+      "columns": [
+        "id",
+        "name",
+        "mode",
+        "fare_class"
+      ],
+      "bytes": 378,
+      "sha256": "e7e460891025cf5e584c1921e367333a19a9d6ea74372f14c9b5d4025dc98d5b",
+      "source_urls_from_kit_readme": [
+        "https://api-v3.mbta.com/routes?filter%5Btype%5D=0,1"
+      ],
+      "blank_cells": {
+        "id": 0,
+        "name": 0,
+        "mode": 0,
+        "fare_class": 0
+      },
+      "date_ranges": {}
+    },
+    {
+      "dataset": "mbta-stations",
+      "rows": 170,
+      "columns": [
+        "station",
+        "line",
+        "route"
+      ],
+      "bytes": 6579,
+      "sha256": "aba32080532d4f2397f30040d4e03d11a0fa70ace8c5b20df64c4a8b191672d0",
+      "source_urls_from_kit_readme": [
+        "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/MBTA_Rapid_Transit/MapServer/0/query?where=1%3D1&outFields=STATION,LINE,ROUTE&returnGeometry=false&f=json"
+      ],
+      "blank_cells": {
+        "station": 0,
+        "line": 0,
+        "route": 0
+      },
+      "date_ranges": {}
+    },
+    {
+      "dataset": "ej",
+      "rows": 2604,
+      "columns": [
+        "municipality",
+        "population",
+        "minority_pct",
+        "limited_english_hh_pct",
+        "block_group_income",
+        "ej",
+        "criteria"
+      ],
+      "bytes": 136357,
+      "sha256": "3616a34c7336da3bd7b4e7960e0dd8f9722f42305108bb7493ae113770daa557",
+      "source_urls_from_kit_readme": [
+        "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0/query?where=EJ%3D%27Yes%27&outFields=MUNICIPALITY,TOTAL_POP,PCT_MINORITY,LIMENGHHPCT,BG_MHHI,EJ,EJ_CRIT_DESC&returnGeometry=false&resultRecordCount=100&f=json"
+      ],
+      "blank_cells": {
+        "municipality": 0,
+        "population": 0,
+        "minority_pct": 0,
+        "limited_english_hh_pct": 0,
+        "block_group_income": 19,
+        "ej": 0,
+        "criteria": 0
+      },
+      "date_ranges": {}
+    },
+    {
+      "dataset": "fema",
+      "rows": 415,
+      "columns": [
+        "declarationDate",
+        "disasterNumber",
+        "incidentType",
+        "declarationTitle",
+        "designatedArea",
+        "declarationType"
+      ],
+      "bytes": 41038,
+      "sha256": "3314b4071a1f4d22c43025f947f16d4207320f1c6deb0256aa79a04c407cab8b",
+      "source_urls_from_kit_readme": [
+        "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$filter=state%20eq%20%27MA%27&$top=100&$select=disasterNumber,declarationTitle,declarationDate,incidentType,designatedArea,declarationType&$orderby=declarationDate%20desc"
+      ],
+      "blank_cells": {
+        "declarationDate": 0,
+        "disasterNumber": 0,
+        "incidentType": 0,
+        "declarationTitle": 0,
+        "designatedArea": 0,
+        "declarationType": 0
+      },
+      "date_ranges": {
+        "declarationDate": {
+          "min_lexical": "1953-06-11T00:00:00.000Z",
+          "max_lexical": "2026-06-30T00:00:00.000Z",
+          "distinct": 57
+        }
+      }
+    },
+    {
+      "dataset": "permits",
+      "rows": 8240,
+      "columns": [
+        "permitnumber",
+        "worktype",
+        "permittypedescr",
+        "description",
+        "declared_valuation",
+        "total_fees",
+        "issued_date",
+        "expiration_date",
+        "status",
+        "occupancytype",
+        "sq_feet",
+        "zip",
+        "ward"
+      ],
+      "bytes": 956926,
+      "sha256": "4a7edbe786b4e9defdd1d0aef6c2560cb9a9be71868e531465556a43e4214414",
+      "source_urls_from_kit_readme": [
+        "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20permitnumber%2Cworktype%2Cpermittypedescr%2Cdescription%2Cdeclared_valuation%2Ctotal_fees%2Cissued_date%2Cexpiration_date%2Cstatus%2Coccupancytype%2Csq_feet%2Czip%2Cward%20FROM%20%226ddcd912-32a0-43df-9908-63574f8c7e77%22%20WHERE%20issued_date%20%3E%3D%20%272024-01-01%27%20ORDER%20BY%20issued_date%20DESC%20LIMIT%20100"
+      ],
+      "blank_cells": {
+        "permitnumber": 0,
+        "worktype": 3,
+        "permittypedescr": 0,
+        "description": 3,
+        "declared_valuation": 0,
+        "total_fees": 0,
+        "issued_date": 0,
+        "expiration_date": 364,
+        "status": 0,
+        "occupancytype": 0,
+        "sq_feet": 0,
+        "zip": 0,
+        "ward": 1
+      },
+      "date_ranges": {
+        "issued_date": {
+          "min_lexical": "2024-01-01",
+          "max_lexical": "2026-10-16",
+          "distinct": 787
+        },
+        "expiration_date": {
+          "min_lexical": "2024-07-01",
+          "max_lexical": "2027-04-16",
+          "distinct": 778
+        }
+      }
+    },
+    {
+      "dataset": "neighborhoods",
+      "rows": 24,
+      "columns": [
+        "neighborhood",
+        "year",
+        "land_sqmi",
+        "population",
+        "hs_or_ged",
+        "bachelors",
+        "graduate_degree",
+        "poverty_universe",
+        "poverty_count"
+      ],
+      "bytes": 1827,
+      "sha256": "335577ffd48a1d3a0388091a90520c4654a40653a4370f426b70094dab4fe31f",
+      "source_urls_from_kit_readme": [
+        "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20name%2Cyear%2Carealand_sqmi%2Cpopulation_b01001_001e%2Ceducation_b15003_hsgrad_and_ged%2Ceducation_b15003_022e%2Ceducation_b15003_gradprofdegree%2Cincome_b17001_001e%2Cincome_b17001_002e%20FROM%20%22b0543358-d03f-4682-bf0c-658ea4573d6f%22"
+      ],
+      "blank_cells": {
+        "neighborhood": 0,
+        "year": 1,
+        "land_sqmi": 1,
+        "population": 1,
+        "hs_or_ged": 1,
+        "bachelors": 1,
+        "graduate_degree": 1,
+        "poverty_universe": 1,
+        "poverty_count": 1
+      },
+      "date_ranges": {
+        "year": {
+          "min_lexical": "2025",
+          "max_lexical": "2025",
+          "distinct": 1
+        }
+      }
+    },
+    {
+      "dataset": "violations",
+      "rows": 2018,
+      "columns": [
+        "case_no",
+        "status_date",
+        "status",
+        "code",
+        "value",
+        "description",
+        "city",
+        "zip",
+        "ward"
+      ],
+      "bytes": 151856,
+      "sha256": "631096995e8e1e0b5fe7735a0fc562d991a84e2ebcc1b9c988dc96d32d36bb5b",
+      "source_urls_from_kit_readme": [
+        "https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20case_no%2Cstatus_dttm%2Cstatus%2Ccode%2Cvalue%2Cdescription%2Cviolation_city%2Cviolation_zip%2Cward%20FROM%20%22800a2663-1d6a-46e7-9356-bedb70f5332c%22%20WHERE%20status_dttm%20%3E%3D%20%272024-01-01%27%20ORDER%20BY%20status_dttm%20DESC%20LIMIT%20100"
+      ],
+      "blank_cells": {
+        "case_no": 0,
+        "status_date": 0,
+        "status": 0,
+        "code": 0,
+        "value": 0,
+        "description": 7,
+        "city": 0,
+        "zip": 1,
+        "ward": 0
+      },
+      "date_ranges": {
+        "status_date": {
+          "min_lexical": "2024-01-02",
+          "max_lexical": "2026-10-16",
+          "distinct": 536
+        }
+      }
+    },
+    {
+      "dataset": "scorecard",
+      "rows": 140,
+      "columns": [
+        "unitid",
+        "name",
+        "city",
+        "control",
+        "highest_degree",
+        "admission_rate",
+        "undergraduates",
+        "net_price_public",
+        "net_price_private",
+        "cost",
+        "in_state_tuition",
+        "median_debt",
+        "earnings_10yr",
+        "completion_4yr",
+        "completion_under_4yr"
+      ],
+      "bytes": 15636,
+      "sha256": "da6891a582bf007736e145a35f6ff66735c25dab2e37d4b9f48757f49a8f34f3",
+      "source_urls_from_kit_readme": [
+        "https://ed-public-download.scorecard.network/downloads/Most-Recent-Cohorts-Institution_10152026.zip"
+      ],
+      "blank_cells": {
+        "unitid": 0,
+        "name": 0,
+        "city": 0,
+        "control": 0,
+        "highest_degree": 0,
+        "admission_rate": 69,
+        "undergraduates": 12,
+        "net_price_public": 103,
+        "net_price_private": 63,
+        "cost": 55,
+        "in_state_tuition": 47,
+        "median_debt": 10,
+        "earnings_10yr": 3,
+        "completion_4yr": 70,
+        "completion_under_4yr": 93
+      },
+      "date_ranges": {}
+    },
+    {
+      "dataset": "onet",
+      "rows": 1016,
+      "columns": [
+        "code",
+        "title",
+        "description"
+      ],
+      "bytes": 267003,
+      "sha256": "508ed34f254e22186418ebb85f5cfff2b952d47b844d51cc49090245c0ccfe2d",
+      "source_urls_from_kit_readme": [
+        "https://www.onetcenter.org/dl_files/database/db_30_0_text/Occupation%20Data.txt"
+      ],
+      "blank_cells": {
+        "code": 0,
+        "title": 0,
+        "description": 0
+      },
+      "date_ranges": {}
+    },
+    {
+      "dataset": "ipeds",
+      "rows": 144,
+      "columns": [
+        "unitid",
+        "name",
+        "city",
+        "sector",
+        "level",
+        "control",
+        "hbcu",
+        "size",
+        "website",
+        "latitude",
+        "longitude"
+      ],
+      "bytes": 24266,
+      "sha256": "9fd736c1b7a72ffaffef41f69eaa370e924026322213168206f058d91f029ad6",
+      "source_urls_from_kit_readme": [
+        "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip"
+      ],
+      "blank_cells": {
+        "unitid": 0,
+        "name": 0,
+        "city": 0,
+        "sector": 0,
+        "level": 0,
+        "control": 0,
+        "hbcu": 0,
+        "size": 0,
+        "website": 1,
+        "latitude": 0,
+        "longitude": 0
+      },
+      "date_ranges": {}
+    },
+    {
+      "dataset": "openalex-works",
+      "rows": 500,
+      "columns": [
+        "title",
+        "year",
+        "type",
+        "cited_by",
+        "source"
+      ],
+      "bytes": 62863,
+      "sha256": "00175039f46f6261fc09b5ba48942d4087476eeaed3253f2cc71e0a5f6825065",
+      "source_urls_from_kit_readme": [
+        "https://api.openalex.org/works?filter=authorships.institutions.id:I63966007%7CI136199984%7CI103531236%7CI111088046%7CI12912129%7CI24603500%7CI133738476%7CI33434090%7CI96062909,publication_year:2024&sort=cited_by_count:desc&per_page=25&select=display_name,publication_year,cited_by_count,type,primary_location"
+      ],
+      "blank_cells": {
+        "title": 0,
+        "year": 0,
+        "type": 0,
+        "cited_by": 0,
+        "source": 2
+      },
+      "date_ranges": {
+        "year": {
+          "min_lexical": "2024",
+          "max_lexical": "2024",
+          "distinct": 1
+        }
+      }
+    },
+    {
+      "dataset": "colleges",
+      "rows": 206,
+      "columns": [
+        "college",
+        "campus",
+        "city",
+        "zip",
+        "town",
+        "type",
+        "level",
+        "category",
+        "housing",
+        "latitude",
+        "longitude"
+      ],
+      "bytes": 28555,
+      "sha256": "81d0524825cb94070f77517617ad251c2d8d46accc2c371e921fb99590f33dbc",
+      "source_urls_from_kit_readme": [
+        "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/HigherEd/MapServer/0/query?where=1%3D1&outFields=COLLEGE,CAMPUS,CITY,ZIPCODE,GEOG_TOWN,TYPE,NCES_TYPE,CATEGORY,CAMPUSHOUS&returnGeometry=true&outSR=4326&f=json"
+      ],
+      "blank_cells": {
+        "college": 0,
+        "campus": 114,
+        "city": 0,
+        "zip": 0,
+        "town": 0,
+        "type": 0,
+        "level": 0,
+        "category": 0,
+        "housing": 0,
+        "latitude": 0,
+        "longitude": 0
+      },
+      "date_ranges": {}
+    },
+    {
+      "dataset": "bluebikes",
+      "rows": 63063,
+      "columns": [
+        "start_station",
+        "end_station",
+        "trips",
+        "member_trips",
+        "casual_trips"
+      ],
+      "bytes": 4187621,
+      "sha256": "064f6aec47d0871a19061888a8ab78f90c26a53f9289665c88528943a3cda122",
+      "source_urls_from_kit_readme": [
+        "https://s3.amazonaws.com/hubway-data/202411-bluebikes-tripdata.zip"
+      ],
+      "blank_cells": {
+        "start_station": 0,
+        "end_station": 0,
+        "trips": 0,
+        "member_trips": 0,
+        "casual_trips": 0
+      },
+      "date_ranges": {}
+    },
+    {
+      "dataset": "vision-zero",
+      "rows": 44986,
+      "columns": [
+        "when",
+        "mode",
+        "where",
+        "street",
+        "cross_street",
+        "cross_street_2",
+        "latitude",
+        "longitude"
+      ],
+      "bytes": 3696343,
+      "sha256": "d0fd9bd9c8580496c7ac142e84e50a2549b50491cccb1fa6b4cdd971ecfa47ee",
+      "source_urls_from_kit_readme": [
+        "https://data.boston.gov/api/3/action/datastore_search?resource_id=e4bfe397-6bfc-49c5-9367-c879fac7401d&fields=dispatch_ts,mode_type,location_type,street,xstreet1,xstreet2,lat,long&sort=dispatch_ts%20desc&limit=100"
+      ],
+      "blank_cells": {
+        "when": 0,
+        "mode": 0,
+        "where": 0,
+        "street": 23461,
+        "cross_street": 3428,
+        "cross_street_2": 3428,
+        "latitude": 0,
+        "longitude": 0
+      },
+      "date_ranges": {
+        "when": {
+          "min_lexical": "2015-01-01 05:24:27+00",
+          "max_lexical": "2026-09-01 00:03:10+00",
+          "distinct": 44986
+        }
+      }
+    },
+    {
+      "dataset": "cambridge-crashes",
+      "rows": 17230,
+      "columns": [
+        "when",
+        "day",
+        "street",
+        "cross_street",
+        "near_street",
+        "cyclist",
+        "pedestrian",
+        "manner",
+        "first_event",
+        "light",
+        "weather",
+        "road",
+        "speed_limit",
+        "at",
+        "latitude",
+        "longitude"
+      ],
+      "bytes": 2693846,
+      "sha256": "950aaac2c061bb36f708dd4a4324fbfe4d2847aa2bcd5ba2c73afb9c1ebca23f",
+      "source_urls_from_kit_readme": [
+        "https://data.cambridgema.gov/resource/gb5w-yva3.json?$select=date_time,day_of_week,street_name,cross_street,near_street,location,may_involve_cyclist,may_involve_pedestrian,manner_of_collision,first_harmful_event,ambient_light,weather_condition_1,road_surface_condition,speed_limit,street_or_intersection&$order=date_time%20DESC&$limit=100"
+      ],
+      "blank_cells": {
+        "when": 0,
+        "day": 0,
+        "street": 44,
+        "cross_street": 10853,
+        "near_street": 12719,
+        "cyclist": 15291,
+        "pedestrian": 16061,
+        "manner": 212,
+        "first_event": 951,
+        "light": 74,
+        "weather": 115,
+        "road": 259,
+        "speed_limit": 2676,
+        "at": 20,
+        "latitude": 8352,
+        "longitude": 8352
+      },
+      "date_ranges": {
+        "when": {
+          "min_lexical": "2015-01-01T00:45:00.000",
+          "max_lexical": "2026-09-30T22:18:00.000",
+          "distinct": 17154
+        }
+      }
+    },
+    {
+      "dataset": "cambridge-bikes",
+      "rows": 92268,
+      "columns": [
+        "location",
+        "year",
+        "date",
+        "period",
+        "street",
+        "direction",
+        "where",
+        "movement",
+        "count",
+        "weather",
+        "latitude",
+        "longitude"
+      ],
+      "bytes": 12542625,
+      "sha256": "408e3638b0fa0a3580eb2653b545eeb4cddf4dc8c815ed535d0e753fe04a0477",
+      "source_urls_from_kit_readme": [
+        "https://data.cambridgema.gov/resource/ijm6-q7em.json?$select=countlocation,year,date,timeperiod,street,trafficdirection,cyclistlocation,movementtype,count,weather,latitude,longitude&$where=year%20%3E=%20%272018%27&$order=date%20DESC&$limit=100"
+      ],
+      "blank_cells": {
+        "location": 0,
+        "year": 0,
+        "date": 0,
+        "period": 0,
+        "street": 0,
+        "direction": 0,
+        "where": 0,
+        "movement": 0,
+        "count": 3060,
+        "weather": 0,
+        "latitude": 0,
+        "longitude": 0
+      },
+      "date_ranges": {
+        "year": {
+          "min_lexical": "2018",
+          "max_lexical": "2024",
+          "distinct": 5
+        },
+        "date": {
+          "min_lexical": "2018-09-26T00:00:00.000",
+          "max_lexical": "2024-09-17T00:00:00.000",
+          "distinct": 15
+        }
+      }
+    },
+    {
+      "dataset": "eco-totem",
+      "rows": 17123,
+      "columns": [
+        "when",
+        "day",
+        "total",
+        "entries",
+        "exits"
+      ],
+      "bytes": 664532,
+      "sha256": "82d1441742a58b84afbb7c89753c1a5de790a17c0d86ab0af5f31cd221f2dda9",
+      "source_urls_from_kit_readme": [
+        "https://data.cambridgema.gov/resource/q8v9-mcfg.json?$select=datetime,day,total,entries,exits&$where=datetime%20%3E=%20%272024-01-01T00:00:00%27&$order=datetime%20DESC&$limit=100"
+      ],
+      "blank_cells": {
+        "when": 0,
+        "day": 0,
+        "total": 0,
+        "entries": 0,
+        "exits": 0
+      },
+      "date_ranges": {
+        "when": {
+          "min_lexical": "2024-01-01T00:00:00.000",
+          "max_lexical": "2024-06-30T23:45:00.000",
+          "distinct": 17120
+        }
+      }
+    },
+    {
+      "dataset": "fresh-pond",
+      "rows": 8784,
+      "columns": [
+        "when",
+        "season",
+        "month",
+        "hour",
+        "average_users",
+        "blacks_nook",
+        "community_garden",
+        "little_fresh_pond",
+        "lusitania",
+        "pro_shop"
+      ],
+      "bytes": 470653,
+      "sha256": "fca141945f15ed6bbc6841b7db5de20922c3f42816cb2ae6bbd1dc6be98a6878",
+      "source_urls_from_kit_readme": [
+        "https://data.cambridgema.gov/resource/6xy8-cstb.json?$select=datetime,season,month,hour,fp_avg_hrly_use,bn,cg,lfp,lus,pro_shop&$where=year%20%3E=%20%272024%27&$order=datetime%20DESC&$limit=100"
+      ],
+      "blank_cells": {
+        "when": 0,
+        "season": 0,
+        "month": 0,
+        "hour": 0,
+        "average_users": 1,
+        "blacks_nook": 21,
+        "community_garden": 46,
+        "little_fresh_pond": 9,
+        "lusitania": 19,
+        "pro_shop": 3
+      },
+      "date_ranges": {
+        "when": {
+          "min_lexical": "2024-01-01T00:00:00.000",
+          "max_lexical": "2024-12-31T23:00:00.000",
+          "distinct": 8784
+        }
+      }
+    },
+    {
+      "dataset": "somerville-counts",
+      "rows": 2532,
+      "columns": [
+        "year",
+        "location",
+        "latitude",
+        "longitude",
+        "period",
+        "mode",
+        "count"
+      ],
+      "bytes": 148622,
+      "sha256": "41207079e683e01ba088a3fd491a81905b4268c845bd7a850d1d2761d43921f7",
+      "source_urls_from_kit_readme": [
+        "https://data.somervillema.gov/resource/qu9x-4xq5.json?$select=year,location_name,latitude,longitude,am_pm,mode,count&$order=year%20DESC&$limit=100"
+      ],
+      "blank_cells": {
+        "year": 0,
+        "location": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "period": 0,
+        "mode": 0,
+        "count": 6
+      },
+      "date_ranges": {
+        "year": {
+          "min_lexical": "2010",
+          "max_lexical": "2025",
+          "distinct": 16
+        }
+      }
+    },
+    {
+      "dataset": "numina",
+      "rows": 245555,
+      "columns": [
+        "zone",
+        "metric",
+        "object",
+        "count",
+        "time"
+      ],
+      "bytes": 11559290,
+      "sha256": "42446ef8bed171dee50b5db94dcbbb72b28b7a3cfe4ac4dd8231f5cf022c38e8",
+      "source_urls_from_kit_readme": [
+        "https://data.boston.gov/api/3/action/datastore_search?resource_id=d6c06150-418d-4705-b0c9-e92afd23ede7&fields=zone_id,metric,objClass,result,time&limit=100"
+      ],
+      "blank_cells": {
+        "zone": 0,
+        "metric": 0,
+        "object": 0,
+        "count": 0,
+        "time": 0
+      },
+      "date_ranges": {
+        "time": {
+          "min_lexical": "2020-07-10T00:00:00-04:00",
+          "max_lexical": "2021-04-30T23:00:00-04:00",
+          "distinct": 7080
+        }
+      }
+    }
+  ],
+  "join_checks": {
+    "scorecard_ipeds_unitid": {
+      "scorecard_unique": 140,
+      "ipeds_unique": 144,
+      "matched_unique": 135,
+      "scorecard_only": [
+        "12429201",
+        "13017405",
+        "13017408",
+        "13017409",
+        "18908801"
+      ],
+      "ipeds_only": [
+        "164599",
+        "164845",
+        "165644",
+        "166665",
+        "167464",
+        "167792",
+        "243799",
+        "425986",
+        "457624"
+      ]
+    },
+    "311_neighborhood_exact_name_unmatched_rows": {
+      "Bay Village": 26,
+      "Leather District": 5,
+      "": 7
+    }
+  }
+}

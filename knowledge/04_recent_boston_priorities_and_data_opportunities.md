@@ -4,6 +4,8 @@ Research cutoff: **October 24, 2026, Eastern Time.** Prepared for Hackachusetts 
 
 This brief connects public statements by Boston City Hall, agencies, community partners, and event stakeholders to feasible uses of the hackathon datasets. **Yes, this is a useful way to choose the project:** identify a documented problem, check whether the data can answer it, and demonstrate a useful next action. Public priorities are evidence of relevance, not proof of judges' private preferences or an endorsement.
 
+**Deeper follow-up:** [document 06](06_deep_evidence_transcripts_and_city_priorities.md) adds October 23 City statements, timestamped caption reviews, municipal award winners and existing-product checks. [Document 07](07_civic_dataset_verification.md) directly audits all 22 starter CSVs and supersedes earlier catalog-only data observations.
+
 ## 1. Decision first
 
 **Best default with the supplied data: a neighborhood service evidence-to-action workflow.** Use a defined 311 time window to help a resident organization or staff reviewer understand one service category, inspect the supporting records/aggregates, and prepare a sourced follow-up brief. The differentiator must be the completed workflow and trustworthy analysis; Boston already has open-data AI tooling.
@@ -35,7 +37,7 @@ This is a targeted research set, not a claim to have captured every social post 
 ### Interview/watch list, with verification limits
 
 1. **Start with the October 1 Wu interview:** [Boston Mayor Michelle Wu's strategy for AI][N7]. The page provides a 4:25 audio segment. This research reviewed its accompanying text, **not an audio transcript**; do not invent verbatim remarks or timestamps. The [October 2 Up Next episode][N16] also discusses the interview but is a 19:42 multi-topic episode, not 19:42 devoted entirely to Wu.
-2. **Read the October 19 State of the Schools speech:** [official transcript and embedded recording][N3]. The transcript is now published on the main City page, updated October 21. Earlier search snapshots still describe a future event; use the actual speech. It includes a call for community partners. We read the text, not the recording.
+2. **Read the October 19 State of the Schools speech:** [official transcript and embedded recording][N3]. The transcript is now published on the main City page, updated October 21. Earlier search snapshots still describe a future event; use the actual speech. It includes a call for community partners. The follow-up retrieved the recording’s auto-generated captions and checked selected passages against the official text; see [timestamped notes](06_deep_evidence_transcripts_and_city_priorities.md#b-state-of-the-schools--october-19-2026).
 3. **Read the September 16 Chamber speech/Q&A reporting:** [WBUR][N8]. This captures a useful difference in emphasis: the administration's housing tools and the business community's workforce-retention concern. A proposed October 1 permitting redesign in that article is a planned date, not independent verification that the redesign launched.
 4. **Read the February 2 permitting interview:** [WBZ][N12]. Older, but strategically important: then-CIO Santiago Garces described a task-oriented AI beta built from permit history. Treat it as evidence of an existing approach, not proof of its current quality or completeness.
 5. **Read the April 7 Garces interview:** [StateScoop][N13]. He described making civic analysis accessible through reusable AI workflows. It is an interview about his goals and reported work, not a guarantee that every mentioned public endpoint is currently accessible. His role has since changed.
@@ -153,7 +155,7 @@ Store a short paraphrase and link for news/interviews, not full copyrighted arti
 ### First 30 minutes of data validation
 
 1. Pick one user, one question and at most two operational datasets.
-2. Download the organizer's [Civic starter kit][D9] and inspect its actual files, schemas and metadata. This research reviewed the catalog but did not inspect the ZIP contents.
+2. Download the organizer's [Civic starter kit][D9] and inspect its actual files, schemas and metadata. This has now been completed for all 22 CSVs; use [the audit](07_civic_dataset_verification.md) and repeat relevant checks on the application’s chosen subset.
 3. Confirm row count, date range, missing values, category values, duplicate handling and geographic coverage. Preserve raw files and record source URLs.
 4. Try one bounded request against each required live API. Record response status, schema and retrieval time; don't quietly swap a snapshot into a “live” label.
 5. Verify one join with a small sample. Keep unmatched rows visible. Use a reviewed crosswalk when geographic boundaries differ.
@@ -202,7 +204,7 @@ This is proposed narration, not an actual impact claim. Replace it with the team
 - **D3/D4/D5:** MBTA alerts, filtered route query and official V3 reference — inspect current responses before use.
 - **D7:** FEMA declaration-history query — historical federal declarations, not real-time local warnings.
 - **D8:** [Garces' Boston data reference][D8] — author-maintained schema/migration notes; verify against actual source data.
-- **D9:** [Civic starter ZIP][D9] — offered by the challenge portal; contents not inspected in this research.
+- **D9:** [Civic starter ZIP][D9] — downloaded and parsed in the follow-up; [verified file contents](07_civic_dataset_verification.md) are separate from live API access.
 - Existing City code: [OpenContext](https://github.com/CityOfBoston/OpenContext) and [Coastmix](https://github.com/OETBoston/Coastmix). Review licenses and actual interfaces before reuse; neither implies unrestricted access to City systems.
 
 [N1]: https://www.boston.gov/news/city-boston-launches-coastmix

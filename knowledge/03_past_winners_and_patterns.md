@@ -98,6 +98,12 @@ Boston's Emerging Technology page and OpenContext repository are useful referenc
 
 The detailed competitive implications are in [the Civic strategy brief](02_civic_strategy_stakeholders_and_ideas.md). Present an improvement over an existing task flow, not the unsupported claim that no civic AI or service-navigation tools exist.
 
+### Boston Innovation Expo 2026: City awards with direct Civic relevance
+
+Boston also published its own municipal award winners: **311 Help Center** (People’s Choice), **Mapping Disability Access in Boston** (Cross-Departmental Collaboration), **Lessons from BidBot** (Rising Innovation), and **New Algorithms for Old Mattresses** (Public Impact). These are City Expo awards, not Hackachusetts competition wins. [Official City award list](https://www.boston.gov/news/winners-innovation-expo-2026).
+
+The follow-up inspected the project posters, the short captioned award promo, and a research abstract describing BidBot’s randomized employee evaluation. See [the detailed findings and numerical-claim limits](06_deep_evidence_transcripts_and_city_priorities.md#4-what-boston-itself-recognized-four-actual-city-award-winners). The useful pattern is a specific public-service improvement with inspectable evidence. Awards alone still do not explain an individual judge’s reasoning.
+
 ## 7. Patterns worth adopting — and their limits
 
 The following is our synthesis, not a statement from judges.
