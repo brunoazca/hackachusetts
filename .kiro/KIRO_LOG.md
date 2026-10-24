@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:17 — Started Kiro Crew campaign 'Rat Audit — new datasets to a...
+- Teammate: Bruno
+- Agent: —
+- Did: Started Kiro Crew campaign 'Rat Audit — new datasets to add' with the full list of sources we already have
+- Why: Find datasets that fill gaps (sewer, waste, problem properties, health, benchmarks)
+- Where: none
+- Idea: Candidates: BWSC sewer/catch basins, dumpster permits, Project Oscar compost bins, BPDA pipeline, BHA properties, problem properties, MA DPH health data, NYC/Chicago inspection outcomes
+
 ### 2026-10-24 15:16 — Removed Simple/Explore: all layers on by default, heatmap...
 - Teammate: Bruno
 - Agent: —
