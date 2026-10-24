@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:02 — Auto-sync: .kiro/scripts/autopush.sh commits and pushes e...
+- Teammate: Bruno
+- Agent: —
+- Did: Auto-sync: .kiro/scripts/autopush.sh commits and pushes every change to origin/main every 3 min (secret scan still gates; conflicts abort, never force)
+- Why: Bruno asked to guarantee things are pushed constantly
+- Where: .kiro/scripts/autopush.sh
+- Idea: Run it in any session: INTERVAL=180 .kiro/scripts/autopush.sh
+
 ### 2026-10-24 13:59 — Draft UI: live MapLibre map of all incident categories (c...
 - Teammate: Bruno
 - Agent: —

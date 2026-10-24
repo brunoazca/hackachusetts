@@ -1,0 +1,30 @@
+# Deploy web/ to Vercel (project rat-ops -> https://rat-ops.vercel.app) on every push to main.
+# Needs repo secret VERCEL_TOKEN (Vercel account settings -> Tokens).
+name: Deploy web
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+env:
+  VERCEL_ORG_ID: team_iGzu8oN628j9OSJ3qakDYp4i
+  VERCEL_PROJECT_ID: prj_rJiVrRy5Uwo9OiFa3HId0Sxe6ULx
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      # The project's root directory is web/, so deploy from the repo root; Vercel builds remotely.
+      - run: npx --yes vercel@65.2.0 deploy --prod --yes --token "${{ secrets.VERCEL_TOKEN }}"

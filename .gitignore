@@ -43,3 +43,4 @@ pipeline/.venv/
 
 # Supabase CLI local cache
 supabase/.temp/
+.vercel
