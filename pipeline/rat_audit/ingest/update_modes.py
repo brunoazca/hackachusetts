@@ -19,6 +19,9 @@ UPDATE_MODES: dict[str, tuple[str, str]] = {
     "noaa-ghcnd-logan": ("daily", "NOAA posts with a ~4-day lag"),
     "boston-food-inspections": ("daily", "rodent-related violations; businesses with a new citation are rebuilt"),
     "boston-building-permits": ("daily", "demolition / excavation / new construction; display only"),
+    "cambridge-food-inspections": ("daily", "Cambridge sanitary inspections: pest / rodent violations; full reload"),
+    "cambridge-housing-violations": ("daily", "Cambridge housing code pest violations (410.550); full reload"),
+    "cambridge-building-permits": ("daily", "Cambridge demolition + new construction; display only"),
     # ---- static (loaded once) ----
     "boston-311-2023": ("static", "closed year"),
     "boston-311-2024": ("static", "closed year"),
@@ -28,6 +31,8 @@ UPDATE_MODES: dict[str, tuple[str, str]] = {
     "boston-bigbelly": ("static", "bin locations"),
     "boston-city-lots": ("static", "city-owned property inventory"),
     "boston-public-schools": ("static", "school locations"),
+    "cambridge-assessment-fy26": ("static", "Cambridge property database FY2026 (FY2025 values joined)"),
+    "cambridge-public-schools": ("static", "school locations"),
     "boston-colleges": ("static", "college locations"),
     "boston-checkbook": ("static", "city spending FY2023–26; FY2024 table incomplete"),
     "climate-ready-boston-svi": ("static", "2010 tracts"),

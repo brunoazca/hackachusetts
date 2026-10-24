@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:36 — Decided how to use other cities' rat data for a Boston-fo...
+- Teammate: Bruno
+- Agent: —
+- Did: Decided how to use other cities' rat data for a Boston-focused app: not raw training rows; use NYC inspection outcomes as a 'what works' prior and a natural-decay baseline, NYC complaint-vs-inspection to calibrate under-reporting, DC/Chicago as method benchmarks, Cambridge/Somerville for border effects
+- Why: Other cities differ in reporting systems; their value is outcomes and calibration
+- Where: none
+- Idea: Proposed Kiro campaign: NYC inspection outcomes after baiting / abatement / compliance with matched comparison and decay curve
+
 ### 2026-10-24 15:35 — Forecast map: smoothed surface (25 m raster, nested level...
 - Teammate: Bruno
 - Agent: —

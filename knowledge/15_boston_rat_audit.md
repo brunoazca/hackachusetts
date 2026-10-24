@@ -72,6 +72,27 @@ All Boston datasets are on [Analyze Boston](https://data.boston.gov/) (CKAN). Ta
 | [Zillow ZORI by ZIP](https://www.zillow.com/research/data/) | `files.zillowstatic.com/research/public_csvs/zori/Zip_zori_uc_sfrcondomfr_sm_month.csv` | Typical rent per ZIP, monthly | downloaded |
 | Property assessment values | `ee73430d-…` | Assessed value per parcel, which can be compared year over year at chronic addresses | fields checked |
 
+### New datasets found (Kiro Crew campaign `95a7dbd6`, checked Oct 24)
+
+Ranked by value for the app vs effort. "Checked" = queried by us after the campaign.
+
+| # | Dataset | Access | What it adds | Join | Status |
+|---|---|---|---|---|---|
+| 1 | Boston ISD Building and Property Violations (full) | CKAN `800a2663-1d6a-46e7-9356-bedb70f5332c` | Unsafe, boarded, distressed-structure violations (harborage). The starter file was a 2,018-row slice without addresses | `sam_id`, lat/long | **Checked: 17,493 rows**, with address and lat/long. Has `contact_*` owner fields: keep them private |
+| 2 | Boston Problem Properties list | [boston.gov page](https://www.boston.gov/government/cabinets/operations-cabinet/problem-properties-boston) (HTML table; CKAN CSV is empty) | City's own chronic-nuisance list (4+ valid complaints in 12 months), Parcel ID, designation date | Parcel ID | Page checked (200); scrape the table |
+| 3 | Article 80 Development Projects (BPDA) | [CKAN](https://data.boston.gov/dataset/article80-development-projects): GeoJSON, CSV, SHP, ArcGIS REST | Large construction pipeline with status, units, square feet | lat/long, parcel | **Checked**, updated Oct 18 |
+| 4 | NYC DOHMH Rodent Inspection | Socrata `data.cityofnewyork.us/resource/p937-wjvj.json` | Inspection → compliance → baiting chain **with results**: the outcome data Boston lacks | benchmark (NYC BBL) | **Checked: 3,143,438 inspections**; results: Passed 1.85M, Bait applied 430K, Failed for rat activity 404K, Failed other 261K, Failed both 131K, Monitoring visit 48K. Some dates are invalid (1918, 2045): filter |
+| 5 | Boston street-occupancy permits (dumpsters at construction sites) | Street Occupancy Permit Lookup / Street Work Map (nightly feed) | Private waste containers and how long they stay | address, lat/long | No bulk download found; may need the map's ArcGIS layer |
+| 6 | DC 311 rodent abatement (S0311) + The Lab @ DC model | [Open Data DC](https://opendata.dc.gov/datasets/DCGIS::rodent-control-dashboard); [method](https://thelabprojects.dc.gov/rats) | Benchmark plus a published, validated rat-burrow prediction method | benchmark | Campaign-confirmed |
+| 7 | Chicago rodent baiting 311 | Socrata `data.cityofchicago.org/resource/3hy6-wdqe.json` | Response-time and repeat-request benchmark | benchmark | **Checked: 319,187 rows** |
+| 8 | MBTA rapid transit stations | `gis.boston.gov/ArcGIS/rest/services/Infrastructure/OpenData/MapServer/1/query?where=1%3D1&outFields=*&f=geojson` | Foot traffic and litter near stations | distance | Campaign-confirmed |
+| 9 | Philadelphia 311 (rodent) + L&I complaints | Carto SQL `phl.carto.com/api/v2/sql` | Second request-type benchmark | benchmark | Campaign-confirmed |
+| 10 | MA EPHT asthma ED visits by town | [mass.gov](https://www.mass.gov/info-details/ma-epht-asthma) | Town-level housing-quality proxy | town | Mostly viewer and PDF |
+
+Checked and **not usable as data**: BWSC catch basins (map viewer only), Project Oscar compost bins (program page and flyers only), Boston Housing Authority locations (viewer only), MA leptospirosis case counts (request-only, small counts suppressed).
+
+Socrata sources (NYC, Chicago, Cambridge, Somerville, CDC) use `SOCRATA_APP_TOKEN` from `.env.local` for higher rate limits. Never put the token in a campaign prompt.
+
 ## 4. Findings so far
 
 ### Drivers (2025, 25 Boston ZIPs, per 1,000 property records)
