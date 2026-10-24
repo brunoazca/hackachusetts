@@ -309,15 +309,18 @@ export default function MapView() {
       const d = Date.parse(p.opened ?? p.newest ?? "");
       return Number.isFinite(d) ? Math.max(0, Math.round((ref - d) / 86400000)) : undefined;
     };
+    // Points the chat picked always show, on their own, whatever the filters say.
+    const picked = new Set(highlight);
     const keep = data.features
-      .filter((f) => on.has(f.properties.category) && (CATS[f.properties.category]?.group === "rats" || causes || street))
+      .filter((f) => (f.properties.id && picked.has(f.properties.id)) || (on.has(f.properties.category) && (CATS[f.properties.category]?.group === "rats" || causes || street)))
       .map((f) => ({ ...f, properties: { ...f.properties, age: ageOf(f.properties) } }));
     // Reports at the very same spot (one address) would draw exactly on top of each other and look
     // like one. Fold them into one marker with a count; tapping it opens the address with all of them.
-    // Single reports inside the open insight's region are never grouped: same-address reports fan
+    // Single reports inside the open insight's region (or picked by the chat) are never grouped: same-address reports fan
     // out around their spot (icon offsets, so the ring keeps its size at any zoom).
     const inRegion = (f: (typeof keep)[number]) => {
       if ((f.properties.n ?? 1) > 1) return false;
+      if (f.properties.id && picked.has(f.properties.id)) return true;
       const [x, y] = f.geometry.coordinates;
       return regionBoxes.some((b) => x >= b[0] && x <= b[2] && y >= b[1] && y <= b[3]);
     };
@@ -351,7 +354,7 @@ export default function MapView() {
       features.push({ ...pick, properties: { ...pick.properties, category, n, n_open, spot: true, group: CATS[category]?.group ?? "rats" } as IncidentProps });
     }
     return { type: "FeatureCollection", features };
-  }, [data, cats, causes, street, filters.until, regionBoxes]);
+  }, [data, cats, causes, street, filters.until, regionBoxes, highlight]);
 
   // Keep the keyboard "features in view" list (FeatureList) in sync with what the map draws.
   // In Act we list the ranked sites; otherwise the single reports with a real id, nearest first.

@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:44 — Chat-picked points never cluster: they draw as single ico...
+- Teammate: Bruno
+- Agent: —
+- Did: Chat-picked points never cluster: they draw as single icons (fanned at shared addresses), even if filtered out
+- Why: when the chat selects reports they must be visible one by one, not folded into a group
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
 ### 2026-10-24 19:42 — Region view: buildings step aside (3D off, footprints fad...
 - Teammate: Bruno
 - Agent: —
