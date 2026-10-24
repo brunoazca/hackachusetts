@@ -69,6 +69,8 @@ The Mayor's October 1 WBUR interview, October 19 schools speech, October 20 work
 
 **Product question:** did an action resolve the original issue, create a different obstacle, or require another owner? RepairLedger can make that visible. The starter's waste categories cannot establish rodent prevalence; no literal “rodent” rows were found in its audited keyword check.
 
+**October 24 follow-up:** [document 12](12_rodent_control_creative_playbook.md) adds the October 23 local hearing report and selected captions from the official recording. It also records the City's existing baseline/comparison-site work, preventing a misleading claim that evaluation is absent. The larger Boston 2026 source contains an exact Rodent Activity category; Cambridge offers separate smart-device and sighting data. These expand the evidence without turning self-selected reports into a population estimate.
+
 ### Campus support: conflicting information is a real demonstration fixture
 
 **Sources:** the [provider page](https://www.umb.edu/campus-life/current-students/u-access/food-pantry/) asks users to register; the [Lemontree listing](https://www.foodhelpline.org/resources/umass-boston-u-access-food-pantry) says no preregistration is needed. The latter also contains both summer-hours text and a recurring schedule.

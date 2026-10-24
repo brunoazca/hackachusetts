@@ -10,6 +10,11 @@ Checked October 24, 2026. These files support the Markdown research, not applica
 - `audit_public_resources.py` reproduces this resource inventory. It does not execute downloaded code, create accounts, submit forms or save individual data rows. It retains failed probes and follows the GBFS discovery document for station feeds.
 - `public_resource_inventory.csv` is a **catalog CSV** with 47 data/repository probe rows, not the underlying municipal datasets. GitHub license metadata can say `NOASSERTION` even when the inspected license file is clear; document 10 records the distinction.
 - `creative_link_audit.json` is the separate reachability check for new documents 09–11. The original link audit is retained.
+- `rodent_resource_audit.json` and `audit_rodent_resources.py` record/reproduce exact Boston rodent-category queries, Cambridge metadata/counts, parsed workshop CSV aggregates and repository license signals. No complaint text or addresses are retained in this audit.
+- `rodent_hearing_caption_audit.json` records public recording metadata, hashes of two supplied caption tracks and four inspected windows. Full caption files remain outside the repo; notes are paraphrases and were not checked against the audio.
+- `rodent_link_audit.json` is the bounded URL reachability check for document 12.
+
+The rodent pass checked **26 unique URLs** after replacing an obsolete trash-guide PDF with the current City collection page: 25 returned HTTP 200; Universal Hub returned 403 to HEAD, although its report was readable through the web research service. The final cited set has no 404/410 responses. The machine-readable audit is a reachability check, not proof of the claims on each page.
 
 ## Deeper expansion: concrete checks and remaining limits
 
@@ -31,7 +36,7 @@ The deep research brief records three YouTube caption sources with timestamped n
 
 The City Expo's 34-page poster collection was text-extracted. BidBot, disability access, and mattress-collection posters were also rendered and visually inspected. Their quantitative results remain source-reported, with evaluation limits recorded in document 06.
 
-The October 1 WBUR audio was not independently transcribed. The October 23 rodent hearing's official notice was checked; its third-party AI summary remains a lead requiring verification against the official recording. Neither is presented as a fully verified transcript.
+The October 1 WBUR audio was not independently transcribed. A subsequent rodent-specific pass identified the official October 23 hearing recording and read four caption windows; see document 12 and `rodent_hearing_caption_audit.json`. This does not validate the complete third-party AI summary or amount to a fully verified transcript.
 
 ## HTTP status interpretation
 

@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-10-24T15:41:45.319350+00:00",
+  "url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs",
+  "metadata": {
+    "id": "Fn4cGj8xxBs",
+    "title": "City Services on October 23, 2026",
+    "channel": "Boston City Council",
+    "upload_date": "20261023",
+    "duration": 9514,
+    "availability": "public"
+  },
+  "caption_tracks": [
+    {
+      "track_id": "en-JkeT_87f4cc",
+      "bytes": 471510,
+      "sha256": "4aba7f84dd356ff669d653eb3c2b7c7d63fd0ec5b22ee73006096f23b8a1e67f"
+    },
+    {
+      "track_id": "en-uYU-mmqFLq8",
+      "bytes": 2661723,
+      "sha256": "665208183698d166ac72411c3c91d582f70ec0a47d548d884e70ec8c9d13570c"
+    }
+  ],
+  "reviewed_track": "en-JkeT_87f4cc",
+  "reviewed_windows_seconds": [
+    [
+      810,
+      870
+    ],
+    [
+      1180,
+      1250
+    ],
+    [
+      3540,
+      3630
+    ],
+    [
+      4130,
+      4220
+    ]
+  ],
+  "method": "yt-dlp --skip-download metadata and supplied English subtitle retrieval; selected caption text read. No audio/video downloaded or independent audio verification. Complete hearing not reviewed.",
+  "notes_location": "../12_rodent_control_creative_playbook.md#four-inspected-hearing-passages",
+  "transcript_retention": "No full transcript committed. Track hashes permit identifying the inspected versions."
+}

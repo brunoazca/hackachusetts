@@ -1,0 +1,325 @@
+{
+  "checked_at_utc": "2026-10-24T15:43:02.160491+00:00",
+  "scope": "Unique public URLs in selected knowledge Markdown, excluding fragments. HTTP reachability only; not link content or API validation.",
+  "documents": [
+    "12_rodent_control_creative_playbook.md"
+  ],
+  "status_counts": {
+    "200": 25,
+    "403": 1
+  },
+  "results": [
+    {
+      "url": "https://content.boston.gov/sites/default/files/file/2024/07/Final%20Full%20BRAP%20Report.pdf",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://content.boston.gov/sites/default/files/file/2024/07/Final%20Full%20BRAP%20Report.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/311-service-requests/resource/1a0b420d-99f1-4887-9851-990b2a5a6e17",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/311-service-requests/resource/1a0b420d-99f1-4887-9851-990b2a5a6e17",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.boston.gov/dataset/311-service-requests/resource/254adca6-64ab-4c5c-9fc0-a6da622be185",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/dataset/311-service-requests/resource/254adca6-64ab-4c5c-9fc0-a6da622be185",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/Public-Works/Commonwealth-Connect-Service-Requests-Rodent-Sight/uz4w-baz5/about_data",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/Public-Works/Commonwealth-Connect-Service-Requests-Rodent-Sight/uz4w-baz5/about_data",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/Public-Works/Smart-Rat-Boxes/78bs-b5ig/about_data",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/Public-Works/Smart-Rat-Boxes/78bs-b5ig/about_data",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/api/views/78bs-b5ig.json",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/api/views/78bs-b5ig.json",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/api/views/uz4w-baz5.json",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/api/views/uz4w-baz5.json",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/resource/78bs-b5ig.csv",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/resource/78bs-b5ig.csv",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://data.cambridgema.gov/resource/uz4w-baz5.csv",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/resource/uz4w-baz5.csv",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://gisportal.boston.gov/arcgis/rest/services/Infrastructure/OpenData/MapServer/10",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://gisportal.boston.gov/arcgis/rest/services/Infrastructure/OpenData/MapServer/10",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/harvardinformatics/llm-workshop-smart-rat",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/harvardinformatics/llm-workshop-smart-rat",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/harvardinformatics/llm-workshop-smart-rat/blob/main/LICENSE",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/harvardinformatics/llm-workshop-smart-rat/blob/main/LICENSE",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/harvardinformatics/llm-workshop-smart-rat/blob/main/data/data_dictionary.md",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/harvardinformatics/llm-workshop-smart-rat/blob/main/data/data_dictionary.md",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://github.com/ishana-s/Invasive_Rats_Refuse",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://github.com/ishana-s/Invasive_Rats_Refuse",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308917",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308917",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/participatory-budgeting/rat-prevention-initiatives-dense-residential-areas",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/participatory-budgeting/rat-prevention-initiatives-dense-residential-areas",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/departments/public-works/trash",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/departments/public-works/trash",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2026/05/Operations%20FY27%20City%20Council%20Hearing.pdf",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/sites/default/files/file/2026/05/Operations%20FY27%20City%20Council%20Hearing.pdf",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.boston.gov/trash-and-recycling",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.boston.gov/trash-and-recycling",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2019.00013/full",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2019.00013/full",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.universalhub.com/2026/allston-rat-city-more-boston-rat-city-rat-amusement-parks-rat-buffets",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "403",
+      "final_url": "https://www.universalhub.com/2026/allston-rat-city-more-boston-rat-city-rat-amusement-parks-rat-buffets",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "requires review; HEAD failure does not prove source is unavailable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs&t=1180s",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs&t=1180s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs&t=3540s",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs&t=3540s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs&t=4130s",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs&t=4130s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs&t=810s",
+      "documents": [
+        "12_rodent_control_creative_playbook.md"
+      ],
+      "method": "HEAD",
+      "http_status": "200",
+      "final_url": "https://www.youtube.com/watch?v=Fn4cGj8xxBs&t=810s",
+      "curl_exit_code": 0,
+      "error": null,
+      "interpretation": "reachable; content not validated by this check"
+    }
+  ]
+}

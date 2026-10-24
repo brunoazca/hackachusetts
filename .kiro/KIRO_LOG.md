@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 11:43 — Researched eight creative rodent-control concepts and ver...
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Researched eight creative rodent-control concepts and verified source data
+- Why: Ground the rodent idea in current City priorities, usable records and a feasible demo
+- Where: knowledge/12_rodent_control_creative_playbook.md; knowledge indexes and briefs; knowledge/sources/rodent*; knowledge/sources/audit_rodent_resources.py
+- Idea: NIGHTSHIFT: coordinate one block of overnight waste exposure; RATLAB is the data-analysis alternative
+
 ### 2026-10-24 11:14 — Expanded Civic research with 15 creative concepts and ver...
 - Teammate: Guilherme
 - Agent: Codex (research; not Kiro build activity)
