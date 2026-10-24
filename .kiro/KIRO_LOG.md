@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:45 — Paused build: stopped the 4 parallel build agents to plan...
+- Teammate: Bruno
+- Agent: —
+- Did: Paused build: stopped the 4 parallel build agents to plan more
+- Why: Bruno asked to plan further before building
+- Where: none
+- Idea: Next: settle correlations, prediction design, scope priorities and demo story before restarting tracks
+
+### 2026-10-24 12:44 — Kiro Crew campaigns 93c1ad29 (what worked) and e241ffc6 (...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew campaigns 93c1ad29 (what worked) and e241ffc6 (block drivers) done; results added to knowledge/09 and the Data Atlas card
+- Why: Integrate research results
+- Where: knowledge/09_boston_rat_audit.md
+- Idea: Monitoring (1,750 cases) does not cut recurrence (14.1->14.2%), violations do (15.3->12.2%); chronic sites get 237/280 monitoring, 14 violations. Block level: ZIP +0.78 was reporting artifact; trash +0.13, dumping +0.10, restaurants +0.03, rain none, Big Belly ~8% lower
+
 ### 2026-10-24 12:43 — Scaffolded Rat Audit: Supabase project + PostGIS schema, ...
 - Teammate: Bruno
 - Agent: —
