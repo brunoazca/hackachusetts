@@ -3,7 +3,7 @@
 Part of the [Piper design standards](../README.md).
 
 ### Command bar (⌘K)
-- Trigger in TopBar: 560 × 40, `panel` glass, radius 12, placeholder
+- Trigger in TopBar: 560 × 40, `surface`, radius 12, placeholder
   "Search a street, ZIP, or ask Piper…", `kbd` ⌘K at right (mono 11, 20 h, radius
   6, 1 px edge).
 - Open: centered at top 96, 640 w, max-h 480, scrim. Input 52 h, `text-body`.

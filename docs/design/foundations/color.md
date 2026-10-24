@@ -82,7 +82,7 @@ fg-2 `#4F463E`, fg-3 `#6B6056`, line `#D8CFC1`, edge `#857868`.
 | Open report | filled dot | bone @ 85% | soot @ 85% |
 | Closed report | hollow dot, 1 px | mink | mink |
 | Came back | filled dot + ring | vermilion | vermilion-deep |
-| Chronic site | dot + 1–5 rings (one per return, cap 5) | vermilion | vermilion-deep |
+| Chronic site | dot + 1–3 rings (one per ~4 returns, cap 3) | vermilion | vermilion-deep |
 | Forecast cell | 45° hatch, band = density | delft | delft-deep |
 | Held 60+ days | filled square, 8 px | verdigris | verdigris-deep |
 | Driver place | outline glyph (see 7.4) | ash | fg-2 |
@@ -117,7 +117,7 @@ borders, switch tracks, segment outlines) uses `edge`.
 | Body text | `fg` | `fg-2` for paragraphs |
 | Labels, meta | `fg-2` | `fg-3` for anything longer than a line |
 | Axis labels, captions, eyebrows | `fg-3` | `line` |
-| Panel over the map | `panel` + `glass` | `card` (opaque, hides map) |
+| Panel over the map | `panel-solid` + 1 px `line` (utility `surface`) | blur, glow, big shadows |
 | Card inside a panel | `card` | `panel` nested in `panel` |
 | Primary button | `accent` / `accent-fg` | `return` |
 | A site that came back | `return` | `danger` |

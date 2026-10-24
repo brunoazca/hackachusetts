@@ -10,7 +10,7 @@ Part of the [Piper design standards](../README.md).
    between sections 24 · edge gap 12 (desktop) / 8 (phone).
 3. **Three control heights:** 32, 40, 48. A clickable row is ≥ 36 tall.
 4. **Nothing interactive under 24 × 24** (WCAG 2.5.8). Phone actions are 48.
-5. **Panels float** 12 px from the viewport edge on glass. No edge-to-edge bars on desktop.
+5. **Panels float** 12 px from the viewport edge on a solid `surface`. No edge-to-edge bars on desktop.
 6. **The map's clear area is protected.** `flyTo`/`fitBounds` always pass
    `mapPadding` so targets land between the panels, never under them.
 
@@ -47,10 +47,11 @@ outline with 2 px `bg` offset (`outline: 2px solid; outline-offset: 2px`).
 
 | Token | Value | Use |
 |---|---|---|
-| `shadow-panel` | `0 1px 0 0 rgb(255 255 255 / .04) inset, 0 24px 48px -16px rgb(0 0 0 / .65)` | floating panels |
-| `shadow-pop` | `0 12px 32px -8px rgb(0 0 0 / .7)` | menus, tooltips, ⌘K |
-| `shadow-sheet` | `0 -24px 64px -12px rgb(0 0 0 / .75)` | work order, bottom sheet |
-| `glass` | `backdrop-filter: blur(20px) saturate(1.15)` | panels |
+| `shadow-panel` | `0 1px 2px rgb(0 0 0 / .25)` | floating panels |
+| `shadow-pop` | `0 4px 12px rgb(0 0 0 / .2)` | menus, tooltips, ⌘K |
+| `shadow-sheet` | `0 -8px 24px rgb(0 0 0 / .25)` | work order, bottom sheet |
+| `surface` | `panel-solid` + 1 px `line` + 1–2 px shadow | all panels (default) |
+| `glass` | `backdrop-filter: blur(12px)` | opt-in only; never the default |
 
 Bone theme uses the same geometry at ¼ alpha with warm shadow `rgb(60 40 20)`.
 
@@ -78,7 +79,7 @@ cmdk 50 · sheet 60 · toast 70 · tooltip 80`.
 └───────────────────────────────────────────────────────────────────────────┘
 ```
 
-- TopBar is not a bar: three floating clusters on glass, 12 px from the top.
+- TopBar is not a bar: three floating clusters on `surface`, 12 px from the top.
 - Rail: top 80, left 12, bottom 136 (above timeline). Collapsed: 56 w, glyphs only.
 - Dossier: top 80, right 12, bottom 12, width 400 (lg) / 440 (2xl). Scrolls inside.
 - Timeline: left = rail right + 12, right = Dossier left − 12, bottom 12, height 112.

@@ -148,9 +148,8 @@
   --text-ui--line-height: 20px;
   --text-small: 13px;
   --text-small--line-height: 18px;
-  --text-eyebrow: 11px;
+  --text-eyebrow: 12px;
   --text-eyebrow--line-height: 16px;
-  --text-eyebrow--letter-spacing: 0.08em;
   --text-data: 13px;
   --text-data--line-height: 20px;
   --text-data-lg: 20px;
@@ -165,10 +164,9 @@
   --radius-xl: 20px;
 
   /* elevation */
-  --shadow-panel: inset 0 1px 0 0 rgb(255 255 255 / 0.04),
-    0 24px 48px -16px rgb(var(--p-shadow-rgb) / calc(0.65 * var(--p-shadow-a)));
-  --shadow-pop: 0 12px 32px -8px rgb(var(--p-shadow-rgb) / calc(0.7 * var(--p-shadow-a)));
-  --shadow-sheet: 0 -24px 64px -12px rgb(var(--p-shadow-rgb) / calc(0.75 * var(--p-shadow-a)));
+  --shadow-panel: 0 1px 2px rgb(var(--p-shadow-rgb) / calc(0.25 * var(--p-shadow-a)));
+  --shadow-pop: 0 4px 12px rgb(var(--p-shadow-rgb) / calc(0.2 * var(--p-shadow-a)));
+  --shadow-sheet: 0 -8px 24px rgb(var(--p-shadow-rgb) / calc(0.25 * var(--p-shadow-a)));
 
   /* motion -> ease-out, ease-spring ... */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -238,7 +236,9 @@
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "ss01" off;
   }
-  .font-display { font-optical-sizing: auto; font-style: italic; font-weight: 500; }
+  /* a themed subtree (work order) must set its own color, or it inherits the parent theme's computed text color */
+  [data-theme], .theme-bone { color: var(--p-fg); }
+  .font-display { font-optical-sizing: auto; font-weight: 500; }
   .font-mono, [data-numeric] { font-variant-numeric: tabular-nums; }
   :focus-visible {
     outline: 2px solid var(--p-accent);
@@ -249,19 +249,24 @@
 }
 
 /* ---------- Utilities ---------- */
+/* Default floating surface: solid, hairline, almost no shadow. */
+@utility surface {
+  background: var(--p-panel-solid);
+  border: 1px solid var(--p-line);
+  box-shadow: 0 1px 2px rgb(var(--p-shadow-rgb) / calc(0.25 * var(--p-shadow-a)));
+}
+/* Opt-in only (e.g. the TopBar over a busy map). Not the default. */
 @utility glass {
   background: var(--p-panel);
-  backdrop-filter: blur(20px) saturate(1.15);
-  -webkit-backdrop-filter: blur(20px) saturate(1.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--p-line);
-  box-shadow: var(--shadow-panel);
 }
 @utility eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-sans);
+  font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-weight: 500;
   color: var(--p-fg-3);
 }
 @utility skeleton {

@@ -112,15 +112,15 @@
     // reports
     const rep = $("#g-reports");
     SITES.forEach((s) => {
-      const n = 26 + Math.round(rnd() * 16);
+      const n = 14 + Math.round(rnd() * 8);
       for (let i = 0; i < n; i++) {
         const x = s.x + gauss() * 26, y = s.y + gauss() * 22, k = rnd();
-        if (k < 0.1) { svg("circle", { class: "glow", cx: x, cy: y, r: 7 }, rep); svg("circle", { class: "dot-return", cx: x, cy: y, r: 2.6 }, rep); }
+        if (k < 0.1) svg("circle", { class: "dot-return", cx: x, cy: y, r: 2.4 }, rep);
         else if (k < 0.45) svg("circle", { class: "dot-open", cx: x, cy: y, r: 2.4 }, rep);
         else svg("circle", { class: "dot-closed", cx: x, cy: y, r: 2.4 }, rep);
       }
     });
-    for (let i = 0; i < 420; i++) {
+    for (let i = 0; i < 220; i++) {
       const x = 120 + rnd() * 780, y = 200 + rnd() * 580; if (x > 860 && y < 380) continue;
       svg("circle", rnd() < 0.4 ? { class: "dot-open", cx: x, cy: y, r: 2 } : { class: "dot-closed", cx: x, cy: y, r: 2 }, rep);
     }
@@ -132,7 +132,7 @@
       if (type === "works") svg("path", { class: "driver", d: `M${x} ${y - 6} L${x + 6} ${y + 5} L${x - 6} ${y + 5}Z` }, dr);
       if (type === "bin") { svg("circle", { class: "driver", cx: x, cy: y, r: 5 }, dr); svg("circle", { cx: x, cy: y, r: 1.2, fill: "var(--p-fg-2)" }, dr); }
     };
-    SITES.forEach((s, i) => { glyph(["food", "works", "bin", "food"][i % 4], s.x + 30 + rnd() * 20, s.y - 26 - rnd() * 10); glyph("food", s.x - 34, s.y + 18); });
+    SITES.slice(0, 5).forEach((s, i) => glyph(["food", "works", "bin", "food", "food"][i], s.x + 30 + rnd() * 20, s.y - 26 - rnd() * 10));
     glyph("shelter", 724, 424);
     // tune path
     const g = $("#g-tune");
@@ -141,10 +141,10 @@
     const gs = $("#g-sites");
     SITES.forEach((s) => {
       const grp = svg("g", { class: "site", tabindex: "0", role: "button", "data-id": s.id, "aria-label": `Chronic site ${s.rank}: ${s.street}, ${s.back} came back` }, gs);
-      const rings = Math.min(5, Math.max(1, Math.round(s.back / 2)));
-      for (let i = rings; i >= 1; i--) svg("circle", { class: "ring", cx: s.x, cy: s.y, r: 8 + 7 * i, "stroke-opacity": (1 - 0.17 * i).toFixed(2) }, grp);
-      svg("circle", { class: "sel", cx: s.x, cy: s.y, r: 8 + 7 * rings + 4 }, grp);
-      svg("circle", { class: "dot-return", cx: s.x, cy: s.y, r: 5 }, grp);
+      const rings = Math.min(3, Math.max(1, Math.round(s.back / 4)));
+      for (let i = rings; i >= 1; i--) svg("circle", { class: "ring", cx: s.x, cy: s.y, r: 6 + 6 * i, "stroke-opacity": (1 - 0.25 * i).toFixed(2) }, grp);
+      svg("circle", { class: "sel", cx: s.x, cy: s.y, r: 6 + 6 * rings + 4 }, grp);
+      svg("circle", { class: "dot-return", cx: s.x, cy: s.y, r: 4 }, grp);
       svg("circle", { cx: s.x, cy: s.y, r: 28, fill: "transparent" }, grp); // hit area
     });
   }
@@ -265,10 +265,10 @@
   function renderDossier(s) {
     body.innerHTML = "";
     const v = html(`<div class="rise">
-      <div class="row" style="justify-content:space-between"><span class="eyebrow">Specimen ${String(s.rank).padStart(2, "0")} · ${s.zip} · Obs. ${s.reports} · Returns ${s.back}</span>
+      <div class="row" style="justify-content:space-between"><span class="eyebrow">Chronic site · ${s.rank} of 10</span>
         <span class="row" style="gap:0"><button class="icon-btn" data-nav="-1" aria-label="Previous site (K)">${icon.chevL}</button><button class="icon-btn" data-nav="1" aria-label="Next site (J)">${icon.chevR}</button><button class="icon-btn" data-close aria-label="Close (Esc)">${icon.x}</button></span></div>
       <h3 class="t-headline font-display dossier-h">Monitored ${numberWords[s.monitored] || s.monitored} times.</h3>
-      <p class="t-ui fg2">${s.street}, ${s.zip} · <span class="c-return">${s.back} came back</span></p>
+      <p class="t-ui fg2">${s.street}, ${s.zip}</p>
       <div class="stats"><div><div class="t-data-lg" data-to="${s.reports}">0</div><div class="t-small">reports</div></div><div><div class="t-data-lg c-return" data-to="${s.back}">0</div><div class="t-small">came back</div></div><div><div class="t-data-lg c-forecast" data-to="${s.p}" data-suffix="%">0</div><div class="t-small">in 60 days</div></div></div>
       <div class="sec"><span class="eyebrow">Return timeline</span><div id="rtl"></div></div>
       <div class="sec"><span class="eyebrow">Two voices · latest report</span><div class="voices"><div class="voice"><span class="eyebrow">Resident</span><p class="t-body">“Rats by the dumpsters, again.”</p></div><div class="voice city"><span class="eyebrow">City · closed Sep 10</span><p>Inspected. Will monitor.</p></div></div></div>
@@ -282,12 +282,12 @@
       <div class="sec stack"><span class="eyebrow">Recommended</span>
         <div class="action escalate" data-action="violation"><span class="eyebrow">ISD · Code enforcement</span><b class="t-title">Issue a violation, not another visit</b>
           <p class="because">Monitoring left repeats at 14.1% → 14.2%; violations cut them to 12.2%.</p>
-          <div class="row" style="flex-wrap:wrap"><button class="chip chip-source">311 · Analyze Boston</button><button class="chip chip-source">What worked · 2025</button></div>
+          <p class="t-small fg3">Source: 311 closures, 2025</p>
           <div class="row actions"><button class="btn btn-primary" data-approve>Approve</button><button class="btn btn-secondary">Edit</button><button class="btn btn-ghost" data-reject>Reject</button></div></div>
         ${s.lot ? `<div class="action" data-action="lot"><span class="eyebrow">Parks · Vacant lot</span><b class="t-title">Clear and bait the lot next door</b><p class="because">A vacant parcel ${s.lot.d} m away; returns cluster on its side of the block.</p>
           <div class="row actions"><button class="btn btn-primary" data-approve>Approve</button><button class="btn btn-secondary">Edit</button><button class="btn btn-ghost" data-reject>Reject</button></div></div>` : ""}
       </div>
-      <div class="sec row" style="flex-wrap:wrap"><button class="chip chip-source">311 · updated 4 min ago</button><button class="chip chip-source">Assessing FY2026</button><button class="chip chip-source">Model run Oct 24</button></div>
+      <p class="sec t-small fg3">Sources: 311 (updated 4 min ago) · Assessing FY2026 · model run Oct 24</p>
     </div>`);
     body.appendChild(v);
     $("#rtl", v).appendChild(returnTimeline(s));

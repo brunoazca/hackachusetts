@@ -10,7 +10,7 @@ Part of the [Piper design standards](README.md). Target: **WCAG 2.2 AA**, plus t
    tritan simulation before every recording.
 3. **Contrast is measured.** `scripts/check-design-tokens.py` fails on any text
    pair under 4.5:1 or control edge under 3:1.
-4. **Focus is always visible and never hidden** under glass (2.4.7, 2.4.11).
+4. **Focus is always visible and never hidden** under a panel (2.4.7, 2.4.11).
 5. **No drag-only interaction** (2.5.7): the timeline window, bottom sheet and
    map pan all have button or key alternatives.
 6. **Targets ≥ 24 × 24** (2.5.8); 48 on phone for primary actions.

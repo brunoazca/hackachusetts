@@ -1,4 +1,4 @@
-# Piper design standards (v1.0.0)
+# Piper design standards (v1.1.0)
 
 How Piper looks, moves, reads and behaves. Brand and naming:
 [`docs/rat-audit/brand.md`](../rat-audit/brand.md). See it applied:
@@ -40,7 +40,7 @@ exist. Add it there first, then use it.**
 ## When rules conflict
 
 Accessibility → truthful data → equity → clarity → brand flourish. A flourish
-(Bodoni, the Tune, glass) is the first thing removed when it costs any of the others.
+(Bodoni, the Tune) is the first thing removed when it costs any of the others.
 
 ## Code locations
 
@@ -88,6 +88,13 @@ Accessibility → truthful data → equity → clarity → brand flourish. A flo
 - [ ] `python3 scripts/check-design-tokens.py` prints `tokens OK`.
 
 ## Changelog
+
+- **1.1.0 — Oct 24, 2026. Cleaner.** Removed the effects that read as generated:
+  map glows, glass blur on panels (solid surfaces + hairline + 1-2 px shadow;
+  `glass` is opt-in only), big drop shadows, italic Bodoni (now upright; italic
+  only in the wordmark), mono uppercase eyebrows (now 12 px sans, sentence case),
+  chip rows of sources (one quiet "Sources:" line). Rings capped at 3, thinner.
+  Fewer map marks. Fixed a theme bug: a themed subtree now sets its own text color.
 
 - **1.0.0 — Oct 24, 2026.** First release. Hamelin palette; the contrast guard
   raised `mink` to `#968878`, Bone `return` to `#A8381A` and Bone `edge` to

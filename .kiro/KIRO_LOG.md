@@ -46,6 +46,13 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Kiro tasks 9, 12, 14 done directly (Kiro paused, too slow). Live: run risk-v1-20261024T184358, 89k backtest + 13.7k forecast predictions (Oct 26-Nov 16), 133 emerging + 120 early-warning cells; grid_cells seeded with 3442 fallback cells because it was empty
 - Where: pipeline/rat_audit/model/__init__.py, explain.py, tests/test_model_explain.py
 - Idea: grid_cells seeding only runs while the table is empty; Carol can replace it
+### 2026-10-24 14:41 — Design system v1.1.0 'cleaner': removed map glows, panel ...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Design system v1.1.0 'cleaner': removed map glows, panel blur/glass, big shadows, italic Bodoni, mono caps eyebrows, source chip rows; rings capped at 3; fewer map marks; fixed Bone theme text bug in subtrees; Bone screenshots reviewed
+- Why: Guilherme found v1.0 too AI-ish and wanted to see the light theme
+- Where: docs/design/**, web/src/styles/piper.css, web/src/lib/design-tokens.ts
+- Idea: Rule: no blur, no glow, no letter-spaced caps; flourish limited to one Bodoni line and the Tune
 
 ### 2026-10-24 14:35 — Piper design standards v1.0.0 on branch feat/piper-design...
 - Teammate: Guilherme

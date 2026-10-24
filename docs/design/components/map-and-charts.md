@@ -82,7 +82,7 @@ one line title (`text-ui` 600), one line status + date (mono). Appears on hover
 
 ### Map controls
 
-Zoom +/−, compass reset, locate; 40 × 40 icon buttons in a vertical glass stack
+Zoom +/−, compass reset, locate; 40 × 40 icon buttons in a vertical `surface` stack
 bottom-right of the clear map area (above timeline). Scale bar mono 11.
 Attribution collapsed to an (i) button.
 

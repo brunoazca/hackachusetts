@@ -154,13 +154,13 @@ export const motion = {
   },
 } as const;
 
-export const MAX_RINGS = 5;
+export const MAX_RINGS = 3;
 
 /** Ring i (1..MAX_RINGS) around a chronic site. */
 export const ring = (i: number) => ({
-  radius: 8 + 7 * i,
-  width: 1.25,
-  opacity: 1 - 0.17 * i,
+  radius: 6 + 6 * i,
+  width: 1,
+  opacity: 1 - 0.25 * i,
 });
 
 /** Heatmap ramp (warm only, night). */
