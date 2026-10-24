@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:01 — Unified Insight backend: RPCs area_insight / area_insight...
+- Teammate: Bruno
+- Agent: —
+- Did: Unified Insight backend: RPCs area_insight / area_insight_polygon / record_insight / evidence_insight / insight_ranking (+ cell_of, nearby_causes, cells_forecast, cause_label); cell_solutions (rules card + AI input for 1,064 lone cells, on-demand AI via solve_cell, 7 s then cached) and cause_baselines; record_solutions for all 19,461 rodent reports; 27 AI region cards + 70 AI lone cells = 97/100 ranked entries with AI; Modal solutions job after scoring + insight_ai endpoint; spec §12
+- Why: Bruno asked to merge Inspect and Insights into one panel whose content depends on what is clicked, with on-demand AI; behaviour first, UI later
+- Where: supabase/migrations/20261024500008_cell_solutions.sql, 20261024500009_insight_rpcs.sql, pipeline/rat_audit/model/region_solution.py, pipeline/rat_audit/jobs.py, pipeline/modal_app.py, .kiro/specs/rat-audit/insights-severity-ranking.md §12
+- Idea: Boston has ~27 real hotspots however wide the pool; reaching 100 ranked entries honestly means adding lone cells, not splitting clusters. Front logic (web/src/lib/insight.ts, map-store back(), /api/insight-ai) kept local until the new UI lands.
+
 ### 2026-10-24 18:57 — Insights region cards: dropped the full demographic profi...
 - Teammate: Bruno
 - Agent: —

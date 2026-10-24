@@ -707,3 +707,33 @@ Step 1 is shippable **now** against existing data and is the demo-safe fallback.
 - Does the ranked region card **replace** the city-wide findings view, or sit above it
   with findings collapsed below? (spec assumes: replace as the lead, findings collapse
   into "Methodology & evidence")
+
+---
+
+## 12. Rev. 3 — one Insight panel, behaviour by what is clicked (Bruno, Oct 24)
+
+**Inspect and Insights merge into one panel.** Layout (to build on the new UI main, not before):
+the **Insight panel on the left**, **chat (Ask) on the right**, **filters at the bottom** of the page.
+The panel shows the ranking when nothing is selected and changes with each click. Same card skeleton
+for every kind: **Where/what → Outlook → What to do → Evidence → Related records → Sources & caveat**.
+Place names are links (§5.7 `locations`), report ids are links; Back returns to the previous
+selection, Esc clears to the ranking (`map-store.history` / `back()`).
+
+| Selection (`map-store.selection`) | Call | Panel | Map |
+|---|---|---|---|
+| nothing | `region_solutions` by rank | ranked region cards (AI, top 100) | forecast layer |
+| `cell` | `area_insight([cell_id])` | the cell's region card if it is in a ranked region, else its own cell card (`cell_solutions`, rules + "Generate AI analysis" → `POST /api/insight-ai` → Modal `insight_ai`, cached) | fly to it, outline cells, highlight its reports |
+| `area` (drawn polygon) | `area_insight_polygon(geojson)` | summed severity + forecast, the ranked regions and worst cells it touches | outline |
+| `incident`, rodent | `record_insight(id)` | **Outlook:** chance a report comes back within 60 days if monitored vs with the best action, cell forecast · **What to do:** the area card's line for this report, else the per-record model · **Evidence:** causes within 150 m (×Boston), address action history | fly to it (z17), highlight address history |
+| `incident`, any other 311 / `place` | `record_insight` routes non-rodent ids to `evidence_insight('incident', id)`; places → `evidence_insight('place', id)` | what it is; rodent reports within 150 m 90 days before vs after (fixed places: last 12 months); the list of those reports (clickable → their record insight); same-kind density vs Boston; caveat "near, not proven caused" | fly to it, highlight related reports |
+| `site`, parcel, event, listing, tract | existing detail views (unchanged) | — | — |
+
+Backend (Bruno, live): RPCs `area_insight`, `area_insight_polygon`, `record_insight`, `evidence_insight`
+(+ helpers `cell_of`, `nearby_causes`, `cells_forecast`, `cause_label`) in
+`20261024500009_insight_rpcs.sql`; tables `cell_solutions`, `cause_baselines`
+(`20261024500008`); `record_solutions` now covers every rodent report since 2023; AI cards for the
+top **100** regions; Modal `solutions` runs after every scoring and `insight_ai` serves on-demand AI
+(needs `AI_GATEWAY_API_KEY` in the `rat-audit` secret and `MODAL_INSIGHT_AI_URL` in the web env).
+Front logic (Bruno, local until the new UI lands): `web/src/lib/insight.ts` (`routeSelection`,
+`loadInsight`, `highlightIds`, `focusOf`, `generateAreaAi`), `map-store.history/back()`,
+`web/src/app/api/insight-ai/route.ts`, tests `web/tests/insight.test.ts`.
