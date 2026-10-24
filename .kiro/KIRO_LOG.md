@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 15:35 — Forecast map: smoothed surface (25 m raster, nested level...
+- Teammate: Bruno
+- Agent: —
+- Did: Forecast map: smoothed surface (25 m raster, nested levels 1..5+, clipped to land via tracts) instead of hard 250 m squares; only 1+ expected reports shown; default period = next 4 weeks
+- Why: Squares looked blocky, spilled into the harbor/Charles, and weekly values rarely reach 1 report
+- Where: pipeline/rat_audit/model/surface.py, model/__init__.py, tests/test_model_surface.py, supabase/migrations/20261024500003_model_forecast_surface.sql, web ForecastLayer/ForecastControl/forecast.ts/MapView
+- Idea: Modal needs a redeploy so score() rebuilds surfaces after Monday's retrain
+
+### 2026-10-24 15:33 — Kiro Crew campaign 95a7dbd6 (new datasets) done and in th...
+- Teammate: Bruno
+- Agent: —
+- Did: Kiro Crew campaign 95a7dbd6 (new datasets) done and in the knowledge library; verified top picks with the Socrata token; added ranked table to knowledge/15
+- Why: Fill data gaps for the Rat Audit
+- Where: knowledge/15_boston_rat_audit.md
+- Idea: Load first: ISD building violations full (17,493 rows w/ lat-long), Problem Properties list (scrape), Article 80 projects, NYC rodent inspections (3.1M with results = real outcome data to test what works)
+
 ### 2026-10-24 15:30 — Scheduled hourly design critique of the site via Kiro Cre...
 - Teammate: Bruno
 - Agent: —

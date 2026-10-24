@@ -28,6 +28,7 @@ from .features import CORE, build_panel, cell_ids_for, monday
 from .gbm import MODEL as GBM_MODEL, PARAMS, PoissonGBM
 from .grid import build_grid, boston_boundary_from_db, grid_cells_count
 from .recurrence import site_recurrence_logit
+from .surface import build_surfaces
 
 FUTURE_WEEKS = 4
 CAVEAT = "Model estimate, not a measured effect. Expected 311 rodent reports, not a count of rats."
@@ -146,6 +147,7 @@ def score(conn: psycopg.Connection, *, future_start: date | None = None) -> dict
         (json.dumps({"emerging": em, "scored_at": datetime.now(timezone.utc).isoformat(),
                      "forecast_from": str(future_start)}), run_id),
     )
+    surfaces = build_surfaces(conn, run_id)
     conn.commit()
     return {
         "model_run_id": run_id, "grid_cells_seeded": seeded,
@@ -154,6 +156,7 @@ def score(conn: psycopg.Connection, *, future_start: date | None = None) -> dict
         "bands": fut[fut["week_start"] == fut["week_start"].min()]["risk_band"].value_counts().to_dict(),
         "emerging": int((emerging["kind"] == "emerging_hotspot").sum()),
         "early_warning": int((emerging["kind"] == "early_warning").sum()),
+        "surfaces": surfaces,
     }
 
 
