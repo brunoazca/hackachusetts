@@ -5,6 +5,61 @@ R7.4–5. The database writers, shared shell, map and migrations belong to other
 fronts. Work started on `feat/rat-audit-insights` at `1af6bcd`. It is now committed
 and integrated into local `main`; see the latest verification below.
 
+## RPC now live; v2 client follow-up — 2026-10-24 16:34
+
+Analytics supplied/applied the RPC outside this front. Public-key GET now returns
+HTTP 200 and the forecast renders from the real shared database. The first call
+returned 500/57014 during the migration window; subsequent isolated/live/browser
+calls succeeded. This does not yet certify findings or cost results: both tables
+still have zero rows in this check.
+
+- **Real shared data:** 4 live tests passed, 3 explicitly skipped for missing
+  findings/costs/citation references. Compared 13,768 predictions over 4 weeks,
+  3,442 cells/week, exact risk-band counts and top-five cell values. No mocks.
+- **Numerical diagnosis:** SQL `sum(real)` vs JS double summation differed by at
+  most 0.00124 reports in these four totals. Replaced the arbitrary fixed relative
+  tolerance with the float32 sequential-summation error bound; counts, bands and
+  top cells remain exact assertions. Evidence: `forecast-diagnostic.json`.
+- **Independent diagnostics:** RPC failures no longer prevent raw stored-model
+  checks from running. Integration checks still fail on RPC errors, rather than
+  turning errors into skips. The test week boundary now matches America/New_York.
+- **Client compatibility:** handles Analytics v2 `matched` and
+  `unadjusted_contrast`; preserves ratio, supplied interval and pair count, labels
+  descriptive case counts separately, and marks unavailable matched intervals as
+  insufficient data. No matched effect is inferred or calculated in the client.
+- **Synthetic/mocks/SSR:** 54 passed (5 new regressions). These validate the new v2
+  contract with synthetic data; v2 results have not yet been published for live
+  validation. Five checks against the earlier real local export also passed.
+- Scoped ESLint and `pnpm build` passed on the Insights worktree.
+- Browser on `http://localhost:3038`: real GET 200, 4 forecast weeks, explicit
+  model-vs-baseline comparisons, no uncaught errors and no panel overflow
+  (419 px content/scroll). No response interception or fixtures.
+
+The integrator finished main at `cf4389b` during this check. A separate browser run
+on `http://127.0.0.1:3000` confirmed the same real forecast, GET 200, no page errors
+and 380/380 px panel width in the new shell. Its initial harness tried a hidden tab;
+opening the new **Open Insights** rail button first fixed the harness. This main
+run verifies the already-integrated forecast; the new matched adapter remains on
+the feature branch for integration. Screenshot inspection then found stale main
+dev CSS: missing `--p-fg`/`--p-panel`, transparent panels and dark text. Restarting
+alone did not fix it. Stopped only this session's server, moved `.next/dev` into the
+scratch backup, and restarted; the final browser check loaded the expected tokens,
+light text on dark panels and 378/378 px content/scroll. No main source edits. Final
+evidence: `browser-main-fresh.json` and `forecast-main-fresh.png`.
+
+Evidence and backups: `/private/tmp/insights-migration-validation-20261024/`.
+No shared database writes, pipeline runs, RPC/migration changes, merge, push or
+deployment were performed by this front. Main was in an unrelated merge when
+work started, so all edits remained in this worktree.
+
+### Starting the app locally
+
+The ignored `web/.env.local` symlink points to the supplied root env; Next loads it
+itself. From `web/`, use `pnpm dev`. Avoid `node --env-file=… next dev`: this installed
+Next forwards that flag into child `NODE_OPTIONS`, which Node rejects. Node/tsx
+standalone tests may still use `--env-file=.env.local`. The main checkout also now
+has this ignored symlink (created during the startup fix); values were not copied.
+
 ## Local main integration — 2026-10-24 15:57
 
 Integrated the Insights branch after updating it over main's newer work. The merge

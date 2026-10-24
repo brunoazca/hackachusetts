@@ -33,10 +33,27 @@ function sampleSize(stat: Obj): number | null {
   return null;
 }
 
+// v2 distinguishes a matched estimate from the descriptive per-action cohort.
+function matchedSummary(stat: unknown): { text: string; pairs: number | null; insufficient: boolean } | null {
+  if (!isObj(stat) || !isObj(stat.matched)) return null;
+  const m = stat.matched;
+  const rawPairs = num(m.n_pairs);
+  const pairs = rawPairs !== null && Number.isInteger(rawPairs) && rawPairs >= 0 ? rawPairs : null;
+  const ratio = num(m.risk_ratio);
+  const bounds = Array.isArray(m.ci_95) && m.ci_95.length === 2 ? m.ci_95.map(num) : [];
+  const [lo, hi] = bounds;
+  if (ratio === null || ratio < 0 || !pairs || lo == null || hi == null || lo < 0 || lo > hi) {
+    return { text: "Matched: insufficient evidence to compare enforcement with monitoring", pairs, insufficient: true };
+  }
+  return { text: `Matched: enforcement vs monitoring risk ratio = ${fmtNumber(ratio)} · 95% CI ${fmtNumber(lo)} to ${fmtNumber(hi)}`,
+    pairs, insufficient: false };
+}
+
 export function parseStat(stat: unknown): { statText: string | null; n: number | null; more: [string, string][] } {
   if (!isObj(stat)) return { statText: null, n: null, more: [] };
   const n = sampleSize(stat);
-  const parts: string[] = [];
+  const matched = matchedSummary(stat);
+  const parts: string[] = matched ? [matched.text] : [];
   const used = new Set(["n", ...STAT_SKIP]);
   if (stat.insufficient === true) { parts.push("Not enough data to test"); used.add("insufficient"); }
   const rho = num(stat.rho);
@@ -66,7 +83,7 @@ export function parseStat(stat: unknown): { statText: string | null; n: number |
   }
   // Analytics' contrast is an unadjusted difference, in percentage points, not a
   // matched estimate or a causal treatment effect. Preserve its supplied interval.
-  const contrast = isObj(stat.contrast) ? stat.contrast : null;
+  const contrast = isObj(stat.unadjusted_contrast) ? stat.unadjusted_contrast : isObj(stat.contrast) ? stat.contrast : null;
   if (contrast && str(contrast.a) && str(contrast.b) && num(contrast.diff_pp) !== null) {
     parts.push(`Unadjusted: ${humanize(contrast.a as string)} − ${humanize(contrast.b as string)} = ${fmtNumber(contrast.diff_pp as number)} percentage points`);
     if (Array.isArray(contrast.ci_pp) && contrast.ci_pp.length === 2) {
@@ -147,6 +164,8 @@ function actionSamples(stat: unknown): Finding["actionSamples"] {
 
 export function toFinding(row: CorrelationRow, sources: SourceRow[] = []): Finding {
   const { statText, n, more } = parseStat(row.stat);
+  const matched = matchedSummary(row.stat);
+  const descriptiveSample = n !== null ? `n = ${fmtNumber(n)}${row.unit ? ` (${row.unit})` : ""}` : null;
   const { chart, problem } = parseChart(row.chart);
   const strength = STRENGTHS.includes(row.strength as Strength) ? (row.strength as Strength) : null;
   return {
@@ -157,9 +176,12 @@ export function toFinding(row: CorrelationRow, sources: SourceRow[] = []): Findi
     unit: row.unit,
     statText,
     moreStats: more,
-    insufficient: isObj(row.stat) && row.stat.insufficient === true,
+    insufficient: (isObj(row.stat) && row.stat.insufficient === true) || matched?.insufficient === true,
     actionSamples: actionSamples(row.stat),
-    sampleText: n !== null ? `n = ${fmtNumber(n)}${row.unit ? ` (${row.unit})` : ""}` : null,
+    sampleText: matched
+      ? [`Matched: ${matched.pairs !== null ? `${fmtNumber(matched.pairs)} pairs` : "pair count not reported"}`,
+          descriptiveSample ? `Descriptive: ${descriptiveSample}` : null].filter(Boolean).join(" · ")
+      : descriptiveSample,
     strength,
     chart,
     chartProblem: problem,

@@ -48,7 +48,7 @@ test("real analytics export: every finding retains its title, method, caveat, so
 test("real analytics export: all action denominators, censoring, rates and intervals survive", options, () => {
   const row = payload.correlations!.find((r) => r.id === "what-worked")!;
   assert.ok(row, "what-worked missing from real export");
-  const stat = row.stat as { by_tag: Record<string, { n: number; n_censored: number; recur_60d_pct: number; ci_low: number; ci_high: number }>; contrast: { diff_pp: number; ci_pp: number[] } };
+  const stat = row.stat as { by_tag: Record<string, { n: number; n_censored: number; recur_60d_pct: number; ci_low: number; ci_high: number }>; contrast?: { diff_pp: number; ci_pp: number[] }; unadjusted_contrast?: { diff_pp: number; ci_pp: number[] }; matched?: { risk_ratio: number | null; ci_95: number[] | null; n_pairs: number } };
   const finding = data.findings.find((f) => f.id === row.id)!;
   assert.equal(finding.actionSamples.length, Object.keys(stat.by_tag).length);
   for (const [tag, raw] of Object.entries(stat.by_tag)) {
@@ -60,9 +60,16 @@ test("real analytics export: all action denominators, censoring, rates and inter
     assert.deepEqual(sample.intervalPct, [raw.ci_low, raw.ci_high]);
   }
   assert.ok(finding.chart?.ci, "Confidence bounds must remain error bars");
-  assert.match(finding.statText!, /Unadjusted:/);
-  for (const value of [stat.contrast.diff_pp, ...stat.contrast.ci_pp]) {
-    assert.ok(finding.statText!.includes(String(value)), "Raw contrast/interval missing");
+  const contrast = stat.unadjusted_contrast ?? stat.contrast;
+  if (contrast) {
+    assert.match(finding.statText!, /Unadjusted:/);
+    for (const value of [contrast.diff_pp, ...contrast.ci_pp]) {
+      assert.ok(finding.statText!.includes(String(value)), "Raw contrast/interval missing");
+    }
+  }
+  if (stat.matched) {
+    assert.match(finding.statText!, /Matched:/);
+    assert.ok(finding.sampleText?.includes(`${stat.matched.n_pairs.toLocaleString("en-US")} pairs`));
   }
   const html = renderToStaticMarkup(createElement(FindingCard, { finding }));
   assert.equal((html.match(/data-action="/g) ?? []).length, Object.keys(stat.by_tag).length);

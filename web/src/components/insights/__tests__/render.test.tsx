@@ -302,3 +302,27 @@ test("invalid date-like chart labels fall back to categories without NaN coordin
   assert.doesNotMatch(html, /NaN|Infinity/);
   assert.match(html, /2026-99-99/);
 });
+
+
+import { pipelineMatchedRow } from "./fixtures";
+
+test("v2 matched and unadjusted results render with their own sample labels", () => {
+  const html = renderToStaticMarkup(<FindingCard finding={toFinding(pipelineMatchedRow)} />);
+  assert.match(html, /Matched: enforcement vs monitoring risk ratio = 1\.03/);
+  assert.match(html, /95% CI 0\.82 to 1\.25/);
+  assert.match(html, /Matched: 35 pairs · Descriptive: n = 350/);
+  assert.match(html, /Unadjusted: Citation − Monitoring/);
+  assert.match(html, /data-mark="ci"/);
+  assert.match(html, /Action samples and uncertainty/);
+  assertA11yRefs(html);
+});
+
+test("v2 unavailable matched interval gets an insufficient-data badge", () => {
+  const row = { ...pipelineMatchedRow, stat: { ...(pipelineMatchedRow.stat as object),
+    matched: { risk_ratio: 1, ci_95: null, n_pairs: 3 } } };
+  const html = renderToStaticMarkup(<FindingCard finding={toFinding(row)} />);
+  assert.match(html, /data-strength="insufficient"/);
+  assert.match(html, /Insufficient data/);
+  assert.doesNotMatch(html, /No association found/);
+  assert.match(html, /Fixture/);
+});

@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:35 — 2.8: real forecast RPC validation and v2 matched-result compatibility
+- Teammate: Carol
+- Agent:
+- Did: Validated the newly available shared insights_summary RPC using public-key GET/HEAD only; adapted the panel for Analytics v2 matched/unadjusted_contrast, distinct pair/case denominators and insufficient matched evidence.
+- Why: Advance this front while Carol/Analytics applies migrations; preserve the integrator's concurrent main merge and all existing work.
+- Where: web/src/components/insights/parse.ts, __tests__/*, README.md; .kiro/KIRO_LOG.md.
+- Evidence: First RPC call returned 500/57014; later isolated, live-suite and browser calls returned 200. Shared tests: 4 pass, 3 SKIP because correlations/price_impact/source references remain absent. Compared 13,768 real predictions, 4 weeks, 3,442 cells/week, bands and top five; no intercepted response.
+- Evidence: The live test exposed float32 SUM(real) rounding (maximum 0.00124-report difference). Used a float32 error bound with exact count/band/top-cell assertions; isolated RPC errors from independent stored-model tests and aligned the week boundary to America/New_York.
+- Evidence: Five new synthetic regressions failed before the adapter change; corrected an incomplete new fixture, then 54 synthetic/mock/SSR + 5 prior-real-export tests passed. Scoped lint and pnpm build passed. The new matched contract is not yet live-data validated.
+- Evidence: Browser at localhost:3038 showed real forecast/baseline scores and 4 weeks, no page errors or panel overflow (419/419 px). Evidence and before-files: /private/tmp/insights-migration-validation-20261024/.
+- Evidence: After the integrator completed main cf4389b, a separate browser check on port 3000 also passed with real GET 200, four weeks, no errors and 380/380 px panel width. Adapted the harness to the new Open Insights rail button after the initial hidden-tab timeout. Main was not edited.
+- Evidence: Visual inspection caught stale main dev CSS after its merge (missing theme variables, transparent panel/dark text). Restart alone failed; preserving .next/dev in scratch and restarting only this session's server restored the theme. Final main browser check: real GET 200, expected theme variables, no errors, 378/378 px. No main source edits.
+- Decision: All edits stay in feat/rat-audit-insights. No shared writes, migration creation/application, pipeline rerun, main merge, push or deploy. Retained unavailable/error behavior; do not claim full real-data acceptance until findings, costs and citations are populated.
+- Idea: Rerun the three skipped comparisons after Analytics publishes results; integrate this small client follow-up after the current main integration.
+
+
 ### 2026-10-24 16:26 — Kiro Crew pipeline: 3 new crewmates (Da Vinci design crit...
 - Teammate: Bruno
 - Agent: —

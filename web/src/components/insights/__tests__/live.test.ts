@@ -20,6 +20,11 @@ let db: SupabaseClient;
 let state: InsightsState;
 let payload: InsightsPayload;
 let rpcMissing = false;
+let rpcStatus: number;
+let rpcCode: string | undefined;
+function assertRpcSuccess() {
+  assert.equal(rpcCode, undefined, `insights_summary: HTTP ${rpcStatus}, ${rpcCode}`);
+}
 let correlations: CorrelationRow[];
 let impacts: PriceImpactRow[];
 let runs: ModelRunRow[];
@@ -46,7 +51,8 @@ before(async () => {
     assert.ok(!r.error, `${name}: HTTP ${r.status}, ${r.error?.code ?? "no error"}`);
   }
   rpcMissing = rpc.error?.code === "PGRST202";
-  assert.ok(!rpc.error || rpcMissing, `insights_summary: HTTP ${rpc.status}, ${rpc.error?.code}`);
+  rpcStatus = rpc.status;
+  rpcCode = rpc.error?.code;
   // Adapt this exact real response; do not issue a second RPC that may observe a newer run.
   state = await loadInsights(async () => ({ data: rpc.data, error: rpc.error }));
   payload = rpc.data;
@@ -61,10 +67,9 @@ test("live: endpoint availability is handled correctly (not a success-path valid
     assert.equal(state.status, "unavailable");
     if (state.status === "unavailable") assert.match(state.reason, /insights_summary/);
     t.diagnostic("HTTP 404/PGRST202: integration comparisons below are blocked by the missing RPC.");
-  } else if (!correlations.length && !impacts.length && !runs.length) {
-    assert.equal(state.status, "unavailable");
   } else {
-    assert.equal(state.status, "ready");
+    assertRpcSuccess();
+    assert.equal(state.status, !correlations.length && !impacts.length && !runs.length ? "unavailable" : "ready");
   }
 });
 
@@ -97,6 +102,7 @@ for (const model of ["cell_week_poisson_gbm", "cell_week_baseline_mean4"]) {
 
 test("live integration: RPC findings match stored findings", options, (t) => {
   if (rpcMissing) { t.skip("insights_summary is missing (404/PGRST202)"); return; }
+  assertRpcSuccess();
   if (!correlations.length) { t.skip("No real correlation rows to compare"); return; }
   assert.equal(state.status, "ready");
   if (state.status !== "ready") return;
@@ -106,6 +112,7 @@ test("live integration: RPC findings match stored findings", options, (t) => {
 
 test("live integration: RPC costs and prices match stored rows", options, (t) => {
   if (rpcMissing) { t.skip("insights_summary is missing (404/PGRST202)"); return; }
+  assertRpcSuccess();
   if (!impacts.length) { t.skip("No real price/cost rows to compare"); return; }
   assert.equal(state.status, "ready");
   if (state.status !== "ready") return;
@@ -117,12 +124,14 @@ test("live integration: RPC costs and prices match stored rows", options, (t) =>
 
 test("live integration: forecast run, week totals and top cells match stored predictions", { ...options, timeout: 60_000 }, async (t) => {
   if (rpcMissing) { t.skip("insights_summary is missing (404/PGRST202)"); return; }
+  assertRpcSuccess();
   const run = runs.find((r) => r.model === "cell_week_poisson_gbm") ?? runs.find((r) => r.model === "cell_week_baseline_mean4");
   if (!run) { t.skip("No real cell-week model run to compare"); return; }
   assert.equal(state.status, "ready");
   assert.equal(payload.forecast?.run?.id, run.id);
   assert.deepEqual(payload.forecast?.run?.metrics, run.metrics);
-  const monday = new Date();
+  // Match the RPC calendar even during the Sunday/Monday UTC vs Boston boundary.
+  const monday = new Date(`${new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" })}T12:00:00Z`);
   monday.setUTCHours(0, 0, 0, 0);
   monday.setUTCDate(monday.getUTCDate() - (monday.getUTCDay() + 6) % 7);
   const predictions: { cell_id: string; week_start: string; expected: number; risk_band: string }[] = [];
@@ -140,8 +149,14 @@ test("live integration: forecast run, week totals and top cells match stored pre
   for (const week of weeks) {
     const rows = predictions.filter((p) => p.week_start === week.week_start);
     const sum = rows.reduce((total, p) => total + p.expected, 0);
-    // expected is SQL real; sums can differ slightly in float32 vs JS float64.
-    assert.ok(Math.abs(week.expected_total - sum) <= Math.max(1e-4, Math.abs(sum) * 1e-5));
+    // PostgreSQL SUM(real) accumulates in float32, unlike the JS reference sum.
+    // Bound sequential rounding error by gamma_n = n*u/(1-n*u), u = 2^-24.
+    // The measured 3,442-cell totals differed by up to 0.00124 reports; row counts,
+    // bands and top cells below remain exact comparisons (no omitted rows allowed).
+    const roundoff = rows.length * 2 ** -24;
+    const tolerance = Math.max(1e-4, Math.abs(sum) * roundoff / (1 - roundoff));
+    assert.ok(Math.abs(week.expected_total - sum) <= tolerance,
+      `${week.week_start}: RPC total ${week.expected_total}, reference ${sum}, float32 bound ${tolerance}`);
     assert.equal(week.cells, rows.length);
     for (const band of ["low", "elevated", "high", "very_high"] as const) {
       assert.equal(week.bands[band] ?? 0, rows.filter((p) => p.risk_band === band).length);
@@ -156,6 +171,7 @@ test("live integration: forecast run, week totals and top cells match stored pre
 
 test("live integration: every finding/cost source matches stored citation metadata", options, async (t) => {
   if (rpcMissing) { t.skip("insights_summary is missing (404/PGRST202)"); return; }
+  assertRpcSuccess();
   const ids = [...new Set([...correlations, ...impacts].flatMap((r) => r.source_ids ?? []))].sort();
   if (!ids.length) { t.skip("No real finding/cost source references to compare"); return; }
   assert.ok(payload.sources?.length, "RPC must include name, URL and retrieval date for cited sources");

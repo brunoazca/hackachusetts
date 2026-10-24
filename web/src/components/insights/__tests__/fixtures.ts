@@ -160,3 +160,22 @@ export const pipelineCitationsCost: PriceImpactRow = {
     since_2024: { businesses: 120, violations: 300, violations_explicit: 200 }, businesses_with_capped_history: 2, lower_bound: true },
   caveat: "Fixture cost caveat.", source_ids: ["fx-food"], computed_at: at,
 };
+
+// Synthetic v2 producer shape: matched headline plus descriptive per-action rates.
+export const pipelineMatchedRow: CorrelationRow = {
+  ...pipelineWhatWorkedRow, title: "Fixture matched comparison", strength: "none",
+  stat: {
+    by_tag: {
+      citation: { n: 50, n_censored: 1, recur_60d_pct: 30, ci_low: 18, ci_high: 44 },
+      monitoring: { n: 300, n_censored: 5, recur_60d_pct: 20, ci_low: 15.5, ci_high: 25 },
+    },
+    unadjusted_contrast: { a: "citation", b: "monitoring", diff_pp: 10, ci_pp: [-2, 20] },
+    matched: { risk_ratio: 1.03, ci_95: [0.82, 1.25], n_pairs: 35, strength: "none" },
+  },
+  chart: { type: "bar", x_label: "Closure action", y_label: "60-day repeat rate (%)",
+    series: [
+      { name: "60-day repeat rate", points: [["Citation", 30], ["Monitoring", 20]] },
+      { name: "95% CI low", points: [["Citation", 18], ["Monitoring", 15.5]] },
+      { name: "95% CI high", points: [["Citation", 44], ["Monitoring", 25]] },
+    ] },
+};

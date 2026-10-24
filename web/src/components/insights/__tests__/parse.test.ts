@@ -228,3 +228,37 @@ test("analytics handoff: malformed action and department breakdowns degrade safe
   ] } });
   assert.deepEqual(impact.tables.find((t) => t.name === "Departments · FY2025")?.rows, [["Good", "$0"]]);
 });
+
+
+import { pipelineMatchedRow } from "./fixtures";
+
+test("v2 matched headline keeps the supplied ratio, interval and distinct denominators", () => {
+  const finding = toFinding(pipelineMatchedRow);
+  assert.match(finding.statText!, /Matched: enforcement vs monitoring risk ratio = 1\.03/);
+  assert.match(finding.statText!, /95% CI 0\.82 to 1\.25/);
+  assert.match(finding.statText!, /Unadjusted: Citation − Monitoring/);
+  assert.equal(finding.sampleText, "Matched: 35 pairs · Descriptive: n = 350 (closed rodent case)");
+  assert.equal(finding.insufficient, false);
+  assert.equal(finding.actionSamples.length, 2);
+});
+
+test("v2 absent or invalid matched estimates are insufficient, not evidence of no association", () => {
+  for (const matched of [
+    { risk_ratio: null, ci_95: null, n_pairs: 0 },
+    { risk_ratio: 1.03, ci_95: null, n_pairs: 3 },
+    { risk_ratio: 1.03, ci_95: [1.25, 0.82], n_pairs: 35 },
+  ]) {
+    const finding = toFinding({ ...pipelineMatchedRow, stat: { ...(pipelineMatchedRow.stat as object), matched } });
+    assert.equal(finding.insufficient, true);
+    assert.match(finding.statText!, /Matched: insufficient evidence/);
+    assert.doesNotMatch(finding.statText!, /risk ratio =/);
+    assert.match(finding.statText!, /Unadjusted:/);
+  }
+});
+
+test("v2 a valid zero risk ratio remains zero", () => {
+  const finding = toFinding({ ...pipelineMatchedRow, stat: { ...(pipelineMatchedRow.stat as object),
+    matched: { risk_ratio: 0, ci_95: [0, 0.3], n_pairs: 35 } } });
+  assert.equal(finding.insufficient, false);
+  assert.match(finding.statText!, /risk ratio = 0 · 95% CI 0 to 0\.3/);
+});
