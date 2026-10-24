@@ -40,6 +40,21 @@ If the agent does not know the teammate's name, it asks before logging.
 - Verification: Integrated agent/Insights suite: 135 passed, 19 skipped; additional current-severity regression passed; TypeScript and scoped lint passed; production build passed with font fallback warnings.
 - Held: a11y/map-twin-skip-motion has conflicts and references an absent PriorityLayer; analytics-core is still being worked on; old severity-ranking is superseded and carries analytics dependencies; chat-map-filters is superseded by the integrated main controls.
 - Idea: Keep all existing work-log entries; publish through the existing main -> Deploy web -> piper-app.vercel.app workflow. No database migrations were applied.
+### 2026-10-24 17:50 — Model report: merged the 'Why the model predicts what it ...
+- Teammate: Bruno
+- Agent: —
+- Did: Model report: merged the 'Why the model predicts what it does' section (importance, partial dependence, training-data table) into the template; page and artifact now on the current run
+- Why: Another session added interpretability to the page; keep it and use current data everywhere
+- Where: docs/rat-audit/model-report/template.html, index.html
+- Idea: —
+
+### 2026-10-24 17:48 — Model report: long backtest rerun on current model (Jan 2...
+- Teammate: Bruno
+- Agent: —
+- Did: Model report: long backtest rerun on current model (Jan 2024–Oct 2026): capture 65.3% vs 49.7%, MAE 0.0475 vs 0.0469
+- Why: Report numbers must match the model in production
+- Where: docs/rat-audit/model-report/README.md, index.html, data/bt_long.json
+- Idea: —
 
 ### 2026-10-24 17:48 — Integrate all chat/map changes for the requested push
 - Teammate: Carol

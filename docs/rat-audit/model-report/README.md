@@ -10,6 +10,7 @@ Owner: model track (Bruno). Built Oct 24, 2026. Rebuild with `pipeline/scripts/m
   Current run `risk-v1-20261024T210943`, trained on data through Oct 12, 2026.
 - On 26 weeks it never saw (Apr 20 – Oct 12, 2026), the model's top 10% of blocks held **65% of all rodent reports**,
   against **54%** for the obvious alternative (each block's average of its last 4 weeks). It ranked better in **26 of 26 weeks**.
+  Over 146 weeks since Jan 2024: **65% vs 50%**, better in 145 of 146 weeks.
 - Per-block error is about the same as that average (MAE 0.0734 vs 0.0713). **Use it to decide where to look, not to promise exact counts.**
 - **Recurrence** (`site_recurrence_logit`): chance that rodent reports return to the same address within 60 days of a case closing.
   On 2,964 later cases it never saw, AUC **0.71** (0.50 = coin flip). The riskiest 10% of cases came back 42% of the time; the safest 10%, 8%.
@@ -80,12 +81,13 @@ overestimates more at every level above 0.2 (e.g. predicts 0.83 where 0.49 happe
 
 | | Model | 4-week average |
 |---|---|---|
-| Reports in the top 10% of blocks | **64.0%** | 49.3% |
+| Reports in the top 10% of blocks | **65.3%** | 49.7% |
 | Weeks where it ranked better | **145 of 146** | — |
-| MAE per block-week | 0.0496 | **0.0489** |
+| MAE per block-week | 0.0475 | **0.0469** |
+| Total expected vs actual | 14,456 vs 15,406 (−6%) | 15,122 (−2%) |
 
-These numbers are from the previous model version (training from 2023, 38 features incl. code-enforcement tickets).
-The rerun with the current model is in progress; when it finishes, `index.html` and this table are updated from `data/bt_long.json`.
+Same picture over almost 3 years: the model finds the right blocks far more often (+15.6 points), while per-block error is a tie.
+The previous model version (training from 2023, with code-enforcement tickets) scored 64.0% / 0.0496 on the same weeks.
 
 ### What was tried and not kept
 
