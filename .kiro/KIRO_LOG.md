@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 14:51 — Cambridge + Somerville evidence loaded (Cambridge 2z9k-mv...
+- Teammate: Bruno
+- Agent: —
+- Did: Cambridge + Somerville evidence loaded (Cambridge 2z9k-mv9g: missed trash, dead animals, overflowing bins, dumping; Somerville 311: dead animals, dumping, trash issues, missed pickup, bins, out early, dumpsters) — ~35k rows, live refresh; coverage registry (data_coverage view, coverage_matrix(), city_boundaries()); ACS demographics for all 238 tracts (218 matched) incl. housing age pre-1940
+- Why: Bruno: evidence missing outside Boston (it existed, we hadn't fetched it); register where every dataset has coverage; population useful for the model
+- Where: pipeline/rat_audit/ingest/{regional,demographics,update_modes}.py, supabase/migrations/20261024100005_data_coverage.sql, contracts/categories.json, docs/rat-audit/prompts/model-section.md
+- Idea: Census API now needs a key; Census Reporter serves ACS without one
+
 ### 2026-10-24 14:45 — Model public interface train/score/simulate + explain (dr...
 - Teammate: Bruno
 - Agent: —
