@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "boston-opendata": {
+      "command": "uv",
+      "args": [
+        "run", "-q", "--python", "3.12",
+        "--with", "opencontext @ git+https://github.com/CityOfBoston/OpenContext@5549481af4ed65dd7bb9b85dceccfc18a413479d",
+        "python", ".kiro/mcp/opencontext_stdio.py"
+      ],
+      "env": { "OPENCONTEXT_CONFIG": ".kiro/mcp/opencontext/boston-ckan.yaml" },
+      "timeout": 120000,
+      "disabled": false
+    },
+    "massgis": {
+      "command": "uv",
+      "args": [
+        "run", "-q", "--python", "3.12",
+        "--with", "opencontext @ git+https://github.com/CityOfBoston/OpenContext@5549481af4ed65dd7bb9b85dceccfc18a413479d",
+        "python", ".kiro/mcp/opencontext_stdio.py"
+      ],
+      "env": { "OPENCONTEXT_CONFIG": ".kiro/mcp/opencontext/massgis-arcgis.yaml" },
+      "timeout": 120000,
+      "disabled": false
+    },
+    "civic-snapshots": {
+      "command": "python3",
+      "args": [".kiro/mcp/civic_snapshots.py"],
+      "disabled": false
+    },
+    "mbta": {
+      "command": "python3",
+      "args": [".kiro/mcp/mbta.py"],
+      "disabled": false
+    },
+    "aws-docs": {
+      "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
+      "env": { "FASTMCP_LOG_LEVEL": "ERROR" },
+      "disabled": false
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest", "--headless"],
+      "disabled": false
+    }
+  }
+}

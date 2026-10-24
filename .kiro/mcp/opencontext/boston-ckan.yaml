@@ -1,0 +1,20 @@
+# OpenContext config: Boston open data portal (CKAN, data.boston.gov).
+# Public, read-only, no key needed. Auth is off because this runs locally
+# over stdio for Kiro; the City's own hosted copy uses OAuth.
+server_name: "Boston OpenData MCP (Hackachusetts local)"
+description: "Read-only access to data.boston.gov via the City's OpenContext CKAN plugin"
+organization: "City of Boston"
+
+plugins:
+  ckan:
+    enabled: true
+    base_url: "https://data.boston.gov"
+    portal_url: "https://data.boston.gov"
+    city_name: "Boston"
+    timeout: 60
+
+logging:
+  level: "WARNING"
+
+auth:
+  enabled: false

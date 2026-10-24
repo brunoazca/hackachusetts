@@ -31,6 +31,22 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 11:57 — Set up 6 MCP servers for Kiro: City of Boston OpenContext...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Set up 6 MCP servers for Kiro: City of Boston OpenContext (data.boston.gov + MassGIS) via stdio bridge, civic-snapshots SQL, MBTA live, aws-docs, playwright; check_mcp script + hook + steering
+- Why: Data tools ready before the idea is picked
+- Where: .kiro/settings/mcp.json, .kiro/mcp/*, .kiro/scripts/check_mcp.py, .kiro/hooks/mcp-health.kiro.hook, .kiro/steering/mcp-tools.md, .kiro/steering/structure.md
+- Idea: OpenContext is the City's own MCP; using it is a strong City-fit + integration story
+
+### 2026-10-24 11:56 — Wrote knowledge/13: five new concepts (CurbCheck, Three H...
+- Teammate: Guilherme
+- Agent: Claude Code (research/ideation; not Kiro build activity)
+- Did: Wrote knowledge/13: five new concepts (CurbCheck, Three Hours, 311 outcome layer, On the Record, Warrant) with live-verified sources
+- Why: User asked for 100% new, best-for-this-hackathon ideas regardless of complexity
+- Where: knowledge/13_hidden_ledgers_deep_concepts.md, knowledge/README.md
+- Idea: Recommend CurbCheck: photo of a paper no-parking sign -> City Street Occupancy Permit lookup -> verified/no-match/ambiguous card; Parking Enforcement is the #1 2026 311 type (52,623)
+
 ### 2026-10-24 11:50 — Reframed rodent concept as an operational inspection tool
 - Teammate: Guilherme
 - Agent: Codex (research; not Kiro build activity)
@@ -54,6 +70,22 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Connect public priorities and resident friction to distinctive feasible demos
 - Where: knowledge/02,04,07,08,09,10,11,README; knowledge/sources; data/civic/CATALOG.md
 - Idea: Prioritize Last 100 Feet, ShiftFits or OpenDoor after proving one dependency; retain BlockBrief as fallback
+
+### 2026-10-24 11:03 — Re-read full rules, judging, City + sponsor evidence (doc...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Re-read full rules, judging, City + sponsor evidence (docs 00-09); scored ideas vs rubric
+- Why: Team found prior ideas obvious/boring
+- Where: none
+- Idea: Top: Last 100 Feet (A1); runner-up MoveOut Relay (A10); both algorithm-core like City's mattress award
+
+### 2026-10-24 10:52 — Verified audit/log feature complete and teammate-ready
+- Teammate: Guilherme
+- Agent: default
+- Did: Verified audit/log feature complete and teammate-ready
+- Why: confirm git pull gives teammates the full logging system
+- Where: none
+- Idea: none
 
 ### 2026-10-24 10:51 — Full repo review; shortlisted 5 build ideas, recommend Bl...
 - Teammate: Guilherme
