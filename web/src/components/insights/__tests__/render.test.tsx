@@ -70,7 +70,7 @@ test("charts never emit NaN coordinates, even for flat or single-point data", ()
 test("finding card shows question, result, method, sample, caveat, source and date", () => {
   const html = renderToStaticMarkup(<FindingCard finding={toFinding(scatterRow)} />);
   for (const s of ["Fixture question A?", "ρ = 0.41", "Spearman over 250 m cells, 2025", "n = 1,234 (250 m cells)",
-    "Fixture caveat A.", "src-a", "Moderate association", 'dateTime="2026-10-24T19:00:00Z"', "Oct 24, 2026"]) {
+    "Fixture caveat A.", "src-a", "Some link", 'dateTime="2026-10-24T19:00:00Z"', "Oct 24, 2026"]) {
     assert.ok(html.includes(s), `missing: ${s}`);
   }
   assertA11yRefs(html);
@@ -79,9 +79,9 @@ test("finding card shows question, result, method, sample, caveat, source and da
 test("null result card is as complete as a positive one", () => {
   const pos = renderToStaticMarkup(<FindingCard finding={toFinding(scatterRow)} />);
   const nul = renderToStaticMarkup(<FindingCard finding={toFinding(nullRow)} />);
-  assert.match(nul, /No association found/);
+  assert.match(nul, /No link found/);
   assert.match(nul, /Fixture caveat B\./);
-  assert.match(nul, /Source not recorded/);
+  assert.match(nul, /Source not listed/);
   assert.match(nul, /near: 1\.2 → 1\.19/);
   for (const html of [pos, nul]) {
     assert.equal(count(html, /<dt/g), 4);
@@ -91,30 +91,30 @@ test("null result card is as complete as a positive one", () => {
 
 test("unsupported chart and missing stat degrade the card, not the panel", () => {
   const html = renderToStaticMarkup(<FindingCard finding={toFinding(badChartRow)} />);
-  assert.match(html, /Chart unavailable: Chart type &quot;pie&quot; is not supported\./);
-  assert.match(html, /Statistic not reported/);
-  assert.match(html, /Strength not labelled/);
+  assert.match(html, /title="Chart type &quot;pie&quot; is not supported\."[^>]*>No chart for this one\./);
+  assert.match(html, /No number yet/);
+  assert.match(html, /Link unclear/);
   assert.doesNotMatch(html, /<svg/);
 });
 
 test("forecast summary compares model to baseline explicitly", () => {
   const html = renderToStaticMarkup(<ForecastSummary forecast={toForecast(fullPayload.forecast)!} />);
-  assert.match(html, /Backtested model \(cell_week_poisson_gbm\)/);
-  assert.match(html, /over the last 26 weeks/);
+  assert.match(html, /Our forecast/);
+  assert.match(html, /Tested on the last 26 weeks/);
   // MAE 0.41 < 0.47: better. Top-10% 38% < 42%: worse, and said so.
-  assert.match(html, /data-score="MAE"[\s\S]*?data-verdict="better">Better than baseline/);
-  assert.match(html, /data-score="Top-10% capture"[\s\S]*?data-verdict="worse">Worse than baseline/);
+  assert.match(html, /data-score="Average miss"[\s\S]*?data-verdict="better">Better than the simple guess/);
+  assert.match(html, /data-score="Top 10% of blocks"[\s\S]*?data-verdict="worse">Worse than the simple guess/);
   assert.match(html, />38%</);
   assert.match(html, />42%</);
   assert.match(html, /Expected 311 rodent <em>reports<\/em> citywide/);
-  assert.match(html, /Per 250 m cell, not a count of rats/);
+  assert.match(html, /Counts reports from people, not rats/);
   assert.match(html, />3\.2<\/span>/);
   assert.match(html, /Fixtureville/);
   assert.match(html, /Drivers: Trash storage reports \(\+0\.8\)/);
   assert.match(html, /Week of Oct 26, 2026[\s\S]*Week of Nov 2, 2026/);
   assert.match(html, /aria-pressed="true"[^>]*aria-label="Week of Oct 26, 2026"/);
   assert.match(html, />56 of 900</);
-  assert.match(html, /−4 pts/);
+  assert.match(html, /A simple guess got <span[^>]*>42%<\/span>\./);
   // "rats" only appears in the disclaimer.
   assert.equal(count(html, /\brats?\b/gi), 1);
 });
@@ -122,16 +122,16 @@ test("forecast summary compares model to baseline explicitly", () => {
 test("forecast summary for a baseline-only run and a run missing baseline scores", () => {
   const base = renderToStaticMarkup(<ForecastSummary forecast={toForecast({ run: baselineRun, weeks: [], top_cells: [] })!} />);
   assert.match(base, /data-model-kind="baseline"/);
-  assert.match(base, /Baseline: mean of the last 4 weeks/);
-  assert.match(base, /Baseline only/);
-  assert.match(base, /trained model is not available yet/);
-  assert.match(base, /No future weeks have been scored/);
+  assert.match(base, /Simple guess: average of the last 4 weeks/);
+  assert.match(base, /Simple guess only/);
+  assert.match(base, /Our forecast is not ready yet/);
+  assert.match(base, /weekly forecast is not ready yet/);
 
   const run = { ...modelRun, metrics: { mae: 0.4 } };
   const noBase = renderToStaticMarkup(<ForecastSummary forecast={toForecast({ run, weeks: [], top_cells: [] })!} />);
-  assert.match(noBase, /No comparison available/);
-  assert.match(noBase, /baseline was not scored for this run/);
-  assert.match(noBase, /window not reported/);
+  assert.match(noBase, /Nothing to compare yet/);
+  assert.match(noBase, /simple guess was not tested this time/);
+  assert.match(noBase, /Test period unknown/);
 });
 
 const render = (state: InsightsState, onRetry?: () => void) => renderToStaticMarkup(<InsightsView state={state} onRetry={onRetry} />);
@@ -171,19 +171,19 @@ test("ready state renders all sections, a caveat next to every price figure, val
   // each impact card carries its own caveat
   for (const id of ["cost-pest-control", "fx-assessed"]) {
     const card = html.split(`data-impact="${id}"`)[1].split("</article>")[0];
-    assert.match(card, /Caveat: <\/span>Fixture (cost|price) caveat\./);
+    assert.match(card, /Keep in mind: <\/span>Fixture (cost|price) caveat\./);
   }
   assertA11yRefs(html);
 });
 
 test("ready state with partial data shows per-section empty states", () => {
   const html = render({ status: "ready", data: toInsightsData({ correlations: [nullRow], price_impact: [], forecast: null }) });
-  assert.match(html, /No forecast run has been written yet/);
-  assert.match(html, /No counted costs have been computed yet/);
-  assert.match(html, /No price comparisons have been computed yet/);
+  assert.match(html, /The forecast is not ready yet/);
+  assert.match(html, /No cost figures yet/);
+  assert.match(html, /No price comparisons yet/);
   assert.equal(count(html, /data-finding=/g), 1);
   const noFindings = render({ status: "ready", data: toInsightsData({ ...fullPayload, correlations: [] }) });
-  assert.match(noFindings, /No findings have been computed yet/);
+  assert.match(noFindings, /No patterns to show yet/);
 });
 
 test("fixtures are imported by tests only", () => {
@@ -205,7 +205,7 @@ test("CI bounds render as error bars, not as extra bars, and appear in the table
   assert.match(html, /with 95% confidence intervals/);
   assert.match(html, /<td>15\.5 to 25<\/td>/);
   assert.doesNotMatch(html, /aria-label="Legend"/);
-  assert.match(html, /More statistics/);
+  assert.match(html, /More numbers/);
 });
 
 test("pest payments render as a table with the caveat beside it", () => {
@@ -230,7 +230,7 @@ test("real baseline metric field names render both scores, never n/a", () => {
   const html = renderToStaticMarkup(<ForecastSummary forecast={toForecast({ run, weeks: [], top_cells: [] })!} />);
   assert.match(html, />0\.071</);
   assert.match(html, />54\.3%</);
-  assert.doesNotMatch(html, /n\/a|Better than baseline|Worse than baseline/);
+  assert.doesNotMatch(html, /n\/a|Better than the simple guess|Worse than the simple guess/);
 });
 
 
@@ -239,14 +239,14 @@ import { pipelineInsufficientRow } from "./fixtures";
 test("insufficient data never receives a no-association badge", () => {
   const html = renderToStaticMarkup(<FindingCard finding={toFinding(pipelineInsufficientRow)} />);
   assert.match(html, /data-strength="insufficient"/);
-  assert.match(html, />Insufficient data</);
-  assert.doesNotMatch(html, /No association found/);
+  assert.match(html, />Not enough data</);
+  assert.doesNotMatch(html, /No link found/);
 });
 
 test("action sample sizes, censoring, rates and intervals are available together", () => {
   const html = renderToStaticMarkup(<FindingCard finding={toFinding(pipelineWhatWorkedRow)} />);
-  assert.match(html, /Action samples and uncertainty/);
-  assert.match(html, /Excluded: follow-up incomplete/);
+  assert.match(html, /What happened after each response/);
+  assert.match(html, /Not counted: ones we could not follow long enough/);
   assert.match(html, /data-action="baited"[\s\S]*?>300<[\s\S]*?>5<[\s\S]*?>20%<[\s\S]*?>15\.5% to 25%</);
   assert.match(html, /data-action="cited"[\s\S]*?>50<[\s\S]*?>1<[\s\S]*?>30%</);
   const precise = renderToStaticMarkup(<FindingCard finding={toFinding({ ...pipelineWhatWorkedRow,
@@ -280,7 +280,7 @@ test("source metadata survives the RPC schema and renders linked names and retri
   assert.equal(count(html, />Fixture source name<\/a>/g), 2);
   assert.equal(count(html, /dateTime="2026-10-23T18:30:00Z"/g), 2);
   assert.match(html, /missing-source/);
-  assert.match(html, /Source details unavailable/);
+  assert.match(html, /Source details missing/);
   assertA11yRefs(html);
 });
 
@@ -294,10 +294,10 @@ test("missing source metadata is explicit; unsafe source URLs never become links
     const html = render(state);
     assert.match(html, /Unsafe-link source/);
     assert.doesNotMatch(html, /href=/);
-    assert.match(html, /Source link unavailable/);
+    assert.match(html, /Fixture source name \(no link\)|\(no link\)/);
   }
   const legacy = render({ status: "ready", data: toInsightsData(fullPayload) });
-  assert.match(legacy, /Source details unavailable/);
+  assert.match(legacy, /Source details missing/);
 });
 
 test("invalid date-like chart labels fall back to categories without NaN coordinates", () => {

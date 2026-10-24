@@ -8,7 +8,7 @@ export default function InsightsView({ state, onRetry }: { state: InsightsState;
   if (state.status === "loading") {
     return (
       <div role="status" aria-live="polite" aria-busy="true" className="space-y-3 p-4" data-state="loading">
-        <p className="text-sm text-neutral-600">Loading findings, forecast and costs…</p>
+        <p className="text-sm text-neutral-600">Loading findings…</p>
         {[0, 1, 2].map((i) => <div key={i} aria-hidden className="h-24 animate-pulse rounded-lg bg-neutral-100" />)}
       </div>
     );
@@ -33,7 +33,8 @@ export default function InsightsView({ state, onRetry }: { state: InsightsState;
     return (
       <div role="status" className="m-4 rounded-lg border border-dashed border-neutral-300 p-3 text-sm" data-state="unavailable">
         <p className="font-semibold text-neutral-900">Results not available yet.</p>
-        <p className="mt-1 text-xs text-neutral-600">{state.reason}</p>
+        <p className="mt-1 text-xs text-neutral-600">We are still getting these ready. Try again in a moment.</p>
+        <details className="mt-1 text-[11px] text-neutral-500"><summary className="cursor-pointer">Details</summary>{state.reason}</details>
         {onRetry && (
           <button type="button" onClick={onRetry}
             className="mt-2 rounded border border-neutral-300 px-2 py-1 text-xs font-medium text-neutral-800 hover:bg-neutral-100">
@@ -50,13 +51,13 @@ export default function InsightsView({ state, onRetry }: { state: InsightsState;
       {forecast ? <ForecastSummary forecast={forecast} /> : <ForecastUnavailable />}
 
       <section aria-labelledby="findings-h" className="space-y-2">
-        <h2 id="findings-h" className="text-sm font-semibold text-neutral-900">Findings</h2>
+        <h2 id="findings-h" className="text-sm font-semibold text-neutral-900">Patterns we found</h2>
         <p className="text-xs text-neutral-600">
-          Associations in 311 reports and city data, nulls included. Correlation is not cause; counts are reports, not rats.
+          What tends to show up with more rodent reports. We show checks that found nothing, too. A pattern is not proof of cause.
         </p>
         {findings.length
           ? findings.map((f) => <FindingCard key={f.id} finding={f} />)
-          : <p className="text-xs text-neutral-600" role="note">No findings have been computed yet.</p>}
+          : <p className="text-xs text-neutral-600" role="note">No patterns to show yet.</p>}
       </section>
 
       <PriceImpact costs={costs} exploratory={exploratory} />

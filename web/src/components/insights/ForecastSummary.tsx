@@ -19,9 +19,9 @@ export function compare(p: ScorePair, lowerIsBetter: boolean): Verdict {
 }
 
 const VERDICT_TEXT: Record<Exclude<Verdict, null>, string> = {
-  better: "Better than baseline",
-  worse: "Worse than baseline",
-  same: "Same as baseline",
+  better: "Better than the simple guess",
+  worse: "Worse than the simple guess",
+  same: "Same as the simple guess",
 };
 
 function ScoreRow({ name, hint, pair, lowerIsBetter, fmt, isBaseline }: {
@@ -33,10 +33,10 @@ function ScoreRow({ name, hint, pair, lowerIsBetter, fmt, isBaseline }: {
       <th scope="row" className="py-1 pr-2 text-left font-normal text-neutral-700">
         {name}<span className="block text-[10px] text-neutral-500">{hint}</span>
       </th>
-      <td className="py-1 pr-2 tabular-nums">{isBaseline ? "—" : pair.model === null ? "n/a" : fmt(pair.model)}</td>
-      <td className="py-1 pr-2 tabular-nums">{pair.baseline === null ? "n/a" : fmt(pair.baseline)}</td>
+      <td className="py-1 pr-2 tabular-nums">{isBaseline ? "—" : pair.model === null ? "—" : fmt(pair.model)}</td>
+      <td className="py-1 pr-2 tabular-nums">{pair.baseline === null ? "—" : fmt(pair.baseline)}</td>
       <td className="py-1 text-neutral-700" data-verdict={v ?? "none"}>
-        {isBaseline ? "Baseline only" : v ? VERDICT_TEXT[v] : "No comparison available"}
+        {isBaseline ? "Simple guess only" : v ? VERDICT_TEXT[v] : "Nothing to compare yet"}
       </td>
     </tr>
   );
@@ -45,11 +45,8 @@ function ScoreRow({ name, hint, pair, lowerIsBetter, fmt, isBaseline }: {
 export function ForecastUnavailable() {
   return (
     <section aria-labelledby="forecast-h" className="rounded-lg border border-dashed border-neutral-300 p-3" data-state="unavailable">
-      <h3 id="forecast-h" className="text-sm font-semibold text-neutral-900">Forecast: expected reports</h3>
-      <p className="mt-1 text-xs text-neutral-600">
-        No forecast run has been written yet. Neither the baseline nor the trained model is available, so
-        there is nothing to compare.
-      </p>
+      <h3 id="forecast-h" className="text-sm font-semibold text-neutral-900">Where reports are likely next</h3>
+      <p className="mt-1 text-xs text-neutral-600">The forecast is not ready yet. Check back soon.</p>
     </section>
   );
 }
@@ -141,8 +138,8 @@ export default function ForecastSummary({ forecast: f }: { forecast: ForecastVie
   const week = upcoming[activeIdx];
 
   const label = f.isBaseline
-    ? "Baseline: mean of the last 4 weeks"
-    : `Backtested model (${f.model})`;
+    ? "Simple guess: average of the last 4 weeks"
+    : "Our forecast";
   const baselineMissing = !f.isBaseline && f.mae.baseline === null && f.top10.baseline === null;
   const capture = f.isBaseline ? f.top10.baseline : f.top10.model;
   const captureBase = f.isBaseline ? null : f.top10.baseline;
@@ -167,8 +164,8 @@ export default function ForecastSummary({ forecast: f }: { forecast: ForecastVie
   return (
     <section aria-labelledby="forecast-h" className="rounded-xl border border-line bg-card p-3 text-fg" data-model-kind={f.isBaseline ? "baseline" : "model"}>
       <div className="flex items-center justify-between gap-2">
-        <h3 id="forecast-h" className="text-eyebrow font-semibold uppercase tracking-wide text-fg-3">Forecast: expected reports</h3>
-        {f.isBaseline && <span className="rounded-full bg-card-hover px-2 py-0.5 text-[10px] text-fg-2">Baseline</span>}
+        <h3 id="forecast-h" className="text-eyebrow font-semibold uppercase tracking-wide text-fg-3">Where reports are likely next</h3>
+        {f.isBaseline && <span className="rounded-full bg-card-hover px-2 py-0.5 text-[10px] text-fg-2">Simple guess</span>}
       </div>
 
       {upcoming.length > 0 ? (
@@ -192,27 +189,27 @@ export default function ForecastSummary({ forecast: f }: { forecast: ForecastVie
               <span className="font-mono text-headline-sm font-bold tabular-nums">~{fmtNumber(Math.round(week.expected_total))}</span>
               <span className="text-right text-[11px] text-fg-3">
                 <span className="tabular-nums text-fg-2">{fmtNumber((week.bands.high ?? 0) + (week.bands.very_high ?? 0))} of {fmtNumber(week.cells)}</span>
-                <span className="block">cells high or very high</span>
+                <span className="block">blocks likely to be busy</span>
               </span>
             </div>
             <Trend weeks={upcoming} active={activeIdx} />
-            <p className="text-[11px] text-fg-3">Per 250 m cell, not a count of rats.</p>
+            <p className="text-[11px] text-fg-3">Counts reports from people, not rats.</p>
           </div>
         </>
       ) : (
-        <p className="mt-3 text-xs text-fg-3" role="note">No future weeks have been scored for this run.</p>
+        <p className="mt-3 text-xs text-fg-3" role="note">The weekly forecast is not ready yet. Check back soon.</p>
       )}
 
       {capture !== null && (
         <div className="mt-3 flex items-center gap-3 rounded-lg border border-line p-2.5" data-capture>
           <CaptureRing model={capture} baseline={captureBase} />
           <div className="text-xs">
-            <p className="font-semibold text-fg">Top 10% of cells held {fmtPct(capture)} of reports.</p>
+            <p className="font-semibold text-fg">Our top 10% of blocks had {fmtPct(capture)} of all reports.</p>
             <p className="mt-0.5 text-fg-3">
               {gainPts !== null
-                ? <><span className={gainPts >= 0 ? "text-held" : "text-return"}>{gainPts >= 0 ? "+" : "−"}{fmtNumber(Math.abs(gainPts), 1)} pts</span> vs the simple baseline ({fmtPct(captureBase!)})</>
-                : f.isBaseline ? "Baseline ranking; the trained model is not scored yet." : "No baseline score to compare."}
-              {f.backtestWeeks !== null && <> · {fmtNumber(f.backtestWeeks)}-week backtest</>}
+                ? <>A simple guess got <span className={gainPts >= 0 ? "text-fg-2" : "text-return"}>{fmtPct(captureBase!)}</span>{gainPts >= 0 ? <>, so ours finds <span className="font-semibold text-held">{fmtNumber(Math.abs(gainPts), 0)} more in every 100</span>.</> : "."}</>
+                : f.isBaseline ? "This is the simple guess. Our forecast is not ready yet." : "Nothing to compare with yet."}
+              {f.backtestWeeks !== null && <> Tested on the last {fmtNumber(f.backtestWeeks)} weeks.</>}
             </p>
           </div>
         </div>
@@ -221,7 +218,7 @@ export default function ForecastSummary({ forecast: f }: { forecast: ForecastVie
       {f.topCells.length > 0 && (
         <div className="mt-4">
           <div className="flex items-baseline justify-between gap-2">
-            <h4 className="text-small font-semibold">Hotspots, {fmtDate(f.topCells[0].weekStart)}</h4>
+            <h4 className="text-small font-semibold">Busiest blocks, week of {fmtDate(f.topCells[0].weekStart)}</h4>
           </div>
           {legend.length > 0 && (
             <ul className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-fg-3" aria-label="Driver colors">
@@ -232,7 +229,7 @@ export default function ForecastSummary({ forecast: f }: { forecast: ForecastVie
           )}
           <ol className="mt-2 space-y-1.5">
             {f.topCells.map((c, i) => (
-              <li key={`${c.cellId}-${c.weekStart}`} data-cell={c.cellId}>
+              <li key={`${c.cellId}-${c.weekStart}`} data-cell={c.cellId} title={c.cellId}>
                 <button type="button" onClick={() => openCell(c)}
                   className="group flex w-full items-center gap-2.5 rounded-lg border border-line bg-card p-2 text-left transition-[transform,border-color,background-color] hover:translate-x-0.5 hover:border-edge hover:bg-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">
                   <span className={`flex h-8 w-8 flex-none items-center justify-center rounded-lg font-mono text-sm font-bold ${RANK_TILE[c.band ?? "low"]}`}>{i + 1}</span>
@@ -241,10 +238,7 @@ export default function ForecastSummary({ forecast: f }: { forecast: ForecastVie
                       <span className="truncate text-small font-semibold">{c.neighborhood ?? "Unnamed block"}</span>
                       <span className="flex-none font-mono text-small font-bold tabular-nums">{fmtNumber(c.expected, 1)}</span>
                     </span>
-                    <span className="flex items-baseline justify-between gap-2 text-[10px] text-fg-3">
-                      <span className="truncate font-mono">{c.cellId}</span>
-                      <span className="flex-none">{c.band ? `${BAND_LABEL[c.band]} · ` : ""}expected</span>
-                    </span>
+                    <span className="block text-[10px] text-fg-3">{c.band ? `${BAND_LABEL[c.band]} · ` : ""}reports expected</span>
                     <DriverBar parts={c.driverParts} />
                     {c.drivers.length > 0 && <span className="sr-only">Drivers: {c.drivers.join(", ")}</span>}
                   </span>
@@ -252,56 +246,55 @@ export default function ForecastSummary({ forecast: f }: { forecast: ForecastVie
               </li>
             ))}
           </ol>
-          <p className="mt-1 text-[10px] text-fg-3">Tap a hotspot to open its block on the map.</p>
+          <p className="mt-1 text-[10px] text-fg-3">Tap a block to see it on the map.</p>
         </div>
       )}
 
       <details className="group mt-3 border-t border-line pt-2">
         <summary className="cursor-pointer list-none text-xs text-fg-2 hover:text-fg">
-          <span className="inline-block transition-transform group-open:rotate-90">▸</span> Model details
+          <span className="inline-block transition-transform group-open:rotate-90">▸</span> How we checked this
         </summary>
         <p className="mt-2 text-xs">
           <span className="rounded bg-card-hover px-1.5 py-0.5 font-medium text-fg">{label}</span>
         </p>
         <table className="mt-2 w-full text-xs">
           <caption className="text-left text-fg-3">
-            Backtest{f.backtestWeeks !== null ? ` over the last ${fmtNumber(f.backtestWeeks)} weeks` : " (window not reported)"}
+            {f.backtestWeeks !== null ? `Tested on the last ${fmtNumber(f.backtestWeeks)} weeks` : "Test period unknown"}
           </caption>
           <thead>
             <tr className="text-left text-fg-3">
-              <th scope="col" className="pr-2 font-medium">Score</th>
-              <th scope="col" className="pr-2 font-medium">Model</th>
-              <th scope="col" className="pr-2 font-medium">Baseline</th>
-              <th scope="col" className="pr-2 font-medium">Comparison</th>
+              <th scope="col" className="pr-2 font-medium">Check</th>
+              <th scope="col" className="pr-2 font-medium">Ours</th>
+              <th scope="col" className="pr-2 font-medium">Simple guess</th>
+              <th scope="col" className="pr-2 font-medium">Result</th>
             </tr>
           </thead>
           <tbody>
-            <ScoreRow name="MAE" hint="mean absolute error, lower is better" pair={f.mae} lowerIsBetter fmt={(v) => fmtNumber(v, 3)} isBaseline={f.isBaseline} />
-            <ScoreRow name="Top-10% capture" hint="share of reports in the top 10% of cells, higher is better" pair={f.top10} lowerIsBetter={false} fmt={fmtPct} isBaseline={f.isBaseline} />
+            <ScoreRow name="Average miss" hint="how far off each block's guess was; lower is better" pair={f.mae} lowerIsBetter fmt={(v) => fmtNumber(v, 3)} isBaseline={f.isBaseline} />
+            <ScoreRow name="Top 10% of blocks" hint="share of reports in the busiest 10% of blocks; higher is better" pair={f.top10} lowerIsBetter={false} fmt={fmtPct} isBaseline={f.isBaseline} />
           </tbody>
         </table>
         {baselineMissing && (
           <p className="mt-1 text-xs text-fg-3" role="note">
-            The baseline was not scored for this run, so we cannot say whether the model beats it.
+            The simple guess was not tested this time, so we can&apos;t compare.
           </p>
         )}
         {f.isBaseline && (
           <p className="mt-1 text-xs text-fg-3" role="note">
-            The trained model is not available yet; the map forecast uses this baseline.
+            Our forecast is not ready yet, so the map shows the simple guess.
           </p>
         )}
         {f.features.length > 0 && (
           <div className="mt-3">
-            <h4 className="text-xs font-semibold text-fg">What the model leans on</h4>
+            <h4 className="text-xs font-semibold text-fg">What matters most</h4>
             <ol className="mt-1 list-decimal pl-4 text-xs text-fg-2">
               {f.features.map((x) => <li key={x.label}>{x.label}</li>)}
             </ol>
           </div>
         )}
         <p className="mt-2 text-[11px] text-fg-3">
-          Run <code>{f.runId}</code>
-          {f.trainedThrough && <> · trained through {fmtDate(f.trainedThrough)}</>}
-          {" "}· computed <time dateTime={f.createdAt}>{fmtDateTime(f.createdAt)}</time>
+          {f.trainedThrough && <>Uses reports up to {fmtDate(f.trainedThrough)} · </>}
+          Updated <time dateTime={f.createdAt}>{fmtDateTime(f.createdAt)}</time>
         </p>
       </details>
     </section>

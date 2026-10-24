@@ -4,6 +4,7 @@ import { supabase } from "@/lib/supabase";
 import { fetchSources } from "@/lib/queries";
 import type { SourceEvidence } from "@/lib/evidence";
 import SourceList from "@/components/evidence/SourceList";
+import { Eyebrow, Skeleton, StatTile } from "@/components/ui/bits";
 
 // Building facts for one Boston parcel. Owner name stays in the private schema (reveal, R3.9 — not built yet).
 
@@ -28,22 +29,24 @@ export default function ParcelCard({ pid }: { pid: string }) {
       });
     return () => { live = false; };
   }, [pid]);
-  if (!p) return <p className="p-4 text-sm text-neutral-700">Loading building…</p>;
+  if (!p) return <Skeleton label="Loading building…" rows={1} />;
   const age = p.yr_built ? new Date().getFullYear() - p.yr_built : null;
   return (
     <article className="space-y-3 p-4 text-sm" aria-live="polite">
       <header>
-        <span className="text-xs font-semibold uppercase tracking-wide text-neutral-700">Building</span>
-        <h2 className="text-lg font-semibold">{p.address_block ?? "Parcel"}</h2>
-        <p className="text-neutral-700">{p.land_use ?? "—"} · {p.city}</p>
+        <Eyebrow>Building</Eyebrow>
+        <h2 className="mt-0.5 text-title font-bold text-fg">{p.address_block ?? "Building"}</h2>
+        <p className="text-fg-3">{p.land_use ?? "Use unknown"} · {p.city}</p>
       </header>
-      <dl className="grid grid-cols-3 gap-2">
-        <div><dt className="text-xs text-neutral-700">Built</dt><dd className="font-semibold">{p.yr_built ?? "—"}{age ? ` (${age} yr)` : ""}</dd></div>
-        <div><dt className="text-xs text-neutral-700">Units</dt><dd className="font-semibold">{p.units ?? "—"}</dd></div>
-        <div><dt className="text-xs text-neutral-700">Owner lives here</dt><dd className="font-semibold">{p.own_occ == null ? "—" : p.own_occ ? "Yes" : "No"}</dd></div>
-      </dl>
-      <p className="rounded-md bg-neutral-50 p-2 text-neutral-800">Owner: <span className="select-none blur-sm">Hidden Owner Name LLC</span> <span className="text-xs text-neutral-700">(reveal coming)</span></p>
-      <footer className="border-t border-neutral-100 pt-2 text-xs text-neutral-700">
+      <div className="grid grid-cols-3 gap-2">
+        <StatTile value={age !== null ? `${age} yr` : "—"} label={p.yr_built ? `built ${p.yr_built}` : "age unknown"} tone={age !== null && age >= 100 ? "text-warn" : undefined} />
+        <StatTile value={p.units ?? "—"} label={p.units === 1 ? "home" : "homes"} />
+        <StatTile value={p.own_occ == null ? "—" : p.own_occ ? "Yes" : "No"} label="owner lives here" />
+      </div>
+      <p className="flex items-center gap-2 rounded-lg border border-line bg-card px-3 py-2 text-[13px] text-fg-2">
+        <span aria-hidden>🔒</span><span>Owner name is hidden to protect privacy.</span>
+      </p>
+      <footer className="border-t border-line pt-2 text-xs text-fg-3">
         <SourceList sources={sources} unavailable={!sources.length} />
       </footer>
     </article>

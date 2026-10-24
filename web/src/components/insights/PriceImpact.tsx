@@ -12,7 +12,7 @@ function ImpactCard({ item }: { item: ImpactItem }) {
         <h4 id={headingId} className="text-sm font-semibold text-neutral-900">{item.title}</h4>
         {item.kind === "exploratory" && (
           <span className="shrink-0 rounded-full border border-neutral-400 px-2 py-0.5 text-[11px] font-medium text-neutral-700">
-            Exploratory
+            Early look
           </span>
         )}
       </div>
@@ -23,7 +23,7 @@ function ImpactCard({ item }: { item: ImpactItem }) {
         </p>
       )}
       {item.headline === null && !item.details.length && !item.tables.length && (
-        <p className="mt-1 text-xs italic text-neutral-500">Value not reported</p>
+        <p className="mt-1 text-xs italic text-neutral-500">No number yet</p>
       )}
       <p className="text-xs text-neutral-500">
         {item.metric}{item.scope !== "city" && <> · {item.scope}{item.scopeId ? ` ${item.scopeId}` : ""}</>}
@@ -51,7 +51,7 @@ function ImpactCard({ item }: { item: ImpactItem }) {
       {/* R7.5: the caveat sits next to every price figure. */}
       <Caveat text={item.caveat} />
       <div className="mt-2 text-[11px] text-neutral-500">
-        Source: <Sources ids={item.sources} details={item.sourceDetails} /> · Computed{" "}
+        Source: <Sources ids={item.sources} details={item.sourceDetails} /> · Updated{" "}
         <time dateTime={item.computedAt}>{fmtDateTime(item.computedAt)}</time>
       </div>
     </article>
@@ -65,16 +65,16 @@ export default function PriceImpact({ costs, exploratory }: { costs: ImpactItem[
         <h3 id="costs-h" className="text-sm font-semibold text-neutral-900">Costs we can count</h3>
         {costs.length
           ? costs.map((c) => <ImpactCard key={c.id} item={c} />)
-          : <p className="text-xs text-neutral-600" role="note">No counted costs have been computed yet.</p>}
+          : <p className="text-xs text-neutral-600" role="note">No cost figures yet.</p>}
       </section>
       <section aria-labelledby="price-h" className="space-y-2">
-        <h3 id="price-h" className="text-sm font-semibold text-neutral-900">Prices near hot spots (exploratory)</h3>
+        <h3 id="price-h" className="text-sm font-semibold text-neutral-900">Home prices near hot spots (early look)</h3>
         <p className="text-xs text-neutral-600">
-          These comparisons are exploratory and confounded. They do not show that rodents lower property values.
+          An early look only. Many things change home prices, so these do not show that rodents lower property values.
         </p>
         {exploratory.length
           ? exploratory.map((c) => <ImpactCard key={c.id} item={c} />)
-          : <p className="text-xs text-neutral-600" role="note">No price comparisons have been computed yet.</p>}
+          : <p className="text-xs text-neutral-600" role="note">No price comparisons yet.</p>}
       </section>
     </>
   );
