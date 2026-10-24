@@ -2,6 +2,28 @@
 
 This worktree owns tasks 4.1–4.6. Core tasks 4.1–4.4 and 4.6 are implemented with the validation limits below, including v2 `due_sites` and `app_set_mode`. Task 4.5 remains unimplemented P1 work; the whole Agent track is not being marked complete.
 
+## Shared map controls and Insights — October 24, 2026
+
+This local follow-up on `3599998` supersedes the older map-control limitations below.
+The original map and chat now share every actual category/context layer, date range,
+report status, points/heat/both display, nearby-record visibility, forecast period,
+site neighborhood and current viewport. Manual changes travel with the next message.
+Highlights render for loaded incidents or visible sites; tool results state that scope.
+Map changes reveal Assess controls, while site-queue filtering reveals Act.
+
+`get_insights` reads the same `insights_summary` RPC and parser as the panel, including
+findings, forecast, costs and exploratory prices, plus its dated historical research.
+It preserves sources, missing sections and uncertainty, and identifies stored results
+as study-wide rather than recomputed for the current map. Forecast comparison uses
+the panel's shared calculation: better hotspot ranking can coexist with worse count
+accuracy. This does not implement every individual P1 tool listed in the older audit.
+
+- Agent/Insights suite: **130 passed, 0 failed, 19 environment/export-dependent checks skipped**; five repository regression tests also passed.
+- Scoped ESLint, production build (including TypeScript), secret scanner and diff whitespace checks passed. Existing Atkinson fallback warnings remain.
+- Real-model browser flow with connected data verified category/date/status changes, original map controls, contextual layers, forecast dates and Insights citations. A manual status change was recognized by the next message.
+- The final model response correctly distinguished hotspot capture (about 65% versus 54%) from count MAE (0.073 versus 0.071, worse). No browser console errors were captured; the existing `wood-pattern` sprite warning remains.
+- Local preview: `http://127.0.0.1:3046`. No push, deployment, credential change, migration or shared database write was performed in this follow-up. Earlier deployment observations below are historical, not a fresh production check.
+
 ## Final integration check — October 24, 2026
 
 Rebased the Agent follow-up onto local main `7d74d6b`, retaining the working Gateway

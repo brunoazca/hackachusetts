@@ -6,6 +6,7 @@ import type { FeatureCollection, Point } from "geojson";
 import { setWorkerUrl, type ExpressionSpecification, type HeatmapLayerSpecification } from "maplibre-gl";
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
+import { filterIncidentStatus, type CategoryId } from "@/lib/map-controls";
 import { fetchCoverage, fetchIncidentBins, fetchIncidents, type BBox, type CoverageRow, type IncidentProps } from "@/lib/queries";
 import ContextLayers from "./ContextLayers";
 import MapLegend from "./MapLegend";
@@ -107,20 +108,22 @@ export default function MapView() {
   const flyToTarget = useMap((s) => s.flyToTarget);
   const select = useMap((s) => s.select);
   const selection = useMap((s) => s.selection);
-  // All data by default: every incident layer on, shown as heatmaps (icons appear from zoom 15).
-  const [enabled, setEnabled] = useState<Record<string, boolean>>(
-    () => Object.fromEntries(Object.keys(CATS).map((c) => [c, true])),
-  );
-  const [mode, setMode] = useState<ViewMode>("heat");
-  // Causes (trash, vacant lots, works) are context for rats, not the headline: off until asked for.
-  const [causes, setCauses] = useState(false);
-  // Block profile (demographics, building age per 250 m cell): off until picked in "Buildings & people".
+  const enabled = useMap((s) => s.layers);
+  const setEnabled = useMap((s) => s.setLayers);
+  const mode = useMap((s) => s.viewMode);
+  const setMode = useMap((s) => s.setViewMode);
+  const causes = useMap((s) => s.causes);
+  const setCauses = useMap((s) => s.setCauses);
+  const highlight = useMap((s) => s.highlight);
+  // Block profile remains off until selected in Buildings & people.
   const [cellMetric, setCellMetric] = useState<string | null>(null);
   const [coverage, setCoverage] = useState<CoverageRow[]>([]);
   const [bbox, setBbox] = useState<BBox | null>(null);
   const [zoom, setZoom] = useState(view.zoom);
   useEffect(() => { fetchCoverage().then(setCoverage).catch(() => {}); }, []);
-  const [data, setData] = useState<FC>(EMPTY);
+  const [rawData, setData] = useState<FC>(EMPTY);
+  const data = useMemo<FC>(() => ({ type: "FeatureCollection", features: filterIncidentStatus(rawData.features.filter(f => enabled[f.properties.category as CategoryId]), filters.status) }), [rawData, filters.status, enabled]);
+  const highlighted = useMemo<FC>(() => ({ type: "FeatureCollection", features: data.features.filter(f => f.properties.id && highlight.includes(f.properties.id)) }), [data, highlight]);
   const [iconsReady, setIconsReady] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -148,7 +151,7 @@ export default function MapView() {
   // Causes join the markers when asked for, or once you reach street level.
   const street = zoom >= 15;
   const clusterFC = useMemo<FC>(() => {
-    const on = new Set(cats);
+    const on = new Set<string>(cats);
     const keep = data.features.filter((f) => on.has(f.properties.category) && (CATS[f.properties.category]?.group === "rats" || causes || street));
     // Reports at the very same spot (one address) would draw exactly on top of each other and look
     // like one. Fold them into one marker with a count; tapping it opens the address with all of them.
@@ -198,26 +201,32 @@ export default function MapView() {
   // so the map settles at once. A new request only goes out when the view leaves the box or the
   // data's detail level changes (street points vs. one cell size per zoom step).
   const fetched = useRef<{ key: string; box: BBox } | null>(null);
-  const load = useCallback(async (force = false) => {
+  const load = useCallback(async () => {
     const map = mapRef.current;
     if (!map) return;
     const b = map.getBounds();
     const view: BBox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
     const z = map.getZoom();
+    const center = map.getCenter();
+    useMap.getState().setView({ lat: center.lat, lon: center.lng, zoom: z });
+    useMap.getState().setBounds(view);
+    setBbox(view);
     setZoom(z);
-    const key = z >= POINTS_ZOOM ? "pts" : `bins${Math.floor(z)}`;
+    const detail = z >= POINTS_ZOOM ? "pts" : `bins${Math.floor(z)}`;
+    const key = `${detail}:${cats.join(",")}:${filters.since}:${filters.until}`;
     const f = fetched.current;
-    if (!force && f && f.key === key && view[0] >= f.box[0] && view[1] >= f.box[1] && view[2] <= f.box[2] && view[3] <= f.box[3]) return;
+    if (f && f.key === key && view[0] >= f.box[0] && view[1] >= f.box[1] && view[2] <= f.box[2] && view[3] <= f.box[3]) return;
     const padX = (view[2] - view[0]) * 0.35, padY = (view[3] - view[1]) * 0.35;
     const box: BBox = [view[0] - padX, view[1] - padY, view[2] + padX, view[3] + padY];
     const id = ++reqId.current;
-    if (cats.length === 0) { setData(EMPTY); fetched.current = null; return; }
+    if (cats.length === 0) { setData(EMPTY); setLoading(false); setError(null); fetched.current = null; return; }
+    if (f?.key !== key) setData(EMPTY);
     setLoading(true);
     try {
-      const fc = key === "pts"
+      const fc = detail === "pts"
         ? await fetchIncidents(box, cats, filters.since, filters.until)
         : await fetchIncidentBins(box, cats, filters.since, filters.until, cellFor(Math.floor(z)));
-      if (id === reqId.current) { setData(fc); setBbox(box); setError(null); fetched.current = { key, box }; }
+      if (id === reqId.current) { setData(fc); setError(null); fetched.current = { key, box }; }
     } catch (e) {
       if (id === reqId.current) setError(e instanceof Error ? e.message : String(e));
     } finally {
@@ -226,12 +235,20 @@ export default function MapView() {
   }, [cats, filters.since, filters.until]);
 
   // Layers or dates changed: the cached box no longer matches, fetch again.
-  useEffect(() => { load(true); }, [load]);
+  useEffect(() => { load(); }, [load]);
   const moveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const onMoveEnd = useCallback(() => {
+    const map = mapRef.current;
+    if (map) {
+      const b = map.getBounds(), c = map.getCenter();
+      useMap.getState().setView({ lat: c.lat, lon: c.lng, zoom: map.getZoom() });
+      useMap.getState().setBounds([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()]);
+    }
     if (moveTimer.current) clearTimeout(moveTimer.current);
     moveTimer.current = setTimeout(() => load(), 120);
   }, [load]);
+
+  useEffect(() => () => { if (moveTimer.current) clearTimeout(moveTimer.current); }, []);
 
   const onLoad = useCallback(async () => {
     const map = mapRef.current?.getMap();
@@ -263,8 +280,8 @@ export default function MapView() {
   }, [theme, iconsReady]);
 
   const interactive = useMemo(
-    () => [...(appMode === "act" ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(cellMetric ? ["ctx-cells"] : []), ...(iconsReady ? ["all-clusters", "all-points"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
-    [iconsReady, appMode, enabled.ctx_buildings, cellMetric, zoom, forecastOn],
+    () => [...(appMode === "act" && enabled.sites ? ["sites"] : []), ...(enabled.ctx_buildings && zoom >= 15 ? ["ctx-buildings"] : []), ...(cellMetric ? ["ctx-cells"] : []), ...(iconsReady ? ["all-clusters", "all-points"] : []), ...(forecastOn ? FORECAST_LAYER_IDS : [])],
+    [iconsReady, appMode, enabled.sites, enabled.ctx_buildings, cellMetric, zoom, forecastOn],
   );
 
   // A tap on empty map flies there and opens the closest real report.
@@ -357,6 +374,9 @@ export default function MapView() {
         <Source id="heat-rats" type="geojson" data={heat.rats}>
           <Layer id="heat-rats" type="heatmap" layout={{ visibility: showHeat ? "visible" : "none" }} paint={heatPaint(HEAT_RAMPS.rats, 0.75, heat.nRats)} />
         </Source>
+        <Source id="chat-highlight" type="geojson" data={highlighted}>
+          <Layer id="chat-highlight" type="circle" paint={{ "circle-radius": 23, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": T.fg, "circle-stroke-width": 4 }} />
+        </Source>
         {iconsReady && (
           // One clustered source for every visible kind, so groups never stack on top of each other.
           // A group takes the color of whichever family (rats, food, shelter, works) it holds most of.
@@ -412,7 +432,7 @@ export default function MapView() {
             />
           </Source>
         )}
-        {appMode === "act" && (
+        {appMode === "act" && enabled.sites && (
           <Source id="sites" type="geojson" data={sitesFC}>
             <Layer
               id="sites"
@@ -421,8 +441,8 @@ export default function MapView() {
                 "circle-radius": ["interpolate", ["linear"], ["get", "returns"], 0, 9, 10, 15, 20, 20],
                 "circle-color": ["case", ["get", "due"], T.returned, T.fg3],
                 "circle-opacity": 0.95,
-                "circle-stroke-color": ["case", ["==", ["get", "id"], selectedId], T.fg, T.bg],
-                "circle-stroke-width": ["case", ["==", ["get", "id"], selectedId], 4, 2],
+                "circle-stroke-color": ["case", ["any", ["==", ["get", "id"], selectedId], ["in", ["get", "id"], ["literal", highlight]]], T.fg, T.bg],
+                "circle-stroke-width": ["case", ["any", ["==", ["get", "id"], selectedId], ["in", ["get", "id"], ["literal", highlight]]], 4, 2],
               }}
             />
             <Layer
@@ -448,7 +468,7 @@ export default function MapView() {
           Could not load reports: {error}
         </div>
       )}
-      {zoom >= POINTS_ZOOM && data.features.length >= 20000 && (
+      {zoom >= POINTS_ZOOM && rawData.features.length >= 20000 && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-md bg-amber-50 px-3 py-1.5 text-sm text-amber-950 shadow">
           Showing the newest 20,000 reports — zoom in or shorten the period to see all of them.
         </div>

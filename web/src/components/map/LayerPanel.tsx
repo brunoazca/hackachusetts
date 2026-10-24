@@ -24,9 +24,7 @@ const GROUPS: { id: string; label: string }[] = [
   { id: "displace", label: "Displacement" },
 ];
 
-export function activeCategories(enabled: Record<string, boolean>) {
-  return Object.keys(CATS).filter((id) => enabled[id]);
-}
+export { activeCategories } from "@/lib/map-controls";
 
 const iso = (d: Date) => d.toISOString().slice(0, 10);
 const daysAgo = (n: number) => iso(new Date(Date.now() - n * 86400000));
@@ -38,7 +36,8 @@ const PRESETS = [
   { label: "All", days: 365 * 4 },
 ];
 
-export type ViewMode = "points" | "heat" | "both";
+import type { ViewMode } from "@/lib/map-controls";
+export type { ViewMode } from "@/lib/map-controls";
 export const HEAT_RAMPS = {
   rats: ["#fde0c5", "#fbb27a", "#f4793e", "#d7263d", "#8f0f24"],
   evidence: ["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"],
@@ -285,6 +284,13 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
             </div>
           </header>
 
+          {current.id === "view" && (
+            <label className="mb-3 block text-small text-fg-2">Report status
+              <select aria-label="Report status" value={filters.status} onChange={e => setFilters({ status: e.target.value as "all" | "open" | "closed" })} className="mt-1 block w-full rounded-md border border-edge bg-card p-2 text-fg">
+                <option value="all">All reports</option><option value="open">Open</option><option value="closed">Closed</option>
+              </select>
+            </label>
+          )}
           {GROUPS.some((g) => g.id === current.id) && (
             <div>
               {groupIds(current.id).map((id) => {

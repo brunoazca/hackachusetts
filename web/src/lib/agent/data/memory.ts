@@ -12,6 +12,7 @@ import type {
 // (with fixtures that live under __tests__) — never wired into the route.
 
 export type MemoryTables = {
+  insights?: unknown;
   incidents?: IncidentRow[];
   places?: PlaceRow[];
   sites?: SiteRow[];
@@ -28,6 +29,7 @@ export function createMemoryData(t: MemoryTables): AgentData {
   const incidents = t.incidents ?? [];
   const sites = t.sites?.length ? t.sites : (t.draft_sites ?? []);
   return {
+    async insightsSummary() { return t.insights ?? { correlations: [], price_impact: [], forecast: null }; },
     async incidents(q) {
       const rows = incidents
         .filter((r) => !q.categories?.length || q.categories.includes(r.category))

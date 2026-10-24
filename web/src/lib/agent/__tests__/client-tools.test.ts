@@ -2,13 +2,14 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { executeClientTool, type MapActions } from "../tools/client";
 import { buildMapContext, parseMapContext } from "../context";
+import { CATEGORY_IDS, activeCategories, LAYER_GROUPS, filterIncidentStatus } from "../../map-controls";
 import { useMap } from "../../map-store";
 
 function fakeMap() {
   const calls: [string, unknown][] = [];
   const rec = (name: string) => (v: unknown) => { calls.push([name, v]); };
   const map: MapActions = {
-    setMode: rec("setMode"),
+    setMode: rec("setMode"), setSiteNeighborhood: rec("setSiteNeighborhood"), setViewMode: rec("setViewMode"), setCauses: rec("setCauses"),
     flyTo: rec("flyTo"), setLayers: rec("setLayers"), setFilters: rec("setFilters"), setHighlight: rec("setHighlight"),
     select: rec("select"), setPanel: rec("setPanel"), setForecastWeek: rec("setForecastWeek"),
   };
@@ -33,13 +34,17 @@ test("layers, highlight, select, forecast, panel, filters", () => {
   executeClientTool("open_panel", { panel: "insights" }, map);
   executeClientTool("map_set_filters", { status: "open" }, map);
   assert.deepEqual(calls, [
-    ["setLayers", { rodent: false, food: true }],
+    ["setLayers", { rodent: false, ...Object.fromEntries(LAYER_GROUPS.food.map(id => [id, true])) }],
+    ["setMode", "assess"],
+    ["setCauses", true],
     ["setHighlight", ["a", "b"]],
     ["select", { kind: "site", id: "s1" }],
+    ["setMode", "assess"],
     ["setLayers", { forecast: true }],
     ["setForecastWeek", "2026-10-26"],
     ["setPanel", "insights"],
     ["setFilters", { status: "open" }],
+    ["setMode", "assess"],
   ]);
 });
 
@@ -92,25 +97,77 @@ test("app_set_mode uses the current real store and preserves selection", () => {
 });
 
 
-test("unwired map actions report a rendering limitation instead of claiming visible success", () => {
-  const { map, calls } = fakeMap();
-  for (const [name, input] of [
-    ["map_highlight", { ids: ["fixture-incident"] }],
-    ["map_set_layers", { on: ["food"] }],
-    ["map_set_filters", { status: "open" }],
-  ] as const) {
-    const result = executeClientTool(name, input, map);
-    assert.ok(result.ok);
-    assert.equal(result.rendered, false);
-    assert.match(result.caveat!, /do not (claim|say)/);
+test("every original category, context layer and display setting is shared with the map", () => {
+  const before = useMap.getState();
+  try {
+    for (const id of CATEGORY_IDS) {
+      const result = executeClientTool("map_set_filters", { categories: [id] }, useMap.getState());
+      assert.equal(result.ok, true);
+      assert.deepEqual(activeCategories(useMap.getState().layers), [id]);
+    }
+    executeClientTool("map_set_layers", { on: ["food", "ctx_housing", "ctx_buildings"], off: ["rodent"] }, useMap.getState());
+    assert.equal(useMap.getState().layers.ctx_housing, true);
+    assert.equal(useMap.getState().layers.ctx_buildings, true);
+    assert.equal(useMap.getState().causes, true);
+    assert.equal(useMap.getState().layers.rodent, false);
+    for (const id of LAYER_GROUPS.food) assert.equal(useMap.getState().layers[id], true);
+    executeClientTool("map_set_view", { mode: "both", nearby_records: false }, useMap.getState());
+    assert.equal(useMap.getState().viewMode, "both");
+    assert.equal(useMap.getState().causes, false);
+    useMap.getState().setLayers({ rodent: true });
+    assert.ok(buildMapContext(useMap.getState()).layers.includes("rodent"), "manual changes reach next chat request");
+    executeClientTool("map_set_layers", { off: CATEGORY_IDS }, useMap.getState());
+    assert.deepEqual(activeCategories(useMap.getState().layers), [], "all off does not become all on");
+    executeClientTool("map_set_filters", { categories: [] }, useMap.getState());
+    assert.deepEqual(activeCategories(useMap.getState().layers), CATEGORY_IDS);
+    executeClientTool("map_show_forecast", { week_start: "4w" }, useMap.getState());
+    assert.equal(buildMapContext(useMap.getState()).forecastPeriod, "4w");
+  } finally { useMap.setState(before, true); }
+});
+
+test("invalid dates, reversed partial ranges and unknown categories cannot partially mutate the map", () => {
+  const before = useMap.getState();
+  for (const input of [{ since: "2026-02-30" }, { since: "2099-01-01", status: "open" }, { until: "2000-01-01" }, { categories: ["invented"] }]) {
+    assert.equal(executeClientTool("map_set_filters", input, useMap.getState()).ok, false);
+    assert.equal(useMap.getState(), before);
   }
-  assert.equal(calls.length, 3, "requests still reach the store for future map integration");
-  for (const [name, input] of [
-    ["map_set_layers", { on: ["forecast"] }],
-    ["map_set_filters", { since: "2026-10-01" }],
-  ] as const) {
-    const result = executeClientTool(name, input, map);
-    assert.ok(result.ok);
-    assert.equal(result.rendered, undefined);
-  }
+});
+
+test("status filters preserve exact aggregate weights and individual reports without mutating fetched data", () => {
+  const rows = [{ properties: { n: 10, n_open: 3 } }, { properties: { n: 5, n_open: 0 } },
+    { properties: { status: "open" } }, { properties: { status: "closed" } }];
+  const original = structuredClone(rows);
+  const sum = (status: "all" | "open" | "closed") => filterIncidentStatus(rows, status).reduce((n, row) => n + (row.properties.n ?? 1), 0);
+  assert.equal(sum("all"), 17);
+  assert.equal(sum("open"), 4);
+  assert.equal(sum("closed"), 13);
+  assert.deepEqual(rows, original);
+});
+
+test("highlight reaches the renderer state; context contains actual bounds and display", () => {
+  const before = useMap.getState();
+  try {
+    useMap.getState().setBounds([-71.12, 42.3, -71.0, 42.4]);
+    useMap.getState().setView({ lat: 42.35, lon: -71.06, zoom: 15 });
+    executeClientTool("map_highlight", { ids: ["a", "b"] }, useMap.getState());
+    assert.deepEqual(useMap.getState().highlight, ["a", "b"]);
+    const context = buildMapContext(useMap.getState());
+    assert.deepEqual(parseMapContext(context), context);
+    assert.deepEqual(context.bbox, [-71.12, 42.3, -71.0, 42.4]);
+    assert.equal(context.view?.zoom, 15);
+    executeClientTool("map_fly_to", { lat: 42.36, lon: -71.1, zoom: 16 }, useMap.getState());
+    assert.equal(buildMapContext(useMap.getState()).bbox, null, "pending flight must not reuse old viewport");
+  } finally { useMap.setState(before, true); }
+});
+
+test("Places neighborhood filter shares the queue state and opens Act", () => {
+  const before = useMap.getState();
+  try {
+    executeClientTool("map_filter_sites", { neighborhood: "Roxbury" }, useMap.getState());
+    assert.equal(useMap.getState().siteNeighborhood, "Roxbury");
+    assert.equal(buildMapContext(useMap.getState()).siteNeighborhood, "Roxbury");
+    assert.equal(useMap.getState().mode, "act");
+    executeClientTool("map_set_filters", { status: "open" }, useMap.getState());
+    assert.equal(useMap.getState().mode, "assess", "map commands expose the original map controls");
+  } finally { useMap.setState(before, true); }
 });

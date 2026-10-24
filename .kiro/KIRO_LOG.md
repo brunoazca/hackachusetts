@@ -47,7 +47,6 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: docs/rat-audit/model-report/, pipeline/scripts/model_report.py
 - Idea: Long backtest being rerun on the current model; will update index.html and the long-test table
 
-<<<<<<< Updated upstream
 ### 2026-10-24 17:40 — Make English the fixed chat response language
 - Teammate: Carol
 - Agent: Codex
@@ -55,7 +54,6 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Carol requested English always, with commit and push to the running application.
 - Where: web/src/lib/agent/prompt.ts
 - Idea: State the response language independently of the user's input language and do not expose policy explanations in replies.
-=======
 ### 2026-10-24 17:40 — Ran hourly design critique of Piper (/) at 1280x900 + 390...
 - Teammate: —
 - Agent: da-vinci
@@ -63,7 +61,6 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: scored civic accessibility criterion; keep a current read of the inspector UI
 - Where: docs/design-critique/latest.md
 - Idea: Collapse the two header icon-buttons into the row below ~420px so refresh/theme aren't clipped on a phone
->>>>>>> Stashed changes
 
 ### 2026-10-24 17:36 — Built the AI region solution job (region_solution.py + re...
 - Teammate: Bruno
@@ -103,6 +100,18 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Carol reported that the reference chips overwhelm the chat and requested a toggle, then authorized a push.
 - Where: web/src/components/chat/Message.tsx
 - Idea: Keep evidence accessible on demand while the answer stays readable.
+### 2026-10-24 17:43 — Connect chat to all map controls and Insights
+- Teammate: Carol
+- Agent:
+- Did: Shared the original map's real layers, dates/status, display, nearby records, forecast, neighborhood and viewport with chat; connected highlights and automatic panel visibility.
+- Did: Added get_insights using the panel's RPC/parser and historical sources; shared deterministic forecast comparisons to prevent inverted MAE claims.
+- Why: Carol requested chat control of the original map and access to Insights.
+- Where: web/src/lib/agent/**, web/src/lib/{map-controls,map-store,insights-history,forecast-comparison}.ts, map/chat/act/insights components, and this log.
+- Evidence: Agent/Insights tests 130 pass, 0 fail, 19 conditional skips; repository tests 5 pass. Scoped lint, production build/TypeScript, secret scanner and diff checks passed.
+- Evidence: Real-model local browser flow applied map filters, recognized a manual status change, read live Insights and correctly separated better hotspot ranking from worse count MAE. Screenshot: /private/tmp/piper-map-chat-verified.jpg.
+- Decision: Local worktree preview on port 3046; no push/deploy, credentials changed, migrations or shared database writes.
+- Decision: Keep Agent empty in this chat's log entries, as requested by Carol; record each substantive piece of work here.
+- Idea: Chat and visual controls should share one state; analytical verdicts should use the same calculations as the panel.
 
 ### 2026-10-24 17:25 — Adicionei a secao 5.4a na spec de Insights: agregar popul...
 - Teammate: Carol

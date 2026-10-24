@@ -42,9 +42,13 @@ export type ToolFailure = {
 /** Map context sent with each chat message (R8.5). */
 export type MapContext = {
   mode?: "assess" | "act";
+  viewMode?: "points" | "heat" | "both";
+  nearbyRecords?: boolean;
+  forecastPeriod?: string;
+  siteNeighborhood?: string;
   selection: { kind: string; id: string } | { kind: "area" } | null;
   view: { lat: number; lon: number; zoom: number } | null;
-  /** Visible map bounds. null until the map store exposes them (see report: `bounds` contract change). */
+  /** Visible map bounds. null before load or while a requested flight is pending. */
   bbox: BBox | null;
   filters: { since: string; until: string; categories: string[]; status: string } | null;
   layers: string[];
