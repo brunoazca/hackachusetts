@@ -86,7 +86,7 @@ compute durations locally. Raw downloads cache to `.cache/raw/` (git-ignored).
   prior report's `closed_at`. Score = 100 × weighted percentile of (recurrences 0.5, reports 0.3, recency 0.2), clipped 0–100.
   `summary.drivers`: counts within 100 m over the site's active period by category/place kind with ids.
   `summary.building`: nearest parcel; `adjacent_vacant` if a vacant-land parcel lies within 40 m.
-  `recommended`: rules from the driver→action table (knowledge/10_rat_signals_brainstorm.md §4) with `because` + source_ids.
+  `recommended`: rules from the driver→action table (knowledge/27_rat_signals_brainstorm.md §4) with `because` + source_ids.
   Rules added from the research [R3.9–R3.11], evaluated first: (1) ≥ 2 recurrences and the last actions were
   monitoring / inspection / "noted" → recommend citation or abatement order, because "monitoring 14.1% → 14.2%,
   violation 15.3% → 12.2%" (what worked); (2) `adjacent_vacant` → joint block visit and action on the adjacent parcel;

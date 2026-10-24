@@ -4,11 +4,12 @@ Checked October 24, 2026. These files support the Markdown research, not applica
 
 ```
 knowledge/sources/
-├── scripts/      # repeatable probe/audit code (run these)
-└── artifacts/    # the JSON/CSV outputs those scripts produced (dated evidence)
+├── scripts/      # general civic/portal probe & audit code (run these)
+├── rats/         # rat-audit-specific pulls, analysis and validation/ subtree
+└── artifacts/    # the JSON/CSV outputs the scripts produced (dated evidence)
 ```
 
-Each `scripts/*.py` writes its output into `artifacts/`. Run a script from anywhere; paths resolve from the script's own location.
+Each general `scripts/*.py` writes its output into `artifacts/`. Rat-audit code and its outputs live under `rats/`. Run a script from anywhere; paths resolve from the script's own location.
 
 ## scripts/
 
@@ -18,7 +19,12 @@ Each `scripts/*.py` writes its output into `artifacts/`. Run a script from anywh
 - `audit_public_resources.py` reproduces the public-resource inventory. It does not execute downloaded code, create accounts, submit forms or save individual data rows. It retains failed probes and follows the GBFS discovery document for station feeds. Writes `artifacts/public_resource_audit.json` and `artifacts/public_resource_inventory.csv`.
 - `audit_rodent_resources.py` records/reproduces exact Boston rodent-category queries, Cambridge metadata/counts, parsed workshop CSV aggregates and repository license signals. No complaint text or addresses are retained. Writes `artifacts/rodent_resource_audit.json`.
 - `inventory_civic_portal.py` / `build_civic_inventory.py` build the `data/civic/inventory/` catalog and regenerate `knowledge/20_civic_source_inventory.md`.
-- `rats_zip.py`, `rats_econ.py`, `storm_analysis.py` are the Boston-rat-audit analysis scripts (ZIP-level driver correlations, Airbnb/Zillow comparison, the blizzard 311→tract join). They read external data dirs passed in, not repo paths.
+
+## rats/
+
+- `rats_zip.py`, `rats_econ.py`, `storm_analysis.py` — the Boston-rat-audit analysis scripts (ZIP-level driver correlations, Airbnb/Zillow comparison, the blizzard 311→tract join). They read external data dirs passed in, not repo paths.
+- `fire_pull.py`, `fire_rats.py`, `demo_site.md` — rat-audit data pulls and the demo-site writeup.
+- `validation/` — the data-plan validation pass (grid, impact, time, tract analyses with their `*_results.txt` outputs).
 
 ## artifacts/
 

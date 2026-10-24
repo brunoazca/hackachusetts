@@ -28,7 +28,10 @@ Docs are grouped: **00–03 competition & event**, **10–19 strategy, evidence 
 | [16 — Creative rodent-control playbook](16_rodent_control_creative_playbook.md) | RodentOps plus seven alternatives, actual Boston/Cambridge rodent data, hearing captions and a small demo scope |
 | [17 — Hidden ledgers: five new concepts](17_hidden_ledgers_deep_concepts.md) | CurbCheck, Three Hours, 311 outcome layer, hearing ledger, town-meeting decoder; live-verified Boston sources and numbers from Oct 24 noon |
 | [18 — Build decision guide](18_idea_shortlist_and_build_recommendation.md) | Updated creative choices and three conservative fallback scopes |
+| [19 — Rat data validation](19_rat_data_validation.md) | Per-dataset verdicts against live Analyze Boston/NOAA/MLB/CDC/iNaturalist; what passed, what failed, with reproducible scripts |
+| [27 — Rat signals brainstorm](27_rat_signals_brainstorm.md) | Causes/impacts/actions and what to retrieve; the driver→action table behind RodentOps recommendations |
 | [25 — RodentOps: government and public voices](25_rodentops_government_and_public_voices.md) | What the City actually says (Wu, ISD, BHA, summit captions), resident complaints with verification levels, existing-tool overlap and pitch/judging implications |
+| [26 — RodentOps expansion round 2](26_rodentops_expansion_round2.md) | Net-new vs 24/25: BWSC catch-basin/stormwater layer, MA rodenticide law (SGAR / 333 CMR 13.08 / home-rule bans), Boston Council dockets by number + the "City does not enforce containerization" admission, the 311 public ticket feed (per-address narrative+closure+inspector), BRAP site-selection method, and NYC's quantified containerization benchmark |
 
 ### Data & verification
 

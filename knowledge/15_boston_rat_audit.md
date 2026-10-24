@@ -1,6 +1,6 @@
 # Boston Rat Audit: datasets, findings, impact and economics
 
-Research date: **October 24, 2026**. Status: the team's leading idea after voting on the [Data Atlas](https://claude.ai/artifact/Ccw6n593reUG1MQjAawa2W). Every count below was queried live from the named source on this date unless marked otherwise. Analysis scripts are in [sources/scripts/](sources/scripts/).
+Research date: **October 24, 2026**. Status: the team's leading idea after voting on the [Data Atlas](https://claude.ai/artifact/Ccw6n593reUG1MQjAawa2W). Every count below was queried live from the named source on this date unless marked otherwise. Analysis scripts are in [sources/rats/](sources/rats/).
 
 ## 1. The idea in one paragraph
 
@@ -76,7 +76,7 @@ All Boston datasets are on [Analyze Boston](https://data.boston.gov/) (CKAN). Ta
 
 ### Drivers (2025, 25 Boston ZIPs, per 1,000 property records)
 
-Spearman correlation between rodent reports and each factor ([rats_zip.py](sources/scripts/rats_zip.py)):
+Spearman correlation between rodent reports and each factor ([rats_zip.py](sources/rats/rats_zip.py)):
 
 | Factor | ρ |
 |---|---|
@@ -197,7 +197,7 @@ Non-unknown coverage: 95.5% (2025), 92.7% (2026). In 2026 the city's notes shift
 
 **Short answer: we cannot show it with public data, and we should not claim it in the pitch.**
 
-- **ZIP-level check** ([rats_econ.py](sources/scripts/rats_econ.py)): Spearman between 2025 rodent reports per 1,000 property records and Zillow values is **−0.18 for home value (ZHVI, 25 ZIPs)** and **+0.30 for rent (ZORI, 23 ZIPs)**. Both are weak and confounded: rat-heavy ZIPs are dense, old, student-heavy and expensive to rent. Example: Mission Hill 02120 has 63.7 rodent reports per 1,000 and a typical rent of $4,206.
+- **ZIP-level check** ([rats_econ.py](sources/rats/rats_econ.py)): Spearman between 2025 rodent reports per 1,000 property records and Zillow values is **−0.18 for home value (ZHVI, 25 ZIPs)** and **+0.30 for rent (ZORI, 23 ZIPs)**. Both are weak and confounded: rat-heavy ZIPs are dense, old, student-heavy and expensive to rent. Example: Mission Hill 02120 has 63.7 rodent reports per 1,000 and a typical rent of $4,206.
 - **Literature:** I found no peer-reviewed study that measures how rodent sightings affect home prices. Figures of "up to 10–20%" come from UK property and insurance marketing ([Property Reporter](https://www.propertyreporter.co.uk/rat-infestations-can-knock-up-to-20-off-a-propertys-value.html), [Property Reporter, UK values](https://www.propertyreporter.co.uk/uk-properties-face-falling-values-as-rat-infestations-rise.html), [Quotezone](https://www.quotezone.co.uk/home-insurance/guides/rat-threat-to-uk-properties-this-winter)) and a US buyer's-agent analysis ([Daily Tidings](https://www.dailytidings.com/more-than-1-in-10-oregon-homes-are-infested-with-rodents-new-study-finds/)). Treat them as anecdotes.
 - **A better test if there is time:** compare assessed-value change (FY2025 → FY2026 property assessment) at chronic rodent parcels against similar nearby parcels (same ZIP, building type, year built). Present that as exploratory, not as proof.
 - **Safer economic framing for the pitch:** guests leaving early, restaurant inspection failures, and repeat inspector visits are costs we can count.
@@ -230,8 +230,8 @@ curl -s "https://data.boston.gov/api/3/action/datastore_search_sql" --get \
   --data-urlencode "sql=SELECT location_zipcode, count(*) FROM \"9d7c2214-4709-478a-a2e8-fb2020a5bb94\" WHERE type='Rodent Activity' GROUP BY 1 ORDER BY 2 DESC"
 ```
 
-- [sources/scripts/rats_zip.py](sources/scripts/rats_zip.py): ZIP-level driver correlations. Inputs: `t311.json`, `food.json`, `rs.json`, `pa.json` (the SQL that produces each is at the top of the script).
-- [sources/scripts/rats_econ.py](sources/scripts/rats_econ.py): Airbnb reviews and Zillow comparison. Inputs: Inside Airbnb `listings.csv.gz`, `reviews.csv.gz`; Zillow `zhvi.csv`, `zori.csv`.
-- [sources/scripts/storm_analysis.py](sources/scripts/storm_analysis.py): the Jan 2022 blizzard test from the storm idea, same join method (311 lat/long → Climate Ready tracts).
+- [sources/rats/rats_zip.py](sources/rats/rats_zip.py): ZIP-level driver correlations. Inputs: `t311.json`, `food.json`, `rs.json`, `pa.json` (the SQL that produces each is at the top of the script).
+- [sources/rats/rats_econ.py](sources/rats/rats_econ.py): Airbnb reviews and Zillow comparison. Inputs: Inside Airbnb `listings.csv.gz`, `reviews.csv.gz`; Zillow `zhvi.csv`, `zori.csv`.
+- [sources/rats/storm_analysis.py](sources/rats/storm_analysis.py): the Jan 2022 blizzard test from the storm idea, same join method (311 lat/long → Climate Ready tracts).
 
 Downloaded data is not committed. Re-fetch with the URLs above.

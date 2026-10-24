@@ -1,6 +1,6 @@
 # Rat Audit: which datasets are really useful
 
-Tested **October 24, 2026** against live Analyze Boston, NOAA, MLB, CDC and iNaturalist data. Every dataset on the [Rat Audit Data Plan board](https://claude.ai/artifact/6bCS5853Lo3fcDvkGqqXid) got a verdict. Scripts and raw outputs: [sources/rats/validation/](sources/rats/validation/). Builds on [10 — Rat signals brainstorm](10_rat_signals_brainstorm.md) and [15 — Boston Rat Audit](15_boston_rat_audit.md).
+Tested **October 24, 2026** against live Analyze Boston, NOAA, MLB, CDC and iNaturalist data. Every dataset on the [Rat Audit Data Plan board](https://claude.ai/artifact/6bCS5853Lo3fcDvkGqqXid) got a verdict. Scripts and raw outputs: [sources/rats/validation/](sources/rats/validation/). Builds on [27 — Rat signals brainstorm](27_rat_signals_brainstorm.md) and [15 — Boston Rat Audit](15_boston_rat_audit.md).
 
 ## 1. Headline
 

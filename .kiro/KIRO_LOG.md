@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:35 — Filled the blank _TBD_ Commands section in steering/tech....
+- Teammate: Guilherme
+- Agent: kirocrew
+- Did: Filled the blank _TBD_ Commands section in steering/tech.md with the real pnpm (web/) and uv (pipeline/) commands from web/package.json; audited all .kiro config against the merged rat-audit tree - no stale rodent-ops/civic-service/src-only refs remain
+- Why: The demo-path hook and agents rely on tech.md for build/test commands; they were all _TBD_
+- Where: .kiro/steering/tech.md
+- Idea: Left partner's in-flight uncommitted knowledge/design changes untouched - not mine to commit
+
 ### 2026-10-24 13:32 — Fixed submission-readiness checker to detect the real app...
 - Teammate: Guilherme
 - Agent: kirocrew
