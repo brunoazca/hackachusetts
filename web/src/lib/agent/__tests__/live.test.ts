@@ -62,11 +62,11 @@ test("live: geocode → nearby_drivers on real coordinates", { skip, timeout: 30
 test("live: site tools use Analytics sites, else the provisional draft queue", { skip, timeout: 30_000 }, async (t) => {
   const siteCount = await db().from("sites").select("id", { count: "exact", head: true });
   assert.equal(siteCount.error, null);
-  const sites = siteCount.count;
+  const sites = (await createSupabaseData().siteSource()) === "analytics";
   const queue = await db().rpc("site_queue", { lim: 1 }, { get: true });
   if (!sites && queue.error && queue.error.code !== "PGRST202") assert.fail(`draft queue: ${classifyError(queue.error)}`);
   const top = await call("top_sites", { limit: 5 });
-  const report: Record<string, unknown> = { sites_table: sites, draft_queue: queue.error ? classifyError(queue.error) : "ok" };
+  const report: Record<string, unknown> = { sites_table: siteCount.count, analytics_active: sites, draft_queue: queue.error ? classifyError(queue.error) : "ok" };
 
   if (!sites && (queue.error || !queue.data?.length)) {
     assert.equal(top.ok, false);
@@ -138,13 +138,20 @@ test("live: top_sites area filter and draft search agree with database results",
   const bbox: [number, number, number, number] = [lon - 0.001, lat - 0.001, lon + 0.001, lat + 0.001];
   const result = await call("top_sites", { limit: 5, bbox });
   assert.equal(result.ok, true, result.error);
+  const v2 = matches[0].summary.definition === "dbscan_50m_min3_v2";
   const query = source === "draft"
     ? db().rpc("draft_sites", {}, { get: true }).select("id,due,returns,reports,last_at,lat,lon").order("due", { ascending: false }).order("returns", { ascending: false }).order("reports", { ascending: false }).order("last_at", { ascending: false }).order("id")
-    : db().from("sites").select("id").order("score", { ascending: false }).order("id");
+    : v2
+      ? db().from("sites").select("id", { count: "exact" }).eq("summary->>definition", "dbscan_50m_min3_v2").not("rank", "is", null).order("id")
+      : db().from("sites").select("id").not("rank", "is", null).order("score", { ascending: false }).order("id");
   const direct = await query.gte("lon", bbox[0]).lte("lon", bbox[2]).gte("lat", bbox[1]).lte("lat", bbox[3]).limit(5);
   assert.equal(direct.error, null);
   assert.ok(Array.isArray(direct.data) && direct.data.length, "Normandy area has sites");
-  assert.deepEqual(result.data.sites.map((s: { id: string }) => s.id), direct.data.map((s) => s.id));
+  if (v2) {
+    assert.equal(result.data.sites.length, Math.min(direct.count ?? 0, 5));
+    assert.ok(result.data.sites.every((s: { lat: number; lon: number }) => s.lon >= bbox[0] && s.lon <= bbox[2] && s.lat >= bbox[1] && s.lat <= bbox[3]));
+    if ((direct.count ?? 0) <= 5) assert.deepEqual(result.data.sites.map((s: { id: string }) => s.id).sort(), direct.data.map((s) => s.id).sort());
+  } else assert.deepEqual(result.data.sites.map((s: { id: string }) => s.id), direct.data.map((s) => s.id));
   console.log("area-filtered sites", { source, matched: direct.data.length, normandy_sites: matches.length });
 });
 
@@ -153,7 +160,11 @@ test("live: due_sites agrees with read-only Due flags", { skip, timeout: 30_000 
   const data = createSupabaseData();
   const source = await data.siteSource();
   const result = await call("due_sites", { limit: 10 });
+  let v2 = false;
   if (source === "analytics") {
+    const probe = await db().from("sites").select("id").eq("summary->>definition", "dbscan_50m_min3_v2").not("rank", "is", null).limit(1);
+    assert.equal(probe.error, null);
+    v2 = Boolean(probe.data?.length);
     const ready = await db().from("sites").select("id").not("summary->due", "is", null).limit(1);
     assert.equal(ready.error, null);
     if (!ready.data?.length) {
@@ -164,6 +175,16 @@ test("live: due_sites agrees with read-only Due flags", { skip, timeout: 30_000 
     }
   }
   assert.equal(result.ok, true, result.error);
+  if (v2) {
+    // Independent database function recomputes Due in Boston time and orders it first.
+    const queue = await db().rpc("site_queue", { lim: 10 }, { get: true });
+    assert.equal(queue.error, null);
+    assert.deepEqual(result.data.sites.map((s: { id: string }) => s.id), queue.data.filter((s: { due: boolean }) => s.due).map((s: { id: string }) => s.id));
+    assert.equal(result.data.provisional, false);
+    assert.ok(result.data.sites.every((s: { base_rate_unit: string }) => s.base_rate_unit === "fraction"));
+    console.log("due_sites", { source: "v2", returned: result.data.sites.length, independent_rpc_ids_match: true });
+    return;
+  }
   const direct = source === "draft"
     ? await db().rpc("draft_sites", {}, { get: true }).select("id,due,returns,reports,last_at").eq("due", true)
       .order("due", { ascending: false }).order("returns", { ascending: false }).order("reports", { ascending: false })

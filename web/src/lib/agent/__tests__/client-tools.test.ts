@@ -90,3 +90,27 @@ test("app_set_mode uses the current real store and preserves selection", () => {
     useMap.setState(before, true);
   }
 });
+
+
+test("unwired map actions report a rendering limitation instead of claiming visible success", () => {
+  const { map, calls } = fakeMap();
+  for (const [name, input] of [
+    ["map_highlight", { ids: ["fixture-incident"] }],
+    ["map_set_layers", { on: ["food"] }],
+    ["map_set_filters", { status: "open" }],
+  ] as const) {
+    const result = executeClientTool(name, input, map);
+    assert.ok(result.ok);
+    assert.equal(result.rendered, false);
+    assert.match(result.caveat!, /do not (claim|say)/);
+  }
+  assert.equal(calls.length, 3, "requests still reach the store for future map integration");
+  for (const [name, input] of [
+    ["map_set_layers", { on: ["forecast"] }],
+    ["map_set_filters", { since: "2026-10-01" }],
+  ] as const) {
+    const result = executeClientTool(name, input, map);
+    assert.ok(result.ok);
+    assert.equal(result.rendered, undefined);
+  }
+});

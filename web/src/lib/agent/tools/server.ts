@@ -90,7 +90,7 @@ function publicIncident(r: IncidentRow) {
 }
 
 const PROVISIONAL_CAVEAT =
-  "Provisional sites: addresses with repeat rodent reports from the map's draft queue. The Analytics chronic-site score is not computed yet, so there is no score or recommendation.";
+  "Provisional sites: addresses with repeat rodent reports from the map's draft queue. Analytics clusters and recommendations are not available yet; no score is supplied.";
 
 const provisionalCaveat = (sites: SiteRow[]) => (sites.some((s) => s.provisional) ? [PROVISIONAL_CAVEAT] : []);
 
@@ -102,7 +102,10 @@ function publicSite(s: SiteRow) {
     neighborhood: s.neighborhood,
     zip: s.zip,
     city: s.city,
-    score: s.score,
+    score: s.summary.definition === "dbscan_50m_min3_v2" ? null : s.score,
+    due: s.summary.due ?? null,
+    retired: Boolean(s.summary.retired),
+    returns_12mo: s.summary.returns_12mo ?? null,
     rank: s.rank,
     report_count: s.report_count,
     recurrence_count: s.recurrence_count,
@@ -119,6 +122,8 @@ function siteSourceIds(s: SiteRow): string[] {
   const ids: string[] = [];
   const fromSummary = (s.summary as { source_ids?: unknown }).source_ids;
   if (Array.isArray(fromSummary)) ids.push(...fromSummary.filter((x): x is string => typeof x === "string"));
+  const baseSources = (s.summary.base_rate as { source_ids?: unknown } | null)?.source_ids;
+  if (Array.isArray(baseSources)) ids.push(...baseSources.filter((x): x is string => typeof x === "string"));
   for (const r of s.recommended as { source_ids?: unknown }[]) {
     if (Array.isArray(r?.source_ids)) ids.push(...r.source_ids.filter((x): x is string => typeof x === "string"));
   }
@@ -259,7 +264,7 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
 
     top_sites: tool({
       description:
-        "List chronic rodent sites ranked by score (0–100: recurrences, report count, recency). Optionally within a neighborhood or bounding box.",
+        "List current rodent sites in queue order: v2 prioritizes Due then returns in the last 12 months. Older Analytics may supply a legacy score. Optionally filter by neighborhood or bounding box.",
       inputSchema: z.object({
         limit: z.number().int().min(1).max(20).optional(),
         neighborhood: z.string().optional(),
@@ -273,7 +278,9 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
           const caveats = [
             sites.some((x) => x.provisional)
               ? "Ordered by the draft queue: due for follow-up, then returns after closure, then report count."
-              : "Score ranks how persistent reports are at an address, not how many rats there are.",
+              : sites.some((x) => x.summary.definition === "dbscan_50m_min3_v2")
+                ? "V2 queue: current Due first, then returns in the last 12 months, report count and recency. No composite score; any stored rank is from the last analytics refresh."
+                : "Legacy score ranks how persistent reports are at an address, not how many rats there are.",
             ...provisionalCaveat(sites),
           ];
           if (!sites.length) caveats.push("No chronic sites in this area.");
@@ -305,8 +312,10 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
               id: s.id, address_block: stripHouseNumber(s.address_block), neighborhood: s.neighborhood,
               lat: s.lat, lon: s.lon, due: true, report_count: s.report_count,
               closures: s.summary.closures ?? null, returns: s.recurrence_count,
-              last_closed: s.summary.last_closed ?? null, days_since_close: s.summary.days_since_close ?? null,
+              last_closed: s.summary.last_closed ?? s.summary.last_closed_at ?? null, days_since_close: s.summary.days_since_close ?? null,
               base_rate: s.summary.base_rate ?? null,
+              base_rate_unit: s.summary.base_rate ? "fraction" : null,
+              due_threshold: s.summary.due_threshold ?? null,
             })),
           },
           features: sites.map(siteFeature),
@@ -323,7 +332,7 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
 
     get_site: tool({
       description:
-        "Full detail for one chronic site: score, timeline of rodent reports with the city action taken at each closure, nearby drivers, building facts and recommended actions.",
+        "Full detail for one site: queue priority, timeline of rodent reports with the city action taken at each closure, nearby drivers, building facts and recommended actions.",
       inputSchema: z.object({ site_id: z.string().min(1) }),
       execute: ({ site_id }) =>
         run(async (d) => {
@@ -332,7 +341,7 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
           if (!s) {
             return { data: { found: false, site_id }, features: [], caveats: [`No site with id ${site_id}.`], sourceIds: [] };
           }
-          // Analytics keeps the last 60 exact IDs in summary.timeline; draft detail
+          // V2 Analytics keeps all representative IDs (legacy lists can be capped); draft detail
           // lists its reports directly. Never broaden a supplied list to the street.
           const listed = s.reports ?? (Array.isArray(s.summary.timeline) ? s.summary.timeline : undefined);
           const ids = listed?.flatMap((r: { id?: unknown } | null) => typeof r?.id === "string" ? [r.id] : []);
@@ -356,6 +365,7 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
             features: [siteFeature(s), ...rows.slice(0, 30).map(incidentFeature)],
             caveats: [
               ...provisionalCaveat([s]),
+              ...(s.summary.retired ? ["Historical retired cluster: review the current queue before planning another action."] : []),
               ...(ids
                 ? (rows.length < s.report_count ? [`Partial timeline: ${rows.length} of ${s.report_count} site reports are available from the supplied report IDs; action counts cover only these reports.`] : [])
                 : ["Timeline groups rodent reports by street block, which can include neighbouring addresses."]),
@@ -478,6 +488,9 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
           await requireSites(d);
           const s = await d.site(q.site_id);
           if (!s) return { data: { drafted: false }, features: [], caveats: [`No site with id ${q.site_id}.`], sourceIds: [] };
+          if (s.summary.retired) {
+            return { data: { drafted: false }, features: [siteFeature(s)], caveats: ["This cluster is retired. Select a current site before drafting a new action."], sourceIds: siteSourceIds(s) };
+          }
           if (!(DRAFT_ACTION_IDS as readonly string[]).includes(q.action) || prohibitedRecommendation.test(q.note ?? "")) {
             return { data: { drafted: false }, features: [siteFeature(s)], caveats: ["Choose sanitation, exclusion, enforcement or referral for the next action."], sourceIds: siteSourceIds(s) };
           }

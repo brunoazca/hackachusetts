@@ -286,3 +286,31 @@ test("what_worked preserves Analytics intervals/censoring and cites the contribu
   for (const key of ["ci_low", "ci_high", "n_censored", "observed_through", "by_year"] as const) assert.deepEqual(result.data.outcomes[0][key], outcome[key]);
   assert.deepEqual(result.sources.map((s: { id: string }) => s.id), outcome.source_ids);
 });
+
+
+test("v2 exposes queue counts and fractional base rates, while retired sites stay historical", async () => {
+  const active = { ...tables.sites![0], score: 0, summary: { definition: "dbscan_50m_min3_v2", due: true,
+    returns_12mo: 3, closures: 5, last_closed_at: "2026-10-01T12:00:00Z", days_since_close: 23,
+    base_rate: { n: 100, rate: 0.6 }, due_threshold: 0.5, source_ids: ["fixture-311"] } };
+  const retired = { ...active, id: "fixture-retired", rank: null, summary: { ...active.summary, retired: true, due: false } };
+  const t = createServerTools({ data: createMemoryData({ ...tables, sites: [active,retired] }), now: () => NOW });
+  const top = await t.top_sites.execute!({}, opts);
+  assert.ok("ok" in top && top.ok);
+  assert.deepEqual(top.data.sites.map((s: { id: string }) => s.id), [active.id]);
+  assert.equal(top.data.sites[0].score, null);
+  assert.match(top.caveats[0], /No composite score/);
+  const due = await t.due_sites.execute!({}, opts);
+  assert.ok("ok" in due && due.ok);
+  assert.equal(due.data.sites[0].last_closed, active.summary.last_closed_at);
+  assert.equal(due.data.sites[0].base_rate_unit, "fraction");
+  assert.equal(due.data.sites[0].due_threshold, 0.5);
+  const draft = await t.draft_work_order.execute!({ site_id: retired.id, action: "inspection" }, opts);
+  assert.ok("ok" in draft && draft.ok);
+  assert.equal(draft.data.drafted, false);
+  assert.match(draft.caveats[0], /retired/);
+  const detail = await t.get_site.execute!({ site_id: retired.id }, opts);
+  assert.ok("ok" in detail && detail.ok);
+  assert.equal(detail.data.found, true);
+  assert.ok(detail.data.site);
+  assert.equal(detail.data.site.retired, true);
+});

@@ -40,7 +40,7 @@ export type SiteRow = {
   address_block: string;
   zip: string | null;
   neighborhood: string | null;
-  /** 0–100 from Analytics; null for provisional (draft queue) sites, which have no score. */
+  /** Legacy composite score only; null for v2 clusters and provisional draft sites. */
   score: number | null;
   rank: number | null;
   report_count: number;

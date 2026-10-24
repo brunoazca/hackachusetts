@@ -51,6 +51,7 @@ export function createMemoryData(t: MemoryTables): AgentData {
     },
     async sites(q) {
       return sites
+        .filter((s) => !s.summary.retired)
         .filter((s) => q.due == null || s.summary.due === q.due)
         .filter((s) => !q.neighborhood || has(s.neighborhood, q.neighborhood))
         .filter((s) => !q.city || s.city === q.city)
@@ -63,6 +64,7 @@ export function createMemoryData(t: MemoryTables): AgentData {
     },
     async sitesByText(text, limit) {
       return sites
+        .filter((s) => !s.summary.retired)
         .filter((s) => has(s.address_block, text) || has(s.neighborhood, text) || s.zip === text)
         .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
         .slice(0, limit);

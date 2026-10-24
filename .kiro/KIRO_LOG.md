@@ -31,6 +31,19 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 16:46 — Prepare Agent for v2 data and validate the real chat
+- Teammate: Carol
+- Agent:
+- Did: Updated only Agent readers/tools/tests for A's v2 handoff (cae4faa): current Boston-day Due, full queue pagination before limits, no placeholder score, retired history without new drafts, old draft ID fallback and complete supplied histories over 300 IDs.
+- Why: Advance the Agent while Carol applies migrations elsewhere, without running writers or changing other fronts.
+- Where: Existing web/src/lib/agent/data/{supabase,memory,types}.ts, tools/{server,client}.ts, prompt.ts, four existing test files, README.md; this log. No new repository files or dependencies.
+- Did: Real-model browser testing found a false highlighted-map claim. Client tools now disclose unsupported visual effects and the prompt requires honoring that result; final browser run correctly reported the highlighting limitation.
+- Evidence: 61 local fixture/mock/store tests passed; 7 live tests skipped in that no-env run. Final build, TypeScript and scoped ESLint passed. Shared DB after adapter edits: 5 passed, 1 database statement timeout, 1 skipped (empty action_outcomes); the failing site-tools test passed on one isolated retry. Do not relabel this as a clean full-suite rerun.
+- Evidence: Shared base_rates, analytics_site_case and insights_summary now exist; sites/action_outcomes still zero at the last read. Installed analytics_site_case passed SELECT-only synthetic cases for day 60/61, future, low-rate and retired rows. New anon REST projection readable with zero rows; populated v2 semantics remain unvalidated.
+- Evidence: Shared env key now works with Gateway and the configured MODEL_ID override. Actual handler returned HTTP 200, search_incidents=30 Normandy St reports in 2025-01-01..2026-10-24 and Boston 311 2025/2026 citations. Final local-browser conversation at 1280x720 switched to Act, moved the map, showed 30, source/feature chips and the correct highlight caveat; no captured console warnings/errors. No model or DB mocks in these conversations.
+- Decision: Re-read TEAM/CONTRACT and Agent task assignments; P1 4.5 and Map dependencies remain pending. New work stays uncommitted on feat/rat-audit-agent from 8a1caaa; other chats' main integration untouched. No migration, shared DB write, new merge, push or deploy. Local credential success does not certify production configuration.
+- Idea: Once Analytics populates v2 rows, repeat the focused queue/outcomes comparisons; schema presence alone is not real-data acceptance.
+
 ### 2026-10-24 16:58 — 2.8: verify the improved panel on local main and show it in the current app
 - Teammate: Carol
 - Agent:

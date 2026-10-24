@@ -136,7 +136,7 @@ test("populated Analytics sites without v2 Due flags report analytics_not_comput
     const request = new Request(input, init);
     const url = new URL(request.url);
     assert.equal(url.pathname, "/rest/v1/sites");
-    if (request.method === "HEAD") return new Response(null, { headers: { "content-range": "*/1121" } });
+    if (request.method === "HEAD") return new Response(null, { headers: { "content-range": url.searchParams.has("summary->>definition") ? "*/0" : "*/1121" } });
     assert.equal(request.method, "GET");
     assert.equal(url.searchParams.get("summary->due"), "not.is.null");
     return json([]);
@@ -155,4 +155,92 @@ test("source citations preserve database update cadence and retrieval time", asy
     return json([source]);
   });
   assert.deepEqual(await data.sources([source.id]), [source]);
+});
+
+
+test("v2 queue pages all matches before current Due sorting/limit, excluding retired sites", async (t) => {
+  const closed = "2026-08-25T23:30:00-04:00"; // 60 Boston calendar days before Oct 24.
+  const common = { id: "fixture-v2", address_block: "Fixture St, 02121", neighborhood: "Dorchester", rank: 1,
+    report_count: 5, recurrence_count: 4, returns_12mo: 1, last_at: "2026-10-01", last_closed_at: closed,
+    definition: "dbscan_50m_min3_v2", source_ids: ["fixture-source"], closures: 4,
+    base_rate: { n: 100, rate: 0.6 }, due_threshold: 0.5, retired: false };
+  const rows = [
+    { ...common, id: "a-expired", last_closed_at: "2026-08-24T23:59:00-04:00", returns_12mo: 99 },
+    { ...common, id: "b-low-rate", base_rate: { n: 100, rate: 0.49 } },
+    { ...common, id: "c-boundary", returns_12mo: 5 },
+    { ...common, id: "d-priority", returns_12mo: 8 },
+    { ...common, id: "e-retired", retired: true, returns_12mo: 100 },
+  ];
+  const offsets: number[] = [];
+  t.mock.method(globalThis, "fetch", async (input: string | URL | Request, init?: RequestInit) => {
+    const request = new Request(input, init); const url = new URL(request.url); const q = url.searchParams;
+    assert.equal(url.pathname, "/rest/v1/sites");
+    assert.equal(q.get("rank"), "not.is.null");
+    if (request.method === "HEAD") return new Response(null, { headers: { "content-range": "*/5" } });
+    assert.equal(q.get("summary->>definition"), "eq.dbscan_50m_min3_v2");
+    assert.equal(q.get("neighborhood"), "ilike.%dor%");
+    assert.deepEqual(q.getAll("lon"), ["gte.-71.08", "lte.-71.06"]);
+    assert.ok(!q.get("select")!.split(",").includes("summary"), "queue excludes histories and notes");
+    const offset = Number(q.get("offset")); offsets.push(offset);
+    // Simulate a PostgREST cap smaller than the requested page size.
+    return new Response(JSON.stringify(rows.slice(offset, offset + 2)), { headers: { "content-type": "application/json", "content-range": `${offset}-${Math.min(offset + 1,4)}/5` } });
+  });
+  let at = new Date("2026-10-25T03:30:00Z"); // Still Oct 24 in Boston.
+  const data = createSupabaseData({ NEXT_PUBLIC_SUPABASE_URL: "https://agent.invalid", NEXT_PUBLIC_SUPABASE_ANON_KEY: "fixture-key" }, () => at);
+  const query = { due: true, limit: 1, neighborhood: "dor", bbox: [-71.08, 42.3, -71.06, 42.31] as [number, number, number, number] };
+  const result = await data.sites(query);
+  assert.deepEqual(offsets, [0,2,4]);
+  assert.equal(result[0].id, "d-priority");
+  assert.equal(result[0].score, null);
+  assert.equal(result[0].summary.days_since_close, 60);
+  assert.equal(result[0].summary.last_closed, closed);
+  at = new Date("2026-10-25T04:01:00Z"); // Day 61; a cached refresh flag must not stay Due.
+  assert.deepEqual(await data.sites(query), []);
+});
+
+test("v2 site detail masks the placeholder score and expires stored Due", async (t) => {
+  const { tables } = await import("./fixtures");
+  const row = { ...tables.sites![0], score: 0, summary: { definition: "dbscan_50m_min3_v2", due: true,
+    last_closed_at: "2026-08-01T12:00:00Z", base_rate: { n: 10, rate: 0.8 }, due_threshold: 0.5 } };
+  t.mock.method(globalThis, "fetch", async (input: string | URL | Request, init?: RequestInit) => {
+    const request = new Request(input, init);
+    if (request.method === "HEAD") return new Response(null, { headers: { "content-range": "*/1" } });
+    return json(row);
+  });
+  const data = createSupabaseData({ NEXT_PUBLIC_SUPABASE_URL: "https://agent.invalid", NEXT_PUBLIC_SUPABASE_ANON_KEY: "fixture-key" }, () => new Date("2026-10-24T12:00:00Z"));
+  const result = await data.site(row.id);
+  assert.equal(result!.score, null);
+  assert.equal(result!.summary.due, false);
+  assert.equal(result!.summary.days_since_close, 84);
+});
+
+test("exact site histories retain more than 300 IDs without broadening the query", async (t) => {
+  const ids = Array.from({ length: 351 }, (_, i) => `fixture-incident-${i}`);
+  t.mock.method(globalThis, "fetch", async (input: string | URL | Request, init?: RequestInit) => {
+    const request = new Request(input, init); const url = new URL(request.url);
+    assert.equal(request.method, "GET");
+    assert.equal(url.pathname, "/rest/v1/incidents");
+    const requested = url.searchParams.get("id")!.slice(4,-1).split(",");
+    assert.ok(requested.every(id => ids.includes(id)));
+    return json(requested.map(id => ({ id })));
+  });
+  const data = createSupabaseData({ NEXT_PUBLIC_SUPABASE_URL: "https://agent.invalid", NEXT_PUBLIC_SUPABASE_ANON_KEY: "fixture-key" });
+  assert.deepEqual((await data.incidentsByIds([...ids, ids[0]])).map(r => r.id).sort(), [...ids].sort());
+});
+
+
+test("selected draft IDs still resolve after active Analytics sites arrive", async (t) => {
+  t.mock.method(globalThis, "fetch", async (input: string | URL | Request, init?: RequestInit) => {
+    const request = new Request(input, init); const url = new URL(request.url);
+    assert.equal(request.method, "GET");
+    if (url.pathname === "/rest/v1/sites") return json(null);
+    assert.equal(url.pathname, "/rest/v1/rpc/site_detail");
+    assert.equal(url.searchParams.get("site_id"), draft.id);
+    return json({ site: draft, reports: [], source_ids: ["fixture-source"], drivers_100m_12mo: {}, legacy: true });
+  });
+  const data = createSupabaseData({ NEXT_PUBLIC_SUPABASE_URL: "https://agent.invalid", NEXT_PUBLIC_SUPABASE_ANON_KEY: "fixture-key" });
+  const result = await data.site(draft.id);
+  assert.equal(result!.id, draft.id);
+  assert.equal(result!.provisional, true);
+  assert.equal(result!.score, null);
 });

@@ -22,6 +22,33 @@ const PLACE_COLS = "id,source_id,kind,name,address_block,starts_at,ends_at,lat,l
 const SITE_COLS =
   "id,address_block,zip,neighborhood,score,rank,report_count,recurrence_count,first_at,last_at,summary,recommended,city,lat,lon,computed_at";
 
+const V2_DEFINITION = "dbscan_50m_min3_v2";
+// Queue reads omit notes, geometry and full histories. Fetch all matching pages
+// before applying the clock-dependent Due predicate and the caller's limit.
+const V2_LIST_COLS = "id,address_block,zip,neighborhood,rank,report_count,recurrence_count,first_at,last_at,city,lat,lon,computed_at,definition:summary->>definition,source_ids:summary->source_ids,closures:summary->closures,returns_12mo:summary->returns_12mo,last_closed_at:summary->>last_closed_at,base_rate:summary->base_rate,due_threshold:summary->due_threshold,retired:summary->retired";
+
+function calendarDay(value: Date): number {
+  const day = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(value);
+  return Date.parse(day + "T00:00:00Z") / 86400000;
+}
+
+function currentSite(row: SiteRow, now: Date): SiteRow {
+  if (row.summary.definition !== V2_DEFINITION) return row;
+  const closed = new Date(String(row.summary.last_closed_at ?? ""));
+  const days = Number.isFinite(closed.getTime()) ? calendarDay(now) - calendarDay(closed) : null;
+  const base = row.summary.base_rate as { n?: number; rate?: number } | null;
+  const threshold = typeof row.summary.due_threshold === "number" ? row.summary.due_threshold : 0.5;
+  const due = row.rank != null && !row.summary.retired && days != null && days >= 0 && days <= 60
+    && typeof base?.n === "number" && base.n > 0 && typeof base.rate === "number" && base.rate >= threshold;
+  return { ...row, score: null, summary: { ...row.summary, due, last_closed: row.summary.last_closed_at ?? null, days_since_close: days } };
+}
+
+function queueOrder(a: SiteRow, b: SiteRow): number {
+  return Number(Boolean(b.summary.due)) - Number(Boolean(a.summary.due))
+    || Number(b.summary.returns_12mo ?? b.recurrence_count) - Number(a.summary.returns_12mo ?? a.recurrence_count)
+    || b.report_count - a.report_count || (b.last_at ?? "").localeCompare(a.last_at ?? "") || a.id.localeCompare(b.id);
+}
+
 type Env = Record<string, string | undefined>;
 
 export function supabaseConfigured(env: Env = process.env): boolean {
@@ -83,7 +110,7 @@ export function classifyError(e: PgError): FailureReason {
   return "query";
 }
 
-export function createSupabaseData(env: Env = process.env): AgentData {
+export function createSupabaseData(env: Env = process.env, now: () => Date = () => new Date()): AgentData {
   if (!supabaseConfigured(env)) throw new DataUnavailableError("Supabase is not configured", "not_configured");
   const db: SupabaseClient = createClient(env.NEXT_PUBLIC_SUPABASE_URL!, env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
     auth: { persistSession: false },
@@ -97,7 +124,7 @@ export function createSupabaseData(env: Env = process.env): AgentData {
   // (site_queue / site_detail RPCs, migration 20261024300002) so ids match the Act UI.
   let source: Promise<"analytics" | "draft" | "none"> | null = null;
   const siteSource = () => (source ??= (async () => {
-    const { count, error } = await db.from("sites").select("id", { count: "exact", head: true });
+    const { count, error } = await db.from("sites").select("id", { count: "exact", head: true }).not("rank", "is", null);
     fail("sites", error);
     if (count) return "analytics";
     const probe = await db.rpc("site_queue", { lim: 1 }, { get: true });
@@ -107,6 +134,40 @@ export function createSupabaseData(env: Env = process.env): AgentData {
     fail("site_queue", probe.error);
     return probe.data?.length ? "draft" : "none";
   })());
+
+  let v2: Promise<boolean> | null = null;
+  const hasV2Sites = () => (v2 ??= (async () => {
+    const { count, error } = await db.from("sites").select("id", { count: "exact", head: true })
+      .eq("summary->>definition", V2_DEFINITION).not("rank", "is", null);
+    fail("v2 sites", error);
+    return Boolean(count);
+  })());
+
+  async function v2Sites(q: SiteQuery, text?: string): Promise<SiteRow[]> {
+    const rows: SiteRow[] = [];
+    const at = now();
+    let offset = 0;
+    for (;;) {
+      let r = db.from("sites").select(V2_LIST_COLS, { count: "exact" })
+        .eq("summary->>definition", V2_DEFINITION).not("rank", "is", null);
+      if (q.neighborhood) r = r.ilike("neighborhood", `%${safeText(q.neighborhood)}%`);
+      if (q.city) r = r.eq("city", q.city);
+      if (q.bbox) r = r.gte("lon", q.bbox[0]).lte("lon", q.bbox[2]).gte("lat", q.bbox[1]).lte("lat", q.bbox[3]);
+      if (text) r = r.or(`address_block.ilike.*${text}*,neighborhood.ilike.*${text}*,zip.eq.${text}`);
+      const { data, error, count } = await r.order("id").range(offset, offset + 199);
+      fail("v2 sites", error);
+      if (count == null) throw new DataUnavailableError("V2 queue count unavailable; refusing a potentially truncated result.", "query");
+      for (const value of data ?? []) {
+        const row = value as unknown as SiteRow & Record<string, unknown>;
+        const summary = Object.fromEntries(["definition", "source_ids", "closures", "returns_12mo", "last_closed_at", "base_rate", "due_threshold", "retired"].map(k => [k, row[k]]));
+        rows.push(currentSite({ ...row, score: null, summary, recommended: [] }, at));
+      }
+      offset += data?.length ?? 0;
+      if (offset >= count) break;
+      if (!data?.length) throw new DataUnavailableError("V2 queue changed while paging; retry the query.", "query");
+    }
+    return rows.filter(s => !s.summary.retired && (q.due == null || s.summary.due === q.due)).sort(queueOrder).slice(0, q.limit);
+  }
 
   async function draftSites(q: SiteQuery, text?: string): Promise<SiteRow[]> {
     // The same read-only function behind site_queue, filtered before LIMIT.
@@ -149,9 +210,14 @@ export function createSupabaseData(env: Env = process.env): AgentData {
 
     async incidentsByIds(ids: string[]) {
       if (!ids.length) return [];
-      const { data, error } = await db.from("incidents").select(INCIDENT_COLS).in("id", ids.slice(0, 300));
-      fail("incidents", error);
-      return (data ?? []) as IncidentRow[];
+      const rows: IncidentRow[] = [];
+      const unique = [...new Set(ids)];
+      for (let start = 0; start < unique.length; start += 100) {
+        const { data, error } = await db.from("incidents").select(INCIDENT_COLS).in("id", unique.slice(start, start + 100));
+        fail("incidents", error);
+        rows.push(...((data ?? []) as IncidentRow[]));
+      }
+      return rows;
     },
 
     async places(q: PlaceQuery) {
@@ -170,7 +236,8 @@ export function createSupabaseData(env: Env = process.env): AgentData {
       if ((await siteSource()) === "draft") {
         return draftSites(q);
       }
-      let r = db.from("sites").select(SITE_COLS);
+      if (await hasV2Sites()) return v2Sites(q);
+      let r = db.from("sites").select(SITE_COLS).not("rank", "is", null);
       if (q.due != null) {
         const ready = await db.from("sites").select("id").not("summary->due", "is", null).limit(1);
         fail("sites due", ready.error);
@@ -189,14 +256,15 @@ export function createSupabaseData(env: Env = process.env): AgentData {
     },
 
     async site(id: string) {
-      if ((await siteSource()) === "draft") {
-        const { data, error } = await db.rpc("site_detail", { site_id: id }, { get: true });
-        fail("site_detail", error);
-        return data ? fromDraftDetail(data as DraftDetail) : null;
-      }
+      // Historical clusters remain readable even if the active queue is still draft.
       const { data, error } = await db.from("sites").select(SITE_COLS).eq("id", id).maybeSingle();
       fail("site", error);
-      return (data as SiteRow | null) ?? null;
+      if (data) return currentSite(data as SiteRow, now());
+      // An already-selected draft ID can survive the switch to v2 Analytics.
+      const legacy = await db.rpc("site_detail", { site_id: id }, { get: true });
+      if (legacy.error?.code === "PGRST202") return null;
+      fail("site_detail", legacy.error);
+      return legacy.data ? fromDraftDetail(legacy.data as DraftDetail) : null;
     },
 
     async sitesByText(text: string, limit: number) {
@@ -205,7 +273,8 @@ export function createSupabaseData(env: Env = process.env): AgentData {
       if ((await siteSource()) === "draft") {
         return draftSites({ limit }, t);
       }
-      const { data, error } = await db.from("sites").select(SITE_COLS)
+      if (await hasV2Sites()) return v2Sites({ limit }, t);
+      const { data, error } = await db.from("sites").select(SITE_COLS).not("rank", "is", null)
         .or(`address_block.ilike.*${t}*,neighborhood.ilike.*${t}*,zip.eq.${t}`)
         .order("score", { ascending: false }).limit(limit);
       fail("sites", error);

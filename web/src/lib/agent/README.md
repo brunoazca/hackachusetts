@@ -2,9 +2,9 @@
 
 This worktree owns tasks 4.1–4.6. Core tasks 4.1–4.4 and 4.6 are implemented with the validation limits below, including v2 `due_sites` and `app_set_mode`. Task 4.5 remains unimplemented P1 work; the whole Agent track is not being marked complete.
 
-## Latest validation — October 24, 2026
+## Other integrated validation — October 24, 2026
 
-This section supersedes the earlier credential/blocker snapshot below.
+Evidence inherited from the main integrator; current Agent validation follows.
 
 - Gateway default: `openai/gpt-4.1-mini`, verified with the configured API key and free credits. `MODEL_ID` still overrides it. Sonnet 5.5 returned HTTP 403 for that free-credit account.
 - A real browser conversation called `search_incidents`, streamed a Portuguese answer and rendered source links. For October 1–24, the answer was 658 rodent reports: 563 Boston, 54 Somerville, 41 Cambridge; 78 open and 580 closed. An independent query fetched all 658 unique IDs and matched the total. The corresponding Boston local-day window also counted 658 at validation time.
@@ -15,21 +15,21 @@ This section supersedes the earlier credential/blocker snapshot below.
 - Remote Piper UI is integrated with the working chat. Insights retains both the live panel and the remote historical research cards; historical cards appear when the live endpoint is unavailable or errors and remain explicitly labelled as snapshots.
 - No credentials, migrations or database writes are part of this change. Vercel still needs its own server-side Gateway credential; local `.env.local` is not deployed by Git.
 
-## Scope audit before integration (historical)
+## Scope audit (Oct 24, after real-model validation)
 
 Re-read `docs/rat-audit/TEAM.md`, `CONTRACT.md`, the rat-audit requirements/design/tasks,
 v2 proposal, data audit, repository steering, and this front's code/log. Carol also owns
 Analytics and Insights, but those are separate worktrees; this audit does not certify them.
-A's published analytics handoff remains partial, as described below.
+The latest adapter changes target A's v2 handoff at `cae4faa`; populated shared v2 data still needs validation.
 
 | Task | Agent implementation and evidence | Remaining limitation |
 |---|---|---|
-| 4.1 P0 | Gateway / Anthropic / Bedrock switch; missing-provider state; unit tests and actual GET/POST checks | Real provider call blocked by absent credentials |
-| 4.2 P0 | Eight core server tools; tool-only answers, privacy, no-rodenticide and unsaved-draft rules; malformed messages return 400 using SDK validation | Shared Analytics tables empty; Due uses the explicitly provisional draft rule |
+| 4.1 P0 | Gateway / Anthropic / Bedrock switch; missing-provider state; unit tests and actual GET/POST checks | Gateway with configured `MODEL_ID` verified locally; Anthropic/Bedrock live and production env not verified |
+| 4.2 P0 | Eight core server tools; tool-only answers, privacy, no-rodenticide and unsaved-draft rules; malformed messages return 400 using SDK validation | Shared Analytics outputs empty at last check; v2 Due covered by fixtures and installed SQL with synthetic records |
 | 4.3 P0 + mode P1 | All listed client-tool schemas/executors; current selection/view/mode context; actual store regression tests; forecast store wiring now in main | Highlight, non-forecast layer toggles, category/status filters and visible bbox still need Map/integrator work; depth removed by main |
-| 4.4 P0 | Streaming UI, steps, feature/source chips, starters, labelled controls and aria-live; source cadence plus retrieval time in Boston timezone | Browser verified the no-provider state in both modes at 1280×800; live-model streaming and mobile not certified |
+| 4.4 P0 | Streaming UI, steps, feature/source chips, starters, labelled controls and aria-live; source cadence plus retrieval time in Boston timezone | Real-model conversation, sources, Act and map movement verified at 1280×720; mobile not certified |
 | 4.5 P1 | **Not implemented:** get_findings, forecast, price_impact, events_near, compare_areas, get_trial, base_rates, area_stats | Keep pending; P0 integration comes first. `map_show_forecast` is a client toggle, not the missing forecast data tool |
-| 4.6 P0 | 55 local tests (mock model/HTTP, fixtures, store); 6 shared-DB passes; A's real local outputs checked separately | 1 shared-DB check blocked (`what_worked`); real-model end-to-end chat not validated |
+| 4.6 P0 | 61 local tests (mock model/HTTP, fixtures, store); real Gateway/browser flow; shared-DB checks detailed below | `what_worked` blocked by empty outcomes; one DB timeout passed on isolated retry; populated v2 still pending |
 
 Build/static checks are green; this is not a claim that every Carol task or the full product
 acceptance flow is complete. Integration/deployment/submission tasks 5.x belong to the integrator.
@@ -39,13 +39,30 @@ No shared task checkboxes were marked complete by this front.
 
 `679a41c` contained none of the three newly requested items. They are included in this delivery:
 
-- `due_sites`: reads the database Due flag, filters before the limit, returns counts and citations. Current live results use the draft queue and explicitly say **provisional**; the v2 base-rate threshold remains Analytics task 2.19.
+- `due_sites`: filters before the limit and returns counts/citations. For `dbscan_50m_min3_v2`, recomputes Due at read time using Boston calendar days 0–60, a nonempty base-rate cohort and its threshold (default 0.5); excludes retired clusters. Shared results still use the explicitly **provisional** draft queue until active Analytics rows arrive.
 - System prompt: "Never recommend rodenticide or poison"; past baiting can be reported as history. Recommendation outputs are filtered, and work-order drafts exclude baiting/pesticide actions and notes.
 - `app_set_mode`: switches **Assess / Act** using the actual store and preserves selection; current mode travels with chat context. **No depth parameter:** main commit `01c2fa4` removed Simple/Explore (R0.5, design §7, store). Task 4.3, R8.11 and design §8 still mention depth and need integrator reconciliation.
 
 Integrated into local `main` after Carol authorized the partial delivery. Agent commits `7551904` (original implementation) and `b30587c` (v2 and validation fixes) were rebased onto `e54370b`, which preserves the Insights integration and fetched remote main `50ed4bf`. All prior changes and log entries were preserved; recovery snapshots and stashes remain available. No push, deployment, migration or shared database write was performed. The published site will only change after a later push/deployment.
 
-## Compatibility with Agent A's published branch
+## Compatibility with Agent A's current v2 handoff
+
+Read A's v2 implementation (`06081aa`) and RPC transition/forecast fix (`cae4faa`).
+The Agent adapter now:
+
+- Orders active v2 sites by current Due, returns in the last 12 months, reports, recency and id. Reads all matching lean pages before sorting/limiting, including when the server caps pages below the requested size.
+- Hides the schema's placeholder score; exposes base rates as fractions, threshold and source citations. Stored rank is explicitly from the last Analytics refresh.
+- Keeps retired history readable but excludes it from queues and work-order drafting. Existing draft IDs still resolve after Analytics becomes active.
+- Fetches every supplied representative report ID in batches instead of truncating at 300; never expands an exact site list to the street.
+
+During this pass, `base_rates`, `analytics_site_case(public.sites)` and `insights_summary()`
+became present in the shared DB. `sites` and `action_outcomes` were still empty at the last
+read. Installed SQL was checked with **synthetic CTE records, SELECT only**: day 60 eligible;
+day 61, future closure, below-threshold rate and retired cluster ineligible. An actual anon
+REST query accepted the new JSON projection, returning zero rows. These checks do **not**
+validate a populated v2 queue or prove the Analytics refresh has run.
+
+## Earlier compatibility evidence (legacy handoff, retained for context)
 
 Checked `origin/feat/rat-audit-analytics-core` at `f410efe` (implementation `3884561`).
 This is explicitly a **partial v2 handoff**, with address-based sites, no v2 Due flags,
@@ -62,7 +79,7 @@ its store wiring; the Agent was rebased onto it before the final build and brows
 - `what_worked` preserves Wilson intervals, observation windows, censoring and year breakdowns
   when present, and cites the contributing `source_ids`. The adapter also reads the old aggregate
   schema without requiring A's migration.
-- A's current sites lack `summary.due`. Once those sites reach the shared DB, `due_sites` will
+- Those legacy sites lack `summary.due`. If that legacy output reaches the shared DB, `due_sites` will
   explicitly report `analytics_not_computed` until task 2.19 runs, rather than return an empty success.
 
 Real-data compatibility check: SELECT-only access to A's existing `rat-analytics-real` PostGIS
@@ -108,35 +125,47 @@ npx -y tsx@4.20.6 --env-file=.env.local --test src/lib/agent/__tests__/live.test
 
 The tests use `node:test`, so the shared `package.json` and the typecheck are unaffected. Integrator, optionally: add `"tsx": "4.20.6"` to devDependencies and the script `"test:agent": "tsx --test src/lib/agent/__tests__/*.test.ts"`.
 
-## Earlier validation status (Oct 24, before live-model setup)
+## Validation status (Oct 24, after migrations began)
 
 | Check | Result |
 |---|---|
-| Env loaded by app + test process | Supabase URL/anon key: yes. Model credential: **none → real-model chat BLOCKED** |
-| Local tests (fixtures, mock model/HTTP, real Zustand store) | **55/55 pass**; no real model calls |
-| Live read-only (`live.test.ts`, `--env-file=.env.local`) | **6 passed, 1 skipped/blocked**, no failures or retries in the final run. `what_worked` is blocked by empty `action_outcomes`. Normandy St: 30 reports since 2025 = direct count; exact 19 site report IDs match `site_detail`; draft `saved=false`; area filter matches 2 sites; 10 Due IDs match the independent query and are explicitly provisional. The earlier transient timeout remains recorded in the log |
-| Table states (read-only observation) | sources 49; incidents 303,421; places 12,897; events 331; grid_cells 3,442; predictions 206,520. sites, action_outcomes, correlations remain empty |
-| Combined local main / static checks | Next build, TypeScript, scoped ESLint and all 55 local Agent tests passed with Insights integrated |
-| Earlier browser check, build on main 75bb782 | In-app browser at 1280×800: Ask reachable in Assess and Act; "Assistant not configured", labelled disabled input/send; real map/queue data visible; forecast control shows weeks/legend. No browser warnings/errors captured. No model call, approval or DB write |
-| Actual local API + source metadata | GET `/api/chat` 200, configured=false, data=live; POST 503 `not_configured`. Two real source rows resolve with valid cadence/retrieval metadata |
+| Model/environment | Shared ignored env symlink now supplies a working Gateway credential; configured `MODEL_ID` override. No value exposed or key copied/changed. Production env/deployment not checked. |
+| Local tests | **61 passed, 0 failed, 7 live skipped** (68 total). Fixtures, mocked HTTP/model and actual store; these are not live-model tests. |
+| Shared DB, read-only | Before edits: 6 passed, 1 skipped. After v2 adapter edits: **5 passed, 1 failed with a database statement timeout, 1 skipped**. The single failing site-tools test passed on one isolated retry. This is not a clean full-suite rerun. `what_worked` remains skipped because `action_outcomes` is empty. |
+| Production build/static checks | Final `pnpm build`, TypeScript and scoped ESLint passed on the Agent branch. |
+| Real model + real DB through handler | HTTP 200; `search_incidents` returned exactly **30** Normandy St rodent reports from 2025-01-01 through 2026-10-24, matching the independent count. Answer cited Boston 311 2025/2026; no stream errors. No model or DB mocks. |
+| Real browser on final local build | At 1280×720: Ask accepted the prompt; actual model switched to Act, counted 30, moved the map, rendered the answer and source/feature chips. After the visual-status fix, it correctly stated that highlighting is unavailable. No captured console warnings/errors. No approval or DB write. |
+| V2 evidence | Mock pagination/date-boundary/history tests passed. Installed SQL function passed SELECT-only synthetic cases; actual anon REST projection readable but empty. **Populated real v2 queue/outcomes remain unvalidated.** |
+| Shared snapshot during this pass | sources 49; incidents 303,421; places 12,897; events 331; grid_cells 3,442; predictions 206,520; sites/action_outcomes/correlations 0. Concurrent ingestion/migrations may change these counts. |
 
-Sites: while the Analytics `sites` table is empty, the adapter uses the map track's draft queue
-(`site_queue`, its underlying `draft_sites`, and `site_detail`, migration `20261024300002`), flagged **provisional**, no score; raw notes are not mapped. Area, neighborhood and text filters run in the database before the limit. Permission, connection and query failures keep their actual reason; only an empty queue or absent optional RPC means unavailable.
+The browser exposed a false success claim for highlighting: the store accepted ids but
+MapView did not render them. Client tools now return `rendered:false` with an explicit caveat
+for highlight, non-forecast layers and category/status filters; the prompt prohibits claiming
+those visual changes succeeded. Date-only filters and forecast remain supported. The final
+real-model browser run verified the highlighting caveat; other unsupported controls have
+local regression coverage, not separate live-model conversations.
 
-`web/.env.local` already links to `/Users/mcarolinaporto/Projetos/hackachusetts/.env.local`
-and is git-ignored. Next loads it from `web/`; tests need `--env-file=.env.local`.
-Only presence was checked, never values. No key was copied or changed.
-The suites contain 62 tests: 55 local passed; the 7 shared-database checks run separately as reported above. The real-model chat remains blocked by absent credentials. Browser checks cover the no-provider state and current map/forecast UI, not a model-driven conversation.
+While active Analytics sites are absent, the adapter uses the map's read-only draft queue
+and detail RPCs, flagged **provisional**. Raw notes are not mapped. Actual query/permission
+failures remain errors, not an empty successful answer.
+
+`web/.env.local` links to `/Users/mcarolinaporto/Projetos/hackachusetts/.env.local` and is
+ignored. Next loads it from `web/`; standalone live tests require `--env-file=.env.local`.
+The earlier no-key blocker is resolved **locally**; historical log entries remain unchanged.
+
+These follow-up changes are uncommitted on `feat/rat-audit-agent`, based on `8a1caaa`.
+No new repository files, dependencies, shared-file edits, migration execution, shared DB writes,
+new main merge, push or deployment. Other chats' main integration was left untouched.
 
 ## Remaining blockers (exact change → owner)
 
 | Blocks | Change | Owner |
 |---|---|---|
-| Published chat | Local Gateway/model/data flow is validated; configure the server-side Gateway key in the Vercel project and validate the deployment | Carol / integrator |
+| Deployed-model chat | Local key works; verify model configuration and a real conversation in the deployed environment | Carol / integrator |
 | `what_worked` | Fill `action_outcomes` (task 2.4); closure classifier (2.2) — the checked Normandy cases still have unknown action tags | Analytics (Carol, analytics-core) |
-| Base-rate Due semantics | Compute base_rates and sites.summary.due (task 2.19); A's published branch does not implement these flags. Current draft Due is provisional | Analytics |
-| Scored sites + recommendations in shared DB | Fill `sites` (task 2.3); Agent compatibility with A's current output is validated locally, but its v2 clustering/legal-lane work remains incomplete | Analytics |
-| Analytics site selection in Inspector | A uses `site_<address_key-prefix>` IDs; main's `site_detail`/`queries.ts` still serve draft IDs. Align the Inspector's site source before enabling the populated Analytics path | Map / integrator |
+| Populated v2 Due | Run the reviewed Analytics refresh and validate Agent results against the populated queue; installed schema alone is insufficient | Analytics / Agent validation |
+| V2 sites + recommendations in shared DB | Populate active clusters and outcomes; v2 has queue priority, not a composite score | Analytics |
+| Populated v2 Inspector flow | Validate current cluster IDs across site_queue, site_detail and queries.ts after the refresh | Map / integrator |
 | `map_highlight` visible | MapView reads `useMap(s => s.highlight)` and styles those ids | Gui (map) |
 | Non-forecast `map_set_layers` visible | MapView/LayerPanel must use store `layers` for these toggles (still local `useState`). Forecast is now wired to store `layers.forecast` / `forecastWeek` and its UI renders | Gui (map) |
 | `map_set_filters` categories/status | MapView applies `filters.categories` / `filters.status` | Gui (map) |
@@ -159,7 +188,7 @@ The suites contain 62 tests: 55 local passed; the 7 shared-database checks run s
 
 ## Not done / depends on others
 
-- MapView consumes `flyToTarget`, selection and now forecast state. Highlight, non-forecast layers, category/status filters and visible bounds remain integration gaps. A model-driven map conversation cannot be verified without credentials.
+- MapView consumes `flyToTarget`, selection and now forecast state. Highlight, non-forecast layers, category/status filters and visible bounds remain integration gaps. Mode change and fly-to were verified with the real model; unsupported visual tools now report their limitation.
 - Provisional `get_site` timelines use exact report IDs from `site_detail`; Analytics timelines use `summary.timeline` IDs. Only legacy Analytics rows without that list retain the explicit street-block grouping caveat.
-- Scored sites/recommendations and real action outcomes remain blocked on analytics tasks 2.3/2.4. Provisional sites work now. Forecast rows exist, but P1 forecast tools are outside this front’s current implementation.
+- Populated v2 sites/recommendations and real action outcomes await the Analytics refresh. Provisional sites work now. Forecast rows exist, but P1 forecast tools are outside this front’s current implementation.
 - `closure_note` is never sent to the model until the name scrub (1.11) lands.

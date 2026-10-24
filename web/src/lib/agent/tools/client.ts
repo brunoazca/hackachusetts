@@ -83,7 +83,7 @@ export type MapActions = {
   setForecastWeek: (w: string | null) => void;
 };
 
-export type ClientToolOutput = { ok: true; done: string } | { ok: false; error: string };
+export type ClientToolOutput = { ok: true; done: string; rendered?: false; caveat?: string } | { ok: false; error: string };
 
 export function isClientTool(name: string): name is ClientToolName {
   return (CLIENT_TOOL_NAMES as string[]).includes(name);
@@ -112,16 +112,23 @@ export function executeClientTool(name: string, input: unknown, map: MapActions)
       for (const l of off) patch[l] = false;
       for (const l of on) patch[l] = true;
       map.setLayers(patch);
+      if ([...on, ...off].some(layer => layer !== "forecast")) {
+        return { ok: true, done: "Layer request recorded", rendered: false, caveat: "Only the forecast layer can currently be changed from chat. Use the map controls for the other requested layers; do not claim they changed." };
+      }
       return { ok: true, done: `Layers on: ${on.join(", ") || "—"}; off: ${off.join(", ") || "—"}` };
     }
     case "map_set_filters": {
       map.setFilters(v);
+      const filters = v as { categories?: string[]; status?: string };
+      if (filters.categories != null || filters.status != null) {
+        return { ok: true, done: "Filter request recorded", rendered: false, caveat: "Category and status filters cannot currently be changed from chat. Any supplied date range was applied; do not claim the category or status filter changed." };
+      }
       return { ok: true, done: "Filters updated" };
     }
     case "map_highlight": {
       const { ids } = v as { ids: string[] };
       map.setHighlight(ids);
-      return { ok: true, done: ids.length ? `Highlighted ${ids.length} features` : "Cleared highlight" };
+      return { ok: true, done: "Highlight request recorded", rendered: false, caveat: "Visual highlighting is not available in the current map. Use the feature chips to inspect the reports; do not say they were highlighted." };
     }
     case "map_select": {
       const { kind, id } = v as { kind: (typeof SELECT_KINDS)[number]; id: string };
