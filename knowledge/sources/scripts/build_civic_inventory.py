@@ -381,7 +381,7 @@ def main():
         'The legacy BLS Massachusetts URL redirected to the broader OEWS tables page in the web research tool. Treat it as a navigation reference, not an archived Massachusetts wage table. Large Scorecard and Bluebikes originals are represented by their full organizer slices and 100-row local previews.','',
         '## Reproduce','',
         'From the repository root, use Python 3 and curl. Download the current page and its referenced JavaScript bundle, then parse the literal catalog without executing it:','',
-        '```sh','python3 knowledge/sources/inventory_civic_portal.py --bundle /path/to/portal.js --initial',
+        '```sh','python3 knowledge/sources/scripts/inventory_civic_portal.py --bundle /path/to/portal.js --initial',
         'python3 knowledge/sources/scripts/inventory_civic_portal.py --socrata data/civic/inventory/socrata_entries.json',
         'python3 knowledge/sources/scripts/inventory_civic_portal.py --entries data/civic/inventory/ckan_entries.json --output-name ckan_requests',
         'python3 knowledge/sources/scripts/build_civic_inventory.py','```','',
