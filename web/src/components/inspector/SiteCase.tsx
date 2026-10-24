@@ -5,7 +5,7 @@ import { fetchSiteDetail, type SiteDetail } from "@/lib/queries";
 import { markerDataUrl } from "@/components/map/icons";
 
 // Site case (R3.2), compact: the answer first (returns vs closures), one strip of numbers,
-// a visual return timeline, the top drivers, the last few city actions. Long closure notes are
+// a report timeline, nearby records, and the last few recorded responses. Long closure notes are
 // trimmed to their first sentence; the full list is one click away.
 // Decision + work order (R4) land when the analytics `sites` table exists.
 
@@ -71,17 +71,17 @@ export default function SiteCase({ id }: { id: string }) {
     <article className="px-5 pb-5 pt-3 text-sm" aria-live="polite">
       {/* 1. The answer */}
       <header className="pb-3">
-        <div className="flex items-center gap-2 text-[12px] text-fg-3">
-          <span>Chronic site</span>
+        <div className="flex flex-wrap items-center gap-2 text-[12px] text-fg-3">
+          <span>Repeat-report place</span>
           <span aria-hidden>·</span>
           <span>{s.neighborhood ?? s.city}</span>
-          {s.due && <span className="ml-auto rounded-sm bg-return px-1.5 py-px text-[11px] font-bold uppercase tracking-wide text-bg">Due</span>}
+          {s.due && <span className="ml-auto rounded-sm bg-return px-1.5 py-px text-[11px] font-semibold text-bg">Review suggested</span>}
         </div>
         <h2 className="mt-1 text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">{s.address_block ?? "Unnamed block"}</h2>
         <p className="mt-0.5 text-[14px] leading-5 text-fg-2">
           {s.returns > 0
-            ? <>Came back <b className="font-bold text-return">{s.returns}</b> times after {s.closures} closures.</>
-            : <>No return yet after {s.closures} closures.</>}
+            ? <><b className="font-bold text-return">{s.returns}</b> later reports within 60 days of an earlier closure.</>
+            : <>No later report recorded within 60 days of a closure.</>}
         </p>
       </header>
 
@@ -89,7 +89,7 @@ export default function SiteCase({ id }: { id: string }) {
       <div className="flex divide-x divide-line border-y border-line">
         <Stat value={s.reports} label="reports" />
         <Stat value={s.closures} label="closures" />
-        <Stat value={s.returns} label="came back" tone={s.returns ? "text-return" : undefined} />
+        <Stat value={s.returns} label="after closure" tone={s.returns ? "text-return" : undefined} />
         <Stat value={s.days_since_close ?? "—"} label="days since close" />
       </div>
 
@@ -99,12 +99,12 @@ export default function SiteCase({ id }: { id: string }) {
           <h3 className="text-[12px] font-semibold text-fg-2">Reports over time</h3>
           <span className="font-mono text-[11px] text-fg-3">{fmt(s.first_at)} → {fmt(s.last_at)}</span>
         </div>
-        <div className="relative mt-2 h-7" role="img" aria-label={`${s.reports} reports from ${s.first_at} to ${s.last_at}; ${s.returns} came back after a closure.`}>
+        <div className="relative mt-2 h-7" role="img" aria-label={`${s.reports} reports from ${s.first_at} to ${s.last_at}; ${s.returns} occurred within 60 days after an earlier closure.`}>
           <div className="absolute inset-x-0 top-1/2 h-px bg-line" />
           {view.reports.map((r) => (
             <span
               key={r.id}
-              title={`${r.opened}${r.back ? " · came back" : ""}`}
+              title={`${r.opened}${r.back ? " · report after an earlier closure" : ""}`}
               className={`absolute top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full ${r.back ? "h-3 w-3 bg-return ring-2 ring-bg" : "h-2 w-2 bg-fg-3"}`}
               style={{ left: `${x(r.opened)}%` }}
             />
@@ -112,23 +112,24 @@ export default function SiteCase({ id }: { id: string }) {
         </div>
         <div className="mt-1 flex gap-4 text-[11px] text-fg-3">
           <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-fg-3" />report</span>
-          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-return" />came back</span>
+          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-return" />after earlier closure</span>
         </div>
       </section>
 
       {/* 4. What is around it */}
       <section className="pt-4">
-        <div className="flex items-baseline justify-between">
-          <h3 className="text-[12px] font-semibold text-fg-2">Nearby · 100 m · last 12 months</h3>
+        <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+          <h3 className="text-[12px] font-semibold text-fg-2">Nearby records · 100 m · last 12 months</h3>
           {d.adjacent_vacant_parcels > 0 && (
-            <span className="flex items-center gap-1.5 text-[12px] font-semibold text-warn">
+            <span className="flex items-center gap-1.5 whitespace-nowrap text-[12px] font-semibold text-warn">
               <span aria-hidden className="h-2 w-2 rotate-45 bg-warn" />
               {d.adjacent_vacant_parcels} vacant lot{d.adjacent_vacant_parcels > 1 ? "s" : ""} ≤ 40 m
             </span>
           )}
         </div>
+        <p className="mt-1 text-[11px] text-fg-3">Nearby records provide context. Proximity does not establish a cause.</p>
         {view.drivers.length === 0 ? (
-          <p className="mt-2 text-fg-3">No other signals within 100 m.</p>
+          <p className="mt-2 text-fg-3">No other records within 100 m.</p>
         ) : (
           <ul className="mt-1.5">
             {shownDrivers.map(([cat, n]) => (
@@ -153,15 +154,15 @@ export default function SiteCase({ id }: { id: string }) {
 
       {/* 5. What the city did, newest first */}
       <section className="pt-4">
-        <h3 className="text-[12px] font-semibold text-fg-2">What the city did</h3>
+        <h3 className="text-[12px] font-semibold text-fg-2">Recorded responses</h3>
         <ol className="mt-1.5 divide-y divide-line">
           {shownReports.map((r) => (
             <li key={r.id} className="grid grid-cols-[64px_minmax(0,1fr)] gap-2 py-2">
               <span className="pt-px font-mono text-[12px] tabular-nums text-fg-3">{fmt(r.opened)}</span>
               <span className="min-w-0">
-                <span className="flex items-center gap-2">
+                <span className="flex flex-wrap items-center gap-2">
                   <span className="text-[13px] font-semibold capitalize text-fg">{(r.action ?? (r.closed ? "closed" : "open")).replace(/_/g, " ")}</span>
-                  {r.back && <span className="rounded-sm bg-return/15 px-1.5 text-[11px] font-semibold text-return">came back</span>}
+                  {r.back && <span className="rounded-sm bg-return/15 px-1.5 text-[11px] font-semibold text-return" title="This report followed an earlier closure; this does not evaluate the response shown here.">Report after earlier closure</span>}
                 </span>
                 <span className="block truncate text-[12px] leading-[18px] text-fg-3" title={r.note ?? undefined}>{gist(r.note)}</span>
               </span>
@@ -182,7 +183,7 @@ export default function SiteCase({ id }: { id: string }) {
       </section>
 
       <footer className="mt-4 text-[11px] text-fg-3">
-        Sources: Boston 311 (2024–2026, live), code enforcement (live). Site = one address with repeat reports.
+        Sources: municipal rodent reports and available code enforcement records. A place is one address with repeat reports. Reports are not rat counts; a closed case does not confirm resolution.
       </footer>
     </article>
   );

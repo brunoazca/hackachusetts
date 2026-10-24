@@ -20,7 +20,7 @@ export default function MapLegend({ mode, causes, zoom }: { mode: ViewMode; caus
       {!street ? (
         <div className="flex flex-col gap-1.5">
           <span className="flex items-center gap-2"><Ramp colors={HEAT_RAMPS.rats} /><span><b className="font-semibold text-fg">Rat reports</b> · few → many</span></span>
-          {causes && <span className="flex items-center gap-2"><Ramp colors={HEAT_RAMPS.evidence} /><span><b className="font-semibold text-fg">Likely causes</b> · trash, vacant lots, works</span></span>}
+          {causes && <span className="flex items-center gap-2"><Ramp colors={HEAT_RAMPS.evidence} /><span><b className="font-semibold text-fg">Nearby records</b> · trash, vacant lots, works</span></span>}
           <span className="text-fg-3">Zoom in to see each report.</span>
         </div>
       ) : (

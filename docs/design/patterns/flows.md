@@ -8,7 +8,7 @@ Part of the [Piper design standards](../README.md).
 3. Right panel shows **This week's 10**. Focus starts on ⌘K.
 
 ### Inspect a site (the demo path)
-⌘K → "where does monitoring keep failing?" → Ask answers, chips list 3 sites →
+⌘K → "which places have reports after closure?" → Ask answers, chips list 3 sites →
 click Normandy St chip → map flies (with `mapPadding`, foundations/space-layout.md), site selected, rings draw,
 Dossier opens with headline *Monitored eleven times.* → toggle "Show the Tune" →
 brass notes drift from the vacant lot → Approve on "Issue a violation" → work

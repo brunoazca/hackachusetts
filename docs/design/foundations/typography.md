@@ -53,11 +53,11 @@ Rules:
 | Context | Eyebrow | Headline | Support | Record |
 |---|---|---|---|---|
 | Dossier | `SPECIMEN 03 · 02121` | *Monitored eleven times.* | `9 came back` (ui, `return`) | `16 · 9 · 58%` (data-lg) |
-| Finding | `FINDING 01 · WHAT WORKED` | *Monitoring changes nothing. Violations do.* | question (small, `fg-2`) | `14.1% → 14.2%` (data) |
+| Finding | `FINDING 01 · WHAT WORKED` | *These records do not establish which response works better.* | question (small, `fg-2`) | `Risk ratio 1.03 · 95% CI 0.89–1.20` (data) |
 | Work order | `WO-2026-1024-003` | *Work order — Normandy St* (headline-sm) | labels (eyebrow) | values (data) |
 
 ## Writing headlines
 
 Bodoni headlines are **claims about conditions, under 7 words, ending with a
 period**: *Monitored eleven times.* / *Quiet since June.* / *Next door is the
-source.* / *Rain: no effect.* No questions, no puns, never about residents.
+source.* / *Rain: no association detected.* No questions, no puns, never about residents.

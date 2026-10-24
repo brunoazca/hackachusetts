@@ -1,5 +1,7 @@
 # Kiro prompt — write the final video script for Rat Audit Boston (brand: Piper)
 
+> Production concept: some beats below depend on unfinished features. Use [demo-script.md](demo-script.md) for the implemented recording path. Do not present recommendations, approval/work orders, the assistant, or trial design as working features. Editable claims were corrected on October 24; existing video exports must be re-rendered before reuse.
+
 Paste everything below the line into Kiro.
 
 ---
@@ -35,7 +37,7 @@ Citywide frame:
 - 5,321 rodent reports in Boston in 2026, already more than all of 2025.
 - 99% of cases are marked closed.
 - 407 addresses got a NEW report 30+ days after an earlier one.
-- Across Boston's 46 chronic addresses (5+ reports), 237 of ~280 recorded actions were "monitoring"; only 14 were violations. Monitoring does not reduce recurrence; escalation does.
+- Across Boston's 46 chronic addresses (5+ reports), 237 of ~280 recorded actions were "monitoring"; only 14 were violations. The records do not establish which response works better.
 
 One block, Normandy St · Dorchester 02121, 2025-03 to 2026-06: 18 separate rodent reports. The city closed each case within days, then it was reported again. The 311 closure actions, in order:
 1. Area inspector monitoring (2025-03)
@@ -49,9 +51,9 @@ One block, Normandy St · Dorchester 02121, 2025-03 to 2026-06: 18 separate rode
 9. Violation issued to owners of the adjacent lot (2025-12)
 10. Rodent activity reported again (2026-01) and again (2026-06)
 
-The real driver was next door: a vacant lot classed "RES LAND (Unusable)". Within ~100 m in 2025: Illegal Dumping ×6, Improper Trash Storage (barrels) ×3, Pick up Dead Animal ×4, Poor Conditions of Property ×4, Rodent Activity at neighboring addresses ×4, the adjacent vacant lot ×1.
+Nearby context includes a vacant lot classed "RES LAND (Unusable)". Within ~100 m in 2025: Illegal Dumping ×6, Improper Trash Storage (barrels) ×3, Pick up Dead Animal ×4, Poor Conditions of Property ×4, Rodent Activity at neighboring addresses ×4, the adjacent vacant lot ×1.
 
-Resolution line: "A block problem, not an address problem."
+Resolution line: "Review the block around each report."
 
 ## 4. The data report (what the product is built on; use for Track, Explore, Predict)
 
@@ -72,11 +74,11 @@ Tested signals (ward-month cells; these are the labels for the Explore legend):
 
 | Signal | Strength | Read |
 |---|---:|---|
-| Warm months → more rats | +0.87 | Strongest effect. Summer is rat season. |
+| Warm months → more reports | +0.87 | Strongest effect. Summer is rat season. |
 | Last year's reports here | +0.32 | Rats come back to the same blocks. |
 | Trash storage problems (311 + code) | +0.17 | Real but smaller. |
 | Dead-animal + indoor-pest reports | +0.11 to +0.14 | Early warning before a hot spot. |
-| Rain, snow, demolitions, restaurants | ~0 | Honest nulls. Shown as "tested, no effect". |
+| Rain, snow, demolitions, restaurants | ~0 | Honest nulls. Shown as "no association detected". |
 
 One-sentence version: rats follow heat and trash, and they come back to the same place, so we forecast where, and a human picks the next action.
 
@@ -92,7 +94,7 @@ Real vs live: the demo path is the committed CSVs, nothing breaks on stage. The 
 
 | Script beat | URL | Length | What plays |
 |---|---|---:|---|
-| Beat 0 (logo) | `beat4-animation.html?t=23.7` | 3.6 s | the exploded card collapses into one pin, "A block problem, not an address problem." |
+| Beat 0 (logo) | `beat4-animation.html?t=23.7` | 3.6 s | the exploded card collapses into one pin, "Review the block around each report." |
 | Beat 1 (paradox) | `beat4-animation.html?t=0&to=10.3` | 10 s | 5,321 counts up; "99% closed" cracks; "but 407 addresses came back" |
 | Beat 2 (reveal) | `beat4-animation.html?t=10.3&to=27.3` | 17 s | 46 / 237 / 14 strip; Normandy St block, 18 pins; the escalation ladder with a vermilion ring on every "reported again"; the vacant lot ignites with dumping ×6, dead animal ×4, improper trash ×3; collapse to one pin |
 
@@ -103,11 +105,11 @@ The Beat 2 slice ends on a single pin at centre frame. **Match-cut** to the live
 | # | Beat | Time | Product on screen | Evidence woven in |
 |---|---|---|---|---|
 | 0 | Who is Piper | 0:00–0:12 | Logo sets over the pin collapse; fast transition into the real Piper UI (map + queue) | Rings slice (3.6 s) |
-| 1 | Track | 0:12–0:42 | Site queue (Due first), map, Live badge; click the top Due site, map flies | News wall 4 s → Rings slice 0–10.3 s → back to product |
+| 1 | Track | 0:12–0:42 | Site queue (Review suggested first), map, Live badge; click the top Review suggested site, map flies | News wall 4 s → Rings slice 0–10.3 s → back to product |
 | 2 | Analyze | 0:42–1:15 | Case panel on Normandy St (5 s) → Rings slice 10.3–27.3 s full-screen (17 s) → raw 311 rows with real dates and scrubbed closure notes (5 s) → match-cut to the pin on the live map (4 s) | the 311 rows are the citation |
-| 3 | Act | 1:15–1:40 | Recommendation by the §6 rules with its "because" line and sources; inspector clicks **Approve**; draft work order prints, "Draft — for inspector use", check-again date = today + 60 days | After the approve, 4 s: the vacant-lot parcel record, then one card: "NYC cut rat sightings 20%+ with containerization. Boston has no measured result yet." |
-| 4 | Explore | 1:40–2:05 | Flip depth to Explore; layer groups Rat signals, Food & trash, Shelter, Displacement; hover exactly ONE layer so its tested label shows ("Demolitions: tested, no effect"); dock Ask and type one question ("Compare returns after citations vs monitoring in Dorchester since 2025"); it answers from tools, cites sources, moves the map | the signal table in §4 |
-| 5 | Predict + Prove | 2:05–2:20 | Queue "due to come back" flag (4 s); Prove screen: matched pairs, one gets containers, the measure sentence "returns in 60 days, treatment vs comparison" (8 s) | "Boston's rodent plan spans twenty agencies and has never published that number." |
+| 3 | Act | 1:15–1:40 | Recommendation by the §6 rules with its "because" line and sources; inspector clicks **Approve**; draft work order prints, "Draft — for inspector use", check-again date = today + 60 days | After the approve, 4 s: the vacant-lot parcel record, then one card: "NYC cut rat sightings 20%+ with containerization. These records do not establish which response lasts." |
+| 4 | Explore | 1:40–2:05 | Flip depth to Explore; layer groups Rat signals, Food & trash, Shelter, Displacement; hover exactly ONE layer so its tested label shows ("Demolitions: no post-work report spike detected"); dock Ask and type one question ("Compare returns after citations vs monitoring in Dorchester since 2025"); it answers from tools, cites sources, moves the map | the signal table in §4 |
+| 5 | Predict + Prove | 2:05–2:20 | Queue "Review suggested" flag (4 s); Prove screen: matched pairs, one gets containers, the measure sentence "returns in 60 days, treatment vs comparison" (8 s) | "Evaluating outcomes requires field follow-up and a defined comparison." |
 | 6 | Built with Kiro | 2:20–2:45 | Four clips, not seven: `.kiro/specs/rat-audit/` tree; one hook firing on save; `.kiro/agents/civic-judge.json`; MCP (City of Boston OpenContext + Supabase) live. Then ONE card with the verified counts | counts you verified in §1 item 7 |
 | — | Close | 2:45–2:55 | Map, one pin selected, the approved action showing. Bodoni title "Piper — Rat Audit Boston". Tagline "Follow the rats." | — |
 
@@ -130,7 +132,7 @@ Plain, confident, civic. No jokes about rats. No "AI decides". Short sentences. 
 3. **Per-beat script.** For each beat: `Product` (what is on screen, which component: e.g. `web/src/components/act/SiteQueue.tsx`, `InspectorPanel.tsx`, `SiteCase.tsx`, `map/LayerPanel.tsx`, `tested.ts`, `chat/ChatPanel.tsx`), `Evidence` (the cutaway and its source), `On-screen text` (verbatim, every number from §3/§4), `Voiceover` (verbatim), `Why this beat` (one line).
 4. **Shot list:** one row per shot, with start time, duration, source (product screen / animation slice URL / cutaway asset), and the one thing the viewer must read.
 5. **Voiceover word count** and seconds-per-beat check against 150 wpm.
-6. **Recording checklist**, including: block-level only; Approve click visible; one source citation visible; Live or "seeded" badge visible; one "tested, no effect" label visible; brand art never over the map; Kiro counts re-verified after pull; final file public, under 3:00.
+6. **Recording checklist**, including: block-level only; Approve click visible; one source citation visible; Live or "seeded" badge visible; one "no association detected" label visible; brand art never over the map; Kiro counts re-verified after pull; final file public, under 3:00.
 7. **Footnotes:** the 5,321 vs 5,000 reconciliation, and any other place two sources differ.
 8. **Open questions for the team:** at most three, each answerable with yes/no.
 

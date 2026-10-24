@@ -1,49 +1,24 @@
-"use client";
-
-// Placeholder styled with Piper tokens until the insights track lands. Owned by its track;
-// replace freely, keep the export name. The one finding shown is the spec's lead result
-// (.kiro/specs/rat-audit/requirements.md, R5.2), not live data.
-
-function Bar({ label, before, after, good }: { label: string; before: number; after: number; good?: boolean }) {
-  const h = (v: number) => `${(v / 16) * 100}%`;
-  return (
-    <div className="flex flex-1 flex-col items-center gap-1.5">
-      <div className="flex h-28 items-end gap-1.5" aria-hidden>
-        <div className="flex w-9 flex-col items-center justify-end gap-1" style={{ height: "100%" }}>
-          <span className="font-mono text-[10px] text-fg-3">{before}</span>
-          <div className="w-full rounded-t-[2px] bg-fg-3/60" style={{ height: h(before) }} />
-        </div>
-        <div className="flex w-9 flex-col items-center justify-end gap-1" style={{ height: "100%" }}>
-          <span className="font-mono text-[10px] text-fg">{after}</span>
-          <div className={`w-full rounded-t-[2px] ${good ? "bg-held" : "bg-return"}`} style={{ height: h(after) }} />
-        </div>
-      </div>
-      <span className="font-mono text-[11px] text-fg-3">{label}</span>
-    </div>
-  );
-}
+// Historical findings from docs/submission/data-report.md, not a live query.
+// The matched comparison supersedes the earlier unadjusted before/after chart.
 
 export default function InsightsPanel() {
   return (
     <div className="space-y-3 px-5 pb-5 pt-4">
       <article className="space-y-3 rounded-lg border border-line bg-card p-5">
-        <span className="eyebrow">Finding 01 · What worked</span>
-        <h2 className="text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">Monitoring changes nothing. Violations do.</h2>
-        <p className="text-[13px] leading-[18px] text-fg-2">Share of addresses with a new report within 60 days, before and after each closure type (2025).</p>
-        <div className="flex gap-4 pt-1" role="img" aria-label="Monitoring: 14.1% before, 14.2% after. Violation: 15.3% before, 12.2% after.">
-          <Bar label="monitoring" before={14.1} after={14.2} />
-          <Bar label="violation" before={15.3} after={12.2} good />
-        </div>
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-xs text-fg-2">14.1% → 14.2% · 15.3% → 12.2%</span>
-          <span className="rounded-full bg-accent/15 px-2 py-0.5 text-xs font-medium text-accent">moderate</span>
-        </div>
-        <p className="text-xs text-fg-3">Reports, not rats. Source: Boston 311 rodent closures, 2025 (research result; the live Insights panel replaces this card).</p>
+        <span className="eyebrow">Historical research snapshot · Responses</span>
+        <h2 className="text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">These records do not establish which response works better.</h2>
+        <p className="text-[13px] leading-[18px] text-fg-2">The team&apos;s matched analysis of 19,496 Boston cases from 2023–2026 found no clear difference in reports within 60 days of closure for citation or abatement compared with monitoring.</p>
+        <dl className="grid grid-cols-2 gap-3 border-y border-line py-3">
+          <div><dt className="text-xs text-fg-3">Risk ratio</dt><dd className="font-mono text-xl text-fg">1.03</dd></div>
+          <div><dt className="text-xs text-fg-3">95% confidence interval</dt><dd className="font-mono text-xl text-fg">0.89–1.20</dd></div>
+        </dl>
+        <p className="text-xs leading-5 text-fg-2">This observational comparison does not prove that the responses are equally effective. Reports are not rat counts, and closure notes do not confirm what happened in the field.</p>
+        <p className="text-xs leading-5 text-fg-3">Research snapshot: October 24, 2026. Source: <a className="underline" href="https://data.boston.gov/dataset/311-service-requests" target="_blank" rel="noreferrer">Boston 311 records</a>; analysis documented in the repository&apos;s submission data report. This card does not update with the map.</p>
       </article>
       <article className="space-y-2 rounded-lg border border-line bg-card p-5">
-        <span className="eyebrow">Finding · Weather</span>
-        <h2 className="text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">Rain: no effect.</h2>
-        <p className="text-xs text-fg-3">Null results get the same card.</p>
+        <span className="eyebrow">Historical research snapshot · Weather</span>
+        <h2 className="text-[20px] font-bold leading-7 tracking-[-0.01em] text-fg">Rain: no association detected in the tested windows.</h2>
+        <p className="text-xs leading-5 text-fg-3">The exploratory analysis did not detect a clear relationship with reported rodent activity. That does not establish that rain has no effect on rats.</p>
       </article>
     </div>
   );
