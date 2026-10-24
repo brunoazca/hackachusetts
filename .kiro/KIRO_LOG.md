@@ -103,6 +103,92 @@ If the agent does not know the teammate's name, it asks before logging.
 - Decision: All edits stay in feat/rat-audit-insights. No shared writes, migration creation/application, pipeline rerun, main merge, push or deploy. Retained unavailable/error behavior; do not claim full real-data acceptance until findings, costs and citations are populated.
 - Idea: Rerun the three skipped comparisons after Analytics publishes results; integrate this small client follow-up after the current main integration.
 
+### 2026-10-24 17:10 — Modal: deployed + retrained risk-v1-20261024T210943 and s...
+- Teammate: Bruno
+- Agent: —
+- Did: Modal: deployed + retrained risk-v1-20261024T210943 and scored next 4 weeks
+- Why: new history config live: capture 0.650 vs baseline 0.543, MAE 0.0734 (baseline 0.0713)
+- Where: pipeline/modal_app.py
+- Idea: —
+
+### 2026-10-24 17:02 — Three-city experiment (rat_audit/model/cities.py): shared...
+- Teammate: Bruno
+- Agent: —
+- Did: Three-city experiment (rat_audit/model/cities.py): shared-feature panel for Boston/Cambridge/Somerville, NaN for signals a city lacks, in-memory grids; backtested own-city vs pooled vs +ACS, per-city capture to model_runs (cell_week_poisson_gbm_cities). Deployed the 2017+/no-pandemic/no-ce model to Modal and started retrain+score.
+- Why: Per-city capture vs baseline; deploy the best Boston model
+- Where: pipeline/rat_audit/model/cities.py pipeline/tests/test_model_cities.py model_runs
+- Idea: Pooled model wins for Cambridge (+10.5 pt vs baseline) and Somerville; Boston keeps its own model. Serving CAM/SOM needs grid_cells for those cities (Carol).
+
+### 2026-10-24 17:01 — Exposure (0055b00f) and predictors (af332c28) campaigns d...
+- Teammate: Bruno
+- Agent: —
+- Did: Exposure (0055b00f) and predictors (af332c28) campaigns done, in Kiro library; added to knowledge/15 and spec (R4.0b exposure tie-breaker P1, R6.2 feature verdicts)
+- Why: Rank by who is affected; decide forecast features
+- Where: .kiro/specs/rat-audit/requirements.md, knowledge/15_boston_rat_audit.md
+- Idea: Hotspots near food 3.26x, public schools 2.58x, child care 1.81x, long-term care 1.48x, hospitals 0. Forecast: keep trash+dumping + ISD violations (0.360->0.368); drop weather, MBTA, Article 80
+
+### 2026-10-24 16:58 — Forecast trains 2017+ minus pandemic; ce_* out of CORE
+- Teammate: Bruno
+- Agent: —
+- Did: Forecast trains 2017+ minus pandemic; ce_* out of CORE
+- Why: backtest 26 wk (2026-04-20..10-12): capture 0.643->0.650, MAE 0.0752->0.0734; ce_* rows only exist since 2026-04
+- Where: pipeline/rat_audit/model/features.py pipeline/rat_audit/model/__init__.py
+- Idea: ce_* back via signal_volume monthly counts (2023+), lagged one full month
+
+### 2026-10-24 16:38 — Hourly design critique of Piper (Rat Audit) / route; capt...
+- Teammate: —
+- Agent: da-vinci
+- Did: Hourly design critique of Piper (Rat Audit) / route; captured desktop+phone, measured contrast and target sizes from the DOM
+- Why: scored accessibility is a civic judging criterion, so WCAG findings need measured facts not guesses
+- Where: docs/design-critique/2026-10-24-1637.md, docs/design-critique/latest.md
+- Idea: distinguish duplicate street rows (e.g. two 'E Springfield St, 02118') with a street number or date range so the worklist is scannable
+
+### 2026-10-24 16:36 — Ran lint/types/build on web/: lint FAIL (3 errors, 1103 w...
+- Teammate: —
+- Agent: hopper
+- Did: Ran lint/types/build on web/: lint FAIL (3 errors, 1103 warnings), types PASS, build PASS 23s; wrote docs/health/latest.md
+- Why: catch a broken build before demo day
+- Where: docs/health/latest.md
+- Idea: —
+
+### 2026-10-24 16:32 — Made a 'commit-and-handoff' skill: the safe-commit recipe...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Made a 'commit-and-handoff' skill: the safe-commit recipe — stage only your own files by path, scan secrets, commit with hooks on, then hand 'git push origin main' to a human because the agent is policy-blocked from pushing main
+- Why: We repeat this every ship; the three traps (git add -A in a shared worktree, retrying the blocked push, leaking a secret) keep biting
+- Where: .kiro/skills/commit-and-handoff/SKILL.md
+- Idea: none
+
+### 2026-10-24 16:31 — Made a 'verify-demo-path' skill: the verify-before-done g...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Made a 'verify-demo-path' skill: the verify-before-done gauntlet we repeat every turn (secret scan, typecheck, lint, build, overclaim, submission) in one order, with hard gates marked
+- Why: We ran these scripts by hand on almost every change; a skill stops anyone skipping a step
+- Where: .kiro/skills/verify-demo-path/SKILL.md
+- Idea: Skill-ify the other repeated thing next: commit-only-your-paths then hand push to a human
+
+### 2026-10-24 16:28 — Enabled the Playwright CLI browser + new skills in Kiro Crew
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Turned on the built-in browser (Playwright CLI 0.1.22 installed, Chromium downloaded, built-in browser toggle on) in Settings → Browser, and added skills
+- Why: Give Kiro agents a browser to drive/verify the live app, plus the new skills
+- Where: none (Kiro Crew settings)
+- Idea: Can now click-test the Piper UI headlessly before reporting, instead of puppeteer-core
+
+### 2026-10-24 16:24 — Shipped Piper UI to main via PR #3 (clean branch without ...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Shipped Piper UI to main via PR #3 (clean branch without 1.3 GB of .mov over GitHub's limit) and PR #4 (copy pass); reset local main to origin (backup branch kept, videos kept on disk and git-excluded, stale index.lock removed); removed extra worktrees so only hackachusetts/ remains
+- Why: Guilherme: everything on main, no local diff, one folder
+- Where: PR #3, PR #4, .git/info/exclude
+- Idea: Video assets need Git LFS or external storage, not the repo
+### 2026-10-24 16:34 — Trimmed Kiro Crew to the useful crewmates: Da Vinci (desi...
+- Teammate: Bruno
+- Agent: —
+- Did: Trimmed Kiro Crew to the useful crewmates: Da Vinci (design, hourly), Hopper (build, 3h), Ginsburg (civic-judge), Keller (a11y-auditor); removed Einstein, kiro-historian, no-auto-action, rodent-honesty, snapshot-validator
+- Why: scope freeze; hooks already cover overclaims and citations; research frozen
+- Where: .kiro/agents/, .kiro/scripts/research_lab.py, knowledge/research/INDEX.md
+- Idea: —
 
 ### 2026-10-24 16:26 — Kiro Crew pipeline: 3 new crewmates (Da Vinci design crit...
 - Teammate: Bruno

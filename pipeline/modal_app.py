@@ -44,7 +44,7 @@ def backfill() -> list[dict]:
     return list(ingest_source.map(jobs.INGEST_SOURCES))
 
 
-@app.function(timeout=3600, cpu=4.0, memory=8192)
+@app.function(timeout=3600, cpu=4.0, memory=16384)  # panel from 2016 (~1.9M rows)
 def analytics_and_score() -> dict:
     from rat_audit import jobs
     return {"analytics": jobs.analytics(), "score": jobs.score()}
@@ -56,7 +56,7 @@ def daily() -> dict:
     return {"refresh": jobs.refresh(jobs.DAILY_SOURCES), "after": analytics_and_score.remote()}
 
 
-@app.function(timeout=3600, cpu=4.0, memory=8192)  # manual: retrain + backtest (no cron)
+@app.function(timeout=7200, cpu=8.0, memory=16384)  # manual: retrain + backtest on 2016+ history (no cron)
 def weekly_retrain() -> dict:
     from rat_audit import jobs
     return jobs.train()

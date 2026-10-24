@@ -1,6 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
+import { fetchSources } from "@/lib/queries";
+import type { SourceEvidence } from "@/lib/evidence";
+import SourceList from "@/components/evidence/SourceList";
 
 // Building facts for one Boston parcel. Owner name stays in the private schema (reveal, R3.9 — not built yet).
 
@@ -11,9 +14,19 @@ type Parcel = {
 
 export default function ParcelCard({ pid }: { pid: string }) {
   const [p, setP] = useState<Parcel | null>(null);
+  const [sources, setSources] = useState<SourceEvidence[]>([]);
   useEffect(() => {
+    let live = true;
     supabase.from("parcels").select("pid,address_block,zip,land_use,yr_built,own_occ,units,city,source_id,sources(name,update_note)").eq("pid", pid).maybeSingle()
-      .then(({ data }) => setP(data as Parcel | null));
+      .then(async ({ data }) => {
+        if (!live) return;
+        setP(data as Parcel | null);
+        if (data) {
+          const result = await fetchSources([data.source_id]);
+          if (live) setSources(result);
+        }
+      });
+    return () => { live = false; };
   }, [pid]);
   if (!p) return <p className="p-4 text-sm text-neutral-700">Loading building…</p>;
   const age = p.yr_built ? new Date().getFullYear() - p.yr_built : null;
@@ -31,7 +44,7 @@ export default function ParcelCard({ pid }: { pid: string }) {
       </dl>
       <p className="rounded-md bg-neutral-50 p-2 text-neutral-800">Owner: <span className="select-none blur-sm">Hidden Owner Name LLC</span> <span className="text-xs text-neutral-700">(reveal coming)</span></p>
       <footer className="border-t border-neutral-100 pt-2 text-xs text-neutral-700">
-        Source: {p.sources?.name ?? p.source_id} (static){p.sources?.update_note ? ` — ${p.sources.update_note}` : ""}.
+        <SourceList sources={sources} unavailable={!sources.length} />
       </footer>
     </article>
   );

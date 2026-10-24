@@ -162,9 +162,7 @@ def score(conn: psycopg.Connection, *, future_start: date | None = None) -> dict
 
 # What-if interventions: feature -> multiplier on the underlying counts (features are log1p counts).
 INTERVENTIONS = {
-    "trash_storage": {"trash_storage_s4": 0.5, "trash_storage_s12": 0.5, "ring_trash_storage_s4": 0.5,
-                      "ce_trash_storage_s4": 0.5, "ce_trash_storage_s12": 0.5, "ring_ce_trash_storage_s4": 0.5,
-                      "ce_overfill_s4": 0.5, "ce_overfill_s12": 0.5},
+    "trash_storage": {"trash_storage_s4": 0.5, "trash_storage_s12": 0.5, "ring_trash_storage_s4": 0.5},
     "clear_lot": {"weeds_s4": 0.0, "weeds_s12": 0.0, "dumping_s4": 0.5, "dumping_s12": 0.5,
                   "litter_s4": 0.5, "litter_s12": 0.5},
     "pest_followup": {"pest_s4": 0.5, "pest_s12": 0.5, "ring_pest_s4": 0.5},

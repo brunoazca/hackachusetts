@@ -1,6 +1,6 @@
 # Research index
 
-Every Kiro Crew Research Lab campaign and its full report. Maintained by the `einstein` crewmate via `.kiro/scripts/research_lab.py`; do not edit by hand.
+Every Kiro Crew Research Lab campaign and its full report. Regenerate with `python3 .kiro/scripts/research_lab.py export-all`; do not edit by hand.
 Summaries that feed the product live in `knowledge/15_boston_rat_audit.md`.
 
 | Created | ID | Campaign | Status | Parent | Depth | Report |
