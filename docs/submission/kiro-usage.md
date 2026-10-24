@@ -4,9 +4,9 @@
 > actual files in `.kiro/` and name concrete moments Kiro did the work.
 
 ## Spec-driven development
-- `.kiro/specs/parking-permit-navigator/requirements.md` — EARS requirements.
-- `.kiro/specs/parking-permit-navigator/design.md` — architecture + a11y plan.
-- `.kiro/specs/parking-permit-navigator/tasks.md` — the task checklist Kiro executed.
+- `.kiro/specs/<feature>/requirements.md` — EARS requirements.
+- `.kiro/specs/<feature>/design.md` — architecture + a11y plan.
+- `.kiro/specs/<feature>/tasks.md` — the task checklist Kiro executed.
 - _<Add: which tasks Kiro implemented, with commit links.>_
 
 ## Steering

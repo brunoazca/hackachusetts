@@ -1,0 +1,10 @@
+{
+  "name": "Snapshot citation check on data save",
+  "description": "When a data snapshot is saved, confirm it carries an authoritative citation (source name, url, retrieved date) — the civic 'every fact is cited' rule.",
+  "trigger": {
+    "type": "fileEdited",
+    "patterns": ["src/data/**/*.json", "data/**/snapshot*.json"]
+  },
+  "prompt": "A data snapshot was just saved. Run `python3 .kiro/scripts/validate_snapshots.py` from the repo root and report pass/fail in one line plus any missing citation fields. If it fails, give the concrete fix (add source name, url, retrieved_date) but do NOT invent a source — require it be traced to its real origin. Do not touch unrelated code. THEN log it: run `.kiro/klog.sh -t \"—\" -a \"snapshot-hook\" -d \"snapshot citation check <pass/fail>\" -w \"keep every fact cited\" -f \"<file>\" -i \"—\"` from the repo root.",
+  "enabled": true
+}

@@ -31,6 +31,38 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 10:45 — dry-run scorecard of current state
+- Teammate: Guilherme
+- Agent: civic-judge
+- Did: dry-run scorecard of current state
+- Why: surface the biggest submission risk early
+- Where: none
+- Idea: Pick the idea now and ship one real end-to-end slice; a template spec and zero app code is the submission's biggest risk at 10:45 AM.
+
+### 2026-10-24 10:45 — Built idea-neutral Kiro automation: snapshot-validator ag...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Built idea-neutral Kiro automation: snapshot-validator agent+hook+script, submission-readiness script+cron, hourly demo-path-health cron, and triggered a civic-judge dry run
+- Why: Set up useful, idea-agnostic Kiro automation that leaves a visible proof trail before the app idea is chosen
+- Where: .kiro/agents/snapshot-validator.json, .kiro/hooks/snapshot-citation-check.kiro.hook, .kiro/scripts/validate_snapshots.py, .kiro/scripts/check_submission_ready.py, 2 cron jobs
+- Idea: Crons fire on the Schedule page; validators enforce the civic cite+ready rules for any idea
+
+### 2026-10-24 10:39 — Removed parking-permit-navigator spec; created clean idea...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Removed parking-permit-navigator spec; created clean idea-neutral civic-service spec (requirements/design/tasks) and fixed all references in README, structure.md, kiro-usage.md, CATALOG.md
+- Why: Start fresh on a new civic idea with a complete, blank-but-structured spec
+- Where: .kiro/specs/civic-service/*, README.md, .kiro/steering/structure.md, docs/submission/kiro-usage.md, data/civic/CATALOG.md
+- Idea: Rename civic-service to the chosen outcome (e.g. block-brief) once the team decides
+
+### 2026-10-24 10:36 — Pulled origin/main and reviewed KB + repo state; found no...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Pulled origin/main and reviewed KB + repo state; found no app code yet, submission docs still templates, spec still parking-permit template while research recommends BlockBrief
+- Why: User asked for a full state review and showcase recommendations
+- Where: .kiro/KIRO_LOG.md
+- Idea: Pick BlockBrief, rename spec to block-brief, build 3-screen app from boston-311 snapshot; wire historian agent to fill kiro-usage.md at the end
+
 ### 2026-10-24 10:35 — Recommended three scoped Civic MVPs; team choice remains ...
 - Teammate: Guilherme
 - Agent: Codex (research; not Kiro build activity)

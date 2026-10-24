@@ -21,7 +21,7 @@ _<Fill in from `.kiro/steering/tech.md` once the stack exists.>_
 ## How we used Kiro
 This project is spec-driven with Kiro. Real work lives in `/.kiro`:
 - `/.kiro/steering/` — always-on product, tech, and structure guidance.
-- `/.kiro/specs/parking-permit-navigator/` — requirements, design, tasks.
+- `/.kiro/specs/civic-service/` — requirements, design, tasks (rename to the chosen feature).
 - `/.kiro/hooks/` — automated accessibility and demo-path checks on save.
 - `/.kiro/agents/civic-judge.json` — a judge-style reviewer agent.
 

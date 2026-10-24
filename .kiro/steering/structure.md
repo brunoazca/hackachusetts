@@ -26,5 +26,5 @@ hackachusetts/
 - `docs/submission/` is the source of truth for everything the judges read.
 
 ## Naming
-- Spec folders: kebab-case, named by outcome (e.g. `parking-permit-navigator`).
+- Spec folders: kebab-case, named by outcome (e.g. `block-brief`, `notice-to-action`).
 - Branches: `feat/<short>`, `fix/<short>`.
