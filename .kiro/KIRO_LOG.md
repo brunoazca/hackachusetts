@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:42 — Audited Supabase usage (410 MB: incidents 210, private de...
+- Teammate: Bruno
+- Agent: —
+- Did: Audited Supabase usage (410 MB: incidents 210, private details 43, parcels+owners 77, volume tables 51) and account setup
+- Why: Decide whether to move Supabase/Vercel to personal Free account; kept rat-audit on bone@blackbone.ai since Free caps at 500 MB and no data will be cut
+- Where: supabase (rat-audit)
+- Idea: Boston 2026 has ~2x incidents (ce_* 36k only in 2026, litter 12k) — possible date bug in enforcement loader
+
 ### 2026-10-24 13:36 — Marked every source live/daily/static: update_modes.py re...
 - Teammate: Bruno
 - Agent: —
