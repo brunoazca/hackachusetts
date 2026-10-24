@@ -120,7 +120,8 @@ export default function Timeline() {
             type="range" min={0} max={TOTAL} value={lo}
             aria-label="From" aria-valuetext={nice(START + lo * DAY)}
             onChange={(e) => { const v = Math.min(Number(e.target.value), hi - 1); setLo(v); commit(v, hi); }}
-            className="piper-range absolute inset-x-0 top-0 h-7 w-full"
+            // Short windows put both thumbs on the same pixel; near the end only "From" can move, so it must be the one on top.
+            className={`piper-range absolute inset-x-0 top-0 h-7 w-full ${lo > TOTAL / 2 ? "z-10" : ""}`}
           />
           <input
             type="range" min={0} max={TOTAL} value={hi}

@@ -109,7 +109,7 @@ export const useMap = create<MapState>((set) => ({
   setBounds: (bounds) => set({ bounds }),
   setViewMode: (viewMode) => set({ viewMode }),
   setCauses: (causes) => set({ causes }),
-  filters: { since: daysAgo(90), until: iso(today), categories: [...CATEGORY_IDS], status: "all" },
+  filters: { since: daysAgo(7), until: iso(today), categories: [...CATEGORY_IDS], status: "all" },
   highlight: [],
   selection: null,
   panel: "inspector",
