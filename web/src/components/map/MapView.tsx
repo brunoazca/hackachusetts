@@ -75,7 +75,8 @@ function heatPaint(ramp: string[], opacity: number, n: number) {
     "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 10, 8, 13, 16, 16, 30],
     "heatmap-color": [
       "interpolate", ["linear"], ["heatmap-density"],
-      0, "rgba(0,0,0,0)", 0.12, ramp[0], 0.3, ramp[1], 0.55, ramp[2], 0.8, ramp[3], 1, ramp[4],
+      // Fade from the ramp's own first color (not transparent black), so edges don't turn gray.
+      0, `${ramp[0]}00`, 0.12, ramp[0], 0.3, ramp[1], 0.55, ramp[2], 0.8, ramp[3], 1, ramp[4],
     ],
     // Hot spots are a city-scale view: they fade out by street level, where the real markers take over.
     "heatmap-opacity": ["interpolate", ["linear"], ["zoom"], 12.5, opacity, 14.5, 0],
