@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:24 — Map: centered the bottom filter bar
+- Teammate: Bruno
+- Agent: —
+- Did: Map: centered the bottom filter bar
+- Why: user asked to center the filters at the bottom
+- Where: web/src/components/map/LayerPanel.tsx
+- Idea: —
+
 ### 2026-10-24 19:24 — Chat: red rail button, removed the 'Ask' header row, shor...
 - Teammate: Bruno
 - Agent: —

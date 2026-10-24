@@ -176,7 +176,8 @@ export default function LayerPanel({ enabled, onChange, mode, onModeChange, caus
   const setAll = (ids: string[], v: boolean) => apply({ ...enabled, ...Object.fromEntries(ids.map((id) => [id, v])) }, ids, v);
 
   return (
-    <nav aria-label="Map layers and filters" className="map-secondary-panel absolute bottom-3 left-[404px] z-20">
+    // Centered in the map area to the right of the 392 px Insight panel.
+    <nav aria-label="Map layers and filters" className="map-secondary-panel absolute bottom-3 left-[calc(50%+196px)] z-20 -translate-x-1/2">
       {/* Bottom bar */}
       <div className="glass flex h-[52px] flex-row items-center gap-1 rounded-lg p-1">
         {dock.map((d, i) => (
