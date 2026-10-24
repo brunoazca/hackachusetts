@@ -1,0 +1,81 @@
+[{"sy":"2022","race_eth":"All Candidates","lic_type":"Emergency","lic_cnt":"4814","lic_pct":"1"}
+,{"sy":"2022","race_eth":"All Candidates","lic_type":"Initial","lic_cnt":"8052","lic_pct":"1"}
+,{"sy":"2022","race_eth":"All Candidates","lic_type":"Provisional","lic_cnt":"2214","lic_pct":"1"}
+,{"sy":"2022","race_eth":"American Indian or Alaska Native","lic_type":"Emergency","lic_cnt":"6","lic_pct":"0.0012"}
+,{"sy":"2022","race_eth":"American Indian or Alaska Native","lic_type":"Initial","lic_cnt":"2","lic_pct":"0.0002"}
+,{"sy":"2022","race_eth":"American Indian or Alaska Native","lic_type":"Provisional","lic_cnt":"2","lic_pct":"0.0009"}
+,{"sy":"2022","race_eth":"Asian","lic_type":"Emergency","lic_cnt":"107","lic_pct":"0.0222"}
+,{"sy":"2022","race_eth":"Asian","lic_type":"Initial","lic_cnt":"188","lic_pct":"0.0233"}
+,{"sy":"2022","race_eth":"Asian","lic_type":"Provisional","lic_cnt":"58","lic_pct":"0.0262"}
+,{"sy":"2022","race_eth":"Black or African American","lic_type":"Emergency","lic_cnt":"357","lic_pct":"0.0742"}
+,{"sy":"2022","race_eth":"Black or African American","lic_type":"Initial","lic_cnt":"212","lic_pct":"0.0263"}
+,{"sy":"2022","race_eth":"Black or African American","lic_type":"Provisional","lic_cnt":"65","lic_pct":"0.0294"}
+,{"sy":"2022","race_eth":"Hispanic/Latino","lic_type":"Emergency","lic_cnt":"533","lic_pct":"0.1107"}
+,{"sy":"2022","race_eth":"Hispanic/Latino","lic_type":"Initial","lic_cnt":"390","lic_pct":"0.0484"}
+,{"sy":"2022","race_eth":"Hispanic/Latino","lic_type":"Provisional","lic_cnt":"145","lic_pct":"0.0655"}
+,{"sy":"2022","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Emergency","lic_cnt":"2","lic_pct":"0.0004"}
+,{"sy":"2022","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Initial","lic_cnt":"2","lic_pct":"0.0002"}
+,{"sy":"2022","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Provisional","lic_cnt":"2","lic_pct":"0.0009"}
+,{"sy":"2022","race_eth":"Not Reported","lic_type":"Emergency","lic_cnt":"1332","lic_pct":"0.2767"}
+,{"sy":"2022","race_eth":"Not Reported","lic_type":"Initial","lic_cnt":"2208","lic_pct":"0.2742"}
+,{"sy":"2022","race_eth":"Not Reported","lic_type":"Provisional","lic_cnt":"560","lic_pct":"0.2529"}
+,{"sy":"2022","race_eth":"Two or more races","lic_type":"Emergency","lic_cnt":"64","lic_pct":"0.0133"}
+,{"sy":"2022","race_eth":"Two or more races","lic_type":"Initial","lic_cnt":"85","lic_pct":"0.0106"}
+,{"sy":"2022","race_eth":"Two or more races","lic_type":"Provisional","lic_cnt":"37","lic_pct":"0.0167"}
+,{"sy":"2022","race_eth":"White","lic_type":"Emergency","lic_cnt":"2413","lic_pct":"0.5012"}
+,{"sy":"2022","race_eth":"White","lic_type":"Initial","lic_cnt":"4965","lic_pct":"0.6166"}
+,{"sy":"2022","race_eth":"White","lic_type":"Provisional","lic_cnt":"1345","lic_pct":"0.6075"}
+,{"sy":"2021","race_eth":"All Candidates","lic_type":"Emergency","lic_cnt":"6372","lic_pct":"1"}
+,{"sy":"2021","race_eth":"All Candidates","lic_type":"Initial","lic_cnt":"7989","lic_pct":"1"}
+,{"sy":"2021","race_eth":"All Candidates","lic_type":"Provisional","lic_cnt":"2261","lic_pct":"1"}
+,{"sy":"2021","race_eth":"American Indian or Alaska Native","lic_type":"Emergency","lic_cnt":"7","lic_pct":"0.0011"}
+,{"sy":"2021","race_eth":"American Indian or Alaska Native","lic_type":"Initial","lic_cnt":"3","lic_pct":"0.0004"}
+,{"sy":"2021","race_eth":"American Indian or Alaska Native","lic_type":"Provisional","lic_cnt":"2","lic_pct":"0.0009"}
+,{"sy":"2021","race_eth":"Asian","lic_type":"Emergency","lic_cnt":"122","lic_pct":"0.0191"}
+,{"sy":"2021","race_eth":"Asian","lic_type":"Initial","lic_cnt":"178","lic_pct":"0.0223"}
+,{"sy":"2021","race_eth":"Asian","lic_type":"Provisional","lic_cnt":"67","lic_pct":"0.0296"}
+,{"sy":"2021","race_eth":"Black or African American","lic_type":"Emergency","lic_cnt":"474","lic_pct":"0.0744"}
+,{"sy":"2021","race_eth":"Black or African American","lic_type":"Initial","lic_cnt":"201","lic_pct":"0.0252"}
+,{"sy":"2021","race_eth":"Black or African American","lic_type":"Provisional","lic_cnt":"63","lic_pct":"0.0279"}
+,{"sy":"2021","race_eth":"Hispanic/Latino","lic_type":"Emergency","lic_cnt":"667","lic_pct":"0.1047"}
+,{"sy":"2021","race_eth":"Hispanic/Latino","lic_type":"Initial","lic_cnt":"368","lic_pct":"0.0461"}
+,{"sy":"2021","race_eth":"Hispanic/Latino","lic_type":"Provisional","lic_cnt":"157","lic_pct":"0.0694"}
+,{"sy":"2021","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Emergency","lic_cnt":"0","lic_pct":"0"}
+,{"sy":"2021","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Initial","lic_cnt":"1","lic_pct":"0.0001"}
+,{"sy":"2021","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Provisional","lic_cnt":"3","lic_pct":"0.0013"}
+,{"sy":"2021","race_eth":"Not Reported","lic_type":"Emergency","lic_cnt":"1743","lic_pct":"0.2735"}
+,{"sy":"2021","race_eth":"Not Reported","lic_type":"Initial","lic_cnt":"2176","lic_pct":"0.2724"}
+,{"sy":"2021","race_eth":"Not Reported","lic_type":"Provisional","lic_cnt":"616","lic_pct":"0.2724"}
+,{"sy":"2021","race_eth":"Two or more races","lic_type":"Emergency","lic_cnt":"85","lic_pct":"0.0133"}
+,{"sy":"2021","race_eth":"Two or more races","lic_type":"Initial","lic_cnt":"82","lic_pct":"0.0103"}
+,{"sy":"2021","race_eth":"Two or more races","lic_type":"Provisional","lic_cnt":"28","lic_pct":"0.0124"}
+,{"sy":"2021","race_eth":"White","lic_type":"Emergency","lic_cnt":"3274","lic_pct":"0.5138"}
+,{"sy":"2021","race_eth":"White","lic_type":"Initial","lic_cnt":"4980","lic_pct":"0.6234"}
+,{"sy":"2021","race_eth":"White","lic_type":"Provisional","lic_cnt":"1325","lic_pct":"0.586"}
+,{"sy":"2020","race_eth":"All Candidates","lic_type":"Emergency","lic_cnt":"3040","lic_pct":"1"}
+,{"sy":"2020","race_eth":"All Candidates","lic_type":"Initial","lic_cnt":"8562","lic_pct":"1"}
+,{"sy":"2020","race_eth":"All Candidates","lic_type":"Provisional","lic_cnt":"2247","lic_pct":"1"}
+,{"sy":"2020","race_eth":"American Indian or Alaska Native","lic_type":"Emergency","lic_cnt":"2","lic_pct":"0.0007"}
+,{"sy":"2020","race_eth":"American Indian or Alaska Native","lic_type":"Initial","lic_cnt":"11","lic_pct":"0.0013"}
+,{"sy":"2020","race_eth":"American Indian or Alaska Native","lic_type":"Provisional","lic_cnt":"1","lic_pct":"0.0004"}
+,{"sy":"2020","race_eth":"Asian","lic_type":"Emergency","lic_cnt":"60","lic_pct":"0.0197"}
+,{"sy":"2020","race_eth":"Asian","lic_type":"Initial","lic_cnt":"195","lic_pct":"0.0228"}
+,{"sy":"2020","race_eth":"Asian","lic_type":"Provisional","lic_cnt":"50","lic_pct":"0.0223"}
+,{"sy":"2020","race_eth":"Black or African American","lic_type":"Emergency","lic_cnt":"283","lic_pct":"0.0931"}
+,{"sy":"2020","race_eth":"Black or African American","lic_type":"Initial","lic_cnt":"199","lic_pct":"0.0232"}
+,{"sy":"2020","race_eth":"Black or African American","lic_type":"Provisional","lic_cnt":"78","lic_pct":"0.0347"}
+,{"sy":"2020","race_eth":"Hispanic/Latino","lic_type":"Emergency","lic_cnt":"368","lic_pct":"0.1211"}
+,{"sy":"2020","race_eth":"Hispanic/Latino","lic_type":"Initial","lic_cnt":"410","lic_pct":"0.0479"}
+,{"sy":"2020","race_eth":"Hispanic/Latino","lic_type":"Provisional","lic_cnt":"144","lic_pct":"0.0641"}
+,{"sy":"2020","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Emergency","lic_cnt":"0","lic_pct":"0"}
+,{"sy":"2020","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Initial","lic_cnt":"2","lic_pct":"0.0002"}
+,{"sy":"2020","race_eth":"Native Hawaiian or Other Pacific Islander","lic_type":"Provisional","lic_cnt":"1","lic_pct":"0.0004"}
+,{"sy":"2020","race_eth":"Not Reported","lic_type":"Emergency","lic_cnt":"810","lic_pct":"0.2664"}
+,{"sy":"2020","race_eth":"Not Reported","lic_type":"Initial","lic_cnt":"2383","lic_pct":"0.2783"}
+,{"sy":"2020","race_eth":"Not Reported","lic_type":"Provisional","lic_cnt":"601","lic_pct":"0.2675"}
+,{"sy":"2020","race_eth":"Two or more races","lic_type":"Emergency","lic_cnt":"45","lic_pct":"0.0148"}
+,{"sy":"2020","race_eth":"Two or more races","lic_type":"Initial","lic_cnt":"90","lic_pct":"0.0105"}
+,{"sy":"2020","race_eth":"Two or more races","lic_type":"Provisional","lic_cnt":"32","lic_pct":"0.0142"}
+,{"sy":"2020","race_eth":"White","lic_type":"Emergency","lic_cnt":"1472","lic_pct":"0.4842"}
+,{"sy":"2020","race_eth":"White","lic_type":"Initial","lic_cnt":"5272","lic_pct":"0.6157"}
+,{"sy":"2020","race_eth":"White","lic_type":"Provisional","lic_cnt":"1340","lic_pct":"0.5964"}]

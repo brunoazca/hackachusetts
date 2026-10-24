@@ -1,0 +1,1408 @@
+{
+  "id": "crash-sheet-0-1980353091",
+  "url": "https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit",
+  "sheet": "data quality pivot tables",
+  "range": "A1:Z1000",
+  "grid": {
+    "rowCount": 1000,
+    "columnCount": 26,
+    "hideGridlines": true
+  },
+  "retention": "full_tab_grid_values",
+  "rows": 1000,
+  "retrieved_at_utc": "2026-10-24T15:15:41.450Z",
+  "result": {
+    "range": "'data quality pivot tables'!A1:Z1000",
+    "majorDimension": "ROWS",
+    "values": [
+      [
+        "Data Quality Issues in MassDOT Crash Reports: Boston, Brookline, Cambridge, Somerville, 2020-2025"
+      ],
+      [
+        "last updated by Jack Dougherty, 2 March 2026"
+      ],
+      [],
+      [
+        "Question: MassDOT crash data from state and local police reports is our most reliable source, but what are the quality issues?"
+      ],
+      [
+        "Based on conversation with MassDOT highway safety manager, some quality issues with crash data are due to these factors:"
+      ],
+      [
+        "1) State Police do not successfully geocode many crashes they report, such as missing about 25% somewhere in Boston in 2024"
+      ],
+      [
+        "2) Boston Police did not succesfully report many crashes prior to switching to new MDOT-provided system in 2022"
+      ],
+      [
+        "3) Boston Police did not uniformly code Most Severe Injury prior to switching to new MDOT-provided system in 2022"
+      ],
+      [
+        "4) Some police appear to have mistakenly recorded \"witnesses to a crash\" in the \"Vulnerable Users\" field"
+      ],
+      [
+        "There may be other data quality issues not shown here, including those more directly related to 2020 Covid pandemic"
+      ],
+      [],
+      [
+        "Separately, I am still looking into why significant percentages of public crash data from local govts do not seem to appear in MDOT data."
+      ],
+      [
+        "  Local Govt public crash data sources include: Boston Vision Zero (EMS data, not Boston PD data); Cambridge PD; Somerville PD"
+      ],
+      [],
+      [],
+      [
+        "MDOT crashes reported by all agencies (Local police, State police, MBTA police, Campus police, blanks)"
+      ],
+      [
+        "COUNT of Crash Number",
+        "Crash Year"
+      ],
+      [
+        "City Town Name",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      [
+        "BOSTON",
+        "3129",
+        "4139",
+        "5745",
+        "5972",
+        "5689",
+        "5658"
+      ],
+      [
+        "BROOKLINE",
+        "272",
+        "364",
+        "404",
+        "408",
+        "419",
+        "455"
+      ],
+      [
+        "CAMBRIDGE",
+        "983",
+        "1389",
+        "1514",
+        "1693",
+        "1576",
+        "1388"
+      ],
+      [
+        "SOMERVILLE",
+        "585",
+        "641",
+        "710",
+        "662",
+        "627",
+        "489"
+      ],
+      [
+        "Grand Total",
+        "4969",
+        "6533",
+        "8373",
+        "8735",
+        "8311",
+        "7990"
+      ],
+      [],
+      [
+        "State Police and Local Police each reported about half of crashes (more State PD in Bos & Som; more Local PD in Cam & Brk)"
+      ],
+      [
+        "COUNT of Crash Number",
+        "Crash Year"
+      ],
+      [
+        "Police Agency Type",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      [
+        "State police",
+        "2993",
+        "3998",
+        "4082",
+        "4142",
+        "3691",
+        "3067"
+      ],
+      [
+        "MBTA police",
+        "26",
+        "49",
+        "29",
+        "43",
+        "133",
+        "116"
+      ],
+      [
+        "Local police",
+        "1944",
+        "2484",
+        "4259",
+        "4550",
+        "4486",
+        "4807"
+      ],
+      [
+        "Campus police",
+        null,
+        null,
+        "1",
+        null,
+        "1"
+      ],
+      [
+        null,
+        "6",
+        "2",
+        "2"
+      ],
+      [
+        "Grand Total",
+        "4969",
+        "6533",
+        "8373",
+        "8735",
+        "8311",
+        "7990"
+      ],
+      [],
+      [
+        "1) State Police do not successfully geocode many crashes they report, such as missing about 25% somewhere in Boston in 2024"
+      ],
+      [
+        "Filtered: Agency = State Police"
+      ],
+      [
+        "COUNT of Crash Number",
+        "Crash Year"
+      ],
+      [
+        "Is Geocoded",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      [
+        "Low Confidence",
+        null,
+        "2",
+        null,
+        null,
+        "2"
+      ],
+      [
+        "Multiple",
+        "1",
+        "2",
+        null,
+        "2",
+        "2",
+        "2"
+      ],
+      [
+        "No",
+        "98",
+        "218",
+        "183",
+        "506",
+        "889",
+        "597"
+      ],
+      [
+        "One",
+        null,
+        null,
+        null,
+        "2",
+        null,
+        "1"
+      ],
+      [
+        "Yes",
+        "2894",
+        "3776",
+        "3899",
+        "3632",
+        "2798",
+        "2467"
+      ],
+      [
+        "Grand Total",
+        "2993",
+        "3998",
+        "4082",
+        "4142",
+        "3691",
+        "3067"
+      ],
+      [],
+      [
+        "2) Boston PD did not successfully report many crashes prior to new MDOT-provided data system in 2022, resulting in dubious increase"
+      ],
+      [
+        "Filtered: Crashes reported by Local Police agency only"
+      ],
+      [
+        "COUNT of Crash Number",
+        "Crash Year"
+      ],
+      [
+        "City Town Name",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      [
+        "BOSTON",
+        "541",
+        "652",
+        "2275",
+        "2440",
+        "2448",
+        "2876"
+      ],
+      [
+        "BROOKLINE",
+        "245",
+        "338",
+        "375",
+        "361",
+        "368",
+        "419"
+      ],
+      [
+        "CAMBRIDGE",
+        "792",
+        "1109",
+        "1208",
+        "1371",
+        "1286",
+        "1168"
+      ],
+      [
+        "SOMERVILLE",
+        "366",
+        "385",
+        "401",
+        "378",
+        "384",
+        "344"
+      ],
+      [
+        "Grand Total",
+        "1944",
+        "2484",
+        "4259",
+        "4550",
+        "4486",
+        "4807"
+      ],
+      [],
+      [
+        "3) Boston Police did not uniformly code Most Severe Injury prior to switching to new MDOT-provided system in 2022"
+      ],
+      [
+        "Filtered: Crashes with any \"Non-Fatal Injury - Incapacitating\" (used primarily by Boston PD)"
+      ],
+      [
+        "COUNT of Crash Number",
+        "Crash Year"
+      ],
+      [
+        "City Town Name",
+        "2020",
+        "2021",
+        "2022"
+      ],
+      [
+        "BOSTON",
+        "15",
+        "24",
+        "1"
+      ],
+      [
+        "BROOKLINE",
+        null,
+        null,
+        "1"
+      ],
+      [
+        "Grand Total",
+        "15",
+        "24",
+        "2"
+      ],
+      [],
+      [
+        "Compare with more standardized Most Severe Injury codes routlinely used in MDOT: Suspected Serious Injury (A) and Fatality (K)"
+      ],
+      [
+        "Filtered: Crashes with any Suspected Serious Injury (A) "
+      ],
+      [
+        "COUNT of Crash Number",
+        "Crash Year"
+      ],
+      [
+        "City Town Name",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      [
+        "BOSTON",
+        "30",
+        "36",
+        "49",
+        "126",
+        "129",
+        "101"
+      ],
+      [
+        "BROOKLINE",
+        "2",
+        "1",
+        "4",
+        "4",
+        "4",
+        "6"
+      ],
+      [
+        "CAMBRIDGE",
+        "14",
+        "30",
+        "23",
+        "18",
+        "21",
+        "11"
+      ],
+      [
+        "SOMERVILLE",
+        "11",
+        "11",
+        "6",
+        "11",
+        "11",
+        "5"
+      ],
+      [
+        "Grand Total",
+        "57",
+        "78",
+        "82",
+        "159",
+        "165",
+        "123"
+      ],
+      [],
+      [
+        "Filtered: Crashes with any Fatality (K)"
+      ],
+      [
+        "COUNT of Crash Number",
+        "Crash Year"
+      ],
+      [
+        "City Town Name",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      [
+        "BOSTON",
+        "18",
+        "30",
+        "22",
+        "18",
+        "25",
+        "8"
+      ],
+      [
+        "BROOKLINE",
+        "1",
+        "1",
+        null,
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "CAMBRIDGE",
+        "2",
+        null,
+        "2",
+        "1",
+        "4",
+        "1"
+      ],
+      [
+        "SOMERVILLE",
+        "1",
+        "2"
+      ],
+      [
+        "Grand Total",
+        "22",
+        "33",
+        "24",
+        "20",
+        "30",
+        "10"
+      ],
+      [],
+      [
+        "4) Some police appear to have mistakenly recorded \"witnesses to a crash\" in the \"Vulnerable Users\" field"
+      ],
+      [
+        "See apparent increase in number of crashes involving a Vulnerable User in Boston and Cambridge from 2021 to 2025"
+      ],
+      [
+        "COUNTA of Vulnerable User Type (All Persons)",
+        "Crash Year"
+      ],
+      [
+        "City Town Name",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      [
+        "BOSTON",
+        "117",
+        "122",
+        "258",
+        "328",
+        "335",
+        "418"
+      ],
+      [
+        "BROOKLINE",
+        "39",
+        "45",
+        "63",
+        "47",
+        "51",
+        "68"
+      ],
+      [
+        "CAMBRIDGE",
+        "101",
+        "145",
+        "208",
+        "238",
+        "238",
+        "233"
+      ],
+      [
+        "SOMERVILLE",
+        "54",
+        "56",
+        "77",
+        "81",
+        "97",
+        "63"
+      ],
+      [
+        "Grand Total",
+        "311",
+        "368",
+        "606",
+        "694",
+        "721",
+        "782"
+      ],
+      [],
+      [
+        "See wide range of ways police have recorded data in the \"Vulnerable User Type (All Persons)\" field, especially VU3 and higher"
+      ],
+      [
+        "COUNT of Crash Number",
+        "Crash Year"
+      ],
+      [
+        "Vulnerable User Type (All Persons)",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      [
+        " VU1: Bicyclist",
+        "12",
+        "6",
+        "13"
+      ],
+      [
+        " VU1: Bicyclist / VU2: Bicyclist",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU1: Other",
+        "4",
+        "4",
+        "4"
+      ],
+      [
+        " VU1: Other / VU2: Other",
+        null,
+        "1",
+        "1"
+      ],
+      [
+        " VU1: Pedestrian",
+        "8",
+        "12",
+        "11",
+        "2"
+      ],
+      [
+        " VU1: Pedestrian / VU2: Pedestrian",
+        "1",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        " VU1: Skateboarder",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Bicyclist",
+        "108",
+        "122",
+        "217",
+        "233",
+        "272",
+        "281"
+      ],
+      [
+        " VU2: Bicyclist / VU3: Bicyclist",
+        "1",
+        null,
+        "3",
+        "4",
+        "1",
+        "4"
+      ],
+      [
+        " VU2: Bicyclist / VU3: Bicyclist / VU4: Bicyclist",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Bicyclist / VU3: Bicyclist / VU4: Bicyclist / VU5: Bicyclist",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Bicyclist / VU3: Other",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Electric Personal Assistive Mobility Device User",
+        null,
+        null,
+        null,
+        null,
+        "4",
+        "1"
+      ],
+      [
+        " VU2: Emergency Responder - Outside of vehicle",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "2"
+      ],
+      [
+        " VU2: Hand Cyclist",
+        null,
+        null,
+        null,
+        null,
+        "2",
+        "2"
+      ],
+      [
+        " VU2: Motorized Bicyclist",
+        null,
+        null,
+        null,
+        null,
+        "4",
+        "7"
+      ],
+      [
+        " VU2: Motorized Bicyclist / VU3: Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        "53",
+        "58"
+      ],
+      [
+        " VU2: Motorized Scooter Rider / VU3: Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        "1",
+        "2"
+      ],
+      [
+        " VU2: Non-Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        "4",
+        "6"
+      ],
+      [
+        " VU2: Non-Motorized Wheelchair User",
+        null,
+        null,
+        null,
+        null,
+        "1",
+        "3"
+      ],
+      [
+        " VU2: Other",
+        "7",
+        "17",
+        "19",
+        "35",
+        "4",
+        "3"
+      ],
+      [
+        " VU2: Other / VU3: Bicyclist",
+        null,
+        null,
+        "1",
+        "1"
+      ],
+      [
+        " VU2: Other / VU3: Other",
+        null,
+        null,
+        "1",
+        "4"
+      ],
+      [
+        " VU2: Other / VU3: Other / VU4: Pedestrian",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Other / VU4: Roadway Worker - Outside of vehicle",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Pedestrian",
+        "108",
+        "149",
+        "226",
+        "214",
+        "237",
+        "270"
+      ],
+      [
+        " VU2: Pedestrian / VU3: Other",
+        null,
+        "1",
+        "1",
+        "2"
+      ],
+      [
+        " VU2: Pedestrian / VU3: Pedestrian",
+        "5",
+        "1",
+        "6",
+        "14",
+        "4",
+        "7"
+      ],
+      [
+        " VU2: Pedestrian / VU3: Pedestrian / VU4: Pedestrian",
+        null,
+        "1",
+        "1",
+        null,
+        "1",
+        "2"
+      ],
+      [
+        " VU2: Pedestrian / VU3: Pedestrian / VU4: Pedestrian / VU5: Pedestrian / VU6: Pedestrian",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Pedestrian / VU3: Train/Trolley passenger",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Pedestrian / VU3: Unknown",
+        null,
+        "1"
+      ],
+      [
+        " VU2: Pedestrian / VU4: Pedestrian",
+        null,
+        null,
+        null,
+        null,
+        "2"
+      ],
+      [
+        " VU2: Roadway Worker - Outside of vehicle",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Roadway Worker - Outside of vehicle / VU3: Emergency Responder - Outside of vehicle",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "2"
+      ],
+      [
+        " VU2: Roadway Worker - Outside of vehicle / VU3: Roadway Worker - Outside of vehicle",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Roller Skater",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Skateboarder",
+        "6",
+        "1",
+        "4",
+        "1",
+        "4",
+        "3"
+      ],
+      [
+        " VU2: Skateboarder / VU3: Skateboarder",
+        "1"
+      ],
+      [
+        " VU2: Train/Trolley passenger",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Train/Trolley passenger / VU3: Train/Trolley passenger",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Tricyclist",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Unknown",
+        "1",
+        "1",
+        "3",
+        "7",
+        "1",
+        "2"
+      ],
+      [
+        " VU2: Unknown / VU3: Other",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Unknown / VU3: Other / VU4: Bicyclist",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU2: Utility Worker ��� Outside of vehicle",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Bicyclist",
+        "12",
+        "18",
+        "25",
+        "32",
+        "27",
+        "36"
+      ],
+      [
+        " VU3: Bicyclist / VU4: Bicyclist",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Bicyclist / VU4: Pedestrian",
+        "1"
+      ],
+      [
+        " VU3: Electric Personal Assistive Mobility Device User",
+        null,
+        null,
+        null,
+        null,
+        "2"
+      ],
+      [
+        " VU3: Emergency Responder - Outside of vehicle",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Hand Cyclist",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Motorized Bicyclist",
+        null,
+        null,
+        null,
+        null,
+        "1",
+        "3"
+      ],
+      [
+        " VU3: Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        "13",
+        "17"
+      ],
+      [
+        " VU3: Non-Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        "5",
+        "1"
+      ],
+      [
+        " VU3: Non-Motorized Wheelchair User",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Other",
+        "6",
+        "4",
+        "9",
+        "30",
+        "3",
+        "1"
+      ],
+      [
+        " VU3: Other / VU2: Other",
+        "1"
+      ],
+      [
+        " VU3: Other / VU4: Pedestrian",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Other Micromobility Device User",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Pedestrian",
+        "13",
+        "11",
+        "27",
+        "32",
+        "32",
+        "32"
+      ],
+      [
+        " VU3: Pedestrian / VU2: Pedestrian",
+        "1",
+        "1"
+      ],
+      [
+        " VU3: Pedestrian / VU4: Bicyclist / VU5: Pedestrian",
+        "1"
+      ],
+      [
+        " VU3: Pedestrian / VU4: Other",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Pedestrian / VU4: Pedestrian",
+        null,
+        null,
+        "3",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Pedestrian / VU4: Unknown",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Skateboarder",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Train/Trolley passenger",
+        null,
+        "1",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Unknown",
+        null,
+        "1",
+        "5",
+        "6"
+      ],
+      [
+        " VU3: Unknown / VU4: Other",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU3: Unknown / VU4: Unknown",
+        null,
+        null,
+        "1",
+        "2"
+      ],
+      [
+        " VU3: Unknown / VU4: Unknown / VU5: Unknown",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU4: Bicyclist",
+        "3",
+        "5",
+        "4",
+        "11",
+        "8",
+        "8"
+      ],
+      [
+        " VU4: Motorized Bicyclist",
+        null,
+        null,
+        null,
+        null,
+        "1",
+        "1"
+      ],
+      [
+        " VU4: Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        "1",
+        "3"
+      ],
+      [
+        " VU4: Motorized Scooter Rider / VU5: Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU4: Non-Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU4: Other",
+        "3",
+        "1",
+        "3",
+        "10",
+        "4"
+      ],
+      [
+        " VU4: Other / VU5: Other",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU4: Pedestrian",
+        "5",
+        "3",
+        "3",
+        "13",
+        "6",
+        "6"
+      ],
+      [
+        " VU4: Pedestrian / VU5: Pedestrian",
+        null,
+        "1",
+        null,
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        " VU4: Pedestrian / VU5: Pedestrian / VU6: Pedestrian",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU4: Train/Trolley passenger",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU4: Tricyclist",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU4: Unknown",
+        null,
+        null,
+        null,
+        "4",
+        null,
+        "2"
+      ],
+      [
+        " VU4: Unknown / VU5: Unknown",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU5: Bicyclist",
+        "1",
+        null,
+        "1",
+        "4",
+        "2",
+        "2"
+      ],
+      [
+        " VU5: Bicyclist / VU6: Bicyclist",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU5: Hand Cyclist",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU5: Motorized Bicyclist",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU5: Motorized Scooter Rider",
+        null,
+        null,
+        null,
+        null,
+        "3",
+        "1"
+      ],
+      [
+        " VU5: Other",
+        "1",
+        "1",
+        null,
+        "5"
+      ],
+      [
+        " VU5: Other / VU6: Other",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU5: Pedestrian",
+        "1",
+        null,
+        "1",
+        "2",
+        null,
+        "1"
+      ],
+      [
+        " VU5: Pedestrian / VU6: Pedestrian",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU5: Unknown",
+        null,
+        "1",
+        "1",
+        "1",
+        null,
+        "1"
+      ],
+      [
+        " VU6: Other",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU6: Other / VU7: Other",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU6: Pedestrian",
+        null,
+        null,
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        " VU6: Unknown",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU7: Other",
+        null,
+        null,
+        null,
+        "3"
+      ],
+      [
+        " VU7: Pedestrian",
+        null,
+        "1",
+        null,
+        "2"
+      ],
+      [
+        " VU7: Pedestrian / VU8: Pedestrian",
+        null,
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU7: Unknown / VU8: Unknown / VU9: Unknown",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU8: Unknown",
+        null,
+        null,
+        "1"
+      ],
+      [
+        " VU9: Pedestrian",
+        null,
+        null,
+        "1",
+        "1"
+      ],
+      [
+        " VU9: Unknown / VU10: Other / VU11: Unknown",
+        null,
+        null,
+        null,
+        "1"
+      ],
+      [
+        "Grand Total",
+        "311",
+        "368",
+        "606",
+        "694",
+        "721",
+        "782"
+      ]
+    ]
+  }
+}

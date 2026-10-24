@@ -1,0 +1,717 @@
+{
+  "dataset": "mbta-alerts",
+  "source": "data/civic/datasets/mbta-alerts/data.csv",
+  "source_sha256": "f7c5b3bd957c7781632f9755c8de98814238119df5c5994559479daeea5f88d5",
+  "total_snapshot_rows": 130,
+  "preview_rows": 100,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "updated",
+    "effect",
+    "severity",
+    "routes",
+    "header"
+  ],
+  "records": [
+    {
+      "updated": "2026-10-06T09:48:33",
+      "effect": "STATION_ISSUE",
+      "severity": "1",
+      "routes": "CR-Fairmount, CR-Franklin, CR-Greenbush, CR-Kingston, CR-Needham, CR-NewBedford, CR-Providence, CR-Worcester",
+      "header": "From late August through late November, 2026, South Station restrooms will be under construction. Temporary restroom facilities have been positioned along Atlantic Ave."
+    },
+    {
+      "updated": "2026-09-30T15:23:27",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "45",
+      "header": "Route 45 detoured from 7:30 AM to 1:30 PM on Sun, Nov 8, due to the BAA Half Marathon. No service to Franklin Park Rd or Glenway St."
+    },
+    {
+      "updated": "2026-10-18T15:59:37",
+      "effect": "DELAY",
+      "severity": "5",
+      "routes": "34E",
+      "header": "Route 34E is experiencing delays of about 20 minutes due to traffic."
+    },
+    {
+      "updated": "2026-07-21T20:49:43",
+      "effect": "STATION_ISSUE",
+      "severity": "1",
+      "routes": "Orange",
+      "header": "The platform at Jackson Square is undergoing renovations to improve safety and accessibility. Sections of the platform are unlevel, which may make it difficult for some riders to board and exit trains."
+    },
+    {
+      "updated": "2026-10-07T15:56:17",
+      "effect": "ELEVATOR_CLOSURE",
+      "severity": "8",
+      "routes": "CR-Fitchburg",
+      "header": "South Acton Elevator 704 (Track 1 (outbound platform) to pedestrian bridge) is unavailable."
+    },
+    {
+      "updated": "2026-09-21T20:03:25",
+      "effect": "STOP_MOVE",
+      "severity": "1",
+      "routes": "109, 85, 91",
+      "header": "Washington St @ Medford St (outbound) stop has moved, effective on September 20, 2026. Passengers can board at the new stop location at Washington St @ Rossmore St."
+    },
+    {
+      "updated": "2026-10-07T15:59:27",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "350, 62, 67, 76, Red",
+      "header": "Alewife Escalator 351 (Main concourse to platform) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-18T15:20:45",
+      "effect": "DELAY",
+      "severity": "5",
+      "routes": "30",
+      "header": "Route 30 is experiencing delays of about 20 minutes due to traffic."
+    },
+    {
+      "updated": "2026-10-07T15:59:08",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "741, 742, 743",
+      "header": "Courthouse Escalator 418 (Lobby to Seaport Boulevard, Fan Pier Boulevard) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-06T15:19:09",
+      "effect": "SUSPENSION",
+      "severity": "7",
+      "routes": "CR-Greenbush",
+      "header": "Greenbush Line: On Mon, Oct 19 service will be suspended between South Station and Weymouth Landing/East Braintree. All Greenbush Line trains will terminate and originate at Braintree for Red Line service."
+    },
+    {
+      "updated": "2026-10-11T15:29:08",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "42",
+      "header": "Route 42 is detoured from 7:30 AM to 1:30 PM on Sunday, November 8 due to the BAA Half Marathon. The closest stop with service is 3550 Washington St, outside Arborway bus yard."
+    },
+    {
+      "updated": "2026-10-14T19:52:01",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "741, 742, 743, CR-Fairmount, CR-Franklin, CR-Greenbush, CR-Kingston, CR-Needham, CR-NewBedford, CR-Providence, CR-Worcester, Red",
+      "header": "South Station Escalator 387 (Lobby to 1 Financial Center) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-07-21T20:46:13",
+      "effect": "STATION_ISSUE",
+      "severity": "1",
+      "routes": "Orange",
+      "header": "The stairway connecting the Jackson Square lobby and the south end of the platform is closed until winter 2026. Use the stairway at the north end of the platform. This closure is for the construction of a new stairway and a second elevator."
+    },
+    {
+      "updated": "2026-10-14T12:03:01",
+      "effect": "STATION_CLOSURE",
+      "severity": "7",
+      "routes": "Green-C",
+      "header": "Green Line C Branch: Westbound (outbound) trains will skip Saint Paul Street, from Oct 19, through Nov. 7, for accessibility upgrades. Riders can instead board or disembark one stop away at either Coolidge Corner or Kent Street, which are 0.2 miles away."
+    },
+    {
+      "updated": "2026-10-11T17:40:34",
+      "effect": "ELEVATOR_CLOSURE",
+      "severity": "3",
+      "routes": "39, CR-Franklin, CR-Needham, CR-Providence, CR-Worcester, Orange",
+      "header": "Back Bay Elevator 854 (Commuter Rail track 2 to lobby) is unavailable."
+    },
+    {
+      "updated": "2026-10-18T14:18:47",
+      "effect": "DELAY",
+      "severity": "5",
+      "routes": "465",
+      "header": "Route 465 is experiencing delays of about 20 minutes due to an accident."
+    },
+    {
+      "updated": "2026-10-07T15:56:08",
+      "effect": "ACCESS_ISSUE",
+      "severity": "3",
+      "routes": "Mattapan",
+      "header": "The Central Avenue mini-high platform (Ashmont side) is out of service."
+    },
+    {
+      "updated": "2026-10-15T18:46:02",
+      "effect": "ELEVATOR_CLOSURE",
+      "severity": "3",
+      "routes": "Green-D, Green-E",
+      "header": "Science Park/West End Elevator 981 (Lechmere & North platform to lobby) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-07T16:01:45",
+      "effect": "PARKING_ISSUE",
+      "severity": "3",
+      "routes": "426, 429, 435, 436, 439, 441, 442, 455, 456",
+      "header": "Lynn Parking Garage is partially closed, but has sufficient parking capacity to accommodate daily demand."
+    },
+    {
+      "updated": "2026-10-18T14:42:09",
+      "effect": "DELAY",
+      "severity": "5",
+      "routes": "64",
+      "header": "Route 64 is experiencing delays of about 20 minutes due to traffic."
+    },
+    {
+      "updated": "2026-10-16T12:27:40",
+      "effect": "SERVICE_CHANGE",
+      "severity": "7",
+      "routes": "CR-Franklin",
+      "header": "Franklin/Foxboro Line will be replaced by a shuttle bus between Foxboro and Walpole on Mon, Oct 19."
+    },
+    {
+      "updated": "2026-10-07T16:01:28",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "1",
+      "routes": "10, 16, 17, 171, 18, 708, 9, Red",
+      "header": "Andrew Escalator 123 (Ashmont/Braintree platform to busway) is unavailable until further notice, pending replacement."
+    },
+    {
+      "updated": "2026-07-21T22:38:51",
+      "effect": "STOP_CLOSURE",
+      "severity": "5",
+      "routes": "424, 426, 450, 455",
+      "header": "American Legion Hwy @ Revere St is closed due to construction. For Routes 426 and 450, the closest stop with service is American Legion Hwy @ Hutchinson St. For Routes 424 and 455, the closest stop with service is Revere St @ Stowers St."
+    },
+    {
+      "updated": "2026-10-18T15:47:25",
+      "effect": "DELAY",
+      "severity": "7",
+      "routes": "26",
+      "header": "Route 26 is experiencing delays of about 30 minutes due to police activity."
+    },
+    {
+      "updated": "2026-09-16T07:59:08",
+      "effect": "STOP_MOVE",
+      "severity": "1",
+      "routes": "505",
+      "header": "The Route 505 stops at Washington St @ Prospect St, inbound and outbound, have moved for construction. Riders can use the bus stop at Washington St @ Auburn St during this work."
+    },
+    {
+      "updated": "2026-10-16T13:49:38",
+      "effect": "STOP_MOVE",
+      "severity": "3",
+      "routes": "83",
+      "header": "Starting in October, the Route 83 outbound supplemental school trips at 3:10 PM and 3:15 PM will pick up students at the new layover location at Felton St @ Cambridge St. This stop replaces Broadway @ Antrim St (outbound)"
+    },
+    {
+      "updated": "2026-07-21T20:39:41",
+      "effect": "STATION_ISSUE",
+      "severity": "1",
+      "routes": "CR-Fitchburg",
+      "header": "Littleton/Route 495 passengers can expect occasional traffic and detours when accessing the station due to the Foster Street reconstruction work."
+    },
+    {
+      "updated": "2026-10-13T11:06:49",
+      "effect": "EXTRA_SERVICE",
+      "severity": "3",
+      "routes": "59",
+      "header": "Route 59 will have additional service from October 16 - 18, to accommodate Needham Branch Commuter Rail passengers between Newton Highlands and Needham Junction."
+    },
+    {
+      "updated": "2026-07-26T11:16:04",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "556",
+      "header": "Route 556 inbound is detoured, skipping Hammond St @ Plympton St due to maintenance. The closest stops with service are 184 Hammond St & Hammond St @ Lawrence St."
+    },
+    {
+      "updated": "2026-10-07T16:01:01",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "1",
+      "routes": "Blue, Orange",
+      "header": "State Escalator 6 (Oak Grove platform to Old State House lobby) unavailable"
+    },
+    {
+      "updated": "2026-10-13T06:34:54",
+      "effect": "SERVICE_CHANGE",
+      "severity": "3",
+      "routes": "Boat-F1, Boat-F2H",
+      "header": "F2H Hingham/Hull Ferry weekend service has ended for the season. Visit MBTA.com/Ferry for current schedules."
+    },
+    {
+      "updated": "2026-10-11T15:27:19",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "21",
+      "header": "Route 21 is detoured from 7:30 AM to 1:30 PM on Sunday, November 8 due to the BAA Half Marathon. The closest stops with service are Forest Hills and Morton St @ Harvard St."
+    },
+    {
+      "updated": "2026-10-15T09:41:45",
+      "effect": "SHUTTLE",
+      "severity": "8",
+      "routes": "CR-Worcester",
+      "header": "From Sat, Oct 17 through Sun, Oct 18, Framingham/Worcester Line service between Framingham and Boston will be replaced by shuttle bus to accommodate track improvement work."
+    },
+    {
+      "updated": "2026-10-07T15:54:46",
+      "effect": "ELEVATOR_CLOSURE",
+      "severity": "3",
+      "routes": "CR-Worcester",
+      "header": "Natick Center Elevator 751 (Track 2 to street) is unavailable."
+    },
+    {
+      "updated": "2026-09-16T07:54:58",
+      "effect": "STOP_MOVE",
+      "severity": "1",
+      "routes": "80, 87, 88",
+      "header": "The Route 80, 87, & 88 outbound stop at McGrath Hwy @ Poplar St has temporarily relocated to the front of the Mercedes Benz dealership due to construction."
+    },
+    {
+      "updated": "2026-09-16T07:57:29",
+      "effect": "STOP_MOVE",
+      "severity": "1",
+      "routes": "60, 65",
+      "header": "The Route 60 & 65 outbound stop at Brookline Ave @ Longwood Ave has moved due to construction. Please board buses at Brookline Ave @ Deaconess Rd."
+    },
+    {
+      "updated": "2026-10-18T16:14:02",
+      "effect": "DELAY",
+      "severity": "4",
+      "routes": "CR-Greenbush",
+      "header": "Greenbush Line Train 6075 (3:55 PM from South Station) is now operating near schedule between Quincy Center and Greenbush."
+    },
+    {
+      "updated": "2026-10-07T09:42:50",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "119",
+      "header": "Route 119 inbound is detoured and omitting the Beachmont Loop on weekdays from 8 AM to 5 PM due to construction through Friday, October 30. Service will originate/terminate at Winthrop Ave @ Beachmont Station."
+    },
+    {
+      "updated": "2026-10-15T08:58:44",
+      "effect": "SCHEDULE_CHANGE",
+      "severity": "8",
+      "routes": "CR-Worcester",
+      "header": "On Fri, Oct 16 and Mon, Oct 19, a temporary reduced service schedule well be in effect on the Framingham/Worcester Line to accommodate signal improvement work. Check mbta.com/cr for more information."
+    },
+    {
+      "updated": "2026-10-13T11:05:58",
+      "effect": "SCHEDULE_CHANGE",
+      "severity": "3",
+      "routes": "CR-Fairmount, CR-Fitchburg, CR-Greenbush, CR-Haverhill, CR-Kingston, CR-Lowell, CR-Needham, CR-NewBedford, CR-Newburyport, CR-Providence, CR-Worcester",
+      "header": "On Monday, October 26, a new Fall/Winter schedule will be in effect. Some times have been adjusted for seasonal effects and all train numbers have changed to 4-digits. Visit mbta.com/cr for more information."
+    },
+    {
+      "updated": "2026-09-29T07:18:38",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "451",
+      "header": "Route 451 outbound is detoured every Friday, Saturday, and Sunday in October, from start to end of service, for Salem Haunted Happenings. The first outbound stop after Salem Depot will be Bridge St @ Cromwell St, omitting Derby St and Winter St."
+    },
+    {
+      "updated": "2026-10-07T15:57:54",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "15, 18, 21, 215, 217, 22, 23, 24, 240, 26, Mattapan, Red",
+      "header": "Ashmont Escalator 438 (Ashmont platform to Mattapan Line, busway) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-13T23:43:53",
+      "effect": "ELEVATOR_CLOSURE",
+      "severity": "3",
+      "routes": "Blue",
+      "header": "Revere Beach Elevator 885 (Wonderland platform to lobby) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-07T15:03:54",
+      "effect": "NOTICE",
+      "severity": "1",
+      "routes": "Red",
+      "header": "Braintree Station notice: Premium parking is available at this location. You can buy premium passes and permits using SpotHero."
+    },
+    {
+      "updated": "2026-10-07T15:56:26",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "114, 116, 120, 121, Blue",
+      "header": "Maverick Escalator 428 (Unpaid lobby to Lewis Mall) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-18T15:20:56",
+      "effect": "DELAY",
+      "severity": "7",
+      "routes": "65",
+      "header": "Route 65 is experiencing delays of about 20 minutes due to traffic."
+    },
+    {
+      "updated": "2026-09-16T07:56:36",
+      "effect": "STOP_MOVE",
+      "severity": "1",
+      "routes": "77, 96",
+      "header": "The Route 77 & 96 outbound stop at Massachusetts Ave @ Wendell St moves about 100 feet south, from 7 AM - 4 PM weekdays, due to construction."
+    },
+    {
+      "updated": "2026-09-15T17:30:13",
+      "effect": "STATION_ISSUE",
+      "severity": "1",
+      "routes": "Red",
+      "header": "Due to construction, the staircase at the north end of the Savin Hill platform is out of service. Riders should follow station personnel and signage to the alternate staircase located in the center of the platform."
+    },
+    {
+      "updated": "2026-10-07T16:02:24",
+      "effect": "PARKING_ISSUE",
+      "severity": "8",
+      "routes": "CR-Lowell",
+      "header": "Select areas of the Anderson/Woburn MBTA Daily Lot and Gated Overnight Lot will be temporarily closed for major paving and infrastructure improvement work."
+    },
+    {
+      "updated": "2026-08-13T15:00:55",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "742",
+      "header": "SL2 is detoured weekdays from 6 PM until end of service and skipping Northern Ave @ Tide St. Closest outbound stops are Northern Ave @ Harbor St & 23 Drydock Ave. Closest inbound stops are Drydock Ave @ Design Center Place & Northern Ave opp Harbor St."
+    },
+    {
+      "updated": "2026-10-07T15:09:37",
+      "effect": "NOTICE",
+      "severity": "1",
+      "routes": "CR-Providence",
+      "header": "Route 128 Station notice: Premium parking is available at this location. You can buy premium passes and permits using SpotHero."
+    },
+    {
+      "updated": "2026-10-07T16:01:52",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "1",
+      "routes": "741, 742, 743",
+      "header": "Courthouse Escalator 417 (Airport/Design Center platform to south lobby) is unavailable due to ongoing construction at the station."
+    },
+    {
+      "updated": "2026-10-07T16:00:51",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "1",
+      "routes": "101, 104, 105, 106, 108, 131, 132, 137, 411, 430, 97, 99, CR-Haverhill, Orange",
+      "header": "Malden Center Escalator 312 (Street level to Commuter Rail platform) unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-07T15:54:32",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "Red",
+      "header": "Broadway Escalator 367 (Platform to paid lobby) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-07T15:57:23",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "741, 742, 743, CR-Fairmount, CR-Franklin, CR-Greenbush, CR-Kingston, CR-Needham, CR-NewBedford, CR-Providence, CR-Worcester, Red",
+      "header": "South Station Escalator 388 (Lobby to CSA area) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-11T15:26:39",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "16",
+      "header": "Route 16 is detoured from 7:30 AM to 1:30 PM on Sunday, November 8 due to the BAA Half Marathon. The closest inbound stops with service are Forest Hills and Columbia Rd @ Wolcott St. The closest outbound stops are Columbia Rd @ Seaver St and Forest Hills."
+    },
+    {
+      "updated": "2026-10-14T11:36:20",
+      "effect": "SUSPENSION",
+      "severity": "8",
+      "routes": "CR-Needham",
+      "header": "From 11 PM on Friday, October 16 through Sunday, October 18, Needham Line service will be suspended to accommodate West Roxbury Bridge work."
+    },
+    {
+      "updated": "2026-10-15T16:37:12",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "66",
+      "header": "Route 66 detoured beginning at 08:00 AM on Friday, October 16, though Sunday, October 18, due to the Head of the Charles Regatta."
+    },
+    {
+      "updated": "2026-10-07T16:01:35",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "1",
+      "routes": "Blue",
+      "header": "Bowdoin Escalator 125 (Lobby to street) is unavailable until further notice, pending replacement."
+    },
+    {
+      "updated": "2026-10-14T13:44:59",
+      "effect": "NOTICE",
+      "severity": "7",
+      "routes": "CR-Newburyport",
+      "header": "Reminder: On weekends from October 3rd through November 1st, Bikes and Scooters are not allowed on all Newburyport/Rockport Line trains due to heavy Haunted Happenings ridership to Salem."
+    },
+    {
+      "updated": "2026-10-13T21:45:56",
+      "effect": "STOP_CLOSURE",
+      "severity": "5",
+      "routes": "87, 88, 89, 8993",
+      "header": "Broadway @ Weston Ave (inbound) is temporarily closed due to construction. Riders can board at Broadway @ Garrison Ave or Broadway @ Holland St - Teele Sq."
+    },
+    {
+      "updated": "2026-10-11T15:28:09",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "31",
+      "header": "Route 31 is detoured from 7:30 AM to 1:30 PM on Sunday, November 8 due to the BAA Half Marathon. The closest stops with service are Forest Hills and Morton St @ Harvard St."
+    },
+    {
+      "updated": "2026-10-13T06:34:10",
+      "effect": "SERVICE_CHANGE",
+      "severity": "3",
+      "routes": "Boat-Lynn",
+      "header": "F5 Lynn Ferry weekend service has ended for the season. Visit MBTA.com/Ferry for current schedules."
+    },
+    {
+      "updated": "2026-09-21T14:46:22",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "131",
+      "header": "Route 131 is being detoured weekdays from 7 AM to 3 PM for construction. The closest inbound stops are Laurel St @ Sixth St and Grove St @ Crescent Pl. The closest outbound stops are Grove St @ Linwood Ave and 167 Laurel St."
+    },
+    {
+      "updated": "2026-10-07T15:57:45",
+      "effect": "PARKING_ISSUE",
+      "severity": "1",
+      "routes": "CR-Worcester",
+      "header": "Reminder: The traffic gate off of High St. to the Southern Ashland Parking Lot is not for public access. Please access the lot via Memorial Dr. off W. Union St."
+    },
+    {
+      "updated": "2026-09-17T10:21:57",
+      "effect": "NOTICE",
+      "severity": "1",
+      "routes": "CR-Fairmount",
+      "header": "Fare Validation Machines are being installed at all Fairmount Line stations. Passengers will need to validate their fare to scan through the gates at South Station."
+    },
+    {
+      "updated": "2026-10-07T15:07:07",
+      "effect": "NOTICE",
+      "severity": "1",
+      "routes": "Green-D",
+      "header": "Riverside Station notice: Premium parking is available at this location. You can buy premium passes and permits using SpotHero."
+    },
+    {
+      "updated": "2026-10-16T13:15:57",
+      "effect": "SUSPENSION",
+      "severity": "7",
+      "routes": "Green-B, Green-C, Green-D, Green-E",
+      "header": "Green Line: No trains between North Station & Babcock St (B), Kenmore (C+D), & Heath St (E), October 31 - November 1. Use buses between Babcock, Kenmore, Heath St (Rt 39) & Copley/Back Bay. Use Orange Line between North Station & Back Bay."
+    },
+    {
+      "updated": "2026-10-07T15:59:44",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "10, 16, 17, 171, 18, 708, 9, Red",
+      "header": "Andrew Escalator 124 (Ashmont/Braintree platform to busway) is unavailable."
+    },
+    {
+      "updated": "2026-10-07T15:54:01",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "210, 226, 230, 236, CR-Kingston, CR-NewBedford, Red",
+      "header": "Braintree Escalator 334 (Red Line platform to paid lobby) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-13T21:41:51",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "87",
+      "header": "Route 87 will be detoured from 10:00 AM to 7:00 PM on Sun, Oct 18 due to the Monster Mash. See additional information for missed stops and closest stops with service."
+    },
+    {
+      "updated": "2026-10-12T11:54:37",
+      "effect": "ELEVATOR_CLOSURE",
+      "severity": "3",
+      "routes": "Orange, Red",
+      "header": "Downtown Crossing Elevator 869 (Alewife platform to Summer Street Concourse) is unavailable due to maintenance through Tuesday, December 1."
+    },
+    {
+      "updated": "2026-10-13T06:35:31",
+      "effect": "SERVICE_CHANGE",
+      "severity": "3",
+      "routes": "Boat-F6, Boat-F7, Boat-F8",
+      "header": "F8 Winthrop/Quincy Ferry weekend service has ended for the season. Visit MBTA.com/Ferry for current schedules."
+    },
+    {
+      "updated": "2026-10-18T12:44:45",
+      "effect": "DELAY",
+      "severity": "5",
+      "routes": "77",
+      "header": "Route 77 is experiencing delays of about 20 minutes due to traffic."
+    },
+    {
+      "updated": "2026-10-18T15:21:13",
+      "effect": "DELAY",
+      "severity": "6",
+      "routes": "15",
+      "header": "Route 15 is experiencing delays of about 25 minutes due to traffic."
+    },
+    {
+      "updated": "2026-10-16T09:09:43",
+      "effect": "STOP_CLOSURE",
+      "severity": "5",
+      "routes": "16, 21, 31, 32, 42",
+      "header": "The Forest Hills Lower Busway will be closed for construction from 9:00 PM until the end of service on Sunday, October 18, and Monday, October 19. Routes 16, 21, 31, 32, and 42 will use the Forest Hills Upper Busway."
+    },
+    {
+      "updated": "2026-09-22T09:38:09",
+      "effect": "STOP_MOVE",
+      "severity": "1",
+      "routes": "45",
+      "header": "Blue Hill Ave @ Intervale St (inbound) will be moving across Intervale St on Monday, October 5 for approximately 18 months due to construction."
+    },
+    {
+      "updated": "2026-10-14T09:47:01",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "87, 88, 89, 90, 94, 96, Red",
+      "header": "Davis Escalator 339 (College Avenue landing to unpaid lobby) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-14T09:18:57",
+      "effect": "SCHEDULE_CHANGE",
+      "severity": "8",
+      "routes": "CR-Fairmount",
+      "header": "On Fri, Oct 16 and Mon, Oct 19, a construction schedule will be in effect on the Fairmount Line to accommodate signal improvement work with a temporary reduction to hourly service. Visit mbta.com/cr for more information."
+    },
+    {
+      "updated": "2026-10-07T16:01:20",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "1",
+      "routes": "131, 137, CR-Haverhill, Orange",
+      "header": "Oak Grove Escalator 105 (Commuter Rail platform to unpaid lobby) unavailable"
+    },
+    {
+      "updated": "2026-07-21T20:38:40",
+      "effect": "STATION_ISSUE",
+      "severity": "1",
+      "routes": "CR-Worcester",
+      "header": "There is no accessible path connecting the inbound and outbound platforms at Wellesley Square Station. The existing path includes steep slopes and is long. Designs are underway to provide for a fully compliant pathway."
+    },
+    {
+      "updated": "2026-10-16T13:27:21",
+      "effect": "SUSPENSION",
+      "severity": "7",
+      "routes": "Green-B, Green-C, Green-D, Green-E",
+      "header": "Green Line: No trains between North Station & Babcock St (B), Cleveland Circle (C), Kenmore (D), & Heath St (E), Nov. 7-15. Use buses between Babcock, Cleveland Circle, Kenmore, Heath St & Copley/Back Bay. Use Orange Line between North Station & Back Bay."
+    },
+    {
+      "updated": "2026-09-30T15:25:20",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "60",
+      "header": "Route 60 detoured from 7:30 AM to 1:30 PM on Sun Nov 8 due to the BAA Half Marathon."
+    },
+    {
+      "updated": "2026-10-18T06:02:02",
+      "effect": "ELEVATOR_CLOSURE",
+      "severity": "3",
+      "routes": "Orange",
+      "header": "Chinatown Elevator 922 (Forest Hills platform to Boylston St, Washington St) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-18T14:17:25",
+      "effect": "DELAY",
+      "severity": "5",
+      "routes": "215",
+      "header": "Route 215 is experiencing delays of about 20 minutes due to traffic."
+    },
+    {
+      "updated": "2026-10-16T20:25:22",
+      "effect": "SERVICE_CHANGE",
+      "severity": "8",
+      "routes": "CR-Providence",
+      "header": "On Fri, Oct 16 and Mon, Oct 19, Stoughton Line service will only operate between Stoughton and Canton Junction. Please transfer to and from scheduled Providence Line trains at Canton Junction for continued service."
+    },
+    {
+      "updated": "2026-10-07T16:01:10",
+      "effect": "PARKING_ISSUE",
+      "severity": "3",
+      "routes": "Boat-F1, Boat-F2H",
+      "header": "Hingham/Hull Ferry: Portions of the Town of Hull parking lot at the Hull ferry terminal are blocked off for sewer pump station construction work. More information is available at https://www.town.hull.ma.us/"
+    },
+    {
+      "updated": "2026-10-07T16:02:02",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "1",
+      "routes": "741, 742, 743",
+      "header": "Courthouse Escalator 415 (Airport/Design Center platform to lobby) unavailable due to ongoing construction at the station."
+    },
+    {
+      "updated": "2026-10-03T13:52:27",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "450",
+      "header": "Route 450 is detoured every Friday, Saturday, and Sunday in October, from start to end of service, for Salem Haunted Happenings."
+    },
+    {
+      "updated": "2026-10-18T14:41:22",
+      "effect": "DELAY",
+      "severity": "5",
+      "routes": "238",
+      "header": "Route 238 is experiencing delays of about 20 minutes due to traffic."
+    },
+    {
+      "updated": "2026-10-07T15:59:18",
+      "effect": "ELEVATOR_CLOSURE",
+      "severity": "3",
+      "routes": "CR-Worcester",
+      "header": "Worcester Elevator 782 (Parking lot to pedestrian bridge) is unavailable. Please use elevator in main building at 2 Washington Sq."
+    },
+    {
+      "updated": "2026-10-11T15:44:07",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "16",
+      "header": "Route 16 is detoured from 10 PM to 6 AM Thursdays through Sundays due to construction. Closest outbound stops are Columbia Rd @ Seaver St and Arborway opp Courthouse. Closest inbound stops are Arborway @ Courthouse and Blue Hill Ave @ Ellington St."
+    },
+    {
+      "updated": "2026-10-13T08:34:05",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "455",
+      "header": "Route 455 outbound is detoured every Friday, Saturday, and Sunday in October, from start to end of service, for Salem Haunted Happenings. Buses will terminate at Lafayette St @ Harbor St. There will be no service to Salem Depot."
+    },
+    {
+      "updated": "2026-10-18T06:20:01",
+      "effect": "ESCALATOR_CLOSURE",
+      "severity": "3",
+      "routes": "114, 116, 120, 121, Blue",
+      "header": "Maverick Escalator 434 (Maverick Square to unpaid lobby) is unavailable due to maintenance."
+    },
+    {
+      "updated": "2026-10-07T12:25:55",
+      "effect": "STOP_MOVE",
+      "severity": "1",
+      "routes": "742",
+      "header": "Northern Ave @ Tide St is moving 500 feet west in front of the EDIC Garage due to construction through Wednesday, October 28."
+    },
+    {
+      "updated": "2026-09-30T20:01:55",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "112, 121",
+      "header": "Routes 112 and 121 will be detoured starting Tuesday, Oct 13, until further notice due to construction at Day Square."
+    },
+    {
+      "updated": "2026-07-05T12:07:41",
+      "effect": "STOP_MOVE",
+      "severity": "1",
+      "routes": "558",
+      "header": "Route 558: Four stops have moved due to construction. Moved inbound stops: Commonwealth Ave @ Islington Rd & Commonwealth Ave opp Marriott. Moved outbound stops: Commonwealth Ave @ Islington Rd & Commonwealth Ave @ Marriott."
+    },
+    {
+      "updated": "2026-10-07T10:09:34",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "104, 112, 114, 116",
+      "header": "Routes 104, 112, 114, and 116 will be detoured inbound on Tuesday, October 27 from 9:30 AM to 8:00 PM due to a construction crane placement. The closest stops with service are Broadway @ Fourth St and Park St @ Hawthorne St."
+    },
+    {
+      "updated": "2026-10-16T09:43:49",
+      "effect": "DETOUR",
+      "severity": "7",
+      "routes": "119",
+      "header": "Route 119 inbound is detoured and omitting the Beachmont Loop due to construction on Saturdays from 8 AM to 3 PM through Saturday, October 31. Service will originate/terminate at Winthrop Ave @ Beachmont Station."
+    },
+    {
+      "updated": "2026-10-18T15:20:57",
+      "effect": "DELAY",
+      "severity": "6",
+      "routes": "36",
+      "header": "Route 36 is experiencing delays of about 25 minutes due to traffic."
+    }
+  ]
+}

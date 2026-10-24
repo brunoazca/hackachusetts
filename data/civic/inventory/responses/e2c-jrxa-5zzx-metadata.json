@@ -1,0 +1,102 @@
+{
+  "id" : "jrxa-5zzx",
+  "name" : "Massachusetts Youth Risk Behavior Survey: Resource Page",
+  "assetType" : "href",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "K-12",
+  "createdAt" : 1699044309,
+  "description" : "The Massachusetts Youth Risk Behavior Survey (MYRBS) was developed by the Centers for Disease Control and Prevention to monitor priority health risk behaviors that contribute to the leading causes of death, disease, injury, and social problems among youth. The Massachusetts Department of Elementary and Secondary Education (DESE) — in collaboration with the Centers for Disease Control and Prevention (CDC) and the Massachusetts Department of Public Health (DPH) — conducts the Youth Risk Behavior Survey (YRBS) in randomly selected public high schools in every odd-numbered years. \n\nThe Massachusetts YRBS (MYRBS) focuses on the major risk behaviors that threaten the health and safety of young people. This anonymous survey includes questions about tobacco use, alcohol and other drug use, sexual behaviors that might lead to unintended pregnancy or sexually transmitted disease, dietary behaviors, physical activity, and behaviors associated with intentional or unintentional injuries. Since 2007, the MYRBS has been conducted jointly with the <a href=\" https://www.mass.gov/lists/massachusetts-youth-health-survey-myhs\" target=\"_blank\" rel=\"noopener noreferrer\">Massachusetts Youth Health Survey</a> (MYHS) developed by DPH.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40142049,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1699044335,
+  "publicationGroup" : 19353167,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1699044309,
+  "tableId" : 19353167,
+  "totalTimesRated" : 0,
+  "viewCount" : 992,
+  "viewLastModified" : 1715614887,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1715368238,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6308914,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1715368209,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1715368238,
+      "failureCount" : 0,
+      "startedAt" : 1715368238,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "URL" : "https://www.doe.mass.edu/sfs/yrbs/"
+      }
+    } ],
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "accessPoints" : {
+      "URL" : "https://www.doe.mass.edu/sfs/yrbs/"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "yrbs", "youth risk behavior survey", "health", "disease", "injuries", "pregnancy", "std", "risk behaviors", "grade", "race and ethnicity", "gender", "protective factors", "school experiences", "family", "adult interaction", "physical activity", "nutrition", "weight control", "motor vehicle safety", "sports-related concussion", "substance perception", "substance access", "alcohol use", "tobacco use", "marijuana use", "drug use", "gambling", "bullying", "discrimination", "harassment", "dating", "sexual violence", "violence", "neighborhood", "mental health", "suicide", "sexual behavior", "food insecurity", "housing insecurity", "sexual orientation" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

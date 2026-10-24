@@ -1,0 +1,96 @@
+{
+  "id" : "69cv-eeg5",
+  "name" : "Arts Course Taking Trends by Grade",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1777394500,
+  "description" : "Discover how many K-8 students have received arts instruction each year since 2018, and which arts disciplines were most popular among high school students in 2025. The interactive charts break down data by grade level within a district or school of interest.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 42100782,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1777394648,
+  "publicationGroup" : 20360372,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1777394500,
+  "tableId" : 20360372,
+  "totalTimesRated" : 0,
+  "viewCount" : 644,
+  "viewLastModified" : 1779292027,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1779123571,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7473497,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1779123542,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1779123571,
+      "failureCount" : 0,
+      "startedAt" : 1779123571,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "category" : "Data Stories",
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "arts", "visual arts", "high school arts", "music", "theatre", "theater", "dance", "media", "arts discipline", "art" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -6,6 +6,8 @@ All 22 CSVs were downloaded and parsed locally. The machine-readable [audit](sou
 
 **This verifies the delivered files, not their completeness against the original databases or live API access.** No application database or ingestion pipeline has been provisioned. The public source links and the local snapshot should be separate parts of the data contract.
 
+**Later research:** [document 10](10_public_data_and_repositories.md) verifies additional public responses, including MBTA identifiers/relationships, Cambridge ramp geometry, Bluebikes feeds, MassGIS GEOID/polygons and fuller Boston schemas. Those findings expand what a project could obtain; they do not add the omitted columns to these starter CSVs.
+
 ## 1. Decisions the audit changes
 
 1. **311 is usable for a small descriptive brief.** It contains exactly 5,000 records spanning October 8–18, not a year of service performance. It omits identifiers and closing dates needed for case-level follow-up and resolution-time calculations.

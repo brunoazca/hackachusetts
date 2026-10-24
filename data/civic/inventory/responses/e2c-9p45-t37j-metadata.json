@@ -1,0 +1,2857 @@
+{
+  "id" : "9p45-t37j",
+  "name" : "Pathways/Programs Enrollment by Grade, Race/Ethnicity, Gender, and Selected Populations",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1693338841,
+  "description" : "Massachusetts offers a variety of pathways and programs to ensure students graduate college and career ready. These include Career Technical Education (CTE) programs, Early College, and Innovation Pathways. For more information about these pathways and programs, visit the <a href=\"https://www.doe.mass.edu/ccte/\" target=\"_blank\" rel=\"noreferrer noopener\">Office of College, Career, and Technical Education website</a>.\n\nThis dataset contains student enrollment data for all public and charter schools and districts since 2022. It is a wide file with three groups of columns representing the following enrollment indicators:<ul><li>Number of students in CTE programs, Early College, and Innovation Pathways by grade, including grades 9-12 and special education beyond grade 12 (SP)</li><li>Percent of students in CTE programs, Early College, and Innovation Pathways by race and gender</li><li>Number and percent of students in CTE programs, Early College, and Innovation Pathways in student groups: First Language Not English, English Learners, Students with Disabilities, High Needs, Low Income, and Economically Disadvantaged</li></ul>Economically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noopener noreferrer\">DESE Researcher's Guide</a> for more information.\n\nAfter Dark Chapter 74 enrollment is a subset of Chapter 74 Program enrollment. Also, in 2022, some districts reported enrollment in additional Innovation Pathway sectors. This report includes only the five designated sectors.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/PathwaysProgramsEnrollmentbyGrade.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Pathways/Programs Enrollment by Grade</a>\n<a href=\"https://profiles.doe.mass.edu/statereport/PathwaysProgramsEnrollmentbyRacegender.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Pathways/Programs Enrollment by Race/Gender</a>\n<a href=\"https://profiles.doe.mass.edu/statereport/PathwaysProgramsEnrollbySelectedPopulation.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Pathways/Programs Enrollment by Selected Population</a>\n\n<b>List of Pathways and Programs</b>\n\nPathways<ul><li>After Dark</li><li>Career Connections (Non-Chapter 74 Programs)</li><li>Career Technical Education (Chapter 74 Programs)</li><li>Early College</li><li>Innovation Career Pathways</li></ul>After Dark<ul><li>Advanced Manufacturing Technology</li><li>Automotive Collision Repair & Refinishing</li><li>Automotive Technology</li><li>Carpentry</li><li>Construction Craft Laborer</li><li>Cosmetology</li><li>Design & Visual Communications</li><li>Electricity</li><li>Exploratory</li><li>Health Assisting</li><li>Heating - Ventilation - Air Conditioning - Refrigeration</li><li>Horticulture</li><li>Information Support Services & Networking</li><li>Metal Fabrication & Joining Technologies</li><li>Plumbing</li></ul>Career Connections (Non-Chapter 74 Programs)<ul><li>Airplane Mechanics and Aircraft Maintenance Technology/Technician</li><li>Automotive Collision Repair & Refinishing</li><li>Automotive Technology</li><li>Biotechnology</li><li>Building/Property Maintenance</li><li>Business Technology</li><li>Cabinetmaking</li><li>Carpentry</li><li>Construction Craft Laborer</li><li>Criminal Justice</li><li>Culinary Arts</li><li>Design & Visual Communications</li><li>Drafting</li><li>Early Education and Care</li><li>Engineering Technology</li><li>Environmental Science & Technology</li><li>Exploratory</li><li>Family & Consumer Studies (formerly vocational home economics)</li><li>Fashion Technology</li><li>Graphic Communications</li><li>Health Assisting</li><li>Heating - Ventilation - Air Conditioning - Refrigeration</li><li>Hospitality Management</li><li>Information Support Services & Networking</li><li>Marketing/Finance</li><li>Medical Assisting</li><li>Programming & Web Development</li><li>Radio & Television Broadcasting</li><li>Robotics and Automation Technology</li></ul>Career Technical Education (Chapter 74 Programs)<ul><li>Advanced Manufacturing Technology</li><li>Agricultural Mechanics</li><li>Animal Science</li><li>Automotive Collision Repair & Refinishing</li><li>Automotive Technology</li><li>Aviation Maintenance Technology</li><li>Biotechnology</li><li>Building/Property Maintenance</li><li>Business Technology</li><li>Cabinetmaking</li><li>Carpentry</li><li>Construction Craft Laborer</li><li>Cosmetology</li><li>Criminal Justice</li><li>Culinary Arts</li><li>Dental Assisting</li><li>Design & Visual Communications</li><li>Diesel Technology</li><li>Drafting</li><li>Early Education and Care</li><li>Electricity</li><li>Electronics</li><li>Engineering Technology</li><li>Environmental Science & Technology</li><li>Exploratory</li><li>Fashion Technology</li><li>Graphic Communications</li><li>Health Assisting</li><li>Heating - Ventilation - Air Conditioning - Refrigeration</li><li>Horticulture</li><li>Hospitality Management</li><li>Information Support Services & Networking</li><li>Marine Service Technology</li><li>Marketing</li><li>Masonry & Tile Setting</li><li>Medical Assisting</li><li>Metal Fabrication & Joining Technologies</li><li>Painting & Design Technologies</li><li>Plumbing</li><li>Programming & Web Development</li><li>Radio & Television Broadcasting</li><li>Robotics and Automation Technology</li><li>Sheet Metalworking</li><li>Stationary Engineering</li></ul>Innovation Career Pathways<ul><li>Business and Finance</li><li>Environmental and Life Science</li><li>Health Care and Social Assistance</li><li>Information</li><li>Manufacturing</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1875,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41288001,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745420327,
+  "publicationGroup" : 19270964,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1773336554,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19871027,
+  "totalTimesRated" : 0,
+  "viewCount" : 13370,
+  "viewLastModified" : 1786392980,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1698935435,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6860021,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1698935405,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1698935436,
+      "failureCount" : 0,
+      "startedAt" : 1698935435,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609187636,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148222220,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026",
+        "count" : "3989"
+      }, {
+        "item" : "2025",
+        "count" : "3949"
+      }, {
+        "item" : "2024",
+        "count" : "3783"
+      }, {
+        "item" : "2023",
+        "count" : "3588"
+      }, {
+        "item" : "2022",
+        "count" : "3526"
+      } ],
+      "smallest" : "2022",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 609187637,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148222231,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "35180000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "03480000",
+        "count" : "701"
+      }, {
+        "item" : "00350000",
+        "count" : "682"
+      }, {
+        "item" : "00000000",
+        "count" : "467"
+      }, {
+        "item" : "02810000",
+        "count" : "436"
+      }, {
+        "item" : "01630000",
+        "count" : "321"
+      }, {
+        "item" : "08250000",
+        "count" : "272"
+      }, {
+        "item" : "08710000",
+        "count" : "270"
+      }, {
+        "item" : "08850000",
+        "count" : "264"
+      }, {
+        "item" : "02430000",
+        "count" : "261"
+      }, {
+        "item" : "08280000",
+        "count" : "260"
+      }, {
+        "item" : "02010000",
+        "count" : "254"
+      }, {
+        "item" : "08760000",
+        "count" : "252"
+      }, {
+        "item" : "08100000",
+        "count" : "250"
+      }, {
+        "item" : "08170000",
+        "count" : "248"
+      }, {
+        "item" : "08720000",
+        "count" : "246"
+      }, {
+        "item" : "08320000",
+        "count" : "240"
+      }, {
+        "item" : "08520000",
+        "count" : "238"
+      }, {
+        "item" : "08230000",
+        "count" : "232"
+      }, {
+        "item" : "03250000",
+        "count" : "224"
+      }, {
+        "item" : "02930000",
+        "count" : "218"
+      } ],
+      "smallest" : "00000000",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187638,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148222228,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Worcester",
+        "count" : "701"
+      }, {
+        "item" : "Boston",
+        "count" : "682"
+      }, {
+        "item" : "State",
+        "count" : "467"
+      }, {
+        "item" : "Springfield",
+        "count" : "436"
+      }, {
+        "item" : "Lynn",
+        "count" : "321"
+      }, {
+        "item" : "Greater New Bedford Regional Vocational Technical",
+        "count" : "272"
+      }, {
+        "item" : "Shawsheen Valley Regional Vocational Technical",
+        "count" : "270"
+      }, {
+        "item" : "Whittier Regional Vocational Technical",
+        "count" : "264"
+      }, {
+        "item" : "Quincy",
+        "count" : "261"
+      }, {
+        "item" : "Greater Lowell Regional Vocational Technical",
+        "count" : "260"
+      }, {
+        "item" : "New Bedford",
+        "count" : "254"
+      }, {
+        "item" : "Southern Worcester County Regional Vocational School District",
+        "count" : "252"
+      }, {
+        "item" : "Bristol-Plymouth Regional Vocational Technical",
+        "count" : "250"
+      }, {
+        "item" : "Essex North Shore Agricultural and Technical School District",
+        "count" : "248"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "246"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "240"
+      }, {
+        "item" : "Nashoba Valley Regional Vocational Technical",
+        "count" : "238"
+      }, {
+        "item" : "Greater Lawrence Regional Vocational Technical",
+        "count" : "232"
+      }, {
+        "item" : "Westfield",
+        "count" : "224"
+      }, {
+        "item" : "Taunton",
+        "count" : "218"
+      } ],
+      "smallest" : "Agawam",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187639,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148222212,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "35180505",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "467"
+      }, {
+        "item" : "00350000",
+        "count" : "225"
+      }, {
+        "item" : "03480000",
+        "count" : "208"
+      }, {
+        "item" : "02810000",
+        "count" : "178"
+      }, {
+        "item" : "08250000",
+        "count" : "136"
+      }, {
+        "item" : "08250605",
+        "count" : "136"
+      }, {
+        "item" : "08710000",
+        "count" : "135"
+      }, {
+        "item" : "03480605",
+        "count" : "135"
+      }, {
+        "item" : "08710605",
+        "count" : "135"
+      }, {
+        "item" : "08850000",
+        "count" : "132"
+      }, {
+        "item" : "08850605",
+        "count" : "132"
+      }, {
+        "item" : "08280000",
+        "count" : "130"
+      }, {
+        "item" : "08280605",
+        "count" : "130"
+      }, {
+        "item" : "02810620",
+        "count" : "129"
+      }, {
+        "item" : "08760605",
+        "count" : "126"
+      }, {
+        "item" : "08760000",
+        "count" : "126"
+      }, {
+        "item" : "08100000",
+        "count" : "125"
+      }, {
+        "item" : "08100605",
+        "count" : "125"
+      }, {
+        "item" : "08170000",
+        "count" : "124"
+      }, {
+        "item" : "08170505",
+        "count" : "124"
+      } ],
+      "smallest" : "00000000",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187640,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148222210,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "Worcester Technical High",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State",
+        "count" : "467"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "246"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "240"
+      }, {
+        "item" : "Boston",
+        "count" : "225"
+      }, {
+        "item" : "Worcester",
+        "count" : "208"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "200"
+      }, {
+        "item" : "Tri-County Regional Vocational Technical",
+        "count" : "192"
+      }, {
+        "item" : "Springfield",
+        "count" : "178"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "160"
+      }, {
+        "item" : "Greater New Bedford Regional Vocational Technical",
+        "count" : "136"
+      }, {
+        "item" : "Gr New Bedford Vocational Technical",
+        "count" : "136"
+      }, {
+        "item" : "Shawsheen Valley Regional Vocational Technical",
+        "count" : "135"
+      }, {
+        "item" : "Worcester Technical High",
+        "count" : "135"
+      }, {
+        "item" : "Shawsheen Valley Vocational Technical High School",
+        "count" : "135"
+      }, {
+        "item" : "Whittier Regional Vocational",
+        "count" : "132"
+      }, {
+        "item" : "Whittier Regional Vocational Technical",
+        "count" : "132"
+      }, {
+        "item" : "Gr Lowell Regional Vocational Technical",
+        "count" : "130"
+      }, {
+        "item" : "Greater Lowell Regional Vocational Technical",
+        "count" : "130"
+      }, {
+        "item" : "Roger L. Putnam Vocational Technical Academy",
+        "count" : "129"
+      }, {
+        "item" : "Southern Worcester County Regional Vocational School District",
+        "count" : "126"
+      } ],
+      "smallest" : "Agawam",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187641,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148345549,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "9651"
+      }, {
+        "item" : "District",
+        "count" : "8717"
+      }, {
+        "item" : "State",
+        "count" : "467"
+      } ],
+      "smallest" : "District",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187642,
+    "name" : "PATHWAY",
+    "dataTypeName" : "text",
+    "description" : "Pathway",
+    "fieldName" : "pathway",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148222216,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "Innovation Career Pathways",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Career Technical Education (Chapter 74 Programs)",
+        "count" : "11840"
+      }, {
+        "item" : "Career Connections (Non-Chapter 74 Programs)",
+        "count" : "2230"
+      }, {
+        "item" : "Innovation Career Pathways",
+        "count" : "2073"
+      }, {
+        "item" : "All (Pathways/Programs)",
+        "count" : "1677"
+      }, {
+        "item" : "After Dark",
+        "count" : "550"
+      }, {
+        "item" : "Early College",
+        "count" : "465"
+      } ],
+      "smallest" : "After Dark",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187643,
+    "name" : "PROGRAM",
+    "dataTypeName" : "text",
+    "description" : "Program Area",
+    "fieldName" : "program",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148222224,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "Stationary Engineering",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All (Pathways/Programs)",
+        "count" : "1291"
+      }, {
+        "item" : "Career Technical Education (Chapter 74 Programs)",
+        "count" : "818"
+      }, {
+        "item" : "Health Assisting",
+        "count" : "772"
+      }, {
+        "item" : "Carpentry",
+        "count" : "745"
+      }, {
+        "item" : "Culinary Arts",
+        "count" : "740"
+      }, {
+        "item" : "Automotive Technology",
+        "count" : "736"
+      }, {
+        "item" : "Exploratory",
+        "count" : "718"
+      }, {
+        "item" : "Electricity",
+        "count" : "499"
+      }, {
+        "item" : "Cosmetology",
+        "count" : "497"
+      }, {
+        "item" : "Advanced Manufacturing Technology",
+        "count" : "492"
+      }, {
+        "item" : "Early Education and Care",
+        "count" : "479"
+      }, {
+        "item" : "Innovation Career Pathways",
+        "count" : "474"
+      }, {
+        "item" : "Information Support Services & Networking",
+        "count" : "473"
+      }, {
+        "item" : "Graphic Communications",
+        "count" : "413"
+      }, {
+        "item" : "Metal Fabrication & Joining Technologies",
+        "count" : "409"
+      }, {
+        "item" : "Engineering Technology",
+        "count" : "401"
+      }, {
+        "item" : "Design & Visual Communications",
+        "count" : "388"
+      }, {
+        "item" : "All (Pathways & Programs)",
+        "count" : "386"
+      }, {
+        "item" : "Programming & Web Development",
+        "count" : "363"
+      }, {
+        "item" : "Manufacturing",
+        "count" : "355"
+      } ],
+      "smallest" : "Advanced Manufacturing Technology",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187644,
+    "name" : "PROGRAM_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students Enrolled in Program Area Count",
+    "fieldName" : "program_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222221,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "82903",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "495"
+      }, {
+        "item" : "2",
+        "count" : "403"
+      }, {
+        "item" : "35",
+        "count" : "323"
+      }, {
+        "item" : "4",
+        "count" : "294"
+      }, {
+        "item" : "3",
+        "count" : "292"
+      }, {
+        "item" : "41",
+        "count" : "274"
+      }, {
+        "item" : "34",
+        "count" : "262"
+      }, {
+        "item" : "31",
+        "count" : "261"
+      }, {
+        "item" : "38",
+        "count" : "253"
+      }, {
+        "item" : "37",
+        "count" : "249"
+      }, {
+        "item" : "36",
+        "count" : "247"
+      }, {
+        "item" : "7",
+        "count" : "243"
+      }, {
+        "item" : "5",
+        "count" : "243"
+      }, {
+        "item" : "32",
+        "count" : "241"
+      }, {
+        "item" : "28",
+        "count" : "239"
+      }, {
+        "item" : "40",
+        "count" : "239"
+      }, {
+        "item" : "27",
+        "count" : "238"
+      }, {
+        "item" : "29",
+        "count" : "237"
+      }, {
+        "item" : "43",
+        "count" : "230"
+      }, {
+        "item" : "21",
+        "count" : "228"
+      } ],
+      "smallest" : "1",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187645,
+    "name" : "PROGRAM_PCT",
+    "dataTypeName" : "number",
+    "description" : "Students Enrolled in Program Area Percent",
+    "fieldName" : "program_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222225,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "1.241",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "561"
+      }, {
+        "item" : "0.002",
+        "count" : "479"
+      }, {
+        "item" : "0.003",
+        "count" : "470"
+      }, {
+        "item" : "0.001",
+        "count" : "453"
+      }, {
+        "item" : "0.004",
+        "count" : "400"
+      }, {
+        "item" : "0.005",
+        "count" : "345"
+      }, {
+        "item" : "0.008",
+        "count" : "310"
+      }, {
+        "item" : "0.007",
+        "count" : "263"
+      }, {
+        "item" : "0.031",
+        "count" : "251"
+      }, {
+        "item" : "0.02",
+        "count" : "250"
+      }, {
+        "item" : "0.03",
+        "count" : "247"
+      }, {
+        "item" : "0.01",
+        "count" : "246"
+      }, {
+        "item" : "0.006",
+        "count" : "246"
+      }, {
+        "item" : "0.021",
+        "count" : "242"
+      }, {
+        "item" : "0.038",
+        "count" : "241"
+      }, {
+        "item" : "0.035",
+        "count" : "240"
+      }, {
+        "item" : "0.013",
+        "count" : "237"
+      }, {
+        "item" : "0.016",
+        "count" : "235"
+      }, {
+        "item" : "0.009",
+        "count" : "234"
+      }, {
+        "item" : "0.025",
+        "count" : "234"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187646,
+    "name" : "G9_CNT",
+    "dataTypeName" : "number",
+    "description" : "9th Grade Students Enrolled in Program Area Count",
+    "fieldName" : "g9_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222230,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "19750",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0",
+        "count" : "11149"
+      }, {
+        "item" : "1",
+        "count" : "643"
+      }, {
+        "item" : "2",
+        "count" : "298"
+      }, {
+        "item" : "4",
+        "count" : "178"
+      }, {
+        "item" : "3",
+        "count" : "176"
+      }, {
+        "item" : "8",
+        "count" : "124"
+      }, {
+        "item" : "7",
+        "count" : "104"
+      }, {
+        "item" : "18",
+        "count" : "102"
+      }, {
+        "item" : "5",
+        "count" : "101"
+      }, {
+        "item" : "11",
+        "count" : "99"
+      }, {
+        "item" : "9",
+        "count" : "97"
+      }, {
+        "item" : "6",
+        "count" : "86"
+      }, {
+        "item" : "10",
+        "count" : "84"
+      }, {
+        "item" : "16",
+        "count" : "81"
+      }, {
+        "item" : "14",
+        "count" : "76"
+      }, {
+        "item" : "24",
+        "count" : "75"
+      }, {
+        "item" : "20",
+        "count" : "72"
+      }, {
+        "item" : "12",
+        "count" : "71"
+      }, {
+        "item" : "13",
+        "count" : "67"
+      }, {
+        "item" : "21",
+        "count" : "65"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187647,
+    "name" : "G10_CNT",
+    "dataTypeName" : "number",
+    "description" : "10th Grade Students Enrolled in Program Area Count",
+    "fieldName" : "g10_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222217,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "20447",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2128"
+      }, {
+        "item" : "12",
+        "count" : "686"
+      }, {
+        "item" : "14",
+        "count" : "671"
+      }, {
+        "item" : "15",
+        "count" : "666"
+      }, {
+        "item" : "16",
+        "count" : "550"
+      }, {
+        "item" : "18",
+        "count" : "549"
+      }, {
+        "item" : "13",
+        "count" : "548"
+      }, {
+        "item" : "10",
+        "count" : "541"
+      }, {
+        "item" : "11",
+        "count" : "533"
+      }, {
+        "item" : "20",
+        "count" : "508"
+      }, {
+        "item" : "19",
+        "count" : "453"
+      }, {
+        "item" : "17",
+        "count" : "446"
+      }, {
+        "item" : "9",
+        "count" : "416"
+      }, {
+        "item" : "5",
+        "count" : "415"
+      }, {
+        "item" : "1",
+        "count" : "415"
+      }, {
+        "item" : "8",
+        "count" : "403"
+      }, {
+        "item" : "6",
+        "count" : "395"
+      }, {
+        "item" : "4",
+        "count" : "390"
+      }, {
+        "item" : "7",
+        "count" : "350"
+      }, {
+        "item" : "3",
+        "count" : "339"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187648,
+    "name" : "G11_CNT",
+    "dataTypeName" : "number",
+    "description" : "11th Grade Students Enrolled in  Program Area Count",
+    "fieldName" : "g11_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222227,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "21411",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1125"
+      }, {
+        "item" : "14",
+        "count" : "744"
+      }, {
+        "item" : "12",
+        "count" : "704"
+      }, {
+        "item" : "15",
+        "count" : "662"
+      }, {
+        "item" : "11",
+        "count" : "633"
+      }, {
+        "item" : "9",
+        "count" : "610"
+      }, {
+        "item" : "8",
+        "count" : "610"
+      }, {
+        "item" : "13",
+        "count" : "592"
+      }, {
+        "item" : "6",
+        "count" : "555"
+      }, {
+        "item" : "10",
+        "count" : "549"
+      }, {
+        "item" : "5",
+        "count" : "538"
+      }, {
+        "item" : "17",
+        "count" : "533"
+      }, {
+        "item" : "16",
+        "count" : "490"
+      }, {
+        "item" : "7",
+        "count" : "477"
+      }, {
+        "item" : "18",
+        "count" : "470"
+      }, {
+        "item" : "4",
+        "count" : "446"
+      }, {
+        "item" : "3",
+        "count" : "397"
+      }, {
+        "item" : "20",
+        "count" : "396"
+      }, {
+        "item" : "19",
+        "count" : "383"
+      }, {
+        "item" : "2",
+        "count" : "352"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187649,
+    "name" : "G12_CNT",
+    "dataTypeName" : "number",
+    "description" : "12th Grade Students Enrolled in Program Area Count",
+    "fieldName" : "g12_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222234,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "21261",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1507"
+      }, {
+        "item" : "11",
+        "count" : "714"
+      }, {
+        "item" : "10",
+        "count" : "665"
+      }, {
+        "item" : "13",
+        "count" : "654"
+      }, {
+        "item" : "12",
+        "count" : "628"
+      }, {
+        "item" : "9",
+        "count" : "621"
+      }, {
+        "item" : "8",
+        "count" : "610"
+      }, {
+        "item" : "14",
+        "count" : "584"
+      }, {
+        "item" : "6",
+        "count" : "571"
+      }, {
+        "item" : "15",
+        "count" : "570"
+      }, {
+        "item" : "7",
+        "count" : "564"
+      }, {
+        "item" : "16",
+        "count" : "515"
+      }, {
+        "item" : "4",
+        "count" : "497"
+      }, {
+        "item" : "5",
+        "count" : "481"
+      }, {
+        "item" : "17",
+        "count" : "423"
+      }, {
+        "item" : "18",
+        "count" : "414"
+      }, {
+        "item" : "3",
+        "count" : "383"
+      }, {
+        "item" : "1",
+        "count" : "366"
+      }, {
+        "item" : "20",
+        "count" : "356"
+      }, {
+        "item" : "19",
+        "count" : "343"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187650,
+    "name" : "SP_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students Receiving Special Education beyond Grade 12 Enrolled in Program Area Count",
+    "fieldName" : "sp_cnt",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222211,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "63",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0",
+        "count" : "16567"
+      }, {
+        "item" : "1",
+        "count" : "334"
+      }, {
+        "item" : "2",
+        "count" : "64"
+      }, {
+        "item" : "14",
+        "count" : "18"
+      }, {
+        "item" : "4",
+        "count" : "16"
+      }, {
+        "item" : "5",
+        "count" : "15"
+      }, {
+        "item" : "13",
+        "count" : "12"
+      }, {
+        "item" : "11",
+        "count" : "11"
+      }, {
+        "item" : "3",
+        "count" : "11"
+      }, {
+        "item" : "9",
+        "count" : "6"
+      }, {
+        "item" : "10",
+        "count" : "6"
+      }, {
+        "item" : "21",
+        "count" : "5"
+      }, {
+        "item" : "18",
+        "count" : "5"
+      }, {
+        "item" : "6",
+        "count" : "5"
+      }, {
+        "item" : "17",
+        "count" : "5"
+      }, {
+        "item" : "20",
+        "count" : "4"
+      }, {
+        "item" : "15",
+        "count" : "4"
+      }, {
+        "item" : "12",
+        "count" : "3"
+      }, {
+        "item" : "8",
+        "count" : "3"
+      }, {
+        "item" : "7",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187654,
+    "name" : "AIAN_PCT",
+    "dataTypeName" : "number",
+    "description" : "American Indian or Alaska Native Students Enrolled in Program Area Percent",
+    "fieldName" : "aian_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222218,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "0.167",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "13829"
+      }, {
+        "item" : "0.002",
+        "count" : "368"
+      }, {
+        "item" : "0.003",
+        "count" : "297"
+      }, {
+        "item" : "0.004",
+        "count" : "223"
+      }, {
+        "item" : "0.001",
+        "count" : "210"
+      }, {
+        "item" : "0.005",
+        "count" : "179"
+      }, {
+        "item" : "0.007",
+        "count" : "149"
+      }, {
+        "item" : "0.006",
+        "count" : "141"
+      }, {
+        "item" : "0.008",
+        "count" : "95"
+      }, {
+        "item" : "0.011",
+        "count" : "82"
+      }, {
+        "item" : "0.029",
+        "count" : "82"
+      }, {
+        "item" : "0.009",
+        "count" : "82"
+      }, {
+        "item" : "0.01",
+        "count" : "77"
+      }, {
+        "item" : "0.023",
+        "count" : "67"
+      }, {
+        "item" : "0.012",
+        "count" : "60"
+      }, {
+        "item" : "0.021",
+        "count" : "58"
+      }, {
+        "item" : "0.024",
+        "count" : "57"
+      }, {
+        "item" : "0.017",
+        "count" : "57"
+      }, {
+        "item" : "0.014",
+        "count" : "56"
+      }, {
+        "item" : "0.019",
+        "count" : "55"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187652,
+    "name" : "AS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Asian Students Enrolled in Program Area Percent",
+    "fieldName" : "as_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222241,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "0.833",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "7058"
+      }, {
+        "item" : "0.02",
+        "count" : "213"
+      }, {
+        "item" : "0.014",
+        "count" : "207"
+      }, {
+        "item" : "0.024",
+        "count" : "182"
+      }, {
+        "item" : "0.019",
+        "count" : "182"
+      }, {
+        "item" : "0.029",
+        "count" : "171"
+      }, {
+        "item" : "0.008",
+        "count" : "170"
+      }, {
+        "item" : "0.013",
+        "count" : "166"
+      }, {
+        "item" : "0.026",
+        "count" : "165"
+      }, {
+        "item" : "0.012",
+        "count" : "163"
+      }, {
+        "item" : "0.022",
+        "count" : "162"
+      }, {
+        "item" : "0.021",
+        "count" : "160"
+      }, {
+        "item" : "0.023",
+        "count" : "158"
+      }, {
+        "item" : "0.032",
+        "count" : "155"
+      }, {
+        "item" : "0.016",
+        "count" : "155"
+      }, {
+        "item" : "0.018",
+        "count" : "151"
+      }, {
+        "item" : "0.034",
+        "count" : "150"
+      }, {
+        "item" : "0.011",
+        "count" : "148"
+      }, {
+        "item" : "0.036",
+        "count" : "146"
+      }, {
+        "item" : "0.017",
+        "count" : "144"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187651,
+    "name" : "BAA_PCT",
+    "dataTypeName" : "number",
+    "description" : "Black or African American Students Enrolled in Program Area Count",
+    "fieldName" : "baa_pct",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222235,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "0.921",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "4050"
+      }, {
+        "item" : "0.02",
+        "count" : "170"
+      }, {
+        "item" : "0.029",
+        "count" : "161"
+      }, {
+        "item" : "0.053",
+        "count" : "161"
+      }, {
+        "item" : "0.026",
+        "count" : "157"
+      }, {
+        "item" : "0.091",
+        "count" : "157"
+      }, {
+        "item" : "0.111",
+        "count" : "153"
+      }, {
+        "item" : "0.083",
+        "count" : "146"
+      }, {
+        "item" : "0.024",
+        "count" : "146"
+      }, {
+        "item" : "0.056",
+        "count" : "142"
+      }, {
+        "item" : "0.077",
+        "count" : "141"
+      }, {
+        "item" : "0.067",
+        "count" : "141"
+      }, {
+        "item" : "0.032",
+        "count" : "140"
+      }, {
+        "item" : "0.018",
+        "count" : "138"
+      }, {
+        "item" : "0.071",
+        "count" : "136"
+      }, {
+        "item" : "0.019",
+        "count" : "135"
+      }, {
+        "item" : "0.042",
+        "count" : "134"
+      }, {
+        "item" : "0.059",
+        "count" : "134"
+      }, {
+        "item" : "0.036",
+        "count" : "131"
+      }, {
+        "item" : "0.023",
+        "count" : "130"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187653,
+    "name" : "HL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Hispanic or Latino Students Enrolled in Program Area Percent",
+    "fieldName" : "hl_pct",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222240,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "926"
+      }, {
+        "item" : "0.125",
+        "count" : "201"
+      }, {
+        "item" : "0.167",
+        "count" : "192"
+      }, {
+        "item" : "0.25",
+        "count" : "184"
+      }, {
+        "item" : "0.333",
+        "count" : "182"
+      }, {
+        "item" : "0.143",
+        "count" : "173"
+      }, {
+        "item" : "0.111",
+        "count" : "143"
+      }, {
+        "item" : "0.2",
+        "count" : "142"
+      }, {
+        "item" : "0.091",
+        "count" : "132"
+      }, {
+        "item" : "0.1",
+        "count" : "131"
+      }, {
+        "item" : "0.5",
+        "count" : "127"
+      }, {
+        "item" : "0.286",
+        "count" : "121"
+      }, {
+        "item" : "0.182",
+        "count" : "113"
+      }, {
+        "item" : "0.077",
+        "count" : "112"
+      }, {
+        "item" : "0.056",
+        "count" : "109"
+      }, {
+        "item" : "0.222",
+        "count" : "107"
+      }, {
+        "item" : "0.154",
+        "count" : "99"
+      }, {
+        "item" : "0.083",
+        "count" : "97"
+      }, {
+        "item" : "0.063",
+        "count" : "95"
+      }, {
+        "item" : "0.067",
+        "count" : "95"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187656,
+    "name" : "MNHL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Multi-Race, Not Hispanic or Latino Students Enrolled in Program Area Percent",
+    "fieldName" : "mnhl_pct",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222239,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "0.429",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "4470"
+      }, {
+        "item" : "0.029",
+        "count" : "338"
+      }, {
+        "item" : "0.038",
+        "count" : "291"
+      }, {
+        "item" : "0.043",
+        "count" : "279"
+      }, {
+        "item" : "0.037",
+        "count" : "241"
+      }, {
+        "item" : "0.036",
+        "count" : "240"
+      }, {
+        "item" : "0.024",
+        "count" : "234"
+      }, {
+        "item" : "0.048",
+        "count" : "233"
+      }, {
+        "item" : "0.019",
+        "count" : "231"
+      }, {
+        "item" : "0.026",
+        "count" : "230"
+      }, {
+        "item" : "0.031",
+        "count" : "222"
+      }, {
+        "item" : "0.032",
+        "count" : "220"
+      }, {
+        "item" : "0.034",
+        "count" : "219"
+      }, {
+        "item" : "0.02",
+        "count" : "219"
+      }, {
+        "item" : "0.023",
+        "count" : "208"
+      }, {
+        "item" : "0.045",
+        "count" : "207"
+      }, {
+        "item" : "0.04",
+        "count" : "203"
+      }, {
+        "item" : "0.03",
+        "count" : "199"
+      }, {
+        "item" : "0.056",
+        "count" : "196"
+      }, {
+        "item" : "0.028",
+        "count" : "194"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187655,
+    "name" : "NHPI_PCT",
+    "dataTypeName" : "number",
+    "description" : "Native Hawaiian or Other Pacific Islander Students Enrolled in Program Area Percent",
+    "fieldName" : "nhpi_pct",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222226,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "0.111",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "15490"
+      }, {
+        "item" : "0.001",
+        "count" : "390"
+      }, {
+        "item" : "0.002",
+        "count" : "230"
+      }, {
+        "item" : "0.003",
+        "count" : "167"
+      }, {
+        "item" : "0.004",
+        "count" : "101"
+      }, {
+        "item" : "0.005",
+        "count" : "67"
+      }, {
+        "item" : "0.007",
+        "count" : "45"
+      }, {
+        "item" : "0.006",
+        "count" : "45"
+      }, {
+        "item" : "0.009",
+        "count" : "36"
+      }, {
+        "item" : "0.008",
+        "count" : "34"
+      }, {
+        "item" : "0.016",
+        "count" : "30"
+      }, {
+        "item" : "0.013",
+        "count" : "27"
+      }, {
+        "item" : "0.01",
+        "count" : "27"
+      }, {
+        "item" : "0.012",
+        "count" : "25"
+      }, {
+        "item" : "0.029",
+        "count" : "24"
+      }, {
+        "item" : "0.017",
+        "count" : "24"
+      }, {
+        "item" : "0.011",
+        "count" : "23"
+      }, {
+        "item" : "0.018",
+        "count" : "23"
+      }, {
+        "item" : "0.019",
+        "count" : "22"
+      }, {
+        "item" : "0.024",
+        "count" : "20"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187657,
+    "name" : "WH_PCT",
+    "dataTypeName" : "number",
+    "description" : "White Students Enrolled in Program Area Percent",
+    "fieldName" : "wh_pct",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222237,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "307"
+      }, {
+        "item" : "1.0",
+        "count" : "306"
+      }, {
+        "item" : "0.667",
+        "count" : "227"
+      }, {
+        "item" : "0.5",
+        "count" : "204"
+      }, {
+        "item" : "0.833",
+        "count" : "168"
+      }, {
+        "item" : "0.75",
+        "count" : "157"
+      }, {
+        "item" : "0.8",
+        "count" : "145"
+      }, {
+        "item" : "0.857",
+        "count" : "144"
+      }, {
+        "item" : "0.714",
+        "count" : "124"
+      }, {
+        "item" : "0.333",
+        "count" : "107"
+      }, {
+        "item" : "0.778",
+        "count" : "100"
+      }, {
+        "item" : "0.875",
+        "count" : "98"
+      }, {
+        "item" : "0.889",
+        "count" : "85"
+      }, {
+        "item" : "0.6",
+        "count" : "83"
+      }, {
+        "item" : "0.25",
+        "count" : "81"
+      }, {
+        "item" : "0.7",
+        "count" : "81"
+      }, {
+        "item" : "0.9",
+        "count" : "80"
+      }, {
+        "item" : "0.571",
+        "count" : "79"
+      }, {
+        "item" : "0.727",
+        "count" : "78"
+      }, {
+        "item" : "0.818",
+        "count" : "77"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187658,
+    "name" : "FE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Female Students Enrolled in Program Area Percent",
+    "fieldName" : "fe_pct",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222232,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "409"
+      }, {
+        "item" : "1.0",
+        "count" : "259"
+      }, {
+        "item" : "0.5",
+        "count" : "224"
+      }, {
+        "item" : "0.333",
+        "count" : "208"
+      }, {
+        "item" : "0.25",
+        "count" : "154"
+      }, {
+        "item" : "0.143",
+        "count" : "143"
+      }, {
+        "item" : "0.167",
+        "count" : "141"
+      }, {
+        "item" : "0.2",
+        "count" : "121"
+      }, {
+        "item" : "0.111",
+        "count" : "121"
+      }, {
+        "item" : "0.286",
+        "count" : "120"
+      }, {
+        "item" : "0.125",
+        "count" : "117"
+      }, {
+        "item" : "0.667",
+        "count" : "102"
+      }, {
+        "item" : "0.429",
+        "count" : "96"
+      }, {
+        "item" : "0.1",
+        "count" : "95"
+      }, {
+        "item" : "0.571",
+        "count" : "85"
+      }, {
+        "item" : "0.4",
+        "count" : "82"
+      }, {
+        "item" : "0.375",
+        "count" : "75"
+      }, {
+        "item" : "0.6",
+        "count" : "71"
+      }, {
+        "item" : "0.444",
+        "count" : "71"
+      }, {
+        "item" : "0.091",
+        "count" : "70"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187659,
+    "name" : "MA_PCT",
+    "dataTypeName" : "number",
+    "description" : "Male Students Enrolled in Program Area Percent",
+    "fieldName" : "ma_pct",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222214,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "401"
+      }, {
+        "item" : "0.0",
+        "count" : "303"
+      }, {
+        "item" : "0.5",
+        "count" : "210"
+      }, {
+        "item" : "0.667",
+        "count" : "205"
+      }, {
+        "item" : "0.75",
+        "count" : "157"
+      }, {
+        "item" : "0.833",
+        "count" : "143"
+      }, {
+        "item" : "0.857",
+        "count" : "137"
+      }, {
+        "item" : "0.8",
+        "count" : "119"
+      }, {
+        "item" : "0.889",
+        "count" : "116"
+      }, {
+        "item" : "0.714",
+        "count" : "114"
+      }, {
+        "item" : "0.875",
+        "count" : "113"
+      }, {
+        "item" : "0.333",
+        "count" : "107"
+      }, {
+        "item" : "0.9",
+        "count" : "88"
+      }, {
+        "item" : "0.6",
+        "count" : "80"
+      }, {
+        "item" : "0.571",
+        "count" : "77"
+      }, {
+        "item" : "0.429",
+        "count" : "75"
+      }, {
+        "item" : "0.556",
+        "count" : "73"
+      }, {
+        "item" : "0.867",
+        "count" : "72"
+      }, {
+        "item" : "0.4",
+        "count" : "68"
+      }, {
+        "item" : "0.909",
+        "count" : "68"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187660,
+    "name" : "NB_PCT",
+    "dataTypeName" : "number",
+    "description" : "Nonbinary Students Enrolled in Program Area Percent",
+    "fieldName" : "nb_pct",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222229,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "0.2",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "13418"
+      }, {
+        "item" : "0.002",
+        "count" : "278"
+      }, {
+        "item" : "0.003",
+        "count" : "241"
+      }, {
+        "item" : "0.004",
+        "count" : "218"
+      }, {
+        "item" : "0.005",
+        "count" : "213"
+      }, {
+        "item" : "0.001",
+        "count" : "210"
+      }, {
+        "item" : "0.006",
+        "count" : "171"
+      }, {
+        "item" : "0.011",
+        "count" : "126"
+      }, {
+        "item" : "0.007",
+        "count" : "124"
+      }, {
+        "item" : "0.01",
+        "count" : "108"
+      }, {
+        "item" : "0.008",
+        "count" : "107"
+      }, {
+        "item" : "0.019",
+        "count" : "94"
+      }, {
+        "item" : "0.012",
+        "count" : "86"
+      }, {
+        "item" : "0.009",
+        "count" : "85"
+      }, {
+        "item" : "0.018",
+        "count" : "80"
+      }, {
+        "item" : "0.015",
+        "count" : "78"
+      }, {
+        "item" : "0.02",
+        "count" : "76"
+      }, {
+        "item" : "0.022",
+        "count" : "75"
+      }, {
+        "item" : "0.021",
+        "count" : "72"
+      }, {
+        "item" : "0.013",
+        "count" : "72"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187663,
+    "name" : "EL_CNT",
+    "dataTypeName" : "number",
+    "description" : "English Learners Students Enrolled in Program Area Count",
+    "fieldName" : "el_cnt",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222243,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "6574",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0",
+        "count" : "6257"
+      }, {
+        "item" : "1",
+        "count" : "2479"
+      }, {
+        "item" : "2",
+        "count" : "1461"
+      }, {
+        "item" : "3",
+        "count" : "1017"
+      }, {
+        "item" : "4",
+        "count" : "648"
+      }, {
+        "item" : "5",
+        "count" : "511"
+      }, {
+        "item" : "6",
+        "count" : "478"
+      }, {
+        "item" : "7",
+        "count" : "420"
+      }, {
+        "item" : "8",
+        "count" : "307"
+      }, {
+        "item" : "9",
+        "count" : "293"
+      }, {
+        "item" : "11",
+        "count" : "215"
+      }, {
+        "item" : "10",
+        "count" : "212"
+      }, {
+        "item" : "12",
+        "count" : "178"
+      }, {
+        "item" : "13",
+        "count" : "122"
+      }, {
+        "item" : "15",
+        "count" : "119"
+      }, {
+        "item" : "14",
+        "count" : "114"
+      }, {
+        "item" : "16",
+        "count" : "89"
+      }, {
+        "item" : "17",
+        "count" : "76"
+      }, {
+        "item" : "20",
+        "count" : "67"
+      }, {
+        "item" : "18",
+        "count" : "65"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187664,
+    "name" : "EL_PCT",
+    "dataTypeName" : "number",
+    "description" : "English Learners Students Enrolled in Program Area Percent",
+    "fieldName" : "el_pct",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222219,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "6257"
+      }, {
+        "item" : "0.029",
+        "count" : "148"
+      }, {
+        "item" : "0.024",
+        "count" : "146"
+      }, {
+        "item" : "0.019",
+        "count" : "142"
+      }, {
+        "item" : "0.023",
+        "count" : "139"
+      }, {
+        "item" : "0.026",
+        "count" : "134"
+      }, {
+        "item" : "0.017",
+        "count" : "132"
+      }, {
+        "item" : "0.045",
+        "count" : "127"
+      }, {
+        "item" : "0.018",
+        "count" : "125"
+      }, {
+        "item" : "0.022",
+        "count" : "123"
+      }, {
+        "item" : "0.02",
+        "count" : "122"
+      }, {
+        "item" : "0.056",
+        "count" : "117"
+      }, {
+        "item" : "0.037",
+        "count" : "115"
+      }, {
+        "item" : "0.025",
+        "count" : "112"
+      }, {
+        "item" : "0.016",
+        "count" : "111"
+      }, {
+        "item" : "0.125",
+        "count" : "110"
+      }, {
+        "item" : "0.077",
+        "count" : "108"
+      }, {
+        "item" : "0.067",
+        "count" : "106"
+      }, {
+        "item" : "0.014",
+        "count" : "106"
+      }, {
+        "item" : "0.036",
+        "count" : "103"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187661,
+    "name" : "FLNE_CNT",
+    "dataTypeName" : "number",
+    "description" : " First Language Not English Students Enrolled in Program Area Count",
+    "fieldName" : "flne_cnt",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222223,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "21922",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2519"
+      }, {
+        "item" : "1",
+        "count" : "1626"
+      }, {
+        "item" : "2",
+        "count" : "1226"
+      }, {
+        "item" : "3",
+        "count" : "938"
+      }, {
+        "item" : "4",
+        "count" : "727"
+      }, {
+        "item" : "5",
+        "count" : "703"
+      }, {
+        "item" : "6",
+        "count" : "613"
+      }, {
+        "item" : "7",
+        "count" : "445"
+      }, {
+        "item" : "8",
+        "count" : "413"
+      }, {
+        "item" : "9",
+        "count" : "369"
+      }, {
+        "item" : "10",
+        "count" : "356"
+      }, {
+        "item" : "11",
+        "count" : "339"
+      }, {
+        "item" : "12",
+        "count" : "304"
+      }, {
+        "item" : "13",
+        "count" : "274"
+      }, {
+        "item" : "15",
+        "count" : "235"
+      }, {
+        "item" : "14",
+        "count" : "235"
+      }, {
+        "item" : "16",
+        "count" : "213"
+      }, {
+        "item" : "17",
+        "count" : "202"
+      }, {
+        "item" : "18",
+        "count" : "177"
+      }, {
+        "item" : "19",
+        "count" : "168"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187662,
+    "name" : "FLNE_PCT",
+    "dataTypeName" : "number",
+    "description" : "First Language Not English Students Enrolled in Program Area Percent",
+    "fieldName" : "flne_pct",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222222,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2519"
+      }, {
+        "item" : "0.167",
+        "count" : "178"
+      }, {
+        "item" : "0.333",
+        "count" : "171"
+      }, {
+        "item" : "0.5",
+        "count" : "171"
+      }, {
+        "item" : "0.143",
+        "count" : "135"
+      }, {
+        "item" : "0.25",
+        "count" : "132"
+      }, {
+        "item" : "0.125",
+        "count" : "120"
+      }, {
+        "item" : "0.2",
+        "count" : "114"
+      }, {
+        "item" : "0.111",
+        "count" : "113"
+      }, {
+        "item" : "0.1",
+        "count" : "108"
+      }, {
+        "item" : "0.222",
+        "count" : "103"
+      }, {
+        "item" : "0.083",
+        "count" : "100"
+      }, {
+        "item" : "0.071",
+        "count" : "98"
+      }, {
+        "item" : "0.091",
+        "count" : "97"
+      }, {
+        "item" : "0.029",
+        "count" : "96"
+      }, {
+        "item" : "0.429",
+        "count" : "94"
+      }, {
+        "item" : "0.056",
+        "count" : "88"
+      }, {
+        "item" : "0.037",
+        "count" : "87"
+      }, {
+        "item" : "0.059",
+        "count" : "86"
+      }, {
+        "item" : "0.077",
+        "count" : "82"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187667,
+    "name" : "HN_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students with High Needs Enrolled in Program Area Count",
+    "fieldName" : "hn_cnt",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222209,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "46841",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "18",
+        "count" : "477"
+      }, {
+        "item" : "14",
+        "count" : "447"
+      }, {
+        "item" : "16",
+        "count" : "424"
+      }, {
+        "item" : "6",
+        "count" : "408"
+      }, {
+        "item" : "12",
+        "count" : "403"
+      }, {
+        "item" : "13",
+        "count" : "397"
+      }, {
+        "item" : "8",
+        "count" : "390"
+      }, {
+        "item" : "20",
+        "count" : "387"
+      }, {
+        "item" : "5",
+        "count" : "386"
+      }, {
+        "item" : "17",
+        "count" : "377"
+      }, {
+        "item" : "7",
+        "count" : "369"
+      }, {
+        "item" : "21",
+        "count" : "364"
+      }, {
+        "item" : "15",
+        "count" : "362"
+      }, {
+        "item" : "11",
+        "count" : "346"
+      }, {
+        "item" : "24",
+        "count" : "343"
+      }, {
+        "item" : "19",
+        "count" : "342"
+      }, {
+        "item" : "9",
+        "count" : "340"
+      }, {
+        "item" : "23",
+        "count" : "334"
+      }, {
+        "item" : "22",
+        "count" : "323"
+      }, {
+        "item" : "10",
+        "count" : "320"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187668,
+    "name" : "HN_PCT",
+    "dataTypeName" : "number",
+    "description" : "Students with High Needs Enrolled in Program Area Percent",
+    "fieldName" : "hn_pct",
+    "position" : 31,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222213,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.5",
+        "count" : "396"
+      }, {
+        "item" : "0.667",
+        "count" : "235"
+      }, {
+        "item" : "1.0",
+        "count" : "212"
+      }, {
+        "item" : "0.75",
+        "count" : "175"
+      }, {
+        "item" : "0.571",
+        "count" : "174"
+      }, {
+        "item" : "0.6",
+        "count" : "157"
+      }, {
+        "item" : "0.333",
+        "count" : "147"
+      }, {
+        "item" : "0.714",
+        "count" : "142"
+      }, {
+        "item" : "0.429",
+        "count" : "121"
+      }, {
+        "item" : "0.625",
+        "count" : "112"
+      }, {
+        "item" : "0.25",
+        "count" : "111"
+      }, {
+        "item" : "0.8",
+        "count" : "104"
+      }, {
+        "item" : "0.545",
+        "count" : "103"
+      }, {
+        "item" : "0.4",
+        "count" : "103"
+      }, {
+        "item" : "0.833",
+        "count" : "95"
+      }, {
+        "item" : "0.556",
+        "count" : "89"
+      }, {
+        "item" : "0.444",
+        "count" : "87"
+      }, {
+        "item" : "0.778",
+        "count" : "84"
+      }, {
+        "item" : "0.857",
+        "count" : "81"
+      }, {
+        "item" : "0.615",
+        "count" : "81"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187669,
+    "name" : "LI_CNT",
+    "dataTypeName" : "number",
+    "description" : "Low Income Students Enrolled in Program Area Count",
+    "fieldName" : "li_cnt",
+    "position" : 32,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222233,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "37583",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "6",
+        "count" : "556"
+      }, {
+        "item" : "7",
+        "count" : "541"
+      }, {
+        "item" : "11",
+        "count" : "539"
+      }, {
+        "item" : "9",
+        "count" : "539"
+      }, {
+        "item" : "12",
+        "count" : "484"
+      }, {
+        "item" : "4",
+        "count" : "476"
+      }, {
+        "item" : "8",
+        "count" : "474"
+      }, {
+        "item" : "14",
+        "count" : "472"
+      }, {
+        "item" : "10",
+        "count" : "469"
+      }, {
+        "item" : "3",
+        "count" : "460"
+      }, {
+        "item" : "5",
+        "count" : "445"
+      }, {
+        "item" : "13",
+        "count" : "443"
+      }, {
+        "item" : "15",
+        "count" : "416"
+      }, {
+        "item" : "17",
+        "count" : "416"
+      }, {
+        "item" : "16",
+        "count" : "387"
+      }, {
+        "item" : "2",
+        "count" : "351"
+      }, {
+        "item" : "21",
+        "count" : "332"
+      }, {
+        "item" : "22",
+        "count" : "303"
+      }, {
+        "item" : "18",
+        "count" : "298"
+      }, {
+        "item" : "19",
+        "count" : "281"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187670,
+    "name" : "LI_PCT",
+    "dataTypeName" : "number",
+    "description" : "Low Income Students Enrolled in Program Area Percent",
+    "fieldName" : "li_pct",
+    "position" : 33,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222238,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.5",
+        "count" : "334"
+      }, {
+        "item" : "0.333",
+        "count" : "276"
+      }, {
+        "item" : "0.25",
+        "count" : "203"
+      }, {
+        "item" : "0.4",
+        "count" : "169"
+      }, {
+        "item" : "0.667",
+        "count" : "155"
+      }, {
+        "item" : "0.286",
+        "count" : "145"
+      }, {
+        "item" : "0.429",
+        "count" : "142"
+      }, {
+        "item" : "0.167",
+        "count" : "113"
+      }, {
+        "item" : "0.0",
+        "count" : "109"
+      }, {
+        "item" : "0.6",
+        "count" : "108"
+      }, {
+        "item" : "0.375",
+        "count" : "106"
+      }, {
+        "item" : "0.2",
+        "count" : "102"
+      }, {
+        "item" : "0.143",
+        "count" : "102"
+      }, {
+        "item" : "0.75",
+        "count" : "98"
+      }, {
+        "item" : "0.444",
+        "count" : "95"
+      }, {
+        "item" : "0.571",
+        "count" : "94"
+      }, {
+        "item" : "0.222",
+        "count" : "85"
+      }, {
+        "item" : "0.625",
+        "count" : "81"
+      }, {
+        "item" : "0.714",
+        "count" : "79"
+      }, {
+        "item" : "0.3",
+        "count" : "68"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187665,
+    "name" : "SWD_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students with Disabilities Enrolled in Program Area Count",
+    "fieldName" : "swd_cnt",
+    "position" : 34,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222215,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "14239",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "3",
+        "count" : "1144"
+      }, {
+        "item" : "4",
+        "count" : "1064"
+      }, {
+        "item" : "5",
+        "count" : "1061"
+      }, {
+        "item" : "6",
+        "count" : "1056"
+      }, {
+        "item" : "2",
+        "count" : "1043"
+      }, {
+        "item" : "8",
+        "count" : "947"
+      }, {
+        "item" : "7",
+        "count" : "933"
+      }, {
+        "item" : "1",
+        "count" : "899"
+      }, {
+        "item" : "9",
+        "count" : "791"
+      }, {
+        "item" : "10",
+        "count" : "747"
+      }, {
+        "item" : "0",
+        "count" : "675"
+      }, {
+        "item" : "11",
+        "count" : "606"
+      }, {
+        "item" : "12",
+        "count" : "504"
+      }, {
+        "item" : "13",
+        "count" : "474"
+      }, {
+        "item" : "14",
+        "count" : "398"
+      }, {
+        "item" : "15",
+        "count" : "387"
+      }, {
+        "item" : "16",
+        "count" : "247"
+      }, {
+        "item" : "17",
+        "count" : "210"
+      }, {
+        "item" : "19",
+        "count" : "178"
+      }, {
+        "item" : "18",
+        "count" : "154"
+      } ],
+      "smallest" : "0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187666,
+    "name" : "SWD_PCT",
+    "dataTypeName" : "number",
+    "description" : "Students with Disabilities Enrolled in Program Area Percent",
+    "fieldName" : "swd_pct",
+    "position" : 35,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222236,
+    "cachedContents" : {
+      "non_null" : "17108",
+      "largest" : "1.0",
+      "null" : "1727",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "675"
+      }, {
+        "item" : "0.167",
+        "count" : "278"
+      }, {
+        "item" : "0.333",
+        "count" : "259"
+      }, {
+        "item" : "0.2",
+        "count" : "255"
+      }, {
+        "item" : "0.143",
+        "count" : "226"
+      }, {
+        "item" : "0.25",
+        "count" : "214"
+      }, {
+        "item" : "0.111",
+        "count" : "184"
+      }, {
+        "item" : "0.286",
+        "count" : "177"
+      }, {
+        "item" : "0.125",
+        "count" : "175"
+      }, {
+        "item" : "0.1",
+        "count" : "168"
+      }, {
+        "item" : "0.222",
+        "count" : "146"
+      }, {
+        "item" : "0.182",
+        "count" : "141"
+      }, {
+        "item" : "0.154",
+        "count" : "131"
+      }, {
+        "item" : "0.133",
+        "count" : "121"
+      }, {
+        "item" : "0.083",
+        "count" : "121"
+      }, {
+        "item" : "0.091",
+        "count" : "120"
+      }, {
+        "item" : "0.5",
+        "count" : "119"
+      }, {
+        "item" : "0.176",
+        "count" : "105"
+      }, {
+        "item" : "0.214",
+        "count" : "97"
+      }, {
+        "item" : "0.4",
+        "count" : "97"
+      } ],
+      "smallest" : "0.0",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187671,
+    "name" : "TOTALSTU",
+    "dataTypeName" : "number",
+    "description" : "Total Student Count",
+    "fieldName" : "totalstu",
+    "position" : 36,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148222242,
+    "cachedContents" : {
+      "non_null" : "18835",
+      "largest" : "289737",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1282",
+        "count" : "108"
+      }, {
+        "item" : "2314",
+        "count" : "104"
+      }, {
+        "item" : "769",
+        "count" : "100"
+      }, {
+        "item" : "289737",
+        "count" : "98"
+      }, {
+        "item" : "288913",
+        "count" : "97"
+      }, {
+        "item" : "289546",
+        "count" : "96"
+      }, {
+        "item" : "289634",
+        "count" : "95"
+      }, {
+        "item" : "1185",
+        "count" : "94"
+      }, {
+        "item" : "1751",
+        "count" : "94"
+      }, {
+        "item" : "1292",
+        "count" : "92"
+      }, {
+        "item" : "2096",
+        "count" : "83"
+      }, {
+        "item" : "283064",
+        "count" : "81"
+      }, {
+        "item" : "1867",
+        "count" : "80"
+      }, {
+        "item" : "655",
+        "count" : "78"
+      }, {
+        "item" : "643",
+        "count" : "76"
+      }, {
+        "item" : "750",
+        "count" : "76"
+      }, {
+        "item" : "736",
+        "count" : "76"
+      }, {
+        "item" : "1409",
+        "count" : "75"
+      }, {
+        "item" : "1310",
+        "count" : "74"
+      }, {
+        "item" : "2147",
+        "count" : "72"
+      } ],
+      "smallest" : "16",
+      "count" : "18835",
+      "cardinality" : "18835"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "pathways", "undergraduate education", "special education", "race", "low income", "grade", "gender", "ethnicity", "el", "economically disadvantaged" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

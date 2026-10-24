@@ -1,0 +1,1093 @@
+{
+  "id" : "p2yd-4gvj",
+  "name" : "Early College Participation",
+  "assetType" : "dataset",
+  "attribution" : "Executive Office of Education",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1719936275,
+  "description" : "This dataset contains data on the number of students participating in designated Early College programs since school year 2020-21. <a href=\"https://www.doe.mass.edu/ccte/pathways/early-college/\">Early College</a> is a program that designates partnerships between high schools and colleges to support high school students to complete college courses. The list of designated partnerships is available <a href=\"https://www.doe.mass.edu/ccte/pathways/early-college/designees.html\">here</a>.\n\nStudents are counted in this dataset if they are marked as an Early College student by the district. The district also submits each student's affiliation with a single institution of higher education (IHE), though some Early College students take credits at more than one IHE. The period column allows you to filter for Fall or Spring, or to see the full-year deduplicated count of participants.\n\nThe dataset is updated after each semester, when the SIMS collection for that semester is certified.\n\nThe data here are the same as the participation data in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiNWQ0MzdhMGItMzU0MS00MGZjLTg0MmMtZjRkYWY3ZTIxNjE2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\">MA Early College Dashboard</a>.\n\n<b>Data note: </B> For the Fall 2021 collection, only 2 digits of the college code were stored, so college names could not be loaded. The incomplete 2-digit codes are shown in this dataset, but the college name field is blank for that collection.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 470,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41278566,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745331833,
+  "publicationGroup" : 19568567,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1745331817,
+  "tableId" : 19862568,
+  "totalTimesRated" : 0,
+  "viewCount" : 2859,
+  "viewLastModified" : 1773776744,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1720023858,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6851799,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1720023840,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "aurd-vfnd",
+      "displayName" : "Sam Ribnick"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1720023858,
+      "failureCount" : 0,
+      "startedAt" : 1720023858,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "aurd-vfnd",
+      "displayName" : "Sam Ribnick"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609139470,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153416030,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Worcester",
+        "count" : "768"
+      }, {
+        "item" : "Boston",
+        "count" : "534"
+      }, {
+        "item" : "Lynn",
+        "count" : "456"
+      }, {
+        "item" : "Westfield",
+        "count" : "305"
+      }, {
+        "item" : "Springfield",
+        "count" : "292"
+      }, {
+        "item" : "Leominster",
+        "count" : "277"
+      }, {
+        "item" : "Holyoke",
+        "count" : "266"
+      }, {
+        "item" : "Fall River",
+        "count" : "261"
+      }, {
+        "item" : "Fitchburg",
+        "count" : "218"
+      }, {
+        "item" : "Haverhill",
+        "count" : "214"
+      }, {
+        "item" : "Salem",
+        "count" : "197"
+      }, {
+        "item" : "Gardner",
+        "count" : "176"
+      }, {
+        "item" : "Lawrence",
+        "count" : "169"
+      }, {
+        "item" : "Milford",
+        "count" : "151"
+      }, {
+        "item" : "Quincy",
+        "count" : "141"
+      }, {
+        "item" : "Chelsea",
+        "count" : "129"
+      }, {
+        "item" : "New Heights Charter School of Brockton (District)",
+        "count" : "103"
+      }, {
+        "item" : "Lowell",
+        "count" : "99"
+      }, {
+        "item" : "Marlborough",
+        "count" : "99"
+      }, {
+        "item" : "Sizer School: A North Central Charter Essential (District)",
+        "count" : "97"
+      } ],
+      "smallest" : "Argosy Collegiate Charter School (District)",
+      "count" : "5848",
+      "cardinality" : "38"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139471,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153416031,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "35130000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "03480000",
+        "count" : "768"
+      }, {
+        "item" : "00350000",
+        "count" : "534"
+      }, {
+        "item" : "01630000",
+        "count" : "456"
+      }, {
+        "item" : "03250000",
+        "count" : "305"
+      }, {
+        "item" : "02810000",
+        "count" : "292"
+      }, {
+        "item" : "01530000",
+        "count" : "277"
+      }, {
+        "item" : "01370000",
+        "count" : "266"
+      }, {
+        "item" : "00950000",
+        "count" : "261"
+      }, {
+        "item" : "00970000",
+        "count" : "218"
+      }, {
+        "item" : "01280000",
+        "count" : "214"
+      }, {
+        "item" : "02580000",
+        "count" : "197"
+      }, {
+        "item" : "01030000",
+        "count" : "176"
+      }, {
+        "item" : "01490000",
+        "count" : "169"
+      }, {
+        "item" : "01850000",
+        "count" : "151"
+      }, {
+        "item" : "02430000",
+        "count" : "141"
+      }, {
+        "item" : "00570000",
+        "count" : "129"
+      }, {
+        "item" : "35130000",
+        "count" : "103"
+      }, {
+        "item" : "01700000",
+        "count" : "99"
+      }, {
+        "item" : "01600000",
+        "count" : "99"
+      }, {
+        "item" : "04740000",
+        "count" : "97"
+      } ],
+      "smallest" : "00350000",
+      "count" : "5848",
+      "cardinality" : "38"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139472,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "School Name",
+    "fieldName" : "org_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153416032,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "Worcester Technical High",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Holyoke High",
+        "count" : "266"
+      }, {
+        "item" : "B M C Durfee High",
+        "count" : "261"
+      }, {
+        "item" : "High School Of Commerce",
+        "count" : "240"
+      }, {
+        "item" : "Fitchburg High",
+        "count" : "218"
+      }, {
+        "item" : "Haverhill High",
+        "count" : "214"
+      }, {
+        "item" : "Madison Park Technical Vocational High School",
+        "count" : "189"
+      }, {
+        "item" : "Westfield Technical Academy",
+        "count" : "184"
+      }, {
+        "item" : "Classical High",
+        "count" : "174"
+      }, {
+        "item" : "Lawrence High School",
+        "count" : "169"
+      }, {
+        "item" : "Salem High",
+        "count" : "165"
+      }, {
+        "item" : "Lynn English High",
+        "count" : "162"
+      }, {
+        "item" : "Milford High",
+        "count" : "151"
+      }, {
+        "item" : "Leominster High School",
+        "count" : "146"
+      }, {
+        "item" : "Chelsea High",
+        "count" : "129"
+      }, {
+        "item" : "Charlestown High School",
+        "count" : "125"
+      }, {
+        "item" : "Westfield High",
+        "count" : "121"
+      }, {
+        "item" : "Gardner High",
+        "count" : "118"
+      }, {
+        "item" : "Doherty Memorial High",
+        "count" : "116"
+      }, {
+        "item" : "Worcester Technical High",
+        "count" : "114"
+      }, {
+        "item" : "North High",
+        "count" : "111"
+      } ],
+      "smallest" : "Argosy Collegiate Charter School",
+      "count" : "5848",
+      "cardinality" : "61"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139473,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "School Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153416033,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "35130305",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01370505",
+        "count" : "266"
+      }, {
+        "item" : "00950505",
+        "count" : "261"
+      }, {
+        "item" : "02810510",
+        "count" : "240"
+      }, {
+        "item" : "00970505",
+        "count" : "218"
+      }, {
+        "item" : "01280505",
+        "count" : "214"
+      }, {
+        "item" : "00350537",
+        "count" : "189"
+      }, {
+        "item" : "03250605",
+        "count" : "184"
+      }, {
+        "item" : "01630505",
+        "count" : "174"
+      }, {
+        "item" : "01490515",
+        "count" : "169"
+      }, {
+        "item" : "02580505",
+        "count" : "165"
+      }, {
+        "item" : "01630510",
+        "count" : "162"
+      }, {
+        "item" : "01850505",
+        "count" : "151"
+      }, {
+        "item" : "01530505",
+        "count" : "146"
+      }, {
+        "item" : "00570505",
+        "count" : "129"
+      }, {
+        "item" : "00350515",
+        "count" : "125"
+      }, {
+        "item" : "03250505",
+        "count" : "121"
+      }, {
+        "item" : "01030505",
+        "count" : "118"
+      }, {
+        "item" : "03480512",
+        "count" : "116"
+      }, {
+        "item" : "03480605",
+        "count" : "114"
+      }, {
+        "item" : "03480515",
+        "count" : "111"
+      } ],
+      "smallest" : "00350074",
+      "count" : "5848",
+      "cardinality" : "61"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139474,
+    "name" : "CEEB_NAME",
+    "dataTypeName" : "text",
+    "description" : "College Name",
+    "fieldName" : "ceeb_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153416034,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "No Data",
+        "count" : "1613"
+      }, {
+        "item" : "Quinsigamond Community College",
+        "count" : "586"
+      }, {
+        "item" : "Mt. Wachusett Community College",
+        "count" : "377"
+      }, {
+        "item" : "North Shore Community College",
+        "count" : "375"
+      }, {
+        "item" : "Bunker Hill Community College",
+        "count" : "241"
+      }, {
+        "item" : "Westfield State University",
+        "count" : "241"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "232"
+      }, {
+        "item" : "Northern Essex Community College",
+        "count" : "226"
+      }, {
+        "item" : "Framingham State University",
+        "count" : "220"
+      }, {
+        "item" : "Salem State University",
+        "count" : "219"
+      }, {
+        "item" : "Bristol Community College",
+        "count" : "161"
+      }, {
+        "item" : "Wentworth Institute Of Technology",
+        "count" : "148"
+      }, {
+        "item" : "Quincy College",
+        "count" : "141"
+      }, {
+        "item" : "Middlesex Community College",
+        "count" : "141"
+      }, {
+        "item" : "Worcester State University",
+        "count" : "132"
+      }, {
+        "item" : "Springfield Technical Community College",
+        "count" : "120"
+      }, {
+        "item" : "Holyoke Community College",
+        "count" : "110"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "71"
+      }, {
+        "item" : "Merrimack College",
+        "count" : "67"
+      }, {
+        "item" : "Cambridge College 3201",
+        "count" : "62"
+      } ],
+      "smallest" : "American International College",
+      "count" : "5848",
+      "cardinality" : "31"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139475,
+    "name" : "CEEB_CODE",
+    "dataTypeName" : "text",
+    "description" : "College Code (CEEB code)",
+    "fieldName" : "ceeb_code",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153416035,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "95",
+      "null" : "0",
+      "top" : [ {
+        "item" : "95",
+        "count" : "656"
+      }, {
+        "item" : "3714",
+        "count" : "586"
+      }, {
+        "item" : "3545",
+        "count" : "377"
+      }, {
+        "item" : "3651",
+        "count" : "375"
+      }, {
+        "item" : "3123",
+        "count" : "241"
+      }, {
+        "item" : "3523",
+        "count" : "241"
+      }, {
+        "item" : "3518",
+        "count" : "232"
+      }, {
+        "item" : "3674",
+        "count" : "226"
+      }, {
+        "item" : "3519",
+        "count" : "220"
+      }, {
+        "item" : "3522",
+        "count" : "219"
+      }, {
+        "item" : "62",
+        "count" : "202"
+      }, {
+        "item" : "81",
+        "count" : "175"
+      }, {
+        "item" : "55",
+        "count" : "168"
+      }, {
+        "item" : "3110",
+        "count" : "161"
+      }, {
+        "item" : "3958",
+        "count" : "148"
+      }, {
+        "item" : "3554",
+        "count" : "141"
+      }, {
+        "item" : "3713",
+        "count" : "141"
+      }, {
+        "item" : "3524",
+        "count" : "132"
+      }, {
+        "item" : "3791",
+        "count" : "120"
+      }, {
+        "item" : "3437",
+        "count" : "110"
+      } ],
+      "smallest" : "11",
+      "count" : "5848",
+      "cardinality" : "45"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139476,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153435358,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "2024",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023",
+        "count" : "1830"
+      }, {
+        "item" : "2021",
+        "count" : "1598"
+      }, {
+        "item" : "2022",
+        "count" : "1307"
+      }, {
+        "item" : "2024",
+        "count" : "1113"
+      } ],
+      "smallest" : "2021",
+      "count" : "5848",
+      "cardinality" : "4"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139477,
+    "name" : "PERIOD",
+    "dataTypeName" : "text",
+    "description" : "Fall, Spring or Full Year deduplicated count",
+    "fieldName" : "period",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153416037,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "Spring",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Fall",
+        "count" : "3323"
+      }, {
+        "item" : "Spring",
+        "count" : "2525"
+      } ],
+      "smallest" : "Fall",
+      "count" : "5848",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139478,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153416038,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "467"
+      }, {
+        "item" : "Non-English Learners",
+        "count" : "466"
+      }, {
+        "item" : "Students without Disabilities",
+        "count" : "462"
+      }, {
+        "item" : "Low Income",
+        "count" : "459"
+      }, {
+        "item" : "Female",
+        "count" : "459"
+      }, {
+        "item" : "Male",
+        "count" : "445"
+      }, {
+        "item" : "Non-Low Income",
+        "count" : "443"
+      }, {
+        "item" : "White",
+        "count" : "436"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "434"
+      }, {
+        "item" : "Black or African American",
+        "count" : "380"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "370"
+      }, {
+        "item" : "Asian",
+        "count" : "318"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "300"
+      }, {
+        "item" : "English Learners",
+        "count" : "288"
+      }, {
+        "item" : "Nonbinary",
+        "count" : "56"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "41"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "24"
+      } ],
+      "smallest" : "All Students",
+      "count" : "5848",
+      "cardinality" : "17"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139488,
+    "name" : "G09_CNT",
+    "dataTypeName" : "text",
+    "description" : "Grade 9 Count",
+    "fieldName" : "g09_cnt",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158117435,
+    "cachedContents" : {
+      "non_null" : "1173",
+      "largest" : "98",
+      "null" : "4675",
+      "top" : [ {
+        "item" : "1",
+        "count" : "299"
+      }, {
+        "item" : "2",
+        "count" : "159"
+      }, {
+        "item" : "3",
+        "count" : "71"
+      }, {
+        "item" : "4",
+        "count" : "49"
+      }, {
+        "item" : "8",
+        "count" : "32"
+      }, {
+        "item" : "5",
+        "count" : "28"
+      }, {
+        "item" : "9",
+        "count" : "27"
+      }, {
+        "item" : "6",
+        "count" : "26"
+      }, {
+        "item" : "15",
+        "count" : "23"
+      }, {
+        "item" : "7",
+        "count" : "22"
+      }, {
+        "item" : "17",
+        "count" : "22"
+      }, {
+        "item" : "20",
+        "count" : "21"
+      }, {
+        "item" : "12",
+        "count" : "17"
+      }, {
+        "item" : "24",
+        "count" : "16"
+      }, {
+        "item" : "28",
+        "count" : "16"
+      }, {
+        "item" : "11",
+        "count" : "15"
+      }, {
+        "item" : "13",
+        "count" : "14"
+      }, {
+        "item" : "10",
+        "count" : "14"
+      }, {
+        "item" : "14",
+        "count" : "13"
+      }, {
+        "item" : "23",
+        "count" : "13"
+      } ],
+      "smallest" : "1",
+      "count" : "5848",
+      "cardinality" : "110"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139487,
+    "name" : "G10_CNT",
+    "dataTypeName" : "text",
+    "description" : "Grade 10 Count",
+    "fieldName" : "g10_cnt",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158117434,
+    "cachedContents" : {
+      "non_null" : "2605",
+      "largest" : "97",
+      "null" : "3243",
+      "top" : [ {
+        "item" : "1",
+        "count" : "416"
+      }, {
+        "item" : "2",
+        "count" : "247"
+      }, {
+        "item" : "3",
+        "count" : "193"
+      }, {
+        "item" : "4",
+        "count" : "185"
+      }, {
+        "item" : "5",
+        "count" : "132"
+      }, {
+        "item" : "6",
+        "count" : "101"
+      }, {
+        "item" : "8",
+        "count" : "87"
+      }, {
+        "item" : "9",
+        "count" : "81"
+      }, {
+        "item" : "7",
+        "count" : "79"
+      }, {
+        "item" : "10",
+        "count" : "76"
+      }, {
+        "item" : "13",
+        "count" : "65"
+      }, {
+        "item" : "16",
+        "count" : "60"
+      }, {
+        "item" : "15",
+        "count" : "59"
+      }, {
+        "item" : "12",
+        "count" : "57"
+      }, {
+        "item" : "11",
+        "count" : "49"
+      }, {
+        "item" : "17",
+        "count" : "38"
+      }, {
+        "item" : "14",
+        "count" : "37"
+      }, {
+        "item" : "19",
+        "count" : "33"
+      }, {
+        "item" : "26",
+        "count" : "31"
+      }, {
+        "item" : "18",
+        "count" : "29"
+      } ],
+      "smallest" : "1",
+      "count" : "5848",
+      "cardinality" : "91"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139486,
+    "name" : "G11_CNT",
+    "dataTypeName" : "text",
+    "description" : "Grade 11 Count",
+    "fieldName" : "g11_cnt",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158117433,
+    "cachedContents" : {
+      "non_null" : "4782",
+      "largest" : "96",
+      "null" : "1066",
+      "top" : [ {
+        "item" : "1",
+        "count" : "695"
+      }, {
+        "item" : "2",
+        "count" : "474"
+      }, {
+        "item" : "3",
+        "count" : "286"
+      }, {
+        "item" : "4",
+        "count" : "271"
+      }, {
+        "item" : "5",
+        "count" : "225"
+      }, {
+        "item" : "6",
+        "count" : "176"
+      }, {
+        "item" : "7",
+        "count" : "167"
+      }, {
+        "item" : "8",
+        "count" : "153"
+      }, {
+        "item" : "12",
+        "count" : "131"
+      }, {
+        "item" : "9",
+        "count" : "120"
+      }, {
+        "item" : "10",
+        "count" : "105"
+      }, {
+        "item" : "13",
+        "count" : "104"
+      }, {
+        "item" : "11",
+        "count" : "102"
+      }, {
+        "item" : "14",
+        "count" : "93"
+      }, {
+        "item" : "16",
+        "count" : "90"
+      }, {
+        "item" : "17",
+        "count" : "88"
+      }, {
+        "item" : "18",
+        "count" : "85"
+      }, {
+        "item" : "15",
+        "count" : "82"
+      }, {
+        "item" : "21",
+        "count" : "67"
+      }, {
+        "item" : "19",
+        "count" : "63"
+      } ],
+      "smallest" : "1",
+      "count" : "5848",
+      "cardinality" : "113"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139485,
+    "name" : "G12_CNT",
+    "dataTypeName" : "text",
+    "description" : "Grade 12 Count",
+    "fieldName" : "g12_cnt",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158117432,
+    "cachedContents" : {
+      "non_null" : "5017",
+      "largest" : "99",
+      "null" : "831",
+      "top" : [ {
+        "item" : "1",
+        "count" : "816"
+      }, {
+        "item" : "2",
+        "count" : "473"
+      }, {
+        "item" : "3",
+        "count" : "304"
+      }, {
+        "item" : "4",
+        "count" : "272"
+      }, {
+        "item" : "5",
+        "count" : "212"
+      }, {
+        "item" : "6",
+        "count" : "168"
+      }, {
+        "item" : "7",
+        "count" : "163"
+      }, {
+        "item" : "8",
+        "count" : "146"
+      }, {
+        "item" : "9",
+        "count" : "140"
+      }, {
+        "item" : "12",
+        "count" : "118"
+      }, {
+        "item" : "10",
+        "count" : "117"
+      }, {
+        "item" : "11",
+        "count" : "109"
+      }, {
+        "item" : "15",
+        "count" : "93"
+      }, {
+        "item" : "14",
+        "count" : "92"
+      }, {
+        "item" : "13",
+        "count" : "89"
+      }, {
+        "item" : "17",
+        "count" : "88"
+      }, {
+        "item" : "18",
+        "count" : "81"
+      }, {
+        "item" : "16",
+        "count" : "77"
+      }, {
+        "item" : "21",
+        "count" : "68"
+      }, {
+        "item" : "20",
+        "count" : "68"
+      } ],
+      "smallest" : "1",
+      "count" : "5848",
+      "cardinality" : "151"
+    },
+    "format" : { }
+  }, {
+    "id" : 609139484,
+    "name" : "ALL_CNT",
+    "dataTypeName" : "text",
+    "description" : "All Grades Count",
+    "fieldName" : "all_cnt",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158117431,
+    "cachedContents" : {
+      "non_null" : "5848",
+      "largest" : "99",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "656"
+      }, {
+        "item" : "2",
+        "count" : "371"
+      }, {
+        "item" : "4",
+        "count" : "242"
+      }, {
+        "item" : "3",
+        "count" : "238"
+      }, {
+        "item" : "5",
+        "count" : "234"
+      }, {
+        "item" : "8",
+        "count" : "166"
+      }, {
+        "item" : "6",
+        "count" : "161"
+      }, {
+        "item" : "7",
+        "count" : "151"
+      }, {
+        "item" : "10",
+        "count" : "149"
+      }, {
+        "item" : "9",
+        "count" : "129"
+      }, {
+        "item" : "11",
+        "count" : "123"
+      }, {
+        "item" : "13",
+        "count" : "109"
+      }, {
+        "item" : "16",
+        "count" : "84"
+      }, {
+        "item" : "14",
+        "count" : "82"
+      }, {
+        "item" : "15",
+        "count" : "80"
+      }, {
+        "item" : "17",
+        "count" : "73"
+      }, {
+        "item" : "12",
+        "count" : "73"
+      }, {
+        "item" : "18",
+        "count" : "72"
+      }, {
+        "item" : "20",
+        "count" : "67"
+      }, {
+        "item" : "22",
+        "count" : "59"
+      } ],
+      "smallest" : "1",
+      "count" : "5848",
+      "cardinality" : "282"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Update" : {
+        "Update Frequency" : "Each semester"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "rowLabel" : "School and College pair, per semester per student group",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "early college", "college", "university", "participation", "ihe" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

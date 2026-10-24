@@ -1,0 +1,506 @@
+{
+  "id" : "vrmj-6h37",
+  "name" : "Educator Preparation Program Completers",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1721760198,
+  "description" : "This dataset shows the number of candidates who completed an <a href=\"https://www.doe.mass.edu/edprep/directory.html\" target=\"_blank\" rel=\"noopener noreferrer\">approved Massachusetts educator preparation program</a> by institution, license level, and the type of program completed since 2011. It includes the total number of candidates meeting all requirements of the preparation program (i.e., instruction/course work and practicum), regardless of whether a candidate has taken and passed state tests or assessments for licensure or has been endorsed for licensure by the program.\n\nNote: \"All Program Completers\" may double count candidates who completed two programs during the same year.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/epppprogramcompleters.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Ed Prep Program Completers</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 525,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40769954,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1722360234,
+  "publicationGroup" : 19588660,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1782145783,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19603377,
+  "totalTimesRated" : 0,
+  "viewCount" : 1042,
+  "viewLastModified" : 1788984904,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1725981611,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6545732,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1725981597,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1725981611,
+      "failureCount" : 0,
+      "startedAt" : 1725981611,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 597253169,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154046969,
+    "cachedContents" : {
+      "non_null" : "32098",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2014",
+        "count" : "6762"
+      }, {
+        "item" : "2013",
+        "count" : "4607"
+      }, {
+        "item" : "2011",
+        "count" : "2741"
+      }, {
+        "item" : "2012",
+        "count" : "2685"
+      }, {
+        "item" : "2015",
+        "count" : "2318"
+      }, {
+        "item" : "2016",
+        "count" : "2309"
+      }, {
+        "item" : "2017",
+        "count" : "2211"
+      }, {
+        "item" : "2018",
+        "count" : "1224"
+      }, {
+        "item" : "2019",
+        "count" : "1158"
+      }, {
+        "item" : "2022",
+        "count" : "1089"
+      }, {
+        "item" : "2020",
+        "count" : "1075"
+      }, {
+        "item" : "2021",
+        "count" : "1051"
+      }, {
+        "item" : "2023",
+        "count" : "991"
+      }, {
+        "item" : "2024",
+        "count" : "947"
+      }, {
+        "item" : "2025",
+        "count" : "930"
+      } ],
+      "smallest" : "2011",
+      "count" : "32098",
+      "cardinality" : "32098"
+    },
+    "format" : { }
+  }, {
+    "id" : 597253167,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154046967,
+    "cachedContents" : {
+      "non_null" : "32098",
+      "largest" : "30000066",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "3347"
+      }, {
+        "item" : "30000012",
+        "count" : "1121"
+      }, {
+        "item" : "05760000",
+        "count" : "1068"
+      }, {
+        "item" : "30000033",
+        "count" : "956"
+      }, {
+        "item" : "20200005",
+        "count" : "954"
+      }, {
+        "item" : "30000010",
+        "count" : "942"
+      }, {
+        "item" : "20200011",
+        "count" : "939"
+      }, {
+        "item" : "30000024",
+        "count" : "857"
+      }, {
+        "item" : "30000053",
+        "count" : "815"
+      }, {
+        "item" : "30000058",
+        "count" : "683"
+      }, {
+        "item" : "30000023",
+        "count" : "679"
+      }, {
+        "item" : "30000052",
+        "count" : "672"
+      }, {
+        "item" : "30000029",
+        "count" : "652"
+      }, {
+        "item" : "20200001",
+        "count" : "652"
+      }, {
+        "item" : "30000045",
+        "count" : "620"
+      }, {
+        "item" : "30000022",
+        "count" : "615"
+      }, {
+        "item" : "30000063",
+        "count" : "570"
+      }, {
+        "item" : "30000038",
+        "count" : "552"
+      }, {
+        "item" : "30000048",
+        "count" : "548"
+      }, {
+        "item" : "30000046",
+        "count" : "541"
+      } ],
+      "smallest" : "00000000",
+      "count" : "32098",
+      "cardinality" : "32098"
+    },
+    "format" : { }
+  }, {
+    "id" : 597253168,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154046968,
+    "cachedContents" : {
+      "non_null" : "32098",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State Total",
+        "count" : "2361"
+      }, {
+        "item" : "The Education Cooperative (TEC)",
+        "count" : "1068"
+      }, {
+        "item" : "State",
+        "count" : "986"
+      }, {
+        "item" : "French River Education Center",
+        "count" : "954"
+      }, {
+        "item" : "Boston University",
+        "count" : "942"
+      }, {
+        "item" : "The Reading Institute",
+        "count" : "939"
+      }, {
+        "item" : "Gordon College",
+        "count" : "857"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "835"
+      }, {
+        "item" : "UMass/Boston",
+        "count" : "815"
+      }, {
+        "item" : "UMass/Amherst",
+        "count" : "672"
+      }, {
+        "item" : "Lesley University",
+        "count" : "652"
+      }, {
+        "item" : "Catherine Leahy Brine Educational Consultants, Inc.",
+        "count" : "652"
+      }, {
+        "item" : "Mount Holyoke College",
+        "count" : "552"
+      }, {
+        "item" : "Springfield College",
+        "count" : "548"
+      }, {
+        "item" : "Merrimack College",
+        "count" : "518"
+      }, {
+        "item" : "EDCO Collaborative",
+        "count" : "507"
+      }, {
+        "item" : "Framingham State University",
+        "count" : "503"
+      }, {
+        "item" : "Massachusetts Secondary School Administrators' Association (MSSAA)",
+        "count" : "493"
+      }, {
+        "item" : "MGH Institute of Health Professions",
+        "count" : "492"
+      }, {
+        "item" : "South Shore Educational Collaborative",
+        "count" : "489"
+      } ],
+      "smallest" : "ACCEPT Education Collaborative",
+      "count" : "32098",
+      "cardinality" : "32098"
+    },
+    "format" : { }
+  }, {
+    "id" : 597253166,
+    "name" : "PRGRM_LIC_LVL",
+    "dataTypeName" : "text",
+    "description" : "Program License Level",
+    "fieldName" : "prgrm_lic_lvl",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154046966,
+    "cachedContents" : {
+      "non_null" : "32098",
+      "largest" : "Professional",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Initial",
+        "count" : "27745"
+      }, {
+        "item" : "Professional",
+        "count" : "4353"
+      } ],
+      "smallest" : "Initial",
+      "count" : "32098",
+      "cardinality" : "32098"
+    },
+    "format" : { }
+  }, {
+    "id" : 597253165,
+    "name" : "PRGRM_NAME",
+    "dataTypeName" : "text",
+    "description" : "Program Name",
+    "fieldName" : "prgrm_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154046965,
+    "cachedContents" : {
+      "non_null" : "32098",
+      "largest" : "All Program Completers",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Program Completers",
+        "count" : "1443"
+      }, {
+        "item" : "Academic: Teacher, Elementary, 1-6, Initial, Baccalaureate",
+        "count" : "538"
+      }, {
+        "item" : "Academic: Teacher, Elementary, 1-6, Initial, Post-Baccalaureate",
+        "count" : "511"
+      }, {
+        "item" : "Academic: Teacher, Moderate Disabilities, PreK-8, Initial, Post-Baccalaureate",
+        "count" : "466"
+      }, {
+        "item" : "Academic: Teacher, Mathematics, 8-12, Initial, Baccalaureate",
+        "count" : "435"
+      }, {
+        "item" : "Academic: Teacher, Mathematics, 8-12, Initial, Post-Baccalaureate",
+        "count" : "420"
+      }, {
+        "item" : "Academic: Teacher, Moderate Disabilities, 5-12, Initial, Post-Baccalaureate",
+        "count" : "395"
+      }, {
+        "item" : "Academic: Teacher, Biology, 8-12, Initial, Post-Baccalaureate",
+        "count" : "391"
+      }, {
+        "item" : "Academic: Teacher, Mathematics, 5-8, Initial, Post-Baccalaureate",
+        "count" : "367"
+      }, {
+        "item" : "Academic: Specialist Teacher, Reading, All Levels, Initial, Post-Baccalaureate",
+        "count" : "350"
+      }, {
+        "item" : "Academic: Teacher, English, 8-12, Initial, Baccalaureate",
+        "count" : "343"
+      }, {
+        "item" : "Academic: Teacher, History, 8-12, Initial, Baccalaureate",
+        "count" : "338"
+      }, {
+        "item" : "Academic: Teacher, Biology, 8-12, Initial, Baccalaureate",
+        "count" : "336"
+      }, {
+        "item" : "Academic: Teacher, Early Childhood: Students with and without Disabilities, PreK-2, Initial, Baccalaureate",
+        "count" : "316"
+      }, {
+        "item" : "Academic: Teacher, General Science, 5-8, Initial, Post-Baccalaureate",
+        "count" : "314"
+      }, {
+        "item" : "Academic: Teacher, English, 8-12, Initial, Post-Baccalaureate",
+        "count" : "314"
+      }, {
+        "item" : "Academic: Teacher, History, 8-12, Initial, Post-Baccalaureate",
+        "count" : "310"
+      }, {
+        "item" : "Academic: Teacher, Mathematics, 5-8, Initial, Baccalaureate",
+        "count" : "303"
+      }, {
+        "item" : "Academic: Teacher, Chemistry, 8-12, Initial, Post-Baccalaureate",
+        "count" : "300"
+      }, {
+        "item" : "Academic: Teacher, Elementary, 1-6, Professional, Post-Baccalaureate",
+        "count" : "277"
+      } ],
+      "smallest" : "Academic: Administrator, Principal/Assistant Principal, 5-12, Initial, Post-Baccalaureate",
+      "count" : "32098",
+      "cardinality" : "32098"
+    },
+    "format" : { }
+  }, {
+    "id" : 597253164,
+    "name" : "PRGRM_CMPLTR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Program Completer Count",
+    "fieldName" : "prgrm_cmpltr_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154046964,
+    "cachedContents" : {
+      "non_null" : "32098",
+      "largest" : "6513",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "14687"
+      }, {
+        "item" : "1",
+        "count" : "4636"
+      }, {
+        "item" : "2",
+        "count" : "2386"
+      }, {
+        "item" : "3",
+        "count" : "1567"
+      }, {
+        "item" : "4",
+        "count" : "1246"
+      }, {
+        "item" : "5",
+        "count" : "978"
+      }, {
+        "item" : "6",
+        "count" : "772"
+      }, {
+        "item" : "7",
+        "count" : "587"
+      }, {
+        "item" : "8",
+        "count" : "489"
+      }, {
+        "item" : "9",
+        "count" : "403"
+      }, {
+        "item" : "10",
+        "count" : "357"
+      }, {
+        "item" : "11",
+        "count" : "318"
+      }, {
+        "item" : "13",
+        "count" : "236"
+      }, {
+        "item" : "12",
+        "count" : "235"
+      }, {
+        "item" : "14",
+        "count" : "205"
+      }, {
+        "item" : "15",
+        "count" : "182"
+      }, {
+        "item" : "17",
+        "count" : "149"
+      }, {
+        "item" : "18",
+        "count" : "143"
+      }, {
+        "item" : "16",
+        "count" : "143"
+      }, {
+        "item" : "21",
+        "count" : "115"
+      } ],
+      "smallest" : "0",
+      "count" : "32098",
+      "cardinality" : "32098"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "ed prep", "educator preparation", "educators", "teachers", "administrators", "support", "specialists", "apprenticeship", "performance review program for initial licensure", "prpil" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

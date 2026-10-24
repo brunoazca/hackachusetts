@@ -1,0 +1,982 @@
+{
+  "id" : "cnfs-edqq",
+  "name" : "District Expenditures by Function Code",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu",
+  "averageRating" : 0,
+  "category" : "Finance and Budget",
+  "createdAt" : 1708986267,
+  "description" : "This dataset includes school district expenditures by function code starting with fiscal year 2009.\n\nFunction codes describe discrete expenditures within major functional areas such as administration, teaching, and maintenance. The report also distinguishes between in-district and out-of-district programs and spending is categorized by funding source, including general fund and grants and revolving funds. For more information about the data and how to interpret it, please visit the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmVkOWM4NmMtOGQyYi00ZjY0LTkwZWUtZGQyZGM3YTlhZjgxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noopener noreferrer\">School Finance Dashboard</a>.\n\nThis dataset only includes school district expenditures. Due to differences how data is reported by school districts and charter schools and virtual schools, charter school and virtual school data is not available at the function code level. Visit the <a href=\"https://www.doe.mass.edu/charter/finance/revexp\" target=\"_blank\" rel=\"noopener noreferrer\">charter school financial report page</a> for more information.\n\nThis dataset is one of three containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmVkOWM4NmMtOGQyYi00ZjY0LTkwZWUtZGQyZGM3YTlhZjgxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noopener noreferrer\">School Finance Dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/District-Expenditures-by-Spending-Category/er3w-dyti/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">District Expenditures by Spending Category</a>\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/District-Expenditures-by-Function-Code/cnfs-edqq/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">District Expenditures by Function Code</a>\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/School-Expenditures-by-Spending-Category/i5up-aez6/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">School Expenditures by Spending Category</a>\n\n<b>List of Functional Spending Codes by Category</b>\n\n*Function code discontinued starting in fiscal year 2018\n\nADMN Administration<ul><li>1110 School Committee</li><li>1210 Superintendent</li><li>1220 Assistant Superintendents</li><li>1230 Other District-Wide Administration</li><li>1410 Business and Finance</li><li>1420 Human Resources and Benefits</li><li>1430 Legal Service for School Committee</li><li>1435 Legal Settlements</li><li>1450 Administrative Technology-Districtwide</li></ul>LDRS Instructional Leadership<ul><li>2110 Curriculum Directors and Dept. Heads (Supervisory)</li><li>2120 Curriculum Directors and Dept. Heads (Non-Supervisory)</li><li>2130 Instructional Technology Leadership and Training</li><li>2210 School Leadership</li><li>2220 Curriculum/Dept Leaders (School Level)*</li><li>2250 Administrative Technology and Support (Schools)*</li><li>2315 Instructional Coordinators (Non-Supervisory)*</li></ul>TCHR Teachers<ul><li>2305 Teachers, Classroom</li><li>2310 Teachers, Specialists*</li></ul>TSER Other Teaching Services<ul><li>2320 Medical/ Therapeutic Services</li><li>2324 Substitutes, Long-Term</li><li>2325 Substitutes, Short-Term</li><li>2330 Paraprofessionals</li><li>2340 Librarians/Media Center Directors</li><li>2345 Distance Learning and Online Coursework</li></ul>PDEV Professional Development<ul><li>2351 Professional Development Leadership</li><li>2352 Instructional Coaches</li><li>2353 Instructional Staff-Professional Days*</li><li>2354 Stipends for Teachers Providing Instructional Coaching</li><li>2355 Substitutes for Prof. Development*</li><li>2356 Costs for Instructional Staff to Attend Professional Development</li><li>2357 Prof. Dev. Stipends, Providers, Expenses*</li><li>2358 Outside Professional Development Providers for Instructional Staff</li></ul>MATL Instructional Materials, Equipment and Technology<ul><li>2410 Textbooks</li><li>2415 Other Instructional Matls (Libraries)</li><li>2420 Instructional Equipment</li><li>2430 General Classroom Supplies</li><li>2440 Other Instructional Services</li><li>2451 Instructional Hardware - Student and Staff Devices (computers)</li><li>2453 Instructional Hardware - All Other</li><li>2455 Instructional Software and Other Instructional Materials</li></ul>GUID Guidance, Counseling and Testing<ul><li>2710 Guidance incl Adjustment Counselors</li><li>2720 Testing and Assessment</li><li>2800 Psychological Services</li></ul>SERV Pupil Services<ul><li>3100 Attendance and Parent Liaison Services</li><li>3200 Medical/Health Services</li><li>3300 Transportation Services</li><li>3400 Food Services</li><li>3510 Athletics</li><li>3520 Other Student Activities</li><li>3600 School Security</li></ul>OPMN Operations and Maintenance<ul><li>4110 Custodial Services</li><li>4120 Heating of Buildings</li><li>4130 Utility Services</li><li>4210 Maintenance of Grounds</li><li>4220 Maintenance of Buildings</li><li>4225 Building Security System</li><li>4230 Maintenance of Equipment</li><li>4300 Extraordinary Maintenance</li><li>4400 Technology Infrastructure, Maintenance, and Support - Salaries</li><li>4450 Technology Infrastructure, Maintenance, and Support - All Other</li></ul>BENE Insurance, Retirement Programs and Other<ul><li>5100 Employer Retirement Contributions</li><li>5150 Employee Separation Costs</li><li>5200 Insurance for Active Employees</li><li>5250 Insurance for Retired School Employees</li><li>5260 Other Non-Employee Insurance</li><li>5300 Rental Lease of Equipment</li><li>5350 Rental Lease of Buildings</li><li>5400 Short Term Interest RANs</li><li>5500 Other Fixed Charges</li><li>5550 School Crossing Guards</li></ul>TUIT Tuition<ul><li>9100 Tuition to Mass. Schools</li><li>9110 Tuition for School Choice</li><li>9120 Tuition to Commonwealth Charter Schools</li><li>9125 Tuition to Horace Mann Charter Schools</li><li>9200 Tuition to Out-of-State Schools</li><li>9300 Tuition to Non-Public Schools</li><li>9400 Tuition to Collaboratives</li></ul>ODTR Out-of-district Transportation<ul><li>9130 Charter Transportation Tuition</li></ul>IIII In-district Expenditure<p>OODD Out-of-district Expenditure<p>TTPP Expenditure (Admin, Instruction, Operations)",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1136,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41312689,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1746738097,
+  "publicationGroup" : 19465670,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1786130496,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19887622,
+  "totalTimesRated" : 0,
+  "viewCount" : 3110,
+  "viewLastModified" : 1789570865,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1732654904,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6878050,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1732654866,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1732654904,
+      "failureCount" : 0,
+      "startedAt" : 1732654904,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609670167,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158341194,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024",
+        "count" : "21755"
+      }, {
+        "item" : "2023",
+        "count" : "21701"
+      }, {
+        "item" : "2022",
+        "count" : "21688"
+      }, {
+        "item" : "2021",
+        "count" : "21635"
+      }, {
+        "item" : "2025",
+        "count" : "21611"
+      }, {
+        "item" : "2019",
+        "count" : "21583"
+      }, {
+        "item" : "2020",
+        "count" : "21573"
+      }, {
+        "item" : "2017",
+        "count" : "21288"
+      }, {
+        "item" : "2014",
+        "count" : "21269"
+      }, {
+        "item" : "2018",
+        "count" : "21258"
+      }, {
+        "item" : "2016",
+        "count" : "21238"
+      }, {
+        "item" : "2011",
+        "count" : "21196"
+      }, {
+        "item" : "2010",
+        "count" : "21177"
+      }, {
+        "item" : "2009",
+        "count" : "21164"
+      }, {
+        "item" : "2015",
+        "count" : "21159"
+      }, {
+        "item" : "2012",
+        "count" : "21151"
+      }, {
+        "item" : "2013",
+        "count" : "21068"
+      } ],
+      "smallest" : "2009",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 609670156,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151600594,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "02010000",
+        "count" : "1339"
+      }, {
+        "item" : "02070000",
+        "count" : "1337"
+      }, {
+        "item" : "00490000",
+        "count" : "1335"
+      }, {
+        "item" : "02710000",
+        "count" : "1334"
+      }, {
+        "item" : "02810000",
+        "count" : "1325"
+      }, {
+        "item" : "02390000",
+        "count" : "1324"
+      }, {
+        "item" : "01990000",
+        "count" : "1320"
+      }, {
+        "item" : "02360000",
+        "count" : "1312"
+      }, {
+        "item" : "03320000",
+        "count" : "1311"
+      }, {
+        "item" : "01590000",
+        "count" : "1293"
+      }, {
+        "item" : "01370000",
+        "count" : "1292"
+      }, {
+        "item" : "00300000",
+        "count" : "1289"
+      }, {
+        "item" : "03080000",
+        "count" : "1286"
+      }, {
+        "item" : "02460000",
+        "count" : "1283"
+      }, {
+        "item" : "01410000",
+        "count" : "1282"
+      }, {
+        "item" : "01810000",
+        "count" : "1280"
+      }, {
+        "item" : "00100000",
+        "count" : "1277"
+      }, {
+        "item" : "00570000",
+        "count" : "1276"
+      }, {
+        "item" : "02170000",
+        "count" : "1276"
+      }, {
+        "item" : "02930000",
+        "count" : "1275"
+      } ],
+      "smallest" : "00010000",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670157,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151600597,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "New Bedford",
+        "count" : "1339"
+      }, {
+        "item" : "Newton",
+        "count" : "1337"
+      }, {
+        "item" : "Cambridge",
+        "count" : "1335"
+      }, {
+        "item" : "Shrewsbury",
+        "count" : "1334"
+      }, {
+        "item" : "Springfield",
+        "count" : "1325"
+      }, {
+        "item" : "Plymouth",
+        "count" : "1324"
+      }, {
+        "item" : "Needham",
+        "count" : "1320"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "1312"
+      }, {
+        "item" : "West Springfield",
+        "count" : "1311"
+      }, {
+        "item" : "Longmeadow",
+        "count" : "1293"
+      }, {
+        "item" : "Holyoke",
+        "count" : "1292"
+      }, {
+        "item" : "Beverly",
+        "count" : "1289"
+      }, {
+        "item" : "Waltham",
+        "count" : "1286"
+      }, {
+        "item" : "Reading",
+        "count" : "1283"
+      }, {
+        "item" : "Hudson",
+        "count" : "1282"
+      }, {
+        "item" : "Methuen",
+        "count" : "1280"
+      }, {
+        "item" : "Arlington",
+        "count" : "1277"
+      }, {
+        "item" : "North Reading",
+        "count" : "1276"
+      }, {
+        "item" : "Chelsea",
+        "count" : "1276"
+      }, {
+        "item" : "Taunton",
+        "count" : "1275"
+      } ],
+      "smallest" : "Abington",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670158,
+    "name" : "FUNC_CAT_CODE",
+    "dataTypeName" : "text",
+    "description" : "Function Category Code",
+    "fieldName" : "func_cat_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151600602,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "TUIT",
+      "null" : "0",
+      "top" : [ {
+        "item" : "OPMN",
+        "count" : "47967"
+      }, {
+        "item" : "MATL",
+        "count" : "43045"
+      }, {
+        "item" : "ADMN",
+        "count" : "42195"
+      }, {
+        "item" : "SERV",
+        "count" : "36727"
+      }, {
+        "item" : "BENE",
+        "count" : "36425"
+      }, {
+        "item" : "TSER",
+        "count" : "28941"
+      }, {
+        "item" : "LDRS",
+        "count" : "27824"
+      }, {
+        "item" : "TUIT",
+        "count" : "23850"
+      }, {
+        "item" : "PDEV",
+        "count" : "21989"
+      }, {
+        "item" : "GUID",
+        "count" : "19901"
+      }, {
+        "item" : "TCHR",
+        "count" : "13541"
+      }, {
+        "item" : "TTPP",
+        "count" : "5479"
+      }, {
+        "item" : "IIII",
+        "count" : "5479"
+      }, {
+        "item" : "OODD",
+        "count" : "5343"
+      }, {
+        "item" : "ODTR",
+        "count" : "4802"
+      }, {
+        "item" : "COMM",
+        "count" : "6"
+      } ],
+      "smallest" : "ADMN",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670159,
+    "name" : "FUNC_CAT_DESC",
+    "dataTypeName" : "text",
+    "description" : "Function Category Description",
+    "fieldName" : "func_cat_desc",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155589912,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "Teachers",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Operations and Maintenance",
+        "count" : "47967"
+      }, {
+        "item" : "Instructional Materials, Equipment and Technology",
+        "count" : "43045"
+      }, {
+        "item" : "Administration",
+        "count" : "42195"
+      }, {
+        "item" : "Pupil Services",
+        "count" : "36727"
+      }, {
+        "item" : "Insurance, Retirement Programs and Other",
+        "count" : "36425"
+      }, {
+        "item" : "Other Teaching Services",
+        "count" : "28941"
+      }, {
+        "item" : "Instructional Leadership",
+        "count" : "27824"
+      }, {
+        "item" : "Payments to Out-of-District Schools",
+        "count" : "23850"
+      }, {
+        "item" : "Professional Development",
+        "count" : "21989"
+      }, {
+        "item" : "Guidance, Counseling and Testing",
+        "count" : "19901"
+      }, {
+        "item" : "Teachers",
+        "count" : "13541"
+      }, {
+        "item" : "Expenditure (Admin, Instruction, Operations)",
+        "count" : "5479"
+      }, {
+        "item" : "In-district Expenditure",
+        "count" : "5479"
+      }, {
+        "item" : "Out-of-district Expenditure",
+        "count" : "5343"
+      }, {
+        "item" : "Out-of-district Transportation",
+        "count" : "4802"
+      }, {
+        "item" : "Community Activities",
+        "count" : "6"
+      } ],
+      "smallest" : "Administration",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670160,
+    "name" : "FUNC_CODE",
+    "dataTypeName" : "text",
+    "description" : "Function Code",
+    "fieldName" : "func_code",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151600606,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "TTPP",
+      "null" : "0",
+      "top" : [ {
+        "item" : "IIII",
+        "count" : "5479"
+      }, {
+        "item" : "TTPP",
+        "count" : "5479"
+      }, {
+        "item" : "ADMN",
+        "count" : "5479"
+      }, {
+        "item" : "MATL",
+        "count" : "5478"
+      }, {
+        "item" : "LDRS",
+        "count" : "5478"
+      }, {
+        "item" : "TCHR",
+        "count" : "5478"
+      }, {
+        "item" : "TSER",
+        "count" : "5478"
+      }, {
+        "item" : "SERV",
+        "count" : "5478"
+      }, {
+        "item" : "BENE",
+        "count" : "5478"
+      }, {
+        "item" : "OPMN",
+        "count" : "5476"
+      }, {
+        "item" : "PDEV",
+        "count" : "5475"
+      }, {
+        "item" : "2305",
+        "count" : "5470"
+      }, {
+        "item" : "1210",
+        "count" : "5469"
+      }, {
+        "item" : "2330",
+        "count" : "5468"
+      }, {
+        "item" : "5200",
+        "count" : "5468"
+      }, {
+        "item" : "3200",
+        "count" : "5461"
+      }, {
+        "item" : "GUID",
+        "count" : "5458"
+      }, {
+        "item" : "3300",
+        "count" : "5456"
+      }, {
+        "item" : "2210",
+        "count" : "5451"
+      }, {
+        "item" : "4130",
+        "count" : "5443"
+      } ],
+      "smallest" : "1110",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670161,
+    "name" : "FUNC_DESC",
+    "dataTypeName" : "text",
+    "description" : "Function Description",
+    "fieldName" : "func_desc",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151600613,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "Utility Services",
+      "null" : "0",
+      "top" : [ {
+        "item" : "In-district Expenditure",
+        "count" : "5479"
+      }, {
+        "item" : "Administration",
+        "count" : "5479"
+      }, {
+        "item" : "Expenditure (Admin, Instruction, Operations)",
+        "count" : "5479"
+      }, {
+        "item" : "Other Teaching Services",
+        "count" : "5478"
+      }, {
+        "item" : "Instructional Materials, Equipment and Technology",
+        "count" : "5478"
+      }, {
+        "item" : "Instructional Leadership",
+        "count" : "5478"
+      }, {
+        "item" : "Pupil Services",
+        "count" : "5478"
+      }, {
+        "item" : "Teachers",
+        "count" : "5478"
+      }, {
+        "item" : "Insurance, Retirement Programs and Other",
+        "count" : "5478"
+      }, {
+        "item" : "Operations and Maintenance",
+        "count" : "5476"
+      }, {
+        "item" : "Professional Development",
+        "count" : "5475"
+      }, {
+        "item" : "Teachers, Classroom",
+        "count" : "5470"
+      }, {
+        "item" : "Superintendent",
+        "count" : "5469"
+      }, {
+        "item" : "Paraprofessionals",
+        "count" : "5468"
+      }, {
+        "item" : "Insurance for Active Employees",
+        "count" : "5468"
+      }, {
+        "item" : "Medical/Health Services",
+        "count" : "5461"
+      }, {
+        "item" : "Guidance, Counseling and Testing",
+        "count" : "5458"
+      }, {
+        "item" : "Transportation Services",
+        "count" : "5456"
+      }, {
+        "item" : "School Leadership",
+        "count" : "5451"
+      }, {
+        "item" : "Utility Services",
+        "count" : "5443"
+      } ],
+      "smallest" : "Administration",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670162,
+    "name" : "IN_OUT_DIST",
+    "dataTypeName" : "text",
+    "description" : "In and Out of District",
+    "fieldName" : "in_out_dist",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151600609,
+    "cachedContents" : {
+      "non_null" : "287692",
+      "largest" : "Out-of-District",
+      "null" : "75822",
+      "top" : [ {
+        "item" : "In-District",
+        "count" : "263799"
+      }, {
+        "item" : "Out-of-District",
+        "count" : "23893"
+      } ],
+      "smallest" : "In-District",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : { }
+  }, {
+    "id" : 609670163,
+    "name" : "GEN_FUND",
+    "dataTypeName" : "number",
+    "description" : "General Fund",
+    "fieldName" : "gen_fund",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151600616,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "1895822315",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "13888"
+      }, {
+        "item" : "5000",
+        "count" : "279"
+      }, {
+        "item" : "10000",
+        "count" : "230"
+      }, {
+        "item" : "1000",
+        "count" : "130"
+      }, {
+        "item" : "15000",
+        "count" : "122"
+      }, {
+        "item" : "2000",
+        "count" : "115"
+      }, {
+        "item" : "20000",
+        "count" : "114"
+      }, {
+        "item" : "30000",
+        "count" : "100"
+      }, {
+        "item" : "3000",
+        "count" : "100"
+      }, {
+        "item" : "4000",
+        "count" : "94"
+      }, {
+        "item" : "1500",
+        "count" : "83"
+      }, {
+        "item" : "500",
+        "count" : "83"
+      }, {
+        "item" : "25000",
+        "count" : "79"
+      }, {
+        "item" : "6000",
+        "count" : "68"
+      }, {
+        "item" : "2500",
+        "count" : "62"
+      }, {
+        "item" : "1200",
+        "count" : "57"
+      }, {
+        "item" : "8000",
+        "count" : "56"
+      }, {
+        "item" : "40000",
+        "count" : "56"
+      }, {
+        "item" : "50000",
+        "count" : "53"
+      }, {
+        "item" : "100",
+        "count" : "53"
+      } ],
+      "smallest" : "-669355",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "currencyStyle" : "USD",
+      "precision" : "0",
+      "align" : "left"
+    }
+  }, {
+    "id" : 609670164,
+    "name" : "GRNTS_REVOLV",
+    "dataTypeName" : "number",
+    "description" : "Grants and Revolving",
+    "fieldName" : "grnts_revolv",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151600620,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "280985924",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "180518"
+      }, {
+        "item" : "3000",
+        "count" : "331"
+      }, {
+        "item" : "1000",
+        "count" : "280"
+      }, {
+        "item" : "10000",
+        "count" : "276"
+      }, {
+        "item" : "5000",
+        "count" : "244"
+      }, {
+        "item" : "2000",
+        "count" : "233"
+      }, {
+        "item" : "1500",
+        "count" : "199"
+      }, {
+        "item" : "500",
+        "count" : "194"
+      }, {
+        "item" : "4000",
+        "count" : "185"
+      }, {
+        "item" : "2500",
+        "count" : "164"
+      }, {
+        "item" : "200",
+        "count" : "133"
+      }, {
+        "item" : "15000",
+        "count" : "129"
+      }, {
+        "item" : "7500",
+        "count" : "113"
+      }, {
+        "item" : "6000",
+        "count" : "111"
+      }, {
+        "item" : "20000",
+        "count" : "110"
+      }, {
+        "item" : "50000",
+        "count" : "103"
+      }, {
+        "item" : "25000",
+        "count" : "95"
+      }, {
+        "item" : "30000",
+        "count" : "92"
+      }, {
+        "item" : "600",
+        "count" : "89"
+      }, {
+        "item" : "3500",
+        "count" : "84"
+      } ],
+      "smallest" : "-43117",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0",
+      "align" : "left"
+    }
+  }, {
+    "id" : 609670165,
+    "name" : "TOT_EXP",
+    "dataTypeName" : "number",
+    "description" : "Total Expenditures",
+    "fieldName" : "tot_exp",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151600625,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "2083951609",
+      "null" : "0",
+      "top" : [ {
+        "item" : "5000",
+        "count" : "286"
+      }, {
+        "item" : "10000",
+        "count" : "239"
+      }, {
+        "item" : "1000",
+        "count" : "151"
+      }, {
+        "item" : "2000",
+        "count" : "124"
+      }, {
+        "item" : "15000",
+        "count" : "119"
+      }, {
+        "item" : "20000",
+        "count" : "110"
+      }, {
+        "item" : "3000",
+        "count" : "100"
+      }, {
+        "item" : "500",
+        "count" : "95"
+      }, {
+        "item" : "4000",
+        "count" : "91"
+      }, {
+        "item" : "30000",
+        "count" : "87"
+      }, {
+        "item" : "1500",
+        "count" : "86"
+      }, {
+        "item" : "6000",
+        "count" : "81"
+      }, {
+        "item" : "25000",
+        "count" : "74"
+      }, {
+        "item" : "2500",
+        "count" : "72"
+      }, {
+        "item" : "1200",
+        "count" : "57"
+      }, {
+        "item" : "300",
+        "count" : "57"
+      }, {
+        "item" : "100",
+        "count" : "54"
+      }, {
+        "item" : "7500",
+        "count" : "54"
+      }, {
+        "item" : "50000",
+        "count" : "53"
+      }, {
+        "item" : "40000",
+        "count" : "49"
+      } ],
+      "smallest" : "-446659",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "currencyStyle" : "USD",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 609670166,
+    "name" : "PER_PUPIL_EXP",
+    "dataTypeName" : "number",
+    "description" : "Per Pupil Expenditures",
+    "fieldName" : "per_pupil_exp",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151600628,
+    "cachedContents" : {
+      "non_null" : "363514",
+      "largest" : "68565",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "37063"
+      }, {
+        "item" : "1",
+        "count" : "4181"
+      }, {
+        "item" : "2",
+        "count" : "3686"
+      }, {
+        "item" : "3",
+        "count" : "3319"
+      }, {
+        "item" : "4",
+        "count" : "2998"
+      }, {
+        "item" : "5",
+        "count" : "2873"
+      }, {
+        "item" : "6",
+        "count" : "2735"
+      }, {
+        "item" : "7",
+        "count" : "2678"
+      }, {
+        "item" : "8",
+        "count" : "2495"
+      }, {
+        "item" : "9",
+        "count" : "2402"
+      }, {
+        "item" : "10",
+        "count" : "2298"
+      }, {
+        "item" : "11",
+        "count" : "2183"
+      }, {
+        "item" : "12",
+        "count" : "2105"
+      }, {
+        "item" : "13",
+        "count" : "2012"
+      }, {
+        "item" : "15",
+        "count" : "1899"
+      }, {
+        "item" : "16",
+        "count" : "1893"
+      }, {
+        "item" : "14",
+        "count" : "1886"
+      }, {
+        "item" : "17",
+        "count" : "1864"
+      }, {
+        "item" : "18",
+        "count" : "1795"
+      }, {
+        "item" : "19",
+        "count" : "1719"
+      } ],
+      "smallest" : "-488",
+      "count" : "363514",
+      "cardinality" : "363514"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "currencyStyle" : "USD",
+      "precision" : "0"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "expenditure", "public schools", "charter schools", "virtual schools", "financial", "grants", "donations", "revolving", "cost per pupil", "cpp", "administration", "teaching", "maintenance", "fte", "district", "funding", "appropriations", "federal grants", "state grants", "private grants", "gift", "circuit breaker funds", "school lunch funds", "athletic funds", "local receipts", "insurance receipts", "school committee", "community services", "fixed assets", "debt service", "low income", "demographics", "teacher salaries", "class sizes", "school finance dashboard", "district detail" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

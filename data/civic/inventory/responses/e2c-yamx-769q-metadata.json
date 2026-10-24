@@ -1,0 +1,765 @@
+{
+  "id" : "yamx-769q",
+  "name" : "Special Education Indicators",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1717437857,
+  "description" : "This dataset contains special education indicators since 2017. It is a long file that contains multiple rows for each district, with rows for different years, comparing students with disabilities, students without disabilities, and all students on a wide range of indicators. Not all indicators are available for all years. For definitions of each indicator, please visit the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">RADAR Special Education Dashboard</a>.\n\nResource Allocation and District Action Reports (RADAR) enable district leaders to compare their staffing, class size, special education services, school performance, and per-pupil spending data with similar districts. They are intended to support districts in making effective strategic decisions as they develop district plans and budgets.\n\nThis dataset is one of five containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">RADAR Special Education Dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Program-Characteristics-and-Stud/n62c-bx65/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Program Characteristics and Student Demographics</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Placement-Trajectory/92x3-2qj9/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Placement Trajectory</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Students-Moving-In-and-Out-of-Special-Education-Se/8aww-sugs/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Students Moving In and Out of Special Education Services</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Indicators/yamx-769q/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Indicators</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Student-Progression-from-High-Sc/cdfp-645n/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Student Progression from High School through Postsecondary Education</a>\n\nBelow is a list of indicators that are included within the dataset. Note: \"Student progression from high school through second year of postsecondary education\" and \"Student progression from high school through postsecondary degree completion\" are available for download in <a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Student-Progression-from-High-Sc/cdfp-645n/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">this companion dataset</a>. These two indicators are separate from the main Special Education Indicators download since the data are in a different format.\n\n<b>List of Indicators</b>\n\nContext<ul><li>Stability rate (enrolled all year)</li><li>Student Enrollment</li></ul>Student Outcomes<ul><li>4-year cohort graduation rate</li><li>5-year cohort graduation rate</li><li>9th to 10th grade promotion rate (first-time 9th graders only)</li><li>Annual dropout rate</li><li>Chronically absent rate (% of students absent 10% or more each year)</li><li>Student attendance rate</li><li>Students absent 10 or more days each year</li><li>Students suspended in school at least once</li><li>Students suspended out-of-school at least once</li></ul>Assessments (Next Gen MCAS)<ul><li>Average student growth percentiles (SGP) in ELA (Grades 3-8)</li><li>Average student growth percentiles (SGP) in ELA (Grade 10)</li><li>Average student growth percentiles (SGP) in math (Grades 3-8)</li><li>Average student growth percentiles (SGP) in math (Grade 10)</li><li>Meeting or exceeding expectations on ELA (Grades 3-8)</li><li>Meeting or exceeding expectations on ELA (Grade 10)</li><li>Meeting or exceeding expectations on math (Grades 3-8)</li><li>Meeting or exceeding expectations on math (Grade 10)</li><li>Meeting or exceeding expectations on science (Grades 5 and 8)</li><li>Meeting or exceeding expectations on science (Grade 10)</li></ul>Assessments (AP and SAT)<ul><li>Jr / Sr AP test takers scoring 3 or above</li><li>Jr / Sr enrolled in one or more AP / IB courses</li><li>Jr / Sr who took AP courses and participated in one or more AP tests</li><li>SAT average score - Mathematics</li><li>SAT average score - reading</li></ul>Program of Study<ul><li>12th graders passing a full year of mathematics coursework</li><li>12th graders passing a full year of science and technology/engineering coursework</li><li>9th graders completing and passing all courses</li><li>High school graduates who completed MassCore</li></ul>Postsecondary Outcomes<ul><li>College students persistently enrolled in postsecondary education for the first two years</li><li>High school graduates enrolled in 2-year postsecondary education</li><li>High school graduates enrolled in 4-year postsecondary education</li><li>Students enrolled in postsecondary education in the immediate fall after high school graduation</li><li><a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Student-Progression-from-High-Sc/cdfp-645n/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Student progression from high school through postsecondary degree completion</a></li><li><a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Student-Progression-from-High-Sc/cdfp-645n/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Student progression from high school through second year of postsecondary education</a></li></a></ul>Special Education Staff<ul><li>Special education director FTE</li><li>Special education teachers per 100 SWD</li><li>Special education paraprofessionals per 100 SWD</li><li>Special education support staff per 100 SWD</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 441,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41701063,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1761686659,
+  "publicationGroup" : 19538070,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1784838818,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20136841,
+  "totalTimesRated" : 0,
+  "viewCount" : 9827,
+  "viewLastModified" : 1784838803,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1725978696,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7175750,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1725978560,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1725978696,
+      "failureCount" : 0,
+      "startedAt" : 1725978696,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 619908029,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823838,
+    "cachedContents" : {
+      "non_null" : "228125",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024",
+        "count" : "36090"
+      }, {
+        "item" : "2025",
+        "count" : "33200"
+      }, {
+        "item" : "2023",
+        "count" : "33129"
+      }, {
+        "item" : "2022",
+        "count" : "32204"
+      }, {
+        "item" : "2021",
+        "count" : "30986"
+      }, {
+        "item" : "2019",
+        "count" : "30180"
+      }, {
+        "item" : "2020",
+        "count" : "22220"
+      }, {
+        "item" : "2018",
+        "count" : "6487"
+      }, {
+        "item" : "2026",
+        "count" : "2471"
+      }, {
+        "item" : "2017",
+        "count" : "1158"
+      } ],
+      "smallest" : "2017",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908030,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823839,
+    "cachedContents" : {
+      "non_null" : "228125",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01000000",
+        "count" : "709"
+      }, {
+        "item" : "01010000",
+        "count" : "704"
+      }, {
+        "item" : "00000000",
+        "count" : "703"
+      }, {
+        "item" : "02070000",
+        "count" : "703"
+      }, {
+        "item" : "01390000",
+        "count" : "703"
+      }, {
+        "item" : "01590000",
+        "count" : "703"
+      }, {
+        "item" : "01550000",
+        "count" : "703"
+      }, {
+        "item" : "00100000",
+        "count" : "703"
+      }, {
+        "item" : "01990000",
+        "count" : "703"
+      }, {
+        "item" : "00460000",
+        "count" : "703"
+      }, {
+        "item" : "03170000",
+        "count" : "703"
+      }, {
+        "item" : "02360000",
+        "count" : "703"
+      }, {
+        "item" : "00090000",
+        "count" : "703"
+      }, {
+        "item" : "00490000",
+        "count" : "703"
+      }, {
+        "item" : "02810000",
+        "count" : "703"
+      }, {
+        "item" : "03150000",
+        "count" : "703"
+      }, {
+        "item" : "00440000",
+        "count" : "702"
+      }, {
+        "item" : "00400000",
+        "count" : "702"
+      }, {
+        "item" : "01640000",
+        "count" : "702"
+      }, {
+        "item" : "01890000",
+        "count" : "702"
+      } ],
+      "smallest" : "00000000",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908031,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823840,
+    "cachedContents" : {
+      "non_null" : "228125",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Framingham",
+        "count" : "709"
+      }, {
+        "item" : "Franklin",
+        "count" : "704"
+      }, {
+        "item" : "Springfield",
+        "count" : "703"
+      }, {
+        "item" : "Wellesley",
+        "count" : "703"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "703"
+      }, {
+        "item" : "Arlington",
+        "count" : "703"
+      }, {
+        "item" : "State",
+        "count" : "703"
+      }, {
+        "item" : "Longmeadow",
+        "count" : "703"
+      }, {
+        "item" : "Hopkinton",
+        "count" : "703"
+      }, {
+        "item" : "Lexington",
+        "count" : "703"
+      }, {
+        "item" : "Andover",
+        "count" : "703"
+      }, {
+        "item" : "Cambridge",
+        "count" : "703"
+      }, {
+        "item" : "Newton",
+        "count" : "703"
+      }, {
+        "item" : "Brookline",
+        "count" : "703"
+      }, {
+        "item" : "Wayland",
+        "count" : "703"
+      }, {
+        "item" : "Needham",
+        "count" : "703"
+      }, {
+        "item" : "Northampton",
+        "count" : "702"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "702"
+      }, {
+        "item" : "Braintree",
+        "count" : "702"
+      }, {
+        "item" : "Brockton",
+        "count" : "702"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908032,
+    "name" : "GRADES",
+    "dataTypeName" : "text",
+    "description" : "Grades",
+    "fieldName" : "grades",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823841,
+    "cachedContents" : {
+      "non_null" : "228125",
+      "largest" : "K-12",
+      "null" : "0",
+      "top" : [ {
+        "item" : "K-12",
+        "count" : "156853"
+      }, {
+        "item" : "Grades 3-8",
+        "count" : "31898"
+      }, {
+        "item" : "Grade 10",
+        "count" : "25871"
+      }, {
+        "item" : "Grade 12",
+        "count" : "7357"
+      }, {
+        "item" : "Grades 9-12",
+        "count" : "3588"
+      }, {
+        "item" : "Grades 11 and 12",
+        "count" : "2558"
+      } ],
+      "smallest" : "Grade 10",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908033,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823842,
+    "cachedContents" : {
+      "non_null" : "228125",
+      "largest" : "Students without Disabilities",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Students with Disabilities",
+        "count" : "89250"
+      }, {
+        "item" : "All Students",
+        "count" : "79078"
+      }, {
+        "item" : "Students without Disabilities",
+        "count" : "59797"
+      } ],
+      "smallest" : "All Students",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908034,
+    "name" : "IND_CAT",
+    "dataTypeName" : "text",
+    "description" : "Indicator Category",
+    "fieldName" : "ind_cat",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154182577,
+    "cachedContents" : {
+      "non_null" : "228125",
+      "largest" : "STUDENT OUTCOMES",
+      "null" : "0",
+      "top" : [ {
+        "item" : "STUDENT OUTCOMES",
+        "count" : "58909"
+      }, {
+        "item" : "ASSESSMENTS (Next Gen MCAS)",
+        "count" : "57769"
+      }, {
+        "item" : "ASSESSMENTS (AP and SAT)",
+        "count" : "31493"
+      }, {
+        "item" : "POSTSECONDARY OUTCOMES",
+        "count" : "31448"
+      }, {
+        "item" : "PROGRAM OF STUDY",
+        "count" : "21587"
+      }, {
+        "item" : "CONTEXT",
+        "count" : "13963"
+      }, {
+        "item" : "SPECIAL EDUCATION STAFF",
+        "count" : "12956"
+      } ],
+      "smallest" : "ASSESSMENTS (AP and SAT)",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908035,
+    "name" : "IND_DESC",
+    "dataTypeName" : "text",
+    "description" : "Indicator Description",
+    "fieldName" : "ind_desc",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152823843,
+    "cachedContents" : {
+      "non_null" : "228125",
+      "largest" : "Students suspended out-of-school at least once",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Chronically absent rate (% of students absent 10% or more each year)",
+        "count" : "8397"
+      }, {
+        "item" : "Students absent 10 or more days each year",
+        "count" : "8397"
+      }, {
+        "item" : "Student attendance rate",
+        "count" : "8397"
+      }, {
+        "item" : "Student Enrollment",
+        "count" : "8368"
+      }, {
+        "item" : "Students enrolled in postsecondary education in the immediate fall after high school graduation",
+        "count" : "7975"
+      }, {
+        "item" : "High school graduates enrolled in 2-year postsecondary education",
+        "count" : "7975"
+      }, {
+        "item" : "High school graduates enrolled in 4-year postsecondary education",
+        "count" : "7975"
+      }, {
+        "item" : "College students persistently enrolled in postsecondary education for the first two years",
+        "count" : "7523"
+      }, {
+        "item" : "Jr / Sr enrolled in one or more AP / IB courses",
+        "count" : "7368"
+      }, {
+        "item" : "Jr / Sr who took AP courses and participated in one or more AP tests",
+        "count" : "6525"
+      }, {
+        "item" : "9th to 10th grade promotion rate (first-time 9th graders only)",
+        "count" : "6438"
+      }, {
+        "item" : "Meeting or exceeding expectations on ELA (Grades 3-8)",
+        "count" : "6385"
+      }, {
+        "item" : "Meeting or exceeding expectations on Math (Grades 3-8)",
+        "count" : "6385"
+      }, {
+        "item" : "Average student growth percentiles (SGP) - Math (Grades 3-8)",
+        "count" : "6381"
+      }, {
+        "item" : "Average student growth percentiles (SGP) - ELA (Grades 3-8)",
+        "count" : "6381"
+      }, {
+        "item" : "Meeting or exceeding expectations on Science (Grades 5 and 8)",
+        "count" : "6366"
+      }, {
+        "item" : "Students suspended out-of-school at least once",
+        "count" : "6330"
+      }, {
+        "item" : "Students suspended in-school at least once",
+        "count" : "6330"
+      }, {
+        "item" : "12th graders passing a full year of mathematics coursework",
+        "count" : "6275"
+      }, {
+        "item" : "12th graders passing a full year of science and technology/engineering coursework",
+        "count" : "6254"
+      } ],
+      "smallest" : "12th graders passing a full year of mathematics coursework",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908036,
+    "name" : "TOT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Count",
+    "fieldName" : "tot_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823844,
+    "cachedContents" : {
+      "non_null" : "225333",
+      "largest" : "981894.0",
+      "null" : "2792",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "2612"
+      }, {
+        "item" : "2.0",
+        "count" : "1981"
+      }, {
+        "item" : "3.0",
+        "count" : "1735"
+      }, {
+        "item" : "4.0",
+        "count" : "1608"
+      }, {
+        "item" : "7.0",
+        "count" : "1515"
+      }, {
+        "item" : "13.0",
+        "count" : "1448"
+      }, {
+        "item" : "6.0",
+        "count" : "1426"
+      }, {
+        "item" : "5.0",
+        "count" : "1400"
+      }, {
+        "item" : "8.0",
+        "count" : "1375"
+      }, {
+        "item" : "10.0",
+        "count" : "1337"
+      }, {
+        "item" : "11.0",
+        "count" : "1331"
+      }, {
+        "item" : "9.0",
+        "count" : "1308"
+      }, {
+        "item" : "14.0",
+        "count" : "1301"
+      }, {
+        "item" : "12.0",
+        "count" : "1257"
+      }, {
+        "item" : "15.0",
+        "count" : "1237"
+      }, {
+        "item" : "16.0",
+        "count" : "1226"
+      }, {
+        "item" : "17.0",
+        "count" : "1195"
+      }, {
+        "item" : "18.0",
+        "count" : "1179"
+      }, {
+        "item" : "20.0",
+        "count" : "1143"
+      }, {
+        "item" : "33.0",
+        "count" : "1138"
+      } ],
+      "smallest" : "0.1",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908037,
+    "name" : "IND_CNT",
+    "dataTypeName" : "number",
+    "description" : "Indicator Count",
+    "fieldName" : "ind_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823845,
+    "cachedContents" : {
+      "non_null" : "164323",
+      "largest" : "959394.0",
+      "null" : "63802",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "5397"
+      }, {
+        "item" : "1.0",
+        "count" : "3438"
+      }, {
+        "item" : "2.0",
+        "count" : "3236"
+      }, {
+        "item" : "3.0",
+        "count" : "3049"
+      }, {
+        "item" : "4.0",
+        "count" : "2936"
+      }, {
+        "item" : "5.0",
+        "count" : "2744"
+      }, {
+        "item" : "6.0",
+        "count" : "2640"
+      }, {
+        "item" : "7.0",
+        "count" : "2492"
+      }, {
+        "item" : "8.0",
+        "count" : "2207"
+      }, {
+        "item" : "9.0",
+        "count" : "2106"
+      }, {
+        "item" : "10.0",
+        "count" : "2014"
+      }, {
+        "item" : "11.0",
+        "count" : "1911"
+      }, {
+        "item" : "12.0",
+        "count" : "1713"
+      }, {
+        "item" : "13.0",
+        "count" : "1676"
+      }, {
+        "item" : "14.0",
+        "count" : "1525"
+      }, {
+        "item" : "16.0",
+        "count" : "1490"
+      }, {
+        "item" : "15.0",
+        "count" : "1468"
+      }, {
+        "item" : "17.0",
+        "count" : "1379"
+      }, {
+        "item" : "18.0",
+        "count" : "1290"
+      }, {
+        "item" : "19.0",
+        "count" : "1273"
+      } ],
+      "smallest" : "0.0",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  }, {
+    "id" : 619908038,
+    "name" : "IND_PCT",
+    "dataTypeName" : "number",
+    "description" : "Indicator Percent",
+    "fieldName" : "ind_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152823846,
+    "cachedContents" : {
+      "non_null" : "214522",
+      "largest" : "771.0",
+      "null" : "13603",
+      "top" : [ {
+        "item" : "100.0",
+        "count" : "8113"
+      }, {
+        "item" : "0.0",
+        "count" : "4119"
+      }, {
+        "item" : "1.0",
+        "count" : "2852"
+      }, {
+        "item" : "0.1",
+        "count" : "1768"
+      }, {
+        "item" : "0.2",
+        "count" : "1602"
+      }, {
+        "item" : "50.0",
+        "count" : "1397"
+      }, {
+        "item" : "0.3",
+        "count" : "1228"
+      }, {
+        "item" : "0.5",
+        "count" : "1142"
+      }, {
+        "item" : "0.4",
+        "count" : "1048"
+      }, {
+        "item" : "75.0",
+        "count" : "924"
+      }, {
+        "item" : "0.6",
+        "count" : "875"
+      }, {
+        "item" : "60.0",
+        "count" : "848"
+      }, {
+        "item" : "0.8",
+        "count" : "833"
+      }, {
+        "item" : "46.0",
+        "count" : "829"
+      }, {
+        "item" : "0.7",
+        "count" : "828"
+      }, {
+        "item" : "8.0",
+        "count" : "817"
+      }, {
+        "item" : "20.0",
+        "count" : "808"
+      }, {
+        "item" : "10.0",
+        "count" : "805"
+      }, {
+        "item" : "40.0",
+        "count" : "797"
+      }, {
+        "item" : "5.0",
+        "count" : "782"
+      } ],
+      "smallest" : "0.0",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 619908039,
+    "name" : "VALUE_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Indicator Type",
+    "fieldName" : "value_type",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162795130,
+    "cachedContents" : {
+      "non_null" : "228125",
+      "largest" : "Percent of Students",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Percent of Students",
+        "count" : "179201"
+      }, {
+        "item" : "Average",
+        "count" : "35968"
+      }, {
+        "item" : "FTE per 100 SWD",
+        "count" : "10164"
+      }, {
+        "item" : "FTE",
+        "count" : "2792"
+      } ],
+      "smallest" : "Average",
+      "count" : "228125",
+      "cardinality" : "228125"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "special education", "disability", "student growth percentile", "dropout", "ela", "math", "science", "test", "performance", "assessment", "dropout rates", "special population", "sped", "students with disabilities", "staffing", "advanced placement", "radar" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

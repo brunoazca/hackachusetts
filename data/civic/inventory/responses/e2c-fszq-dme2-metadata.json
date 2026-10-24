@@ -1,0 +1,599 @@
+{
+  "id" : "fszq-dme2",
+  "name" : "Public Postsecondary Awards (Degrees) Conferred Statewide",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Higher Education",
+  "attributionLink" : "https://www.mass.edu/datacenter/factbook/awardsconferred.asp",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1710511880,
+  "description" : "This dataset contains the count of certificates and degrees conferred statewide at all public Massachusetts institutions of higher education since 2014. The data are disaggregated by year, award type, meta-major, and 2 digit CIP Code (Classification of Instructional Program), and student attributes such as race and gender.\n\nThis dataset is 1 of 3 datasets that is also published in the interactive\n<a href=\"https://www.mass.edu/datacenter/factbook/awardsconferred.asp\">Awards Conferred dashboard</a> on the Department of Higher Education Data Center:\n\n1) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-by-I/5yjf-27fz/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred by Institution: Detail</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-by-I/79yf-3ucb/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred by Institution: Summary</a>\n3) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-Stat/fszq-dme2/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred Statewide</a>\n\nThis dataset utilizes the 2020 CIP. The Classification of Instructional Programs was created by the U.S. Department of Education's National Center for Education Statistics (NCES) in 1980. More information can be found on the <a href=\"https://nces.ed.gov/ipeds/cipcode/default.aspx?y=56\">CIP user site</a>.\n\nMeta-majors are a framework that categorizes academic programs into broad curricular pathways.\n\nA crosswalk of meta-major and CIP is available as a dataset: \n<a href=\"https://educationtocareer.data.mass.gov/dataset/Public-Postsecondary-Awards-Crosswalk/6c8i-436p\">Awards Conferred Meta-Major to Classification of Instructional Programs (CIP) Codes</a>.\n\nNotes:\n- Data appear as reported to the Massachusetts Department of Higher Education.\n- Figures published by DHE may differ slightly from figures published by other institutions and organizations due to differences in timing of publication, data definitions, and calculation logic.\n- A fiscal year (FY) is 12-month period beginning July 1 and ending June 30. Because a fiscal year straddles two different calendar years, the calendar year and fiscal year will not always match. For example, FY 2025 runs from July 1, 2024 to June 30, 2025.\n- An award is conferred to a student by a postsecondary educational institution as official recognition after their successful completion of a program of study.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 552,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41223191,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1743508513,
+  "publicationGroup" : 19479814,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1763750799,
+  "rowsUpdatedBy" : "3fm6-nje8",
+  "tableId" : 19824844,
+  "totalTimesRated" : 0,
+  "viewCount" : 1296,
+  "viewLastModified" : 1763750797,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1712763470,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6808979,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1712760200,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1712763470,
+      "failureCount" : 0,
+      "startedAt" : 1712763470,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "3fm6-nje8",
+      "displayName" : "Symantha Clough"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 608034571,
+    "name" : "FISCAL_YEAR",
+    "dataTypeName" : "text",
+    "description" : "Year (Fiscal)",
+    "fieldName" : "fiscal_year",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135905,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "1650"
+      }, {
+        "item" : "2024",
+        "count" : "1621"
+      }, {
+        "item" : "2023",
+        "count" : "1597"
+      }, {
+        "item" : "2021",
+        "count" : "1581"
+      }, {
+        "item" : "2022",
+        "count" : "1572"
+      }, {
+        "item" : "2017",
+        "count" : "1560"
+      }, {
+        "item" : "2018",
+        "count" : "1559"
+      }, {
+        "item" : "2019",
+        "count" : "1556"
+      }, {
+        "item" : "2020",
+        "count" : "1543"
+      }, {
+        "item" : "2016",
+        "count" : "1524"
+      }, {
+        "item" : "2015",
+        "count" : "1498"
+      }, {
+        "item" : "2014",
+        "count" : "1476"
+      } ],
+      "smallest" : "2014",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  }, {
+    "id" : 608034572,
+    "name" : "AWARDS_CONFERRED",
+    "dataTypeName" : "number",
+    "description" : "Awards Conferred Count",
+    "fieldName" : "awards_conferred",
+    "position" : 2,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135903,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "1549",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "4681"
+      }, {
+        "item" : "2",
+        "count" : "2446"
+      }, {
+        "item" : "3",
+        "count" : "1570"
+      }, {
+        "item" : "4",
+        "count" : "1112"
+      }, {
+        "item" : "5",
+        "count" : "848"
+      }, {
+        "item" : "6",
+        "count" : "659"
+      }, {
+        "item" : "7",
+        "count" : "567"
+      }, {
+        "item" : "8",
+        "count" : "459"
+      }, {
+        "item" : "9",
+        "count" : "382"
+      }, {
+        "item" : "11",
+        "count" : "321"
+      }, {
+        "item" : "10",
+        "count" : "314"
+      }, {
+        "item" : "12",
+        "count" : "260"
+      }, {
+        "item" : "13",
+        "count" : "241"
+      }, {
+        "item" : "14",
+        "count" : "203"
+      }, {
+        "item" : "16",
+        "count" : "191"
+      }, {
+        "item" : "15",
+        "count" : "166"
+      }, {
+        "item" : "17",
+        "count" : "153"
+      }, {
+        "item" : "18",
+        "count" : "146"
+      }, {
+        "item" : "19",
+        "count" : "132"
+      }, {
+        "item" : "20",
+        "count" : "115"
+      } ],
+      "smallest" : "1",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  }, {
+    "id" : 608034573,
+    "name" : "RACE_ETHNICITY",
+    "dataTypeName" : "text",
+    "description" : "Race/Ethnicity",
+    "fieldName" : "race_ethnicity",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135901,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "White",
+        "count" : "3880"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "2813"
+      }, {
+        "item" : "Black or African American",
+        "count" : "2608"
+      }, {
+        "item" : "Asian or Pacific Islander",
+        "count" : "2381"
+      }, {
+        "item" : "U.S. Non-resident",
+        "count" : "2329"
+      }, {
+        "item" : "Two or more races",
+        "count" : "2114"
+      }, {
+        "item" : "Unknown",
+        "count" : "2026"
+      }, {
+        "item" : "American Indian or Alaskan Native",
+        "count" : "586"
+      } ],
+      "smallest" : "American Indian or Alaskan Native",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  }, {
+    "id" : 608034574,
+    "name" : "GENDER",
+    "dataTypeName" : "text",
+    "description" : "Gender",
+    "fieldName" : "gender",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135899,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "Unknown",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Female",
+        "count" : "9541"
+      }, {
+        "item" : "Male",
+        "count" : "8795"
+      }, {
+        "item" : "Unknown",
+        "count" : "387"
+      }, {
+        "item" : "Another Gender",
+        "count" : "14"
+      } ],
+      "smallest" : "Another Gender",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  }, {
+    "id" : 608034575,
+    "name" : "AWARD_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Award Type",
+    "fieldName" : "award_type",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135897,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "Post-Bacc. Certificate",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Bachelor",
+        "count" : "4789"
+      }, {
+        "item" : "Associate",
+        "count" : "4146"
+      }, {
+        "item" : "Master",
+        "count" : "3291"
+      }, {
+        "item" : "Certificate",
+        "count" : "2922"
+      }, {
+        "item" : "Post-Bacc. Certificate",
+        "count" : "1641"
+      }, {
+        "item" : "Doctoral",
+        "count" : "1583"
+      }, {
+        "item" : "Certificate of Adv. Grad. Study",
+        "count" : "230"
+      }, {
+        "item" : "First-Professional",
+        "count" : "135"
+      } ],
+      "smallest" : "Associate",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  }, {
+    "id" : 608034576,
+    "name" : "AWARD_TYPE_ORDER",
+    "dataTypeName" : "number",
+    "description" : "Award Type Order",
+    "fieldName" : "award_type_order",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152165266,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "8",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3",
+        "count" : "4789"
+      }, {
+        "item" : "2",
+        "count" : "4146"
+      }, {
+        "item" : "5",
+        "count" : "3291"
+      }, {
+        "item" : "1",
+        "count" : "2922"
+      }, {
+        "item" : "4",
+        "count" : "1641"
+      }, {
+        "item" : "7",
+        "count" : "1583"
+      }, {
+        "item" : "6",
+        "count" : "230"
+      }, {
+        "item" : "8",
+        "count" : "135"
+      } ],
+      "smallest" : "1",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  }, {
+    "id" : 608034577,
+    "name" : "META_MAJOR",
+    "dataTypeName" : "text",
+    "description" : "Meta-Major",
+    "fieldName" : "meta_major",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135895,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "Trades",
+      "null" : "0",
+      "top" : [ {
+        "item" : "STEM",
+        "count" : "5587"
+      }, {
+        "item" : "Arts & Humanities",
+        "count" : "4027"
+      }, {
+        "item" : "Social and Behavioral Sciences and Human Services",
+        "count" : "3594"
+      }, {
+        "item" : "Business and Communication",
+        "count" : "1784"
+      }, {
+        "item" : "Trades",
+        "count" : "1533"
+      }, {
+        "item" : "Education",
+        "count" : "1079"
+      }, {
+        "item" : "Health",
+        "count" : "1056"
+      }, {
+        "item" : "Other",
+        "count" : "77"
+      } ],
+      "smallest" : "Arts & Humanities",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  }, {
+    "id" : 608034579,
+    "name" : "CIP_2_CODE",
+    "dataTypeName" : "number",
+    "description" : "2 Digit CIP Code",
+    "fieldName" : "cip_2_code",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 157658974,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "54",
+      "null" : "0",
+      "top" : [ {
+        "item" : "13",
+        "count" : "1079"
+      }, {
+        "item" : "51",
+        "count" : "1056"
+      }, {
+        "item" : "52",
+        "count" : "1027"
+      }, {
+        "item" : "11",
+        "count" : "861"
+      }, {
+        "item" : "43",
+        "count" : "818"
+      }, {
+        "item" : "44",
+        "count" : "798"
+      }, {
+        "item" : "14",
+        "count" : "790"
+      }, {
+        "item" : "30",
+        "count" : "778"
+      }, {
+        "item" : "45",
+        "count" : "773"
+      }, {
+        "item" : "50",
+        "count" : "766"
+      }, {
+        "item" : "42",
+        "count" : "750"
+      }, {
+        "item" : "26",
+        "count" : "716"
+      }, {
+        "item" : "15",
+        "count" : "604"
+      }, {
+        "item" : "16",
+        "count" : "559"
+      }, {
+        "item" : "9",
+        "count" : "519"
+      }, {
+        "item" : "40",
+        "count" : "518"
+      }, {
+        "item" : "22",
+        "count" : "511"
+      }, {
+        "item" : "23",
+        "count" : "511"
+      }, {
+        "item" : "27",
+        "count" : "488"
+      }, {
+        "item" : "1",
+        "count" : "481"
+      } ],
+      "smallest" : "1",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  }, {
+    "id" : 608034578,
+    "name" : "CIP_2_DESC",
+    "dataTypeName" : "text",
+    "description" : "CIP 2 Description",
+    "fieldName" : "cip_2_desc",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135907,
+    "cachedContents" : {
+      "non_null" : "18737",
+      "largest" : "Visual And Performing Arts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Education",
+        "count" : "1079"
+      }, {
+        "item" : "Health Professions And Related Programs",
+        "count" : "1056"
+      }, {
+        "item" : "Business, Management, Marketing, And Related Support Services",
+        "count" : "1027"
+      }, {
+        "item" : "Computer And Information Sciences And Support Services",
+        "count" : "861"
+      }, {
+        "item" : "Homeland Security, Law Enforcement, Firefighting And Related Protective Services",
+        "count" : "818"
+      }, {
+        "item" : "Public Administration And Social Service Professions",
+        "count" : "798"
+      }, {
+        "item" : "Engineering",
+        "count" : "790"
+      }, {
+        "item" : "Multi/Interdisciplinary Studies",
+        "count" : "778"
+      }, {
+        "item" : "Social Sciences",
+        "count" : "773"
+      }, {
+        "item" : "Visual And Performing Arts",
+        "count" : "766"
+      }, {
+        "item" : "Psychology",
+        "count" : "750"
+      }, {
+        "item" : "Biological And Biomedical Sciences",
+        "count" : "716"
+      }, {
+        "item" : "Engineering/Engineering-Related Technologies/Technicians",
+        "count" : "604"
+      }, {
+        "item" : "Foreign Languages, Literatures, And Linguistics",
+        "count" : "559"
+      }, {
+        "item" : "Communication, Journalism, And Related Programs",
+        "count" : "519"
+      }, {
+        "item" : "Physical Sciences",
+        "count" : "518"
+      }, {
+        "item" : "Legal Professions And Studies",
+        "count" : "511"
+      }, {
+        "item" : "English Language And Literature/Letters",
+        "count" : "511"
+      }, {
+        "item" : "Mathematics And Statistics",
+        "count" : "488"
+      }, {
+        "item" : "Agricultural/Animal/Plant/Veterinary Science And Related Fields",
+        "count" : "481"
+      } ],
+      "smallest" : "Agricultural/Animal/Plant/Veterinary Science And Related Fields",
+      "count" : "18737",
+      "cardinality" : "18737"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "One year of degrees and certificates conferred statewide per race, gender, award type, meta-major, and CIP 2",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "gender", "race", "ethnicity", "race and ethnicity", "college", "university", "graduation", "demographics", "community college", "undergraduate education", "graduate education", "degrees", "degrees awarded", "degrees conferred", "degrees obtained", "certificates", "certificates awarded", "master", "bachelor", "doctorate", "doctoral", "associate", "post-bachelor" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

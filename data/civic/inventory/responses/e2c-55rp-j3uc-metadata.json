@@ -1,0 +1,99 @@
+{
+  "id" : "55rp-j3uc",
+  "name" : "Measuring progress toward racial equity in public higher education",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1693599827,
+  "description" : "A new set of aspirational universal targets will help move public higher education in Massachusetts toward its goal of racial equity over the next decade. Learn how the targets were developed.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 39923975,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1694023306,
+  "publicationGroup" : 19275012,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1693599827,
+  "tableId" : 19275012,
+  "totalTimesRated" : 0,
+  "viewCount" : 3460,
+  "viewLastModified" : 1765913262,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1696338493,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 5814216,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1696338474,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1696338493,
+      "failureCount" : 0,
+      "startedAt" : 1696338493,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "A new set of aspirational universal targets will help move public higher education in Massachusetts toward its goal of racial equity over the next decade. Learn how the targets were developed.",
+      "title" : "DHE Racial Equity Targets"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "higher education", "college", "racial equity" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

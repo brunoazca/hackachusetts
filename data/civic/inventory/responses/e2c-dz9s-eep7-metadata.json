@@ -1,0 +1,452 @@
+{
+  "id" : "dz9s-eep7",
+  "name" : "Licensed and Funded Early Education and Care Program Openings and Closings",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "attributionLink" : "https://www.mass.gov/lists/data-on-licensed-and-funded-child-care-programs",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1769538429,
+  "description" : "This dataset includes the number of Department of Early Education and Care (EEC) licensed and funded early education and care programs that have opened or closed historically, along with their capacity. The data are pulled from EEC's Licensing Education Analytic Database (LEAD). Data are updated at the beginning of each month. For a list of current licensed and funded early education and care programs, please visit the <a href=\"https://educationtocareer.data.mass.gov/Early-Education-and-Care-/Current-Licensed-and-Funded-Early-Education-and-Ca/iyks-y3g6/about_data\">Current Licensed and Funded Early Education and Care Programs</a> dataset. \n\nThis dataset includes: \n\n<strong>Licensed Programs</strong> are programs that are subject to licensing regulations by EEC, which include meeting health and safety standards, training and professional development requirements, criminal and background checks, and maintaining appropriate ratios of educators to children. Licensed programs can include any of the following: family child care and center based (also called “group and school age”) programs <a href=\"https://www.mass.gov/guides/find-a-licensed-family-group-or-school-age-child-care-program\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for more information on licensed programs</a>.\n\n<strong>Funded Programs</strong> are programs that are not subject to licensure by EEC but have the approval from EEC to provide subsidized child care for low-income or at-risk families. Funded programs can include any of the following: public schools; private schools; religious schools; and government, tribal, and military child care programs. <a href= \"https://www.mass.gov/guides/eec-funded-programs\" target=\"_blank\" rel=\"noopener noreferrer\" >Click here for more information on funded programs</a>.\n\nThis dataset is part of <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d\" target=\"_blank\" rel=\"noopener noreferrer\">EEC's Key Performance Indicator (KPI) Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 79,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41893795,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1769542134,
+  "publicationGroup" : 20244530,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790016239,
+  "rowsUpdatedBy" : "m5tk-n3hd",
+  "tableId" : 20244530,
+  "totalTimesRated" : 0,
+  "viewCount" : 988,
+  "viewLastModified" : 1790016238,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1770993446,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7353291,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1770993334,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1770993446,
+      "failureCount" : 0,
+      "startedAt" : 1770993446,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 625359738,
+    "name" : "DATA_LOAD_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Refresh date.",
+    "fieldName" : "data_load_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 164860148,
+    "cachedContents" : {
+      "non_null" : "920",
+      "largest" : "2026-09-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-09-01T00:00:00.000",
+        "count" : "920"
+      } ],
+      "smallest" : "2026-09-01T00:00:00.000",
+      "count" : "920",
+      "cardinality" : "920"
+    },
+    "format" : { }
+  }, {
+    "id" : 625359737,
+    "name" : "TRANSACTION_MONTH",
+    "dataTypeName" : "calendar_date",
+    "description" : "Month in which openings/closings occurred.",
+    "fieldName" : "transaction_month",
+    "position" : 2,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 164860147,
+    "cachedContents" : {
+      "non_null" : "920",
+      "largest" : "2026-08-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023-06-01T00:00:00.000",
+        "count" : "23"
+      }, {
+        "item" : "2023-12-01T00:00:00.000",
+        "count" : "22"
+      }, {
+        "item" : "2022-09-01T00:00:00.000",
+        "count" : "22"
+      }, {
+        "item" : "2025-06-01T00:00:00.000",
+        "count" : "21"
+      }, {
+        "item" : "2022-08-01T00:00:00.000",
+        "count" : "21"
+      }, {
+        "item" : "2026-06-01T00:00:00.000",
+        "count" : "21"
+      }, {
+        "item" : "2023-09-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2025-08-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2023-11-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2022-10-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2024-09-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2024-05-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2024-07-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2025-07-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2024-06-01T00:00:00.000",
+        "count" : "19"
+      }, {
+        "item" : "2024-01-01T00:00:00.000",
+        "count" : "19"
+      }, {
+        "item" : "2023-03-01T00:00:00.000",
+        "count" : "19"
+      }, {
+        "item" : "2025-05-01T00:00:00.000",
+        "count" : "19"
+      }, {
+        "item" : "2025-09-01T00:00:00.000",
+        "count" : "19"
+      }, {
+        "item" : "2023-04-01T00:00:00.000",
+        "count" : "19"
+      } ],
+      "smallest" : "2022-07-01T00:00:00.000",
+      "count" : "920",
+      "cardinality" : "920"
+    },
+    "format" : { }
+  }, {
+    "id" : 625359736,
+    "name" : "OPENING_CLOSING",
+    "dataTypeName" : "text",
+    "description" : "Indicates whether PROVIDER_COUNT represent program openings or closings.",
+    "fieldName" : "opening_closing",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164860146,
+    "cachedContents" : {
+      "non_null" : "920",
+      "largest" : "Opened",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Opened",
+        "count" : "473"
+      }, {
+        "item" : "Closed",
+        "count" : "447"
+      } ],
+      "smallest" : "Closed",
+      "count" : "920",
+      "cardinality" : "920"
+    },
+    "format" : { }
+  }, {
+    "id" : 625359735,
+    "name" : "LICENSING_REGION",
+    "dataTypeName" : "text",
+    "description" : "Regional office that oversees program’s licensing.",
+    "fieldName" : "licensing_region",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164860145,
+    "cachedContents" : {
+      "non_null" : "920",
+      "largest" : "Western",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Southeast and Cape",
+        "count" : "198"
+      }, {
+        "item" : "Northeast",
+        "count" : "190"
+      }, {
+        "item" : "Metro Boston",
+        "count" : "184"
+      }, {
+        "item" : "Central",
+        "count" : "179"
+      }, {
+        "item" : "Western",
+        "count" : "169"
+      } ],
+      "smallest" : "Central",
+      "count" : "920",
+      "cardinality" : "920"
+    },
+    "format" : { }
+  }, {
+    "id" : 625359734,
+    "name" : "PROGRAM_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Types of Child Care Programs: Family Child Care, Center-based Care (also known as Group and School Age), Public School, Private School.",
+    "fieldName" : "program_type",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164860144,
+    "cachedContents" : {
+      "non_null" : "920",
+      "largest" : "Funded Public Schools",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Family Child Care",
+        "count" : "499"
+      }, {
+        "item" : "Center-Based Care",
+        "count" : "400"
+      }, {
+        "item" : "Funded Public Schools",
+        "count" : "13"
+      }, {
+        "item" : "Funded Private Schools",
+        "count" : "8"
+      } ],
+      "smallest" : "Center-Based Care",
+      "count" : "920",
+      "cardinality" : "920"
+    },
+    "format" : { }
+  }, {
+    "id" : 625359733,
+    "name" : "PROVIDER_COUNT",
+    "dataTypeName" : "number",
+    "description" : "The number of programs licensed by EEC.",
+    "fieldName" : "provider_count",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164860143,
+    "cachedContents" : {
+      "non_null" : "920",
+      "largest" : "26",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-1",
+        "count" : "87"
+      }, {
+        "item" : "2",
+        "count" : "71"
+      }, {
+        "item" : "-2",
+        "count" : "62"
+      }, {
+        "item" : "1",
+        "count" : "55"
+      }, {
+        "item" : "3",
+        "count" : "50"
+      }, {
+        "item" : "-3",
+        "count" : "50"
+      }, {
+        "item" : "-4",
+        "count" : "44"
+      }, {
+        "item" : "-5",
+        "count" : "41"
+      }, {
+        "item" : "5",
+        "count" : "37"
+      }, {
+        "item" : "-6",
+        "count" : "35"
+      }, {
+        "item" : "10",
+        "count" : "31"
+      }, {
+        "item" : "-7",
+        "count" : "31"
+      }, {
+        "item" : "-8",
+        "count" : "31"
+      }, {
+        "item" : "4",
+        "count" : "29"
+      }, {
+        "item" : "8",
+        "count" : "29"
+      }, {
+        "item" : "7",
+        "count" : "28"
+      }, {
+        "item" : "6",
+        "count" : "24"
+      }, {
+        "item" : "9",
+        "count" : "22"
+      }, {
+        "item" : "-9",
+        "count" : "19"
+      }, {
+        "item" : "11",
+        "count" : "14"
+      } ],
+      "smallest" : "-25",
+      "count" : "920",
+      "cardinality" : "920"
+    },
+    "format" : { }
+  }, {
+    "id" : 625359732,
+    "name" : "TOTAL_CAPACITY",
+    "dataTypeName" : "number",
+    "description" : "Aggregate capacity of programs that are opening or closing.",
+    "fieldName" : "total_capacity",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164860142,
+    "cachedContents" : {
+      "non_null" : "920",
+      "largest" : "1168",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-38",
+        "count" : "13"
+      }, {
+        "item" : "-40",
+        "count" : "12"
+      }, {
+        "item" : "-30",
+        "count" : "11"
+      }, {
+        "item" : "68",
+        "count" : "11"
+      }, {
+        "item" : "-52",
+        "count" : "10"
+      }, {
+        "item" : "-58",
+        "count" : "10"
+      }, {
+        "item" : "-34",
+        "count" : "10"
+      }, {
+        "item" : "52",
+        "count" : "10"
+      }, {
+        "item" : "36",
+        "count" : "10"
+      }, {
+        "item" : "-54",
+        "count" : "9"
+      }, {
+        "item" : "-24",
+        "count" : "9"
+      }, {
+        "item" : "-32",
+        "count" : "9"
+      }, {
+        "item" : "18",
+        "count" : "9"
+      }, {
+        "item" : "-36",
+        "count" : "9"
+      }, {
+        "item" : "-20",
+        "count" : "9"
+      }, {
+        "item" : "-26",
+        "count" : "9"
+      }, {
+        "item" : "-62",
+        "count" : "9"
+      }, {
+        "item" : "-56",
+        "count" : "8"
+      }, {
+        "item" : "86",
+        "count" : "8"
+      }, {
+        "item" : "-44",
+        "count" : "8"
+      } ],
+      "smallest" : "-860",
+      "count" : "920",
+      "cardinality" : "920"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Monthly",
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-early-education-and-care"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "licensed childcare", "daycare", "licensed", "funded", "prek", "preschool", "toddlers", "infants", "capacity" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

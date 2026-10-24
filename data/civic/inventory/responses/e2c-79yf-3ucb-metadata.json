@@ -1,0 +1,3246 @@
+{
+  "id" : "79yf-3ucb",
+  "name" : "Public Postsecondary Awards (Degrees) Conferred by Institution: Summary",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Higher Education",
+  "attributionLink" : "https://www.mass.edu/datacenter/factbook/awardsconferred.asp",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1710511161,
+  "description" : "This dataset contains the counts and share of certificates and degrees conferred at all public Massachusetts institutions of higher education since 2014. Data are disaggregated by year, segment, and institution, reporting counts and percentages of awards conferred by award type, gender, and race.\n\nThis dataset is 1 of 3 datasets that is also published in the interactive\n<a href=\"https://www.mass.edu/datacenter/factbook/awardsconferred.asp\">Awards Conferred dashboard</a> on the Department of Higher Education Data Center:\n\n1) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-by-I/5yjf-27fz/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred by Institution: Detail</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-by-I/79yf-3ucb/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred by Institution: Summary</a>\n3) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-Stat/fszq-dme2/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred Statewide</a>\n\nNotes:\n- Data appear as reported to the Massachusetts Department of Higher Education.\n- Figures published by DHE may differ slightly from figures published by other institutions and organizations due to differences in timing of publication, data definitions, and calculation logic.\n- An award is conferred to a student by a postsecondary educational institution as official recognition after their successful completion of a program of study.\n- A fiscal year (FY) is 12-month period beginning July 1 and ending June 30. Because a fiscal year straddles two different calendar years, the calendar year and fiscal year will not always match. For example, FY 2025 runs from July 1, 2024 to June 30, 2025.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 363,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40476650,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1712332135,
+  "publicationGroup" : 19479771,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1763750818,
+  "rowsUpdatedBy" : "3fm6-nje8",
+  "tableId" : 19479771,
+  "totalTimesRated" : 0,
+  "viewCount" : 1378,
+  "viewLastModified" : 1763750817,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1712763468,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6263138,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1712760209,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1712763468,
+      "failureCount" : 0,
+      "startedAt" : 1712763468,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "3fm6-nje8",
+      "displayName" : "Symantha Clough"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 591461761,
+    "name" : "FISCAL_YEAR",
+    "dataTypeName" : "text",
+    "description" : "Year (Fiscal)",
+    "fieldName" : "fiscal_year",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135878,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2021",
+        "count" : "56"
+      }, {
+        "item" : "2016",
+        "count" : "56"
+      }, {
+        "item" : "2023",
+        "count" : "56"
+      }, {
+        "item" : "2022",
+        "count" : "56"
+      }, {
+        "item" : "2015",
+        "count" : "56"
+      }, {
+        "item" : "2017",
+        "count" : "56"
+      }, {
+        "item" : "2024",
+        "count" : "56"
+      }, {
+        "item" : "2018",
+        "count" : "56"
+      }, {
+        "item" : "2020",
+        "count" : "56"
+      }, {
+        "item" : "2014",
+        "count" : "56"
+      }, {
+        "item" : "2019",
+        "count" : "56"
+      }, {
+        "item" : "2025",
+        "count" : "28"
+      } ],
+      "smallest" : "2014",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461783,
+    "name" : "SEGMENT",
+    "dataTypeName" : "text",
+    "description" : "Segment",
+    "fieldName" : "segment",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135900,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "University of Massachusetts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Community Colleges",
+        "count" : "345"
+      }, {
+        "item" : "State Universities",
+        "count" : "207"
+      }, {
+        "item" : "University of Massachusetts",
+        "count" : "92"
+      } ],
+      "smallest" : "Community Colleges",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461748,
+    "name" : "INSTITUTION",
+    "dataTypeName" : "text",
+    "description" : "Public Institution Name",
+    "fieldName" : "institution",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152135865,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Holyoke Community College",
+        "count" : "23"
+      }, {
+        "item" : "Massachusetts Maritime Academy",
+        "count" : "23"
+      }, {
+        "item" : "Massachusetts College of Liberal Arts",
+        "count" : "23"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "23"
+      }, {
+        "item" : "Bunker Hill Community College",
+        "count" : "23"
+      }, {
+        "item" : "Bristol Community College",
+        "count" : "23"
+      }, {
+        "item" : "Quinsigamond Community College",
+        "count" : "23"
+      }, {
+        "item" : "Berkshire Community College",
+        "count" : "23"
+      }, {
+        "item" : "Mt. Wachusett Community College",
+        "count" : "23"
+      }, {
+        "item" : "University of Massachusetts Dartmouth",
+        "count" : "23"
+      }, {
+        "item" : "North Shore Community College",
+        "count" : "23"
+      }, {
+        "item" : "Middlesex Community College",
+        "count" : "23"
+      }, {
+        "item" : "MassBay Community College",
+        "count" : "23"
+      }, {
+        "item" : "University of Massachusetts Lowell",
+        "count" : "23"
+      }, {
+        "item" : "University of Massachusetts Boston",
+        "count" : "23"
+      }, {
+        "item" : "Westfield State University",
+        "count" : "23"
+      }, {
+        "item" : "Massasoit Community College",
+        "count" : "23"
+      }, {
+        "item" : "University of Massachusetts Amherst",
+        "count" : "23"
+      }, {
+        "item" : "Massachusetts College of Art and Design",
+        "count" : "23"
+      }, {
+        "item" : "Springfield Technical Community College",
+        "count" : "23"
+      } ],
+      "smallest" : "Berkshire Community College",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461765,
+    "name" : "CERTIFICATE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Certificates Conferred Count",
+    "fieldName" : "certificate_cnt",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135882,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "618",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "127"
+      }, {
+        "item" : "1",
+        "count" : "13"
+      }, {
+        "item" : "18",
+        "count" : "12"
+      }, {
+        "item" : "3",
+        "count" : "10"
+      }, {
+        "item" : "118",
+        "count" : "10"
+      }, {
+        "item" : "132",
+        "count" : "9"
+      }, {
+        "item" : "12",
+        "count" : "8"
+      }, {
+        "item" : "16",
+        "count" : "8"
+      }, {
+        "item" : "11",
+        "count" : "8"
+      }, {
+        "item" : "4",
+        "count" : "7"
+      }, {
+        "item" : "179",
+        "count" : "6"
+      }, {
+        "item" : "250",
+        "count" : "6"
+      }, {
+        "item" : "9",
+        "count" : "6"
+      }, {
+        "item" : "7",
+        "count" : "6"
+      }, {
+        "item" : "2",
+        "count" : "6"
+      }, {
+        "item" : "235",
+        "count" : "6"
+      }, {
+        "item" : "151",
+        "count" : "6"
+      }, {
+        "item" : "125",
+        "count" : "6"
+      }, {
+        "item" : "161",
+        "count" : "6"
+      }, {
+        "item" : "162",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461768,
+    "name" : "CERTIFICATE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total of Certificates Conferred",
+    "fieldName" : "certificate_pct",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135885,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.472",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "127"
+      }, {
+        "item" : "0.001",
+        "count" : "22"
+      }, {
+        "item" : "0.005",
+        "count" : "14"
+      }, {
+        "item" : "0.002",
+        "count" : "12"
+      }, {
+        "item" : "0.004",
+        "count" : "12"
+      }, {
+        "item" : "0.003",
+        "count" : "8"
+      }, {
+        "item" : "0.297",
+        "count" : "8"
+      }, {
+        "item" : "0.012",
+        "count" : "6"
+      }, {
+        "item" : "0.307",
+        "count" : "6"
+      }, {
+        "item" : "0.066",
+        "count" : "6"
+      }, {
+        "item" : "0.271",
+        "count" : "6"
+      }, {
+        "item" : "0.153",
+        "count" : "6"
+      }, {
+        "item" : "0.195",
+        "count" : "6"
+      }, {
+        "item" : "0.180",
+        "count" : "6"
+      }, {
+        "item" : "0.056",
+        "count" : "4"
+      }, {
+        "item" : "0.162",
+        "count" : "4"
+      }, {
+        "item" : "0.098",
+        "count" : "4"
+      }, {
+        "item" : "0.173",
+        "count" : "4"
+      }, {
+        "item" : "0.214",
+        "count" : "4"
+      }, {
+        "item" : "0.108",
+        "count" : "4"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "align" : "left"
+    }
+  }, {
+    "id" : 591461749,
+    "name" : "ASSOCIATE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Associate Degrees Conferred Count",
+    "fieldName" : "associate_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135866,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "1291",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "253"
+      }, {
+        "item" : "41",
+        "count" : "6"
+      }, {
+        "item" : "409",
+        "count" : "4"
+      }, {
+        "item" : "442",
+        "count" : "4"
+      }, {
+        "item" : "768",
+        "count" : "4"
+      }, {
+        "item" : "481",
+        "count" : "4"
+      }, {
+        "item" : "39",
+        "count" : "4"
+      }, {
+        "item" : "44",
+        "count" : "4"
+      }, {
+        "item" : "720",
+        "count" : "4"
+      }, {
+        "item" : "540",
+        "count" : "4"
+      }, {
+        "item" : "988",
+        "count" : "4"
+      }, {
+        "item" : "1125",
+        "count" : "4"
+      }, {
+        "item" : "213",
+        "count" : "4"
+      }, {
+        "item" : "549",
+        "count" : "4"
+      }, {
+        "item" : "913",
+        "count" : "4"
+      }, {
+        "item" : "401",
+        "count" : "4"
+      }, {
+        "item" : "839",
+        "count" : "4"
+      }, {
+        "item" : "25",
+        "count" : "3"
+      }, {
+        "item" : "212",
+        "count" : "2"
+      }, {
+        "item" : "1026",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461750,
+    "name" : "ASSOCIATE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total of Associate Degrees Conferred",
+    "fieldName" : "associate_pct",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135867,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.985",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "253"
+      }, {
+        "item" : "0.005",
+        "count" : "9"
+      }, {
+        "item" : "0.703",
+        "count" : "8"
+      }, {
+        "item" : "0.820",
+        "count" : "6"
+      }, {
+        "item" : "0.693",
+        "count" : "6"
+      }, {
+        "item" : "0.729",
+        "count" : "6"
+      }, {
+        "item" : "0.805",
+        "count" : "6"
+      }, {
+        "item" : "0.847",
+        "count" : "6"
+      }, {
+        "item" : "0.008",
+        "count" : "6"
+      }, {
+        "item" : "0.002",
+        "count" : "5"
+      }, {
+        "item" : "0.007",
+        "count" : "4"
+      }, {
+        "item" : "0.846",
+        "count" : "4"
+      }, {
+        "item" : "0.798",
+        "count" : "4"
+      }, {
+        "item" : "0.829",
+        "count" : "4"
+      }, {
+        "item" : "0.862",
+        "count" : "4"
+      }, {
+        "item" : "0.709",
+        "count" : "4"
+      }, {
+        "item" : "0.892",
+        "count" : "4"
+      }, {
+        "item" : "0.842",
+        "count" : "4"
+      }, {
+        "item" : "0.003",
+        "count" : "4"
+      }, {
+        "item" : "0.838",
+        "count" : "4"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461775,
+    "name" : "BACHELOR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Bachelor's Degrees Conferred Count",
+    "fieldName" : "bachelor_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135892,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "6838",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "345"
+      }, {
+        "item" : "350",
+        "count" : "6"
+      }, {
+        "item" : "2564",
+        "count" : "4"
+      }, {
+        "item" : "351",
+        "count" : "4"
+      }, {
+        "item" : "850",
+        "count" : "4"
+      }, {
+        "item" : "1283",
+        "count" : "2"
+      }, {
+        "item" : "622",
+        "count" : "2"
+      }, {
+        "item" : "2333",
+        "count" : "2"
+      }, {
+        "item" : "1670",
+        "count" : "2"
+      }, {
+        "item" : "348",
+        "count" : "2"
+      }, {
+        "item" : "915",
+        "count" : "2"
+      }, {
+        "item" : "2389",
+        "count" : "2"
+      }, {
+        "item" : "391",
+        "count" : "2"
+      }, {
+        "item" : "1135",
+        "count" : "2"
+      }, {
+        "item" : "1937",
+        "count" : "2"
+      }, {
+        "item" : "1594",
+        "count" : "2"
+      }, {
+        "item" : "6332",
+        "count" : "2"
+      }, {
+        "item" : "2489",
+        "count" : "2"
+      }, {
+        "item" : "1076",
+        "count" : "2"
+      }, {
+        "item" : "6259",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461785,
+    "name" : "BACHELOR_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total of Bachelor's Degrees Conferred",
+    "fieldName" : "bachelor_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135902,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.904",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "345"
+      }, {
+        "item" : "0.880",
+        "count" : "6"
+      }, {
+        "item" : "0.795",
+        "count" : "6"
+      }, {
+        "item" : "0.849",
+        "count" : "4"
+      }, {
+        "item" : "0.674",
+        "count" : "4"
+      }, {
+        "item" : "0.878",
+        "count" : "4"
+      }, {
+        "item" : "0.662",
+        "count" : "4"
+      }, {
+        "item" : "0.734",
+        "count" : "4"
+      }, {
+        "item" : "0.682",
+        "count" : "4"
+      }, {
+        "item" : "0.644",
+        "count" : "4"
+      }, {
+        "item" : "0.823",
+        "count" : "4"
+      }, {
+        "item" : "0.874",
+        "count" : "4"
+      }, {
+        "item" : "0.575",
+        "count" : "4"
+      }, {
+        "item" : "0.700",
+        "count" : "4"
+      }, {
+        "item" : "0.850",
+        "count" : "4"
+      }, {
+        "item" : "0.669",
+        "count" : "4"
+      }, {
+        "item" : "0.630",
+        "count" : "4"
+      }, {
+        "item" : "0.704",
+        "count" : "4"
+      }, {
+        "item" : "0.712",
+        "count" : "4"
+      }, {
+        "item" : "0.641",
+        "count" : "4"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461747,
+    "name" : "POST_BACC_CERT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Post-Baccalaureate Certificates Conferred Count",
+    "fieldName" : "post_bacc_cert_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135864,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "424",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "379"
+      }, {
+        "item" : "6",
+        "count" : "8"
+      }, {
+        "item" : "42",
+        "count" : "8"
+      }, {
+        "item" : "3",
+        "count" : "7"
+      }, {
+        "item" : "66",
+        "count" : "6"
+      }, {
+        "item" : "55",
+        "count" : "6"
+      }, {
+        "item" : "16",
+        "count" : "6"
+      }, {
+        "item" : "7",
+        "count" : "6"
+      }, {
+        "item" : "10",
+        "count" : "5"
+      }, {
+        "item" : "26",
+        "count" : "4"
+      }, {
+        "item" : "28",
+        "count" : "4"
+      }, {
+        "item" : "144",
+        "count" : "4"
+      }, {
+        "item" : "21",
+        "count" : "4"
+      }, {
+        "item" : "31",
+        "count" : "4"
+      }, {
+        "item" : "2",
+        "count" : "4"
+      }, {
+        "item" : "22",
+        "count" : "4"
+      }, {
+        "item" : "35",
+        "count" : "4"
+      }, {
+        "item" : "29",
+        "count" : "4"
+      }, {
+        "item" : "18",
+        "count" : "4"
+      }, {
+        "item" : "58",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461792,
+    "name" : "POST_BACC_CERT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total of Post-Baccalaureate Certificates Conferred",
+    "fieldName" : "post_bacc_cert_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135909,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.120",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "379"
+      }, {
+        "item" : "0.011",
+        "count" : "13"
+      }, {
+        "item" : "0.018",
+        "count" : "12"
+      }, {
+        "item" : "0.007",
+        "count" : "11"
+      }, {
+        "item" : "0.022",
+        "count" : "10"
+      }, {
+        "item" : "0.021",
+        "count" : "10"
+      }, {
+        "item" : "0.019",
+        "count" : "10"
+      }, {
+        "item" : "0.014",
+        "count" : "10"
+      }, {
+        "item" : "0.023",
+        "count" : "9"
+      }, {
+        "item" : "0.009",
+        "count" : "8"
+      }, {
+        "item" : "0.012",
+        "count" : "8"
+      }, {
+        "item" : "0.027",
+        "count" : "8"
+      }, {
+        "item" : "0.013",
+        "count" : "8"
+      }, {
+        "item" : "0.030",
+        "count" : "7"
+      }, {
+        "item" : "0.010",
+        "count" : "6"
+      }, {
+        "item" : "0.047",
+        "count" : "6"
+      }, {
+        "item" : "0.005",
+        "count" : "6"
+      }, {
+        "item" : "0.033",
+        "count" : "6"
+      }, {
+        "item" : "0.081",
+        "count" : "6"
+      }, {
+        "item" : "0.024",
+        "count" : "6"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461753,
+    "name" : "MASTER_CNT",
+    "dataTypeName" : "number",
+    "description" : "Master's Degrees Conferred Count",
+    "fieldName" : "master_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135870,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "2471",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "345"
+      }, {
+        "item" : "50",
+        "count" : "8"
+      }, {
+        "item" : "51",
+        "count" : "6"
+      }, {
+        "item" : "38",
+        "count" : "6"
+      }, {
+        "item" : "234",
+        "count" : "6"
+      }, {
+        "item" : "53",
+        "count" : "5"
+      }, {
+        "item" : "37",
+        "count" : "4"
+      }, {
+        "item" : "41",
+        "count" : "4"
+      }, {
+        "item" : "478",
+        "count" : "4"
+      }, {
+        "item" : "495",
+        "count" : "4"
+      }, {
+        "item" : "1385",
+        "count" : "4"
+      }, {
+        "item" : "461",
+        "count" : "4"
+      }, {
+        "item" : "427",
+        "count" : "4"
+      }, {
+        "item" : "48",
+        "count" : "4"
+      }, {
+        "item" : "446",
+        "count" : "3"
+      }, {
+        "item" : "45",
+        "count" : "3"
+      }, {
+        "item" : "684",
+        "count" : "3"
+      }, {
+        "item" : "262",
+        "count" : "2"
+      }, {
+        "item" : "511",
+        "count" : "2"
+      }, {
+        "item" : "1438",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461789,
+    "name" : "MASTER_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total of Master's Degrees Conferred",
+    "fieldName" : "master_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135906,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.614",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "345"
+      }, {
+        "item" : "0.120",
+        "count" : "10"
+      }, {
+        "item" : "0.199",
+        "count" : "8"
+      }, {
+        "item" : "0.142",
+        "count" : "6"
+      }, {
+        "item" : "0.239",
+        "count" : "6"
+      }, {
+        "item" : "0.242",
+        "count" : "5"
+      }, {
+        "item" : "0.090",
+        "count" : "4"
+      }, {
+        "item" : "0.250",
+        "count" : "4"
+      }, {
+        "item" : "0.210",
+        "count" : "4"
+      }, {
+        "item" : "0.134",
+        "count" : "4"
+      }, {
+        "item" : "0.171",
+        "count" : "4"
+      }, {
+        "item" : "0.170",
+        "count" : "4"
+      }, {
+        "item" : "0.092",
+        "count" : "4"
+      }, {
+        "item" : "0.287",
+        "count" : "4"
+      }, {
+        "item" : "0.185",
+        "count" : "4"
+      }, {
+        "item" : "0.136",
+        "count" : "4"
+      }, {
+        "item" : "0.219",
+        "count" : "4"
+      }, {
+        "item" : "0.335",
+        "count" : "4"
+      }, {
+        "item" : "0.331",
+        "count" : "4"
+      }, {
+        "item" : "0.248",
+        "count" : "4"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461755,
+    "name" : "ADV_GRAD_STUDY_CNT",
+    "dataTypeName" : "number",
+    "description" : "Certificates of Advanced Graduate Study Conferred Count",
+    "fieldName" : "adv_grad_study_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135872,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "79",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "440"
+      }, {
+        "item" : "11",
+        "count" : "14"
+      }, {
+        "item" : "10",
+        "count" : "13"
+      }, {
+        "item" : "13",
+        "count" : "12"
+      }, {
+        "item" : "22",
+        "count" : "11"
+      }, {
+        "item" : "23",
+        "count" : "10"
+      }, {
+        "item" : "19",
+        "count" : "9"
+      }, {
+        "item" : "21",
+        "count" : "8"
+      }, {
+        "item" : "17",
+        "count" : "8"
+      }, {
+        "item" : "1",
+        "count" : "8"
+      }, {
+        "item" : "32",
+        "count" : "8"
+      }, {
+        "item" : "20",
+        "count" : "8"
+      }, {
+        "item" : "15",
+        "count" : "8"
+      }, {
+        "item" : "18",
+        "count" : "7"
+      }, {
+        "item" : "25",
+        "count" : "6"
+      }, {
+        "item" : "2",
+        "count" : "5"
+      }, {
+        "item" : "7",
+        "count" : "5"
+      }, {
+        "item" : "3",
+        "count" : "4"
+      }, {
+        "item" : "4",
+        "count" : "4"
+      }, {
+        "item" : "12",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461777,
+    "name" : "ADV_GRAD_STUDY_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total of Certificates of Advanced Graduate Study Conferred",
+    "fieldName" : "adv_grad_study_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135894,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.054",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "440"
+      }, {
+        "item" : "0.002",
+        "count" : "25"
+      }, {
+        "item" : "0.003",
+        "count" : "23"
+      }, {
+        "item" : "0.006",
+        "count" : "16"
+      }, {
+        "item" : "0.011",
+        "count" : "12"
+      }, {
+        "item" : "0.010",
+        "count" : "11"
+      }, {
+        "item" : "0.001",
+        "count" : "10"
+      }, {
+        "item" : "0.009",
+        "count" : "10"
+      }, {
+        "item" : "0.008",
+        "count" : "10"
+      }, {
+        "item" : "0.005",
+        "count" : "9"
+      }, {
+        "item" : "0.007",
+        "count" : "8"
+      }, {
+        "item" : "0.016",
+        "count" : "8"
+      }, {
+        "item" : "0.004",
+        "count" : "8"
+      }, {
+        "item" : "0.012",
+        "count" : "6"
+      }, {
+        "item" : "0.013",
+        "count" : "6"
+      }, {
+        "item" : "0.015",
+        "count" : "4"
+      }, {
+        "item" : "0.018",
+        "count" : "4"
+      }, {
+        "item" : "0.025",
+        "count" : "3"
+      }, {
+        "item" : "0.014",
+        "count" : "3"
+      }, {
+        "item" : "0.037",
+        "count" : "3"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461779,
+    "name" : "DOCTORAL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Doctoral Degrees Conferred Count",
+    "fieldName" : "doctoral_cnt",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135896,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "395",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "552"
+      }, {
+        "item" : "110",
+        "count" : "4"
+      }, {
+        "item" : "43",
+        "count" : "4"
+      }, {
+        "item" : "319",
+        "count" : "4"
+      }, {
+        "item" : "81",
+        "count" : "4"
+      }, {
+        "item" : "98",
+        "count" : "4"
+      }, {
+        "item" : "171",
+        "count" : "3"
+      }, {
+        "item" : "122",
+        "count" : "2"
+      }, {
+        "item" : "40",
+        "count" : "2"
+      }, {
+        "item" : "154",
+        "count" : "2"
+      }, {
+        "item" : "124",
+        "count" : "2"
+      }, {
+        "item" : "367",
+        "count" : "2"
+      }, {
+        "item" : "172",
+        "count" : "2"
+      }, {
+        "item" : "56",
+        "count" : "2"
+      }, {
+        "item" : "42",
+        "count" : "2"
+      }, {
+        "item" : "297",
+        "count" : "2"
+      }, {
+        "item" : "355",
+        "count" : "2"
+      }, {
+        "item" : "194",
+        "count" : "2"
+      }, {
+        "item" : "88",
+        "count" : "2"
+      }, {
+        "item" : "36",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461781,
+    "name" : "DOCTORAL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total of Doctoral Degrees Conferred",
+    "fieldName" : "doctoral_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135898,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.044",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "552"
+      }, {
+        "item" : "0.022",
+        "count" : "7"
+      }, {
+        "item" : "0.041",
+        "count" : "6"
+      }, {
+        "item" : "0.027",
+        "count" : "6"
+      }, {
+        "item" : "0.014",
+        "count" : "6"
+      }, {
+        "item" : "0.043",
+        "count" : "6"
+      }, {
+        "item" : "0.020",
+        "count" : "6"
+      }, {
+        "item" : "0.028",
+        "count" : "4"
+      }, {
+        "item" : "0.019",
+        "count" : "4"
+      }, {
+        "item" : "0.023",
+        "count" : "4"
+      }, {
+        "item" : "0.038",
+        "count" : "4"
+      }, {
+        "item" : "0.026",
+        "count" : "4"
+      }, {
+        "item" : "0.018",
+        "count" : "4"
+      }, {
+        "item" : "0.030",
+        "count" : "4"
+      }, {
+        "item" : "0.035",
+        "count" : "4"
+      }, {
+        "item" : "0.031",
+        "count" : "3"
+      }, {
+        "item" : "0.021",
+        "count" : "2"
+      }, {
+        "item" : "0.036",
+        "count" : "2"
+      }, {
+        "item" : "0.024",
+        "count" : "2"
+      }, {
+        "item" : "0.033",
+        "count" : "2"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461758,
+    "name" : "FIRST_PROF_CNT",
+    "dataTypeName" : "number",
+    "description" : "First-Professional Degrees Conferred Count",
+    "fieldName" : "first_prof_cnt",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135875,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "111",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "621"
+      }, {
+        "item" : "86",
+        "count" : "4"
+      }, {
+        "item" : "49",
+        "count" : "2"
+      }, {
+        "item" : "79",
+        "count" : "2"
+      }, {
+        "item" : "64",
+        "count" : "2"
+      }, {
+        "item" : "58",
+        "count" : "2"
+      }, {
+        "item" : "111",
+        "count" : "2"
+      }, {
+        "item" : "50",
+        "count" : "2"
+      }, {
+        "item" : "47",
+        "count" : "2"
+      }, {
+        "item" : "110",
+        "count" : "2"
+      }, {
+        "item" : "53",
+        "count" : "2"
+      }, {
+        "item" : "99",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461762,
+    "name" : "FIRST_PROF_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total of First-Professional Degrees Conferred",
+    "fieldName" : "first_prof_pct",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135879,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.061",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "621"
+      }, {
+        "item" : "0.045",
+        "count" : "4"
+      }, {
+        "item" : "0.024",
+        "count" : "4"
+      }, {
+        "item" : "0.034",
+        "count" : "2"
+      }, {
+        "item" : "0.030",
+        "count" : "2"
+      }, {
+        "item" : "0.059",
+        "count" : "2"
+      }, {
+        "item" : "0.061",
+        "count" : "2"
+      }, {
+        "item" : "0.043",
+        "count" : "2"
+      }, {
+        "item" : "0.025",
+        "count" : "2"
+      }, {
+        "item" : "0.027",
+        "count" : "2"
+      }, {
+        "item" : "0.048",
+        "count" : "1"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461767,
+    "name" : "FEMALE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to Females",
+    "fieldName" : "female_cnt",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135884,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "5199",
+      "null" : "0",
+      "top" : [ {
+        "item" : "571",
+        "count" : "6"
+      }, {
+        "item" : "987",
+        "count" : "6"
+      }, {
+        "item" : "194",
+        "count" : "4"
+      }, {
+        "item" : "878",
+        "count" : "4"
+      }, {
+        "item" : "243",
+        "count" : "4"
+      }, {
+        "item" : "927",
+        "count" : "4"
+      }, {
+        "item" : "210",
+        "count" : "4"
+      }, {
+        "item" : "454",
+        "count" : "4"
+      }, {
+        "item" : "810",
+        "count" : "4"
+      }, {
+        "item" : "197",
+        "count" : "4"
+      }, {
+        "item" : "232",
+        "count" : "4"
+      }, {
+        "item" : "640",
+        "count" : "4"
+      }, {
+        "item" : "490",
+        "count" : "4"
+      }, {
+        "item" : "902",
+        "count" : "4"
+      }, {
+        "item" : "667",
+        "count" : "4"
+      }, {
+        "item" : "906",
+        "count" : "4"
+      }, {
+        "item" : "496",
+        "count" : "4"
+      }, {
+        "item" : "499",
+        "count" : "4"
+      }, {
+        "item" : "529",
+        "count" : "4"
+      }, {
+        "item" : "984",
+        "count" : "4"
+      } ],
+      "smallest" : "32",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461754,
+    "name" : "FEMALE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by Females",
+    "fieldName" : "female_pct",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135871,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.776",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.654",
+        "count" : "10"
+      }, {
+        "item" : "0.646",
+        "count" : "10"
+      }, {
+        "item" : "0.642",
+        "count" : "10"
+      }, {
+        "item" : "0.626",
+        "count" : "10"
+      }, {
+        "item" : "0.641",
+        "count" : "10"
+      }, {
+        "item" : "0.638",
+        "count" : "9"
+      }, {
+        "item" : "0.687",
+        "count" : "8"
+      }, {
+        "item" : "0.596",
+        "count" : "8"
+      }, {
+        "item" : "0.683",
+        "count" : "8"
+      }, {
+        "item" : "0.552",
+        "count" : "8"
+      }, {
+        "item" : "0.664",
+        "count" : "8"
+      }, {
+        "item" : "0.672",
+        "count" : "8"
+      }, {
+        "item" : "0.645",
+        "count" : "8"
+      }, {
+        "item" : "0.622",
+        "count" : "8"
+      }, {
+        "item" : "0.636",
+        "count" : "7"
+      }, {
+        "item" : "0.666",
+        "count" : "7"
+      }, {
+        "item" : "0.692",
+        "count" : "6"
+      }, {
+        "item" : "0.590",
+        "count" : "6"
+      }, {
+        "item" : "0.721",
+        "count" : "6"
+      }, {
+        "item" : "0.643",
+        "count" : "6"
+      } ],
+      "smallest" : "0.098",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "noCommas" : "false"
+    }
+  }, {
+    "id" : 591461760,
+    "name" : "MALE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to Males",
+    "fieldName" : "male_cnt",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135877,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "4974",
+      "null" : "0",
+      "top" : [ {
+        "item" : "129",
+        "count" : "8"
+      }, {
+        "item" : "386",
+        "count" : "6"
+      }, {
+        "item" : "339",
+        "count" : "6"
+      }, {
+        "item" : "391",
+        "count" : "6"
+      }, {
+        "item" : "454",
+        "count" : "4"
+      }, {
+        "item" : "325",
+        "count" : "4"
+      }, {
+        "item" : "225",
+        "count" : "4"
+      }, {
+        "item" : "524",
+        "count" : "4"
+      }, {
+        "item" : "363",
+        "count" : "4"
+      }, {
+        "item" : "314",
+        "count" : "4"
+      }, {
+        "item" : "433",
+        "count" : "4"
+      }, {
+        "item" : "112",
+        "count" : "4"
+      }, {
+        "item" : "286",
+        "count" : "4"
+      }, {
+        "item" : "416",
+        "count" : "4"
+      }, {
+        "item" : "178",
+        "count" : "4"
+      }, {
+        "item" : "124",
+        "count" : "4"
+      }, {
+        "item" : "330",
+        "count" : "4"
+      }, {
+        "item" : "320",
+        "count" : "4"
+      }, {
+        "item" : "65",
+        "count" : "4"
+      }, {
+        "item" : "646",
+        "count" : "4"
+      } ],
+      "smallest" : "34",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461752,
+    "name" : "MALE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by Males",
+    "fieldName" : "male_pct",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135869,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.902",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.364",
+        "count" : "11"
+      }, {
+        "item" : "0.359",
+        "count" : "10"
+      }, {
+        "item" : "0.354",
+        "count" : "10"
+      }, {
+        "item" : "0.336",
+        "count" : "10"
+      }, {
+        "item" : "0.313",
+        "count" : "9"
+      }, {
+        "item" : "0.362",
+        "count" : "9"
+      }, {
+        "item" : "0.328",
+        "count" : "8"
+      }, {
+        "item" : "0.410",
+        "count" : "8"
+      }, {
+        "item" : "0.326",
+        "count" : "8"
+      }, {
+        "item" : "0.374",
+        "count" : "8"
+      }, {
+        "item" : "0.317",
+        "count" : "8"
+      }, {
+        "item" : "0.392",
+        "count" : "8"
+      }, {
+        "item" : "0.334",
+        "count" : "7"
+      }, {
+        "item" : "0.399",
+        "count" : "7"
+      }, {
+        "item" : "0.337",
+        "count" : "6"
+      }, {
+        "item" : "0.378",
+        "count" : "6"
+      }, {
+        "item" : "0.279",
+        "count" : "6"
+      }, {
+        "item" : "0.319",
+        "count" : "6"
+      }, {
+        "item" : "0.350",
+        "count" : "6"
+      }, {
+        "item" : "0.401",
+        "count" : "6"
+      } ],
+      "smallest" : "0.218",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461769,
+    "name" : "UNKNGEN_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to People of Unknown Gender",
+    "fieldName" : "unkngen_cnt",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135886,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "34",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "452"
+      }, {
+        "item" : "2",
+        "count" : "38"
+      }, {
+        "item" : "5",
+        "count" : "30"
+      }, {
+        "item" : "1",
+        "count" : "29"
+      }, {
+        "item" : "3",
+        "count" : "24"
+      }, {
+        "item" : "4",
+        "count" : "16"
+      }, {
+        "item" : "8",
+        "count" : "10"
+      }, {
+        "item" : "7",
+        "count" : "9"
+      }, {
+        "item" : "11",
+        "count" : "8"
+      }, {
+        "item" : "9",
+        "count" : "8"
+      }, {
+        "item" : "6",
+        "count" : "5"
+      }, {
+        "item" : "13",
+        "count" : "4"
+      }, {
+        "item" : "12",
+        "count" : "2"
+      }, {
+        "item" : "10",
+        "count" : "2"
+      }, {
+        "item" : "18",
+        "count" : "2"
+      }, {
+        "item" : "19",
+        "count" : "2"
+      }, {
+        "item" : "17",
+        "count" : "1"
+      }, {
+        "item" : "25",
+        "count" : "1"
+      }, {
+        "item" : "34",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461763,
+    "name" : "UNKNGEN_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by People of Unknown Gender",
+    "fieldName" : "unkngen_pct",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135880,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.056",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "456"
+      }, {
+        "item" : "0.001",
+        "count" : "35"
+      }, {
+        "item" : "0.002",
+        "count" : "21"
+      }, {
+        "item" : "0.004",
+        "count" : "20"
+      }, {
+        "item" : "0.005",
+        "count" : "19"
+      }, {
+        "item" : "0.003",
+        "count" : "12"
+      }, {
+        "item" : "0.009",
+        "count" : "12"
+      }, {
+        "item" : "0.008",
+        "count" : "10"
+      }, {
+        "item" : "0.006",
+        "count" : "10"
+      }, {
+        "item" : "0.007",
+        "count" : "9"
+      }, {
+        "item" : "0.010",
+        "count" : "8"
+      }, {
+        "item" : "0.017",
+        "count" : "5"
+      }, {
+        "item" : "0.013",
+        "count" : "4"
+      }, {
+        "item" : "0.020",
+        "count" : "4"
+      }, {
+        "item" : "0.012",
+        "count" : "4"
+      }, {
+        "item" : "0.016",
+        "count" : "2"
+      }, {
+        "item" : "0.015",
+        "count" : "2"
+      }, {
+        "item" : "0.024",
+        "count" : "2"
+      }, {
+        "item" : "0.011",
+        "count" : "2"
+      }, {
+        "item" : "0.029",
+        "count" : "2"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461774,
+    "name" : "AMERIND_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to American Indians or Alaskan Natives",
+    "fieldName" : "amerind_cnt",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135891,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "20",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "149"
+      }, {
+        "item" : "2",
+        "count" : "118"
+      }, {
+        "item" : "0",
+        "count" : "83"
+      }, {
+        "item" : "3",
+        "count" : "82"
+      }, {
+        "item" : "4",
+        "count" : "54"
+      }, {
+        "item" : "5",
+        "count" : "54"
+      }, {
+        "item" : "6",
+        "count" : "40"
+      }, {
+        "item" : "9",
+        "count" : "18"
+      }, {
+        "item" : "7",
+        "count" : "14"
+      }, {
+        "item" : "8",
+        "count" : "10"
+      }, {
+        "item" : "11",
+        "count" : "8"
+      }, {
+        "item" : "17",
+        "count" : "4"
+      }, {
+        "item" : "10",
+        "count" : "4"
+      }, {
+        "item" : "20",
+        "count" : "2"
+      }, {
+        "item" : "19",
+        "count" : "2"
+      }, {
+        "item" : "12",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461764,
+    "name" : "AMERIND_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by American Indians or Alaskan Natives",
+    "fieldName" : "amerind_pct",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135881,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.016",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.001",
+        "count" : "149"
+      }, {
+        "item" : "0.002",
+        "count" : "144"
+      }, {
+        "item" : "0.003",
+        "count" : "109"
+      }, {
+        "item" : "0.000",
+        "count" : "89"
+      }, {
+        "item" : "0.004",
+        "count" : "39"
+      }, {
+        "item" : "0.005",
+        "count" : "34"
+      }, {
+        "item" : "0.006",
+        "count" : "23"
+      }, {
+        "item" : "0.007",
+        "count" : "18"
+      }, {
+        "item" : "0.008",
+        "count" : "16"
+      }, {
+        "item" : "0.009",
+        "count" : "8"
+      }, {
+        "item" : "0.011",
+        "count" : "4"
+      }, {
+        "item" : "0.014",
+        "count" : "4"
+      }, {
+        "item" : "0.010",
+        "count" : "4"
+      }, {
+        "item" : "0.015",
+        "count" : "2"
+      }, {
+        "item" : "0.016",
+        "count" : "1"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461751,
+    "name" : "AAPI_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to Asian Americans or Pacific Islanders",
+    "fieldName" : "aapi_cnt",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135868,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "1240",
+      "null" : "0",
+      "top" : [ {
+        "item" : "11",
+        "count" : "17"
+      }, {
+        "item" : "5",
+        "count" : "16"
+      }, {
+        "item" : "3",
+        "count" : "14"
+      }, {
+        "item" : "17",
+        "count" : "14"
+      }, {
+        "item" : "12",
+        "count" : "14"
+      }, {
+        "item" : "36",
+        "count" : "14"
+      }, {
+        "item" : "20",
+        "count" : "13"
+      }, {
+        "item" : "40",
+        "count" : "13"
+      }, {
+        "item" : "33",
+        "count" : "13"
+      }, {
+        "item" : "25",
+        "count" : "13"
+      }, {
+        "item" : "38",
+        "count" : "12"
+      }, {
+        "item" : "26",
+        "count" : "12"
+      }, {
+        "item" : "9",
+        "count" : "11"
+      }, {
+        "item" : "19",
+        "count" : "11"
+      }, {
+        "item" : "23",
+        "count" : "11"
+      }, {
+        "item" : "2",
+        "count" : "10"
+      }, {
+        "item" : "61",
+        "count" : "10"
+      }, {
+        "item" : "10",
+        "count" : "10"
+      }, {
+        "item" : "6",
+        "count" : "10"
+      }, {
+        "item" : "35",
+        "count" : "10"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461759,
+    "name" : "AAPI_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by Asian Americans or Pacific Islanders",
+    "fieldName" : "aapi_pct",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135876,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.155",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.039",
+        "count" : "21"
+      }, {
+        "item" : "0.023",
+        "count" : "20"
+      }, {
+        "item" : "0.019",
+        "count" : "20"
+      }, {
+        "item" : "0.016",
+        "count" : "18"
+      }, {
+        "item" : "0.026",
+        "count" : "18"
+      }, {
+        "item" : "0.030",
+        "count" : "17"
+      }, {
+        "item" : "0.032",
+        "count" : "17"
+      }, {
+        "item" : "0.033",
+        "count" : "16"
+      }, {
+        "item" : "0.034",
+        "count" : "16"
+      }, {
+        "item" : "0.028",
+        "count" : "16"
+      }, {
+        "item" : "0.020",
+        "count" : "16"
+      }, {
+        "item" : "0.015",
+        "count" : "14"
+      }, {
+        "item" : "0.017",
+        "count" : "14"
+      }, {
+        "item" : "0.021",
+        "count" : "14"
+      }, {
+        "item" : "0.037",
+        "count" : "14"
+      }, {
+        "item" : "0.022",
+        "count" : "14"
+      }, {
+        "item" : "0.027",
+        "count" : "12"
+      }, {
+        "item" : "0.014",
+        "count" : "12"
+      }, {
+        "item" : "0.038",
+        "count" : "11"
+      }, {
+        "item" : "0.044",
+        "count" : "10"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461757,
+    "name" : "AFERAMER_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to Black or African Americans",
+    "fieldName" : "aferamer_cnt",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135874,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "609",
+      "null" : "0",
+      "top" : [ {
+        "item" : "24",
+        "count" : "11"
+      }, {
+        "item" : "81",
+        "count" : "10"
+      }, {
+        "item" : "99",
+        "count" : "10"
+      }, {
+        "item" : "45",
+        "count" : "9"
+      }, {
+        "item" : "14",
+        "count" : "8"
+      }, {
+        "item" : "21",
+        "count" : "8"
+      }, {
+        "item" : "30",
+        "count" : "8"
+      }, {
+        "item" : "67",
+        "count" : "8"
+      }, {
+        "item" : "98",
+        "count" : "8"
+      }, {
+        "item" : "62",
+        "count" : "8"
+      }, {
+        "item" : "9",
+        "count" : "8"
+      }, {
+        "item" : "59",
+        "count" : "8"
+      }, {
+        "item" : "95",
+        "count" : "7"
+      }, {
+        "item" : "84",
+        "count" : "7"
+      }, {
+        "item" : "53",
+        "count" : "7"
+      }, {
+        "item" : "19",
+        "count" : "6"
+      }, {
+        "item" : "17",
+        "count" : "6"
+      }, {
+        "item" : "8",
+        "count" : "6"
+      }, {
+        "item" : "156",
+        "count" : "6"
+      }, {
+        "item" : "232",
+        "count" : "6"
+      } ],
+      "smallest" : "1",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461771,
+    "name" : "AFERAMER_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by Black or African Americans",
+    "fieldName" : "aferamer_pct",
+    "position" : 31,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135888,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.744",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.079",
+        "count" : "13"
+      }, {
+        "item" : "0.058",
+        "count" : "13"
+      }, {
+        "item" : "0.036",
+        "count" : "12"
+      }, {
+        "item" : "0.060",
+        "count" : "11"
+      }, {
+        "item" : "0.076",
+        "count" : "10"
+      }, {
+        "item" : "0.040",
+        "count" : "10"
+      }, {
+        "item" : "0.038",
+        "count" : "10"
+      }, {
+        "item" : "0.056",
+        "count" : "10"
+      }, {
+        "item" : "0.054",
+        "count" : "10"
+      }, {
+        "item" : "0.074",
+        "count" : "10"
+      }, {
+        "item" : "0.041",
+        "count" : "10"
+      }, {
+        "item" : "0.078",
+        "count" : "9"
+      }, {
+        "item" : "0.075",
+        "count" : "9"
+      }, {
+        "item" : "0.044",
+        "count" : "9"
+      }, {
+        "item" : "0.062",
+        "count" : "8"
+      }, {
+        "item" : "0.086",
+        "count" : "8"
+      }, {
+        "item" : "0.063",
+        "count" : "8"
+      }, {
+        "item" : "0.069",
+        "count" : "8"
+      }, {
+        "item" : "0.045",
+        "count" : "8"
+      }, {
+        "item" : "0.081",
+        "count" : "8"
+      } ],
+      "smallest" : "0.003",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461772,
+    "name" : "HISPLAT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to Hispanics or Latinos",
+    "fieldName" : "hisplat_cnt",
+    "position" : 32,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135889,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "773",
+      "null" : "0",
+      "top" : [ {
+        "item" : "28",
+        "count" : "8"
+      }, {
+        "item" : "179",
+        "count" : "8"
+      }, {
+        "item" : "25",
+        "count" : "8"
+      }, {
+        "item" : "17",
+        "count" : "8"
+      }, {
+        "item" : "45",
+        "count" : "8"
+      }, {
+        "item" : "18",
+        "count" : "8"
+      }, {
+        "item" : "23",
+        "count" : "8"
+      }, {
+        "item" : "112",
+        "count" : "8"
+      }, {
+        "item" : "88",
+        "count" : "7"
+      }, {
+        "item" : "106",
+        "count" : "6"
+      }, {
+        "item" : "41",
+        "count" : "6"
+      }, {
+        "item" : "236",
+        "count" : "6"
+      }, {
+        "item" : "133",
+        "count" : "6"
+      }, {
+        "item" : "29",
+        "count" : "6"
+      }, {
+        "item" : "172",
+        "count" : "6"
+      }, {
+        "item" : "31",
+        "count" : "6"
+      }, {
+        "item" : "108",
+        "count" : "6"
+      }, {
+        "item" : "168",
+        "count" : "6"
+      }, {
+        "item" : "170",
+        "count" : "6"
+      }, {
+        "item" : "274",
+        "count" : "6"
+      } ],
+      "smallest" : "1",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461793,
+    "name" : "HISPLAT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by Hispanics or Latinos",
+    "fieldName" : "hisplat_pct",
+    "position" : 33,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135910,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.441",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.092",
+        "count" : "12"
+      }, {
+        "item" : "0.082",
+        "count" : "10"
+      }, {
+        "item" : "0.073",
+        "count" : "10"
+      }, {
+        "item" : "0.102",
+        "count" : "10"
+      }, {
+        "item" : "0.100",
+        "count" : "10"
+      }, {
+        "item" : "0.138",
+        "count" : "10"
+      }, {
+        "item" : "0.071",
+        "count" : "10"
+      }, {
+        "item" : "0.086",
+        "count" : "10"
+      }, {
+        "item" : "0.179",
+        "count" : "9"
+      }, {
+        "item" : "0.066",
+        "count" : "8"
+      }, {
+        "item" : "0.077",
+        "count" : "8"
+      }, {
+        "item" : "0.099",
+        "count" : "8"
+      }, {
+        "item" : "0.173",
+        "count" : "8"
+      }, {
+        "item" : "0.087",
+        "count" : "8"
+      }, {
+        "item" : "0.108",
+        "count" : "8"
+      }, {
+        "item" : "0.074",
+        "count" : "8"
+      }, {
+        "item" : "0.094",
+        "count" : "8"
+      }, {
+        "item" : "0.081",
+        "count" : "8"
+      }, {
+        "item" : "0.057",
+        "count" : "8"
+      }, {
+        "item" : "0.084",
+        "count" : "8"
+      } ],
+      "smallest" : "0.003",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461776,
+    "name" : "WHITE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to White People",
+    "fieldName" : "white_cnt",
+    "position" : 34,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135893,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "5993",
+      "null" : "0",
+      "top" : [ {
+        "item" : "274",
+        "count" : "8"
+      }, {
+        "item" : "348",
+        "count" : "6"
+      }, {
+        "item" : "255",
+        "count" : "5"
+      }, {
+        "item" : "821",
+        "count" : "5"
+      }, {
+        "item" : "335",
+        "count" : "5"
+      }, {
+        "item" : "391",
+        "count" : "4"
+      }, {
+        "item" : "1149",
+        "count" : "4"
+      }, {
+        "item" : "441",
+        "count" : "4"
+      }, {
+        "item" : "299",
+        "count" : "4"
+      }, {
+        "item" : "782",
+        "count" : "4"
+      }, {
+        "item" : "1150",
+        "count" : "4"
+      }, {
+        "item" : "315",
+        "count" : "4"
+      }, {
+        "item" : "613",
+        "count" : "4"
+      }, {
+        "item" : "535",
+        "count" : "4"
+      }, {
+        "item" : "2041",
+        "count" : "4"
+      }, {
+        "item" : "269",
+        "count" : "4"
+      }, {
+        "item" : "296",
+        "count" : "4"
+      }, {
+        "item" : "605",
+        "count" : "4"
+      }, {
+        "item" : "2044",
+        "count" : "4"
+      }, {
+        "item" : "516",
+        "count" : "4"
+      } ],
+      "smallest" : "7",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461794,
+    "name" : "WHITE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by White People",
+    "fieldName" : "white_pct",
+    "position" : 35,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135911,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.916",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.695",
+        "count" : "8"
+      }, {
+        "item" : "0.788",
+        "count" : "8"
+      }, {
+        "item" : "0.622",
+        "count" : "8"
+      }, {
+        "item" : "0.628",
+        "count" : "6"
+      }, {
+        "item" : "0.760",
+        "count" : "6"
+      }, {
+        "item" : "0.527",
+        "count" : "6"
+      }, {
+        "item" : "0.630",
+        "count" : "6"
+      }, {
+        "item" : "0.580",
+        "count" : "6"
+      }, {
+        "item" : "0.758",
+        "count" : "6"
+      }, {
+        "item" : "0.577",
+        "count" : "6"
+      }, {
+        "item" : "0.651",
+        "count" : "6"
+      }, {
+        "item" : "0.804",
+        "count" : "6"
+      }, {
+        "item" : "0.796",
+        "count" : "6"
+      }, {
+        "item" : "0.652",
+        "count" : "6"
+      }, {
+        "item" : "0.698",
+        "count" : "5"
+      }, {
+        "item" : "0.593",
+        "count" : "5"
+      }, {
+        "item" : "0.662",
+        "count" : "5"
+      }, {
+        "item" : "0.667",
+        "count" : "5"
+      }, {
+        "item" : "0.795",
+        "count" : "4"
+      }, {
+        "item" : "0.640",
+        "count" : "4"
+      } ],
+      "smallest" : "0.036",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461770,
+    "name" : "MULTIRACE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to Multiracial People",
+    "fieldName" : "multirace_cnt",
+    "position" : 36,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135887,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "395",
+      "null" : "0",
+      "top" : [ {
+        "item" : "27",
+        "count" : "22"
+      }, {
+        "item" : "17",
+        "count" : "20"
+      }, {
+        "item" : "6",
+        "count" : "20"
+      }, {
+        "item" : "28",
+        "count" : "19"
+      }, {
+        "item" : "29",
+        "count" : "18"
+      }, {
+        "item" : "23",
+        "count" : "16"
+      }, {
+        "item" : "26",
+        "count" : "16"
+      }, {
+        "item" : "10",
+        "count" : "14"
+      }, {
+        "item" : "20",
+        "count" : "14"
+      }, {
+        "item" : "8",
+        "count" : "13"
+      }, {
+        "item" : "21",
+        "count" : "13"
+      }, {
+        "item" : "2",
+        "count" : "12"
+      }, {
+        "item" : "18",
+        "count" : "12"
+      }, {
+        "item" : "34",
+        "count" : "12"
+      }, {
+        "item" : "11",
+        "count" : "12"
+      }, {
+        "item" : "13",
+        "count" : "12"
+      }, {
+        "item" : "36",
+        "count" : "12"
+      }, {
+        "item" : "25",
+        "count" : "12"
+      }, {
+        "item" : "31",
+        "count" : "12"
+      }, {
+        "item" : "22",
+        "count" : "12"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461766,
+    "name" : "MULTIRACE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by Multiracial People",
+    "fieldName" : "multirace_pct",
+    "position" : 37,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135883,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.087",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.027",
+        "count" : "39"
+      }, {
+        "item" : "0.019",
+        "count" : "33"
+      }, {
+        "item" : "0.023",
+        "count" : "28"
+      }, {
+        "item" : "0.024",
+        "count" : "27"
+      }, {
+        "item" : "0.029",
+        "count" : "26"
+      }, {
+        "item" : "0.020",
+        "count" : "26"
+      }, {
+        "item" : "0.032",
+        "count" : "25"
+      }, {
+        "item" : "0.028",
+        "count" : "24"
+      }, {
+        "item" : "0.026",
+        "count" : "22"
+      }, {
+        "item" : "0.022",
+        "count" : "19"
+      }, {
+        "item" : "0.025",
+        "count" : "18"
+      }, {
+        "item" : "0.021",
+        "count" : "18"
+      }, {
+        "item" : "0.031",
+        "count" : "18"
+      }, {
+        "item" : "0.030",
+        "count" : "18"
+      }, {
+        "item" : "0.033",
+        "count" : "17"
+      }, {
+        "item" : "0.018",
+        "count" : "16"
+      }, {
+        "item" : "0.034",
+        "count" : "16"
+      }, {
+        "item" : "0.037",
+        "count" : "14"
+      }, {
+        "item" : "0.015",
+        "count" : "14"
+      }, {
+        "item" : "0.039",
+        "count" : "13"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461791,
+    "name" : "USNONRES_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to U.S. Non-Residents",
+    "fieldName" : "usnonres_cnt",
+    "position" : 38,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135908,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "1618",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "84"
+      }, {
+        "item" : "3",
+        "count" : "42"
+      }, {
+        "item" : "2",
+        "count" : "40"
+      }, {
+        "item" : "4",
+        "count" : "37"
+      }, {
+        "item" : "1",
+        "count" : "33"
+      }, {
+        "item" : "7",
+        "count" : "26"
+      }, {
+        "item" : "5",
+        "count" : "22"
+      }, {
+        "item" : "6",
+        "count" : "21"
+      }, {
+        "item" : "8",
+        "count" : "16"
+      }, {
+        "item" : "18",
+        "count" : "14"
+      }, {
+        "item" : "13",
+        "count" : "12"
+      }, {
+        "item" : "9",
+        "count" : "12"
+      }, {
+        "item" : "21",
+        "count" : "10"
+      }, {
+        "item" : "10",
+        "count" : "10"
+      }, {
+        "item" : "17",
+        "count" : "9"
+      }, {
+        "item" : "14",
+        "count" : "8"
+      }, {
+        "item" : "34",
+        "count" : "8"
+      }, {
+        "item" : "29",
+        "count" : "8"
+      }, {
+        "item" : "20",
+        "count" : "8"
+      }, {
+        "item" : "12",
+        "count" : "8"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461787,
+    "name" : "USNONRES_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by U.S. Non-Residents",
+    "fieldName" : "usnonres_pct",
+    "position" : 39,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135904,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.180",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.000",
+        "count" : "84"
+      }, {
+        "item" : "0.003",
+        "count" : "41"
+      }, {
+        "item" : "0.005",
+        "count" : "33"
+      }, {
+        "item" : "0.007",
+        "count" : "31"
+      }, {
+        "item" : "0.002",
+        "count" : "28"
+      }, {
+        "item" : "0.010",
+        "count" : "26"
+      }, {
+        "item" : "0.004",
+        "count" : "26"
+      }, {
+        "item" : "0.006",
+        "count" : "25"
+      }, {
+        "item" : "0.008",
+        "count" : "21"
+      }, {
+        "item" : "0.009",
+        "count" : "20"
+      }, {
+        "item" : "0.012",
+        "count" : "20"
+      }, {
+        "item" : "0.011",
+        "count" : "16"
+      }, {
+        "item" : "0.013",
+        "count" : "15"
+      }, {
+        "item" : "0.001",
+        "count" : "12"
+      }, {
+        "item" : "0.027",
+        "count" : "8"
+      }, {
+        "item" : "0.078",
+        "count" : "8"
+      }, {
+        "item" : "0.014",
+        "count" : "7"
+      }, {
+        "item" : "0.015",
+        "count" : "7"
+      }, {
+        "item" : "0.037",
+        "count" : "7"
+      }, {
+        "item" : "0.022",
+        "count" : "6"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 591461773,
+    "name" : "UNKNRACE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of Awards Conferred to People of an Unknown Race",
+    "fieldName" : "unknrace_cnt",
+    "position" : 40,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135890,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "545",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3",
+        "count" : "31"
+      }, {
+        "item" : "5",
+        "count" : "30"
+      }, {
+        "item" : "7",
+        "count" : "28"
+      }, {
+        "item" : "4",
+        "count" : "26"
+      }, {
+        "item" : "1",
+        "count" : "25"
+      }, {
+        "item" : "2",
+        "count" : "25"
+      }, {
+        "item" : "12",
+        "count" : "21"
+      }, {
+        "item" : "28",
+        "count" : "20"
+      }, {
+        "item" : "6",
+        "count" : "19"
+      }, {
+        "item" : "9",
+        "count" : "19"
+      }, {
+        "item" : "27",
+        "count" : "18"
+      }, {
+        "item" : "8",
+        "count" : "18"
+      }, {
+        "item" : "24",
+        "count" : "16"
+      }, {
+        "item" : "14",
+        "count" : "16"
+      }, {
+        "item" : "11",
+        "count" : "16"
+      }, {
+        "item" : "0",
+        "count" : "16"
+      }, {
+        "item" : "20",
+        "count" : "15"
+      }, {
+        "item" : "10",
+        "count" : "15"
+      }, {
+        "item" : "36",
+        "count" : "14"
+      }, {
+        "item" : "19",
+        "count" : "14"
+      } ],
+      "smallest" : "0",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : { }
+  }, {
+    "id" : 591461756,
+    "name" : "UNKNRACE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent of Total Awards Conferred by People of an Unknown Race",
+    "fieldName" : "unknrace_pct",
+    "position" : 41,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152135873,
+    "cachedContents" : {
+      "non_null" : "644",
+      "largest" : "0.176",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.006",
+        "count" : "29"
+      }, {
+        "item" : "0.013",
+        "count" : "28"
+      }, {
+        "item" : "0.018",
+        "count" : "26"
+      }, {
+        "item" : "0.015",
+        "count" : "26"
+      }, {
+        "item" : "0.014",
+        "count" : "24"
+      }, {
+        "item" : "0.012",
+        "count" : "23"
+      }, {
+        "item" : "0.009",
+        "count" : "23"
+      }, {
+        "item" : "0.016",
+        "count" : "23"
+      }, {
+        "item" : "0.017",
+        "count" : "22"
+      }, {
+        "item" : "0.008",
+        "count" : "21"
+      }, {
+        "item" : "0.010",
+        "count" : "20"
+      }, {
+        "item" : "0.011",
+        "count" : "19"
+      }, {
+        "item" : "0.019",
+        "count" : "18"
+      }, {
+        "item" : "0.002",
+        "count" : "18"
+      }, {
+        "item" : "0.001",
+        "count" : "18"
+      }, {
+        "item" : "0.007",
+        "count" : "18"
+      }, {
+        "item" : "0.000",
+        "count" : "16"
+      }, {
+        "item" : "0.022",
+        "count" : "15"
+      }, {
+        "item" : "0.020",
+        "count" : "15"
+      }, {
+        "item" : "0.003",
+        "count" : "14"
+      } ],
+      "smallest" : "0.000",
+      "count" : "644",
+      "cardinality" : "644"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "One year of degrees and certificates conferred per institution of higher education",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "degrees", "degrees awarded", "degrees conferred", "degrees obtained", "race", "race and ethnicity", "university", "graduation", "demographics", "undergraduate education", "graduate education", "community college", "certificates", "certificates awarded", "master", "bachelor", "doctorate", "doctoral", "associate", "post-bachelor" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,2097 @@
+{
+  "id" : "iyks-y3g6",
+  "name" : "Current Licensed and Funded Early Education and Care Programs",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "attributionLink" : "https://www.mass.gov/lists/data-on-licensed-and-funded-child-care-programs",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1758737994,
+  "description" : "This dataset includes a snapshot of programs currently licensed or funded by the Department of Early Education and Care (EEC). The data is pulled from EEC's Licensing Education Analytic Database (LEAD).  For a list of all current and historical early education and care programs please visit the <a href=\"https://educationtocareer.data.mass.gov/Early-Education-and-Care-/Licensed-and-Funded-Early-Education-and-Care-Progr/dn4d-tjbb/about_data\">Licensed and Funded Early Education and Care Programs</a> dataset. Data are updated monthly at the beginning of each month.<p><strong>Licensed</strong> programs are programs that are subject to licensing regulations by EEC, which include meeting health and safety standards, training and professional development requirements, criminal and background checks, and maintaining appropriate ratios of educators to children. Licensed programs can include any of the following: family child care and group and school age programs. <a href=\"https://www.mass.gov/guides/find-a-licensed-family-group-or-school-age-child-care-program\"target=\"_blank\" rel=\"noopener noreferrer\">For more information on licensed programs click here.</a><p><strong>Funded</strong> programs are programs that are not subject to licensure by EEC but have the approval from EEC to provide subsidized child care for low-income or at-risk families. Funded programs can include any of the following: public schools; private schools; religious schools; and government, tribal, and military child care programs. <a href=\"https://www.mass.gov/guides/eec-funded-programs\"target=\"_blank\" rel=\"noopener noreferrer\">For more information on funded providers click here.</a> <p>The types of programs in this dataset include: <p><ul> <li><strong>Licensed Family Child Care</strong> is child care provided in someone's home where the caretaker is not related to the children.</li><p><li><strong>Licensed Center-Based Care</strong>, sometimes called group and school age programs, provide early education and care for young children in a non-residential setting such as a school or community center. These programs include several types of early education and care such as: Center-based care for infants, toddlers, preschool, or kindergarten age children; Early Head Start and Head Start programs; and Out-of- school time programs that operate before/after school or during the summer.</li><p><li><strong>Funded Public Schools</strong> that participate in CCFA are included here and public schools that do not participate in CCFA are not included here. For data on all public schools with pre-K enrollment, please see the<a href=\"https://educationtocareer.data.mass.gov/Students-and-Teachers/Pre-Kindergarten-and-Kindergarten-Enrollment/rg9w-dkpg/about_data\"> Pre-Kindergarten and Kindergarten Enrollment dataset.</a></li><p><li><strong>Funded Private Schools</strong> that participate in CCFA are included here and private schools that do not participate in CCFA are not included here. For data on all private schools with pre-K enrollment, please see the <a href=\"https://educationtocareer.data.mass.gov/Students-and-Teachers/Non-Public-School-Enrollment/cbbr-jpy4/about_data\">Non-Public School Enrollment dataset.</a></li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 618,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42037076,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1774901755,
+  "publicationGroup" : 20104847,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790016147,
+  "rowsUpdatedBy" : "m5tk-n3hd",
+  "tableId" : 20324539,
+  "totalTimesRated" : 0,
+  "viewCount" : 5125,
+  "viewLastModified" : 1790016131,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1761055269,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7408202,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1761054609,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1761055269,
+      "failureCount" : 0,
+      "startedAt" : 1761055269,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 629623708,
+    "name" : "PROVIDER_NUMBER",
+    "dataTypeName" : "text",
+    "description" : "Unique program number from EEC’s Licensing Education Analytic Database (LEAD)",
+    "fieldName" : "provider_number",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040850,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "P-275226",
+      "null" : "0",
+      "top" : [ {
+        "item" : "P-170189",
+        "count" : "1"
+      }, {
+        "item" : "P-170756",
+        "count" : "1"
+      }, {
+        "item" : "P-260193",
+        "count" : "1"
+      }, {
+        "item" : "P-186882",
+        "count" : "1"
+      }, {
+        "item" : "P-269046",
+        "count" : "1"
+      }, {
+        "item" : "P-244626",
+        "count" : "1"
+      }, {
+        "item" : "P-177174",
+        "count" : "1"
+      }, {
+        "item" : "P-173059",
+        "count" : "1"
+      }, {
+        "item" : "P-185800",
+        "count" : "1"
+      }, {
+        "item" : "P-244194",
+        "count" : "1"
+      }, {
+        "item" : "P-178339",
+        "count" : "1"
+      }, {
+        "item" : "P-247273",
+        "count" : "1"
+      }, {
+        "item" : "P-247189",
+        "count" : "1"
+      }, {
+        "item" : "P-178041",
+        "count" : "1"
+      }, {
+        "item" : "P-171273",
+        "count" : "1"
+      }, {
+        "item" : "P-253613",
+        "count" : "1"
+      }, {
+        "item" : "P-174169",
+        "count" : "1"
+      }, {
+        "item" : "P-264476",
+        "count" : "1"
+      }, {
+        "item" : "P-185575",
+        "count" : "1"
+      }, {
+        "item" : "P-262256",
+        "count" : "1"
+      } ],
+      "smallest" : "P-169294",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623709,
+    "name" : "PROGRAM_NAME",
+    "dataTypeName" : "text",
+    "description" : "Program name",
+    "fieldName" : "program_name",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040849,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "Zurheide, Marie",
+      "null" : "0",
+      "top" : [ {
+        "item" : "The Goddard School",
+        "count" : "19"
+      }, {
+        "item" : "Kindercare Learning Center",
+        "count" : "13"
+      }, {
+        "item" : "The Learning Experience",
+        "count" : "12"
+      }, {
+        "item" : "Knowledge Beginnings",
+        "count" : "9"
+      }, {
+        "item" : "Pine Village Preschool",
+        "count" : "8"
+      }, {
+        "item" : "KinderCare Learning Center",
+        "count" : "8"
+      }, {
+        "item" : "Kinder Care Learning Center",
+        "count" : "6"
+      }, {
+        "item" : "Cambridge Preschool of the Arts",
+        "count" : "4"
+      }, {
+        "item" : "The Kids' Place",
+        "count" : "4"
+      }, {
+        "item" : "First Circle Learning Center",
+        "count" : "4"
+      }, {
+        "item" : "Early Risers",
+        "count" : "4"
+      }, {
+        "item" : "123 Grow Child Center, Inc.",
+        "count" : "3"
+      }, {
+        "item" : "Spanish Immersion Montessori School",
+        "count" : "3"
+      }, {
+        "item" : "Little Panda Early Learning and Care Center",
+        "count" : "3"
+      }, {
+        "item" : "Mighty Oaks Montessori School",
+        "count" : "3"
+      }, {
+        "item" : "Learning House Preschool",
+        "count" : "3"
+      }, {
+        "item" : "Children's House Learning Inc.",
+        "count" : "3"
+      }, {
+        "item" : "De La Cruz, Maria",
+        "count" : "3"
+      }, {
+        "item" : "The Magical Years Early Learning Center, Inc.",
+        "count" : "3"
+      }, {
+        "item" : "Roots Learning Center",
+        "count" : "3"
+      } ],
+      "smallest" : "123 Grow Child Center, Inc.",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623710,
+    "name" : "PROGRAM_UMBRELLA",
+    "dataTypeName" : "text",
+    "description" : "Program umbrella organization",
+    "fieldName" : "program_umbrella",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040848,
+    "cachedContents" : {
+      "non_null" : "3139",
+      "largest" : "Zorn Fruherziehung, LLC",
+      "null" : "6078",
+      "top" : [ {
+        "item" : "KinderCare Education, LLC",
+        "count" : "116"
+      }, {
+        "item" : "Bright Horizons Children’s Centers, LLC",
+        "count" : "60"
+      }, {
+        "item" : "YMCA of Greater Boston",
+        "count" : "59"
+      }, {
+        "item" : "YMCA of The North Shore",
+        "count" : "40"
+      }, {
+        "item" : "Old Colony YMCA",
+        "count" : "35"
+      }, {
+        "item" : "Cadence Education, LLC",
+        "count" : "29"
+      }, {
+        "item" : "Little Sprouts, LLC",
+        "count" : "24"
+      }, {
+        "item" : "AlphaBest Education Inc",
+        "count" : "23"
+      }, {
+        "item" : "Archdiocese of Boston Schools",
+        "count" : "22"
+      }, {
+        "item" : "MB Imagine ECE, LLC",
+        "count" : "20"
+      }, {
+        "item" : "Action For Boston Community Development, Inc./ABCD",
+        "count" : "20"
+      }, {
+        "item" : "Four Rohwers, Inc.",
+        "count" : "19"
+      }, {
+        "item" : "Guild of St. Agnes",
+        "count" : "19"
+      }, {
+        "item" : "For Kids Only After School, Incorporated",
+        "count" : "17"
+      }, {
+        "item" : "Hockomock Area YMCA",
+        "count" : "16"
+      }, {
+        "item" : "INSPIRE EARLY EDUCATION LTD",
+        "count" : "12"
+      }, {
+        "item" : "City of Cambridge, Department of Human Service Programs",
+        "count" : "12"
+      }, {
+        "item" : "Community Day Care of Lawrence, Inc.",
+        "count" : "12"
+      }, {
+        "item" : "BrightPath Early Learning LLC",
+        "count" : "11"
+      }, {
+        "item" : "Community Teamwork, Inc.",
+        "count" : "11"
+      } ],
+      "smallest" : "12 Bradstreet Avenue, LLC",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623711,
+    "name" : "PROGRAM_STREET_ADDRESS1",
+    "dataTypeName" : "text",
+    "description" : "Program street address (line 1)",
+    "fieldName" : "program_street_address1",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040847,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "Woodsdale Elementary School",
+      "null" : "0",
+      "top" : [ {
+        "item" : "11 WEBSTER ST",
+        "count" : "2"
+      }, {
+        "item" : "346 Central St",
+        "count" : "2"
+      }, {
+        "item" : "291 Talbot Ave",
+        "count" : "2"
+      }, {
+        "item" : "5 DAMON ST",
+        "count" : "2"
+      }, {
+        "item" : "800 HIGHLAND AVE",
+        "count" : "2"
+      }, {
+        "item" : "116 School Street",
+        "count" : "2"
+      }, {
+        "item" : "1575 Tremont St",
+        "count" : "2"
+      }, {
+        "item" : "12 Gilmore Street",
+        "count" : "2"
+      }, {
+        "item" : "1 CHURCH ST",
+        "count" : "2"
+      }, {
+        "item" : "169 PLEASANT ST",
+        "count" : "2"
+      }, {
+        "item" : "20 Brayton Hill Terrace",
+        "count" : "2"
+      }, {
+        "item" : "115 Main Street",
+        "count" : "2"
+      }, {
+        "item" : "15 Cookson Terrace",
+        "count" : "2"
+      }, {
+        "item" : "451 MAIN ST",
+        "count" : "2"
+      }, {
+        "item" : "1 Erin Lane",
+        "count" : "2"
+      }, {
+        "item" : "151 Route 130",
+        "count" : "2"
+      }, {
+        "item" : "26 CLINTON ST",
+        "count" : "2"
+      }, {
+        "item" : "596 South Bridge Street",
+        "count" : "2"
+      }, {
+        "item" : "777 RANDOLPH AVE",
+        "count" : "2"
+      }, {
+        "item" : "16 Spring Street",
+        "count" : "2"
+      } ],
+      "smallest" : "00 LYMAN STREET",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623712,
+    "name" : "PROGRAM_STREET_ADDRESS2",
+    "dataTypeName" : "text",
+    "description" : "Program street address (line 2)",
+    "fieldName" : "program_street_address2",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040846,
+    "cachedContents" : {
+      "non_null" : "371",
+      "largest" : "(West Tisbury)",
+      "null" : "8846",
+      "top" : [ {
+        "item" : "Apt 1",
+        "count" : "29"
+      }, {
+        "item" : "Apt 2",
+        "count" : "15"
+      }, {
+        "item" : "1st Floor",
+        "count" : "15"
+      }, {
+        "item" : "2nd Floor",
+        "count" : "10"
+      }, {
+        "item" : "apt 1",
+        "count" : "9"
+      }, {
+        "item" : "#1",
+        "count" : "8"
+      }, {
+        "item" : "Apt. 2",
+        "count" : "6"
+      }, {
+        "item" : "1",
+        "count" : "6"
+      }, {
+        "item" : "2nd floor",
+        "count" : "5"
+      }, {
+        "item" : "apt 2",
+        "count" : "5"
+      }, {
+        "item" : "Apt. 1",
+        "count" : "3"
+      }, {
+        "item" : "2",
+        "count" : "3"
+      }, {
+        "item" : "Unit 2",
+        "count" : "3"
+      }, {
+        "item" : "#2",
+        "count" : "3"
+      }, {
+        "item" : "Apartment 1",
+        "count" : "3"
+      }, {
+        "item" : "Unit 1",
+        "count" : "3"
+      }, {
+        "item" : "Apt #1",
+        "count" : "2"
+      }, {
+        "item" : "Apt1",
+        "count" : "2"
+      }, {
+        "item" : "#3",
+        "count" : "2"
+      }, {
+        "item" : "129 Granite St.",
+        "count" : "2"
+      } ],
+      "smallest" : "01830",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623713,
+    "name" : "PROGRAM_CITY",
+    "dataTypeName" : "text",
+    "description" : "Program city",
+    "fieldName" : "program_city",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040845,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "Yarmouth Port",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Lawrence",
+        "count" : "504"
+      }, {
+        "item" : "Springfield",
+        "count" : "476"
+      }, {
+        "item" : "Worcester",
+        "count" : "420"
+      }, {
+        "item" : "Lowell",
+        "count" : "288"
+      }, {
+        "item" : "Lynn",
+        "count" : "263"
+      }, {
+        "item" : "Boston",
+        "count" : "229"
+      }, {
+        "item" : "Dorchester",
+        "count" : "227"
+      }, {
+        "item" : "Brockton",
+        "count" : "167"
+      }, {
+        "item" : "Methuen",
+        "count" : "156"
+      }, {
+        "item" : "Haverhill",
+        "count" : "148"
+      }, {
+        "item" : "Everett",
+        "count" : "139"
+      }, {
+        "item" : "Framingham",
+        "count" : "133"
+      }, {
+        "item" : "Fitchburg",
+        "count" : "120"
+      }, {
+        "item" : "Revere",
+        "count" : "115"
+      }, {
+        "item" : "Hyde Park",
+        "count" : "113"
+      }, {
+        "item" : "Malden",
+        "count" : "107"
+      }, {
+        "item" : "Cambridge",
+        "count" : "105"
+      }, {
+        "item" : "Fall River",
+        "count" : "102"
+      }, {
+        "item" : "Peabody",
+        "count" : "91"
+      }, {
+        "item" : "Quincy",
+        "count" : "90"
+      } ],
+      "smallest" : "Abington",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623714,
+    "name" : "PROGRAM_ZIPCODE",
+    "dataTypeName" : "text",
+    "description" : "Program zip code",
+    "fieldName" : "program_zipcode",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040820,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "27101",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01841",
+        "count" : "297"
+      }, {
+        "item" : "01843",
+        "count" : "148"
+      }, {
+        "item" : "01844",
+        "count" : "133"
+      }, {
+        "item" : "02149",
+        "count" : "127"
+      }, {
+        "item" : "02124",
+        "count" : "126"
+      }, {
+        "item" : "02136",
+        "count" : "114"
+      }, {
+        "item" : "02151",
+        "count" : "109"
+      }, {
+        "item" : "01902",
+        "count" : "105"
+      }, {
+        "item" : "02121",
+        "count" : "99"
+      }, {
+        "item" : "01604",
+        "count" : "99"
+      }, {
+        "item" : "02148",
+        "count" : "92"
+      }, {
+        "item" : "01108",
+        "count" : "86"
+      }, {
+        "item" : "01420",
+        "count" : "86"
+      }, {
+        "item" : "01104",
+        "count" : "85"
+      }, {
+        "item" : "01109",
+        "count" : "85"
+      }, {
+        "item" : "02126",
+        "count" : "84"
+      }, {
+        "item" : "01852",
+        "count" : "80"
+      }, {
+        "item" : "02301",
+        "count" : "75"
+      }, {
+        "item" : "02131",
+        "count" : "74"
+      }, {
+        "item" : "01960",
+        "count" : "72"
+      } ],
+      "smallest" : "01001",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623742,
+    "name" : "PROGRAM_LATITUDE",
+    "dataTypeName" : "number",
+    "description" : "A geographic coordinate that specifies the north-south position of the specific program. Measure available beginning 12/2/2025.",
+    "fieldName" : "program_latitude",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166554566,
+    "cachedContents" : {
+      "non_null" : "9208",
+      "largest" : "53.8654673000",
+      "null" : "9",
+      "top" : [ {
+        "item" : "42.2526375000",
+        "count" : "3"
+      }, {
+        "item" : "42.3335003000",
+        "count" : "3"
+      }, {
+        "item" : "42.2441928000",
+        "count" : "3"
+      }, {
+        "item" : "42.2614366000",
+        "count" : "2"
+      }, {
+        "item" : "42.7239670000",
+        "count" : "2"
+      }, {
+        "item" : "42.2377740000",
+        "count" : "2"
+      }, {
+        "item" : "42.2781783000",
+        "count" : "2"
+      }, {
+        "item" : "42.2754103000",
+        "count" : "2"
+      }, {
+        "item" : "42.4808604000",
+        "count" : "2"
+      }, {
+        "item" : "42.5013340000",
+        "count" : "2"
+      }, {
+        "item" : "42.3621210000",
+        "count" : "2"
+      }, {
+        "item" : "42.2713852000",
+        "count" : "2"
+      }, {
+        "item" : "42.5891558000",
+        "count" : "2"
+      }, {
+        "item" : "42.3646370000",
+        "count" : "2"
+      }, {
+        "item" : "42.7148480000",
+        "count" : "2"
+      }, {
+        "item" : "42.2833010000",
+        "count" : "2"
+      }, {
+        "item" : "42.2534730000",
+        "count" : "2"
+      }, {
+        "item" : "42.2412060000",
+        "count" : "2"
+      }, {
+        "item" : "42.6307230000",
+        "count" : "2"
+      }, {
+        "item" : "42.2952079000",
+        "count" : "2"
+      } ],
+      "smallest" : "15.9128998000",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623741,
+    "name" : "PROGRAM_LONGITUDE",
+    "dataTypeName" : "number",
+    "description" : "A geographic coordinate that specifies the east-west position of the specific program. Measure available beginning 12/2/2025.",
+    "fieldName" : "program_longitude",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166554565,
+    "cachedContents" : {
+      "non_null" : "9208",
+      "largest" : "79.7399875000",
+      "null" : "9",
+      "top" : [ {
+        "item" : "-71.1018171000",
+        "count" : "3"
+      }, {
+        "item" : "-71.7901494000",
+        "count" : "3"
+      }, {
+        "item" : "-71.0527018000",
+        "count" : "3"
+      }, {
+        "item" : "-71.7886620000",
+        "count" : "3"
+      }, {
+        "item" : "-71.0025660000",
+        "count" : "2"
+      }, {
+        "item" : "-70.7678070000",
+        "count" : "2"
+      }, {
+        "item" : "-71.4157479000",
+        "count" : "2"
+      }, {
+        "item" : "-71.1964660000",
+        "count" : "2"
+      }, {
+        "item" : "-70.9271702000",
+        "count" : "2"
+      }, {
+        "item" : "-71.1412134000",
+        "count" : "2"
+      }, {
+        "item" : "-71.1608422000",
+        "count" : "2"
+      }, {
+        "item" : "-71.0619641000",
+        "count" : "2"
+      }, {
+        "item" : "-71.1551200000",
+        "count" : "2"
+      }, {
+        "item" : "-72.5827110000",
+        "count" : "2"
+      }, {
+        "item" : "-71.0698030000",
+        "count" : "2"
+      }, {
+        "item" : "-71.0910870000",
+        "count" : "2"
+      }, {
+        "item" : "-73.1205750000",
+        "count" : "2"
+      }, {
+        "item" : "-71.1803131000",
+        "count" : "2"
+      }, {
+        "item" : "-71.2347260000",
+        "count" : "2"
+      }, {
+        "item" : "-73.1367861000",
+        "count" : "2"
+      } ],
+      "smallest" : "-82.9071230000",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623715,
+    "name" : "PROGRAM_PHONE",
+    "dataTypeName" : "text",
+    "description" : "Program phone number",
+    "fieldName" : "program_phone",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040821,
+    "cachedContents" : {
+      "non_null" : "9213",
+      "largest" : "(988) 907-0526",
+      "null" : "4",
+      "top" : [ {
+        "item" : "(508) 530-1928",
+        "count" : "15"
+      }, {
+        "item" : "(781) 812-8735",
+        "count" : "12"
+      }, {
+        "item" : "(508) 894-4257",
+        "count" : "10"
+      }, {
+        "item" : "(508) 833-4796",
+        "count" : "10"
+      }, {
+        "item" : "(971) 438-6709",
+        "count" : "10"
+      }, {
+        "item" : "(413) 568-8631",
+        "count" : "9"
+      }, {
+        "item" : "(617) 659-5307",
+        "count" : "8"
+      }, {
+        "item" : "(978) 564-3929",
+        "count" : "7"
+      }, {
+        "item" : "(508) 779-7365",
+        "count" : "7"
+      }, {
+        "item" : "(508) 222-0309",
+        "count" : "7"
+      }, {
+        "item" : "(857) 208-6356",
+        "count" : "7"
+      }, {
+        "item" : "(617) 625-6600",
+        "count" : "7"
+      }, {
+        "item" : "(978) 686-4098",
+        "count" : "7"
+      }, {
+        "item" : "(719) 216-6014",
+        "count" : "6"
+      }, {
+        "item" : "(603) 944-6037",
+        "count" : "6"
+      }, {
+        "item" : "(857) 201-9996",
+        "count" : "6"
+      }, {
+        "item" : "(857) 205-5632",
+        "count" : "6"
+      }, {
+        "item" : "(413) 739-6955",
+        "count" : "6"
+      }, {
+        "item" : "(857) 259-5211",
+        "count" : "6"
+      }, {
+        "item" : "(978) 667-2193",
+        "count" : "6"
+      } ],
+      "smallest" : "(061) 953-0373",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623716,
+    "name" : "LICENSING_REGION",
+    "dataTypeName" : "text",
+    "description" : "Regional office that oversees program’s licensing",
+    "fieldName" : "licensing_region",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040822,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "Western",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Northeast",
+        "count" : "2361"
+      }, {
+        "item" : "Metro Boston",
+        "count" : "2146"
+      }, {
+        "item" : "Central",
+        "count" : "1758"
+      }, {
+        "item" : "Southeast and Cape",
+        "count" : "1588"
+      }, {
+        "item" : "Western",
+        "count" : "1364"
+      } ],
+      "smallest" : "Central",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623717,
+    "name" : "SUBSIDY_REGION",
+    "dataTypeName" : "text",
+    "description" : "Region for the purpose of subsidy administration",
+    "fieldName" : "subsidy_region",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040823,
+    "cachedContents" : {
+      "non_null" : "9216",
+      "largest" : "Region 6",
+      "null" : "1",
+      "top" : [ {
+        "item" : "Region 4",
+        "count" : "2143"
+      }, {
+        "item" : "Region 3",
+        "count" : "2069"
+      }, {
+        "item" : "Region 2",
+        "count" : "1283"
+      }, {
+        "item" : "Region 5",
+        "count" : "1274"
+      }, {
+        "item" : "Region 6",
+        "count" : "1242"
+      }, {
+        "item" : "Region 1",
+        "count" : "1205"
+      } ],
+      "smallest" : "Region 1",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623718,
+    "name" : "PROGRAM_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Types of Child Care Programs: Family Child Care, Center-based Care (also known as Group and School Age), Public School, Private School",
+    "fieldName" : "program_type",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040824,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "Public School",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Family Child Care",
+        "count" : "6078"
+      }, {
+        "item" : "Center-based Care",
+        "count" : "3019"
+      }, {
+        "item" : "Public School",
+        "count" : "85"
+      }, {
+        "item" : "Private School",
+        "count" : "35"
+      } ],
+      "smallest" : "Center-based Care",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623719,
+    "name" : "LICENSED_FUNDED",
+    "dataTypeName" : "text",
+    "description" : "Program's status as licensed or funded.",
+    "fieldName" : "licensed_funded",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040825,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "Licensed",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Licensed",
+        "count" : "9097"
+      }, {
+        "item" : "Funded",
+        "count" : "120"
+      } ],
+      "smallest" : "Funded",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623720,
+    "name" : "LICENSED_PROVIDER_STATUS",
+    "dataTypeName" : "text",
+    "description" : "Applies only to licensed programs. Contains the values: current, expired, or renewal in progress. Will be null for funded programs.",
+    "fieldName" : "licensed_provider_status",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040826,
+    "cachedContents" : {
+      "non_null" : "9101",
+      "largest" : "Renewal in progress",
+      "null" : "116",
+      "top" : [ {
+        "item" : "Current",
+        "count" : "8334"
+      }, {
+        "item" : "Renewal in progress",
+        "count" : "750"
+      }, {
+        "item" : "Expired",
+        "count" : "13"
+      }, {
+        "item" : "Regional Enrollment Freeze",
+        "count" : "4"
+      } ],
+      "smallest" : "Current",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623721,
+    "name" : "FUNDED_PROVIDER_STATUS",
+    "dataTypeName" : "text",
+    "description" : "Applies only to funded programs. Contains the values: current, expired, or funding renewal in progress. Will be null for licensed programs.",
+    "fieldName" : "funded_provider_status",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040827,
+    "cachedContents" : {
+      "non_null" : "120",
+      "largest" : "Funding Renewal In Progress",
+      "null" : "9097",
+      "top" : [ {
+        "item" : "Current",
+        "count" : "87"
+      }, {
+        "item" : "Funding Renewal In Progress",
+        "count" : "31"
+      }, {
+        "item" : "Expired",
+        "count" : "2"
+      } ],
+      "smallest" : "Current",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623722,
+    "name" : "REGULATORY_STATUS",
+    "dataTypeName" : "text",
+    "description" : "Applies only to FCCs. May have the values active or inactive. Value will be null for non-FCC programs. Fore more information about FCC inactive status, see https://www.mass.gov/doc/inactive-policy-for-family-child-care/download#:~:text=Inactive%20Status%20allows%20a%20Family,the%20outcome%20of%20an%20investigation.",
+    "fieldName" : "regulatory_status",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040828,
+    "cachedContents" : {
+      "non_null" : "6078",
+      "largest" : "Inactive",
+      "null" : "3139",
+      "top" : [ {
+        "item" : "Active",
+        "count" : "5878"
+      }, {
+        "item" : "Inactive",
+        "count" : "200"
+      } ],
+      "smallest" : "Active",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623723,
+    "name" : "FIRST_ISSUED_DATE",
+    "dataTypeName" : "text",
+    "description" : "Date the program first received license from EEC or was approved to be funded by EEC",
+    "fieldName" : "first_issued_date",
+    "position" : 19,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040829,
+    "cachedContents" : {
+      "non_null" : "9216",
+      "largest" : "2026-09-01",
+      "null" : "1",
+      "top" : [ {
+        "item" : "2022-08-30",
+        "count" : "13"
+      }, {
+        "item" : "2023-09-21",
+        "count" : "12"
+      }, {
+        "item" : "2025-09-03",
+        "count" : "12"
+      }, {
+        "item" : "2026-01-05",
+        "count" : "12"
+      }, {
+        "item" : "2023-12-08",
+        "count" : "12"
+      }, {
+        "item" : "2022-08-29",
+        "count" : "12"
+      }, {
+        "item" : "2025-08-27",
+        "count" : "11"
+      }, {
+        "item" : "2023-09-05",
+        "count" : "11"
+      }, {
+        "item" : "2022-09-02",
+        "count" : "10"
+      }, {
+        "item" : "2024-10-21",
+        "count" : "10"
+      }, {
+        "item" : "2025-01-06",
+        "count" : "10"
+      }, {
+        "item" : "2025-07-28",
+        "count" : "9"
+      }, {
+        "item" : "1987-08-16",
+        "count" : "9"
+      }, {
+        "item" : "2018-09-04",
+        "count" : "9"
+      }, {
+        "item" : "2024-07-15",
+        "count" : "9"
+      }, {
+        "item" : "2024-12-12",
+        "count" : "9"
+      }, {
+        "item" : "2025-09-09",
+        "count" : "9"
+      }, {
+        "item" : "2025-09-02",
+        "count" : "9"
+      }, {
+        "item" : "2026-04-17",
+        "count" : "9"
+      }, {
+        "item" : "2021-08-30",
+        "count" : "9"
+      } ],
+      "smallest" : "1980-01-04",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623724,
+    "name" : "LICENSED_CAPACITY",
+    "dataTypeName" : "number",
+    "description" : "The total number of children that a program can serve at a given time.  Note: 1) Licensed capacity by age is not available for Family Child Care programs or Group and School Age programs with a capacity of 10 or fewer children. 2) Family Child Care programs' license capacity usually start at 6 and vary between 6-10. In some cases, a program cannot be approved to care for 6 children due to factors such as lack of sufficient space. 3) Classrooms in Group and School Age programs often overlap age groups, so capacity by age will not equal licensed capacity. For instance, if a preschool program uses the same space as the after-school school-age program, both preschool and after school capacities would be listed, but both groups cannot be in attendance at the same time because they occupy the same space, so licensed capacity would be lower than the sum of capacity by age.",
+    "fieldName" : "licensed_capacity",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040830,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "625.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "10.00",
+        "count" : "2206"
+      }, {
+        "item" : "6.00",
+        "count" : "2037"
+      }, {
+        "item" : "8.00",
+        "count" : "1817"
+      }, {
+        "item" : "39.00",
+        "count" : "184"
+      }, {
+        "item" : "52.00",
+        "count" : "174"
+      }, {
+        "item" : "20.00",
+        "count" : "113"
+      }, {
+        "item" : "26.00",
+        "count" : "110"
+      }, {
+        "item" : "78.00",
+        "count" : "87"
+      }, {
+        "item" : "65.00",
+        "count" : "86"
+      }, {
+        "item" : "36.00",
+        "count" : "64"
+      }, {
+        "item" : "60.00",
+        "count" : "52"
+      }, {
+        "item" : "45.00",
+        "count" : "49"
+      }, {
+        "item" : "40.00",
+        "count" : "44"
+      }, {
+        "item" : "29.00",
+        "count" : "44"
+      }, {
+        "item" : "24.00",
+        "count" : "39"
+      }, {
+        "item" : "100.00",
+        "count" : "38"
+      }, {
+        "item" : "38.00",
+        "count" : "38"
+      }, {
+        "item" : "49.00",
+        "count" : "36"
+      }, {
+        "item" : "91.00",
+        "count" : "36"
+      }, {
+        "item" : "80.00",
+        "count" : "33"
+      } ],
+      "smallest" : "2.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623725,
+    "name" : "INFANT_BIRTH15MO",
+    "dataTypeName" : "number",
+    "description" : "Program’s infant capacity",
+    "fieldName" : "infant_birth15mo",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040831,
+    "cachedContents" : {
+      "non_null" : "1036",
+      "largest" : "35.00",
+      "null" : "8181",
+      "top" : [ {
+        "item" : "7.00",
+        "count" : "516"
+      }, {
+        "item" : "14.00",
+        "count" : "270"
+      }, {
+        "item" : "21.00",
+        "count" : "83"
+      }, {
+        "item" : "6.00",
+        "count" : "38"
+      }, {
+        "item" : "3.00",
+        "count" : "28"
+      }, {
+        "item" : "10.00",
+        "count" : "25"
+      }, {
+        "item" : "28.00",
+        "count" : "17"
+      }, {
+        "item" : "5.00",
+        "count" : "12"
+      }, {
+        "item" : "13.00",
+        "count" : "11"
+      }, {
+        "item" : "17.00",
+        "count" : "10"
+      }, {
+        "item" : "12.00",
+        "count" : "7"
+      }, {
+        "item" : "11.00",
+        "count" : "5"
+      }, {
+        "item" : "4.00",
+        "count" : "2"
+      }, {
+        "item" : "24.00",
+        "count" : "2"
+      }, {
+        "item" : "9.00",
+        "count" : "2"
+      }, {
+        "item" : "20.00",
+        "count" : "2"
+      }, {
+        "item" : "35.00",
+        "count" : "1"
+      }, {
+        "item" : "2.00",
+        "count" : "1"
+      }, {
+        "item" : "8.00",
+        "count" : "1"
+      }, {
+        "item" : "19.00",
+        "count" : "1"
+      } ],
+      "smallest" : "1.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623726,
+    "name" : "INFANT_TODDLER_BIRTH33MO",
+    "dataTypeName" : "number",
+    "description" : "Program’s infant/toddler capacity",
+    "fieldName" : "infant_toddler_birth33mo",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040832,
+    "cachedContents" : {
+      "non_null" : "898",
+      "largest" : "72.00",
+      "null" : "8319",
+      "top" : [ {
+        "item" : "9.00",
+        "count" : "496"
+      }, {
+        "item" : "18.00",
+        "count" : "134"
+      }, {
+        "item" : "7.00",
+        "count" : "62"
+      }, {
+        "item" : "8.00",
+        "count" : "34"
+      }, {
+        "item" : "27.00",
+        "count" : "26"
+      }, {
+        "item" : "16.00",
+        "count" : "17"
+      }, {
+        "item" : "6.00",
+        "count" : "15"
+      }, {
+        "item" : "3.00",
+        "count" : "11"
+      }, {
+        "item" : "12.00",
+        "count" : "10"
+      }, {
+        "item" : "36.00",
+        "count" : "10"
+      }, {
+        "item" : "17.00",
+        "count" : "10"
+      }, {
+        "item" : "4.00",
+        "count" : "9"
+      }, {
+        "item" : "14.00",
+        "count" : "7"
+      }, {
+        "item" : "13.00",
+        "count" : "6"
+      }, {
+        "item" : "24.00",
+        "count" : "6"
+      }, {
+        "item" : "5.00",
+        "count" : "6"
+      }, {
+        "item" : "32.00",
+        "count" : "5"
+      }, {
+        "item" : "22.00",
+        "count" : "4"
+      }, {
+        "item" : "45.00",
+        "count" : "4"
+      }, {
+        "item" : "26.00",
+        "count" : "3"
+      } ],
+      "smallest" : "3.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623727,
+    "name" : "TODDLER_15MO33MO",
+    "dataTypeName" : "number",
+    "description" : "Program’s toddler capacity",
+    "fieldName" : "toddler_15mo33mo",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040833,
+    "cachedContents" : {
+      "non_null" : "1052",
+      "largest" : "112.00",
+      "null" : "8165",
+      "top" : [ {
+        "item" : "9.00",
+        "count" : "420"
+      }, {
+        "item" : "18.00",
+        "count" : "253"
+      }, {
+        "item" : "27.00",
+        "count" : "109"
+      }, {
+        "item" : "36.00",
+        "count" : "49"
+      }, {
+        "item" : "8.00",
+        "count" : "34"
+      }, {
+        "item" : "45.00",
+        "count" : "30"
+      }, {
+        "item" : "4.00",
+        "count" : "22"
+      }, {
+        "item" : "17.00",
+        "count" : "22"
+      }, {
+        "item" : "13.00",
+        "count" : "20"
+      }, {
+        "item" : "22.00",
+        "count" : "14"
+      }, {
+        "item" : "16.00",
+        "count" : "12"
+      }, {
+        "item" : "54.00",
+        "count" : "9"
+      }, {
+        "item" : "6.00",
+        "count" : "8"
+      }, {
+        "item" : "26.00",
+        "count" : "6"
+      }, {
+        "item" : "12.00",
+        "count" : "6"
+      }, {
+        "item" : "40.00",
+        "count" : "5"
+      }, {
+        "item" : "7.00",
+        "count" : "5"
+      }, {
+        "item" : "24.00",
+        "count" : "3"
+      }, {
+        "item" : "31.00",
+        "count" : "3"
+      }, {
+        "item" : "14.00",
+        "count" : "3"
+      } ],
+      "smallest" : "4.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623728,
+    "name" : "TODDLER_PRESCHOOL_15MOK",
+    "dataTypeName" : "number",
+    "description" : "Program’s toddler/preschool capacity",
+    "fieldName" : "toddler_preschool_15mok",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040834,
+    "cachedContents" : {
+      "non_null" : "792",
+      "largest" : "54.00",
+      "null" : "8425",
+      "top" : [ {
+        "item" : "9.00",
+        "count" : "516"
+      }, {
+        "item" : "18.00",
+        "count" : "102"
+      }, {
+        "item" : "5.00",
+        "count" : "27"
+      }, {
+        "item" : "8.00",
+        "count" : "24"
+      }, {
+        "item" : "27.00",
+        "count" : "15"
+      }, {
+        "item" : "13.00",
+        "count" : "13"
+      }, {
+        "item" : "7.00",
+        "count" : "12"
+      }, {
+        "item" : "36.00",
+        "count" : "11"
+      }, {
+        "item" : "14.00",
+        "count" : "11"
+      }, {
+        "item" : "4.00",
+        "count" : "9"
+      }, {
+        "item" : "16.00",
+        "count" : "8"
+      }, {
+        "item" : "17.00",
+        "count" : "7"
+      }, {
+        "item" : "12.00",
+        "count" : "6"
+      }, {
+        "item" : "15.00",
+        "count" : "6"
+      }, {
+        "item" : "6.00",
+        "count" : "5"
+      }, {
+        "item" : "10.00",
+        "count" : "5"
+      }, {
+        "item" : "45.00",
+        "count" : "3"
+      }, {
+        "item" : "54.00",
+        "count" : "2"
+      }, {
+        "item" : "20.00",
+        "count" : "2"
+      }, {
+        "item" : "24.00",
+        "count" : "2"
+      } ],
+      "smallest" : "4.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623729,
+    "name" : "PRESCHOOL_33MOK",
+    "dataTypeName" : "number",
+    "description" : "Program's preschool capacity",
+    "fieldName" : "preschool_33mok",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040835,
+    "cachedContents" : {
+      "non_null" : "1884",
+      "largest" : "460.00",
+      "null" : "7333",
+      "top" : [ {
+        "item" : "20.00",
+        "count" : "323"
+      }, {
+        "item" : "40.00",
+        "count" : "208"
+      }, {
+        "item" : "60.00",
+        "count" : "114"
+      }, {
+        "item" : "30.00",
+        "count" : "91"
+      }, {
+        "item" : "10.00",
+        "count" : "89"
+      }, {
+        "item" : "80.00",
+        "count" : "57"
+      }, {
+        "item" : "50.00",
+        "count" : "43"
+      }, {
+        "item" : "18.00",
+        "count" : "42"
+      }, {
+        "item" : "39.00",
+        "count" : "42"
+      }, {
+        "item" : "36.00",
+        "count" : "37"
+      }, {
+        "item" : "16.00",
+        "count" : "34"
+      }, {
+        "item" : "38.00",
+        "count" : "28"
+      }, {
+        "item" : "100.00",
+        "count" : "27"
+      }, {
+        "item" : "19.00",
+        "count" : "27"
+      }, {
+        "item" : "34.00",
+        "count" : "27"
+      }, {
+        "item" : "24.00",
+        "count" : "26"
+      }, {
+        "item" : "17.00",
+        "count" : "25"
+      }, {
+        "item" : "54.00",
+        "count" : "21"
+      }, {
+        "item" : "14.00",
+        "count" : "21"
+      }, {
+        "item" : "32.00",
+        "count" : "19"
+      } ],
+      "smallest" : "4.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623730,
+    "name" : "PRESCHOOLSA_33MO8YR",
+    "dataTypeName" : "number",
+    "description" : "Program's preschool/school age capacity",
+    "fieldName" : "preschoolsa_33mo8yr",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040836,
+    "cachedContents" : {
+      "non_null" : "694",
+      "largest" : "140.00",
+      "null" : "8523",
+      "top" : [ {
+        "item" : "20.00",
+        "count" : "267"
+      }, {
+        "item" : "10.00",
+        "count" : "73"
+      }, {
+        "item" : "40.00",
+        "count" : "39"
+      }, {
+        "item" : "18.00",
+        "count" : "28"
+      }, {
+        "item" : "15.00",
+        "count" : "26"
+      }, {
+        "item" : "30.00",
+        "count" : "23"
+      }, {
+        "item" : "17.00",
+        "count" : "19"
+      }, {
+        "item" : "16.00",
+        "count" : "17"
+      }, {
+        "item" : "19.00",
+        "count" : "16"
+      }, {
+        "item" : "13.00",
+        "count" : "14"
+      }, {
+        "item" : "39.00",
+        "count" : "11"
+      }, {
+        "item" : "9.00",
+        "count" : "10"
+      }, {
+        "item" : "24.00",
+        "count" : "10"
+      }, {
+        "item" : "60.00",
+        "count" : "10"
+      }, {
+        "item" : "14.00",
+        "count" : "9"
+      }, {
+        "item" : "12.00",
+        "count" : "8"
+      }, {
+        "item" : "8.00",
+        "count" : "8"
+      }, {
+        "item" : "80.00",
+        "count" : "7"
+      }, {
+        "item" : "50.00",
+        "count" : "6"
+      }, {
+        "item" : "25.00",
+        "count" : "6"
+      } ],
+      "smallest" : "5.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623731,
+    "name" : "KINDERGARTEN",
+    "dataTypeName" : "number",
+    "description" : "Program's kindergarten capacity ",
+    "fieldName" : "kindergarten",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040837,
+    "cachedContents" : {
+      "non_null" : "100",
+      "largest" : "117.00",
+      "null" : "9117",
+      "top" : [ {
+        "item" : "15.00",
+        "count" : "16"
+      }, {
+        "item" : "20.00",
+        "count" : "14"
+      }, {
+        "item" : "25.00",
+        "count" : "12"
+      }, {
+        "item" : "10.00",
+        "count" : "6"
+      }, {
+        "item" : "5.00",
+        "count" : "5"
+      }, {
+        "item" : "24.00",
+        "count" : "4"
+      }, {
+        "item" : "12.00",
+        "count" : "4"
+      }, {
+        "item" : "50.00",
+        "count" : "4"
+      }, {
+        "item" : "13.00",
+        "count" : "3"
+      }, {
+        "item" : "40.00",
+        "count" : "3"
+      }, {
+        "item" : "8.00",
+        "count" : "3"
+      }, {
+        "item" : "30.00",
+        "count" : "3"
+      }, {
+        "item" : "26.00",
+        "count" : "2"
+      }, {
+        "item" : "19.00",
+        "count" : "2"
+      }, {
+        "item" : "23.00",
+        "count" : "2"
+      }, {
+        "item" : "28.00",
+        "count" : "2"
+      }, {
+        "item" : "60.00",
+        "count" : "2"
+      }, {
+        "item" : "29.00",
+        "count" : "1"
+      }, {
+        "item" : "16.00",
+        "count" : "1"
+      }, {
+        "item" : "35.00",
+        "count" : "1"
+      } ],
+      "smallest" : "5.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623732,
+    "name" : "KINDERGARTEN_SCHOOLAGE",
+    "dataTypeName" : "number",
+    "description" : "Program's kindergarten/school age capacity ",
+    "fieldName" : "kindergarten_schoolage",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040838,
+    "cachedContents" : {
+      "non_null" : "0",
+      "null" : "9217",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623733,
+    "name" : "SCHOOLAGE_5YR14YR",
+    "dataTypeName" : "number",
+    "description" : "Program's school age capacity",
+    "fieldName" : "schoolage_5yr14yr",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040839,
+    "cachedContents" : {
+      "non_null" : "1149",
+      "largest" : "600.00",
+      "null" : "8068",
+      "top" : [ {
+        "item" : "52.00",
+        "count" : "179"
+      }, {
+        "item" : "39.00",
+        "count" : "136"
+      }, {
+        "item" : "26.00",
+        "count" : "118"
+      }, {
+        "item" : "78.00",
+        "count" : "82"
+      }, {
+        "item" : "65.00",
+        "count" : "58"
+      }, {
+        "item" : "91.00",
+        "count" : "36"
+      }, {
+        "item" : "20.00",
+        "count" : "30"
+      }, {
+        "item" : "104.00",
+        "count" : "30"
+      }, {
+        "item" : "13.00",
+        "count" : "27"
+      }, {
+        "item" : "130.00",
+        "count" : "22"
+      }, {
+        "item" : "100.00",
+        "count" : "22"
+      }, {
+        "item" : "117.00",
+        "count" : "20"
+      }, {
+        "item" : "60.00",
+        "count" : "18"
+      }, {
+        "item" : "40.00",
+        "count" : "13"
+      }, {
+        "item" : "80.00",
+        "count" : "12"
+      }, {
+        "item" : "50.00",
+        "count" : "10"
+      }, {
+        "item" : "120.00",
+        "count" : "10"
+      }, {
+        "item" : "42.00",
+        "count" : "9"
+      }, {
+        "item" : "24.00",
+        "count" : "9"
+      }, {
+        "item" : "72.00",
+        "count" : "8"
+      } ],
+      "smallest" : "1.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623734,
+    "name" : "MULTI_AGEGROUP_BIRTH14YR",
+    "dataTypeName" : "number",
+    "description" : "Program's multi-age group capacity.",
+    "fieldName" : "multi_agegroup_birth14yr",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162040840,
+    "cachedContents" : {
+      "non_null" : "9",
+      "largest" : "37.00",
+      "null" : "9208",
+      "top" : [ {
+        "item" : "6.00",
+        "count" : "4"
+      }, {
+        "item" : "10.00",
+        "count" : "2"
+      }, {
+        "item" : "8.00",
+        "count" : "1"
+      }, {
+        "item" : "30.00",
+        "count" : "1"
+      }, {
+        "item" : "37.00",
+        "count" : "1"
+      } ],
+      "smallest" : "6.00",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623735,
+    "name" : "VOUCHER_CONTRACT",
+    "dataTypeName" : "checkbox",
+    "description" : "Value is true if a program has an EEC voucher agreement or contract to serve children with child care financial assistance (CCFA).",
+    "fieldName" : "voucher_contract",
+    "position" : 31,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 162040841,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "null" : "0",
+      "top" : [ {
+        "item" : true,
+        "count" : "6626"
+      }, {
+        "item" : false,
+        "count" : "2591"
+      } ],
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623736,
+    "name" : "C3_ATTESTATION",
+    "dataTypeName" : "text",
+    "description" : "Starting Nov 1, 2025, to receive C3 funding, providers must attest they are willing to accept children with vouchers (EEC's Child Care Financial Assistance). A value of \"Yes\" represents that a program has attested they are willing. A value of \"Exempt\" represents that a program has received an exemption. Null values represent that a program does not participate in C3.",
+    "fieldName" : "c3_attestation",
+    "position" : 32,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040842,
+    "cachedContents" : {
+      "non_null" : "7385",
+      "largest" : "Yes",
+      "null" : "1832",
+      "top" : [ {
+        "item" : "Yes",
+        "count" : "7341"
+      }, {
+        "item" : "Exempt",
+        "count" : "44"
+      } ],
+      "smallest" : "Exempt",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623740,
+    "name" : "HEAD_START",
+    "dataTypeName" : "checkbox",
+    "description" : "Indicates whether or not a program participates in Head Start, either as a program site or as a partner site. Measure available beginning 12/2/2025.",
+    "fieldName" : "head_start",
+    "position" : 33,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 166554564,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "null" : "0",
+      "top" : [ {
+        "item" : false,
+        "count" : "9053"
+      }, {
+        "item" : true,
+        "count" : "164"
+      } ],
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623739,
+    "name" : "EARLY_HEAD_START",
+    "dataTypeName" : "checkbox",
+    "description" : "Indicates whether or not a program participates in Early Head Start either as a program site or as a partner site. Measure available beginning 12/2/2025.",
+    "fieldName" : "early_head_start",
+    "position" : 34,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 166554563,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "null" : "0",
+      "top" : [ {
+        "item" : false,
+        "count" : "9210"
+      }, {
+        "item" : true,
+        "count" : "7"
+      } ],
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623737,
+    "name" : "COI_CAT",
+    "dataTypeName" : "text",
+    "description" : "Child Opportunity Index Category. State-normed COI 3.0-2021. Contains the values: very low, low, moderate, high, very high.",
+    "fieldName" : "coi_cat",
+    "position" : 35,
+    "renderTypeName" : "text",
+    "tableColumnId" : 162040843,
+    "cachedContents" : {
+      "non_null" : "9134",
+      "largest" : "Very Low",
+      "null" : "83",
+      "top" : [ {
+        "item" : "Very Low",
+        "count" : "2773"
+      }, {
+        "item" : "Low",
+        "count" : "2373"
+      }, {
+        "item" : "Moderate",
+        "count" : "1574"
+      }, {
+        "item" : "High",
+        "count" : "1354"
+      }, {
+        "item" : "Very High",
+        "count" : "1060"
+      } ],
+      "smallest" : "High",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : { }
+  }, {
+    "id" : 629623738,
+    "name" : "SNAPSHOT_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date of data pull",
+    "fieldName" : "data_pulled_date",
+    "position" : 36,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 162040844,
+    "cachedContents" : {
+      "non_null" : "9217",
+      "largest" : "2026-09-02T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-09-02T00:00:00.000",
+        "count" : "9217"
+      } ],
+      "smallest" : "2026-09-02T00:00:00.000",
+      "count" : "9217",
+      "cardinality" : "9217"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Monthly",
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-early-education-and-care"
+      }
+    },
+    "rowLabel" : "child care program and its attributes in the most recent month.",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "daycare", "licensed", "funded", "prek", "preschool", "toddlers", "infants", "capacity", "licensed childcare" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,102 @@
+{
+  "id" : "73i6-6tsf",
+  "name" : "DARTs Success After High School: Dashboard",
+  "assetType" : "href",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1700171084,
+  "description" : "The DART: Success After High School Dashboard is a tool used to support the self-evaluation process for whole districts as well as individual schools. It contains a set of data elements  provide an indication of the overall condition of a district or school's efforts to ensure all students are ready for their next steps as productive and contributing members of society.\n\nThis tool contains data elements that cover a range of school, district, post-secondary and career readiness information including demographics, high school indicators, high school performance, programs of study, post-secondary education outcomes, and career development education.\n\nThe DARTs provide a gauge of the overall condition of a district or school, but do not have all available information. They should be treated as a good starting point for exploring the data and identifying areas of focus for further inquiry. Please see the Info tab on the dashboard for detailed data analysis considerations.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40180342,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1700171122,
+  "publicationGroup" : 19366995,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1700171084,
+  "tableId" : 19366995,
+  "totalTimesRated" : 0,
+  "viewCount" : 723,
+  "viewLastModified" : 1715615964,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1712168966,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6248025,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1712168933,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1712168966,
+      "failureCount" : 0,
+      "startedAt" : 1712168966,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "PowerBI Dashboard" : "https://app.powerbigov.us/view?r=eyJrIjoiY2E5YTI3MDctNTNkNi00OTRmLTkyNzEtMmMzODNmYzUyZmQxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+      }
+    } ],
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu/"
+      }
+    },
+    "accessPoints" : {
+      "PowerBI Dashboard" : "https://app.powerbigov.us/view?r=eyJrIjoiY2E5YTI3MDctNTNkNi00OTRmLTkyNzEtMmMzODNmYzUyZmQxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "grade", "race", "ethnicity", "gender", "enrollment", "low income", "economically disadvantaged", "special education", "high needs", "disability", "sgp", "student growth percentile", "dropout", "sat", "fafsa", "ela", "math", "science", "ap test", "performance", "demographic", "assessment", "dropout rates", "advanced placement", "sped", "students with disabilities" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

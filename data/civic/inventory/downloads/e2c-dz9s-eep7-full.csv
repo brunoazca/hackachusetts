@@ -1,0 +1,921 @@
+DATA_LOAD_DATE,TRANSACTION_MONTH,OPENING_CLOSING,LICENSING_REGION,PROGRAM_TYPE,PROVIDER_COUNT,TOTAL_CAPACITY
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Central,Center-Based Care,-3,-68
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Central,Center-Based Care,-2,-51
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Central,Center-Based Care,-1,-211
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Central,Center-Based Care,-2,-93
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Central,Center-Based Care,-1,-52
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-1,-83
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-5,-369
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-1,-127
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-1,-16
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-6,-341
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-2,-49
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-1,-10
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-2,-80
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Central,Center-Based Care,-4,-162
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Central,Center-Based Care,-1,-175
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Closed,Central,Center-Based Care,-2,-36
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Central,Center-Based Care,-3,-153
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Central,Center-Based Care,-3,-108
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Central,Center-Based Care,-1,-80
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Central,Center-Based Care,-3,-277
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Central,Center-Based Care,-1,-30
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-10,-860
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-3,-153
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-1,-26
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-1,-23
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-9,-328
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-1,-36
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-2,-337
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-1,-59
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Central,Center-Based Care,-1,-81
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Central,Center-Based Care,-2,-103
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Central,Center-Based Care,-1,-57
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Central,Center-Based Care,-2,-58
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Central,Center-Based Care,-4,-207
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Closed,Central,Center-Based Care,-5,-168
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Central,Center-Based Care,-2,-41
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Central,Center-Based Care,10,656
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Central,Center-Based Care,5,159
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Central,Center-Based Care,2,48
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Central,Center-Based Care,1,60
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,1,120
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,2,219
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,2,198
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,1,126
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,2,167
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,2,166
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,4,179
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,5,272
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,2,24
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,2,207
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Central,Center-Based Care,5,225
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Central,Center-Based Care,3,166
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Central,Center-Based Care,2,230
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Central,Center-Based Care,2,119
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Central,Center-Based Care,2,115
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Opened,Central,Center-Based Care,2,215
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Central,Center-Based Care,3,278
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Central,Center-Based Care,7,545
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Central,Center-Based Care,2,72
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,2,120
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,1,39
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,2,146
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,2,67
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,5,536
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,1,52
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,5,175
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,4,98
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,2,33
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,6,587
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Central,Center-Based Care,1,26
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Central,Center-Based Care,2,16
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Central,Center-Based Care,1,52
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Central,Center-Based Care,1,65
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Central,Center-Based Care,1,10
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Central,Center-Based Care,1,57
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Central,Center-Based Care,2,168
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Central,Center-Based Care,2,120
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Closed,Central,Family Child Care,-3,-18
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Central,Family Child Care,-7,-52
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Central,Family Child Care,-8,-54
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Central,Family Child Care,-9,-68
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Central,Family Child Care,-5,-38
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Central,Family Child Care,-2,-16
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-10,-82
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-3,-22
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-5,-38
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-4,-30
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-8,-56
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-10,-74
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-7,-54
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-8,-66
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-8,-66
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-4,-26
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-3,-22
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Central,Family Child Care,-5,-38
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-5,-40
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-9,-71
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-6,-40
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-2,-16
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-4,-32
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-9,-72
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-13,-98
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-14,-114
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-11,-82
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-4,-30
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-5,-34
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Closed,Central,Family Child Care,-4,-30
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-4,-28
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-1,-6
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-4,-28
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-12,-82
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-9,-76
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-6,-42
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-9,-60
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-13,-84
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-16,-104
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-3,-18
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-8,-56
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Central,Family Child Care,-7,-56
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Closed,Central,Family Child Care,-9,-62
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Central,Family Child Care,-7,-48
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Closed,Central,Family Child Care,-11,-90
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Central,Family Child Care,-5,-30
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Central,Family Child Care,-4,-30
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Central,Family Child Care,-7,-52
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Closed,Central,Family Child Care,-6,-42
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Central,Family Child Care,-13,-88
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Central,Family Child Care,4,38
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Central,Family Child Care,4,28
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Central,Family Child Care,7,50
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Central,Family Child Care,10,86
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Central,Family Child Care,10,86
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Central,Family Child Care,6,54
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Central,Family Child Care,5,40
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Central,Family Child Care,5,46
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Central,Family Child Care,10,74
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Central,Family Child Care,10,84
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Opened,Central,Family Child Care,8,70
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Central,Family Child Care,15,118
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Central,Family Child Care,4,38
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Central,Family Child Care,8,64
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Central,Family Child Care,10,70
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Central,Family Child Care,10,74
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Central,Family Child Care,8,64
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Central,Family Child Care,14,106
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Central,Family Child Care,19,138
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Central,Family Child Care,6,42
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Central,Family Child Care,11,82
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Opened,Central,Family Child Care,10,76
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Central,Family Child Care,7,50
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Opened,Central,Family Child Care,5,36
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Central,Family Child Care,7,46
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Central,Family Child Care,10,68
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Central,Family Child Care,11,70
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Central,Family Child Care,12,74
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Opened,Central,Family Child Care,9,66
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Opened,Central,Family Child Care,12,86
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Central,Family Child Care,8,48
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Central,Family Child Care,10,62
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Central,Family Child Care,13,82
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Central,Family Child Care,4,24
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Central,Family Child Care,9,58
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Central,Family Child Care,5,32
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Central,Family Child Care,13,80
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Central,Family Child Care,5,30
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Central,Family Child Care,9,54
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Central,Family Child Care,6,40
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Central,Family Child Care,7,42
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Central,Family Child Care,9,56
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Opened,Central,Family Child Care,8,48
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Central,Family Child Care,6,36
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Central,Family Child Care,10,68
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Central,Family Child Care,19,114
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Central,Family Child Care,3,18
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Central,Family Child Care,13,78
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Central,Family Child Care,12,78
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Central,Family Child Care,11,76
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Central,Funded Public Schools,-1,-80
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Central,Funded Public Schools,-7,-796
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-4,-169
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-6,-256
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-1,-52
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-4,-207
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-2,-95
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-2,-79
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-1,-45
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-8,-525
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-2,-169
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-2,-74
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-1,-25
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-1,-36
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-4,-295
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-1,-98
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-3,-35
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-7,-245
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-3,-111
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-6,-270
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-4,-127
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-5,-147
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-1,-204
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-6,-326
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-2,-25
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-3,-99
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-7,-317
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-1,-42
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-2,-85
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-4,-215
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-2,-55
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-1,-20
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-9,-519
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-5,-193
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Metro Boston,Center-Based Care,-3,-87
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Metro Boston,Center-Based Care,5,213
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Metro Boston,Center-Based Care,5,262
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Metro Boston,Center-Based Care,15,971
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Metro Boston,Center-Based Care,3,87
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Metro Boston,Center-Based Care,3,193
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,130
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,4,213
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,127
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,73
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,36
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,172
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,183
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,105
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,111
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,4,171
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,3,288
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,3,110
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,64
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,6,307
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,3,208
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,80
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,4,133
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,16
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,3,207
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,5,231
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,7,493
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,5,317
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,94
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Opened,Metro Boston,Center-Based Care,6,289
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,8,358
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,126
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,94
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,20
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,4,396
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,4,178
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,82
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,10
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,17,712
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,3,81
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,36
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,76
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,20
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,65
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,61
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,26
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Metro Boston,Center-Based Care,5,174
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Metro Boston,Center-Based Care,1,9
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Metro Boston,Center-Based Care,2,63
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Closed,Metro Boston,Family Child Care,-3,-24
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Metro Boston,Family Child Care,-3,-20
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Metro Boston,Family Child Care,-4,-22
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Metro Boston,Family Child Care,-7,-42
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Metro Boston,Family Child Care,-7,-46
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Metro Boston,Family Child Care,-5,-40
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-3,-22
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-2,-14
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-5,-32
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-3,-24
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-8,-58
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-8,-64
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-2,-16
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-2,-16
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-2,-15
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-1,-8
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-7,-50
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Metro Boston,Family Child Care,-7,-46
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-2,-10
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-2,-16
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-4,-32
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-3,-24
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-2,-14
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-5,-36
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-6,-38
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-8,-62
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-5,-30
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-6,-37
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-3,-26
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Closed,Metro Boston,Family Child Care,-4,-28
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-4,-28
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-9,-58
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-10,-68
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-10,-74
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-7,-58
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-7,-48
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-2,-18
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-9,-59
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-5,-31
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-8,-54
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Metro Boston,Family Child Care,-8,-70
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Closed,Metro Boston,Family Child Care,-5,-34
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Metro Boston,Family Child Care,-6,-34
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Closed,Metro Boston,Family Child Care,-5,-38
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Metro Boston,Family Child Care,-13,-90
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Metro Boston,Family Child Care,-7,-50
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Metro Boston,Family Child Care,-13,-88
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Closed,Metro Boston,Family Child Care,-7,-46
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Metro Boston,Family Child Care,-4,-24
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Metro Boston,Family Child Care,17,148
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Metro Boston,Family Child Care,7,61
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Metro Boston,Family Child Care,7,66
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Metro Boston,Family Child Care,8,66
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Metro Boston,Family Child Care,8,72
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Metro Boston,Family Child Care,7,66
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,7,61
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,5,46
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,5,36
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,12,103
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,11,94
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,10,93
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,14,104
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,9,67
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,5,37
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,8,69
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,7,52
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Metro Boston,Family Child Care,9,68
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,12,86
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,14,109
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,10,68
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,15,113
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,12,96
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,11,72
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,16,110
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,10,66
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,11,73
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,16,111
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,9,59
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Opened,Metro Boston,Family Child Care,22,140
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,15,98
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,17,108
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,14,90
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,8,54
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,20,130
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,16,100
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,14,90
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,13,78
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,17,102
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,23,142
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,22,140
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Metro Boston,Family Child Care,16,100
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Opened,Metro Boston,Family Child Care,12,76
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Metro Boston,Family Child Care,17,102
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Metro Boston,Family Child Care,14,84
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Metro Boston,Family Child Care,13,82
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Metro Boston,Family Child Care,10,71
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Metro Boston,Family Child Care,13,78
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Metro Boston,Family Child Care,13,86
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Metro Boston,Family Child Care,9,54
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Metro Boston,Funded Private Schools,-1,-84
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Metro Boston,Funded Private Schools,-2,-163
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Metro Boston,Funded Private Schools,-1,-92
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Closed,Metro Boston,Funded Public Schools,-1,-160
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Closed,Northeast,Center-Based Care,-3,-66
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Northeast,Center-Based Care,-3,-122
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Northeast,Center-Based Care,-4,-202
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-33
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-65
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Northeast,Center-Based Care,-5,-391
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-52
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-40
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-126
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-65
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-59
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-8,-418
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-3,-73
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-8,-705
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-323
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-104
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-127
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-34
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-80
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-3,-107
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-32
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-6,-336
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-29
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-3,-123
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-3,-60
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-98
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-62
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Northeast,Center-Based Care,-4,-236
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-57
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Northeast,Center-Based Care,-6,-224
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-39
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Northeast,Center-Based Care,-11,-643
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-32
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-28
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Closed,Northeast,Center-Based Care,-3,-93
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Northeast,Center-Based Care,-1,-9
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Northeast,Center-Based Care,-2,-116
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Northeast,Center-Based Care,-8,-331
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Northeast,Center-Based Care,2,71
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Northeast,Center-Based Care,11,753
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Northeast,Center-Based Care,11,618
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Northeast,Center-Based Care,1,33
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Northeast,Center-Based Care,3,155
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Northeast,Center-Based Care,5,443
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,2,253
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,4,250
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,4,166
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,1,10
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,2,116
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,3,272
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,2,104
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,6,288
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,12,1168
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,1,42
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,3,214
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Northeast,Center-Based Care,1,52
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,4,180
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,2,74
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,4,207
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,1,20
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,1,36
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,2,94
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,8,525
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,7,232
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,3,205
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,3,109
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Opened,Northeast,Center-Based Care,3,250
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,1,78
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,3,93
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,1,300
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,2,134
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,3,154
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,4,183
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,2,43
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,9,395
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,8,334
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,2,51
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Northeast,Center-Based Care,1,87
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Opened,Northeast,Center-Based Care,4,151
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Northeast,Center-Based Care,3,125
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Northeast,Center-Based Care,3,92
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Northeast,Center-Based Care,3,55
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Northeast,Center-Based Care,2,45
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Northeast,Center-Based Care,2,98
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Northeast,Center-Based Care,2,57
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Northeast,Center-Based Care,7,419
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Closed,Northeast,Family Child Care,-8,-58
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Northeast,Family Child Care,-12,-92
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Northeast,Family Child Care,-16,-120
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Northeast,Family Child Care,-7,-50
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Northeast,Family Child Care,-9,-66
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Northeast,Family Child Care,-8,-54
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-7,-58
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-4,-28
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-6,-48
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-4,-18
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-2,-12
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-6,-44
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-6,-44
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-3,-20
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-3,-20
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-11,-80
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-8,-60
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Northeast,Family Child Care,-4,-34
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-13,-82
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-11,-72
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-5,-32
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-3,-26
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-5,-36
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-6,-38
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-5,-22
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-9,-66
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-6,-44
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-8,-56
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-9,-62
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Closed,Northeast,Family Child Care,-6,-36
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-17,-108
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-3,-20
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-7,-46
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-4,-26
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-10,-76
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-12,-100
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-4,-28
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-17,-132
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-12,-80
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-7,-49
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-7,-48
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Northeast,Family Child Care,-9,-66
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Closed,Northeast,Family Child Care,-25,-161
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Northeast,Family Child Care,-9,-62
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Closed,Northeast,Family Child Care,-10,-68
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Northeast,Family Child Care,-11,-84
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Northeast,Family Child Care,-11,-78
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Northeast,Family Child Care,-12,-88
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Closed,Northeast,Family Child Care,-14,-96
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Northeast,Family Child Care,-10,-70
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Northeast,Family Child Care,7,58
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Northeast,Family Child Care,14,114
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Northeast,Family Child Care,9,80
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Northeast,Family Child Care,5,44
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Northeast,Family Child Care,7,58
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Northeast,Family Child Care,20,172
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,12,104
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,10,80
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,17,146
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,14,120
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,12,104
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,8,70
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,10,84
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,15,114
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,26,206
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,19,144
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,10,72
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Northeast,Family Child Care,23,160
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,17,124
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,15,101
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,15,110
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,18,140
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,24,164
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,25,180
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,17,106
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,16,110
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,14,86
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,22,138
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,22,136
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Opened,Northeast,Family Child Care,22,136
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,19,118
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,10,62
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,13,77
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,16,98
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,10,64
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,17,104
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,16,102
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,21,127
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,11,68
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,25,154
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,22,136
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Northeast,Family Child Care,16,96
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Opened,Northeast,Family Child Care,13,80
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Northeast,Family Child Care,15,90
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Northeast,Family Child Care,17,104
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Northeast,Family Child Care,16,102
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Northeast,Family Child Care,10,60
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Northeast,Family Child Care,13,80
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Northeast,Family Child Care,12,76
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Northeast,Family Child Care,9,54
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Northeast,Funded Private Schools,-1,-85
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Northeast,Funded Private Schools,-1,-19
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Northeast,Funded Private Schools,-1,-57
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Northeast,Funded Public Schools,-1,-230
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-76
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-4,-313
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-3,-83
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-4,-149
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-3,-78
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-64
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-9
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-3,-196
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-26
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-4,-142
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-5,-125
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-35
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-38
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-3,-73
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-52
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-18
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-3,-320
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-6,-559
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-78
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-3,-238
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-90
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-105
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-50
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-45
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-59
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-25
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-109
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-219
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-40
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-229
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-10
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-5,-169
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-4,-191
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-20
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-3,-115
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-81
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-5,-159
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-4,-588
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-56
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-3,-160
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-4,-185
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-1,-43
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Southeast and Cape,Center-Based Care,-2,-31
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,18
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,110
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,5,478
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,55
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,50
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,278
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,190
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,24
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,137
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,40
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,4,171
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,24
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,4,156
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,9,431
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,6,236
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,123
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,117
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,33
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,34
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,276
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,31
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,7,511
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,45
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,131
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,56
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,8,633
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,8,442
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,59
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,241
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,222
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,76
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,129
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,245
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,156
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,98
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,6,313
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,3,102
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,19
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,12,795
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,53
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,39
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,1,10
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,4,223
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,48
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Southeast and Cape,Center-Based Care,2,96
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-17,-120
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-8,-58
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-15,-120
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-7,-48
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-7,-52
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-9,-78
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-3,-18
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-7,-58
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-8,-46
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-7,-46
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-6,-42
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-4,-32
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-4,-22
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-5,-40
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-4,-32
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-1,-10
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-4,-24
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-2,-12
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-5,-34
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-7,-56
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-8,-64
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-3,-26
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-18,-126
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-15,-114
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-8,-56
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-6,-44
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-10,-68
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-8,-50
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-5,-40
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-8,-54
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-6,-40
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-4,-24
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-2,-16
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-3,-20
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-9,-54
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-11,-76
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-10,-68
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-14,-107
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-5,-38
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-6,-42
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-6,-44
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-5,-32
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-11,-72
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-5,-34
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-6,-38
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-5,-40
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-6,-46
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-13,-100
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-13,-90
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Southeast and Cape,Family Child Care,-6,-44
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,8,80
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,9,74
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,2,18
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,54
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,6,44
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,4,30
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,56
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,3,26
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,62
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,9,79
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,5,42
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,9,74
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,6,42
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,5,44
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,6,44
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,52
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,8,56
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,5,36
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,4,28
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,8,56
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,8,58
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,8,62
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,48
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,3,22
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,5,30
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,6,40
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,48
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,8,57
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,6,36
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,4,24
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,5,30
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,9,68
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,5,34
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,3,18
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,9,60
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,46
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,5,30
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,10,60
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,9,54
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,14,86
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,8,48
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,10,60
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,3,18
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,3,18
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,4,23
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,6,36
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,3,18
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,42
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,11,68
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Southeast and Cape,Family Child Care,7,46
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Southeast and Cape,Funded Private Schools,-1,-52
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Southeast and Cape,Funded Private Schools,-1,0
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Southeast and Cape,Funded Public Schools,-1,-250
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Southeast and Cape,Funded Public Schools,-2,-79
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Southeast and Cape,Funded Public Schools,-1,-52
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Southeast and Cape,Funded Public Schools,-1,-75
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Southeast and Cape,Funded Public Schools,-6,-442
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Southeast and Cape,Funded Public Schools,-1,-71
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Closed,Southeast and Cape,Funded Public Schools,-1,-40
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Southeast and Cape,Funded Public Schools,-1,-80
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Western,Center-Based Care,-1,-62
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Western,Center-Based Care,-2,-143
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Western,Center-Based Care,-1,-62
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Western,Center-Based Care,-2,-38
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Western,Center-Based Care,-1,-26
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Western,Center-Based Care,-8,-466
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Closed,Western,Center-Based Care,-2,-60
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Western,Center-Based Care,-3,-127
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Western,Center-Based Care,-2,-31
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Western,Center-Based Care,-2,-34
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Western,Center-Based Care,-3,-104
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Western,Center-Based Care,-1,-13
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Closed,Western,Center-Based Care,-1,-122
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Western,Center-Based Care,-1,-20
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Western,Center-Based Care,-5,-282
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Western,Center-Based Care,-1,-39
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Western,Center-Based Care,-3,-58
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Closed,Western,Center-Based Care,-1,-18
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Western,Center-Based Care,-5,-188
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Western,Center-Based Care,-1,-60
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Western,Center-Based Care,-4,-208
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Western,Center-Based Care,-1,-13
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Western,Center-Based Care,-1,-65
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Western,Center-Based Care,-1,-10
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Western,Center-Based Care,-1,-33
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Western,Center-Based Care,-8,-351
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Western,Center-Based Care,-1,-13
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Western,Center-Based Care,2,156
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Western,Center-Based Care,6,248
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Western,Center-Based Care,5,157
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Western,Center-Based Care,2,68
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Western,Center-Based Care,2,79
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,3,60
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,1,180
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,1,73
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,2,151
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,3,216
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,2,40
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,2,151
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,3,135
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,3,120
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Western,Center-Based Care,3,103
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,4,197
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,1,36
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,1,74
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,2,152
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,2,151
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,2,44
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,1,27
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,2,72
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Opened,Western,Center-Based Care,1,26
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,3,97
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,2,280
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,2,103
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,1,9
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,2,93
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,1,60
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,6,187
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,2,77
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,3,81
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,4,95
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Western,Center-Based Care,2,34
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Western,Center-Based Care,3,78
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Western,Center-Based Care,1,10
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Western,Center-Based Care,1,188
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Western,Center-Based Care,3,192
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Western,Center-Based Care,1,52
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Western,Center-Based Care,9,219
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Closed,Western,Family Child Care,-8,-60
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Closed,Western,Family Child Care,-15,-118
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Closed,Western,Family Child Care,-7,-52
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Closed,Western,Family Child Care,-7,-56
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Closed,Western,Family Child Care,-3,-24
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Closed,Western,Family Child Care,-7,-54
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-5,-34
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-8,-62
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-5,-40
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-4,-30
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-5,-34
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-2,-18
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-9,-70
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-6,-42
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-7,-50
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-3,-24
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-3,-22
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Closed,Western,Family Child Care,-5,-38
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-4,-28
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-1,-10
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-1,-6
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-2,-14
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-2,-14
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-1,-8
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-1,-6
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-6,-43
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-5,-36
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-5,-38
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-1,-6
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Closed,Western,Family Child Care,-5,-40
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-1,-6
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-4,-30
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-5,-36
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-6,-38
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-4,-30
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-3,-24
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-8,-62
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-8,-54
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-8,-58
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-4,-26
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-3,-20
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Closed,Western,Family Child Care,-3,-22
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Closed,Western,Family Child Care,-6,-44
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Closed,Western,Family Child Care,-7,-54
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Closed,Western,Family Child Care,-6,-44
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Closed,Western,Family Child Care,-6,-36
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Closed,Western,Family Child Care,-9,-60
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Closed,Western,Family Child Care,-13,-104
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Closed,Western,Family Child Care,-6,-50
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Closed,Western,Family Child Care,-11,-88
+09/01/2026 12:00:00 AM,07/01/2022 12:00:00 AM,Opened,Western,Family Child Care,4,40
+09/01/2026 12:00:00 AM,08/01/2022 12:00:00 AM,Opened,Western,Family Child Care,7,52
+09/01/2026 12:00:00 AM,09/01/2022 12:00:00 AM,Opened,Western,Family Child Care,4,34
+09/01/2026 12:00:00 AM,10/01/2022 12:00:00 AM,Opened,Western,Family Child Care,2,18
+09/01/2026 12:00:00 AM,11/01/2022 12:00:00 AM,Opened,Western,Family Child Care,11,90
+09/01/2026 12:00:00 AM,12/01/2022 12:00:00 AM,Opened,Western,Family Child Care,9,76
+09/01/2026 12:00:00 AM,01/01/2023 12:00:00 AM,Opened,Western,Family Child Care,9,70
+09/01/2026 12:00:00 AM,02/01/2023 12:00:00 AM,Opened,Western,Family Child Care,10,90
+09/01/2026 12:00:00 AM,03/01/2023 12:00:00 AM,Opened,Western,Family Child Care,5,40
+09/01/2026 12:00:00 AM,04/01/2023 12:00:00 AM,Opened,Western,Family Child Care,9,68
+09/01/2026 12:00:00 AM,05/01/2023 12:00:00 AM,Opened,Western,Family Child Care,5,44
+09/01/2026 12:00:00 AM,06/01/2023 12:00:00 AM,Opened,Western,Family Child Care,6,46
+09/01/2026 12:00:00 AM,07/01/2023 12:00:00 AM,Opened,Western,Family Child Care,15,128
+09/01/2026 12:00:00 AM,08/01/2023 12:00:00 AM,Opened,Western,Family Child Care,8,68
+09/01/2026 12:00:00 AM,09/01/2023 12:00:00 AM,Opened,Western,Family Child Care,8,58
+09/01/2026 12:00:00 AM,10/01/2023 12:00:00 AM,Opened,Western,Family Child Care,8,54
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Opened,Western,Family Child Care,6,42
+09/01/2026 12:00:00 AM,12/01/2023 12:00:00 AM,Opened,Western,Family Child Care,8,60
+09/01/2026 12:00:00 AM,01/01/2024 12:00:00 AM,Opened,Western,Family Child Care,10,68
+09/01/2026 12:00:00 AM,02/01/2024 12:00:00 AM,Opened,Western,Family Child Care,11,86
+09/01/2026 12:00:00 AM,03/01/2024 12:00:00 AM,Opened,Western,Family Child Care,6,42
+09/01/2026 12:00:00 AM,04/01/2024 12:00:00 AM,Opened,Western,Family Child Care,8,50
+09/01/2026 12:00:00 AM,05/01/2024 12:00:00 AM,Opened,Western,Family Child Care,13,90
+09/01/2026 12:00:00 AM,06/01/2024 12:00:00 AM,Opened,Western,Family Child Care,5,40
+09/01/2026 12:00:00 AM,07/01/2024 12:00:00 AM,Opened,Western,Family Child Care,7,52
+09/01/2026 12:00:00 AM,08/01/2024 12:00:00 AM,Opened,Western,Family Child Care,13,98
+09/01/2026 12:00:00 AM,09/01/2024 12:00:00 AM,Opened,Western,Family Child Care,14,100
+09/01/2026 12:00:00 AM,10/01/2024 12:00:00 AM,Opened,Western,Family Child Care,10,66
+09/01/2026 12:00:00 AM,11/01/2024 12:00:00 AM,Opened,Western,Family Child Care,11,76
+09/01/2026 12:00:00 AM,12/01/2024 12:00:00 AM,Opened,Western,Family Child Care,11,77
+09/01/2026 12:00:00 AM,01/01/2025 12:00:00 AM,Opened,Western,Family Child Care,10,72
+09/01/2026 12:00:00 AM,02/01/2025 12:00:00 AM,Opened,Western,Family Child Care,6,38
+09/01/2026 12:00:00 AM,03/01/2025 12:00:00 AM,Opened,Western,Family Child Care,10,66
+09/01/2026 12:00:00 AM,04/01/2025 12:00:00 AM,Opened,Western,Family Child Care,5,32
+09/01/2026 12:00:00 AM,05/01/2025 12:00:00 AM,Opened,Western,Family Child Care,7,48
+09/01/2026 12:00:00 AM,06/01/2025 12:00:00 AM,Opened,Western,Family Child Care,8,52
+09/01/2026 12:00:00 AM,07/01/2025 12:00:00 AM,Opened,Western,Family Child Care,5,32
+09/01/2026 12:00:00 AM,08/01/2025 12:00:00 AM,Opened,Western,Family Child Care,6,38
+09/01/2026 12:00:00 AM,09/01/2025 12:00:00 AM,Opened,Western,Family Child Care,10,64
+09/01/2026 12:00:00 AM,10/01/2025 12:00:00 AM,Opened,Western,Family Child Care,6,38
+09/01/2026 12:00:00 AM,11/01/2025 12:00:00 AM,Opened,Western,Family Child Care,10,64
+09/01/2026 12:00:00 AM,12/01/2025 12:00:00 AM,Opened,Western,Family Child Care,8,52
+09/01/2026 12:00:00 AM,01/01/2026 12:00:00 AM,Opened,Western,Family Child Care,10,62
+09/01/2026 12:00:00 AM,02/01/2026 12:00:00 AM,Opened,Western,Family Child Care,5,30
+09/01/2026 12:00:00 AM,03/01/2026 12:00:00 AM,Opened,Western,Family Child Care,5,30
+09/01/2026 12:00:00 AM,04/01/2026 12:00:00 AM,Opened,Western,Family Child Care,3,18
+09/01/2026 12:00:00 AM,05/01/2026 12:00:00 AM,Opened,Western,Family Child Care,3,20
+09/01/2026 12:00:00 AM,06/01/2026 12:00:00 AM,Opened,Western,Family Child Care,3,20
+09/01/2026 12:00:00 AM,07/01/2026 12:00:00 AM,Opened,Western,Family Child Care,5,32
+09/01/2026 12:00:00 AM,08/01/2026 12:00:00 AM,Opened,Western,Family Child Care,4,24
+09/01/2026 12:00:00 AM,11/01/2023 12:00:00 AM,Closed,Western,Funded Public Schools,-1,-30

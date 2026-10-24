@@ -1,0 +1,2173 @@
+{
+  "id" : "49fr-nu44",
+  "name" : "Early Childhood Educator Wages",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1744983264,
+  "description" : "This dataset includes hourly wages of early childhood educators by licensing region and role. Wage data is collected bi-annually from the <a href=\"https://www.mass.gov/info-details/commonwealth-cares-for-children-c3-grants\"target=\"_blank\" rel=\"noopener noreferrer\">Commonwealth Cares for Children (C3) </a>application. Programs report the highest and lowest wages by educator role. The highest and lowest wages are then averaged across programs both overall and by licensing region.\n\nThis data set is part of <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d\"target=\"_blank\" rel=\"noopener noreferrer\">EEC's Key Performance Indicator (KPI) Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 210,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42216038,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1781621590,
+  "publicationGroup" : 19859595,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790010333,
+  "rowsUpdatedBy" : "m5tk-n3hd",
+  "tableId" : 20421742,
+  "totalTimesRated" : 0,
+  "viewCount" : 650,
+  "viewLastModified" : 1790010332,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1781621683,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7523733,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1781621670,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1781621683,
+      "failureCount" : 0,
+      "startedAt" : 1781621683,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 635221771,
+    "name" : "C3_APP_MONTH",
+    "dataTypeName" : "text",
+    "description" : "Month of C3 application.",
+    "fieldName" : "c3_app_month",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 168543146,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "2026-05-01",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025-11-01",
+        "count" : "6"
+      }, {
+        "item" : "2024-11-01",
+        "count" : "6"
+      }, {
+        "item" : "2023-05-01",
+        "count" : "6"
+      }, {
+        "item" : "2026-05-01",
+        "count" : "6"
+      }, {
+        "item" : "2021-11-01",
+        "count" : "6"
+      }, {
+        "item" : "2022-05-01",
+        "count" : "6"
+      }, {
+        "item" : "2022-11-01",
+        "count" : "6"
+      }, {
+        "item" : "2023-11-01",
+        "count" : "6"
+      }, {
+        "item" : "2024-05-01",
+        "count" : "6"
+      }, {
+        "item" : "2025-05-01",
+        "count" : "6"
+      } ],
+      "smallest" : "2021-11-01",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 635221745,
+    "name" : "LICENSING_REGION",
+    "dataTypeName" : "text",
+    "description" : "Regional office that oversees program’s licensing.",
+    "fieldName" : "licensing_region",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158424164,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "Western",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Western",
+        "count" : "10"
+      }, {
+        "item" : "Southeast and Cape",
+        "count" : "10"
+      }, {
+        "item" : "All Regions",
+        "count" : "10"
+      }, {
+        "item" : "Metro Boston",
+        "count" : "10"
+      }, {
+        "item" : "Northeast",
+        "count" : "10"
+      }, {
+        "item" : "Central",
+        "count" : "10"
+      } ],
+      "smallest" : "All Regions",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : { }
+  }, {
+    "id" : 635221746,
+    "name" : "ASSISTANT_LEADER_UPPER",
+    "dataTypeName" : "number",
+    "description" : "Average of the highest assistant leader wages.",
+    "fieldName" : "assistant_leader_upper",
+    "position" : 3,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424163,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "21.1589",
+      "null" : "0",
+      "top" : [ {
+        "item" : "18.9057",
+        "count" : "1"
+      }, {
+        "item" : "19.8798",
+        "count" : "1"
+      }, {
+        "item" : "18.2536",
+        "count" : "1"
+      }, {
+        "item" : "15.4047",
+        "count" : "1"
+      }, {
+        "item" : "17.5002",
+        "count" : "1"
+      }, {
+        "item" : "17.8470",
+        "count" : "1"
+      }, {
+        "item" : "15.7732",
+        "count" : "1"
+      }, {
+        "item" : "16.4465",
+        "count" : "1"
+      }, {
+        "item" : "16.6155",
+        "count" : "1"
+      }, {
+        "item" : "17.3724",
+        "count" : "1"
+      }, {
+        "item" : "17.4125",
+        "count" : "1"
+      }, {
+        "item" : "18.3133",
+        "count" : "1"
+      }, {
+        "item" : "18.9819",
+        "count" : "1"
+      }, {
+        "item" : "19.0016",
+        "count" : "1"
+      }, {
+        "item" : "17.1433",
+        "count" : "1"
+      }, {
+        "item" : "16.3364",
+        "count" : "1"
+      }, {
+        "item" : "16.7684",
+        "count" : "1"
+      }, {
+        "item" : "17.8477",
+        "count" : "1"
+      }, {
+        "item" : "17.1869",
+        "count" : "1"
+      }, {
+        "item" : "17.9597",
+        "count" : "1"
+      } ],
+      "smallest" : "14.6882",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221747,
+    "name" : "ASSISTANT_LEADER_LOWER",
+    "dataTypeName" : "number",
+    "description" : "Average of the lowest assistant leader wages.",
+    "fieldName" : "assistant_leader_lower",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424162,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "17.9767",
+      "null" : "0",
+      "top" : [ {
+        "item" : "16.5156",
+        "count" : "1"
+      }, {
+        "item" : "14.8829",
+        "count" : "1"
+      }, {
+        "item" : "16.1480",
+        "count" : "1"
+      }, {
+        "item" : "17.2075",
+        "count" : "1"
+      }, {
+        "item" : "17.0565",
+        "count" : "1"
+      }, {
+        "item" : "14.1792",
+        "count" : "1"
+      }, {
+        "item" : "15.9353",
+        "count" : "1"
+      }, {
+        "item" : "16.2432",
+        "count" : "1"
+      }, {
+        "item" : "16.7506",
+        "count" : "1"
+      }, {
+        "item" : "15.2131",
+        "count" : "1"
+      }, {
+        "item" : "15.5932",
+        "count" : "1"
+      }, {
+        "item" : "15.9261",
+        "count" : "1"
+      }, {
+        "item" : "15.4514",
+        "count" : "1"
+      }, {
+        "item" : "15.2107",
+        "count" : "1"
+      }, {
+        "item" : "15.5282",
+        "count" : "1"
+      }, {
+        "item" : "16.0086",
+        "count" : "1"
+      }, {
+        "item" : "16.5272",
+        "count" : "1"
+      }, {
+        "item" : "16.8224",
+        "count" : "1"
+      }, {
+        "item" : "15.2291",
+        "count" : "1"
+      }, {
+        "item" : "15.3120",
+        "count" : "1"
+      } ],
+      "smallest" : "14.0865",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221748,
+    "name" : "ASSISTANT_LEADER_AVG",
+    "dataTypeName" : "number",
+    "description" : "Average of ASSISTANT_LEADER_UPPER and ASSISTANT_LEADER_LOWER. ",
+    "fieldName" : "assistant_leader_avg",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424161,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "19.5678",
+      "null" : "0",
+      "top" : [ {
+        "item" : "16.4389",
+        "count" : "1"
+      }, {
+        "item" : "17.4407",
+        "count" : "1"
+      }, {
+        "item" : "17.3540",
+        "count" : "1"
+      }, {
+        "item" : "16.9679",
+        "count" : "1"
+      }, {
+        "item" : "17.5917",
+        "count" : "1"
+      }, {
+        "item" : "16.3768",
+        "count" : "1"
+      }, {
+        "item" : "16.4412",
+        "count" : "1"
+      }, {
+        "item" : "17.8967",
+        "count" : "1"
+      }, {
+        "item" : "17.8663",
+        "count" : "1"
+      }, {
+        "item" : "15.2328",
+        "count" : "1"
+      }, {
+        "item" : "17.6601",
+        "count" : "1"
+      }, {
+        "item" : "17.9536",
+        "count" : "1"
+      }, {
+        "item" : "18.0078",
+        "count" : "1"
+      }, {
+        "item" : "16.7545",
+        "count" : "1"
+      }, {
+        "item" : "18.0998",
+        "count" : "1"
+      }, {
+        "item" : "18.6022",
+        "count" : "1"
+      }, {
+        "item" : "17.4667",
+        "count" : "1"
+      }, {
+        "item" : "18.1479",
+        "count" : "1"
+      }, {
+        "item" : "16.7267",
+        "count" : "1"
+      }, {
+        "item" : "16.8502",
+        "count" : "1"
+      } ],
+      "smallest" : "14.4030",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221749,
+    "name" : "ASSISTANT_TEACHER_UPPER",
+    "dataTypeName" : "number",
+    "description" : "Average of the highest assistant teacher wages.",
+    "fieldName" : "assistant_teacher_upper",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424160,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "22.4144",
+      "null" : "0",
+      "top" : [ {
+        "item" : "20.6992",
+        "count" : "1"
+      }, {
+        "item" : "19.4424",
+        "count" : "1"
+      }, {
+        "item" : "20.8216",
+        "count" : "1"
+      }, {
+        "item" : "22.1422",
+        "count" : "1"
+      }, {
+        "item" : "16.2503",
+        "count" : "1"
+      }, {
+        "item" : "16.8082",
+        "count" : "1"
+      }, {
+        "item" : "18.6354",
+        "count" : "1"
+      }, {
+        "item" : "20.5139",
+        "count" : "1"
+      }, {
+        "item" : "17.3501",
+        "count" : "1"
+      }, {
+        "item" : "19.6454",
+        "count" : "1"
+      }, {
+        "item" : "19.1745",
+        "count" : "1"
+      }, {
+        "item" : "16.4583",
+        "count" : "1"
+      }, {
+        "item" : "20.6168",
+        "count" : "1"
+      }, {
+        "item" : "18.2831",
+        "count" : "1"
+      }, {
+        "item" : "20.7176",
+        "count" : "1"
+      }, {
+        "item" : "15.8938",
+        "count" : "1"
+      }, {
+        "item" : "19.1672",
+        "count" : "1"
+      }, {
+        "item" : "17.4036",
+        "count" : "1"
+      }, {
+        "item" : "20.3756",
+        "count" : "1"
+      }, {
+        "item" : "17.4865",
+        "count" : "1"
+      } ],
+      "smallest" : "15.2398",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221750,
+    "name" : "ASSISTANT_TEACHER_LOWER",
+    "dataTypeName" : "number",
+    "description" : "Average of the lowest assistant teacher wages.",
+    "fieldName" : "assistant_teacher_lower",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424159,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "19.5054",
+      "null" : "0",
+      "top" : [ {
+        "item" : "16.3667",
+        "count" : "1"
+      }, {
+        "item" : "16.3913",
+        "count" : "1"
+      }, {
+        "item" : "19.4676",
+        "count" : "1"
+      }, {
+        "item" : "16.2021",
+        "count" : "1"
+      }, {
+        "item" : "18.1145",
+        "count" : "1"
+      }, {
+        "item" : "16.8586",
+        "count" : "1"
+      }, {
+        "item" : "17.0221",
+        "count" : "1"
+      }, {
+        "item" : "15.8314",
+        "count" : "1"
+      }, {
+        "item" : "15.9543",
+        "count" : "1"
+      }, {
+        "item" : "16.3117",
+        "count" : "1"
+      }, {
+        "item" : "19.2033",
+        "count" : "1"
+      }, {
+        "item" : "17.7150",
+        "count" : "1"
+      }, {
+        "item" : "17.3766",
+        "count" : "1"
+      }, {
+        "item" : "16.6719",
+        "count" : "1"
+      }, {
+        "item" : "16.1097",
+        "count" : "1"
+      }, {
+        "item" : "17.0701",
+        "count" : "1"
+      }, {
+        "item" : "17.9951",
+        "count" : "1"
+      }, {
+        "item" : "18.1053",
+        "count" : "1"
+      }, {
+        "item" : "16.4670",
+        "count" : "1"
+      }, {
+        "item" : "15.1432",
+        "count" : "1"
+      } ],
+      "smallest" : "14.2807",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221751,
+    "name" : "ASSISTANT_TEACHER_AVG",
+    "dataTypeName" : "number",
+    "description" : "Average of ASSISTANT_TEACHER_UPPER and ASSISTANT_TEACHER_LOWER. ",
+    "fieldName" : "assistant_teacher_avg",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424179,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "20.9599",
+      "null" : "0",
+      "top" : [ {
+        "item" : "18.9773",
+        "count" : "1"
+      }, {
+        "item" : "17.3813",
+        "count" : "1"
+      }, {
+        "item" : "17.8341",
+        "count" : "1"
+      }, {
+        "item" : "17.6616",
+        "count" : "1"
+      }, {
+        "item" : "19.2652",
+        "count" : "1"
+      }, {
+        "item" : "19.3629",
+        "count" : "1"
+      }, {
+        "item" : "19.2779",
+        "count" : "1"
+      }, {
+        "item" : "19.5505",
+        "count" : "1"
+      }, {
+        "item" : "18.2611",
+        "count" : "1"
+      }, {
+        "item" : "19.2194",
+        "count" : "1"
+      }, {
+        "item" : "14.7602",
+        "count" : "1"
+      }, {
+        "item" : "17.2145",
+        "count" : "1"
+      }, {
+        "item" : "17.1187",
+        "count" : "1"
+      }, {
+        "item" : "16.6584",
+        "count" : "1"
+      }, {
+        "item" : "19.1873",
+        "count" : "1"
+      }, {
+        "item" : "16.4428",
+        "count" : "1"
+      }, {
+        "item" : "20.5918",
+        "count" : "1"
+      }, {
+        "item" : "18.2655",
+        "count" : "1"
+      }, {
+        "item" : "16.8400",
+        "count" : "1"
+      }, {
+        "item" : "16.9508",
+        "count" : "1"
+      } ],
+      "smallest" : "14.7602",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221752,
+    "name" : "CENTER_DIRECTOR_UPPER",
+    "dataTypeName" : "number",
+    "description" : "Average of the highest center director wages.",
+    "fieldName" : "center_director_upper",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424178,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "41.8855",
+      "null" : "0",
+      "top" : [ {
+        "item" : "37.2392",
+        "count" : "1"
+      }, {
+        "item" : "30.2283",
+        "count" : "1"
+      }, {
+        "item" : "33.1560",
+        "count" : "1"
+      }, {
+        "item" : "30.6307",
+        "count" : "1"
+      }, {
+        "item" : "34.0635",
+        "count" : "1"
+      }, {
+        "item" : "41.1230",
+        "count" : "1"
+      }, {
+        "item" : "37.1294",
+        "count" : "1"
+      }, {
+        "item" : "31.0775",
+        "count" : "1"
+      }, {
+        "item" : "34.0217",
+        "count" : "1"
+      }, {
+        "item" : "34.8712",
+        "count" : "1"
+      }, {
+        "item" : "38.4238",
+        "count" : "1"
+      }, {
+        "item" : "31.0564",
+        "count" : "1"
+      }, {
+        "item" : "33.6520",
+        "count" : "1"
+      }, {
+        "item" : "41.8855",
+        "count" : "1"
+      }, {
+        "item" : "38.0852",
+        "count" : "1"
+      }, {
+        "item" : "30.8303",
+        "count" : "1"
+      }, {
+        "item" : "31.7919",
+        "count" : "1"
+      }, {
+        "item" : "31.3974",
+        "count" : "1"
+      }, {
+        "item" : "29.4831",
+        "count" : "1"
+      }, {
+        "item" : "31.5715",
+        "count" : "1"
+      } ],
+      "smallest" : "25.9316",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221753,
+    "name" : "CENTER_DIRECTOR_LOW",
+    "dataTypeName" : "number",
+    "description" : "Average of the lowest center director wages.",
+    "fieldName" : "center_director_low",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424177,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "36.5048",
+      "null" : "0",
+      "top" : [ {
+        "item" : "31.1304",
+        "count" : "1"
+      }, {
+        "item" : "30.9977",
+        "count" : "1"
+      }, {
+        "item" : "28.2736",
+        "count" : "1"
+      }, {
+        "item" : "27.6898",
+        "count" : "1"
+      }, {
+        "item" : "29.2351",
+        "count" : "1"
+      }, {
+        "item" : "29.5986",
+        "count" : "1"
+      }, {
+        "item" : "25.0602",
+        "count" : "1"
+      }, {
+        "item" : "28.9896",
+        "count" : "1"
+      }, {
+        "item" : "35.6337",
+        "count" : "1"
+      }, {
+        "item" : "28.1930",
+        "count" : "1"
+      }, {
+        "item" : "36.4047",
+        "count" : "1"
+      }, {
+        "item" : "24.5100",
+        "count" : "1"
+      }, {
+        "item" : "26.5686",
+        "count" : "1"
+      }, {
+        "item" : "29.8698",
+        "count" : "1"
+      }, {
+        "item" : "32.7032",
+        "count" : "1"
+      }, {
+        "item" : "32.9765",
+        "count" : "1"
+      }, {
+        "item" : "28.0476",
+        "count" : "1"
+      }, {
+        "item" : "27.9847",
+        "count" : "1"
+      }, {
+        "item" : "27.5902",
+        "count" : "1"
+      }, {
+        "item" : "30.1137",
+        "count" : "1"
+      } ],
+      "smallest" : "23.6604",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221754,
+    "name" : "CENTER_DIRECTOR_AVG",
+    "dataTypeName" : "number",
+    "description" : "Average of CENTER_DIRECTOR_LOW and CENTER_DIRECTOR_UPPER. ",
+    "fieldName" : "center_director_avg",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424176,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "39.1519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "29.1104",
+        "count" : "1"
+      }, {
+        "item" : "30.0780",
+        "count" : "1"
+      }, {
+        "item" : "32.8296",
+        "count" : "1"
+      }, {
+        "item" : "38.8748",
+        "count" : "1"
+      }, {
+        "item" : "29.9574",
+        "count" : "1"
+      }, {
+        "item" : "38.3784",
+        "count" : "1"
+      }, {
+        "item" : "29.3731",
+        "count" : "1"
+      }, {
+        "item" : "24.7960",
+        "count" : "1"
+      }, {
+        "item" : "25.4158",
+        "count" : "1"
+      }, {
+        "item" : "32.2287",
+        "count" : "1"
+      }, {
+        "item" : "31.7395",
+        "count" : "1"
+      }, {
+        "item" : "31.1955",
+        "count" : "1"
+      }, {
+        "item" : "31.0249",
+        "count" : "1"
+      }, {
+        "item" : "34.0279",
+        "count" : "1"
+      }, {
+        "item" : "29.5311",
+        "count" : "1"
+      }, {
+        "item" : "28.3985",
+        "count" : "1"
+      }, {
+        "item" : "30.6234",
+        "count" : "1"
+      }, {
+        "item" : "33.0300",
+        "count" : "1"
+      }, {
+        "item" : "26.5658",
+        "count" : "1"
+      }, {
+        "item" : "32.3144",
+        "count" : "1"
+      } ],
+      "smallest" : "24.7960",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221755,
+    "name" : "TEACHER_UPPER",
+    "dataTypeName" : "number",
+    "description" : "Average of the highest teacher wages.",
+    "fieldName" : "teacher_upper",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424183,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "30.5619",
+      "null" : "0",
+      "top" : [ {
+        "item" : "28.2002",
+        "count" : "1"
+      }, {
+        "item" : "24.6577",
+        "count" : "1"
+      }, {
+        "item" : "21.6491",
+        "count" : "1"
+      }, {
+        "item" : "30.4759",
+        "count" : "1"
+      }, {
+        "item" : "27.1278",
+        "count" : "1"
+      }, {
+        "item" : "25.4723",
+        "count" : "1"
+      }, {
+        "item" : "19.7312",
+        "count" : "1"
+      }, {
+        "item" : "30.1622",
+        "count" : "1"
+      }, {
+        "item" : "22.9437",
+        "count" : "1"
+      }, {
+        "item" : "25.1970",
+        "count" : "1"
+      }, {
+        "item" : "27.7822",
+        "count" : "1"
+      }, {
+        "item" : "23.2755",
+        "count" : "1"
+      }, {
+        "item" : "27.0976",
+        "count" : "1"
+      }, {
+        "item" : "27.0871",
+        "count" : "1"
+      }, {
+        "item" : "24.7480",
+        "count" : "1"
+      }, {
+        "item" : "21.4418",
+        "count" : "1"
+      }, {
+        "item" : "22.8678",
+        "count" : "1"
+      }, {
+        "item" : "24.5153",
+        "count" : "1"
+      }, {
+        "item" : "25.6107",
+        "count" : "1"
+      }, {
+        "item" : "25.9984",
+        "count" : "1"
+      } ],
+      "smallest" : "19.7312",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221756,
+    "name" : "TEACHER_LOWER",
+    "dataTypeName" : "number",
+    "description" : "Average of the lowest teacher wages.",
+    "fieldName" : "teacher_lower",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424182,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "23.3362",
+      "null" : "0",
+      "top" : [ {
+        "item" : "22.8123",
+        "count" : "1"
+      }, {
+        "item" : "17.7198",
+        "count" : "1"
+      }, {
+        "item" : "19.6115",
+        "count" : "1"
+      }, {
+        "item" : "19.6620",
+        "count" : "1"
+      }, {
+        "item" : "18.9338",
+        "count" : "1"
+      }, {
+        "item" : "23.3362",
+        "count" : "1"
+      }, {
+        "item" : "16.4859",
+        "count" : "1"
+      }, {
+        "item" : "16.9469",
+        "count" : "1"
+      }, {
+        "item" : "20.7490",
+        "count" : "1"
+      }, {
+        "item" : "19.4473",
+        "count" : "1"
+      }, {
+        "item" : "21.0759",
+        "count" : "1"
+      }, {
+        "item" : "16.2394",
+        "count" : "1"
+      }, {
+        "item" : "18.8312",
+        "count" : "1"
+      }, {
+        "item" : "17.7675",
+        "count" : "1"
+      }, {
+        "item" : "18.5754",
+        "count" : "1"
+      }, {
+        "item" : "18.6472",
+        "count" : "1"
+      }, {
+        "item" : "20.3715",
+        "count" : "1"
+      }, {
+        "item" : "19.9665",
+        "count" : "1"
+      }, {
+        "item" : "18.0438",
+        "count" : "1"
+      }, {
+        "item" : "18.5795",
+        "count" : "1"
+      } ],
+      "smallest" : "15.7917",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221757,
+    "name" : "TEACHER_AVG",
+    "dataTypeName" : "number",
+    "description" : "Average of TEACHER_LOWER and TEACHER_UPPER. ",
+    "fieldName" : "teacher_avg",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424181,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "26.9491",
+      "null" : "0",
+      "top" : [ {
+        "item" : "17.7615",
+        "count" : "1"
+      }, {
+        "item" : "21.8169",
+        "count" : "1"
+      }, {
+        "item" : "24.6197",
+        "count" : "1"
+      }, {
+        "item" : "26.8659",
+        "count" : "1"
+      }, {
+        "item" : "20.4977",
+        "count" : "1"
+      }, {
+        "item" : "22.3014",
+        "count" : "1"
+      }, {
+        "item" : "20.5050",
+        "count" : "1"
+      }, {
+        "item" : "23.3046",
+        "count" : "1"
+      }, {
+        "item" : "22.6757",
+        "count" : "1"
+      }, {
+        "item" : "22.4514",
+        "count" : "1"
+      }, {
+        "item" : "24.8256",
+        "count" : "1"
+      }, {
+        "item" : "20.1702",
+        "count" : "1"
+      }, {
+        "item" : "21.9556",
+        "count" : "1"
+      }, {
+        "item" : "22.1986",
+        "count" : "1"
+      }, {
+        "item" : "22.6274",
+        "count" : "1"
+      }, {
+        "item" : "23.8388",
+        "count" : "1"
+      }, {
+        "item" : "22.5923",
+        "count" : "1"
+      }, {
+        "item" : "22.5671",
+        "count" : "1"
+      }, {
+        "item" : "24.7267",
+        "count" : "1"
+      }, {
+        "item" : "19.3241",
+        "count" : "1"
+      } ],
+      "smallest" : "17.7615",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221758,
+    "name" : "GROUP_LEADER_UPPER",
+    "dataTypeName" : "number",
+    "description" : "Average of the highest group leader wages.",
+    "fieldName" : "group_leader_upper",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424175,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "25.6467",
+      "null" : "0",
+      "top" : [ {
+        "item" : "21.2785",
+        "count" : "1"
+      }, {
+        "item" : "20.4174",
+        "count" : "1"
+      }, {
+        "item" : "23.4492",
+        "count" : "1"
+      }, {
+        "item" : "24.8619",
+        "count" : "1"
+      }, {
+        "item" : "19.9526",
+        "count" : "1"
+      }, {
+        "item" : "17.2659",
+        "count" : "1"
+      }, {
+        "item" : "19.9482",
+        "count" : "1"
+      }, {
+        "item" : "23.1385",
+        "count" : "1"
+      }, {
+        "item" : "20.1438",
+        "count" : "1"
+      }, {
+        "item" : "20.8501",
+        "count" : "1"
+      }, {
+        "item" : "18.9873",
+        "count" : "1"
+      }, {
+        "item" : "23.7799",
+        "count" : "1"
+      }, {
+        "item" : "17.9790",
+        "count" : "1"
+      }, {
+        "item" : "20.9635",
+        "count" : "1"
+      }, {
+        "item" : "20.2276",
+        "count" : "1"
+      }, {
+        "item" : "20.9377",
+        "count" : "1"
+      }, {
+        "item" : "22.3403",
+        "count" : "1"
+      }, {
+        "item" : "22.9963",
+        "count" : "1"
+      }, {
+        "item" : "20.1727",
+        "count" : "1"
+      }, {
+        "item" : "18.9910",
+        "count" : "1"
+      } ],
+      "smallest" : "16.3730",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221759,
+    "name" : "GROUP_LEADER_LOWER",
+    "dataTypeName" : "number",
+    "description" : "Average of the lowest group leader wages.",
+    "fieldName" : "group_leader_lower",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424174,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "20.0965",
+      "null" : "0",
+      "top" : [ {
+        "item" : "17.1446",
+        "count" : "1"
+      }, {
+        "item" : "19.4876",
+        "count" : "1"
+      }, {
+        "item" : "17.0497",
+        "count" : "1"
+      }, {
+        "item" : "16.5911",
+        "count" : "1"
+      }, {
+        "item" : "17.6748",
+        "count" : "1"
+      }, {
+        "item" : "16.2707",
+        "count" : "1"
+      }, {
+        "item" : "16.1866",
+        "count" : "1"
+      }, {
+        "item" : "17.9810",
+        "count" : "1"
+      }, {
+        "item" : "18.6239",
+        "count" : "1"
+      }, {
+        "item" : "18.3948",
+        "count" : "1"
+      }, {
+        "item" : "16.7921",
+        "count" : "1"
+      }, {
+        "item" : "18.6378",
+        "count" : "1"
+      }, {
+        "item" : "19.0278",
+        "count" : "1"
+      }, {
+        "item" : "17.5994",
+        "count" : "1"
+      }, {
+        "item" : "18.2196",
+        "count" : "1"
+      }, {
+        "item" : "18.8949",
+        "count" : "1"
+      }, {
+        "item" : "19.1986",
+        "count" : "1"
+      }, {
+        "item" : "18.8944",
+        "count" : "1"
+      }, {
+        "item" : "19.1487",
+        "count" : "1"
+      }, {
+        "item" : "17.0378",
+        "count" : "1"
+      } ],
+      "smallest" : "14.9323",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221760,
+    "name" : "GROUP_LEADER_AVG",
+    "dataTypeName" : "number",
+    "description" : "Average of GROUP_LEADER_LOWER and GROUP_LEADER_UPPER. ",
+    "fieldName" : "group_leader_avg",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424173,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "22.7184",
+      "null" : "0",
+      "top" : [ {
+        "item" : "20.5644",
+        "count" : "1"
+      }, {
+        "item" : "21.7537",
+        "count" : "1"
+      }, {
+        "item" : "17.7478",
+        "count" : "1"
+      }, {
+        "item" : "19.6177",
+        "count" : "1"
+      }, {
+        "item" : "19.5601",
+        "count" : "1"
+      }, {
+        "item" : "18.0981",
+        "count" : "1"
+      }, {
+        "item" : "18.8211",
+        "count" : "1"
+      }, {
+        "item" : "17.5523",
+        "count" : "1"
+      }, {
+        "item" : "19.1523",
+        "count" : "1"
+      }, {
+        "item" : "18.2038",
+        "count" : "1"
+      }, {
+        "item" : "20.0444",
+        "count" : "1"
+      }, {
+        "item" : "22.5027",
+        "count" : "1"
+      }, {
+        "item" : "17.7919",
+        "count" : "1"
+      }, {
+        "item" : "18.2991",
+        "count" : "1"
+      }, {
+        "item" : "18.0328",
+        "count" : "1"
+      }, {
+        "item" : "18.4682",
+        "count" : "1"
+      }, {
+        "item" : "16.8677",
+        "count" : "1"
+      }, {
+        "item" : "22.3355",
+        "count" : "1"
+      }, {
+        "item" : "17.7480",
+        "count" : "1"
+      }, {
+        "item" : "19.4767",
+        "count" : "1"
+      } ],
+      "smallest" : "15.6526",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221761,
+    "name" : "PROGRAM_ADMIN_UPPER",
+    "dataTypeName" : "number",
+    "description" : "Average of the highest program administrator wages.",
+    "fieldName" : "program_admin_upper",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424172,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "42.5854",
+      "null" : "0",
+      "top" : [ {
+        "item" : "28.6013",
+        "count" : "1"
+      }, {
+        "item" : "34.0270",
+        "count" : "1"
+      }, {
+        "item" : "32.8558",
+        "count" : "1"
+      }, {
+        "item" : "27.1349",
+        "count" : "1"
+      }, {
+        "item" : "29.7953",
+        "count" : "1"
+      }, {
+        "item" : "38.1251",
+        "count" : "1"
+      }, {
+        "item" : "33.7308",
+        "count" : "1"
+      }, {
+        "item" : "31.2823",
+        "count" : "1"
+      }, {
+        "item" : "36.6880",
+        "count" : "1"
+      }, {
+        "item" : "36.2019",
+        "count" : "1"
+      }, {
+        "item" : "39.1294",
+        "count" : "1"
+      }, {
+        "item" : "42.5854",
+        "count" : "1"
+      }, {
+        "item" : "38.1569",
+        "count" : "1"
+      }, {
+        "item" : "32.4218",
+        "count" : "1"
+      }, {
+        "item" : "29.1150",
+        "count" : "1"
+      }, {
+        "item" : "33.8876",
+        "count" : "1"
+      }, {
+        "item" : "38.9169",
+        "count" : "1"
+      }, {
+        "item" : "30.9966",
+        "count" : "1"
+      }, {
+        "item" : "32.9573",
+        "count" : "1"
+      }, {
+        "item" : "27.4080",
+        "count" : "1"
+      } ],
+      "smallest" : "27.1349",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "percentScale" : "1",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221762,
+    "name" : "PROGRAM_ADMIN_LOWER",
+    "dataTypeName" : "number",
+    "description" : "Average of the lowest program administrator wages.",
+    "fieldName" : "program_admin_lower",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424171,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "36.8450",
+      "null" : "0",
+      "top" : [ {
+        "item" : "24.9974",
+        "count" : "1"
+      }, {
+        "item" : "33.0317",
+        "count" : "1"
+      }, {
+        "item" : "34.7145",
+        "count" : "1"
+      }, {
+        "item" : "32.9922",
+        "count" : "1"
+      }, {
+        "item" : "32.1321",
+        "count" : "1"
+      }, {
+        "item" : "32.0749",
+        "count" : "1"
+      }, {
+        "item" : "36.6468",
+        "count" : "1"
+      }, {
+        "item" : "29.3021",
+        "count" : "1"
+      }, {
+        "item" : "33.6709",
+        "count" : "1"
+      }, {
+        "item" : "30.9543",
+        "count" : "1"
+      }, {
+        "item" : "31.3070",
+        "count" : "1"
+      }, {
+        "item" : "28.1455",
+        "count" : "1"
+      }, {
+        "item" : "26.3573",
+        "count" : "1"
+      }, {
+        "item" : "24.9419",
+        "count" : "1"
+      }, {
+        "item" : "27.4458",
+        "count" : "1"
+      }, {
+        "item" : "28.6537",
+        "count" : "1"
+      }, {
+        "item" : "28.6792",
+        "count" : "1"
+      }, {
+        "item" : "23.1977",
+        "count" : "1"
+      }, {
+        "item" : "32.5477",
+        "count" : "1"
+      }, {
+        "item" : "25.3882",
+        "count" : "1"
+      } ],
+      "smallest" : "23.1977",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221763,
+    "name" : "PROGRAM_ADMIN_AVG",
+    "dataTypeName" : "number",
+    "description" : "Average of PROGRAM_ADMIN_LOWER and PROGRAM_ADMIN_UPPER.",
+    "fieldName" : "program_admin_avg",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424170,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "39.3383",
+      "null" : "0",
+      "top" : [ {
+        "item" : "38.6269",
+        "count" : "1"
+      }, {
+        "item" : "31.3781",
+        "count" : "1"
+      }, {
+        "item" : "30.6394",
+        "count" : "1"
+      }, {
+        "item" : "25.6714",
+        "count" : "1"
+      }, {
+        "item" : "35.2836",
+        "count" : "1"
+      }, {
+        "item" : "32.2092",
+        "count" : "1"
+      }, {
+        "item" : "28.6770",
+        "count" : "1"
+      }, {
+        "item" : "34.3070",
+        "count" : "1"
+      }, {
+        "item" : "30.7550",
+        "count" : "1"
+      }, {
+        "item" : "28.3144",
+        "count" : "1"
+      }, {
+        "item" : "30.6256",
+        "count" : "1"
+      }, {
+        "item" : "30.7417",
+        "count" : "1"
+      }, {
+        "item" : "30.2836",
+        "count" : "1"
+      }, {
+        "item" : "34.7334",
+        "count" : "1"
+      }, {
+        "item" : "25.7817",
+        "count" : "1"
+      }, {
+        "item" : "25.4695",
+        "count" : "1"
+      }, {
+        "item" : "33.8212",
+        "count" : "1"
+      }, {
+        "item" : "31.0269",
+        "count" : "1"
+      }, {
+        "item" : "29.3038",
+        "count" : "1"
+      }, {
+        "item" : "39.3383",
+        "count" : "1"
+      } ],
+      "smallest" : "25.4695",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221764,
+    "name" : "SITE_COORDINATOR_UPPER",
+    "dataTypeName" : "number",
+    "description" : "Average of the highest site coordinator wages.",
+    "fieldName" : "site_coordinator_upper",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424180,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "31.0237",
+      "null" : "0",
+      "top" : [ {
+        "item" : "25.4670",
+        "count" : "1"
+      }, {
+        "item" : "28.0795",
+        "count" : "1"
+      }, {
+        "item" : "24.0969",
+        "count" : "1"
+      }, {
+        "item" : "26.5678",
+        "count" : "1"
+      }, {
+        "item" : "24.5038",
+        "count" : "1"
+      }, {
+        "item" : "27.2296",
+        "count" : "1"
+      }, {
+        "item" : "27.2989",
+        "count" : "1"
+      }, {
+        "item" : "24.3136",
+        "count" : "1"
+      }, {
+        "item" : "24.1401",
+        "count" : "1"
+      }, {
+        "item" : "26.6863",
+        "count" : "1"
+      }, {
+        "item" : "23.5662",
+        "count" : "1"
+      }, {
+        "item" : "22.1740",
+        "count" : "1"
+      }, {
+        "item" : "25.7198",
+        "count" : "1"
+      }, {
+        "item" : "25.5493",
+        "count" : "1"
+      }, {
+        "item" : "30.8082",
+        "count" : "1"
+      }, {
+        "item" : "29.3951",
+        "count" : "1"
+      }, {
+        "item" : "31.0237",
+        "count" : "1"
+      }, {
+        "item" : "21.3938",
+        "count" : "1"
+      }, {
+        "item" : "28.2513",
+        "count" : "1"
+      }, {
+        "item" : "22.7435",
+        "count" : "1"
+      } ],
+      "smallest" : "19.7173",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221765,
+    "name" : "SITE_COORDINATOR_LOWER",
+    "dataTypeName" : "number",
+    "description" : "Average of the lowest site coordinator wages.",
+    "fieldName" : "site_coordinator_lower",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424169,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "27.9794",
+      "null" : "0",
+      "top" : [ {
+        "item" : "22.2579",
+        "count" : "1"
+      }, {
+        "item" : "19.9544",
+        "count" : "1"
+      }, {
+        "item" : "21.0629",
+        "count" : "1"
+      }, {
+        "item" : "18.3785",
+        "count" : "1"
+      }, {
+        "item" : "23.6049",
+        "count" : "1"
+      }, {
+        "item" : "21.5202",
+        "count" : "1"
+      }, {
+        "item" : "18.2833",
+        "count" : "1"
+      }, {
+        "item" : "24.4208",
+        "count" : "1"
+      }, {
+        "item" : "23.8015",
+        "count" : "1"
+      }, {
+        "item" : "19.3959",
+        "count" : "1"
+      }, {
+        "item" : "26.1763",
+        "count" : "1"
+      }, {
+        "item" : "18.9840",
+        "count" : "1"
+      }, {
+        "item" : "25.5472",
+        "count" : "1"
+      }, {
+        "item" : "25.0761",
+        "count" : "1"
+      }, {
+        "item" : "21.8721",
+        "count" : "1"
+      }, {
+        "item" : "26.1543",
+        "count" : "1"
+      }, {
+        "item" : "22.0528",
+        "count" : "1"
+      }, {
+        "item" : "17.7816",
+        "count" : "1"
+      }, {
+        "item" : "18.8683",
+        "count" : "1"
+      }, {
+        "item" : "23.5167",
+        "count" : "1"
+      } ],
+      "smallest" : "17.7816",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221766,
+    "name" : "SITE_COORDINATOR_AVG",
+    "dataTypeName" : "number",
+    "description" : "Average of SITE_COORDINATOR_LOWER and SITE_COORDINATOR_UPPER.",
+    "fieldName" : "site_coordinator_avg",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424168,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "29.4524",
+      "null" : "0",
+      "top" : [ {
+        "item" : "28.1886",
+        "count" : "1"
+      }, {
+        "item" : "27.1169",
+        "count" : "1"
+      }, {
+        "item" : "19.2470",
+        "count" : "1"
+      }, {
+        "item" : "20.3442",
+        "count" : "1"
+      }, {
+        "item" : "24.7764",
+        "count" : "1"
+      }, {
+        "item" : "23.8342",
+        "count" : "1"
+      }, {
+        "item" : "22.3529",
+        "count" : "1"
+      }, {
+        "item" : "22.6690",
+        "count" : "1"
+      }, {
+        "item" : "25.4475",
+        "count" : "1"
+      }, {
+        "item" : "20.3784",
+        "count" : "1"
+      }, {
+        "item" : "28.4510",
+        "count" : "1"
+      }, {
+        "item" : "22.4162",
+        "count" : "1"
+      }, {
+        "item" : "19.9096",
+        "count" : "1"
+      }, {
+        "item" : "19.6006",
+        "count" : "1"
+      }, {
+        "item" : "21.0547",
+        "count" : "1"
+      }, {
+        "item" : "22.9766",
+        "count" : "1"
+      }, {
+        "item" : "26.6009",
+        "count" : "1"
+      }, {
+        "item" : "23.7703",
+        "count" : "1"
+      }, {
+        "item" : "20.7850",
+        "count" : "1"
+      }, {
+        "item" : "23.8566",
+        "count" : "1"
+      } ],
+      "smallest" : "18.7495",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "2"
+    }
+  }, {
+    "id" : 635221767,
+    "name" : "TOTAL_UNIQUE_PROGRAMS",
+    "dataTypeName" : "number",
+    "description" : "Number of programs reporting wages. Some programs provide both early education and school age services so EARLY_EDUCATION_PROGRAMS and SCHOOL_AGE_PROGRAMS will not always sum to TOTAL_UNIQUE_PROGRAMS",
+    "fieldName" : "total_unique_programs",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158424167,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "2780.0000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "369.0000",
+        "count" : "2"
+      }, {
+        "item" : "651.0000",
+        "count" : "2"
+      }, {
+        "item" : "478.0000",
+        "count" : "2"
+      }, {
+        "item" : "2412.0000",
+        "count" : "1"
+      }, {
+        "item" : "371.0000",
+        "count" : "1"
+      }, {
+        "item" : "548.0000",
+        "count" : "1"
+      }, {
+        "item" : "482.0000",
+        "count" : "1"
+      }, {
+        "item" : "606.0000",
+        "count" : "1"
+      }, {
+        "item" : "581.0000",
+        "count" : "1"
+      }, {
+        "item" : "2709.0000",
+        "count" : "1"
+      }, {
+        "item" : "2780.0000",
+        "count" : "1"
+      }, {
+        "item" : "576.0000",
+        "count" : "1"
+      }, {
+        "item" : "622.0000",
+        "count" : "1"
+      }, {
+        "item" : "324.0000",
+        "count" : "1"
+      }, {
+        "item" : "516.0000",
+        "count" : "1"
+      }, {
+        "item" : "655.0000",
+        "count" : "1"
+      }, {
+        "item" : "575.0000",
+        "count" : "1"
+      }, {
+        "item" : "600.0000",
+        "count" : "1"
+      }, {
+        "item" : "547.0000",
+        "count" : "1"
+      }, {
+        "item" : "367.0000",
+        "count" : "1"
+      } ],
+      "smallest" : "322.0000",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : { }
+  }, {
+    "id" : 635221770,
+    "name" : "EARLY_EDUCATION_PROGRAMS",
+    "dataTypeName" : "number",
+    "description" : "Number of early education programs reporting wages.",
+    "fieldName" : "early_education_programs",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168543145,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "2115.0000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "482.0000",
+        "count" : "2"
+      }, {
+        "item" : "255.0000",
+        "count" : "2"
+      }, {
+        "item" : "2046.0000",
+        "count" : "2"
+      }, {
+        "item" : "455.0000",
+        "count" : "2"
+      }, {
+        "item" : "477.0000",
+        "count" : "2"
+      }, {
+        "item" : "443.0000",
+        "count" : "1"
+      }, {
+        "item" : "424.0000",
+        "count" : "1"
+      }, {
+        "item" : "456.0000",
+        "count" : "1"
+      }, {
+        "item" : "251.0000",
+        "count" : "1"
+      }, {
+        "item" : "1829.0000",
+        "count" : "1"
+      }, {
+        "item" : "354.0000",
+        "count" : "1"
+      }, {
+        "item" : "250.0000",
+        "count" : "1"
+      }, {
+        "item" : "435.0000",
+        "count" : "1"
+      }, {
+        "item" : "419.0000",
+        "count" : "1"
+      }, {
+        "item" : "402.0000",
+        "count" : "1"
+      }, {
+        "item" : "393.0000",
+        "count" : "1"
+      }, {
+        "item" : "1817.0000",
+        "count" : "1"
+      }, {
+        "item" : "2035.0000",
+        "count" : "1"
+      }, {
+        "item" : "257.0000",
+        "count" : "1"
+      }, {
+        "item" : "375.0000",
+        "count" : "1"
+      } ],
+      "smallest" : "222.0000",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : { }
+  }, {
+    "id" : 635221769,
+    "name" : "SCHOOL_AGE_PROGRAMS",
+    "dataTypeName" : "number",
+    "description" : "Number of school age programs reporting wages.",
+    "fieldName" : "school_age_programs",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168543144,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "974.0000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "205.0000",
+        "count" : "3"
+      }, {
+        "item" : "223.0000",
+        "count" : "2"
+      }, {
+        "item" : "187.0000",
+        "count" : "2"
+      }, {
+        "item" : "152.0000",
+        "count" : "2"
+      }, {
+        "item" : "174.0000",
+        "count" : "2"
+      }, {
+        "item" : "153.0000",
+        "count" : "2"
+      }, {
+        "item" : "201.0000",
+        "count" : "2"
+      }, {
+        "item" : "154.0000",
+        "count" : "2"
+      }, {
+        "item" : "917.0000",
+        "count" : "1"
+      }, {
+        "item" : "942.0000",
+        "count" : "1"
+      }, {
+        "item" : "947.0000",
+        "count" : "1"
+      }, {
+        "item" : "208.0000",
+        "count" : "1"
+      }, {
+        "item" : "183.0000",
+        "count" : "1"
+      }, {
+        "item" : "244.0000",
+        "count" : "1"
+      }, {
+        "item" : "221.0000",
+        "count" : "1"
+      }, {
+        "item" : "179.0000",
+        "count" : "1"
+      }, {
+        "item" : "165.0000",
+        "count" : "1"
+      }, {
+        "item" : "961.0000",
+        "count" : "1"
+      }, {
+        "item" : "200.0000",
+        "count" : "1"
+      }, {
+        "item" : "169.0000",
+        "count" : "1"
+      } ],
+      "smallest" : "143.0000",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : { }
+  }, {
+    "id" : 635221768,
+    "name" : "DATA_LOAD_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Refresh date",
+    "fieldName" : "data_load_date",
+    "position" : 27,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 158424166,
+    "cachedContents" : {
+      "non_null" : "60",
+      "largest" : "2026-09-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-09-01T00:00:00.000",
+        "count" : "60"
+      } ],
+      "smallest" : "2026-09-01T00:00:00.000",
+      "count" : "60",
+      "cardinality" : "60"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/lists/data-on-massachusetts-child-care-programs#eec-key-performance-indicator-(kpi)-dashboard-"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "c3", "commonwealth cares for children", "childcare", "daycare", "licensed childcare", "educators" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

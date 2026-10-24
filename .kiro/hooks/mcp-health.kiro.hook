@@ -1,0 +1,10 @@
+{
+  "name": "MCP servers stay healthy",
+  "description": "When an MCP server or its config changes, launch every server the way Kiro does and make one real call each.",
+  "trigger": {
+    "type": "fileEdited",
+    "patterns": [".kiro/mcp/**/*", ".kiro/settings/mcp.json"]
+  },
+  "prompt": "An MCP server or .kiro/settings/mcp.json changed. From the repo root run `python3 .kiro/scripts/check_mcp.py`. Report each server's PASS/FAIL in one line. If any FAIL, fix the cause (do not disable the server to make it pass) and rerun until all PASS. THEN log it: run `.kiro/klog.sh \"<teammate if known, else —>\" \"mcp-health-hook\" \"check_mcp <pass/fail>\" \"keep MCP servers working\" \"<files or —>\" \"—\"` from the repo root.",
+  "enabled": true
+}

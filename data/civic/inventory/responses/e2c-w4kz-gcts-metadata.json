@@ -1,0 +1,101 @@
+{
+  "id" : "w4kz-gcts",
+  "name" : "School Finance Dashboard",
+  "assetType" : "href",
+  "averageRating" : 0,
+  "category" : "Finance and Budget",
+  "createdAt" : 1732658483,
+  "description" : "This dashboard includes reports comparing expenditure, enrollment, and staffing data collected from Massachusetts public schools and districts each year. The expenditure data includes district and school level operating expenditures, encompassing general fund expenditures and grant and revolving fund expenditures. In addition to showing the overall cost per pupil, they provide detail about how much districts, charter schools, and virtual schools spend in specific functional areas such as administration, teaching, and maintenance.\n\nThis dashboard contains the same data that is also published in the following datasets in the E2C Hub:\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/District-Expenditures-by-Spending-Category/er3w-dyti/about_data\">District Expenditures by Spending Category</a>\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/District-Expenditures-by-Function-Code/cnfs-edqq/about_data\">District Expenditures by Function Code</a>\n<a href=\"https://educationtocareer.data.mass.gov/Finance-and-Budget/School-Expenditures-by-Spending-Category/i5up-aez6/about_data\">School Expenditures by Spending Category</a>",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40982248,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1732658880,
+  "publicationGroup" : 19703330,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1732658483,
+  "tableId" : 19703330,
+  "totalTimesRated" : 0,
+  "viewCount" : 1312,
+  "viewLastModified" : 1746222653,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1732658960,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6634039,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1732658950,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1732658960,
+      "failureCount" : 0,
+      "startedAt" : 1732658960,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "Power BI" : "https://app.powerbigov.us/view?r=eyJrIjoiZmVkOWM4NmMtOGQyYi00ZjY0LTkwZWUtZGQyZGM3YTlhZjgxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+      }
+    } ],
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "accessPoints" : {
+      "Power BI" : "https://app.powerbigov.us/view?r=eyJrIjoiZmVkOWM4NmMtOGQyYi00ZjY0LTkwZWUtZGQyZGM3YTlhZjgxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "school finance dashboard" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

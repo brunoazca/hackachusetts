@@ -1,0 +1,345 @@
+{
+  "id" : "fuam-di5w",
+  "name" : "Early Childhood Educator Workforce",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1748886237,
+  "description" : "This dataset includes the estimated number of early childhood educators in the workforce across Massachusetts. Early childhood educator roles are available by licensing region and program type. Workforce data is collected bi-annually from the <a href=\"https://www.mass.gov/info-details/commonwealth-cares-for-children-c3-grants\"target=\"_blank\" rel=\"noopener noreferrer\">Commonwealth Cares for Children (C3) </a>application. Note that the number of family child care licensees reflects the number of licensed family child care programs in the <a href=\"https://educationtocareer.data.mass.gov/Early-Education-and-Care-/Licensed-and-Funded-Child-Care-Providers/dn4d-tjbb/about_data\">Licensed and Funded Child Care Providers</a> dataset.\n\nThis data set is part of <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d\"target=\"_blank\" rel=\"noopener noreferrer\">EEC's Key Performance Indicator (KPI) Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 194,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41352290,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1748888606,
+  "publicationGroup" : 19909583,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790008354,
+  "rowsUpdatedBy" : "m5tk-n3hd",
+  "tableId" : 19909583,
+  "totalTimesRated" : 0,
+  "viewCount" : 1188,
+  "viewLastModified" : 1790008353,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1750098292,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6924247,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1750098240,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "m5tk-n3hd",
+      "displayName" : "E2C Hub"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1750098293,
+      "failureCount" : 0,
+      "startedAt" : 1750098292,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "b2zp-yiy6",
+      "displayName" : "Ellen Song"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 611031955,
+    "name" : "STAFF_COUNT",
+    "dataTypeName" : "number",
+    "description" : "The number of self-reported educators aggregated across programs",
+    "fieldName" : "staff_count",
+    "position" : 1,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158909277,
+    "cachedContents" : {
+      "non_null" : "270",
+      "largest" : "4694.29",
+      "null" : "0",
+      "top" : [ {
+        "item" : "155.0",
+        "count" : "3"
+      }, {
+        "item" : "119.75",
+        "count" : "3"
+      }, {
+        "item" : "110.79",
+        "count" : "3"
+      }, {
+        "item" : "156.47",
+        "count" : "3"
+      }, {
+        "item" : "1627.0",
+        "count" : "3"
+      }, {
+        "item" : "155.47",
+        "count" : "3"
+      }, {
+        "item" : "455.54",
+        "count" : "3"
+      }, {
+        "item" : "228.12",
+        "count" : "2"
+      }, {
+        "item" : "931.0",
+        "count" : "2"
+      }, {
+        "item" : "132.13",
+        "count" : "2"
+      }, {
+        "item" : "204.21",
+        "count" : "2"
+      }, {
+        "item" : "195.14",
+        "count" : "2"
+      }, {
+        "item" : "470.52",
+        "count" : "2"
+      }, {
+        "item" : "249.39",
+        "count" : "2"
+      }, {
+        "item" : "653.0",
+        "count" : "2"
+      }, {
+        "item" : "510.93",
+        "count" : "2"
+      }, {
+        "item" : "197.23",
+        "count" : "2"
+      }, {
+        "item" : "919.95",
+        "count" : "2"
+      }, {
+        "item" : "448.0",
+        "count" : "2"
+      }, {
+        "item" : "783.53",
+        "count" : "2"
+      } ],
+      "smallest" : "86.97",
+      "count" : "270",
+      "cardinality" : "270"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 611031954,
+    "name" : "JOB_TITLE",
+    "dataTypeName" : "text",
+    "description" : "Job title",
+    "fieldName" : "job_title",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158909276,
+    "cachedContents" : {
+      "non_null" : "270",
+      "largest" : "Teacher",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Group Leader",
+        "count" : "30"
+      }, {
+        "item" : "Teacher",
+        "count" : "30"
+      }, {
+        "item" : "FCC Licensee",
+        "count" : "30"
+      }, {
+        "item" : "FCC Assistant",
+        "count" : "30"
+      }, {
+        "item" : "Assistant Leader",
+        "count" : "30"
+      }, {
+        "item" : "Program Administrator",
+        "count" : "30"
+      }, {
+        "item" : "Assistant Teacher",
+        "count" : "30"
+      }, {
+        "item" : "Center Director",
+        "count" : "30"
+      }, {
+        "item" : "Site Coordinator",
+        "count" : "30"
+      } ],
+      "smallest" : "Assistant Leader",
+      "count" : "270",
+      "cardinality" : "270"
+    },
+    "format" : { }
+  }, {
+    "id" : 611031953,
+    "name" : "LICENSING_REGION",
+    "dataTypeName" : "text",
+    "description" : "Regional office that oversees program’s licensing",
+    "fieldName" : "licensing_region",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158909275,
+    "cachedContents" : {
+      "non_null" : "270",
+      "largest" : "Western",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Southeast and Cape",
+        "count" : "54"
+      }, {
+        "item" : "Western",
+        "count" : "54"
+      }, {
+        "item" : "Metro Boston",
+        "count" : "54"
+      }, {
+        "item" : "Northeast",
+        "count" : "54"
+      }, {
+        "item" : "Central",
+        "count" : "54"
+      } ],
+      "smallest" : "Central",
+      "count" : "270",
+      "cardinality" : "270"
+    },
+    "format" : { }
+  }, {
+    "id" : 611031952,
+    "name" : "PROGRAM_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Types of Child Care Providers: Family Child Care, Center-based Care (also known as Group and School Age), Public School, Private School",
+    "fieldName" : "program_type",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158909274,
+    "cachedContents" : {
+      "non_null" : "270",
+      "largest" : "Family Child Care Educators",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Center-Based School Age (FTEs)",
+        "count" : "120"
+      }, {
+        "item" : "Center-Based Early Education (FTEs)",
+        "count" : "90"
+      }, {
+        "item" : "Family Child Care Educators",
+        "count" : "60"
+      } ],
+      "smallest" : "Center-Based Early Education (FTEs)",
+      "count" : "270",
+      "cardinality" : "270"
+    },
+    "format" : { }
+  }, {
+    "id" : 611031951,
+    "name" : "DATA_LOAD_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date of data pull",
+    "fieldName" : "data_load_date",
+    "position" : 5,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 158909273,
+    "cachedContents" : {
+      "non_null" : "270",
+      "largest" : "2026-09-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-05-31T00:00:00.000",
+        "count" : "40"
+      }, {
+        "item" : "2026-06-30T00:00:00.000",
+        "count" : "40"
+      }, {
+        "item" : "2026-04-16T00:00:00.000",
+        "count" : "40"
+      }, {
+        "item" : "2026-09-01T00:00:00.000",
+        "count" : "40"
+      }, {
+        "item" : "2026-04-30T00:00:00.000",
+        "count" : "40"
+      }, {
+        "item" : "2026-07-31T00:00:00.000",
+        "count" : "40"
+      }, {
+        "item" : "2026-04-02T00:00:00.000",
+        "count" : "10"
+      }, {
+        "item" : "2026-08-02T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2026-07-02T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2026-06-02T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2026-05-02T00:00:00.000",
+        "count" : "5"
+      } ],
+      "smallest" : "2026-04-02T00:00:00.000",
+      "count" : "270",
+      "cardinality" : "270"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/lists/data-on-massachusetts-child-care-programs#eec-key-performance-indicator-(kpi)-dashboard-"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "licensed childcare", "daycare", "educators", "c3", "commonwealth cares for children", "workforce" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

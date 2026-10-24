@@ -1,0 +1,1257 @@
+{
+  "id" : "37cp-pad8",
+  "name" : "Advanced Placement (AP) Participation",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1704476893,
+  "description" : "This dataset reports the number of students in all Massachusetts public schools who took one or more Advanced Placement (AP) exams since 2007. Results are disaggregated by test subject and student group.\n\nEconomically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noreferrer noopener\">DESE Researcher's Guide</a> for more information.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/ap_part.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Advanced Placement Participation</a>\n\n<b>List of AP Subjects</b>\n\nArts<ul><li>2-D Art and Design</li><li>3-D Art and Design</li><li>Drawing</li><li>Music Theory</li><li>Studio Art: 2-D Design</li><li>Studio Art: 3-D Design</li><li>Studio Art: Drawing</li></ul>English Language Arts<ul><li>English Lang/Comp</li><li>English Lit/Comp</li></ul>Foreign Languages<ul><li>Chinese Lang</li><li>French Lang</li><li>French Lit</li><li>German Lang</li><li>Italian Lang</li><li>Japanese Lang</li><li>Latin: Lit</li><li>Latin: Vergil</li><li>Spanish Lang</li><li>Spanish Lit</li></ul>History and Social Science<ul><li>African American History</li><li>Art History</li><li>Economics: Macro</li><li>Economics: Micro</li><li>Govt & Pol: Comp</li><li>Govt & Pol: U.S.</li><li>Govt RAD: Comp</li><li>Govt RAD: U.S.</li><li>History: European</li><li>History: U.S.</li><li>History: World</li><li>Human Geography</li><li>Psychology</li><li>World History: Modern</li></ul>Math and Computer Science<ul><li>Calculus AB</li><li>Calculus BC</li><li>Computer Sci A</li><li>Computer Sci AB</li><li>Computer Sci Principles</li><li>Precalculus</li><li>Statistics</li></ul>Science and Technology<ul><li>Biology</li><li>Chemistry</li><li>Environmental Sci</li><li>Physics 1</li><li>Physics 2</li><li>Physics B</li><li>Physics C: E</li><li>Physics C: E&M</li><li>Physics C: Mech</li></ul>Capstone<ul><li>Capstone Research</li><li>Capstone Seminar</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 625,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40415942,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1707502453,
+  "publicationGroup" : 19420526,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1769463852,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19452662,
+  "totalTimesRated" : 0,
+  "viewCount" : 4934,
+  "viewLastModified" : 1786391154,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1709316899,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6198352,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1709316889,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1709316899,
+      "failureCount" : 0,
+      "startedAt" : 1709316899,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 589322655,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786848,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "126046"
+      }, {
+        "item" : "2024",
+        "count" : "120872"
+      }, {
+        "item" : "2023",
+        "count" : "113610"
+      }, {
+        "item" : "2022",
+        "count" : "108094"
+      }, {
+        "item" : "2019",
+        "count" : "104923"
+      }, {
+        "item" : "2020",
+        "count" : "104256"
+      }, {
+        "item" : "2021",
+        "count" : "103764"
+      }, {
+        "item" : "2018",
+        "count" : "101748"
+      }, {
+        "item" : "2017",
+        "count" : "96024"
+      }, {
+        "item" : "2016",
+        "count" : "91481"
+      }, {
+        "item" : "2015",
+        "count" : "88264"
+      }, {
+        "item" : "2014",
+        "count" : "83945"
+      }, {
+        "item" : "2013",
+        "count" : "79703"
+      }, {
+        "item" : "2012",
+        "count" : "74282"
+      }, {
+        "item" : "2011",
+        "count" : "63500"
+      }, {
+        "item" : "2010",
+        "count" : "58890"
+      }, {
+        "item" : "2009",
+        "count" : "56613"
+      }, {
+        "item" : "2008",
+        "count" : "52423"
+      }, {
+        "item" : "2007",
+        "count" : "50068"
+      } ],
+      "smallest" : "2007",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322656,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786849,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "58746"
+      }, {
+        "item" : "03480000",
+        "count" : "33897"
+      }, {
+        "item" : "02810000",
+        "count" : "20799"
+      }, {
+        "item" : "02070000",
+        "count" : "17421"
+      }, {
+        "item" : "01630000",
+        "count" : "12589"
+      }, {
+        "item" : "00460000",
+        "count" : "12579"
+      }, {
+        "item" : "02430000",
+        "count" : "12537"
+      }, {
+        "item" : "02360000",
+        "count" : "12451"
+      }, {
+        "item" : "00000000",
+        "count" : "12332"
+      }, {
+        "item" : "01550000",
+        "count" : "11907"
+      }, {
+        "item" : "00490000",
+        "count" : "11788"
+      }, {
+        "item" : "01650000",
+        "count" : "11192"
+      }, {
+        "item" : "02390000",
+        "count" : "11036"
+      }, {
+        "item" : "00260000",
+        "count" : "10918"
+      }, {
+        "item" : "01000000",
+        "count" : "10718"
+      }, {
+        "item" : "01490000",
+        "count" : "10255"
+      }, {
+        "item" : "07300000",
+        "count" : "10246"
+      }, {
+        "item" : "01890000",
+        "count" : "9984"
+      }, {
+        "item" : "01980000",
+        "count" : "9918"
+      }, {
+        "item" : "01990000",
+        "count" : "9894"
+      } ],
+      "smallest" : "00000000",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322657,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786850,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "58746"
+      }, {
+        "item" : "Worcester",
+        "count" : "33897"
+      }, {
+        "item" : "Springfield",
+        "count" : "20799"
+      }, {
+        "item" : "Newton",
+        "count" : "17421"
+      }, {
+        "item" : "Lynn",
+        "count" : "12589"
+      }, {
+        "item" : "Brookline",
+        "count" : "12579"
+      }, {
+        "item" : "Quincy",
+        "count" : "12537"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "12451"
+      }, {
+        "item" : "State",
+        "count" : "12332"
+      }, {
+        "item" : "Lexington",
+        "count" : "11907"
+      }, {
+        "item" : "Cambridge",
+        "count" : "11788"
+      }, {
+        "item" : "Malden",
+        "count" : "11192"
+      }, {
+        "item" : "Plymouth",
+        "count" : "11036"
+      }, {
+        "item" : "Belmont",
+        "count" : "10918"
+      }, {
+        "item" : "Framingham",
+        "count" : "10718"
+      }, {
+        "item" : "Lawrence",
+        "count" : "10255"
+      }, {
+        "item" : "Northboro-Southboro",
+        "count" : "10246"
+      }, {
+        "item" : "Milton",
+        "count" : "9984"
+      }, {
+        "item" : "Natick",
+        "count" : "9918"
+      }, {
+        "item" : "Needham",
+        "count" : "9894"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322658,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization  Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786851,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "12332"
+      }, {
+        "item" : "00350000",
+        "count" : "9499"
+      }, {
+        "item" : "03480000",
+        "count" : "7680"
+      }, {
+        "item" : "00350560",
+        "count" : "7478"
+      }, {
+        "item" : "02070000",
+        "count" : "6757"
+      }, {
+        "item" : "00460000",
+        "count" : "6290"
+      }, {
+        "item" : "00460505",
+        "count" : "6289"
+      }, {
+        "item" : "02810000",
+        "count" : "6135"
+      }, {
+        "item" : "01550000",
+        "count" : "5954"
+      }, {
+        "item" : "01550505",
+        "count" : "5953"
+      }, {
+        "item" : "00490000",
+        "count" : "5894"
+      }, {
+        "item" : "00490506",
+        "count" : "5894"
+      }, {
+        "item" : "02070510",
+        "count" : "5832"
+      }, {
+        "item" : "03480520",
+        "count" : "5704"
+      }, {
+        "item" : "01650505",
+        "count" : "5596"
+      }, {
+        "item" : "01650000",
+        "count" : "5596"
+      }, {
+        "item" : "00260000",
+        "count" : "5459"
+      }, {
+        "item" : "00260505",
+        "count" : "5459"
+      }, {
+        "item" : "01000000",
+        "count" : "5359"
+      }, {
+        "item" : "01000515",
+        "count" : "5359"
+      } ],
+      "smallest" : "00000000",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322659,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786852,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "Worcester Technical High",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State",
+        "count" : "12332"
+      }, {
+        "item" : "Boston",
+        "count" : "9499"
+      }, {
+        "item" : "Worcester",
+        "count" : "7680"
+      }, {
+        "item" : "Boston Latin School",
+        "count" : "7478"
+      }, {
+        "item" : "Newton",
+        "count" : "6757"
+      }, {
+        "item" : "Brookline",
+        "count" : "6290"
+      }, {
+        "item" : "Brookline High",
+        "count" : "6289"
+      }, {
+        "item" : "Springfield",
+        "count" : "6135"
+      }, {
+        "item" : "Lexington",
+        "count" : "5954"
+      }, {
+        "item" : "Lexington High",
+        "count" : "5953"
+      }, {
+        "item" : "Cambridge Rindge and Latin",
+        "count" : "5894"
+      }, {
+        "item" : "Cambridge",
+        "count" : "5894"
+      }, {
+        "item" : "Newton South High",
+        "count" : "5832"
+      }, {
+        "item" : "South High Community",
+        "count" : "5704"
+      }, {
+        "item" : "Malden High",
+        "count" : "5596"
+      }, {
+        "item" : "Malden",
+        "count" : "5596"
+      }, {
+        "item" : "Belmont High",
+        "count" : "5459"
+      }, {
+        "item" : "Belmont",
+        "count" : "5459"
+      }, {
+        "item" : "Framingham High School",
+        "count" : "5359"
+      }, {
+        "item" : "Framingham",
+        "count" : "5359"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322660,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151042979,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "877949"
+      }, {
+        "item" : "District",
+        "count" : "788225"
+      }, {
+        "item" : "State",
+        "count" : "12332"
+      } ],
+      "smallest" : "District",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322661,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786853,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "231174"
+      }, {
+        "item" : "White",
+        "count" : "217366"
+      }, {
+        "item" : "Female",
+        "count" : "214386"
+      }, {
+        "item" : "Male",
+        "count" : "209947"
+      }, {
+        "item" : "High Needs",
+        "count" : "138967"
+      }, {
+        "item" : "Asian",
+        "count" : "134258"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "115702"
+      }, {
+        "item" : "Low Income",
+        "count" : "92918"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "85442"
+      }, {
+        "item" : "Black or African American",
+        "count" : "81504"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "64134"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "54956"
+      }, {
+        "item" : "English Learners",
+        "count" : "19746"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "10227"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "7779"
+      } ],
+      "smallest" : "All Students",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322670,
+    "name" : "SUBJ_CAT",
+    "dataTypeName" : "text",
+    "description" : "Subject Category",
+    "fieldName" : "subj_cat",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151317140,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "Science and Technology",
+      "null" : "0",
+      "top" : [ {
+        "item" : "History and Social Science",
+        "count" : "406254"
+      }, {
+        "item" : "Science and Technology",
+        "count" : "331641"
+      }, {
+        "item" : "Math and Computer Science",
+        "count" : "306468"
+      }, {
+        "item" : "English Language Arts",
+        "count" : "234795"
+      }, {
+        "item" : "Foreign Languages",
+        "count" : "149184"
+      }, {
+        "item" : "Arts",
+        "count" : "121325"
+      }, {
+        "item" : "All Subjects",
+        "count" : "112634"
+      }, {
+        "item" : "Capstone",
+        "count" : "16205"
+      } ],
+      "smallest" : "All Subjects",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322662,
+    "name" : "SUBJ",
+    "dataTypeName" : "text",
+    "description" : "Subject",
+    "fieldName" : "subj",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150786854,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "World History: Modern",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Subjects",
+        "count" : "112634"
+      }, {
+        "item" : "History and Social Science",
+        "count" : "91541"
+      }, {
+        "item" : "English Language Arts",
+        "count" : "90710"
+      }, {
+        "item" : "Math and Computer Science",
+        "count" : "89408"
+      }, {
+        "item" : "Science and Technology",
+        "count" : "87956"
+      }, {
+        "item" : "English Lit/Comp",
+        "count" : "75080"
+      }, {
+        "item" : "Calculus AB",
+        "count" : "73530"
+      }, {
+        "item" : "History: U.S.",
+        "count" : "71694"
+      }, {
+        "item" : "English Lang/Comp",
+        "count" : "69005"
+      }, {
+        "item" : "Biology",
+        "count" : "68819"
+      }, {
+        "item" : "Statistics",
+        "count" : "57635"
+      }, {
+        "item" : "Foreign Languages",
+        "count" : "52058"
+      }, {
+        "item" : "Chemistry",
+        "count" : "48984"
+      }, {
+        "item" : "Psychology",
+        "count" : "47107"
+      }, {
+        "item" : "Spanish Lang",
+        "count" : "45226"
+      }, {
+        "item" : "Govt & Pol: U.S.",
+        "count" : "35969"
+      }, {
+        "item" : "Govt RAD: U.S.",
+        "count" : "35969"
+      }, {
+        "item" : "Environmental Sci",
+        "count" : "35889"
+      }, {
+        "item" : "Calculus BC",
+        "count" : "32491"
+      }, {
+        "item" : "Arts",
+        "count" : "32432"
+      } ],
+      "smallest" : "2-D Art and Design",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322663,
+    "name" : "TEST_TAKERS_CNT",
+    "dataTypeName" : "number",
+    "description" : "Test Takers Count",
+    "fieldName" : "test_takers_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786855,
+    "cachedContents" : {
+      "non_null" : "1678506",
+      "largest" : "65211",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "382329"
+      }, {
+        "item" : "2",
+        "count" : "179919"
+      }, {
+        "item" : "3",
+        "count" : "118235"
+      }, {
+        "item" : "4",
+        "count" : "88632"
+      }, {
+        "item" : "5",
+        "count" : "72280"
+      }, {
+        "item" : "6",
+        "count" : "60278"
+      }, {
+        "item" : "7",
+        "count" : "53896"
+      }, {
+        "item" : "8",
+        "count" : "48143"
+      }, {
+        "item" : "9",
+        "count" : "42892"
+      }, {
+        "item" : "10",
+        "count" : "38196"
+      }, {
+        "item" : "11",
+        "count" : "34757"
+      }, {
+        "item" : "12",
+        "count" : "31984"
+      }, {
+        "item" : "13",
+        "count" : "29077"
+      }, {
+        "item" : "14",
+        "count" : "26827"
+      }, {
+        "item" : "15",
+        "count" : "24538"
+      }, {
+        "item" : "16",
+        "count" : "22387"
+      }, {
+        "item" : "17",
+        "count" : "20911"
+      }, {
+        "item" : "18",
+        "count" : "19088"
+      }, {
+        "item" : "19",
+        "count" : "17541"
+      }, {
+        "item" : "20",
+        "count" : "16432"
+      } ],
+      "smallest" : "1",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322664,
+    "name" : "TESTS_TAKEN_CNT",
+    "dataTypeName" : "number",
+    "description" : "Tests Taken Count",
+    "fieldName" : "tests_taken_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786856,
+    "cachedContents" : {
+      "non_null" : "631902",
+      "largest" : "131220",
+      "null" : "1046604",
+      "top" : [ {
+        "item" : "10",
+        "count" : "34299"
+      }, {
+        "item" : "11",
+        "count" : "32459"
+      }, {
+        "item" : "12",
+        "count" : "30473"
+      }, {
+        "item" : "13",
+        "count" : "27826"
+      }, {
+        "item" : "14",
+        "count" : "25752"
+      }, {
+        "item" : "15",
+        "count" : "23990"
+      }, {
+        "item" : "16",
+        "count" : "21803"
+      }, {
+        "item" : "17",
+        "count" : "20556"
+      }, {
+        "item" : "18",
+        "count" : "18630"
+      }, {
+        "item" : "19",
+        "count" : "17187"
+      }, {
+        "item" : "20",
+        "count" : "15988"
+      }, {
+        "item" : "21",
+        "count" : "14798"
+      }, {
+        "item" : "22",
+        "count" : "13667"
+      }, {
+        "item" : "23",
+        "count" : "12989"
+      }, {
+        "item" : "24",
+        "count" : "12200"
+      }, {
+        "item" : "25",
+        "count" : "11519"
+      }, {
+        "item" : "26",
+        "count" : "10526"
+      }, {
+        "item" : "27",
+        "count" : "9856"
+      }, {
+        "item" : "28",
+        "count" : "9155"
+      }, {
+        "item" : "29",
+        "count" : "8831"
+      } ],
+      "smallest" : "10",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322665,
+    "name" : "ONE_TEST_CNT",
+    "dataTypeName" : "number",
+    "description" : "One Test Count",
+    "fieldName" : "one_test_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786857,
+    "cachedContents" : {
+      "non_null" : "631902",
+      "largest" : "31709",
+      "null" : "1046604",
+      "top" : [ {
+        "item" : "10",
+        "count" : "38112"
+      }, {
+        "item" : "11",
+        "count" : "34874"
+      }, {
+        "item" : "12",
+        "count" : "32280"
+      }, {
+        "item" : "13",
+        "count" : "29427"
+      }, {
+        "item" : "14",
+        "count" : "26777"
+      }, {
+        "item" : "15",
+        "count" : "24688"
+      }, {
+        "item" : "16",
+        "count" : "22574"
+      }, {
+        "item" : "17",
+        "count" : "21149"
+      }, {
+        "item" : "18",
+        "count" : "19160"
+      }, {
+        "item" : "19",
+        "count" : "17713"
+      }, {
+        "item" : "20",
+        "count" : "16507"
+      }, {
+        "item" : "21",
+        "count" : "15140"
+      }, {
+        "item" : "22",
+        "count" : "14032"
+      }, {
+        "item" : "23",
+        "count" : "13228"
+      }, {
+        "item" : "24",
+        "count" : "12288"
+      }, {
+        "item" : "25",
+        "count" : "11538"
+      }, {
+        "item" : "26",
+        "count" : "10574"
+      }, {
+        "item" : "27",
+        "count" : "10049"
+      }, {
+        "item" : "28",
+        "count" : "9298"
+      }, {
+        "item" : "29",
+        "count" : "8850"
+      } ],
+      "smallest" : "0",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322666,
+    "name" : "TWO_TEST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Two Test Count",
+    "fieldName" : "two_test_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786858,
+    "cachedContents" : {
+      "non_null" : "631902",
+      "largest" : "17892",
+      "null" : "1046604",
+      "top" : [ {
+        "item" : "0",
+        "count" : "474386"
+      }, {
+        "item" : "1",
+        "count" : "24763"
+      }, {
+        "item" : "2",
+        "count" : "16711"
+      }, {
+        "item" : "3",
+        "count" : "13159"
+      }, {
+        "item" : "4",
+        "count" : "10645"
+      }, {
+        "item" : "5",
+        "count" : "8845"
+      }, {
+        "item" : "6",
+        "count" : "7517"
+      }, {
+        "item" : "7",
+        "count" : "6180"
+      }, {
+        "item" : "8",
+        "count" : "5106"
+      }, {
+        "item" : "9",
+        "count" : "4583"
+      }, {
+        "item" : "10",
+        "count" : "3951"
+      }, {
+        "item" : "11",
+        "count" : "3573"
+      }, {
+        "item" : "12",
+        "count" : "3147"
+      }, {
+        "item" : "13",
+        "count" : "2884"
+      }, {
+        "item" : "14",
+        "count" : "2646"
+      }, {
+        "item" : "15",
+        "count" : "2346"
+      }, {
+        "item" : "16",
+        "count" : "2144"
+      }, {
+        "item" : "17",
+        "count" : "1815"
+      }, {
+        "item" : "19",
+        "count" : "1752"
+      }, {
+        "item" : "18",
+        "count" : "1707"
+      } ],
+      "smallest" : "0",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322667,
+    "name" : "THREE_TEST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Three Test Count",
+    "fieldName" : "three_test_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786859,
+    "cachedContents" : {
+      "non_null" : "631902",
+      "largest" : "11077",
+      "null" : "1046604",
+      "top" : [ {
+        "item" : "0",
+        "count" : "551959"
+      }, {
+        "item" : "1",
+        "count" : "17717"
+      }, {
+        "item" : "2",
+        "count" : "9771"
+      }, {
+        "item" : "3",
+        "count" : "6636"
+      }, {
+        "item" : "4",
+        "count" : "5126"
+      }, {
+        "item" : "5",
+        "count" : "3833"
+      }, {
+        "item" : "6",
+        "count" : "3146"
+      }, {
+        "item" : "7",
+        "count" : "2706"
+      }, {
+        "item" : "8",
+        "count" : "2222"
+      }, {
+        "item" : "9",
+        "count" : "2114"
+      }, {
+        "item" : "10",
+        "count" : "1806"
+      }, {
+        "item" : "11",
+        "count" : "1635"
+      }, {
+        "item" : "12",
+        "count" : "1474"
+      }, {
+        "item" : "13",
+        "count" : "1320"
+      }, {
+        "item" : "14",
+        "count" : "1199"
+      }, {
+        "item" : "15",
+        "count" : "1185"
+      }, {
+        "item" : "16",
+        "count" : "1078"
+      }, {
+        "item" : "17",
+        "count" : "950"
+      }, {
+        "item" : "18",
+        "count" : "882"
+      }, {
+        "item" : "19",
+        "count" : "850"
+      } ],
+      "smallest" : "0",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322668,
+    "name" : "FOUR_TEST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Four Test Count",
+    "fieldName" : "four_test_cnt",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786860,
+    "cachedContents" : {
+      "non_null" : "631902",
+      "largest" : "5255",
+      "null" : "1046604",
+      "top" : [ {
+        "item" : "0",
+        "count" : "586225"
+      }, {
+        "item" : "1",
+        "count" : "11497"
+      }, {
+        "item" : "2",
+        "count" : "6612"
+      }, {
+        "item" : "3",
+        "count" : "4608"
+      }, {
+        "item" : "4",
+        "count" : "3225"
+      }, {
+        "item" : "5",
+        "count" : "2535"
+      }, {
+        "item" : "6",
+        "count" : "2112"
+      }, {
+        "item" : "7",
+        "count" : "1852"
+      }, {
+        "item" : "8",
+        "count" : "1407"
+      }, {
+        "item" : "9",
+        "count" : "1255"
+      }, {
+        "item" : "10",
+        "count" : "1105"
+      }, {
+        "item" : "11",
+        "count" : "1020"
+      }, {
+        "item" : "12",
+        "count" : "933"
+      }, {
+        "item" : "14",
+        "count" : "729"
+      }, {
+        "item" : "13",
+        "count" : "690"
+      }, {
+        "item" : "15",
+        "count" : "576"
+      }, {
+        "item" : "17",
+        "count" : "501"
+      }, {
+        "item" : "16",
+        "count" : "481"
+      }, {
+        "item" : "19",
+        "count" : "439"
+      }, {
+        "item" : "18",
+        "count" : "425"
+      } ],
+      "smallest" : "0",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  }, {
+    "id" : 589322669,
+    "name" : "FIVE_PLUS_TEST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Five Test Count",
+    "fieldName" : "five_plus_test_cnt",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150786861,
+    "cachedContents" : {
+      "non_null" : "631902",
+      "largest" : "2384",
+      "null" : "1046604",
+      "top" : [ {
+        "item" : "0",
+        "count" : "604790"
+      }, {
+        "item" : "1",
+        "count" : "9356"
+      }, {
+        "item" : "2",
+        "count" : "4550"
+      }, {
+        "item" : "3",
+        "count" : "2850"
+      }, {
+        "item" : "4",
+        "count" : "1933"
+      }, {
+        "item" : "5",
+        "count" : "1521"
+      }, {
+        "item" : "6",
+        "count" : "1112"
+      }, {
+        "item" : "7",
+        "count" : "963"
+      }, {
+        "item" : "8",
+        "count" : "739"
+      }, {
+        "item" : "9",
+        "count" : "611"
+      }, {
+        "item" : "10",
+        "count" : "460"
+      }, {
+        "item" : "11",
+        "count" : "378"
+      }, {
+        "item" : "12",
+        "count" : "360"
+      }, {
+        "item" : "13",
+        "count" : "301"
+      }, {
+        "item" : "14",
+        "count" : "250"
+      }, {
+        "item" : "15",
+        "count" : "201"
+      }, {
+        "item" : "16",
+        "count" : "155"
+      }, {
+        "item" : "17",
+        "count" : "147"
+      }, {
+        "item" : "18",
+        "count" : "134"
+      }, {
+        "item" : "19",
+        "count" : "109"
+      } ],
+      "smallest" : "0",
+      "count" : "1678506",
+      "cardinality" : "1678506"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "advanced placement", "ap", "college", "demographic", "demographics", "assessment", "disability", "ecodis", "economically disadvantaged", "el", "ela", "english learner", "english learners", "ethnicity", "gender", "high needs", "low income", "math", "race", "race and ethnicity", "science", "special education", "stem", "students with disabilities", "test", "testing", "university" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

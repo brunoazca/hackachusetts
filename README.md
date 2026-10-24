@@ -24,6 +24,11 @@ This project is spec-driven with Kiro. Real work lives in `/.kiro`:
 - `/.kiro/specs/civic-service/` — requirements, design, tasks (rename to the chosen feature).
 - `/.kiro/hooks/` — automated accessibility and demo-path checks on save.
 - `/.kiro/agents/civic-judge.json` — a judge-style reviewer agent.
+- `/.kiro/settings/mcp.json` + `/.kiro/mcp/` — MCP servers Kiro uses while building:
+  the **City of Boston's own [OpenContext](https://github.com/CityOfBoston/OpenContext)**
+  (data.boston.gov and MassGIS, through a small stdio bridge), SQL over our committed
+  data snapshots, live MBTA, AWS docs, and Playwright for UI checks.
+  Check them all with `python3 .kiro/scripts/check_mcp.py` (needs `python3`, `uv`, `node`).
 
 Full write-up: `docs/submission/kiro-usage.md`.
 

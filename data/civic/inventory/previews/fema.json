@@ -1,0 +1,818 @@
+{
+  "dataset": "fema",
+  "source": "data/civic/datasets/fema/data.csv",
+  "source_sha256": "3314b4071a1f4d22c43025f947f16d4207320f1c6deb0256aa79a04c407cab8b",
+  "total_snapshot_rows": 415,
+  "preview_rows": 100,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "declarationDate",
+    "disasterNumber",
+    "incidentType",
+    "declarationTitle",
+    "designatedArea",
+    "declarationType"
+  ],
+  "records": [
+    {
+      "declarationDate": "2026-06-30T00:00:00.000Z",
+      "disasterNumber": "4919",
+      "incidentType": "Winter Storm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Mashpee Wampanoag Tribe",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2024-05-15T00:00:00.000Z",
+      "disasterNumber": "4780",
+      "incidentType": "Flood",
+      "declarationTitle": "SEVERE STORMS AND FLOODING",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2024-05-15T00:00:00.000Z",
+      "disasterNumber": "4780",
+      "incidentType": "Flood",
+      "declarationTitle": "SEVERE STORMS AND FLOODING",
+      "designatedArea": "Worcester (County) (in (P)MSA 1120,2600,9240)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Dukes (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Middlesex (County)(in (P)MSA 1120,2600,4560)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Hampden (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Essex (County)(in PMSA 1120,4160,7090)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Berkshire (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Nantucket (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Barnstable (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Plymouth (County)(in (P)MSA 1120,1200,5400)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Franklin (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Worcester (County) (in (P)MSA 1120,2600,9240)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2023-09-15T00:00:00.000Z",
+      "disasterNumber": "3599",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE LEE",
+      "designatedArea": "Hampshire (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2022-04-18T00:00:00.000Z",
+      "disasterNumber": "4651",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2022-04-18T00:00:00.000Z",
+      "disasterNumber": "4651",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Mashpee Wampanoag Tribe",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2022-04-18T00:00:00.000Z",
+      "disasterNumber": "4651",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2022-04-18T00:00:00.000Z",
+      "disasterNumber": "4651",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2022-04-18T00:00:00.000Z",
+      "disasterNumber": "4651",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Plymouth (County)(in (P)MSA 1120,1200,5400)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2021-08-22T00:00:00.000Z",
+      "disasterNumber": "3566",
+      "incidentType": "Hurricane",
+      "declarationTitle": "TROPICAL STORM HENRI",
+      "designatedArea": "Mashpee Wampanoag Tribe",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Franklin (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Barnstable (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Dukes (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Essex (County)(in PMSA 1120,4160,7090)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Berkshire (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Hampshire (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Hampden (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Mashpee Wampanoag Tribe",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Wampanoag Tribe of Gay Head (Aquinnah)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Worcester (County) (in (P)MSA 1120,2600,9240)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Middlesex (County)(in (P)MSA 1120,2600,4560)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Nantucket (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Hassanamisco Indian Reservation",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Plymouth (County)(in (P)MSA 1120,1200,5400)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-27T00:00:00.000Z",
+      "disasterNumber": "4496",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19 PANDEMIC",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Berkshire (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Dukes (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Hampshire (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Essex (County)(in PMSA 1120,4160,7090)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Plymouth (County)(in (P)MSA 1120,1200,5400)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Nantucket (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Middlesex (County)(in (P)MSA 1120,2600,4560)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Franklin (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3497",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Wampanoag Tribe of Gay Head (Aquinnah)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3484",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Mashpee Wampanoag Tribe",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Worcester (County) (in (P)MSA 1120,2600,9240)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Barnstable (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2020-03-13T00:00:00.000Z",
+      "disasterNumber": "3438",
+      "incidentType": "Biological",
+      "declarationTitle": "COVID-19",
+      "designatedArea": "Hampden (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2018-07-19T00:00:00.000Z",
+      "disasterNumber": "4379",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-07-19T00:00:00.000Z",
+      "disasterNumber": "4379",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Middlesex (County)(in (P)MSA 1120,2600,4560)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-07-19T00:00:00.000Z",
+      "disasterNumber": "4379",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-07-19T00:00:00.000Z",
+      "disasterNumber": "4379",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Worcester (County) (in (P)MSA 1120,2600,9240)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-07-19T00:00:00.000Z",
+      "disasterNumber": "4379",
+      "incidentType": "Snowstorm",
+      "declarationTitle": "SEVERE WINTER STORM AND SNOWSTORM",
+      "designatedArea": "Essex (County)(in PMSA 1120,4160,7090)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-06-25T00:00:00.000Z",
+      "disasterNumber": "4372",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM AND FLOODING",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-06-25T00:00:00.000Z",
+      "disasterNumber": "4372",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM AND FLOODING",
+      "designatedArea": "Plymouth (County)(in (P)MSA 1120,1200,5400)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-06-25T00:00:00.000Z",
+      "disasterNumber": "4372",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM AND FLOODING",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-06-25T00:00:00.000Z",
+      "disasterNumber": "4372",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM AND FLOODING",
+      "designatedArea": "Essex (County)(in PMSA 1120,4160,7090)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-06-25T00:00:00.000Z",
+      "disasterNumber": "4372",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM AND FLOODING",
+      "designatedArea": "Barnstable (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2018-06-25T00:00:00.000Z",
+      "disasterNumber": "4372",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM AND FLOODING",
+      "designatedArea": "Nantucket (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Worcester (County) (in (P)MSA 1120,2600,9240)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Barnstable (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Dukes (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Essex (County)(in PMSA 1120,4160,7090)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Nantucket (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Middlesex (County)(in (P)MSA 1120,2600,4560)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2015-04-13T00:00:00.000Z",
+      "disasterNumber": "4214",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Plymouth (County)(in (P)MSA 1120,1200,5400)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Worcester (County) (in (P)MSA 1120,2600,9240)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Hampshire (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Berkshire (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Dukes (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Plymouth (County)(in (P)MSA 1120,1200,5400)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Barnstable (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Middlesex (County)(in (P)MSA 1120,2600,4560)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Essex (County)(in PMSA 1120,4160,7090)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Hampden (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Nantucket (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-19T00:00:00.000Z",
+      "disasterNumber": "4110",
+      "incidentType": "Severe Storm",
+      "declarationTitle": "SEVERE WINTER STORM, SNOWSTORM, AND FLOODING",
+      "designatedArea": "Franklin (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2013-04-17T00:00:00.000Z",
+      "disasterNumber": "3362",
+      "incidentType": "Terrorist",
+      "declarationTitle": "EXPLOSIONS",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2013-04-17T00:00:00.000Z",
+      "disasterNumber": "3362",
+      "incidentType": "Terrorist",
+      "declarationTitle": "EXPLOSIONS",
+      "designatedArea": "Norfolk (County)(in PMSA 1120,1200,6060)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2013-04-17T00:00:00.000Z",
+      "disasterNumber": "3362",
+      "incidentType": "Terrorist",
+      "declarationTitle": "EXPLOSIONS",
+      "designatedArea": "Middlesex (County)(in (P)MSA 1120,2600,4560)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2013-04-17T00:00:00.000Z",
+      "disasterNumber": "3362",
+      "incidentType": "Terrorist",
+      "declarationTitle": "EXPLOSIONS",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "EM"
+    },
+    {
+      "declarationDate": "2012-12-19T00:00:00.000Z",
+      "disasterNumber": "4097",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE SANDY",
+      "designatedArea": "Dukes (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2012-12-19T00:00:00.000Z",
+      "disasterNumber": "4097",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE SANDY",
+      "designatedArea": "Bristol (County)(in (P)MSA 1120,1200,2480,5400,6060)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2012-12-19T00:00:00.000Z",
+      "disasterNumber": "4097",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE SANDY",
+      "designatedArea": "Barnstable (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2012-12-19T00:00:00.000Z",
+      "disasterNumber": "4097",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE SANDY",
+      "designatedArea": "Nantucket (County)",
+      "declarationType": "DR"
+    },
+    {
+      "declarationDate": "2012-12-19T00:00:00.000Z",
+      "disasterNumber": "4097",
+      "incidentType": "Hurricane",
+      "declarationTitle": "HURRICANE SANDY",
+      "designatedArea": "Suffolk (County)",
+      "declarationType": "DR"
+    }
+  ]
+}

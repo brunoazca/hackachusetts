@@ -1,0 +1,2245 @@
+{
+  "id" : "v4jy-wi85",
+  "name" : "Public Postsecondary Fall Enrollment: Summary",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Higher Education",
+  "attributionLink" : "https://www.mass.edu/datacenter/factbook/fallenrollment.asp",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1682350185,
+  "description" : "This dataset contains fall enrollment headcounts and percentages by race and gender. It includes undergraduate and graduate students at all public Massachusetts institutions of higher education since 2014. Data are disaggregated by the year of fall term, segment, institution, enrollment level, and enrollment status reporting counts and percentages of total enrollment by gender and race/ethnicity.\n\nThis dataset is 1 of 2 datasets that is also published in the interactive\n<a href=\"https://www.mass.edu/datacenter/factbook/fallenrollment.asp\"_blank\" rel=\"noopener noreferrer\">Fall Enrollment dashboard</a> on the Department of Higher Education Data Center:\n\n1) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Fall-Enrollment/gzpm-dvfd/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Fall Enrollment: Detail</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Fall-Enrollment-by-Race-and-G/v4jy-wi85/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Fall Enrollment: Summary</a>\n\nRelated datasets:\n1) <a href=\"https://educationtocareer.data.mass.gov/dataset/Public-Postsecondary-Annual-Enrollment/j7yp-crt6/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Annual Enrollment: Detail</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Annual-Enrollment-by-Race-and/hx2h-9z86/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Annual Enrollment: Summary</a>\n\nNotes:\n- Data appear as reported to the Massachusetts Department of Higher Education.\n- Figures published here may vary from those of individual institutions due to differences in calculation methodologies.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2847,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41926641,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1770218915,
+  "publicationGroup" : 19135285,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1770218903,
+  "rowsUpdatedBy" : "3fm6-nje8",
+  "tableId" : 20264178,
+  "totalTimesRated" : 0,
+  "viewCount" : 4701,
+  "viewLastModified" : 1770218915,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1685566757,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7339712,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1685547814,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1685566757,
+      "failureCount" : 0,
+      "startedAt" : 1685566757,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 626073620,
+    "name" : "YEAR_FALL_TERM",
+    "dataTypeName" : "number",
+    "description" : "Year (Fall Term)",
+    "fieldName" : "year_fall_term",
+    "position" : 1,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724564,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "82"
+      }, {
+        "item" : "2021",
+        "count" : "82"
+      }, {
+        "item" : "2019",
+        "count" : "82"
+      }, {
+        "item" : "2022",
+        "count" : "82"
+      }, {
+        "item" : "2023",
+        "count" : "82"
+      }, {
+        "item" : "2014",
+        "count" : "82"
+      }, {
+        "item" : "2020",
+        "count" : "81"
+      }, {
+        "item" : "2024",
+        "count" : "81"
+      }, {
+        "item" : "2015",
+        "count" : "81"
+      }, {
+        "item" : "2017",
+        "count" : "81"
+      }, {
+        "item" : "2018",
+        "count" : "81"
+      }, {
+        "item" : "2016",
+        "count" : "81"
+      } ],
+      "smallest" : "2014",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "noCommas" : "true",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073618,
+    "name" : "SEGMENT",
+    "dataTypeName" : "text",
+    "description" : "Segment",
+    "fieldName" : "segment",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146724566,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "University of Massachusetts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State Universities",
+        "count" : "426"
+      }, {
+        "item" : "Community Colleges",
+        "count" : "360"
+      }, {
+        "item" : "University of Massachusetts",
+        "count" : "192"
+      } ],
+      "smallest" : "Community Colleges",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : { }
+  }, {
+    "id" : 626073619,
+    "name" : "INSTITUTION",
+    "dataTypeName" : "text",
+    "description" : "Public Institution Name",
+    "fieldName" : "institution",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146724565,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Westfield State University",
+        "count" : "48"
+      }, {
+        "item" : "University of Massachusetts Dartmouth",
+        "count" : "48"
+      }, {
+        "item" : "University of Massachusetts Amherst",
+        "count" : "48"
+      }, {
+        "item" : "Massachusetts College of Art and Design",
+        "count" : "48"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "48"
+      }, {
+        "item" : "Worcester State University",
+        "count" : "48"
+      }, {
+        "item" : "University of Massachusetts Boston",
+        "count" : "48"
+      }, {
+        "item" : "Framingham State University",
+        "count" : "48"
+      }, {
+        "item" : "Massachusetts College of Liberal Arts",
+        "count" : "48"
+      }, {
+        "item" : "University of Massachusetts Lowell",
+        "count" : "48"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "48"
+      }, {
+        "item" : "Salem State University",
+        "count" : "48"
+      }, {
+        "item" : "Massachusetts Maritime Academy",
+        "count" : "42"
+      }, {
+        "item" : "Roxbury Community College",
+        "count" : "24"
+      }, {
+        "item" : "Holyoke Community College",
+        "count" : "24"
+      }, {
+        "item" : "Cape Cod Community College",
+        "count" : "24"
+      }, {
+        "item" : "Bunker Hill Community College",
+        "count" : "24"
+      }, {
+        "item" : "Bristol Community College",
+        "count" : "24"
+      }, {
+        "item" : "Quinsigamond Community College",
+        "count" : "24"
+      }, {
+        "item" : "Berkshire Community College",
+        "count" : "24"
+      } ],
+      "smallest" : "Berkshire Community College",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : { }
+  }, {
+    "id" : 626073647,
+    "name" : "ENROLLMENT_LEVEL",
+    "dataTypeName" : "text",
+    "description" : "Enrollment Level",
+    "fieldName" : "enrollment_level",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 165149207,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "Undergraduate",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Undergraduate",
+        "count" : "672"
+      }, {
+        "item" : "Graduate/Professional",
+        "count" : "306"
+      } ],
+      "smallest" : "Graduate/Professional",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : { }
+  }, {
+    "id" : 626073646,
+    "name" : "ENROLLMENT_STATUS",
+    "dataTypeName" : "text",
+    "description" : "Enrollment Status",
+    "fieldName" : "enrollment_status",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 165149206,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "Part Time",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Part Time",
+        "count" : "492"
+      }, {
+        "item" : "Full Time",
+        "count" : "486"
+      } ],
+      "smallest" : "Full Time",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : { }
+  }, {
+    "id" : 626073621,
+    "name" : "STUDENT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Student Count",
+    "fieldName" : "student_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152182775,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "22920",
+      "null" : "0",
+      "top" : [ {
+        "item" : "173",
+        "count" : "3"
+      }, {
+        "item" : "1261",
+        "count" : "3"
+      }, {
+        "item" : "44",
+        "count" : "3"
+      }, {
+        "item" : "14",
+        "count" : "3"
+      }, {
+        "item" : "9",
+        "count" : "3"
+      }, {
+        "item" : "3337",
+        "count" : "2"
+      }, {
+        "item" : "385",
+        "count" : "2"
+      }, {
+        "item" : "497",
+        "count" : "2"
+      }, {
+        "item" : "1659",
+        "count" : "2"
+      }, {
+        "item" : "378",
+        "count" : "2"
+      }, {
+        "item" : "1210",
+        "count" : "2"
+      }, {
+        "item" : "28",
+        "count" : "2"
+      }, {
+        "item" : "629",
+        "count" : "2"
+      }, {
+        "item" : "351",
+        "count" : "2"
+      }, {
+        "item" : "4173",
+        "count" : "2"
+      }, {
+        "item" : "35",
+        "count" : "2"
+      }, {
+        "item" : "2456",
+        "count" : "2"
+      }, {
+        "item" : "177",
+        "count" : "2"
+      }, {
+        "item" : "1264",
+        "count" : "2"
+      }, {
+        "item" : "493",
+        "count" : "2"
+      } ],
+      "smallest" : "1",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : { }
+  }, {
+    "id" : 626073622,
+    "name" : "FEMALE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Female Count",
+    "fieldName" : "female_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724563,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "11882",
+      "null" : "0",
+      "top" : [ {
+        "item" : "10",
+        "count" : "6"
+      }, {
+        "item" : "149",
+        "count" : "6"
+      }, {
+        "item" : "24",
+        "count" : "4"
+      }, {
+        "item" : "52",
+        "count" : "4"
+      }, {
+        "item" : "7",
+        "count" : "4"
+      }, {
+        "item" : "16",
+        "count" : "3"
+      }, {
+        "item" : "4",
+        "count" : "3"
+      }, {
+        "item" : "32",
+        "count" : "3"
+      }, {
+        "item" : "220",
+        "count" : "3"
+      }, {
+        "item" : "352",
+        "count" : "3"
+      }, {
+        "item" : "378",
+        "count" : "3"
+      }, {
+        "item" : "1244",
+        "count" : "3"
+      }, {
+        "item" : "538",
+        "count" : "3"
+      }, {
+        "item" : "359",
+        "count" : "3"
+      }, {
+        "item" : "5",
+        "count" : "3"
+      }, {
+        "item" : "135",
+        "count" : "3"
+      }, {
+        "item" : "348",
+        "count" : "3"
+      }, {
+        "item" : "353",
+        "count" : "3"
+      }, {
+        "item" : "558",
+        "count" : "3"
+      }, {
+        "item" : "1391",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073623,
+    "name" : "FEMALE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Female Percent (Percent of Gender Total)",
+    "fieldName" : "female_pct",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724578,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.93",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.59",
+        "count" : "48"
+      }, {
+        "item" : "0.61",
+        "count" : "45"
+      }, {
+        "item" : "0.65",
+        "count" : "43"
+      }, {
+        "item" : "0.57",
+        "count" : "41"
+      }, {
+        "item" : "0.60",
+        "count" : "40"
+      }, {
+        "item" : "0.56",
+        "count" : "39"
+      }, {
+        "item" : "0.55",
+        "count" : "39"
+      }, {
+        "item" : "0.62",
+        "count" : "39"
+      }, {
+        "item" : "0.66",
+        "count" : "37"
+      }, {
+        "item" : "0.54",
+        "count" : "36"
+      }, {
+        "item" : "0.53",
+        "count" : "34"
+      }, {
+        "item" : "0.58",
+        "count" : "34"
+      }, {
+        "item" : "0.64",
+        "count" : "33"
+      }, {
+        "item" : "0.51",
+        "count" : "31"
+      }, {
+        "item" : "0.52",
+        "count" : "28"
+      }, {
+        "item" : "0.63",
+        "count" : "28"
+      }, {
+        "item" : "0.71",
+        "count" : "24"
+      }, {
+        "item" : "0.50",
+        "count" : "22"
+      }, {
+        "item" : "0.67",
+        "count" : "21"
+      }, {
+        "item" : "0.68",
+        "count" : "21"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073624,
+    "name" : "MALE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Male Count",
+    "fieldName" : "male_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724562,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "11451",
+      "null" : "0",
+      "top" : [ {
+        "item" : "17",
+        "count" : "5"
+      }, {
+        "item" : "19",
+        "count" : "5"
+      }, {
+        "item" : "37",
+        "count" : "4"
+      }, {
+        "item" : "4",
+        "count" : "4"
+      }, {
+        "item" : "23",
+        "count" : "4"
+      }, {
+        "item" : "64",
+        "count" : "4"
+      }, {
+        "item" : "30",
+        "count" : "4"
+      }, {
+        "item" : "489",
+        "count" : "4"
+      }, {
+        "item" : "45",
+        "count" : "4"
+      }, {
+        "item" : "440",
+        "count" : "4"
+      }, {
+        "item" : "71",
+        "count" : "4"
+      }, {
+        "item" : "469",
+        "count" : "4"
+      }, {
+        "item" : "42",
+        "count" : "3"
+      }, {
+        "item" : "43",
+        "count" : "3"
+      }, {
+        "item" : "853",
+        "count" : "3"
+      }, {
+        "item" : "25",
+        "count" : "3"
+      }, {
+        "item" : "12",
+        "count" : "3"
+      }, {
+        "item" : "34",
+        "count" : "3"
+      }, {
+        "item" : "345",
+        "count" : "3"
+      }, {
+        "item" : "529",
+        "count" : "3"
+      } ],
+      "smallest" : "1",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073625,
+    "name" : "MALE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Male Percent (Percent of Gender Total)",
+    "fieldName" : "male_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724577,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "1.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.39",
+        "count" : "53"
+      }, {
+        "item" : "0.41",
+        "count" : "50"
+      }, {
+        "item" : "0.38",
+        "count" : "45"
+      }, {
+        "item" : "0.35",
+        "count" : "39"
+      }, {
+        "item" : "0.34",
+        "count" : "39"
+      }, {
+        "item" : "0.44",
+        "count" : "35"
+      }, {
+        "item" : "0.42",
+        "count" : "35"
+      }, {
+        "item" : "0.45",
+        "count" : "34"
+      }, {
+        "item" : "0.40",
+        "count" : "34"
+      }, {
+        "item" : "0.36",
+        "count" : "33"
+      }, {
+        "item" : "0.49",
+        "count" : "31"
+      }, {
+        "item" : "0.46",
+        "count" : "29"
+      }, {
+        "item" : "0.47",
+        "count" : "29"
+      }, {
+        "item" : "0.30",
+        "count" : "27"
+      }, {
+        "item" : "0.43",
+        "count" : "27"
+      }, {
+        "item" : "0.29",
+        "count" : "27"
+      }, {
+        "item" : "0.32",
+        "count" : "26"
+      }, {
+        "item" : "0.31",
+        "count" : "26"
+      }, {
+        "item" : "0.48",
+        "count" : "24"
+      }, {
+        "item" : "0.33",
+        "count" : "23"
+      } ],
+      "smallest" : "0.07",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073626,
+    "name" : "UNKNGENDER_CNT",
+    "dataTypeName" : "number",
+    "description" : "Unknown Gender Count",
+    "fieldName" : "unkngender_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724561,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "229",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "480"
+      }, {
+        "item" : "1",
+        "count" : "74"
+      }, {
+        "item" : "2",
+        "count" : "53"
+      }, {
+        "item" : "3",
+        "count" : "42"
+      }, {
+        "item" : "4",
+        "count" : "21"
+      }, {
+        "item" : "7",
+        "count" : "18"
+      }, {
+        "item" : "9",
+        "count" : "17"
+      }, {
+        "item" : "6",
+        "count" : "16"
+      }, {
+        "item" : "5",
+        "count" : "16"
+      }, {
+        "item" : "13",
+        "count" : "10"
+      }, {
+        "item" : "8",
+        "count" : "10"
+      }, {
+        "item" : "11",
+        "count" : "10"
+      }, {
+        "item" : "15",
+        "count" : "9"
+      }, {
+        "item" : "10",
+        "count" : "9"
+      }, {
+        "item" : "14",
+        "count" : "9"
+      }, {
+        "item" : "34",
+        "count" : "8"
+      }, {
+        "item" : "32",
+        "count" : "8"
+      }, {
+        "item" : "43",
+        "count" : "7"
+      }, {
+        "item" : "12",
+        "count" : "7"
+      }, {
+        "item" : "18",
+        "count" : "7"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073627,
+    "name" : "UNKNGENDER_PCT",
+    "dataTypeName" : "number",
+    "description" : "Unknown Gender Percent (Percent of Gender Total)",
+    "fieldName" : "unkngender_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724576,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.33",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "679"
+      }, {
+        "item" : "0.01",
+        "count" : "159"
+      }, {
+        "item" : "0.02",
+        "count" : "67"
+      }, {
+        "item" : "0.03",
+        "count" : "32"
+      }, {
+        "item" : "0.05",
+        "count" : "7"
+      }, {
+        "item" : "0.04",
+        "count" : "7"
+      }, {
+        "item" : "0.06",
+        "count" : "4"
+      }, {
+        "item" : "0.19",
+        "count" : "3"
+      }, {
+        "item" : "0.07",
+        "count" : "3"
+      }, {
+        "item" : "0.10",
+        "count" : "2"
+      }, {
+        "item" : "0.08",
+        "count" : "2"
+      }, {
+        "item" : "0.16",
+        "count" : "2"
+      }, {
+        "item" : "0.11",
+        "count" : "2"
+      }, {
+        "item" : "0.22",
+        "count" : "2"
+      }, {
+        "item" : "0.15",
+        "count" : "1"
+      }, {
+        "item" : "0.23",
+        "count" : "1"
+      }, {
+        "item" : "0.13",
+        "count" : "1"
+      }, {
+        "item" : "0.33",
+        "count" : "1"
+      }, {
+        "item" : "0.17",
+        "count" : "1"
+      }, {
+        "item" : "0.29",
+        "count" : "1"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073645,
+    "name" : "ANRGENDER_CNT",
+    "dataTypeName" : "number",
+    "description" : "Another Gender Count",
+    "fieldName" : "anrgender_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 165149205,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "73",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "969"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      }, {
+        "item" : "10",
+        "count" : "1"
+      }, {
+        "item" : "36",
+        "count" : "1"
+      }, {
+        "item" : "64",
+        "count" : "1"
+      }, {
+        "item" : "1",
+        "count" : "1"
+      }, {
+        "item" : "47",
+        "count" : "1"
+      }, {
+        "item" : "55",
+        "count" : "1"
+      }, {
+        "item" : "73",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : { }
+  }, {
+    "id" : 626073644,
+    "name" : "ANRGENDER_PCT",
+    "dataTypeName" : "number",
+    "description" : "Another Gender Percent (Percent of Gender Total)",
+    "fieldName" : "anrgender_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 165149204,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.18",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "970"
+      }, {
+        "item" : "0.04",
+        "count" : "2"
+      }, {
+        "item" : "0.03",
+        "count" : "1"
+      }, {
+        "item" : "0.18",
+        "count" : "1"
+      }, {
+        "item" : "0.08",
+        "count" : "1"
+      }, {
+        "item" : "0.05",
+        "count" : "1"
+      }, {
+        "item" : "0.01",
+        "count" : "1"
+      }, {
+        "item" : "0.02",
+        "count" : "1"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : { }
+  }, {
+    "id" : 626073628,
+    "name" : "AMERIND_CNT",
+    "dataTypeName" : "number",
+    "description" : "American Indian or Alaskan Native Count",
+    "fieldName" : "amerind_cnt",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724560,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "32",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "173"
+      }, {
+        "item" : "1",
+        "count" : "143"
+      }, {
+        "item" : "2",
+        "count" : "95"
+      }, {
+        "item" : "4",
+        "count" : "84"
+      }, {
+        "item" : "3",
+        "count" : "84"
+      }, {
+        "item" : "6",
+        "count" : "63"
+      }, {
+        "item" : "5",
+        "count" : "59"
+      }, {
+        "item" : "8",
+        "count" : "42"
+      }, {
+        "item" : "7",
+        "count" : "34"
+      }, {
+        "item" : "9",
+        "count" : "25"
+      }, {
+        "item" : "12",
+        "count" : "24"
+      }, {
+        "item" : "10",
+        "count" : "23"
+      }, {
+        "item" : "11",
+        "count" : "22"
+      }, {
+        "item" : "13",
+        "count" : "20"
+      }, {
+        "item" : "15",
+        "count" : "18"
+      }, {
+        "item" : "16",
+        "count" : "13"
+      }, {
+        "item" : "14",
+        "count" : "11"
+      }, {
+        "item" : "17",
+        "count" : "8"
+      }, {
+        "item" : "18",
+        "count" : "7"
+      }, {
+        "item" : "19",
+        "count" : "5"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073629,
+    "name" : "AMERIND_PCT",
+    "dataTypeName" : "number",
+    "description" : "American Indian or Alaskan Native Percent (Percent of Race/Ethnicity Total)",
+    "fieldName" : "amerind_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724575,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.03",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "873"
+      }, {
+        "item" : "0.01",
+        "count" : "100"
+      }, {
+        "item" : "0.02",
+        "count" : "4"
+      }, {
+        "item" : "0.03",
+        "count" : "1"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073630,
+    "name" : "AAPI_CNT",
+    "dataTypeName" : "number",
+    "description" : "Asian American or Pacific Islander Count",
+    "fieldName" : "aapi_cnt",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724559,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "3354",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "29"
+      }, {
+        "item" : "2",
+        "count" : "20"
+      }, {
+        "item" : "1",
+        "count" : "18"
+      }, {
+        "item" : "13",
+        "count" : "18"
+      }, {
+        "item" : "16",
+        "count" : "17"
+      }, {
+        "item" : "3",
+        "count" : "15"
+      }, {
+        "item" : "5",
+        "count" : "14"
+      }, {
+        "item" : "18",
+        "count" : "14"
+      }, {
+        "item" : "7",
+        "count" : "13"
+      }, {
+        "item" : "10",
+        "count" : "13"
+      }, {
+        "item" : "11",
+        "count" : "12"
+      }, {
+        "item" : "6",
+        "count" : "12"
+      }, {
+        "item" : "4",
+        "count" : "12"
+      }, {
+        "item" : "25",
+        "count" : "12"
+      }, {
+        "item" : "20",
+        "count" : "11"
+      }, {
+        "item" : "17",
+        "count" : "11"
+      }, {
+        "item" : "30",
+        "count" : "11"
+      }, {
+        "item" : "14",
+        "count" : "11"
+      }, {
+        "item" : "19",
+        "count" : "10"
+      }, {
+        "item" : "15",
+        "count" : "10"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073631,
+    "name" : "AAPI_PCT",
+    "dataTypeName" : "number",
+    "description" : "Asian American or Pacific Islander Percent (Percent of Race/Ethnicity Total)",
+    "fieldName" : "aapi_pct",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724574,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.31",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.02",
+        "count" : "227"
+      }, {
+        "item" : "0.03",
+        "count" : "180"
+      }, {
+        "item" : "0.04",
+        "count" : "134"
+      }, {
+        "item" : "0.05",
+        "count" : "83"
+      }, {
+        "item" : "0.01",
+        "count" : "67"
+      }, {
+        "item" : "0.06",
+        "count" : "56"
+      }, {
+        "item" : "0.00",
+        "count" : "32"
+      }, {
+        "item" : "0.07",
+        "count" : "31"
+      }, {
+        "item" : "0.08",
+        "count" : "29"
+      }, {
+        "item" : "0.10",
+        "count" : "29"
+      }, {
+        "item" : "0.09",
+        "count" : "24"
+      }, {
+        "item" : "0.14",
+        "count" : "18"
+      }, {
+        "item" : "0.11",
+        "count" : "18"
+      }, {
+        "item" : "0.12",
+        "count" : "13"
+      }, {
+        "item" : "0.15",
+        "count" : "12"
+      }, {
+        "item" : "0.13",
+        "count" : "11"
+      }, {
+        "item" : "0.17",
+        "count" : "6"
+      }, {
+        "item" : "0.16",
+        "count" : "3"
+      }, {
+        "item" : "0.18",
+        "count" : "1"
+      }, {
+        "item" : "0.22",
+        "count" : "1"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073632,
+    "name" : "AFRAMER_CNT",
+    "dataTypeName" : "number",
+    "description" : "Black or African American Count",
+    "fieldName" : "aframer_cnt",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724558,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "2849",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "21"
+      }, {
+        "item" : "0",
+        "count" : "18"
+      }, {
+        "item" : "3",
+        "count" : "14"
+      }, {
+        "item" : "4",
+        "count" : "14"
+      }, {
+        "item" : "2",
+        "count" : "14"
+      }, {
+        "item" : "5",
+        "count" : "13"
+      }, {
+        "item" : "6",
+        "count" : "13"
+      }, {
+        "item" : "29",
+        "count" : "10"
+      }, {
+        "item" : "44",
+        "count" : "9"
+      }, {
+        "item" : "49",
+        "count" : "9"
+      }, {
+        "item" : "18",
+        "count" : "8"
+      }, {
+        "item" : "15",
+        "count" : "7"
+      }, {
+        "item" : "84",
+        "count" : "7"
+      }, {
+        "item" : "58",
+        "count" : "7"
+      }, {
+        "item" : "11",
+        "count" : "6"
+      }, {
+        "item" : "27",
+        "count" : "6"
+      }, {
+        "item" : "37",
+        "count" : "6"
+      }, {
+        "item" : "7",
+        "count" : "6"
+      }, {
+        "item" : "12",
+        "count" : "6"
+      }, {
+        "item" : "33",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073633,
+    "name" : "AFRAMER_PCT",
+    "dataTypeName" : "number",
+    "description" : "Black or African American Percent (Percent of Race/Ethnicity Total)",
+    "fieldName" : "aframer_pct",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724573,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.83",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.04",
+        "count" : "103"
+      }, {
+        "item" : "0.05",
+        "count" : "100"
+      }, {
+        "item" : "0.07",
+        "count" : "84"
+      }, {
+        "item" : "0.06",
+        "count" : "83"
+      }, {
+        "item" : "0.09",
+        "count" : "76"
+      }, {
+        "item" : "0.08",
+        "count" : "73"
+      }, {
+        "item" : "0.03",
+        "count" : "60"
+      }, {
+        "item" : "0.10",
+        "count" : "54"
+      }, {
+        "item" : "0.11",
+        "count" : "42"
+      }, {
+        "item" : "0.02",
+        "count" : "31"
+      }, {
+        "item" : "0.15",
+        "count" : "30"
+      }, {
+        "item" : "0.13",
+        "count" : "27"
+      }, {
+        "item" : "0.12",
+        "count" : "25"
+      }, {
+        "item" : "0.14",
+        "count" : "23"
+      }, {
+        "item" : "0.17",
+        "count" : "22"
+      }, {
+        "item" : "0.00",
+        "count" : "18"
+      }, {
+        "item" : "0.01",
+        "count" : "17"
+      }, {
+        "item" : "0.16",
+        "count" : "16"
+      }, {
+        "item" : "0.22",
+        "count" : "9"
+      }, {
+        "item" : "0.26",
+        "count" : "6"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073634,
+    "name" : "HISPLAT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Hispanic or Latino Count",
+    "fieldName" : "hisplat_cnt",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724557,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "2573",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2",
+        "count" : "17"
+      }, {
+        "item" : "0",
+        "count" : "14"
+      }, {
+        "item" : "1",
+        "count" : "14"
+      }, {
+        "item" : "4",
+        "count" : "14"
+      }, {
+        "item" : "6",
+        "count" : "10"
+      }, {
+        "item" : "5",
+        "count" : "10"
+      }, {
+        "item" : "37",
+        "count" : "9"
+      }, {
+        "item" : "48",
+        "count" : "8"
+      }, {
+        "item" : "32",
+        "count" : "8"
+      }, {
+        "item" : "7",
+        "count" : "7"
+      }, {
+        "item" : "55",
+        "count" : "6"
+      }, {
+        "item" : "11",
+        "count" : "6"
+      }, {
+        "item" : "12",
+        "count" : "6"
+      }, {
+        "item" : "104",
+        "count" : "5"
+      }, {
+        "item" : "90",
+        "count" : "5"
+      }, {
+        "item" : "26",
+        "count" : "5"
+      }, {
+        "item" : "112",
+        "count" : "5"
+      }, {
+        "item" : "77",
+        "count" : "5"
+      }, {
+        "item" : "3",
+        "count" : "5"
+      }, {
+        "item" : "39",
+        "count" : "5"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073635,
+    "name" : "HISPLAT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Hispanic or Latino Percent (Percent of Race/Ethnicity Total)",
+    "fieldName" : "hisplat_pct",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724572,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.50",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.08",
+        "count" : "78"
+      }, {
+        "item" : "0.07",
+        "count" : "69"
+      }, {
+        "item" : "0.05",
+        "count" : "65"
+      }, {
+        "item" : "0.09",
+        "count" : "64"
+      }, {
+        "item" : "0.06",
+        "count" : "61"
+      }, {
+        "item" : "0.11",
+        "count" : "55"
+      }, {
+        "item" : "0.10",
+        "count" : "46"
+      }, {
+        "item" : "0.12",
+        "count" : "38"
+      }, {
+        "item" : "0.16",
+        "count" : "34"
+      }, {
+        "item" : "0.04",
+        "count" : "33"
+      }, {
+        "item" : "0.13",
+        "count" : "31"
+      }, {
+        "item" : "0.03",
+        "count" : "31"
+      }, {
+        "item" : "0.14",
+        "count" : "31"
+      }, {
+        "item" : "0.18",
+        "count" : "30"
+      }, {
+        "item" : "0.15",
+        "count" : "29"
+      }, {
+        "item" : "0.19",
+        "count" : "27"
+      }, {
+        "item" : "0.17",
+        "count" : "24"
+      }, {
+        "item" : "0.23",
+        "count" : "20"
+      }, {
+        "item" : "0.26",
+        "count" : "18"
+      }, {
+        "item" : "0.28",
+        "count" : "17"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073638,
+    "name" : "MULTIRACE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Multiracial Count",
+    "fieldName" : "multirace_cnt",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724570,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "1141",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "34"
+      }, {
+        "item" : "2",
+        "count" : "32"
+      }, {
+        "item" : "1",
+        "count" : "26"
+      }, {
+        "item" : "3",
+        "count" : "18"
+      }, {
+        "item" : "23",
+        "count" : "18"
+      }, {
+        "item" : "11",
+        "count" : "17"
+      }, {
+        "item" : "6",
+        "count" : "15"
+      }, {
+        "item" : "4",
+        "count" : "14"
+      }, {
+        "item" : "14",
+        "count" : "14"
+      }, {
+        "item" : "13",
+        "count" : "13"
+      }, {
+        "item" : "10",
+        "count" : "13"
+      }, {
+        "item" : "24",
+        "count" : "12"
+      }, {
+        "item" : "26",
+        "count" : "12"
+      }, {
+        "item" : "12",
+        "count" : "12"
+      }, {
+        "item" : "65",
+        "count" : "12"
+      }, {
+        "item" : "19",
+        "count" : "12"
+      }, {
+        "item" : "17",
+        "count" : "11"
+      }, {
+        "item" : "20",
+        "count" : "11"
+      }, {
+        "item" : "18",
+        "count" : "11"
+      }, {
+        "item" : "41",
+        "count" : "10"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073639,
+    "name" : "MULTIRACE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Multiracial Percent (Percent of Race/Ethnicity Total)",
+    "fieldName" : "multirace_pct",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724569,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.15",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.03",
+        "count" : "278"
+      }, {
+        "item" : "0.02",
+        "count" : "228"
+      }, {
+        "item" : "0.04",
+        "count" : "171"
+      }, {
+        "item" : "0.01",
+        "count" : "116"
+      }, {
+        "item" : "0.05",
+        "count" : "74"
+      }, {
+        "item" : "0.00",
+        "count" : "48"
+      }, {
+        "item" : "0.06",
+        "count" : "40"
+      }, {
+        "item" : "0.07",
+        "count" : "15"
+      }, {
+        "item" : "0.08",
+        "count" : "5"
+      }, {
+        "item" : "0.09",
+        "count" : "1"
+      }, {
+        "item" : "0.11",
+        "count" : "1"
+      }, {
+        "item" : "0.15",
+        "count" : "1"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073636,
+    "name" : "USNONRES_CNT",
+    "dataTypeName" : "number",
+    "description" : "U.S. Non-Resident Count",
+    "fieldName" : "nonres_cnt",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724556,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "1852",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "129"
+      }, {
+        "item" : "1",
+        "count" : "55"
+      }, {
+        "item" : "2",
+        "count" : "48"
+      }, {
+        "item" : "3",
+        "count" : "42"
+      }, {
+        "item" : "4",
+        "count" : "34"
+      }, {
+        "item" : "5",
+        "count" : "27"
+      }, {
+        "item" : "7",
+        "count" : "23"
+      }, {
+        "item" : "18",
+        "count" : "22"
+      }, {
+        "item" : "8",
+        "count" : "20"
+      }, {
+        "item" : "6",
+        "count" : "15"
+      }, {
+        "item" : "12",
+        "count" : "14"
+      }, {
+        "item" : "21",
+        "count" : "14"
+      }, {
+        "item" : "10",
+        "count" : "14"
+      }, {
+        "item" : "15",
+        "count" : "13"
+      }, {
+        "item" : "29",
+        "count" : "13"
+      }, {
+        "item" : "11",
+        "count" : "12"
+      }, {
+        "item" : "24",
+        "count" : "12"
+      }, {
+        "item" : "9",
+        "count" : "12"
+      }, {
+        "item" : "33",
+        "count" : "10"
+      }, {
+        "item" : "14",
+        "count" : "10"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073637,
+    "name" : "USNONRES_PCT",
+    "dataTypeName" : "number",
+    "description" : "U.S. Non-Resident Percent (Percent of Race/Ethnicity Total)",
+    "fieldName" : "nonres_pct",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724571,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.50",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "322"
+      }, {
+        "item" : "0.01",
+        "count" : "239"
+      }, {
+        "item" : "0.02",
+        "count" : "87"
+      }, {
+        "item" : "0.03",
+        "count" : "73"
+      }, {
+        "item" : "0.04",
+        "count" : "43"
+      }, {
+        "item" : "0.05",
+        "count" : "28"
+      }, {
+        "item" : "0.06",
+        "count" : "25"
+      }, {
+        "item" : "0.07",
+        "count" : "19"
+      }, {
+        "item" : "0.08",
+        "count" : "15"
+      }, {
+        "item" : "0.09",
+        "count" : "14"
+      }, {
+        "item" : "0.22",
+        "count" : "10"
+      }, {
+        "item" : "0.11",
+        "count" : "8"
+      }, {
+        "item" : "0.26",
+        "count" : "6"
+      }, {
+        "item" : "0.25",
+        "count" : "5"
+      }, {
+        "item" : "0.13",
+        "count" : "5"
+      }, {
+        "item" : "0.15",
+        "count" : "5"
+      }, {
+        "item" : "0.19",
+        "count" : "5"
+      }, {
+        "item" : "0.10",
+        "count" : "5"
+      }, {
+        "item" : "0.29",
+        "count" : "4"
+      }, {
+        "item" : "0.28",
+        "count" : "4"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073640,
+    "name" : "UNKNRACE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Unknown Race Count",
+    "fieldName" : "unknrace_cnt",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724555,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "1358",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "28"
+      }, {
+        "item" : "4",
+        "count" : "24"
+      }, {
+        "item" : "1",
+        "count" : "22"
+      }, {
+        "item" : "16",
+        "count" : "22"
+      }, {
+        "item" : "3",
+        "count" : "20"
+      }, {
+        "item" : "25",
+        "count" : "16"
+      }, {
+        "item" : "2",
+        "count" : "16"
+      }, {
+        "item" : "9",
+        "count" : "16"
+      }, {
+        "item" : "8",
+        "count" : "15"
+      }, {
+        "item" : "5",
+        "count" : "15"
+      }, {
+        "item" : "11",
+        "count" : "15"
+      }, {
+        "item" : "20",
+        "count" : "14"
+      }, {
+        "item" : "7",
+        "count" : "13"
+      }, {
+        "item" : "21",
+        "count" : "13"
+      }, {
+        "item" : "19",
+        "count" : "13"
+      }, {
+        "item" : "12",
+        "count" : "12"
+      }, {
+        "item" : "23",
+        "count" : "12"
+      }, {
+        "item" : "41",
+        "count" : "12"
+      }, {
+        "item" : "14",
+        "count" : "11"
+      }, {
+        "item" : "13",
+        "count" : "10"
+      } ],
+      "smallest" : "0",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073641,
+    "name" : "UNKNRACE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Unknown Race Percent (Percent of Race/Ethnicity Total)",
+    "fieldName" : "unknrace_pct",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724568,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "0.53",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.02",
+        "count" : "195"
+      }, {
+        "item" : "0.01",
+        "count" : "152"
+      }, {
+        "item" : "0.03",
+        "count" : "131"
+      }, {
+        "item" : "0.04",
+        "count" : "102"
+      }, {
+        "item" : "0.05",
+        "count" : "81"
+      }, {
+        "item" : "0.00",
+        "count" : "66"
+      }, {
+        "item" : "0.06",
+        "count" : "53"
+      }, {
+        "item" : "0.08",
+        "count" : "38"
+      }, {
+        "item" : "0.07",
+        "count" : "33"
+      }, {
+        "item" : "0.10",
+        "count" : "28"
+      }, {
+        "item" : "0.09",
+        "count" : "18"
+      }, {
+        "item" : "0.11",
+        "count" : "16"
+      }, {
+        "item" : "0.13",
+        "count" : "11"
+      }, {
+        "item" : "0.12",
+        "count" : "9"
+      }, {
+        "item" : "0.14",
+        "count" : "5"
+      }, {
+        "item" : "0.16",
+        "count" : "5"
+      }, {
+        "item" : "0.27",
+        "count" : "3"
+      }, {
+        "item" : "0.17",
+        "count" : "3"
+      }, {
+        "item" : "0.21",
+        "count" : "3"
+      }, {
+        "item" : "0.18",
+        "count" : "3"
+      } ],
+      "smallest" : "0.00",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073642,
+    "name" : "WHITE_CNT",
+    "dataTypeName" : "number",
+    "description" : "White Count",
+    "fieldName" : "white_cnt",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724554,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "14485",
+      "null" : "0",
+      "top" : [ {
+        "item" : "44",
+        "count" : "4"
+      }, {
+        "item" : "39",
+        "count" : "4"
+      }, {
+        "item" : "47",
+        "count" : "4"
+      }, {
+        "item" : "41",
+        "count" : "4"
+      }, {
+        "item" : "146",
+        "count" : "4"
+      }, {
+        "item" : "105",
+        "count" : "4"
+      }, {
+        "item" : "740",
+        "count" : "4"
+      }, {
+        "item" : "48",
+        "count" : "3"
+      }, {
+        "item" : "23",
+        "count" : "3"
+      }, {
+        "item" : "16",
+        "count" : "3"
+      }, {
+        "item" : "141",
+        "count" : "3"
+      }, {
+        "item" : "1283",
+        "count" : "3"
+      }, {
+        "item" : "1518",
+        "count" : "3"
+      }, {
+        "item" : "49",
+        "count" : "3"
+      }, {
+        "item" : "513",
+        "count" : "3"
+      }, {
+        "item" : "892",
+        "count" : "3"
+      }, {
+        "item" : "620",
+        "count" : "3"
+      }, {
+        "item" : "123",
+        "count" : "3"
+      }, {
+        "item" : "35",
+        "count" : "3"
+      }, {
+        "item" : "262",
+        "count" : "3"
+      } ],
+      "smallest" : "1",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 626073643,
+    "name" : "WHITE_PCT",
+    "dataTypeName" : "number",
+    "description" : "White Percent (Percent of Race/Ethnicity Total)",
+    "fieldName" : "white_pct",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724567,
+    "cachedContents" : {
+      "non_null" : "978",
+      "largest" : "1.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.58",
+        "count" : "36"
+      }, {
+        "item" : "0.62",
+        "count" : "31"
+      }, {
+        "item" : "0.68",
+        "count" : "30"
+      }, {
+        "item" : "0.73",
+        "count" : "28"
+      }, {
+        "item" : "0.59",
+        "count" : "27"
+      }, {
+        "item" : "0.56",
+        "count" : "25"
+      }, {
+        "item" : "0.71",
+        "count" : "25"
+      }, {
+        "item" : "0.70",
+        "count" : "24"
+      }, {
+        "item" : "0.78",
+        "count" : "23"
+      }, {
+        "item" : "0.75",
+        "count" : "23"
+      }, {
+        "item" : "0.47",
+        "count" : "22"
+      }, {
+        "item" : "0.50",
+        "count" : "22"
+      }, {
+        "item" : "0.53",
+        "count" : "21"
+      }, {
+        "item" : "0.67",
+        "count" : "21"
+      }, {
+        "item" : "0.69",
+        "count" : "21"
+      }, {
+        "item" : "0.44",
+        "count" : "20"
+      }, {
+        "item" : "0.66",
+        "count" : "20"
+      }, {
+        "item" : "0.54",
+        "count" : "19"
+      }, {
+        "item" : "0.65",
+        "count" : "19"
+      }, {
+        "item" : "0.74",
+        "count" : "19"
+      } ],
+      "smallest" : "0.02",
+      "count" : "978",
+      "cardinality" : "978"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "One year of fall enrollment per institution of higher education",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "enrollment", "gender", "race", "ethnicity", "college", "university", "graduation", "demographic", "graduation rates", "demographics" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

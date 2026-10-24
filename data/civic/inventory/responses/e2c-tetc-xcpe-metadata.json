@@ -1,0 +1,1717 @@
+{
+  "id" : "tetc-xcpe",
+  "name" : "MCAS Participation",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1773781875,
+  "description" : "This dataset contains the number and percent of students participating in the MCAS by each grade, subject and student group from 2017 onward.\n\nThe Massachusetts Comprehensive Assessment System (MCAS) is a statewide assessment administered to help parents, students, educators, and policymakers determine where districts, schools, and students are meeting expectations and where they need additional support. For more information about MCAS data, please visit the Department of Elementary and Secondary Education’s <a href=\"https://profiles.doe.mass.edu/help/data.aspx?section=assess\" target=\"_blank\" rel=\"noopener noreferrer\">Profiles Help - About the Data</a> page.\n\nThis dataset counts participation in both the current (“Next Gen”) MCAS assessment as well as the prior Legacy MCAS assessment. Results from different assessment systems measure different standards and cannot be directly compared. Please see the DESE Researcher’s Guide linked as featured content below for more information.\n\nGrade 10 ELA and Mathematics results exclude students repeating grade 10 who previously participated in the same subject test. High school Science participation reflects testing in grades 9 or 10 and varies by year: since 2024, it includes Biology and Introductory Physics; prior to 2024, it includes Biology, Chemistry, Introductory Physics, and Technology/Engineering.\n\nParticipation rates are not reported for groups with fewer than 10 enrolled students. English learners are counted as participants only if they meet both MCAS ELA testing requirements and complete the ACCESS for ELLs assessment.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/participation.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">MCAS Participation</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 61,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42205703,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1781027289,
+  "publicationGroup" : 20310378,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1781027228,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20416387,
+  "totalTimesRated" : 0,
+  "viewCount" : 378,
+  "viewLastModified" : 1786392754,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1781273971,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7520040,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1781189679,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1781273971,
+      "failureCount" : 0,
+      "startedAt" : 1781273971,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 634919270,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199033,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "111961"
+      }, {
+        "item" : "2024",
+        "count" : "106157"
+      }, {
+        "item" : "2023",
+        "count" : "105420"
+      }, {
+        "item" : "2022",
+        "count" : "104957"
+      }, {
+        "item" : "2019",
+        "count" : "101765"
+      }, {
+        "item" : "2021",
+        "count" : "101443"
+      }, {
+        "item" : "2018",
+        "count" : "100658"
+      }, {
+        "item" : "2017",
+        "count" : "98065"
+      } ],
+      "smallest" : "2017",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919271,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199032,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "1644"
+      }, {
+        "item" : "00350000",
+        "count" : "1430"
+      }, {
+        "item" : "01630000",
+        "count" : "1376"
+      }, {
+        "item" : "00440000",
+        "count" : "1371"
+      }, {
+        "item" : "01000000",
+        "count" : "1370"
+      }, {
+        "item" : "00490000",
+        "count" : "1370"
+      }, {
+        "item" : "00160000",
+        "count" : "1370"
+      }, {
+        "item" : "02070000",
+        "count" : "1370"
+      }, {
+        "item" : "03480000",
+        "count" : "1370"
+      }, {
+        "item" : "00460000",
+        "count" : "1370"
+      }, {
+        "item" : "02430000",
+        "count" : "1369"
+      }, {
+        "item" : "00950000",
+        "count" : "1369"
+      }, {
+        "item" : "00970000",
+        "count" : "1369"
+      }, {
+        "item" : "02810000",
+        "count" : "1368"
+      }, {
+        "item" : "01760000",
+        "count" : "1367"
+      }, {
+        "item" : "01650000",
+        "count" : "1364"
+      }, {
+        "item" : "00100000",
+        "count" : "1360"
+      }, {
+        "item" : "01550000",
+        "count" : "1360"
+      }, {
+        "item" : "01600000",
+        "count" : "1360"
+      }, {
+        "item" : "03360000",
+        "count" : "1358"
+      } ],
+      "smallest" : "00000000",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919272,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199031,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "46137"
+      }, {
+        "item" : "Springfield",
+        "count" : "20361"
+      }, {
+        "item" : "Worcester",
+        "count" : "20286"
+      }, {
+        "item" : "Lowell",
+        "count" : "11328"
+      }, {
+        "item" : "New Bedford",
+        "count" : "10140"
+      }, {
+        "item" : "Lynn",
+        "count" : "9924"
+      }, {
+        "item" : "Brockton",
+        "count" : "9876"
+      }, {
+        "item" : "Fall River",
+        "count" : "8407"
+      }, {
+        "item" : "Newton",
+        "count" : "8404"
+      }, {
+        "item" : "Quincy",
+        "count" : "8327"
+      }, {
+        "item" : "Lawrence",
+        "count" : "8266"
+      }, {
+        "item" : "Cambridge",
+        "count" : "7134"
+      }, {
+        "item" : "Brookline",
+        "count" : "7027"
+      }, {
+        "item" : "Malden",
+        "count" : "6486"
+      }, {
+        "item" : "Framingham",
+        "count" : "6452"
+      }, {
+        "item" : "Everett",
+        "count" : "6040"
+      }, {
+        "item" : "Somerville",
+        "count" : "5872"
+      }, {
+        "item" : "Haverhill",
+        "count" : "5456"
+      }, {
+        "item" : "Holyoke",
+        "count" : "5419"
+      }, {
+        "item" : "Chicopee",
+        "count" : "5414"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919273,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199030,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "1644"
+      }, {
+        "item" : "00350000",
+        "count" : "1430"
+      }, {
+        "item" : "01630000",
+        "count" : "1376"
+      }, {
+        "item" : "00440000",
+        "count" : "1371"
+      }, {
+        "item" : "01000000",
+        "count" : "1370"
+      }, {
+        "item" : "00490000",
+        "count" : "1370"
+      }, {
+        "item" : "00160000",
+        "count" : "1370"
+      }, {
+        "item" : "02070000",
+        "count" : "1370"
+      }, {
+        "item" : "03480000",
+        "count" : "1370"
+      }, {
+        "item" : "00460000",
+        "count" : "1370"
+      }, {
+        "item" : "02430000",
+        "count" : "1369"
+      }, {
+        "item" : "00950000",
+        "count" : "1369"
+      }, {
+        "item" : "00970000",
+        "count" : "1369"
+      }, {
+        "item" : "02810000",
+        "count" : "1368"
+      }, {
+        "item" : "01760000",
+        "count" : "1367"
+      }, {
+        "item" : "01650000",
+        "count" : "1364"
+      }, {
+        "item" : "00100000",
+        "count" : "1360"
+      }, {
+        "item" : "01550000",
+        "count" : "1360"
+      }, {
+        "item" : "01600000",
+        "count" : "1360"
+      }, {
+        "item" : "03360000",
+        "count" : "1358"
+      } ],
+      "smallest" : "00000000",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919274,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199029,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Lawrence",
+        "count" : "2254"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "1867"
+      }, {
+        "item" : "Franklin",
+        "count" : "1773"
+      }, {
+        "item" : "State",
+        "count" : "1644"
+      }, {
+        "item" : "Lincoln",
+        "count" : "1510"
+      }, {
+        "item" : "Peabody",
+        "count" : "1501"
+      }, {
+        "item" : "Boston",
+        "count" : "1430"
+      }, {
+        "item" : "Winthrop",
+        "count" : "1425"
+      }, {
+        "item" : "Lynn",
+        "count" : "1376"
+      }, {
+        "item" : "Brockton",
+        "count" : "1371"
+      }, {
+        "item" : "Framingham",
+        "count" : "1370"
+      }, {
+        "item" : "Brookline",
+        "count" : "1370"
+      }, {
+        "item" : "Worcester",
+        "count" : "1370"
+      }, {
+        "item" : "Attleboro",
+        "count" : "1370"
+      }, {
+        "item" : "Cambridge",
+        "count" : "1370"
+      }, {
+        "item" : "Newton",
+        "count" : "1370"
+      }, {
+        "item" : "Fall River",
+        "count" : "1369"
+      }, {
+        "item" : "Quincy",
+        "count" : "1369"
+      }, {
+        "item" : "Fitchburg",
+        "count" : "1369"
+      }, {
+        "item" : "Springfield",
+        "count" : "1368"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919275,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199028,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "537464"
+      }, {
+        "item" : "District",
+        "count" : "284691"
+      }, {
+        "item" : "Collaborative",
+        "count" : "6627"
+      }, {
+        "item" : "State",
+        "count" : "1644"
+      } ],
+      "smallest" : "Collaborative",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919276,
+    "name" : "GRADE",
+    "dataTypeName" : "text",
+    "description" : "Grade",
+    "fieldName" : "grade",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199027,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "HS",
+      "null" : "0",
+      "top" : [ {
+        "item" : "05",
+        "count" : "169519"
+      }, {
+        "item" : "08",
+        "count" : "132232"
+      }, {
+        "item" : "03",
+        "count" : "117722"
+      }, {
+        "item" : "04",
+        "count" : "116690"
+      }, {
+        "item" : "06",
+        "count" : "93299"
+      }, {
+        "item" : "07",
+        "count" : "85924"
+      }, {
+        "item" : "10",
+        "count" : "73113"
+      }, {
+        "item" : "HS",
+        "count" : "35300"
+      }, {
+        "item" : "AL",
+        "count" : "6627"
+      } ],
+      "smallest" : "03",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919277,
+    "name" : "SUBJECT",
+    "dataTypeName" : "text",
+    "description" : "Subject",
+    "fieldName" : "subject",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199026,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "Science",
+      "null" : "0",
+      "top" : [ {
+        "item" : "English",
+        "count" : "344415"
+      }, {
+        "item" : "Mathematics",
+        "count" : "344352"
+      }, {
+        "item" : "Science",
+        "count" : "135933"
+      }, {
+        "item" : "Civics",
+        "count" : "5726"
+      } ],
+      "smallest" : "Civics",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919278,
+    "name" : "STU_GRP_CAT",
+    "dataTypeName" : "text",
+    "description" : "Student Group Category",
+    "fieldName" : "stu_grp_cat",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 168261721,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "Selected Population",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Selected Population",
+        "count" : "411674"
+      }, {
+        "item" : "Race/Ethnicity",
+        "count" : "281158"
+      }, {
+        "item" : "All Students",
+        "count" : "131604"
+      }, {
+        "item" : "Disability Category",
+        "count" : "4716"
+      }, {
+        "item" : "Gender",
+        "count" : "1274"
+      } ],
+      "smallest" : "All Students",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919279,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166199025,
+    "cachedContents" : {
+      "non_null" : "830426",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "131604"
+      }, {
+        "item" : "High Needs",
+        "count" : "126706"
+      }, {
+        "item" : "White",
+        "count" : "110951"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "104927"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "76041"
+      }, {
+        "item" : "English Learners and Former English Learners",
+        "count" : "66297"
+      }, {
+        "item" : "Low Income",
+        "count" : "58944"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "54800"
+      }, {
+        "item" : "Black or African American",
+        "count" : "41483"
+      }, {
+        "item" : "Asian",
+        "count" : "30490"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "21758"
+      }, {
+        "item" : "Male",
+        "count" : "637"
+      }, {
+        "item" : "Emotional Disability",
+        "count" : "637"
+      }, {
+        "item" : "Female",
+        "count" : "637"
+      }, {
+        "item" : "Autism",
+        "count" : "628"
+      }, {
+        "item" : "Health Disability",
+        "count" : "624"
+      }, {
+        "item" : "Neurological Disability",
+        "count" : "597"
+      }, {
+        "item" : "Intellectual Disability",
+        "count" : "566"
+      }, {
+        "item" : "Specific Learning Disabilities",
+        "count" : "517"
+      }, {
+        "item" : "Communication Disability",
+        "count" : "457"
+      } ],
+      "smallest" : "All Students",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919280,
+    "name" : "ENROLLED",
+    "dataTypeName" : "number",
+    "description" : "Enrolled Count",
+    "fieldName" : "enrolled",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168261722,
+    "cachedContents" : {
+      "non_null" : "829902",
+      "largest" : "74074",
+      "null" : "524",
+      "top" : [ {
+        "item" : "10",
+        "count" : "26141"
+      }, {
+        "item" : "11",
+        "count" : "23952"
+      }, {
+        "item" : "12",
+        "count" : "22413"
+      }, {
+        "item" : "13",
+        "count" : "20982"
+      }, {
+        "item" : "14",
+        "count" : "20632"
+      }, {
+        "item" : "15",
+        "count" : "19118"
+      }, {
+        "item" : "16",
+        "count" : "17910"
+      }, {
+        "item" : "17",
+        "count" : "17496"
+      }, {
+        "item" : "18",
+        "count" : "16726"
+      }, {
+        "item" : "19",
+        "count" : "15099"
+      }, {
+        "item" : "20",
+        "count" : "14966"
+      }, {
+        "item" : "21",
+        "count" : "13680"
+      }, {
+        "item" : "22",
+        "count" : "13082"
+      }, {
+        "item" : "23",
+        "count" : "12610"
+      }, {
+        "item" : "24",
+        "count" : "11882"
+      }, {
+        "item" : "25",
+        "count" : "11797"
+      }, {
+        "item" : "26",
+        "count" : "11378"
+      }, {
+        "item" : "28",
+        "count" : "10697"
+      }, {
+        "item" : "29",
+        "count" : "10522"
+      }, {
+        "item" : "27",
+        "count" : "10495"
+      } ],
+      "smallest" : "1",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919281,
+    "name" : "PART_RATE",
+    "dataTypeName" : "number",
+    "description" : "Participation Rate",
+    "fieldName" : "part_rate",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168261723,
+    "cachedContents" : {
+      "non_null" : "791825",
+      "largest" : "1",
+      "null" : "38601",
+      "top" : [ {
+        "item" : "1",
+        "count" : "491091"
+      }, {
+        "item" : "0.99",
+        "count" : "73244"
+      }, {
+        "item" : "0.98",
+        "count" : "60311"
+      }, {
+        "item" : "0.97",
+        "count" : "39150"
+      }, {
+        "item" : "0.96",
+        "count" : "27294"
+      }, {
+        "item" : "0.95",
+        "count" : "20396"
+      }, {
+        "item" : "0.94",
+        "count" : "16151"
+      }, {
+        "item" : "0.93",
+        "count" : "12104"
+      }, {
+        "item" : "0.92",
+        "count" : "10379"
+      }, {
+        "item" : "0.91",
+        "count" : "6939"
+      }, {
+        "item" : "0.9",
+        "count" : "6559"
+      }, {
+        "item" : "0.89",
+        "count" : "3431"
+      }, {
+        "item" : "0.88",
+        "count" : "3233"
+      }, {
+        "item" : "0.86",
+        "count" : "2103"
+      }, {
+        "item" : "0.85",
+        "count" : "1810"
+      }, {
+        "item" : "0.87",
+        "count" : "1761"
+      }, {
+        "item" : "0.83",
+        "count" : "1623"
+      }, {
+        "item" : "0.82",
+        "count" : "1403"
+      }, {
+        "item" : "0.8",
+        "count" : "1348"
+      }, {
+        "item" : "0.84",
+        "count" : "979"
+      } ],
+      "smallest" : "0",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 634919282,
+    "name" : "ACCOM_CNT",
+    "dataTypeName" : "number",
+    "description" : "Participants with Accommodations Count",
+    "fieldName" : "accom_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166199044,
+    "cachedContents" : {
+      "non_null" : "798203",
+      "largest" : "19467",
+      "null" : "32223",
+      "top" : [ {
+        "item" : "3",
+        "count" : "45335"
+      }, {
+        "item" : "2",
+        "count" : "44238"
+      }, {
+        "item" : "4",
+        "count" : "43925"
+      }, {
+        "item" : "5",
+        "count" : "40924"
+      }, {
+        "item" : "1",
+        "count" : "38233"
+      }, {
+        "item" : "6",
+        "count" : "37351"
+      }, {
+        "item" : "7",
+        "count" : "35063"
+      }, {
+        "item" : "8",
+        "count" : "32992"
+      }, {
+        "item" : "9",
+        "count" : "31142"
+      }, {
+        "item" : "10",
+        "count" : "29589"
+      }, {
+        "item" : "11",
+        "count" : "27257"
+      }, {
+        "item" : "12",
+        "count" : "25032"
+      }, {
+        "item" : "13",
+        "count" : "23004"
+      }, {
+        "item" : "14",
+        "count" : "20920"
+      }, {
+        "item" : "15",
+        "count" : "19234"
+      }, {
+        "item" : "16",
+        "count" : "18089"
+      }, {
+        "item" : "17",
+        "count" : "16276"
+      }, {
+        "item" : "18",
+        "count" : "15127"
+      }, {
+        "item" : "19",
+        "count" : "13854"
+      }, {
+        "item" : "20",
+        "count" : "12774"
+      } ],
+      "smallest" : "1",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919283,
+    "name" : "ACCOM_PCT",
+    "dataTypeName" : "number",
+    "description" : "Participants with Accommodations Percent",
+    "fieldName" : "accom_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166199043,
+    "cachedContents" : {
+      "non_null" : "798203",
+      "largest" : "1",
+      "null" : "32223",
+      "top" : [ {
+        "item" : "0.2",
+        "count" : "27293"
+      }, {
+        "item" : "0.18",
+        "count" : "27086"
+      }, {
+        "item" : "0.17",
+        "count" : "26287"
+      }, {
+        "item" : "0.19",
+        "count" : "23961"
+      }, {
+        "item" : "0.21",
+        "count" : "23475"
+      }, {
+        "item" : "0.15",
+        "count" : "23172"
+      }, {
+        "item" : "0.13",
+        "count" : "23093"
+      }, {
+        "item" : "0.14",
+        "count" : "22213"
+      }, {
+        "item" : "0.16",
+        "count" : "20741"
+      }, {
+        "item" : "0.23",
+        "count" : "20245"
+      }, {
+        "item" : "0.25",
+        "count" : "19984"
+      }, {
+        "item" : "0.22",
+        "count" : "19653"
+      }, {
+        "item" : "0.24",
+        "count" : "19287"
+      }, {
+        "item" : "0.1",
+        "count" : "18168"
+      }, {
+        "item" : "0.27",
+        "count" : "17330"
+      }, {
+        "item" : "0.11",
+        "count" : "16649"
+      }, {
+        "item" : "0.08",
+        "count" : "15633"
+      }, {
+        "item" : "0.12",
+        "count" : "15571"
+      }, {
+        "item" : "0.29",
+        "count" : "15422"
+      }, {
+        "item" : "0.33",
+        "count" : "14832"
+      } ],
+      "smallest" : "0",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 634919284,
+    "name" : "NOACCOM_CNT",
+    "dataTypeName" : "number",
+    "description" : "Participants without Accommodations Count",
+    "fieldName" : "noaccom_cnt",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166199042,
+    "cachedContents" : {
+      "non_null" : "815534",
+      "largest" : "63286",
+      "null" : "14892",
+      "top" : [ {
+        "item" : "10",
+        "count" : "25131"
+      }, {
+        "item" : "9",
+        "count" : "24900"
+      }, {
+        "item" : "11",
+        "count" : "23176"
+      }, {
+        "item" : "8",
+        "count" : "22026"
+      }, {
+        "item" : "12",
+        "count" : "21234"
+      }, {
+        "item" : "13",
+        "count" : "19957"
+      }, {
+        "item" : "14",
+        "count" : "18493"
+      }, {
+        "item" : "7",
+        "count" : "18448"
+      }, {
+        "item" : "15",
+        "count" : "17086"
+      }, {
+        "item" : "6",
+        "count" : "15898"
+      }, {
+        "item" : "16",
+        "count" : "15624"
+      }, {
+        "item" : "2",
+        "count" : "15409"
+      }, {
+        "item" : "1",
+        "count" : "15380"
+      }, {
+        "item" : "17",
+        "count" : "14625"
+      }, {
+        "item" : "3",
+        "count" : "14143"
+      }, {
+        "item" : "5",
+        "count" : "14082"
+      }, {
+        "item" : "18",
+        "count" : "13612"
+      }, {
+        "item" : "4",
+        "count" : "13378"
+      }, {
+        "item" : "19",
+        "count" : "12687"
+      }, {
+        "item" : "20",
+        "count" : "12315"
+      } ],
+      "smallest" : "1",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919285,
+    "name" : "NOACCOM_PCT",
+    "dataTypeName" : "number",
+    "description" : "Participants without Accommodations Percent",
+    "fieldName" : "noaccom_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166199041,
+    "cachedContents" : {
+      "non_null" : "815534",
+      "largest" : "1",
+      "null" : "14892",
+      "top" : [ {
+        "item" : "0.8",
+        "count" : "26570"
+      }, {
+        "item" : "0.82",
+        "count" : "25017"
+      }, {
+        "item" : "0.83",
+        "count" : "24939"
+      }, {
+        "item" : "0.79",
+        "count" : "23861"
+      }, {
+        "item" : "0.81",
+        "count" : "22817"
+      }, {
+        "item" : "1",
+        "count" : "21592"
+      }, {
+        "item" : "0.75",
+        "count" : "21325"
+      }, {
+        "item" : "0.78",
+        "count" : "20891"
+      }, {
+        "item" : "0.77",
+        "count" : "20472"
+      }, {
+        "item" : "0.85",
+        "count" : "20359"
+      }, {
+        "item" : "0.76",
+        "count" : "20125"
+      }, {
+        "item" : "0.73",
+        "count" : "19491"
+      }, {
+        "item" : "0.86",
+        "count" : "19407"
+      }, {
+        "item" : "0.84",
+        "count" : "18561"
+      }, {
+        "item" : "0.88",
+        "count" : "18121"
+      }, {
+        "item" : "0.71",
+        "count" : "17079"
+      }, {
+        "item" : "0.7",
+        "count" : "16289"
+      }, {
+        "item" : "0.67",
+        "count" : "16276"
+      }, {
+        "item" : "0.74",
+        "count" : "16201"
+      }, {
+        "item" : "0.9",
+        "count" : "15416"
+      } ],
+      "smallest" : "0.01",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 634919286,
+    "name" : "ALT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Participants Taking MCAS-Alt Count",
+    "fieldName" : "alt_cnt",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168261724,
+    "cachedContents" : {
+      "non_null" : "318651",
+      "largest" : "1295",
+      "null" : "511775",
+      "top" : [ {
+        "item" : "1",
+        "count" : "129120"
+      }, {
+        "item" : "2",
+        "count" : "69703"
+      }, {
+        "item" : "3",
+        "count" : "40319"
+      }, {
+        "item" : "4",
+        "count" : "23293"
+      }, {
+        "item" : "5",
+        "count" : "14299"
+      }, {
+        "item" : "6",
+        "count" : "9689"
+      }, {
+        "item" : "7",
+        "count" : "6713"
+      }, {
+        "item" : "8",
+        "count" : "4524"
+      }, {
+        "item" : "9",
+        "count" : "3359"
+      }, {
+        "item" : "10",
+        "count" : "2472"
+      }, {
+        "item" : "11",
+        "count" : "1942"
+      }, {
+        "item" : "12",
+        "count" : "1590"
+      }, {
+        "item" : "13",
+        "count" : "1272"
+      }, {
+        "item" : "14",
+        "count" : "983"
+      }, {
+        "item" : "15",
+        "count" : "901"
+      }, {
+        "item" : "16",
+        "count" : "730"
+      }, {
+        "item" : "17",
+        "count" : "591"
+      }, {
+        "item" : "18",
+        "count" : "447"
+      }, {
+        "item" : "19",
+        "count" : "378"
+      }, {
+        "item" : "20",
+        "count" : "318"
+      } ],
+      "smallest" : "1",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919287,
+    "name" : "ALT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Participants Taking MCAS-Alt Percent",
+    "fieldName" : "alt_pct",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166199039,
+    "cachedContents" : {
+      "non_null" : "318651",
+      "largest" : "1",
+      "null" : "511775",
+      "top" : [ {
+        "item" : "0.01",
+        "count" : "67083"
+      }, {
+        "item" : "0.02",
+        "count" : "58753"
+      }, {
+        "item" : "0.03",
+        "count" : "42221"
+      }, {
+        "item" : "0.04",
+        "count" : "29181"
+      }, {
+        "item" : "0.05",
+        "count" : "22205"
+      }, {
+        "item" : "0.06",
+        "count" : "17577"
+      }, {
+        "item" : "0.07",
+        "count" : "13449"
+      }, {
+        "item" : "0.08",
+        "count" : "11930"
+      }, {
+        "item" : "0.09",
+        "count" : "7866"
+      }, {
+        "item" : "0",
+        "count" : "7668"
+      }, {
+        "item" : "0.1",
+        "count" : "7172"
+      }, {
+        "item" : "0.11",
+        "count" : "4783"
+      }, {
+        "item" : "0.13",
+        "count" : "3880"
+      }, {
+        "item" : "0.12",
+        "count" : "2930"
+      }, {
+        "item" : "0.14",
+        "count" : "2902"
+      }, {
+        "item" : "0.15",
+        "count" : "2139"
+      }, {
+        "item" : "0.17",
+        "count" : "2030"
+      }, {
+        "item" : "0.18",
+        "count" : "1622"
+      }, {
+        "item" : "0.2",
+        "count" : "1436"
+      }, {
+        "item" : "0.16",
+        "count" : "1211"
+      } ],
+      "smallest" : "0",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 634919288,
+    "name" : "FIRST_YEAR_EL_EXEMPT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Participants Exempted First-Year English Learners Count",
+    "fieldName" : "first_year_el_exempt_cnt",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166199038,
+    "cachedContents" : {
+      "non_null" : "78293",
+      "largest" : "1104",
+      "null" : "752133",
+      "top" : [ {
+        "item" : "1",
+        "count" : "35055"
+      }, {
+        "item" : "2",
+        "count" : "14206"
+      }, {
+        "item" : "3",
+        "count" : "7699"
+      }, {
+        "item" : "4",
+        "count" : "4864"
+      }, {
+        "item" : "5",
+        "count" : "3503"
+      }, {
+        "item" : "6",
+        "count" : "2413"
+      }, {
+        "item" : "7",
+        "count" : "1923"
+      }, {
+        "item" : "8",
+        "count" : "1308"
+      }, {
+        "item" : "9",
+        "count" : "1007"
+      }, {
+        "item" : "10",
+        "count" : "762"
+      }, {
+        "item" : "11",
+        "count" : "616"
+      }, {
+        "item" : "12",
+        "count" : "597"
+      }, {
+        "item" : "13",
+        "count" : "442"
+      }, {
+        "item" : "14",
+        "count" : "348"
+      }, {
+        "item" : "15",
+        "count" : "340"
+      }, {
+        "item" : "16",
+        "count" : "295"
+      }, {
+        "item" : "17",
+        "count" : "241"
+      }, {
+        "item" : "18",
+        "count" : "214"
+      }, {
+        "item" : "19",
+        "count" : "188"
+      }, {
+        "item" : "20",
+        "count" : "149"
+      } ],
+      "smallest" : "1",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919289,
+    "name" : "FIRST_YEAR_EL_EXEMPT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Participants Exempted First-Year English Learners Percent",
+    "fieldName" : "first_year_el_exempt_pct",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166199037,
+    "cachedContents" : {
+      "non_null" : "78293",
+      "largest" : "1",
+      "null" : "752133",
+      "top" : [ {
+        "item" : "0.01",
+        "count" : "15482"
+      }, {
+        "item" : "0.02",
+        "count" : "12350"
+      }, {
+        "item" : "0.03",
+        "count" : "9348"
+      }, {
+        "item" : "0.04",
+        "count" : "6910"
+      }, {
+        "item" : "0.05",
+        "count" : "5357"
+      }, {
+        "item" : "0.06",
+        "count" : "4487"
+      }, {
+        "item" : "0",
+        "count" : "4090"
+      }, {
+        "item" : "0.07",
+        "count" : "3646"
+      }, {
+        "item" : "0.08",
+        "count" : "3220"
+      }, {
+        "item" : "0.09",
+        "count" : "2286"
+      }, {
+        "item" : "0.1",
+        "count" : "2071"
+      }, {
+        "item" : "0.11",
+        "count" : "1327"
+      }, {
+        "item" : "0.13",
+        "count" : "1110"
+      }, {
+        "item" : "0.12",
+        "count" : "897"
+      }, {
+        "item" : "0.14",
+        "count" : "796"
+      }, {
+        "item" : "0.15",
+        "count" : "649"
+      }, {
+        "item" : "0.17",
+        "count" : "548"
+      }, {
+        "item" : "0.18",
+        "count" : "523"
+      }, {
+        "item" : "0.2",
+        "count" : "432"
+      }, {
+        "item" : "0.16",
+        "count" : "361"
+      } ],
+      "smallest" : "0",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 634919290,
+    "name" : "NP_ABSENT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Non-Participants Absent Count",
+    "fieldName" : "np_absent_cnt",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168261725,
+    "cachedContents" : {
+      "non_null" : "281618",
+      "largest" : "5205",
+      "null" : "548808",
+      "top" : [ {
+        "item" : "1",
+        "count" : "140179"
+      }, {
+        "item" : "2",
+        "count" : "54926"
+      }, {
+        "item" : "3",
+        "count" : "27543"
+      }, {
+        "item" : "4",
+        "count" : "14944"
+      }, {
+        "item" : "5",
+        "count" : "9525"
+      }, {
+        "item" : "6",
+        "count" : "6300"
+      }, {
+        "item" : "7",
+        "count" : "4443"
+      }, {
+        "item" : "8",
+        "count" : "3463"
+      }, {
+        "item" : "9",
+        "count" : "2580"
+      }, {
+        "item" : "10",
+        "count" : "2003"
+      }, {
+        "item" : "11",
+        "count" : "1609"
+      }, {
+        "item" : "12",
+        "count" : "1401"
+      }, {
+        "item" : "13",
+        "count" : "1172"
+      }, {
+        "item" : "14",
+        "count" : "938"
+      }, {
+        "item" : "15",
+        "count" : "735"
+      }, {
+        "item" : "16",
+        "count" : "662"
+      }, {
+        "item" : "17",
+        "count" : "651"
+      }, {
+        "item" : "18",
+        "count" : "573"
+      }, {
+        "item" : "19",
+        "count" : "485"
+      }, {
+        "item" : "20",
+        "count" : "417"
+      } ],
+      "smallest" : "1",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919291,
+    "name" : "NP_MEDICAL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Non-Participants Medical Count",
+    "fieldName" : "np_medical_cnt",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168261726,
+    "cachedContents" : {
+      "non_null" : "78266",
+      "largest" : "4260",
+      "null" : "752160",
+      "top" : [ {
+        "item" : "1",
+        "count" : "55417"
+      }, {
+        "item" : "2",
+        "count" : "12559"
+      }, {
+        "item" : "3",
+        "count" : "4026"
+      }, {
+        "item" : "4",
+        "count" : "1873"
+      }, {
+        "item" : "5",
+        "count" : "859"
+      }, {
+        "item" : "6",
+        "count" : "493"
+      }, {
+        "item" : "7",
+        "count" : "337"
+      }, {
+        "item" : "8",
+        "count" : "259"
+      }, {
+        "item" : "9",
+        "count" : "209"
+      }, {
+        "item" : "10",
+        "count" : "163"
+      }, {
+        "item" : "11",
+        "count" : "146"
+      }, {
+        "item" : "14",
+        "count" : "92"
+      }, {
+        "item" : "12",
+        "count" : "89"
+      }, {
+        "item" : "15",
+        "count" : "88"
+      }, {
+        "item" : "13",
+        "count" : "87"
+      }, {
+        "item" : "16",
+        "count" : "87"
+      }, {
+        "item" : "17",
+        "count" : "65"
+      }, {
+        "item" : "18",
+        "count" : "54"
+      }, {
+        "item" : "20",
+        "count" : "52"
+      }, {
+        "item" : "23",
+        "count" : "52"
+      } ],
+      "smallest" : "1",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919292,
+    "name" : "NP_EL_NOT_PART_ACCESS_CNT",
+    "dataTypeName" : "number",
+    "description" : "Non-Participants English Learners Not Participating in ACCESS Count",
+    "fieldName" : "np_el_not_part_access",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166199034,
+    "cachedContents" : {
+      "non_null" : "23807",
+      "largest" : "231",
+      "null" : "806619",
+      "top" : [ {
+        "item" : "1",
+        "count" : "16299"
+      }, {
+        "item" : "2",
+        "count" : "3514"
+      }, {
+        "item" : "3",
+        "count" : "1357"
+      }, {
+        "item" : "4",
+        "count" : "699"
+      }, {
+        "item" : "5",
+        "count" : "445"
+      }, {
+        "item" : "6",
+        "count" : "233"
+      }, {
+        "item" : "7",
+        "count" : "197"
+      }, {
+        "item" : "8",
+        "count" : "142"
+      }, {
+        "item" : "9",
+        "count" : "121"
+      }, {
+        "item" : "10",
+        "count" : "90"
+      }, {
+        "item" : "11",
+        "count" : "70"
+      }, {
+        "item" : "12",
+        "count" : "56"
+      }, {
+        "item" : "13",
+        "count" : "49"
+      }, {
+        "item" : "14",
+        "count" : "33"
+      }, {
+        "item" : "17",
+        "count" : "25"
+      }, {
+        "item" : "22",
+        "count" : "24"
+      }, {
+        "item" : "16",
+        "count" : "23"
+      }, {
+        "item" : "15",
+        "count" : "21"
+      }, {
+        "item" : "18",
+        "count" : "19"
+      }, {
+        "item" : "21",
+        "count" : "16"
+      } ],
+      "smallest" : "1",
+      "count" : "830426",
+      "cardinality" : "830426"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "testing", "ela", "math", "science", "civics", "nextgen", "legacy", "mcas", "participation", "assessment", "standardized test" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

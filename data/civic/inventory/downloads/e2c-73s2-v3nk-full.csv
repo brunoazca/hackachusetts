@@ -1,0 +1,1324 @@
+REPORT_YEAR,COHORT_YEAR,SEGMENT,INSTITUTION,STUDENT_TYPE,ENROLLMENT_STATUS,RETENTION_ADJ_COHORT_CNT,PERSIST_ADJ_COHORT_CNT,RETAINED_INITIAL_INST_CNT,RETAINED_INITIAL_INST_PCT,PERSISTED_ANY_INST_CNT,PERSISTED_ANY_INST_PCT
+2025,2024,Community Colleges,Berkshire Community College,First-time,Full Time,173,168,104,0.6,109,0.6
+2025,2024,Community Colleges,Berkshire Community College,First-time,Part Time,195,182,79,0.4,77,0.4
+2025,2024,Community Colleges,Berkshire Community College,New transfer,Full Time,48,47,22,0.5,28,0.6
+2025,2024,Community Colleges,Berkshire Community College,New transfer,Part Time,112,110,50,0.4,58,0.5
+2025,2024,Community Colleges,Bristol Community College,First-time,Full Time,705,687,428,0.6,454,0.7
+2025,2024,Community Colleges,Bristol Community College,First-time,Part Time,910,875,451,0.5,464,0.5
+2025,2024,Community Colleges,Bristol Community College,New transfer,Full Time,125,124,76,0.6,88,0.7
+2025,2024,Community Colleges,Bristol Community College,New transfer,Part Time,244,238,127,0.5,141,0.6
+2025,2024,Community Colleges,Bunker Hill Community College,First-time,Full Time,881,751,584,0.7,533,0.7
+2025,2024,Community Colleges,Bunker Hill Community College,First-time,Part Time,937,831,459,0.5,468,0.6
+2025,2024,Community Colleges,Bunker Hill Community College,New transfer,Full Time,607,497,366,0.6,356,0.7
+2025,2024,Community Colleges,Bunker Hill Community College,New transfer,Part Time,639,609,335,0.5,373,0.6
+2025,2024,Community Colleges,Cape Cod Community College,First-time,Full Time,201,192,123,0.6,131,0.7
+2025,2024,Community Colleges,Cape Cod Community College,First-time,Part Time,454,432,235,0.5,249,0.6
+2025,2024,Community Colleges,Cape Cod Community College,New transfer,Full Time,82,78,47,0.6,54,0.7
+2025,2024,Community Colleges,Cape Cod Community College,New transfer,Part Time,269,265,158,0.6,172,0.6
+2025,2024,Community Colleges,Greenfield Community College,First-time,Full Time,80,79,51,0.6,57,0.7
+2025,2024,Community Colleges,Greenfield Community College,First-time,Part Time,141,138,79,0.6,88,0.6
+2025,2024,Community Colleges,Greenfield Community College,New transfer,Full Time,36,36,21,0.6,21,0.6
+2025,2024,Community Colleges,Greenfield Community College,New transfer,Part Time,103,103,46,0.4,58,0.6
+2025,2024,Community Colleges,Holyoke Community College,First-time,Full Time,414,395,261,0.6,286,0.7
+2025,2024,Community Colleges,Holyoke Community College,First-time,Part Time,451,426,237,0.5,242,0.6
+2025,2024,Community Colleges,Holyoke Community College,New transfer,Full Time,103,98,54,0.5,67,0.7
+2025,2024,Community Colleges,Holyoke Community College,New transfer,Part Time,195,185,109,0.6,117,0.6
+2025,2024,Community Colleges,MassBay Community College,First-time,Full Time,476,453,276,0.6,313,0.7
+2025,2024,Community Colleges,MassBay Community College,First-time,Part Time,549,513,284,0.5,293,0.6
+2025,2024,Community Colleges,MassBay Community College,New transfer,Full Time,157,141,78,0.5,88,0.6
+2025,2024,Community Colleges,MassBay Community College,New transfer,Part Time,256,241,119,0.5,139,0.6
+2025,2024,Community Colleges,Massasoit Community College,First-time,Full Time,464,451,297,0.6,317,0.7
+2025,2024,Community Colleges,Massasoit Community College,First-time,Part Time,585,573,309,0.5,330,0.6
+2025,2024,Community Colleges,Massasoit Community College,New transfer,Full Time,185,183,103,0.6,125,0.7
+2025,2024,Community Colleges,Massasoit Community College,New transfer,Part Time,282,280,154,0.5,184,0.7
+2025,2024,Community Colleges,Middlesex Community College,First-time,Full Time,469,455,305,0.6,337,0.7
+2025,2024,Community Colleges,Middlesex Community College,First-time,Part Time,719,704,344,0.5,372,0.5
+2025,2024,Community Colleges,Middlesex Community College,New transfer,Full Time,181,174,126,0.7,135,0.8
+2025,2024,Community Colleges,Middlesex Community College,New transfer,Part Time,449,443,248,0.6,279,0.6
+2025,2024,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,292,289,200,0.7,214,0.7
+2025,2024,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,415,405,235,0.6,245,0.6
+2025,2024,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,87,85,56,0.6,63,0.7
+2025,2024,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,318,314,184,0.6,204,0.6
+2025,2024,Community Colleges,North Shore Community College,First-time,Full Time,414,381,230,0.6,245,0.6
+2025,2024,Community Colleges,North Shore Community College,First-time,Part Time,605,516,300,0.5,301,0.6
+2025,2024,Community Colleges,North Shore Community College,New transfer,Full Time,152,145,86,0.6,99,0.7
+2025,2024,Community Colleges,North Shore Community College,New transfer,Part Time,337,323,183,0.5,207,0.6
+2025,2024,Community Colleges,Northern Essex Community College,First-time,Full Time,258,245,162,0.6,168,0.7
+2025,2024,Community Colleges,Northern Essex Community College,First-time,Part Time,495,482,271,0.5,282,0.6
+2025,2024,Community Colleges,Northern Essex Community College,New transfer,Full Time,114,114,59,0.5,68,0.6
+2025,2024,Community Colleges,Northern Essex Community College,New transfer,Part Time,251,243,122,0.5,140,0.6
+2025,2024,Community Colleges,Quinsigamond Community College,First-time,Full Time,564,504,356,0.6,347,0.7
+2025,2024,Community Colleges,Quinsigamond Community College,First-time,Part Time,766,647,404,0.5,384,0.6
+2025,2024,Community Colleges,Quinsigamond Community College,New transfer,Full Time,212,189,113,0.5,119,0.6
+2025,2024,Community Colleges,Quinsigamond Community College,New transfer,Part Time,490,448,263,0.5,264,0.6
+2025,2024,Community Colleges,Roxbury Community College,First-time,Full Time,234,222,141,0.6,153,0.7
+2025,2024,Community Colleges,Roxbury Community College,First-time,Part Time,369,357,136,0.4,160,0.4
+2025,2024,Community Colleges,Roxbury Community College,New transfer,Full Time,30,28,16,0.5,21,0.8
+2025,2024,Community Colleges,Roxbury Community College,New transfer,Part Time,51,51,24,0.5,27,0.5
+2025,2024,Community Colleges,Springfield Technical Community College,First-time,Full Time,603,592,398,0.7,426,0.7
+2025,2024,Community Colleges,Springfield Technical Community College,First-time,Part Time,928,912,444,0.5,480,0.5
+2025,2024,Community Colleges,Springfield Technical Community College,New transfer,Full Time,37,36,23,0.6,26,0.7
+2025,2024,Community Colleges,Springfield Technical Community College,New transfer,Part Time,108,108,55,0.5,62,0.6
+2025,2024,State Universities,Bridgewater State University,First-time,Full Time,1498,1450,1157,0.8,1237,0.9
+2025,2024,State Universities,Bridgewater State University,First-time,Part Time,52,50,21,0.4,28,0.6
+2025,2024,State Universities,Bridgewater State University,New transfer,Full Time,568,549,491,0.9,491,0.9
+2025,2024,State Universities,Bridgewater State University,New transfer,Part Time,150,150,93,0.6,104,0.7
+2025,2024,State Universities,Fitchburg State University,First-time,Full Time,538,532,397,0.7,448,0.8
+2025,2024,State Universities,Fitchburg State University,First-time,Part Time,1,1,,,,
+2025,2024,State Universities,Fitchburg State University,New transfer,Full Time,182,171,146,0.8,153,0.9
+2025,2024,State Universities,Fitchburg State University,New transfer,Part Time,127,124,95,0.7,96,0.8
+2025,2024,State Universities,Framingham State University,First-time,Full Time,584,532,431,0.7,477,0.9
+2025,2024,State Universities,Framingham State University,First-time,Part Time,3,2,,,,
+2025,2024,State Universities,Framingham State University,New transfer,Full Time,203,200,164,0.8,175,0.9
+2025,2024,State Universities,Framingham State University,New transfer,Part Time,22,21,14,0.6,15,0.7
+2025,2024,State Universities,Massachusetts College of Art and Design,First-time,Full Time,357,340,323,0.9,324,1.0
+2025,2024,State Universities,Massachusetts College of Art and Design,First-time,Part Time,6,5,,,,
+2025,2024,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,77,76,67,0.9,68,0.9
+2025,2024,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,4,3,,,,
+2025,2024,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,123,117,84,0.7,101,0.9
+2025,2024,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,1,1,,,,
+2025,2024,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,64,63,52,0.8,57,0.9
+2025,2024,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,7,7,4,0.6,4,0.6
+2025,2024,State Universities,Massachusetts Maritime Academy,First-time,Full Time,455,449,388,0.9,416,0.9
+2025,2024,State Universities,Massachusetts Maritime Academy,First-time,Part Time,2,2,,,,
+2025,2024,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,40,40,35,0.9,37,0.9
+2025,2024,State Universities,Massachusetts Maritime Academy,New transfer,Part Time,1,1,,,,
+2025,2024,State Universities,Salem State University,First-time,Full Time,837,829,638,0.8,708,0.9
+2025,2024,State Universities,Salem State University,First-time,Part Time,21,21,9,0.4,14,0.7
+2025,2024,State Universities,Salem State University,New transfer,Full Time,313,286,274,0.9,265,0.9
+2025,2024,State Universities,Salem State University,New transfer,Part Time,73,72,60,0.8,63,0.9
+2025,2024,State Universities,Westfield State University,First-time,Full Time,827,790,601,0.7,692,0.9
+2025,2024,State Universities,Westfield State University,First-time,Part Time,13,12,3,0.2,5,0.4
+2025,2024,State Universities,Westfield State University,New transfer,Full Time,254,237,210,0.8,214,0.9
+2025,2024,State Universities,Westfield State University,New transfer,Part Time,63,60,45,0.7,48,0.8
+2025,2024,State Universities,Worcester State University,First-time,Full Time,750,723,589,0.8,642,0.9
+2025,2024,State Universities,Worcester State University,First-time,Part Time,5,5,,,,
+2025,2024,State Universities,Worcester State University,New transfer,Full Time,245,232,205,0.8,205,0.9
+2025,2024,State Universities,Worcester State University,New transfer,Part Time,54,50,42,0.8,42,0.8
+2025,2024,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,5371,4836,4955,0.9,4676,1.0
+2025,2024,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,13,11,7,0.5,7,0.6
+2025,2024,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1004,938,918,0.9,898,1.0
+2025,2024,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,132,129,84,0.6,86,0.7
+2025,2024,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,1893,1729,1362,0.7,1493,0.9
+2025,2024,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,40,39,24,0.6,29,0.7
+2025,2024,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,1030,943,801,0.8,819,0.9
+2025,2024,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,271,250,189,0.7,187,0.7
+2025,2024,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1291,1249,869,0.7,1045,0.8
+2025,2024,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,12,11,6,0.5,8,0.7
+2025,2024,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,306,301,258,0.8,267,0.9
+2025,2024,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,104,103,73,0.7,79,0.8
+2025,2024,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,2024,1948,1651,0.8,1787,0.9
+2025,2024,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,53,50,28,0.5,31,0.6
+2025,2024,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,747,723,644,0.9,646,0.9
+2025,2024,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,267,263,181,0.7,196,0.7
+2024,2023,Community Colleges,Berkshire Community College,First-time,Full Time,110,107,67,0.6,71,0.7
+2024,2023,Community Colleges,Berkshire Community College,First-time,Part Time,108,102,47,0.4,48,0.5
+2024,2023,Community Colleges,Berkshire Community College,New transfer,Full Time,37,36,16,0.4,19,0.5
+2024,2023,Community Colleges,Berkshire Community College,New transfer,Part Time,105,103,43,0.4,53,0.5
+2024,2023,Community Colleges,Bristol Community College,First-time,Full Time,783,752,431,0.6,452,0.6
+2024,2023,Community Colleges,Bristol Community College,First-time,Part Time,663,639,307,0.5,325,0.5
+2024,2023,Community Colleges,Bristol Community College,New transfer,Full Time,116,115,63,0.5,75,0.7
+2024,2023,Community Colleges,Bristol Community College,New transfer,Part Time,179,176,93,0.5,103,0.6
+2024,2023,Community Colleges,Bunker Hill Community College,First-time,Full Time,799,674,515,0.6,467,0.7
+2024,2023,Community Colleges,Bunker Hill Community College,First-time,Part Time,686,603,312,0.5,313,0.5
+2024,2023,Community Colleges,Bunker Hill Community College,New transfer,Full Time,382,336,241,0.6,252,0.8
+2024,2023,Community Colleges,Bunker Hill Community College,New transfer,Part Time,414,398,174,0.4,217,0.5
+2024,2023,Community Colleges,Cape Cod Community College,First-time,Full Time,175,170,121,0.7,126,0.7
+2024,2023,Community Colleges,Cape Cod Community College,First-time,Part Time,293,270,156,0.5,162,0.6
+2024,2023,Community Colleges,Cape Cod Community College,New transfer,Full Time,75,74,40,0.5,50,0.7
+2024,2023,Community Colleges,Cape Cod Community College,New transfer,Part Time,202,197,103,0.5,118,0.6
+2024,2023,Community Colleges,Greenfield Community College,First-time,Full Time,93,90,56,0.6,60,0.7
+2024,2023,Community Colleges,Greenfield Community College,First-time,Part Time,142,142,82,0.6,95,0.7
+2024,2023,Community Colleges,Greenfield Community College,New transfer,Full Time,35,35,15,0.4,20,0.6
+2024,2023,Community Colleges,Greenfield Community College,New transfer,Part Time,97,97,41,0.4,52,0.5
+2024,2023,Community Colleges,Holyoke Community College,First-time,Full Time,374,363,226,0.6,242,0.7
+2024,2023,Community Colleges,Holyoke Community College,First-time,Part Time,322,310,158,0.5,170,0.5
+2024,2023,Community Colleges,Holyoke Community College,New transfer,Full Time,96,92,43,0.4,55,0.6
+2024,2023,Community Colleges,Holyoke Community College,New transfer,Part Time,164,160,73,0.4,84,0.5
+2024,2023,Community Colleges,MassBay Community College,First-time,Full Time,474,434,262,0.6,290,0.7
+2024,2023,Community Colleges,MassBay Community College,First-time,Part Time,435,403,214,0.5,217,0.5
+2024,2023,Community Colleges,MassBay Community College,New transfer,Full Time,98,88,52,0.5,53,0.6
+2024,2023,Community Colleges,MassBay Community College,New transfer,Part Time,167,163,82,0.5,103,0.6
+2024,2023,Community Colleges,Massasoit Community College,First-time,Full Time,457,442,285,0.6,307,0.7
+2024,2023,Community Colleges,Massasoit Community College,First-time,Part Time,403,387,193,0.5,216,0.6
+2024,2023,Community Colleges,Massasoit Community College,New transfer,Full Time,138,135,79,0.6,93,0.7
+2024,2023,Community Colleges,Massasoit Community College,New transfer,Part Time,164,163,77,0.5,97,0.6
+2024,2023,Community Colleges,Middlesex Community College,First-time,Full Time,465,461,295,0.6,335,0.7
+2024,2023,Community Colleges,Middlesex Community College,First-time,Part Time,563,554,229,0.4,254,0.5
+2024,2023,Community Colleges,Middlesex Community College,New transfer,Full Time,181,179,105,0.6,132,0.7
+2024,2023,Community Colleges,Middlesex Community College,New transfer,Part Time,338,334,146,0.4,172,0.5
+2024,2023,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,265,261,164,0.6,177,0.7
+2024,2023,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,336,322,154,0.5,173,0.5
+2024,2023,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,93,90,51,0.5,57,0.6
+2024,2023,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,216,208,100,0.5,115,0.6
+2024,2023,Community Colleges,North Shore Community College,First-time,Full Time,428,392,255,0.6,270,0.7
+2024,2023,Community Colleges,North Shore Community College,First-time,Part Time,417,340,193,0.5,183,0.5
+2024,2023,Community Colleges,North Shore Community College,New transfer,Full Time,125,112,75,0.6,85,0.8
+2024,2023,Community Colleges,North Shore Community College,New transfer,Part Time,166,155,101,0.6,108,0.7
+2024,2023,Community Colleges,Northern Essex Community College,First-time,Full Time,310,299,191,0.6,203,0.7
+2024,2023,Community Colleges,Northern Essex Community College,First-time,Part Time,328,318,166,0.5,171,0.5
+2024,2023,Community Colleges,Northern Essex Community College,New transfer,Full Time,130,124,64,0.5,80,0.6
+2024,2023,Community Colleges,Northern Essex Community College,New transfer,Part Time,158,149,73,0.5,83,0.6
+2024,2023,Community Colleges,Quinsigamond Community College,First-time,Full Time,444,386,258,0.6,255,0.7
+2024,2023,Community Colleges,Quinsigamond Community College,First-time,Part Time,606,506,296,0.5,279,0.6
+2024,2023,Community Colleges,Quinsigamond Community College,New transfer,Full Time,164,132,86,0.5,94,0.7
+2024,2023,Community Colleges,Quinsigamond Community College,New transfer,Part Time,333,283,151,0.5,150,0.5
+2024,2023,Community Colleges,Roxbury Community College,First-time,Full Time,188,172,110,0.6,114,0.7
+2024,2023,Community Colleges,Roxbury Community College,First-time,Part Time,253,242,100,0.4,108,0.4
+2024,2023,Community Colleges,Roxbury Community College,New transfer,Full Time,43,41,23,0.5,25,0.6
+2024,2023,Community Colleges,Roxbury Community College,New transfer,Part Time,48,48,29,0.6,31,0.6
+2024,2023,Community Colleges,Springfield Technical Community College,First-time,Full Time,544,539,334,0.6,350,0.6
+2024,2023,Community Colleges,Springfield Technical Community College,First-time,Part Time,382,366,177,0.5,192,0.5
+2024,2023,Community Colleges,Springfield Technical Community College,New transfer,Full Time,120,118,81,0.7,89,0.8
+2024,2023,Community Colleges,Springfield Technical Community College,New transfer,Part Time,200,196,122,0.6,132,0.7
+2024,2023,State Universities,Bridgewater State University,First-time,Full Time,1512,1463,1138,0.8,1239,0.8
+2024,2023,State Universities,Bridgewater State University,First-time,Part Time,64,60,26,0.4,34,0.6
+2024,2023,State Universities,Bridgewater State University,New transfer,Full Time,546,541,442,0.8,469,0.9
+2024,2023,State Universities,Bridgewater State University,New transfer,Part Time,142,141,92,0.6,101,0.7
+2024,2023,State Universities,Fitchburg State University,First-time,Full Time,607,597,421,0.7,484,0.8
+2024,2023,State Universities,Fitchburg State University,First-time,Part Time,4,4,,,,
+2024,2023,State Universities,Fitchburg State University,New transfer,Full Time,166,161,132,0.8,141,0.9
+2024,2023,State Universities,Fitchburg State University,New transfer,Part Time,69,68,41,0.6,48,0.7
+2024,2023,State Universities,Framingham State University,First-time,Full Time,497,484,350,0.7,406,0.8
+2024,2023,State Universities,Framingham State University,First-time,Part Time,2,2,,,,
+2024,2023,State Universities,Framingham State University,New transfer,Full Time,189,188,150,0.8,161,0.9
+2024,2023,State Universities,Framingham State University,New transfer,Part Time,44,44,27,0.6,32,0.7
+2024,2023,State Universities,Massachusetts College of Art and Design,First-time,Full Time,431,403,386,0.9,377,0.9
+2024,2023,State Universities,Massachusetts College of Art and Design,First-time,Part Time,1,0,,,,
+2024,2023,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,97,85,91,0.9,81,1.0
+2024,2023,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,3,3,,,,
+2024,2023,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,189,180,145,0.8,163,0.9
+2024,2023,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,2,2,,,,
+2024,2023,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,76,73,59,0.8,63,0.9
+2024,2023,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,12,11,9,0.8,10,0.9
+2024,2023,State Universities,Massachusetts Maritime Academy,First-time,Full Time,355,347,309,0.9,320,0.9
+2024,2023,State Universities,Massachusetts Maritime Academy,First-time,Part Time,1,1,,,,
+2024,2023,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,28,27,24,0.9,25,0.9
+2024,2023,State Universities,Salem State University,First-time,Full Time,793,789,600,0.8,677,0.9
+2024,2023,State Universities,Salem State University,First-time,Part Time,17,16,11,0.6,11,0.7
+2024,2023,State Universities,Salem State University,New transfer,Full Time,280,262,244,0.9,239,0.9
+2024,2023,State Universities,Salem State University,New transfer,Part Time,63,63,52,0.8,54,0.9
+2024,2023,State Universities,Westfield State University,First-time,Full Time,702,669,521,0.7,573,0.9
+2024,2023,State Universities,Westfield State University,First-time,Part Time,10,8,3,0.3,4,0.5
+2024,2023,State Universities,Westfield State University,New transfer,Full Time,223,211,179,0.8,185,0.9
+2024,2023,State Universities,Westfield State University,New transfer,Part Time,53,52,38,0.7,40,0.8
+2024,2023,State Universities,Worcester State University,First-time,Full Time,901,866,719,0.8,768,0.9
+2024,2023,State Universities,Worcester State University,First-time,Part Time,8,7,6,0.8,6,0.9
+2024,2023,State Universities,Worcester State University,New transfer,Full Time,244,235,206,0.8,205,0.9
+2024,2023,State Universities,Worcester State University,New transfer,Part Time,62,60,39,0.6,43,0.7
+2024,2023,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,5246,4794,4818,0.9,4692,1.0
+2024,2023,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,39,36,27,0.7,33,0.9
+2024,2023,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1088,1021,976,0.9,957,0.9
+2024,2023,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,162,160,110,0.7,114,0.7
+2024,2023,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,2406,2191,1694,0.7,1888,0.9
+2024,2023,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,57,54,26,0.5,33,0.6
+2024,2023,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,783,735,608,0.8,632,0.9
+2024,2023,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,243,237,152,0.6,167,0.7
+2024,2023,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1361,1329,862,0.6,1101,0.8
+2024,2023,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,13,12,4,0.3,8,0.7
+2024,2023,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,288,284,226,0.8,245,0.9
+2024,2023,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,86,86,59,0.7,65,0.8
+2024,2023,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,2031,1973,1711,0.8,1830,0.9
+2024,2023,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,59,57,26,0.4,30,0.5
+2024,2023,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,708,686,603,0.9,621,0.9
+2024,2023,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,332,319,198,0.6,217,0.7
+2023,2022,Community Colleges,Berkshire Community College,First-time,Full Time,144,140,85,0.6,94,0.7
+2023,2022,Community Colleges,Berkshire Community College,First-time,Part Time,107,100,54,0.5,57,0.6
+2023,2022,Community Colleges,Berkshire Community College,New transfer,Full Time,24,24,11,0.5,15,0.6
+2023,2022,Community Colleges,Berkshire Community College,New transfer,Part Time,66,60,33,0.5,34,0.6
+2023,2022,Community Colleges,Bristol Community College,First-time,Full Time,729,705,438,0.6,464,0.7
+2023,2022,Community Colleges,Bristol Community College,First-time,Part Time,510,490,214,0.4,235,0.5
+2023,2022,Community Colleges,Bristol Community College,New transfer,Full Time,109,106,66,0.6,76,0.7
+2023,2022,Community Colleges,Bristol Community College,New transfer,Part Time,140,139,48,0.3,68,0.5
+2023,2022,Community Colleges,Bunker Hill Community College,First-time,Full Time,847,756,531,0.6,512,0.7
+2023,2022,Community Colleges,Bunker Hill Community College,First-time,Part Time,653,572,313,0.5,318,0.6
+2023,2022,Community Colleges,Bunker Hill Community College,New transfer,Full Time,410,359,240,0.6,246,0.7
+2023,2022,Community Colleges,Bunker Hill Community College,New transfer,Part Time,382,367,176,0.5,205,0.6
+2023,2022,Community Colleges,Cape Cod Community College,First-time,Full Time,219,208,123,0.6,134,0.6
+2023,2022,Community Colleges,Cape Cod Community College,First-time,Part Time,217,204,88,0.4,100,0.5
+2023,2022,Community Colleges,Cape Cod Community College,New transfer,Full Time,71,67,42,0.6,43,0.6
+2023,2022,Community Colleges,Cape Cod Community College,New transfer,Part Time,161,157,98,0.6,108,0.7
+2023,2022,Community Colleges,Greenfield Community College,First-time,Full Time,79,76,57,0.7,62,0.8
+2023,2022,Community Colleges,Greenfield Community College,First-time,Part Time,115,115,62,0.5,70,0.6
+2023,2022,Community Colleges,Greenfield Community College,New transfer,Full Time,31,31,13,0.4,16,0.5
+2023,2022,Community Colleges,Greenfield Community College,New transfer,Part Time,68,68,39,0.6,45,0.7
+2023,2022,Community Colleges,Holyoke Community College,First-time,Full Time,345,333,215,0.6,233,0.7
+2023,2022,Community Colleges,Holyoke Community College,First-time,Part Time,297,285,136,0.5,152,0.5
+2023,2022,Community Colleges,Holyoke Community College,New transfer,Full Time,82,80,42,0.5,50,0.6
+2023,2022,Community Colleges,Holyoke Community College,New transfer,Part Time,144,141,65,0.5,79,0.6
+2023,2022,Community Colleges,MassBay Community College,First-time,Full Time,383,341,240,0.6,248,0.7
+2023,2022,Community Colleges,MassBay Community College,First-time,Part Time,314,287,155,0.5,166,0.6
+2023,2022,Community Colleges,MassBay Community College,New transfer,Full Time,99,91,60,0.6,69,0.8
+2023,2022,Community Colleges,MassBay Community College,New transfer,Part Time,149,140,73,0.5,85,0.6
+2023,2022,Community Colleges,Massasoit Community College,First-time,Full Time,497,491,302,0.6,333,0.7
+2023,2022,Community Colleges,Massasoit Community College,First-time,Part Time,346,337,174,0.5,191,0.6
+2023,2022,Community Colleges,Massasoit Community College,New transfer,Full Time,129,128,71,0.6,89,0.7
+2023,2022,Community Colleges,Massasoit Community College,New transfer,Part Time,147,146,70,0.5,103,0.7
+2023,2022,Community Colleges,Middlesex Community College,First-time,Full Time,422,416,257,0.6,290,0.7
+2023,2022,Community Colleges,Middlesex Community College,First-time,Part Time,494,482,203,0.4,223,0.5
+2023,2022,Community Colleges,Middlesex Community College,New transfer,Full Time,130,129,82,0.6,99,0.8
+2023,2022,Community Colleges,Middlesex Community College,New transfer,Part Time,309,309,134,0.4,170,0.6
+2023,2022,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,215,209,127,0.6,137,0.7
+2023,2022,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,243,227,117,0.5,118,0.5
+2023,2022,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,80,78,42,0.5,48,0.6
+2023,2022,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,164,155,66,0.4,88,0.6
+2023,2022,Community Colleges,North Shore Community College,First-time,Full Time,432,386,268,0.6,256,0.7
+2023,2022,Community Colleges,North Shore Community College,First-time,Part Time,337,281,169,0.5,159,0.6
+2023,2022,Community Colleges,North Shore Community College,New transfer,Full Time,121,108,54,0.4,62,0.6
+2023,2022,Community Colleges,North Shore Community College,New transfer,Part Time,175,157,83,0.5,96,0.6
+2023,2022,Community Colleges,Northern Essex Community College,First-time,Full Time,338,320,219,0.6,224,0.7
+2023,2022,Community Colleges,Northern Essex Community College,First-time,Part Time,322,304,156,0.5,162,0.5
+2023,2022,Community Colleges,Northern Essex Community College,New transfer,Full Time,106,99,63,0.6,67,0.7
+2023,2022,Community Colleges,Northern Essex Community College,New transfer,Part Time,152,141,76,0.5,84,0.6
+2023,2022,Community Colleges,Quinsigamond Community College,First-time,Full Time,516,463,323,0.6,328,0.7
+2023,2022,Community Colleges,Quinsigamond Community College,First-time,Part Time,526,435,235,0.4,224,0.5
+2023,2022,Community Colleges,Quinsigamond Community College,New transfer,Full Time,162,148,85,0.5,99,0.7
+2023,2022,Community Colleges,Quinsigamond Community College,New transfer,Part Time,258,221,119,0.5,129,0.6
+2023,2022,Community Colleges,Roxbury Community College,First-time,Full Time,108,105,51,0.5,62,0.6
+2023,2022,Community Colleges,Roxbury Community College,First-time,Part Time,98,98,46,0.5,52,0.5
+2023,2022,Community Colleges,Roxbury Community College,New transfer,Full Time,20,20,6,0.3,9,0.4
+2023,2022,Community Colleges,Roxbury Community College,New transfer,Part Time,23,23,11,0.5,15,0.7
+2023,2022,Community Colleges,Springfield Technical Community College,First-time,Full Time,474,472,317,0.7,338,0.7
+2023,2022,Community Colleges,Springfield Technical Community College,First-time,Part Time,394,390,179,0.5,185,0.5
+2023,2022,Community Colleges,Springfield Technical Community College,New transfer,Full Time,83,83,54,0.7,59,0.7
+2023,2022,Community Colleges,Springfield Technical Community College,New transfer,Part Time,181,181,105,0.6,115,0.6
+2023,2022,State Universities,Bridgewater State University,First-time,Full Time,1499,1471,1156,0.8,1260,0.9
+2023,2022,State Universities,Bridgewater State University,First-time,Part Time,73,70,33,0.5,39,0.6
+2023,2022,State Universities,Bridgewater State University,New transfer,Full Time,521,517,435,0.8,450,0.9
+2023,2022,State Universities,Bridgewater State University,New transfer,Part Time,127,127,78,0.6,87,0.7
+2023,2022,State Universities,Fitchburg State University,First-time,Full Time,481,481,354,0.7,393,0.8
+2023,2022,State Universities,Fitchburg State University,First-time,Part Time,5,5,,,,
+2023,2022,State Universities,Fitchburg State University,New transfer,Full Time,166,166,130,0.8,142,0.9
+2023,2022,State Universities,Fitchburg State University,New transfer,Part Time,116,112,71,0.6,72,0.6
+2023,2022,State Universities,Framingham State University,First-time,Full Time,488,486,350,0.7,401,0.8
+2023,2022,State Universities,Framingham State University,First-time,Part Time,2,2,,,,
+2023,2022,State Universities,Framingham State University,New transfer,Full Time,187,183,144,0.8,154,0.8
+2023,2022,State Universities,Framingham State University,New transfer,Part Time,16,16,10,0.6,12,0.8
+2023,2022,State Universities,Massachusetts College of Art and Design,First-time,Full Time,406,391,342,0.8,351,0.9
+2023,2022,State Universities,Massachusetts College of Art and Design,First-time,Part Time,3,3,,,,
+2023,2022,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,74,66,64,0.9,62,0.9
+2023,2022,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,4,3,,,,
+2023,2022,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,177,176,124,0.7,146,0.8
+2023,2022,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,60,60,45,0.8,52,0.9
+2023,2022,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,15,15,10,0.7,10,0.7
+2023,2022,State Universities,Massachusetts Maritime Academy,First-time,Full Time,316,311,250,0.8,274,0.9
+2023,2022,State Universities,Massachusetts Maritime Academy,First-time,Part Time,1,1,,,,
+2023,2022,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,23,23,20,0.9,21,0.9
+2023,2022,State Universities,Massachusetts Maritime Academy,New transfer,Part Time,1,1,,,,
+2023,2022,State Universities,Salem State University,First-time,Full Time,858,848,632,0.7,714,0.8
+2023,2022,State Universities,Salem State University,First-time,Part Time,5,5,,,,
+2023,2022,State Universities,Salem State University,New transfer,Full Time,269,251,232,0.9,225,0.9
+2023,2022,State Universities,Salem State University,New transfer,Part Time,74,74,49,0.7,51,0.7
+2023,2022,State Universities,Westfield State University,First-time,Full Time,788,757,562,0.7,640,0.8
+2023,2022,State Universities,Westfield State University,First-time,Part Time,11,11,4,0.4,4,0.4
+2023,2022,State Universities,Westfield State University,New transfer,Full Time,234,228,190,0.8,196,0.9
+2023,2022,State Universities,Westfield State University,New transfer,Part Time,50,49,32,0.6,38,0.8
+2023,2022,State Universities,Worcester State University,First-time,Full Time,788,770,627,0.8,680,0.9
+2023,2022,State Universities,Worcester State University,First-time,Part Time,11,10,4,0.4,5,0.5
+2023,2022,State Universities,Worcester State University,New transfer,Full Time,252,247,190,0.8,207,0.8
+2023,2022,State Universities,Worcester State University,New transfer,Part Time,80,78,56,0.7,56,0.7
+2023,2022,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,5578,5171,5070,0.9,4993,1.0
+2023,2022,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,9,8,5,0.6,6,0.8
+2023,2022,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1041,997,910,0.9,922,0.9
+2023,2022,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,170,163,109,0.6,115,0.7
+2023,2022,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,2354,2182,1715,0.7,1903,0.9
+2023,2022,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,84,79,33,0.4,48,0.6
+2023,2022,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,797,749,584,0.7,602,0.8
+2023,2022,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,254,250,163,0.6,180,0.7
+2023,2022,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1300,1283,827,0.6,1048,0.8
+2023,2022,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,19,19,7,0.4,10,0.5
+2023,2022,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,285,283,242,0.8,259,0.9
+2023,2022,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,93,91,58,0.6,64,0.7
+2023,2022,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,1889,1831,1552,0.8,1689,0.9
+2023,2022,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,46,44,30,0.7,31,0.7
+2023,2022,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,735,708,630,0.9,647,0.9
+2023,2022,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,270,261,173,0.6,186,0.7
+2022,2021,Community Colleges,Berkshire Community College,First-time,Full Time,143,135,79,0.6,87,0.6
+2022,2021,Community Colleges,Berkshire Community College,First-time,Part Time,136,121,48,0.4,47,0.4
+2022,2021,Community Colleges,Berkshire Community College,New transfer,Full Time,23,23,13,0.6,14,0.6
+2022,2021,Community Colleges,Berkshire Community College,New transfer,Part Time,66,59,20,0.3,28,0.5
+2022,2021,Community Colleges,Bristol Community College,First-time,Full Time,755,684,439,0.6,440,0.6
+2022,2021,Community Colleges,Bristol Community College,First-time,Part Time,472,443,192,0.4,200,0.5
+2022,2021,Community Colleges,Bristol Community College,New transfer,Full Time,117,109,62,0.5,74,0.7
+2022,2021,Community Colleges,Bristol Community College,New transfer,Part Time,147,137,72,0.5,81,0.6
+2022,2021,Community Colleges,Bunker Hill Community College,First-time,Full Time,702,614,398,0.6,373,0.6
+2022,2021,Community Colleges,Bunker Hill Community College,First-time,Part Time,501,444,196,0.4,202,0.5
+2022,2021,Community Colleges,Bunker Hill Community College,New transfer,Full Time,311,284,151,0.5,164,0.6
+2022,2021,Community Colleges,Bunker Hill Community College,New transfer,Part Time,333,317,127,0.4,171,0.5
+2022,2021,Community Colleges,Cape Cod Community College,First-time,Full Time,282,271,148,0.5,170,0.6
+2022,2021,Community Colleges,Cape Cod Community College,First-time,Part Time,201,185,94,0.5,104,0.6
+2022,2021,Community Colleges,Cape Cod Community College,New transfer,Full Time,59,57,32,0.5,41,0.7
+2022,2021,Community Colleges,Cape Cod Community College,New transfer,Part Time,122,118,63,0.5,71,0.6
+2022,2021,Community Colleges,Greenfield Community College,First-time,Full Time,87,86,56,0.6,63,0.7
+2022,2021,Community Colleges,Greenfield Community College,First-time,Part Time,127,127,66,0.5,72,0.6
+2022,2021,Community Colleges,Greenfield Community College,New transfer,Full Time,30,30,13,0.4,18,0.6
+2022,2021,Community Colleges,Greenfield Community College,New transfer,Part Time,98,98,50,0.5,60,0.6
+2022,2021,Community Colleges,Holyoke Community College,First-time,Full Time,415,409,245,0.6,274,0.7
+2022,2021,Community Colleges,Holyoke Community College,First-time,Part Time,325,319,136,0.4,153,0.5
+2022,2021,Community Colleges,Holyoke Community College,New transfer,Full Time,79,76,46,0.6,53,0.7
+2022,2021,Community Colleges,Holyoke Community College,New transfer,Part Time,130,125,56,0.4,66,0.5
+2022,2021,Community Colleges,MassBay Community College,First-time,Full Time,404,374,223,0.6,250,0.7
+2022,2021,Community Colleges,MassBay Community College,First-time,Part Time,313,295,148,0.5,156,0.5
+2022,2021,Community Colleges,MassBay Community College,New transfer,Full Time,96,94,53,0.6,64,0.7
+2022,2021,Community Colleges,MassBay Community College,New transfer,Part Time,133,131,56,0.4,75,0.6
+2022,2021,Community Colleges,Massasoit Community College,First-time,Full Time,567,558,323,0.6,366,0.7
+2022,2021,Community Colleges,Massasoit Community College,First-time,Part Time,395,382,188,0.5,207,0.5
+2022,2021,Community Colleges,Massasoit Community College,New transfer,Full Time,112,112,59,0.5,74,0.7
+2022,2021,Community Colleges,Massasoit Community College,New transfer,Part Time,182,182,89,0.5,109,0.6
+2022,2021,Community Colleges,Middlesex Community College,First-time,Full Time,555,551,328,0.6,381,0.7
+2022,2021,Community Colleges,Middlesex Community College,First-time,Part Time,466,455,188,0.4,217,0.5
+2022,2021,Community Colleges,Middlesex Community College,New transfer,Full Time,142,139,85,0.6,95,0.7
+2022,2021,Community Colleges,Middlesex Community College,New transfer,Part Time,286,285,123,0.4,148,0.5
+2022,2021,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,267,246,136,0.5,147,0.6
+2022,2021,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,242,232,129,0.5,128,0.6
+2022,2021,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,82,80,39,0.5,46,0.6
+2022,2021,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,189,185,89,0.5,113,0.6
+2022,2021,Community Colleges,North Shore Community College,First-time,Full Time,449,416,244,0.5,263,0.6
+2022,2021,Community Colleges,North Shore Community College,First-time,Part Time,340,292,151,0.4,149,0.5
+2022,2021,Community Colleges,North Shore Community College,New transfer,Full Time,129,118,64,0.5,74,0.6
+2022,2021,Community Colleges,North Shore Community College,New transfer,Part Time,219,203,108,0.5,119,0.6
+2022,2021,Community Colleges,Northern Essex Community College,First-time,Full Time,485,462,267,0.6,289,0.6
+2022,2021,Community Colleges,Northern Essex Community College,First-time,Part Time,379,353,150,0.4,161,0.5
+2022,2021,Community Colleges,Northern Essex Community College,New transfer,Full Time,91,85,47,0.5,50,0.6
+2022,2021,Community Colleges,Northern Essex Community College,New transfer,Part Time,116,101,36,0.3,46,0.5
+2022,2021,Community Colleges,Quinsigamond Community College,First-time,Full Time,604,560,342,0.6,364,0.6
+2022,2021,Community Colleges,Quinsigamond Community College,First-time,Part Time,414,348,194,0.5,188,0.5
+2022,2021,Community Colleges,Quinsigamond Community College,New transfer,Full Time,164,151,70,0.4,88,0.6
+2022,2021,Community Colleges,Quinsigamond Community College,New transfer,Part Time,229,210,108,0.5,112,0.5
+2022,2021,Community Colleges,Roxbury Community College,First-time,Full Time,86,86,32,0.4,42,0.5
+2022,2021,Community Colleges,Roxbury Community College,First-time,Part Time,145,144,49,0.3,57,0.4
+2022,2021,Community Colleges,Roxbury Community College,New transfer,Full Time,3,3,,,,
+2022,2021,Community Colleges,Roxbury Community College,New transfer,Part Time,17,17,4,0.2,6,0.4
+2022,2021,Community Colleges,Springfield Technical Community College,First-time,Full Time,398,396,242,0.6,268,0.7
+2022,2021,Community Colleges,Springfield Technical Community College,First-time,Part Time,393,389,144,0.4,157,0.4
+2022,2021,Community Colleges,Springfield Technical Community College,New transfer,Full Time,118,117,74,0.6,85,0.7
+2022,2021,Community Colleges,Springfield Technical Community College,New transfer,Part Time,196,196,107,0.5,122,0.6
+2022,2021,State Universities,Bridgewater State University,First-time,Full Time,1319,1304,997,0.8,1101,0.8
+2022,2021,State Universities,Bridgewater State University,First-time,Part Time,68,67,21,0.3,31,0.5
+2022,2021,State Universities,Bridgewater State University,New transfer,Full Time,572,571,472,0.8,494,0.9
+2022,2021,State Universities,Bridgewater State University,New transfer,Part Time,183,181,114,0.6,125,0.7
+2022,2021,State Universities,Fitchburg State University,First-time,Full Time,559,553,402,0.7,451,0.8
+2022,2021,State Universities,Fitchburg State University,First-time,Part Time,8,8,4,0.5,6,0.8
+2022,2021,State Universities,Fitchburg State University,New transfer,Full Time,158,157,118,0.7,129,0.8
+2022,2021,State Universities,Fitchburg State University,New transfer,Part Time,89,88,56,0.6,57,0.6
+2022,2021,State Universities,Framingham State University,First-time,Full Time,575,566,408,0.7,476,0.8
+2022,2021,State Universities,Framingham State University,First-time,Part Time,5,5,,,,
+2022,2021,State Universities,Framingham State University,New transfer,Full Time,173,172,130,0.8,141,0.8
+2022,2021,State Universities,Framingham State University,New transfer,Part Time,57,56,40,0.7,43,0.8
+2022,2021,State Universities,Massachusetts College of Art and Design,First-time,Full Time,384,357,323,0.8,324,0.9
+2022,2021,State Universities,Massachusetts College of Art and Design,First-time,Part Time,3,2,,,,
+2022,2021,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,82,76,68,0.8,68,0.9
+2022,2021,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,6,6,,,,
+2022,2021,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,164,158,111,0.7,130,0.8
+2022,2021,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,3,3,,,,
+2022,2021,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,42,42,28,0.7,35,0.8
+2022,2021,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,14,13,13,0.9,13,1.0
+2022,2021,State Universities,Massachusetts Maritime Academy,First-time,Full Time,320,316,242,0.8,281,0.9
+2022,2021,State Universities,Massachusetts Maritime Academy,First-time,Part Time,1,1,,,,
+2022,2021,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,30,29,28,0.9,28,1.0
+2022,2021,State Universities,Salem State University,First-time,Full Time,898,893,670,0.7,745,0.8
+2022,2021,State Universities,Salem State University,First-time,Part Time,41,41,17,0.4,24,0.6
+2022,2021,State Universities,Salem State University,New transfer,Full Time,288,284,223,0.8,243,0.9
+2022,2021,State Universities,Salem State University,New transfer,Part Time,93,84,72,0.8,68,0.8
+2022,2021,State Universities,Westfield State University,First-time,Full Time,795,789,599,0.8,685,0.9
+2022,2021,State Universities,Westfield State University,First-time,Part Time,7,6,2,0.3,,
+2022,2021,State Universities,Westfield State University,New transfer,Full Time,216,212,169,0.8,177,0.8
+2022,2021,State Universities,Westfield State University,New transfer,Part Time,59,58,37,0.6,38,0.7
+2022,2021,State Universities,Worcester State University,First-time,Full Time,751,737,583,0.8,649,0.9
+2022,2021,State Universities,Worcester State University,First-time,Part Time,4,4,,,,
+2022,2021,State Universities,Worcester State University,New transfer,Full Time,288,281,217,0.8,227,0.8
+2022,2021,State Universities,Worcester State University,New transfer,Part Time,67,66,43,0.6,45,0.7
+2022,2021,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,4848,4590,4381,0.9,4414,1.0
+2022,2021,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,24,23,8,0.3,11,0.5
+2022,2021,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1226,1176,1047,0.9,1073,0.9
+2022,2021,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,233,232,159,0.7,165,0.7
+2022,2021,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,2177,2052,1573,0.7,1743,0.8
+2022,2021,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,67,65,25,0.4,34,0.5
+2022,2021,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,808,750,603,0.7,607,0.8
+2022,2021,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,222,215,126,0.6,142,0.7
+2022,2021,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1253,1242,833,0.7,1009,0.8
+2022,2021,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,14,13,5,0.4,8,0.6
+2022,2021,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,287,285,239,0.8,258,0.9
+2022,2021,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,115,115,73,0.6,80,0.7
+2022,2021,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,1867,1831,1577,0.8,1705,0.9
+2022,2021,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,40,40,20,0.5,23,0.6
+2022,2021,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,705,684,593,0.8,606,0.9
+2022,2021,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,290,284,198,0.7,203,0.7
+2021,2020,Community Colleges,Berkshire Community College,First-time,Full Time,144,140,83,0.6,93,0.7
+2021,2020,Community Colleges,Berkshire Community College,First-time,Part Time,108,98,43,0.4,47,0.5
+2021,2020,Community Colleges,Berkshire Community College,New transfer,Full Time,30,29,12,0.4,18,0.6
+2021,2020,Community Colleges,Berkshire Community College,New transfer,Part Time,52,43,21,0.4,26,0.6
+2021,2020,Community Colleges,Bristol Community College,First-time,Full Time,821,792,487,0.6,505,0.6
+2021,2020,Community Colleges,Bristol Community College,First-time,Part Time,378,355,181,0.5,185,0.5
+2021,2020,Community Colleges,Bristol Community College,New transfer,Full Time,138,134,76,0.6,83,0.6
+2021,2020,Community Colleges,Bristol Community College,New transfer,Part Time,148,146,63,0.4,73,0.5
+2021,2020,Community Colleges,Bunker Hill Community College,First-time,Full Time,704,548,446,0.6,405,0.7
+2021,2020,Community Colleges,Bunker Hill Community College,First-time,Part Time,497,390,236,0.5,234,0.6
+2021,2020,Community Colleges,Bunker Hill Community College,New transfer,Full Time,244,215,106,0.4,119,0.6
+2021,2020,Community Colleges,Bunker Hill Community College,New transfer,Part Time,281,242,119,0.4,137,0.6
+2021,2020,Community Colleges,Cape Cod Community College,First-time,Full Time,263,257,141,0.5,168,0.7
+2021,2020,Community Colleges,Cape Cod Community College,First-time,Part Time,188,181,77,0.4,84,0.5
+2021,2020,Community Colleges,Cape Cod Community College,New transfer,Full Time,78,76,35,0.4,50,0.7
+2021,2020,Community Colleges,Cape Cod Community College,New transfer,Part Time,152,149,71,0.5,89,0.6
+2021,2020,Community Colleges,Greenfield Community College,First-time,Full Time,98,97,54,0.6,59,0.6
+2021,2020,Community Colleges,Greenfield Community College,First-time,Part Time,109,109,45,0.4,55,0.5
+2021,2020,Community Colleges,Greenfield Community College,New transfer,Full Time,30,30,10,0.3,17,0.6
+2021,2020,Community Colleges,Greenfield Community College,New transfer,Part Time,144,144,81,0.6,96,0.7
+2021,2020,Community Colleges,Holyoke Community College,First-time,Full Time,412,401,260,0.6,288,0.7
+2021,2020,Community Colleges,Holyoke Community College,First-time,Part Time,339,326,148,0.4,167,0.5
+2021,2020,Community Colleges,Holyoke Community College,New transfer,Full Time,95,90,47,0.5,58,0.6
+2021,2020,Community Colleges,Holyoke Community College,New transfer,Part Time,153,141,61,0.4,72,0.5
+2021,2020,Community Colleges,MassBay Community College,First-time,Full Time,406,389,220,0.5,248,0.6
+2021,2020,Community Colleges,MassBay Community College,First-time,Part Time,347,323,159,0.5,176,0.5
+2021,2020,Community Colleges,MassBay Community College,New transfer,Full Time,83,81,31,0.4,40,0.5
+2021,2020,Community Colleges,MassBay Community College,New transfer,Part Time,128,126,60,0.5,74,0.6
+2021,2020,Community Colleges,Massasoit Community College,First-time,Full Time,540,534,356,0.7,387,0.7
+2021,2020,Community Colleges,Massasoit Community College,First-time,Part Time,340,326,184,0.5,196,0.6
+2021,2020,Community Colleges,Massasoit Community College,New transfer,Full Time,118,116,62,0.5,74,0.6
+2021,2020,Community Colleges,Massasoit Community College,New transfer,Part Time,176,175,101,0.6,119,0.7
+2021,2020,Community Colleges,Middlesex Community College,First-time,Full Time,571,570,349,0.6,413,0.7
+2021,2020,Community Colleges,Middlesex Community College,First-time,Part Time,420,413,198,0.5,227,0.6
+2021,2020,Community Colleges,Middlesex Community College,New transfer,Full Time,137,137,68,0.5,94,0.7
+2021,2020,Community Colleges,Middlesex Community College,New transfer,Part Time,296,296,137,0.5,173,0.6
+2021,2020,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,279,271,155,0.6,159,0.6
+2021,2020,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,212,204,81,0.4,87,0.4
+2021,2020,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,82,78,45,0.5,49,0.6
+2021,2020,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,165,155,78,0.5,83,0.5
+2021,2020,Community Colleges,North Shore Community College,First-time,Full Time,492,464,290,0.6,298,0.6
+2021,2020,Community Colleges,North Shore Community College,First-time,Part Time,361,330,168,0.5,170,0.5
+2021,2020,Community Colleges,North Shore Community College,New transfer,Full Time,136,130,79,0.6,88,0.7
+2021,2020,Community Colleges,North Shore Community College,New transfer,Part Time,248,228,126,0.5,137,0.6
+2021,2020,Community Colleges,Northern Essex Community College,First-time,Full Time,471,455,248,0.5,289,0.6
+2021,2020,Community Colleges,Northern Essex Community College,First-time,Part Time,325,312,135,0.4,153,0.5
+2021,2020,Community Colleges,Northern Essex Community College,New transfer,Full Time,78,74,32,0.4,43,0.6
+2021,2020,Community Colleges,Northern Essex Community College,New transfer,Part Time,127,115,55,0.4,70,0.6
+2021,2020,Community Colleges,Quinsigamond Community College,First-time,Full Time,684,630,365,0.5,393,0.6
+2021,2020,Community Colleges,Quinsigamond Community College,First-time,Part Time,401,351,200,0.5,197,0.6
+2021,2020,Community Colleges,Quinsigamond Community College,New transfer,Full Time,158,141,67,0.4,88,0.6
+2021,2020,Community Colleges,Quinsigamond Community College,New transfer,Part Time,287,251,127,0.4,140,0.6
+2021,2020,Community Colleges,Roxbury Community College,First-time,Full Time,100,98,34,0.3,44,0.4
+2021,2020,Community Colleges,Roxbury Community College,First-time,Part Time,111,106,22,0.2,34,0.3
+2021,2020,Community Colleges,Roxbury Community College,New transfer,Full Time,3,3,,,,
+2021,2020,Community Colleges,Roxbury Community College,New transfer,Part Time,10,10,1,0.1,2,0.2
+2021,2020,Community Colleges,Springfield Technical Community College,First-time,Full Time,425,424,250,0.6,274,0.6
+2021,2020,Community Colleges,Springfield Technical Community College,First-time,Part Time,319,318,149,0.5,161,0.5
+2021,2020,Community Colleges,Springfield Technical Community College,New transfer,Full Time,116,116,70,0.6,78,0.7
+2021,2020,Community Colleges,Springfield Technical Community College,New transfer,Part Time,170,170,95,0.6,108,0.6
+2021,2020,State Universities,Bridgewater State University,First-time,Full Time,1336,1313,1058,0.8,1139,0.9
+2021,2020,State Universities,Bridgewater State University,First-time,Part Time,54,53,25,0.5,31,0.6
+2021,2020,State Universities,Bridgewater State University,New transfer,Full Time,624,615,478,0.8,511,0.8
+2021,2020,State Universities,Bridgewater State University,New transfer,Part Time,177,175,88,0.5,108,0.6
+2021,2020,State Universities,Fitchburg State University,First-time,Full Time,652,644,446,0.7,507,0.8
+2021,2020,State Universities,Fitchburg State University,First-time,Part Time,9,9,8,0.9,8,0.9
+2021,2020,State Universities,Fitchburg State University,New transfer,Full Time,168,164,109,0.6,123,0.8
+2021,2020,State Universities,Fitchburg State University,New transfer,Part Time,110,105,79,0.7,83,0.8
+2021,2020,State Universities,Framingham State University,First-time,Full Time,608,599,427,0.7,481,0.8
+2021,2020,State Universities,Framingham State University,First-time,Part Time,7,7,3,0.4,5,0.7
+2021,2020,State Universities,Framingham State University,New transfer,Full Time,233,227,177,0.8,188,0.8
+2021,2020,State Universities,Framingham State University,New transfer,Part Time,35,35,21,0.6,22,0.6
+2021,2020,State Universities,Massachusetts College of Art and Design,First-time,Full Time,331,313,284,0.9,284,0.9
+2021,2020,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,91,88,74,0.8,75,0.9
+2021,2020,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,2,2,,,,
+2021,2020,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,170,161,110,0.6,136,0.8
+2021,2020,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,1,1,,,,
+2021,2020,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,56,54,38,0.7,43,0.8
+2021,2020,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,17,17,14,0.8,14,0.8
+2021,2020,State Universities,Massachusetts Maritime Academy,First-time,Full Time,327,326,264,0.8,291,0.9
+2021,2020,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,32,32,31,1.0,31,1.0
+2021,2020,State Universities,Massachusetts Maritime Academy,New transfer,Part Time,1,1,,,,
+2021,2020,State Universities,Salem State University,First-time,Full Time,965,953,730,0.8,800,0.8
+2021,2020,State Universities,Salem State University,First-time,Part Time,31,29,14,0.5,16,0.6
+2021,2020,State Universities,Salem State University,New transfer,Full Time,289,284,236,0.8,250,0.9
+2021,2020,State Universities,Salem State University,New transfer,Part Time,101,91,82,0.8,77,0.8
+2021,2020,State Universities,Westfield State University,First-time,Full Time,831,824,627,0.8,707,0.9
+2021,2020,State Universities,Westfield State University,First-time,Part Time,5,5,,,,
+2021,2020,State Universities,Westfield State University,New transfer,Full Time,249,247,187,0.8,199,0.8
+2021,2020,State Universities,Westfield State University,New transfer,Part Time,74,72,44,0.6,48,0.7
+2021,2020,State Universities,Worcester State University,First-time,Full Time,799,794,609,0.8,698,0.9
+2021,2020,State Universities,Worcester State University,First-time,Part Time,8,8,3,0.4,3,0.4
+2021,2020,State Universities,Worcester State University,New transfer,Full Time,280,279,207,0.7,226,0.8
+2021,2020,State Universities,Worcester State University,New transfer,Part Time,72,69,48,0.7,47,0.7
+2021,2020,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,5012,4739,4535,0.9,4560,1.0
+2021,2020,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,42,39,31,0.7,33,0.8
+2021,2020,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1131,1061,977,0.9,957,0.9
+2021,2020,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,280,269,182,0.6,194,0.7
+2021,2020,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,2165,2089,1622,0.7,1821,0.9
+2021,2020,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,64,60,31,0.5,41,0.7
+2021,2020,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,853,800,645,0.8,648,0.8
+2021,2020,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,226,218,123,0.5,137,0.6
+2021,2020,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1265,1252,865,0.7,1020,0.8
+2021,2020,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,16,15,5,0.3,9,0.6
+2021,2020,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,333,324,249,0.7,272,0.8
+2021,2020,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,113,111,66,0.6,74,0.7
+2021,2020,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,2021,1979,1663,0.8,1804,0.9
+2021,2020,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,63,62,40,0.6,45,0.7
+2021,2020,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,840,803,714,0.8,721,0.9
+2021,2020,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,372,363,244,0.7,247,0.7
+2020,2019,Community Colleges,Berkshire Community College,First-time,Full Time,189,181,90,0.5,99,0.5
+2020,2019,Community Colleges,Berkshire Community College,First-time,Part Time,146,133,51,0.3,54,0.4
+2020,2019,Community Colleges,Berkshire Community College,New transfer,Full Time,36,35,19,0.5,27,0.8
+2020,2019,Community Colleges,Berkshire Community College,New transfer,Part Time,57,54,25,0.4,31,0.6
+2020,2019,Community Colleges,Bristol Community College,First-time,Full Time,1015,1005,567,0.6,592,0.6
+2020,2019,Community Colleges,Bristol Community College,First-time,Part Time,466,460,212,0.5,220,0.5
+2020,2019,Community Colleges,Bristol Community College,New transfer,Full Time,146,146,74,0.5,91,0.6
+2020,2019,Community Colleges,Bristol Community College,New transfer,Part Time,181,179,96,0.5,111,0.6
+2020,2019,Community Colleges,Bunker Hill Community College,First-time,Full Time,1067,894,606,0.6,552,0.6
+2020,2019,Community Colleges,Bunker Hill Community College,First-time,Part Time,971,865,416,0.4,417,0.5
+2020,2019,Community Colleges,Bunker Hill Community College,New transfer,Full Time,404,353,204,0.5,215,0.6
+2020,2019,Community Colleges,Bunker Hill Community College,New transfer,Part Time,521,489,217,0.4,253,0.5
+2020,2019,Community Colleges,Cape Cod Community College,First-time,Full Time,311,301,169,0.5,181,0.6
+2020,2019,Community Colleges,Cape Cod Community College,First-time,Part Time,225,213,83,0.4,85,0.4
+2020,2019,Community Colleges,Cape Cod Community College,New transfer,Full Time,82,78,40,0.5,53,0.7
+2020,2019,Community Colleges,Cape Cod Community College,New transfer,Part Time,153,151,78,0.5,86,0.6
+2020,2019,Community Colleges,Greenfield Community College,First-time,Full Time,121,121,75,0.6,84,0.7
+2020,2019,Community Colleges,Greenfield Community College,First-time,Part Time,168,167,81,0.5,88,0.5
+2020,2019,Community Colleges,Greenfield Community College,New transfer,Full Time,59,59,23,0.4,33,0.6
+2020,2019,Community Colleges,Greenfield Community College,New transfer,Part Time,140,139,83,0.6,91,0.7
+2020,2019,Community Colleges,Holyoke Community College,First-time,Full Time,674,666,378,0.6,395,0.6
+2020,2019,Community Colleges,Holyoke Community College,First-time,Part Time,382,370,149,0.4,162,0.4
+2020,2019,Community Colleges,Holyoke Community College,New transfer,Full Time,153,144,68,0.4,87,0.6
+2020,2019,Community Colleges,Holyoke Community College,New transfer,Part Time,191,187,78,0.4,90,0.5
+2020,2019,Community Colleges,MassBay Community College,First-time,Full Time,517,483,260,0.5,299,0.6
+2020,2019,Community Colleges,MassBay Community College,First-time,Part Time,378,353,150,0.4,175,0.5
+2020,2019,Community Colleges,MassBay Community College,New transfer,Full Time,72,68,37,0.5,44,0.6
+2020,2019,Community Colleges,MassBay Community College,New transfer,Part Time,94,89,39,0.4,46,0.5
+2020,2019,Community Colleges,Massasoit Community College,First-time,Full Time,842,817,488,0.6,511,0.6
+2020,2019,Community Colleges,Massasoit Community College,First-time,Part Time,447,430,195,0.4,203,0.5
+2020,2019,Community Colleges,Massasoit Community College,New transfer,Full Time,197,195,106,0.5,133,0.7
+2020,2019,Community Colleges,Massasoit Community College,New transfer,Part Time,229,228,124,0.5,139,0.6
+2020,2019,Community Colleges,Middlesex Community College,First-time,Full Time,773,765,434,0.6,495,0.6
+2020,2019,Community Colleges,Middlesex Community College,First-time,Part Time,508,506,201,0.4,232,0.5
+2020,2019,Community Colleges,Middlesex Community College,New transfer,Full Time,217,213,128,0.6,147,0.7
+2020,2019,Community Colleges,Middlesex Community College,New transfer,Part Time,351,349,179,0.5,219,0.6
+2020,2019,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,394,377,201,0.5,208,0.6
+2020,2019,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,258,246,104,0.4,109,0.4
+2020,2019,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,96,90,45,0.5,52,0.6
+2020,2019,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,203,193,94,0.5,116,0.6
+2020,2019,Community Colleges,North Shore Community College,First-time,Full Time,605,559,307,0.5,315,0.6
+2020,2019,Community Colleges,North Shore Community College,First-time,Part Time,484,433,194,0.4,187,0.4
+2020,2019,Community Colleges,North Shore Community College,New transfer,Full Time,204,198,118,0.6,137,0.7
+2020,2019,Community Colleges,North Shore Community College,New transfer,Part Time,238,229,128,0.5,138,0.6
+2020,2019,Community Colleges,Northern Essex Community College,First-time,Full Time,592,571,322,0.5,344,0.6
+2020,2019,Community Colleges,Northern Essex Community College,First-time,Part Time,427,402,178,0.4,192,0.5
+2020,2019,Community Colleges,Northern Essex Community College,New transfer,Full Time,122,115,62,0.5,74,0.6
+2020,2019,Community Colleges,Northern Essex Community College,New transfer,Part Time,146,140,68,0.5,82,0.6
+2020,2019,Community Colleges,Quinsigamond Community College,First-time,Full Time,565,546,325,0.6,354,0.6
+2020,2019,Community Colleges,Quinsigamond Community College,First-time,Part Time,623,565,304,0.5,290,0.5
+2020,2019,Community Colleges,Quinsigamond Community College,New transfer,Full Time,170,163,83,0.5,97,0.6
+2020,2019,Community Colleges,Quinsigamond Community College,New transfer,Part Time,308,290,137,0.4,163,0.6
+2020,2019,Community Colleges,Roxbury Community College,First-time,Full Time,212,211,86,0.4,99,0.5
+2020,2019,Community Colleges,Roxbury Community College,First-time,Part Time,162,161,65,0.4,82,0.5
+2020,2019,Community Colleges,Roxbury Community College,New transfer,Full Time,57,57,26,0.5,33,0.6
+2020,2019,Community Colleges,Roxbury Community College,New transfer,Part Time,79,79,29,0.4,38,0.5
+2020,2019,Community Colleges,Springfield Technical Community College,First-time,Full Time,667,661,384,0.6,399,0.6
+2020,2019,Community Colleges,Springfield Technical Community College,First-time,Part Time,388,387,138,0.4,147,0.4
+2020,2019,Community Colleges,Springfield Technical Community College,New transfer,Full Time,180,180,114,0.6,123,0.7
+2020,2019,Community Colleges,Springfield Technical Community College,New transfer,Part Time,195,195,103,0.5,120,0.6
+2020,2019,State Universities,Bridgewater State University,First-time,Full Time,1576,1538,1212,0.8,1336,0.9
+2020,2019,State Universities,Bridgewater State University,First-time,Part Time,36,35,13,0.4,22,0.6
+2020,2019,State Universities,Bridgewater State University,New transfer,Full Time,725,714,605,0.8,631,0.9
+2020,2019,State Universities,Bridgewater State University,New transfer,Part Time,208,207,124,0.6,141,0.7
+2020,2019,State Universities,Fitchburg State University,First-time,Full Time,671,668,514,0.8,573,0.9
+2020,2019,State Universities,Fitchburg State University,First-time,Part Time,3,3,,,,
+2020,2019,State Universities,Fitchburg State University,New transfer,Full Time,223,219,176,0.8,193,0.9
+2020,2019,State Universities,Fitchburg State University,New transfer,Part Time,115,113,80,0.7,85,0.8
+2020,2019,State Universities,Framingham State University,First-time,Full Time,772,765,533,0.7,638,0.8
+2020,2019,State Universities,Framingham State University,First-time,Part Time,4,2,,,,
+2020,2019,State Universities,Framingham State University,New transfer,Full Time,305,304,227,0.7,247,0.8
+2020,2019,State Universities,Framingham State University,New transfer,Part Time,66,66,48,0.7,50,0.8
+2020,2019,State Universities,Massachusetts College of Art and Design,First-time,Full Time,378,349,278,0.7,288,0.8
+2020,2019,State Universities,Massachusetts College of Art and Design,First-time,Part Time,5,4,,,,
+2020,2019,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,105,101,87,0.8,84,0.8
+2020,2019,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,4,4,,,,
+2020,2019,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,284,277,209,0.7,239,0.9
+2020,2019,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,120,115,89,0.7,94,0.8
+2020,2019,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,13,13,9,0.7,9,0.7
+2020,2019,State Universities,Massachusetts Maritime Academy,First-time,Full Time,404,404,352,0.9,376,0.9
+2020,2019,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,38,37,32,0.8,32,0.9
+2020,2019,State Universities,Massachusetts Maritime Academy,New transfer,Part Time,1,1,,,,
+2020,2019,State Universities,Salem State University,First-time,Full Time,997,984,735,0.7,829,0.8
+2020,2019,State Universities,Salem State University,First-time,Part Time,14,11,8,0.6,7,0.6
+2020,2019,State Universities,Salem State University,New transfer,Full Time,418,392,352,0.8,348,0.9
+2020,2019,State Universities,Salem State University,New transfer,Part Time,75,73,45,0.6,52,0.7
+2020,2019,State Universities,Westfield State University,First-time,Full Time,1039,1034,751,0.7,909,0.9
+2020,2019,State Universities,Westfield State University,First-time,Part Time,2,2,,,,
+2020,2019,State Universities,Westfield State University,New transfer,Full Time,321,317,248,0.8,257,0.8
+2020,2019,State Universities,Westfield State University,New transfer,Part Time,78,78,48,0.6,50,0.6
+2020,2019,State Universities,Worcester State University,First-time,Full Time,878,867,727,0.8,789,0.9
+2020,2019,State Universities,Worcester State University,First-time,Part Time,8,7,5,0.6,5,0.7
+2020,2019,State Universities,Worcester State University,New transfer,Full Time,374,370,287,0.8,308,0.8
+2020,2019,State Universities,Worcester State University,New transfer,Part Time,109,108,71,0.7,78,0.7
+2020,2019,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,5729,5417,5107,0.9,5148,1.0
+2020,2019,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,35,20,10,0.3,16,0.8
+2020,2019,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1133,1055,977,0.9,956,0.9
+2020,2019,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,271,268,190,0.7,197,0.7
+2020,2019,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,2079,1895,1580,0.8,1659,0.9
+2020,2019,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,42,36,20,0.5,22,0.6
+2020,2019,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,949,869,750,0.8,732,0.8
+2020,2019,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,324,318,211,0.7,228,0.7
+2020,2019,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1309,1288,928,0.7,1079,0.8
+2020,2019,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,12,11,6,0.5,8,0.7
+2020,2019,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,364,345,291,0.8,296,0.9
+2020,2019,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,117,116,71,0.6,82,0.7
+2020,2019,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,2352,2305,1986,0.8,2126,0.9
+2020,2019,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,43,41,22,0.5,25,0.6
+2020,2019,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,891,870,761,0.9,782,0.9
+2020,2019,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,401,395,271,0.7,293,0.7
+2019,2018,Community Colleges,Berkshire Community College,First-time,Full Time,159,150,85,0.5,93,0.6
+2019,2018,Community Colleges,Berkshire Community College,First-time,Part Time,111,106,49,0.4,54,0.5
+2019,2018,Community Colleges,Berkshire Community College,New transfer,Full Time,34,33,10,0.3,18,0.5
+2019,2018,Community Colleges,Berkshire Community College,New transfer,Part Time,61,59,29,0.5,36,0.6
+2019,2018,Community Colleges,Bristol Community College,First-time,Full Time,984,976,589,0.6,632,0.6
+2019,2018,Community Colleges,Bristol Community College,First-time,Part Time,515,513,253,0.5,265,0.5
+2019,2018,Community Colleges,Bristol Community College,New transfer,Full Time,165,164,93,0.6,115,0.7
+2019,2018,Community Colleges,Bristol Community College,New transfer,Part Time,203,203,100,0.5,114,0.6
+2019,2018,Community Colleges,Bunker Hill Community College,First-time,Full Time,1095,971,676,0.6,658,0.7
+2019,2018,Community Colleges,Bunker Hill Community College,First-time,Part Time,1040,984,514,0.5,523,0.5
+2019,2018,Community Colleges,Bunker Hill Community College,New transfer,Full Time,499,431,253,0.5,260,0.6
+2019,2018,Community Colleges,Bunker Hill Community College,New transfer,Part Time,604,583,247,0.4,309,0.5
+2019,2018,Community Colleges,Cape Cod Community College,First-time,Full Time,266,262,165,0.6,181,0.7
+2019,2018,Community Colleges,Cape Cod Community College,First-time,Part Time,236,225,112,0.5,123,0.5
+2019,2018,Community Colleges,Cape Cod Community College,New transfer,Full Time,68,68,38,0.6,48,0.7
+2019,2018,Community Colleges,Cape Cod Community College,New transfer,Part Time,160,160,81,0.5,107,0.7
+2019,2018,Community Colleges,Greenfield Community College,First-time,Full Time,124,122,84,0.7,90,0.7
+2019,2018,Community Colleges,Greenfield Community College,First-time,Part Time,130,130,68,0.5,71,0.5
+2019,2018,Community Colleges,Greenfield Community College,New transfer,Full Time,54,54,24,0.4,33,0.6
+2019,2018,Community Colleges,Greenfield Community College,New transfer,Part Time,113,113,63,0.6,76,0.7
+2019,2018,Community Colleges,Holyoke Community College,First-time,Full Time,763,743,443,0.6,489,0.7
+2019,2018,Community Colleges,Holyoke Community College,First-time,Part Time,381,369,170,0.4,184,0.5
+2019,2018,Community Colleges,Holyoke Community College,New transfer,Full Time,165,164,87,0.5,95,0.6
+2019,2018,Community Colleges,Holyoke Community College,New transfer,Part Time,172,170,62,0.4,79,0.5
+2019,2018,Community Colleges,MassBay Community College,First-time,Full Time,531,491,305,0.6,337,0.7
+2019,2018,Community Colleges,MassBay Community College,First-time,Part Time,374,351,178,0.5,187,0.5
+2019,2018,Community Colleges,MassBay Community College,New transfer,Full Time,87,85,46,0.5,64,0.8
+2019,2018,Community Colleges,MassBay Community College,New transfer,Part Time,150,144,68,0.5,79,0.5
+2019,2018,Community Colleges,Massasoit Community College,First-time,Full Time,828,809,473,0.6,510,0.6
+2019,2018,Community Colleges,Massasoit Community College,First-time,Part Time,502,491,231,0.5,252,0.5
+2019,2018,Community Colleges,Massasoit Community College,New transfer,Full Time,234,232,118,0.5,148,0.6
+2019,2018,Community Colleges,Massasoit Community College,New transfer,Part Time,286,284,150,0.5,180,0.6
+2019,2018,Community Colleges,Middlesex Community College,First-time,Full Time,765,750,464,0.6,527,0.7
+2019,2018,Community Colleges,Middlesex Community College,First-time,Part Time,533,508,237,0.4,267,0.5
+2019,2018,Community Colleges,Middlesex Community College,New transfer,Full Time,239,226,121,0.5,155,0.7
+2019,2018,Community Colleges,Middlesex Community College,New transfer,Part Time,387,375,167,0.4,200,0.5
+2019,2018,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,385,371,209,0.5,227,0.6
+2019,2018,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,246,230,110,0.4,120,0.5
+2019,2018,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,110,104,57,0.5,66,0.6
+2019,2018,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,189,184,97,0.5,111,0.6
+2019,2018,Community Colleges,North Shore Community College,First-time,Full Time,594,578,351,0.6,373,0.6
+2019,2018,Community Colleges,North Shore Community College,First-time,Part Time,481,454,218,0.5,232,0.5
+2019,2018,Community Colleges,North Shore Community College,New transfer,Full Time,203,197,117,0.6,128,0.6
+2019,2018,Community Colleges,North Shore Community College,New transfer,Part Time,252,243,149,0.6,175,0.7
+2019,2018,Community Colleges,Northern Essex Community College,First-time,Full Time,553,547,320,0.6,337,0.6
+2019,2018,Community Colleges,Northern Essex Community College,First-time,Part Time,485,475,209,0.4,221,0.5
+2019,2018,Community Colleges,Northern Essex Community College,New transfer,Full Time,93,91,42,0.5,55,0.6
+2019,2018,Community Colleges,Northern Essex Community College,New transfer,Part Time,152,147,62,0.4,80,0.5
+2019,2018,Community Colleges,Quinsigamond Community College,First-time,Full Time,686,666,412,0.6,437,0.7
+2019,2018,Community Colleges,Quinsigamond Community College,First-time,Part Time,596,538,317,0.5,302,0.6
+2019,2018,Community Colleges,Quinsigamond Community College,New transfer,Full Time,148,132,73,0.5,84,0.6
+2019,2018,Community Colleges,Quinsigamond Community College,New transfer,Part Time,288,275,137,0.5,163,0.6
+2019,2018,Community Colleges,Roxbury Community College,First-time,Full Time,200,195,73,0.4,96,0.5
+2019,2018,Community Colleges,Roxbury Community College,First-time,Part Time,280,275,108,0.4,136,0.5
+2019,2018,Community Colleges,Roxbury Community College,New transfer,Full Time,45,45,17,0.4,24,0.5
+2019,2018,Community Colleges,Roxbury Community College,New transfer,Part Time,122,122,30,0.2,59,0.5
+2019,2018,Community Colleges,Springfield Technical Community College,First-time,Full Time,642,639,394,0.6,425,0.7
+2019,2018,Community Colleges,Springfield Technical Community College,First-time,Part Time,297,296,139,0.5,156,0.5
+2019,2018,Community Colleges,Springfield Technical Community College,New transfer,Full Time,170,169,117,0.7,129,0.8
+2019,2018,Community Colleges,Springfield Technical Community College,New transfer,Part Time,207,207,105,0.5,116,0.6
+2019,2018,State Universities,Bridgewater State University,First-time,Full Time,1481,1479,1136,0.8,1293,0.9
+2019,2018,State Universities,Bridgewater State University,First-time,Part Time,37,37,14,0.4,23,0.6
+2019,2018,State Universities,Bridgewater State University,New transfer,Full Time,872,868,688,0.8,730,0.8
+2019,2018,State Universities,Bridgewater State University,New transfer,Part Time,200,200,129,0.6,150,0.8
+2019,2018,State Universities,Fitchburg State University,First-time,Full Time,713,708,526,0.7,621,0.9
+2019,2018,State Universities,Fitchburg State University,First-time,Part Time,2,2,,,,
+2019,2018,State Universities,Fitchburg State University,New transfer,Full Time,268,263,212,0.8,230,0.9
+2019,2018,State Universities,Fitchburg State University,New transfer,Part Time,114,109,68,0.6,76,0.7
+2019,2018,State Universities,Framingham State University,First-time,Full Time,756,752,557,0.7,653,0.9
+2019,2018,State Universities,Framingham State University,First-time,Part Time,11,11,4,0.4,7,0.6
+2019,2018,State Universities,Framingham State University,New transfer,Full Time,295,294,229,0.8,243,0.8
+2019,2018,State Universities,Framingham State University,New transfer,Part Time,56,56,33,0.6,38,0.7
+2019,2018,State Universities,Massachusetts College of Art and Design,First-time,Full Time,363,342,306,0.8,314,0.9
+2019,2018,State Universities,Massachusetts College of Art and Design,First-time,Part Time,2,2,,,,
+2019,2018,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,130,120,114,0.9,110,0.9
+2019,2018,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,4,3,,,,
+2019,2018,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,257,255,190,0.7,225,0.9
+2019,2018,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,5,5,,,,
+2019,2018,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,83,74,58,0.7,63,0.9
+2019,2018,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,30,29,24,0.8,25,0.9
+2019,2018,State Universities,Massachusetts Maritime Academy,First-time,Full Time,398,397,347,0.9,376,0.9
+2019,2018,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,38,38,35,0.9,37,1.0
+2019,2018,State Universities,Salem State University,First-time,Full Time,1097,1086,801,0.7,928,0.9
+2019,2018,State Universities,Salem State University,First-time,Part Time,14,14,4,0.3,7,0.5
+2019,2018,State Universities,Salem State University,New transfer,Full Time,484,458,396,0.8,401,0.9
+2019,2018,State Universities,Salem State University,New transfer,Part Time,94,94,72,0.8,75,0.8
+2019,2018,State Universities,Westfield State University,First-time,Full Time,999,985,718,0.7,878,0.9
+2019,2018,State Universities,Westfield State University,First-time,Part Time,4,4,,,,
+2019,2018,State Universities,Westfield State University,New transfer,Full Time,359,358,272,0.8,307,0.9
+2019,2018,State Universities,Westfield State University,New transfer,Part Time,70,70,50,0.7,51,0.7
+2019,2018,State Universities,Worcester State University,First-time,Full Time,887,879,719,0.8,799,0.9
+2019,2018,State Universities,Worcester State University,First-time,Part Time,4,4,,,,
+2019,2018,State Universities,Worcester State University,New transfer,Full Time,416,413,337,0.8,361,0.9
+2019,2018,State Universities,Worcester State University,New transfer,Part Time,108,108,79,0.7,85,0.8
+2019,2018,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,5031,4663,4584,0.9,4535,1.0
+2019,2018,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,17,7,5,0.3,6,0.9
+2019,2018,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1190,1152,1046,0.9,1072,0.9
+2019,2018,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,273,266,190,0.7,193,0.7
+2019,2018,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,2279,2073,1729,0.8,1839,0.9
+2019,2018,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,36,33,17,0.5,24,0.7
+2019,2018,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,974,911,760,0.8,771,0.8
+2019,2018,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,297,295,171,0.6,201,0.7
+2019,2018,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1405,1389,986,0.7,1191,0.9
+2019,2018,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,17,17,10,0.6,11,0.6
+2019,2018,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,545,528,411,0.8,447,0.8
+2019,2018,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,134,131,88,0.7,95,0.7
+2019,2018,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,2081,2040,1715,0.8,1911,0.9
+2019,2018,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,39,39,20,0.5,23,0.6
+2019,2018,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,985,962,841,0.9,868,0.9
+2019,2018,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,383,379,228,0.6,255,0.7
+2018,2017,Community Colleges,Berkshire Community College,First-time,Full Time,218,211,123,0.6,127,0.6
+2018,2017,Community Colleges,Berkshire Community College,First-time,Part Time,157,153,63,0.4,72,0.5
+2018,2017,Community Colleges,Berkshire Community College,New transfer,Full Time,33,31,16,0.5,20,0.6
+2018,2017,Community Colleges,Berkshire Community College,New transfer,Part Time,47,46,32,0.7,35,0.8
+2018,2017,Community Colleges,Bristol Community College,First-time,Full Time,1061,1051,641,0.6,673,0.6
+2018,2017,Community Colleges,Bristol Community College,First-time,Part Time,557,553,262,0.5,279,0.5
+2018,2017,Community Colleges,Bristol Community College,New transfer,Full Time,176,176,100,0.6,116,0.7
+2018,2017,Community Colleges,Bristol Community College,New transfer,Part Time,198,197,93,0.5,111,0.6
+2018,2017,Community Colleges,Bunker Hill Community College,First-time,Full Time,998,862,626,0.6,602,0.7
+2018,2017,Community Colleges,Bunker Hill Community College,First-time,Part Time,877,816,429,0.5,446,0.5
+2018,2017,Community Colleges,Bunker Hill Community College,New transfer,Full Time,517,435,277,0.5,286,0.7
+2018,2017,Community Colleges,Bunker Hill Community College,New transfer,Part Time,592,559,271,0.5,315,0.6
+2018,2017,Community Colleges,Cape Cod Community College,First-time,Full Time,349,348,178,0.5,216,0.6
+2018,2017,Community Colleges,Cape Cod Community College,First-time,Part Time,200,197,71,0.4,78,0.4
+2018,2017,Community Colleges,Cape Cod Community College,New transfer,Full Time,80,80,38,0.5,52,0.6
+2018,2017,Community Colleges,Cape Cod Community College,New transfer,Part Time,155,155,76,0.5,89,0.6
+2018,2017,Community Colleges,Greenfield Community College,First-time,Full Time,131,129,94,0.7,103,0.8
+2018,2017,Community Colleges,Greenfield Community College,First-time,Part Time,177,176,105,0.6,110,0.6
+2018,2017,Community Colleges,Greenfield Community College,New transfer,Full Time,51,51,21,0.4,30,0.6
+2018,2017,Community Colleges,Greenfield Community College,New transfer,Part Time,132,132,77,0.6,90,0.7
+2018,2017,Community Colleges,Holyoke Community College,First-time,Full Time,880,874,510,0.6,561,0.6
+2018,2017,Community Colleges,Holyoke Community College,First-time,Part Time,456,445,199,0.4,220,0.5
+2018,2017,Community Colleges,Holyoke Community College,New transfer,Full Time,172,167,78,0.5,97,0.6
+2018,2017,Community Colleges,Holyoke Community College,New transfer,Part Time,178,174,81,0.5,103,0.6
+2018,2017,Community Colleges,MassBay Community College,First-time,Full Time,546,508,297,0.5,339,0.7
+2018,2017,Community Colleges,MassBay Community College,First-time,Part Time,483,450,221,0.5,238,0.5
+2018,2017,Community Colleges,MassBay Community College,New transfer,Full Time,110,105,59,0.5,72,0.7
+2018,2017,Community Colleges,MassBay Community College,New transfer,Part Time,162,158,80,0.5,95,0.6
+2018,2017,Community Colleges,Massasoit Community College,First-time,Full Time,917,901,564,0.6,607,0.7
+2018,2017,Community Colleges,Massasoit Community College,First-time,Part Time,467,463,222,0.5,249,0.5
+2018,2017,Community Colleges,Massasoit Community College,New transfer,Full Time,231,227,121,0.5,141,0.6
+2018,2017,Community Colleges,Massasoit Community College,New transfer,Part Time,243,243,140,0.6,162,0.7
+2018,2017,Community Colleges,Middlesex Community College,First-time,Full Time,913,891,573,0.6,638,0.7
+2018,2017,Community Colleges,Middlesex Community College,First-time,Part Time,572,559,259,0.5,288,0.5
+2018,2017,Community Colleges,Middlesex Community College,New transfer,Full Time,244,237,135,0.6,170,0.7
+2018,2017,Community Colleges,Middlesex Community College,New transfer,Part Time,424,409,189,0.4,227,0.6
+2018,2017,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,406,401,240,0.6,256,0.6
+2018,2017,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,265,251,122,0.5,122,0.5
+2018,2017,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,116,109,59,0.5,73,0.7
+2018,2017,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,189,182,104,0.6,122,0.7
+2018,2017,Community Colleges,North Shore Community College,First-time,Full Time,681,654,431,0.6,447,0.7
+2018,2017,Community Colleges,North Shore Community College,First-time,Part Time,508,472,243,0.5,241,0.5
+2018,2017,Community Colleges,North Shore Community College,New transfer,Full Time,187,184,95,0.5,122,0.7
+2018,2017,Community Colleges,North Shore Community College,New transfer,Part Time,280,270,155,0.6,169,0.6
+2018,2017,Community Colleges,Northern Essex Community College,First-time,Full Time,697,689,388,0.6,431,0.6
+2018,2017,Community Colleges,Northern Essex Community College,First-time,Part Time,554,544,226,0.4,248,0.5
+2018,2017,Community Colleges,Northern Essex Community College,New transfer,Full Time,103,102,52,0.5,66,0.6
+2018,2017,Community Colleges,Northern Essex Community College,New transfer,Part Time,181,181,66,0.4,93,0.5
+2018,2017,Community Colleges,Quinsigamond Community College,First-time,Full Time,758,733,423,0.6,460,0.6
+2018,2017,Community Colleges,Quinsigamond Community College,First-time,Part Time,557,515,290,0.5,294,0.6
+2018,2017,Community Colleges,Quinsigamond Community College,New transfer,Full Time,155,141,84,0.5,95,0.7
+2018,2017,Community Colleges,Quinsigamond Community College,New transfer,Part Time,258,243,141,0.5,156,0.6
+2018,2017,Community Colleges,Roxbury Community College,First-time,Full Time,99,96,37,0.4,48,0.5
+2018,2017,Community Colleges,Roxbury Community College,First-time,Part Time,128,125,54,0.4,61,0.5
+2018,2017,Community Colleges,Roxbury Community College,New transfer,Full Time,85,85,27,0.3,42,0.5
+2018,2017,Community Colleges,Roxbury Community College,New transfer,Part Time,132,131,52,0.4,63,0.5
+2018,2017,Community Colleges,Springfield Technical Community College,First-time,Full Time,724,721,421,0.6,452,0.6
+2018,2017,Community Colleges,Springfield Technical Community College,First-time,Part Time,345,345,137,0.4,147,0.4
+2018,2017,Community Colleges,Springfield Technical Community College,New transfer,Full Time,157,156,89,0.6,110,0.7
+2018,2017,Community Colleges,Springfield Technical Community College,New transfer,Part Time,207,206,113,0.5,135,0.7
+2018,2017,State Universities,Bridgewater State University,First-time,Full Time,1475,1475,1158,0.8,1310,0.9
+2018,2017,State Universities,Bridgewater State University,First-time,Part Time,31,31,9,0.3,14,0.5
+2018,2017,State Universities,Bridgewater State University,New transfer,Full Time,884,881,694,0.8,747,0.8
+2018,2017,State Universities,Bridgewater State University,New transfer,Part Time,205,204,119,0.6,141,0.7
+2018,2017,State Universities,Fitchburg State University,First-time,Full Time,750,739,553,0.7,652,0.9
+2018,2017,State Universities,Fitchburg State University,First-time,Part Time,6,6,,,,
+2018,2017,State Universities,Fitchburg State University,New transfer,Full Time,285,276,223,0.8,238,0.9
+2018,2017,State Universities,Fitchburg State University,New transfer,Part Time,79,76,55,0.7,57,0.8
+2018,2017,State Universities,Framingham State University,First-time,Full Time,758,758,529,0.7,660,0.9
+2018,2017,State Universities,Framingham State University,First-time,Part Time,6,5,,,,
+2018,2017,State Universities,Framingham State University,New transfer,Full Time,343,339,253,0.7,278,0.8
+2018,2017,State Universities,Framingham State University,New transfer,Part Time,73,72,46,0.6,49,0.7
+2018,2017,State Universities,Massachusetts College of Art and Design,First-time,Full Time,422,399,361,0.9,361,0.9
+2018,2017,State Universities,Massachusetts College of Art and Design,First-time,Part Time,2,1,,,,
+2018,2017,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,112,110,97,0.9,100,0.9
+2018,2017,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,287,284,211,0.7,250,0.9
+2018,2017,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,2,2,,,,
+2018,2017,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,101,96,72,0.7,77,0.8
+2018,2017,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,31,31,28,0.9,28,0.9
+2018,2017,State Universities,Massachusetts Maritime Academy,First-time,Full Time,392,388,337,0.9,363,0.9
+2018,2017,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,36,35,35,1.0,35,1.0
+2018,2017,State Universities,Salem State University,First-time,Full Time,1082,1075,806,0.7,960,0.9
+2018,2017,State Universities,Salem State University,First-time,Part Time,12,12,3,0.2,7,0.6
+2018,2017,State Universities,Salem State University,New transfer,Full Time,507,500,429,0.8,453,0.9
+2018,2017,State Universities,Salem State University,New transfer,Part Time,99,98,72,0.7,77,0.8
+2018,2017,State Universities,Westfield State University,First-time,Full Time,1009,1006,751,0.7,906,0.9
+2018,2017,State Universities,Westfield State University,First-time,Part Time,2,2,,,,
+2018,2017,State Universities,Westfield State University,New transfer,Full Time,366,364,300,0.8,319,0.9
+2018,2017,State Universities,Westfield State University,New transfer,Part Time,62,61,36,0.6,42,0.7
+2018,2017,State Universities,Worcester State University,First-time,Full Time,905,892,729,0.8,825,0.9
+2018,2017,State Universities,Worcester State University,First-time,Part Time,3,3,,,,
+2018,2017,State Universities,Worcester State University,New transfer,Full Time,408,406,336,0.8,356,0.9
+2018,2017,State Universities,Worcester State University,New transfer,Part Time,118,118,85,0.7,91,0.8
+2018,2017,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,4747,4479,4293,0.9,4358,1.0
+2018,2017,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,13,4,4,0.3,,
+2018,2017,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1191,1149,1035,0.9,1053,0.9
+2018,2017,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,311,308,202,0.6,218,0.7
+2018,2017,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,1798,1633,1384,0.8,1436,0.9
+2018,2017,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,82,26,48,0.6,16,0.6
+2018,2017,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,1137,1066,878,0.8,893,0.8
+2018,2017,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,358,351,215,0.6,245,0.7
+2018,2017,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1319,1302,933,0.7,1125,0.9
+2018,2017,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,14,14,3,0.2,8,0.6
+2018,2017,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,459,436,366,0.8,383,0.9
+2018,2017,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,154,152,96,0.6,106,0.7
+2018,2017,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,1994,1952,1699,0.9,1854,1.0
+2018,2017,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,47,43,25,0.5,24,0.6
+2018,2017,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,998,970,837,0.8,874,0.9
+2018,2017,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,499,492,304,0.6,325,0.7
+2017,2016,Community Colleges,Berkshire Community College,First-time,Full Time,182,181,105,0.6,119,0.7
+2017,2016,Community Colleges,Berkshire Community College,First-time,Part Time,152,143,65,0.4,67,0.5
+2017,2016,Community Colleges,Berkshire Community College,New transfer,Full Time,37,37,19,0.5,24,0.6
+2017,2016,Community Colleges,Berkshire Community College,New transfer,Part Time,60,60,33,0.6,43,0.7
+2017,2016,Community Colleges,Bristol Community College,First-time,Full Time,1240,1238,733,0.6,795,0.6
+2017,2016,Community Colleges,Bristol Community College,First-time,Part Time,550,549,263,0.5,275,0.5
+2017,2016,Community Colleges,Bristol Community College,New transfer,Full Time,184,183,89,0.5,108,0.6
+2017,2016,Community Colleges,Bristol Community College,New transfer,Part Time,182,181,87,0.5,99,0.5
+2017,2016,Community Colleges,Bunker Hill Community College,First-time,Full Time,1055,892,703,0.7,664,0.7
+2017,2016,Community Colleges,Bunker Hill Community College,First-time,Part Time,945,868,506,0.5,517,0.6
+2017,2016,Community Colleges,Bunker Hill Community College,New transfer,Full Time,522,409,262,0.5,268,0.7
+2017,2016,Community Colleges,Bunker Hill Community College,New transfer,Part Time,610,566,265,0.4,316,0.6
+2017,2016,Community Colleges,Cape Cod Community College,First-time,Full Time,320,318,190,0.6,211,0.7
+2017,2016,Community Colleges,Cape Cod Community College,First-time,Part Time,226,226,107,0.5,124,0.5
+2017,2016,Community Colleges,Cape Cod Community College,New transfer,Full Time,55,55,25,0.5,38,0.7
+2017,2016,Community Colleges,Cape Cod Community College,New transfer,Part Time,138,137,69,0.5,75,0.5
+2017,2016,Community Colleges,Greenfield Community College,First-time,Full Time,143,142,87,0.6,100,0.7
+2017,2016,Community Colleges,Greenfield Community College,First-time,Part Time,156,155,83,0.5,91,0.6
+2017,2016,Community Colleges,Greenfield Community College,New transfer,Full Time,50,50,25,0.5,28,0.6
+2017,2016,Community Colleges,Greenfield Community College,New transfer,Part Time,138,138,71,0.5,85,0.6
+2017,2016,Community Colleges,Holyoke Community College,First-time,Full Time,922,905,531,0.6,593,0.7
+2017,2016,Community Colleges,Holyoke Community College,First-time,Part Time,484,476,191,0.4,212,0.4
+2017,2016,Community Colleges,Holyoke Community College,New transfer,Full Time,195,189,91,0.5,112,0.6
+2017,2016,Community Colleges,Holyoke Community College,New transfer,Part Time,208,205,88,0.4,101,0.5
+2017,2016,Community Colleges,MassBay Community College,First-time,Full Time,562,508,321,0.6,345,0.7
+2017,2016,Community Colleges,MassBay Community College,First-time,Part Time,445,414,207,0.5,224,0.5
+2017,2016,Community Colleges,MassBay Community College,New transfer,Full Time,99,92,53,0.5,60,0.7
+2017,2016,Community Colleges,MassBay Community College,New transfer,Part Time,149,141,73,0.5,87,0.6
+2017,2016,Community Colleges,Massasoit Community College,First-time,Full Time,1032,1013,621,0.6,686,0.7
+2017,2016,Community Colleges,Massasoit Community College,First-time,Part Time,563,555,258,0.5,279,0.5
+2017,2016,Community Colleges,Massasoit Community College,New transfer,Full Time,207,207,120,0.6,153,0.7
+2017,2016,Community Colleges,Massasoit Community College,New transfer,Part Time,210,210,108,0.5,124,0.6
+2017,2016,Community Colleges,Middlesex Community College,First-time,Full Time,917,897,562,0.6,648,0.7
+2017,2016,Community Colleges,Middlesex Community College,First-time,Part Time,689,659,274,0.4,302,0.5
+2017,2016,Community Colleges,Middlesex Community College,New transfer,Full Time,258,252,137,0.5,171,0.7
+2017,2016,Community Colleges,Middlesex Community College,New transfer,Part Time,411,403,165,0.4,228,0.6
+2017,2016,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,527,513,279,0.5,324,0.6
+2017,2016,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,277,267,122,0.4,129,0.5
+2017,2016,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,105,101,54,0.5,60,0.6
+2017,2016,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,196,187,100,0.5,112,0.6
+2017,2016,Community Colleges,North Shore Community College,First-time,Full Time,625,601,391,0.6,397,0.7
+2017,2016,Community Colleges,North Shore Community College,First-time,Part Time,484,446,249,0.5,247,0.6
+2017,2016,Community Colleges,North Shore Community College,New transfer,Full Time,192,188,115,0.6,136,0.7
+2017,2016,Community Colleges,North Shore Community College,New transfer,Part Time,275,267,145,0.5,166,0.6
+2017,2016,Community Colleges,Northern Essex Community College,First-time,Full Time,702,690,400,0.6,445,0.6
+2017,2016,Community Colleges,Northern Essex Community College,First-time,Part Time,545,533,236,0.4,261,0.5
+2017,2016,Community Colleges,Northern Essex Community College,New transfer,Full Time,142,139,64,0.5,87,0.6
+2017,2016,Community Colleges,Northern Essex Community College,New transfer,Part Time,183,177,73,0.4,89,0.5
+2017,2016,Community Colleges,Quinsigamond Community College,First-time,Full Time,786,768,408,0.5,462,0.6
+2017,2016,Community Colleges,Quinsigamond Community College,First-time,Part Time,609,562,308,0.5,310,0.6
+2017,2016,Community Colleges,Quinsigamond Community College,New transfer,Full Time,190,183,80,0.4,101,0.6
+2017,2016,Community Colleges,Quinsigamond Community College,New transfer,Part Time,258,249,136,0.5,156,0.6
+2017,2016,Community Colleges,Roxbury Community College,First-time,Full Time,74,72,36,0.5,46,0.6
+2017,2016,Community Colleges,Roxbury Community College,First-time,Part Time,133,131,48,0.4,56,0.4
+2017,2016,Community Colleges,Roxbury Community College,New transfer,Full Time,65,64,26,0.4,46,0.7
+2017,2016,Community Colleges,Roxbury Community College,New transfer,Part Time,127,126,52,0.4,75,0.6
+2017,2016,Community Colleges,Springfield Technical Community College,First-time,Full Time,667,663,379,0.6,417,0.6
+2017,2016,Community Colleges,Springfield Technical Community College,First-time,Part Time,346,343,162,0.5,168,0.5
+2017,2016,Community Colleges,Springfield Technical Community College,New transfer,Full Time,121,120,66,0.5,83,0.7
+2017,2016,Community Colleges,Springfield Technical Community College,New transfer,Part Time,251,251,138,0.6,153,0.6
+2017,2016,State Universities,Bridgewater State University,First-time,Full Time,1381,1377,1054,0.8,1231,0.9
+2017,2016,State Universities,Bridgewater State University,First-time,Part Time,39,39,9,0.2,26,0.7
+2017,2016,State Universities,Bridgewater State University,New transfer,Full Time,884,880,703,0.8,751,0.9
+2017,2016,State Universities,Bridgewater State University,New transfer,Part Time,224,224,137,0.6,155,0.7
+2017,2016,State Universities,Fitchburg State University,First-time,Full Time,759,754,596,0.8,679,0.9
+2017,2016,State Universities,Fitchburg State University,First-time,Part Time,4,4,,,,
+2017,2016,State Universities,Fitchburg State University,New transfer,Full Time,308,304,239,0.8,255,0.8
+2017,2016,State Universities,Fitchburg State University,New transfer,Part Time,69,67,43,0.6,50,0.7
+2017,2016,State Universities,Framingham State University,First-time,Full Time,739,736,560,0.8,663,0.9
+2017,2016,State Universities,Framingham State University,First-time,Part Time,10,7,6,0.6,5,0.7
+2017,2016,State Universities,Framingham State University,New transfer,Full Time,319,318,227,0.7,263,0.8
+2017,2016,State Universities,Framingham State University,New transfer,Part Time,49,49,32,0.7,36,0.7
+2017,2016,State Universities,Massachusetts College of Art and Design,First-time,Full Time,374,359,326,0.9,332,0.9
+2017,2016,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,91,87,81,0.9,82,0.9
+2017,2016,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,4,4,,,,
+2017,2016,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,325,325,240,0.7,288,0.9
+2017,2016,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,2,2,,,,
+2017,2016,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,92,85,68,0.7,74,0.9
+2017,2016,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,34,34,25,0.7,26,0.8
+2017,2016,State Universities,Massachusetts Maritime Academy,First-time,Full Time,402,398,350,0.9,380,1.0
+2017,2016,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,51,51,46,0.9,48,0.9
+2017,2016,State Universities,Salem State University,First-time,Full Time,1130,1115,873,0.8,1000,0.9
+2017,2016,State Universities,Salem State University,First-time,Part Time,15,14,2,0.1,4,0.3
+2017,2016,State Universities,Salem State University,New transfer,Full Time,590,574,491,0.8,510,0.9
+2017,2016,State Universities,Salem State University,New transfer,Part Time,148,145,93,0.6,109,0.8
+2017,2016,State Universities,Westfield State University,First-time,Full Time,1065,1061,835,0.8,984,0.9
+2017,2016,State Universities,Westfield State University,First-time,Part Time,3,3,,,,
+2017,2016,State Universities,Westfield State University,New transfer,Full Time,331,330,263,0.8,287,0.9
+2017,2016,State Universities,Westfield State University,New transfer,Part Time,86,86,51,0.6,58,0.7
+2017,2016,State Universities,Worcester State University,First-time,Full Time,782,775,644,0.8,717,0.9
+2017,2016,State Universities,Worcester State University,First-time,Part Time,7,7,4,0.6,5,0.7
+2017,2016,State Universities,Worcester State University,New transfer,Full Time,401,397,318,0.8,342,0.9
+2017,2016,State Universities,Worcester State University,New transfer,Part Time,117,116,95,0.8,101,0.9
+2017,2016,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,4679,4431,4230,0.9,4306,1.0
+2017,2016,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,7,6,5,0.7,,
+2017,2016,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1218,1173,1064,0.9,1089,0.9
+2017,2016,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,282,280,183,0.6,191,0.7
+2017,2016,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,1542,1378,1199,0.8,1219,0.9
+2017,2016,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,106,38,68,0.6,22,0.6
+2017,2016,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,1065,990,810,0.8,849,0.9
+2017,2016,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,413,401,268,0.6,298,0.7
+2017,2016,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1358,1341,1003,0.7,1192,0.9
+2017,2016,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,9,8,1,0.1,4,0.5
+2017,2016,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,399,379,309,0.8,325,0.9
+2017,2016,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,112,110,67,0.6,76,0.7
+2017,2016,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,1680,1652,1457,0.9,1570,1.0
+2017,2016,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,59,54,32,0.5,37,0.7
+2017,2016,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,1073,1013,898,0.8,920,0.9
+2017,2016,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,365,348,226,0.6,256,0.7
+2016,2015,Community Colleges,Berkshire Community College,First-time,Full Time,266,262,163,0.6,184,0.7
+2016,2015,Community Colleges,Berkshire Community College,First-time,Part Time,165,163,82,0.5,91,0.6
+2016,2015,Community Colleges,Berkshire Community College,New transfer,Full Time,43,43,22,0.5,30,0.7
+2016,2015,Community Colleges,Berkshire Community College,New transfer,Part Time,45,45,22,0.5,27,0.6
+2016,2015,Community Colleges,Bristol Community College,First-time,Full Time,1215,1211,748,0.6,815,0.7
+2016,2015,Community Colleges,Bristol Community College,First-time,Part Time,494,489,248,0.5,261,0.5
+2016,2015,Community Colleges,Bristol Community College,New transfer,Full Time,202,202,117,0.6,138,0.7
+2016,2015,Community Colleges,Bristol Community College,New transfer,Part Time,199,196,101,0.5,112,0.6
+2016,2015,Community Colleges,Bunker Hill Community College,First-time,Full Time,977,832,623,0.6,580,0.7
+2016,2015,Community Colleges,Bunker Hill Community College,First-time,Part Time,967,934,496,0.5,518,0.6
+2016,2015,Community Colleges,Bunker Hill Community College,New transfer,Full Time,511,405,264,0.5,251,0.6
+2016,2015,Community Colleges,Bunker Hill Community College,New transfer,Part Time,739,711,341,0.5,414,0.6
+2016,2015,Community Colleges,Cape Cod Community College,First-time,Full Time,388,386,217,0.6,239,0.6
+2016,2015,Community Colleges,Cape Cod Community College,First-time,Part Time,291,288,142,0.5,160,0.6
+2016,2015,Community Colleges,Cape Cod Community College,New transfer,Full Time,69,69,38,0.6,48,0.7
+2016,2015,Community Colleges,Cape Cod Community College,New transfer,Part Time,118,116,50,0.4,67,0.6
+2016,2015,Community Colleges,Greenfield Community College,First-time,Full Time,189,188,123,0.7,131,0.7
+2016,2015,Community Colleges,Greenfield Community College,First-time,Part Time,166,164,75,0.5,84,0.5
+2016,2015,Community Colleges,Greenfield Community College,New transfer,Full Time,71,70,37,0.5,43,0.6
+2016,2015,Community Colleges,Greenfield Community College,New transfer,Part Time,128,127,67,0.5,79,0.6
+2016,2015,Community Colleges,Holyoke Community College,First-time,Full Time,985,976,514,0.5,594,0.6
+2016,2015,Community Colleges,Holyoke Community College,First-time,Part Time,426,422,181,0.4,194,0.5
+2016,2015,Community Colleges,Holyoke Community College,New transfer,Full Time,241,235,124,0.5,145,0.6
+2016,2015,Community Colleges,Holyoke Community College,New transfer,Part Time,222,220,81,0.4,110,0.5
+2016,2015,Community Colleges,MassBay Community College,First-time,Full Time,589,560,346,0.6,385,0.7
+2016,2015,Community Colleges,MassBay Community College,First-time,Part Time,422,409,194,0.5,219,0.5
+2016,2015,Community Colleges,MassBay Community College,New transfer,Full Time,61,58,34,0.6,41,0.7
+2016,2015,Community Colleges,MassBay Community College,New transfer,Part Time,112,112,57,0.5,77,0.7
+2016,2015,Community Colleges,Massasoit Community College,First-time,Full Time,1072,1049,649,0.6,704,0.7
+2016,2015,Community Colleges,Massasoit Community College,First-time,Part Time,597,589,290,0.5,319,0.5
+2016,2015,Community Colleges,Massasoit Community College,New transfer,Full Time,213,210,105,0.5,130,0.6
+2016,2015,Community Colleges,Massasoit Community College,New transfer,Part Time,230,230,113,0.5,141,0.6
+2016,2015,Community Colleges,Middlesex Community College,First-time,Full Time,1099,1076,700,0.6,795,0.7
+2016,2015,Community Colleges,Middlesex Community College,First-time,Part Time,732,709,325,0.4,355,0.5
+2016,2015,Community Colleges,Middlesex Community College,New transfer,Full Time,255,248,130,0.5,169,0.7
+2016,2015,Community Colleges,Middlesex Community College,New transfer,Part Time,433,429,166,0.4,225,0.5
+2016,2015,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,481,467,255,0.5,310,0.7
+2016,2015,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,310,298,131,0.4,143,0.5
+2016,2015,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,107,105,54,0.5,67,0.6
+2016,2015,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,151,144,76,0.5,84,0.6
+2016,2015,Community Colleges,North Shore Community College,First-time,Full Time,695,674,426,0.6,475,0.7
+2016,2015,Community Colleges,North Shore Community College,First-time,Part Time,518,481,282,0.5,280,0.6
+2016,2015,Community Colleges,North Shore Community College,New transfer,Full Time,231,220,127,0.6,152,0.7
+2016,2015,Community Colleges,North Shore Community College,New transfer,Part Time,284,276,162,0.6,183,0.7
+2016,2015,Community Colleges,Northern Essex Community College,First-time,Full Time,746,737,440,0.6,486,0.7
+2016,2015,Community Colleges,Northern Essex Community College,First-time,Part Time,573,560,233,0.4,253,0.5
+2016,2015,Community Colleges,Northern Essex Community College,New transfer,Full Time,157,152,74,0.5,92,0.6
+2016,2015,Community Colleges,Northern Essex Community College,New transfer,Part Time,238,234,117,0.5,145,0.6
+2016,2015,Community Colleges,Quinsigamond Community College,First-time,Full Time,809,796,448,0.6,498,0.6
+2016,2015,Community Colleges,Quinsigamond Community College,First-time,Part Time,618,584,316,0.5,321,0.6
+2016,2015,Community Colleges,Quinsigamond Community College,New transfer,Full Time,175,167,82,0.5,101,0.6
+2016,2015,Community Colleges,Quinsigamond Community College,New transfer,Part Time,212,202,98,0.5,114,0.6
+2016,2015,Community Colleges,Roxbury Community College,First-time,Full Time,92,88,51,0.6,52,0.6
+2016,2015,Community Colleges,Roxbury Community College,First-time,Part Time,143,142,51,0.4,63,0.4
+2016,2015,Community Colleges,Roxbury Community College,New transfer,Full Time,38,35,18,0.5,24,0.7
+2016,2015,Community Colleges,Roxbury Community College,New transfer,Part Time,74,74,40,0.5,53,0.7
+2016,2015,Community Colleges,Springfield Technical Community College,First-time,Full Time,842,838,502,0.6,543,0.6
+2016,2015,Community Colleges,Springfield Technical Community College,First-time,Part Time,401,399,173,0.4,186,0.5
+2016,2015,Community Colleges,Springfield Technical Community College,New transfer,Full Time,163,162,89,0.5,113,0.7
+2016,2015,Community Colleges,Springfield Technical Community College,New transfer,Part Time,255,254,138,0.5,158,0.6
+2016,2015,State Universities,Bridgewater State University,First-time,Full Time,1493,1482,1192,0.8,1357,0.9
+2016,2015,State Universities,Bridgewater State University,First-time,Part Time,35,35,11,0.3,19,0.5
+2016,2015,State Universities,Bridgewater State University,New transfer,Full Time,834,822,656,0.8,698,0.8
+2016,2015,State Universities,Bridgewater State University,New transfer,Part Time,193,188,115,0.6,132,0.7
+2016,2015,State Universities,Fitchburg State University,First-time,Full Time,781,770,587,0.8,680,0.9
+2016,2015,State Universities,Fitchburg State University,First-time,Part Time,8,8,3,0.4,3,0.4
+2016,2015,State Universities,Fitchburg State University,New transfer,Full Time,235,229,183,0.8,201,0.9
+2016,2015,State Universities,Fitchburg State University,New transfer,Part Time,85,82,49,0.6,56,0.7
+2016,2015,State Universities,Framingham State University,First-time,Full Time,843,839,623,0.7,750,0.9
+2016,2015,State Universities,Framingham State University,First-time,Part Time,11,11,6,0.5,6,0.5
+2016,2015,State Universities,Framingham State University,New transfer,Full Time,291,287,221,0.8,252,0.9
+2016,2015,State Universities,Framingham State University,New transfer,Part Time,86,80,60,0.7,59,0.7
+2016,2015,State Universities,Massachusetts College of Art and Design,First-time,Full Time,293,284,272,0.9,270,1.0
+2016,2015,State Universities,Massachusetts College of Art and Design,First-time,Part Time,1,1,,,,
+2016,2015,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,84,81,74,0.9,73,0.9
+2016,2015,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,5,5,,,,
+2016,2015,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,270,266,217,0.8,240,0.9
+2016,2015,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,105,104,86,0.8,91,0.9
+2016,2015,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,38,38,31,0.8,31,0.8
+2016,2015,State Universities,Massachusetts Maritime Academy,First-time,Full Time,385,384,337,0.9,370,1.0
+2016,2015,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,35,35,33,0.9,35,1.0
+2016,2015,State Universities,Massachusetts Maritime Academy,New transfer,Part Time,1,1,,,,
+2016,2015,State Universities,Salem State University,First-time,Full Time,1082,1078,857,0.8,965,0.9
+2016,2015,State Universities,Salem State University,First-time,Part Time,11,10,5,0.5,7,0.7
+2016,2015,State Universities,Salem State University,New transfer,Full Time,597,582,491,0.8,523,0.9
+2016,2015,State Universities,Salem State University,New transfer,Part Time,154,153,109,0.7,123,0.8
+2016,2015,State Universities,Westfield State University,First-time,Full Time,1292,1290,998,0.8,1197,0.9
+2016,2015,State Universities,Westfield State University,First-time,Part Time,1,1,,,,
+2016,2015,State Universities,Westfield State University,New transfer,Full Time,327,324,256,0.8,289,0.9
+2016,2015,State Universities,Westfield State University,New transfer,Part Time,55,55,33,0.6,37,0.7
+2016,2015,State Universities,Worcester State University,First-time,Full Time,808,804,646,0.8,747,0.9
+2016,2015,State Universities,Worcester State University,First-time,Part Time,6,6,,,,
+2016,2015,State Universities,Worcester State University,New transfer,Full Time,461,459,368,0.8,396,0.9
+2016,2015,State Universities,Worcester State University,New transfer,Part Time,127,124,81,0.6,89,0.7
+2016,2015,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,4698,4504,4282,0.9,4392,1.0
+2016,2015,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,10,9,5,0.5,9,1.0
+2016,2015,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1123,1089,978,0.9,1010,0.9
+2016,2015,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,226,222,167,0.7,174,0.8
+2016,2015,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,1538,1368,1225,0.8,1232,0.9
+2016,2015,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,142,29,82,0.6,21,0.7
+2016,2015,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,1153,1096,921,0.8,945,0.9
+2016,2015,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,470,455,314,0.7,342,0.8
+2016,2015,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1418,1412,1037,0.7,1270,0.9
+2016,2015,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,15,15,3,0.2,8,0.5
+2016,2015,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,415,402,320,0.8,352,0.9
+2016,2015,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,123,120,82,0.7,87,0.7
+2016,2015,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,1596,1553,1355,0.8,1473,0.9
+2016,2015,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,25,23,17,0.7,17,0.7
+2016,2015,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,1122,1069,911,0.8,948,0.9
+2016,2015,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,352,331,226,0.6,241,0.7
+2015,2014,Community Colleges,Berkshire Community College,First-time,Full Time,260,256,144,0.6,163,0.6
+2015,2014,Community Colleges,Berkshire Community College,First-time,Part Time,167,165,75,0.4,91,0.6
+2015,2014,Community Colleges,Berkshire Community College,New transfer,Full Time,30,30,12,0.4,20,0.7
+2015,2014,Community Colleges,Berkshire Community College,New transfer,Part Time,55,55,32,0.6,40,0.7
+2015,2014,Community Colleges,Bristol Community College,First-time,Full Time,1379,1374,877,0.6,945,0.7
+2015,2014,Community Colleges,Bristol Community College,First-time,Part Time,581,576,270,0.5,281,0.5
+2015,2014,Community Colleges,Bristol Community College,New transfer,Full Time,208,208,125,0.6,149,0.7
+2015,2014,Community Colleges,Bristol Community College,New transfer,Part Time,219,215,114,0.5,135,0.6
+2015,2014,Community Colleges,Bunker Hill Community College,First-time,Full Time,1196,972,726,0.6,643,0.7
+2015,2014,Community Colleges,Bunker Hill Community College,First-time,Part Time,1178,1124,581,0.5,634,0.6
+2015,2014,Community Colleges,Bunker Hill Community College,New transfer,Full Time,426,399,197,0.5,241,0.6
+2015,2014,Community Colleges,Bunker Hill Community College,New transfer,Part Time,592,577,281,0.5,339,0.6
+2015,2014,Community Colleges,Cape Cod Community College,First-time,Full Time,376,370,208,0.6,234,0.6
+2015,2014,Community Colleges,Cape Cod Community College,First-time,Part Time,332,325,148,0.4,169,0.5
+2015,2014,Community Colleges,Cape Cod Community College,New transfer,Full Time,81,81,40,0.5,51,0.6
+2015,2014,Community Colleges,Cape Cod Community College,New transfer,Part Time,162,161,72,0.4,91,0.6
+2015,2014,Community Colleges,Greenfield Community College,First-time,Full Time,189,187,114,0.6,127,0.7
+2015,2014,Community Colleges,Greenfield Community College,First-time,Part Time,172,172,82,0.5,98,0.6
+2015,2014,Community Colleges,Greenfield Community College,New transfer,Full Time,61,61,33,0.5,43,0.7
+2015,2014,Community Colleges,Greenfield Community College,New transfer,Part Time,131,131,59,0.4,81,0.6
+2015,2014,Community Colleges,Holyoke Community College,First-time,Full Time,976,973,568,0.6,643,0.7
+2015,2014,Community Colleges,Holyoke Community College,First-time,Part Time,510,506,223,0.4,245,0.5
+2015,2014,Community Colleges,Holyoke Community College,New transfer,Full Time,219,212,126,0.6,158,0.7
+2015,2014,Community Colleges,Holyoke Community College,New transfer,Part Time,232,231,95,0.4,119,0.5
+2015,2014,Community Colleges,MassBay Community College,First-time,Full Time,640,599,348,0.5,393,0.7
+2015,2014,Community Colleges,MassBay Community College,First-time,Part Time,549,532,228,0.4,261,0.5
+2015,2014,Community Colleges,MassBay Community College,New transfer,Full Time,112,106,54,0.5,74,0.7
+2015,2014,Community Colleges,MassBay Community College,New transfer,Part Time,139,137,69,0.5,80,0.6
+2015,2014,Community Colleges,Massasoit Community College,First-time,Full Time,1178,1155,680,0.6,753,0.7
+2015,2014,Community Colleges,Massasoit Community College,First-time,Part Time,544,531,263,0.5,290,0.5
+2015,2014,Community Colleges,Massasoit Community College,New transfer,Full Time,177,174,91,0.5,115,0.7
+2015,2014,Community Colleges,Massasoit Community College,New transfer,Part Time,222,221,115,0.5,138,0.6
+2015,2014,Community Colleges,Middlesex Community College,First-time,Full Time,1103,1079,677,0.6,789,0.7
+2015,2014,Community Colleges,Middlesex Community College,First-time,Part Time,734,700,333,0.5,362,0.5
+2015,2014,Community Colleges,Middlesex Community College,New transfer,Full Time,277,275,150,0.5,191,0.7
+2015,2014,Community Colleges,Middlesex Community College,New transfer,Part Time,385,380,162,0.4,208,0.5
+2015,2014,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,499,498,269,0.5,316,0.6
+2015,2014,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,296,292,137,0.5,149,0.5
+2015,2014,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,128,125,67,0.5,81,0.6
+2015,2014,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,138,132,62,0.4,72,0.5
+2015,2014,Community Colleges,North Shore Community College,First-time,Full Time,728,701,423,0.6,466,0.7
+2015,2014,Community Colleges,North Shore Community College,First-time,Part Time,549,522,285,0.5,297,0.6
+2015,2014,Community Colleges,North Shore Community College,New transfer,Full Time,196,188,107,0.5,140,0.7
+2015,2014,Community Colleges,North Shore Community College,New transfer,Part Time,292,284,168,0.6,189,0.7
+2015,2014,Community Colleges,Northern Essex Community College,First-time,Full Time,752,746,443,0.6,506,0.7
+2015,2014,Community Colleges,Northern Essex Community College,First-time,Part Time,596,595,283,0.5,311,0.5
+2015,2014,Community Colleges,Northern Essex Community College,New transfer,Full Time,142,139,69,0.5,90,0.6
+2015,2014,Community Colleges,Northern Essex Community College,New transfer,Part Time,229,228,97,0.4,122,0.5
+2015,2014,Community Colleges,Quinsigamond Community College,First-time,Full Time,898,885,495,0.6,550,0.6
+2015,2014,Community Colleges,Quinsigamond Community College,First-time,Part Time,675,636,355,0.5,351,0.6
+2015,2014,Community Colleges,Quinsigamond Community College,New transfer,Full Time,177,173,83,0.5,107,0.6
+2015,2014,Community Colleges,Quinsigamond Community College,New transfer,Part Time,195,188,93,0.5,111,0.6
+2015,2014,Community Colleges,Roxbury Community College,First-time,Full Time,177,168,84,0.5,101,0.6
+2015,2014,Community Colleges,Roxbury Community College,First-time,Part Time,261,255,96,0.4,132,0.5
+2015,2014,Community Colleges,Roxbury Community College,New transfer,Full Time,83,82,37,0.4,50,0.6
+2015,2014,Community Colleges,Roxbury Community College,New transfer,Part Time,201,201,70,0.3,95,0.5
+2015,2014,Community Colleges,Springfield Technical Community College,First-time,Full Time,891,889,535,0.6,582,0.7
+2015,2014,Community Colleges,Springfield Technical Community College,First-time,Part Time,384,382,167,0.4,180,0.5
+2015,2014,Community Colleges,Springfield Technical Community College,New transfer,Full Time,248,248,149,0.6,175,0.7
+2015,2014,Community Colleges,Springfield Technical Community College,New transfer,Part Time,316,313,167,0.5,192,0.6
+2015,2014,State Universities,Bridgewater State University,First-time,Full Time,1506,1499,1197,0.8,1386,0.9
+2015,2014,State Universities,Bridgewater State University,First-time,Part Time,34,33,9,0.3,17,0.5
+2015,2014,State Universities,Bridgewater State University,New transfer,Full Time,810,798,654,0.8,693,0.9
+2015,2014,State Universities,Bridgewater State University,New transfer,Part Time,168,163,106,0.6,113,0.7
+2015,2014,State Universities,Fitchburg State University,First-time,Full Time,720,718,542,0.8,632,0.9
+2015,2014,State Universities,Fitchburg State University,First-time,Part Time,7,7,5,0.7,5,0.7
+2015,2014,State Universities,Fitchburg State University,New transfer,Full Time,269,268,218,0.8,239,0.9
+2015,2014,State Universities,Fitchburg State University,New transfer,Part Time,102,101,72,0.7,76,0.8
+2015,2014,State Universities,Framingham State University,First-time,Full Time,806,804,595,0.7,731,0.9
+2015,2014,State Universities,Framingham State University,First-time,Part Time,2,2,,,,
+2015,2014,State Universities,Framingham State University,New transfer,Full Time,344,341,267,0.8,284,0.8
+2015,2014,State Universities,Framingham State University,New transfer,Part Time,62,61,45,0.7,50,0.8
+2015,2014,State Universities,Massachusetts College of Art and Design,First-time,Full Time,327,315,310,0.9,307,1.0
+2015,2014,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,124,122,112,0.9,114,0.9
+2015,2014,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,1,1,,,,
+2015,2014,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,351,344,270,0.8,320,0.9
+2015,2014,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,1,1,,,,
+2015,2014,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,123,122,89,0.7,99,0.8
+2015,2014,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,36,36,28,0.8,32,0.9
+2015,2014,State Universities,Massachusetts Maritime Academy,First-time,Full Time,320,318,300,0.9,316,1.0
+2015,2014,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,42,41,39,0.9,39,1.0
+2015,2014,State Universities,Salem State University,First-time,Full Time,1127,1122,903,0.8,1012,0.9
+2015,2014,State Universities,Salem State University,First-time,Part Time,21,20,9,0.4,13,0.6
+2015,2014,State Universities,Salem State University,New transfer,Full Time,576,554,484,0.8,496,0.9
+2015,2014,State Universities,Salem State University,New transfer,Part Time,148,146,102,0.7,110,0.8
+2015,2014,State Universities,Westfield State University,First-time,Full Time,1220,1219,954,0.8,1136,0.9
+2015,2014,State Universities,Westfield State University,First-time,Part Time,4,4,,,,
+2015,2014,State Universities,Westfield State University,New transfer,Full Time,321,321,254,0.8,278,0.9
+2015,2014,State Universities,Westfield State University,New transfer,Part Time,54,54,35,0.6,37,0.7
+2015,2014,State Universities,Worcester State University,First-time,Full Time,785,784,639,0.8,710,0.9
+2015,2014,State Universities,Worcester State University,First-time,Part Time,9,9,5,0.6,7,0.8
+2015,2014,State Universities,Worcester State University,New transfer,Full Time,452,448,356,0.8,392,0.9
+2015,2014,State Universities,Worcester State University,New transfer,Part Time,117,117,94,0.8,100,0.9
+2015,2014,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,4689,4558,4265,0.9,4426,1.0
+2015,2014,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,3,3,,,,
+2015,2014,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1175,1145,1021,0.9,1052,0.9
+2015,2014,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,248,245,174,0.7,185,0.8
+2015,2014,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,1438,1235,1125,0.8,1108,0.9
+2015,2014,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,104,31,67,0.6,23,0.7
+2015,2014,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,1194,1121,941,0.8,969,0.9
+2015,2014,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,438,426,302,0.7,334,0.8
+2015,2014,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1494,1481,1120,0.8,1358,0.9
+2015,2014,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,16,14,3,0.2,6,0.4
+2015,2014,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,404,389,310,0.8,338,0.9
+2015,2014,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,124,116,70,0.6,80,0.7
+2015,2014,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,1638,1607,1409,0.9,1531,1.0
+2015,2014,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,32,32,20,0.6,23,0.7
+2015,2014,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,1102,1047,906,0.8,925,0.9
+2015,2014,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,330,313,216,0.7,233,0.7
+2014,2013,Community Colleges,Berkshire Community College,First-time,Full Time,277,274,156,0.6,173,0.6
+2014,2013,Community Colleges,Berkshire Community College,First-time,Part Time,190,187,104,0.5,117,0.6
+2014,2013,Community Colleges,Berkshire Community College,New transfer,Full Time,53,53,25,0.5,38,0.7
+2014,2013,Community Colleges,Berkshire Community College,New transfer,Part Time,64,64,35,0.5,40,0.6
+2014,2013,Community Colleges,Bristol Community College,First-time,Full Time,1485,1474,946,0.6,1004,0.7
+2014,2013,Community Colleges,Bristol Community College,First-time,Part Time,660,656,362,0.5,375,0.6
+2014,2013,Community Colleges,Bristol Community College,New transfer,Full Time,179,178,103,0.6,130,0.7
+2014,2013,Community Colleges,Bristol Community College,New transfer,Part Time,191,190,108,0.6,127,0.7
+2014,2013,Community Colleges,Bunker Hill Community College,First-time,Full Time,1125,989,745,0.7,701,0.7
+2014,2013,Community Colleges,Bunker Hill Community College,First-time,Part Time,1073,1026,552,0.5,580,0.6
+2014,2013,Community Colleges,Bunker Hill Community College,New transfer,Full Time,449,383,224,0.5,247,0.6
+2014,2013,Community Colleges,Bunker Hill Community College,New transfer,Part Time,617,604,298,0.5,357,0.6
+2014,2013,Community Colleges,Cape Cod Community College,First-time,Full Time,475,471,256,0.5,308,0.7
+2014,2013,Community Colleges,Cape Cod Community College,First-time,Part Time,376,372,154,0.4,180,0.5
+2014,2013,Community Colleges,Cape Cod Community College,New transfer,Full Time,46,46,32,0.7,36,0.8
+2014,2013,Community Colleges,Cape Cod Community College,New transfer,Part Time,122,122,52,0.4,65,0.5
+2014,2013,Community Colleges,Greenfield Community College,First-time,Full Time,198,196,120,0.6,136,0.7
+2014,2013,Community Colleges,Greenfield Community College,First-time,Part Time,171,171,81,0.5,91,0.5
+2014,2013,Community Colleges,Greenfield Community College,New transfer,Full Time,73,73,42,0.6,49,0.7
+2014,2013,Community Colleges,Greenfield Community College,New transfer,Part Time,139,139,73,0.5,92,0.7
+2014,2013,Community Colleges,Holyoke Community College,First-time,Full Time,1062,1053,631,0.6,701,0.7
+2014,2013,Community Colleges,Holyoke Community College,First-time,Part Time,474,472,214,0.5,232,0.5
+2014,2013,Community Colleges,Holyoke Community College,New transfer,Full Time,261,260,138,0.5,169,0.6
+2014,2013,Community Colleges,Holyoke Community College,New transfer,Part Time,202,201,87,0.4,108,0.5
+2014,2013,Community Colleges,MassBay Community College,First-time,Full Time,644,618,388,0.6,440,0.7
+2014,2013,Community Colleges,MassBay Community College,First-time,Part Time,551,533,248,0.4,288,0.5
+2014,2013,Community Colleges,MassBay Community College,New transfer,Full Time,93,92,41,0.4,60,0.7
+2014,2013,Community Colleges,MassBay Community College,New transfer,Part Time,115,113,58,0.5,67,0.6
+2014,2013,Community Colleges,Massasoit Community College,First-time,Full Time,1275,1267,747,0.6,846,0.7
+2014,2013,Community Colleges,Massasoit Community College,First-time,Part Time,572,567,264,0.5,300,0.5
+2014,2013,Community Colleges,Massasoit Community College,New transfer,Full Time,204,203,108,0.5,139,0.7
+2014,2013,Community Colleges,Massasoit Community College,New transfer,Part Time,221,221,102,0.5,132,0.6
+2014,2013,Community Colleges,Middlesex Community College,First-time,Full Time,1105,1085,686,0.6,799,0.7
+2014,2013,Community Colleges,Middlesex Community College,First-time,Part Time,915,891,436,0.5,486,0.5
+2014,2013,Community Colleges,Middlesex Community College,New transfer,Full Time,282,276,148,0.5,200,0.7
+2014,2013,Community Colleges,Middlesex Community College,New transfer,Part Time,430,427,188,0.4,263,0.6
+2014,2013,Community Colleges,Mt. Wachusett Community College,First-time,Full Time,589,581,352,0.6,417,0.7
+2014,2013,Community Colleges,Mt. Wachusett Community College,First-time,Part Time,319,307,140,0.4,152,0.5
+2014,2013,Community Colleges,Mt. Wachusett Community College,New transfer,Full Time,134,131,69,0.5,80,0.6
+2014,2013,Community Colleges,Mt. Wachusett Community College,New transfer,Part Time,172,163,75,0.4,98,0.6
+2014,2013,Community Colleges,North Shore Community College,First-time,Full Time,905,880,569,0.6,615,0.7
+2014,2013,Community Colleges,North Shore Community College,First-time,Part Time,531,508,288,0.5,305,0.6
+2014,2013,Community Colleges,North Shore Community College,New transfer,Full Time,261,256,143,0.5,159,0.6
+2014,2013,Community Colleges,North Shore Community College,New transfer,Part Time,328,322,187,0.6,212,0.7
+2014,2013,Community Colleges,Northern Essex Community College,First-time,Full Time,816,813,510,0.6,561,0.7
+2014,2013,Community Colleges,Northern Essex Community College,First-time,Part Time,684,680,326,0.5,351,0.5
+2014,2013,Community Colleges,Northern Essex Community College,New transfer,Full Time,149,149,74,0.5,96,0.6
+2014,2013,Community Colleges,Northern Essex Community College,New transfer,Part Time,247,247,103,0.4,135,0.5
+2014,2013,Community Colleges,Quinsigamond Community College,First-time,Full Time,922,906,528,0.6,588,0.6
+2014,2013,Community Colleges,Quinsigamond Community College,First-time,Part Time,737,717,409,0.6,424,0.6
+2014,2013,Community Colleges,Quinsigamond Community College,New transfer,Full Time,196,192,86,0.4,118,0.6
+2014,2013,Community Colleges,Quinsigamond Community College,New transfer,Part Time,226,222,107,0.5,128,0.6
+2014,2013,Community Colleges,Roxbury Community College,First-time,Full Time,224,219,125,0.6,153,0.7
+2014,2013,Community Colleges,Roxbury Community College,First-time,Part Time,292,284,114,0.4,135,0.5
+2014,2013,Community Colleges,Roxbury Community College,New transfer,Full Time,53,52,21,0.4,35,0.7
+2014,2013,Community Colleges,Roxbury Community College,New transfer,Part Time,121,121,56,0.5,73,0.6
+2014,2013,Community Colleges,Springfield Technical Community College,First-time,Full Time,920,917,563,0.6,600,0.7
+2014,2013,Community Colleges,Springfield Technical Community College,First-time,Part Time,454,453,198,0.4,219,0.5
+2014,2013,Community Colleges,Springfield Technical Community College,New transfer,Full Time,225,222,129,0.6,156,0.7
+2014,2013,Community Colleges,Springfield Technical Community College,New transfer,Part Time,264,264,150,0.6,175,0.7
+2014,2013,State Universities,Bridgewater State University,First-time,Full Time,1451,1444,1183,0.8,1328,0.9
+2014,2013,State Universities,Bridgewater State University,First-time,Part Time,22,22,7,0.3,12,0.5
+2014,2013,State Universities,Bridgewater State University,New transfer,Full Time,804,787,648,0.8,698,0.9
+2014,2013,State Universities,Bridgewater State University,New transfer,Part Time,177,170,103,0.6,115,0.7
+2014,2013,State Universities,Fitchburg State University,First-time,Full Time,788,784,613,0.8,706,0.9
+2014,2013,State Universities,Fitchburg State University,First-time,Part Time,11,9,2,0.2,4,0.4
+2014,2013,State Universities,Fitchburg State University,New transfer,Full Time,299,295,233,0.8,258,0.9
+2014,2013,State Universities,Fitchburg State University,New transfer,Part Time,96,93,64,0.7,67,0.7
+2014,2013,State Universities,Framingham State University,First-time,Full Time,804,802,599,0.7,731,0.9
+2014,2013,State Universities,Framingham State University,First-time,Part Time,5,5,,,,
+2014,2013,State Universities,Framingham State University,New transfer,Full Time,338,332,257,0.8,274,0.8
+2014,2013,State Universities,Framingham State University,New transfer,Part Time,68,68,39,0.6,46,0.7
+2014,2013,State Universities,Massachusetts College of Art and Design,First-time,Full Time,366,353,331,0.9,340,1.0
+2014,2013,State Universities,Massachusetts College of Art and Design,First-time,Part Time,1,1,,,,
+2014,2013,State Universities,Massachusetts College of Art and Design,New transfer,Full Time,121,120,96,0.8,103,0.9
+2014,2013,State Universities,Massachusetts College of Art and Design,New transfer,Part Time,5,5,,,,
+2014,2013,State Universities,Massachusetts College of Liberal Arts,First-time,Full Time,271,269,218,0.8,252,0.9
+2014,2013,State Universities,Massachusetts College of Liberal Arts,First-time,Part Time,4,4,,,,
+2014,2013,State Universities,Massachusetts College of Liberal Arts,New transfer,Full Time,110,110,79,0.7,95,0.9
+2014,2013,State Universities,Massachusetts College of Liberal Arts,New transfer,Part Time,16,14,7,0.4,9,0.6
+2014,2013,State Universities,Massachusetts Maritime Academy,First-time,Full Time,332,331,295,0.9,320,1.0
+2014,2013,State Universities,Massachusetts Maritime Academy,New transfer,Full Time,49,49,44,0.9,46,0.9
+2014,2013,State Universities,Massachusetts Maritime Academy,New transfer,Part Time,1,1,,,,
+2014,2013,State Universities,Salem State University,First-time,Full Time,1074,1069,874,0.8,967,0.9
+2014,2013,State Universities,Salem State University,First-time,Part Time,13,13,5,0.4,9,0.7
+2014,2013,State Universities,Salem State University,New transfer,Full Time,621,599,511,0.8,540,0.9
+2014,2013,State Universities,Salem State University,New transfer,Part Time,145,144,109,0.8,115,0.8
+2014,2013,State Universities,Westfield State University,First-time,Full Time,1285,1283,985,0.8,1191,0.9
+2014,2013,State Universities,Westfield State University,First-time,Part Time,2,2,,,,
+2014,2013,State Universities,Westfield State University,New transfer,Full Time,365,364,268,0.7,304,0.8
+2014,2013,State Universities,Westfield State University,New transfer,Part Time,62,62,37,0.6,40,0.6
+2014,2013,State Universities,Worcester State University,First-time,Full Time,775,769,638,0.8,709,0.9
+2014,2013,State Universities,Worcester State University,First-time,Part Time,4,4,,,,
+2014,2013,State Universities,Worcester State University,New transfer,Full Time,455,452,360,0.8,394,0.9
+2014,2013,State Universities,Worcester State University,New transfer,Part Time,145,145,98,0.7,110,0.8
+2014,2013,University of Massachusetts,University of Massachusetts Amherst,First-time,Full Time,4681,4588,4203,0.9,4458,1.0
+2014,2013,University of Massachusetts,University of Massachusetts Amherst,First-time,Part Time,3,3,,,,
+2014,2013,University of Massachusetts,University of Massachusetts Amherst,New transfer,Full Time,1158,1143,977,0.8,1048,0.9
+2014,2013,University of Massachusetts,University of Massachusetts Amherst,New transfer,Part Time,255,254,166,0.7,176,0.7
+2014,2013,University of Massachusetts,University of Massachusetts Boston,First-time,Full Time,1311,1160,1049,0.8,1044,0.9
+2014,2013,University of Massachusetts,University of Massachusetts Boston,First-time,Part Time,100,41,60,0.6,27,0.7
+2014,2013,University of Massachusetts,University of Massachusetts Boston,New transfer,Full Time,1199,1145,971,0.8,1003,0.9
+2014,2013,University of Massachusetts,University of Massachusetts Boston,New transfer,Part Time,469,457,319,0.7,359,0.8
+2014,2013,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Full Time,1494,1491,1185,0.8,1385,0.9
+2014,2013,University of Massachusetts,University of Massachusetts Dartmouth,First-time,Part Time,22,21,4,0.2,14,0.7
+2014,2013,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Full Time,399,385,309,0.8,329,0.9
+2014,2013,University of Massachusetts,University of Massachusetts Dartmouth,New transfer,Part Time,160,159,104,0.6,121,0.8
+2014,2013,University of Massachusetts,University of Massachusetts Lowell,First-time,Full Time,1626,1613,1375,0.8,1496,0.9
+2014,2013,University of Massachusetts,University of Massachusetts Lowell,First-time,Part Time,24,24,16,0.7,19,0.8
+2014,2013,University of Massachusetts,University of Massachusetts Lowell,New transfer,Full Time,924,888,770,0.8,808,0.9
+2014,2013,University of Massachusetts,University of Massachusetts Lowell,New transfer,Part Time,331,324,212,0.6,232,0.7

@@ -1,0 +1,430 @@
+{
+  "id" : "9j3v-zihf",
+  "name" : "Annual Measurable Achievement Objectives (AMAO) Determinations",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1773257114,
+  "description" : "This dataset contains summary data on Annual Measurable Achievement Objectives (AMAOs) for English Learner (EL) students in Massachusetts public school districts that received federal Title III funds from 2006 through 2016. Note: This a historical dataset that is no longer being updated.\n\nUnder Title III of the No Child Left Behind Act (NCLB), the Massachusetts Department of Elementary and Secondary Education (DESE) was required to establish AMAOs to measure English language acquisition and academic achievement for EL students. The dataset includes district-level AMAO determinations for districts receiving Title III funds during the reporting years. Districts that did not receive Title III funds are not included, as they were not subject to AMAO reporting requirements.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/amao.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">AMAO Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 11,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42205721,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1781028308,
+  "publicationGroup" : 20305326,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1781120175,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20416395,
+  "totalTimesRated" : 0,
+  "viewCount" : 208,
+  "viewLastModified" : 1781123804,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1781273988,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7518731,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1781123812,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1781273988,
+      "failureCount" : 0,
+      "startedAt" : 1781273988,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 634919729,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166115129,
+    "cachedContents" : {
+      "non_null" : "684",
+      "largest" : "2016",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2016",
+        "count" : "80"
+      }, {
+        "item" : "2015",
+        "count" : "73"
+      }, {
+        "item" : "2014",
+        "count" : "70"
+      }, {
+        "item" : "2013",
+        "count" : "66"
+      }, {
+        "item" : "2012",
+        "count" : "63"
+      }, {
+        "item" : "2011",
+        "count" : "58"
+      }, {
+        "item" : "2009",
+        "count" : "56"
+      }, {
+        "item" : "2010",
+        "count" : "56"
+      }, {
+        "item" : "2008",
+        "count" : "55"
+      }, {
+        "item" : "2006",
+        "count" : "54"
+      }, {
+        "item" : "2007",
+        "count" : "53"
+      } ],
+      "smallest" : "2006",
+      "count" : "684",
+      "cardinality" : "684"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919730,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166115130,
+    "cachedContents" : {
+      "non_null" : "684",
+      "largest" : "08280000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01370000",
+        "count" : "11"
+      }, {
+        "item" : "00350000",
+        "count" : "11"
+      }, {
+        "item" : "02070000",
+        "count" : "11"
+      }, {
+        "item" : "01550000",
+        "count" : "11"
+      }, {
+        "item" : "01810000",
+        "count" : "11"
+      }, {
+        "item" : "02810000",
+        "count" : "11"
+      }, {
+        "item" : "03140000",
+        "count" : "11"
+      }, {
+        "item" : "00100000",
+        "count" : "11"
+      }, {
+        "item" : "03470000",
+        "count" : "11"
+      }, {
+        "item" : "00000000",
+        "count" : "11"
+      }, {
+        "item" : "02440000",
+        "count" : "11"
+      }, {
+        "item" : "00930000",
+        "count" : "11"
+      }, {
+        "item" : "03080000",
+        "count" : "11"
+      }, {
+        "item" : "03320000",
+        "count" : "11"
+      }, {
+        "item" : "00460000",
+        "count" : "11"
+      }, {
+        "item" : "03210000",
+        "count" : "11"
+      }, {
+        "item" : "02430000",
+        "count" : "11"
+      }, {
+        "item" : "00610000",
+        "count" : "11"
+      }, {
+        "item" : "01600000",
+        "count" : "11"
+      }, {
+        "item" : "01000000",
+        "count" : "11"
+      } ],
+      "smallest" : "00000000",
+      "count" : "684",
+      "cardinality" : "684"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919731,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166115131,
+    "cachedContents" : {
+      "non_null" : "684",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Medford",
+        "count" : "11"
+      }, {
+        "item" : "New Bedford",
+        "count" : "11"
+      }, {
+        "item" : "Marlborough",
+        "count" : "11"
+      }, {
+        "item" : "Brockton",
+        "count" : "11"
+      }, {
+        "item" : "West Springfield",
+        "count" : "11"
+      }, {
+        "item" : "Norwood",
+        "count" : "11"
+      }, {
+        "item" : "Malden",
+        "count" : "11"
+      }, {
+        "item" : "Hudson",
+        "count" : "11"
+      }, {
+        "item" : "Worcester",
+        "count" : "11"
+      }, {
+        "item" : "Methuen",
+        "count" : "11"
+      }, {
+        "item" : "Lowell Community Charter Public (District)",
+        "count" : "11"
+      }, {
+        "item" : "Haverhill",
+        "count" : "11"
+      }, {
+        "item" : "Revere",
+        "count" : "11"
+      }, {
+        "item" : "State",
+        "count" : "11"
+      }, {
+        "item" : "Fall River",
+        "count" : "11"
+      }, {
+        "item" : "Lexington",
+        "count" : "11"
+      }, {
+        "item" : "Waltham",
+        "count" : "11"
+      }, {
+        "item" : "Springfield",
+        "count" : "11"
+      }, {
+        "item" : "Attleboro",
+        "count" : "11"
+      }, {
+        "item" : "Brookline",
+        "count" : "11"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "684",
+      "cardinality" : "684"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919733,
+    "name" : "PROGRESS",
+    "dataTypeName" : "text",
+    "description" : "Progress Determination",
+    "fieldName" : "progress",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166115133,
+    "cachedContents" : {
+      "non_null" : "684",
+      "largest" : "Yes",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Yes",
+        "count" : "533"
+      }, {
+        "item" : "No",
+        "count" : "151"
+      } ],
+      "smallest" : "No",
+      "count" : "684",
+      "cardinality" : "684"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919734,
+    "name" : "ATTAINMENT",
+    "dataTypeName" : "text",
+    "description" : "Attainment Determination",
+    "fieldName" : "attainment",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166115134,
+    "cachedContents" : {
+      "non_null" : "684",
+      "largest" : "Yes",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Yes",
+        "count" : "497"
+      }, {
+        "item" : "No",
+        "count" : "187"
+      } ],
+      "smallest" : "No",
+      "count" : "684",
+      "cardinality" : "684"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919735,
+    "name" : "ACCOUNTABILITY_FOR_EL_FORMER_EL",
+    "dataTypeName" : "text",
+    "description" : "Accountability for English Learners (EL) and Former English Leaners (FEL) Determination",
+    "fieldName" : "accountability_for_el_former_el",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166115135,
+    "cachedContents" : {
+      "non_null" : "347",
+      "largest" : "Yes",
+      "null" : "337",
+      "top" : [ {
+        "item" : "No",
+        "count" : "263"
+      }, {
+        "item" : "Yes",
+        "count" : "84"
+      } ],
+      "smallest" : "No",
+      "count" : "684",
+      "cardinality" : "684"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919736,
+    "name" : "AYP_FOR_LEP_ELA",
+    "dataTypeName" : "text",
+    "description" : "Adequate Yearly Progress (AYP) for Limited English Proficient (LEP) Student Group - English Language Arts (ELA)",
+    "fieldName" : "ayp_for_lep_ela",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166115136,
+    "cachedContents" : {
+      "non_null" : "296",
+      "largest" : "Yes",
+      "null" : "388",
+      "top" : [ {
+        "item" : "No",
+        "count" : "236"
+      }, {
+        "item" : "Yes",
+        "count" : "60"
+      } ],
+      "smallest" : "No",
+      "count" : "684",
+      "cardinality" : "684"
+    },
+    "format" : { }
+  }, {
+    "id" : 634919737,
+    "name" : "AYP_FOR_LEP_MATH",
+    "dataTypeName" : "text",
+    "description" : "Adequate Yearly Progress (AYP) for Limited English Proficient (LEP) Student Group - Math",
+    "fieldName" : "ayp_for_lep_math",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166115137,
+    "cachedContents" : {
+      "non_null" : "298",
+      "largest" : "Yes",
+      "null" : "386",
+      "top" : [ {
+        "item" : "No",
+        "count" : "223"
+      }, {
+        "item" : "Yes",
+        "count" : "75"
+      } ],
+      "smallest" : "No",
+      "count" : "684",
+      "cardinality" : "684"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "amao", "english learners", "limited english proficient", "lep", "title iii", "no child left behind", "nclb", "progress", "attainment", "adequate yearly progress", "ayp", "former english learners" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

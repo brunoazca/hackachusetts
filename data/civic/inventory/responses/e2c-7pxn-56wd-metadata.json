@@ -1,0 +1,93 @@
+{
+  "id" : "7pxn-56wd",
+  "name" : "Student Outcomes Comparison Dashboard",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "createdAt" : 1754922785,
+  "description" : "The Student Outcomes Comparison dashboard offers an at-a-glance view of multiple student indicators — chronic absenteeism, out-of-school suspension, ninth-grade course passing, Pathways enrollment, dropout, graduation, and MCAS results — by student group within a district. A color-coded heat map highlights those indicators for which different student groups are experiencing the greatest disparities.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 41519919,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1754922898,
+  "publicationGroup" : 20010958,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1754922785,
+  "tableId" : 20010958,
+  "totalTimesRated" : 0,
+  "viewCount" : 1551,
+  "viewLastModified" : 1779109257,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1770411163,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7344156,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1770411143,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1770411163,
+      "failureCount" : 0,
+      "startedAt" : 1770411163,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

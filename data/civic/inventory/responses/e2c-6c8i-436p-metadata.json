@@ -1,0 +1,619 @@
+{
+  "id" : "6c8i-436p",
+  "name" : "Awards Conferred Meta-Major to Classification of Instructional Programs (CIP) Codes",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Higher Education",
+  "attributionLink" : "https://www.mass.edu/datacenter/access/home.asp",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1741875267,
+  "description" : "This dataset provides a crosswalk that maps the meta-major column to the Classification of Instructional Programs (CIP) classification columns in the <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-Stat/fszq-dme2/about_data\">Awards (Degrees) Conferred Statewide</a> dataset. Meta-majors are a framework that categorizes academic programs into broad curricular pathways.\n\nThis dataset utilizes the 2020 CIP. The Classification of Instructional Programs was created by the U.S. Department of Education's National Center for Education Statistics (NCES) in 1980. More information can be found on the <a href=\"https://nces.ed.gov/ipeds/cipcode/default.aspx?y=56\">CIP user site</a>.\n\nThis crosswalk is unique to this dataset and should not be used to map award information from other sources or institutions.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 290,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41194729,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1743527904,
+  "publicationGroup" : 19807333,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1743527892,
+  "tableId" : 19807333,
+  "totalTimesRated" : 0,
+  "viewCount" : 599,
+  "viewLastModified" : 1755026554,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1743528042,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6819347,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1743527904,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1743528042,
+      "failureCount" : 0,
+      "startedAt" : 1743528042,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "3fm6-nje8",
+      "displayName" : "Symantha Clough"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 608047420,
+    "name" : "META_MAJOR",
+    "dataTypeName" : "text",
+    "description" : "Meta-Major",
+    "fieldName" : "meta_major",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 157665063,
+    "cachedContents" : {
+      "non_null" : "717",
+      "largest" : "Trades",
+      "null" : "0",
+      "top" : [ {
+        "item" : "STEM",
+        "count" : "192"
+      }, {
+        "item" : "Arts & Humanities",
+        "count" : "137"
+      }, {
+        "item" : "Health",
+        "count" : "108"
+      }, {
+        "item" : "Business and Communication",
+        "count" : "90"
+      }, {
+        "item" : "Social and Behavioral Sciences and Human Services",
+        "count" : "76"
+      }, {
+        "item" : "Education",
+        "count" : "59"
+      }, {
+        "item" : "Trades",
+        "count" : "52"
+      }, {
+        "item" : "Other",
+        "count" : "2"
+      }, {
+        "item" : "None/Undeclared",
+        "count" : "1"
+      } ],
+      "smallest" : "Arts & Humanities",
+      "count" : "717",
+      "cardinality" : "9"
+    },
+    "format" : { }
+  }, {
+    "id" : 608047419,
+    "name" : "CIP_2_CODE",
+    "dataTypeName" : "text",
+    "description" : "2 Digit CIP Code",
+    "fieldName" : "cip_2_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 157665062,
+    "cachedContents" : {
+      "non_null" : "717",
+      "largest" : "54",
+      "null" : "0",
+      "top" : [ {
+        "item" : "51",
+        "count" : "108"
+      }, {
+        "item" : "52",
+        "count" : "68"
+      }, {
+        "item" : "13",
+        "count" : "59"
+      }, {
+        "item" : "50",
+        "count" : "50"
+      }, {
+        "item" : "15",
+        "count" : "46"
+      }, {
+        "item" : "11",
+        "count" : "29"
+      }, {
+        "item" : "14",
+        "count" : "29"
+      }, {
+        "item" : "30",
+        "count" : "28"
+      }, {
+        "item" : "16",
+        "count" : "24"
+      }, {
+        "item" : "26",
+        "count" : "23"
+      }, {
+        "item" : "01",
+        "count" : "21"
+      }, {
+        "item" : "45",
+        "count" : "20"
+      }, {
+        "item" : "43",
+        "count" : "19"
+      }, {
+        "item" : "19",
+        "count" : "15"
+      }, {
+        "item" : "40",
+        "count" : "14"
+      }, {
+        "item" : "42",
+        "count" : "14"
+      }, {
+        "item" : "05",
+        "count" : "14"
+      }, {
+        "item" : "03",
+        "count" : "13"
+      }, {
+        "item" : "09",
+        "count" : "12"
+      }, {
+        "item" : "12",
+        "count" : "11"
+      } ],
+      "smallest" : "00",
+      "count" : "717",
+      "cardinality" : "39"
+    },
+    "format" : { }
+  }, {
+    "id" : 608047418,
+    "name" : "CIP_2_DESC",
+    "dataTypeName" : "text",
+    "description" : "CIP 2 Description",
+    "fieldName" : "cip_2_desc",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 157665061,
+    "cachedContents" : {
+      "non_null" : "717",
+      "largest" : "Visual And Performing Arts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Health Professions And Related Programs",
+        "count" : "108"
+      }, {
+        "item" : "Business, Management, Marketing, And Related Support Services",
+        "count" : "68"
+      }, {
+        "item" : "Education",
+        "count" : "59"
+      }, {
+        "item" : "Visual And Performing Arts",
+        "count" : "50"
+      }, {
+        "item" : "Engineering/Engineering-Related Technologies/Technicians",
+        "count" : "46"
+      }, {
+        "item" : "Computer And Information Sciences And Support Services",
+        "count" : "29"
+      }, {
+        "item" : "Engineering",
+        "count" : "29"
+      }, {
+        "item" : "Multi/Interdisciplinary Studies",
+        "count" : "28"
+      }, {
+        "item" : "Foreign Languages, Literatures, And Linguistics",
+        "count" : "24"
+      }, {
+        "item" : "Biological And Biomedical Sciences",
+        "count" : "23"
+      }, {
+        "item" : "Agricultural/Animal/Plant/Veterinary Science And Related Fields",
+        "count" : "21"
+      }, {
+        "item" : "Social Sciences",
+        "count" : "20"
+      }, {
+        "item" : "Homeland Security, Law Enforcement, Firefighting And Related Protective Services",
+        "count" : "19"
+      }, {
+        "item" : "Family And Consumer Sciences/Human Sciences",
+        "count" : "15"
+      }, {
+        "item" : "Psychology",
+        "count" : "14"
+      }, {
+        "item" : "Area, Ethnic, Cultural, Gender, And Group Studies",
+        "count" : "14"
+      }, {
+        "item" : "Physical Sciences",
+        "count" : "14"
+      }, {
+        "item" : "Natural Resources And Conservation",
+        "count" : "13"
+      }, {
+        "item" : "Communication, Journalism, And Related Programs",
+        "count" : "12"
+      }, {
+        "item" : "Culinary, Entertainment, And Personal Services",
+        "count" : "11"
+      } ],
+      "smallest" : "Agricultural/Animal/Plant/Veterinary Science And Related Fields",
+      "count" : "717",
+      "cardinality" : "39"
+    },
+    "format" : { }
+  }, {
+    "id" : 608047417,
+    "name" : "CIP_4_CODE",
+    "dataTypeName" : "text",
+    "description" : "4 Digit CIP Code",
+    "fieldName" : "cip_4_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 157665060,
+    "cachedContents" : {
+      "non_null" : "717",
+      "largest" : "5401",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1313",
+        "count" : "25"
+      }, {
+        "item" : "5138",
+        "count" : "13"
+      }, {
+        "item" : "5107",
+        "count" : "13"
+      }, {
+        "item" : "5007",
+        "count" : "12"
+      }, {
+        "item" : "5202",
+        "count" : "12"
+      }, {
+        "item" : "5109",
+        "count" : "12"
+      }, {
+        "item" : "5009",
+        "count" : "10"
+      }, {
+        "item" : "5004",
+        "count" : "10"
+      }, {
+        "item" : "5122",
+        "count" : "10"
+      }, {
+        "item" : "4301",
+        "count" : "9"
+      }, {
+        "item" : "1907",
+        "count" : "8"
+      }, {
+        "item" : "5209",
+        "count" : "8"
+      }, {
+        "item" : "1304",
+        "count" : "8"
+      }, {
+        "item" : "1312",
+        "count" : "8"
+      }, {
+        "item" : "5108",
+        "count" : "8"
+      }, {
+        "item" : "0501",
+        "count" : "7"
+      }, {
+        "item" : "0502",
+        "count" : "7"
+      }, {
+        "item" : "1110",
+        "count" : "7"
+      }, {
+        "item" : "5204",
+        "count" : "7"
+      }, {
+        "item" : "1205",
+        "count" : "7"
+      } ],
+      "smallest" : "0000",
+      "count" : "717",
+      "cardinality" : "277"
+    },
+    "format" : { }
+  }, {
+    "id" : 608047416,
+    "name" : "CIP_4_DESC",
+    "dataTypeName" : "text",
+    "description" : "CIP 4 Description",
+    "fieldName" : "cip_4_desc",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 157665059,
+    "cachedContents" : {
+      "non_null" : "717",
+      "largest" : "Zoology/Animal Biology",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Teacher Education And Professional Development, Specific Subject Areas",
+        "count" : "25"
+      }, {
+        "item" : "Health And Medical Administrative Services",
+        "count" : "13"
+      }, {
+        "item" : "Registered Nursing, Nursing Administration, Nursing Research And Clinical Nursing",
+        "count" : "13"
+      }, {
+        "item" : "Allied Health Diagnostic, Intervention, And Treatment Professions",
+        "count" : "12"
+      }, {
+        "item" : "Fine And Studio Arts",
+        "count" : "12"
+      }, {
+        "item" : "Business Administration, Management And Operations",
+        "count" : "12"
+      }, {
+        "item" : "Design And Applied Arts",
+        "count" : "10"
+      }, {
+        "item" : "Music",
+        "count" : "10"
+      }, {
+        "item" : "Public Health",
+        "count" : "10"
+      }, {
+        "item" : "Criminal Justice And Corrections",
+        "count" : "9"
+      }, {
+        "item" : "Hospitality Administration/Management",
+        "count" : "8"
+      }, {
+        "item" : "Human Development, Family Studies, And Related Services",
+        "count" : "8"
+      }, {
+        "item" : "Educational Administration And Supervision",
+        "count" : "8"
+      }, {
+        "item" : "Teacher Education And Professional Development, Specific Levels And Methods",
+        "count" : "8"
+      }, {
+        "item" : "Allied Health And Medical Assisting Services",
+        "count" : "8"
+      }, {
+        "item" : "Ethnic, Cultural Minority, Gender, And Group Studies",
+        "count" : "7"
+      }, {
+        "item" : "Culinary Arts And Related Services",
+        "count" : "7"
+      }, {
+        "item" : "Area Studies",
+        "count" : "7"
+      }, {
+        "item" : "Special Education And Teaching",
+        "count" : "7"
+      }, {
+        "item" : "Clinical, Counseling And Applied Psychology",
+        "count" : "7"
+      } ],
+      "smallest" : "Accounting And Computer Science",
+      "count" : "717",
+      "cardinality" : "277"
+    },
+    "format" : { }
+  }, {
+    "id" : 608047415,
+    "name" : "CIP_6_CODE",
+    "dataTypeName" : "text",
+    "description" : "6 Digit CIP Code",
+    "fieldName" : "cip_6_code",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 157665058,
+    "cachedContents" : {
+      "non_null" : "717",
+      "largest" : "540199",
+      "null" : "0",
+      "top" : [ {
+        "item" : "500504",
+        "count" : "1"
+      }, {
+        "item" : "131203",
+        "count" : "1"
+      }, {
+        "item" : "131314",
+        "count" : "1"
+      }, {
+        "item" : "420101",
+        "count" : "1"
+      }, {
+        "item" : "120409",
+        "count" : "1"
+      }, {
+        "item" : "510908",
+        "count" : "1"
+      }, {
+        "item" : "521002",
+        "count" : "1"
+      }, {
+        "item" : "010303",
+        "count" : "1"
+      }, {
+        "item" : "510714",
+        "count" : "1"
+      }, {
+        "item" : "260305",
+        "count" : "1"
+      }, {
+        "item" : "430301",
+        "count" : "1"
+      }, {
+        "item" : "140901",
+        "count" : "1"
+      }, {
+        "item" : "131312",
+        "count" : "1"
+      }, {
+        "item" : "270305",
+        "count" : "1"
+      }, {
+        "item" : "511005",
+        "count" : "1"
+      }, {
+        "item" : "131213",
+        "count" : "1"
+      }, {
+        "item" : "520299",
+        "count" : "1"
+      }, {
+        "item" : "160400",
+        "count" : "1"
+      }, {
+        "item" : "510913",
+        "count" : "1"
+      }, {
+        "item" : "304401",
+        "count" : "1"
+      } ],
+      "smallest" : "000001",
+      "count" : "717",
+      "cardinality" : "717"
+    },
+    "format" : { }
+  }, {
+    "id" : 608047414,
+    "name" : "CIP_6_DESC",
+    "dataTypeName" : "text",
+    "description" : "CIP 6 Description",
+    "fieldName" : "cip_6_desc",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 157665057,
+    "cachedContents" : {
+      "non_null" : "717",
+      "largest" : "Zoology/Animal Biology",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Bilingual And Multilingual Education",
+        "count" : "1"
+      }, {
+        "item" : "Energy Systems Engineering, General",
+        "count" : "1"
+      }, {
+        "item" : "Multicultural Education",
+        "count" : "1"
+      }, {
+        "item" : "Apparel And Accessories Marketing Operations",
+        "count" : "1"
+      }, {
+        "item" : "Finance, General",
+        "count" : "1"
+      }, {
+        "item" : "Recording Arts Technology/Technician",
+        "count" : "1"
+      }, {
+        "item" : "Pharmacy Technician/Assistant",
+        "count" : "1"
+      }, {
+        "item" : "Liberal Arts And Sciences/Liberal Studies",
+        "count" : "1"
+      }, {
+        "item" : "Nursing Practice",
+        "count" : "1"
+      }, {
+        "item" : "Education/Teaching Of Individuals With Vision Impairments Including Blindness",
+        "count" : "1"
+      }, {
+        "item" : "Directing And Theatrical Production",
+        "count" : "1"
+      }, {
+        "item" : "Chemistry, Other",
+        "count" : "1"
+      }, {
+        "item" : "Natural Resources And Conservation, Other",
+        "count" : "1"
+      }, {
+        "item" : "Human Resources Management/Personnel Administration, General",
+        "count" : "1"
+      }, {
+        "item" : "Insurance",
+        "count" : "1"
+      }, {
+        "item" : "Ancient/Classical Greek Language And Literature",
+        "count" : "1"
+      }, {
+        "item" : "Culinary Arts And Related Services, Other",
+        "count" : "1"
+      }, {
+        "item" : "Nursing Science",
+        "count" : "1"
+      }, {
+        "item" : "Consumer Merchandising/Retailing Management",
+        "count" : "1"
+      }, {
+        "item" : "French Language And Literature",
+        "count" : "1"
+      } ],
+      "smallest" : "Accounting",
+      "count" : "717",
+      "cardinality" : "717"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "CIP mapped to a meta-major",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "college", "university", "university of massachusetts", "community college", "state university", "degrees", "degree", "award", "awards", "awards conferred", "degrees conferred", "conferred", "conferral", "major", "meta major", "meta-major", "cip", "cip classification", "arts", "humanities", "business", "communications", "education", "health", "stem", "social sciences", "trades", "nces" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

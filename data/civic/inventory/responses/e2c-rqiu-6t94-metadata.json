@@ -1,0 +1,95 @@
+{
+  "id" : "rqiu-6t94",
+  "name" : "College-Going Data Trends by Institution Type",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1785162397,
+  "description" : "Massachusetts public high school graduates pursue higher education at different types of institutions—two-year or four-year, public or private, in-state and out-of-state. These charts explore 10-year trends in the percentage of students enrolled in higher education by institution type the March following their high school graduation.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 42361693,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1785162575,
+  "publicationGroup" : 20498788,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1785162397,
+  "tableId" : 20498788,
+  "totalTimesRated" : 0,
+  "viewCount" : 459,
+  "viewLastModified" : 1786645232,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1786645256,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7620843,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1786645243,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1786645256,
+      "failureCount" : 0,
+      "startedAt" : 1786645256,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "college-going", "high school graduates", "graduation", "college", "university", "state university", "public college", "private college", "2-year college", "two-year college", "community college", "public university", "massachusetts", "out-of-state", "private university", "state college", "student outcomes", "college attendance", "enrollment", "four-year college", "postsecondary", "higher education", "undergraduate education" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

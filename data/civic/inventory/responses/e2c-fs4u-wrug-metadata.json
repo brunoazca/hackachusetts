@@ -1,0 +1,95 @@
+{
+  "id" : "fs4u-wrug",
+  "name" : "Advanced Science Completion Data Trends",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "K-12",
+  "createdAt" : 1787936833,
+  "description" : "These charts show the percentage of Massachusetts public school students in grades 11 and 12 who completed advanced math coursework over time and by student group.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 42452147,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1787936883,
+  "publicationGroup" : 20549728,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1787936833,
+  "tableId" : 20549728,
+  "totalTimesRated" : 0,
+  "viewCount" : 53,
+  "viewLastModified" : 1790174154,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1790273337,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7758674,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1790273329,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1790273337,
+      "failureCount" : 0,
+      "startedAt" : 1790273337,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "advanced math", "advanced coursework", "advanced placement", "high school", "college prep", "coursetaking", "ap", "ib", "dual enrollment" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

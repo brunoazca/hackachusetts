@@ -1,0 +1,454 @@
+{
+  "id" : "q8y7-9cyk",
+  "name" : "Child Care Financial Assistance Caseload",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "attributionLink" : "https://www.mass.gov/lists/data-on-licensed-and-funded-child-care-programs",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1785242116,
+  "description" : "The Massachusetts Department of Early Education and Care (EEC) supports access to child care and out-of-school time programs by providing Child Care Financial Assistance (CCFA) to eligible families. This dataset includes the number of unique children served by EEC's CCFA program by month, based on CCFA billing data. The data include disaggregations by age group, region, funding source, agreement type, and provider type. Note that children can be served across multiple categories, but all totals are deduplicated and represent a count of unique children.  Therefore, instead of summing across categories, users should use the filters to select specific disaggregations. The billing data for a given month may be updated as additional providers submit their billing information. Categories with fewer than 10 children billed are not included.\nThis dataset is part of <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d\" target=\"_blank\" rel=\"noopener noreferrer\">EEC's Key Performance Indicator (KPI) Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 12,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42418080,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1787160438,
+  "publicationGroup" : 20499901,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790092044,
+  "rowsUpdatedBy" : "m5tk-n3hd",
+  "tableId" : 20528507,
+  "totalTimesRated" : 0,
+  "viewCount" : 189,
+  "viewLastModified" : 1790179527,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1790099927,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7754312,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1790099875,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "m5tk-n3hd",
+      "displayName" : "E2C Hub"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1790099928,
+      "failureCount" : 0,
+      "startedAt" : 1790099927,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "m5tk-n3hd",
+      "displayName" : "E2C Hub"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 641895438,
+    "name" : "BILLING_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "The month in which services were provided.",
+    "fieldName" : "billing_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 170706628,
+    "cachedContents" : {
+      "non_null" : "16278",
+      "largest" : "2026-07-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2016-01-01T00:00:00.000",
+        "count" : "133"
+      }, {
+        "item" : "2016-02-01T00:00:00.000",
+        "count" : "133"
+      }, {
+        "item" : "2016-06-01T00:00:00.000",
+        "count" : "133"
+      }, {
+        "item" : "2016-03-01T00:00:00.000",
+        "count" : "133"
+      }, {
+        "item" : "2016-04-01T00:00:00.000",
+        "count" : "133"
+      }, {
+        "item" : "2016-05-01T00:00:00.000",
+        "count" : "133"
+      }, {
+        "item" : "2015-12-01T00:00:00.000",
+        "count" : "123"
+      }, {
+        "item" : "2015-10-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2019-11-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2024-12-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2017-02-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2026-06-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2025-04-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2018-12-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2025-02-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2026-04-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2025-03-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2023-09-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2017-04-01T00:00:00.000",
+        "count" : "122"
+      }, {
+        "item" : "2024-06-01T00:00:00.000",
+        "count" : "122"
+      } ],
+      "smallest" : "2015-07-01T00:00:00.000",
+      "count" : "16278",
+      "cardinality" : "16278"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 641895431,
+    "name" : "SUBSIDY_REGION",
+    "dataTypeName" : "text",
+    "description" : "Indicates whether the unique count of children billed includes all CCFA regions (\"ALL\") or is disaggregated by Western , Central, Northeast, Metro,  Southeast, and Metro Boston.",
+    "fieldName" : "subsidy_region",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 170266582,
+    "cachedContents" : {
+      "non_null" : "16278",
+      "largest" : "Western",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Statewide",
+        "count" : "5881"
+      }, {
+        "item" : "Northeast",
+        "count" : "1735"
+      }, {
+        "item" : "Central",
+        "count" : "1735"
+      }, {
+        "item" : "Metro Boston",
+        "count" : "1735"
+      }, {
+        "item" : "Western",
+        "count" : "1735"
+      }, {
+        "item" : "Southeast",
+        "count" : "1734"
+      }, {
+        "item" : "Metro",
+        "count" : "1723"
+      } ],
+      "smallest" : "Central",
+      "count" : "16278",
+      "cardinality" : "16278"
+    },
+    "format" : { }
+  }, {
+    "id" : 641895432,
+    "name" : "PROVIDER_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Indicates whether the unique count of children billed includes all program types (\"ALL\") or is disaggregated by the type of program in which children are served, including whether they are served in a center-based setting, a family child care program, or informal child care program.",
+    "fieldName" : "provider_type",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 170266583,
+    "cachedContents" : {
+      "non_null" : "16278",
+      "largest" : "Informal Child Care",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ALL",
+        "count" : "11904"
+      }, {
+        "item" : "Family Child Care",
+        "count" : "1463"
+      }, {
+        "item" : "Center-Based Care",
+        "count" : "1463"
+      }, {
+        "item" : "Informal Child Care",
+        "count" : "1448"
+      } ],
+      "smallest" : "ALL",
+      "count" : "16278",
+      "cardinality" : "16278"
+    },
+    "format" : { }
+  }, {
+    "id" : 641895433,
+    "name" : "AGE_GROUP",
+    "dataTypeName" : "text",
+    "description" : "Indicates whether the unique count of children billed includes all age groups (\"ALL\") or disaggregated by age group, including infant (birth-15 months), toddler (15 months-2 years and 9 months),  preschool (2 years and 9 months- Kindergarten), and school age (Kindergarten-12 years).",
+    "fieldName" : "age_group",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 170266584,
+    "cachedContents" : {
+      "non_null" : "16278",
+      "largest" : "Toddler",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ALL",
+        "count" : "8276"
+      }, {
+        "item" : "PreSchool",
+        "count" : "2001"
+      }, {
+        "item" : "SchoolAge",
+        "count" : "2001"
+      }, {
+        "item" : "Toddler",
+        "count" : "2001"
+      }, {
+        "item" : "Infant",
+        "count" : "1999"
+      } ],
+      "smallest" : "ALL",
+      "count" : "16278",
+      "cardinality" : "16278"
+    },
+    "format" : { }
+  }, {
+    "id" : 641895434,
+    "name" : "FUNDING_SOURCE",
+    "dataTypeName" : "text",
+    "description" : "Indicates whether the unique count of children billed includes all sources of financial assistance (\"ALL\") or is disaggregated by IE (Income Eligible), DCF (Department of Children and Families), DTA (Department of Transitional Assistance), and IE Waitlist Remed (Income Eligible  and Waitlisted).",
+    "fieldName" : "funding_source",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 170266585,
+    "cachedContents" : {
+      "non_null" : "16278",
+      "largest" : "Income Eligible and Waitlisted",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ALL",
+        "count" : "11822"
+      }, {
+        "item" : "Income Eligible",
+        "count" : "1463"
+      }, {
+        "item" : "DTA",
+        "count" : "1463"
+      }, {
+        "item" : "DCF",
+        "count" : "1463"
+      }, {
+        "item" : "Income Eligible and Waitlisted",
+        "count" : "67"
+      } ],
+      "smallest" : "ALL",
+      "count" : "16278",
+      "cardinality" : "16278"
+    },
+    "format" : { }
+  }, {
+    "id" : 641895435,
+    "name" : "AGREEMENT_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Indicates whether the unique count of children billed includes all categories of childcare financial assistance (\"ALL\") or disaggregated by vouchers and contracted seats.",
+    "fieldName" : "agreement_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 170266586,
+    "cachedContents" : {
+      "non_null" : "16278",
+      "largest" : "Voucher",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ALL",
+        "count" : "13352"
+      }, {
+        "item" : "Contract",
+        "count" : "1463"
+      }, {
+        "item" : "Voucher",
+        "count" : "1463"
+      } ],
+      "smallest" : "ALL",
+      "count" : "16278",
+      "cardinality" : "16278"
+    },
+    "format" : { }
+  }, {
+    "id" : 641895436,
+    "name" : "CHILD_COUNT",
+    "dataTypeName" : "number",
+    "description" : "Unique count of children billed.",
+    "fieldName" : "child_count",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 170266587,
+    "cachedContents" : {
+      "non_null" : "16278",
+      "largest" : "53315",
+      "null" : "0",
+      "top" : [ {
+        "item" : "24",
+        "count" : "29"
+      }, {
+        "item" : "14",
+        "count" : "25"
+      }, {
+        "item" : "22",
+        "count" : "25"
+      }, {
+        "item" : "20",
+        "count" : "22"
+      }, {
+        "item" : "19",
+        "count" : "22"
+      }, {
+        "item" : "21",
+        "count" : "22"
+      }, {
+        "item" : "17",
+        "count" : "19"
+      }, {
+        "item" : "13",
+        "count" : "17"
+      }, {
+        "item" : "12",
+        "count" : "17"
+      }, {
+        "item" : "54",
+        "count" : "17"
+      }, {
+        "item" : "72",
+        "count" : "16"
+      }, {
+        "item" : "18",
+        "count" : "16"
+      }, {
+        "item" : "26",
+        "count" : "16"
+      }, {
+        "item" : "11",
+        "count" : "14"
+      }, {
+        "item" : "55",
+        "count" : "14"
+      }, {
+        "item" : "75",
+        "count" : "14"
+      }, {
+        "item" : "15",
+        "count" : "14"
+      }, {
+        "item" : "56",
+        "count" : "14"
+      }, {
+        "item" : "25",
+        "count" : "14"
+      }, {
+        "item" : "73",
+        "count" : "12"
+      } ],
+      "smallest" : "10",
+      "count" : "16278",
+      "cardinality" : "16278"
+    },
+    "format" : { }
+  }, {
+    "id" : 641895439,
+    "name" : "LOAD_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Refresh date.",
+    "fieldName" : "load_date",
+    "position" : 8,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 170706629,
+    "cachedContents" : {
+      "non_null" : "16278",
+      "largest" : "2026-09-01T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-09-01T00:00:00.000",
+        "count" : "16278"
+      } ],
+      "smallest" : "2026-09-01T00:00:00.000",
+      "count" : "16278",
+      "cardinality" : "16278"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Monthly",
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-early-education-and-care"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "licensed childcare", "daycare", "licensed", "funded", "prek", "preschool", "toddlers", "infants", "capacity" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

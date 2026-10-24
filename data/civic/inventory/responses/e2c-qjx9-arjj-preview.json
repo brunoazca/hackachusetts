@@ -1,0 +1,100 @@
+[{"sy":"2022","test":"01 Communication & Literacy Skills","race_eth":"Afr. Amer./Black","take_cnt":"466","pass_pct":"0.483"}
+,{"sy":"2022","test":"01 Communication & Literacy Skills","race_eth":"All Testers","take_cnt":"7340","pass_pct":"0.742"}
+,{"sy":"2022","test":"01 Communication & Literacy Skills","race_eth":"Amer. Ind. or Alaska Nat.","take_cnt":"26","pass_pct":"0.692"}
+,{"sy":"2022","test":"01 Communication & Literacy Skills","race_eth":"Asian/ Pacific Islander","take_cnt":"282","pass_pct":"0.741"}
+,{"sy":"2022","test":"01 Communication & Literacy Skills","race_eth":"Hispanic/Latino","take_cnt":"624","pass_pct":"0.563"}
+,{"sy":"2022","test":"01 Communication & Literacy Skills","race_eth":"No Response","take_cnt":"97","pass_pct":"0.722"}
+,{"sy":"2022","test":"01 Communication & Literacy Skills","race_eth":"Other","take_cnt":"232","pass_pct":"0.698"}
+,{"sy":"2022","test":"01 Communication & Literacy Skills","race_eth":"White","take_cnt":"5613","pass_pct":"0.786"}
+,{"sy":"2022","test":"02 Early Childhood","race_eth":"Afr. Amer./Black","take_cnt":"34","pass_pct":"0.265"}
+,{"sy":"2022","test":"02 Early Childhood","race_eth":"All Testers","take_cnt":"928","pass_pct":"0.489"}
+,{"sy":"2022","test":"02 Early Childhood","race_eth":"Amer. Ind. or Alaska Nat.","take_cnt":"1"}
+,{"sy":"2022","test":"02 Early Childhood","race_eth":"Asian/ Pacific Islander","take_cnt":"31","pass_pct":"0.548"}
+,{"sy":"2022","test":"02 Early Childhood","race_eth":"Hispanic/Latino","take_cnt":"60","pass_pct":"0.3"}
+,{"sy":"2022","test":"02 Early Childhood","race_eth":"No Response","take_cnt":"10","pass_pct":"0.4"}
+,{"sy":"2022","test":"02 Early Childhood","race_eth":"Other","take_cnt":"27","pass_pct":"0.222"}
+,{"sy":"2022","test":"02 Early Childhood","race_eth":"White","take_cnt":"765","pass_pct":"0.523"}
+,{"sy":"2022","test":"03 General Curriculum","race_eth":"Afr. Amer./Black","take_cnt":"82","pass_pct":"0.317"}
+,{"sy":"2022","test":"03 General Curriculum","race_eth":"All Testers","take_cnt":"2699","pass_pct":"0.485"}
+,{"sy":"2022","test":"03 General Curriculum","race_eth":"Amer. Ind. or Alaska Nat.","take_cnt":"7"}
+,{"sy":"2022","test":"03 General Curriculum","race_eth":"Asian/ Pacific Islander","take_cnt":"84","pass_pct":"0.619"}
+,{"sy":"2022","test":"03 General Curriculum","race_eth":"Hispanic/Latino","take_cnt":"104","pass_pct":"0.433"}
+,{"sy":"2022","test":"03 General Curriculum","race_eth":"No Response","take_cnt":"39","pass_pct":"0.436"}
+,{"sy":"2022","test":"03 General Curriculum","race_eth":"Other","take_cnt":"63","pass_pct":"0.429"}
+,{"sy":"2022","test":"03 General Curriculum","race_eth":"White","take_cnt":"2320","pass_pct":"0.491"}
+,{"sy":"2022","test":"03 General Curriculum - Mathematics","race_eth":"Afr. Amer./Black","take_cnt":"73","pass_pct":"0.274"}
+,{"sy":"2022","test":"03 General Curriculum - Mathematics","race_eth":"All Testers","take_cnt":"2469","pass_pct":"0.513"}
+,{"sy":"2022","test":"03 General Curriculum - Mathematics","race_eth":"Amer. Ind. or Alaska Nat.","take_cnt":"6"}
+,{"sy":"2022","test":"03 General Curriculum - Mathematics","race_eth":"Asian/ Pacific Islander","take_cnt":"83","pass_pct":"0.699"}
+,{"sy":"2022","test":"03 General Curriculum - Mathematics","race_eth":"Hispanic/Latino","take_cnt":"101","pass_pct":"0.426"}
+,{"sy":"2022","test":"03 General Curriculum - Mathematics","race_eth":"No Response","take_cnt":"29","pass_pct":"0.483"}
+,{"sy":"2022","test":"03 General Curriculum - Mathematics","race_eth":"Other","take_cnt":"60","pass_pct":"0.417"}
+,{"sy":"2022","test":"03 General Curriculum - Mathematics","race_eth":"White","take_cnt":"2117","pass_pct":"0.522"}
+,{"sy":"2022","test":"03 General Curriculum - Multi-Subject","race_eth":"Afr. Amer./Black","take_cnt":"80","pass_pct":"0.525"}
+,{"sy":"2022","test":"03 General Curriculum - Multi-Subject","race_eth":"All Testers","take_cnt":"2421","pass_pct":"0.649"}
+,{"sy":"2022","test":"03 General Curriculum - Multi-Subject","race_eth":"Amer. Ind. or Alaska Nat.","take_cnt":"6"}
+,{"sy":"2022","test":"03 General Curriculum - Multi-Subject","race_eth":"Asian/ Pacific Islander","take_cnt":"75","pass_pct":"0.733"}
+,{"sy":"2022","test":"03 General Curriculum - Multi-Subject","race_eth":"Hispanic/Latino","take_cnt":"90","pass_pct":"0.6"}
+,{"sy":"2022","test":"03 General Curriculum - Multi-Subject","race_eth":"No Response","take_cnt":"29","pass_pct":"0.655"}
+,{"sy":"2022","test":"03 General Curriculum - Multi-Subject","race_eth":"Other","take_cnt":"51","pass_pct":"0.549"}
+,{"sy":"2022","test":"03 General Curriculum - Multi-Subject","race_eth":"White","take_cnt":"2090","pass_pct":"0.656"}
+,{"sy":"2022","test":"06 History","race_eth":"Afr. Amer./Black","take_cnt":"31","pass_pct":"0.29"}
+,{"sy":"2022","test":"06 History","race_eth":"All Testers","take_cnt":"590","pass_pct":"0.646"}
+,{"sy":"2022","test":"06 History","race_eth":"Amer. Ind. or Alaska Nat.","take_cnt":"7"}
+,{"sy":"2022","test":"06 History","race_eth":"Asian/ Pacific Islander","take_cnt":"21","pass_pct":"0.81"}
+,{"sy":"2022","test":"06 History","race_eth":"Hispanic/Latino","take_cnt":"36","pass_pct":"0.5"}
+,{"sy":"2022","test":"06 History","race_eth":"No Response","take_cnt":"15","pass_pct":"0.6"}
+,{"sy":"2022","test":"06 History","race_eth":"Other","take_cnt":"21","pass_pct":"0.619"}
+,{"sy":"2022","test":"06 History","race_eth":"White","take_cnt":"459","pass_pct":"0.675"}
+,{"sy":"2022","test":"08 Reading Specialist","race_eth":"Afr. Amer./Black","take_cnt":"7"}
+,{"sy":"2022","test":"08 Reading Specialist","race_eth":"All Testers","take_cnt":"348","pass_pct":"0.698"}
+,{"sy":"2022","test":"08 Reading Specialist","race_eth":"Amer. Ind. or Alaska Nat.","take_cnt":"2"}
+,{"sy":"2022","test":"08 Reading Specialist","race_eth":"Asian/ Pacific Islander","take_cnt":"5"}
+,{"sy":"2022","test":"08 Reading Specialist","race_eth":"Hispanic/Latino","take_cnt":"10","pass_pct":"0.5"}
+,{"sy":"2022","test":"08 Reading Specialist","race_eth":"No Response","take_cnt":"8"}
+,{"sy":"2022","test":"08 Reading Specialist","race_eth":"Other","take_cnt":"9"}
+,{"sy":"2022","test":"08 Reading Specialist","race_eth":"White","take_cnt":"307","pass_pct":"0.713"}
+,{"sy":"2022","test":"10 General Science","race_eth":"Afr. Amer./Black","take_cnt":"10","pass_pct":"0.7"}
+,{"sy":"2022","test":"10 General Science","race_eth":"All Testers","take_cnt":"198","pass_pct":"0.823"}
+,{"sy":"2022","test":"10 General Science","race_eth":"Amer. Ind. or Alaska Nat.","take_cnt":"1"}
+,{"sy":"2022","test":"10 General Science","race_eth":"Asian/ Pacific Islander","take_cnt":"10","pass_pct":"0.8"}
+,{"sy":"2022","test":"10 General Science","race_eth":"Hispanic/Latino","take_cnt":"12","pass_pct":"0.667"}
+,{"sy":"2022","test":"10 General Science","race_eth":"No Response","take_cnt":"2"}
+,{"sy":"2022","test":"10 General Science","race_eth":"Other","take_cnt":"4"}
+,{"sy":"2022","test":"10 General Science","race_eth":"White","take_cnt":"159","pass_pct":"0.849"}
+,{"sy":"2022","test":"11 Physics","race_eth":"Afr. Amer./Black","take_cnt":"4"}
+,{"sy":"2022","test":"11 Physics","race_eth":"All Testers","take_cnt":"83","pass_pct":"0.627"}
+,{"sy":"2022","test":"11 Physics","race_eth":"Amer. Ind. or Alaska Nat."}
+,{"sy":"2022","test":"11 Physics","race_eth":"Asian/ Pacific Islander","take_cnt":"8"}
+,{"sy":"2022","test":"11 Physics","race_eth":"Hispanic/Latino","take_cnt":"4"}
+,{"sy":"2022","test":"11 Physics","race_eth":"No Response","take_cnt":"2"}
+,{"sy":"2022","test":"11 Physics","race_eth":"Other","take_cnt":"2"}
+,{"sy":"2022","test":"11 Physics","race_eth":"White","take_cnt":"63","pass_pct":"0.635"}
+,{"sy":"2022","test":"12 Chemistry","race_eth":"Afr. Amer./Black","take_cnt":"1"}
+,{"sy":"2022","test":"12 Chemistry","race_eth":"All Testers","take_cnt":"91","pass_pct":"0.615"}
+,{"sy":"2022","test":"12 Chemistry","race_eth":"Amer. Ind. or Alaska Nat."}
+,{"sy":"2022","test":"12 Chemistry","race_eth":"Asian/ Pacific Islander","take_cnt":"10","pass_pct":"0.8"}
+,{"sy":"2022","test":"12 Chemistry","race_eth":"Hispanic/Latino","take_cnt":"2"}
+,{"sy":"2022","test":"12 Chemistry","race_eth":"No Response","take_cnt":"1"}
+,{"sy":"2022","test":"12 Chemistry","race_eth":"Other","take_cnt":"2"}
+,{"sy":"2022","test":"12 Chemistry","race_eth":"White","take_cnt":"75","pass_pct":"0.587"}
+,{"sy":"2022","test":"13 Biology","race_eth":"Afr. Amer./Black","take_cnt":"10","pass_pct":"0.7"}
+,{"sy":"2022","test":"13 Biology","race_eth":"All Testers","take_cnt":"208","pass_pct":"0.721"}
+,{"sy":"2022","test":"13 Biology","race_eth":"Amer. Ind. or Alaska Nat."}
+,{"sy":"2022","test":"13 Biology","race_eth":"Asian/ Pacific Islander","take_cnt":"10","pass_pct":"0.7"}
+,{"sy":"2022","test":"13 Biology","race_eth":"Hispanic/Latino","take_cnt":"12","pass_pct":"0.667"}
+,{"sy":"2022","test":"13 Biology","race_eth":"No Response","take_cnt":"1"}
+,{"sy":"2022","test":"13 Biology","race_eth":"Other","take_cnt":"5"}
+,{"sy":"2022","test":"13 Biology","race_eth":"White","take_cnt":"170","pass_pct":"0.729"}
+,{"sy":"2022","test":"14 Earth Science","race_eth":"Afr. Amer./Black"}
+,{"sy":"2022","test":"14 Earth Science","race_eth":"All Testers","take_cnt":"33","pass_pct":"0.515"}
+,{"sy":"2022","test":"14 Earth Science","race_eth":"Amer. Ind. or Alaska Nat."}
+,{"sy":"2022","test":"14 Earth Science","race_eth":"Asian/ Pacific Islander","take_cnt":"1"}
+,{"sy":"2022","test":"14 Earth Science","race_eth":"Hispanic/Latino","take_cnt":"1"}
+,{"sy":"2022","test":"14 Earth Science","race_eth":"No Response"}
+,{"sy":"2022","test":"14 Earth Science","race_eth":"Other"}
+,{"sy":"2022","test":"14 Earth Science","race_eth":"White","take_cnt":"31","pass_pct":"0.548"}
+,{"sy":"2022","test":"15 Latin and Classical Humanities","race_eth":"Afr. Amer./Black"}
+,{"sy":"2022","test":"15 Latin and Classical Humanities","race_eth":"All Testers","take_cnt":"12","pass_pct":"0.917"}
+,{"sy":"2022","test":"15 Latin and Classical Humanities","race_eth":"Amer. Ind. or Alaska Nat."}
+,{"sy":"2022","test":"15 Latin and Classical Humanities","race_eth":"Asian/ Pacific Islander","take_cnt":"1"}]

@@ -1,0 +1,943 @@
+{
+  "id" : "ppbc-i8t9",
+  "name" : "Elementary and Secondary School and District Accountability Classifications",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1762383465,
+  "description" : "This dataset is a summary of accountability data for public schools and districts from 2023 onward. It includes the overall classification, reason for classification, annual criterion-referenced target percentages and weights, accountability percentile, and cumulative criterion-referenced target percentage.\n\nAll Massachusetts public schools and districts with sufficient data are classified into one of two categories: schools and districts that require assistance or intervention, and schools and districts that do not require assistance or intervention. This dataset provides information on each district and school's performance against improvement targets and their overall performance compared to other schools in the state.\n\nAccountability percentiles are only calculated for schools, and are not available at the district level. For more information about school and district accountability classifications and the appropriate use of accountability data, please see the <a href=\"https://www.doe.mass.edu/accountability/lists-tools/default.html\" target=\"_blank\" rel=\"noopener noreferrer\">Accountability Lists, Materials, and Tools</a> page on the District and School Accountability website.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/accountability.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Accountability Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 108,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41871877,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1768248915,
+  "publicationGroup" : 20151431,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790785365,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20232671,
+  "totalTimesRated" : 0,
+  "viewCount" : 1169,
+  "viewLastModified" : 1790785364,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1774643327,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7405552,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1774643316,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1774643327,
+      "failureCount" : 0,
+      "startedAt" : 1774643327,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 624642980,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163012121,
+    "cachedContents" : {
+      "non_null" : "8863",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023",
+        "count" : "2229"
+      }, {
+        "item" : "2024",
+        "count" : "2226"
+      }, {
+        "item" : "2025",
+        "count" : "2211"
+      }, {
+        "item" : "2026",
+        "count" : "2197"
+      } ],
+      "smallest" : "2023",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : { }
+  }, {
+    "id" : 624642981,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163012120,
+    "cachedContents" : {
+      "non_null" : "8863",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "435"
+      }, {
+        "item" : "02810000",
+        "count" : "266"
+      }, {
+        "item" : "03480000",
+        "count" : "189"
+      }, {
+        "item" : "01630000",
+        "count" : "114"
+      }, {
+        "item" : "01600000",
+        "count" : "112"
+      }, {
+        "item" : "01490000",
+        "count" : "108"
+      }, {
+        "item" : "02010000",
+        "count" : "101"
+      }, {
+        "item" : "00440000",
+        "count" : "100"
+      }, {
+        "item" : "02070000",
+        "count" : "92"
+      }, {
+        "item" : "02430000",
+        "count" : "80"
+      }, {
+        "item" : "00950000",
+        "count" : "77"
+      }, {
+        "item" : "00490000",
+        "count" : "71"
+      }, {
+        "item" : "01280000",
+        "count" : "69"
+      }, {
+        "item" : "00610000",
+        "count" : "64"
+      }, {
+        "item" : "02360000",
+        "count" : "61"
+      }, {
+        "item" : "01000000",
+        "count" : "60"
+      }, {
+        "item" : "07750000",
+        "count" : "56"
+      }, {
+        "item" : "02390000",
+        "count" : "56"
+      }, {
+        "item" : "02930000",
+        "count" : "55"
+      }, {
+        "item" : "01530000",
+        "count" : "55"
+      } ],
+      "smallest" : "00010000",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : { }
+  }, {
+    "id" : 624642982,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163012119,
+    "cachedContents" : {
+      "non_null" : "8863",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "435"
+      }, {
+        "item" : "Springfield",
+        "count" : "266"
+      }, {
+        "item" : "Worcester",
+        "count" : "189"
+      }, {
+        "item" : "Lynn",
+        "count" : "114"
+      }, {
+        "item" : "Lowell",
+        "count" : "112"
+      }, {
+        "item" : "Lawrence",
+        "count" : "108"
+      }, {
+        "item" : "New Bedford",
+        "count" : "101"
+      }, {
+        "item" : "Brockton",
+        "count" : "100"
+      }, {
+        "item" : "Newton",
+        "count" : "92"
+      }, {
+        "item" : "Quincy",
+        "count" : "80"
+      }, {
+        "item" : "Fall River",
+        "count" : "77"
+      }, {
+        "item" : "Cambridge",
+        "count" : "71"
+      }, {
+        "item" : "Haverhill",
+        "count" : "69"
+      }, {
+        "item" : "Chicopee",
+        "count" : "64"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "61"
+      }, {
+        "item" : "Framingham",
+        "count" : "60"
+      }, {
+        "item" : "Wachusett",
+        "count" : "56"
+      }, {
+        "item" : "Plymouth",
+        "count" : "56"
+      }, {
+        "item" : "Leominster",
+        "count" : "55"
+      }, {
+        "item" : "Taunton",
+        "count" : "55"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : { }
+  }, {
+    "id" : 624642983,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163012118,
+    "cachedContents" : {
+      "non_null" : "8863",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00780005",
+        "count" : "4"
+      }, {
+        "item" : "00350066",
+        "count" : "4"
+      }, {
+        "item" : "03480512",
+        "count" : "4"
+      }, {
+        "item" : "01600000",
+        "count" : "4"
+      }, {
+        "item" : "00070000",
+        "count" : "4"
+      }, {
+        "item" : "02430060",
+        "count" : "4"
+      }, {
+        "item" : "02310010",
+        "count" : "4"
+      }, {
+        "item" : "02130015",
+        "count" : "4"
+      }, {
+        "item" : "02640015",
+        "count" : "4"
+      }, {
+        "item" : "03320040",
+        "count" : "4"
+      }, {
+        "item" : "07750305",
+        "count" : "4"
+      }, {
+        "item" : "08530000",
+        "count" : "4"
+      }, {
+        "item" : "04170000",
+        "count" : "4"
+      }, {
+        "item" : "07450010",
+        "count" : "4"
+      }, {
+        "item" : "01700008",
+        "count" : "4"
+      }, {
+        "item" : "07170010",
+        "count" : "4"
+      }, {
+        "item" : "00570515",
+        "count" : "4"
+      }, {
+        "item" : "02810475",
+        "count" : "4"
+      }, {
+        "item" : "01550305",
+        "count" : "4"
+      }, {
+        "item" : "02810100",
+        "count" : "4"
+      } ],
+      "smallest" : "00010000",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : { }
+  }, {
+    "id" : 624642984,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163012117,
+    "cachedContents" : {
+      "non_null" : "8863",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "24"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "23"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "20"
+      }, {
+        "item" : "South Elementary",
+        "count" : "16"
+      }, {
+        "item" : "Center",
+        "count" : "12"
+      }, {
+        "item" : "Lawrence",
+        "count" : "12"
+      }, {
+        "item" : "Franklin",
+        "count" : "12"
+      }, {
+        "item" : "Winthrop",
+        "count" : "12"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "12"
+      }, {
+        "item" : "Lincoln",
+        "count" : "12"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "11"
+      }, {
+        "item" : "East Middle School",
+        "count" : "8"
+      }, {
+        "item" : "Peirce",
+        "count" : "8"
+      }, {
+        "item" : "Brookfield",
+        "count" : "8"
+      }, {
+        "item" : "John F Kennedy Middle School",
+        "count" : "8"
+      }, {
+        "item" : "West Elementary",
+        "count" : "8"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "8"
+      }, {
+        "item" : "Glover",
+        "count" : "8"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "8"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "8"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : { }
+  }, {
+    "id" : 624642985,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163012116,
+    "cachedContents" : {
+      "non_null" : "8863",
+      "largest" : "School",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "7275"
+      }, {
+        "item" : "District",
+        "count" : "1588"
+      } ],
+      "smallest" : "District",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : { }
+  }, {
+    "id" : 624642986,
+    "name" : "CLASSIFICATION_OVERALL",
+    "dataTypeName" : "text",
+    "description" : "Overall Accountability Classification",
+    "fieldName" : "classification_overall",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163012115,
+    "cachedContents" : {
+      "non_null" : "8863",
+      "largest" : "Requiring assistance or intervention",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Not requiring assistance or intervention",
+        "count" : "6680"
+      }, {
+        "item" : "Requiring assistance or intervention",
+        "count" : "1259"
+      }, {
+        "item" : "Insufficient data",
+        "count" : "924"
+      } ],
+      "smallest" : "Insufficient data",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : { }
+  }, {
+    "id" : 624642987,
+    "name" : "CLASSIFICATION_REASON",
+    "dataTypeName" : "text",
+    "description" : "Reason for Accountability Classification",
+    "fieldName" : "classification_reason",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 163012114,
+    "cachedContents" : {
+      "non_null" : "8863",
+      "largest" : "Substantial progress toward targets",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Substantial progress toward targets",
+        "count" : "2716"
+      }, {
+        "item" : "Moderate progress toward targets",
+        "count" : "2479"
+      }, {
+        "item" : "In need of focused/targeted support",
+        "count" : "1178"
+      }, {
+        "item" : "Meeting or exceeding targets",
+        "count" : "986"
+      }, {
+        "item" : "Insufficient data",
+        "count" : "924"
+      }, {
+        "item" : "Limited or no progress toward targets",
+        "count" : "239"
+      }, {
+        "item" : "School of Recognition",
+        "count" : "234"
+      }, {
+        "item" : "In need of broad/comprehensive support",
+        "count" : "81"
+      }, {
+        "item" : "2024 National Blue Ribbon School – High Performing",
+        "count" : "7"
+      }, {
+        "item" : "2023 National Blue Ribbon School – High Performing",
+        "count" : "7"
+      }, {
+        "item" : "School of Recognition: 2025 National Blue Ribbon School Nominee",
+        "count" : "6"
+      }, {
+        "item" : "2023 National ESEA Distinguished School",
+        "count" : "2"
+      }, {
+        "item" : "2025 National ESEA Distinguished School",
+        "count" : "2"
+      }, {
+        "item" : "2024 National ESEA Distinguished School",
+        "count" : "2"
+      } ],
+      "smallest" : "2023 National Blue Ribbon School – High Performing",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : { }
+  }, {
+    "id" : 624642993,
+    "name" : "PREV_YEAR_TGT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Previous Year Annual Criterion-Referenced Target Percent",
+    "fieldName" : "prev_year_tgt_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164566978,
+    "cachedContents" : {
+      "non_null" : "5797",
+      "largest" : "1",
+      "null" : "3066",
+      "top" : [ {
+        "item" : "0.43",
+        "count" : "129"
+      }, {
+        "item" : "0.48",
+        "count" : "111"
+      }, {
+        "item" : "0.42",
+        "count" : "109"
+      }, {
+        "item" : "0.47",
+        "count" : "108"
+      }, {
+        "item" : "0.41",
+        "count" : "107"
+      }, {
+        "item" : "0.52",
+        "count" : "106"
+      }, {
+        "item" : "0.49",
+        "count" : "105"
+      }, {
+        "item" : "0.53",
+        "count" : "105"
+      }, {
+        "item" : "0.59",
+        "count" : "104"
+      }, {
+        "item" : "0.57",
+        "count" : "104"
+      }, {
+        "item" : "0.39",
+        "count" : "104"
+      }, {
+        "item" : "0.56",
+        "count" : "103"
+      }, {
+        "item" : "0.5",
+        "count" : "103"
+      }, {
+        "item" : "0.44",
+        "count" : "102"
+      }, {
+        "item" : "0.51",
+        "count" : "101"
+      }, {
+        "item" : "0.54",
+        "count" : "99"
+      }, {
+        "item" : "0.38",
+        "count" : "97"
+      }, {
+        "item" : "0.55",
+        "count" : "95"
+      }, {
+        "item" : "0.61",
+        "count" : "93"
+      }, {
+        "item" : "0.36",
+        "count" : "91"
+      } ],
+      "smallest" : "0",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 624642992,
+    "name" : "PREV_YEAR_TGT_PCT_WT",
+    "dataTypeName" : "number",
+    "description" : "Previous Year Annual Criterion-Referenced Target Percent Weight",
+    "fieldName" : "prev_year_tgt_pct_wt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164566977,
+    "cachedContents" : {
+      "non_null" : "5876",
+      "largest" : "0.4",
+      "null" : "2987",
+      "top" : [ {
+        "item" : "0.4",
+        "count" : "5797"
+      }, {
+        "item" : "0",
+        "count" : "79"
+      } ],
+      "smallest" : "0",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 624642991,
+    "name" : "CURR_YEAR_TGT_PCT",
+    "dataTypeName" : "number",
+    "description" : "Current Year Annual Criterion-Referenced Target Percent",
+    "fieldName" : "curr_year_tgt_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164566976,
+    "cachedContents" : {
+      "non_null" : "7847",
+      "largest" : "1",
+      "null" : "1016",
+      "top" : [ {
+        "item" : "0.48",
+        "count" : "153"
+      }, {
+        "item" : "0.39",
+        "count" : "150"
+      }, {
+        "item" : "0.43",
+        "count" : "150"
+      }, {
+        "item" : "0.42",
+        "count" : "148"
+      }, {
+        "item" : "0.57",
+        "count" : "145"
+      }, {
+        "item" : "0.51",
+        "count" : "145"
+      }, {
+        "item" : "0.53",
+        "count" : "143"
+      }, {
+        "item" : "0.56",
+        "count" : "143"
+      }, {
+        "item" : "0.5",
+        "count" : "140"
+      }, {
+        "item" : "0.47",
+        "count" : "136"
+      }, {
+        "item" : "0.6",
+        "count" : "134"
+      }, {
+        "item" : "0.52",
+        "count" : "134"
+      }, {
+        "item" : "0.49",
+        "count" : "133"
+      }, {
+        "item" : "0.41",
+        "count" : "133"
+      }, {
+        "item" : "0.44",
+        "count" : "132"
+      }, {
+        "item" : "0.54",
+        "count" : "132"
+      }, {
+        "item" : "0.59",
+        "count" : "130"
+      }, {
+        "item" : "0.55",
+        "count" : "127"
+      }, {
+        "item" : "0.38",
+        "count" : "125"
+      }, {
+        "item" : "0.45",
+        "count" : "124"
+      } ],
+      "smallest" : "0",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 624642990,
+    "name" : "CURR_YEAR_TGT_PCT_WT",
+    "dataTypeName" : "number",
+    "description" : "Current Year Annual Criterion-Referenced Target Percent Weight",
+    "fieldName" : "curr_year_tgt_pct_wt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164566975,
+    "cachedContents" : {
+      "non_null" : "7847",
+      "largest" : "1",
+      "null" : "1016",
+      "top" : [ {
+        "item" : "0.6",
+        "count" : "5797"
+      }, {
+        "item" : "1",
+        "count" : "2050"
+      } ],
+      "smallest" : "0.6",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 624642988,
+    "name" : "ACCNTBLTY_PCTLE",
+    "dataTypeName" : "number",
+    "description" : "Accountability Percentile (1-99)",
+    "fieldName" : "accntblty_pctle",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 163012113,
+    "cachedContents" : {
+      "non_null" : "6100",
+      "largest" : "99.00",
+      "null" : "2763",
+      "top" : [ {
+        "item" : "17.00",
+        "count" : "66"
+      }, {
+        "item" : "34.00",
+        "count" : "66"
+      }, {
+        "item" : "20.0",
+        "count" : "65"
+      }, {
+        "item" : "80.0",
+        "count" : "65"
+      }, {
+        "item" : "49.00",
+        "count" : "64"
+      }, {
+        "item" : "3.00",
+        "count" : "64"
+      }, {
+        "item" : "83.00",
+        "count" : "64"
+      }, {
+        "item" : "6.00",
+        "count" : "64"
+      }, {
+        "item" : "78.00",
+        "count" : "64"
+      }, {
+        "item" : "56.00",
+        "count" : "64"
+      }, {
+        "item" : "12.00",
+        "count" : "64"
+      }, {
+        "item" : "67.00",
+        "count" : "64"
+      }, {
+        "item" : "97.00",
+        "count" : "64"
+      }, {
+        "item" : "73.00",
+        "count" : "63"
+      }, {
+        "item" : "23.00",
+        "count" : "63"
+      }, {
+        "item" : "65.00",
+        "count" : "63"
+      }, {
+        "item" : "70.0",
+        "count" : "63"
+      }, {
+        "item" : "27.00",
+        "count" : "63"
+      }, {
+        "item" : "40.0",
+        "count" : "63"
+      }, {
+        "item" : "54.00",
+        "count" : "63"
+      } ],
+      "smallest" : "1.00",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 624642989,
+    "name" : "CUMULATIVE_PRGRSS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Cumulative Criterion-Referenced Target Percent",
+    "fieldName" : "cumulative_prgrss_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 163012112,
+    "cachedContents" : {
+      "non_null" : "7847",
+      "largest" : "1",
+      "null" : "1016",
+      "top" : [ {
+        "item" : "0.44",
+        "count" : "193"
+      }, {
+        "item" : "0.46",
+        "count" : "190"
+      }, {
+        "item" : "0.54",
+        "count" : "189"
+      }, {
+        "item" : "0.51",
+        "count" : "189"
+      }, {
+        "item" : "0.47",
+        "count" : "187"
+      }, {
+        "item" : "0.53",
+        "count" : "184"
+      }, {
+        "item" : "0.43",
+        "count" : "182"
+      }, {
+        "item" : "0.45",
+        "count" : "175"
+      }, {
+        "item" : "0.42",
+        "count" : "170"
+      }, {
+        "item" : "0.52",
+        "count" : "167"
+      }, {
+        "item" : "0.49",
+        "count" : "167"
+      }, {
+        "item" : "0.48",
+        "count" : "165"
+      }, {
+        "item" : "0.59",
+        "count" : "163"
+      }, {
+        "item" : "0.56",
+        "count" : "159"
+      }, {
+        "item" : "0.64",
+        "count" : "155"
+      }, {
+        "item" : "0.55",
+        "count" : "150"
+      }, {
+        "item" : "0.5",
+        "count" : "149"
+      }, {
+        "item" : "0.41",
+        "count" : "149"
+      }, {
+        "item" : "0.35",
+        "count" : "136"
+      }, {
+        "item" : "0.57",
+        "count" : "136"
+      } ],
+      "smallest" : "0",
+      "count" : "8863",
+      "cardinality" : "8863"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "accountability", "percentile", "targets", "progress towards targets", "criterion-referenced percentage" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

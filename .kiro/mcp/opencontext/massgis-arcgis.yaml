@@ -1,0 +1,19 @@
+# OpenContext config: MassGIS open data hub (ArcGIS Hub, gis.data.mass.gov).
+# Statewide layers: EJ block groups, transit, colleges, flood zones, etc.
+# Public, read-only, no token needed.
+server_name: "MassGIS OpenData MCP (Hackachusetts local)"
+description: "Read-only access to MassGIS layers via the City's OpenContext ArcGIS plugin"
+organization: "MassGIS"
+
+plugins:
+  arcgis:
+    enabled: true
+    portal_url: "https://gis.data.mass.gov"
+    city_name: "Massachusetts"
+    timeout: 60
+
+logging:
+  level: "WARNING"
+
+auth:
+  enabled: false

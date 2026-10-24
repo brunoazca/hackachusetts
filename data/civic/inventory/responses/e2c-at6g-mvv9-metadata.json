@@ -1,0 +1,101 @@
+{
+  "id" : "at6g-mvv9",
+  "name" : "Early Childhood Integrated Data System (ECIDS)",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1695172564,
+  "description" : "",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 39980536,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1695223011,
+  "publicationGroup" : 19295067,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1695172564,
+  "tableId" : 19295067,
+  "totalTimesRated" : 0,
+  "viewCount" : 4549,
+  "viewLastModified" : 1765913173,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1697551134,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 5854593,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1697551108,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "axbm-8ha8",
+      "displayName" : "jsmithsparks"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1697551134,
+      "failureCount" : 0,
+      "startedAt" : 1697551134,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "axbm-8ha8",
+      "displayName" : "jsmithsparks"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "",
+      "title" : "ECIDS October 2023"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "w42n-iktd",
+    "disabledAt" : 1792440418,
+    "displayName" : "Ana Vasconcelos",
+    "screenName" : "Ana Vasconcelos",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "w42n-iktd",
+    "disabledAt" : 1792440418,
+    "displayName" : "Ana Vasconcelos",
+    "screenName" : "Ana Vasconcelos",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "ecids", "early childhood integrated data system", "early childhood" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

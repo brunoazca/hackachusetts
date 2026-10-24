@@ -1,0 +1,804 @@
+{
+  "id" : "52c5-e56a",
+  "name" : "Elementary and Secondary Staff Retention Rates",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu/",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1720808864,
+  "description" : "This dataset shows the percentage of superintendents, principals, and teachers who remain working in the same position from one year to the next from 2009 onward.\n\nThe unduplicated state total represents unique individuals who remain working in the same job classification anywhere in the state from one year to the next.\n\nAt the district level, a superintendent, principal, or teacher who moves from one school to another within the same district is still considered retained. At the school level, that individual would not be considered retained if they moved to a different school.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/staffingRetentionRates.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Staffing Retention Rates</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 59,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42029827,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1774548554,
+  "publicationGroup" : 19577052,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1776445111,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20320735,
+  "totalTimesRated" : 0,
+  "viewCount" : 512,
+  "viewLastModified" : 1786392217,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1776455857,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7438451,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1776455846,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1776455857,
+      "failureCount" : 0,
+      "startedAt" : 1776455857,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 629378598,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153665750,
+    "cachedContents" : {
+      "non_null" : "87341",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2016",
+        "count" : "4917"
+      }, {
+        "item" : "2015",
+        "count" : "4910"
+      }, {
+        "item" : "2014",
+        "count" : "4908"
+      }, {
+        "item" : "2017",
+        "count" : "4906"
+      }, {
+        "item" : "2018",
+        "count" : "4904"
+      }, {
+        "item" : "2019",
+        "count" : "4896"
+      }, {
+        "item" : "2020",
+        "count" : "4887"
+      }, {
+        "item" : "2021",
+        "count" : "4879"
+      }, {
+        "item" : "2022",
+        "count" : "4877"
+      }, {
+        "item" : "2013",
+        "count" : "4869"
+      }, {
+        "item" : "2024",
+        "count" : "4859"
+      }, {
+        "item" : "2023",
+        "count" : "4842"
+      }, {
+        "item" : "2009",
+        "count" : "4824"
+      }, {
+        "item" : "2025",
+        "count" : "4806"
+      }, {
+        "item" : "2026",
+        "count" : "4797"
+      }, {
+        "item" : "2012",
+        "count" : "4763"
+      }, {
+        "item" : "2011",
+        "count" : "4755"
+      }, {
+        "item" : "2010",
+        "count" : "4742"
+      } ],
+      "smallest" : "2009",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378599,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153665741,
+    "cachedContents" : {
+      "non_null" : "87341",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "4263"
+      }, {
+        "item" : "02810000",
+        "count" : "2099"
+      }, {
+        "item" : "03480000",
+        "count" : "1677"
+      }, {
+        "item" : "01490000",
+        "count" : "1037"
+      }, {
+        "item" : "01630000",
+        "count" : "968"
+      }, {
+        "item" : "02010000",
+        "count" : "961"
+      }, {
+        "item" : "01600000",
+        "count" : "946"
+      }, {
+        "item" : "00440000",
+        "count" : "878"
+      }, {
+        "item" : "02070000",
+        "count" : "846"
+      }, {
+        "item" : "02430000",
+        "count" : "725"
+      }, {
+        "item" : "00950000",
+        "count" : "650"
+      }, {
+        "item" : "00490000",
+        "count" : "628"
+      }, {
+        "item" : "01280000",
+        "count" : "622"
+      }, {
+        "item" : "00610000",
+        "count" : "594"
+      }, {
+        "item" : "01000000",
+        "count" : "544"
+      }, {
+        "item" : "02390000",
+        "count" : "522"
+      }, {
+        "item" : "02930000",
+        "count" : "522"
+      }, {
+        "item" : "07750000",
+        "count" : "512"
+      }, {
+        "item" : "02360000",
+        "count" : "511"
+      }, {
+        "item" : "01530000",
+        "count" : "482"
+      } ],
+      "smallest" : "00000000",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378600,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153665742,
+    "cachedContents" : {
+      "non_null" : "87341",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "4263"
+      }, {
+        "item" : "Springfield",
+        "count" : "2099"
+      }, {
+        "item" : "Worcester",
+        "count" : "1677"
+      }, {
+        "item" : "Lawrence",
+        "count" : "1037"
+      }, {
+        "item" : "Lynn",
+        "count" : "968"
+      }, {
+        "item" : "New Bedford",
+        "count" : "961"
+      }, {
+        "item" : "Lowell",
+        "count" : "946"
+      }, {
+        "item" : "Brockton",
+        "count" : "878"
+      }, {
+        "item" : "Newton",
+        "count" : "846"
+      }, {
+        "item" : "Quincy",
+        "count" : "725"
+      }, {
+        "item" : "Fall River",
+        "count" : "650"
+      }, {
+        "item" : "Cambridge",
+        "count" : "628"
+      }, {
+        "item" : "Haverhill",
+        "count" : "622"
+      }, {
+        "item" : "Chicopee",
+        "count" : "594"
+      }, {
+        "item" : "Framingham",
+        "count" : "544"
+      }, {
+        "item" : "Plymouth",
+        "count" : "522"
+      }, {
+        "item" : "Taunton",
+        "count" : "522"
+      }, {
+        "item" : "Wachusett",
+        "count" : "512"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "511"
+      }, {
+        "item" : "Leominster",
+        "count" : "482"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378601,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153665743,
+    "cachedContents" : {
+      "non_null" : "87341",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "144"
+      }, {
+        "item" : "02150000",
+        "count" : "54"
+      }, {
+        "item" : "03400000",
+        "count" : "54"
+      }, {
+        "item" : "02380000",
+        "count" : "54"
+      }, {
+        "item" : "02920000",
+        "count" : "54"
+      }, {
+        "item" : "03170000",
+        "count" : "54"
+      }, {
+        "item" : "00070000",
+        "count" : "54"
+      }, {
+        "item" : "01570000",
+        "count" : "54"
+      }, {
+        "item" : "04120000",
+        "count" : "54"
+      }, {
+        "item" : "00770000",
+        "count" : "54"
+      }, {
+        "item" : "00880000",
+        "count" : "54"
+      }, {
+        "item" : "01620000",
+        "count" : "54"
+      }, {
+        "item" : "01850000",
+        "count" : "54"
+      }, {
+        "item" : "02840000",
+        "count" : "54"
+      }, {
+        "item" : "02910000",
+        "count" : "54"
+      }, {
+        "item" : "01600000",
+        "count" : "54"
+      }, {
+        "item" : "02780000",
+        "count" : "54"
+      }, {
+        "item" : "08530000",
+        "count" : "54"
+      }, {
+        "item" : "00300000",
+        "count" : "54"
+      }, {
+        "item" : "01810000",
+        "count" : "54"
+      } ],
+      "smallest" : "00000000",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378602,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153665744,
+    "cachedContents" : {
+      "non_null" : "87341",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "216"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "180"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "159"
+      }, {
+        "item" : "South Elementary",
+        "count" : "144"
+      }, {
+        "item" : "Lincoln",
+        "count" : "126"
+      }, {
+        "item" : "Franklin",
+        "count" : "126"
+      }, {
+        "item" : "Winthrop",
+        "count" : "126"
+      }, {
+        "item" : "Lawrence",
+        "count" : "126"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "108"
+      }, {
+        "item" : "Center",
+        "count" : "108"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "106"
+      }, {
+        "item" : "Center School",
+        "count" : "98"
+      }, {
+        "item" : "Brookfield",
+        "count" : "90"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "90"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "90"
+      }, {
+        "item" : "Tri-County Regional Vocational Technical",
+        "count" : "90"
+      }, {
+        "item" : "South",
+        "count" : "90"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "90"
+      }, {
+        "item" : "Hancock",
+        "count" : "90"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "90"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378603,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153665745,
+    "cachedContents" : {
+      "non_null" : "87341",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "65707"
+      }, {
+        "item" : "District",
+        "count" : "21490"
+      }, {
+        "item" : "State",
+        "count" : "144"
+      } ],
+      "smallest" : "District",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378604,
+    "name" : "STAFF_DESC",
+    "dataTypeName" : "text",
+    "description" : "Staff Description",
+    "fieldName" : "staff_desc",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 153665746,
+    "cachedContents" : {
+      "non_null" : "87341",
+      "largest" : "Teachers",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Teachers",
+        "count" : "40184"
+      }, {
+        "item" : "Principals",
+        "count" : "39977"
+      }, {
+        "item" : "Superintendent",
+        "count" : "7180"
+      } ],
+      "smallest" : "Principals",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378609,
+    "name" : "TOT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Count",
+    "fieldName" : "tot_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166466246,
+    "cachedContents" : {
+      "non_null" : "86370",
+      "largest" : "82641",
+      "null" : "971",
+      "top" : [ {
+        "item" : "1",
+        "count" : "40871"
+      }, {
+        "item" : "2",
+        "count" : "1822"
+      }, {
+        "item" : "4",
+        "count" : "934"
+      }, {
+        "item" : "5",
+        "count" : "853"
+      }, {
+        "item" : "29",
+        "count" : "840"
+      }, {
+        "item" : "25",
+        "count" : "838"
+      }, {
+        "item" : "26",
+        "count" : "838"
+      }, {
+        "item" : "28",
+        "count" : "833"
+      }, {
+        "item" : "32",
+        "count" : "821"
+      }, {
+        "item" : "3",
+        "count" : "811"
+      }, {
+        "item" : "30",
+        "count" : "806"
+      }, {
+        "item" : "33",
+        "count" : "795"
+      }, {
+        "item" : "27",
+        "count" : "790"
+      }, {
+        "item" : "31",
+        "count" : "783"
+      }, {
+        "item" : "35",
+        "count" : "779"
+      }, {
+        "item" : "34",
+        "count" : "773"
+      }, {
+        "item" : "37",
+        "count" : "769"
+      }, {
+        "item" : "24",
+        "count" : "767"
+      }, {
+        "item" : "36",
+        "count" : "760"
+      }, {
+        "item" : "23",
+        "count" : "740"
+      } ],
+      "smallest" : "0",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378610,
+    "name" : "RETND_CNT",
+    "dataTypeName" : "number",
+    "description" : "Retained Count",
+    "fieldName" : "retnd_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166466247,
+    "cachedContents" : {
+      "non_null" : "86370",
+      "largest" : "72252",
+      "null" : "971",
+      "top" : [ {
+        "item" : "1",
+        "count" : "34429"
+      }, {
+        "item" : "0",
+        "count" : "7459"
+      }, {
+        "item" : "2",
+        "count" : "1452"
+      }, {
+        "item" : "4",
+        "count" : "1009"
+      }, {
+        "item" : "23",
+        "count" : "1005"
+      }, {
+        "item" : "3",
+        "count" : "998"
+      }, {
+        "item" : "25",
+        "count" : "981"
+      }, {
+        "item" : "24",
+        "count" : "946"
+      }, {
+        "item" : "22",
+        "count" : "938"
+      }, {
+        "item" : "27",
+        "count" : "925"
+      }, {
+        "item" : "26",
+        "count" : "908"
+      }, {
+        "item" : "28",
+        "count" : "905"
+      }, {
+        "item" : "20",
+        "count" : "875"
+      }, {
+        "item" : "21",
+        "count" : "872"
+      }, {
+        "item" : "29",
+        "count" : "872"
+      }, {
+        "item" : "30",
+        "count" : "850"
+      }, {
+        "item" : "5",
+        "count" : "842"
+      }, {
+        "item" : "19",
+        "count" : "840"
+      }, {
+        "item" : "31",
+        "count" : "826"
+      }, {
+        "item" : "17",
+        "count" : "799"
+      } ],
+      "smallest" : "0",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  }, {
+    "id" : 629378607,
+    "name" : "RETND_PCT",
+    "dataTypeName" : "number",
+    "description" : "Retained Percent",
+    "fieldName" : "retnd_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166117363,
+    "cachedContents" : {
+      "non_null" : "86374",
+      "largest" : "1.0",
+      "null" : "967",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "37068"
+      }, {
+        "item" : "0.0",
+        "count" : "7463"
+      }, {
+        "item" : "0.75",
+        "count" : "995"
+      }, {
+        "item" : "0.833",
+        "count" : "978"
+      }, {
+        "item" : "0.8",
+        "count" : "954"
+      }, {
+        "item" : "0.5",
+        "count" : "954"
+      }, {
+        "item" : "0.857",
+        "count" : "831"
+      }, {
+        "item" : "0.875",
+        "count" : "787"
+      }, {
+        "item" : "0.667",
+        "count" : "762"
+      }, {
+        "item" : "0.889",
+        "count" : "687"
+      }, {
+        "item" : "0.9",
+        "count" : "601"
+      }, {
+        "item" : "0.909",
+        "count" : "448"
+      }, {
+        "item" : "0.917",
+        "count" : "430"
+      }, {
+        "item" : "0.923",
+        "count" : "407"
+      }, {
+        "item" : "0.846",
+        "count" : "389"
+      }, {
+        "item" : "0.867",
+        "count" : "372"
+      }, {
+        "item" : "0.818",
+        "count" : "368"
+      }, {
+        "item" : "0.882",
+        "count" : "367"
+      }, {
+        "item" : "0.897",
+        "count" : "353"
+      }, {
+        "item" : "0.778",
+        "count" : "351"
+      } ],
+      "smallest" : "0.0",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 629378608,
+    "name" : "COMMENTS",
+    "dataTypeName" : "text",
+    "description" : "Comments",
+    "fieldName" : "comments",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166117362,
+    "cachedContents" : {
+      "non_null" : "10",
+      "largest" : "Failed to meet data reporting requirements",
+      "null" : "87331",
+      "top" : [ {
+        "item" : "Failed to meet data reporting requirements",
+        "count" : "10"
+      } ],
+      "smallest" : "Failed to meet data reporting requirements",
+      "count" : "87341",
+      "cardinality" : "87341"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "staffing", "retention", "job", "teachers", "faculty", "educators", "superintendents", "principals", "employment" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

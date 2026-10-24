@@ -1,0 +1,86 @@
+[
+  {
+    "id": "layer-716971b29a5e-schema",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0?f=pjson",
+    "name": "Boston Bicycle Network (2016) schema",
+    "role": "arcgis_layer_schema",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-716971b29a5e-count",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+    "name": "Boston Bicycle Network (2016) count",
+    "role": "arcgis_layer_count",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-716971b29a5e-preview",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=100&f=json",
+    "name": "Boston Bicycle Network (2016) preview",
+    "role": "arcgis_layer_preview",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-3e100ec62c11-schema",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Hourly_Bike_Counts/FeatureServer/0?f=pjson",
+    "name": "Streets Hourly Bike Counts schema",
+    "role": "arcgis_layer_schema",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-3e100ec62c11-count",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Hourly_Bike_Counts/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+    "name": "Streets Hourly Bike Counts count",
+    "role": "arcgis_layer_count",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-3e100ec62c11-preview",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Hourly_Bike_Counts/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=100&f=json",
+    "name": "Streets Hourly Bike Counts preview",
+    "role": "arcgis_layer_preview",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-cf076aad2170-schema",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Daily_Bike_Counts/FeatureServer/0?f=pjson",
+    "name": "Streets Daily Motor Vehicle Counts schema",
+    "role": "arcgis_layer_schema",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-cf076aad2170-count",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Daily_Bike_Counts/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+    "name": "Streets Daily Motor Vehicle Counts count",
+    "role": "arcgis_layer_count",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-cf076aad2170-preview",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Daily_Bike_Counts/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=100&f=json",
+    "name": "Streets Daily Motor Vehicle Counts preview",
+    "role": "arcgis_layer_preview",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "id": "layer-e9bd0d3bda8b-schema",
+    "url": "https://gis.crashdata.dot.mass.gov/arcgis/rest/services/MassDOT/MASSDOT_ODP_OPEN_2024/FeatureServer/0?f=pjson",
+    "name": "2024 Crashes schema",
+    "role": "arcgis_layer_schema",
+    "parent": "crash-background"
+  },
+  {
+    "id": "layer-e9bd0d3bda8b-count",
+    "url": "https://gis.crashdata.dot.mass.gov/arcgis/rest/services/MassDOT/MASSDOT_ODP_OPEN_2024/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+    "name": "2024 Crashes count",
+    "role": "arcgis_layer_count",
+    "parent": "crash-background"
+  },
+  {
+    "id": "layer-e9bd0d3bda8b-preview",
+    "url": "https://gis.crashdata.dot.mass.gov/arcgis/rest/services/MassDOT/MASSDOT_ODP_OPEN_2024/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=100&f=json",
+    "name": "2024 Crashes preview",
+    "role": "arcgis_layer_preview",
+    "parent": "crash-background"
+  }
+]

@@ -1,0 +1,596 @@
+{
+  "id" : "yvqy-nszj",
+  "name" : "Children Enrolled in Formal Early Education and Care Statewide",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Early Education and Care",
+  "attributionLink" : "https://www.mass.gov/lists/data-on-licensed-and-funded-child-care-programs",
+  "averageRating" : 0,
+  "category" : "Early Education and Care ",
+  "createdAt" : 1769542684,
+  "description" : "This dataset includes the estimated number of children statewide and by region using data from the US Census, as well as the subset of children estimated to be enrolled in formal early education and care programs across the mixed delivery system. Additionally, the dataset includes the total number of children in families with household income below 50% of the state median income and whether all adults in the household are in the labor force, based on data from the US Census, along with the number of children who receive Child Care Financial Assistance (CCFA).  \n \nThis dataset comes from the Child Universal Success Platform (CUSP), an integrated data system developed by Third Sector Intelligence (3Si) in partnership with the Department of Early Education and Care (EEC). CUSP models the full child population in the Commonwealth and estimates the extent to which families are participating in the formal early education and care system. CUSP creates a child population base, drawing on data from the US Census, and uses aggregate capacity data from EEC's Licensing Education Analytic Database (LEAD), aggregate enrollment data from programs participating in  Commonwealth Cares for Children (C3), as well as aggregate pre-K enrollment data for district public schools and private schools to estimate the proportion of children served by formal early education and care programs across the mixed delivery system. In this dataset, \"formal early education and care\" includes enrollment in EEC licensed and funded center based care, family child care programs, district public preschools, and private pre-K programs, but does not include public/private K-12 enrollment or district run afterschool programs.\n\nThis dataset is part of <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d\" target=\"_blank\" rel=\"noopener noreferrer\">EEC's Key Performance Indicator (KPI) Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 60,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41897359,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1769640235,
+  "publicationGroup" : 20244579,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1792770532,
+  "rowsUpdatedBy" : "m5tk-n3hd",
+  "tableId" : 20246414,
+  "totalTimesRated" : 0,
+  "viewCount" : 867,
+  "viewLastModified" : 1792770531,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1770993442,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7353293,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1770993418,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1770993443,
+      "failureCount" : 0,
+      "startedAt" : 1770993442,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "279s-kggh",
+      "displayName" : "Justine Rogoff"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 625493957,
+    "name" : "DATA_LOAD_DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "Month represented in the data.",
+    "fieldName" : "data_load_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 164912279,
+    "cachedContents" : {
+      "non_null" : "1860",
+      "largest" : "2026-01-15T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024-04-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2024-06-04T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2024-08-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2023-09-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2023-10-02T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2025-02-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2025-04-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2025-08-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2023-08-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2024-05-02T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2025-03-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2023-07-03T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2025-05-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2023-12-04T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2025-10-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2023-11-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2024-11-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2025-09-01T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2025-01-02T00:00:00.000",
+        "count" : "60"
+      }, {
+        "item" : "2024-03-01T00:00:00.000",
+        "count" : "60"
+      } ],
+      "smallest" : "2023-07-03T00:00:00.000",
+      "count" : "1860",
+      "cardinality" : "1860"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 625493950,
+    "name" : "SUBSIDY_REGION",
+    "dataTypeName" : "text",
+    "description" : "Region for the purpose of subsidy administration.",
+    "fieldName" : "subsidy_region",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164860508,
+    "cachedContents" : {
+      "non_null" : "1860",
+      "largest" : "Western MA",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Western MA",
+        "count" : "310"
+      }, {
+        "item" : "Metro",
+        "count" : "310"
+      }, {
+        "item" : "Northeast MA",
+        "count" : "310"
+      }, {
+        "item" : "Southeast and Cape MA",
+        "count" : "310"
+      }, {
+        "item" : "Metro Boston",
+        "count" : "310"
+      }, {
+        "item" : "Central MA",
+        "count" : "310"
+      } ],
+      "smallest" : "Central MA",
+      "count" : "1860",
+      "cardinality" : "1860"
+    },
+    "format" : { }
+  }, {
+    "id" : 625493951,
+    "name" : "AGE_GROUP",
+    "dataTypeName" : "text",
+    "description" : "Child age group.",
+    "fieldName" : "age_group",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164860507,
+    "cachedContents" : {
+      "non_null" : "1860",
+      "largest" : "Toddler",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School Age",
+        "count" : "372"
+      }, {
+        "item" : "Toddler",
+        "count" : "372"
+      }, {
+        "item" : "Preschool",
+        "count" : "372"
+      }, {
+        "item" : "Infant",
+        "count" : "372"
+      }, {
+        "item" : "Children Age 0-5",
+        "count" : "372"
+      } ],
+      "smallest" : "Children Age 0-5",
+      "count" : "1860",
+      "cardinality" : "1860"
+    },
+    "format" : { }
+  }, {
+    "id" : 625493952,
+    "name" : "LABOR_FORCE_PARTICIPATION",
+    "dataTypeName" : "text",
+    "description" : "An indicator of whether the count includes all families or only families with all adults in the labor force.",
+    "fieldName" : "labor_force_participation",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164860506,
+    "cachedContents" : {
+      "non_null" : "1860",
+      "largest" : "Households with all adults in the labor force",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All households",
+        "count" : "930"
+      }, {
+        "item" : "Households with all adults in the labor force",
+        "count" : "930"
+      } ],
+      "smallest" : "All households",
+      "count" : "1860",
+      "cardinality" : "1860"
+    },
+    "format" : { }
+  }, {
+    "id" : 625493953,
+    "name" : "CHILD_COUNT",
+    "dataTypeName" : "number",
+    "description" : "The total number of children, based on US Census data. ",
+    "fieldName" : "child_count",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164860505,
+    "cachedContents" : {
+      "non_null" : "1860",
+      "largest" : "204074",
+      "null" : "0",
+      "top" : [ {
+        "item" : "10217",
+        "count" : "3"
+      }, {
+        "item" : "22177",
+        "count" : "2"
+      }, {
+        "item" : "32222",
+        "count" : "2"
+      }, {
+        "item" : "32003",
+        "count" : "2"
+      }, {
+        "item" : "21450",
+        "count" : "2"
+      }, {
+        "item" : "11680",
+        "count" : "2"
+      }, {
+        "item" : "8637",
+        "count" : "2"
+      }, {
+        "item" : "17352",
+        "count" : "2"
+      }, {
+        "item" : "17983",
+        "count" : "2"
+      }, {
+        "item" : "8602",
+        "count" : "2"
+      }, {
+        "item" : "18096",
+        "count" : "2"
+      }, {
+        "item" : "12667",
+        "count" : "2"
+      }, {
+        "item" : "11008",
+        "count" : "2"
+      }, {
+        "item" : "12217",
+        "count" : "2"
+      }, {
+        "item" : "12242",
+        "count" : "2"
+      }, {
+        "item" : "10605",
+        "count" : "2"
+      }, {
+        "item" : "12698",
+        "count" : "2"
+      }, {
+        "item" : "12591",
+        "count" : "2"
+      }, {
+        "item" : "8260",
+        "count" : "2"
+      }, {
+        "item" : "11242",
+        "count" : "2"
+      } ],
+      "smallest" : "6543",
+      "count" : "1860",
+      "cardinality" : "1860"
+    },
+    "format" : { }
+  }, {
+    "id" : 625493954,
+    "name" : "SERVED_COUNT",
+    "dataTypeName" : "number",
+    "description" : "The estimated total number of children enrolled in formal early education and care across the mixed delivery system, based on the Child Universal Success Platform (CUSP) model.",
+    "fieldName" : "served_count",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164860504,
+    "cachedContents" : {
+      "non_null" : "1860",
+      "largest" : "65344",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2113",
+        "count" : "3"
+      }, {
+        "item" : "4832",
+        "count" : "2"
+      }, {
+        "item" : "7836",
+        "count" : "2"
+      }, {
+        "item" : "3568",
+        "count" : "2"
+      }, {
+        "item" : "26594",
+        "count" : "2"
+      }, {
+        "item" : "4620",
+        "count" : "2"
+      }, {
+        "item" : "1810",
+        "count" : "2"
+      }, {
+        "item" : "3194",
+        "count" : "2"
+      }, {
+        "item" : "5535",
+        "count" : "2"
+      }, {
+        "item" : "5406",
+        "count" : "2"
+      }, {
+        "item" : "6910",
+        "count" : "2"
+      }, {
+        "item" : "9610",
+        "count" : "2"
+      }, {
+        "item" : "24099",
+        "count" : "2"
+      }, {
+        "item" : "5520",
+        "count" : "2"
+      }, {
+        "item" : "6326",
+        "count" : "2"
+      }, {
+        "item" : "2061",
+        "count" : "2"
+      }, {
+        "item" : "5493",
+        "count" : "2"
+      }, {
+        "item" : "6851",
+        "count" : "2"
+      }, {
+        "item" : "16758",
+        "count" : "2"
+      }, {
+        "item" : "5787",
+        "count" : "2"
+      } ],
+      "smallest" : "1592",
+      "count" : "1860",
+      "cardinality" : "1860"
+    },
+    "format" : { }
+  }, {
+    "id" : 625493955,
+    "name" : "BELOW_50_SMI_COUNT",
+    "dataTypeName" : "number",
+    "description" : "The total number of children whose family income is below 50% of the state median income.",
+    "fieldName" : "below_50_smi_count",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164860503,
+    "cachedContents" : {
+      "non_null" : "1860",
+      "largest" : "44132",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3483",
+        "count" : "3"
+      }, {
+        "item" : "3614",
+        "count" : "3"
+      }, {
+        "item" : "5330",
+        "count" : "3"
+      }, {
+        "item" : "4216",
+        "count" : "3"
+      }, {
+        "item" : "3154",
+        "count" : "3"
+      }, {
+        "item" : "4180",
+        "count" : "3"
+      }, {
+        "item" : "4273",
+        "count" : "3"
+      }, {
+        "item" : "4166",
+        "count" : "3"
+      }, {
+        "item" : "4997",
+        "count" : "3"
+      }, {
+        "item" : "5597",
+        "count" : "3"
+      }, {
+        "item" : "5615",
+        "count" : "3"
+      }, {
+        "item" : "5036",
+        "count" : "2"
+      }, {
+        "item" : "5902",
+        "count" : "2"
+      }, {
+        "item" : "5872",
+        "count" : "2"
+      }, {
+        "item" : "4845",
+        "count" : "2"
+      }, {
+        "item" : "3847",
+        "count" : "2"
+      }, {
+        "item" : "3318",
+        "count" : "2"
+      }, {
+        "item" : "4368",
+        "count" : "2"
+      }, {
+        "item" : "3516",
+        "count" : "2"
+      }, {
+        "item" : "6204",
+        "count" : "2"
+      } ],
+      "smallest" : "2561",
+      "count" : "1860",
+      "cardinality" : "1860"
+    },
+    "format" : { }
+  }, {
+    "id" : 625493956,
+    "name" : "CCFA_COUNT",
+    "dataTypeName" : "number",
+    "description" : "The total number of children receiving CCFA.",
+    "fieldName" : "ccfa_count",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164860502,
+    "cachedContents" : {
+      "non_null" : "1860",
+      "largest" : "15323",
+      "null" : "0",
+      "top" : [ {
+        "item" : "459",
+        "count" : "6"
+      }, {
+        "item" : "462",
+        "count" : "6"
+      }, {
+        "item" : "445",
+        "count" : "6"
+      }, {
+        "item" : "479",
+        "count" : "6"
+      }, {
+        "item" : "486",
+        "count" : "6"
+      }, {
+        "item" : "525",
+        "count" : "6"
+      }, {
+        "item" : "512",
+        "count" : "4"
+      }, {
+        "item" : "599",
+        "count" : "4"
+      }, {
+        "item" : "5159",
+        "count" : "4"
+      }, {
+        "item" : "1415",
+        "count" : "4"
+      }, {
+        "item" : "474",
+        "count" : "4"
+      }, {
+        "item" : "577",
+        "count" : "4"
+      }, {
+        "item" : "2214",
+        "count" : "4"
+      }, {
+        "item" : "508",
+        "count" : "4"
+      }, {
+        "item" : "458",
+        "count" : "4"
+      }, {
+        "item" : "1765",
+        "count" : "4"
+      }, {
+        "item" : "3523",
+        "count" : "4"
+      }, {
+        "item" : "413",
+        "count" : "4"
+      }, {
+        "item" : "482",
+        "count" : "4"
+      }, {
+        "item" : "1901",
+        "count" : "4"
+      } ],
+      "smallest" : "356",
+      "count" : "1860",
+      "cardinality" : "1860"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Monthly",
+        "Update Frequency" : "Monthly"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.gov/orgs/department-of-early-education-and-care"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "childcare", "licensed childcare", "daycare", "licensed", "funded", "prek", "preschool", "toddlers", "infants", "capacity" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

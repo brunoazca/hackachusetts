@@ -1,0 +1,816 @@
+{
+  "id" : "a9ye-ac8e",
+  "name" : "MassCore Completion",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1700591252,
+  "description" : "This report provides the number and percentage of Massachusetts public high school graduates who completed the MassCore recommended program of study each year since 2009.\n\nMassCore is a state-recommended program of study intended to align high school coursework with college and workforce expectations. The program of studies includes the successful completion of four units of English, four units of mathematics, three units of a lab-based science, three units of history, two units of the same world language, one unit of the arts, and five additional \"core\" courses. A computer science course that includes rigorous mathematical or scientific concepts and aligns with the 2016 Digital Literacy and Computer Science Framework can substitute for either a mathematics course or a laboratory science course. For more information on MassCore please click <a href=\"https://www.doe.mass.edu/ccte/ccr/masscore/default.html\" target=\"_blank\" rel=\"noreferrer noopener\">here</a>.\n\nMassCore completion rates are not reported for any student group where the number graduated is less than 6.\n\nState graduation requirements changed between 2024 and 2025. This dataset reflects data for students submitted as graduates by their districts in the reporting year.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/masscore.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">MassCore</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 480,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41287656,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745417114,
+  "publicationGroup" : 19371698,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1768242248,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19871010,
+  "totalTimesRated" : 0,
+  "viewCount" : 8407,
+  "viewLastModified" : 1786392639,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1706642285,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6859975,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1706642267,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1706642285,
+      "failureCount" : 0,
+      "startedAt" : 1706642285,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609174468,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150051106,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "6711"
+      }, {
+        "item" : "2024",
+        "count" : "6497"
+      }, {
+        "item" : "2022",
+        "count" : "6487"
+      }, {
+        "item" : "2023",
+        "count" : "6478"
+      }, {
+        "item" : "2021",
+        "count" : "6353"
+      }, {
+        "item" : "2020",
+        "count" : "6288"
+      }, {
+        "item" : "2019",
+        "count" : "6264"
+      }, {
+        "item" : "2018",
+        "count" : "6085"
+      }, {
+        "item" : "2017",
+        "count" : "5963"
+      }, {
+        "item" : "2016",
+        "count" : "5921"
+      }, {
+        "item" : "2015",
+        "count" : "5777"
+      }, {
+        "item" : "2013",
+        "count" : "5745"
+      }, {
+        "item" : "2014",
+        "count" : "5698"
+      }, {
+        "item" : "2012",
+        "count" : "5551"
+      }, {
+        "item" : "2011",
+        "count" : "5509"
+      }, {
+        "item" : "2009",
+        "count" : "5441"
+      }, {
+        "item" : "2010",
+        "count" : "5395"
+      } ],
+      "smallest" : "2009",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174469,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150051108,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "4991"
+      }, {
+        "item" : "02810000",
+        "count" : "1629"
+      }, {
+        "item" : "03480000",
+        "count" : "1516"
+      }, {
+        "item" : "01630000",
+        "count" : "923"
+      }, {
+        "item" : "01490000",
+        "count" : "915"
+      }, {
+        "item" : "00440000",
+        "count" : "763"
+      }, {
+        "item" : "00610000",
+        "count" : "620"
+      }, {
+        "item" : "02070000",
+        "count" : "615"
+      }, {
+        "item" : "01530000",
+        "count" : "615"
+      }, {
+        "item" : "02430000",
+        "count" : "587"
+      }, {
+        "item" : "00970000",
+        "count" : "561"
+      }, {
+        "item" : "02360000",
+        "count" : "559"
+      }, {
+        "item" : "00950000",
+        "count" : "557"
+      }, {
+        "item" : "02010000",
+        "count" : "540"
+      }, {
+        "item" : "02480000",
+        "count" : "527"
+      }, {
+        "item" : "01600000",
+        "count" : "518"
+      }, {
+        "item" : "03250000",
+        "count" : "517"
+      }, {
+        "item" : "02930000",
+        "count" : "514"
+      }, {
+        "item" : "02390000",
+        "count" : "506"
+      }, {
+        "item" : "00160000",
+        "count" : "502"
+      } ],
+      "smallest" : "00000000",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174470,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150051110,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "4991"
+      }, {
+        "item" : "Springfield",
+        "count" : "1629"
+      }, {
+        "item" : "Worcester",
+        "count" : "1516"
+      }, {
+        "item" : "Lynn",
+        "count" : "923"
+      }, {
+        "item" : "Lawrence",
+        "count" : "915"
+      }, {
+        "item" : "Brockton",
+        "count" : "763"
+      }, {
+        "item" : "Chicopee",
+        "count" : "620"
+      }, {
+        "item" : "Leominster",
+        "count" : "615"
+      }, {
+        "item" : "Newton",
+        "count" : "615"
+      }, {
+        "item" : "Quincy",
+        "count" : "587"
+      }, {
+        "item" : "Fitchburg",
+        "count" : "561"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "559"
+      }, {
+        "item" : "Fall River",
+        "count" : "557"
+      }, {
+        "item" : "New Bedford",
+        "count" : "540"
+      }, {
+        "item" : "Revere",
+        "count" : "527"
+      }, {
+        "item" : "Lowell",
+        "count" : "518"
+      }, {
+        "item" : "Westfield",
+        "count" : "517"
+      }, {
+        "item" : "Taunton",
+        "count" : "514"
+      }, {
+        "item" : "Plymouth",
+        "count" : "506"
+      }, {
+        "item" : "Attleboro",
+        "count" : "502"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174471,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150051112,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "238"
+      }, {
+        "item" : "00350000",
+        "count" : "226"
+      }, {
+        "item" : "00440000",
+        "count" : "210"
+      }, {
+        "item" : "03480000",
+        "count" : "208"
+      }, {
+        "item" : "00440505",
+        "count" : "207"
+      }, {
+        "item" : "01630000",
+        "count" : "205"
+      }, {
+        "item" : "01650505",
+        "count" : "205"
+      }, {
+        "item" : "01650000",
+        "count" : "205"
+      }, {
+        "item" : "02480000",
+        "count" : "204"
+      }, {
+        "item" : "00460000",
+        "count" : "204"
+      }, {
+        "item" : "02810000",
+        "count" : "204"
+      }, {
+        "item" : "02070000",
+        "count" : "204"
+      }, {
+        "item" : "02070510",
+        "count" : "204"
+      }, {
+        "item" : "00460505",
+        "count" : "204"
+      }, {
+        "item" : "02070505",
+        "count" : "204"
+      }, {
+        "item" : "01550000",
+        "count" : "203"
+      }, {
+        "item" : "06050000",
+        "count" : "203"
+      }, {
+        "item" : "02010000",
+        "count" : "203"
+      }, {
+        "item" : "01630510",
+        "count" : "203"
+      }, {
+        "item" : "01550505",
+        "count" : "203"
+      } ],
+      "smallest" : "00000000",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174472,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150051114,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "Worcester Technical High",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "364"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "344"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "336"
+      }, {
+        "item" : "Tri-County Regional Vocational Technical",
+        "count" : "288"
+      }, {
+        "item" : "Norfolk County Agricultural",
+        "count" : "250"
+      }, {
+        "item" : "State",
+        "count" : "238"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "238"
+      }, {
+        "item" : "Boston",
+        "count" : "226"
+      }, {
+        "item" : "Brockton",
+        "count" : "210"
+      }, {
+        "item" : "Worcester",
+        "count" : "208"
+      }, {
+        "item" : "Brockton High",
+        "count" : "207"
+      }, {
+        "item" : "Malden",
+        "count" : "205"
+      }, {
+        "item" : "Malden High",
+        "count" : "205"
+      }, {
+        "item" : "Lynn",
+        "count" : "205"
+      }, {
+        "item" : "Newton North High",
+        "count" : "204"
+      }, {
+        "item" : "Newton",
+        "count" : "204"
+      }, {
+        "item" : "Brookline High",
+        "count" : "204"
+      }, {
+        "item" : "Revere",
+        "count" : "204"
+      }, {
+        "item" : "Springfield",
+        "count" : "204"
+      }, {
+        "item" : "Brookline",
+        "count" : "204"
+      } ],
+      "smallest" : "21st Century Skills Academy",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174473,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150051116,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "56690"
+      }, {
+        "item" : "District",
+        "count" : "45235"
+      }, {
+        "item" : "State",
+        "count" : "238"
+      } ],
+      "smallest" : "District",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174474,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150051118,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "11469"
+      }, {
+        "item" : "High Needs",
+        "count" : "11379"
+      }, {
+        "item" : "Male",
+        "count" : "11231"
+      }, {
+        "item" : "Female",
+        "count" : "11229"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "10562"
+      }, {
+        "item" : "White",
+        "count" : "10446"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "7514"
+      }, {
+        "item" : "Low Income",
+        "count" : "6529"
+      }, {
+        "item" : "Black or African American",
+        "count" : "5542"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "4638"
+      }, {
+        "item" : "Asian",
+        "count" : "4269"
+      }, {
+        "item" : "English Learners",
+        "count" : "3941"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "3291"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "94"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "29"
+      } ],
+      "smallest" : "All Students",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174475,
+    "name" : "CNT_HS_GRAD",
+    "dataTypeName" : "number",
+    "description" : "Count of High School Graduates",
+    "fieldName" : "cnt_hs_grad",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150051120,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "71405",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6",
+        "count" : "3144"
+      }, {
+        "item" : "7",
+        "count" : "2709"
+      }, {
+        "item" : "8",
+        "count" : "2340"
+      }, {
+        "item" : "9",
+        "count" : "2089"
+      }, {
+        "item" : "10",
+        "count" : "1924"
+      }, {
+        "item" : "11",
+        "count" : "1840"
+      }, {
+        "item" : "12",
+        "count" : "1670"
+      }, {
+        "item" : "13",
+        "count" : "1560"
+      }, {
+        "item" : "14",
+        "count" : "1451"
+      }, {
+        "item" : "15",
+        "count" : "1445"
+      }, {
+        "item" : "16",
+        "count" : "1270"
+      }, {
+        "item" : "17",
+        "count" : "1199"
+      }, {
+        "item" : "18",
+        "count" : "1191"
+      }, {
+        "item" : "22",
+        "count" : "1168"
+      }, {
+        "item" : "20",
+        "count" : "1130"
+      }, {
+        "item" : "19",
+        "count" : "1117"
+      }, {
+        "item" : "21",
+        "count" : "1113"
+      }, {
+        "item" : "23",
+        "count" : "1038"
+      }, {
+        "item" : "25",
+        "count" : "997"
+      }, {
+        "item" : "24",
+        "count" : "993"
+      } ],
+      "smallest" : "6",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174476,
+    "name" : "CNT_COMPL_MASSCORE",
+    "dataTypeName" : "number",
+    "description" : "Count of Students Completed MassCore",
+    "fieldName" : "cnt_compl_masscore",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150051122,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "58619",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "4863"
+      }, {
+        "item" : "6",
+        "count" : "3227"
+      }, {
+        "item" : "7",
+        "count" : "2771"
+      }, {
+        "item" : "8",
+        "count" : "2365"
+      }, {
+        "item" : "9",
+        "count" : "2133"
+      }, {
+        "item" : "10",
+        "count" : "1928"
+      }, {
+        "item" : "11",
+        "count" : "1843"
+      }, {
+        "item" : "12",
+        "count" : "1698"
+      }, {
+        "item" : "13",
+        "count" : "1536"
+      }, {
+        "item" : "1",
+        "count" : "1496"
+      }, {
+        "item" : "15",
+        "count" : "1495"
+      }, {
+        "item" : "14",
+        "count" : "1473"
+      }, {
+        "item" : "5",
+        "count" : "1394"
+      }, {
+        "item" : "16",
+        "count" : "1312"
+      }, {
+        "item" : "4",
+        "count" : "1266"
+      }, {
+        "item" : "17",
+        "count" : "1227"
+      }, {
+        "item" : "18",
+        "count" : "1219"
+      }, {
+        "item" : "3",
+        "count" : "1203"
+      }, {
+        "item" : "20",
+        "count" : "1181"
+      }, {
+        "item" : "2",
+        "count" : "1142"
+      } ],
+      "smallest" : "0",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : { }
+  }, {
+    "id" : 609174477,
+    "name" : "PCT_COMPL_MASSCORE",
+    "dataTypeName" : "number",
+    "description" : "Percent of Students Completed MassCore",
+    "fieldName" : "pct_compl_masscore",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150051125,
+    "cachedContents" : {
+      "non_null" : "102163",
+      "largest" : "1.0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "49288"
+      }, {
+        "item" : "0.0",
+        "count" : "4863"
+      }, {
+        "item" : "0.5",
+        "count" : "713"
+      }, {
+        "item" : "0.667",
+        "count" : "650"
+      }, {
+        "item" : "0.833",
+        "count" : "524"
+      }, {
+        "item" : "0.333",
+        "count" : "430"
+      }, {
+        "item" : "0.857",
+        "count" : "414"
+      }, {
+        "item" : "0.75",
+        "count" : "412"
+      }, {
+        "item" : "0.875",
+        "count" : "295"
+      }, {
+        "item" : "0.889",
+        "count" : "295"
+      }, {
+        "item" : "0.714",
+        "count" : "293"
+      }, {
+        "item" : "0.9",
+        "count" : "254"
+      }, {
+        "item" : "0.8",
+        "count" : "253"
+      }, {
+        "item" : "0.167",
+        "count" : "249"
+      }, {
+        "item" : "0.571",
+        "count" : "245"
+      }, {
+        "item" : "0.25",
+        "count" : "240"
+      }, {
+        "item" : "0.6",
+        "count" : "236"
+      }, {
+        "item" : "0.429",
+        "count" : "229"
+      }, {
+        "item" : "0.909",
+        "count" : "222"
+      }, {
+        "item" : "0.625",
+        "count" : "219"
+      } ],
+      "smallest" : "0.0",
+      "count" : "102163",
+      "cardinality" : "102163"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "assessment", "ccte", "completion", "graduation", "testing", "course completion", "race and ethnicity", "gender", "high needs", "economically disadvantaged", "low income", "students with disabilities" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

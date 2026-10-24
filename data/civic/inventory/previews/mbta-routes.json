@@ -1,0 +1,64 @@
+{
+  "dataset": "mbta-routes",
+  "source": "data/civic/datasets/mbta-routes/data.csv",
+  "source_sha256": "e7e460891025cf5e584c1921e367333a19a9d6ea74372f14c9b5d4025dc98d5b",
+  "total_snapshot_rows": 8,
+  "preview_rows": 8,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "id",
+    "name",
+    "mode",
+    "fare_class"
+  ],
+  "records": [
+    {
+      "id": "Red",
+      "name": "Red Line",
+      "mode": "Heavy rail",
+      "fare_class": "Rapid Transit"
+    },
+    {
+      "id": "Mattapan",
+      "name": "Mattapan Line",
+      "mode": "Light rail",
+      "fare_class": "Rapid Transit"
+    },
+    {
+      "id": "Orange",
+      "name": "Orange Line",
+      "mode": "Heavy rail",
+      "fare_class": "Rapid Transit"
+    },
+    {
+      "id": "Green-B",
+      "name": "Green Line B",
+      "mode": "Light rail",
+      "fare_class": "Rapid Transit"
+    },
+    {
+      "id": "Green-C",
+      "name": "Green Line C",
+      "mode": "Light rail",
+      "fare_class": "Rapid Transit"
+    },
+    {
+      "id": "Green-D",
+      "name": "Green Line D",
+      "mode": "Light rail",
+      "fare_class": "Rapid Transit"
+    },
+    {
+      "id": "Green-E",
+      "name": "Green Line E",
+      "mode": "Light rail",
+      "fare_class": "Rapid Transit"
+    },
+    {
+      "id": "Blue",
+      "name": "Blue Line",
+      "mode": "Heavy rail",
+      "fare_class": "Rapid Transit"
+    }
+  ]
+}

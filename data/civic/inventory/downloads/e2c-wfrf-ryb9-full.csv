@@ -1,0 +1,46 @@
+DATA_LOAD_DATE,LICENSING_REGION,PROGRAM_TYPE,PROVIDER_COUNT,LICENSED_CAPACITY
+09/01/2026,Central,Adoption Agency,3,
+09/01/2026,Central,Foster Care Agency,6,
+09/01/2026,Central,Residential Care,60,757
+09/01/2026,Metro Boston,Adoption Agency,3,
+09/01/2026,Metro Boston,Foster Care Agency,3,
+09/01/2026,Metro Boston,Residential Care,51,812
+09/01/2026,Northeast,Adoption Agency,10,
+09/01/2026,Northeast,Foster Care Agency,16,
+09/01/2026,Northeast,Residential Care,74,1173
+09/01/2026,Southeast and Cape,Adoption Agency,7,
+09/01/2026,Southeast and Cape,Foster Care Agency,12,
+09/01/2026,Southeast and Cape,Residential Care,87,1591
+09/01/2026,Western,Adoption Agency,2,
+09/01/2026,Western,Foster Care Agency,11,
+09/01/2026,Western,Residential Care,50,888
+08/01/2026,Central,Adoption Agency,3,
+08/01/2026,Central,Foster Care Agency,6,
+08/01/2026,Central,Residential Care,60,757
+08/01/2026,Metro Boston,Adoption Agency,3,
+08/01/2026,Metro Boston,Foster Care Agency,3,
+08/01/2026,Metro Boston,Residential Care,51,812
+08/01/2026,Northeast,Adoption Agency,10,
+08/01/2026,Northeast,Foster Care Agency,16,
+08/01/2026,Northeast,Residential Care,74,1173
+08/01/2026,Southeast and Cape,Adoption Agency,7,
+08/01/2026,Southeast and Cape,Foster Care Agency,12,
+08/01/2026,Southeast and Cape,Residential Care,87,1591
+08/01/2026,Western,Adoption Agency,2,
+08/01/2026,Western,Foster Care Agency,11,
+08/01/2026,Western,Residential Care,50,888
+07/01/2026,Central,Adoption Agency,3,
+07/01/2026,Central,Foster Care Agency,6,
+07/01/2026,Central,Residential Care,60,753
+07/01/2026,Metro Boston,Adoption Agency,3,
+07/01/2026,Metro Boston,Foster Care Agency,3,
+07/01/2026,Metro Boston,Residential Care,51,812
+07/01/2026,Northeast,Adoption Agency,10,
+07/01/2026,Northeast,Foster Care Agency,16,
+07/01/2026,Northeast,Residential Care,74,1173
+07/01/2026,Southeast and Cape,Adoption Agency,6,
+07/01/2026,Southeast and Cape,Foster Care Agency,12,
+07/01/2026,Southeast and Cape,Residential Care,89,1609
+07/01/2026,Western,Adoption Agency,2,
+07/01/2026,Western,Foster Care Agency,11,
+07/01/2026,Western,Residential Care,51,894

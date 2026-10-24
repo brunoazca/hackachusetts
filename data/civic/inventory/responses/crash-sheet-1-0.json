@@ -1,0 +1,317 @@
+{
+  "id": "crash-sheet-1-0",
+  "url": "https://docs.google.com/spreadsheets/d/1yeqLAtUca4A_Ww_oDZV0k0ednMzgZmq1pYhiXhG0oTs/edit",
+  "sheet": "summary",
+  "range": "A1:Z1037",
+  "grid": {
+    "rowCount": 1037,
+    "columnCount": 26
+  },
+  "retention": "full_tab_grid_values",
+  "rows": 1037,
+  "retrieved_at_utc": "2026-10-24T15:15:41.514Z",
+  "result": {
+    "range": "summary!A1:Z1037",
+    "majorDimension": "ROWS",
+    "values": [
+      [
+        "Boston area crashes 2024"
+      ],
+      [
+        "combined from multiple sources"
+      ],
+      [],
+      [
+        "source"
+      ],
+      [
+        "MDOT GeoDOT open data - crashes - year - ESRI server",
+        "https://geodot.mass.gov/search?groupIds=1816c66377f9495ba6baa72515494d2c"
+      ],
+      [
+        "MDOT MassDOT Impact - crashes - extract - Portal or Form",
+        "https://apps.crashdata.dot.mass.gov/cdp/home"
+      ],
+      [
+        "BVZ City of Boston Vision Zero - crashes and fatalities",
+        "https://data.boston.gov/organization/vision-zero-boston-program"
+      ],
+      [
+        "CPD Cambridge Police",
+        "https://data.cambridgema.gov/Public-Safety/CPD-Crash-Log/h6fp-bp8s/about_data"
+      ],
+      [
+        "SPD Somerville Police",
+        "https://data.somervillema.gov/Public-Safety/Police-Data-Crashes/mtik-28va/about_data"
+      ],
+      [
+        "Note: I found no public crash data by Brookline local govt"
+      ],
+      [],
+      [
+        "LOTS of issues with cleaning and combining 2024 data"
+      ],
+      [
+        "  MDOT, BVZ, CPD, SPD all use different forms and definitions"
+      ],
+      [
+        "  BVZ has least amount of data, while MDOT has most data"
+      ],
+      [
+        "  CPD has good quality data, except only a portion is geocoded, and I was able to geocode more by using street intersections listed in data"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "2024 Crash data for four areas",
+        "Boston",
+        "Cambridge",
+        "Somerville",
+        "Brookline"
+      ],
+      [
+        "MassDOT Source",
+        "5689",
+        "1576",
+        "627",
+        "419"
+      ],
+      [
+        "Local government source",
+        "3456",
+        "1691",
+        "398"
+      ],
+      [
+        "Total (with dups)",
+        "9145",
+        "3267",
+        "1025",
+        "419"
+      ],
+      [
+        "LocalGov NonDups found",
+        "2673",
+        "719",
+        "158"
+      ],
+      [
+        "Combined MassDOT + LocalGov NonDups (not all geocoded)",
+        "8362",
+        "2295",
+        "785",
+        "419"
+      ],
+      [
+        "Percent LocalGov NonDups / Local Total",
+        "77%",
+        "43%",
+        "40%",
+        "",
+        "Higher percentage shows larger local numbers NOT uploaded to MassDOT"
+      ],
+      [
+        "Percent Combined / Total with Dups",
+        "91%",
+        "70%",
+        "77%",
+        "100%"
+      ],
+      [
+        "But not all geocoded!"
+      ],
+      [],
+      [
+        "Meaningful variables for BCU crash maps and other products"
+      ],
+      [],
+      [
+        "id"
+      ],
+      [
+        "(actual MDOT code = 5123456)"
+      ],
+      [
+        "(created BVZ code 1YYYYxxxx = 12024xxxx)"
+      ],
+      [
+        "created CPD code 3YYYYxxxx = 32024xxxx"
+      ],
+      [
+        "created SPD code"
+      ],
+      [],
+      [],
+      [
+        "muni"
+      ],
+      [
+        "bos"
+      ],
+      [
+        "cam"
+      ],
+      [
+        "som"
+      ],
+      [
+        "bro"
+      ],
+      [],
+      [
+        "date"
+      ],
+      [
+        "YYYY/MM/DD"
+      ],
+      [],
+      [
+        "time"
+      ],
+      [
+        "HH:MM"
+      ],
+      [],
+      [
+        "lat"
+      ],
+      [
+        "lng"
+      ],
+      [],
+      [],
+      [
+        "bike = 1",
+        "cyclists or may involve cyclist"
+      ],
+      [
+        "ped = 1",
+        "pedestrian or may involve pedestrian"
+      ],
+      [
+        "(all others are motor vehicles, may include moped)"
+      ],
+      [],
+      [
+        "severity"
+      ],
+      [
+        "1 = fatality"
+      ],
+      [
+        "2 = injury or possible injury"
+      ],
+      [
+        "blank = property damage or unknown or blank"
+      ],
+      [],
+      [
+        "Boston VZ variables of interest"
+      ],
+      [],
+      [
+        "mode_typeBVZ"
+      ],
+      [
+        "mv"
+      ],
+      [
+        "ped"
+      ],
+      [
+        "bike"
+      ],
+      [
+        "(all other or blank)"
+      ],
+      [],
+      [
+        "BVZ (by definition, possibly injury because EMS?)"
+      ],
+      [
+        "Fatal injury",
+        "Fatalities dataset"
+      ],
+      [
+        "Non-fatal injury",
+        "Other BV data = possible injury"
+      ],
+      [],
+      [
+        "MassDOT variables of interest"
+      ],
+      [],
+      [
+        "MOST_HRMFL_EVT_CL"
+      ],
+      [
+        "V1:(Collision with cyclist (bicycle, tricycle, unicycle, pedal car))",
+        "contains = cyclist",
+        "IF(REGEXMATCH(Cell,\"cyclist\"),1)"
+      ],
+      [
+        "V1:(Collision with pedestrian)",
+        "contains = pedestrian"
+      ],
+      [
+        "all others or blank (includes moped)"
+      ],
+      [],
+      [
+        "CRASH_SEVERITY_DESCR"
+      ],
+      [
+        "Fatal injury"
+      ],
+      [
+        "Non-fatal injury"
+      ],
+      [
+        "(all others or blank)"
+      ],
+      [],
+      [
+        "MAX_INJR_SVRTY_CL"
+      ],
+      [
+        "Fatal Injury (K)"
+      ],
+      [
+        "Suspected Serious Injury (A)"
+      ],
+      [
+        "Suspected Minor Injury (B)"
+      ],
+      [
+        "Possible Injury (C)"
+      ],
+      [
+        "(all others or blank)"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id" : "bqet-bmhp",
+  "name" : "Early College creates pathways to higher education",
+  "assetType" : "story",
+  "attributionLink" : "https://app.powerbigov.us/view?r=eyJrIjoiYzE2NzI3ODAtNjUyZS00MWVmLTkwNzYtMTRjOTQ1NTk3Y2IxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1709330594,
+  "description" : "This revised data story explores trends in participation and outcomes based on insights from the Early College Data Dashboard.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40453733,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1709570989,
+  "publicationGroup" : 19470397,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1709330594,
+  "tableId" : 19470397,
+  "totalTimesRated" : 0,
+  "viewCount" : 13800,
+  "viewLastModified" : 1790106162,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1709755013,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6205435,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1709754968,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1709755013,
+      "failureCount" : 0,
+      "startedAt" : 1709755013,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "This dashboard breaks down Early College student participation, registered credits and earned credits in four screens. Use the arrows just below the dashboard to navigate to each screen.",
+      "title" : "Early College Data Dashboard Overview"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "college", "high school", "credits", "ihe", "higher education", "early college", "brockton", "new heights", "worcester", "quinsigamond", "massasoit", "university" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

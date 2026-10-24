@@ -1,0 +1,1099 @@
+{
+  "id" : "cdfp-645n",
+  "name" : "Special Education Student Progression from High School Through Postsecondary Education",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1717704800,
+  "description" : "This is a companion dataset to the main Special Education Indicators dataset. The waterfall data shows a cohort of high school students and their progression through high school graduation, college enrollment and persistence in higher education to a second year or college completion.\n\nIt contains two indicators published separately from the main dataset since the data are in a different format: \"Student progression from high school through second year of postsecondary education\" and \"Student progression from high school through postsecondary degree completion\". For all other special education indicators, please visit the main <a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Indicators/yamx-769q/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Special Education Indicators</a> dataset.\n\nResource Allocation and District Action Reports (RADAR) enable district leaders to compare their staffing, class size, special education services, school performance, and per-pupil spending data with similar districts. They are intended to support districts in making effective strategic decisions as they develop district plans and budgets.\n\nThis dataset is one of five containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">RADAR Special Education Dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Program-Characteristics-and-Stud/n62c-bx65/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Program Characteristics and Student Demographics</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Placement-Trajectory/92x3-2qj9/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Placement Trajectory</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Students-Moving-In-and-Out-of-Special-Education-Se/8aww-sugs/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Students Moving In and Out of Special Education Services</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Indicators/yamx-769q/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Indicators</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Student-Progression-from-High-Sc/cdfp-645n/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Student Progression from High School through Postsecondary Education</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 417,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40850964,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1725569715,
+  "publicationGroup" : 19542356,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1784838953,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19645761,
+  "totalTimesRated" : 0,
+  "viewCount" : 1501,
+  "viewLastModified" : 1784838952,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1725978694,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6545721,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1725978570,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1725978694,
+      "failureCount" : 0,
+      "startedAt" : 1725978694,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 599101267,
+    "name" : "COHORT_YR",
+    "dataTypeName" : "text",
+    "description" : "Cohort Year",
+    "fieldName" : "cohort_yr",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152890882,
+    "cachedContents" : {
+      "non_null" : "5530",
+      "largest" : "2024",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023",
+        "count" : "944"
+      }, {
+        "item" : "2022",
+        "count" : "932"
+      }, {
+        "item" : "2024",
+        "count" : "930"
+      }, {
+        "item" : "2016",
+        "count" : "912"
+      }, {
+        "item" : "2015",
+        "count" : "906"
+      }, {
+        "item" : "2017",
+        "count" : "906"
+      } ],
+      "smallest" : "2015",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101268,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152890883,
+    "cachedContents" : {
+      "non_null" : "5530",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "07120000",
+        "count" : "18"
+      }, {
+        "item" : "00070000",
+        "count" : "18"
+      }, {
+        "item" : "08280000",
+        "count" : "18"
+      }, {
+        "item" : "00010000",
+        "count" : "18"
+      }, {
+        "item" : "02180000",
+        "count" : "18"
+      }, {
+        "item" : "03080000",
+        "count" : "18"
+      }, {
+        "item" : "08530000",
+        "count" : "18"
+      }, {
+        "item" : "07300000",
+        "count" : "18"
+      }, {
+        "item" : "01310000",
+        "count" : "18"
+      }, {
+        "item" : "02190000",
+        "count" : "18"
+      }, {
+        "item" : "03320000",
+        "count" : "18"
+      }, {
+        "item" : "02650000",
+        "count" : "18"
+      }, {
+        "item" : "02110000",
+        "count" : "18"
+      }, {
+        "item" : "04380000",
+        "count" : "18"
+      }, {
+        "item" : "00610000",
+        "count" : "18"
+      }, {
+        "item" : "07730000",
+        "count" : "18"
+      }, {
+        "item" : "08060000",
+        "count" : "18"
+      }, {
+        "item" : "00050000",
+        "count" : "18"
+      }, {
+        "item" : "01550000",
+        "count" : "18"
+      }, {
+        "item" : "01600000",
+        "count" : "18"
+      } ],
+      "smallest" : "00000000",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101269,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152890884,
+    "cachedContents" : {
+      "non_null" : "5530",
+      "largest" : "Worcester",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Dighton-Rehoboth",
+        "count" : "18"
+      }, {
+        "item" : "Andover",
+        "count" : "18"
+      }, {
+        "item" : "Acton-Boxborough",
+        "count" : "18"
+      }, {
+        "item" : "Littleton",
+        "count" : "18"
+      }, {
+        "item" : "New Bedford",
+        "count" : "18"
+      }, {
+        "item" : "Springfield",
+        "count" : "18"
+      }, {
+        "item" : "Advanced Math and Science Academy Charter (District)",
+        "count" : "18"
+      }, {
+        "item" : "North Middlesex",
+        "count" : "18"
+      }, {
+        "item" : "Haverhill",
+        "count" : "18"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "18"
+      }, {
+        "item" : "Norwood",
+        "count" : "18"
+      }, {
+        "item" : "Needham",
+        "count" : "18"
+      }, {
+        "item" : "Four Rivers Charter Public (District)",
+        "count" : "18"
+      }, {
+        "item" : "Bedford",
+        "count" : "18"
+      }, {
+        "item" : "Silver Lake",
+        "count" : "18"
+      }, {
+        "item" : "Sturgis Charter Public (District)",
+        "count" : "18"
+      }, {
+        "item" : "Minuteman Regional Vocational Technical",
+        "count" : "18"
+      }, {
+        "item" : "Bourne",
+        "count" : "18"
+      }, {
+        "item" : "Scituate",
+        "count" : "18"
+      }, {
+        "item" : "Stoneham",
+        "count" : "18"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101270,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152890886,
+    "cachedContents" : {
+      "non_null" : "5530",
+      "largest" : "Students without Disabilities",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "1862"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "1843"
+      }, {
+        "item" : "Students without Disabilities",
+        "count" : "1825"
+      } ],
+      "smallest" : "All Students",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101271,
+    "name" : "IND_CAT",
+    "dataTypeName" : "text",
+    "description" : "Indicator Category",
+    "fieldName" : "ind_cat",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154185111,
+    "cachedContents" : {
+      "non_null" : "5530",
+      "largest" : "Postsecondary Outcomes",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Postsecondary Outcomes",
+        "count" : "5530"
+      } ],
+      "smallest" : "Postsecondary Outcomes",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101272,
+    "name" : "IND_DESC",
+    "dataTypeName" : "text",
+    "description" : "Indicator Description",
+    "fieldName" : "ind_desc",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152890887,
+    "cachedContents" : {
+      "non_null" : "5530",
+      "largest" : "Student progression from high school through second year of postsecondary education",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Student progression from high school through second year of postsecondary education",
+        "count" : "2806"
+      }, {
+        "item" : "Student progression from high school through postsecondary degree completion",
+        "count" : "2724"
+      } ],
+      "smallest" : "Student progression from high school through postsecondary degree completion",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101273,
+    "name" : "TOT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Count of Students Included in the Cohort",
+    "fieldName" : "tot_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152890888,
+    "cachedContents" : {
+      "non_null" : "5530",
+      "largest" : "74045.0",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "84"
+      }, {
+        "item" : "30.0",
+        "count" : "51"
+      }, {
+        "item" : "11.0",
+        "count" : "45"
+      }, {
+        "item" : "13.0",
+        "count" : "44"
+      }, {
+        "item" : "35.0",
+        "count" : "42"
+      }, {
+        "item" : "34.0",
+        "count" : "42"
+      }, {
+        "item" : "19.0",
+        "count" : "42"
+      }, {
+        "item" : "20.0",
+        "count" : "41"
+      }, {
+        "item" : "14.0",
+        "count" : "40"
+      }, {
+        "item" : "17.0",
+        "count" : "39"
+      }, {
+        "item" : "18.0",
+        "count" : "38"
+      }, {
+        "item" : "45.0",
+        "count" : "38"
+      }, {
+        "item" : "29.0",
+        "count" : "38"
+      }, {
+        "item" : "48.0",
+        "count" : "38"
+      }, {
+        "item" : "36.0",
+        "count" : "38"
+      }, {
+        "item" : "38.0",
+        "count" : "38"
+      }, {
+        "item" : "23.0",
+        "count" : "37"
+      }, {
+        "item" : "37.0",
+        "count" : "37"
+      }, {
+        "item" : "40.0",
+        "count" : "37"
+      }, {
+        "item" : "24.0",
+        "count" : "37"
+      } ],
+      "smallest" : "1.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101274,
+    "name" : "GRAD_5YR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count Graduate within 5 Years",
+    "fieldName" : "grad_5yr_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154757354,
+    "cachedContents" : {
+      "non_null" : "5352",
+      "largest" : "67914.0",
+      "null" : "178",
+      "top" : [ {
+        "item" : "11.0",
+        "count" : "63"
+      }, {
+        "item" : "12.0",
+        "count" : "53"
+      }, {
+        "item" : "10.0",
+        "count" : "53"
+      }, {
+        "item" : "15.0",
+        "count" : "50"
+      }, {
+        "item" : "7.0",
+        "count" : "48"
+      }, {
+        "item" : "16.0",
+        "count" : "47"
+      }, {
+        "item" : "13.0",
+        "count" : "47"
+      }, {
+        "item" : "14.0",
+        "count" : "47"
+      }, {
+        "item" : "27.0",
+        "count" : "46"
+      }, {
+        "item" : "28.0",
+        "count" : "45"
+      }, {
+        "item" : "34.0",
+        "count" : "44"
+      }, {
+        "item" : "17.0",
+        "count" : "44"
+      }, {
+        "item" : "55.0",
+        "count" : "44"
+      }, {
+        "item" : "20.0",
+        "count" : "43"
+      }, {
+        "item" : "25.0",
+        "count" : "41"
+      }, {
+        "item" : "43.0",
+        "count" : "40"
+      }, {
+        "item" : "36.0",
+        "count" : "40"
+      }, {
+        "item" : "18.0",
+        "count" : "39"
+      }, {
+        "item" : "22.0",
+        "count" : "39"
+      }, {
+        "item" : "31.0",
+        "count" : "38"
+      } ],
+      "smallest" : "0.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101275,
+    "name" : "GRAD_5YR_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent Graduate within 5 Years",
+    "fieldName" : "grad_5yr_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154757352,
+    "cachedContents" : {
+      "non_null" : "5352",
+      "largest" : "1.0",
+      "null" : "178",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "430"
+      }, {
+        "item" : "0.987",
+        "count" : "59"
+      }, {
+        "item" : "0.988",
+        "count" : "58"
+      }, {
+        "item" : "0.974",
+        "count" : "58"
+      }, {
+        "item" : "0.981",
+        "count" : "58"
+      }, {
+        "item" : "0.992",
+        "count" : "53"
+      }, {
+        "item" : "0.986",
+        "count" : "51"
+      }, {
+        "item" : "0.938",
+        "count" : "49"
+      }, {
+        "item" : "0.97",
+        "count" : "49"
+      }, {
+        "item" : "0.977",
+        "count" : "48"
+      }, {
+        "item" : "0.975",
+        "count" : "48"
+      }, {
+        "item" : "0.909",
+        "count" : "47"
+      }, {
+        "item" : "0.978",
+        "count" : "47"
+      }, {
+        "item" : "0.966",
+        "count" : "46"
+      }, {
+        "item" : "0.963",
+        "count" : "46"
+      }, {
+        "item" : "0.973",
+        "count" : "45"
+      }, {
+        "item" : "0.994",
+        "count" : "44"
+      }, {
+        "item" : "0.985",
+        "count" : "44"
+      }, {
+        "item" : "0.99",
+        "count" : "44"
+      }, {
+        "item" : "0.857",
+        "count" : "43"
+      } ],
+      "smallest" : "0.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 599101276,
+    "name" : "COLL_IMM_FALL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count Enrolled in College (Immediate Fall)",
+    "fieldName" : "coll_imm_fall_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154757362,
+    "cachedContents" : {
+      "non_null" : "5352",
+      "largest" : "45980.0",
+      "null" : "178",
+      "top" : [ {
+        "item" : "5.0",
+        "count" : "97"
+      }, {
+        "item" : "6.0",
+        "count" : "89"
+      }, {
+        "item" : "7.0",
+        "count" : "85"
+      }, {
+        "item" : "2.0",
+        "count" : "83"
+      }, {
+        "item" : "4.0",
+        "count" : "78"
+      }, {
+        "item" : "3.0",
+        "count" : "76"
+      }, {
+        "item" : "8.0",
+        "count" : "72"
+      }, {
+        "item" : "9.0",
+        "count" : "69"
+      }, {
+        "item" : "17.0",
+        "count" : "67"
+      }, {
+        "item" : "14.0",
+        "count" : "64"
+      }, {
+        "item" : "12.0",
+        "count" : "63"
+      }, {
+        "item" : "10.0",
+        "count" : "62"
+      }, {
+        "item" : "11.0",
+        "count" : "62"
+      }, {
+        "item" : "16.0",
+        "count" : "61"
+      }, {
+        "item" : "22.0",
+        "count" : "61"
+      }, {
+        "item" : "1.0",
+        "count" : "60"
+      }, {
+        "item" : "13.0",
+        "count" : "58"
+      }, {
+        "item" : "18.0",
+        "count" : "58"
+      }, {
+        "item" : "28.0",
+        "count" : "58"
+      }, {
+        "item" : "15.0",
+        "count" : "58"
+      } ],
+      "smallest" : "0.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101277,
+    "name" : "COLL_IMM_FALL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent Enrolled in College (Immediate Fall)",
+    "fieldName" : "coll_imm_fall_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154757358,
+    "cachedContents" : {
+      "non_null" : "5352",
+      "largest" : "1.0",
+      "null" : "178",
+      "top" : [ {
+        "item" : "0.5",
+        "count" : "73"
+      }, {
+        "item" : "0.333",
+        "count" : "47"
+      }, {
+        "item" : "0.667",
+        "count" : "46"
+      }, {
+        "item" : "0.556",
+        "count" : "29"
+      }, {
+        "item" : "0.0",
+        "count" : "29"
+      }, {
+        "item" : "0.429",
+        "count" : "29"
+      }, {
+        "item" : "0.625",
+        "count" : "26"
+      }, {
+        "item" : "0.4",
+        "count" : "26"
+      }, {
+        "item" : "0.25",
+        "count" : "24"
+      }, {
+        "item" : "0.75",
+        "count" : "24"
+      }, {
+        "item" : "0.375",
+        "count" : "24"
+      }, {
+        "item" : "0.571",
+        "count" : "24"
+      }, {
+        "item" : "0.8",
+        "count" : "23"
+      }, {
+        "item" : "0.833",
+        "count" : "22"
+      }, {
+        "item" : "0.714",
+        "count" : "21"
+      }, {
+        "item" : "0.417",
+        "count" : "19"
+      }, {
+        "item" : "0.7",
+        "count" : "18"
+      }, {
+        "item" : "0.538",
+        "count" : "18"
+      }, {
+        "item" : "0.6",
+        "count" : "18"
+      }, {
+        "item" : "0.813",
+        "count" : "18"
+      } ],
+      "smallest" : "0.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 599101278,
+    "name" : "PERSIST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count Persistently Enrolled in College",
+    "fieldName" : "persist_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154757360,
+    "cachedContents" : {
+      "non_null" : "5352",
+      "largest" : "40439.0",
+      "null" : "178",
+      "top" : [ {
+        "item" : "4.0",
+        "count" : "113"
+      }, {
+        "item" : "2.0",
+        "count" : "109"
+      }, {
+        "item" : "3.0",
+        "count" : "108"
+      }, {
+        "item" : "5.0",
+        "count" : "105"
+      }, {
+        "item" : "1.0",
+        "count" : "85"
+      }, {
+        "item" : "8.0",
+        "count" : "83"
+      }, {
+        "item" : "6.0",
+        "count" : "83"
+      }, {
+        "item" : "7.0",
+        "count" : "81"
+      }, {
+        "item" : "11.0",
+        "count" : "80"
+      }, {
+        "item" : "13.0",
+        "count" : "80"
+      }, {
+        "item" : "12.0",
+        "count" : "78"
+      }, {
+        "item" : "16.0",
+        "count" : "75"
+      }, {
+        "item" : "10.0",
+        "count" : "74"
+      }, {
+        "item" : "9.0",
+        "count" : "74"
+      }, {
+        "item" : "0.0",
+        "count" : "73"
+      }, {
+        "item" : "21.0",
+        "count" : "67"
+      }, {
+        "item" : "14.0",
+        "count" : "66"
+      }, {
+        "item" : "15.0",
+        "count" : "66"
+      }, {
+        "item" : "18.0",
+        "count" : "64"
+      }, {
+        "item" : "17.0",
+        "count" : "60"
+      } ],
+      "smallest" : "0.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101279,
+    "name" : "PERSIST_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent Persistently Enrolled in College",
+    "fieldName" : "persist_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154757356,
+    "cachedContents" : {
+      "non_null" : "5352",
+      "largest" : "0.963",
+      "null" : "178",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "73"
+      }, {
+        "item" : "0.5",
+        "count" : "72"
+      }, {
+        "item" : "0.333",
+        "count" : "53"
+      }, {
+        "item" : "0.25",
+        "count" : "42"
+      }, {
+        "item" : "0.429",
+        "count" : "31"
+      }, {
+        "item" : "0.286",
+        "count" : "30"
+      }, {
+        "item" : "0.667",
+        "count" : "28"
+      }, {
+        "item" : "0.4",
+        "count" : "27"
+      }, {
+        "item" : "0.444",
+        "count" : "26"
+      }, {
+        "item" : "0.2",
+        "count" : "25"
+      }, {
+        "item" : "0.571",
+        "count" : "24"
+      }, {
+        "item" : "0.375",
+        "count" : "23"
+      }, {
+        "item" : "0.167",
+        "count" : "23"
+      }, {
+        "item" : "0.545",
+        "count" : "22"
+      }, {
+        "item" : "0.714",
+        "count" : "22"
+      }, {
+        "item" : "0.533",
+        "count" : "19"
+      }, {
+        "item" : "0.417",
+        "count" : "17"
+      }, {
+        "item" : "0.143",
+        "count" : "17"
+      }, {
+        "item" : "0.438",
+        "count" : "17"
+      }, {
+        "item" : "0.583",
+        "count" : "17"
+      } ],
+      "smallest" : "0.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 599101280,
+    "name" : "DEG_6YR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count Obtained a Degree within 6 Years",
+    "fieldName" : "deg_6yr_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154757366,
+    "cachedContents" : {
+      "non_null" : "2624",
+      "largest" : "32491.0",
+      "null" : "2906",
+      "top" : [ {
+        "item" : "4.0",
+        "count" : "77"
+      }, {
+        "item" : "1.0",
+        "count" : "76"
+      }, {
+        "item" : "2.0",
+        "count" : "74"
+      }, {
+        "item" : "0.0",
+        "count" : "69"
+      }, {
+        "item" : "3.0",
+        "count" : "67"
+      }, {
+        "item" : "6.0",
+        "count" : "63"
+      }, {
+        "item" : "8.0",
+        "count" : "55"
+      }, {
+        "item" : "11.0",
+        "count" : "46"
+      }, {
+        "item" : "7.0",
+        "count" : "45"
+      }, {
+        "item" : "5.0",
+        "count" : "44"
+      }, {
+        "item" : "21.0",
+        "count" : "40"
+      }, {
+        "item" : "12.0",
+        "count" : "39"
+      }, {
+        "item" : "9.0",
+        "count" : "37"
+      }, {
+        "item" : "10.0",
+        "count" : "35"
+      }, {
+        "item" : "14.0",
+        "count" : "34"
+      }, {
+        "item" : "15.0",
+        "count" : "31"
+      }, {
+        "item" : "17.0",
+        "count" : "29"
+      }, {
+        "item" : "13.0",
+        "count" : "29"
+      }, {
+        "item" : "20.0",
+        "count" : "26"
+      }, {
+        "item" : "16.0",
+        "count" : "23"
+      } ],
+      "smallest" : "0.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : { }
+  }, {
+    "id" : 599101281,
+    "name" : "DEG_6YR_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percent Obtained a Degree within 6 Years",
+    "fieldName" : "deg_6yr_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154757364,
+    "cachedContents" : {
+      "non_null" : "2624",
+      "largest" : "0.913",
+      "null" : "2906",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "69"
+      }, {
+        "item" : "0.5",
+        "count" : "29"
+      }, {
+        "item" : "0.333",
+        "count" : "29"
+      }, {
+        "item" : "0.25",
+        "count" : "26"
+      }, {
+        "item" : "0.143",
+        "count" : "18"
+      }, {
+        "item" : "0.4",
+        "count" : "18"
+      }, {
+        "item" : "0.2",
+        "count" : "17"
+      }, {
+        "item" : "0.167",
+        "count" : "16"
+      }, {
+        "item" : "0.286",
+        "count" : "14"
+      }, {
+        "item" : "0.375",
+        "count" : "14"
+      }, {
+        "item" : "0.091",
+        "count" : "12"
+      }, {
+        "item" : "0.667",
+        "count" : "11"
+      }, {
+        "item" : "0.364",
+        "count" : "11"
+      }, {
+        "item" : "0.125",
+        "count" : "11"
+      }, {
+        "item" : "0.1",
+        "count" : "11"
+      }, {
+        "item" : "0.625",
+        "count" : "10"
+      }, {
+        "item" : "0.222",
+        "count" : "10"
+      }, {
+        "item" : "0.071",
+        "count" : "9"
+      }, {
+        "item" : "0.429",
+        "count" : "9"
+      }, {
+        "item" : "0.344",
+        "count" : "9"
+      } ],
+      "smallest" : "0.0",
+      "count" : "5530",
+      "cardinality" : "5530"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "special education", "disability", "special population", "sped", "students with disabilities", "radar" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

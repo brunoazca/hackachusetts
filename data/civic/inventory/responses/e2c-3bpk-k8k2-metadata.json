@@ -1,0 +1,815 @@
+{
+  "id" : "3bpk-k8k2",
+  "name" : "Public Postsecondary Tuition and Fees",
+  "assetType" : "dataset",
+  "attribution" : "Massachusetts Department of Higher Education",
+  "attributionLink" : "https://www.mass.edu/datacenter/tuition/home.asp",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1680793834,
+  "description" : "This dataset contains undergraduate tuition and mandatory fees for each public Massachusetts institution of higher education since fiscal year 2006 (FY06). Data are disaggregated by fiscal year, segment, institution, and student residency.\n\nThese annual rates are based on full-time, undergraduate, state-supported tuition and mandatory fees, as published in the fall.\n\nThis dataset contains two versions of tuition and mandatory fee data:\n<b>1) Nominal/Published Rates:</b> the published tuition and fees for a given year, reflecting the actual cost at the time.\n<b>2) Inflation-Adjusted Rates:</b> tuition and fees adjusted for inflation using 2024 dollars, to provide a consistent comparison of the cost of college over time.\n\nThis dataset is 1 of 2 underlying datasets used in the interactive\n<a href=\"https://www.mass.edu/datacenter/factbook/tuitionfees.asp\">Tuition and Fees dashboard</a> on the Department of Higher Education Data Center:\n\n1) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Tuition-and-Fees/3bpk-k8k2/about_data\" target=\"_blank\" rel=\"noopener noreferrer\"> Public Postsecondary Tuition and Fees</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/dataset/Public-Postsecondary-Weighted-Tuition-and-Fees-by-/phn7-2pa8/about_data\" target=\"_blank\" rel=\"noopener noreferrer\"> Weighted Average Tuition and Fees by Public Postsecondary Segment</a>\n\nNotes:\n- Data appear as reported to the Massachusetts Department of Higher Education.\n- Figures published by DHE may differ slightly from figures published by other institutions and organizations due to differences in timing of publication, data definitions, and calculation logic.\n- A fiscal year (FY) is 12-month period beginning July 1 and ending June 30. Because a fiscal year straddles two different calendar years, the calendar year and fiscal year will not always match. For example, FY 2025 runs from July 1, 2024 to June 30, 2025.\n- Columns ADJ_TUITION_2024, ADJ_MAND_FEES_2024, and ADJ_TUITION_AND_MAND_FEES_2024 are adjusted for inflation using the <a href=\"https://www.bls.gov/cpi/tables/supplemental-files/\" target=\"_blank\" rel=\"noopener noreferrer\">Consumer Price Index for All Urban Consumers (CPI-U)</a> from the Bureau of Labor Statistics. Rates are converted to 2024 dollars to allow for consistence comparisons over time.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2215,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42282664,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1783953753,
+  "publicationGroup" : 19118284,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1784301454,
+  "rowsUpdatedBy" : "3fm6-nje8",
+  "tableId" : 20461104,
+  "totalTimesRated" : 0,
+  "viewCount" : 9300,
+  "viewLastModified" : 1784301454,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1685566753,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7567882,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1685547808,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1685566753,
+      "failureCount" : 0,
+      "startedAt" : 1685566753,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 637040369,
+    "name" : "FISCAL_YEAR",
+    "dataTypeName" : "text",
+    "description" : "Fiscal year in which the tuition and fee rates apply",
+    "fieldName" : "fiscal_year",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 169166164,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2021",
+        "count" : "56"
+      }, {
+        "item" : "2013",
+        "count" : "56"
+      }, {
+        "item" : "2014",
+        "count" : "56"
+      }, {
+        "item" : "2016",
+        "count" : "56"
+      }, {
+        "item" : "2026",
+        "count" : "56"
+      }, {
+        "item" : "2015",
+        "count" : "56"
+      }, {
+        "item" : "2011",
+        "count" : "56"
+      }, {
+        "item" : "2024",
+        "count" : "56"
+      }, {
+        "item" : "2007",
+        "count" : "56"
+      }, {
+        "item" : "2008",
+        "count" : "56"
+      }, {
+        "item" : "2010",
+        "count" : "56"
+      }, {
+        "item" : "2019",
+        "count" : "56"
+      }, {
+        "item" : "2025",
+        "count" : "56"
+      }, {
+        "item" : "2012",
+        "count" : "56"
+      }, {
+        "item" : "2023",
+        "count" : "56"
+      }, {
+        "item" : "2022",
+        "count" : "56"
+      }, {
+        "item" : "2006",
+        "count" : "56"
+      }, {
+        "item" : "2017",
+        "count" : "56"
+      }, {
+        "item" : "2018",
+        "count" : "56"
+      }, {
+        "item" : "2009",
+        "count" : "56"
+      } ],
+      "smallest" : "2006",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 637040363,
+    "name" : "SEGMENT",
+    "dataTypeName" : "text",
+    "description" : "Type of public institution (e.g., Community College, State University, or University of Massachusetts)",
+    "fieldName" : "segment",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146724670,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "University of Massachusetts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Community Colleges",
+        "count" : "630"
+      }, {
+        "item" : "State Universities",
+        "count" : "378"
+      }, {
+        "item" : "University of Massachusetts",
+        "count" : "168"
+      } ],
+      "smallest" : "Community Colleges",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : { }
+  }, {
+    "id" : 637040364,
+    "name" : "INSTITUTION",
+    "dataTypeName" : "text",
+    "description" : "Name of the public college or university",
+    "fieldName" : "institution",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 146724669,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Holyoke Community College",
+        "count" : "42"
+      }, {
+        "item" : "Massachusetts Maritime Academy",
+        "count" : "42"
+      }, {
+        "item" : "Massachusetts College of Liberal Arts",
+        "count" : "42"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "42"
+      }, {
+        "item" : "Bunker Hill Community College",
+        "count" : "42"
+      }, {
+        "item" : "Bristol Community College",
+        "count" : "42"
+      }, {
+        "item" : "Quinsigamond Community College",
+        "count" : "42"
+      }, {
+        "item" : "Berkshire Community College",
+        "count" : "42"
+      }, {
+        "item" : "Mt. Wachusett Community College",
+        "count" : "42"
+      }, {
+        "item" : "University of Massachusetts Dartmouth",
+        "count" : "42"
+      }, {
+        "item" : "North Shore Community College",
+        "count" : "42"
+      }, {
+        "item" : "Middlesex Community College",
+        "count" : "42"
+      }, {
+        "item" : "MassBay Community College",
+        "count" : "42"
+      }, {
+        "item" : "University of Massachusetts Lowell",
+        "count" : "42"
+      }, {
+        "item" : "University of Massachusetts Boston",
+        "count" : "42"
+      }, {
+        "item" : "Westfield State University",
+        "count" : "42"
+      }, {
+        "item" : "Massasoit Community College",
+        "count" : "42"
+      }, {
+        "item" : "University of Massachusetts Amherst",
+        "count" : "42"
+      }, {
+        "item" : "Massachusetts College of Art and Design",
+        "count" : "42"
+      }, {
+        "item" : "Springfield Technical Community College",
+        "count" : "42"
+      } ],
+      "smallest" : "Berkshire Community College",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : { }
+  }, {
+    "id" : 637040365,
+    "name" : "RESIDENCY",
+    "dataTypeName" : "text",
+    "description" : "Student residency status",
+    "fieldName" : "residency",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 166758282,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "Non-Resident",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Massachusetts Resident",
+        "count" : "588"
+      }, {
+        "item" : "Non-Resident",
+        "count" : "588"
+      } ],
+      "smallest" : "Massachusetts Resident",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : { }
+  }, {
+    "id" : 637040366,
+    "name" : "TUITION",
+    "dataTypeName" : "number",
+    "description" : "Published annual tuition rate",
+    "fieldName" : "tuition",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724667,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "40874",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6900",
+        "count" : "189"
+      }, {
+        "item" : "720",
+        "count" : "168"
+      }, {
+        "item" : "7050",
+        "count" : "126"
+      }, {
+        "item" : "750",
+        "count" : "84"
+      }, {
+        "item" : "970",
+        "count" : "84"
+      }, {
+        "item" : "780",
+        "count" : "63"
+      }, {
+        "item" : "910",
+        "count" : "42"
+      }, {
+        "item" : "1030",
+        "count" : "41"
+      }, {
+        "item" : "1714",
+        "count" : "23"
+      }, {
+        "item" : "7410",
+        "count" : "21"
+      }, {
+        "item" : "7800",
+        "count" : "21"
+      }, {
+        "item" : "7980",
+        "count" : "21"
+      }, {
+        "item" : "8430",
+        "count" : "21"
+      }, {
+        "item" : "7710",
+        "count" : "21"
+      }, {
+        "item" : "9976",
+        "count" : "21"
+      }, {
+        "item" : "7260",
+        "count" : "21"
+      }, {
+        "item" : "9758",
+        "count" : "11"
+      }, {
+        "item" : "8568",
+        "count" : "11"
+      }, {
+        "item" : "9938",
+        "count" : "11"
+      }, {
+        "item" : "8100",
+        "count" : "11"
+      } ],
+      "smallest" : "720",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "decimalSeparator" : ".",
+      "currencyStyle" : "USD",
+      "precision" : "0",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 637040367,
+    "name" : "MANDATORY_FEES",
+    "dataTypeName" : "number",
+    "description" : "Published annual mandatory fees. Mandatory fees are determined by institution and may include mandatory fees for academic, recreation, facility, technology, or transportation purposes",
+    "fieldName" : "mandatory_fees",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724671,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "20570",
+      "null" : "0",
+      "top" : [ {
+        "item" : "5970",
+        "count" : "16"
+      }, {
+        "item" : "6000",
+        "count" : "14"
+      }, {
+        "item" : "4580",
+        "count" : "10"
+      }, {
+        "item" : "6040",
+        "count" : "10"
+      }, {
+        "item" : "6096",
+        "count" : "10"
+      }, {
+        "item" : "4130",
+        "count" : "9"
+      }, {
+        "item" : "2930",
+        "count" : "8"
+      }, {
+        "item" : "5420",
+        "count" : "8"
+      }, {
+        "item" : "3510",
+        "count" : "8"
+      }, {
+        "item" : "4484",
+        "count" : "7"
+      }, {
+        "item" : "6170",
+        "count" : "6"
+      }, {
+        "item" : "6550",
+        "count" : "6"
+      }, {
+        "item" : "10410",
+        "count" : "6"
+      }, {
+        "item" : "5030",
+        "count" : "6"
+      }, {
+        "item" : "8250",
+        "count" : "6"
+      }, {
+        "item" : "4350",
+        "count" : "6"
+      }, {
+        "item" : "6152",
+        "count" : "6"
+      }, {
+        "item" : "4356",
+        "count" : "6"
+      }, {
+        "item" : "6250",
+        "count" : "6"
+      }, {
+        "item" : "6840",
+        "count" : "6"
+      } ],
+      "smallest" : "326",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "decimalSeparator" : ".",
+      "currencyStyle" : "USD",
+      "precision" : "0",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 637040368,
+    "name" : "TUITION_AND_MAND_FEES",
+    "dataTypeName" : "number",
+    "description" : "Calculation of Tuition + Mandatory Fees",
+    "fieldName" : "tuition_and_mand_fees",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 146724666,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "44700",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6720",
+        "count" : "7"
+      }, {
+        "item" : "12900",
+        "count" : "7"
+      }, {
+        "item" : "15150",
+        "count" : "6"
+      }, {
+        "item" : "13750",
+        "count" : "6"
+      }, {
+        "item" : "7560",
+        "count" : "6"
+      }, {
+        "item" : "12830",
+        "count" : "5"
+      }, {
+        "item" : "4230",
+        "count" : "5"
+      }, {
+        "item" : "3750",
+        "count" : "5"
+      }, {
+        "item" : "6790",
+        "count" : "5"
+      }, {
+        "item" : "13770",
+        "count" : "5"
+      }, {
+        "item" : "6750",
+        "count" : "5"
+      }, {
+        "item" : "12030",
+        "count" : "5"
+      }, {
+        "item" : "11480",
+        "count" : "4"
+      }, {
+        "item" : "11540",
+        "count" : "4"
+      }, {
+        "item" : "10410",
+        "count" : "4"
+      }, {
+        "item" : "5300",
+        "count" : "4"
+      }, {
+        "item" : "5070",
+        "count" : "4"
+      }, {
+        "item" : "13240",
+        "count" : "4"
+      }, {
+        "item" : "13356",
+        "count" : "4"
+      }, {
+        "item" : "6400",
+        "count" : "4"
+      } ],
+      "smallest" : "3000",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "decimalSeparator" : ".",
+      "currencyStyle" : "USD",
+      "precision" : "0",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 637040370,
+    "name" : "ADJ_TUITION_2024",
+    "dataTypeName" : "number",
+    "description" : "Tuition adjusted for inflation to 2024 dollars",
+    "fieldName" : "adj_tuition_2024",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 169166165,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "42557",
+      "null" : "0",
+      "top" : [ {
+        "item" : "772",
+        "count" : "12"
+      }, {
+        "item" : "970",
+        "count" : "12"
+      }, {
+        "item" : "9291",
+        "count" : "10"
+      }, {
+        "item" : "1004",
+        "count" : "10"
+      }, {
+        "item" : "1053",
+        "count" : "10"
+      }, {
+        "item" : "9622",
+        "count" : "9"
+      }, {
+        "item" : "8620",
+        "count" : "9"
+      }, {
+        "item" : "9132",
+        "count" : "9"
+      }, {
+        "item" : "9926",
+        "count" : "9"
+      }, {
+        "item" : "10089",
+        "count" : "9"
+      }, {
+        "item" : "9427",
+        "count" : "9"
+      }, {
+        "item" : "7104",
+        "count" : "9"
+      }, {
+        "item" : "8830",
+        "count" : "9"
+      }, {
+        "item" : "8466",
+        "count" : "9"
+      }, {
+        "item" : "10736",
+        "count" : "9"
+      }, {
+        "item" : "8363",
+        "count" : "9"
+      }, {
+        "item" : "7396",
+        "count" : "9"
+      }, {
+        "item" : "6723",
+        "count" : "9"
+      }, {
+        "item" : "9018",
+        "count" : "9"
+      }, {
+        "item" : "6810",
+        "count" : "9"
+      } ],
+      "smallest" : "702",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 637040371,
+    "name" : "ADJ_MAND_FEES_2024",
+    "dataTypeName" : "number",
+    "description" : "Mandatory fees adjusted for inflation to 2024 dollars",
+    "fieldName" : "adj_mand_fees_2024",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 169166166,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "26885",
+      "null" : "0",
+      "top" : [ {
+        "item" : "4982",
+        "count" : "4"
+      }, {
+        "item" : "9525",
+        "count" : "4"
+      }, {
+        "item" : "4196",
+        "count" : "4"
+      }, {
+        "item" : "7236",
+        "count" : "4"
+      }, {
+        "item" : "6431",
+        "count" : "4"
+      }, {
+        "item" : "4036",
+        "count" : "4"
+      }, {
+        "item" : "6130",
+        "count" : "4"
+      }, {
+        "item" : "10108",
+        "count" : "4"
+      }, {
+        "item" : "10480",
+        "count" : "4"
+      }, {
+        "item" : "6314",
+        "count" : "4"
+      }, {
+        "item" : "7498",
+        "count" : "4"
+      }, {
+        "item" : "11370",
+        "count" : "4"
+      }, {
+        "item" : "4559",
+        "count" : "4"
+      }, {
+        "item" : "6053",
+        "count" : "4"
+      }, {
+        "item" : "6911",
+        "count" : "4"
+      }, {
+        "item" : "6177",
+        "count" : "4"
+      }, {
+        "item" : "6474",
+        "count" : "4"
+      }, {
+        "item" : "5942",
+        "count" : "4"
+      }, {
+        "item" : "6258",
+        "count" : "4"
+      }, {
+        "item" : "4575",
+        "count" : "4"
+      } ],
+      "smallest" : "400",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 637040372,
+    "name" : "ADJ_TUITION_AND_MAND_FEES_2024",
+    "dataTypeName" : "number",
+    "description" : "Calculation of adjusted Tuition + Mandatory Fees to 2024 dollars",
+    "fieldName" : "adj_tuition_and_mand_fees_2024",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 169166167,
+    "cachedContents" : {
+      "non_null" : "1176",
+      "largest" : "46542",
+      "null" : "0",
+      "top" : [ {
+        "item" : "18099",
+        "count" : "3"
+      }, {
+        "item" : "15386",
+        "count" : "2"
+      }, {
+        "item" : "14316",
+        "count" : "2"
+      }, {
+        "item" : "37212",
+        "count" : "2"
+      }, {
+        "item" : "17405",
+        "count" : "2"
+      }, {
+        "item" : "13750",
+        "count" : "2"
+      }, {
+        "item" : "9854",
+        "count" : "2"
+      }, {
+        "item" : "5913",
+        "count" : "2"
+      }, {
+        "item" : "31908",
+        "count" : "2"
+      }, {
+        "item" : "5132",
+        "count" : "2"
+      }, {
+        "item" : "6846",
+        "count" : "2"
+      }, {
+        "item" : "15446",
+        "count" : "2"
+      }, {
+        "item" : "15485",
+        "count" : "2"
+      }, {
+        "item" : "13397",
+        "count" : "2"
+      }, {
+        "item" : "15298",
+        "count" : "2"
+      }, {
+        "item" : "18333",
+        "count" : "2"
+      }, {
+        "item" : "7405",
+        "count" : "2"
+      }, {
+        "item" : "12255",
+        "count" : "2"
+      }, {
+        "item" : "6827",
+        "count" : "2"
+      }, {
+        "item" : "6718",
+        "count" : "2"
+      } ],
+      "smallest" : "4539",
+      "count" : "1176",
+      "cardinality" : "1176"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "One year of tuition and mandatory fees per institution of higher education",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "tuition", "fees", "higher education", "funding", "college", "university", "finance", "cost of college", "cost of attendance", "mandatory fees", "resident tuition", "inflation", "inflation adjusted", "inflation-adjusted", "real tuition", "real fees", "real tuition and fees", "nominal", "college tuition", "community college", "state university", "university of massachusetts", "umass", "dhe", "nonresident tuition", "school finance", "sticker price", "tuition and fees" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

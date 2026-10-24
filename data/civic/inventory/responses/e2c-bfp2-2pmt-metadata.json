@@ -1,0 +1,1961 @@
+{
+  "id" : "bfp2-2pmt",
+  "name" : "VOCAL Index Scaled Scores and Favorability",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1704479407,
+  "description" : "This dataset contains state-level index scores and their favorability distributions from the Views of Climate and Learning (VOCAL) survey since 2018. These scores are composite measures that summarize student responses across several content-related items.\n\nThe VOCAL survey is designed to provide information on student perceptions of school climate. There are two reports with different types of data: responses to individual items and aggregate index scaled scores that combine item responses. For more information about the VOCAL survey, please visit the <a href=\"https://www.doe.mass.edu/research/vocal\" target=\"_blank\" rel=\"noopener noreferrer\">VOCAL home page</a>.\n\nFavorability data and average topic scores are reported at the state level, and are not disaggregated by student group.\n\nThis dataset is one of two containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiODcyMDMzMjQtZGU5Yi00YTRiLTg4ODEtODI4MmViMDI5NzY3IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">VOCAL state dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Students-and-Teachers/VOCAL-Index-Scaled-Scores-and-Favorability/bfp2-2pmt/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">VOCAL Index Scaled Scores and Favorability</a>\n<a href=\"https://educationtocareer.data.mass.gov/Students-and-Teachers/VOCAL-Item-Response-Scores/jqvp-ngaw/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">VOCAL Item Response Scores</a>\n\n<b>List of Indices</b>\n<ul><li>Overall School Climate</li><li>Engagement Dimension<ul><li>Participation Topic (state-level)</li></ul></li><li>Safety Dimension<ul><li>Bullying Topic (state-level)</li></ul></li><li>Environment Dimension<ul><li>Instructional Environment Topic (state-level)</li></ul></li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 601,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41287986,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745418782,
+  "publicationGroup" : 19420736,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1792521518,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19871016,
+  "totalTimesRated" : 0,
+  "viewCount" : 1579,
+  "viewLastModified" : 1792521882,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1707509970,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6860007,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1707509941,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1707509971,
+      "failureCount" : 0,
+      "startedAt" : 1707509970,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609187378,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787582,
+    "cachedContents" : {
+      "non_null" : "585",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023",
+        "count" : "75"
+      }, {
+        "item" : "2026",
+        "count" : "75"
+      }, {
+        "item" : "2022",
+        "count" : "75"
+      }, {
+        "item" : "2024",
+        "count" : "75"
+      }, {
+        "item" : "2021",
+        "count" : "75"
+      }, {
+        "item" : "2019",
+        "count" : "75"
+      }, {
+        "item" : "2025",
+        "count" : "75"
+      }, {
+        "item" : "2018",
+        "count" : "60"
+      } ],
+      "smallest" : "2018",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187379,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787583,
+    "cachedContents" : {
+      "non_null" : "585",
+      "largest" : "00000000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "585"
+      } ],
+      "smallest" : "00000000",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187380,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787584,
+    "cachedContents" : {
+      "non_null" : "585",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State",
+        "count" : "585"
+      } ],
+      "smallest" : "State",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187381,
+    "name" : "GRADE",
+    "dataTypeName" : "text",
+    "description" : "Grade",
+    "fieldName" : "grade",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787587,
+    "cachedContents" : {
+      "non_null" : "585",
+      "largest" : "ALL",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ALL",
+        "count" : "120"
+      }, {
+        "item" : "10",
+        "count" : "120"
+      }, {
+        "item" : "05",
+        "count" : "120"
+      }, {
+        "item" : "08",
+        "count" : "120"
+      }, {
+        "item" : "04",
+        "count" : "105"
+      } ],
+      "smallest" : "04",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187382,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 150787588,
+    "cachedContents" : {
+      "non_null" : "585",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "American Indian or Alaska Native, Multi-Race, Not Hispanic or Latino, or Native Hawaiian or Other Pacific Islander",
+        "count" : "39"
+      }, {
+        "item" : "All Students",
+        "count" : "39"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "39"
+      }, {
+        "item" : "Non-English Learners",
+        "count" : "39"
+      }, {
+        "item" : "Male",
+        "count" : "39"
+      }, {
+        "item" : "Black or African American",
+        "count" : "39"
+      }, {
+        "item" : "English Learners",
+        "count" : "39"
+      }, {
+        "item" : "White",
+        "count" : "39"
+      }, {
+        "item" : "Asian",
+        "count" : "39"
+      }, {
+        "item" : "Female",
+        "count" : "39"
+      }, {
+        "item" : "Students without Disabilities",
+        "count" : "39"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "39"
+      }, {
+        "item" : "Nonbinary",
+        "count" : "39"
+      }, {
+        "item" : "Low Income",
+        "count" : "25"
+      }, {
+        "item" : "Non-Low Income",
+        "count" : "25"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "14"
+      }, {
+        "item" : "Non-Economically Disadvantaged",
+        "count" : "14"
+      } ],
+      "smallest" : "All Students",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187383,
+    "name" : "OVAL_SCH_CLIM_CNT",
+    "dataTypeName" : "number",
+    "description" : "Overall School Climate Count of Students Included",
+    "fieldName" : "part_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787593,
+    "cachedContents" : {
+      "non_null" : "580",
+      "largest" : "227706",
+      "null" : "5",
+      "top" : [ {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "15",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "30452",
+        "count" : "2"
+      }, {
+        "item" : "38",
+        "count" : "2"
+      }, {
+        "item" : "1473",
+        "count" : "1"
+      }, {
+        "item" : "3162",
+        "count" : "1"
+      }, {
+        "item" : "18589",
+        "count" : "1"
+      }, {
+        "item" : "26062",
+        "count" : "1"
+      }, {
+        "item" : "37",
+        "count" : "1"
+      }, {
+        "item" : "41061",
+        "count" : "1"
+      }, {
+        "item" : "13462",
+        "count" : "1"
+      }, {
+        "item" : "24696",
+        "count" : "1"
+      }, {
+        "item" : "5669",
+        "count" : "1"
+      }, {
+        "item" : "2482",
+        "count" : "1"
+      }, {
+        "item" : "69117",
+        "count" : "1"
+      }, {
+        "item" : "106762",
+        "count" : "1"
+      }, {
+        "item" : "2286",
+        "count" : "1"
+      }, {
+        "item" : "31",
+        "count" : "1"
+      }, {
+        "item" : "19895",
+        "count" : "1"
+      } ],
+      "smallest" : "11",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187384,
+    "name" : "ENGMT_CLIM_CNT",
+    "dataTypeName" : "number",
+    "description" : "Engagement Dimension Count of Students Included",
+    "fieldName" : "engmt_clim_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787592,
+    "cachedContents" : {
+      "non_null" : "580",
+      "largest" : "227706",
+      "null" : "5",
+      "top" : [ {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "38",
+        "count" : "2"
+      }, {
+        "item" : "3733",
+        "count" : "2"
+      }, {
+        "item" : "15",
+        "count" : "2"
+      }, {
+        "item" : "26082",
+        "count" : "2"
+      }, {
+        "item" : "4439",
+        "count" : "2"
+      }, {
+        "item" : "10619",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "37",
+        "count" : "1"
+      }, {
+        "item" : "18868",
+        "count" : "1"
+      }, {
+        "item" : "34596",
+        "count" : "1"
+      }, {
+        "item" : "24029",
+        "count" : "1"
+      }, {
+        "item" : "31",
+        "count" : "1"
+      }, {
+        "item" : "40865",
+        "count" : "1"
+      }, {
+        "item" : "2482",
+        "count" : "1"
+      }, {
+        "item" : "7668",
+        "count" : "1"
+      }, {
+        "item" : "19407",
+        "count" : "1"
+      }, {
+        "item" : "20992",
+        "count" : "1"
+      }, {
+        "item" : "5886",
+        "count" : "1"
+      }, {
+        "item" : "41419",
+        "count" : "1"
+      } ],
+      "smallest" : "11",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187385,
+    "name" : "SFTY_CLIM_CNT",
+    "dataTypeName" : "number",
+    "description" : "Safety Dimension Count of Students Included",
+    "fieldName" : "sfty_clim_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787591,
+    "cachedContents" : {
+      "non_null" : "580",
+      "largest" : "227706",
+      "null" : "5",
+      "top" : [ {
+        "item" : "4442",
+        "count" : "2"
+      }, {
+        "item" : "38",
+        "count" : "2"
+      }, {
+        "item" : "24338",
+        "count" : "2"
+      }, {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "41793",
+        "count" : "2"
+      }, {
+        "item" : "15",
+        "count" : "2"
+      }, {
+        "item" : "30452",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "1473",
+        "count" : "1"
+      }, {
+        "item" : "27222",
+        "count" : "1"
+      }, {
+        "item" : "52298",
+        "count" : "1"
+      }, {
+        "item" : "5669",
+        "count" : "1"
+      }, {
+        "item" : "9929",
+        "count" : "1"
+      }, {
+        "item" : "34965",
+        "count" : "1"
+      }, {
+        "item" : "2482",
+        "count" : "1"
+      }, {
+        "item" : "2284",
+        "count" : "1"
+      }, {
+        "item" : "29582",
+        "count" : "1"
+      }, {
+        "item" : "112509",
+        "count" : "1"
+      }, {
+        "item" : "3162",
+        "count" : "1"
+      }, {
+        "item" : "10491",
+        "count" : "1"
+      } ],
+      "smallest" : "11",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187386,
+    "name" : "ENVIR_CLIM_CNT",
+    "dataTypeName" : "number",
+    "description" : "Environment Dimension Count of Students Included",
+    "fieldName" : "envir_clim_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787590,
+    "cachedContents" : {
+      "non_null" : "580",
+      "largest" : "227706",
+      "null" : "5",
+      "top" : [ {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "15",
+        "count" : "2"
+      }, {
+        "item" : "2178",
+        "count" : "2"
+      }, {
+        "item" : "5122",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "38",
+        "count" : "2"
+      }, {
+        "item" : "2482",
+        "count" : "1"
+      }, {
+        "item" : "12533",
+        "count" : "1"
+      }, {
+        "item" : "28234",
+        "count" : "1"
+      }, {
+        "item" : "12742",
+        "count" : "1"
+      }, {
+        "item" : "43670",
+        "count" : "1"
+      }, {
+        "item" : "39539",
+        "count" : "1"
+      }, {
+        "item" : "37",
+        "count" : "1"
+      }, {
+        "item" : "4469",
+        "count" : "1"
+      }, {
+        "item" : "114024",
+        "count" : "1"
+      }, {
+        "item" : "28553",
+        "count" : "1"
+      }, {
+        "item" : "25812",
+        "count" : "1"
+      }, {
+        "item" : "43556",
+        "count" : "1"
+      }, {
+        "item" : "49753",
+        "count" : "1"
+      }, {
+        "item" : "51486",
+        "count" : "1"
+      } ],
+      "smallest" : "11",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187387,
+    "name" : "PART_ENGMT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Participation (Engagement) Count of Students Included",
+    "fieldName" : "part_engmt_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787595,
+    "cachedContents" : {
+      "non_null" : "449",
+      "largest" : "206529",
+      "null" : "136",
+      "top" : [ {
+        "item" : "0",
+        "count" : "74"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "15",
+        "count" : "2"
+      }, {
+        "item" : "34914",
+        "count" : "1"
+      }, {
+        "item" : "2482",
+        "count" : "1"
+      }, {
+        "item" : "38182",
+        "count" : "1"
+      }, {
+        "item" : "40850",
+        "count" : "1"
+      }, {
+        "item" : "37023",
+        "count" : "1"
+      }, {
+        "item" : "3854",
+        "count" : "1"
+      }, {
+        "item" : "17493",
+        "count" : "1"
+      }, {
+        "item" : "24952",
+        "count" : "1"
+      }, {
+        "item" : "23099",
+        "count" : "1"
+      }, {
+        "item" : "19684",
+        "count" : "1"
+      }, {
+        "item" : "96174",
+        "count" : "1"
+      }, {
+        "item" : "30450",
+        "count" : "1"
+      }, {
+        "item" : "23916",
+        "count" : "1"
+      }, {
+        "item" : "26723",
+        "count" : "1"
+      }, {
+        "item" : "24431",
+        "count" : "1"
+      }, {
+        "item" : "31",
+        "count" : "1"
+      }, {
+        "item" : "47665",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187388,
+    "name" : "BUL_SFTY_CNT",
+    "dataTypeName" : "number",
+    "description" : "Bullying (Safety) Count of Students Included",
+    "fieldName" : "bul_sfty_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787589,
+    "cachedContents" : {
+      "non_null" : "580",
+      "largest" : "227706",
+      "null" : "5",
+      "top" : [ {
+        "item" : "5482",
+        "count" : "2"
+      }, {
+        "item" : "30439",
+        "count" : "2"
+      }, {
+        "item" : "101",
+        "count" : "2"
+      }, {
+        "item" : "2497",
+        "count" : "2"
+      }, {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "3813",
+        "count" : "2"
+      }, {
+        "item" : "10615",
+        "count" : "2"
+      }, {
+        "item" : "15",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "39672",
+        "count" : "2"
+      }, {
+        "item" : "38",
+        "count" : "2"
+      }, {
+        "item" : "3720",
+        "count" : "2"
+      }, {
+        "item" : "18618",
+        "count" : "2"
+      }, {
+        "item" : "4054",
+        "count" : "1"
+      }, {
+        "item" : "29482",
+        "count" : "1"
+      }, {
+        "item" : "37",
+        "count" : "1"
+      }, {
+        "item" : "197886",
+        "count" : "1"
+      }, {
+        "item" : "16979",
+        "count" : "1"
+      }, {
+        "item" : "26861",
+        "count" : "1"
+      }, {
+        "item" : "1330",
+        "count" : "1"
+      } ],
+      "smallest" : "11",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187389,
+    "name" : "INSTR_ENVIR_CNT",
+    "dataTypeName" : "number",
+    "description" : "Instructional (Environment) Count of Students Included",
+    "fieldName" : "instr_envir_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787594,
+    "cachedContents" : {
+      "non_null" : "449",
+      "largest" : "206561",
+      "null" : "136",
+      "top" : [ {
+        "item" : "0",
+        "count" : "74"
+      }, {
+        "item" : "15",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "5122",
+        "count" : "2"
+      }, {
+        "item" : "107454",
+        "count" : "1"
+      }, {
+        "item" : "12742",
+        "count" : "1"
+      }, {
+        "item" : "28553",
+        "count" : "1"
+      }, {
+        "item" : "4469",
+        "count" : "1"
+      }, {
+        "item" : "2482",
+        "count" : "1"
+      }, {
+        "item" : "20351",
+        "count" : "1"
+      }, {
+        "item" : "3722",
+        "count" : "1"
+      }, {
+        "item" : "24275",
+        "count" : "1"
+      }, {
+        "item" : "25812",
+        "count" : "1"
+      }, {
+        "item" : "55494",
+        "count" : "1"
+      }, {
+        "item" : "112547",
+        "count" : "1"
+      }, {
+        "item" : "3854",
+        "count" : "1"
+      }, {
+        "item" : "22322",
+        "count" : "1"
+      }, {
+        "item" : "26723",
+        "count" : "1"
+      }, {
+        "item" : "1754",
+        "count" : "1"
+      }, {
+        "item" : "3785",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187390,
+    "name" : "OVAL_SCH_CLIM_AVG",
+    "dataTypeName" : "number",
+    "description" : "Overall School Climate Average Score",
+    "fieldName" : "oval_sch_clim",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787610,
+    "cachedContents" : {
+      "non_null" : "580",
+      "largest" : "68",
+      "null" : "5",
+      "top" : [ {
+        "item" : "43",
+        "count" : "53"
+      }, {
+        "item" : "50",
+        "count" : "43"
+      }, {
+        "item" : "44",
+        "count" : "39"
+      }, {
+        "item" : "57",
+        "count" : "35"
+      }, {
+        "item" : "45",
+        "count" : "34"
+      }, {
+        "item" : "52",
+        "count" : "30"
+      }, {
+        "item" : "58",
+        "count" : "29"
+      }, {
+        "item" : "46",
+        "count" : "28"
+      }, {
+        "item" : "49",
+        "count" : "28"
+      }, {
+        "item" : "53",
+        "count" : "25"
+      }, {
+        "item" : "51",
+        "count" : "25"
+      }, {
+        "item" : "56",
+        "count" : "22"
+      }, {
+        "item" : "47",
+        "count" : "18"
+      }, {
+        "item" : "48",
+        "count" : "18"
+      }, {
+        "item" : "59",
+        "count" : "18"
+      }, {
+        "item" : "42",
+        "count" : "18"
+      }, {
+        "item" : "55",
+        "count" : "15"
+      }, {
+        "item" : "60",
+        "count" : "14"
+      }, {
+        "item" : "54",
+        "count" : "13"
+      }, {
+        "item" : "62",
+        "count" : "13"
+      } ],
+      "smallest" : "32",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187391,
+    "name" : "ENGMT_CLIM_AVG",
+    "dataTypeName" : "number",
+    "description" : "Engagement Dimension Average Score",
+    "fieldName" : "engmt_clim_avg",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787596,
+    "cachedContents" : {
+      "non_null" : "577",
+      "largest" : "66",
+      "null" : "8",
+      "top" : [ {
+        "item" : "45",
+        "count" : "78"
+      }, {
+        "item" : "50",
+        "count" : "54"
+      }, {
+        "item" : "56",
+        "count" : "46"
+      }, {
+        "item" : "44",
+        "count" : "43"
+      }, {
+        "item" : "46",
+        "count" : "35"
+      }, {
+        "item" : "51",
+        "count" : "34"
+      }, {
+        "item" : "57",
+        "count" : "30"
+      }, {
+        "item" : "53",
+        "count" : "29"
+      }, {
+        "item" : "55",
+        "count" : "25"
+      }, {
+        "item" : "52",
+        "count" : "24"
+      }, {
+        "item" : "59",
+        "count" : "22"
+      }, {
+        "item" : "49",
+        "count" : "22"
+      }, {
+        "item" : "54",
+        "count" : "22"
+      }, {
+        "item" : "58",
+        "count" : "19"
+      }, {
+        "item" : "48",
+        "count" : "18"
+      }, {
+        "item" : "60",
+        "count" : "15"
+      }, {
+        "item" : "47",
+        "count" : "13"
+      }, {
+        "item" : "42",
+        "count" : "7"
+      }, {
+        "item" : "62",
+        "count" : "7"
+      }, {
+        "item" : "43",
+        "count" : "6"
+      } ],
+      "smallest" : "34",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187392,
+    "name" : "SFTY_CLIM_AVG",
+    "dataTypeName" : "number",
+    "description" : "Safety Dimension Average Score",
+    "fieldName" : "sfty_clim_avg",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787597,
+    "cachedContents" : {
+      "non_null" : "577",
+      "largest" : "67",
+      "null" : "8",
+      "top" : [ {
+        "item" : "44",
+        "count" : "45"
+      }, {
+        "item" : "46",
+        "count" : "41"
+      }, {
+        "item" : "48",
+        "count" : "39"
+      }, {
+        "item" : "51",
+        "count" : "36"
+      }, {
+        "item" : "42",
+        "count" : "33"
+      }, {
+        "item" : "41",
+        "count" : "32"
+      }, {
+        "item" : "50",
+        "count" : "30"
+      }, {
+        "item" : "56",
+        "count" : "27"
+      }, {
+        "item" : "43",
+        "count" : "26"
+      }, {
+        "item" : "55",
+        "count" : "25"
+      }, {
+        "item" : "49",
+        "count" : "23"
+      }, {
+        "item" : "54",
+        "count" : "23"
+      }, {
+        "item" : "52",
+        "count" : "21"
+      }, {
+        "item" : "45",
+        "count" : "21"
+      }, {
+        "item" : "57",
+        "count" : "20"
+      }, {
+        "item" : "58",
+        "count" : "17"
+      }, {
+        "item" : "40",
+        "count" : "16"
+      }, {
+        "item" : "53",
+        "count" : "14"
+      }, {
+        "item" : "47",
+        "count" : "13"
+      }, {
+        "item" : "60",
+        "count" : "11"
+      } ],
+      "smallest" : "30",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187393,
+    "name" : "ENVIR_CLIM_AVG",
+    "dataTypeName" : "number",
+    "description" : "Environment Dimension Average Score",
+    "fieldName" : "envir_clim_avg",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787598,
+    "cachedContents" : {
+      "non_null" : "577",
+      "largest" : "70",
+      "null" : "8",
+      "top" : [ {
+        "item" : "51",
+        "count" : "44"
+      }, {
+        "item" : "48",
+        "count" : "40"
+      }, {
+        "item" : "52",
+        "count" : "40"
+      }, {
+        "item" : "44",
+        "count" : "36"
+      }, {
+        "item" : "45",
+        "count" : "34"
+      }, {
+        "item" : "56",
+        "count" : "32"
+      }, {
+        "item" : "47",
+        "count" : "32"
+      }, {
+        "item" : "46",
+        "count" : "31"
+      }, {
+        "item" : "53",
+        "count" : "27"
+      }, {
+        "item" : "58",
+        "count" : "26"
+      }, {
+        "item" : "57",
+        "count" : "24"
+      }, {
+        "item" : "49",
+        "count" : "23"
+      }, {
+        "item" : "54",
+        "count" : "23"
+      }, {
+        "item" : "50",
+        "count" : "23"
+      }, {
+        "item" : "60",
+        "count" : "21"
+      }, {
+        "item" : "62",
+        "count" : "20"
+      }, {
+        "item" : "59",
+        "count" : "18"
+      }, {
+        "item" : "55",
+        "count" : "16"
+      }, {
+        "item" : "61",
+        "count" : "14"
+      }, {
+        "item" : "43",
+        "count" : "13"
+      } ],
+      "smallest" : "36",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187394,
+    "name" : "PART_ENGMT_AVG",
+    "dataTypeName" : "number",
+    "description" : "Participation (Engagement) Average Score",
+    "fieldName" : "part_engmt_avg",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787599,
+    "cachedContents" : {
+      "non_null" : "25",
+      "largest" : "57",
+      "null" : "560",
+      "top" : [ {
+        "item" : "46",
+        "count" : "7"
+      }, {
+        "item" : "55",
+        "count" : "3"
+      }, {
+        "item" : "47",
+        "count" : "3"
+      }, {
+        "item" : "51",
+        "count" : "3"
+      }, {
+        "item" : "53",
+        "count" : "2"
+      }, {
+        "item" : "50",
+        "count" : "2"
+      }, {
+        "item" : "56",
+        "count" : "2"
+      }, {
+        "item" : "52",
+        "count" : "1"
+      }, {
+        "item" : "57",
+        "count" : "1"
+      }, {
+        "item" : "54",
+        "count" : "1"
+      } ],
+      "smallest" : "46",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187395,
+    "name" : "BUL_SFTY_AVG",
+    "dataTypeName" : "number",
+    "description" : "Bullying (Safety) Average Score",
+    "fieldName" : "bul_sfty_avg",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787600,
+    "cachedContents" : {
+      "non_null" : "161",
+      "largest" : "64",
+      "null" : "424",
+      "top" : [ {
+        "item" : "45",
+        "count" : "15"
+      }, {
+        "item" : "46",
+        "count" : "14"
+      }, {
+        "item" : "43",
+        "count" : "12"
+      }, {
+        "item" : "50",
+        "count" : "11"
+      }, {
+        "item" : "49",
+        "count" : "10"
+      }, {
+        "item" : "47",
+        "count" : "9"
+      }, {
+        "item" : "44",
+        "count" : "9"
+      }, {
+        "item" : "54",
+        "count" : "8"
+      }, {
+        "item" : "59",
+        "count" : "8"
+      }, {
+        "item" : "56",
+        "count" : "7"
+      }, {
+        "item" : "53",
+        "count" : "7"
+      }, {
+        "item" : "51",
+        "count" : "7"
+      }, {
+        "item" : "42",
+        "count" : "6"
+      }, {
+        "item" : "57",
+        "count" : "6"
+      }, {
+        "item" : "52",
+        "count" : "6"
+      }, {
+        "item" : "58",
+        "count" : "4"
+      }, {
+        "item" : "55",
+        "count" : "4"
+      }, {
+        "item" : "48",
+        "count" : "4"
+      }, {
+        "item" : "41",
+        "count" : "4"
+      }, {
+        "item" : "40",
+        "count" : "3"
+      } ],
+      "smallest" : "31",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187396,
+    "name" : "INSTR_ENVIR_AVG",
+    "dataTypeName" : "number",
+    "description" : "Instructional (Environment) Average Score",
+    "fieldName" : "instr_envir_avg",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787601,
+    "cachedContents" : {
+      "non_null" : "25",
+      "largest" : "62",
+      "null" : "560",
+      "top" : [ {
+        "item" : "51",
+        "count" : "3"
+      }, {
+        "item" : "52",
+        "count" : "3"
+      }, {
+        "item" : "47",
+        "count" : "3"
+      }, {
+        "item" : "45",
+        "count" : "3"
+      }, {
+        "item" : "50",
+        "count" : "2"
+      }, {
+        "item" : "46",
+        "count" : "2"
+      }, {
+        "item" : "44",
+        "count" : "2"
+      }, {
+        "item" : "62",
+        "count" : "1"
+      }, {
+        "item" : "54",
+        "count" : "1"
+      }, {
+        "item" : "56",
+        "count" : "1"
+      }, {
+        "item" : "57",
+        "count" : "1"
+      }, {
+        "item" : "58",
+        "count" : "1"
+      }, {
+        "item" : "59",
+        "count" : "1"
+      }, {
+        "item" : "60",
+        "count" : "1"
+      } ],
+      "smallest" : "44",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187397,
+    "name" : "LFVRBL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Least Favorable Count",
+    "fieldName" : "lfvrbl_cnt",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787602,
+    "cachedContents" : {
+      "non_null" : "30",
+      "largest" : "28436",
+      "null" : "555",
+      "top" : [ {
+        "item" : "1261",
+        "count" : "1"
+      }, {
+        "item" : "2172",
+        "count" : "1"
+      }, {
+        "item" : "2494",
+        "count" : "1"
+      }, {
+        "item" : "3225",
+        "count" : "1"
+      }, {
+        "item" : "3397",
+        "count" : "1"
+      }, {
+        "item" : "3462",
+        "count" : "1"
+      }, {
+        "item" : "3844",
+        "count" : "1"
+      }, {
+        "item" : "4367",
+        "count" : "1"
+      }, {
+        "item" : "5391",
+        "count" : "1"
+      }, {
+        "item" : "5822",
+        "count" : "1"
+      }, {
+        "item" : "5994",
+        "count" : "1"
+      }, {
+        "item" : "6019",
+        "count" : "1"
+      }, {
+        "item" : "6061",
+        "count" : "1"
+      }, {
+        "item" : "6246",
+        "count" : "1"
+      }, {
+        "item" : "6516",
+        "count" : "1"
+      }, {
+        "item" : "7136",
+        "count" : "1"
+      }, {
+        "item" : "7431",
+        "count" : "1"
+      }, {
+        "item" : "7576",
+        "count" : "1"
+      }, {
+        "item" : "7625",
+        "count" : "1"
+      }, {
+        "item" : "9687",
+        "count" : "1"
+      } ],
+      "smallest" : "1261",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187398,
+    "name" : "SFVRBL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Somewhat Favorable Count",
+    "fieldName" : "sfvrbl_cnt",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787603,
+    "cachedContents" : {
+      "non_null" : "30",
+      "largest" : "81801",
+      "null" : "555",
+      "top" : [ {
+        "item" : "6317",
+        "count" : "1"
+      }, {
+        "item" : "9109",
+        "count" : "1"
+      }, {
+        "item" : "10968",
+        "count" : "1"
+      }, {
+        "item" : "12925",
+        "count" : "1"
+      }, {
+        "item" : "13394",
+        "count" : "1"
+      }, {
+        "item" : "13919",
+        "count" : "1"
+      }, {
+        "item" : "14614",
+        "count" : "1"
+      }, {
+        "item" : "14753",
+        "count" : "1"
+      }, {
+        "item" : "17111",
+        "count" : "1"
+      }, {
+        "item" : "17449",
+        "count" : "1"
+      }, {
+        "item" : "17600",
+        "count" : "1"
+      }, {
+        "item" : "18068",
+        "count" : "1"
+      }, {
+        "item" : "18191",
+        "count" : "1"
+      }, {
+        "item" : "18238",
+        "count" : "1"
+      }, {
+        "item" : "18939",
+        "count" : "1"
+      }, {
+        "item" : "20058",
+        "count" : "1"
+      }, {
+        "item" : "20335",
+        "count" : "1"
+      }, {
+        "item" : "20635",
+        "count" : "1"
+      }, {
+        "item" : "21192",
+        "count" : "1"
+      }, {
+        "item" : "26477",
+        "count" : "1"
+      } ],
+      "smallest" : "6317",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187399,
+    "name" : "FVRBL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Favorable Count",
+    "fieldName" : "fvrbl_cnt",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787604,
+    "cachedContents" : {
+      "non_null" : "30",
+      "largest" : "66727",
+      "null" : "555",
+      "top" : [ {
+        "item" : "9058",
+        "count" : "1"
+      }, {
+        "item" : "9173",
+        "count" : "1"
+      }, {
+        "item" : "9669",
+        "count" : "1"
+      }, {
+        "item" : "10444",
+        "count" : "1"
+      }, {
+        "item" : "10631",
+        "count" : "1"
+      }, {
+        "item" : "11398",
+        "count" : "1"
+      }, {
+        "item" : "12794",
+        "count" : "1"
+      }, {
+        "item" : "13144",
+        "count" : "1"
+      }, {
+        "item" : "13421",
+        "count" : "1"
+      }, {
+        "item" : "13595",
+        "count" : "1"
+      }, {
+        "item" : "14282",
+        "count" : "1"
+      }, {
+        "item" : "16616",
+        "count" : "1"
+      }, {
+        "item" : "17864",
+        "count" : "1"
+      }, {
+        "item" : "19158",
+        "count" : "1"
+      }, {
+        "item" : "19185",
+        "count" : "1"
+      }, {
+        "item" : "19744",
+        "count" : "1"
+      }, {
+        "item" : "20054",
+        "count" : "1"
+      }, {
+        "item" : "20302",
+        "count" : "1"
+      }, {
+        "item" : "20636",
+        "count" : "1"
+      }, {
+        "item" : "21040",
+        "count" : "1"
+      } ],
+      "smallest" : "9058",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187400,
+    "name" : "MFVRBL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Most Favorable Count",
+    "fieldName" : "mfvrbl_cnt",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787605,
+    "cachedContents" : {
+      "non_null" : "30",
+      "largest" : "47366",
+      "null" : "555",
+      "top" : [ {
+        "item" : "3015",
+        "count" : "1"
+      }, {
+        "item" : "3201",
+        "count" : "1"
+      }, {
+        "item" : "3234",
+        "count" : "1"
+      }, {
+        "item" : "3564",
+        "count" : "1"
+      }, {
+        "item" : "3656",
+        "count" : "1"
+      }, {
+        "item" : "3673",
+        "count" : "1"
+      }, {
+        "item" : "3712",
+        "count" : "1"
+      }, {
+        "item" : "3962",
+        "count" : "1"
+      }, {
+        "item" : "4112",
+        "count" : "1"
+      }, {
+        "item" : "4273",
+        "count" : "1"
+      }, {
+        "item" : "4421",
+        "count" : "1"
+      }, {
+        "item" : "5420",
+        "count" : "1"
+      }, {
+        "item" : "8807",
+        "count" : "1"
+      }, {
+        "item" : "9080",
+        "count" : "1"
+      }, {
+        "item" : "9140",
+        "count" : "1"
+      }, {
+        "item" : "10893",
+        "count" : "1"
+      }, {
+        "item" : "12335",
+        "count" : "1"
+      }, {
+        "item" : "12718",
+        "count" : "1"
+      }, {
+        "item" : "13032",
+        "count" : "1"
+      }, {
+        "item" : "13443",
+        "count" : "1"
+      } ],
+      "smallest" : "3015",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : { }
+  }, {
+    "id" : 609187401,
+    "name" : "LFVRBL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Least Favorable Percent",
+    "fieldName" : "lfvrbl_pct",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787606,
+    "cachedContents" : {
+      "non_null" : "30",
+      "largest" : "0.22",
+      "null" : "555",
+      "top" : [ {
+        "item" : "0.19",
+        "count" : "4"
+      }, {
+        "item" : "0.13",
+        "count" : "3"
+      }, {
+        "item" : "0.07",
+        "count" : "3"
+      }, {
+        "item" : "0.12",
+        "count" : "3"
+      }, {
+        "item" : "0.08",
+        "count" : "2"
+      }, {
+        "item" : "0.05",
+        "count" : "2"
+      }, {
+        "item" : "0.14",
+        "count" : "2"
+      }, {
+        "item" : "0.17",
+        "count" : "2"
+      }, {
+        "item" : "0.18",
+        "count" : "2"
+      }, {
+        "item" : "0.22",
+        "count" : "1"
+      }, {
+        "item" : "0.06",
+        "count" : "1"
+      }, {
+        "item" : "0.1",
+        "count" : "1"
+      }, {
+        "item" : "0.11",
+        "count" : "1"
+      }, {
+        "item" : "0.15",
+        "count" : "1"
+      }, {
+        "item" : "0.2",
+        "count" : "1"
+      }, {
+        "item" : "0.03",
+        "count" : "1"
+      } ],
+      "smallest" : "0.03",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187402,
+    "name" : "SFVRBL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Somewhat Favorable Percent",
+    "fieldName" : "sfvrbl_pct",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787607,
+    "cachedContents" : {
+      "non_null" : "30",
+      "largest" : "0.51",
+      "null" : "555",
+      "top" : [ {
+        "item" : "0.48",
+        "count" : "3"
+      }, {
+        "item" : "0.49",
+        "count" : "3"
+      }, {
+        "item" : "0.39",
+        "count" : "2"
+      }, {
+        "item" : "0.34",
+        "count" : "2"
+      }, {
+        "item" : "0.5",
+        "count" : "2"
+      }, {
+        "item" : "0.27",
+        "count" : "2"
+      }, {
+        "item" : "0.29",
+        "count" : "1"
+      }, {
+        "item" : "0.33",
+        "count" : "1"
+      }, {
+        "item" : "0.35",
+        "count" : "1"
+      }, {
+        "item" : "0.36",
+        "count" : "1"
+      }, {
+        "item" : "0.38",
+        "count" : "1"
+      }, {
+        "item" : "0.4",
+        "count" : "1"
+      }, {
+        "item" : "0.42",
+        "count" : "1"
+      }, {
+        "item" : "0.45",
+        "count" : "1"
+      }, {
+        "item" : "0.47",
+        "count" : "1"
+      }, {
+        "item" : "0.14",
+        "count" : "1"
+      }, {
+        "item" : "0.51",
+        "count" : "1"
+      }, {
+        "item" : "0.19",
+        "count" : "1"
+      }, {
+        "item" : "0.22",
+        "count" : "1"
+      }, {
+        "item" : "0.25",
+        "count" : "1"
+      } ],
+      "smallest" : "0.14",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187403,
+    "name" : "FVRBL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Favorable Percent",
+    "fieldName" : "fvrbl_pct",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787608,
+    "cachedContents" : {
+      "non_null" : "30",
+      "largest" : "0.44",
+      "null" : "555",
+      "top" : [ {
+        "item" : "0.24",
+        "count" : "5"
+      }, {
+        "item" : "0.25",
+        "count" : "4"
+      }, {
+        "item" : "0.32",
+        "count" : "3"
+      }, {
+        "item" : "0.38",
+        "count" : "2"
+      }, {
+        "item" : "0.34",
+        "count" : "2"
+      }, {
+        "item" : "0.36",
+        "count" : "2"
+      }, {
+        "item" : "0.42",
+        "count" : "2"
+      }, {
+        "item" : "0.4",
+        "count" : "2"
+      }, {
+        "item" : "0.41",
+        "count" : "2"
+      }, {
+        "item" : "0.44",
+        "count" : "1"
+      }, {
+        "item" : "0.29",
+        "count" : "1"
+      }, {
+        "item" : "0.33",
+        "count" : "1"
+      }, {
+        "item" : "0.37",
+        "count" : "1"
+      }, {
+        "item" : "0.39",
+        "count" : "1"
+      }, {
+        "item" : "0.22",
+        "count" : "1"
+      } ],
+      "smallest" : "0.22",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 609187404,
+    "name" : "MFVRBL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Most Favorable Percent",
+    "fieldName" : "mfvrbl_pct",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 150787609,
+    "cachedContents" : {
+      "non_null" : "30",
+      "largest" : "0.45",
+      "null" : "555",
+      "top" : [ {
+        "item" : "0.17",
+        "count" : "4"
+      }, {
+        "item" : "0.06",
+        "count" : "3"
+      }, {
+        "item" : "0.1",
+        "count" : "3"
+      }, {
+        "item" : "0.11",
+        "count" : "2"
+      }, {
+        "item" : "0.07",
+        "count" : "2"
+      }, {
+        "item" : "0.15",
+        "count" : "2"
+      }, {
+        "item" : "0.24",
+        "count" : "2"
+      }, {
+        "item" : "0.25",
+        "count" : "2"
+      }, {
+        "item" : "0.26",
+        "count" : "1"
+      }, {
+        "item" : "0.27",
+        "count" : "1"
+      }, {
+        "item" : "0.3",
+        "count" : "1"
+      }, {
+        "item" : "0.36",
+        "count" : "1"
+      }, {
+        "item" : "0.09",
+        "count" : "1"
+      }, {
+        "item" : "0.08",
+        "count" : "1"
+      }, {
+        "item" : "0.45",
+        "count" : "1"
+      }, {
+        "item" : "0.14",
+        "count" : "1"
+      }, {
+        "item" : "0.16",
+        "count" : "1"
+      }, {
+        "item" : "0.21",
+        "count" : "1"
+      } ],
+      "smallest" : "0.06",
+      "count" : "585",
+      "cardinality" : "585"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "State-Level"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "race and ethnicity", "gender", "low income", "economically disadvantaged", "english learners", "students with disabilities" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

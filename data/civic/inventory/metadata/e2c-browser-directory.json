@@ -1,0 +1,309 @@
+{
+  "source": "https://www.mass.gov/info-details/e2c-hub-directory-of-datasets-and-reports",
+  "method": "Read rendered main-content links through browser DOM on 2026-10-24 after curl/web 403. Site states last updated October 20, 2026.",
+  "socrataIds": [
+    "at6g-mvv9",
+    "jd5n-jjmd",
+    "qwjp-9vph",
+    "q8y7-9cyk",
+    "yvqy-nszj",
+    "5722-nbhm",
+    "iyks-y3g6",
+    "49fr-nu44",
+    "fuam-di5w",
+    "6vdc-7ggh",
+    "dn4d-tjbb",
+    "dz9s-eep7",
+    "u9sw-3ren",
+    "wfrf-ryb9",
+    "rg9w-dkpg",
+    "ieg9-974i",
+    "32yj-9xt9",
+    "7pxn-56wd",
+    "35yv-uxv5",
+    "t8td-gens",
+    "cbbr-jpy4",
+    "rdxw-mfv3",
+    "8xyg-59b2",
+    "4as3-w39x",
+    "5jqj-jcbt",
+    "vxt3-k35x",
+    "dh9y-ve3d",
+    "q6dt-ivmn",
+    "qagd-r9iy",
+    "kmvr-zict",
+    "fjsb-cxmh",
+    "72n5-hu3e",
+    "puw9-zucz",
+    "37cp-pad8",
+    "787a-3wen",
+    "ppbc-i8t9",
+    "ccsh-ajgw",
+    "shzx-cvwg",
+    "i9w6-niyt",
+    "ks7h-2kdy",
+    "tetc-xcpe",
+    "wihy-jkek",
+    "9j3v-zihf",
+    "hctd-j8zk",
+    "ab34-d3ma",
+    "yamx-769q",
+    "92x3-2qj9",
+    "n62c-bx65",
+    "cdfp-645n",
+    "8aww-sugs",
+    "abfc-q25d",
+    "jrxa-5zzx",
+    "vuut-f46x",
+    "2bxu-kf62",
+    "jgga-jdgw",
+    "ak6h-9k7x",
+    "2kca-w7rq",
+    "3etc-hecr",
+    "3ss8-pnvb",
+    "c8ur-ajfv",
+    "bfp2-2pmt",
+    "jqvp-ngaw",
+    "fs4u-wrug",
+    "69cv-eeg5",
+    "ga7v-un9v",
+    "5c4k-sik5",
+    "ujwr-ux9i",
+    "w3f3-phkq",
+    "fbdq-3q4d",
+    "a9ye-ac8e",
+    "bqet-bmhp",
+    "a3kv-y3pw",
+    "8ibc-ffun",
+    "yau2-eqsf",
+    "p2yd-4gvj",
+    "9p45-t37j",
+    "thnh-sabg",
+    "rqiu-6t94",
+    "73i6-6tsf",
+    "c2dm-3692",
+    "vj54-j4q3",
+    "adqe-6sht",
+    "cmm7-ttbg",
+    "4sut-78p8",
+    "kgrx-cg4a",
+    "n2xa-p822",
+    "37px-xsir",
+    "sg4g-eg2n",
+    "nwwi-cbw8",
+    "fm6k-958d",
+    "ky22-vsgr",
+    "8ura-7r8n",
+    "t375-4q57",
+    "tfbb-6vx7",
+    "3dib-mg9p",
+    "vrmj-6h37",
+    "xt3e-byts",
+    "qjx9-arjj",
+    "jzmw-ccc4",
+    "a4b4-k49f",
+    "2hei-cc7k",
+    "52c5-e56a",
+    "4684-cw3t",
+    "77fu-a6h8",
+    "vd2f-ib9q",
+    "b99t-n6jh",
+    "fz9c-2g33",
+    "j5ue-xkfn",
+    "sfq4-mfdi",
+    "w4kz-gcts",
+    "m24c-upce",
+    "5izv-jyrd",
+    "cnfs-edqq",
+    "er3w-dyti",
+    "8szy-v4ed",
+    "i5up-aez6",
+    "n8nv-juq7",
+    "55rp-j3uc",
+    "p53a-bt7u",
+    "j7yp-crt6",
+    "hx2h-9z86",
+    "gzpm-dvfd",
+    "v4jy-wi85",
+    "gamm-8t4n",
+    "ezse-47sq",
+    "73s2-v3nk",
+    "6c8i-436p",
+    "5yjf-27fz",
+    "79yf-3ucb",
+    "fszq-dme2",
+    "3bpk-k8k2",
+    "epe8-7wux",
+    "vdnx-8f88"
+  ],
+  "otherLinks": [
+    {
+      "name": "Licensed Child Care Search",
+      "url": "https://childcare.mass.gov/findchildcare"
+    },
+    {
+      "name": "Data Briefs",
+      "url": "https://www.mass.gov/info-details/early-education-and-care-data-briefs"
+    },
+    {
+      "name": "Key Performance Indicators Dashboard",
+      "url": "https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d"
+    },
+    {
+      "name": "Massachusetts School Finder",
+      "url": "https://profiles.doe.mass.edu/search/get_closest_orgs.aspx"
+    },
+    {
+      "name": "District Analysis and Review Tools (DART)",
+      "url": "https://www.doe.mass.edu/dart/"
+    },
+    {
+      "name": "Edwin Analytics",
+      "url": "https://www.doe.mass.edu/edwin/gettingstarted.html"
+    },
+    {
+      "name": "Resource Allocation and District Action Reports (RADAR)",
+      "url": "https://www.doe.mass.edu/research/radar/"
+    },
+    {
+      "name": "School and District Performance Summary",
+      "url": "https://app.powerbigov.us/view?r=eyJrIjoiMjA5YjZiNDktYWU5MC00ODYwLWE3MjEtY2E1MzNmMzQ2ZDE2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    {
+      "name": "School and District Profiles",
+      "url": "https://profiles.doe.mass.edu/"
+    },
+    {
+      "name": "School and District Report Cards",
+      "url": "https://reportcards.doe.mass.edu/"
+    },
+    {
+      "name": "DART Detail: English Learners Dashboard",
+      "url": "https://app.powerbigov.us/view?r=eyJrIjoiZDcyMjUxYmUtOWFkYS00NWQ2LTllMjItMWE2Yjc4ZDQyYTY2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    {
+      "name": "RADAR Special Education Dashboard",
+      "url": "https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    {
+      "name": "Student Sending and Receiving Report",
+      "url": "https://app.powerbigov.us/view?r=eyJrIjoiYTY4ZWE3M2UtYWQ3ZS00MjFhLWJkZTAtNThhOGY0MzEwMDQ5IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    {
+      "name": "STEM Dashboard",
+      "url": "https://www.mass.gov/info-details/stem-dashboard"
+    },
+    {
+      "name": "Curriculum Data",
+      "url": "https://profiles.doe.mass.edu/statereport/Curriculumdata.aspx"
+    },
+    {
+      "name": "CTE Admissions and Waitlist Analysis",
+      "url": "https://www.doe.mass.edu/ccte/data-reports/default.html"
+    },
+    {
+      "name": "Massachusetts Early College Data Dashboard",
+      "url": "https://app.powerbigov.us/view?r=eyJrIjoiNDRmMGZjNDMtMDIxZC00NTdkLWFkNmEtYzEwODMxMWQ3Mjk2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    {
+      "name": "High School, College, and Career Outcomes Report",
+      "url": "https://www.mass.gov/info-details/2025-massachusetts-high-school-college-and-career-outcomes-report"
+    },
+    {
+      "name": "Charter School Financial Dashboard",
+      "url": "https://www.doe.mass.edu/charter/finance/dashboard/"
+    },
+    {
+      "name": "District Analysis and Review Tool (DART)",
+      "url": "https://profiles.doe.mass.edu/analysis/state.aspx"
+    },
+    {
+      "name": "Campus Contacts",
+      "url": "https://www.mass.edu/forstufam/admissions/campuscontacts.asp"
+    },
+    {
+      "name": "College Navigator",
+      "url": "https://nces.ed.gov/collegenavigator/"
+    },
+    {
+      "name": "College Scorecard",
+      "url": "https://collegescorecard.ed.gov/"
+    },
+    {
+      "name": "Performance Measurement Reporting System",
+      "url": "https://www.mass.edu/datacenter/pmrs/home.asp"
+    },
+    {
+      "name": "Department of Higher Education Reports",
+      "url": "https://www.mass.edu/datacenter/home/reports.asp"
+    },
+    {
+      "name": "Annual Enrollment Dashboard",
+      "url": "https://www.mass.edu/datacenter/factbook/annualenrollment.asp"
+    },
+    {
+      "name": "Fall Enrollment Dashboard",
+      "url": "https://www.mass.edu/datacenter/factbook/fallenrollment.asp"
+    },
+    {
+      "name": "Retention of First-Time, Full-Time Students Dashboard",
+      "url": "https://www.mass.edu/datacenter/factbook/retentionftft.asp"
+    },
+    {
+      "name": "Community Colleges—Annual Credit Course Completion Rate",
+      "url": "https://www.mass.edu/datacenter/success/CCAnnualCreditCourseCompletion.asp"
+    },
+    {
+      "name": "State University—Six-Year Graduation Rates",
+      "url": "https://www.mass.edu/datacenter/success/SUSixYearGradRate.asp"
+    },
+    {
+      "name": "Awards Conferred Dashboard",
+      "url": "https://www.mass.edu/datacenter/factbook/awardsconferred.asp"
+    },
+    {
+      "name": "Tuition and Mandatory Fees Dashboard",
+      "url": "https://www.mass.edu/datacenter/factbook/tuitionfees.asp"
+    },
+    {
+      "name": "Mandatory Fees at Massachusetts Public Colleges and Universities",
+      "url": "https://www.mass.edu/datacenter/tuition/AppendixTuitionFeesWeight6.asp"
+    },
+    {
+      "name": "Tuition and Mandatory Fees at Public Colleges and Universities",
+      "url": "https://www.mass.edu/datacenter/tuition/AppendixTuitionFeesWeight7.asp"
+    },
+    {
+      "name": "Tuition at Massachusetts Public Colleges and Universities",
+      "url": "https://www.mass.edu/datacenter/tuition/AppendixTuitionFeesWeight5.asp"
+    },
+    {
+      "name": "Weighted Average Tuition and Fees by Public Postsecondary Segment (malformed source link)",
+      "url": "https://weighted%20average%20tuition%20and%20fees%20by%20public%20postsecondary%20segment/"
+    },
+    {
+      "name": "The Earnings Outcomes of Public Postsecondary Education in Massachusetts",
+      "url": "https://www.mass.edu/datacenter/2025earningsreport.asp"
+    },
+    {
+      "name": "Department of Economic Research Data Visualization Index",
+      "url": "https://www.mass.gov/lists/department-of-economic-research-data-visualization-index#employment-and-jobs-"
+    },
+    {
+      "name": "Employment Projections",
+      "url": "https://www.mass.gov/info-details/employment-projections"
+    },
+    {
+      "name": "MA Labor Market Dashboard",
+      "url": "https://www.mass.gov/info-details/unemployment-rates-in-massachusetts"
+    },
+    {
+      "name": "Monthly Job Postings",
+      "url": "https://public.tableau.com/app/profile/maeconomicresearch/viz/MonthlyJobPosting-MA/IndustriesCompaniesandJobs_1"
+    },
+    {
+      "name": "Municipal Employment Data",
+      "url": "https://lmi.dua.eol.mass.gov/lmi/MunicipalEmploymentData"
+    }
+  ]
+}

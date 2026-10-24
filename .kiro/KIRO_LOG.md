@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 12:16 — Resolved KIRO_LOG merge conflict: kept both sides' entrie...
+- Teammate: Bruno
+- Agent: —
+- Did: Resolved KIRO_LOG merge conflict: kept both sides' entries, interleaved newest-first
+- Why: Pull of origin/main (Guilherme's MCP setup) conflicted on the log
+- Where: .kiro/KIRO_LOG.md
+- Idea: none
+
 ### 2026-10-24 12:13 — Checked how to run Research Lab campaigns programmaticall...
 - Teammate: Bruno
 - Agent: —
@@ -63,6 +71,22 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: knowledge/08_boston_rat_audit.md, knowledge/README.md, knowledge/sources/rats/*.py
 - Idea: Airbnb: 212 of 267,731 reviews mention rats/mice (Bay Village 0.39%); Zillow vs rodent rate weak (ZHVI -0.18, ZORI +0.30): do not claim value loss
 
+### 2026-10-24 11:58 — Finished MCP setup: env-var expansion in OpenContext brid...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Finished MCP setup: env-var expansion in OpenContext bridge, Cambridge + Somerville Socrata servers (off until SOCRATA_APP_TOKEN), README MCP section; all 6 enabled servers PASS
+- Why: Have every civic data source ready before the idea is picked
+- Where: .kiro/mcp/opencontext_stdio.py, .kiro/mcp/opencontext/*-socrata.yaml, .kiro/settings/mcp.json, .kiro/steering/mcp-tools.md, README.md
+- Idea: none
+
+### 2026-10-24 11:57 — Set up 6 MCP servers for Kiro: City of Boston OpenContext...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Set up 6 MCP servers for Kiro: City of Boston OpenContext (data.boston.gov + MassGIS) via stdio bridge, civic-snapshots SQL, MBTA live, aws-docs, playwright; check_mcp script + hook + steering
+- Why: Data tools ready before the idea is picked
+- Where: .kiro/settings/mcp.json, .kiro/mcp/*, .kiro/scripts/check_mcp.py, .kiro/hooks/mcp-health.kiro.hook, .kiro/steering/mcp-tools.md, .kiro/steering/structure.md
+- Idea: OpenContext is the City's own MCP; using it is a strong City-fit + integration story
+
 ### 2026-10-24 11:56 — Reframed Rats into Boston Rat Audit (all sources: 311 rod...
 - Teammate: Bruno
 - Agent: —
@@ -70,6 +94,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Team wants a full audit of rat drivers, not one hypothesis
 - Where: none (Data Atlas page)
 - Idea: ZIP-level 2025: rodent reports vs improper trash storage +0.78, housing pest violations +0.68, dumping +0.63, restaurants +0.41; rats follow trash more than restaurants
+
+### 2026-10-24 11:56 — Wrote knowledge/13: five new concepts (CurbCheck, Three H...
+- Teammate: Guilherme
+- Agent: Claude Code (research/ideation; not Kiro build activity)
+- Did: Wrote knowledge/13: five new concepts (CurbCheck, Three Hours, 311 outcome layer, On the Record, Warrant) with live-verified sources
+- Why: User asked for 100% new, best-for-this-hackathon ideas regardless of complexity
+- Where: knowledge/13_hidden_ledgers_deep_concepts.md, knowledge/README.md
+- Idea: Recommend CurbCheck: photo of a paper no-parking sign -> City Street Occupancy Permit lookup -> verified/no-match/ambiguous card; Parking Enforcement is the #1 2026 311 type (52,623)
 
 ### 2026-10-24 11:54 — Chose Rats as lead idea; validated: 5,321 rodent reports ...
 - Teammate: Bruno
@@ -86,6 +118,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Product needs a non-obvious core a dashboard can't copy
 - Where: none
 - Idea: Core = resolving hidden portfolios (125 owner names -> 1 mailing address) + problems per unit; user = ISD / Office of Housing Stability / tenant unions
+
+### 2026-10-24 11:50 — Reframed rodent concept as an operational inspection tool
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Reframed rodent concept as an operational inspection tool
+- Why: User wants a practical tool; assess its value and workflow risks candidly
+- Where: knowledge/12_rodent_control_creative_playbook.md; knowledge/README.md; knowledge/08_idea_shortlist_and_build_recommendation.md; knowledge/09_creative_civic_opportunity_atlas.md
+- Idea: RodentOps: recurring complaints to a reviewed inspection brief, with separate action and outcome evidence
 
 ### 2026-10-24 11:49 — Verified Problem Landlord Radar on real data: 913 owner n...
 - Teammate: Bruno
@@ -110,6 +150,14 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Likes favor field-crew triage of a visceral hazard with many causal datasets
 - Where: none (Data Atlas page)
 - Idea: Fire incidents (601,721 rows w/ address) + RentSmart owner join + 311 heat/catchbasin/abandoned cars are the new data hooks
+
+### 2026-10-24 11:43 — Researched eight creative rodent-control concepts and ver...
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Researched eight creative rodent-control concepts and verified source data
+- Why: Ground the rodent idea in current City priorities, usable records and a feasible demo
+- Where: knowledge/12_rodent_control_creative_playbook.md; knowledge indexes and briefs; knowledge/sources/rodent*; knowledge/sources/audit_rodent_resources.py
+- Idea: NIGHTSHIFT: coordinate one block of overnight waste exposure; RATLAB is the data-analysis alternative
 
 ### 2026-10-24 11:39 — Made every idea actionable in the Data Atlas: each card n...
 - Teammate: Bruno
@@ -182,6 +230,30 @@ If the agent does not know the teammate's name, it asks before logging.
 - Why: Team needed one view of all data and integration ideas
 - Where: none (artifact: claude.ai/artifact/Ccw6n593reUG1MQjAawa2W)
 - Idea: Clusters: requests, housing, people/need, hazards, transit, streets, movement, campus/careers
+
+### 2026-10-24 11:14 — Expanded Civic research with 15 creative concepts and ver...
+- Teammate: Guilherme
+- Agent: Codex (research; not Kiro build activity)
+- Did: Expanded Civic research with 15 creative concepts and verified public resources
+- Why: Connect public priorities and resident friction to distinctive feasible demos
+- Where: knowledge/02,04,07,08,09,10,11,README; knowledge/sources; data/civic/CATALOG.md
+- Idea: Prioritize Last 100 Feet, ShiftFits or OpenDoor after proving one dependency; retain BlockBrief as fallback
+
+### 2026-10-24 11:03 — Re-read full rules, judging, City + sponsor evidence (doc...
+- Teammate: Guilherme
+- Agent: default (kirocrew)
+- Did: Re-read full rules, judging, City + sponsor evidence (docs 00-09); scored ideas vs rubric
+- Why: Team found prior ideas obvious/boring
+- Where: none
+- Idea: Top: Last 100 Feet (A1); runner-up MoveOut Relay (A10); both algorithm-core like City's mattress award
+
+### 2026-10-24 10:52 — Verified audit/log feature complete and teammate-ready
+- Teammate: Guilherme
+- Agent: default
+- Did: Verified audit/log feature complete and teammate-ready
+- Why: confirm git pull gives teammates the full logging system
+- Where: none
+- Idea: none
 
 ### 2026-10-24 10:51 — Full repo review; shortlisted 5 build ideas, recommend Bl...
 - Teammate: Guilherme

@@ -1,0 +1,97 @@
+{
+  "id" : "c2dm-3692",
+  "name" : "FAFSA Completion Dashboard",
+  "assetType" : "href",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1771433026,
+  "description" : "This dashboard provides information about Massachusetts students completing the <a href=\"https://www.usa.gov/fafsa\" target=\"_blank\" rel=\"noopener noreferrer\">Free Application for Federal Student Aid (FAFSA)</a> by state, district, school, and student group. The completion percentage in the dashboard is based on Grade 12 enrollment. FAFSA information is from data provided by the federal government to the Department of Higher Education and matched with student level data from the Department of Elementary and Secondary Education. Data is updated in the dashboard twice a month.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 41962369,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1771433065,
+  "publicationGroup" : 20284457,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1771433026,
+  "tableId" : 20284457,
+  "totalTimesRated" : 0,
+  "viewCount" : 244,
+  "viewLastModified" : 1771433391,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1771525958,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7364651,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1771525485,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1771525959,
+      "failureCount" : 0,
+      "startedAt" : 1771525958,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "URL" : "https://www.doe.mass.edu/ccte/data-reports/fafsa-data.html"
+      },
+      "title" : "Massachusetts FAFSA Completion Dashboard"
+    } ],
+    "accessPoints" : {
+      "URL" : "https://www.doe.mass.edu/ccte/data-reports/fafsa-data.html"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "fafsa", "financial aid", "low income", "students with disabilities", "english learners", "gender", "race and ethnicity", "12th grade" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

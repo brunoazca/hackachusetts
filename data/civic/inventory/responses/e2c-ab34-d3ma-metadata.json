@@ -1,0 +1,1549 @@
+{
+  "id" : "ab34-d3ma",
+  "name" : "Special Education Circuit Breaker Reimbursements",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Finance and Budget",
+  "createdAt" : 1782228605,
+  "description" : "This dataset includes reimbursement amounts provided to Massachusetts public school districts through the Commonwealth's Special Education Circuit Breaker program (\"circuit breaker\") starting with fiscal year 2006. It also includes expenditure amounts reported to the Department of Elementary and Secondary Education (DESE) on annual circuit breaker claims. \n\nCircuit breaker program reimburses districts for qualified high-cost special education expenditures in two categories:  instruction/tuition and transportation. Instruction/tuition has been reimbursed since the program’s inception. Transportation reimbursement was added with the Student Opportunity Act (beginning fiscal year 2022). \n\nDistricts report costs annually through a claiming process. Expenses over the annual per-student claim threshold are reimbursed quarterly, in the following fiscal year, and at a consistent percentage statewide dependent on available budget. \n\nPer statute (M.G.L. <a href=\"https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXII/Chapter71b/Section5a\" target=\"_blank\" rel=\"noreferrer noopener\">Chapter 71B Section 5A</a>), reimbursements are calculated first in the instruction/tuition category. Then, any money left in the state circuit breaker budget line is calculated for transportation reimbursement. Additionally, each year the per-student claim threshold increases based on inflation according to a defined formula. \n\nCircuit breaker reimburses through multiple program components:<ul><li><b>Quarterly payments</b> are provided four times per year and are reimbursements for expenses incurred in the prior fiscal year. Expenses in the instruction and tuition category have been reimbursed since the program's inception. Beginning with the implementation of the Student Opportunity Act (FY22 payments), expenses for out-of-district transportation are also reimbursed.</li><li><b>Extraordinary Relief payments</b> are provided once a year to districts showing a significant (greater than 25%) increase in instruction and tuition expenses over the prior year. This reimbursement is provided to qualified districts in the same fiscal year expenses were incurred.</li><li><b>Additional/Supplemental payments</b> are provided in atypical scenarios, such as in years when the legislature enacts additional circuit breaker reimbursement mechanisms or authorizes supplemental funding for distribution.</li></ul>More information regarding the circuit breaker program can be found on the <a href=\"https://www.doe.mass.edu/finance/circuitbreaker/\" target=\"_blank\" rel=\"noreferrer noopener\">DESE circuit breaker website</a>, including historic information of <a href=\"https://www.doe.mass.edu/finance/circuitbreaker/rates.html\" target=\"_blank\" rel=\"noreferrer noopener\"> claim thresholds and percentage reimbursement rates</a>. In addition to the standard reimbursement percentages indicated in the chart, students claimed with special indicators (homeless, state ward or abandoned) are reimbursed at 100% over the claim threshold.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 38,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42235085,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1782333686,
+  "publicationGroup" : 20430664,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1791384105,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20432756,
+  "totalTimesRated" : 0,
+  "viewCount" : 394,
+  "viewLastModified" : 1791384104,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1782842217,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7547161,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1782842210,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1782842217,
+      "failureCount" : 0,
+      "startedAt" : 1782842217,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 635787066,
+    "name" : "FY",
+    "dataTypeName" : "text",
+    "description" : "Fiscal Year: Year in which payment was made to district",
+    "fieldName" : "fy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 168746900,
+    "cachedContents" : {
+      "non_null" : "6007",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2007",
+        "count" : "296"
+      }, {
+        "item" : "2008",
+        "count" : "295"
+      }, {
+        "item" : "2009",
+        "count" : "295"
+      }, {
+        "item" : "2006",
+        "count" : "292"
+      }, {
+        "item" : "2010",
+        "count" : "290"
+      }, {
+        "item" : "2011",
+        "count" : "289"
+      }, {
+        "item" : "2015",
+        "count" : "289"
+      }, {
+        "item" : "2012",
+        "count" : "288"
+      }, {
+        "item" : "2017",
+        "count" : "287"
+      }, {
+        "item" : "2013",
+        "count" : "287"
+      }, {
+        "item" : "2016",
+        "count" : "286"
+      }, {
+        "item" : "2014",
+        "count" : "284"
+      }, {
+        "item" : "2020",
+        "count" : "283"
+      }, {
+        "item" : "2019",
+        "count" : "283"
+      }, {
+        "item" : "2018",
+        "count" : "282"
+      }, {
+        "item" : "2022",
+        "count" : "281"
+      }, {
+        "item" : "2025",
+        "count" : "281"
+      }, {
+        "item" : "2024",
+        "count" : "281"
+      }, {
+        "item" : "2026",
+        "count" : "281"
+      }, {
+        "item" : "2023",
+        "count" : "279"
+      } ],
+      "smallest" : "2006",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : { }
+  }, {
+    "id" : 635787065,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 168746899,
+    "cachedContents" : {
+      "non_null" : "6007",
+      "largest" : "08320000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "06250000",
+        "count" : "21"
+      }, {
+        "item" : "00490000",
+        "count" : "21"
+      }, {
+        "item" : "01550000",
+        "count" : "21"
+      }, {
+        "item" : "02180000",
+        "count" : "21"
+      }, {
+        "item" : "03080000",
+        "count" : "21"
+      }, {
+        "item" : "00070000",
+        "count" : "21"
+      }, {
+        "item" : "01600000",
+        "count" : "21"
+      }, {
+        "item" : "00010000",
+        "count" : "21"
+      }, {
+        "item" : "02190000",
+        "count" : "21"
+      }, {
+        "item" : "03320000",
+        "count" : "21"
+      }, {
+        "item" : "02650000",
+        "count" : "21"
+      }, {
+        "item" : "00430000",
+        "count" : "21"
+      }, {
+        "item" : "02110000",
+        "count" : "21"
+      }, {
+        "item" : "07300000",
+        "count" : "21"
+      }, {
+        "item" : "01310000",
+        "count" : "21"
+      }, {
+        "item" : "00610000",
+        "count" : "21"
+      }, {
+        "item" : "07730000",
+        "count" : "21"
+      }, {
+        "item" : "00050000",
+        "count" : "21"
+      }, {
+        "item" : "01570000",
+        "count" : "21"
+      }, {
+        "item" : "01860000",
+        "count" : "21"
+      } ],
+      "smallest" : "00000000",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : { }
+  }, {
+    "id" : 635787064,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 168746898,
+    "cachedContents" : {
+      "non_null" : "6007",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Scituate",
+        "count" : "21"
+      }, {
+        "item" : "Stoneham",
+        "count" : "21"
+      }, {
+        "item" : "Norfolk",
+        "count" : "21"
+      }, {
+        "item" : "Acton-Boxborough",
+        "count" : "21"
+      }, {
+        "item" : "New Bedford",
+        "count" : "21"
+      }, {
+        "item" : "Dighton-Rehoboth",
+        "count" : "21"
+      }, {
+        "item" : "Littleton",
+        "count" : "21"
+      }, {
+        "item" : "Andover",
+        "count" : "21"
+      }, {
+        "item" : "Springfield",
+        "count" : "21"
+      }, {
+        "item" : "Brimfield",
+        "count" : "21"
+      }, {
+        "item" : "North Middlesex",
+        "count" : "21"
+      }, {
+        "item" : "Haverhill",
+        "count" : "21"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "21"
+      }, {
+        "item" : "Boxford",
+        "count" : "21"
+      }, {
+        "item" : "Needham",
+        "count" : "21"
+      }, {
+        "item" : "Bedford",
+        "count" : "21"
+      }, {
+        "item" : "Norwood",
+        "count" : "21"
+      }, {
+        "item" : "Northborough",
+        "count" : "21"
+      }, {
+        "item" : "Bourne",
+        "count" : "21"
+      }, {
+        "item" : "Hoosac Valley Regional",
+        "count" : "21"
+      } ],
+      "smallest" : "Abington",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : { }
+  }, {
+    "id" : 635787063,
+    "name" : "ELIG_STU_CLAIM_CNT",
+    "dataTypeName" : "number",
+    "description" : "Eligible Students Claimed: Number of students for which expenses were claimed ",
+    "fieldName" : "elig_stu_claim_cnt",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746897,
+    "cachedContents" : {
+      "non_null" : "4962",
+      "largest" : "12034",
+      "null" : "1045",
+      "top" : [ {
+        "item" : "17",
+        "count" : "120"
+      }, {
+        "item" : "14",
+        "count" : "116"
+      }, {
+        "item" : "19",
+        "count" : "116"
+      }, {
+        "item" : "21",
+        "count" : "115"
+      }, {
+        "item" : "7",
+        "count" : "115"
+      }, {
+        "item" : "25",
+        "count" : "112"
+      }, {
+        "item" : "23",
+        "count" : "106"
+      }, {
+        "item" : "22",
+        "count" : "106"
+      }, {
+        "item" : "9",
+        "count" : "106"
+      }, {
+        "item" : "20",
+        "count" : "104"
+      }, {
+        "item" : "26",
+        "count" : "103"
+      }, {
+        "item" : "18",
+        "count" : "103"
+      }, {
+        "item" : "24",
+        "count" : "102"
+      }, {
+        "item" : "30",
+        "count" : "102"
+      }, {
+        "item" : "31",
+        "count" : "98"
+      }, {
+        "item" : "11",
+        "count" : "94"
+      }, {
+        "item" : "29",
+        "count" : "94"
+      }, {
+        "item" : "8",
+        "count" : "92"
+      }, {
+        "item" : "12",
+        "count" : "91"
+      }, {
+        "item" : "16",
+        "count" : "90"
+      } ],
+      "smallest" : "7",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : { }
+  }, {
+    "id" : 635787062,
+    "name" : "TOT_ELIG_EXPENSES",
+    "dataTypeName" : "number",
+    "description" : "Total Eligible Expenses: Total amount of expenses claimed ",
+    "fieldName" : "tot_elig_expenses",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746896,
+    "cachedContents" : {
+      "non_null" : "5956",
+      "largest" : "1443824902",
+      "null" : "51",
+      "top" : [ {
+        "item" : "369579",
+        "count" : "2"
+      }, {
+        "item" : "611128",
+        "count" : "2"
+      }, {
+        "item" : "173908",
+        "count" : "2"
+      }, {
+        "item" : "436162",
+        "count" : "2"
+      }, {
+        "item" : "52220",
+        "count" : "2"
+      }, {
+        "item" : "51219",
+        "count" : "2"
+      }, {
+        "item" : "2208327",
+        "count" : "1"
+      }, {
+        "item" : "2746043",
+        "count" : "1"
+      }, {
+        "item" : "15147335",
+        "count" : "1"
+      }, {
+        "item" : "3572050",
+        "count" : "1"
+      }, {
+        "item" : "2153581",
+        "count" : "1"
+      }, {
+        "item" : "1190829",
+        "count" : "1"
+      }, {
+        "item" : "8705948",
+        "count" : "1"
+      }, {
+        "item" : "54053",
+        "count" : "1"
+      }, {
+        "item" : "94860",
+        "count" : "1"
+      }, {
+        "item" : "3258053",
+        "count" : "1"
+      }, {
+        "item" : "1014700",
+        "count" : "1"
+      }, {
+        "item" : "206739",
+        "count" : "1"
+      }, {
+        "item" : "2660445",
+        "count" : "1"
+      }, {
+        "item" : "8854282",
+        "count" : "1"
+      } ],
+      "smallest" : "31875",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "currencyStyle" : "USD",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787061,
+    "name" : "THRESHOLD_AMT",
+    "dataTypeName" : "number",
+    "description" : "Threshold Amount: Expenses are reimbursed on a per-student basis where total qualified expenses exceed the annual claim threshold. The threshold amount is the total of below-threshold costs paid by the district for all students claimed ",
+    "fieldName" : "threshold_amt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746895,
+    "cachedContents" : {
+      "non_null" : "5947",
+      "largest" : "556847072",
+      "null" : "60",
+      "top" : [ {
+        "item" : "51721",
+        "count" : "18"
+      }, {
+        "item" : "49494",
+        "count" : "17"
+      }, {
+        "item" : "52419",
+        "count" : "16"
+      }, {
+        "item" : "85680",
+        "count" : "16"
+      }, {
+        "item" : "94726",
+        "count" : "15"
+      }, {
+        "item" : "38916",
+        "count" : "15"
+      }, {
+        "item" : "35408",
+        "count" : "14"
+      }, {
+        "item" : "38028",
+        "count" : "14"
+      }, {
+        "item" : "31616",
+        "count" : "14"
+      }, {
+        "item" : "41408",
+        "count" : "14"
+      }, {
+        "item" : "67400",
+        "count" : "13"
+      }, {
+        "item" : "77272",
+        "count" : "13"
+      }, {
+        "item" : "30340",
+        "count" : "12"
+      }, {
+        "item" : "43094",
+        "count" : "12"
+      }, {
+        "item" : "41944",
+        "count" : "12"
+      }, {
+        "item" : "83888",
+        "count" : "12"
+      }, {
+        "item" : "129282",
+        "count" : "12"
+      }, {
+        "item" : "274752",
+        "count" : "11"
+      }, {
+        "item" : "96704",
+        "count" : "11"
+      }, {
+        "item" : "221312",
+        "count" : "11"
+      } ],
+      "smallest" : "16850",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787060,
+    "name" : "NET_ELIG_INSTR_TUIT_COSTS",
+    "dataTypeName" : "number",
+    "description" : "Net Eligible Instructional & Tuition Costs: Expenses claimed above the per-student claim threshold in the instruction & tuition category ",
+    "fieldName" : "net_elig_instr_tuit_costs",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746894,
+    "cachedContents" : {
+      "non_null" : "5943",
+      "largest" : "652792540",
+      "null" : "64",
+      "top" : [ {
+        "item" : "535339",
+        "count" : "2"
+      }, {
+        "item" : "165357",
+        "count" : "2"
+      }, {
+        "item" : "45665",
+        "count" : "2"
+      }, {
+        "item" : "1537823",
+        "count" : "2"
+      }, {
+        "item" : "8362",
+        "count" : "2"
+      }, {
+        "item" : "802713",
+        "count" : "2"
+      }, {
+        "item" : "3511433",
+        "count" : "2"
+      }, {
+        "item" : "384441",
+        "count" : "2"
+      }, {
+        "item" : "38787",
+        "count" : "2"
+      }, {
+        "item" : "3635532",
+        "count" : "2"
+      }, {
+        "item" : "53500",
+        "count" : "2"
+      }, {
+        "item" : "16228",
+        "count" : "2"
+      }, {
+        "item" : "547017",
+        "count" : "1"
+      }, {
+        "item" : "1003655",
+        "count" : "1"
+      }, {
+        "item" : "2085273",
+        "count" : "1"
+      }, {
+        "item" : "346242",
+        "count" : "1"
+      }, {
+        "item" : "1342434",
+        "count" : "1"
+      }, {
+        "item" : "609429",
+        "count" : "1"
+      }, {
+        "item" : "1306662",
+        "count" : "1"
+      }, {
+        "item" : "1627364",
+        "count" : "1"
+      } ],
+      "smallest" : "91",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787059,
+    "name" : "NET_ELIG_TRANS_COSTS",
+    "dataTypeName" : "number",
+    "description" : "Net Eligible Transportation Costs: Expenses claimed above the per-student claim threshold in the transportation category ",
+    "fieldName" : "net_elig_trans_costs",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746893,
+    "cachedContents" : {
+      "non_null" : "1326",
+      "largest" : "234185325",
+      "null" : "4681",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5"
+      }, {
+        "item" : "25644",
+        "count" : "2"
+      }, {
+        "item" : "810",
+        "count" : "1"
+      }, {
+        "item" : "1122",
+        "count" : "1"
+      }, {
+        "item" : "1272",
+        "count" : "1"
+      }, {
+        "item" : "1837",
+        "count" : "1"
+      }, {
+        "item" : "2175",
+        "count" : "1"
+      }, {
+        "item" : "3229",
+        "count" : "1"
+      }, {
+        "item" : "2254",
+        "count" : "1"
+      }, {
+        "item" : "2328",
+        "count" : "1"
+      }, {
+        "item" : "2550",
+        "count" : "1"
+      }, {
+        "item" : "2627",
+        "count" : "1"
+      }, {
+        "item" : "2933",
+        "count" : "1"
+      }, {
+        "item" : "3144",
+        "count" : "1"
+      }, {
+        "item" : "3199",
+        "count" : "1"
+      }, {
+        "item" : "1910",
+        "count" : "1"
+      }, {
+        "item" : "3524",
+        "count" : "1"
+      }, {
+        "item" : "3892",
+        "count" : "1"
+      }, {
+        "item" : "4442",
+        "count" : "1"
+      }, {
+        "item" : "1119",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787058,
+    "name" : "TOT_NET_CLAIM",
+    "dataTypeName" : "number",
+    "description" : "Total Net Claim: Expenses claimed above the per-student claim threshold in both the instruction & tuition and transportation categories ",
+    "fieldName" : "tot_net_claim",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746892,
+    "cachedContents" : {
+      "non_null" : "5975",
+      "largest" : "886977865",
+      "null" : "32",
+      "top" : [ {
+        "item" : "0",
+        "count" : "28"
+      }, {
+        "item" : "104703",
+        "count" : "2"
+      }, {
+        "item" : "8362",
+        "count" : "2"
+      }, {
+        "item" : "1537823",
+        "count" : "2"
+      }, {
+        "item" : "16228",
+        "count" : "2"
+      }, {
+        "item" : "165357",
+        "count" : "2"
+      }, {
+        "item" : "45665",
+        "count" : "2"
+      }, {
+        "item" : "384441",
+        "count" : "2"
+      }, {
+        "item" : "53500",
+        "count" : "2"
+      }, {
+        "item" : "2511722",
+        "count" : "2"
+      }, {
+        "item" : "535339",
+        "count" : "2"
+      }, {
+        "item" : "2246982",
+        "count" : "2"
+      }, {
+        "item" : "740743",
+        "count" : "1"
+      }, {
+        "item" : "942205",
+        "count" : "1"
+      }, {
+        "item" : "3050836",
+        "count" : "1"
+      }, {
+        "item" : "547017",
+        "count" : "1"
+      }, {
+        "item" : "718138",
+        "count" : "1"
+      }, {
+        "item" : "2085273",
+        "count" : "1"
+      }, {
+        "item" : "205443",
+        "count" : "1"
+      }, {
+        "item" : "13917612",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787057,
+    "name" : "REIMB_INSTR_TUIT",
+    "dataTypeName" : "number",
+    "description" : "Reimbursement Instruction & Tuition: Reimbursement calculated in the instruction & tuition category, not including reimbursement for student expenses with special indicators ",
+    "fieldName" : "reimb_instr_tuit",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746891,
+    "cachedContents" : {
+      "non_null" : "5960",
+      "largest" : "475014062",
+      "null" : "47",
+      "top" : [ {
+        "item" : "0",
+        "count" : "22"
+      }, {
+        "item" : "29090",
+        "count" : "2"
+      }, {
+        "item" : "248294",
+        "count" : "2"
+      }, {
+        "item" : "288331",
+        "count" : "2"
+      }, {
+        "item" : "4774",
+        "count" : "2"
+      }, {
+        "item" : "162011",
+        "count" : "2"
+      }, {
+        "item" : "251348",
+        "count" : "2"
+      }, {
+        "item" : "463070",
+        "count" : "2"
+      }, {
+        "item" : "989459",
+        "count" : "2"
+      }, {
+        "item" : "196180",
+        "count" : "2"
+      }, {
+        "item" : "93747",
+        "count" : "2"
+      }, {
+        "item" : "183514",
+        "count" : "2"
+      }, {
+        "item" : "170813",
+        "count" : "2"
+      }, {
+        "item" : "122098",
+        "count" : "2"
+      }, {
+        "item" : "2032532",
+        "count" : "2"
+      }, {
+        "item" : "7901",
+        "count" : "2"
+      }, {
+        "item" : "313677",
+        "count" : "2"
+      }, {
+        "item" : "829928",
+        "count" : "1"
+      }, {
+        "item" : "417143",
+        "count" : "1"
+      }, {
+        "item" : "5139619",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787056,
+    "name" : "REIMB_SPEC_IND_INSTR_TUIT",
+    "dataTypeName" : "number",
+    "description" : "Reimbursement: Special Indicator Instruction & Tuition: Reimbursement calculated in the instruction & tuition category for student expenses reimbursed at 100% over threshold (those with special indicators of homeless, state ward or abandoned) ",
+    "fieldName" : "reimb_spec_ind_instr_tuit",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746890,
+    "cachedContents" : {
+      "non_null" : "1684",
+      "largest" : "24261848",
+      "null" : "4323",
+      "top" : [ {
+        "item" : "20017",
+        "count" : "3"
+      }, {
+        "item" : "41147",
+        "count" : "3"
+      }, {
+        "item" : "5384",
+        "count" : "3"
+      }, {
+        "item" : "12260",
+        "count" : "3"
+      }, {
+        "item" : "5705",
+        "count" : "3"
+      }, {
+        "item" : "21066",
+        "count" : "2"
+      }, {
+        "item" : "18357",
+        "count" : "2"
+      }, {
+        "item" : "21306",
+        "count" : "2"
+      }, {
+        "item" : "11062",
+        "count" : "2"
+      }, {
+        "item" : "14024",
+        "count" : "2"
+      }, {
+        "item" : "14576",
+        "count" : "2"
+      }, {
+        "item" : "15077",
+        "count" : "2"
+      }, {
+        "item" : "19617",
+        "count" : "2"
+      }, {
+        "item" : "8065",
+        "count" : "2"
+      }, {
+        "item" : "5869",
+        "count" : "2"
+      }, {
+        "item" : "8269",
+        "count" : "2"
+      }, {
+        "item" : "5976",
+        "count" : "2"
+      }, {
+        "item" : "6566",
+        "count" : "2"
+      }, {
+        "item" : "8528",
+        "count" : "2"
+      }, {
+        "item" : "14119",
+        "count" : "2"
+      } ],
+      "smallest" : "17",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787055,
+    "name" : "REIMB_TRANS",
+    "dataTypeName" : "number",
+    "description" : "Reimbursement: Transportation: Reimbursement calculated in the transportation category, not including reimbursement for student expenses with special indicators ",
+    "fieldName" : "reimb_trans",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746889,
+    "cachedContents" : {
+      "non_null" : "1320",
+      "largest" : "155277106",
+      "null" : "4687",
+      "top" : [ {
+        "item" : "608",
+        "count" : "1"
+      }, {
+        "item" : "839",
+        "count" : "1"
+      }, {
+        "item" : "842",
+        "count" : "1"
+      }, {
+        "item" : "954",
+        "count" : "1"
+      }, {
+        "item" : "1247",
+        "count" : "1"
+      }, {
+        "item" : "1433",
+        "count" : "1"
+      }, {
+        "item" : "1634",
+        "count" : "1"
+      }, {
+        "item" : "1691",
+        "count" : "1"
+      }, {
+        "item" : "1746",
+        "count" : "1"
+      }, {
+        "item" : "1913",
+        "count" : "1"
+      }, {
+        "item" : "1970",
+        "count" : "1"
+      }, {
+        "item" : "2200",
+        "count" : "1"
+      }, {
+        "item" : "2358",
+        "count" : "1"
+      }, {
+        "item" : "2399",
+        "count" : "1"
+      }, {
+        "item" : "2422",
+        "count" : "1"
+      }, {
+        "item" : "2643",
+        "count" : "1"
+      }, {
+        "item" : "2907",
+        "count" : "1"
+      }, {
+        "item" : "2919",
+        "count" : "1"
+      }, {
+        "item" : "3332",
+        "count" : "1"
+      }, {
+        "item" : "403",
+        "count" : "1"
+      } ],
+      "smallest" : "403",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "currencyStyle" : "USD",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787054,
+    "name" : "REIMB_SPEC_IND_TRANS",
+    "dataTypeName" : "number",
+    "description" : "Reimbursement: Special Indicator Transportation: Reimbursement calculated in the transportation category for student expenses reimbursed at 100% over threshold (those with special indicators of homeless, state ward or abandoned) ",
+    "fieldName" : "reimb_spec_ind_trans",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746888,
+    "cachedContents" : {
+      "non_null" : "258",
+      "largest" : "5464878",
+      "null" : "5749",
+      "top" : [ {
+        "item" : "50400",
+        "count" : "2"
+      }, {
+        "item" : "397",
+        "count" : "1"
+      }, {
+        "item" : "3055",
+        "count" : "1"
+      }, {
+        "item" : "485",
+        "count" : "1"
+      }, {
+        "item" : "544",
+        "count" : "1"
+      }, {
+        "item" : "824",
+        "count" : "1"
+      }, {
+        "item" : "944",
+        "count" : "1"
+      }, {
+        "item" : "1111",
+        "count" : "1"
+      }, {
+        "item" : "1212",
+        "count" : "1"
+      }, {
+        "item" : "1617",
+        "count" : "1"
+      }, {
+        "item" : "1762",
+        "count" : "1"
+      }, {
+        "item" : "2018",
+        "count" : "1"
+      }, {
+        "item" : "2188",
+        "count" : "1"
+      }, {
+        "item" : "3000",
+        "count" : "1"
+      }, {
+        "item" : "429",
+        "count" : "1"
+      }, {
+        "item" : "3210",
+        "count" : "1"
+      }, {
+        "item" : "3352",
+        "count" : "1"
+      }, {
+        "item" : "3398",
+        "count" : "1"
+      }, {
+        "item" : "3794",
+        "count" : "1"
+      }, {
+        "item" : "392",
+        "count" : "1"
+      } ],
+      "smallest" : "372",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787053,
+    "name" : "PRIOR_YEAR_ADJ",
+    "dataTypeName" : "number",
+    "description" : "Prior Year Adjustment: Any adjustment made to prior year reimbursement amounts ",
+    "fieldName" : "prior_year_adj",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746887,
+    "cachedContents" : {
+      "non_null" : "376",
+      "largest" : "3379",
+      "null" : "5631",
+      "top" : [ {
+        "item" : "-5144",
+        "count" : "2"
+      }, {
+        "item" : "-1432",
+        "count" : "2"
+      }, {
+        "item" : "-1401",
+        "count" : "2"
+      }, {
+        "item" : "-35000",
+        "count" : "2"
+      }, {
+        "item" : "-955",
+        "count" : "2"
+      }, {
+        "item" : "-669676",
+        "count" : "1"
+      }, {
+        "item" : "-740246",
+        "count" : "1"
+      }, {
+        "item" : "-975369",
+        "count" : "1"
+      }, {
+        "item" : "-526280",
+        "count" : "1"
+      }, {
+        "item" : "-532740",
+        "count" : "1"
+      }, {
+        "item" : "-515331",
+        "count" : "1"
+      }, {
+        "item" : "-492489",
+        "count" : "1"
+      }, {
+        "item" : "-488663",
+        "count" : "1"
+      }, {
+        "item" : "-485287",
+        "count" : "1"
+      }, {
+        "item" : "-799863",
+        "count" : "1"
+      }, {
+        "item" : "-439080",
+        "count" : "1"
+      }, {
+        "item" : "-446865",
+        "count" : "1"
+      }, {
+        "item" : "-538551",
+        "count" : "1"
+      }, {
+        "item" : "-435708",
+        "count" : "1"
+      }, {
+        "item" : "-447852",
+        "count" : "1"
+      } ],
+      "smallest" : "-19945888",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787052,
+    "name" : "TOT_QTLY_PAYMENT",
+    "dataTypeName" : "number",
+    "description" : "Total Quarterly Payment: Total of reimbursements paid to districts based on year-end claims. Quarterly payments are made four times per year to reimburse prior year expenses ",
+    "fieldName" : "tot_qtly_payment",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746886,
+    "cachedContents" : {
+      "non_null" : "5950",
+      "largest" : "654908055",
+      "null" : "57",
+      "top" : [ {
+        "item" : "313677",
+        "count" : "2"
+      }, {
+        "item" : "248294",
+        "count" : "2"
+      }, {
+        "item" : "196180",
+        "count" : "2"
+      }, {
+        "item" : "119403",
+        "count" : "2"
+      }, {
+        "item" : "30503",
+        "count" : "2"
+      }, {
+        "item" : "7901",
+        "count" : "2"
+      }, {
+        "item" : "835558",
+        "count" : "2"
+      }, {
+        "item" : "288331",
+        "count" : "2"
+      }, {
+        "item" : "4774",
+        "count" : "2"
+      }, {
+        "item" : "36110",
+        "count" : "2"
+      }, {
+        "item" : "1467900",
+        "count" : "1"
+      }, {
+        "item" : "417143",
+        "count" : "1"
+      }, {
+        "item" : "134648",
+        "count" : "1"
+      }, {
+        "item" : "829928",
+        "count" : "1"
+      }, {
+        "item" : "235187",
+        "count" : "1"
+      }, {
+        "item" : "62525",
+        "count" : "1"
+      }, {
+        "item" : "333032",
+        "count" : "1"
+      }, {
+        "item" : "277407",
+        "count" : "1"
+      }, {
+        "item" : "295097",
+        "count" : "1"
+      }, {
+        "item" : "533497",
+        "count" : "1"
+      } ],
+      "smallest" : "68",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787051,
+    "name" : "EXTRA_RELIEF_PAYMENT",
+    "dataTypeName" : "number",
+    "description" : "Extraordinary Relief Payment: Total of relief reimbursement paid to qualifying districts. Payment is made once per year based on current year expenses ",
+    "fieldName" : "extra_relief_payment",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746885,
+    "cachedContents" : {
+      "non_null" : "677",
+      "largest" : "27732928",
+      "null" : "5330",
+      "top" : [ {
+        "item" : "3000000",
+        "count" : "2"
+      }, {
+        "item" : "550",
+        "count" : "1"
+      }, {
+        "item" : "4107",
+        "count" : "1"
+      }, {
+        "item" : "577",
+        "count" : "1"
+      }, {
+        "item" : "1294",
+        "count" : "1"
+      }, {
+        "item" : "2074",
+        "count" : "1"
+      }, {
+        "item" : "2132",
+        "count" : "1"
+      }, {
+        "item" : "2395",
+        "count" : "1"
+      }, {
+        "item" : "2679",
+        "count" : "1"
+      }, {
+        "item" : "2688",
+        "count" : "1"
+      }, {
+        "item" : "2939",
+        "count" : "1"
+      }, {
+        "item" : "3049",
+        "count" : "1"
+      }, {
+        "item" : "3235",
+        "count" : "1"
+      }, {
+        "item" : "3833",
+        "count" : "1"
+      }, {
+        "item" : "571",
+        "count" : "1"
+      }, {
+        "item" : "4519",
+        "count" : "1"
+      }, {
+        "item" : "4661",
+        "count" : "1"
+      }, {
+        "item" : "6047",
+        "count" : "1"
+      }, {
+        "item" : "6356",
+        "count" : "1"
+      }, {
+        "item" : "513",
+        "count" : "1"
+      } ],
+      "smallest" : "188",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787050,
+    "name" : "ADDL_SUPPL_PAYMENT",
+    "dataTypeName" : "number",
+    "description" : "Additional/Supplemental Payment(s): Any additional payments provided ",
+    "fieldName" : "addl_suppl_payment",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 168746884,
+    "cachedContents" : {
+      "non_null" : "934",
+      "largest" : "53938324",
+      "null" : "5073",
+      "top" : [ {
+        "item" : "10560",
+        "count" : "2"
+      }, {
+        "item" : "332",
+        "count" : "2"
+      }, {
+        "item" : "4279",
+        "count" : "2"
+      }, {
+        "item" : "9892",
+        "count" : "2"
+      }, {
+        "item" : "114402",
+        "count" : "2"
+      }, {
+        "item" : "769",
+        "count" : "2"
+      }, {
+        "item" : "374",
+        "count" : "2"
+      }, {
+        "item" : "1293",
+        "count" : "2"
+      }, {
+        "item" : "6776",
+        "count" : "2"
+      }, {
+        "item" : "8211",
+        "count" : "2"
+      }, {
+        "item" : "47537",
+        "count" : "2"
+      }, {
+        "item" : "53634",
+        "count" : "2"
+      }, {
+        "item" : "4302",
+        "count" : "2"
+      }, {
+        "item" : "790",
+        "count" : "2"
+      }, {
+        "item" : "310",
+        "count" : "2"
+      }, {
+        "item" : "131",
+        "count" : "1"
+      }, {
+        "item" : "129",
+        "count" : "1"
+      }, {
+        "item" : "62",
+        "count" : "1"
+      }, {
+        "item" : "116",
+        "count" : "1"
+      }, {
+        "item" : "96",
+        "count" : "1"
+      } ],
+      "smallest" : "4",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 635787049,
+    "name" : "COMMENTS",
+    "dataTypeName" : "text",
+    "description" : "Comments: Any notes or comments regarding the data",
+    "fieldName" : "comments",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 168746883,
+    "cachedContents" : {
+      "non_null" : "1787",
+      "largest" : "Supplemental payments increased instruction/tuition reimbursement to 71.2%. Number of eligible students claimed is less than 6.",
+      "null" : "4220",
+      "top" : [ {
+        "item" : "Number of eligible students claimed is less than 6.",
+        "count" : "861"
+      }, {
+        "item" : "Supplemental payments increased instruction/tuition reimbursement to 71.2%.",
+        "count" : "235"
+      }, {
+        "item" : "Supplemental payment increased instruction/tuition reimbursement to 75%.",
+        "count" : "233"
+      }, {
+        "item" : "Supplemental payment increased transport reimbursement to 75%.",
+        "count" : "150"
+      }, {
+        "item" : "FY25 Prior Year Adjustment includes amount held back due to Reserve Relief payment made in FY24; Supplemental payment increased transport reimbursement to 75%.",
+        "count" : "81"
+      }, {
+        "item" : "Supplemental payment provided to districts eligible for Reserve Relief enacted by the state legislature for FY24.",
+        "count" : "73"
+      }, {
+        "item" : "Supplemental payments increased instruction/tuition reimbursement to 71.2%. Number of eligible students claimed is less than 6.",
+        "count" : "50"
+      }, {
+        "item" : "Supplemental payment increased instruction/tuition reimbursement to 75%. Number of eligible students claimed is less than 6.",
+        "count" : "45"
+      }, {
+        "item" : "Supplemental payment increased transport reimbursement to 75%. Number of eligible students claimed is less than 6.",
+        "count" : "25"
+      }, {
+        "item" : "Supplemental payment provided to districts eligible for Reserve Relief enacted by the state legislature for FY24. Number of eligible students claimed is less than 6.",
+        "count" : "9"
+      }, {
+        "item" : "Reimbursement overpaid then later corrected; amount reflected in Additional/Supplemental Payments. Number of eligible students claimed is less than 6.",
+        "count" : "9"
+      }, {
+        "item" : "FY25 Prior Year Adjustment includes amount held back due to Reserve Relief payment made in FY24; Supplemental payment increased transport reimbursement to 75%. Number of eligible students claimed is less than 6.",
+        "count" : "9"
+      }, {
+        "item" : "FY25 Prior Year Adjustment includes amount held back due to Reserve Relief payment made in FY24. Number of eligible students claimed is less than 6.",
+        "count" : "2"
+      }, {
+        "item" : "Lanesborough, Williamstown and Mount Greylock payments merged in 2019.",
+        "count" : "2"
+      }, {
+        "item" : "Relief overpaid then later corrected; amount reflected in Additional/Supplemental Payments. Number of eligible students claimed is less than 6.",
+        "count" : "1"
+      }, {
+        "item" : "Reimbursement overpaid then later corrected; amount reflected in Additional/Supplemental Payments.",
+        "count" : "1"
+      }, {
+        "item" : "Lanesborough, Williamstown and Mount Greylock payments merged in 2019; Supplemental payment increased instruction/tuition reimbursement to 75%.",
+        "count" : "1"
+      } ],
+      "smallest" : "FY25 Prior Year Adjustment includes amount held back due to Reserve Relief payment made in FY24. Number of eligible students claimed is less than 6.",
+      "count" : "6007",
+      "cardinality" : "6007"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu "
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "circuit breaker funds", "school finance", "special education", "students with disabilities", "transportation", "instruction", "tuition", "homeless" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

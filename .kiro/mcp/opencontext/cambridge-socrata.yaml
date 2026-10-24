@@ -1,0 +1,24 @@
+# OpenContext config: Cambridge open data (Socrata, data.cambridgema.gov).
+# Crashes, bike counts, Eco-Totem, Fresh Pond, ramps, and more.
+# Needs a free Socrata app token: create one at
+#   https://data.cambridgema.gov/profile/edit/developer_settings
+# then `export SOCRATA_APP_TOKEN=...` in your shell and set
+# "disabled": false for "cambridge-opendata" in .kiro/settings/mcp.json.
+server_name: "Cambridge OpenData MCP (Hackachusetts local)"
+description: "Read-only access to data.cambridgema.gov via the City of Boston's OpenContext Socrata plugin"
+organization: "City of Cambridge"
+
+plugins:
+  socrata:
+    enabled: true
+    base_url: "https://data.cambridgema.gov"
+    portal_url: "https://data.cambridgema.gov"
+    city_name: "Cambridge"
+    app_token: "${SOCRATA_APP_TOKEN}"
+    timeout: 60
+
+logging:
+  level: "WARNING"
+
+auth:
+  enabled: false

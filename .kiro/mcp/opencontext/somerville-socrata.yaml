@@ -1,0 +1,24 @@
+# OpenContext config: Somerville open data (Socrata, data.somervillema.gov).
+# Walk/bike counts, 311, permits, and more.
+# Needs a free Socrata app token (one token works across Socrata portals):
+#   https://data.somervillema.gov/profile/edit/developer_settings
+# then `export SOCRATA_APP_TOKEN=...` in your shell and set
+# "disabled": false for "somerville-opendata" in .kiro/settings/mcp.json.
+server_name: "Somerville OpenData MCP (Hackachusetts local)"
+description: "Read-only access to data.somervillema.gov via the City of Boston's OpenContext Socrata plugin"
+organization: "City of Somerville"
+
+plugins:
+  socrata:
+    enabled: true
+    base_url: "https://data.somervillema.gov"
+    portal_url: "https://data.somervillema.gov"
+    city_name: "Somerville"
+    app_token: "${SOCRATA_APP_TOKEN}"
+    timeout: 60
+
+logging:
+  level: "WARNING"
+
+auth:
+  enabled: false

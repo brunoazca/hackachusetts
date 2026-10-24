@@ -1,0 +1,625 @@
+[
+  {
+    "id": "boston-311-resource-metadata",
+    "url": "https://data.boston.gov/api/3/action/resource_show?id=254adca6-64ab-4c5c-9fc0-a6da622be185",
+    "name": "Boston 311 service requests resource metadata",
+    "role": "resource_metadata",
+    "parent": "boston-311"
+  },
+  {
+    "id": "mbta-stations-layer",
+    "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/MBTA_Rapid_Transit/MapServer/0?f=pjson",
+    "name": "MBTA rapid transit stations layer schema",
+    "role": "resource_metadata",
+    "parent": "mbta-stations"
+  },
+  {
+    "id": "mbta-stations-count",
+    "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/MBTA_Rapid_Transit/MapServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+    "name": "MBTA rapid transit stations total matching rows",
+    "role": "count_query",
+    "parent": "mbta-stations"
+  },
+  {
+    "id": "civic-ej-layer",
+    "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0?f=pjson",
+    "name": "MassGIS environmental justice block groups layer schema",
+    "role": "resource_metadata",
+    "parent": "civic-ej"
+  },
+  {
+    "id": "civic-ej-count",
+    "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0/query?where=EJ%3D%27Yes%27&returnCountOnly=true&f=json",
+    "name": "MassGIS environmental justice block groups total matching rows",
+    "role": "count_query",
+    "parent": "civic-ej"
+  },
+  {
+    "id": "permits-resource-metadata",
+    "url": "https://data.boston.gov/api/3/action/resource_show?id=6ddcd912-32a0-43df-9908-63574f8c7e77",
+    "name": "Boston approved building permits resource metadata",
+    "role": "resource_metadata",
+    "parent": "permits"
+  },
+  {
+    "id": "neighborhoods-resource-metadata",
+    "url": "https://data.boston.gov/api/3/action/resource_show?id=b0543358-d03f-4682-bf0c-658ea4573d6f",
+    "name": "Boston neighborhood estimates, 2025 resource metadata",
+    "role": "resource_metadata",
+    "parent": "neighborhoods"
+  },
+  {
+    "id": "violations-resource-metadata",
+    "url": "https://data.boston.gov/api/3/action/resource_show?id=800a2663-1d6a-46e7-9356-bedb70f5332c",
+    "name": "Boston building and property violations resource metadata",
+    "role": "resource_metadata",
+    "parent": "violations"
+  },
+  {
+    "id": "colleges-layer",
+    "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/HigherEd/MapServer/0?f=pjson",
+    "name": "MassGIS colleges and universities layer schema",
+    "role": "resource_metadata",
+    "parent": "colleges"
+  },
+  {
+    "id": "colleges-count",
+    "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/HigherEd/MapServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+    "name": "MassGIS colleges and universities total matching rows",
+    "role": "count_query",
+    "parent": "colleges"
+  },
+  {
+    "id": "vision-zero-resource-metadata",
+    "url": "https://data.boston.gov/api/3/action/resource_show?id=e4bfe397-6bfc-49c5-9367-c879fac7401d",
+    "name": "Boston Vision Zero crash records resource metadata",
+    "role": "resource_metadata",
+    "parent": "vision-zero"
+  },
+  {
+    "id": "cambridge-crashes-view-metadata",
+    "url": "https://data.cambridgema.gov/api/views/gb5w-yva3.json",
+    "name": "Cambridge police crash records schema",
+    "role": "resource_metadata",
+    "parent": "cambridge-crashes"
+  },
+  {
+    "id": "cambridge-crashes-count",
+    "url": "https://data.cambridgema.gov/resource/gb5w-yva3.json?$select=count(*)",
+    "name": "Cambridge police crash records total source rows",
+    "role": "count_query",
+    "parent": "cambridge-crashes"
+  },
+  {
+    "id": "cambridge-bikes-view-metadata",
+    "url": "https://data.cambridgema.gov/api/views/ijm6-q7em.json",
+    "name": "Cambridge citywide bicycle counts schema",
+    "role": "resource_metadata",
+    "parent": "cambridge-bikes"
+  },
+  {
+    "id": "cambridge-bikes-count",
+    "url": "https://data.cambridgema.gov/resource/ijm6-q7em.json?$select=count(*)",
+    "name": "Cambridge citywide bicycle counts total source rows",
+    "role": "count_query",
+    "parent": "cambridge-bikes"
+  },
+  {
+    "id": "eco-totem-view-metadata",
+    "url": "https://data.cambridgema.gov/api/views/q8v9-mcfg.json",
+    "name": "Cambridge Broadway bicycle counter schema",
+    "role": "resource_metadata",
+    "parent": "eco-totem"
+  },
+  {
+    "id": "eco-totem-count",
+    "url": "https://data.cambridgema.gov/resource/q8v9-mcfg.json?$select=count(*)",
+    "name": "Cambridge Broadway bicycle counter total source rows",
+    "role": "count_query",
+    "parent": "eco-totem"
+  },
+  {
+    "id": "fresh-pond-view-metadata",
+    "url": "https://data.cambridgema.gov/api/views/6xy8-cstb.json",
+    "name": "Cambridge Fresh Pond usership schema",
+    "role": "resource_metadata",
+    "parent": "fresh-pond"
+  },
+  {
+    "id": "fresh-pond-count",
+    "url": "https://data.cambridgema.gov/resource/6xy8-cstb.json?$select=count(*)",
+    "name": "Cambridge Fresh Pond usership total source rows",
+    "role": "count_query",
+    "parent": "fresh-pond"
+  },
+  {
+    "id": "somerville-counts-view-metadata",
+    "url": "https://data.somervillema.gov/api/views/qu9x-4xq5.json",
+    "name": "Somerville bicycle and pedestrian counts schema",
+    "role": "resource_metadata",
+    "parent": "somerville-counts"
+  },
+  {
+    "id": "somerville-counts-count",
+    "url": "https://data.somervillema.gov/resource/qu9x-4xq5.json?$select=count(*)",
+    "name": "Somerville bicycle and pedestrian counts total source rows",
+    "role": "count_query",
+    "parent": "somerville-counts"
+  },
+  {
+    "id": "numina-resource-metadata",
+    "url": "https://data.boston.gov/api/3/action/resource_show?id=d6c06150-418d-4705-b0c9-e92afd23ede7",
+    "name": "Boston Numina street sensors resource metadata",
+    "role": "resource_metadata",
+    "parent": "numina"
+  },
+  {
+    "id": "civic-extra-html",
+    "url": "https://docs.google.com/document/d/1SNUjxvBK5cCq273aYCceGPGKflVUCUF_zrxGw741kAs/export?format=html",
+    "name": "Ideas and resources for the 9/28/2025 hackathon - Google Docs",
+    "role": "document_link_extraction",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "crash-background-html",
+    "url": "https://docs.google.com/document/d/1uXopTPMfoXXUVYxw3qVNQyWBeCKVfKLmRSZtwE6gJOc/export?format=html",
+    "name": "Crash Data background for BU Spark - Google Docs",
+    "role": "document_link_extraction",
+    "parent": "crash-background"
+  },
+  {
+    "id": "linked-26cf83dbce54",
+    "url": "https://www.mass.edu/bhe/lib/documents/BHE/03_BHE 19-02 Performance Measurement_FINAL.pdf",
+    "name": "approved",
+    "role": "linked_report_or_subset",
+    "parent": "ma-higher-ed"
+  },
+  {
+    "id": "linked-60395265c306",
+    "url": "https://www.mass.gov/doc/read-the-acare-report/download",
+    "name": "Advisory Council to Advance Representation in Education (ACARE) Report",
+    "role": "linked_report_or_subset",
+    "parent": "ma-higher-ed"
+  },
+  {
+    "id": "linked-304ac2a23ca7",
+    "url": "https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Tuition-and-Fees/3bpk-k8k2/about_data",
+    "name": "Massachusetts Education-to-Career (E2C) Research and Data Hub",
+    "role": "linked_report_or_subset",
+    "parent": "dhe-tuition"
+  },
+  {
+    "id": "linked-d5e05c192972",
+    "url": "https://www.mass.edu/bhe/lib/documents/BHE/04_BHE 19-03 Vision Statement for BHE Strategic Framework_as amended (2).pdf",
+    "name": "voted",
+    "role": "linked_report_or_subset",
+    "parent": "dhe-equity-race"
+  },
+  {
+    "id": "linked-89143e0025d5",
+    "url": "https://www.doe.mass.edu/infoservices/reports/default.html",
+    "name": "Top",
+    "role": "linked_report_or_subset",
+    "parent": "dese-reports"
+  },
+  {
+    "id": "linked-83beb70229e5",
+    "url": "https://www.doe.mass.edu/infoservices/reports/attendance/default.html",
+    "name": "Attendance",
+    "role": "linked_report_or_subset",
+    "parent": "dese-reports"
+  },
+  {
+    "id": "linked-c344477fa3ac",
+    "url": "https://www.doe.mass.edu/infoservices/reports/bullying/default.html",
+    "name": "Bullying Allegations",
+    "role": "linked_report_or_subset",
+    "parent": "dese-reports"
+  },
+  {
+    "id": "linked-4325123f38de",
+    "url": "https://www.doe.mass.edu/infoservices/reports/gradrates/default.html",
+    "name": "Graduation Rates",
+    "role": "linked_report_or_subset",
+    "parent": "dese-reports"
+  },
+  {
+    "id": "linked-81471d6bccf7",
+    "url": "https://www.doe.mass.edu/infoservices/reports/retention/default.html",
+    "name": "Grade Retention Reports",
+    "role": "linked_report_or_subset",
+    "parent": "dese-reports"
+  },
+  {
+    "id": "linked-46e86ae8af23",
+    "url": "https://www.doe.mass.edu/infoservices/reports/dropout/default.html",
+    "name": "Dropout Rates",
+    "role": "linked_report_or_subset",
+    "parent": "dese-reports"
+  },
+  {
+    "id": "linked-0fd0a715a5b3",
+    "url": "https://www.doe.mass.edu/infoservices/reports/enroll/default.html",
+    "name": "Enrollment Data",
+    "role": "linked_report_or_subset",
+    "parent": "dese-reports"
+  },
+  {
+    "id": "linked-67b9ffd2e3b5",
+    "url": "https://www.doe.mass.edu/infoservices/reports/enroll_ihe/default.html",
+    "name": "Enrollment in Institutions of Higher Education",
+    "role": "linked_report_or_subset",
+    "parent": "dese-reports"
+  },
+  {
+    "id": "linked-ef213260ab8a",
+    "url": "https://www.doe.mass.edu/mcas/2026/results/spring-conversion.xlsx",
+    "name": "Spring 2026 English Language Arts, Mathematics, Science and Technology/Engineering, and Civics Tests",
+    "role": "linked_report_or_subset",
+    "parent": "dese-mcas"
+  },
+  {
+    "id": "linked-64a462212f18",
+    "url": "https://www.doe.mass.edu/mcas/2026/results/feb-sci-conversion.xlsx",
+    "name": "February 2026 Science Tests",
+    "role": "linked_report_or_subset",
+    "parent": "dese-mcas"
+  },
+  {
+    "id": "linked-061b00c0d721",
+    "url": "https://www.doe.mass.edu/ccte/data-reports/reporting-instructions.docx",
+    "name": "Instructions for School Districts in Reporting CCTE Data",
+    "role": "linked_report_or_subset",
+    "parent": "dese-cvte"
+  },
+  {
+    "id": "linked-e6af13d6e5d9",
+    "url": "https://www.doe.mass.edu/ccte/data-reports/schedule.docx",
+    "name": "CCTE Data and Reporting calendar",
+    "role": "linked_report_or_subset",
+    "parent": "dese-cvte"
+  },
+  {
+    "id": "linked-4c9aea93debd",
+    "url": "https://www.doe.mass.edu/ccte/data-reports/collection-template.xlsx",
+    "name": "fall 2026 collection template",
+    "role": "linked_report_or_subset",
+    "parent": "dese-cvte"
+  },
+  {
+    "id": "linked-d5edabe6a9c4",
+    "url": "https://www.doe.mass.edu/ccte/data-reports/cluster-update-summary.docx",
+    "name": "Career Cluster Alignment document",
+    "role": "linked_report_or_subset",
+    "parent": "dese-cvte"
+  },
+  {
+    "id": "linked-6a94ee246f27",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiNzRiMzIyNzItZDJlMy00ZGQwLThjNjItZmNkYjZkZmVhMTY1IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "CTE Population Trends of Eligible and Attending Students",
+    "role": "linked_report_or_subset",
+    "parent": "dese-cvte"
+  },
+  {
+    "id": "linked-1f34ca873ec5",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiYjMzODhkZWYtYzY5Ny00Y2VlLWJkNTAtNGIxMGM0MTEwODVhIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "CTE Admission and Waitlist Analysis as of SY 2025",
+    "role": "linked_report_or_subset",
+    "parent": "dese-cvte"
+  },
+  {
+    "id": "linked-bf619f020f1f",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiMDkzM2U4MDctNDEwNS00ZGI5LWEzYjMtOGI3NjFjZmU1N2MzIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "Learning About Edwin Reports page",
+    "role": "linked_report_or_subset",
+    "parent": "dese-cvte"
+  },
+  {
+    "id": "linked-dce7d8f12416",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiY2E5YTI3MDctNTNkNi00OTRmLTkyNzEtMmMzODNmYzUyZmQxIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "District Analysis Review Tool (DART) for Success After High School",
+    "role": "linked_report_or_subset",
+    "parent": "dese-cvte"
+  },
+  {
+    "id": "linked-b01d79ae952e",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2023data-tables.docx",
+    "name": "2023 MYRBS & MYHS Data Tables",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-38337fc6bed5",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2023methodology-description.docx",
+    "name": "2023 Methodology and Data Table Description",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-204373ce8f77",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2021report.pdf",
+    "name": "2021 Health and Risk Behaviors of Massachusetts Youth Report",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-396e2fe5ea25",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2011-2021trend-tables.pdf",
+    "name": "2011-2021 MA YRBS Trend Tables",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-510fe7a11404",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2021data-tables.docx",
+    "name": "2021 MYRBS & MYHS Data Tables",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-2798a7db8f13",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2019exec-summary.pdf",
+    "name": "Executive Summary",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-bf3f11b74999",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2019data-tables.pdf",
+    "name": "Data Tables",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-9bbe1b848885",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2017exec-summary.pdf",
+    "name": "Executive Summary",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-25aed39caa35",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2017-mental-health.pdf",
+    "name": "Mental Health Summary",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-fd0e9c00ec6a",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2017data-tables.docx",
+    "name": "Data Tables",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-f72e04c8a2bd",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2023questions.pdf",
+    "name": "2023",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-3c8e9f946207",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2021questions.pdf",
+    "name": "2021",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-905146d0d739",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2019questions.pdf",
+    "name": "2019",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-fbe8f02e4735",
+    "url": "https://www.doe.mass.edu/sfs/yrbs/2017questions.pdf",
+    "name": "2017",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-0b73db5d299a",
+    "url": "https://www.cdc.gov/healthyyouth/data/yrbs/pdf/2019/2019_standard_YRBS_item_rationale.pdf",
+    "name": "2019 YRBS Question Item Rationale",
+    "role": "linked_report_or_subset",
+    "parent": "myrbs"
+  },
+  {
+    "id": "linked-3b910819c5fa",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/NSSE25-26CoreSummaryTables/Home",
+    "name": "NSSE 2026 Core Survey Dashboards",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-b7fab0ce7679",
+    "url": "https://tableau.bi.iu.edu/",
+    "name": "Experiences With Online Learning (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-da01c699b2c4",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/AADTopicalModuleSummaryTable2026/AADSummaryTable",
+    "name": "Academic Advising (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-93f6c4265f70",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/CWPTopicalModuleSummaryTables2026/CWPSummaryTable",
+    "name": "Career & Workforce Preparation (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-65770cadaefa",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/CIVTopicalModuleSummaryTable2026/CIVSummaryTable",
+    "name": "Civic Engagement (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-6be3f639405c",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/TRNTopicalModuleSummaryTables2026/TRNSummaryTable",
+    "name": "Development of Transferable Skills (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-b80a32d25109",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/INLTopicalModuleSummaryTable2026/INLSummaryTable",
+    "name": "Experiences With Information Literacy (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-04956a7855c1",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/WRITopicalModuleSummaryTable2026/WRISummaryTable",
+    "name": "Experiences With Writing (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-5ef34ee2f7a9",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/FYTopicalModuleSummaryTable2026/FYSummaryTable",
+    "name": "First-Year Experiences (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-33d169bbc136",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/GBLTopicalModuleSummaryTable2026/GBLSummaryTable",
+    "name": "Global Learning (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-422ba06828fb",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/HIPTopicalModuleSummaryTable2026/HIPSummaryTable",
+    "name": "High-Impact Practice Quality (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-61d1f3840ec8",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/ICDTopicalModuleSummaryTable2026/ICDSummaryTable",
+    "name": "Inclusiv. & Engmt. W/ Cultural Diversity (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-0439fc3cdf05",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/MHWTopicalModuleSummaryTables2026/MHWSummaryTable",
+    "name": "Mental Health & Well-Being (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-bd36579d1a17",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/SRTopicalModuleSummaryTable2026/SRSummaryTable",
+    "name": "Senior Transitions (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-0ea18503274c",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/THXTopicalModuleSummaryTable2026/THXSummaryTable",
+    "name": "Transformative High-Impact Practices (2026)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-5a7831d866d1",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/NSSESenseofBelonging/NSSESenseofBelonging?:isGuestRedirectFromVizportal=y&:embed=y",
+    "name": "Sense of Belonging (2020)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-96ee3cfd2aaa",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/NSSEAdvisingLRC/NSSEAdvisingLRC?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y",
+    "name": "The LRCs of Advising: Listening, Respecting, and Caring (2020)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-d491d57af696",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/NSSEInstitutionalTrust/NSSEInstTrust?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y",
+    "name": "The Trust Gap Among College Students (2020)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "linked-ede496399417",
+    "url": "https://tableau.bi.iu.edu/t/prd/views/NSSEHousingStudy/ACUHO?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y",
+    "name": "Student Living Arrangements and Engagement (2018)",
+    "role": "linked_report_or_subset",
+    "parent": "nsse"
+  },
+  {
+    "id": "boston-bike-dashboard-config",
+    "url": "https://www.arcgis.com/sharing/rest/content/items/3491f78e46a545fe8186ad70ebe897aa/data?f=json",
+    "name": "Boston bicycle dashboard configuration",
+    "role": "linked_metadata",
+    "parent": null
+  },
+  {
+    "id": "open-context-metadata",
+    "url": "https://api.github.com/repos/CityOfBoston/OpenContext",
+    "name": "Boston Open Context repository metadata",
+    "role": "linked_metadata",
+    "parent": null
+  },
+  {
+    "id": "open-context-tree",
+    "url": "https://api.github.com/repos/CityOfBoston/OpenContext/git/trees/main?recursive=1",
+    "name": "Boston Open Context file inventory",
+    "role": "linked_metadata",
+    "parent": null
+  },
+  {
+    "id": "civic-agents-metadata",
+    "url": "https://api.github.com/repos/projnanda/civic-agents",
+    "name": "Civic agents repository metadata",
+    "role": "linked_metadata",
+    "parent": null
+  },
+  {
+    "id": "event",
+    "url": "https://massaicoalition.com/hackachusetts/",
+    "name": "Hackachusetts event",
+    "role": "linked_metadata",
+    "parent": null
+  },
+  {
+    "id": "submit-idea",
+    "url": "https://rich-uranium-d4e.notion.site/b836a9c5ce974d32a09bbec1bd38f928",
+    "name": "Submit idea (read-only access)",
+    "role": "linked_metadata",
+    "parent": null
+  },
+  {
+    "id": "mass-ai",
+    "url": "https://massaicoalition.com/",
+    "name": "Mass AI Coalition",
+    "role": "linked_metadata",
+    "parent": null
+  },
+  {
+    "id": "sundai",
+    "url": "https://www.sundai.club/",
+    "name": "Sundai Club",
+    "role": "linked_metadata",
+    "parent": null
+  },
+  {
+    "id": "folky",
+    "url": "https://folkystudio.com/",
+    "name": "Folky Studio",
+    "role": "linked_metadata",
+    "parent": null
+  }
+]

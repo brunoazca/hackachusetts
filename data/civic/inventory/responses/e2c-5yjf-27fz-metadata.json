@@ -1,0 +1,505 @@
+{
+  "id" : "5yjf-27fz",
+  "name" : "Public Postsecondary Awards (Degrees) Conferred by Institution: Detail",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Higher Education",
+  "attributionLink" : "https://www.mass.edu/datacenter/factbook/awardsconferred.asp",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1712687664,
+  "description" : "This dataset contains the count of certificates and degrees conferred at all public Massachusetts institutions of higher education since 2014. Data are disaggregated by year, segment, institution, award type, and student attributes such as race and gender.\n\nThis dataset is 1 of 3 datasets that is also published in the interactive\n<a href=\"https://www.mass.edu/datacenter/factbook/awardsconferred.asp\">Awards Conferred dashboard</a> on the Department of Higher Education Data Center:\n\n1) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-by-I/5yjf-27fz/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred by Institution: Detail</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-by-I/79yf-3ucb/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred by Institution: Summary</a>\n3) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Awards-Degrees-Conferred-Stat/fszq-dme2/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Awards Conferred Statewide</a>\n\nNotes:\n- Data appear as reported to the Massachusetts Department of Higher Education.\n- Figures published by DHE may differ slightly from figures published by other institutions and organizations due to differences in timing of publication, data definitions, and calculation logic.\n- An award is conferred to a student by a postsecondary educational institution as official recognition after their successful completion of a program of study.\n- A fiscal year (FY) is 12-month period beginning July 1 and ending June 30. Because a fiscal year straddles two different calendar years, the calendar year and fiscal year will not always match. For example, FY 2025 runs from July 1, 2024 to June 30, 2025.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 285,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40514893,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1712689216,
+  "publicationGroup" : 19496731,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1763750719,
+  "rowsUpdatedBy" : "3fm6-nje8",
+  "tableId" : 19496731,
+  "totalTimesRated" : 0,
+  "viewCount" : 1411,
+  "viewLastModified" : 1763750717,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1712763663,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6263181,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1712763645,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1712763663,
+      "failureCount" : 0,
+      "startedAt" : 1712763663,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 591540225,
+    "name" : "FISCAL_YEAR",
+    "dataTypeName" : "text",
+    "description" : "Year (Fiscal)",
+    "fieldName" : "fiscal_year",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152165209,
+    "cachedContents" : {
+      "non_null" : "12060",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "1068"
+      }, {
+        "item" : "2024",
+        "count" : "1025"
+      }, {
+        "item" : "2021",
+        "count" : "1016"
+      }, {
+        "item" : "2016",
+        "count" : "1010"
+      }, {
+        "item" : "2017",
+        "count" : "1010"
+      }, {
+        "item" : "2023",
+        "count" : "1009"
+      }, {
+        "item" : "2018",
+        "count" : "1002"
+      }, {
+        "item" : "2020",
+        "count" : "993"
+      }, {
+        "item" : "2022",
+        "count" : "987"
+      }, {
+        "item" : "2019",
+        "count" : "987"
+      }, {
+        "item" : "2015",
+        "count" : "978"
+      }, {
+        "item" : "2014",
+        "count" : "975"
+      } ],
+      "smallest" : "2014",
+      "count" : "12060",
+      "cardinality" : "12060"
+    },
+    "format" : { }
+  }, {
+    "id" : 591540224,
+    "name" : "AWARDS_CONFERRED",
+    "dataTypeName" : "number",
+    "description" : "Awards Conferred Count",
+    "fieldName" : "awards_conferred",
+    "position" : 2,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152165208,
+    "cachedContents" : {
+      "non_null" : "12060",
+      "largest" : "2308",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "2220"
+      }, {
+        "item" : "2",
+        "count" : "1202"
+      }, {
+        "item" : "3",
+        "count" : "809"
+      }, {
+        "item" : "4",
+        "count" : "634"
+      }, {
+        "item" : "5",
+        "count" : "519"
+      }, {
+        "item" : "6",
+        "count" : "447"
+      }, {
+        "item" : "7",
+        "count" : "355"
+      }, {
+        "item" : "8",
+        "count" : "281"
+      }, {
+        "item" : "9",
+        "count" : "263"
+      }, {
+        "item" : "10",
+        "count" : "233"
+      }, {
+        "item" : "11",
+        "count" : "215"
+      }, {
+        "item" : "12",
+        "count" : "189"
+      }, {
+        "item" : "13",
+        "count" : "188"
+      }, {
+        "item" : "14",
+        "count" : "164"
+      }, {
+        "item" : "16",
+        "count" : "131"
+      }, {
+        "item" : "15",
+        "count" : "128"
+      }, {
+        "item" : "17",
+        "count" : "113"
+      }, {
+        "item" : "18",
+        "count" : "112"
+      }, {
+        "item" : "19",
+        "count" : "110"
+      }, {
+        "item" : "21",
+        "count" : "99"
+      } ],
+      "smallest" : "1",
+      "count" : "12060",
+      "cardinality" : "12060"
+    },
+    "format" : { }
+  }, {
+    "id" : 591540223,
+    "name" : "SEGMENT",
+    "dataTypeName" : "text",
+    "description" : "Segment",
+    "fieldName" : "segment",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152165207,
+    "cachedContents" : {
+      "non_null" : "12060",
+      "largest" : "University of Massachusetts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Community Colleges",
+        "count" : "4744"
+      }, {
+        "item" : "State Universities",
+        "count" : "3762"
+      }, {
+        "item" : "University of Massachusetts",
+        "count" : "3554"
+      } ],
+      "smallest" : "Community Colleges",
+      "count" : "12060",
+      "cardinality" : "12060"
+    },
+    "format" : { }
+  }, {
+    "id" : 591540222,
+    "name" : "INSTITUTION",
+    "dataTypeName" : "text",
+    "description" : "Public Institution Name",
+    "fieldName" : "institution",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152165206,
+    "cachedContents" : {
+      "non_null" : "12060",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "University of Massachusetts Amherst",
+        "count" : "1025"
+      }, {
+        "item" : "University of Massachusetts Lowell",
+        "count" : "937"
+      }, {
+        "item" : "University of Massachusetts Dartmouth",
+        "count" : "799"
+      }, {
+        "item" : "University of Massachusetts Boston",
+        "count" : "793"
+      }, {
+        "item" : "Salem State University",
+        "count" : "581"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "540"
+      }, {
+        "item" : "Worcester State University",
+        "count" : "481"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "454"
+      }, {
+        "item" : "Massachusetts College of Art and Design",
+        "count" : "429"
+      }, {
+        "item" : "Framingham State University",
+        "count" : "401"
+      }, {
+        "item" : "Westfield State University",
+        "count" : "394"
+      }, {
+        "item" : "MassBay Community College",
+        "count" : "374"
+      }, {
+        "item" : "Holyoke Community College",
+        "count" : "371"
+      }, {
+        "item" : "Bunker Hill Community College",
+        "count" : "368"
+      }, {
+        "item" : "Quinsigamond Community College",
+        "count" : "352"
+      }, {
+        "item" : "Bristol Community College",
+        "count" : "350"
+      }, {
+        "item" : "Mt. Wachusett Community College",
+        "count" : "349"
+      }, {
+        "item" : "Springfield Technical Community College",
+        "count" : "345"
+      }, {
+        "item" : "Northern Essex Community College",
+        "count" : "302"
+      }, {
+        "item" : "Middlesex Community College",
+        "count" : "300"
+      } ],
+      "smallest" : "Berkshire Community College",
+      "count" : "12060",
+      "cardinality" : "12060"
+    },
+    "format" : { }
+  }, {
+    "id" : 591540221,
+    "name" : "AWARD_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Award Type",
+    "fieldName" : "award_type",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152165205,
+    "cachedContents" : {
+      "non_null" : "12060",
+      "largest" : "Post-Bacc. Certificate",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Associate",
+        "count" : "2819"
+      }, {
+        "item" : "Certificate",
+        "count" : "2737"
+      }, {
+        "item" : "Bachelor",
+        "count" : "2329"
+      }, {
+        "item" : "Master",
+        "count" : "1975"
+      }, {
+        "item" : "Post-Bacc. Certificate",
+        "count" : "1081"
+      }, {
+        "item" : "Doctoral",
+        "count" : "541"
+      }, {
+        "item" : "Certificate of Adv. Grad. Study",
+        "count" : "443"
+      }, {
+        "item" : "First-Professional",
+        "count" : "135"
+      } ],
+      "smallest" : "Associate",
+      "count" : "12060",
+      "cardinality" : "12060"
+    },
+    "format" : { }
+  }, {
+    "id" : 591540220,
+    "name" : "AWARD_TYPE_ORDER",
+    "dataTypeName" : "number",
+    "description" : "Award Type Order",
+    "fieldName" : "award_type_order",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152165204,
+    "cachedContents" : {
+      "non_null" : "12060",
+      "largest" : "8",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2",
+        "count" : "2819"
+      }, {
+        "item" : "1",
+        "count" : "2737"
+      }, {
+        "item" : "3",
+        "count" : "2329"
+      }, {
+        "item" : "5",
+        "count" : "1975"
+      }, {
+        "item" : "4",
+        "count" : "1081"
+      }, {
+        "item" : "7",
+        "count" : "541"
+      }, {
+        "item" : "6",
+        "count" : "443"
+      }, {
+        "item" : "8",
+        "count" : "135"
+      } ],
+      "smallest" : "1",
+      "count" : "12060",
+      "cardinality" : "12060"
+    },
+    "format" : { }
+  }, {
+    "id" : 591540218,
+    "name" : "GENDER",
+    "dataTypeName" : "text",
+    "description" : "Gender",
+    "fieldName" : "gender",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152165202,
+    "cachedContents" : {
+      "non_null" : "12060",
+      "largest" : "Unknown",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Female",
+        "count" : "6201"
+      }, {
+        "item" : "Male",
+        "count" : "5545"
+      }, {
+        "item" : "Unknown",
+        "count" : "307"
+      }, {
+        "item" : "Another Gender",
+        "count" : "7"
+      } ],
+      "smallest" : "Another Gender",
+      "count" : "12060",
+      "cardinality" : "12060"
+    },
+    "format" : { }
+  }, {
+    "id" : 591540219,
+    "name" : "RACE_ETHNICITY",
+    "dataTypeName" : "text",
+    "description" : "Race/Ethnicity",
+    "fieldName" : "race_ethnicity",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152165203,
+    "cachedContents" : {
+      "non_null" : "12060",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "White",
+        "count" : "2233"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "1790"
+      }, {
+        "item" : "Black or African American",
+        "count" : "1721"
+      }, {
+        "item" : "Asian or Pacific Islander",
+        "count" : "1588"
+      }, {
+        "item" : "Unknown",
+        "count" : "1470"
+      }, {
+        "item" : "Two or more races",
+        "count" : "1453"
+      }, {
+        "item" : "U.S. Non-resident",
+        "count" : "1188"
+      }, {
+        "item" : "American Indian or Alaskan Native",
+        "count" : "617"
+      } ],
+      "smallest" : "American Indian or Alaskan Native",
+      "count" : "12060",
+      "cardinality" : "12060"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "One year of awards conferred per institution of higher education, award type, race, and gender",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "gender", "race", "ethnicity", "race and ethnicity", "college", "university", "community college", "undergraduate education", "graduate education", "graduation", "degrees", "degrees awarded", "degrees conferred", "degrees obtained", "certificates", "certificates awarded", "master", "bachelor", "doctorate", "doctoral", "associate", "post-bachelor" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

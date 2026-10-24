@@ -1,0 +1,730 @@
+{
+  "checked_at_utc": "2026-10-24T15:35:16.552120+00:00",
+  "scope": "Metadata, counts and small API samples; full workshop CSVs parsed only for aggregates. No individual rows retained. Cambridge records are not Boston records.",
+  "portals": [
+    {
+      "url": "https://data.cambridgema.gov/api/views/78bs-b5ig.json",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/api/views/78bs-b5ig.json",
+      "curl_exit_code": 0,
+      "bytes": 42706,
+      "sha256": "4fead390da7ad5ea5bf385327190aeab05dbe73682835c3e7c377d9c2df196a8",
+      "error": null,
+      "format": "json",
+      "dataset_id": "78bs-b5ig",
+      "name": "Smart Rat Boxes",
+      "description": "This dataset provides a list of locations and catch/kill data for City of Cambridge \"Smart Box\" and \"Smart Pipe\" devices through the City's contractor, Modern Pest.\nSmart boxes are placed primarily on public property, and smart pipes are located in the sewers.\nRodent sightings reported on Commonwealth Connect, 311 and see-click-fix can help us locate new or additional problem areas for box or pipe placement.",
+      "attribution": "Modern Pest Services",
+      "attributionLink": "https://www.anticimex.com/digitally-enabled-pest-control/",
+      "licenseId": null,
+      "rowsUpdatedAt": 1792416211,
+      "viewLastModified": 1774281050,
+      "columns": [
+        {
+          "name": "Serial Number",
+          "fieldName": "serial_number",
+          "dataTypeName": "text",
+          "description": ""
+        },
+        {
+          "name": "Device Name",
+          "fieldName": "device_name",
+          "dataTypeName": "text",
+          "description": ""
+        },
+        {
+          "name": "Address",
+          "fieldName": "address",
+          "dataTypeName": "text",
+          "description": ""
+        },
+        {
+          "name": "Latitude",
+          "fieldName": "latitude",
+          "dataTypeName": "number",
+          "description": "latitude"
+        },
+        {
+          "name": "Longitude",
+          "fieldName": "longitude",
+          "dataTypeName": "number",
+          "description": "longitude"
+        },
+        {
+          "name": "Active Site",
+          "fieldName": "active_site",
+          "dataTypeName": "checkbox",
+          "description": ""
+        },
+        {
+          "name": "Device Type",
+          "fieldName": "device_type",
+          "dataTypeName": "text",
+          "description": ""
+        },
+        {
+          "name": "Total Since Install",
+          "fieldName": "total_since_install",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "Prior to 2023",
+          "fieldName": "prior_to_2023",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "Total 2023",
+          "fieldName": "total_2023",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "Total 2024",
+          "fieldName": "total_2024",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "Total 2025",
+          "fieldName": "total_2025",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "Total 2026",
+          "fieldName": "total_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "january 2026",
+          "fieldName": "january_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "February 2026",
+          "fieldName": "february_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "March 2026",
+          "fieldName": "march_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "April 2026",
+          "fieldName": "april_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "May 2026",
+          "fieldName": "may_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "June 2026",
+          "fieldName": "june_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "July 2026",
+          "fieldName": "july_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "August 2026",
+          "fieldName": "august_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "September 2026",
+          "fieldName": "september_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "October 2026",
+          "fieldName": "october_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "November 2026",
+          "fieldName": "november_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "December 2026",
+          "fieldName": "december_2026",
+          "dataTypeName": "number",
+          "description": ""
+        },
+        {
+          "name": "Participatory Budgeting",
+          "fieldName": "participatory_budgeting",
+          "dataTypeName": "text",
+          "description": "Was this smart box added as part of the participatory budget program?"
+        },
+        {
+          "name": "coordinates",
+          "fieldName": "coordinates",
+          "dataTypeName": "point",
+          "description": "latitude/longitude"
+        }
+      ],
+      "count_probe": {
+        "url": "https://data.cambridgema.gov/resource/78bs-b5ig.json?%24select=count%28%2A%29+as+records",
+        "http_status": "200",
+        "final_url": "https://data.cambridgema.gov/resource/78bs-b5ig.json?%24select=count%28%2A%29+as+records",
+        "curl_exit_code": 0,
+        "bytes": 20,
+        "sha256": "7fc3278e780c7f11738a6b00d2bf65d17d28f30cf6bb2b3b70a6d8caeafafbd0",
+        "error": null,
+        "format": "json"
+      },
+      "count_result": [
+        {
+          "records": "528"
+        }
+      ],
+      "sample_probe": {
+        "url": "https://data.cambridgema.gov/resource/78bs-b5ig.json?%24limit=3",
+        "http_status": "200",
+        "final_url": "https://data.cambridgema.gov/resource/78bs-b5ig.json?%24limit=3",
+        "curl_exit_code": 0,
+        "bytes": 2369,
+        "sha256": "f45cf1d71f37a8f94e2d5d36c32ef3b8870be260714d7c72d692f4fc48bd0706",
+        "error": null,
+        "format": "json"
+      },
+      "sample_records": 3,
+      "sample_fields": [
+        ":@computed_region_e4yd_rwk4",
+        ":@computed_region_guic_hr4a",
+        ":@computed_region_rffn_qbt6",
+        ":@computed_region_swkg_bavi",
+        ":@computed_region_v7jj_366k",
+        "active_site",
+        "address",
+        "april_2026",
+        "august_2026",
+        "coordinates",
+        "december_2026",
+        "device_name",
+        "device_type",
+        "february_2026",
+        "january_2026",
+        "july_2026",
+        "june_2026",
+        "latitude",
+        "longitude",
+        "march_2026",
+        "may_2026",
+        "november_2026",
+        "october_2026",
+        "participatory_budgeting",
+        "september_2026",
+        "serial_number",
+        "total_2023",
+        "total_2024",
+        "total_2025",
+        "total_2026",
+        "total_since_install"
+      ]
+    },
+    {
+      "url": "https://data.cambridgema.gov/api/views/uz4w-baz5.json",
+      "http_status": "200",
+      "final_url": "https://data.cambridgema.gov/api/views/uz4w-baz5.json",
+      "curl_exit_code": 0,
+      "bytes": 39518,
+      "sha256": "709b3493b2af548803870a4ea53d441f7fce879a5c1cf74e1ddc225d8581bd0d",
+      "error": null,
+      "format": "json",
+      "dataset_id": "uz4w-baz5",
+      "name": "Commonwealth Connect Service Requests - Rodent Sightings",
+      "description": "Non-emergency service requests submitted through Cambridge's Commonwealth Connect application powered by SeeClickFix Open311. \r\n\r\nPlease note that the City of Cambridge uses Commonwealth Connect to track both public and internal work orders. Occasionally, a ticket will change from internal to public, or vice-versa. All tickets that originated as public requests are included in this dataset. However, technical constraints prevent us from displaying information for tickets that originated as internal work orders.\r\n\r\nPrior to using Commonwealth Connect, the City utilized iReport. Three open datasets derive from historical iReport data: \r\n-Pothole Repair Requests (https://data.cambridgema.gov/Public-Works/Pothole-Repair-Requests/h2y4-rf5c)\r\n-Graffiti Cleanup Requests (https://data.cambridgema.gov/Public-Works/Graffiti-Clean-Up-Requests/hk2d-8z9b)\r\n-Unshoveled/Icy Sidewalk Complaints (https://data.cambridgema.gov/Public-Works/Unshoveled-Icy-Sidewalk-Complaints/72bt-ct3c)\r\n-Snow/Ice Sidewalk Ordinance Violations (https://data.cambridgema.gov/Public-Works/Snow-Ice-Sidewalk-Ordinance-Violations/q8b2-58ab)",
+      "attribution": "SeeClickFix",
+      "attributionLink": "http://en.seeclickfix.com/cambridge",
+      "licenseId": null,
+      "rowsUpdatedAt": 1792834576,
+      "viewLastModified": 1738098882,
+      "columns": [
+        {
+          "name": "ticket_id",
+          "fieldName": "ticket_id",
+          "dataTypeName": "text",
+          "description": "The unique ID associated with each SeeClickFix ticket"
+        },
+        {
+          "name": "city",
+          "fieldName": "city",
+          "dataTypeName": "text",
+          "description": null
+        },
+        {
+          "name": "issue_type",
+          "fieldName": "issue_type",
+          "dataTypeName": "text",
+          "description": "The subject of each SeeClickFix ticket. How the ticket was initially classified."
+        },
+        {
+          "name": "ticket_status",
+          "fieldName": "ticket_status",
+          "dataTypeName": "text",
+          "description": "Each ticket's current status. Closed tickets have been resolved. "
+        },
+        {
+          "name": "issue_description",
+          "fieldName": "issue_description",
+          "dataTypeName": "text",
+          "description": "User submitted description of the issue associated with each ticket."
+        },
+        {
+          "name": "ticket_closed_date_time",
+          "fieldName": "ticket_closed_date_time",
+          "dataTypeName": "calendar_date",
+          "description": "The date and time when each closed ticket was resolved. Not applicable for open tickets. "
+        },
+        {
+          "name": "ticket_created_date_time",
+          "fieldName": "ticket_created_date_time",
+          "dataTypeName": "calendar_date",
+          "description": "The date and time when each ticket was opened. "
+        },
+        {
+          "name": "ticket_last_updated_date_time",
+          "fieldName": "ticket_last_updated_date_time",
+          "dataTypeName": "calendar_date",
+          "description": ""
+        },
+        {
+          "name": "address",
+          "fieldName": "address",
+          "dataTypeName": "text",
+          "description": "The relevant address for each ticket. "
+        },
+        {
+          "name": "lat",
+          "fieldName": "lat",
+          "dataTypeName": "number",
+          "description": "The latitude for each ticket. "
+        },
+        {
+          "name": "lng",
+          "fieldName": "lng",
+          "dataTypeName": "number",
+          "description": "the longitude for each ticket. "
+        },
+        {
+          "name": "location",
+          "fieldName": "location",
+          "dataTypeName": "point",
+          "description": "The lat/lon coordinates for each ticket. "
+        },
+        {
+          "name": "image",
+          "fieldName": "image",
+          "dataTypeName": "text",
+          "description": "An image associated with the ticket. SeeClickFix users have the option of submitting a photo when submitting a ticket. "
+        }
+      ],
+      "count_probe": {
+        "url": "https://data.cambridgema.gov/resource/uz4w-baz5.json?%24select=count%28%2A%29+as+records",
+        "http_status": "200",
+        "final_url": "https://data.cambridgema.gov/resource/uz4w-baz5.json?%24select=count%28%2A%29+as+records",
+        "curl_exit_code": 0,
+        "bytes": 21,
+        "sha256": "ffc83dbcad429c9f37d6783dc4b223533fe61440f65a0e8c3e0741f68dbd3d35",
+        "error": null,
+        "format": "json"
+      },
+      "count_result": [
+        {
+          "records": "5188"
+        }
+      ],
+      "sample_probe": {
+        "url": "https://data.cambridgema.gov/resource/uz4w-baz5.json?%24limit=3",
+        "http_status": "200",
+        "final_url": "https://data.cambridgema.gov/resource/uz4w-baz5.json?%24limit=3",
+        "curl_exit_code": 0,
+        "bytes": 2554,
+        "sha256": "c971a6cd323e5ce212ec1e3d372227e4705207a3339770c06f26160ae5327801",
+        "error": null,
+        "format": "json"
+      },
+      "sample_records": 3,
+      "sample_fields": [
+        "address",
+        "city",
+        "image",
+        "issue_description",
+        "issue_type",
+        "lat",
+        "lng",
+        "location",
+        "ticket_closed_date_time",
+        "ticket_created_date_time",
+        "ticket_id",
+        "ticket_last_updated_date_time",
+        "ticket_status"
+      ]
+    }
+  ],
+  "repositories": [
+    {
+      "url": "https://api.github.com/repos/harvardinformatics/llm-workshop-smart-rat",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/harvardinformatics/llm-workshop-smart-rat",
+      "curl_exit_code": 0,
+      "bytes": 7352,
+      "sha256": "44fe7276ca27c14b3f4d9f81d2f0cbd7da07a53ae61942f1dd5fd26b2c7a1471",
+      "error": null,
+      "format": "json",
+      "requested_repo": "harvardinformatics/llm-workshop-smart-rat",
+      "full_name": "harvardinformatics/llm-workshop-smart-rat",
+      "html_url": "https://github.com/harvardinformatics/llm-workshop-smart-rat",
+      "description": null,
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-18T02:11:49Z",
+      "language": null,
+      "size": 827,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/ishana-s/Invasive_Rats_Refuse",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/ishana-s/Invasive_Rats_Refuse",
+      "curl_exit_code": 0,
+      "bytes": 5610,
+      "sha256": "73b6207778354e9d07e1d0f8323f593802eb539a68edf18fa6ffea3bc8ab204d",
+      "error": null,
+      "format": "json",
+      "requested_repo": "ishana-s/Invasive_Rats_Refuse",
+      "full_name": "ishana-s/Invasive_Rats_Refuse",
+      "html_url": "https://github.com/ishana-s/Invasive_Rats_Refuse",
+      "description": "Supplemental files and code for: Waste Reduction decreases rat activity from peri-urban environment, Shukla and Wilmers",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2024-04-30T17:25:06Z",
+      "language": "R",
+      "size": 11,
+      "license": null
+    }
+  ],
+  "workshop_snapshots": [
+    {
+      "url": "https://raw.githubusercontent.com/harvardinformatics/llm-workshop-smart-rat/main/data/raw/smart_rat_boxes.csv",
+      "http_status": "200",
+      "final_url": "https://raw.githubusercontent.com/harvardinformatics/llm-workshop-smart-rat/main/data/raw/smart_rat_boxes.csv",
+      "curl_exit_code": 0,
+      "bytes": 112032,
+      "sha256": "b7c241b48ceda74b42fb86534d11f16399cd5bb708ed557a025e8107cd33d52c",
+      "error": null,
+      "filename": "smart_rat_boxes.csv",
+      "columns": [
+        "serial_number",
+        "device_name",
+        "address",
+        "latitude",
+        "longitude",
+        "active_site",
+        "device_type",
+        "total_since_install",
+        "prior_to_2023",
+        "total_2023",
+        "total_2024",
+        "total_2025",
+        "total_2026",
+        "january_2026",
+        "february_2026",
+        "march_2026",
+        "april_2026",
+        "may_2026",
+        "june_2026",
+        "july_2026",
+        "august_2026",
+        "september_2026",
+        "october_2026",
+        "november_2026",
+        "december_2026",
+        "participatory_budgeting",
+        "coordinates"
+      ],
+      "records": 512,
+      "distinct_serial_numbers": 428,
+      "missing_latitude": 2,
+      "device_types": [
+        "Box",
+        "Pipe"
+      ],
+      "installation_date_columns": []
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harvardinformatics/llm-workshop-smart-rat/main/data/raw/rodent_311.csv",
+      "http_status": "200",
+      "final_url": "https://raw.githubusercontent.com/harvardinformatics/llm-workshop-smart-rat/main/data/raw/rodent_311.csv",
+      "curl_exit_code": 0,
+      "bytes": 2604558,
+      "sha256": "894fb5674b7d6f51fca4cec1fe43852a6d0a864e45febfb245ac0bfb4d831bb4",
+      "error": null,
+      "filename": "rodent_311.csv",
+      "columns": [
+        "ticket_id",
+        "city",
+        "issue_type",
+        "ticket_status",
+        "issue_description",
+        "ticket_closed_date_time",
+        "ticket_created_date_time",
+        "ticket_last_updated_date_time",
+        "address",
+        "lat",
+        "lng",
+        "location",
+        "image"
+      ],
+      "records": 4973,
+      "created_range": [
+        "2013-10-03T13:34:25",
+        "2026-07-05T18:26:08"
+      ]
+    }
+  ],
+  "boston_exact_category_probes": [
+    {
+      "resource_id": "1a0b420d-99f1-4887-9851-990b2a5a6e17",
+      "category_field": "type",
+      "exact_category": "Rodent Activity",
+      "probes": [
+        {
+          "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=1a0b420d-99f1-4887-9851-990b2a5a6e17&filters=%7B%22type%22%3A+%22Rodent+Activity%22%7D&limit=1&sort=open_dt+asc",
+          "http_status": "200",
+          "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=1a0b420d-99f1-4887-9851-990b2a5a6e17&filters=%7B%22type%22%3A+%22Rodent+Activity%22%7D&limit=1&sort=open_dt+asc",
+          "curl_exit_code": 0,
+          "bytes": 3274,
+          "sha256": "72429bf57392a7c77d7388de610d6abd22a71f9b95a493a012f477b3922b5e27",
+          "error": null,
+          "format": "json",
+          "success": true,
+          "total_matching_category": 5321,
+          "columns": [
+            "_id",
+            "case_enquiry_id",
+            "open_dt",
+            "sla_target_dt",
+            "closed_dt",
+            "on_time",
+            "case_status",
+            "closure_reason",
+            "case_title",
+            "subject",
+            "reason",
+            "type",
+            "queue",
+            "department",
+            "submitted_photo",
+            "closed_photo",
+            "location",
+            "fire_district",
+            "pwd_district",
+            "city_council_district",
+            "police_district",
+            "neighborhood",
+            "neighborhood_services_district",
+            "ward",
+            "precinct",
+            "location_street_name",
+            "location_zipcode",
+            "latitude",
+            "longitude",
+            "geom_4326",
+            "source"
+          ],
+          "boundary_date": [
+            "2026-01-01T12:47:00"
+          ]
+        },
+        {
+          "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=1a0b420d-99f1-4887-9851-990b2a5a6e17&filters=%7B%22type%22%3A+%22Rodent+Activity%22%7D&limit=1&sort=open_dt+desc",
+          "http_status": "200",
+          "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=1a0b420d-99f1-4887-9851-990b2a5a6e17&filters=%7B%22type%22%3A+%22Rodent+Activity%22%7D&limit=1&sort=open_dt+desc",
+          "curl_exit_code": 0,
+          "bytes": 3160,
+          "sha256": "1caf3804296a21fe98e3df75f017519ccd87a56355911fdfbae9e6ec0f9f893f",
+          "error": null,
+          "format": "json",
+          "success": true,
+          "total_matching_category": 5321,
+          "columns": [
+            "_id",
+            "case_enquiry_id",
+            "open_dt",
+            "sla_target_dt",
+            "closed_dt",
+            "on_time",
+            "case_status",
+            "closure_reason",
+            "case_title",
+            "subject",
+            "reason",
+            "type",
+            "queue",
+            "department",
+            "submitted_photo",
+            "closed_photo",
+            "location",
+            "fire_district",
+            "pwd_district",
+            "city_council_district",
+            "police_district",
+            "neighborhood",
+            "neighborhood_services_district",
+            "ward",
+            "precinct",
+            "location_street_name",
+            "location_zipcode",
+            "latitude",
+            "longitude",
+            "geom_4326",
+            "source"
+          ],
+          "boundary_date": [
+            "2026-10-23T21:23:36"
+          ]
+        }
+      ]
+    },
+    {
+      "resource_id": "254adca6-64ab-4c5c-9fc0-a6da622be185",
+      "category_field": "service_name",
+      "exact_category": "Rodent Activity",
+      "probes": [
+        {
+          "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&filters=%7B%22service_name%22%3A+%22Rodent+Activity%22%7D&limit=1&sort=open_date+asc",
+          "http_status": "200",
+          "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&filters=%7B%22service_name%22%3A+%22Rodent+Activity%22%7D&limit=1&sort=open_date+asc",
+          "curl_exit_code": 0,
+          "bytes": 1934,
+          "sha256": "775cf69bc045f39a25011947c318bd267dbb6eb17cffccf36dae3b1fec3326cd",
+          "error": null,
+          "format": "json",
+          "success": true,
+          "total_matching_category": 0,
+          "columns": [
+            "_id",
+            "case_id",
+            "open_date",
+            "case_topic",
+            "service_name",
+            "assigned_department",
+            "assigned_team",
+            "case_status",
+            "closure_reason",
+            "closure_comments",
+            "close_date",
+            "target_close_date",
+            "on_time",
+            "report_source",
+            "full_address",
+            "street_number",
+            "street_name",
+            "zip_code",
+            "neighborhood",
+            "public_works_district",
+            "city_council_district",
+            "fire_district",
+            "police_district",
+            "ward",
+            "precinct",
+            "submitted_photo",
+            "closed_photo",
+            "longitude",
+            "latitude"
+          ],
+          "boundary_date": []
+        },
+        {
+          "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&filters=%7B%22service_name%22%3A+%22Rodent+Activity%22%7D&limit=1&sort=open_date+desc",
+          "http_status": "200",
+          "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=254adca6-64ab-4c5c-9fc0-a6da622be185&filters=%7B%22service_name%22%3A+%22Rodent+Activity%22%7D&limit=1&sort=open_date+desc",
+          "curl_exit_code": 0,
+          "bytes": 1937,
+          "sha256": "cff6e4cf974ab761e23f0fb31988d57d12e123a26321d4a3230db5dcf03e8f5c",
+          "error": null,
+          "format": "json",
+          "success": true,
+          "total_matching_category": 0,
+          "columns": [
+            "_id",
+            "case_id",
+            "open_date",
+            "case_topic",
+            "service_name",
+            "assigned_department",
+            "assigned_team",
+            "case_status",
+            "closure_reason",
+            "closure_comments",
+            "close_date",
+            "target_close_date",
+            "on_time",
+            "report_source",
+            "full_address",
+            "street_number",
+            "street_name",
+            "zip_code",
+            "neighborhood",
+            "public_works_district",
+            "city_council_district",
+            "fire_district",
+            "police_district",
+            "ward",
+            "precinct",
+            "submitted_photo",
+            "closed_photo",
+            "longitude",
+            "latitude"
+          ],
+          "boundary_date": []
+        }
+      ]
+    }
+  ],
+  "workshop_license_check": {
+    "url": "https://raw.githubusercontent.com/harvardinformatics/llm-workshop-smart-rat/main/LICENSE",
+    "http_status": "200",
+    "final_url": "https://raw.githubusercontent.com/harvardinformatics/llm-workshop-smart-rat/main/LICENSE",
+    "curl_exit_code": 0,
+    "bytes": 1522,
+    "sha256": "c6960eeac352cd1616fbdee1d0f65c1627d56232535aaac0acd6378dd394b627",
+    "error": null,
+    "conflicting_signals": [
+      "CC BY 4.0",
+      "CC BY-NC-SA 4.0",
+      "by-nc-nd/4.0"
+    ],
+    "interpretation": "Inconsistent license text; do not assert permissive code reuse. Prefer original City data subject to its terms."
+  }
+}

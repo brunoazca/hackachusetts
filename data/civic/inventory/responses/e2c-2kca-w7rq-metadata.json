@@ -1,0 +1,1385 @@
+{
+  "id" : "2kca-w7rq",
+  "name" : "Student Discipline",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1706291141,
+  "description" : "This dataset provides the disciplines that public school students in Massachusetts received for the offenses committed from 2013 onward, as reported by school districts in the School Safety Discipline Report (SSDR). For more detailed information on the SSDR collection, see the <a href=\"https://www.doe.mass.edu/infoservices/data/ssdr/ssdr-datahandbook.docx\">SSDR Data Handbook</a>.\n\nIn 2018, the offense codes in this dataset changed to use the codes supported by the National Center for Education Statistics (NCES). Years prior to 2018 in this dataset still reference the Massachusetts codes used in those years. For more information, please view the <a href=\"https://profiles.doe.mass.edu/help/data.aspx?section=students#ssdr\">Profiles Help - About the Data</a> page.\n\nEconomically Disadvantaged was used 2015-2021. Low Income was used prior to 2015, and a different version of Low Income has been used since 2022. Please see the <a href=\"https://www.doe.mass.edu/research/researchers.html\" target=\"_blank\" rel=\"noopener noreferrer\">DESE Researcher's Guide</a> for more information.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/ssdr.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Student Discipline</a>\n\n<b>List of Offenses</b>\n<ul><li>All Offenses</li><li>Bullying</li><li>Destruction of school property due to arson</li><li>Felony conviction or complaint</li><li>Homicide (murder or manslaughter)</li><li>Illegal substances</li><li>Kidnapping (abduction)</li><li>Non-drug, non-violent or non-criminal-related offense</li><li>Other violence or substance-related offense</li><li>Physical attack (battery)</li><li>Physical fight</li><li>Robbery using force</li><li>Sexual assault</li><li>Sexual harassment</li><li>Theft (school, staff or student property)</li><li>Threat of physical attack</li><li>Threat of robbery</li><li>Vandalism/destruction of property</li><li>Weapon on school premises</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 570,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40390983,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1706298960,
+  "publicationGroup" : 19442178,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1771530131,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19442178,
+  "totalTimesRated" : 0,
+  "viewCount" : 1738,
+  "viewLastModified" : 1786393291,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1743692672,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6826364,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1743692652,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1743692672,
+      "failureCount" : 0,
+      "startedAt" : 1743692672,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 588756842,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108634,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2013",
+        "count" : "124770"
+      }, {
+        "item" : "2014",
+        "count" : "121716"
+      }, {
+        "item" : "2016",
+        "count" : "115414"
+      }, {
+        "item" : "2017",
+        "count" : "113686"
+      }, {
+        "item" : "2015",
+        "count" : "110650"
+      }, {
+        "item" : "2022",
+        "count" : "106980"
+      }, {
+        "item" : "2019",
+        "count" : "104497"
+      }, {
+        "item" : "2018",
+        "count" : "102577"
+      }, {
+        "item" : "2023",
+        "count" : "101384"
+      }, {
+        "item" : "2024",
+        "count" : "100894"
+      }, {
+        "item" : "2025",
+        "count" : "99744"
+      }, {
+        "item" : "2020",
+        "count" : "91642"
+      }, {
+        "item" : "2021",
+        "count" : "58341"
+      } ],
+      "smallest" : "2013",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756843,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108635,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "73325"
+      }, {
+        "item" : "02810000",
+        "count" : "46045"
+      }, {
+        "item" : "03480000",
+        "count" : "30936"
+      }, {
+        "item" : "01600000",
+        "count" : "22116"
+      }, {
+        "item" : "01630000",
+        "count" : "21449"
+      }, {
+        "item" : "01490000",
+        "count" : "19955"
+      }, {
+        "item" : "00440000",
+        "count" : "18490"
+      }, {
+        "item" : "00950000",
+        "count" : "17334"
+      }, {
+        "item" : "02010000",
+        "count" : "16450"
+      }, {
+        "item" : "02360000",
+        "count" : "12725"
+      }, {
+        "item" : "01370000",
+        "count" : "11957"
+      }, {
+        "item" : "00610000",
+        "count" : "11153"
+      }, {
+        "item" : "01280000",
+        "count" : "10972"
+      }, {
+        "item" : "01000000",
+        "count" : "10441"
+      }, {
+        "item" : "02930000",
+        "count" : "10440"
+      }, {
+        "item" : "02070000",
+        "count" : "10363"
+      }, {
+        "item" : "02430000",
+        "count" : "10007"
+      }, {
+        "item" : "02390000",
+        "count" : "9755"
+      }, {
+        "item" : "00490000",
+        "count" : "9388"
+      }, {
+        "item" : "03250000",
+        "count" : "8985"
+      } ],
+      "smallest" : "00000000",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756844,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108636,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "73325"
+      }, {
+        "item" : "Springfield",
+        "count" : "46045"
+      }, {
+        "item" : "Worcester",
+        "count" : "30936"
+      }, {
+        "item" : "Lowell",
+        "count" : "22116"
+      }, {
+        "item" : "Lynn",
+        "count" : "21449"
+      }, {
+        "item" : "Lawrence",
+        "count" : "19955"
+      }, {
+        "item" : "Brockton",
+        "count" : "18490"
+      }, {
+        "item" : "Fall River",
+        "count" : "17334"
+      }, {
+        "item" : "New Bedford",
+        "count" : "16450"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "12725"
+      }, {
+        "item" : "Holyoke",
+        "count" : "11957"
+      }, {
+        "item" : "Chicopee",
+        "count" : "11153"
+      }, {
+        "item" : "Haverhill",
+        "count" : "10972"
+      }, {
+        "item" : "Framingham",
+        "count" : "10441"
+      }, {
+        "item" : "Taunton",
+        "count" : "10440"
+      }, {
+        "item" : "Newton",
+        "count" : "10363"
+      }, {
+        "item" : "Quincy",
+        "count" : "10007"
+      }, {
+        "item" : "Plymouth",
+        "count" : "9755"
+      }, {
+        "item" : "Cambridge",
+        "count" : "9388"
+      }, {
+        "item" : "Westfield",
+        "count" : "8985"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756845,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108637,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00000000",
+        "count" : "3710"
+      }, {
+        "item" : "00350000",
+        "count" : "2698"
+      }, {
+        "item" : "02810000",
+        "count" : "2627"
+      }, {
+        "item" : "01600000",
+        "count" : "2407"
+      }, {
+        "item" : "01630000",
+        "count" : "2360"
+      }, {
+        "item" : "00950000",
+        "count" : "2308"
+      }, {
+        "item" : "00440000",
+        "count" : "2283"
+      }, {
+        "item" : "02010000",
+        "count" : "2271"
+      }, {
+        "item" : "02360000",
+        "count" : "2122"
+      }, {
+        "item" : "02930000",
+        "count" : "2036"
+      }, {
+        "item" : "00160000",
+        "count" : "2035"
+      }, {
+        "item" : "01280000",
+        "count" : "2008"
+      }, {
+        "item" : "01000000",
+        "count" : "1990"
+      }, {
+        "item" : "01490000",
+        "count" : "1951"
+      }, {
+        "item" : "00610000",
+        "count" : "1905"
+      }, {
+        "item" : "01600505",
+        "count" : "1897"
+      }, {
+        "item" : "02740000",
+        "count" : "1894"
+      }, {
+        "item" : "01370000",
+        "count" : "1886"
+      }, {
+        "item" : "03250000",
+        "count" : "1884"
+      }, {
+        "item" : "02390000",
+        "count" : "1863"
+      } ],
+      "smallest" : "00000000",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756846,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108638,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "State",
+        "count" : "3710"
+      }, {
+        "item" : "Lawrence",
+        "count" : "3307"
+      }, {
+        "item" : "Boston",
+        "count" : "2698"
+      }, {
+        "item" : "Springfield",
+        "count" : "2627"
+      }, {
+        "item" : "John F Kennedy Middle",
+        "count" : "2506"
+      }, {
+        "item" : "Lowell",
+        "count" : "2407"
+      }, {
+        "item" : "Lynn",
+        "count" : "2360"
+      }, {
+        "item" : "Tri-County Regional Vocational Technical",
+        "count" : "2336"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "2328"
+      }, {
+        "item" : "Fall River",
+        "count" : "2308"
+      }, {
+        "item" : "Brockton",
+        "count" : "2283"
+      }, {
+        "item" : "New Bedford",
+        "count" : "2271"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "2122"
+      }, {
+        "item" : "Taunton",
+        "count" : "2036"
+      }, {
+        "item" : "Attleboro",
+        "count" : "2035"
+      }, {
+        "item" : "Haverhill",
+        "count" : "2008"
+      }, {
+        "item" : "Framingham",
+        "count" : "1990"
+      }, {
+        "item" : "Chicopee",
+        "count" : "1905"
+      }, {
+        "item" : "Lowell High",
+        "count" : "1897"
+      }, {
+        "item" : "Somerville",
+        "count" : "1894"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756847,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108639,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "971262"
+      }, {
+        "item" : "District",
+        "count" : "377323"
+      }, {
+        "item" : "State",
+        "count" : "3710"
+      } ],
+      "smallest" : "District",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756848,
+    "name" : "STU_GRP",
+    "dataTypeName" : "text",
+    "description" : "Student Group",
+    "fieldName" : "stu_grp",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108640,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Students",
+        "count" : "161747"
+      }, {
+        "item" : "High Needs",
+        "count" : "150670"
+      }, {
+        "item" : "Male",
+        "count" : "150231"
+      }, {
+        "item" : "Students with Disabilities",
+        "count" : "126065"
+      }, {
+        "item" : "White",
+        "count" : "124381"
+      }, {
+        "item" : "Female",
+        "count" : "98654"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "98162"
+      }, {
+        "item" : "Black or African American",
+        "count" : "78883"
+      }, {
+        "item" : "Economically Disadvantaged",
+        "count" : "69821"
+      }, {
+        "item" : "Low Income",
+        "count" : "68514"
+      }, {
+        "item" : "English Learners",
+        "count" : "64711"
+      }, {
+        "item" : "Multi-Race, Not Hispanic or Latino",
+        "count" : "55958"
+      }, {
+        "item" : "Asian",
+        "count" : "41427"
+      }, {
+        "item" : "American Indian or Alaska Native",
+        "count" : "32742"
+      }, {
+        "item" : "Native Hawaiian or Other Pacific Islander",
+        "count" : "30329"
+      } ],
+      "smallest" : "All Students",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756849,
+    "name" : "OFFENSE",
+    "dataTypeName" : "text",
+    "description" : "Offense",
+    "fieldName" : "offense",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151108641,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "Weapon on school premises",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All Offenses",
+        "count" : "409052"
+      }, {
+        "item" : "Non-drug, non-violent or non-criminal-related offense",
+        "count" : "89501"
+      }, {
+        "item" : "Physical attack (battery)",
+        "count" : "79979"
+      }, {
+        "item" : "18. Non-drug, non-violent or non-criminal-related offense",
+        "count" : "61509"
+      }, {
+        "item" : "Threat of physical attack",
+        "count" : "57087"
+      }, {
+        "item" : "Other violence or substance-related offense",
+        "count" : "51924"
+      }, {
+        "item" : "Physical fight",
+        "count" : "50063"
+      }, {
+        "item" : "Illegal substances",
+        "count" : "50031"
+      }, {
+        "item" : "4. Physical attack, assault (non- sexual)",
+        "count" : "49479"
+      }, {
+        "item" : "3. Threat of physical attack",
+        "count" : "37441"
+      }, {
+        "item" : "2. Physical fight",
+        "count" : "32933"
+      }, {
+        "item" : "Weapon on school premises",
+        "count" : "31877"
+      }, {
+        "item" : "1. Illegal substances",
+        "count" : "29022"
+      }, {
+        "item" : "Vandalism/destruction of property",
+        "count" : "26742"
+      }, {
+        "item" : "Bullying",
+        "count" : "25710"
+      }, {
+        "item" : "7. Theft (school, staff or student property)",
+        "count" : "21736"
+      }, {
+        "item" : "Theft (school, staff or student property)",
+        "count" : "20530"
+      }, {
+        "item" : "10. Vandalism/destruction of property",
+        "count" : "20166"
+      }, {
+        "item" : "Sexual harassment",
+        "count" : "19377"
+      }, {
+        "item" : "14a. Knife (cutting weapon)",
+        "count" : "19126"
+      } ],
+      "smallest" : "10. Vandalism/destruction of property",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756850,
+    "name" : "STU_CNT",
+    "dataTypeName" : "number",
+    "description" : "Student Count",
+    "fieldName" : "stu_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108642,
+    "cachedContents" : {
+      "non_null" : "1352295",
+      "largest" : "981288",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "39665"
+      }, {
+        "item" : "1",
+        "count" : "16762"
+      }, {
+        "item" : "2",
+        "count" : "10458"
+      }, {
+        "item" : "3",
+        "count" : "8118"
+      }, {
+        "item" : "4",
+        "count" : "6694"
+      }, {
+        "item" : "5",
+        "count" : "6277"
+      }, {
+        "item" : "6",
+        "count" : "5787"
+      }, {
+        "item" : "7",
+        "count" : "5470"
+      }, {
+        "item" : "8",
+        "count" : "5302"
+      }, {
+        "item" : "9",
+        "count" : "5056"
+      }, {
+        "item" : "10",
+        "count" : "4993"
+      }, {
+        "item" : "11",
+        "count" : "4925"
+      }, {
+        "item" : "12",
+        "count" : "4641"
+      }, {
+        "item" : "13",
+        "count" : "4498"
+      }, {
+        "item" : "14",
+        "count" : "4317"
+      }, {
+        "item" : "17",
+        "count" : "4270"
+      }, {
+        "item" : "15",
+        "count" : "4139"
+      }, {
+        "item" : "18",
+        "count" : "4057"
+      }, {
+        "item" : "16",
+        "count" : "4023"
+      }, {
+        "item" : "21",
+        "count" : "3885"
+      } ],
+      "smallest" : "0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756851,
+    "name" : "STU_DISCIPL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Student Discipline Count",
+    "fieldName" : "stu_discipl_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108643,
+    "cachedContents" : {
+      "non_null" : "1264131",
+      "largest" : "54453",
+      "null" : "88164",
+      "top" : [ {
+        "item" : "1",
+        "count" : "394924"
+      }, {
+        "item" : "2",
+        "count" : "182736"
+      }, {
+        "item" : "0",
+        "count" : "135554"
+      }, {
+        "item" : "3",
+        "count" : "102656"
+      }, {
+        "item" : "4",
+        "count" : "70226"
+      }, {
+        "item" : "5",
+        "count" : "49934"
+      }, {
+        "item" : "6",
+        "count" : "38186"
+      }, {
+        "item" : "7",
+        "count" : "29517"
+      }, {
+        "item" : "8",
+        "count" : "24523"
+      }, {
+        "item" : "9",
+        "count" : "20162"
+      }, {
+        "item" : "10",
+        "count" : "17288"
+      }, {
+        "item" : "11",
+        "count" : "14629"
+      }, {
+        "item" : "12",
+        "count" : "13073"
+      }, {
+        "item" : "13",
+        "count" : "10992"
+      }, {
+        "item" : "14",
+        "count" : "9806"
+      }, {
+        "item" : "15",
+        "count" : "8754"
+      }, {
+        "item" : "16",
+        "count" : "7851"
+      }, {
+        "item" : "17",
+        "count" : "7209"
+      }, {
+        "item" : "18",
+        "count" : "6561"
+      }, {
+        "item" : "19",
+        "count" : "5842"
+      } ],
+      "smallest" : "0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : { }
+  }, {
+    "id" : 588756852,
+    "name" : "IN_SUSP_PCT",
+    "dataTypeName" : "number",
+    "description" : "In-School Suspension Percent",
+    "fieldName" : "in_susp_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108644,
+    "cachedContents" : {
+      "non_null" : "328101",
+      "largest" : "0.786",
+      "null" : "1024194",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "99943"
+      }, {
+        "item" : "0.001",
+        "count" : "20067"
+      }, {
+        "item" : "0.002",
+        "count" : "17023"
+      }, {
+        "item" : "0.003",
+        "count" : "13797"
+      }, {
+        "item" : "0.004",
+        "count" : "11341"
+      }, {
+        "item" : "0.005",
+        "count" : "9594"
+      }, {
+        "item" : "0.006",
+        "count" : "8245"
+      }, {
+        "item" : "0.007",
+        "count" : "7118"
+      }, {
+        "item" : "0.008",
+        "count" : "6592"
+      }, {
+        "item" : "0.009",
+        "count" : "5814"
+      }, {
+        "item" : "0.01",
+        "count" : "5534"
+      }, {
+        "item" : "0.011",
+        "count" : "5069"
+      }, {
+        "item" : "0.012",
+        "count" : "4699"
+      }, {
+        "item" : "0.013",
+        "count" : "4340"
+      }, {
+        "item" : "0.014",
+        "count" : "4164"
+      }, {
+        "item" : "0.015",
+        "count" : "3840"
+      }, {
+        "item" : "0.016",
+        "count" : "3652"
+      }, {
+        "item" : "0.017",
+        "count" : "3445"
+      }, {
+        "item" : "0.018",
+        "count" : "3110"
+      }, {
+        "item" : "0.019",
+        "count" : "3042"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 588756853,
+    "name" : "OUT_SUSP_PCT",
+    "dataTypeName" : "number",
+    "description" : "Out-of-School Suspension Percent",
+    "fieldName" : "out_susp_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108645,
+    "cachedContents" : {
+      "non_null" : "328101",
+      "largest" : "1.0",
+      "null" : "1024194",
+      "top" : [ {
+        "item" : "0.002",
+        "count" : "11685"
+      }, {
+        "item" : "0.003",
+        "count" : "10964"
+      }, {
+        "item" : "0.004",
+        "count" : "10620"
+      }, {
+        "item" : "0.005",
+        "count" : "10083"
+      }, {
+        "item" : "0.006",
+        "count" : "9615"
+      }, {
+        "item" : "0.001",
+        "count" : "9367"
+      }, {
+        "item" : "0.007",
+        "count" : "9178"
+      }, {
+        "item" : "0.008",
+        "count" : "9169"
+      }, {
+        "item" : "0.009",
+        "count" : "8510"
+      }, {
+        "item" : "0.01",
+        "count" : "8348"
+      }, {
+        "item" : "0.011",
+        "count" : "7841"
+      }, {
+        "item" : "0.0",
+        "count" : "7838"
+      }, {
+        "item" : "0.012",
+        "count" : "7324"
+      }, {
+        "item" : "0.014",
+        "count" : "6994"
+      }, {
+        "item" : "0.013",
+        "count" : "6943"
+      }, {
+        "item" : "0.015",
+        "count" : "6440"
+      }, {
+        "item" : "0.016",
+        "count" : "6186"
+      }, {
+        "item" : "0.017",
+        "count" : "5865"
+      }, {
+        "item" : "0.018",
+        "count" : "5449"
+      }, {
+        "item" : "0.019",
+        "count" : "5342"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 588756854,
+    "name" : "EXP_PCT",
+    "dataTypeName" : "number",
+    "description" : "Expulsion Percent",
+    "fieldName" : "exp_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108646,
+    "cachedContents" : {
+      "non_null" : "328101",
+      "largest" : "0.154",
+      "null" : "1024194",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "323945"
+      }, {
+        "item" : "0.001",
+        "count" : "1481"
+      }, {
+        "item" : "0.002",
+        "count" : "861"
+      }, {
+        "item" : "0.003",
+        "count" : "561"
+      }, {
+        "item" : "0.004",
+        "count" : "309"
+      }, {
+        "item" : "0.005",
+        "count" : "249"
+      }, {
+        "item" : "0.006",
+        "count" : "175"
+      }, {
+        "item" : "0.007",
+        "count" : "88"
+      }, {
+        "item" : "0.008",
+        "count" : "76"
+      }, {
+        "item" : "0.009",
+        "count" : "60"
+      }, {
+        "item" : "0.011",
+        "count" : "57"
+      }, {
+        "item" : "0.01",
+        "count" : "47"
+      }, {
+        "item" : "0.013",
+        "count" : "42"
+      }, {
+        "item" : "0.012",
+        "count" : "22"
+      }, {
+        "item" : "0.016",
+        "count" : "21"
+      }, {
+        "item" : "0.02",
+        "count" : "13"
+      }, {
+        "item" : "0.015",
+        "count" : "10"
+      }, {
+        "item" : "0.019",
+        "count" : "9"
+      }, {
+        "item" : "0.018",
+        "count" : "9"
+      }, {
+        "item" : "0.031",
+        "count" : "7"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 588756855,
+    "name" : "ALT_SETTING_PCT",
+    "dataTypeName" : "number",
+    "description" : "Alternate Setting Percent",
+    "fieldName" : "alt_setting_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108647,
+    "cachedContents" : {
+      "non_null" : "328101",
+      "largest" : "0.5",
+      "null" : "1024194",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "322393"
+      }, {
+        "item" : "0.001",
+        "count" : "1666"
+      }, {
+        "item" : "0.002",
+        "count" : "1080"
+      }, {
+        "item" : "0.003",
+        "count" : "740"
+      }, {
+        "item" : "0.004",
+        "count" : "443"
+      }, {
+        "item" : "0.005",
+        "count" : "316"
+      }, {
+        "item" : "0.006",
+        "count" : "249"
+      }, {
+        "item" : "0.007",
+        "count" : "192"
+      }, {
+        "item" : "0.008",
+        "count" : "138"
+      }, {
+        "item" : "0.009",
+        "count" : "118"
+      }, {
+        "item" : "0.01",
+        "count" : "91"
+      }, {
+        "item" : "0.011",
+        "count" : "73"
+      }, {
+        "item" : "0.012",
+        "count" : "71"
+      }, {
+        "item" : "0.013",
+        "count" : "43"
+      }, {
+        "item" : "0.014",
+        "count" : "39"
+      }, {
+        "item" : "0.018",
+        "count" : "35"
+      }, {
+        "item" : "0.015",
+        "count" : "33"
+      }, {
+        "item" : "0.021",
+        "count" : "30"
+      }, {
+        "item" : "0.017",
+        "count" : "26"
+      }, {
+        "item" : "0.016",
+        "count" : "26"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 588756856,
+    "name" : "EMERG_RMVL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Removed to Alternate Setting",
+    "fieldName" : "emerg_rmvl_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108648,
+    "cachedContents" : {
+      "non_null" : "268742",
+      "largest" : "0.438",
+      "null" : "1083553",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "210405"
+      }, {
+        "item" : "0.001",
+        "count" : "9673"
+      }, {
+        "item" : "0.002",
+        "count" : "7460"
+      }, {
+        "item" : "0.003",
+        "count" : "5702"
+      }, {
+        "item" : "0.004",
+        "count" : "4283"
+      }, {
+        "item" : "0.005",
+        "count" : "3480"
+      }, {
+        "item" : "0.006",
+        "count" : "2717"
+      }, {
+        "item" : "0.007",
+        "count" : "2293"
+      }, {
+        "item" : "0.008",
+        "count" : "1990"
+      }, {
+        "item" : "0.009",
+        "count" : "1559"
+      }, {
+        "item" : "0.01",
+        "count" : "1461"
+      }, {
+        "item" : "0.011",
+        "count" : "1335"
+      }, {
+        "item" : "0.012",
+        "count" : "1108"
+      }, {
+        "item" : "0.013",
+        "count" : "977"
+      }, {
+        "item" : "0.014",
+        "count" : "967"
+      }, {
+        "item" : "0.015",
+        "count" : "755"
+      }, {
+        "item" : "0.016",
+        "count" : "718"
+      }, {
+        "item" : "0.017",
+        "count" : "698"
+      }, {
+        "item" : "0.019",
+        "count" : "581"
+      }, {
+        "item" : "0.018",
+        "count" : "567"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 588756857,
+    "name" : "ARREST_PCT",
+    "dataTypeName" : "number",
+    "description" : "Arrest Percent",
+    "fieldName" : "arrest_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108649,
+    "cachedContents" : {
+      "non_null" : "164252",
+      "largest" : "0.125",
+      "null" : "1188043",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "160765"
+      }, {
+        "item" : "0.001",
+        "count" : "1413"
+      }, {
+        "item" : "0.002",
+        "count" : "691"
+      }, {
+        "item" : "0.003",
+        "count" : "413"
+      }, {
+        "item" : "0.004",
+        "count" : "216"
+      }, {
+        "item" : "0.005",
+        "count" : "161"
+      }, {
+        "item" : "0.006",
+        "count" : "101"
+      }, {
+        "item" : "0.007",
+        "count" : "69"
+      }, {
+        "item" : "0.008",
+        "count" : "56"
+      }, {
+        "item" : "0.01",
+        "count" : "39"
+      }, {
+        "item" : "0.009",
+        "count" : "36"
+      }, {
+        "item" : "0.012",
+        "count" : "24"
+      }, {
+        "item" : "0.013",
+        "count" : "24"
+      }, {
+        "item" : "0.014",
+        "count" : "22"
+      }, {
+        "item" : "0.011",
+        "count" : "22"
+      }, {
+        "item" : "0.018",
+        "count" : "15"
+      }, {
+        "item" : "0.015",
+        "count" : "12"
+      }, {
+        "item" : "0.042",
+        "count" : "10"
+      }, {
+        "item" : "0.019",
+        "count" : "9"
+      }, {
+        "item" : "0.017",
+        "count" : "9"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 588756858,
+    "name" : "LAWENF_REF_PCT",
+    "dataTypeName" : "number",
+    "description" : "Law Enforcement Referral Percent",
+    "fieldName" : "lawenf_ref_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151108650,
+    "cachedContents" : {
+      "non_null" : "135725",
+      "largest" : "0.095",
+      "null" : "1216570",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "131078"
+      }, {
+        "item" : "0.001",
+        "count" : "1496"
+      }, {
+        "item" : "0.002",
+        "count" : "897"
+      }, {
+        "item" : "0.003",
+        "count" : "628"
+      }, {
+        "item" : "0.004",
+        "count" : "390"
+      }, {
+        "item" : "0.005",
+        "count" : "299"
+      }, {
+        "item" : "0.006",
+        "count" : "163"
+      }, {
+        "item" : "0.007",
+        "count" : "138"
+      }, {
+        "item" : "0.008",
+        "count" : "90"
+      }, {
+        "item" : "0.009",
+        "count" : "85"
+      }, {
+        "item" : "0.01",
+        "count" : "71"
+      }, {
+        "item" : "0.012",
+        "count" : "63"
+      }, {
+        "item" : "0.011",
+        "count" : "44"
+      }, {
+        "item" : "0.014",
+        "count" : "37"
+      }, {
+        "item" : "0.013",
+        "count" : "31"
+      }, {
+        "item" : "0.016",
+        "count" : "24"
+      }, {
+        "item" : "0.015",
+        "count" : "19"
+      }, {
+        "item" : "0.019",
+        "count" : "18"
+      }, {
+        "item" : "0.017",
+        "count" : "18"
+      }, {
+        "item" : "0.023",
+        "count" : "11"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1352295",
+      "cardinality" : "1352295"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "discipline", "public school", "school safety discipline report", "ssdr", "gender", "race and ethnicity", "english learner", "low income", "economically disadvantaged", "students with disabilities", "high needs", "bullying", "arson", "vandalism", "felony", "conviction", "complaint", "homicide", "substances", "illegal", "tobacco", "cigarettes", "pipes", "cigars", "vapes", "alcohol", "possession", "kidnapping", "abduction", "criminal", "offense", "violence", "battery", "fight", "robbery", "sexual assault", "sexual harassment", "theft", "threat", "weapon", "gun", "knife", "firearm", "explosive", "bomb", "demographics", "disability", "ecodis", "el", "english learners", "ethnicity", "race" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

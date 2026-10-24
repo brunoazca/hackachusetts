@@ -1,0 +1,48 @@
+{
+  "spreadsheetId": "1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1cHEIwNGEh-u1qP2ahoNPGqboWq1Q6RZE0dzTbOzlrFk/edit",
+  "properties": {
+    "title": "data quality in mdot-4muni-2020-2025",
+    "locale": "en_US",
+    "timeZone": "America/Los_Angeles"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 1980353091,
+        "title": "data quality pivot tables",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26,
+          "hideGridlines": true
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 193900608,
+        "title": "data",
+        "index": 1,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 44912,
+          "columnCount": 18
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1260855922,
+        "title": "notes ",
+        "index": 2,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1001,
+          "columnCount": 26
+        }
+      }
+    }
+  ]
+}

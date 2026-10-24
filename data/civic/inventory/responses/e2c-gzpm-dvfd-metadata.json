@@ -1,0 +1,629 @@
+{
+  "id" : "gzpm-dvfd",
+  "name" : "Public Postsecondary Fall Enrollment: Detail",
+  "assetType" : "dataset",
+  "attribution" : "MA Department of Higher Education",
+  "attributionLink" : "https://www.mass.edu/datacenter/factbook/fallenrollment.asp",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1713534842,
+  "description" : "This dataset contains the total fall enrollment headcount and full-time equivalent (FTE) counts for undergraduate and graduate students at all public Massachusetts institutions of higher education since 2014. Data are disaggregated by the year of fall term, segment, institution, and student attributes such as enrollment level, enrollment status, race/ethnicity, and gender.\n\nThis dataset is 1 of 2 datasets that is also published in the interactive\n<a href=\"https://www.mass.edu/datacenter/factbook/fallenrollment.asp\"_blank\" rel=\"noopener noreferrer\">Fall Enrollment dashboard</a> on the Department of Higher Education Data Center:\n\n1) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Fall-Enrollment/gzpm-dvfd/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Fall Enrollment: Detail</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Fall-Enrollment-by-Race-and-G/v4jy-wi85/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Fall Enrollment: Summary</a>\n\nRelated datasets:\n1) <a href=\"https://educationtocareer.data.mass.gov/dataset/Public-Postsecondary-Annual-Enrollment/j7yp-crt6/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Annual Enrollment: Detail</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/College-and-Career/Public-Postsecondary-Annual-Enrollment-by-Race-and/hx2h-9z86/about_data\" target=\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary Annual Enrollment: Summary</a>\n\nNotes:\n- Data appear as reported to the Massachusetts Department of Higher Education.\n- Figures published here may vary from those of individual institutions due to differences in calculation methodologies.\n- Enrollment can also be measured as full time equivalent (FTE), which is calculated based on the total number of credits carried by enrolled students. In the fall term, 15 undergraduate credits = 1 FTE. For graduate students, 12 credits = 1 FTE at state universities, while at UMass campuses 9 credits = 1 FTE (except for first-professional degree programs which use a 15 credits FTE-standard).\n- The FTE column is formatted for display. Use the FTE_RAW column to calculate accurate aggregations.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 710,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41926419,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1770218043,
+  "publicationGroup" : 19504373,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1770218032,
+  "rowsUpdatedBy" : "3fm6-nje8",
+  "tableId" : 20264102,
+  "totalTimesRated" : 0,
+  "viewCount" : 2037,
+  "viewLastModified" : 1770218043,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1713561911,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7339484,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1713561899,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1713561911,
+      "failureCount" : 0,
+      "startedAt" : 1713561911,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 626063312,
+    "name" : "YEAR_FALL_TERM",
+    "dataTypeName" : "text",
+    "description" : "Year (Fall Term)",
+    "fieldName" : "year_fall_term",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152260633,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "1391"
+      }, {
+        "item" : "2024",
+        "count" : "1375"
+      }, {
+        "item" : "2023",
+        "count" : "1365"
+      }, {
+        "item" : "2021",
+        "count" : "1329"
+      }, {
+        "item" : "2022",
+        "count" : "1327"
+      }, {
+        "item" : "2020",
+        "count" : "1311"
+      }, {
+        "item" : "2017",
+        "count" : "1303"
+      }, {
+        "item" : "2018",
+        "count" : "1303"
+      }, {
+        "item" : "2019",
+        "count" : "1300"
+      }, {
+        "item" : "2016",
+        "count" : "1296"
+      }, {
+        "item" : "2014",
+        "count" : "1273"
+      }, {
+        "item" : "2015",
+        "count" : "1273"
+      } ],
+      "smallest" : "2014",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  }, {
+    "id" : 626063313,
+    "name" : "SEGMENT",
+    "dataTypeName" : "text",
+    "description" : "Segment",
+    "fieldName" : "segment",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152260632,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "University of Massachusetts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Community Colleges",
+        "count" : "6551"
+      }, {
+        "item" : "State Universities",
+        "count" : "6164"
+      }, {
+        "item" : "University of Massachusetts",
+        "count" : "3131"
+      } ],
+      "smallest" : "Community Colleges",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  }, {
+    "id" : 626063314,
+    "name" : "INSTITUTION",
+    "dataTypeName" : "text",
+    "description" : "Public Institution Name",
+    "fieldName" : "institution",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152260631,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "University of Massachusetts Boston",
+        "count" : "850"
+      }, {
+        "item" : "Westfield State University",
+        "count" : "829"
+      }, {
+        "item" : "Salem State University",
+        "count" : "817"
+      }, {
+        "item" : "University of Massachusetts Lowell",
+        "count" : "767"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "763"
+      }, {
+        "item" : "University of Massachusetts Dartmouth",
+        "count" : "760"
+      }, {
+        "item" : "University of Massachusetts Amherst",
+        "count" : "754"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "726"
+      }, {
+        "item" : "Worcester State University",
+        "count" : "711"
+      }, {
+        "item" : "Framingham State University",
+        "count" : "695"
+      }, {
+        "item" : "Massachusetts College of Art and Design",
+        "count" : "670"
+      }, {
+        "item" : "Massachusetts College of Liberal Arts",
+        "count" : "541"
+      }, {
+        "item" : "Holyoke Community College",
+        "count" : "524"
+      }, {
+        "item" : "MassBay Community College",
+        "count" : "510"
+      }, {
+        "item" : "Bunker Hill Community College",
+        "count" : "482"
+      }, {
+        "item" : "Mt. Wachusett Community College",
+        "count" : "475"
+      }, {
+        "item" : "Springfield Technical Community College",
+        "count" : "453"
+      }, {
+        "item" : "Bristol Community College",
+        "count" : "442"
+      }, {
+        "item" : "North Shore Community College",
+        "count" : "439"
+      }, {
+        "item" : "Middlesex Community College",
+        "count" : "433"
+      } ],
+      "smallest" : "Berkshire Community College",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  }, {
+    "id" : 626063315,
+    "name" : "ENROLLMENT_LEVEL",
+    "dataTypeName" : "text",
+    "description" : "Enrollment Level",
+    "fieldName" : "enrollment_level",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152260630,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "Undergraduate",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Undergraduate",
+        "count" : "11631"
+      }, {
+        "item" : "Graduate/Professional",
+        "count" : "4215"
+      } ],
+      "smallest" : "Graduate/Professional",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  }, {
+    "id" : 626063316,
+    "name" : "ENROLLMENT_STATUS",
+    "dataTypeName" : "text",
+    "description" : "Enrollment Status",
+    "fieldName" : "enrollment_status",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152260629,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "Part Time",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Part Time",
+        "count" : "8066"
+      }, {
+        "item" : "Full Time",
+        "count" : "7780"
+      } ],
+      "smallest" : "Full Time",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  }, {
+    "id" : 626063317,
+    "name" : "RACE_ETHNICITY",
+    "dataTypeName" : "text",
+    "description" : "Race/Ethnicity",
+    "fieldName" : "race_ethnicity",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152260628,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "White",
+        "count" : "2354"
+      }, {
+        "item" : "Unknown",
+        "count" : "2234"
+      }, {
+        "item" : "Hispanic or Latino",
+        "count" : "2136"
+      }, {
+        "item" : "Black or African American",
+        "count" : "2080"
+      }, {
+        "item" : "Asian or Pacific Islander",
+        "count" : "2020"
+      }, {
+        "item" : "Two or more races",
+        "count" : "1944"
+      }, {
+        "item" : "U.S. Non-resident",
+        "count" : "1695"
+      }, {
+        "item" : "American Indian or Alaskan Native",
+        "count" : "1383"
+      } ],
+      "smallest" : "American Indian or Alaskan Native",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  }, {
+    "id" : 626063318,
+    "name" : "GENDER",
+    "dataTypeName" : "text",
+    "description" : "Gender",
+    "fieldName" : "gender",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152260627,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "Unknown",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Female",
+        "count" : "7182"
+      }, {
+        "item" : "Male",
+        "count" : "7013"
+      }, {
+        "item" : "Unknown",
+        "count" : "1612"
+      }, {
+        "item" : "Another Gender",
+        "count" : "39"
+      } ],
+      "smallest" : "Another Gender",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  }, {
+    "id" : 626063319,
+    "name" : "STUDENT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Student Count",
+    "fieldName" : "student_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152260626,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "7587",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "1542"
+      }, {
+        "item" : "2",
+        "count" : "895"
+      }, {
+        "item" : "3",
+        "count" : "689"
+      }, {
+        "item" : "4",
+        "count" : "490"
+      }, {
+        "item" : "5",
+        "count" : "401"
+      }, {
+        "item" : "6",
+        "count" : "380"
+      }, {
+        "item" : "7",
+        "count" : "339"
+      }, {
+        "item" : "8",
+        "count" : "297"
+      }, {
+        "item" : "9",
+        "count" : "283"
+      }, {
+        "item" : "10",
+        "count" : "233"
+      }, {
+        "item" : "12",
+        "count" : "221"
+      }, {
+        "item" : "11",
+        "count" : "220"
+      }, {
+        "item" : "13",
+        "count" : "210"
+      }, {
+        "item" : "14",
+        "count" : "196"
+      }, {
+        "item" : "15",
+        "count" : "176"
+      }, {
+        "item" : "16",
+        "count" : "175"
+      }, {
+        "item" : "17",
+        "count" : "159"
+      }, {
+        "item" : "19",
+        "count" : "146"
+      }, {
+        "item" : "22",
+        "count" : "144"
+      }, {
+        "item" : "18",
+        "count" : "135"
+      } ],
+      "smallest" : "1",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  }, {
+    "id" : 626063320,
+    "name" : "FTE",
+    "dataTypeName" : "number",
+    "description" : "Full Time Equivalent",
+    "fieldName" : "fte",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152260625,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "7871.7",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.8",
+        "count" : "400"
+      }, {
+        "item" : "1.0",
+        "count" : "277"
+      }, {
+        "item" : "0.9",
+        "count" : "215"
+      }, {
+        "item" : "0.5",
+        "count" : "199"
+      }, {
+        "item" : "0.3",
+        "count" : "195"
+      }, {
+        "item" : "0.2",
+        "count" : "174"
+      }, {
+        "item" : "1.1",
+        "count" : "168"
+      }, {
+        "item" : "1.7",
+        "count" : "162"
+      }, {
+        "item" : "0.6",
+        "count" : "161"
+      }, {
+        "item" : "0.4",
+        "count" : "159"
+      }, {
+        "item" : "1.3",
+        "count" : "152"
+      }, {
+        "item" : "1.8",
+        "count" : "142"
+      }, {
+        "item" : "2.7",
+        "count" : "121"
+      }, {
+        "item" : "2.0",
+        "count" : "120"
+      }, {
+        "item" : "2.5",
+        "count" : "116"
+      }, {
+        "item" : "0.7",
+        "count" : "110"
+      }, {
+        "item" : "1.6",
+        "count" : "106"
+      }, {
+        "item" : "1.5",
+        "count" : "104"
+      }, {
+        "item" : "1.9",
+        "count" : "103"
+      }, {
+        "item" : "3.3",
+        "count" : "101"
+      } ],
+      "smallest" : "0.1",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 626063321,
+    "name" : "FTE_RAW",
+    "dataTypeName" : "number",
+    "description" : "FTE (used for calculation)",
+    "fieldName" : "fte_raw",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 165147104,
+    "cachedContents" : {
+      "non_null" : "15846",
+      "largest" : "7871.73333541",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1.00000000",
+        "count" : "270"
+      }, {
+        "item" : "0.80000000",
+        "count" : "207"
+      }, {
+        "item" : "0.20000000",
+        "count" : "167"
+      }, {
+        "item" : "0.40000000",
+        "count" : "151"
+      }, {
+        "item" : "0.75000000",
+        "count" : "147"
+      }, {
+        "item" : "0.60000000",
+        "count" : "136"
+      }, {
+        "item" : "0.86666667",
+        "count" : "131"
+      }, {
+        "item" : "0.50000000",
+        "count" : "117"
+      }, {
+        "item" : "2.00000000",
+        "count" : "106"
+      }, {
+        "item" : "0.25000000",
+        "count" : "92"
+      }, {
+        "item" : "1.66666667",
+        "count" : "90"
+      }, {
+        "item" : "1.06666667",
+        "count" : "88"
+      }, {
+        "item" : "0.66666667",
+        "count" : "79"
+      }, {
+        "item" : "1.60000000",
+        "count" : "72"
+      }, {
+        "item" : "1.80000000",
+        "count" : "70"
+      }, {
+        "item" : "1.20000000",
+        "count" : "68"
+      }, {
+        "item" : "3.00000000",
+        "count" : "58"
+      }, {
+        "item" : "1.50000000",
+        "count" : "58"
+      }, {
+        "item" : "0.93333333",
+        "count" : "58"
+      }, {
+        "item" : "0.26666667",
+        "count" : "56"
+      } ],
+      "smallest" : "0.06666667",
+      "count" : "15846",
+      "cardinality" : "15846"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "One year of fall enrollment per institution of higher education disaggregated by student attributes",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "enrollment", "gender", "race", "ethnicity", "race and ethnicity", "college", "university", "community college", "state universities", "university of massachusetts", "demographics", "fte", "full time equivalent", "enrollment level", "enrollment status", "undergraduate education", "undergraduate", "undergrad" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

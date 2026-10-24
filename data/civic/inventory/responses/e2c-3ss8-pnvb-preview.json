@@ -1,0 +1,100 @@
+[{"sy":"2025","dist_code":"99999999","dist_name":"State Total","org_code":"99999999","org_name":"State Total","org_type":"State","enroll_cnt":"925389","stu_rest_cnt":"4055","tot_rest_cnt":"29074","inj_cnt":"891"}
+,{"sy":"2025","dist_code":"99999998","dist_name":"Collaboratives and Approved Private Schools Total","org_code":"99999998","org_name":"Collaboratives and Approved Private Schools Total","org_type":"Collaboratives and Approved Private Schools","enroll_cnt":"9457","stu_rest_cnt":"1900","tot_rest_cnt":"21148","inj_cnt":"360"}
+,{"sy":"2025","dist_code":"99999997","dist_name":"Public Schools Total","org_code":"99999997","org_name":"Public Schools Total","org_type":"Public Schools","enroll_cnt":"915932","stu_rest_cnt":"2266","tot_rest_cnt":"7958","inj_cnt":"534"}
+,{"sy":"2025","dist_code":"04450000","dist_name":"Abby Kelley Foster Charter Public (District)","org_code":"04453003","org_name":"2 New Bond St.","org_type":"Public Schools"}
+,{"sy":"2025","dist_code":"00010000","dist_name":"Abington","org_code":"00010020","org_name":"Beaver Brook Elementary","org_type":"Public Schools","enroll_cnt":"491"}
+,{"sy":"2025","dist_code":"04120000","dist_name":"Academy Of the Pacific Rim Charter Public (District)","org_code":"04120530","org_name":"Academy Of the Pacific Rim Charter Public School","org_type":"Public Schools","enroll_cnt":"509","stu_rest_cnt":"9","tot_rest_cnt":"10","inj_cnt":"0"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","org_code":"06000005","org_name":"Blanchard Memorial School","org_type":"Public Schools","enroll_cnt":"469"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","org_code":"06000030","org_name":"Luther Conant School","org_type":"Public Schools","enroll_cnt":"410"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","org_code":"06000015","org_name":"McCarthy-Towne School","org_type":"Public Schools","enroll_cnt":"431"}
+,{"sy":"2025","dist_code":"06000000","dist_name":"Acton-Boxborough","org_code":"06000010","org_name":"Merriam School","org_type":"Public Schools","enroll_cnt":"395"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","org_code":"00050020","org_name":"Benjamin J Phelps","org_type":"Public Schools","enroll_cnt":"304"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","org_code":"00050010","org_name":"Clifford M Granger","org_type":"Public Schools","enroll_cnt":"361"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","org_code":"00050030","org_name":"James Clark School","org_type":"Public Schools","enroll_cnt":"297","stu_rest_cnt":"6","tot_rest_cnt":"21","inj_cnt":"0"}
+,{"sy":"2025","dist_code":"00050000","dist_name":"Agawam","org_code":"00050303","org_name":"Roberta G. Doering School","org_type":"Public Schools","enroll_cnt":"522"}
+,{"sy":"2025","dist_code":"04090000","dist_name":"Alma del Mar Charter School (District)","org_code":"04090205","org_name":"Alma del Mar Charter School","org_type":"Public Schools","enroll_cnt":"1042"}
+,{"sy":"2025","dist_code":"00070000","dist_name":"Amesbury","org_code":"00070005","org_name":"Shay Elementary","org_type":"Public Schools","enroll_cnt":"485"}
+,{"sy":"2025","dist_code":"00080000","dist_name":"Amherst","org_code":"00080020","org_name":"Fort River Elementary","org_type":"Public Schools","enroll_cnt":"371","stu_rest_cnt":"8","tot_rest_cnt":"24"}
+,{"sy":"2025","dist_code":"00080000","dist_name":"Amherst","org_code":"00080050","org_name":"Wildwood Elementary","org_type":"Public Schools","enroll_cnt":"314","stu_rest_cnt":"7","tot_rest_cnt":"39","inj_cnt":"0"}
+,{"sy":"2025","dist_code":"06050000","dist_name":"Amherst-Pelham","org_code":"06050505","org_name":"Amherst Regional High","org_type":"Public Schools","enroll_cnt":"816"}
+,{"sy":"2025","dist_code":"00090000","dist_name":"Andover","org_code":"00090004","org_name":"High Plain Elementary","org_type":"Public Schools","enroll_cnt":"505"}
+,{"sy":"2025","dist_code":"00090000","dist_name":"Andover","org_code":"00090025","org_name":"West Elementary","org_type":"Public Schools","enroll_cnt":"605"}
+,{"sy":"2025","dist_code":"35090000","dist_name":"Argosy Collegiate Charter School (District)","org_code":"35090305","org_name":"Argosy Collegiate Charter School","org_type":"Public Schools","enroll_cnt":"587"}
+,{"sy":"2025","dist_code":"00100000","dist_name":"Arlington","org_code":"00100505","org_name":"Arlington High","org_type":"Public Schools","enroll_cnt":"1677"}
+,{"sy":"2025","dist_code":"00100000","dist_name":"Arlington","org_code":"00100010","org_name":"Brackett","org_type":"Public Schools","enroll_cnt":"394"}
+,{"sy":"2025","dist_code":"00100000","dist_name":"Arlington","org_code":"00100025","org_name":"Cyrus E Dallin","org_type":"Public Schools","enroll_cnt":"390"}
+,{"sy":"2025","dist_code":"00100000","dist_name":"Arlington","org_code":"00100030","org_name":"Hardy","org_type":"Public Schools","enroll_cnt":"382"}
+,{"sy":"2025","dist_code":"00100000","dist_name":"Arlington","org_code":"00100055","org_name":"M Norcross Stratton","org_type":"Public Schools","enroll_cnt":"448"}
+,{"sy":"2025","dist_code":"00100000","dist_name":"Arlington","org_code":"00100045","org_name":"Peirce","org_type":"Public Schools","enroll_cnt":"318"}
+,{"sy":"2025","dist_code":"06100000","dist_name":"Ashburnham-Westminster","org_code":"06100025","org_name":"Briggs Elementary","org_type":"Public Schools","enroll_cnt":"461"}
+,{"sy":"2025","dist_code":"00140000","dist_name":"Ashland","org_code":"00140405","org_name":"Ashland Middle","org_type":"Public Schools","enroll_cnt":"685"}
+,{"sy":"2025","dist_code":"00140000","dist_name":"Ashland","org_code":"00140015","org_name":"David Mindess","org_type":"Public Schools","enroll_cnt":"670"}
+,{"sy":"2025","dist_code":"00140000","dist_name":"Ashland","org_code":"00140010","org_name":"Henry E Warren Elementary","org_type":"Public Schools","enroll_cnt":"584"}
+,{"sy":"2025","dist_code":"06150000","dist_name":"Athol-Royalston","org_code":"06150020","org_name":"Athol Community Elementary School","org_type":"Public Schools","enroll_cnt":"589","stu_rest_cnt":"9","tot_rest_cnt":"36"}
+,{"sy":"2025","dist_code":"04910000","dist_name":"Atlantis Charter (District)","org_code":"04910550","org_name":"Atlantis Charter School","org_type":"Public Schools","enroll_cnt":"1246"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160001","org_name":"A. Irvin Studley Elementary School","org_type":"Public Schools","enroll_cnt":"372","stu_rest_cnt":"19","tot_rest_cnt":"212","inj_cnt":"9"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160505","org_name":"Attleboro High","org_type":"Public Schools","enroll_cnt":"2030"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160315","org_name":"Cyril K. Brennan Middle School","org_type":"Public Schools","enroll_cnt":"599"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160008","org_name":"Early Learning Center","org_type":"Public Schools","enroll_cnt":"244"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160045","org_name":"Hill-Roberts Elementary School","org_type":"Public Schools","enroll_cnt":"412","stu_rest_cnt":"11","tot_rest_cnt":"30","inj_cnt":"0"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160040","org_name":"Hyman Fine Elementary School","org_type":"Public Schools","enroll_cnt":"472","stu_rest_cnt":"8","tot_rest_cnt":"22","inj_cnt":"0"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160050","org_name":"Peter Thacher Elementary School","org_type":"Public Schools","enroll_cnt":"467","stu_rest_cnt":"7","tot_rest_cnt":"19","inj_cnt":"0"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160305","org_name":"Robert J. Coelho Middle School","org_type":"Public Schools","enroll_cnt":"574"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160035","org_name":"Thomas Willett Elementary School","org_type":"Public Schools","enroll_cnt":"373","stu_rest_cnt":"9","tot_rest_cnt":"53"}
+,{"sy":"2025","dist_code":"00160000","dist_name":"Attleboro","org_code":"00160320","org_name":"Wamsutta Middle School","org_type":"Public Schools","enroll_cnt":"593"}
+,{"sy":"2025","dist_code":"00170000","dist_name":"Auburn","org_code":"00170505","org_name":"Auburn Senior High","org_type":"Public Schools","enroll_cnt":"834"}
+,{"sy":"2025","dist_code":"00170000","dist_name":"Auburn","org_code":"00170010","org_name":"Bryn Mawr","org_type":"Public Schools","enroll_cnt":"241"}
+,{"sy":"2025","dist_code":"00170000","dist_name":"Auburn","org_code":"00170025","org_name":"Pakachoag School","org_type":"Public Schools","enroll_cnt":"249"}
+,{"sy":"2025","dist_code":"00170000","dist_name":"Auburn","org_code":"00170030","org_name":"Swanson Road Intermediate School","org_type":"Public Schools","enroll_cnt":"554"}
+,{"sy":"2025","dist_code":"00180000","dist_name":"Avon","org_code":"00180010","org_name":"Ralph D Butler","org_type":"Public Schools","enroll_cnt":"323"}
+,{"sy":"2025","dist_code":"06160000","dist_name":"Ayer Shirley School District","org_code":"06160505","org_name":"Ayer Shirley Regional High School","org_type":"Public Schools","enroll_cnt":"417"}
+,{"sy":"2025","dist_code":"06160000","dist_name":"Ayer Shirley School District","org_code":"06160001","org_name":"Lura A. White Elementary School","org_type":"Public Schools","enroll_cnt":"357"}
+,{"sy":"2025","dist_code":"06160000","dist_name":"Ayer Shirley School District","org_code":"06160002","org_name":"Page Hilltop Elementary School","org_type":"Public Schools","enroll_cnt":"539"}
+,{"sy":"2025","dist_code":"00200000","dist_name":"Barnstable","org_code":"00200050","org_name":"Barnstable United Elementary School","org_type":"Public Schools","enroll_cnt":"714"}
+,{"sy":"2025","dist_code":"00200000","dist_name":"Barnstable","org_code":"00200010","org_name":"Centerville Elementary","org_type":"Public Schools","enroll_cnt":"267"}
+,{"sy":"2025","dist_code":"00200000","dist_name":"Barnstable","org_code":"00200025","org_name":"Hyannis West Elementary","org_type":"Public Schools","enroll_cnt":"309"}
+,{"sy":"2025","dist_code":"00200000","dist_name":"Barnstable","org_code":"00200005","org_name":"West Barnstable Elementary","org_type":"Public Schools","enroll_cnt":"237"}
+,{"sy":"2025","dist_code":"00200000","dist_name":"Barnstable","org_code":"00200045","org_name":"West Villages Elementary School","org_type":"Public Schools","enroll_cnt":"416"}
+,{"sy":"2025","dist_code":"00230000","dist_name":"Bedford","org_code":"00230305","org_name":"John Glenn Middle","org_type":"Public Schools","enroll_cnt":"604"}
+,{"sy":"2025","dist_code":"00230000","dist_name":"Bedford","org_code":"00230010","org_name":"Lt Eleazer Davis","org_type":"Public Schools","enroll_cnt":"501"}
+,{"sy":"2025","dist_code":"00230000","dist_name":"Bedford","org_code":"00230012","org_name":"Lt Job Lane School","org_type":"Public Schools","enroll_cnt":"540"}
+,{"sy":"2025","dist_code":"00240000","dist_name":"Belchertown","org_code":"00240006","org_name":"Chestnut Hill Community School","org_type":"Public Schools","enroll_cnt":"494"}
+,{"sy":"2025","dist_code":"00240000","dist_name":"Belchertown","org_code":"00240025","org_name":"Jabish Middle School","org_type":"Public Schools","enroll_cnt":"343"}
+,{"sy":"2025","dist_code":"00240000","dist_name":"Belchertown","org_code":"00240018","org_name":"Swift River Elementary","org_type":"Public Schools","enroll_cnt":"445"}
+,{"sy":"2025","dist_code":"00250000","dist_name":"Bellingham","org_code":"00250020","org_name":"Joseph F DiPietro Elementary School","org_type":"Public Schools","enroll_cnt":"385"}
+,{"sy":"2025","dist_code":"00250000","dist_name":"Bellingham","org_code":"00250025","org_name":"Stall Brook","org_type":"Public Schools","enroll_cnt":"280"}
+,{"sy":"2025","dist_code":"00260000","dist_name":"Belmont","org_code":"00260315","org_name":"Belmont Middle School","org_type":"Public Schools","enroll_cnt":"742"}
+,{"sy":"2025","dist_code":"00260000","dist_name":"Belmont","org_code":"00260015","org_name":"Daniel Butler","org_type":"Public Schools","enroll_cnt":"261"}
+,{"sy":"2025","dist_code":"00260000","dist_name":"Belmont","org_code":"00260305","org_name":"Winthrop L Chenery Upper Elementary","org_type":"Public Schools","enroll_cnt":"1023"}
+,{"sy":"2025","dist_code":"00270000","dist_name":"Berkley","org_code":"00270010","org_name":"Berkley Community School","org_type":"Public Schools","enroll_cnt":"459"}
+,{"sy":"2025","dist_code":"00270000","dist_name":"Berkley","org_code":"00270305","org_name":"Berkley Middle School","org_type":"Public Schools","enroll_cnt":"374"}
+,{"sy":"2025","dist_code":"06180000","dist_name":"Berkshire Hills","org_code":"06180505","org_name":"Monument Mt Regional High","org_type":"Public Schools","enroll_cnt":"431"}
+,{"sy":"2025","dist_code":"06200000","dist_name":"Berlin-Boylston","org_code":"06200005","org_name":"Berlin Memorial School","org_type":"Public Schools","enroll_cnt":"242"}
+,{"sy":"2025","dist_code":"00300000","dist_name":"Beverly","org_code":"00300305","org_name":"Beverly Middle School","org_type":"Public Schools","enroll_cnt":"1388"}
+,{"sy":"2025","dist_code":"00300000","dist_name":"Beverly","org_code":"00300015","org_name":"Cove Elementary","org_type":"Public Schools","enroll_cnt":"394","stu_rest_cnt":"6","tot_rest_cnt":"104"}
+,{"sy":"2025","dist_code":"00300000","dist_name":"Beverly","org_code":"00300033","org_name":"Hannah Elementary","org_type":"Public Schools","enroll_cnt":"312"}
+,{"sy":"2025","dist_code":"00300000","dist_name":"Beverly","org_code":"00300040","org_name":"North Beverly Elementary","org_type":"Public Schools","enroll_cnt":"356"}
+,{"sy":"2025","dist_code":"00310000","dist_name":"Billerica","org_code":"00310505","org_name":"Billerica Memorial High School","org_type":"Public Schools","enroll_cnt":"1816"}
+,{"sy":"2025","dist_code":"00310000","dist_name":"Billerica","org_code":"00310005","org_name":"Thomas Ditson","org_type":"Public Schools","enroll_cnt":"542"}
+,{"sy":"2025","dist_code":"06220000","dist_name":"Blackstone-Millville","org_code":"06220405","org_name":"Frederick W. Hartnett Middle School","org_type":"Public Schools","enroll_cnt":"487"}
+,{"sy":"2025","dist_code":"06220000","dist_name":"Blackstone-Millville","org_code":"06220010","org_name":"Millville Elementary","org_type":"Public Schools","enroll_cnt":"459"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350302","org_name":"Adams Elementary School","org_type":"Public Schools","enroll_cnt":"237"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350003","org_name":"Baldwin Early Learning Pilot Academy","org_type":"Public Schools","enroll_cnt":"165"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350278","org_name":"Bates Elementary School","org_type":"Public Schools","enroll_cnt":"281"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350021","org_name":"Beethoven Elementary School","org_type":"Public Schools","enroll_cnt":"287","stu_rest_cnt":"15","tot_rest_cnt":"106"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350390","org_name":"Blackstone Elementary School","org_type":"Public Schools","enroll_cnt":"582"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350546","org_name":"Boston Arts Academy","org_type":"Public Schools","enroll_cnt":"500"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350545","org_name":"Boston Latin Academy","org_type":"Public Schools","enroll_cnt":"1693"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350215","org_name":"Bradley Elementary School","org_type":"Public Schools","enroll_cnt":"292"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350515","org_name":"Charlestown High School","org_type":"Public Schools","enroll_cnt":"754"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350298","org_name":"Clap Elementary School","org_type":"Public Schools","enroll_cnt":"140"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350146","org_name":"Condon K-8 School","org_type":"Public Schools","enroll_cnt":"518","stu_rest_cnt":"8","tot_rest_cnt":"10"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350122","org_name":"Conley Elementary School","org_type":"Public Schools","enroll_cnt":"148"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350020","org_name":"Curley K-8 School","org_type":"Public Schools","enroll_cnt":"902"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350375","org_name":"Edison Elementary School","org_type":"Public Schools","enroll_cnt":"502","stu_rest_cnt":"13","tot_rest_cnt":"25","inj_cnt":"0"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350535","org_name":"English High School","org_type":"Public Schools","enroll_cnt":"720"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350308","org_name":"Greenwood Sarah K-8 School","org_type":"Public Schools","enroll_cnt":"357"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350243","org_name":"Hale Elementary School","org_type":"Public Schools","enroll_cnt":"162"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350077","org_name":"Haley Pilot School","org_type":"Public Schools","enroll_cnt":"360"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350200","org_name":"Harvard-Kent Elementary School","org_type":"Public Schools","enroll_cnt":"334","stu_rest_cnt":"11","tot_rest_cnt":"13"}
+,{"sy":"2025","dist_code":"00350000","dist_name":"Boston","org_code":"00350010","org_name":"Haynes Early Education Center","org_type":"Public Schools","enroll_cnt":"168"}]

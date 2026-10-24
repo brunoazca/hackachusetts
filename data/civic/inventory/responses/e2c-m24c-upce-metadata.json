@@ -1,0 +1,96 @@
+{
+  "id" : "m24c-upce",
+  "name" : "Statewide Spending Trends Per Pupil and Per Teacher",
+  "assetType" : "story",
+  "attribution" : "DESE",
+  "averageRating" : 0,
+  "category" : "Finance and Budget",
+  "createdAt" : 1784731039,
+  "description" : "These interactive charts explore Statewide Spending Trends Per Pupil and Per Teacher.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 42334791,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1784731359,
+  "publicationGroup" : 20486189,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1784731039,
+  "tableId" : 20486189,
+  "totalTimesRated" : 0,
+  "viewCount" : 79,
+  "viewLastModified" : 1791210677,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1791210890,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7784938,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1791210725,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1791210890,
+      "failureCount" : 0,
+      "startedAt" : 1791210890,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "budget", "spending", "finance", "financial", "expenditure", "expenditures", "cost per pupil", "per pupil", "teacher salaries", "costs", "district", "district comparison" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

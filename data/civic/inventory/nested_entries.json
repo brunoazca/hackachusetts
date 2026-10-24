@@ -1,0 +1,436 @@
+[
+  {
+    "id": "nested-0a5d46d64b8c",
+    "url": "https://data.boston.gov/api/3/action/package_show?id=3b2ce71d-d7ca-4027-b971-7180c263d730",
+    "name": "numina complete resource family",
+    "role": "ckan_package",
+    "parent": "numina"
+  },
+  {
+    "id": "nested-0598d3868a68",
+    "url": "https://data.boston.gov/api/3/action/package_show?id=705244a6-70a6-4ff8-ab8e-56441aff18e7",
+    "name": "violations complete resource family",
+    "role": "ckan_package",
+    "parent": "violations"
+  },
+  {
+    "id": "nested-7119f3ae8a1e",
+    "url": "https://data.boston.gov/api/3/action/package_show?id=7b29c1b2-7ec2-4023-8292-c24f5d8f0905",
+    "name": "vision-zero complete resource family",
+    "role": "ckan_package",
+    "parent": "vision-zero"
+  },
+  {
+    "id": "nested-a5b3eb8a3e81",
+    "url": "https://data.boston.gov/api/3/action/package_show?id=8048697b-ad64-4bfc-b090-ee00169f2323",
+    "name": "boston-311 complete resource family",
+    "role": "ckan_package",
+    "parent": "boston-311"
+  },
+  {
+    "id": "nested-219cf76fccbc",
+    "url": "https://data.boston.gov/api/3/action/package_show?id=cd1ec3ff-6ebf-4a65-af68-8329eceab740",
+    "name": "permits complete resource family",
+    "role": "ckan_package",
+    "parent": "permits"
+  },
+  {
+    "id": "nested-4937c01a5122",
+    "url": "https://data.boston.gov/api/3/action/package_show?id=d2ece0af-e0ad-42e4-b280-bd0aa1561ed0",
+    "name": "neighborhoods complete resource family",
+    "role": "ckan_package",
+    "parent": "neighborhoods"
+  },
+  {
+    "id": "nested-8c5f703f8d29",
+    "url": "https://codepen.io/EOTSS-ACCESS/full/OPMMOPw",
+    "name": "accessible chat prototype CodePen",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-2330629bd81d",
+    "url": "https://www.w3.org/WAI/WCAG21/Techniques/",
+    "name": "PDF rules as defined by WCAG 2.1",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-edd2785f3f4d",
+    "url": "https://support.microsoft.com/en-us/office/accessibility-best-practices-with-excel-spreadsheets-6cc05fc5-1314-48b5-8eb3-683e49b3e593",
+    "name": "Accessibility best practices with Excel spreadsheets - Microsoft Support",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-3acd8ab05358",
+    "url": "https://docs.google.com/spreadsheets/d/1bcgcCjW3fp6b_2C7AoUoRTMrBbtug7WX/edit?usp=sharing&ouid=113465608819547084474&rtpof=true&sd=true",
+    "name": "Example of inaccessible Excel (bad)",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-72923bcc5045",
+    "url": "https://docs.google.com/spreadsheets/d/11l7S_gieduOH1uW9w1E-XB881JKB3Qmn/edit?usp=sharing&ouid=113465608819547084474&rtpof=true&sd=true",
+    "name": "Example of accessible Excel (good)",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-7f3c5a404de1",
+    "url": "https://www.mass.gov/info-details/planning-for-accessibility-during-the-procurement-of-digital-products-and-services",
+    "name": "Planning for Accessibility During the Procurement of Digital Products and Services",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-49fb11b32d59",
+    "url": "https://www.mass.gov/info-details/vendor-digital-accessibility-questionnaire",
+    "name": "Vendor Digital Accessibility Questionnaire",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-2ffe9bb87d3f",
+    "url": "https://www.mass.gov/doc/planning-for-accessibility-during-the-procurement-of-digital-products-and-services-checklist/download",
+    "name": "Planning for Accessibility During the Procurement of Digital Products and Services Checklist (PDF)",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-a954afc27124",
+    "url": "https://www.mass.gov/info-details/artificial-intelligence-ai-and-accessibility",
+    "name": "Artificial intelligence (AI) and accessibility",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-34f97a47325d",
+    "url": "https://www.w3.org/TR/WCAG21/",
+    "name": "Web Content Accessibility Guidelines (WCAG) 2.1",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-0ea44b336080",
+    "url": "https://accessiblewebsitetraining.com/success-criterion/",
+    "name": "All 50 WCAG Level A and Level AA success criteria",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-e40271573c91",
+    "url": "https://webaim.org/resources/contrastchecker/",
+    "name": "WebAIM Color Contrast Checker",
+    "role": "supplementary_document_link",
+    "parent": "civic-extra"
+  },
+  {
+    "id": "nested-c7ab52d06cfb",
+    "url": "https://docs.google.com/document/d/1uXopTPMfoXXUVYxw3qVNQyWBeCKVfKLmRSZtwE6gJOc/export?format=docx",
+    "name": "Crash background DOCX link extraction",
+    "role": "document_link_extraction",
+    "parent": "crash-background"
+  },
+  {
+    "id": "nested-6a33f3ce33de",
+    "url": "https://api.us.socrata.com/api/catalog/v1?domains=educationtocareer.data.mass.gov&limit=1000",
+    "name": "E2C public catalog",
+    "role": "catalog_metadata",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-d613d9e7f231",
+    "url": "https://childcare.mass.gov/findchildcare",
+    "name": "Licensed Child Care Search",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-f28f609721e6",
+    "url": "https://www.mass.gov/info-details/early-education-and-care-data-briefs",
+    "name": "Data Briefs",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-fc876e5e5004",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiZmNlNjUwMmEtYzM1NC00OGU2LWIyYWQtMzg1MDk2MmE3MDJkIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9&pageName=9949865fcf248b434d7d",
+    "name": "Key Performance Indicators Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-d784bbcf5622",
+    "url": "https://profiles.doe.mass.edu/search/get_closest_orgs.aspx",
+    "name": "Massachusetts School Finder",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-b4e10f72c448",
+    "url": "https://www.doe.mass.edu/dart/",
+    "name": "District Analysis and Review Tools (DART)",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-aa4951733829",
+    "url": "https://www.doe.mass.edu/edwin/gettingstarted.html",
+    "name": "Edwin Analytics",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-cd86f6b87cfe",
+    "url": "https://www.doe.mass.edu/research/radar/",
+    "name": "Resource Allocation and District Action Reports (RADAR)",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-41c3cdcaae9f",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiMjA5YjZiNDktYWU5MC00ODYwLWE3MjEtY2E1MzNmMzQ2ZDE2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "School and District Performance Summary",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-6d93baf8d2ed",
+    "url": "https://profiles.doe.mass.edu/",
+    "name": "School and District Profiles",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-41d7fc7ddfeb",
+    "url": "https://reportcards.doe.mass.edu/",
+    "name": "School and District Report Cards",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-345dd19b1d7e",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiZDcyMjUxYmUtOWFkYS00NWQ2LTllMjItMWE2Yjc4ZDQyYTY2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "DART Detail: English Learners Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-710905810945",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "RADAR Special Education Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-e9aac96ae73e",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiYTY4ZWE3M2UtYWQ3ZS00MjFhLWJkZTAtNThhOGY0MzEwMDQ5IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "Student Sending and Receiving Report",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-eca34742e458",
+    "url": "https://www.mass.gov/info-details/stem-dashboard",
+    "name": "STEM Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-5d1c60470d05",
+    "url": "https://profiles.doe.mass.edu/statereport/Curriculumdata.aspx",
+    "name": "Curriculum Data",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-13b945e5e239",
+    "url": "https://www.doe.mass.edu/ccte/data-reports/default.html",
+    "name": "CTE Admissions and Waitlist Analysis",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-9aec0a034412",
+    "url": "https://app.powerbigov.us/view?r=eyJrIjoiNDRmMGZjNDMtMDIxZC00NTdkLWFkNmEtYzEwODMxMWQ3Mjk2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9",
+    "name": "Massachusetts Early College Data Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-1501ed7f0157",
+    "url": "https://www.mass.gov/info-details/2025-massachusetts-high-school-college-and-career-outcomes-report",
+    "name": "High School, College, and Career Outcomes Report",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-0d87dcbfed4f",
+    "url": "https://www.doe.mass.edu/charter/finance/dashboard/",
+    "name": "Charter School Financial Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-a608fc9b5677",
+    "url": "https://profiles.doe.mass.edu/analysis/state.aspx",
+    "name": "District Analysis and Review Tool (DART)",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-8db1cff6e502",
+    "url": "https://www.mass.edu/forstufam/admissions/campuscontacts.asp",
+    "name": "Campus Contacts",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-d6b7e8df5b19",
+    "url": "https://nces.ed.gov/collegenavigator/",
+    "name": "College Navigator",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-af42f07c7561",
+    "url": "https://collegescorecard.ed.gov/",
+    "name": "College Scorecard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-b6c7124b32d7",
+    "url": "https://www.mass.edu/datacenter/pmrs/home.asp",
+    "name": "Performance Measurement Reporting System",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-7671c9ace1c5",
+    "url": "https://www.mass.edu/datacenter/home/reports.asp",
+    "name": "Department of Higher Education Reports",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-79ea81836c68",
+    "url": "https://www.mass.edu/datacenter/factbook/annualenrollment.asp",
+    "name": "Annual Enrollment Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-3ebddd414e74",
+    "url": "https://www.mass.edu/datacenter/factbook/fallenrollment.asp",
+    "name": "Fall Enrollment Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-44b4ffda9fc2",
+    "url": "https://www.mass.edu/datacenter/factbook/retentionftft.asp",
+    "name": "Retention of First-Time, Full-Time Students Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-ca75668452b9",
+    "url": "https://www.mass.edu/datacenter/success/CCAnnualCreditCourseCompletion.asp",
+    "name": "Community Colleges\u2014Annual Credit Course Completion Rate",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-2978933290e8",
+    "url": "https://www.mass.edu/datacenter/success/SUSixYearGradRate.asp",
+    "name": "State University\u2014Six-Year Graduation Rates",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-37c11c115c21",
+    "url": "https://www.mass.edu/datacenter/factbook/awardsconferred.asp",
+    "name": "Awards Conferred Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-9ca6715c2487",
+    "url": "https://www.mass.edu/datacenter/factbook/tuitionfees.asp",
+    "name": "Tuition and Mandatory Fees Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-cf4e4b26863f",
+    "url": "https://www.mass.edu/datacenter/tuition/AppendixTuitionFeesWeight6.asp",
+    "name": "Mandatory Fees at Massachusetts Public Colleges and Universities",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-bcdf89e7607d",
+    "url": "https://www.mass.edu/datacenter/tuition/AppendixTuitionFeesWeight7.asp",
+    "name": "Tuition and Mandatory Fees at Public Colleges and Universities",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-811207f2e2d5",
+    "url": "https://www.mass.edu/datacenter/tuition/AppendixTuitionFeesWeight5.asp",
+    "name": "Tuition at Massachusetts Public Colleges and Universities",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-e565b440e53e",
+    "url": "https://weighted%20average%20tuition%20and%20fees%20by%20public%20postsecondary%20segment/",
+    "name": "Weighted Average Tuition and Fees by Public Postsecondary Segment (malformed source link)",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-daabc8593bc6",
+    "url": "https://www.mass.edu/datacenter/2025earningsreport.asp",
+    "name": "The Earnings Outcomes of Public Postsecondary Education in Massachusetts",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-dbdc9648ff45",
+    "url": "https://www.mass.gov/lists/department-of-economic-research-data-visualization-index#employment-and-jobs-",
+    "name": "Department of Economic Research Data Visualization Index",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-ef0a0557f639",
+    "url": "https://www.mass.gov/info-details/employment-projections",
+    "name": "Employment Projections",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-92e8719b0cf6",
+    "url": "https://www.mass.gov/info-details/unemployment-rates-in-massachusetts",
+    "name": "MA Labor Market Dashboard",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-75c4b644c455",
+    "url": "https://public.tableau.com/app/profile/maeconomicresearch/viz/MonthlyJobPosting-MA/IndustriesCompaniesandJobs_1",
+    "name": "Monthly Job Postings",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  },
+  {
+    "id": "nested-0e52e105983d",
+    "url": "https://lmi.dua.eol.mass.gov/lmi/MunicipalEmploymentData",
+    "name": "Municipal Employment Data",
+    "role": "e2c_directory_link",
+    "parent": "e2c"
+  }
+]

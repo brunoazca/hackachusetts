@@ -1,0 +1,1423 @@
+{
+  "id" : "37px-xsir",
+  "name" : "Plans of High School Graduates",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1706290807,
+  "description" : "This dataset contains information regarding the intentions of Massachusetts public high school graduates starting from the year 1995 and onward. Students indicate their plans as of the end of the school year. Only schools and districts that serve 12th grade are included.\n\nState graduation requirements changed between 2024 and 2025. This dataset reflects data for students submitted as graduates by their districts in the reporting year.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/plansofhsgrads.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Plans of High School Grads</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 225,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40390974,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1706290939,
+  "publicationGroup" : 19442172,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1770408422,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19442172,
+  "totalTimesRated" : 0,
+  "viewCount" : 814,
+  "viewLastModified" : 1786392938,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1739998581,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6754353,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1739998563,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1739998581,
+      "failureCount" : 0,
+      "startedAt" : 1739998581,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 588755533,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107580,
+    "cachedContents" : {
+      "non_null" : "20115",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "718"
+      }, {
+        "item" : "2023",
+        "count" : "714"
+      }, {
+        "item" : "2024",
+        "count" : "714"
+      }, {
+        "item" : "2022",
+        "count" : "712"
+      }, {
+        "item" : "2021",
+        "count" : "707"
+      }, {
+        "item" : "2020",
+        "count" : "704"
+      }, {
+        "item" : "2019",
+        "count" : "702"
+      }, {
+        "item" : "2018",
+        "count" : "700"
+      }, {
+        "item" : "2017",
+        "count" : "693"
+      }, {
+        "item" : "2016",
+        "count" : "692"
+      }, {
+        "item" : "2014",
+        "count" : "678"
+      }, {
+        "item" : "2015",
+        "count" : "678"
+      }, {
+        "item" : "2013",
+        "count" : "677"
+      }, {
+        "item" : "2012",
+        "count" : "669"
+      }, {
+        "item" : "2011",
+        "count" : "663"
+      }, {
+        "item" : "2009",
+        "count" : "650"
+      }, {
+        "item" : "2010",
+        "count" : "650"
+      }, {
+        "item" : "2008",
+        "count" : "648"
+      }, {
+        "item" : "2007",
+        "count" : "635"
+      }, {
+        "item" : "2006",
+        "count" : "630"
+      } ],
+      "smallest" : "1995",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : { }
+  }, {
+    "id" : 588755534,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107581,
+    "cachedContents" : {
+      "non_null" : "20115",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "914"
+      }, {
+        "item" : "02810000",
+        "count" : "319"
+      }, {
+        "item" : "03480000",
+        "count" : "234"
+      }, {
+        "item" : "01630000",
+        "count" : "168"
+      }, {
+        "item" : "01490000",
+        "count" : "155"
+      }, {
+        "item" : "00440000",
+        "count" : "144"
+      }, {
+        "item" : "00610000",
+        "count" : "120"
+      }, {
+        "item" : "02360000",
+        "count" : "118"
+      }, {
+        "item" : "01760000",
+        "count" : "115"
+      }, {
+        "item" : "02390000",
+        "count" : "110"
+      }, {
+        "item" : "01530000",
+        "count" : "106"
+      }, {
+        "item" : "02010000",
+        "count" : "106"
+      }, {
+        "item" : "03250000",
+        "count" : "95"
+      }, {
+        "item" : "02070000",
+        "count" : "94"
+      }, {
+        "item" : "00250000",
+        "count" : "93"
+      }, {
+        "item" : "07700000",
+        "count" : "93"
+      }, {
+        "item" : "00950000",
+        "count" : "93"
+      }, {
+        "item" : "02430000",
+        "count" : "93"
+      }, {
+        "item" : "02740000",
+        "count" : "93"
+      }, {
+        "item" : "01280000",
+        "count" : "91"
+      } ],
+      "smallest" : "00000000",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : { }
+  }, {
+    "id" : 588755535,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107582,
+    "cachedContents" : {
+      "non_null" : "20115",
+      "largest" : "Worcester Trade Complex",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "914"
+      }, {
+        "item" : "Springfield",
+        "count" : "319"
+      }, {
+        "item" : "Worcester",
+        "count" : "234"
+      }, {
+        "item" : "Lynn",
+        "count" : "168"
+      }, {
+        "item" : "Lawrence",
+        "count" : "155"
+      }, {
+        "item" : "Brockton",
+        "count" : "144"
+      }, {
+        "item" : "Chicopee",
+        "count" : "120"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "118"
+      }, {
+        "item" : "Medford",
+        "count" : "115"
+      }, {
+        "item" : "Plymouth",
+        "count" : "110"
+      }, {
+        "item" : "New Bedford",
+        "count" : "106"
+      }, {
+        "item" : "Leominster",
+        "count" : "106"
+      }, {
+        "item" : "Westfield",
+        "count" : "95"
+      }, {
+        "item" : "Newton",
+        "count" : "94"
+      }, {
+        "item" : "Fall River",
+        "count" : "93"
+      }, {
+        "item" : "Somerville",
+        "count" : "93"
+      }, {
+        "item" : "Tantasqua",
+        "count" : "93"
+      }, {
+        "item" : "Bellingham",
+        "count" : "93"
+      }, {
+        "item" : "Quincy",
+        "count" : "93"
+      }, {
+        "item" : "Haverhill",
+        "count" : "91"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : { }
+  }, {
+    "id" : 588755536,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107583,
+    "cachedContents" : {
+      "non_null" : "20115",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01310000",
+        "count" : "31"
+      }, {
+        "item" : "07300000",
+        "count" : "31"
+      }, {
+        "item" : "02660000",
+        "count" : "31"
+      }, {
+        "item" : "02640000",
+        "count" : "31"
+      }, {
+        "item" : "08060605",
+        "count" : "31"
+      }, {
+        "item" : "01850000",
+        "count" : "31"
+      }, {
+        "item" : "02650505",
+        "count" : "31"
+      }, {
+        "item" : "02070000",
+        "count" : "31"
+      }, {
+        "item" : "00790505",
+        "count" : "31"
+      }, {
+        "item" : "06650505",
+        "count" : "31"
+      }, {
+        "item" : "03480512",
+        "count" : "31"
+      }, {
+        "item" : "01600000",
+        "count" : "31"
+      }, {
+        "item" : "06900505",
+        "count" : "31"
+      }, {
+        "item" : "00070000",
+        "count" : "31"
+      }, {
+        "item" : "08280000",
+        "count" : "31"
+      }, {
+        "item" : "06000505",
+        "count" : "31"
+      }, {
+        "item" : "06720505",
+        "count" : "31"
+      }, {
+        "item" : "03080000",
+        "count" : "31"
+      }, {
+        "item" : "08530000",
+        "count" : "31"
+      }, {
+        "item" : "03320000",
+        "count" : "31"
+      } ],
+      "smallest" : "00000000",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : { }
+  }, {
+    "id" : 588755537,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107584,
+    "cachedContents" : {
+      "non_null" : "20115",
+      "largest" : "Young Adult Center",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "62"
+      }, {
+        "item" : "Tri-County Regional Vocational Technical",
+        "count" : "62"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "62"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "62"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "62"
+      }, {
+        "item" : "Norfolk County Agricultural",
+        "count" : "60"
+      }, {
+        "item" : "Dighton-Rehoboth",
+        "count" : "31"
+      }, {
+        "item" : "Upper Cape Cod Vocational Technical",
+        "count" : "31"
+      }, {
+        "item" : "Stoneham",
+        "count" : "31"
+      }, {
+        "item" : "Norwood",
+        "count" : "31"
+      }, {
+        "item" : "Springfield",
+        "count" : "31"
+      }, {
+        "item" : "New Bedford",
+        "count" : "31"
+      }, {
+        "item" : "Dover-Sherborn Regional High",
+        "count" : "31"
+      }, {
+        "item" : "Hoosac Valley High School",
+        "count" : "31"
+      }, {
+        "item" : "Littleton",
+        "count" : "31"
+      }, {
+        "item" : "Silver Lake",
+        "count" : "31"
+      }, {
+        "item" : "High School Of Commerce",
+        "count" : "31"
+      }, {
+        "item" : "Ware Junior/Senior High School",
+        "count" : "31"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "31"
+      }, {
+        "item" : "Boston Latin Academy",
+        "count" : "31"
+      } ],
+      "smallest" : "21st Century Skills Academy",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : { }
+  }, {
+    "id" : 588755538,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151107585,
+    "cachedContents" : {
+      "non_null" : "20115",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "11225"
+      }, {
+        "item" : "District",
+        "count" : "8859"
+      }, {
+        "item" : "State",
+        "count" : "31"
+      } ],
+      "smallest" : "District",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : { }
+  }, {
+    "id" : 588755549,
+    "name" : "TOTAL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Count",
+    "fieldName" : "total_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107596,
+    "cachedContents" : {
+      "non_null" : "20115",
+      "largest" : "71405",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "114"
+      }, {
+        "item" : "102",
+        "count" : "104"
+      }, {
+        "item" : "111",
+        "count" : "103"
+      }, {
+        "item" : "98",
+        "count" : "94"
+      }, {
+        "item" : "108",
+        "count" : "92"
+      }, {
+        "item" : "79",
+        "count" : "90"
+      }, {
+        "item" : "94",
+        "count" : "89"
+      }, {
+        "item" : "89",
+        "count" : "88"
+      }, {
+        "item" : "109",
+        "count" : "88"
+      }, {
+        "item" : "75",
+        "count" : "86"
+      }, {
+        "item" : "78",
+        "count" : "86"
+      }, {
+        "item" : "67",
+        "count" : "85"
+      }, {
+        "item" : "118",
+        "count" : "84"
+      }, {
+        "item" : "58",
+        "count" : "84"
+      }, {
+        "item" : "90",
+        "count" : "84"
+      }, {
+        "item" : "93",
+        "count" : "83"
+      }, {
+        "item" : "83",
+        "count" : "82"
+      }, {
+        "item" : "133",
+        "count" : "82"
+      }, {
+        "item" : "107",
+        "count" : "81"
+      }, {
+        "item" : "209",
+        "count" : "80"
+      } ],
+      "smallest" : "1",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : { }
+  }, {
+    "id" : 588755539,
+    "name" : "COLL_4YRPRV_PCT",
+    "dataTypeName" : "number",
+    "description" : "4-Year Private College Percent",
+    "fieldName" : "coll_4yrprv_pct",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107586,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "1.0",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1186"
+      }, {
+        "item" : "0.333",
+        "count" : "120"
+      }, {
+        "item" : "0.25",
+        "count" : "100"
+      }, {
+        "item" : "0.286",
+        "count" : "90"
+      }, {
+        "item" : "0.2",
+        "count" : "88"
+      }, {
+        "item" : "0.5",
+        "count" : "86"
+      }, {
+        "item" : "0.167",
+        "count" : "75"
+      }, {
+        "item" : "0.357",
+        "count" : "72"
+      }, {
+        "item" : "0.4",
+        "count" : "70"
+      }, {
+        "item" : "0.308",
+        "count" : "68"
+      }, {
+        "item" : "0.267",
+        "count" : "65"
+      }, {
+        "item" : "0.304",
+        "count" : "65"
+      }, {
+        "item" : "0.262",
+        "count" : "63"
+      }, {
+        "item" : "0.211",
+        "count" : "62"
+      }, {
+        "item" : "0.226",
+        "count" : "61"
+      }, {
+        "item" : "0.257",
+        "count" : "61"
+      }, {
+        "item" : "0.212",
+        "count" : "60"
+      }, {
+        "item" : "0.248",
+        "count" : "60"
+      }, {
+        "item" : "0.196",
+        "count" : "60"
+      }, {
+        "item" : "0.31",
+        "count" : "60"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755540,
+    "name" : "COLL_4YRPUB_PCT",
+    "dataTypeName" : "number",
+    "description" : "4-Year Public College Percent",
+    "fieldName" : "coll_4yrpub_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107587,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "1.0",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "723"
+      }, {
+        "item" : "0.333",
+        "count" : "149"
+      }, {
+        "item" : "0.25",
+        "count" : "132"
+      }, {
+        "item" : "0.286",
+        "count" : "111"
+      }, {
+        "item" : "0.265",
+        "count" : "94"
+      }, {
+        "item" : "0.313",
+        "count" : "92"
+      }, {
+        "item" : "0.2",
+        "count" : "88"
+      }, {
+        "item" : "0.167",
+        "count" : "87"
+      }, {
+        "item" : "0.267",
+        "count" : "85"
+      }, {
+        "item" : "0.308",
+        "count" : "85"
+      }, {
+        "item" : "0.293",
+        "count" : "82"
+      }, {
+        "item" : "0.274",
+        "count" : "81"
+      }, {
+        "item" : "0.28",
+        "count" : "81"
+      }, {
+        "item" : "0.268",
+        "count" : "81"
+      }, {
+        "item" : "0.315",
+        "count" : "81"
+      }, {
+        "item" : "0.303",
+        "count" : "78"
+      }, {
+        "item" : "0.318",
+        "count" : "78"
+      }, {
+        "item" : "0.309",
+        "count" : "78"
+      }, {
+        "item" : "0.326",
+        "count" : "78"
+      }, {
+        "item" : "0.311",
+        "count" : "75"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755541,
+    "name" : "COLL_2YRPRV_PCT",
+    "dataTypeName" : "number",
+    "description" : "2-Year Private College Percent",
+    "fieldName" : "coll_2yrprv_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107588,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "1.0",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "8373"
+      }, {
+        "item" : "0.004",
+        "count" : "544"
+      }, {
+        "item" : "0.006",
+        "count" : "482"
+      }, {
+        "item" : "0.005",
+        "count" : "476"
+      }, {
+        "item" : "0.008",
+        "count" : "451"
+      }, {
+        "item" : "0.009",
+        "count" : "449"
+      }, {
+        "item" : "0.007",
+        "count" : "431"
+      }, {
+        "item" : "0.003",
+        "count" : "422"
+      }, {
+        "item" : "0.01",
+        "count" : "384"
+      }, {
+        "item" : "0.011",
+        "count" : "381"
+      }, {
+        "item" : "0.013",
+        "count" : "333"
+      }, {
+        "item" : "0.012",
+        "count" : "325"
+      }, {
+        "item" : "0.019",
+        "count" : "269"
+      }, {
+        "item" : "0.015",
+        "count" : "265"
+      }, {
+        "item" : "0.014",
+        "count" : "252"
+      }, {
+        "item" : "0.016",
+        "count" : "249"
+      }, {
+        "item" : "0.017",
+        "count" : "245"
+      }, {
+        "item" : "0.022",
+        "count" : "233"
+      }, {
+        "item" : "0.018",
+        "count" : "204"
+      }, {
+        "item" : "0.02",
+        "count" : "185"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755542,
+    "name" : "COLL_2YRPUB_PCT",
+    "dataTypeName" : "number",
+    "description" : "2-Year Public College Percent",
+    "fieldName" : "coll_2yrpub_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107589,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "1.0",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "609"
+      }, {
+        "item" : "0.167",
+        "count" : "129"
+      }, {
+        "item" : "0.2",
+        "count" : "118"
+      }, {
+        "item" : "0.25",
+        "count" : "117"
+      }, {
+        "item" : "0.125",
+        "count" : "107"
+      }, {
+        "item" : "0.179",
+        "count" : "104"
+      }, {
+        "item" : "0.143",
+        "count" : "97"
+      }, {
+        "item" : "0.176",
+        "count" : "91"
+      }, {
+        "item" : "0.333",
+        "count" : "87"
+      }, {
+        "item" : "0.16",
+        "count" : "85"
+      }, {
+        "item" : "0.132",
+        "count" : "84"
+      }, {
+        "item" : "0.111",
+        "count" : "83"
+      }, {
+        "item" : "0.106",
+        "count" : "82"
+      }, {
+        "item" : "0.119",
+        "count" : "82"
+      }, {
+        "item" : "0.152",
+        "count" : "82"
+      }, {
+        "item" : "0.162",
+        "count" : "81"
+      }, {
+        "item" : "0.182",
+        "count" : "81"
+      }, {
+        "item" : "0.118",
+        "count" : "80"
+      }, {
+        "item" : "0.087",
+        "count" : "80"
+      }, {
+        "item" : "0.063",
+        "count" : "79"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755543,
+    "name" : "PSTSEC_PCT",
+    "dataTypeName" : "number",
+    "description" : "Other Post-Secondary Percent",
+    "fieldName" : "pstsec_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107590,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "1.0",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "4373"
+      }, {
+        "item" : "0.018",
+        "count" : "440"
+      }, {
+        "item" : "0.011",
+        "count" : "439"
+      }, {
+        "item" : "0.01",
+        "count" : "424"
+      }, {
+        "item" : "0.019",
+        "count" : "421"
+      }, {
+        "item" : "0.016",
+        "count" : "418"
+      }, {
+        "item" : "0.009",
+        "count" : "411"
+      }, {
+        "item" : "0.02",
+        "count" : "374"
+      }, {
+        "item" : "0.015",
+        "count" : "371"
+      }, {
+        "item" : "0.013",
+        "count" : "363"
+      }, {
+        "item" : "0.017",
+        "count" : "356"
+      }, {
+        "item" : "0.012",
+        "count" : "349"
+      }, {
+        "item" : "0.014",
+        "count" : "339"
+      }, {
+        "item" : "0.007",
+        "count" : "333"
+      }, {
+        "item" : "0.022",
+        "count" : "328"
+      }, {
+        "item" : "0.006",
+        "count" : "327"
+      }, {
+        "item" : "0.024",
+        "count" : "323"
+      }, {
+        "item" : "0.021",
+        "count" : "322"
+      }, {
+        "item" : "0.023",
+        "count" : "318"
+      }, {
+        "item" : "0.008",
+        "count" : "314"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755544,
+    "name" : "APPREN_PCT",
+    "dataTypeName" : "number",
+    "description" : "Apprenticeship Percent",
+    "fieldName" : "appren_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107591,
+    "cachedContents" : {
+      "non_null" : "5541",
+      "largest" : "0.244",
+      "null" : "14574",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "3985"
+      }, {
+        "item" : "0.004",
+        "count" : "110"
+      }, {
+        "item" : "0.003",
+        "count" : "87"
+      }, {
+        "item" : "0.007",
+        "count" : "87"
+      }, {
+        "item" : "0.006",
+        "count" : "77"
+      }, {
+        "item" : "0.011",
+        "count" : "67"
+      }, {
+        "item" : "0.01",
+        "count" : "65"
+      }, {
+        "item" : "0.009",
+        "count" : "64"
+      }, {
+        "item" : "0.005",
+        "count" : "61"
+      }, {
+        "item" : "0.002",
+        "count" : "57"
+      }, {
+        "item" : "0.012",
+        "count" : "53"
+      }, {
+        "item" : "0.008",
+        "count" : "48"
+      }, {
+        "item" : "0.013",
+        "count" : "47"
+      }, {
+        "item" : "0.019",
+        "count" : "39"
+      }, {
+        "item" : "0.015",
+        "count" : "37"
+      }, {
+        "item" : "0.018",
+        "count" : "34"
+      }, {
+        "item" : "0.016",
+        "count" : "32"
+      }, {
+        "item" : "0.017",
+        "count" : "31"
+      }, {
+        "item" : "0.014",
+        "count" : "30"
+      }, {
+        "item" : "0.029",
+        "count" : "30"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755545,
+    "name" : "WORK_PCT",
+    "dataTypeName" : "number",
+    "description" : "Work Percent",
+    "fieldName" : "work_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107592,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "1.0",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1728"
+      }, {
+        "item" : "0.019",
+        "count" : "141"
+      }, {
+        "item" : "0.031",
+        "count" : "140"
+      }, {
+        "item" : "0.034",
+        "count" : "139"
+      }, {
+        "item" : "0.051",
+        "count" : "137"
+      }, {
+        "item" : "0.013",
+        "count" : "134"
+      }, {
+        "item" : "0.065",
+        "count" : "133"
+      }, {
+        "item" : "0.036",
+        "count" : "131"
+      }, {
+        "item" : "0.048",
+        "count" : "129"
+      }, {
+        "item" : "0.045",
+        "count" : "129"
+      }, {
+        "item" : "0.043",
+        "count" : "127"
+      }, {
+        "item" : "0.063",
+        "count" : "126"
+      }, {
+        "item" : "0.029",
+        "count" : "125"
+      }, {
+        "item" : "0.03",
+        "count" : "125"
+      }, {
+        "item" : "0.011",
+        "count" : "124"
+      }, {
+        "item" : "0.018",
+        "count" : "124"
+      }, {
+        "item" : "0.032",
+        "count" : "123"
+      }, {
+        "item" : "0.023",
+        "count" : "122"
+      }, {
+        "item" : "0.037",
+        "count" : "122"
+      }, {
+        "item" : "0.059",
+        "count" : "122"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755546,
+    "name" : "MILITARY_PCT",
+    "dataTypeName" : "number",
+    "description" : "Military Percent",
+    "fieldName" : "military_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107593,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "0.286",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "4322"
+      }, {
+        "item" : "0.014",
+        "count" : "467"
+      }, {
+        "item" : "0.01",
+        "count" : "461"
+      }, {
+        "item" : "0.011",
+        "count" : "455"
+      }, {
+        "item" : "0.012",
+        "count" : "427"
+      }, {
+        "item" : "0.009",
+        "count" : "425"
+      }, {
+        "item" : "0.013",
+        "count" : "421"
+      }, {
+        "item" : "0.016",
+        "count" : "417"
+      }, {
+        "item" : "0.006",
+        "count" : "413"
+      }, {
+        "item" : "0.02",
+        "count" : "405"
+      }, {
+        "item" : "0.018",
+        "count" : "400"
+      }, {
+        "item" : "0.008",
+        "count" : "399"
+      }, {
+        "item" : "0.019",
+        "count" : "397"
+      }, {
+        "item" : "0.017",
+        "count" : "396"
+      }, {
+        "item" : "0.005",
+        "count" : "393"
+      }, {
+        "item" : "0.007",
+        "count" : "382"
+      }, {
+        "item" : "0.015",
+        "count" : "380"
+      }, {
+        "item" : "0.022",
+        "count" : "371"
+      }, {
+        "item" : "0.021",
+        "count" : "339"
+      }, {
+        "item" : "0.004",
+        "count" : "336"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755547,
+    "name" : "OTHER_PLANS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Other Plans Percent",
+    "fieldName" : "other_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107594,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "1.0",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "8567"
+      }, {
+        "item" : "0.004",
+        "count" : "504"
+      }, {
+        "item" : "0.005",
+        "count" : "458"
+      }, {
+        "item" : "0.006",
+        "count" : "426"
+      }, {
+        "item" : "0.007",
+        "count" : "413"
+      }, {
+        "item" : "0.009",
+        "count" : "403"
+      }, {
+        "item" : "0.008",
+        "count" : "398"
+      }, {
+        "item" : "0.011",
+        "count" : "389"
+      }, {
+        "item" : "0.003",
+        "count" : "351"
+      }, {
+        "item" : "0.01",
+        "count" : "341"
+      }, {
+        "item" : "0.012",
+        "count" : "335"
+      }, {
+        "item" : "0.014",
+        "count" : "306"
+      }, {
+        "item" : "0.013",
+        "count" : "296"
+      }, {
+        "item" : "0.016",
+        "count" : "291"
+      }, {
+        "item" : "0.015",
+        "count" : "262"
+      }, {
+        "item" : "0.017",
+        "count" : "261"
+      }, {
+        "item" : "0.019",
+        "count" : "250"
+      }, {
+        "item" : "0.018",
+        "count" : "240"
+      }, {
+        "item" : "0.02",
+        "count" : "194"
+      }, {
+        "item" : "0.022",
+        "count" : "192"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 588755548,
+    "name" : "UNKNWN_PLANS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Unknown Plans Percent",
+    "fieldName" : "unknwn_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151107595,
+    "cachedContents" : {
+      "non_null" : "19725",
+      "largest" : "1.0",
+      "null" : "390",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "6541"
+      }, {
+        "item" : "0.01",
+        "count" : "279"
+      }, {
+        "item" : "0.006",
+        "count" : "258"
+      }, {
+        "item" : "0.013",
+        "count" : "250"
+      }, {
+        "item" : "0.011",
+        "count" : "242"
+      }, {
+        "item" : "0.005",
+        "count" : "233"
+      }, {
+        "item" : "0.014",
+        "count" : "233"
+      }, {
+        "item" : "0.022",
+        "count" : "232"
+      }, {
+        "item" : "0.009",
+        "count" : "229"
+      }, {
+        "item" : "0.007",
+        "count" : "222"
+      }, {
+        "item" : "0.004",
+        "count" : "221"
+      }, {
+        "item" : "0.018",
+        "count" : "211"
+      }, {
+        "item" : "0.019",
+        "count" : "210"
+      }, {
+        "item" : "0.008",
+        "count" : "202"
+      }, {
+        "item" : "0.023",
+        "count" : "201"
+      }, {
+        "item" : "0.012",
+        "count" : "191"
+      }, {
+        "item" : "0.02",
+        "count" : "188"
+      }, {
+        "item" : "0.015",
+        "count" : "188"
+      }, {
+        "item" : "0.016",
+        "count" : "188"
+      }, {
+        "item" : "0.026",
+        "count" : "187"
+      } ],
+      "smallest" : "0.0",
+      "count" : "20115",
+      "cardinality" : "20115"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "intentions", "12th grade", "high school seniors", "4 year private college", "4 year public college", "2 year private college", "2 year public college", "apprenticeship", "work", "military", "career", "college", "community college", "cvte", "district", "employment", "university", "state university", "school", "graduation", "higher education", "job" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

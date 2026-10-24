@@ -11,7 +11,8 @@ hackachusetts/
 │   ├── specs/         # One folder per feature: requirements, design, tasks
 │   ├── hooks/         # Agent hooks (automation on file events / manual)
 │   ├── agents/        # Custom agent configs
-│   └── settings/      # CLI + MCP settings
+│   ├── mcp/           # Our MCP servers + OpenContext stdio bridge (see steering/mcp-tools.md)
+│   └── settings/      # CLI + MCP settings (mcp.json)
 ├── knowledge/         # Research briefs (rules, strategy, past winners)
 ├── src/               # Application code (create when stack is chosen)
 ├── docs/

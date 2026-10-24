@@ -1,0 +1,717 @@
+{
+  "dataset": "bluebikes",
+  "source": "data/civic/datasets/bluebikes/data.csv",
+  "source_sha256": "064f6aec47d0871a19061888a8ab78f90c26a53f9289665c88528943a3cda122",
+  "total_snapshot_rows": 63063,
+  "preview_rows": 100,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "start_station",
+    "end_station",
+    "trips",
+    "member_trips",
+    "casual_trips"
+  ],
+  "records": [
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "Ames St at Main St",
+      "trips": "593",
+      "member_trips": "556",
+      "casual_trips": "37"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "MIT Vassar St",
+      "trips": "590",
+      "member_trips": "560",
+      "casual_trips": "30"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "MIT Stata Center at Vassar St / Main St",
+      "trips": "537",
+      "member_trips": "509",
+      "casual_trips": "28"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Beacon St at Massachusetts Ave",
+      "trips": "534",
+      "member_trips": "457",
+      "casual_trips": "77"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "507",
+      "member_trips": "478",
+      "casual_trips": "29"
+    },
+    {
+      "start_station": "Beacon St at Massachusetts Ave",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "505",
+      "member_trips": "430",
+      "casual_trips": "75"
+    },
+    {
+      "start_station": "MIT Stata Center at Vassar St / Main St",
+      "end_station": "MIT Vassar St",
+      "trips": "478",
+      "member_trips": "450",
+      "casual_trips": "28"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Central Square at Mass Ave / Essex St",
+      "trips": "448",
+      "member_trips": "398",
+      "casual_trips": "50"
+    },
+    {
+      "start_station": "MIT Hayward St at Amherst St",
+      "end_station": "MIT Vassar St",
+      "trips": "404",
+      "member_trips": "384",
+      "casual_trips": "20"
+    },
+    {
+      "start_station": "MIT Pacific St at Purrington St",
+      "end_station": "Ames St at Main St",
+      "trips": "393",
+      "member_trips": "367",
+      "casual_trips": "26"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "MIT Hayward St at Amherst St",
+      "trips": "388",
+      "member_trips": "372",
+      "casual_trips": "16"
+    },
+    {
+      "start_station": "Central Square at Mass Ave / Essex St",
+      "end_station": "MIT Pacific St at Purrington St",
+      "trips": "385",
+      "member_trips": "374",
+      "casual_trips": "11"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Deerfield St at Commonwealth Ave",
+      "trips": "366",
+      "member_trips": "323",
+      "casual_trips": "43"
+    },
+    {
+      "start_station": "Central Square at Mass Ave / Essex St",
+      "end_station": "MIT Vassar St",
+      "trips": "363",
+      "member_trips": "323",
+      "casual_trips": "40"
+    },
+    {
+      "start_station": "MIT Stata Center at Vassar St / Main St",
+      "end_station": "MIT Pacific St at Purrington St",
+      "trips": "355",
+      "member_trips": "352",
+      "casual_trips": "3"
+    },
+    {
+      "start_station": "Deerfield St at Commonwealth Ave",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "354",
+      "member_trips": "312",
+      "casual_trips": "42"
+    },
+    {
+      "start_station": "MIT Pacific St at Purrington St",
+      "end_station": "MIT Stata Center at Vassar St / Main St",
+      "trips": "342",
+      "member_trips": "329",
+      "casual_trips": "13"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "MIT Carleton St at Amherst St",
+      "trips": "339",
+      "member_trips": "321",
+      "casual_trips": "18"
+    },
+    {
+      "start_station": "Central Square at Mass Ave / Essex St",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "335",
+      "member_trips": "306",
+      "casual_trips": "29"
+    },
+    {
+      "start_station": "St. Alphonsus St at Tremont St",
+      "end_station": "Forsyth St at Huntington Ave",
+      "trips": "325",
+      "member_trips": "232",
+      "casual_trips": "93"
+    },
+    {
+      "start_station": "MIT Pacific St at Purrington St",
+      "end_station": "Central Square at Mass Ave / Essex St",
+      "trips": "319",
+      "member_trips": "307",
+      "casual_trips": "12"
+    },
+    {
+      "start_station": "Ames St at Main St",
+      "end_station": "MIT Vassar St",
+      "trips": "312",
+      "member_trips": "291",
+      "casual_trips": "21"
+    },
+    {
+      "start_station": "Commonwealth Ave at Agganis Way",
+      "end_station": "700 Commonwealth Ave.",
+      "trips": "312",
+      "member_trips": "199",
+      "casual_trips": "113"
+    },
+    {
+      "start_station": "Lower Cambridgeport at Magazine St / Riverside Rd",
+      "end_station": "MIT Vassar St",
+      "trips": "304",
+      "member_trips": "288",
+      "casual_trips": "16"
+    },
+    {
+      "start_station": "Ruggles T Stop - Columbus Ave at Melnea Cass Blvd",
+      "end_station": "Roxbury Crossing T Stop - Columbus Ave at Tremont St",
+      "trips": "295",
+      "member_trips": "225",
+      "casual_trips": "70"
+    },
+    {
+      "start_station": "MIT Carleton St at Amherst St",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "291",
+      "member_trips": "264",
+      "casual_trips": "27"
+    },
+    {
+      "start_station": "MIT Pacific St at Purrington St",
+      "end_station": "MIT Hayward St at Amherst St",
+      "trips": "289",
+      "member_trips": "286",
+      "casual_trips": "3"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "Central Square at Mass Ave / Essex St",
+      "trips": "288",
+      "member_trips": "256",
+      "casual_trips": "32"
+    },
+    {
+      "start_station": "Roxbury Crossing T Stop - Columbus Ave at Tremont St",
+      "end_station": "Ruggles T Stop - Columbus Ave at Melnea Cass Blvd",
+      "trips": "282",
+      "member_trips": "216",
+      "casual_trips": "66"
+    },
+    {
+      "start_station": "MIT Hayward St at Amherst St",
+      "end_station": "MIT Pacific St at Purrington St",
+      "trips": "281",
+      "member_trips": "276",
+      "casual_trips": "5"
+    },
+    {
+      "start_station": "Harvard Square at Mass Ave/ Dunster",
+      "end_station": "Harvard University Radcliffe Quadrangle at Shepard St / Garden St",
+      "trips": "277",
+      "member_trips": "164",
+      "casual_trips": "113"
+    },
+    {
+      "start_station": "MIT Pacific St at Purrington St",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "272",
+      "member_trips": "266",
+      "casual_trips": "6"
+    },
+    {
+      "start_station": "Ames St at Main St",
+      "end_station": "MIT Pacific St at Purrington St",
+      "trips": "271",
+      "member_trips": "265",
+      "casual_trips": "6"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "MIT Carleton St at Amherst St",
+      "trips": "262",
+      "member_trips": "232",
+      "casual_trips": "30"
+    },
+    {
+      "start_station": "MIT Hayward St at Amherst St",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "257",
+      "member_trips": "230",
+      "casual_trips": "27"
+    },
+    {
+      "start_station": "B.U. Central - 725 Comm. Ave.",
+      "end_station": "Commonwealth Ave at Agganis Way",
+      "trips": "252",
+      "member_trips": "179",
+      "casual_trips": "73"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "Lower Cambridgeport at Magazine St / Riverside Rd",
+      "trips": "245",
+      "member_trips": "228",
+      "casual_trips": "17"
+    },
+    {
+      "start_station": "MIT Carleton St at Amherst St",
+      "end_station": "MIT Vassar St",
+      "trips": "244",
+      "member_trips": "231",
+      "casual_trips": "13"
+    },
+    {
+      "start_station": "Commonwealth Ave at Agganis Way",
+      "end_station": "Silber Way",
+      "trips": "241",
+      "member_trips": "154",
+      "casual_trips": "87"
+    },
+    {
+      "start_station": "Harvard University Radcliffe Quadrangle at Shepard St / Garden St",
+      "end_station": "Harvard Square at Mass Ave/ Dunster",
+      "trips": "235",
+      "member_trips": "122",
+      "casual_trips": "113"
+    },
+    {
+      "start_station": "Mass Ave at Albany St",
+      "end_station": "Central Square at Mass Ave / Essex St",
+      "trips": "234",
+      "member_trips": "219",
+      "casual_trips": "15"
+    },
+    {
+      "start_station": "Deerfield St at Commonwealth Ave",
+      "end_station": "Commonwealth Ave at Agganis Way",
+      "trips": "231",
+      "member_trips": "143",
+      "casual_trips": "88"
+    },
+    {
+      "start_station": "Silber Way",
+      "end_station": "Commonwealth Ave at Agganis Way",
+      "trips": "225",
+      "member_trips": "166",
+      "casual_trips": "59"
+    },
+    {
+      "start_station": "Ruggles T Stop - Columbus Ave at Melnea Cass Blvd",
+      "end_station": "Washington St at Lenox St",
+      "trips": "224",
+      "member_trips": "193",
+      "casual_trips": "31"
+    },
+    {
+      "start_station": "Linear Park - Mass. Ave. at Cameron Ave.",
+      "end_station": "Davis Square",
+      "trips": "222",
+      "member_trips": "188",
+      "casual_trips": "34"
+    },
+    {
+      "start_station": "Lower Cambridgeport at Magazine St / Riverside Rd",
+      "end_station": "MIT Pacific St at Purrington St",
+      "trips": "220",
+      "member_trips": "208",
+      "casual_trips": "12"
+    },
+    {
+      "start_station": "MIT Pacific St at Purrington St",
+      "end_station": "MIT Carleton St at Amherst St",
+      "trips": "215",
+      "member_trips": "209",
+      "casual_trips": "6"
+    },
+    {
+      "start_station": "Central Square at Mass Ave / Essex St",
+      "end_station": "Harvard Square at Mass Ave/ Dunster",
+      "trips": "212",
+      "member_trips": "149",
+      "casual_trips": "63"
+    },
+    {
+      "start_station": "700 Commonwealth Ave.",
+      "end_station": "Commonwealth Ave at Agganis Way",
+      "trips": "211",
+      "member_trips": "150",
+      "casual_trips": "61"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Ames St at Main St",
+      "trips": "203",
+      "member_trips": "184",
+      "casual_trips": "19"
+    },
+    {
+      "start_station": "Davis Square",
+      "end_station": "Linear Park - Mass. Ave. at Cameron Ave.",
+      "trips": "200",
+      "member_trips": "185",
+      "casual_trips": "15"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Harvard Square at Mass Ave/ Dunster",
+      "trips": "199",
+      "member_trips": "129",
+      "casual_trips": "70"
+    },
+    {
+      "start_station": "Harvard Square at Mass Ave/ Dunster",
+      "end_station": "Central Square at Mass Ave / Essex St",
+      "trips": "192",
+      "member_trips": "147",
+      "casual_trips": "45"
+    },
+    {
+      "start_station": "Kendall T",
+      "end_station": "MIT Vassar St",
+      "trips": "189",
+      "member_trips": "165",
+      "casual_trips": "24"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Massachusetts Ave at Boylston St.",
+      "trips": "188",
+      "member_trips": "122",
+      "casual_trips": "66"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "Kendall T",
+      "trips": "186",
+      "member_trips": "161",
+      "casual_trips": "25"
+    },
+    {
+      "start_station": "Mass Ave/Lafayette Square",
+      "end_station": "Ames St at Main St",
+      "trips": "186",
+      "member_trips": "178",
+      "casual_trips": "8"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Mass Ave/Lafayette Square",
+      "trips": "186",
+      "member_trips": "153",
+      "casual_trips": "33"
+    },
+    {
+      "start_station": "Jackson Square T Stop",
+      "end_station": "Ruggles T Stop - Columbus Ave at Melnea Cass Blvd",
+      "trips": "179",
+      "member_trips": "161",
+      "casual_trips": "18"
+    },
+    {
+      "start_station": "Washington St at Lenox St",
+      "end_station": "Lenox St at Kendall St",
+      "trips": "179",
+      "member_trips": "178",
+      "casual_trips": "1"
+    },
+    {
+      "start_station": "MIT Stata Center at Vassar St / Main St",
+      "end_station": "Central Square at Mass Ave / Essex St",
+      "trips": "173",
+      "member_trips": "165",
+      "casual_trips": "8"
+    },
+    {
+      "start_station": "Central Square at Mass Ave / Essex St",
+      "end_station": "955 Mass Ave",
+      "trips": "171",
+      "member_trips": "159",
+      "casual_trips": "12"
+    },
+    {
+      "start_station": "Forsyth St at Huntington Ave",
+      "end_station": "St. Alphonsus St at Tremont St",
+      "trips": "171",
+      "member_trips": "131",
+      "casual_trips": "40"
+    },
+    {
+      "start_station": "Harvard Square at Mass Ave/ Dunster",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "169",
+      "member_trips": "118",
+      "casual_trips": "51"
+    },
+    {
+      "start_station": "Washington St at Lenox St",
+      "end_station": "Ruggles T Stop - Columbus Ave at Melnea Cass Blvd",
+      "trips": "168",
+      "member_trips": "142",
+      "casual_trips": "26"
+    },
+    {
+      "start_station": "Community Path at Lowell St",
+      "end_station": "Grove St at Community Path",
+      "trips": "163",
+      "member_trips": "79",
+      "casual_trips": "84"
+    },
+    {
+      "start_station": "Commonwealth Ave at Agganis Way",
+      "end_station": "Packard's Corner - Commonwealth Ave at Brighton Ave",
+      "trips": "163",
+      "member_trips": "149",
+      "casual_trips": "14"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Boylston St at Fairfield St",
+      "trips": "161",
+      "member_trips": "121",
+      "casual_trips": "40"
+    },
+    {
+      "start_station": "Central Square East Boston",
+      "end_station": "East Boston Neighborhood Health Center - 20 Maverick Square",
+      "trips": "160",
+      "member_trips": "151",
+      "casual_trips": "9"
+    },
+    {
+      "start_station": "700 Commonwealth Ave.",
+      "end_station": "Deerfield St at Commonwealth Ave",
+      "trips": "159",
+      "member_trips": "142",
+      "casual_trips": "17"
+    },
+    {
+      "start_station": "Grove St at Community Path",
+      "end_station": "Community Path at Lowell St",
+      "trips": "158",
+      "member_trips": "79",
+      "casual_trips": "79"
+    },
+    {
+      "start_station": "MIT Pacific St at Purrington St",
+      "end_station": "Lower Cambridgeport at Magazine St / Riverside Rd",
+      "trips": "158",
+      "member_trips": "150",
+      "casual_trips": "8"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Newbury St at Hereford St",
+      "trips": "157",
+      "member_trips": "104",
+      "casual_trips": "53"
+    },
+    {
+      "start_station": "Beacon St at Massachusetts Ave",
+      "end_station": "Deerfield St at Commonwealth Ave",
+      "trips": "157",
+      "member_trips": "145",
+      "casual_trips": "12"
+    },
+    {
+      "start_station": "Mass Ave/Lafayette Square",
+      "end_station": "Harvard Square at Mass Ave/ Dunster",
+      "trips": "155",
+      "member_trips": "112",
+      "casual_trips": "43"
+    },
+    {
+      "start_station": "Ames St at Main St",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "155",
+      "member_trips": "141",
+      "casual_trips": "14"
+    },
+    {
+      "start_station": "Alewife MBTA at Steel Place",
+      "end_station": "Discovery Park - 30 Acorn Park Drive",
+      "trips": "155",
+      "member_trips": "131",
+      "casual_trips": "24"
+    },
+    {
+      "start_station": "Commonwealth Ave at Agganis Way",
+      "end_station": "B.U. Central - 725 Comm. Ave.",
+      "trips": "154",
+      "member_trips": "98",
+      "casual_trips": "56"
+    },
+    {
+      "start_station": "Forsyth St at Huntington Ave",
+      "end_station": "Brigham Circle - Francis St at Huntington Ave",
+      "trips": "154",
+      "member_trips": "121",
+      "casual_trips": "33"
+    },
+    {
+      "start_station": "Grove St at Community Path",
+      "end_station": "Community Path at Cedar Street",
+      "trips": "153",
+      "member_trips": "122",
+      "casual_trips": "31"
+    },
+    {
+      "start_station": "Central Square at Mass Ave / Essex St",
+      "end_station": "Old Morse Park at Putnam Ave",
+      "trips": "153",
+      "member_trips": "140",
+      "casual_trips": "13"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "MIT Hayward St at Amherst St",
+      "trips": "152",
+      "member_trips": "143",
+      "casual_trips": "9"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "MIT Pacific St at Purrington St",
+      "trips": "152",
+      "member_trips": "150",
+      "casual_trips": "2"
+    },
+    {
+      "start_station": "Commonwealth Ave at Agganis Way",
+      "end_station": "Deerfield St at Commonwealth Ave",
+      "trips": "152",
+      "member_trips": "112",
+      "casual_trips": "40"
+    },
+    {
+      "start_station": "Seaport Blvd at Sleeper St",
+      "end_station": "Cross St at Hanover St",
+      "trips": "152",
+      "member_trips": "87",
+      "casual_trips": "65"
+    },
+    {
+      "start_station": "Central Square at Mass Ave / Essex St",
+      "end_station": "Ames St at Main St",
+      "trips": "150",
+      "member_trips": "130",
+      "casual_trips": "20"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "149",
+      "member_trips": "112",
+      "casual_trips": "37"
+    },
+    {
+      "start_station": "One Brigham Circle",
+      "end_station": "Forsyth St at Huntington Ave",
+      "trips": "149",
+      "member_trips": "112",
+      "casual_trips": "37"
+    },
+    {
+      "start_station": "Harvard Kennedy School at Bennett St / Eliot St",
+      "end_station": "175 N Harvard St",
+      "trips": "147",
+      "member_trips": "121",
+      "casual_trips": "26"
+    },
+    {
+      "start_station": "Ames St at Main St",
+      "end_station": "Central Square at Mass Ave / Essex St",
+      "trips": "146",
+      "member_trips": "124",
+      "casual_trips": "22"
+    },
+    {
+      "start_station": "Ames St at Main St",
+      "end_station": "Mass Ave/Lafayette Square",
+      "trips": "146",
+      "member_trips": "134",
+      "casual_trips": "12"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "Mass Ave at Albany St",
+      "trips": "145",
+      "member_trips": "135",
+      "casual_trips": "10"
+    },
+    {
+      "start_station": "955 Mass Ave",
+      "end_station": "MIT at Mass Ave / Amherst St",
+      "trips": "143",
+      "member_trips": "107",
+      "casual_trips": "36"
+    },
+    {
+      "start_station": "East Boston Neighborhood Health Center - 20 Maverick Square",
+      "end_station": "Central Square East Boston",
+      "trips": "143",
+      "member_trips": "136",
+      "casual_trips": "7"
+    },
+    {
+      "start_station": "MIT at Mass Ave / Amherst St",
+      "end_station": "Christian Science Plaza - Massachusetts Ave at Westland Ave",
+      "trips": "143",
+      "member_trips": "101",
+      "casual_trips": "42"
+    },
+    {
+      "start_station": "MIT Vassar St",
+      "end_station": "Mass Ave/Lafayette Square",
+      "trips": "141",
+      "member_trips": "125",
+      "casual_trips": "16"
+    },
+    {
+      "start_station": "Ruggles T Stop - Columbus Ave at Melnea Cass Blvd",
+      "end_station": "St. Alphonsus St at Tremont St",
+      "trips": "140",
+      "member_trips": "93",
+      "casual_trips": "47"
+    },
+    {
+      "start_station": "Forsyth St at Huntington Ave",
+      "end_station": "Boylston St at Jersey St",
+      "trips": "138",
+      "member_trips": "109",
+      "casual_trips": "29"
+    },
+    {
+      "start_station": "Old Morse Park at Putnam Ave",
+      "end_station": "Central Square at Mass Ave / Essex St",
+      "trips": "138",
+      "member_trips": "113",
+      "casual_trips": "25"
+    },
+    {
+      "start_station": "MIT Carleton St at Amherst St",
+      "end_station": "MIT Pacific St at Purrington St",
+      "trips": "136",
+      "member_trips": "134",
+      "casual_trips": "2"
+    }
+  ]
+}

@@ -6,7 +6,12 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 
 | Document | Use it for |
 |---|---|
-| [08 — What we should build](08_idea_shortlist_and_build_recommendation.md) | Three scoped ideas, recommended choice, demo moments and build priorities |
+| [Complete Civic source inventory](CIVIC_INVENTORY.md) | All 74 portal resources, full small datasets, large-source previews, five challenge kits, nested subsets and access gaps |
+| [12 — Creative rodent-control playbook](12_rodent_control_creative_playbook.md) | RodentOps plus seven alternatives, actual Boston/Cambridge rodent data, yesterday's hearing captions and a small demo scope |
+| [09 — Creative opportunity atlas](09_creative_civic_opportunity_atlas.md) | 15 ambitious concepts, small day-of demos, differentiation, users and measurable checks |
+| [10 — Public data and repositories](10_public_data_and_repositories.md) | Verified APIs/CSVs, 21 existing public repos, licenses, join recipes and a use for every starter dataset |
+| [11 — Public voices and competitive gaps](11_public_voices_and_competitive_gaps.md) | Resident criticism and positive accounts, current institutional signals, existing products and social/video access limits |
+| [08 — Build decision guide](08_idea_shortlist_and_build_recommendation.md) | Updated creative choices and three conservative fallback scopes |
 | [01 — Rules, judging and submission playbook](01_rules_judging_and_event_playbook.md) | Required deliverables, judging, conflicts to resolve, and the under-three-minute demo |
 | [00 — Full official rules reference](00_official_rules_full.md) | Detailed rule text retained in the repository |
 | [05 — Event logistics](05_event_info_and_logistics.md) | Setup, schedule, campus and event details |
@@ -19,6 +24,10 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 
 ## Most consequential findings
 
+- The strongest new directions are **Last 100 Feet** (journey barriers and repair scenarios), **ShiftFits** (opportunities that fit real schedules), and **OpenDoor** (conflicting service instructions resolved before a trip). These are proposals, not a team selection.
+- For rodent control, **RodentOps** is the recommended tool: turn recurring complaints into a reviewed inspection and follow-up brief. Exact-category checks found 5,321 Boston Rodent Activity records in the larger 2026 source; Cambridge separately publishes smart-device and sighting records. These are reports/catches, not population estimates. See document 12 for provenance and limits.
+- Public data goes beyond the kit: Cambridge ramp GeoJSON, Bluebikes GBFS/CSV, MBTA facility/alert relationships, MassGIS polygons, O*NET skills and OpenAlex identifiers were inspected directly. Integration pitfalls and failed probes are preserved in document 10.
+- The City has public curb-map, parking-sign and Bluebikes display code. Findhelp already tracks referral outcomes. Our ideas need a specific improvement over those existing capabilities.
 - Boston already has AI search, youth resource navigation, permitting work and curb-data projects. Identify a specific completion gap before claiming novelty.
 - The starter 311 file is 5,000 records from October 8–18, 2026. It cannot establish citywide resolution times or all unmet need.
 - Boston's own Expo rewarded service knowledge, accessibility, procurement and collection improvements. These are municipal awards, not Hackachusetts judging results.
@@ -28,7 +37,12 @@ Research cutoff: **October 24, 2026**. This folder is the team's sourced prepara
 
 - [Dataset audit JSON](sources/civic_dataset_audit.json): row counts, columns, missingness, original request URLs, hashes and join results.
 - [Dataset audit script](sources/audit_civic_kit.py): repeatable inspection of the downloaded starter ZIP.
+- [Public-resource audit](sources/public_resource_audit.json) and [probe script](sources/audit_public_resources.py): inspected response fields, CSV headers, repository metadata/licenses and unsuccessful requests.
+- [Public-resource inventory CSV](sources/public_resource_inventory.csv): a flat catalog of the checked data/code URLs, not a mirror of their underlying records.
+- [Rodent-resource audit](sources/rodent_resource_audit.json) and [hearing-caption audit](sources/rodent_hearing_caption_audit.json): exact category queries, Cambridge counts/schemas, repository reuse issues and selected timestamped hearing passages.
 - [Link audit JSON](sources/link_audit.json): bounded HTTP HEAD checks of URLs in this folder, with redirects and failures retained.
 - [Link-check script](sources/check_research_links.py): reproduces reachability checks. A successful HTTP response is not content verification; a blocked request is not proof a page is gone.
 
 Sources are linked beside claims and in each document's source register. Full third-party media/transcripts remain linked at their sources. The repository also contains a [Civic data mirror](../data/civic/CATALOG.md), alongside our notes and verification artifacts. Consult [verification notes](sources/README.md) for access limits.
+
+The public-voices expansion includes self-selected resident accounts and counterexamples, not a representative sentiment study. TikTok was blocked and no X post was accepted as verified evidence; document 11 makes those gaps explicit.

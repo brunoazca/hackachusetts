@@ -1,0 +1,113 @@
+{
+  "id" : "32yj-9xt9",
+  "name" : "NAEP Data Explorer",
+  "assetType" : "href",
+  "attribution" : "The Nation's Report Card",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1738094176,
+  "description" : "The NAEP Data Explorer is a web-based application for accessing National Assessment of Educational Progress (NAEP) data. It provides results by jurisdiction (nation, state, Trial Urban Districts, Puerto Rico, the District of Columbia, and Department of Defense schools) for all main subject areas assessed, including mathematics, reading, writing, and science.\n\nResults are available for the nation and participating states and other jurisdictions since 1990, and for selected urban districts since 2002. The tool can be used to view tables, run statistical tests, and create charts or other materials that can be exported, saved, copied, and shared with others.\n\nAlso known as The Nation’s Report Card, NAEP provides important information about student academic achievement and learning experiences in various subjects. NAEP does not provide scores for individual students or schools; instead, it offers results for populations of students (e.g., fourth-graders) and subgroups of those populations (e.g., female students, Hispanic students) as well as results regarding subject-matter achievement, instructional experiences, and school environment. NAEP results are based on school and student samples that are carefully designed to accurately represent student populations of interest.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 41078866,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1738094244,
+  "publicationGroup" : 19752168,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1738094176,
+  "tableId" : 19752168,
+  "totalTimesRated" : 0,
+  "viewCount" : 1068,
+  "viewLastModified" : 1738174301,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1738101830,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6700164,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1738101790,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1738101830,
+      "failureCount" : 0,
+      "startedAt" : 1738101830,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "URL" : "https://www.nationsreportcard.gov/ndecore/landing"
+      },
+      "title" : "NAEP Data Explorer Tool"
+    }, {
+      "urls" : {
+        "URL" : "https://www.nationsreportcard.gov/profiles/stateprofile/overview/MA"
+      },
+      "title" : "Massachusetts State Profile"
+    }, {
+      "urls" : {
+        "URL" : "https://nces.ed.gov/nationsreportcard/snapshots"
+      },
+      "title" : "State and Urban Districts Snapshots"
+    } ],
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "State-Level"
+      }
+    },
+    "accessPoints" : {
+      "URL" : "https://www.nationsreportcard.gov/ndecore/landing"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "naep", "testing", "nation's report card", "4th grade", "8th grade", "12th grade", "civics", "economics", "geography", "math", "music", "reading", "science", "technology and engineering literacy", "u.s. history", "visual arts", "vocabulary", "writing", "gender", "race and ethnicity", "disability", "504 plan", "english learners", "national school lunch program" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

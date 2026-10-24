@@ -1,0 +1,1659 @@
+{
+  "id" : "77fu-a6h8",
+  "name" : "Elementary and Secondary Teachers by Grade and Subject",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1769631184,
+  "description" : "This dataset provides the full time equivalent (FTE) count and percent of teachers for each subject and at each grade range from 2008 onward.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/gradesubjectstaffing.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Teacher by Grade and Subject Report</a>\n\n<b>List of Subjects</b><ul><li>All</li><li>Agriculture, Food, and Natural Resources</li><li>Architecture and Construction</li><li>Arts</li><li>Business and Marketing</li><li>CH74 - Agriculture and Natural Resources</li><li>CH74 - Arts and Communications Services</li><li>CH74 - Business and Consumer Services</li><li>CH74 - Construction</li><li>CH74 - Exploratory</li><li>CH74 - Health</li><li>CH74 - Hospitality and Tourism</li><li>CH74 - Human Services and Education</li><li>CH74 - Information Technology Services</li><li>CH74 - Law, Justice</li><li>CH74 - Manufacturing, Engineering and Technology</li><li>CH74 - Transportation</li><li>Civics/Government</li><li>Communications and Audio/Visual Technology</li><li>Computer and Information Sciences</li><li>Core-All Subjects</li><li>Economics</li><li>Engineering and Technology</li><li>English/Language Arts</li><li>Foreign Language</li><li>Geography</li><li>Health Care Sciences</li><li>History</li><li>Hospitality and Tourism</li><li>Human Services</li><li>Manufacturing</li><li>Mathematics</li><li>Military Science</li><li>Miscellaneous</li><li>Physical, Health, and Safety Education</li><li>Public, Protective, and Government Service</li><li>Reading</li><li>Religious Education and Theology</li><li>Science</li><li>Social Studies/Social Sciences</li><li>Special Education Services</li><li>Total Non-Core Academic Subjects</li><li>Transportation, Distribution and Logistics</li><li>Unknown</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 28,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42004155,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1773347609,
+  "publicationGroup" : 20246031,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1774027050,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20307177,
+  "totalTimesRated" : 0,
+  "viewCount" : 425,
+  "viewLastModified" : 1786392296,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1774536541,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7403624,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1774536532,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1774536541,
+      "failureCount" : 0,
+      "startedAt" : 1774536541,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 628515254,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164911983,
+    "cachedContents" : {
+      "non_null" : "1774971",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2015",
+        "count" : "95216"
+      }, {
+        "item" : "2016",
+        "count" : "95005"
+      }, {
+        "item" : "2008",
+        "count" : "95004"
+      }, {
+        "item" : "2017",
+        "count" : "94710"
+      }, {
+        "item" : "2018",
+        "count" : "94668"
+      }, {
+        "item" : "2019",
+        "count" : "94626"
+      }, {
+        "item" : "2020",
+        "count" : "94332"
+      }, {
+        "item" : "2022",
+        "count" : "94164"
+      }, {
+        "item" : "2021",
+        "count" : "94145"
+      }, {
+        "item" : "2009",
+        "count" : "93996"
+      }, {
+        "item" : "2023",
+        "count" : "93702"
+      }, {
+        "item" : "2024",
+        "count" : "93534"
+      }, {
+        "item" : "2010",
+        "count" : "93408"
+      }, {
+        "item" : "2025",
+        "count" : "92946"
+      }, {
+        "item" : "2014",
+        "count" : "92906"
+      }, {
+        "item" : "2013",
+        "count" : "92373"
+      }, {
+        "item" : "2026",
+        "count" : "92316"
+      }, {
+        "item" : "2012",
+        "count" : "89200"
+      }, {
+        "item" : "2011",
+        "count" : "88720"
+      } ],
+      "smallest" : "2008",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : { }
+  }, {
+    "id" : 628515255,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164911984,
+    "cachedContents" : {
+      "non_null" : "1774971",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "94897"
+      }, {
+        "item" : "02810000",
+        "count" : "46101"
+      }, {
+        "item" : "03480000",
+        "count" : "36600"
+      }, {
+        "item" : "01490000",
+        "count" : "22624"
+      }, {
+        "item" : "01630000",
+        "count" : "21225"
+      }, {
+        "item" : "02010000",
+        "count" : "20883"
+      }, {
+        "item" : "01600000",
+        "count" : "20522"
+      }, {
+        "item" : "00440000",
+        "count" : "19265"
+      }, {
+        "item" : "02070000",
+        "count" : "18216"
+      }, {
+        "item" : "02430000",
+        "count" : "15552"
+      }, {
+        "item" : "00950000",
+        "count" : "14635"
+      }, {
+        "item" : "01280000",
+        "count" : "13426"
+      }, {
+        "item" : "00490000",
+        "count" : "13390"
+      }, {
+        "item" : "00610000",
+        "count" : "12672"
+      }, {
+        "item" : "01000000",
+        "count" : "11592"
+      }, {
+        "item" : "02930000",
+        "count" : "11256"
+      }, {
+        "item" : "02390000",
+        "count" : "11130"
+      }, {
+        "item" : "07750000",
+        "count" : "10922"
+      }, {
+        "item" : "02360000",
+        "count" : "10884"
+      }, {
+        "item" : "03250000",
+        "count" : "10212"
+      } ],
+      "smallest" : "00000000",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : { }
+  }, {
+    "id" : 628515256,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164911985,
+    "cachedContents" : {
+      "non_null" : "1774971",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "94897"
+      }, {
+        "item" : "Springfield",
+        "count" : "46101"
+      }, {
+        "item" : "Worcester",
+        "count" : "36600"
+      }, {
+        "item" : "Lawrence",
+        "count" : "22624"
+      }, {
+        "item" : "Lynn",
+        "count" : "21225"
+      }, {
+        "item" : "New Bedford",
+        "count" : "20883"
+      }, {
+        "item" : "Lowell",
+        "count" : "20522"
+      }, {
+        "item" : "Brockton",
+        "count" : "19265"
+      }, {
+        "item" : "Newton",
+        "count" : "18216"
+      }, {
+        "item" : "Quincy",
+        "count" : "15552"
+      }, {
+        "item" : "Fall River",
+        "count" : "14635"
+      }, {
+        "item" : "Haverhill",
+        "count" : "13426"
+      }, {
+        "item" : "Cambridge",
+        "count" : "13390"
+      }, {
+        "item" : "Chicopee",
+        "count" : "12672"
+      }, {
+        "item" : "Framingham",
+        "count" : "11592"
+      }, {
+        "item" : "Taunton",
+        "count" : "11256"
+      }, {
+        "item" : "Plymouth",
+        "count" : "11130"
+      }, {
+        "item" : "Wachusett",
+        "count" : "10922"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "10884"
+      }, {
+        "item" : "Westfield",
+        "count" : "10212"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : { }
+  }, {
+    "id" : 628515257,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164911986,
+    "cachedContents" : {
+      "non_null" : "1774971",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "01780000",
+        "count" : "793"
+      }, {
+        "item" : "00440000",
+        "count" : "793"
+      }, {
+        "item" : "00570505",
+        "count" : "793"
+      }, {
+        "item" : "01440505",
+        "count" : "793"
+      }, {
+        "item" : "02200505",
+        "count" : "793"
+      }, {
+        "item" : "00440505",
+        "count" : "793"
+      }, {
+        "item" : "00350184",
+        "count" : "793"
+      }, {
+        "item" : "00570000",
+        "count" : "793"
+      }, {
+        "item" : "00880505",
+        "count" : "793"
+      }, {
+        "item" : "01440000",
+        "count" : "793"
+      }, {
+        "item" : "01780505",
+        "count" : "793"
+      }, {
+        "item" : "02200000",
+        "count" : "793"
+      }, {
+        "item" : "04840000",
+        "count" : "793"
+      }, {
+        "item" : "00880000",
+        "count" : "793"
+      }, {
+        "item" : "00000000",
+        "count" : "793"
+      }, {
+        "item" : "00350000",
+        "count" : "793"
+      }, {
+        "item" : "00050030",
+        "count" : "792"
+      }, {
+        "item" : "00050000",
+        "count" : "792"
+      }, {
+        "item" : "00050303",
+        "count" : "792"
+      }, {
+        "item" : "00050003",
+        "count" : "792"
+      } ],
+      "smallest" : "00000000",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : { }
+  }, {
+    "id" : 628515258,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164911987,
+    "cachedContents" : {
+      "non_null" : "1774971",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "4752"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "3960"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "3547"
+      }, {
+        "item" : "South Elementary",
+        "count" : "3168"
+      }, {
+        "item" : "Franklin",
+        "count" : "2418"
+      }, {
+        "item" : "Center",
+        "count" : "2418"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "2376"
+      }, {
+        "item" : "Winthrop",
+        "count" : "2376"
+      }, {
+        "item" : "Lawrence",
+        "count" : "2376"
+      }, {
+        "item" : "Lincoln",
+        "count" : "2376"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "2334"
+      }, {
+        "item" : "Center School",
+        "count" : "2206"
+      }, {
+        "item" : "South",
+        "count" : "1998"
+      }, {
+        "item" : "East Middle School",
+        "count" : "1584"
+      }, {
+        "item" : "Downey",
+        "count" : "1584"
+      }, {
+        "item" : "Cold Spring",
+        "count" : "1584"
+      }, {
+        "item" : "Hancock",
+        "count" : "1584"
+      }, {
+        "item" : "Glover",
+        "count" : "1584"
+      }, {
+        "item" : "Centerville Elementary",
+        "count" : "1584"
+      }, {
+        "item" : "John F Kennedy Middle",
+        "count" : "1584"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : { }
+  }, {
+    "id" : 628515259,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164911988,
+    "cachedContents" : {
+      "non_null" : "1774971",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "1457488"
+      }, {
+        "item" : "District",
+        "count" : "316690"
+      }, {
+        "item" : "State",
+        "count" : "793"
+      } ],
+      "smallest" : "District",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : { }
+  }, {
+    "id" : 628515260,
+    "name" : "SUBJ",
+    "dataTypeName" : "text",
+    "description" : "Subject",
+    "fieldName" : "subj",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164911989,
+    "cachedContents" : {
+      "non_null" : "1774971",
+      "largest" : "Unknown",
+      "null" : "0",
+      "top" : [ {
+        "item" : "All",
+        "count" : "42580"
+      }, {
+        "item" : "Agriculture, Food, and Natural Resources",
+        "count" : "42580"
+      }, {
+        "item" : "Arts",
+        "count" : "42580"
+      }, {
+        "item" : "Business and Marketing",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Agriculture and Natural Resources",
+        "count" : "42580"
+      }, {
+        "item" : "Architecture and Construction",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Business and Consumer Services",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Construction",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Exploratory",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Health",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Hospitality and Tourism",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Human Services and Education",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Information Technology Services",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Arts and Communications Services",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Manufacturing, Engineering and Technology",
+        "count" : "42580"
+      }, {
+        "item" : "CH74 - Transportation",
+        "count" : "42580"
+      }, {
+        "item" : "Civics/Government",
+        "count" : "42580"
+      }, {
+        "item" : "Communications and Audio/Visual Technology",
+        "count" : "42580"
+      }, {
+        "item" : "Computer and Information Sciences",
+        "count" : "42580"
+      }, {
+        "item" : "Core-All Subjects",
+        "count" : "42580"
+      } ],
+      "smallest" : "Agriculture, Food, and Natural Resources",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : { }
+  }, {
+    "id" : 628515261,
+    "name" : "PK2_CNT",
+    "dataTypeName" : "number",
+    "description" : "Pre-K to Grade 2 Count",
+    "fieldName" : "pk2_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164911990,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "15711.3",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1601299"
+      }, {
+        "item" : "0.5",
+        "count" : "8546"
+      }, {
+        "item" : "0.4",
+        "count" : "7793"
+      }, {
+        "item" : "1.0",
+        "count" : "7627"
+      }, {
+        "item" : "0.6",
+        "count" : "6354"
+      }, {
+        "item" : "0.3",
+        "count" : "6134"
+      }, {
+        "item" : "0.8",
+        "count" : "5280"
+      }, {
+        "item" : "0.7",
+        "count" : "4608"
+      }, {
+        "item" : "0.2",
+        "count" : "4384"
+      }, {
+        "item" : "2.0",
+        "count" : "4319"
+      }, {
+        "item" : "0.9",
+        "count" : "4092"
+      }, {
+        "item" : "1.2",
+        "count" : "3616"
+      }, {
+        "item" : "1.5",
+        "count" : "3502"
+      }, {
+        "item" : "3.0",
+        "count" : "3012"
+      }, {
+        "item" : "1.1",
+        "count" : "2949"
+      }, {
+        "item" : "1.3",
+        "count" : "2916"
+      }, {
+        "item" : "2.3",
+        "count" : "2792"
+      }, {
+        "item" : "1.8",
+        "count" : "2706"
+      }, {
+        "item" : "0.1",
+        "count" : "2458"
+      }, {
+        "item" : "2.5",
+        "count" : "2357"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515262,
+    "name" : "PK2_PCT",
+    "dataTypeName" : "number",
+    "description" : "Pre-K to Grade 2 Percent",
+    "fieldName" : "pk2_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164911991,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "1.0",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1601036"
+      }, {
+        "item" : "1.0",
+        "count" : "13892"
+      }, {
+        "item" : "0.5",
+        "count" : "5451"
+      }, {
+        "item" : "0.4",
+        "count" : "2462"
+      }, {
+        "item" : "0.429",
+        "count" : "1901"
+      }, {
+        "item" : "0.6",
+        "count" : "1863"
+      }, {
+        "item" : "0.333",
+        "count" : "1688"
+      }, {
+        "item" : "0.455",
+        "count" : "824"
+      }, {
+        "item" : "0.462",
+        "count" : "784"
+      }, {
+        "item" : "0.375",
+        "count" : "783"
+      }, {
+        "item" : "0.25",
+        "count" : "766"
+      }, {
+        "item" : "0.667",
+        "count" : "751"
+      }, {
+        "item" : "0.444",
+        "count" : "663"
+      }, {
+        "item" : "0.417",
+        "count" : "663"
+      }, {
+        "item" : "0.474",
+        "count" : "623"
+      }, {
+        "item" : "0.571",
+        "count" : "617"
+      }, {
+        "item" : "0.364",
+        "count" : "568"
+      }, {
+        "item" : "0.75",
+        "count" : "559"
+      }, {
+        "item" : "0.545",
+        "count" : "558"
+      }, {
+        "item" : "0.45",
+        "count" : "557"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515274,
+    "name" : "GRD_3_5_CNT",
+    "dataTypeName" : "number",
+    "description" : "Grades 3 to 5 Count",
+    "fieldName" : "grd_3_5_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166117427,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "14233.4",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1583469"
+      }, {
+        "item" : "0.5",
+        "count" : "10644"
+      }, {
+        "item" : "1.0",
+        "count" : "8939"
+      }, {
+        "item" : "0.4",
+        "count" : "8741"
+      }, {
+        "item" : "0.3",
+        "count" : "7546"
+      }, {
+        "item" : "0.8",
+        "count" : "7007"
+      }, {
+        "item" : "0.6",
+        "count" : "6742"
+      }, {
+        "item" : "0.7",
+        "count" : "5505"
+      }, {
+        "item" : "0.2",
+        "count" : "5327"
+      }, {
+        "item" : "2.0",
+        "count" : "4775"
+      }, {
+        "item" : "1.5",
+        "count" : "4692"
+      }, {
+        "item" : "0.9",
+        "count" : "4513"
+      }, {
+        "item" : "1.2",
+        "count" : "3933"
+      }, {
+        "item" : "1.8",
+        "count" : "3589"
+      }, {
+        "item" : "1.1",
+        "count" : "3529"
+      }, {
+        "item" : "1.3",
+        "count" : "3462"
+      }, {
+        "item" : "3.0",
+        "count" : "3169"
+      }, {
+        "item" : "1.6",
+        "count" : "3099"
+      }, {
+        "item" : "2.3",
+        "count" : "3034"
+      }, {
+        "item" : "1.4",
+        "count" : "2838"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515264,
+    "name" : "GRD_3_5_PCT",
+    "dataTypeName" : "number",
+    "description" : "Grades 3 to 5 Percent",
+    "fieldName" : "grd_3_5_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164911993,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "1.0",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1583103"
+      }, {
+        "item" : "1.0",
+        "count" : "7306"
+      }, {
+        "item" : "0.5",
+        "count" : "5819"
+      }, {
+        "item" : "0.25",
+        "count" : "2986"
+      }, {
+        "item" : "0.4",
+        "count" : "2733"
+      }, {
+        "item" : "0.333",
+        "count" : "2041"
+      }, {
+        "item" : "0.429",
+        "count" : "2040"
+      }, {
+        "item" : "0.6",
+        "count" : "1692"
+      }, {
+        "item" : "0.375",
+        "count" : "1271"
+      }, {
+        "item" : "0.667",
+        "count" : "1168"
+      }, {
+        "item" : "0.462",
+        "count" : "913"
+      }, {
+        "item" : "0.2",
+        "count" : "888"
+      }, {
+        "item" : "0.3",
+        "count" : "797"
+      }, {
+        "item" : "0.444",
+        "count" : "796"
+      }, {
+        "item" : "0.286",
+        "count" : "689"
+      }, {
+        "item" : "0.455",
+        "count" : "686"
+      }, {
+        "item" : "0.545",
+        "count" : "675"
+      }, {
+        "item" : "0.417",
+        "count" : "663"
+      }, {
+        "item" : "0.364",
+        "count" : "615"
+      }, {
+        "item" : "0.222",
+        "count" : "606"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515275,
+    "name" : "GRD_6_8_CNT",
+    "dataTypeName" : "number",
+    "description" : "Grades 6 to 8 Count",
+    "fieldName" : "grd_6_8_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166117428,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "16684.7",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1585829"
+      }, {
+        "item" : "1.0",
+        "count" : "13027"
+      }, {
+        "item" : "2.0",
+        "count" : "8018"
+      }, {
+        "item" : "0.3",
+        "count" : "6821"
+      }, {
+        "item" : "3.0",
+        "count" : "6452"
+      }, {
+        "item" : "0.2",
+        "count" : "6434"
+      }, {
+        "item" : "0.1",
+        "count" : "5566"
+      }, {
+        "item" : "0.8",
+        "count" : "5506"
+      }, {
+        "item" : "0.5",
+        "count" : "5184"
+      }, {
+        "item" : "0.4",
+        "count" : "4463"
+      }, {
+        "item" : "1.5",
+        "count" : "3883"
+      }, {
+        "item" : "0.6",
+        "count" : "3738"
+      }, {
+        "item" : "0.7",
+        "count" : "3531"
+      }, {
+        "item" : "4.0",
+        "count" : "3185"
+      }, {
+        "item" : "1.2",
+        "count" : "2778"
+      }, {
+        "item" : "1.3",
+        "count" : "2514"
+      }, {
+        "item" : "1.8",
+        "count" : "2316"
+      }, {
+        "item" : "0.9",
+        "count" : "2231"
+      }, {
+        "item" : "1.6",
+        "count" : "2204"
+      }, {
+        "item" : "1.4",
+        "count" : "2178"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515266,
+    "name" : "GRD_6_8_PCT",
+    "dataTypeName" : "number",
+    "description" : "Grades 6 to 8 Percent",
+    "fieldName" : "grd_6_8_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164911995,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "1.0",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1584985"
+      }, {
+        "item" : "1.0",
+        "count" : "43366"
+      }, {
+        "item" : "0.75",
+        "count" : "2170"
+      }, {
+        "item" : "0.5",
+        "count" : "1898"
+      }, {
+        "item" : "0.333",
+        "count" : "1888"
+      }, {
+        "item" : "0.143",
+        "count" : "1538"
+      }, {
+        "item" : "0.25",
+        "count" : "1029"
+      }, {
+        "item" : "0.667",
+        "count" : "907"
+      }, {
+        "item" : "0.2",
+        "count" : "827"
+      }, {
+        "item" : "0.167",
+        "count" : "803"
+      }, {
+        "item" : "0.125",
+        "count" : "754"
+      }, {
+        "item" : "0.4",
+        "count" : "696"
+      }, {
+        "item" : "0.6",
+        "count" : "648"
+      }, {
+        "item" : "0.375",
+        "count" : "578"
+      }, {
+        "item" : "0.3",
+        "count" : "542"
+      }, {
+        "item" : "0.286",
+        "count" : "518"
+      }, {
+        "item" : "0.222",
+        "count" : "479"
+      }, {
+        "item" : "0.8",
+        "count" : "476"
+      }, {
+        "item" : "0.231",
+        "count" : "417"
+      }, {
+        "item" : "0.1",
+        "count" : "410"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515276,
+    "name" : "GRD_9_12_CNT",
+    "dataTypeName" : "number",
+    "description" : "Grades 9 to 12 Count",
+    "fieldName" : "grd_9_12_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166117429,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "20685.2",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1576142"
+      }, {
+        "item" : "0.2",
+        "count" : "10899"
+      }, {
+        "item" : "0.3",
+        "count" : "9173"
+      }, {
+        "item" : "1.0",
+        "count" : "9061"
+      }, {
+        "item" : "0.4",
+        "count" : "7515"
+      }, {
+        "item" : "0.8",
+        "count" : "6127"
+      }, {
+        "item" : "0.5",
+        "count" : "5997"
+      }, {
+        "item" : "0.6",
+        "count" : "5817"
+      }, {
+        "item" : "0.1",
+        "count" : "5448"
+      }, {
+        "item" : "2.0",
+        "count" : "4933"
+      }, {
+        "item" : "0.7",
+        "count" : "4657"
+      }, {
+        "item" : "1.2",
+        "count" : "3349"
+      }, {
+        "item" : "3.0",
+        "count" : "3249"
+      }, {
+        "item" : "1.3",
+        "count" : "3164"
+      }, {
+        "item" : "0.9",
+        "count" : "3011"
+      }, {
+        "item" : "1.5",
+        "count" : "2793"
+      }, {
+        "item" : "1.8",
+        "count" : "2609"
+      }, {
+        "item" : "1.4",
+        "count" : "2607"
+      }, {
+        "item" : "1.1",
+        "count" : "2551"
+      }, {
+        "item" : "1.6",
+        "count" : "2473"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515268,
+    "name" : "GRD_9_12_PCT",
+    "dataTypeName" : "number",
+    "description" : "Grades 9 to 12 Percent",
+    "fieldName" : "grd_9_12_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164911997,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "1.0",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1575150"
+      }, {
+        "item" : "1.0",
+        "count" : "86477"
+      }, {
+        "item" : "0.5",
+        "count" : "1595"
+      }, {
+        "item" : "0.667",
+        "count" : "931"
+      }, {
+        "item" : "0.333",
+        "count" : "870"
+      }, {
+        "item" : "0.25",
+        "count" : "627"
+      }, {
+        "item" : "0.75",
+        "count" : "619"
+      }, {
+        "item" : "0.2",
+        "count" : "512"
+      }, {
+        "item" : "0.6",
+        "count" : "505"
+      }, {
+        "item" : "0.8",
+        "count" : "498"
+      }, {
+        "item" : "0.4",
+        "count" : "439"
+      }, {
+        "item" : "0.286",
+        "count" : "401"
+      }, {
+        "item" : "0.167",
+        "count" : "358"
+      }, {
+        "item" : "0.143",
+        "count" : "331"
+      }, {
+        "item" : "0.833",
+        "count" : "308"
+      }, {
+        "item" : "0.714",
+        "count" : "266"
+      }, {
+        "item" : "0.444",
+        "count" : "259"
+      }, {
+        "item" : "0.375",
+        "count" : "258"
+      }, {
+        "item" : "0.571",
+        "count" : "258"
+      }, {
+        "item" : "0.556",
+        "count" : "232"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515277,
+    "name" : "MULTI_GRD_CNT",
+    "dataTypeName" : "number",
+    "description" : "Multiple Grades Count",
+    "fieldName" : "multi_grd_cnt",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166117430,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "10317.0",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1597901"
+      }, {
+        "item" : "1.0",
+        "count" : "19795"
+      }, {
+        "item" : "0.2",
+        "count" : "12364"
+      }, {
+        "item" : "0.3",
+        "count" : "10811"
+      }, {
+        "item" : "2.0",
+        "count" : "8945"
+      }, {
+        "item" : "0.1",
+        "count" : "8434"
+      }, {
+        "item" : "0.5",
+        "count" : "8068"
+      }, {
+        "item" : "0.4",
+        "count" : "6634"
+      }, {
+        "item" : "0.6",
+        "count" : "5111"
+      }, {
+        "item" : "3.0",
+        "count" : "5033"
+      }, {
+        "item" : "0.8",
+        "count" : "4807"
+      }, {
+        "item" : "0.7",
+        "count" : "4024"
+      }, {
+        "item" : "4.0",
+        "count" : "3372"
+      }, {
+        "item" : "1.5",
+        "count" : "2842"
+      }, {
+        "item" : "1.3",
+        "count" : "2706"
+      }, {
+        "item" : "0.9",
+        "count" : "2595"
+      }, {
+        "item" : "1.2",
+        "count" : "2508"
+      }, {
+        "item" : "5.0",
+        "count" : "2367"
+      }, {
+        "item" : "1.1",
+        "count" : "2164"
+      }, {
+        "item" : "1.8",
+        "count" : "1946"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515270,
+    "name" : "MULTI_GRD_PCT",
+    "dataTypeName" : "number",
+    "description" : "Multiple Grades Percent",
+    "fieldName" : "multi_grd_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164911999,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "1.0",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1596503"
+      }, {
+        "item" : "1.0",
+        "count" : "35123"
+      }, {
+        "item" : "0.5",
+        "count" : "2176"
+      }, {
+        "item" : "0.333",
+        "count" : "1334"
+      }, {
+        "item" : "0.2",
+        "count" : "1099"
+      }, {
+        "item" : "0.25",
+        "count" : "1049"
+      }, {
+        "item" : "0.167",
+        "count" : "1017"
+      }, {
+        "item" : "0.667",
+        "count" : "926"
+      }, {
+        "item" : "0.143",
+        "count" : "762"
+      }, {
+        "item" : "0.091",
+        "count" : "746"
+      }, {
+        "item" : "0.111",
+        "count" : "740"
+      }, {
+        "item" : "0.125",
+        "count" : "714"
+      }, {
+        "item" : "0.077",
+        "count" : "644"
+      }, {
+        "item" : "0.1",
+        "count" : "638"
+      }, {
+        "item" : "0.063",
+        "count" : "610"
+      }, {
+        "item" : "0.083",
+        "count" : "600"
+      }, {
+        "item" : "0.067",
+        "count" : "600"
+      }, {
+        "item" : "0.048",
+        "count" : "598"
+      }, {
+        "item" : "0.071",
+        "count" : "593"
+      }, {
+        "item" : "0.024",
+        "count" : "588"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515278,
+    "name" : "ALL_GRD_CNT",
+    "dataTypeName" : "number",
+    "description" : "All Grades Count",
+    "fieldName" : "all_grd_cnt",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 166117431,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "6751.8",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1683490"
+      }, {
+        "item" : "1.0",
+        "count" : "13681"
+      }, {
+        "item" : "0.2",
+        "count" : "7067"
+      }, {
+        "item" : "0.1",
+        "count" : "6501"
+      }, {
+        "item" : "0.3",
+        "count" : "5521"
+      }, {
+        "item" : "2.0",
+        "count" : "4830"
+      }, {
+        "item" : "0.5",
+        "count" : "4447"
+      }, {
+        "item" : "0.4",
+        "count" : "3487"
+      }, {
+        "item" : "0.8",
+        "count" : "2454"
+      }, {
+        "item" : "0.6",
+        "count" : "2376"
+      }, {
+        "item" : "3.0",
+        "count" : "2211"
+      }, {
+        "item" : "0.7",
+        "count" : "1780"
+      }, {
+        "item" : "4.0",
+        "count" : "1467"
+      }, {
+        "item" : "1.5",
+        "count" : "1412"
+      }, {
+        "item" : "1.2",
+        "count" : "1406"
+      }, {
+        "item" : "1.3",
+        "count" : "1262"
+      }, {
+        "item" : "1.1",
+        "count" : "1178"
+      }, {
+        "item" : "0.9",
+        "count" : "1086"
+      }, {
+        "item" : "1.4",
+        "count" : "925"
+      }, {
+        "item" : "1.8",
+        "count" : "868"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515272,
+    "name" : "ALL_GRD_PCT",
+    "dataTypeName" : "number",
+    "description" : "All Grade Percent",
+    "fieldName" : "all_grd_pct",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164912001,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "1.0",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1682275"
+      }, {
+        "item" : "1.0",
+        "count" : "14564"
+      }, {
+        "item" : "0.5",
+        "count" : "1215"
+      }, {
+        "item" : "0.003",
+        "count" : "693"
+      }, {
+        "item" : "0.006",
+        "count" : "666"
+      }, {
+        "item" : "0.004",
+        "count" : "657"
+      }, {
+        "item" : "0.002",
+        "count" : "632"
+      }, {
+        "item" : "0.01",
+        "count" : "632"
+      }, {
+        "item" : "0.008",
+        "count" : "626"
+      }, {
+        "item" : "0.005",
+        "count" : "622"
+      }, {
+        "item" : "0.333",
+        "count" : "621"
+      }, {
+        "item" : "0.009",
+        "count" : "615"
+      }, {
+        "item" : "0.007",
+        "count" : "606"
+      }, {
+        "item" : "0.017",
+        "count" : "605"
+      }, {
+        "item" : "0.013",
+        "count" : "597"
+      }, {
+        "item" : "0.011",
+        "count" : "596"
+      }, {
+        "item" : "0.016",
+        "count" : "583"
+      }, {
+        "item" : "0.012",
+        "count" : "576"
+      }, {
+        "item" : "0.015",
+        "count" : "559"
+      }, {
+        "item" : "0.014",
+        "count" : "551"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 628515273,
+    "name" : "FTE_CNT",
+    "dataTypeName" : "number",
+    "description" : "FTE Count",
+    "fieldName" : "fte_cnt",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 164912002,
+    "cachedContents" : {
+      "non_null" : "1769259",
+      "largest" : "77630.3",
+      "null" : "5712",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1284693"
+      }, {
+        "item" : "1.0",
+        "count" : "39168"
+      }, {
+        "item" : "2.0",
+        "count" : "21381"
+      }, {
+        "item" : "0.2",
+        "count" : "13308"
+      }, {
+        "item" : "0.3",
+        "count" : "11907"
+      }, {
+        "item" : "3.0",
+        "count" : "11737"
+      }, {
+        "item" : "0.5",
+        "count" : "11667"
+      }, {
+        "item" : "0.8",
+        "count" : "10805"
+      }, {
+        "item" : "0.4",
+        "count" : "10301"
+      }, {
+        "item" : "0.6",
+        "count" : "9081"
+      }, {
+        "item" : "4.0",
+        "count" : "7757"
+      }, {
+        "item" : "0.7",
+        "count" : "7293"
+      }, {
+        "item" : "1.2",
+        "count" : "6951"
+      }, {
+        "item" : "1.5",
+        "count" : "6832"
+      }, {
+        "item" : "0.1",
+        "count" : "6413"
+      }, {
+        "item" : "1.3",
+        "count" : "6283"
+      }, {
+        "item" : "0.9",
+        "count" : "6048"
+      }, {
+        "item" : "1.8",
+        "count" : "5967"
+      }, {
+        "item" : "1.1",
+        "count" : "5664"
+      }, {
+        "item" : "1.6",
+        "count" : "5403"
+      } ],
+      "smallest" : "0.0",
+      "count" : "1774971",
+      "cardinality" : "1774971"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "fte", "teachers", "grade", "subject" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

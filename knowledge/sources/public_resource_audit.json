@@ -1,0 +1,1632 @@
+{
+  "checked_at_utc": "2026-10-24T14:53:26.301213+00:00",
+  "scope": "Public GET requests; schemas/metadata only. No application integration, code execution, or current operational accuracy established.",
+  "repositories": [
+    {
+      "url": "https://api.github.com/repos/CityOfBoston/OpenContext",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/CityOfBoston/OpenContext",
+      "curl_exit_code": 0,
+      "bytes": 17766,
+      "sha256": "16deae781119909cfd08d1b65dd0b80a8f17a657584f6a8d58a0b1867799b875",
+      "error": null,
+      "format": "json",
+      "requested_repo": "CityOfBoston/OpenContext",
+      "full_name": "CityOfBoston/OpenContext",
+      "html_url": "https://github.com/CityOfBoston/OpenContext",
+      "description": "Making civic data contextualized and accessible",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-03T18:57:07Z",
+      "language": "Python",
+      "size": 919,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/OETBoston/Coastmix",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/OETBoston/Coastmix",
+      "curl_exit_code": 0,
+      "bytes": 17022,
+      "sha256": "16a24d948f03fce9a4183fc75512343d63eeafd13a7ab33ad8dc41ba868182ff",
+      "error": null,
+      "format": "json",
+      "requested_repo": "OETBoston/Coastmix",
+      "full_name": "OETBoston/Coastmix",
+      "html_url": "https://github.com/OETBoston/Coastmix",
+      "description": "Coastmix is a project by Streetmix and the City of Boston to design, visualize and share resilient coasts. Create your ideal waterfront, build coastal flood protection, and learn how climate change impacts your community.",
+      "default_branch": "louh/coastmix-dev",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-16T19:06:15Z",
+      "language": null,
+      "size": 137485,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/transitmatters/t-performance-dash",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/transitmatters/t-performance-dash",
+      "curl_exit_code": 0,
+      "bytes": 7068,
+      "sha256": "c99871d6f1e468b83ff85589b5aeb0dc7a8dd87e4e4a33451dfbb0686545e080",
+      "error": null,
+      "format": "json",
+      "requested_repo": "transitmatters/t-performance-dash",
+      "full_name": "transitmatters/t-performance-dash",
+      "html_url": "https://github.com/transitmatters/t-performance-dash",
+      "description": "TransitMatters performance visualizer for the MBTA",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-24T00:43:36Z",
+      "language": "TypeScript",
+      "size": 11475,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/AccessMap/accessmap",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/AccessMap/accessmap",
+      "curl_exit_code": 0,
+      "bytes": 6166,
+      "sha256": "8d7b3e98ce2586f3ccc1b251efff271ebe8690e713c3be490d6c0e5cf02595f9",
+      "error": null,
+      "format": "json",
+      "requested_repo": "AccessMap/accessmap",
+      "full_name": "AccessMap/accessmap",
+      "html_url": "https://github.com/AccessMap/accessmap",
+      "description": "The AccessMap web application",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2023-12-29T17:46:39Z",
+      "language": "Python",
+      "size": 268,
+      "license": null
+    },
+    {
+      "url": "https://api.github.com/repos/TaskarCenterAtUW/AccessMapBeyondTheCurb",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/TaskarCenterAtUW/AccessMapBeyondTheCurb",
+      "curl_exit_code": 0,
+      "bytes": 7286,
+      "sha256": "923df78c64ac9839984cf02cc87aa71e2cee538c437b36e9831b364040bcc2f8",
+      "error": null,
+      "format": "json",
+      "requested_repo": "TaskarCenterAtUW/AccessMapBeyondTheCurb",
+      "full_name": "TaskarCenterAtUW/AccessMapBeyondTheCurb",
+      "html_url": "https://github.com/TaskarCenterAtUW/AccessMapBeyondTheCurb",
+      "description": null,
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-05-22T00:48:55Z",
+      "language": "JavaScript",
+      "size": 27,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/ProjectSidewalk/SidewalkWebpage",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/ProjectSidewalk/SidewalkWebpage",
+      "curl_exit_code": 0,
+      "bytes": 7049,
+      "sha256": "ac7f4b06d07519f3cebd896179678761f23496382e6bad70b82081a378f055e1",
+      "error": null,
+      "format": "json",
+      "requested_repo": "ProjectSidewalk/SidewalkWebpage",
+      "full_name": "ProjectSidewalk/SidewalkWebpage",
+      "html_url": "https://github.com/ProjectSidewalk/SidewalkWebpage",
+      "description": "Project Sidewalk web page",
+      "default_branch": "develop",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-23T23:45:55Z",
+      "language": "JavaScript",
+      "size": 1564530,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/mysociety/fixmystreet",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/mysociety/fixmystreet",
+      "curl_exit_code": 0,
+      "bytes": 6512,
+      "sha256": "b8e76756f20a3e153192e1be295a503f2a652c67871996be87af22862a9fa86e",
+      "error": null,
+      "format": "json",
+      "requested_repo": "mysociety/fixmystreet",
+      "full_name": "mysociety/fixmystreet",
+      "html_url": "https://github.com/mysociety/fixmystreet",
+      "description": "This is mySociety's popular map-based reporting platform: easy to install in new countries and regions",
+      "default_branch": "master",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-23T11:58:23Z",
+      "language": "Perl",
+      "size": 239129,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/codeforamerica/ohana-api",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/codeforamerica/ohana-api",
+      "curl_exit_code": 0,
+      "bytes": 6728,
+      "sha256": "24f10a5c3512863a79345f85877594f60819039814cf7bc65bf70e2a7b1dea87",
+      "error": null,
+      "format": "json",
+      "requested_repo": "codeforamerica/ohana-api",
+      "full_name": "codeforamerica/ohana-api",
+      "html_url": "https://github.com/codeforamerica/ohana-api",
+      "description": "The open source API directory of community social services.",
+      "default_branch": "master",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2025-01-26T22:54:45Z",
+      "language": "Ruby",
+      "size": 6310,
+      "license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/openreferral/specification",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/openreferral/specification",
+      "curl_exit_code": 0,
+      "bytes": 6767,
+      "sha256": "2af39a4b06e085947c97ca730a01a177864dcc31944b62fc14f7dbd8618b621d",
+      "error": null,
+      "format": "json",
+      "requested_repo": "openreferral/specification",
+      "full_name": "openreferral/specification",
+      "html_url": "https://github.com/openreferral/specification",
+      "description": "The Human Services Data Specification - a data exchange format developed by the Open Referral Initiative",
+      "default_branch": "3.3.1",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-09-14T12:42:47Z",
+      "language": "Shell",
+      "size": 12254,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/openreferral/api-specification",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/openreferral/api-specification",
+      "curl_exit_code": 0,
+      "bytes": 7001,
+      "sha256": "c7f3fda42c0ff81714a23b39a350328599f6d29591921eb06d6cbe876a1590d5",
+      "error": null,
+      "format": "json",
+      "requested_repo": "openreferral/api-specification",
+      "full_name": "openreferral/api-specification",
+      "html_url": "https://github.com/openreferral/api-specification",
+      "description": "This is the working repository for Open Referral's Human Services Data API protocols.",
+      "default_branch": "master",
+      "archived": true,
+      "disabled": false,
+      "pushed_at": "2023-10-04T13:51:15Z",
+      "language": null,
+      "size": 1127,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/opentripplanner/OpenTripPlanner",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/opentripplanner/OpenTripPlanner",
+      "curl_exit_code": 0,
+      "bytes": 6953,
+      "sha256": "d83e08744e09c4edda90f2d1924b5d3fb9b152dd816abf7c656b0ca10ca7ac8e",
+      "error": null,
+      "format": "json",
+      "requested_repo": "opentripplanner/OpenTripPlanner",
+      "full_name": "opentripplanner/OpenTripPlanner",
+      "html_url": "https://github.com/opentripplanner/OpenTripPlanner",
+      "description": "An open source multi-modal trip planner",
+      "default_branch": "dev-2.x",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-24T12:37:36Z",
+      "language": "Java",
+      "size": 238426,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/jhpyle/docassemble",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/jhpyle/docassemble",
+      "curl_exit_code": 0,
+      "bytes": 5301,
+      "sha256": "5d7d9c7c6251d884e0a548560a52ff08e24db8effa940f7ec4c54ff036d35dc3",
+      "error": null,
+      "format": "json",
+      "requested_repo": "jhpyle/docassemble",
+      "full_name": "jhpyle/docassemble",
+      "html_url": "https://github.com/jhpyle/docassemble",
+      "description": "A free, open-source expert system for guided interviews and document assembly, based on Python, YAML, and Markdown.",
+      "default_branch": "master",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-23T23:43:05Z",
+      "language": "JavaScript",
+      "size": 370299,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/streetmix/streetmix",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/streetmix/streetmix",
+      "curl_exit_code": 0,
+      "bytes": 6391,
+      "sha256": "c058e3b1f1df3e6bae90933c673a4b5d58fcce24f2c77405edb4710487b0673b",
+      "error": null,
+      "format": "json",
+      "requested_repo": "streetmix/streetmix",
+      "full_name": "streetmix/streetmix",
+      "html_url": "https://github.com/streetmix/streetmix",
+      "description": "Streetmix makes it easy for people to design public spaces together.",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-24T07:38:41Z",
+      "language": "TypeScript",
+      "size": 144216,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/NaturalCapitalProject/invest",
+      "http_status": "404",
+      "final_url": "https://api.github.com/repos/NaturalCapitalProject/invest",
+      "curl_exit_code": 0,
+      "bytes": 118,
+      "sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9",
+      "error": null,
+      "format": "json",
+      "requested_repo": "NaturalCapitalProject/invest",
+      "api_message": "Not Found"
+    },
+    {
+      "url": "https://api.github.com/repos/maplibre/maplibre-gl-js",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/maplibre/maplibre-gl-js",
+      "curl_exit_code": 0,
+      "bytes": 6567,
+      "sha256": "30d0cd13a9a9117b831c547b2a0eddde0e3e50dc410184f01dfd339082c2541c",
+      "error": null,
+      "format": "json",
+      "requested_repo": "maplibre/maplibre-gl-js",
+      "full_name": "maplibre/maplibre-gl-js",
+      "html_url": "https://github.com/maplibre/maplibre-gl-js",
+      "description": "MapLibre GL JS - Interactive vector tile maps in the browser",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-23T22:34:13Z",
+      "language": "TypeScript",
+      "size": 1060782,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/cambridgegis/cambridgegis_data",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/cambridgegis/cambridgegis_data",
+      "curl_exit_code": 0,
+      "bytes": 6779,
+      "sha256": "4f9fe5aa664edb59a62aeec107f784b1e811ac709fa7f5e1c741ca6b2fb1fb0c",
+      "error": null,
+      "format": "json",
+      "requested_repo": "cambridgegis/cambridgegis_data",
+      "full_name": "cambridgegis/cambridgegis_data",
+      "html_url": "https://github.com/cambridgegis/cambridgegis_data",
+      "description": "City of Cambridge GIS Data",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-20T13:22:22Z",
+      "language": null,
+      "size": 1181687,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/natcap/invest",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/natcap/invest",
+      "curl_exit_code": 0,
+      "bytes": 6082,
+      "sha256": "c7b7f62460cef6c217529ebaab9c3b3edeaab6b2c51717540819abe41c041206",
+      "error": null,
+      "format": "json",
+      "requested_repo": "natcap/invest",
+      "full_name": "natcap/invest",
+      "html_url": "https://github.com/natcap/invest",
+      "description": "InVEST\u00ae: models that map and value the goods and services from nature that sustain and fulfill human life.",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-10-23T20:00:54Z",
+      "language": "Python",
+      "size": 153951,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/OETBoston/blue",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/OETBoston/blue",
+      "curl_exit_code": 0,
+      "bytes": 6083,
+      "sha256": "2b020073404acb6cf54f322405bd17a067d8fff7bdef438dc60dc6108ef5997c",
+      "error": null,
+      "format": "json",
+      "requested_repo": "OETBoston/blue",
+      "full_name": "OETBoston/blue",
+      "html_url": "https://github.com/OETBoston/blue",
+      "description": "Real-time Information on Blue Bikes, optimized for screens in office buildings.",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-02-20T05:23:05Z",
+      "language": "HTML",
+      "size": 303,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/OETBoston/boston-parking-pwa",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/OETBoston/boston-parking-pwa",
+      "curl_exit_code": 0,
+      "bytes": 6621,
+      "sha256": "24bf7339b6a1598eb884651e00f63f8377f833fc2dd6be3cdc336c12d1654817",
+      "error": null,
+      "format": "json",
+      "requested_repo": "OETBoston/boston-parking-pwa",
+      "full_name": "OETBoston/boston-parking-pwa",
+      "html_url": "https://github.com/OETBoston/boston-parking-pwa",
+      "description": "This tool makes it easy to understand parking signs.",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2025-09-19T20:45:04Z",
+      "language": "HTML",
+      "size": 30387,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/OETBoston/curb-atlas",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/OETBoston/curb-atlas",
+      "curl_exit_code": 0,
+      "bytes": 6313,
+      "sha256": "f236001da7f1f05f735ab793b2369196a74fcb94dc8d979b2c01f277ddc9143d",
+      "error": null,
+      "format": "json",
+      "requested_repo": "OETBoston/curb-atlas",
+      "full_name": "OETBoston/curb-atlas",
+      "html_url": "https://github.com/OETBoston/curb-atlas",
+      "description": "A mapping application to give Boston residents and visitors information about the city's curbs.",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-06-18T04:46:14Z",
+      "language": "Svelte",
+      "size": 3854,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/OETBoston/cds_translator",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/OETBoston/cds_translator",
+      "curl_exit_code": 0,
+      "bytes": 6487,
+      "sha256": "4172ab6372deb945d98aebef79c4f82d2b95fb65bbab192b52f6b8a85de8fb62",
+      "error": null,
+      "format": "json",
+      "requested_repo": "OETBoston/cds_translator",
+      "full_name": "OETBoston/cds_translator",
+      "html_url": "https://github.com/OETBoston/cds_translator",
+      "description": "This tool translates images of parking signs into properly formatted CDS Policy objects.",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-02-20T05:12:48Z",
+      "language": "JavaScript",
+      "size": 30383,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/OETBoston/BidBot",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/OETBoston/BidBot",
+      "curl_exit_code": 0,
+      "bytes": 6002,
+      "sha256": "2ef9b43673cd996416f7c4ba9d376288582f8241e269bbb45de223a1f5efd2b8",
+      "error": null,
+      "format": "json",
+      "requested_repo": "OETBoston/BidBot",
+      "full_name": "OETBoston/BidBot",
+      "html_url": "https://github.com/OETBoston/BidBot",
+      "description": "A retrieval augmented generation tool to assist with procurement-related tasks.",
+      "default_branch": "main",
+      "archived": false,
+      "disabled": false,
+      "pushed_at": "2026-06-15T18:16:25Z",
+      "language": "Python",
+      "size": 3092,
+      "license": null
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://gbfs.bluebikes.com/gbfs/gbfs.json",
+      "http_status": "200",
+      "final_url": "https://gbfs.bluebikes.com/gbfs/gbfs.json",
+      "curl_exit_code": 0,
+      "bytes": 3619,
+      "sha256": "c8e0b94801a8eea7e6b21f022b3c67aba64a6d29cdbe9e9c468d8b6b9dddae64",
+      "error": null,
+      "format": "json",
+      "id": "bluebikes-discovery",
+      "top_level_fields": [
+        "data",
+        "last_updated",
+        "ttl",
+        "version"
+      ],
+      "feed_last_updated": 1792853572,
+      "feed_ttl": 60,
+      "discovered_feeds": [
+        {
+          "name": "gbfs",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/gbfs.json"
+        },
+        {
+          "name": "ebikes_at_stations",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/ebikes_at_stations.json"
+        },
+        {
+          "name": "system_information",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/system_information.json"
+        },
+        {
+          "name": "station_information",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json"
+        },
+        {
+          "name": "station_status",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_status.json"
+        },
+        {
+          "name": "free_bike_status",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/free_bike_status.json"
+        },
+        {
+          "name": "system_hours",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/system_hours.json"
+        },
+        {
+          "name": "system_calendar",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/system_calendar.json"
+        },
+        {
+          "name": "system_regions",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/system_regions.json"
+        },
+        {
+          "name": "system_pricing_plans",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/system_pricing_plans.json"
+        },
+        {
+          "name": "system_alerts",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/system_alerts.json"
+        },
+        {
+          "name": "gbfs_versions",
+          "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/gbfs_versions.json"
+        }
+      ]
+    },
+    {
+      "url": "https://api.github.com/repos/cambridgegis/cambridgegis_data/contents/DPW/Pedestrian_Ramps",
+      "http_status": "200",
+      "final_url": "https://api.github.com/repos/cambridgegis/cambridgegis_data/contents/DPW/Pedestrian_Ramps",
+      "curl_exit_code": 0,
+      "bytes": 4148,
+      "sha256": "f947bd3f88de6e410c92d21c895d631e21af70bc943e6743dffed4d9860b6951",
+      "error": null,
+      "format": "json",
+      "id": "cambridge-ramps-files",
+      "returned_rows": 4,
+      "row_fields": [
+        "_links",
+        "download_url",
+        "git_url",
+        "html_url",
+        "name",
+        "path",
+        "sha",
+        "size",
+        "type",
+        "url"
+      ],
+      "files": [
+        {
+          "name": "DPW_PedestrianRamps.geojson",
+          "size": 2271112,
+          "download_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/DPW/Pedestrian_Ramps/DPW_PedestrianRamps.geojson"
+        },
+        {
+          "name": "DPW_PedestrianRamps.topojson",
+          "size": 1994547,
+          "download_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/DPW/Pedestrian_Ramps/DPW_PedestrianRamps.topojson"
+        },
+        {
+          "name": "DPW_PedestrianRamps.xml",
+          "size": 4866,
+          "download_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/DPW/Pedestrian_Ramps/DPW_PedestrianRamps.xml"
+        },
+        {
+          "name": "README.md",
+          "size": 1538,
+          "download_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/DPW/Pedestrian_Ramps/README.md"
+        }
+      ]
+    },
+    {
+      "url": "https://api-v3.mbta.com/alerts?page%5Blimit%5D=3",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/alerts?page%5Blimit%5D=3",
+      "curl_exit_code": 0,
+      "bytes": 4716,
+      "sha256": "54114e12b917b73889da3af76e58d29bd11fd97144f19b6423694b6de300d896",
+      "error": null,
+      "format": "json",
+      "id": "mbta-alerts",
+      "top_level_fields": [
+        "data",
+        "jsonapi",
+        "links"
+      ],
+      "returned_rows": 3,
+      "row_fields": [
+        "attributes",
+        "id",
+        "links",
+        "type"
+      ],
+      "attributes_fields": [
+        "active_period",
+        "banner",
+        "cause",
+        "closed_timestamp",
+        "created_at",
+        "description",
+        "duration_certainty",
+        "effect",
+        "header",
+        "image",
+        "image_alternative_text",
+        "informed_entity",
+        "last_push_notification_timestamp",
+        "lifecycle",
+        "reminder_times",
+        "service_effect",
+        "severity",
+        "short_header",
+        "timeframe",
+        "updated_at",
+        "url"
+      ]
+    },
+    {
+      "url": "https://api-v3.mbta.com/facilities?page%5Blimit%5D=3",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/facilities?page%5Blimit%5D=3",
+      "curl_exit_code": 0,
+      "bytes": 5154,
+      "sha256": "8e7a2b29cdecd6adb82183296efa5b2823b0a6ed69317644e96ac454e6ca497e",
+      "error": null,
+      "format": "json",
+      "id": "mbta-facilities",
+      "top_level_fields": [
+        "data",
+        "jsonapi",
+        "links"
+      ],
+      "returned_rows": 3,
+      "row_fields": [
+        "attributes",
+        "id",
+        "links",
+        "relationships",
+        "type"
+      ],
+      "attributes_fields": [
+        "latitude",
+        "long_name",
+        "longitude",
+        "properties",
+        "short_name",
+        "type"
+      ],
+      "relationships_fields": [
+        "stop"
+      ]
+    },
+    {
+      "url": "https://api-v3.mbta.com/live_facilities?page%5Blimit%5D=3",
+      "http_status": "400",
+      "final_url": "https://api-v3.mbta.com/live_facilities?page%5Blimit%5D=3",
+      "curl_exit_code": 0,
+      "bytes": 124,
+      "sha256": "3ed5a1b440f638875c672c640f7737b5c726da212f21c75d5b9293996b286dc3",
+      "error": null,
+      "format": "json",
+      "id": "mbta-live-facilities",
+      "top_level_fields": [
+        "errors",
+        "jsonapi"
+      ],
+      "api_error": [
+        {
+          "code": "bad_request",
+          "status": "400",
+          "detail": "At least one filter[] is required."
+        }
+      ]
+    },
+    {
+      "url": "https://api-v3.mbta.com/stops?filter%5Broute%5D=Red&page%5Blimit%5D=3",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/stops?filter%5Broute%5D=Red&page%5Blimit%5D=3",
+      "curl_exit_code": 0,
+      "bytes": 1946,
+      "sha256": "e8e001aa869d370d68254d8bdbc0a67ed1ea990fdc792edeb8332bb596d804bd",
+      "error": null,
+      "format": "json",
+      "id": "mbta-stops",
+      "top_level_fields": [
+        "data",
+        "jsonapi",
+        "links"
+      ],
+      "returned_rows": 3,
+      "row_fields": [
+        "attributes",
+        "id",
+        "links",
+        "relationships",
+        "type"
+      ],
+      "attributes_fields": [
+        "address",
+        "at_street",
+        "description",
+        "latitude",
+        "location_type",
+        "longitude",
+        "municipality",
+        "name",
+        "on_street",
+        "platform_code",
+        "platform_name",
+        "vehicle_type",
+        "wheelchair_boarding"
+      ],
+      "relationships_fields": [
+        "facilities",
+        "parent_station",
+        "zone"
+      ]
+    },
+    {
+      "url": "https://api.weather.gov/points/42.3601,-71.0589",
+      "http_status": "200",
+      "final_url": "https://api.weather.gov/points/42.3601,-71.0589",
+      "curl_exit_code": 0,
+      "bytes": 3919,
+      "sha256": "dd0c6386f37771c2705220c36934835fb28b082cbea6485daf8d33f3d702b209",
+      "error": null,
+      "format": "json",
+      "id": "nws-boston-point",
+      "top_level_fields": [
+        "@context",
+        "geometry",
+        "id",
+        "properties",
+        "type"
+      ],
+      "properties_fields": [
+        "@id",
+        "@type",
+        "astronomicalData",
+        "county",
+        "cwa",
+        "fireWeatherZone",
+        "forecast",
+        "forecastGridData",
+        "forecastHourly",
+        "forecastOffice",
+        "forecastZone",
+        "gridId",
+        "gridX",
+        "gridY",
+        "nwr",
+        "observationStations",
+        "radarStation",
+        "relativeLocation",
+        "timeZone",
+        "type"
+      ]
+    },
+    {
+      "url": "https://api.weather.gov/alerts/active?area=MA",
+      "http_status": "200",
+      "final_url": "https://api.weather.gov/alerts/active?area=MA",
+      "curl_exit_code": 0,
+      "bytes": 226,
+      "sha256": "892517c57f58fc72ba47bb67406c5b32d6f11ff0f86da87e6fc23634e48a5aa5",
+      "error": null,
+      "format": "json",
+      "id": "nws-ma-alerts",
+      "top_level_fields": [
+        "@context",
+        "features",
+        "title",
+        "type",
+        "updated"
+      ],
+      "returned_rows": 0
+    },
+    {
+      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=HackachusettsResearch&begin_date=20261024&end_date=20261024&datum=MLLW&station=8443970&time_zone=gmt&units=metric&interval=h&format=json",
+      "http_status": "200",
+      "final_url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=HackachusettsResearch&begin_date=20261024&end_date=20261024&datum=MLLW&station=8443970&time_zone=gmt&units=metric&interval=h&format=json",
+      "curl_exit_code": 0,
+      "bytes": 935,
+      "sha256": "a1ba5c688d5d30920b9e72e5853bd55d4d4506252ff3630a5dfc32f34cbacd30",
+      "error": null,
+      "format": "json",
+      "id": "noaa-boston-tide",
+      "top_level_fields": [
+        "predictions"
+      ],
+      "returned_rows": 24,
+      "row_fields": [
+        "t",
+        "v"
+      ]
+    },
+    {
+      "url": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B01003_001E&for=tract:*&in=state:25%20county:025",
+      "http_status": "302",
+      "final_url": "https://api.census.gov/data/missing_key.html",
+      "curl_exit_code": 28,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "error": "curl: (28) Operation timed out after 30005 milliseconds with 0 bytes received",
+      "id": "census-acs-2024-suffolk"
+    },
+    {
+      "url": "https://api.openalex.org/works?filter=publication_year:2026&search=Boston%20urban%20heat&per_page=3&select=id,doi,display_name,publication_date,authorships,open_access",
+      "http_status": "200",
+      "final_url": "https://api.openalex.org/works?filter=publication_year:2026&search=Boston%20urban%20heat&per_page=3&select=id,doi,display_name,publication_date,authorships,open_access",
+      "curl_exit_code": 0,
+      "bytes": 13815,
+      "sha256": "1388c4cc89201b2cb66c1807d9a5cb196c797853ebdf75f76cbff3b432e8d483",
+      "error": null,
+      "format": "json",
+      "id": "openalex-works",
+      "top_level_fields": [
+        "group_by",
+        "meta",
+        "results"
+      ],
+      "returned_rows": 3,
+      "row_fields": [
+        "authorships",
+        "display_name",
+        "doi",
+        "id",
+        "open_access",
+        "publication_date"
+      ]
+    },
+    {
+      "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/essential_skills.csv",
+      "http_status": "200",
+      "final_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/essential_skills.csv",
+      "curl_exit_code": 0,
+      "bytes": 2328135,
+      "sha256": "68c4d31d8c55077238395dca40cc4e6d32e6a608b5474bb8264b1f98ae415bd7",
+      "error": null,
+      "id": "onet-essential-skills",
+      "format": "csv",
+      "columns": [
+        "O*NET-SOC Code",
+        "Title",
+        "Element ID",
+        "Element Name",
+        "Scale ID",
+        "Scale Name",
+        "Data Value",
+        "N",
+        "Standard Error",
+        "Lower CI Bound",
+        "Upper CI Bound",
+        "Recommend Suppress",
+        "Not Relevant",
+        "Date",
+        "Domain Source"
+      ],
+      "returned_rows": 18200
+    },
+    {
+      "url": "https://api.github.com/orgs/OETBoston/repos?per_page=100",
+      "http_status": "200",
+      "final_url": "https://api.github.com/orgs/OETBoston/repos?per_page=100",
+      "curl_exit_code": 0,
+      "bytes": 115397,
+      "sha256": "4bce74ee368f05da9ce2082d94e388ae9b143d4b43291a1dcc696c648e37a1a7",
+      "error": null,
+      "format": "json",
+      "id": "oet-public-repos",
+      "returned_rows": 21,
+      "row_fields": [
+        "allow_forking",
+        "archive_url",
+        "archived",
+        "assignees_url",
+        "blobs_url",
+        "branches_url",
+        "clone_url",
+        "collaborators_url",
+        "comments_url",
+        "commits_url",
+        "compare_url",
+        "contents_url",
+        "contributors_url",
+        "created_at",
+        "custom_properties",
+        "default_branch",
+        "deployments_url",
+        "description",
+        "disabled",
+        "downloads_url",
+        "events_url",
+        "fork",
+        "forks",
+        "forks_count",
+        "forks_url",
+        "full_name",
+        "git_commits_url",
+        "git_refs_url",
+        "git_tags_url",
+        "git_url",
+        "has_discussions",
+        "has_downloads",
+        "has_issues",
+        "has_pages",
+        "has_projects",
+        "has_pull_requests",
+        "has_wiki",
+        "homepage",
+        "hooks_url",
+        "html_url",
+        "id",
+        "is_template",
+        "issue_comment_url",
+        "issue_events_url",
+        "issues_url",
+        "keys_url",
+        "labels_url",
+        "language",
+        "languages_url",
+        "license",
+        "merges_url",
+        "milestones_url",
+        "mirror_url",
+        "name",
+        "node_id",
+        "notifications_url",
+        "open_issues",
+        "open_issues_count",
+        "owner",
+        "permissions",
+        "private",
+        "pull_request_creation_policy",
+        "pulls_url",
+        "pushed_at",
+        "releases_url",
+        "size",
+        "ssh_url",
+        "stargazers_count",
+        "stargazers_url",
+        "statuses_url",
+        "subscribers_url",
+        "subscription_url",
+        "svn_url",
+        "tags_url",
+        "teams_url",
+        "topics",
+        "trees_url",
+        "updated_at",
+        "url",
+        "visibility",
+        "watchers",
+        "watchers_count",
+        "web_commit_signoff_required"
+      ],
+      "repositories": [
+        {
+          "name": "ai-translation",
+          "html_url": "https://github.com/OETBoston/ai-translation",
+          "description": null
+        },
+        {
+          "name": "ai-for-design",
+          "html_url": "https://github.com/OETBoston/ai-for-design",
+          "description": "Google Summer of Code 2023: Final Project"
+        },
+        {
+          "name": "BidBot",
+          "html_url": "https://github.com/OETBoston/BidBot",
+          "description": "A retrieval augmented generation tool to assist with procurement-related tasks."
+        },
+        {
+          "name": "muni-lots",
+          "html_url": "https://github.com/OETBoston/muni-lots",
+          "description": null
+        },
+        {
+          "name": "smart-prototype",
+          "html_url": "https://github.com/OETBoston/smart-prototype",
+          "description": null
+        },
+        {
+          "name": "standard-map",
+          "html_url": "https://github.com/OETBoston/standard-map",
+          "description": null
+        },
+        {
+          "name": "COB-Launchpad",
+          "html_url": "https://github.com/OETBoston/COB-Launchpad",
+          "description": "Simple chatbot playground that uses the City of Boston's GenAI service to answer questions. "
+        },
+        {
+          "name": "neighborhood-curbs",
+          "html_url": "https://github.com/OETBoston/neighborhood-curbs",
+          "description": null
+        },
+        {
+          "name": "cds_translator",
+          "html_url": "https://github.com/OETBoston/cds_translator",
+          "description": "This tool translates images of parking signs into properly formatted CDS Policy objects."
+        },
+        {
+          "name": "blue",
+          "html_url": "https://github.com/OETBoston/blue",
+          "description": "Real-time Information on Blue Bikes, optimized for screens in office buildings."
+        },
+        {
+          "name": "boston-parking-pwa",
+          "html_url": "https://github.com/OETBoston/boston-parking-pwa",
+          "description": "This tool makes it easy to understand parking signs."
+        },
+        {
+          "name": "tire-pressure-sensor",
+          "html_url": "https://github.com/OETBoston/tire-pressure-sensor",
+          "description": "TPMS Sensor Technology Pilot | Privacy-First Traffic Analysis for School Transportation"
+        },
+        {
+          "name": "smart-curb-image-extraction",
+          "html_url": "https://github.com/OETBoston/smart-curb-image-extraction",
+          "description": null
+        },
+        {
+          "name": "psi",
+          "html_url": "https://github.com/OETBoston/psi",
+          "description": null
+        },
+        {
+          "name": "curb-atlas",
+          "html_url": "https://github.com/OETBoston/curb-atlas",
+          "description": "A mapping application to give Boston residents and visitors information about the city's curbs."
+        },
+        {
+          "name": "curb-atlas-update",
+          "html_url": "https://github.com/OETBoston/curb-atlas-update",
+          "description": "A mapping application to give Boston residents and visitors information about the city's curbs."
+        },
+        {
+          "name": "Wireless-Traffic-Data-Sensor-Pilot",
+          "html_url": "https://github.com/OETBoston/Wireless-Traffic-Data-Sensor-Pilot",
+          "description": "The Office of Emerging Technology, working with the Streets Cabinet, is testing a new generation of sensors to understand how curb space is used and how vehicles move through neighborhoods. The sensors detect wireless signals that vehicles and phones broadcast to measure how people use the street, all while preserving personal privacy."
+        },
+        {
+          "name": "double_trouble",
+          "html_url": "https://github.com/OETBoston/double_trouble",
+          "description": "app to report and report out double parking instances"
+        },
+        {
+          "name": "islands-world",
+          "html_url": "https://github.com/OETBoston/islands-world",
+          "description": "A browser world of student-built pygame islands \u2014 teaching materials for a two-session vibe-coding class"
+        },
+        {
+          "name": "Coastmix",
+          "html_url": "https://github.com/OETBoston/Coastmix",
+          "description": "Coastmix is a project by Streetmix and the City of Boston to design, visualize and share resilient coasts. Create your ideal waterfront, build coastal flood protection, and learn how climate change impacts your community."
+        },
+        {
+          "name": "coastmix-support",
+          "html_url": "https://github.com/OETBoston/coastmix-support",
+          "description": "Tools for supporting Coastmix"
+        }
+      ]
+    },
+    {
+      "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json",
+      "http_status": "200",
+      "final_url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json",
+      "curl_exit_code": 0,
+      "bytes": 363778,
+      "sha256": "732ea586da3c98d94358c4284c9a39f6cdd2b35bbb438b5fa04a5deed1d4b7b1",
+      "error": null,
+      "format": "json",
+      "id": "bluebikes-station_information",
+      "top_level_fields": [
+        "data",
+        "last_updated",
+        "ttl",
+        "version"
+      ],
+      "feed_last_updated": 1792853633,
+      "feed_ttl": 60,
+      "returned_rows": 628,
+      "row_fields": [
+        "capacity",
+        "eightd_has_key_dispenser",
+        "eightd_station_services",
+        "electric_bike_surcharge_waiver",
+        "external_id",
+        "has_kiosk",
+        "lat",
+        "legacy_id",
+        "lon",
+        "name",
+        "rental_methods",
+        "rental_uris",
+        "short_name",
+        "station_id",
+        "station_type"
+      ]
+    },
+    {
+      "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_status.json",
+      "http_status": "200",
+      "final_url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_status.json",
+      "curl_exit_code": 0,
+      "bytes": 242649,
+      "sha256": "7fa87ad003f363f17c600cf9198ca00c8efbefffa536aab9f6dd4db7707db0f6",
+      "error": null,
+      "format": "json",
+      "id": "bluebikes-station_status",
+      "top_level_fields": [
+        "data",
+        "last_updated",
+        "ttl",
+        "version"
+      ],
+      "feed_last_updated": 1792853573,
+      "feed_ttl": 60,
+      "returned_rows": 628,
+      "row_fields": [
+        "eightd_has_available_keys",
+        "is_installed",
+        "is_renting",
+        "is_returning",
+        "last_reported",
+        "legacy_id",
+        "num_bikes_available",
+        "num_bikes_disabled",
+        "num_docks_available",
+        "num_docks_disabled",
+        "num_ebikes_available",
+        "station_id"
+      ]
+    },
+    {
+      "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0/query?where=MUNICIPALITY%3D%27BOSTON%27&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=3&f=geojson",
+      "http_status": "200",
+      "final_url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0/query?where=MUNICIPALITY%3D%27BOSTON%27&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=3&f=geojson",
+      "curl_exit_code": 0,
+      "bytes": 42,
+      "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c",
+      "error": null,
+      "format": "json",
+      "id": "massgis-ej-geometry",
+      "top_level_fields": [
+        "features",
+        "type"
+      ],
+      "returned_rows": 0
+    },
+    {
+      "url": "https://api-v3.mbta.com/live_facilities?filter%5Bstop%5D=place-harsq",
+      "http_status": "400",
+      "final_url": "https://api-v3.mbta.com/live_facilities?filter%5Bstop%5D=place-harsq",
+      "curl_exit_code": 0,
+      "bytes": 149,
+      "sha256": "1a2b80ab9e6c4971197ebc9e67bef8a190db0335b911dc1743ffb5e13c3412a4",
+      "error": null,
+      "format": "json",
+      "id": "mbta-live-harvard",
+      "top_level_fields": [
+        "errors",
+        "jsonapi"
+      ],
+      "api_error": [
+        {
+          "code": "bad_request",
+          "status": "400",
+          "source": {
+            "parameter": "filter"
+          },
+          "detail": "Unsupported filter(s): stop"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/DPW/Pedestrian_Ramps/DPW_PedestrianRamps.geojson",
+      "http_status": "200",
+      "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/DPW/Pedestrian_Ramps/DPW_PedestrianRamps.geojson",
+      "curl_exit_code": 0,
+      "bytes": 2271112,
+      "sha256": "524e2450f4bf5bde0a1df259c1e94f293a5738c3b28d4a5c88ea815a4405ffcf",
+      "error": null,
+      "format": "json",
+      "id": "cambridge-ramp-geojson",
+      "top_level_fields": [
+        "features",
+        "type"
+      ],
+      "returned_rows": 4605,
+      "row_fields": [
+        "geometry",
+        "id",
+        "properties",
+        "type"
+      ],
+      "properties_fields": [
+        "CONDITION",
+        "F_ALIGN",
+        "F_COND",
+        "F_OPEN",
+        "F_PUDDLE",
+        "F_SLOPE",
+        "F_TOTAL",
+        "F_TOTAL06",
+        "GlobalID",
+        "LIP",
+        "LOCATION",
+        "MATERIAL_T",
+        "OPENING_WI",
+        "PUDDLING",
+        "RAMP_LINE_",
+        "SLOPE_COMP",
+        "SW_WIDTH",
+        "TOTAL_RAMP"
+      ],
+      "point_coordinate_bounds": [
+        -71.16021240713187,
+        42.353509188730065,
+        -71.06882775992821,
+        42.40262671581175
+      ]
+    },
+    {
+      "url": "https://api-v3.mbta.com/alerts?filter%5Beffect%5D=ELEVATOR_CLOSURE&page%5Blimit%5D=3",
+      "http_status": "400",
+      "final_url": "https://api-v3.mbta.com/alerts?filter%5Beffect%5D=ELEVATOR_CLOSURE&page%5Blimit%5D=3",
+      "curl_exit_code": 0,
+      "bytes": 151,
+      "sha256": "58ab7826663bbdbe8f7508458dc2a55d6c0561daa24cd605c7e388c00cefa32f",
+      "error": null,
+      "format": "json",
+      "id": "mbta-elevator-alerts",
+      "top_level_fields": [
+        "errors",
+        "jsonapi"
+      ],
+      "api_error": [
+        {
+          "code": "bad_request",
+          "status": "400",
+          "source": {
+            "parameter": "filter"
+          },
+          "detail": "Unsupported filter(s): effect"
+        }
+      ]
+    },
+    {
+      "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=6ddcd912-32a0-43df-9908-63574f8c7e77&limit=0",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=6ddcd912-32a0-43df-9908-63574f8c7e77&limit=0",
+      "curl_exit_code": 0,
+      "bytes": 2955,
+      "sha256": "ca5f1ed2e1a511c89c2de0ade500ed28183d8b9ef406bdd1ec67d7a87b3053f9",
+      "error": null,
+      "format": "json",
+      "id": "boston-permits-schema",
+      "top_level_fields": [
+        "help",
+        "result",
+        "success"
+      ],
+      "success": true,
+      "columns": [
+        "_id",
+        "permitnumber",
+        "worktype",
+        "permittypedescr",
+        "description",
+        "comments",
+        "applicant",
+        "declared_valuation",
+        "total_fees",
+        "issued_date",
+        "expiration_date",
+        "status",
+        "occupancytype",
+        "sq_feet",
+        "address",
+        "city",
+        "state",
+        "zip",
+        "ward",
+        "property_id",
+        "parcel_id",
+        "gpsy",
+        "gpsx",
+        "y_latitude",
+        "x_longitude"
+      ]
+    },
+    {
+      "url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=800a2663-1d6a-46e7-9356-bedb70f5332c&limit=0",
+      "http_status": "200",
+      "final_url": "https://data.boston.gov/api/3/action/datastore_search?resource_id=800a2663-1d6a-46e7-9356-bedb70f5332c&limit=0",
+      "curl_exit_code": 0,
+      "bytes": 1520,
+      "sha256": "2321c91feb14085a9626e1d956cfeaeac6e68cd325e0071aa102b66ac8f1a571",
+      "error": null,
+      "format": "json",
+      "id": "boston-violations-schema",
+      "top_level_fields": [
+        "help",
+        "result",
+        "success"
+      ],
+      "success": true,
+      "columns": [
+        "_id",
+        "case_no",
+        "ap_case_defn_key",
+        "status_dttm",
+        "status",
+        "code",
+        "value",
+        "description",
+        "violation_stno",
+        "violation_sthigh",
+        "violation_street",
+        "violation_suffix",
+        "violation_city",
+        "violation_state",
+        "violation_zip",
+        "ward",
+        "contact_addr1",
+        "contact_addr2",
+        "contact_city",
+        "contact_state",
+        "contact_zip",
+        "sam_id",
+        "latitude",
+        "longitude",
+        "location"
+      ]
+    },
+    {
+      "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0/query?where=MUNICIPALITY%3D%27Boston%27&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=3&f=geojson",
+      "http_status": "200",
+      "final_url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/EJ2020/MapServer/0/query?where=MUNICIPALITY%3D%27Boston%27&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=3&f=geojson",
+      "curl_exit_code": 0,
+      "bytes": 10742,
+      "sha256": "55eaea36983ac9af6c803e6730b755aee51f21acd17927464723e777da14cf40",
+      "error": null,
+      "format": "json",
+      "id": "massgis-ej-boston-corrected",
+      "top_level_fields": [
+        "exceededTransferLimit",
+        "features",
+        "properties",
+        "type"
+      ],
+      "returned_rows": 3,
+      "row_fields": [
+        "geometry",
+        "id",
+        "properties",
+        "type"
+      ],
+      "properties_fields": [
+        "BG_MHHI",
+        "BG_MHHI_IS_2019",
+        "BG_MHHI_PCT_MAHHI",
+        "EJ",
+        "EJ_CRITERIA",
+        "EJ_CRITERIA_COUNT",
+        "EJ_CRIT_DESC",
+        "GEOGRAPHICAREANAME",
+        "GEOID",
+        "LIMENGHH",
+        "LIMENGHHPCT",
+        "LIMITEDENGLISH",
+        "MEDIANHHI",
+        "MINORITY_POPULATION",
+        "MUNICIPALITY",
+        "MUNIMHHI_PCT_MAHHI",
+        "MUNI_MHHI",
+        "NONHISPWHITE_ALONE",
+        "OBJECTID",
+        "PCT_MINORITY",
+        "SHAPE.AREA",
+        "SHAPE.LEN",
+        "SPLIT_FOR_MUNI",
+        "TOTALHH",
+        "TOTAL_POP"
+      ],
+      "top_level_properties_fields": [
+        "exceededTransferLimit"
+      ]
+    },
+    {
+      "url": "https://api-v3.mbta.com/alerts?filter%5Bfacility%5D=922&page%5Blimit%5D=3",
+      "http_status": "200",
+      "final_url": "https://api-v3.mbta.com/alerts?filter%5Bfacility%5D=922&page%5Blimit%5D=3",
+      "curl_exit_code": 0,
+      "bytes": 39,
+      "sha256": "df63158133de5aff21a18c80947b75c7a4c5fd55f523d4b1a34717f09a2bc9cb",
+      "error": null,
+      "format": "json",
+      "id": "mbta-facility-922-alerts",
+      "top_level_fields": [
+        "data",
+        "jsonapi"
+      ],
+      "returned_rows": 0
+    },
+    {
+      "url": "https://assets.ctfassets.net/p6ae3zqfb1e3/3BswRZgQMp0f8XWBLY6T19/60da57a4630102788a127902bfda9888/-External-_Bluebikes_Station_List__updated_08.21.26_.csv",
+      "http_status": "200",
+      "final_url": "https://assets.ctfassets.net/p6ae3zqfb1e3/3BswRZgQMp0f8XWBLY6T19/60da57a4630102788a127902bfda9888/-External-_Bluebikes_Station_List__updated_08.21.26_.csv",
+      "curl_exit_code": 0,
+      "bytes": 50233,
+      "sha256": "8dd73472d1e77813ff04b91a8595097eb587ca895894e3debc0112be84a01509",
+      "error": null,
+      "id": "bluebikes-station-csv",
+      "format": "csv",
+      "preamble_rows": 1,
+      "columns": [
+        "Name",
+        "Lat",
+        "Long",
+        "Seasonal Status",
+        "Municipality",
+        "Total Docks",
+        "Station ID (to match to historic system data)"
+      ],
+      "returned_rows": 613
+    },
+    {
+      "url": "https://gisportal.boston.gov/arcgis/rest/services/StoryMaps/CoolingCenters/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&resultRecordCount=3&f=geojson",
+      "http_status": "200",
+      "final_url": "https://gisportal.boston.gov/arcgis/rest/services/StoryMaps/CoolingCenters/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&resultRecordCount=3&f=geojson",
+      "curl_exit_code": 0,
+      "bytes": 1183,
+      "sha256": "df555b7bf9f394b61f13af6ba22aba00bf6e0428cb7053de4f794a4895fa8a05",
+      "error": null,
+      "format": "json",
+      "id": "boston-cooling",
+      "top_level_fields": [
+        "exceededTransferLimit",
+        "features",
+        "properties",
+        "type"
+      ],
+      "returned_rows": 3,
+      "row_fields": [
+        "geometry",
+        "id",
+        "properties",
+        "type"
+      ],
+      "properties_fields": [
+        "Address",
+        "CorP",
+        "FullName",
+        "Hours",
+        "Name",
+        "OBJECTID",
+        "OBJECTID_1",
+        "Telephone",
+        "X",
+        "Y"
+      ],
+      "top_level_properties_fields": [
+        "exceededTransferLimit"
+      ]
+    }
+  ],
+  "license_file_checks": [
+    {
+      "repository": "OETBoston/Coastmix",
+      "url": "https://github.com/OETBoston/Coastmix/blob/louh/coastmix-dev/LICENSE",
+      "sha": "0960e51e1546ba2944054b70171b0bf62092b8ed",
+      "opening_lines": "The original license for the Streetmix codebase was the BSD 3-clause license.\nThe current codebase, and all future modifications to it, are licensed under\nthe GNU Affero General Public License v3 (or later), as specified below.\nFor more information about the change in license, please see\nhttps://github.com/streetmix/streetmix/issues/2322\n\n------------------------------------------------------------------------------\n                    GNU AFFERO GENERAL PUBLIC LICENSE\n                       Version 3, 19 November 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim"
+    },
+    {
+      "repository": "mysociety/fixmystreet",
+      "url": "https://github.com/mysociety/fixmystreet/blob/master/LICENSE.txt",
+      "sha": "9d55eb3a7454a70a6eb7fd7cb99da4fd86f36ae3",
+      "opening_lines": "                   mySociety.org Software Licensing\n\nMost of the software here is Copyright (c) UK Citizens Online Democracy. \n\nUnless otherwise stated in particular files or directories, this\nsoftware is free software; you can redistribute it and/or modify it\nunder the terms of the GNU Affero General Public License as published\nby the Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nCan you explain briefly what the GNU Affero GPL is? We offer the\nsource code of our websites to our users. The GNU Affero GPL has the\nrequirement that anyone else using that code for their own websites\nalso does t"
+    },
+    {
+      "repository": "openreferral/specification",
+      "url": "https://github.com/openreferral/specification/blob/3.3.1/LICENSE",
+      "sha": "e9b019039c8618070cd207387ed176c8699262f4",
+      "opening_lines": "The Human Services Data Specification (HSDS) and associated documentation are licensed under the Creative Commons Attribution Share-Alike 4.0 license.\n\nA summary of this license is available at https://creativecommons.org/licenses/by-sa/4.0/\n\nUnless otherwise stated, contributions are copyright of the Open Referral project. \n\nOur preferred form of attribution is \"Human Services Data Specification: an Open Referral resource (https://openreferral.org/)\"\n\nThe Open Referral project is stewarded under the leadership of Greg Bloom, with fiscal sponsorship from Aspiration, a 501c3 organization. HSDS and all associated documentation are the intellect"
+    },
+    {
+      "repository": "opentripplanner/OpenTripPlanner",
+      "url": "https://github.com/opentripplanner/OpenTripPlanner/blob/dev-2.x/LICENSE",
+      "sha": "b5b929d7364a8cbe1de10c3917b808d467eb81be",
+      "opening_lines": "This program is free software: you can redistribute it and/or\nmodify it under the terms of the GNU Lesser General Public License\nas published by the Free Software Foundation, either version 3 of\nthe License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program. If not, see <http://www.gnu.org/licenses/>.\n\n\nThis program incorporates work"
+    },
+    {
+      "repository": "streetmix/streetmix",
+      "url": "https://github.com/streetmix/streetmix/blob/main/LICENSE",
+      "sha": "0960e51e1546ba2944054b70171b0bf62092b8ed",
+      "opening_lines": "The original license for the Streetmix codebase was the BSD 3-clause license.\nThe current codebase, and all future modifications to it, are licensed under\nthe GNU Affero General Public License v3 (or later), as specified below.\nFor more information about the change in license, please see\nhttps://github.com/streetmix/streetmix/issues/2322\n\n------------------------------------------------------------------------------\n                    GNU AFFERO GENERAL PUBLIC LICENSE\n                       Version 3, 19 November 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim"
+    },
+    {
+      "repository": "maplibre/maplibre-gl-js",
+      "url": "https://github.com/maplibre/maplibre-gl-js/blob/main/LICENSE.txt",
+      "sha": "1e8acbb54fa7baddc844377507cc5a79353174fb",
+      "opening_lines": "Copyright (c) 2023, MapLibre contributors\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification,\nare permitted provided that the following conditions are met:\n\n    * Redistributions of source code must retain the above copyright notice,\n      this list of conditions and the following disclaimer.\n    * Redistributions in binary form must reproduce the above copyright notice,\n      this list of conditions and the following disclaimer in the documentation\n      and/or other materials provided with the distribution.\n    * Neither the name of MapLibre GL JS nor the names of its contributors\n      ma"
+    }
+  ],
+  "interpretation_notes": [
+    "The NaturalCapitalProject/invest 404 is corrected by verified natcap/invest.",
+    "MBTA live_facilities documentation describes filter[id] for parking facilities; use elevator alerts plus facility inventory, not live_facilities as an elevator-status feed.",
+    "Uppercase BOSTON returned zero EJ features; case-correct Boston is recorded separately.",
+    "Repository metadata and a push date do not establish a working deployment or code quality.",
+    "MBTA filter[effect] is unsupported. Official swagger documents filter[facility]; a corrected request for facility 922 is retained. Empty alerts do not establish accessibility."
+  ]
+}

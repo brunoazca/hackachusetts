@@ -1,0 +1,1875 @@
+{
+  "id" : "a4b4-k49f",
+  "name" : "Elementary and Secondary Educators by Age Group",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1726242928,
+  "description" : "This dataset includes the full-time equivalent (FTE) counts and percentages of educators by age group in Massachusetts public schools since 2008.\n\nBlank values indicate that data were not reported, unless otherwise noted.\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/agestaffing.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Educators by Age Groups Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 61,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41937286,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1770743052,
+  "publicationGroup" : 19650721,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1792788425,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20270039,
+  "totalTimesRated" : 0,
+  "viewCount" : 375,
+  "viewLastModified" : 1792788179,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1774039099,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7396127,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1774039077,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1774039099,
+      "failureCount" : 0,
+      "startedAt" : 1774039099,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 626434142,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154848245,
+    "cachedContents" : {
+      "non_null" : "2792946",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "159336"
+      }, {
+        "item" : "2026",
+        "count" : "158256"
+      }, {
+        "item" : "2023",
+        "count" : "156170"
+      }, {
+        "item" : "2024",
+        "count" : "155890"
+      }, {
+        "item" : "2021",
+        "count" : "147500"
+      }, {
+        "item" : "2015",
+        "count" : "147355"
+      }, {
+        "item" : "2014",
+        "count" : "147290"
+      }, {
+        "item" : "2016",
+        "count" : "147030"
+      }, {
+        "item" : "2022",
+        "count" : "146951"
+      }, {
+        "item" : "2017",
+        "count" : "146575"
+      }, {
+        "item" : "2018",
+        "count" : "146510"
+      }, {
+        "item" : "2019",
+        "count" : "146445"
+      }, {
+        "item" : "2013",
+        "count" : "146445"
+      }, {
+        "item" : "2020",
+        "count" : "146345"
+      }, {
+        "item" : "2012",
+        "count" : "144950"
+      }, {
+        "item" : "2011",
+        "count" : "139734"
+      }, {
+        "item" : "2008",
+        "count" : "137982"
+      }, {
+        "item" : "2009",
+        "count" : "136518"
+      }, {
+        "item" : "2010",
+        "count" : "135664"
+      } ],
+      "smallest" : "2008",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434143,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154848246,
+    "cachedContents" : {
+      "non_null" : "2792946",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "148800"
+      }, {
+        "item" : "02810000",
+        "count" : "72766"
+      }, {
+        "item" : "03480000",
+        "count" : "57549"
+      }, {
+        "item" : "01490000",
+        "count" : "35559"
+      }, {
+        "item" : "01630000",
+        "count" : "33422"
+      }, {
+        "item" : "02010000",
+        "count" : "32787"
+      }, {
+        "item" : "01600000",
+        "count" : "32340"
+      }, {
+        "item" : "00440000",
+        "count" : "30257"
+      }, {
+        "item" : "02070000",
+        "count" : "28645"
+      }, {
+        "item" : "02430000",
+        "count" : "24468"
+      }, {
+        "item" : "00950000",
+        "count" : "23012"
+      }, {
+        "item" : "01280000",
+        "count" : "21114"
+      }, {
+        "item" : "00490000",
+        "count" : "21103"
+      }, {
+        "item" : "00610000",
+        "count" : "19974"
+      }, {
+        "item" : "01000000",
+        "count" : "18242"
+      }, {
+        "item" : "02930000",
+        "count" : "17668"
+      }, {
+        "item" : "02390000",
+        "count" : "17501"
+      }, {
+        "item" : "07750000",
+        "count" : "17192"
+      }, {
+        "item" : "02360000",
+        "count" : "17107"
+      }, {
+        "item" : "01530000",
+        "count" : "15986"
+      } ],
+      "smallest" : "00000000",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434144,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154848247,
+    "cachedContents" : {
+      "non_null" : "2792946",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "148800"
+      }, {
+        "item" : "Springfield",
+        "count" : "72766"
+      }, {
+        "item" : "Worcester",
+        "count" : "57549"
+      }, {
+        "item" : "Lawrence",
+        "count" : "35559"
+      }, {
+        "item" : "Lynn",
+        "count" : "33422"
+      }, {
+        "item" : "New Bedford",
+        "count" : "32787"
+      }, {
+        "item" : "Lowell",
+        "count" : "32340"
+      }, {
+        "item" : "Brockton",
+        "count" : "30257"
+      }, {
+        "item" : "Newton",
+        "count" : "28645"
+      }, {
+        "item" : "Quincy",
+        "count" : "24468"
+      }, {
+        "item" : "Fall River",
+        "count" : "23012"
+      }, {
+        "item" : "Haverhill",
+        "count" : "21114"
+      }, {
+        "item" : "Cambridge",
+        "count" : "21103"
+      }, {
+        "item" : "Chicopee",
+        "count" : "19974"
+      }, {
+        "item" : "Framingham",
+        "count" : "18242"
+      }, {
+        "item" : "Taunton",
+        "count" : "17668"
+      }, {
+        "item" : "Plymouth",
+        "count" : "17501"
+      }, {
+        "item" : "Wachusett",
+        "count" : "17192"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "17107"
+      }, {
+        "item" : "Leominster",
+        "count" : "15986"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434145,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154848272,
+    "cachedContents" : {
+      "non_null" : "2792946",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00970000",
+        "count" : "1256"
+      }, {
+        "item" : "00200000",
+        "count" : "1256"
+      }, {
+        "item" : "04440000",
+        "count" : "1256"
+      }, {
+        "item" : "00960000",
+        "count" : "1256"
+      }, {
+        "item" : "00050000",
+        "count" : "1256"
+      }, {
+        "item" : "02580000",
+        "count" : "1256"
+      }, {
+        "item" : "01280000",
+        "count" : "1256"
+      }, {
+        "item" : "03480000",
+        "count" : "1256"
+      }, {
+        "item" : "03080000",
+        "count" : "1256"
+      }, {
+        "item" : "02290000",
+        "count" : "1255"
+      }, {
+        "item" : "02010000",
+        "count" : "1255"
+      }, {
+        "item" : "00300000",
+        "count" : "1255"
+      }, {
+        "item" : "02110000",
+        "count" : "1255"
+      }, {
+        "item" : "02740000",
+        "count" : "1255"
+      }, {
+        "item" : "01640000",
+        "count" : "1255"
+      }, {
+        "item" : "01370000",
+        "count" : "1255"
+      }, {
+        "item" : "01670000",
+        "count" : "1255"
+      }, {
+        "item" : "01010000",
+        "count" : "1255"
+      }, {
+        "item" : "00460000",
+        "count" : "1255"
+      }, {
+        "item" : "01030000",
+        "count" : "1255"
+      } ],
+      "smallest" : "00000000",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434146,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154848273,
+    "cachedContents" : {
+      "non_null" : "2792946",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "7470"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "6225"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "5622"
+      }, {
+        "item" : "South Elementary",
+        "count" : "4980"
+      }, {
+        "item" : "Franklin",
+        "count" : "3806"
+      }, {
+        "item" : "Center",
+        "count" : "3796"
+      }, {
+        "item" : "Lawrence",
+        "count" : "3747"
+      }, {
+        "item" : "Lincoln",
+        "count" : "3744"
+      }, {
+        "item" : "Winthrop",
+        "count" : "3743"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "3736"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "3666"
+      }, {
+        "item" : "Center School",
+        "count" : "3413"
+      }, {
+        "item" : "South",
+        "count" : "3130"
+      }, {
+        "item" : "Peabody",
+        "count" : "2500"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "2500"
+      }, {
+        "item" : "Gardner",
+        "count" : "2500"
+      }, {
+        "item" : "Southeastern Regional Vocational Technical",
+        "count" : "2499"
+      }, {
+        "item" : "Old Colony Regional Vocational Technical",
+        "count" : "2498"
+      }, {
+        "item" : "Montachusett Regional Vocational Technical",
+        "count" : "2498"
+      }, {
+        "item" : "Hancock",
+        "count" : "2498"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434147,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154848274,
+    "cachedContents" : {
+      "non_null" : "2792946",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "2290454"
+      }, {
+        "item" : "District",
+        "count" : "501238"
+      }, {
+        "item" : "State",
+        "count" : "1254"
+      } ],
+      "smallest" : "District",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434148,
+    "name" : "JOB_CAT",
+    "dataTypeName" : "text",
+    "description" : "Job Category",
+    "fieldName" : "job_cat",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154848275,
+    "cachedContents" : {
+      "non_null" : "2792946",
+      "largest" : "Special Education Related Staff",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Administrators",
+        "count" : "1076123"
+      }, {
+        "item" : "Instructional Support Staff",
+        "count" : "412944"
+      }, {
+        "item" : "Instructional Staff",
+        "count" : "273389"
+      }, {
+        "item" : "Special Education Related Staff",
+        "count" : "255419"
+      }, {
+        "item" : "Office/Clerical/Administrative Support",
+        "count" : "255411"
+      }, {
+        "item" : "Instructional Support and Special Education Shared Staff",
+        "count" : "255410"
+      }, {
+        "item" : "Medical/Health Services",
+        "count" : "179096"
+      }, {
+        "item" : "All",
+        "count" : "42580"
+      }, {
+        "item" : "Paraprofessional",
+        "count" : "42574"
+      } ],
+      "smallest" : "Administrators",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434149,
+    "name" : "JOB_NAME",
+    "dataTypeName" : "text",
+    "description" : "Job Name",
+    "fieldName" : "job_name",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 154848276,
+    "cachedContents" : {
+      "non_null" : "2792946",
+      "largest" : "Work Study Coordinator",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Principal/headmaster/headmistress/head of school",
+        "count" : "42580"
+      }, {
+        "item" : "All",
+        "count" : "42580"
+      }, {
+        "item" : "Teacher - support content instruction",
+        "count" : "42575"
+      }, {
+        "item" : "Paraprofessional",
+        "count" : "42574"
+      }, {
+        "item" : "Administrative Clerks and Secretaries",
+        "count" : "42573"
+      }, {
+        "item" : "Teacher",
+        "count" : "42573"
+      }, {
+        "item" : "Other Related Special Education Staff",
+        "count" : "42572"
+      }, {
+        "item" : "School Nurse -- Non-Special Education",
+        "count" : "42572"
+      }, {
+        "item" : "Instructional Coach",
+        "count" : "42571"
+      }, {
+        "item" : "Speech Pathologist",
+        "count" : "42571"
+      }, {
+        "item" : "Occupational Therapist",
+        "count" : "42571"
+      }, {
+        "item" : "School Counselor",
+        "count" : "42571"
+      }, {
+        "item" : "Other School Administrator/Coordinator",
+        "count" : "42571"
+      }, {
+        "item" : "Deputy/Associate/Vice-/Assistant Principal",
+        "count" : "42570"
+      }, {
+        "item" : "School Adjustment Counselor -- Special Education",
+        "count" : "42570"
+      }, {
+        "item" : "Tutor",
+        "count" : "42570"
+      }, {
+        "item" : "Physical Therapist",
+        "count" : "42570"
+      }, {
+        "item" : "Librarians and Media Center Directors",
+        "count" : "42570"
+      }, {
+        "item" : "Other Administrative Support Personnel",
+        "count" : "42569"
+      }, {
+        "item" : "School Adjustment Counselor -- Non-Special Education",
+        "count" : "42569"
+      } ],
+      "smallest" : "Administrative Aides",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434150,
+    "name" : "UND_26_CNT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Under 26 FTE Count",
+    "fieldName" : "und_26_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848277,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "9165.9",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2650759"
+      }, {
+        "item" : "1.0",
+        "count" : "40009"
+      }, {
+        "item" : "2.0",
+        "count" : "16463"
+      }, {
+        "item" : "3.0",
+        "count" : "9183"
+      }, {
+        "item" : "4.0",
+        "count" : "5909"
+      }, {
+        "item" : "0.5",
+        "count" : "4040"
+      }, {
+        "item" : "5.0",
+        "count" : "3999"
+      }, {
+        "item" : "6.0",
+        "count" : "2754"
+      }, {
+        "item" : "7.0",
+        "count" : "1971"
+      }, {
+        "item" : "0.2",
+        "count" : "1866"
+      }, {
+        "item" : "0.8",
+        "count" : "1810"
+      }, {
+        "item" : "0.3",
+        "count" : "1676"
+      }, {
+        "item" : "1.5",
+        "count" : "1526"
+      }, {
+        "item" : "0.4",
+        "count" : "1398"
+      }, {
+        "item" : "8.0",
+        "count" : "1378"
+      }, {
+        "item" : "0.6",
+        "count" : "1244"
+      }, {
+        "item" : "0.1",
+        "count" : "1163"
+      }, {
+        "item" : "2.5",
+        "count" : "1136"
+      }, {
+        "item" : "9.0",
+        "count" : "1045"
+      }, {
+        "item" : "0.9",
+        "count" : "1005"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434151,
+    "name" : "UND_26_PCT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Under 26 FTE Percent",
+    "fieldName" : "und_26_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848278,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2650563"
+      }, {
+        "item" : "1.0",
+        "count" : "6136"
+      }, {
+        "item" : "0.5",
+        "count" : "3458"
+      }, {
+        "item" : "0.333",
+        "count" : "2295"
+      }, {
+        "item" : "0.25",
+        "count" : "1882"
+      }, {
+        "item" : "0.2",
+        "count" : "1701"
+      }, {
+        "item" : "0.167",
+        "count" : "1532"
+      }, {
+        "item" : "0.143",
+        "count" : "1421"
+      }, {
+        "item" : "0.125",
+        "count" : "1254"
+      }, {
+        "item" : "0.038",
+        "count" : "1228"
+      }, {
+        "item" : "0.036",
+        "count" : "1203"
+      }, {
+        "item" : "0.111",
+        "count" : "1196"
+      }, {
+        "item" : "0.043",
+        "count" : "1195"
+      }, {
+        "item" : "0.045",
+        "count" : "1185"
+      }, {
+        "item" : "0.083",
+        "count" : "1181"
+      }, {
+        "item" : "0.042",
+        "count" : "1157"
+      }, {
+        "item" : "0.04",
+        "count" : "1157"
+      }, {
+        "item" : "0.048",
+        "count" : "1156"
+      }, {
+        "item" : "0.091",
+        "count" : "1155"
+      }, {
+        "item" : "0.034",
+        "count" : "1141"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 626434152,
+    "name" : "BTWN_26_32_CNT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 26 and 32 FTE Count",
+    "fieldName" : "btwn_26_32_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848279,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "22623.1",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2542939"
+      }, {
+        "item" : "1.0",
+        "count" : "72343"
+      }, {
+        "item" : "2.0",
+        "count" : "21254"
+      }, {
+        "item" : "0.5",
+        "count" : "10656"
+      }, {
+        "item" : "3.0",
+        "count" : "10613"
+      }, {
+        "item" : "4.0",
+        "count" : "6824"
+      }, {
+        "item" : "5.0",
+        "count" : "4836"
+      }, {
+        "item" : "0.3",
+        "count" : "4378"
+      }, {
+        "item" : "0.2",
+        "count" : "4046"
+      }, {
+        "item" : "6.0",
+        "count" : "3725"
+      }, {
+        "item" : "0.8",
+        "count" : "3559"
+      }, {
+        "item" : "0.4",
+        "count" : "2893"
+      }, {
+        "item" : "7.0",
+        "count" : "2878"
+      }, {
+        "item" : "0.1",
+        "count" : "2608"
+      }, {
+        "item" : "0.6",
+        "count" : "2512"
+      }, {
+        "item" : "1.5",
+        "count" : "2443"
+      }, {
+        "item" : "8.0",
+        "count" : "2375"
+      }, {
+        "item" : "9.0",
+        "count" : "1899"
+      }, {
+        "item" : "0.9",
+        "count" : "1717"
+      }, {
+        "item" : "10.0",
+        "count" : "1611"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434153,
+    "name" : "BTWN_26_32_PCT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 26 and 32 FTE Percent",
+    "fieldName" : "btwn_26_32_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848280,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2542571"
+      }, {
+        "item" : "1.0",
+        "count" : "34528"
+      }, {
+        "item" : "0.5",
+        "count" : "13808"
+      }, {
+        "item" : "0.333",
+        "count" : "8229"
+      }, {
+        "item" : "0.25",
+        "count" : "5375"
+      }, {
+        "item" : "0.2",
+        "count" : "4281"
+      }, {
+        "item" : "0.167",
+        "count" : "3523"
+      }, {
+        "item" : "0.143",
+        "count" : "2809"
+      }, {
+        "item" : "0.667",
+        "count" : "2626"
+      }, {
+        "item" : "0.125",
+        "count" : "2238"
+      }, {
+        "item" : "0.286",
+        "count" : "2063"
+      }, {
+        "item" : "0.4",
+        "count" : "2057"
+      }, {
+        "item" : "0.111",
+        "count" : "1965"
+      }, {
+        "item" : "0.1",
+        "count" : "1617"
+      }, {
+        "item" : "0.222",
+        "count" : "1504"
+      }, {
+        "item" : "0.091",
+        "count" : "1484"
+      }, {
+        "item" : "0.182",
+        "count" : "1273"
+      }, {
+        "item" : "0.154",
+        "count" : "1206"
+      }, {
+        "item" : "0.083",
+        "count" : "1115"
+      }, {
+        "item" : "0.133",
+        "count" : "1082"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 626434154,
+    "name" : "BTWN_33_40_CNT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 33 and 40 FTE Count",
+    "fieldName" : "btwn_33_40_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848281,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "29280.9",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2472573"
+      }, {
+        "item" : "1.0",
+        "count" : "101255"
+      }, {
+        "item" : "2.0",
+        "count" : "25839"
+      }, {
+        "item" : "0.5",
+        "count" : "16338"
+      }, {
+        "item" : "3.0",
+        "count" : "11838"
+      }, {
+        "item" : "4.0",
+        "count" : "7043"
+      }, {
+        "item" : "0.2",
+        "count" : "6584"
+      }, {
+        "item" : "0.3",
+        "count" : "6549"
+      }, {
+        "item" : "0.8",
+        "count" : "5857"
+      }, {
+        "item" : "0.4",
+        "count" : "5134"
+      }, {
+        "item" : "5.0",
+        "count" : "5003"
+      }, {
+        "item" : "0.6",
+        "count" : "4510"
+      }, {
+        "item" : "0.1",
+        "count" : "4464"
+      }, {
+        "item" : "1.5",
+        "count" : "3509"
+      }, {
+        "item" : "6.0",
+        "count" : "3492"
+      }, {
+        "item" : "7.0",
+        "count" : "2746"
+      }, {
+        "item" : "0.9",
+        "count" : "2430"
+      }, {
+        "item" : "8.0",
+        "count" : "2292"
+      }, {
+        "item" : "0.7",
+        "count" : "1905"
+      }, {
+        "item" : "2.5",
+        "count" : "1903"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434155,
+    "name" : "BTWN_33_40_PCT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 33 and 40 FTE Percent",
+    "fieldName" : "btwn_33_40_pct",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848282,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2472037"
+      }, {
+        "item" : "1.0",
+        "count" : "67917"
+      }, {
+        "item" : "0.5",
+        "count" : "21001"
+      }, {
+        "item" : "0.333",
+        "count" : "12059"
+      }, {
+        "item" : "0.25",
+        "count" : "7259"
+      }, {
+        "item" : "0.2",
+        "count" : "5660"
+      }, {
+        "item" : "0.167",
+        "count" : "4392"
+      }, {
+        "item" : "0.667",
+        "count" : "4066"
+      }, {
+        "item" : "0.143",
+        "count" : "3077"
+      }, {
+        "item" : "0.4",
+        "count" : "3005"
+      }, {
+        "item" : "0.286",
+        "count" : "2779"
+      }, {
+        "item" : "0.125",
+        "count" : "2316"
+      }, {
+        "item" : "0.111",
+        "count" : "2059"
+      }, {
+        "item" : "0.222",
+        "count" : "2044"
+      }, {
+        "item" : "0.182",
+        "count" : "1710"
+      }, {
+        "item" : "0.1",
+        "count" : "1563"
+      }, {
+        "item" : "0.091",
+        "count" : "1417"
+      }, {
+        "item" : "0.154",
+        "count" : "1351"
+      }, {
+        "item" : "0.375",
+        "count" : "1214"
+      }, {
+        "item" : "0.231",
+        "count" : "1149"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 626434156,
+    "name" : "BTWN_41_48_CNT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 41 and 48 FTE Count",
+    "fieldName" : "btwn_41_48_cnt",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848283,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "32482.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2435397"
+      }, {
+        "item" : "1.0",
+        "count" : "114710"
+      }, {
+        "item" : "2.0",
+        "count" : "27662"
+      }, {
+        "item" : "0.5",
+        "count" : "17830"
+      }, {
+        "item" : "3.0",
+        "count" : "13546"
+      }, {
+        "item" : "0.3",
+        "count" : "8172"
+      }, {
+        "item" : "4.0",
+        "count" : "8153"
+      }, {
+        "item" : "0.2",
+        "count" : "8097"
+      }, {
+        "item" : "0.8",
+        "count" : "7163"
+      }, {
+        "item" : "0.4",
+        "count" : "5966"
+      }, {
+        "item" : "0.1",
+        "count" : "5827"
+      }, {
+        "item" : "5.0",
+        "count" : "5455"
+      }, {
+        "item" : "0.6",
+        "count" : "5425"
+      }, {
+        "item" : "6.0",
+        "count" : "4054"
+      }, {
+        "item" : "1.5",
+        "count" : "3840"
+      }, {
+        "item" : "7.0",
+        "count" : "3022"
+      }, {
+        "item" : "0.9",
+        "count" : "2735"
+      }, {
+        "item" : "8.0",
+        "count" : "2341"
+      }, {
+        "item" : "0.7",
+        "count" : "2208"
+      }, {
+        "item" : "1.8",
+        "count" : "2136"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434157,
+    "name" : "BTWN_41_48_PCT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 41 and 48 FTE Percent",
+    "fieldName" : "btwn_41_48_pct",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848284,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2434480"
+      }, {
+        "item" : "1.0",
+        "count" : "87630"
+      }, {
+        "item" : "0.5",
+        "count" : "24118"
+      }, {
+        "item" : "0.333",
+        "count" : "14240"
+      }, {
+        "item" : "0.25",
+        "count" : "8415"
+      }, {
+        "item" : "0.2",
+        "count" : "6408"
+      }, {
+        "item" : "0.667",
+        "count" : "4681"
+      }, {
+        "item" : "0.167",
+        "count" : "4652"
+      }, {
+        "item" : "0.4",
+        "count" : "3625"
+      }, {
+        "item" : "0.286",
+        "count" : "3488"
+      }, {
+        "item" : "0.143",
+        "count" : "3266"
+      }, {
+        "item" : "0.222",
+        "count" : "2408"
+      }, {
+        "item" : "0.125",
+        "count" : "2234"
+      }, {
+        "item" : "0.182",
+        "count" : "1786"
+      }, {
+        "item" : "0.111",
+        "count" : "1711"
+      }, {
+        "item" : "0.375",
+        "count" : "1701"
+      }, {
+        "item" : "0.231",
+        "count" : "1546"
+      }, {
+        "item" : "0.444",
+        "count" : "1383"
+      }, {
+        "item" : "0.154",
+        "count" : "1313"
+      }, {
+        "item" : "0.1",
+        "count" : "1308"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 626434158,
+    "name" : "BTWN_49_56_CNT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 49 and 56 FTE Count",
+    "fieldName" : "btwn_49_56_cnt",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848285,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "32978.9",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2425007"
+      }, {
+        "item" : "1.0",
+        "count" : "120220"
+      }, {
+        "item" : "2.0",
+        "count" : "28166"
+      }, {
+        "item" : "0.5",
+        "count" : "17398"
+      }, {
+        "item" : "3.0",
+        "count" : "14249"
+      }, {
+        "item" : "4.0",
+        "count" : "9050"
+      }, {
+        "item" : "0.2",
+        "count" : "8751"
+      }, {
+        "item" : "0.3",
+        "count" : "8567"
+      }, {
+        "item" : "0.8",
+        "count" : "6926"
+      }, {
+        "item" : "5.0",
+        "count" : "6414"
+      }, {
+        "item" : "0.1",
+        "count" : "6285"
+      }, {
+        "item" : "0.4",
+        "count" : "5835"
+      }, {
+        "item" : "0.6",
+        "count" : "5092"
+      }, {
+        "item" : "6.0",
+        "count" : "4507"
+      }, {
+        "item" : "1.5",
+        "count" : "3430"
+      }, {
+        "item" : "7.0",
+        "count" : "3349"
+      }, {
+        "item" : "0.9",
+        "count" : "2832"
+      }, {
+        "item" : "8.0",
+        "count" : "2626"
+      }, {
+        "item" : "0.7",
+        "count" : "2275"
+      }, {
+        "item" : "2.5",
+        "count" : "1993"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434159,
+    "name" : "BTWN_49_56_PCT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 49 and 56 FTE Percent",
+    "fieldName" : "btwn_49_56_pct",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848286,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2423763"
+      }, {
+        "item" : "1.0",
+        "count" : "97672"
+      }, {
+        "item" : "0.5",
+        "count" : "24929"
+      }, {
+        "item" : "0.333",
+        "count" : "13933"
+      }, {
+        "item" : "0.25",
+        "count" : "8131"
+      }, {
+        "item" : "0.2",
+        "count" : "5975"
+      }, {
+        "item" : "0.667",
+        "count" : "5458"
+      }, {
+        "item" : "0.167",
+        "count" : "4433"
+      }, {
+        "item" : "0.4",
+        "count" : "3867"
+      }, {
+        "item" : "0.286",
+        "count" : "3604"
+      }, {
+        "item" : "0.143",
+        "count" : "2760"
+      }, {
+        "item" : "0.222",
+        "count" : "2367"
+      }, {
+        "item" : "0.125",
+        "count" : "1912"
+      }, {
+        "item" : "0.375",
+        "count" : "1666"
+      }, {
+        "item" : "0.182",
+        "count" : "1609"
+      }, {
+        "item" : "0.111",
+        "count" : "1600"
+      }, {
+        "item" : "0.231",
+        "count" : "1466"
+      }, {
+        "item" : "0.444",
+        "count" : "1436"
+      }, {
+        "item" : "0.429",
+        "count" : "1421"
+      }, {
+        "item" : "0.6",
+        "count" : "1397"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 626434160,
+    "name" : "BTWN_57_64_CNT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 57 and 64 FTE Count",
+    "fieldName" : "btwn_57_64_cnt",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848287,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "20840.5",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2484734"
+      }, {
+        "item" : "1.0",
+        "count" : "101523"
+      }, {
+        "item" : "2.0",
+        "count" : "25417"
+      }, {
+        "item" : "0.5",
+        "count" : "14237"
+      }, {
+        "item" : "3.0",
+        "count" : "13178"
+      }, {
+        "item" : "4.0",
+        "count" : "8220"
+      }, {
+        "item" : "0.2",
+        "count" : "7452"
+      }, {
+        "item" : "0.3",
+        "count" : "6857"
+      }, {
+        "item" : "5.0",
+        "count" : "5489"
+      }, {
+        "item" : "0.8",
+        "count" : "5398"
+      }, {
+        "item" : "0.1",
+        "count" : "5298"
+      }, {
+        "item" : "0.4",
+        "count" : "5065"
+      }, {
+        "item" : "0.6",
+        "count" : "4099"
+      }, {
+        "item" : "6.0",
+        "count" : "3931"
+      }, {
+        "item" : "1.5",
+        "count" : "3021"
+      }, {
+        "item" : "7.0",
+        "count" : "2880"
+      }, {
+        "item" : "0.9",
+        "count" : "2382"
+      }, {
+        "item" : "8.0",
+        "count" : "2102"
+      }, {
+        "item" : "0.7",
+        "count" : "1873"
+      }, {
+        "item" : "9.0",
+        "count" : "1718"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434161,
+    "name" : "BTWN_57_64_PCT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Between 57 and 64 FTE Percent",
+    "fieldName" : "btwn_57_64_pct",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848288,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2483510"
+      }, {
+        "item" : "1.0",
+        "count" : "69856"
+      }, {
+        "item" : "0.5",
+        "count" : "18208"
+      }, {
+        "item" : "0.333",
+        "count" : "10634"
+      }, {
+        "item" : "0.25",
+        "count" : "6634"
+      }, {
+        "item" : "0.2",
+        "count" : "5374"
+      }, {
+        "item" : "0.167",
+        "count" : "4330"
+      }, {
+        "item" : "0.667",
+        "count" : "3466"
+      }, {
+        "item" : "0.143",
+        "count" : "3304"
+      }, {
+        "item" : "0.4",
+        "count" : "2613"
+      }, {
+        "item" : "0.286",
+        "count" : "2524"
+      }, {
+        "item" : "0.125",
+        "count" : "2457"
+      }, {
+        "item" : "0.111",
+        "count" : "2207"
+      }, {
+        "item" : "0.222",
+        "count" : "1797"
+      }, {
+        "item" : "0.1",
+        "count" : "1753"
+      }, {
+        "item" : "0.091",
+        "count" : "1654"
+      }, {
+        "item" : "0.182",
+        "count" : "1644"
+      }, {
+        "item" : "0.154",
+        "count" : "1456"
+      }, {
+        "item" : "0.083",
+        "count" : "1243"
+      }, {
+        "item" : "0.133",
+        "count" : "1241"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 626434162,
+    "name" : "OVR_64_CNT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Over 64 FTE Count",
+    "fieldName" : "ovr_64_cnt",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848289,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "5269.5",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2661690"
+      }, {
+        "item" : "1.0",
+        "count" : "49712"
+      }, {
+        "item" : "2.0",
+        "count" : "13046"
+      }, {
+        "item" : "0.5",
+        "count" : "6420"
+      }, {
+        "item" : "3.0",
+        "count" : "5556"
+      }, {
+        "item" : "0.2",
+        "count" : "3111"
+      }, {
+        "item" : "0.3",
+        "count" : "2760"
+      }, {
+        "item" : "4.0",
+        "count" : "2719"
+      }, {
+        "item" : "0.4",
+        "count" : "2661"
+      }, {
+        "item" : "0.8",
+        "count" : "2305"
+      }, {
+        "item" : "0.6",
+        "count" : "2222"
+      }, {
+        "item" : "0.1",
+        "count" : "1937"
+      }, {
+        "item" : "1.5",
+        "count" : "1906"
+      }, {
+        "item" : "5.0",
+        "count" : "1454"
+      }, {
+        "item" : "0.9",
+        "count" : "1283"
+      }, {
+        "item" : "2.5",
+        "count" : "1052"
+      }, {
+        "item" : "1.8",
+        "count" : "927"
+      }, {
+        "item" : "0.7",
+        "count" : "894"
+      }, {
+        "item" : "1.2",
+        "count" : "883"
+      }, {
+        "item" : "1.6",
+        "count" : "824"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434163,
+    "name" : "OVR_64_PCT",
+    "dataTypeName" : "number",
+    "description" : "Educators Age Over 64 FTE Percent",
+    "fieldName" : "ovr_64_pct",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848290,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2661196"
+      }, {
+        "item" : "1.0",
+        "count" : "13635"
+      }, {
+        "item" : "0.5",
+        "count" : "4181"
+      }, {
+        "item" : "0.333",
+        "count" : "2788"
+      }, {
+        "item" : "0.25",
+        "count" : "1828"
+      }, {
+        "item" : "0.2",
+        "count" : "1709"
+      }, {
+        "item" : "0.167",
+        "count" : "1568"
+      }, {
+        "item" : "0.021",
+        "count" : "1451"
+      }, {
+        "item" : "0.017",
+        "count" : "1443"
+      }, {
+        "item" : "0.016",
+        "count" : "1436"
+      }, {
+        "item" : "0.018",
+        "count" : "1414"
+      }, {
+        "item" : "0.02",
+        "count" : "1410"
+      }, {
+        "item" : "0.024",
+        "count" : "1400"
+      }, {
+        "item" : "0.019",
+        "count" : "1392"
+      }, {
+        "item" : "0.029",
+        "count" : "1384"
+      }, {
+        "item" : "0.023",
+        "count" : "1382"
+      }, {
+        "item" : "0.022",
+        "count" : "1370"
+      }, {
+        "item" : "0.026",
+        "count" : "1368"
+      }, {
+        "item" : "0.031",
+        "count" : "1352"
+      }, {
+        "item" : "0.015",
+        "count" : "1331"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 626434164,
+    "name" : "FTE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total FTE Count",
+    "fieldName" : "fte_cnt",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 154848291,
+    "cachedContents" : {
+      "non_null" : "2784086",
+      "largest" : "148237.7",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2056855"
+      }, {
+        "item" : "1.0",
+        "count" : "225471"
+      }, {
+        "item" : "2.0",
+        "count" : "54189"
+      }, {
+        "item" : "0.5",
+        "count" : "42275"
+      }, {
+        "item" : "3.0",
+        "count" : "23065"
+      }, {
+        "item" : "0.3",
+        "count" : "20095"
+      }, {
+        "item" : "0.2",
+        "count" : "19448"
+      }, {
+        "item" : "0.8",
+        "count" : "14660"
+      }, {
+        "item" : "0.4",
+        "count" : "14237"
+      }, {
+        "item" : "4.0",
+        "count" : "13848"
+      }, {
+        "item" : "0.1",
+        "count" : "12579"
+      }, {
+        "item" : "0.6",
+        "count" : "11542"
+      }, {
+        "item" : "1.5",
+        "count" : "10384"
+      }, {
+        "item" : "5.0",
+        "count" : "9334"
+      }, {
+        "item" : "6.0",
+        "count" : "6923"
+      }, {
+        "item" : "0.9",
+        "count" : "5777"
+      }, {
+        "item" : "7.0",
+        "count" : "5399"
+      }, {
+        "item" : "0.7",
+        "count" : "5070"
+      }, {
+        "item" : "8.0",
+        "count" : "4453"
+      }, {
+        "item" : "1.8",
+        "count" : "4402"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  }, {
+    "id" : 626434165,
+    "name" : "COMMENTS",
+    "dataTypeName" : "text",
+    "description" : "Comments",
+    "fieldName" : "comments",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 165292052,
+    "cachedContents" : {
+      "non_null" : "8860",
+      "largest" : "Failed to meet data reporting requirements",
+      "null" : "2784086",
+      "top" : [ {
+        "item" : "Failed to meet data reporting requirements",
+        "count" : "8860"
+      } ],
+      "smallest" : "Failed to meet data reporting requirements",
+      "count" : "2792946",
+      "cardinality" : "2792946"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "staffing", "teachers", "educators", "age", "fte" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

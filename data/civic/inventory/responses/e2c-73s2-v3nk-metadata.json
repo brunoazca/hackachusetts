@@ -1,0 +1,853 @@
+{
+  "id" : "73s2-v3nk",
+  "name" : "Public Postsecondary First-Year Retention and Persistence: Summary",
+  "assetType" : "dataset",
+  "attribution" : "Massachusetts Department of Higher Education",
+  "attributionLink" : "https://www.mass.edu/datacenter/factbook/retentionftft.asp",
+  "averageRating" : 0,
+  "category" : "College and Career",
+  "createdAt" : 1716320690,
+  "description" : "This dataset contains first-year retention and persistence rates and counts (Fall to Fall) for first-time and new transfer, degree-seeking undergraduate students. It covers all public community colleges and state universities in Massachusetts, and the University of Massachusetts since 2013. Data are disaggregated by report year, cohort year, segment, institution, student type, and enrollment status/intensity.\n\nThis dataset is 1 of 3 underlying datasets used in the interactive\n<a href=\"https://www.mass.edu/datacenter/factbook/retentionftft.asp\" target=\"\"_blank\" rel=\"noopener noreferrer\">First-Year Retention and Persistence dashboard</a> on the Department of Higher Education Data Center:\n\n1) <a href=\"https://educationtocareer.data.mass.gov/dataset/Public-Postsecondary-First-Year-Retention-Rates/73s2-v3nk/about_data\" target=\"\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary First-Year Retention and Persistence: Summary</a>\n2) <a href=\"https://educationtocareer.data.mass.gov/dataset/Public-Postsecondary-First-Year-Retention-by-Race/ezse-47sq/about_data\" target=\"\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary First-Year Retention and Persistence by Race/Ethnicity</a>\n3) <a href=\"https://educationtocareer.data.mass.gov/dataset/Public-Postsecondary-First-Year-Retention-by-Gende/gamm-8t4n/about_data\" target=\"\"_blank\" rel=\"noopener noreferrer\">Public Postsecondary First-Year Retention and Persistence by Gender</a>\n\n<u>Definitions:</u>\n- <b>Cohort Identification:</b> Students are included in the cohort if their first fall term meets the following criteria: new first-time or new transfer, degree-seeking, and enrolled full-time (12+ credits) or part-time.\n- <b>Adjusted Cohort Count (Retention):</b> Number of first-year students in the cohort, excluding those who completed a credential within the first year.  \n- <b>Adjusted Cohort Count (Persistence):</b> Number of first-year students in the cohort who can be tracked across institutions, excluding those who earned a credential within their first year.\n- <b>Retained:</b> A student who enrolled in their first fall semester and returned the following fall at their initial institution.  \n- <b>Persisted:</b> A student who enrolled in their first fall semester and returned the following fall at any institution in the U.S. (including transfer to another institution). This is identified using Massachusetts Department of Higher Education data or National Student Clearinghouse (NSC) data.  \n\n<b>Why do cohort counts differ?</b> <i>Persistence</i> measures require students to be trackable across institutions to determine whether they enrolled at another college or university in a later term. Students who cannot be tracked for this purpose are excluded from <i>Persistence</i> cohorts but remain included in <i>Retention</i> cohorts.\n\nNotes:\n- To comply with data privacy laws, outcomes for student groups with cohort sizes <= 6 are suppressed.\n- Figures published by DHE may differ slightly from figures published by other institutions and organizations due to differences in timing of publication, data definitions, and calculation logic. \n- Figures in this dashboard may also differ from other DHE analyses and reports that use a broader cohort to calculate retention, i.e., including part-time and/or new transfer students.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 377,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42598607,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1790196817,
+  "publicationGroup" : 19529987,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790196806,
+  "rowsUpdatedBy" : "3fm6-nje8",
+  "tableId" : 20634207,
+  "totalTimesRated" : 0,
+  "viewCount" : 952,
+  "viewLastModified" : 1790196817,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1733415199,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7755961,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1733415127,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1733415199,
+      "failureCount" : 0,
+      "startedAt" : 1733415199,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "3fm6-nje8",
+      "displayName" : "Symantha Clough"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 646931695,
+    "name" : "REPORT_YEAR",
+    "dataTypeName" : "text",
+    "description" : "Year of the cohort's second fall enrollment",
+    "fieldName" : "report_year",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155779070,
+    "cachedContents" : {
+      "non_null" : "1323",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "112"
+      }, {
+        "item" : "2023",
+        "count" : "111"
+      }, {
+        "item" : "2022",
+        "count" : "111"
+      }, {
+        "item" : "2014",
+        "count" : "111"
+      }, {
+        "item" : "2024",
+        "count" : "111"
+      }, {
+        "item" : "2020",
+        "count" : "110"
+      }, {
+        "item" : "2021",
+        "count" : "110"
+      }, {
+        "item" : "2019",
+        "count" : "110"
+      }, {
+        "item" : "2016",
+        "count" : "110"
+      }, {
+        "item" : "2015",
+        "count" : "109"
+      }, {
+        "item" : "2018",
+        "count" : "109"
+      }, {
+        "item" : "2017",
+        "count" : "109"
+      } ],
+      "smallest" : "2014",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931696,
+    "name" : "COHORT_YEAR",
+    "dataTypeName" : "text",
+    "description" : "Year of the cohort's first fall enrollment",
+    "fieldName" : "cohort_year",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155779069,
+    "cachedContents" : {
+      "non_null" : "1323",
+      "largest" : "2024",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024",
+        "count" : "112"
+      }, {
+        "item" : "2023",
+        "count" : "111"
+      }, {
+        "item" : "2021",
+        "count" : "111"
+      }, {
+        "item" : "2013",
+        "count" : "111"
+      }, {
+        "item" : "2022",
+        "count" : "111"
+      }, {
+        "item" : "2020",
+        "count" : "110"
+      }, {
+        "item" : "2015",
+        "count" : "110"
+      }, {
+        "item" : "2018",
+        "count" : "110"
+      }, {
+        "item" : "2019",
+        "count" : "110"
+      }, {
+        "item" : "2016",
+        "count" : "109"
+      }, {
+        "item" : "2014",
+        "count" : "109"
+      }, {
+        "item" : "2017",
+        "count" : "109"
+      } ],
+      "smallest" : "2013",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931697,
+    "name" : "SEGMENT",
+    "dataTypeName" : "text",
+    "description" : "Type of public institution (e.g., community college, state university, or University of Massachusetts)",
+    "fieldName" : "segment",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155779068,
+    "cachedContents" : {
+      "non_null" : "1323",
+      "largest" : "University of Massachusetts",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Community Colleges",
+        "count" : "720"
+      }, {
+        "item" : "State Universities",
+        "count" : "411"
+      }, {
+        "item" : "University of Massachusetts",
+        "count" : "192"
+      } ],
+      "smallest" : "Community Colleges",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931698,
+    "name" : "INSTITUTION",
+    "dataTypeName" : "text",
+    "description" : "Name of the public college or university",
+    "fieldName" : "institution",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 155779067,
+    "cachedContents" : {
+      "non_null" : "1323",
+      "largest" : "Worcester State University",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Cape Cod Community College",
+        "count" : "48"
+      }, {
+        "item" : "Bridgewater State University",
+        "count" : "48"
+      }, {
+        "item" : "Salem State University",
+        "count" : "48"
+      }, {
+        "item" : "Holyoke Community College",
+        "count" : "48"
+      }, {
+        "item" : "Fitchburg State University",
+        "count" : "48"
+      }, {
+        "item" : "Bunker Hill Community College",
+        "count" : "48"
+      }, {
+        "item" : "Bristol Community College",
+        "count" : "48"
+      }, {
+        "item" : "Quinsigamond Community College",
+        "count" : "48"
+      }, {
+        "item" : "Berkshire Community College",
+        "count" : "48"
+      }, {
+        "item" : "Mt. Wachusett Community College",
+        "count" : "48"
+      }, {
+        "item" : "University of Massachusetts Dartmouth",
+        "count" : "48"
+      }, {
+        "item" : "North Shore Community College",
+        "count" : "48"
+      }, {
+        "item" : "Middlesex Community College",
+        "count" : "48"
+      }, {
+        "item" : "MassBay Community College",
+        "count" : "48"
+      }, {
+        "item" : "University of Massachusetts Lowell",
+        "count" : "48"
+      }, {
+        "item" : "University of Massachusetts Boston",
+        "count" : "48"
+      }, {
+        "item" : "Westfield State University",
+        "count" : "48"
+      }, {
+        "item" : "Massasoit Community College",
+        "count" : "48"
+      }, {
+        "item" : "University of Massachusetts Amherst",
+        "count" : "48"
+      }, {
+        "item" : "Springfield Technical Community College",
+        "count" : "48"
+      } ],
+      "smallest" : "Berkshire Community College",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931708,
+    "name" : "STUDENT_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Student type in first fall (First-time or New transfer)",
+    "fieldName" : "student_type",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 172261587,
+    "cachedContents" : {
+      "non_null" : "1323",
+      "largest" : "New transfer",
+      "null" : "0",
+      "top" : [ {
+        "item" : "New transfer",
+        "count" : "665"
+      }, {
+        "item" : "First-time",
+        "count" : "658"
+      } ],
+      "smallest" : "First-time",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931707,
+    "name" : "ENROLLMENT_STATUS",
+    "dataTypeName" : "text",
+    "description" : "Enrollment intensity in first fall (Full Time or Part Time)",
+    "fieldName" : "enrollment_status",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 172261586,
+    "cachedContents" : {
+      "non_null" : "1323",
+      "largest" : "Part Time",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Full Time",
+        "count" : "672"
+      }, {
+        "item" : "Part Time",
+        "count" : "651"
+      } ],
+      "smallest" : "Full Time",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931705,
+    "name" : "RETENTION_ADJ_COHORT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Adjusted Cohort Count for retention metrics",
+    "fieldName" : "retention_adj_cohort_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 172261584,
+    "cachedContents" : {
+      "non_null" : "1323",
+      "largest" : "5729",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "18"
+      }, {
+        "item" : "4",
+        "count" : "14"
+      }, {
+        "item" : "2",
+        "count" : "14"
+      }, {
+        "item" : "3",
+        "count" : "12"
+      }, {
+        "item" : "5",
+        "count" : "10"
+      }, {
+        "item" : "189",
+        "count" : "8"
+      }, {
+        "item" : "82",
+        "count" : "7"
+      }, {
+        "item" : "30",
+        "count" : "7"
+      }, {
+        "item" : "177",
+        "count" : "7"
+      }, {
+        "item" : "93",
+        "count" : "6"
+      }, {
+        "item" : "164",
+        "count" : "6"
+      }, {
+        "item" : "258",
+        "count" : "6"
+      }, {
+        "item" : "11",
+        "count" : "6"
+      }, {
+        "item" : "36",
+        "count" : "6"
+      }, {
+        "item" : "112",
+        "count" : "6"
+      }, {
+        "item" : "7",
+        "count" : "6"
+      }, {
+        "item" : "142",
+        "count" : "6"
+      }, {
+        "item" : "13",
+        "count" : "6"
+      }, {
+        "item" : "127",
+        "count" : "6"
+      }, {
+        "item" : "152",
+        "count" : "5"
+      } ],
+      "smallest" : "1",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931706,
+    "name" : "PERSIST_ADJ_COHORT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Adjusted Cohort Count for persistence metrics (students must be trackable across institutions to determine enrollment at another college or university after first fall; excluding students who completed a credential within the first year)",
+    "fieldName" : "persist_adj_cohort_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 172261585,
+    "cachedContents" : {
+      "non_null" : "1323",
+      "largest" : "5417",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "18"
+      }, {
+        "item" : "2",
+        "count" : "16"
+      }, {
+        "item" : "3",
+        "count" : "13"
+      }, {
+        "item" : "4",
+        "count" : "12"
+      }, {
+        "item" : "5",
+        "count" : "11"
+      }, {
+        "item" : "284",
+        "count" : "10"
+      }, {
+        "item" : "141",
+        "count" : "8"
+      }, {
+        "item" : "7",
+        "count" : "8"
+      }, {
+        "item" : "35",
+        "count" : "8"
+      }, {
+        "item" : "11",
+        "count" : "8"
+      }, {
+        "item" : "163",
+        "count" : "7"
+      }, {
+        "item" : "60",
+        "count" : "7"
+      }, {
+        "item" : "181",
+        "count" : "7"
+      }, {
+        "item" : "139",
+        "count" : "6"
+      }, {
+        "item" : "188",
+        "count" : "6"
+      }, {
+        "item" : "78",
+        "count" : "6"
+      }, {
+        "item" : "36",
+        "count" : "6"
+      }, {
+        "item" : "76",
+        "count" : "6"
+      }, {
+        "item" : "131",
+        "count" : "6"
+      }, {
+        "item" : "144",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931700,
+    "name" : "RETAINED_INITIAL_INST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of first-year students retained at their initial institution in the second fall",
+    "fieldName" : "retained_initial_inst_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155779065,
+    "cachedContents" : {
+      "non_null" : "1250",
+      "largest" : "5107",
+      "null" : "73",
+      "top" : [ {
+        "item" : "4",
+        "count" : "11"
+      }, {
+        "item" : "5",
+        "count" : "11"
+      }, {
+        "item" : "32",
+        "count" : "10"
+      }, {
+        "item" : "81",
+        "count" : "10"
+      }, {
+        "item" : "73",
+        "count" : "10"
+      }, {
+        "item" : "3",
+        "count" : "9"
+      }, {
+        "item" : "68",
+        "count" : "9"
+      }, {
+        "item" : "82",
+        "count" : "9"
+      }, {
+        "item" : "54",
+        "count" : "9"
+      }, {
+        "item" : "25",
+        "count" : "8"
+      }, {
+        "item" : "56",
+        "count" : "8"
+      }, {
+        "item" : "33",
+        "count" : "8"
+      }, {
+        "item" : "79",
+        "count" : "8"
+      }, {
+        "item" : "62",
+        "count" : "7"
+      }, {
+        "item" : "51",
+        "count" : "7"
+      }, {
+        "item" : "52",
+        "count" : "7"
+      }, {
+        "item" : "9",
+        "count" : "7"
+      }, {
+        "item" : "137",
+        "count" : "7"
+      }, {
+        "item" : "21",
+        "count" : "7"
+      }, {
+        "item" : "83",
+        "count" : "7"
+      } ],
+      "smallest" : "1",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931701,
+    "name" : "RETAINED_INITIAL_INST_PCT",
+    "dataTypeName" : "number",
+    "description" : "Count of first-year students retained at their initial institution in the second fall (RETAINED_INITIAL_INST_CNT / RETENTION_ADJ_COHORT_CNT)",
+    "fieldName" : "retained_initial_inst_pct",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155779064,
+    "cachedContents" : {
+      "non_null" : "1250",
+      "largest" : "0.972",
+      "null" : "73",
+      "top" : [ {
+        "item" : "0.463",
+        "count" : "9"
+      }, {
+        "item" : "0.500",
+        "count" : "9"
+      }, {
+        "item" : "0.458",
+        "count" : "8"
+      }, {
+        "item" : "0.475",
+        "count" : "8"
+      }, {
+        "item" : "0.510",
+        "count" : "8"
+      }, {
+        "item" : "0.514",
+        "count" : "8"
+      }, {
+        "item" : "0.600",
+        "count" : "8"
+      }, {
+        "item" : "0.581",
+        "count" : "7"
+      }, {
+        "item" : "0.738",
+        "count" : "7"
+      }, {
+        "item" : "0.476",
+        "count" : "7"
+      }, {
+        "item" : "0.576",
+        "count" : "7"
+      }, {
+        "item" : "0.525",
+        "count" : "7"
+      }, {
+        "item" : "0.580",
+        "count" : "7"
+      }, {
+        "item" : "0.542",
+        "count" : "6"
+      }, {
+        "item" : "0.739",
+        "count" : "6"
+      }, {
+        "item" : "0.596",
+        "count" : "6"
+      }, {
+        "item" : "0.667",
+        "count" : "6"
+      }, {
+        "item" : "0.527",
+        "count" : "6"
+      }, {
+        "item" : "0.591",
+        "count" : "6"
+      }, {
+        "item" : "0.601",
+        "count" : "6"
+      } ],
+      "smallest" : "0.100",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 646931702,
+    "name" : "PERSISTED_ANY_INST_CNT",
+    "dataTypeName" : "number",
+    "description" : "Count of first-year students who persisted to any institution in the U.S. in the second fall",
+    "fieldName" : "persisted_any_inst_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155779063,
+    "cachedContents" : {
+      "non_null" : "1247",
+      "largest" : "5148",
+      "null" : "76",
+      "top" : [ {
+        "item" : "48",
+        "count" : "10"
+      }, {
+        "item" : "50",
+        "count" : "9"
+      }, {
+        "item" : "91",
+        "count" : "9"
+      }, {
+        "item" : "74",
+        "count" : "9"
+      }, {
+        "item" : "88",
+        "count" : "8"
+      }, {
+        "item" : "84",
+        "count" : "8"
+      }, {
+        "item" : "43",
+        "count" : "8"
+      }, {
+        "item" : "95",
+        "count" : "8"
+      }, {
+        "item" : "31",
+        "count" : "8"
+      }, {
+        "item" : "101",
+        "count" : "7"
+      }, {
+        "item" : "52",
+        "count" : "7"
+      }, {
+        "item" : "141",
+        "count" : "7"
+      }, {
+        "item" : "115",
+        "count" : "7"
+      }, {
+        "item" : "46",
+        "count" : "7"
+      }, {
+        "item" : "6",
+        "count" : "7"
+      }, {
+        "item" : "87",
+        "count" : "7"
+      }, {
+        "item" : "63",
+        "count" : "7"
+      }, {
+        "item" : "99",
+        "count" : "7"
+      }, {
+        "item" : "7",
+        "count" : "7"
+      }, {
+        "item" : "153",
+        "count" : "7"
+      } ],
+      "smallest" : "2",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : { }
+  }, {
+    "id" : 646931703,
+    "name" : "PERSISTED_ANY_INST_PCT",
+    "dataTypeName" : "number",
+    "description" : "Percentage of first-year students who persisted to any institution in the U.S. in the second fall (PERSISTED_ANY_INST_CNT / PERSIST_ADJ_COHORT_CNT)",
+    "fieldName" : "persisted_any_inst_pct",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 155779062,
+    "cachedContents" : {
+      "non_null" : "1247",
+      "largest" : "1.000",
+      "null" : "76",
+      "top" : [ {
+        "item" : "0.667",
+        "count" : "14"
+      }, {
+        "item" : "0.858",
+        "count" : "8"
+      }, {
+        "item" : "0.683",
+        "count" : "8"
+      }, {
+        "item" : "0.601",
+        "count" : "8"
+      }, {
+        "item" : "0.750",
+        "count" : "8"
+      }, {
+        "item" : "0.533",
+        "count" : "8"
+      }, {
+        "item" : "0.691",
+        "count" : "8"
+      }, {
+        "item" : "0.547",
+        "count" : "7"
+      }, {
+        "item" : "0.716",
+        "count" : "7"
+      }, {
+        "item" : "0.681",
+        "count" : "7"
+      }, {
+        "item" : "0.661",
+        "count" : "7"
+      }, {
+        "item" : "0.545",
+        "count" : "7"
+      }, {
+        "item" : "0.679",
+        "count" : "7"
+      }, {
+        "item" : "0.727",
+        "count" : "7"
+      }, {
+        "item" : "0.901",
+        "count" : "7"
+      }, {
+        "item" : "0.638",
+        "count" : "7"
+      }, {
+        "item" : "0.515",
+        "count" : "7"
+      }, {
+        "item" : "0.500",
+        "count" : "7"
+      }, {
+        "item" : "0.875",
+        "count" : "7"
+      }, {
+        "item" : "0.552",
+        "count" : "7"
+      } ],
+      "smallest" : "0.200",
+      "count" : "1323",
+      "cardinality" : "1323"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.mass.edu/home.asp"
+      }
+    },
+    "rowLabel" : "One year of retention and persistence counts and rates per institution of higher education",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "enrollment", "undergraduate", "undergrad", "retention", "retention rate", "persistence", "persistence rate", "college persistence", "college retention" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

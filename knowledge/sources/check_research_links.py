@@ -4,6 +4,7 @@
 Usage: python3 knowledge/sources/check_research_links.py
 Reachability is distinct from content verification. Some sites reject HEAD.
 """
+import argparse
 import collections
 import concurrent.futures
 import datetime
@@ -13,9 +14,16 @@ import re
 import subprocess
 import urllib.parse
 
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--glob', action='append', dest='patterns', help='Knowledge Markdown glob; repeat to select files')
+parser.add_argument('--output', default='link_audit.json', help='Output JSON filename in the sources directory')
+args = parser.parse_args()
+if pathlib.Path(args.output).name != args.output:
+    parser.error('--output must be a filename, not a path')
 root = pathlib.Path(__file__).resolve().parents[1]
 references = collections.defaultdict(set)
-for path in root.glob('*.md'):
+paths = sorted({path for pattern in (args.patterns or ['*.md']) for path in root.glob(pattern)})
+for path in paths:
     for url in re.findall(r'https?://[^\s<>\]"`]+', path.read_text()):
         # Our Markdown URLs use percent encoding for parentheses within URLs.
         url = url.split(')')[0].rstrip('.,;')
@@ -44,11 +52,12 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
     results = list(pool.map(check, sorted(references)))
 output = {
     'checked_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-    'scope': 'Unique public URLs in knowledge/*.md, excluding fragments. '
+    'scope': 'Unique public URLs in selected knowledge Markdown, excluding fragments. '
              'HTTP reachability only; not link content or API validation.',
+    'documents': [path.name for path in paths],
     'status_counts': dict(collections.Counter(r['http_status'] for r in results)),
     'results': results,
 }
-target = pathlib.Path(__file__).with_name('link_audit.json')
+target = pathlib.Path(__file__).with_name(args.output)
 target.write_text(json.dumps(output, indent=2) + '\n')
 print(json.dumps({'checked': len(results), 'status_counts': output['status_counts']}))

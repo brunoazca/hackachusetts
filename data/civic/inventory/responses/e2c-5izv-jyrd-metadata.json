@@ -1,0 +1,810 @@
+{
+  "id" : "5izv-jyrd",
+  "name" : "Chapter 70 Foundation Budget and Net School Spending (NSS)",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu",
+  "averageRating" : 0,
+  "category" : "Finance and Budget",
+  "createdAt" : 1708980300,
+  "description" : "This dataset contains Chapter 70 foundation budget and net school spending data from 2008 onward.\n\nThe Chapter 70 program is the major program of state aid to public elementary and secondary schools providing state aid to support school operations. It establishes minimum spending requirements for each school district and minimum requirements for each municipality's share of school costs.\n\nDetailed numbers for the Chapter 70 formula are available on the <a href=\"http://www.doe.mass.edu/finance/chapter70\" target=\"_blank\" rel=\"noopener noreferrer\">School Finance</a> area of the Massachusetts Department of Elementary and Secondary Education’s website. Key files on this site include:\n<ul><li><a href=\"https://www.doe.mass.edu/finance/chapter70/profile.xlsx\" target=\"_blank\" rel=\"noopener noreferrer\">Chapter 70 District Profiles</a> – data including key formula components including foundation enrollment, foundation budget, Chapter 70 aid and required net school spending from 2008 to the most recent year of data available</li><li><a href=\"https://www.doe.mass.edu/finance/chapter70/keyfactors.xlsx\" target=\"_blank\" rel=\"noopener noreferrer\">Chapter 70 Trends in Aid and Local Contribution</a> – graphs and data at the district level comparing key formula components including foundation enrollment, foundation budget, Chapter 70 aid, and required net school spending from 2007 to the most recent year of data available</li><li><a href=\"https://www.doe.mass.edu/finance/chapter70/compliance.html\" target=\"_blank\" rel=\"noopener noreferrer\">Compliance with Net School Spending Requirements</a> – data on net school spending at the district level from 2017 to the most recent year of data available</li></ul>\n\nThis dataset contains the same data that is also published on our DESE Profiles site: \n<a href=\"https://profiles.doe.mass.edu/statereport/netschoolspendingtrend.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Chapter 70 Foundation Budget and Net School Spending</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 278,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41178461,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1741037020,
+  "publicationGroup" : 19465264,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1785432611,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 19799130,
+  "totalTimesRated" : 0,
+  "viewCount" : 5411,
+  "viewLastModified" : 1785432610,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1741037165,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6777896,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1741037145,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1741037165,
+      "failureCount" : 0,
+      "startedAt" : 1741037165,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 606854453,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151580385,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "2022",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2009",
+        "count" : "329"
+      }, {
+        "item" : "2011",
+        "count" : "329"
+      }, {
+        "item" : "2008",
+        "count" : "329"
+      }, {
+        "item" : "2010",
+        "count" : "329"
+      }, {
+        "item" : "2012",
+        "count" : "327"
+      }, {
+        "item" : "2014",
+        "count" : "325"
+      }, {
+        "item" : "2013",
+        "count" : "325"
+      }, {
+        "item" : "2017",
+        "count" : "323"
+      }, {
+        "item" : "2016",
+        "count" : "323"
+      }, {
+        "item" : "2018",
+        "count" : "323"
+      }, {
+        "item" : "2015",
+        "count" : "322"
+      }, {
+        "item" : "2019",
+        "count" : "321"
+      }, {
+        "item" : "2022",
+        "count" : "319"
+      }, {
+        "item" : "2020",
+        "count" : "319"
+      }, {
+        "item" : "2021",
+        "count" : "319"
+      } ],
+      "smallest" : "2008",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : { }
+  }, {
+    "id" : 606854454,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151580386,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "09150000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00610000",
+        "count" : "15"
+      }, {
+        "item" : "07730000",
+        "count" : "15"
+      }, {
+        "item" : "01600000",
+        "count" : "15"
+      }, {
+        "item" : "02170000",
+        "count" : "15"
+      }, {
+        "item" : "00070000",
+        "count" : "15"
+      }, {
+        "item" : "02070000",
+        "count" : "15"
+      }, {
+        "item" : "00010000",
+        "count" : "15"
+      }, {
+        "item" : "02180000",
+        "count" : "15"
+      }, {
+        "item" : "03080000",
+        "count" : "15"
+      }, {
+        "item" : "08530000",
+        "count" : "15"
+      }, {
+        "item" : "07300000",
+        "count" : "15"
+      }, {
+        "item" : "01310000",
+        "count" : "15"
+      }, {
+        "item" : "08280000",
+        "count" : "15"
+      }, {
+        "item" : "02190000",
+        "count" : "15"
+      }, {
+        "item" : "03320000",
+        "count" : "15"
+      }, {
+        "item" : "02650000",
+        "count" : "15"
+      }, {
+        "item" : "00430000",
+        "count" : "15"
+      }, {
+        "item" : "02110000",
+        "count" : "15"
+      }, {
+        "item" : "03180000",
+        "count" : "15"
+      }, {
+        "item" : "08060000",
+        "count" : "15"
+      } ],
+      "smallest" : "00000000",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : { }
+  }, {
+    "id" : 606854455,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151580387,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Norfolk",
+        "count" : "15"
+      }, {
+        "item" : "Hawlemont",
+        "count" : "15"
+      }, {
+        "item" : "Andover",
+        "count" : "15"
+      }, {
+        "item" : "Acton-Boxborough",
+        "count" : "15"
+      }, {
+        "item" : "New Bedford",
+        "count" : "15"
+      }, {
+        "item" : "Littleton",
+        "count" : "15"
+      }, {
+        "item" : "Norwood",
+        "count" : "15"
+      }, {
+        "item" : "Springfield",
+        "count" : "15"
+      }, {
+        "item" : "Brimfield",
+        "count" : "15"
+      }, {
+        "item" : "North Middlesex",
+        "count" : "15"
+      }, {
+        "item" : "Haverhill",
+        "count" : "15"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "15"
+      }, {
+        "item" : "Truro",
+        "count" : "15"
+      }, {
+        "item" : "Needham",
+        "count" : "15"
+      }, {
+        "item" : "Bedford",
+        "count" : "15"
+      }, {
+        "item" : "Silver Lake",
+        "count" : "15"
+      }, {
+        "item" : "Northborough",
+        "count" : "15"
+      }, {
+        "item" : "Minuteman Regional Vocational Technical",
+        "count" : "15"
+      }, {
+        "item" : "Bourne",
+        "count" : "15"
+      }, {
+        "item" : "Boxford",
+        "count" : "15"
+      } ],
+      "smallest" : "Abington",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : { }
+  }, {
+    "id" : 606854456,
+    "name" : "REQ_NSS_AMT",
+    "dataTypeName" : "number",
+    "description" : "Required Net School Spending (NSS) Amount",
+    "fieldName" : "req_nss_amt",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151580388,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "12343912227.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "19402906.00",
+        "count" : "1"
+      }, {
+        "item" : "24353270.00",
+        "count" : "1"
+      }, {
+        "item" : "12903118.00",
+        "count" : "1"
+      }, {
+        "item" : "63093597.00",
+        "count" : "1"
+      }, {
+        "item" : "52203863.00",
+        "count" : "1"
+      }, {
+        "item" : "7287853.00",
+        "count" : "1"
+      }, {
+        "item" : "52978419.05",
+        "count" : "1"
+      }, {
+        "item" : "8055509.00",
+        "count" : "1"
+      }, {
+        "item" : "1274903.00",
+        "count" : "1"
+      }, {
+        "item" : "5372537.00",
+        "count" : "1"
+      }, {
+        "item" : "13639867.00",
+        "count" : "1"
+      }, {
+        "item" : "21697572.00",
+        "count" : "1"
+      }, {
+        "item" : "1012233521.00",
+        "count" : "1"
+      }, {
+        "item" : "14035365.00",
+        "count" : "1"
+      }, {
+        "item" : "35450303.00",
+        "count" : "1"
+      }, {
+        "item" : "5215906.10",
+        "count" : "1"
+      }, {
+        "item" : "30262350.00",
+        "count" : "1"
+      }, {
+        "item" : "1154833.20",
+        "count" : "1"
+      }, {
+        "item" : "35802020.00",
+        "count" : "1"
+      }, {
+        "item" : "25318866.00",
+        "count" : "1"
+      } ],
+      "smallest" : "0.00",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 606854457,
+    "name" : "ACTL_NSS_AMT",
+    "dataTypeName" : "number",
+    "description" : "Actual Net School Spending (NSS) Amount",
+    "fieldName" : "actl_nss_amt",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151580389,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "15734465848.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "7378925.90",
+        "count" : "1"
+      }, {
+        "item" : "5753097.00",
+        "count" : "1"
+      }, {
+        "item" : "39972840.00",
+        "count" : "1"
+      }, {
+        "item" : "44548098.12",
+        "count" : "1"
+      }, {
+        "item" : "24923042.00",
+        "count" : "1"
+      }, {
+        "item" : "22746317.00",
+        "count" : "1"
+      }, {
+        "item" : "38307426.45",
+        "count" : "1"
+      }, {
+        "item" : "2046589.00",
+        "count" : "1"
+      }, {
+        "item" : "10883621.00",
+        "count" : "1"
+      }, {
+        "item" : "68777610.00",
+        "count" : "1"
+      }, {
+        "item" : "38534564.80",
+        "count" : "1"
+      }, {
+        "item" : "43908231.00",
+        "count" : "1"
+      }, {
+        "item" : "33807324.93",
+        "count" : "1"
+      }, {
+        "item" : "25712803.00",
+        "count" : "1"
+      }, {
+        "item" : "41058649.20",
+        "count" : "1"
+      }, {
+        "item" : "30615912.00",
+        "count" : "1"
+      }, {
+        "item" : "9355681.41",
+        "count" : "1"
+      }, {
+        "item" : "14916859.00",
+        "count" : "1"
+      }, {
+        "item" : "85640883.68",
+        "count" : "1"
+      }, {
+        "item" : "9972165.30",
+        "count" : "1"
+      } ],
+      "smallest" : "0.00",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 606854458,
+    "name" : "OVR_UND_REQ_AMT",
+    "dataTypeName" : "number",
+    "description" : "Over or Under Required Amount",
+    "fieldName" : "ovr_und_req_amt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151580390,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "3390553621.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1190183.30",
+        "count" : "1"
+      }, {
+        "item" : "11090940.00",
+        "count" : "1"
+      }, {
+        "item" : "-8795990.00",
+        "count" : "1"
+      }, {
+        "item" : "2520242.00",
+        "count" : "1"
+      }, {
+        "item" : "4044934.60",
+        "count" : "1"
+      }, {
+        "item" : "8413192.00",
+        "count" : "1"
+      }, {
+        "item" : "3410295.00",
+        "count" : "1"
+      }, {
+        "item" : "6443344.44",
+        "count" : "1"
+      }, {
+        "item" : "1436764.00",
+        "count" : "1"
+      }, {
+        "item" : "5586624.00",
+        "count" : "1"
+      }, {
+        "item" : "20482043.00",
+        "count" : "1"
+      }, {
+        "item" : "6474529.00",
+        "count" : "1"
+      }, {
+        "item" : "2595532.80",
+        "count" : "1"
+      }, {
+        "item" : "49153.70",
+        "count" : "1"
+      }, {
+        "item" : "3727348.00",
+        "count" : "1"
+      }, {
+        "item" : "2556252.00",
+        "count" : "1"
+      }, {
+        "item" : "2793708.39",
+        "count" : "1"
+      }, {
+        "item" : "12034706.00",
+        "count" : "1"
+      }, {
+        "item" : "822853.00",
+        "count" : "1"
+      }, {
+        "item" : "4526095.25",
+        "count" : "1"
+      } ],
+      "smallest" : "-14792142.00",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 606854463,
+    "name" : "ACTL_NSS_PCT_OF_REQ_NSS",
+    "dataTypeName" : "number",
+    "description" : "Actual Net School Spending (NSS) as Percentage of Required Net School Spending",
+    "fieldName" : "actl_nss_req_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 157151004,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "4.37",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "154"
+      }, {
+        "item" : "1.02",
+        "count" : "119"
+      }, {
+        "item" : "1.05",
+        "count" : "114"
+      }, {
+        "item" : "1.01",
+        "count" : "112"
+      }, {
+        "item" : "1.03",
+        "count" : "110"
+      }, {
+        "item" : "1.04",
+        "count" : "107"
+      }, {
+        "item" : "1.14",
+        "count" : "102"
+      }, {
+        "item" : "1.09",
+        "count" : "99"
+      }, {
+        "item" : "1.15",
+        "count" : "95"
+      }, {
+        "item" : "1.17",
+        "count" : "94"
+      }, {
+        "item" : "1.06",
+        "count" : "93"
+      }, {
+        "item" : "1.13",
+        "count" : "93"
+      }, {
+        "item" : "1.07",
+        "count" : "92"
+      }, {
+        "item" : "1.11",
+        "count" : "91"
+      }, {
+        "item" : "1.21",
+        "count" : "90"
+      }, {
+        "item" : "1.1",
+        "count" : "88"
+      }, {
+        "item" : "1.2",
+        "count" : "87"
+      }, {
+        "item" : "1.16",
+        "count" : "86"
+      }, {
+        "item" : "1.08",
+        "count" : "83"
+      }, {
+        "item" : "1.12",
+        "count" : "83"
+      } ],
+      "smallest" : "0",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  }, {
+    "id" : 606854460,
+    "name" : "FDN_BDGT_AMT",
+    "dataTypeName" : "number",
+    "description" : "Foundation Budget Amount",
+    "fieldName" : "fdn_bdgt_amt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151580397,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "11917806098.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "26898863.00",
+        "count" : "2"
+      }, {
+        "item" : "100148666.00",
+        "count" : "2"
+      }, {
+        "item" : "1201025.00",
+        "count" : "2"
+      }, {
+        "item" : "1321151.00",
+        "count" : "2"
+      }, {
+        "item" : "57774437.00",
+        "count" : "2"
+      }, {
+        "item" : "1392809.00",
+        "count" : "2"
+      }, {
+        "item" : "10895287.00",
+        "count" : "2"
+      }, {
+        "item" : "4884681.00",
+        "count" : "2"
+      }, {
+        "item" : "7823769.00",
+        "count" : "2"
+      }, {
+        "item" : "5789256.00",
+        "count" : "2"
+      }, {
+        "item" : "59693732.00",
+        "count" : "2"
+      }, {
+        "item" : "7421674.00",
+        "count" : "2"
+      }, {
+        "item" : "22449447.00",
+        "count" : "2"
+      }, {
+        "item" : "37107615.00",
+        "count" : "2"
+      }, {
+        "item" : "9510996.00",
+        "count" : "2"
+      }, {
+        "item" : "19884200.00",
+        "count" : "2"
+      }, {
+        "item" : "32505639.00",
+        "count" : "2"
+      }, {
+        "item" : "29177891.00",
+        "count" : "2"
+      }, {
+        "item" : "5511982.00",
+        "count" : "2"
+      }, {
+        "item" : "6490224.00",
+        "count" : "2"
+      } ],
+      "smallest" : "28361.25",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 606854462,
+    "name" : "ACTL_NSS_PCT_OF_FDN_BUDG",
+    "dataTypeName" : "number",
+    "description" : "Actual Net School Spending (NSS) as Percentage of Foundation Budget",
+    "fieldName" : "actl_nss_fdn_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 157151003,
+    "cachedContents" : {
+      "non_null" : "4862",
+      "largest" : "4.53",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "105"
+      }, {
+        "item" : "1.01",
+        "count" : "91"
+      }, {
+        "item" : "1.05",
+        "count" : "90"
+      }, {
+        "item" : "1.02",
+        "count" : "88"
+      }, {
+        "item" : "1.22",
+        "count" : "88"
+      }, {
+        "item" : "1.14",
+        "count" : "88"
+      }, {
+        "item" : "1.08",
+        "count" : "84"
+      }, {
+        "item" : "1.06",
+        "count" : "84"
+      }, {
+        "item" : "1.15",
+        "count" : "84"
+      }, {
+        "item" : "1.31",
+        "count" : "83"
+      }, {
+        "item" : "1.19",
+        "count" : "80"
+      }, {
+        "item" : "1.21",
+        "count" : "77"
+      }, {
+        "item" : "1.17",
+        "count" : "76"
+      }, {
+        "item" : "1.23",
+        "count" : "75"
+      }, {
+        "item" : "1.04",
+        "count" : "75"
+      }, {
+        "item" : "1.1",
+        "count" : "75"
+      }, {
+        "item" : "1.28",
+        "count" : "74"
+      }, {
+        "item" : "1.16",
+        "count" : "73"
+      }, {
+        "item" : "1.24",
+        "count" : "73"
+      }, {
+        "item" : "1.25",
+        "count" : "72"
+      } ],
+      "smallest" : "0",
+      "count" : "4862",
+      "cardinality" : "4862"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "chapter 70", "public school", "state aid", "spending", "costs", "district", "nss", "net school spending", "foundation budget", "c70" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

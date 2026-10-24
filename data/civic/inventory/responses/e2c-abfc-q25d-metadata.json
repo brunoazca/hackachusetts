@@ -1,0 +1,99 @@
+{
+  "id" : "abfc-q25d",
+  "name" : "Investing in SEL and Mental Health",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1693415017,
+  "description" : "This article highlights some of the new funding for social and emotional learning (SEL) and mental health in schools, trends in staffing to support student wellness, and resources to better understand and address health and safety issues in our schools and communities to improve student success.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 39917390,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1693516611,
+  "publicationGroup" : 19271787,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1693415017,
+  "tableId" : 19271787,
+  "totalTimesRated" : 0,
+  "viewCount" : 9359,
+  "viewLastModified" : 1776805209,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1695907773,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 5802479,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1695907726,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1695907774,
+      "failureCount" : 0,
+      "startedAt" : 1695907773,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "This article highlights some of the new funding for social and emotional learning (SEL) and mental health in schools, trends in staffing to support student wellness, and resources to better understand and address health and safety issues in our schools and communities to improve student success.",
+      "title" : "Investing in SEL and Mental Health"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "epzt-45wh",
+    "displayName" : "Danielle Kane",
+    "screenName" : "Danielle Kane",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "social and emotional learning", "sel", "mental health", "staffing", "funding", "grants", "k-12", "bullying" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

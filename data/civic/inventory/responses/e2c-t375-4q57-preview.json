@@ -1,0 +1,54 @@
+[{"sy":"2021","ind":"Completion","race_eth":"All Candidates","ind_cnt":"4431","ind_pct":"1"}
+,{"sy":"2021","ind":"Completion","race_eth":"American Indian or Alaska Native","ind_cnt":"2","ind_pct":"0"}
+,{"sy":"2021","ind":"Completion","race_eth":"Asian","ind_cnt":"102","ind_pct":"0.023"}
+,{"sy":"2021","ind":"Completion","race_eth":"Black or African American","ind_cnt":"136","ind_pct":"0.031"}
+,{"sy":"2021","ind":"Completion","race_eth":"Hispanic/Latino","ind_cnt":"270","ind_pct":"0.061"}
+,{"sy":"2021","ind":"Completion","race_eth":"Native Hawaiian or Other Pacific Islander","ind_cnt":"1","ind_pct":"0"}
+,{"sy":"2021","ind":"Completion","race_eth":"Not Reported","ind_cnt":"1131","ind_pct":"0.255"}
+,{"sy":"2021","ind":"Completion","race_eth":"Two or more races","ind_cnt":"54","ind_pct":"0.012"}
+,{"sy":"2021","ind":"Completion","race_eth":"White","ind_cnt":"2735","ind_pct":"0.617"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"All Candidates","ind_cnt":"9464","ind_pct":"1"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"American Indian or Alaska Native","ind_cnt":"9","ind_pct":"0.001"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"Asian","ind_cnt":"226","ind_pct":"0.024"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"Black or African American","ind_cnt":"325","ind_pct":"0.034"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"Hispanic/Latino","ind_cnt":"552","ind_pct":"0.058"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"Native Hawaiian or Other Pacific Islander","ind_cnt":"2","ind_pct":"0"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"Not Reported","ind_cnt":"2499","ind_pct":"0.264"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"Two or more races","ind_cnt":"108","ind_pct":"0.011"}
+,{"sy":"2021","ind":"Enrollment","race_eth":"White","ind_cnt":"5743","ind_pct":"0.607"}
+,{"sy":"2020","ind":"Completion","race_eth":"All Candidates","ind_cnt":"4630","ind_pct":"1"}
+,{"sy":"2020","ind":"Completion","race_eth":"American Indian or Alaska Native","ind_cnt":"4","ind_pct":"0.001"}
+,{"sy":"2020","ind":"Completion","race_eth":"Asian","ind_cnt":"123","ind_pct":"0.027"}
+,{"sy":"2020","ind":"Completion","race_eth":"Black or African American","ind_cnt":"109","ind_pct":"0.024"}
+,{"sy":"2020","ind":"Completion","race_eth":"Hispanic/Latino","ind_cnt":"259","ind_pct":"0.056"}
+,{"sy":"2020","ind":"Completion","race_eth":"Native Hawaiian or Other Pacific Islander","ind_cnt":"1","ind_pct":"0"}
+,{"sy":"2020","ind":"Completion","race_eth":"Not Reported","ind_cnt":"1205","ind_pct":"0.26"}
+,{"sy":"2020","ind":"Completion","race_eth":"Two or more races","ind_cnt":"72","ind_pct":"0.016"}
+,{"sy":"2020","ind":"Completion","race_eth":"White","ind_cnt":"2857","ind_pct":"0.617"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"All Candidates","ind_cnt":"8855","ind_pct":"1"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"American Indian or Alaska Native","ind_cnt":"5","ind_pct":"0.001"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"Asian","ind_cnt":"178","ind_pct":"0.02"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"Black or African American","ind_cnt":"275","ind_pct":"0.031"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"Hispanic/Latino","ind_cnt":"511","ind_pct":"0.058"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"Native Hawaiian or Other Pacific Islander","ind_cnt":"2","ind_pct":"0"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"Not Reported","ind_cnt":"2358","ind_pct":"0.266"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"Two or more races","ind_cnt":"89","ind_pct":"0.01"}
+,{"sy":"2020","ind":"Enrollment","race_eth":"White","ind_cnt":"5437","ind_pct":"0.614"}
+,{"sy":"2019","ind":"Completion","race_eth":"All Candidates","ind_cnt":"4884","ind_pct":"1"}
+,{"sy":"2019","ind":"Completion","race_eth":"American Indian or Alaska Native","ind_cnt":"2","ind_pct":"0"}
+,{"sy":"2019","ind":"Completion","race_eth":"Asian","ind_cnt":"139","ind_pct":"0.028"}
+,{"sy":"2019","ind":"Completion","race_eth":"Black or African American","ind_cnt":"126","ind_pct":"0.026"}
+,{"sy":"2019","ind":"Completion","race_eth":"Hispanic/Latino","ind_cnt":"271","ind_pct":"0.055"}
+,{"sy":"2019","ind":"Completion","race_eth":"Native Hawaiian or Other Pacific Islander","ind_cnt":"0","ind_pct":"0"}
+,{"sy":"2019","ind":"Completion","race_eth":"Not Reported","ind_cnt":"1330","ind_pct":"0.272"}
+,{"sy":"2019","ind":"Completion","race_eth":"Two or more races","ind_cnt":"44","ind_pct":"0.009"}
+,{"sy":"2019","ind":"Completion","race_eth":"White","ind_cnt":"2972","ind_pct":"0.609"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"All Candidates","ind_cnt":"9544","ind_pct":"1"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"American Indian or Alaska Native","ind_cnt":"8","ind_pct":"0.001"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"Asian","ind_cnt":"189","ind_pct":"0.02"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"Black or African American","ind_cnt":"286","ind_pct":"0.03"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"Hispanic/Latino","ind_cnt":"514","ind_pct":"0.054"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"Native Hawaiian or Other Pacific Islander","ind_cnt":"2","ind_pct":"0"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"Not Reported","ind_cnt":"2536","ind_pct":"0.266"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"Two or more races","ind_cnt":"99","ind_pct":"0.01"}
+,{"sy":"2019","ind":"Enrollment","race_eth":"White","ind_cnt":"5910","ind_pct":"0.619"}]

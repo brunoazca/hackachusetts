@@ -1,0 +1,106 @@
+{
+  "id" : "ieg9-974i",
+  "name" : "Charter School Dashboard",
+  "assetType" : "href",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Assessment and Accountability",
+  "createdAt" : 1747427996,
+  "description" : "This dashboard provides detailed data about charter schools in Massachusetts. It contains a variety of indicators across many categories, including enrollment, academics, attendance, suspension, retention, attrition, mobility, graduation, and dropout. Indicators are disaggregated by grade and student group, and are contextualized with comparison data.\n\nFor more information about the Charter School Dashboard, visit the Massachusetts Department of Elementary and Secondary Education's website on <a href=\"https://www.doe.mass.edu/charter/governance/default.html?section=requests\" target=\"_blank\" rel=\"noopener noreferrer\">Board Governance and Charter Amendments</a>.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 41326383,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1747428037,
+  "publicationGroup" : 19895681,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1747427996,
+  "tableId" : 19895681,
+  "totalTimesRated" : 0,
+  "viewCount" : 700,
+  "viewLastModified" : 1749051490,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1750196728,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6926270,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1750196714,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1750196728,
+      "failureCount" : 0,
+      "startedAt" : 1750196728,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "Power BI" : "https://app.powerbigov.us/view?r=eyJrIjoiODkyNWYwYmEtNjQ1Mi00MzczLTk0NzYtZDZkNzMzMTU5YmE2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+      }
+    } ],
+    "custom_fields" : {
+      "Update" : {
+        "Publishing Frequency" : "Annually",
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "accessPoints" : {
+      "Power BI" : "https://app.powerbigov.us/view?r=eyJrIjoiODkyNWYwYmEtNjQ1Mi00MzczLTk0NzYtZDZkNzMzMTU5YmE2IiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "charter schools", "dashboard", "enrollment", "mcas", "assessment", "attendance", "discipline", "suspension", "offense", "retention", "attrition", "mobility", "stability", "intake", "churn", "graduation rates", "dropout rates", "gender", "race and ethnicity", "english learners", "first language not english", "high needs", "low income", "economically disadvantaged", "students with disabilities", "district comparison", "newly enrolled", "town" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

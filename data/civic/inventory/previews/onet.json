@@ -1,0 +1,515 @@
+{
+  "dataset": "onet",
+  "source": "data/civic/datasets/onet/data.csv",
+  "source_sha256": "508ed34f254e22186418ebb85f5cfff2b952d47b844d51cc49090245c0ccfe2d",
+  "total_snapshot_rows": 1016,
+  "preview_rows": 100,
+  "selection": "First 100 file rows; not a representative sample",
+  "columns": [
+    "code",
+    "title",
+    "description"
+  ],
+  "records": [
+    {
+      "code": "11-1011.00",
+      "title": "Chief Executives",
+      "description": "Determine and formulate policies and provide overall direction of companies or private and public sector organizations within guidelines set up by a board of directors or similar governing body. Plan, direct, or coordinate operational activities at the highest level of management with the help of subordinate executives and staff managers."
+    },
+    {
+      "code": "11-1011.03",
+      "title": "Chief Sustainability Officers",
+      "description": "Communicate and coordinate with management, shareholders, customers, and employees to address sustainability issues. Enact or oversee a corporate sustainability strategy."
+    },
+    {
+      "code": "11-1021.00",
+      "title": "General and Operations Managers",
+      "description": "Plan, direct, or coordinate the operations of public or private sector organizations, overseeing multiple departments or locations. Duties and responsibilities include formulating policies, managing daily operations, and planning the use of materials and human resources, but are too diverse and general in nature to be classified in any one functional area of management or administration, such as personnel, purchasing, or administrative services. Usually manage through subordinate supervisors. Excludes First-Line Supervisors."
+    },
+    {
+      "code": "11-1031.00",
+      "title": "Legislators",
+      "description": "Develop, introduce, or enact laws and statutes at the local, tribal, state, or federal level. Includes only workers in elected positions."
+    },
+    {
+      "code": "11-2011.00",
+      "title": "Advertising and Promotions Managers",
+      "description": "Plan, direct, or coordinate advertising policies and programs or produce collateral materials, such as posters, contests, coupons, or giveaways, to create extra interest in the purchase of a product or service for a department, an entire organization, or on an account basis."
+    },
+    {
+      "code": "11-2021.00",
+      "title": "Marketing Managers",
+      "description": "Plan, direct, or coordinate marketing policies and programs, such as determining the demand for products and services offered by a firm and its competitors, and identify potential customers. Develop pricing strategies with the goal of maximizing the firm's profits or share of the market while ensuring the firm's customers are satisfied. Oversee product development or monitor trends that indicate the need for new products and services."
+    },
+    {
+      "code": "11-2022.00",
+      "title": "Sales Managers",
+      "description": "Plan, direct, or coordinate the actual distribution or movement of a product or service to the customer. Coordinate sales distribution by establishing sales territories, quotas, and goals and establish training programs for sales representatives. Analyze sales statistics gathered by staff to determine sales potential and inventory requirements and monitor the preferences of customers."
+    },
+    {
+      "code": "11-2032.00",
+      "title": "Public Relations Managers",
+      "description": "Plan, direct, or coordinate activities designed to create or maintain a favorable public image or raise issue awareness for their organization or client."
+    },
+    {
+      "code": "11-2033.00",
+      "title": "Fundraising Managers",
+      "description": "Plan, direct, or coordinate activities to solicit and maintain funds for special projects or nonprofit organizations."
+    },
+    {
+      "code": "11-3012.00",
+      "title": "Administrative Services Managers",
+      "description": "Plan, direct, or coordinate one or more administrative services of an organization, such as records and information management, mail distribution, and other office support services."
+    },
+    {
+      "code": "11-3013.00",
+      "title": "Facilities Managers",
+      "description": "Plan, direct, or coordinate operations and functionalities of facilities and buildings. May include surrounding grounds or multiple facilities of an organization's campus."
+    },
+    {
+      "code": "11-3013.01",
+      "title": "Security Managers",
+      "description": "Direct an organization's security functions, including physical security and safety of employees and facilities."
+    },
+    {
+      "code": "11-3021.00",
+      "title": "Computer and Information Systems Managers",
+      "description": "Plan, direct, or coordinate activities in such fields as electronic data processing, information systems, systems analysis, and computer programming."
+    },
+    {
+      "code": "11-3031.00",
+      "title": "Financial Managers",
+      "description": "Plan, direct, or coordinate accounting, investing, banking, insurance, securities, and other financial activities of a branch, office, or department of an establishment."
+    },
+    {
+      "code": "11-3031.01",
+      "title": "Treasurers and Controllers",
+      "description": "Direct financial activities, such as planning, procurement, and investments for all or part of an organization."
+    },
+    {
+      "code": "11-3031.03",
+      "title": "Investment Fund Managers",
+      "description": "Plan, direct, or coordinate investment strategy or operations for a large pool of liquid assets supplied by institutional investors or individual investors."
+    },
+    {
+      "code": "11-3051.00",
+      "title": "Industrial Production Managers",
+      "description": "Plan, direct, or coordinate the work activities and resources necessary for manufacturing products in accordance with cost, quality, and quantity specifications."
+    },
+    {
+      "code": "11-3051.01",
+      "title": "Quality Control Systems Managers",
+      "description": "Plan, direct, or coordinate quality assurance programs. Formulate quality control policies and control quality of laboratory and production efforts."
+    },
+    {
+      "code": "11-3051.02",
+      "title": "Geothermal Production Managers",
+      "description": "Manage operations at geothermal power generation facilities. Maintain and monitor geothermal plant equipment for efficient and safe plant operations."
+    },
+    {
+      "code": "11-3051.03",
+      "title": "Biofuels Production Managers",
+      "description": "Manage biofuels production and plant operations. Collect and process information on plant production and performance, diagnose problems, and design corrective procedures."
+    },
+    {
+      "code": "11-3051.04",
+      "title": "Biomass Power Plant Managers",
+      "description": "Manage operations at biomass power generation facilities. Direct work activities at plant, including supervision of operations and maintenance staff."
+    },
+    {
+      "code": "11-3051.06",
+      "title": "Hydroelectric Production Managers",
+      "description": "Manage operations at hydroelectric power generation facilities. Maintain and monitor hydroelectric plant equipment for efficient and safe plant operations."
+    },
+    {
+      "code": "11-3061.00",
+      "title": "Purchasing Managers",
+      "description": "Plan, direct, or coordinate the activities of buyers, purchasing officers, and related workers involved in purchasing materials, products, and services. Includes wholesale or retail trade merchandising managers and procurement managers."
+    },
+    {
+      "code": "11-3071.00",
+      "title": "Transportation, Storage, and Distribution Managers",
+      "description": "Plan, direct, or coordinate transportation, storage, or distribution activities in accordance with organizational policies and applicable government laws or regulations. Includes logistics managers."
+    },
+    {
+      "code": "11-3071.04",
+      "title": "Supply Chain Managers",
+      "description": "Direct or coordinate production, purchasing, warehousing, distribution, or financial forecasting services or activities to limit costs and improve accuracy, customer service, or safety. Examine existing procedures or opportunities for streamlining activities to meet product distribution needs. Direct the movement, storage, or processing of inventory."
+    },
+    {
+      "code": "11-3111.00",
+      "title": "Compensation and Benefits Managers",
+      "description": "Plan, direct, or coordinate compensation and benefits activities of an organization."
+    },
+    {
+      "code": "11-3121.00",
+      "title": "Human Resources Managers",
+      "description": "Plan, direct, or coordinate human resources activities and staff of an organization."
+    },
+    {
+      "code": "11-3131.00",
+      "title": "Training and Development Managers",
+      "description": "Plan, direct, or coordinate the training and development activities and staff of an organization."
+    },
+    {
+      "code": "11-9013.00",
+      "title": "Farmers, Ranchers, and Other Agricultural Managers",
+      "description": "Plan, direct, or coordinate the management or operation of farms, ranches, greenhouses, aquacultural operations, nurseries, timber tracts, or other agricultural establishments. May hire, train, and supervise farm workers or contract for services to carry out the day-to-day activities of the managed operation. May engage in or supervise planting, cultivating, harvesting, and financial and marketing activities."
+    },
+    {
+      "code": "11-9021.00",
+      "title": "Construction Managers",
+      "description": "Plan, direct, or coordinate, usually through subordinate supervisory personnel, activities concerned with the construction and maintenance of structures, facilities, and systems. Participate in the conceptual development of a construction project and oversee its organization, scheduling, budgeting, and implementation. Includes managers in specialized construction fields, such as carpentry or plumbing."
+    },
+    {
+      "code": "11-9031.00",
+      "title": "Education and Childcare Administrators, Preschool and Daycare",
+      "description": "Plan, direct, or coordinate academic or nonacademic activities of preschools or childcare centers and programs, including before- and after-school care."
+    },
+    {
+      "code": "11-9032.00",
+      "title": "Education Administrators, Kindergarten through Secondary",
+      "description": "Plan, direct, or coordinate the academic, administrative, or auxiliary activities of kindergarten, elementary, or secondary schools."
+    },
+    {
+      "code": "11-9033.00",
+      "title": "Education Administrators, Postsecondary",
+      "description": "Plan, direct, or coordinate student instruction, administration, and services, as well as other research and educational activities, at postsecondary institutions, including universities, colleges, and junior and community colleges."
+    },
+    {
+      "code": "11-9039.00",
+      "title": "Education Administrators, All Other",
+      "description": "All education administrators not listed separately."
+    },
+    {
+      "code": "11-9041.00",
+      "title": "Architectural and Engineering Managers",
+      "description": "Plan, direct, or coordinate activities in such fields as architecture and engineering or research and development in these fields."
+    },
+    {
+      "code": "11-9041.01",
+      "title": "Biofuels/Biodiesel Technology and Product Development Managers",
+      "description": "Define, plan, or execute biofuels/biodiesel research programs that evaluate alternative feedstock and process technologies with near-term commercial potential."
+    },
+    {
+      "code": "11-9051.00",
+      "title": "Food Service Managers",
+      "description": "Plan, direct, or coordinate activities of an organization or department that serves food and beverages."
+    },
+    {
+      "code": "11-9071.00",
+      "title": "Gambling Managers",
+      "description": "Plan, direct, or coordinate gambling operations in a casino. May formulate house rules."
+    },
+    {
+      "code": "11-9072.00",
+      "title": "Entertainment and Recreation Managers, Except Gambling",
+      "description": "Plan, direct, or coordinate entertainment and recreational activities and operations of a recreational facility, including cruise ships and parks."
+    },
+    {
+      "code": "11-9081.00",
+      "title": "Lodging Managers",
+      "description": "Plan, direct, or coordinate activities of an organization or department that provides lodging and other accommodations."
+    },
+    {
+      "code": "11-9111.00",
+      "title": "Medical and Health Services Managers",
+      "description": "Plan, direct, or coordinate medical and health services in hospitals, clinics, managed care organizations, public health agencies, or similar organizations."
+    },
+    {
+      "code": "11-9121.00",
+      "title": "Natural Sciences Managers",
+      "description": "Plan, direct, or coordinate activities in such fields as life sciences, physical sciences, mathematics, statistics, and research and development in these fields."
+    },
+    {
+      "code": "11-9121.01",
+      "title": "Clinical Research Coordinators",
+      "description": "Plan, direct, or coordinate clinical research projects. Direct the activities of workers engaged in clinical research projects to ensure compliance with protocols and overall clinical objectives. May evaluate and analyze clinical data."
+    },
+    {
+      "code": "11-9121.02",
+      "title": "Water Resource Specialists",
+      "description": "Design or implement programs and strategies related to water resource issues such as supply, quality, and regulatory compliance issues."
+    },
+    {
+      "code": "11-9131.00",
+      "title": "Postmasters and Mail Superintendents",
+      "description": "Plan, direct, or coordinate operational, administrative, management, and support services of a U.S. post office; or coordinate activities of workers engaged in postal and related work in assigned post office."
+    },
+    {
+      "code": "11-9141.00",
+      "title": "Property, Real Estate, and Community Association Managers",
+      "description": "Plan, direct, or coordinate the selling, buying, leasing, or governance activities of commercial, industrial, or residential real estate properties. Includes managers of homeowner and condominium associations, rented or leased housing units, buildings, or land (including rights-of-way)."
+    },
+    {
+      "code": "11-9151.00",
+      "title": "Social and Community Service Managers",
+      "description": "Plan, direct, or coordinate the activities of a social service program or community outreach organization. Oversee the program or organization's budget and policies regarding participant involvement, program requirements, and benefits. Work may involve directing social workers, counselors, or probation officers."
+    },
+    {
+      "code": "11-9161.00",
+      "title": "Emergency Management Directors",
+      "description": "Plan and direct disaster response or crisis management activities, provide disaster preparedness training, and prepare emergency plans and procedures for natural (e.g., hurricanes, floods, earthquakes), wartime, or technological (e.g., nuclear power plant emergencies or hazardous materials spills) disasters or hostage situations."
+    },
+    {
+      "code": "11-9171.00",
+      "title": "Funeral Home Managers",
+      "description": "Plan, direct, or coordinate the services or resources of funeral homes. Includes activities such as determining prices for services or merchandise and managing the facilities of funeral homes."
+    },
+    {
+      "code": "11-9179.00",
+      "title": "Personal Service Managers, All Other",
+      "description": "All personal service managers not listed separately."
+    },
+    {
+      "code": "11-9179.01",
+      "title": "Fitness and Wellness Coordinators",
+      "description": "Manage or coordinate fitness and wellness programs and services. Manage and train staff of wellness specialists, health educators, or fitness instructors."
+    },
+    {
+      "code": "11-9179.02",
+      "title": "Spa Managers",
+      "description": "Plan, direct, or coordinate activities of a spa facility. Coordinate programs, schedule and direct staff, and oversee financial activities."
+    },
+    {
+      "code": "11-9199.00",
+      "title": "Managers, All Other",
+      "description": "All managers not listed separately."
+    },
+    {
+      "code": "11-9199.01",
+      "title": "Regulatory Affairs Managers",
+      "description": "Plan, direct, or coordinate production activities of an organization to ensure compliance with regulations and standard operating procedures."
+    },
+    {
+      "code": "11-9199.02",
+      "title": "Compliance Managers",
+      "description": "Plan, direct, or coordinate activities of an organization to ensure compliance with ethical or regulatory standards."
+    },
+    {
+      "code": "11-9199.08",
+      "title": "Loss Prevention Managers",
+      "description": "Plan and direct policies, procedures, or systems to prevent the loss of assets. Determine risk exposure or potential liability, and develop risk control measures."
+    },
+    {
+      "code": "11-9199.09",
+      "title": "Wind Energy Operations Managers",
+      "description": "Manage wind field operations, including personnel, maintenance activities, financial activities, and planning."
+    },
+    {
+      "code": "11-9199.10",
+      "title": "Wind Energy Development Managers",
+      "description": "Lead or manage the development and evaluation of potential wind energy business opportunities, including environmental studies, permitting, and proposals. May also manage construction of projects."
+    },
+    {
+      "code": "11-9199.11",
+      "title": "Brownfield Redevelopment Specialists and Site Managers",
+      "description": "Plan and direct cleanup and redevelopment of contaminated properties for reuse. Does not include properties sufficiently contaminated to qualify as Superfund sites."
+    },
+    {
+      "code": "13-1011.00",
+      "title": "Agents and Business Managers of Artists, Performers, and Athletes",
+      "description": "Represent and promote artists, performers, and athletes in dealings with current or prospective employers. May handle contract negotiation and other business matters for clients."
+    },
+    {
+      "code": "13-1021.00",
+      "title": "Buyers and Purchasing Agents, Farm Products",
+      "description": "Purchase farm products either for further processing or resale. Includes tree farm contractors, grain brokers and market operators, grain buyers, and tobacco buyers. May negotiate contracts."
+    },
+    {
+      "code": "13-1022.00",
+      "title": "Wholesale and Retail Buyers, Except Farm Products",
+      "description": "Buy merchandise or commodities, other than farm products, for resale to consumers at the wholesale or retail level, including both durable and nondurable goods. Analyze past buying trends, sales records, price, and quality of merchandise to determine value and yield. Select, order, and authorize payment for merchandise according to contractual agreements. May conduct meetings with sales personnel and introduce new products. May negotiate contracts. Includes assistant wholesale and retail buyers of nonfarm products."
+    },
+    {
+      "code": "13-1023.00",
+      "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+      "description": "Purchase machinery, equipment, tools, parts, supplies, or services necessary for the operation of an establishment. Purchase raw or semifinished materials for manufacturing. May negotiate contracts."
+    },
+    {
+      "code": "13-1031.00",
+      "title": "Claims Adjusters, Examiners, and Investigators",
+      "description": "Review settled claims to determine that payments and settlements are made in accordance with company practices and procedures. Confer with legal counsel on claims requiring litigation. May also settle insurance claims."
+    },
+    {
+      "code": "13-1032.00",
+      "title": "Insurance Appraisers, Auto Damage",
+      "description": "Appraise automobile or other vehicle damage to determine repair costs for insurance claim settlement. Prepare insurance forms to indicate repair cost or cost estimates and recommendations. May seek agreement with automotive repair shop on repair costs."
+    },
+    {
+      "code": "13-1041.00",
+      "title": "Compliance Officers",
+      "description": "Examine, evaluate, and investigate eligibility for or conformity with laws and regulations governing contract compliance of licenses and permits, and perform other compliance and enforcement inspection and analysis activities not classified elsewhere."
+    },
+    {
+      "code": "13-1041.01",
+      "title": "Environmental Compliance Inspectors",
+      "description": "Inspect and investigate sources of pollution to protect the public and environment and ensure conformance with Federal, State, and local regulations and ordinances."
+    },
+    {
+      "code": "13-1041.03",
+      "title": "Equal Opportunity Representatives and Officers",
+      "description": "Monitor and evaluate compliance with equal opportunity laws, guidelines, and policies to ensure that employment practices and contracting arrangements give equal opportunity without regard to race, religion, color, national origin, sex, age, or disability."
+    },
+    {
+      "code": "13-1041.04",
+      "title": "Government Property Inspectors and Investigators",
+      "description": "Investigate or inspect government property to ensure compliance with contract agreements and government regulations."
+    },
+    {
+      "code": "13-1041.06",
+      "title": "Coroners",
+      "description": "Direct activities such as autopsies, pathological and toxicological analyses, and inquests relating to the investigation of deaths occurring within a legal jurisdiction to determine cause of death or to fix responsibility for accidental, violent, or unexplained deaths."
+    },
+    {
+      "code": "13-1041.07",
+      "title": "Regulatory Affairs Specialists",
+      "description": "Coordinate and document internal regulatory processes, such as internal audits, inspections, license renewals, or registrations. May compile and prepare materials for submission to regulatory agencies."
+    },
+    {
+      "code": "13-1041.08",
+      "title": "Customs Brokers",
+      "description": "Prepare customs documentation and ensure that shipments meet all applicable laws to facilitate the import and export of goods. Determine and track duties and taxes payable and process payments on behalf of client. Sign documents under a power of attorney. Represent clients in meetings with customs officials and apply for duty refunds and tariff reclassifications. Coordinate transportation and storage of imported goods."
+    },
+    {
+      "code": "13-1051.00",
+      "title": "Cost Estimators",
+      "description": "Prepare cost estimates for product manufacturing, construction projects, or services to aid management in bidding on or determining price of product or service. May specialize according to particular service performed or type of product manufactured."
+    },
+    {
+      "code": "13-1071.00",
+      "title": "Human Resources Specialists",
+      "description": "Recruit, screen, interview, or place individuals within an organization. May perform other activities in multiple human resources areas."
+    },
+    {
+      "code": "13-1074.00",
+      "title": "Farm Labor Contractors",
+      "description": "Recruit and hire seasonal or temporary agricultural laborers. May transport, house, and provide meals for workers."
+    },
+    {
+      "code": "13-1075.00",
+      "title": "Labor Relations Specialists",
+      "description": "Resolve disputes between workers and managers, negotiate collective bargaining agreements, or coordinate grievance procedures to handle employee complaints."
+    },
+    {
+      "code": "13-1081.00",
+      "title": "Logisticians",
+      "description": "Analyze and coordinate the ongoing logistical functions of a firm or organization. Responsible for the entire life cycle of a product, including acquisition, distribution, internal allocation, delivery, and final disposal of resources."
+    },
+    {
+      "code": "13-1081.01",
+      "title": "Logistics Engineers",
+      "description": "Design or analyze operational solutions for projects such as transportation optimization, network modeling, process and methods analysis, cost containment, capacity enhancement, routing and shipment optimization, or information management."
+    },
+    {
+      "code": "13-1081.02",
+      "title": "Logistics Analysts",
+      "description": "Analyze product delivery or supply chain processes to identify or recommend changes. May manage route activity including invoicing, electronic bills, and shipment tracing."
+    },
+    {
+      "code": "13-1082.00",
+      "title": "Project Management Specialists",
+      "description": "Analyze and coordinate the schedule, timeline, procurement, staffing, and budget of a product or service on a per project basis. Lead and guide the work of technical staff. May serve as a point of contact for the client or customer."
+    },
+    {
+      "code": "13-1111.00",
+      "title": "Management Analysts",
+      "description": "Conduct organizational studies and evaluations, design systems and procedures, conduct work simplification and measurement studies, and prepare operations and procedures manuals to assist management in operating more efficiently and effectively. Includes program analysts and management consultants."
+    },
+    {
+      "code": "13-1121.00",
+      "title": "Meeting, Convention, and Event Planners",
+      "description": "Coordinate activities of staff, convention personnel, or clients to make arrangements for group meetings, events, or conventions."
+    },
+    {
+      "code": "13-1131.00",
+      "title": "Fundraisers",
+      "description": "Organize activities to raise funds or otherwise solicit and gather monetary donations or other gifts for an organization. May design and produce promotional materials. May also raise awareness of the organization's work, goals, and financial needs."
+    },
+    {
+      "code": "13-1141.00",
+      "title": "Compensation, Benefits, and Job Analysis Specialists",
+      "description": "Conduct programs of compensation and benefits and job analysis for employer. May specialize in specific areas, such as position classification and pension programs."
+    },
+    {
+      "code": "13-1151.00",
+      "title": "Training and Development Specialists",
+      "description": "Design or conduct work-related training and development programs to improve individual skills or organizational performance. May analyze organizational training needs or evaluate training effectiveness."
+    },
+    {
+      "code": "13-1161.00",
+      "title": "Market Research Analysts and Marketing Specialists",
+      "description": "Research conditions in local, regional, national, or online markets. Gather information to determine potential sales of a product or service, or plan a marketing or advertising campaign. May gather information on competitors, prices, sales, and methods of marketing and distribution. May employ search marketing tactics, analyze web metrics, and develop recommendations to increase search engine ranking and visibility to target markets."
+    },
+    {
+      "code": "13-1161.01",
+      "title": "Search Marketing Strategists",
+      "description": "Employ search marketing tactics to increase visibility and engagement with content, products, or services in Internet-enabled devices or interfaces. Examine search query behaviors on general or specialty search engines or other Internet-based content. Analyze research, data, or technology to understand user intent and measure outcomes for ongoing optimization."
+    },
+    {
+      "code": "13-1199.00",
+      "title": "Business Operations Specialists, All Other",
+      "description": "All business operations specialists not listed separately."
+    },
+    {
+      "code": "13-1199.04",
+      "title": "Business Continuity Planners",
+      "description": "Develop, maintain, or implement business continuity and disaster recovery strategies and solutions, including risk assessments, business impact analyses, strategy selection, and documentation of business continuity and disaster recovery procedures. Plan, conduct, and debrief regular mock-disaster exercises to test the adequacy of existing plans and strategies, updating procedures and plans regularly. Act as a coordinator for continuity efforts after a disruption event."
+    },
+    {
+      "code": "13-1199.05",
+      "title": "Sustainability Specialists",
+      "description": "Address organizational sustainability issues, such as waste stream management, green building practices, and green procurement plans."
+    },
+    {
+      "code": "13-1199.06",
+      "title": "Online Merchants",
+      "description": "Conduct retail activities of businesses operating exclusively online. May perform duties such as preparing business strategies, buying merchandise, managing inventory, implementing marketing activities, fulfilling and shipping online orders, and balancing financial records."
+    },
+    {
+      "code": "13-1199.07",
+      "title": "Security Management Specialists",
+      "description": "Conduct security assessments for organizations, and design security systems and processes. May specialize in areas such as physical security or the safety of employees and facilities."
+    },
+    {
+      "code": "13-2011.00",
+      "title": "Accountants and Auditors",
+      "description": "Examine, analyze, and interpret accounting records to prepare financial statements, give advice, or audit and evaluate statements prepared by others. Install or advise on systems of recording costs or other financial and budgetary data."
+    },
+    {
+      "code": "13-2022.00",
+      "title": "Appraisers of Personal and Business Property",
+      "description": "Appraise and estimate the fair value of tangible personal or business property, such as jewelry, art, antiques, collectibles, and equipment. May also appraise land."
+    },
+    {
+      "code": "13-2023.00",
+      "title": "Appraisers and Assessors of Real Estate",
+      "description": "Appraise real estate, exclusively, and estimate its fair value. May assess taxes in accordance with prescribed schedules."
+    },
+    {
+      "code": "13-2031.00",
+      "title": "Budget Analysts",
+      "description": "Examine budget estimates for completeness, accuracy, and conformance with procedures and regulations. Analyze budgeting and accounting reports."
+    },
+    {
+      "code": "13-2041.00",
+      "title": "Credit Analysts",
+      "description": "Analyze credit data and financial statements of individuals or firms to determine the degree of risk involved in extending credit or lending money. Prepare reports with credit information for use in decisionmaking."
+    },
+    {
+      "code": "13-2051.00",
+      "title": "Financial and Investment Analysts",
+      "description": "Conduct quantitative analyses of information involving investment programs or financial data of public or private institutions, including valuation of businesses."
+    },
+    {
+      "code": "13-2052.00",
+      "title": "Personal Financial Advisors",
+      "description": "Advise clients on financial plans using knowledge of tax and investment strategies, securities, insurance, pension plans, and real estate. Duties include assessing clients' assets, liabilities, cash flow, insurance coverage, tax status, and financial objectives. May also buy and sell financial assets for clients."
+    },
+    {
+      "code": "13-2053.00",
+      "title": "Insurance Underwriters",
+      "description": "Review individual applications for insurance to evaluate degree of risk involved and determine acceptance of applications."
+    }
+  ]
+}

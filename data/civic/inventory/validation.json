@@ -1,0 +1,42 @@
+{
+  "checked_at_utc": "2026-10-24T15:24:02.181477+00:00",
+  "passed": true,
+  "checks": [
+    "74 unique portal resources",
+    "22 starter files match track and individual kits",
+    "five challenge kits have exact membership and matching CSV hashes",
+    "challenge union covers all starter datasets",
+    "133 E2C IDs inventoried",
+    "full E2C table counts equal observed API counts",
+    "daily bicycle layer count and unique IDs equal 2934",
+    "saved response SHA-256 checks",
+    "all inventory JSON parses"
+  ],
+  "statistics": {
+    "portal_resources": 74,
+    "starter_datasets": 22,
+    "starter_rows": 512156,
+    "challenge_kits": 5,
+    "e2c_assets": 133,
+    "e2c_retention_counts": {
+      "reference_preview": 36,
+      "full_dataset": 53,
+      "preview": 43,
+      "metadata_only": 1
+    },
+    "boston_families": 6,
+    "boston_family_resources": 43,
+    "request_observations": 797,
+    "unique_requested_urls": 792,
+    "http_access_counts": {
+      "fetched": 742,
+      "large_remote_file": 25,
+      "unavailable": 29,
+      "blocked_page": 1
+    },
+    "retained_download_files": 126,
+    "google_sheet_tabs": 11,
+    "daily_bike_full_records": 2934,
+    "search_entries": 493
+  }
+}

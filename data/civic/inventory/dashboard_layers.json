@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Boston Bicycle Network (2016)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": "STREET_NAM = 'Centre Street'",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2017)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2018)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2019)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2020)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2021)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2022)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2023)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2024)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2025)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Streets Hourly Bike Counts",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Hourly_Bike_Counts/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Streets Daily Motor Vehicle Counts",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Daily_Bike_Counts/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2016)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": "STREET_NAM = 'Centre Street'",
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2017)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2018)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2019)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2020)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2021)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2022)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2023)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2024)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Boston Bicycle Network (2025)",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/active_transportation_network_gdb/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Streets Hourly Bike Counts",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Hourly_Bike_Counts/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "Streets Daily Bike Counts",
+    "url": "https://services.arcgis.com/sFnw0xNflSi8J0uh/arcgis/rest/services/Streets_Daily_Bike_Counts/FeatureServer/0",
+    "filter": null,
+    "parent": "boston-bike-dashboard"
+  },
+  {
+    "title": "2024 Crashes",
+    "url": "https://gis.crashdata.dot.mass.gov/arcgis/rest/services/MassDOT/MASSDOT_ODP_OPEN_2024/FeatureServer/0",
+    "filter": null,
+    "parent": "crash-background"
+  }
+]

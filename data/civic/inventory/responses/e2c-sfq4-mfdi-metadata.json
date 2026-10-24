@@ -1,0 +1,95 @@
+{
+  "id" : "sfq4-mfdi",
+  "name" : "District Spending Data Trends",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Finance and Budget",
+  "createdAt" : 1781189171,
+  "description" : "Across Massachusetts, the largest share of school spending is for teachers, but spending patterns vary by school district. The charts on this page display per pupil spending by category for one Massachusetts public school district. Select a district from the dropdown menu to get started.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 42208398,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1781190095,
+  "publicationGroup" : 20417927,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1781189171,
+  "tableId" : 20417927,
+  "totalTimesRated" : 0,
+  "viewCount" : 140,
+  "viewLastModified" : 1791208737,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1791210926,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7784944,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1791210917,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1791210926,
+      "failureCount" : 0,
+      "startedAt" : 1791210926,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "wbyv-4s23",
+      "displayName" : "NJ Rees"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "expenditures", "school district", "spending", "costs", "teacher salaries", "per pupil", "instruction", "pupil services", "cost per pupil", "operations", "maintenance", "insurance", "retirement programs", "teaching services", "instructional leadership", "administration", "instructional materials", "guidance counseling", "professional development", "budget" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

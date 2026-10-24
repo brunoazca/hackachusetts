@@ -1,0 +1,2198 @@
+{
+  "id" : "j5ue-xkfn",
+  "name" : "Staffing: Race/Ethnicity and Gender",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "attributionLink" : "https://www.doe.mass.edu",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1695135438,
+  "description" : "This dataset contains the full time equivalent (FTE) count and percentage of educational staff by race/ethnicity and gender employed in all Massachusetts public and charter schools and districts since 2008. The information is as of October 1st of the school year reported.\n\nIn certain years, a small number of schools or districts have failed to meet data reporting requirements. Since 2023, FTE counts and percentages for those schools and districts are reported here as null, and on Profiles as \"Failed to meet data reporting requirements.\" Prior to 2023, these schools and districts were reported here and on Profiles as either null or 0.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/teacherbyracegender.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Staffing Data by Race/Ethnicity and Gender</a>\n\n<b>List of Job Classifications</b>\n\nAdministrators<ul><li>Assistant/Associate/ Vice Superintendents</li><li>Deputy/Associate/Vice-/Assistant Principal</li><li>Human Resources Director</li><li>Other District Wide Administrators</li><li>Other School Administrator/Coordinator</li><li>Principal/headmaster/headmistress/head of school</li><li>School Business Official</li><li>School Nurse Leader</li><li>School Special Education Administrator</li><li>Special Education Administrator</li><li>Superintendent of Schools</li><li>Supervisor/Director/Coordinator: Arts</li><li>Supervisor/Director/Coordinator: English</li><li>Supervisor/Director/Coordinator: English Language Learner</li><li>Supervisor/Director/Coordinator: Foreign Language</li><li>Supervisor/Director/Coordinator: History/Social Studies</li><li>Supervisor/Director/Coordinator: Library/Media</li><li>Supervisor/Director/Coordinator: Mathematics</li><li>Supervisor/Director/Coordinator of Assessment</li><li>Supervisor/Director/Coordinator of Curriculum</li><li>Supervisor/Director/Coordinator of Professional Development</li><li>Supervisor/Director/Coordinator: Reading</li><li>Supervisor/Director/Coordinator: Science</li><li>Supervisor/Director/Coordinator: Technology</li><li>Supervisor/Director of CVTE</li><li>Supervisor/Director of Guidance</li><li>Supervisor/Director of Pupil Personnel</li></ul>Instructional Staff<ul><li>Co-teacher</li><li>Instructional Coach</li><li>Long Term Substitute Teacher</li><li>Teacher</li><li>Teacher - support content instruction</li><li>Virtual Course Co-Teacher</li><li>Virtual Course Teacher</li></ul>Instructional Support and Special Education Shared Staff<ul><li>School Adjustment Counselor -- Non-Special Education</li><li>School Adjustment Counselor -- Special Education</li><li>School Psychologist -- Non-Special Education</li><li>School Psychologist -- Special Education</li><li>School Social Worker -- Non-Special Education</li><li>School Social Worker -- Special Education</li></ul>Instructional Support Staff<ul><li>Diagnostic and Evaluation Staff</li><li>Educational Interpreters</li><li>Family Engagement Coordinator</li><li>Guidance Counselor</li><li>Junior ROTC Instructor</li><li>Librarians and Media Center Directors</li><li>Pathways Coordinator</li><li>Recreation and Therapeutic Recreation Specialists</li><li>Rehabilitation Counselor</li><li>School Resource Officer</li><li>Tutor</li><li>Work Study Coordinator</li></ul>Medical/Health Services<ul><li>Physician</li><li>Psychiatrist</li><li>School Nurse -- Non-Special Education</li><li>School Nurse -- Special Education</li></ul>Office/Clerical/Administrative Support<ul><li>Administrative Aides</li><li>Administrative Clerks and Secretaries</li><li>Information Services & Technical Support</li><li>Other Administrative Support Personnel</li><li>Special Education Administrative Aides</li><li>Special Education Administrative Clerks and Secretaries</li></ul>Paraprofessional<ul><li>Paraprofessional</li></ul>Special Education Related Staff<ul><li>Audiologist</li><li>Occupational Therapist</li><li>Orientation and Mobility Instructor (Peripatologist)</li><li>Other Related Special Education Staff</li><li>Physical Therapist</li><li>Speech Pathologist</li></ul>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1076,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41289918,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1745442814,
+  "publicationGroup" : 19293515,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1773158554,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19872180,
+  "totalTimesRated" : 0,
+  "viewCount" : 3689,
+  "viewLastModified" : 1786393206,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1699981531,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6861321,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1699981517,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1699981531,
+      "failureCount" : 0,
+      "startedAt" : 1699981531,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 609206047,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148515460,
+    "cachedContents" : {
+      "non_null" : "2815705",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "159336"
+      }, {
+        "item" : "2026",
+        "count" : "158256"
+      }, {
+        "item" : "2023",
+        "count" : "156170"
+      }, {
+        "item" : "2024",
+        "count" : "155890"
+      }, {
+        "item" : "2020",
+        "count" : "154974"
+      }, {
+        "item" : "2021",
+        "count" : "154629"
+      }, {
+        "item" : "2022",
+        "count" : "153953"
+      }, {
+        "item" : "2015",
+        "count" : "147355"
+      }, {
+        "item" : "2014",
+        "count" : "147289"
+      }, {
+        "item" : "2016",
+        "count" : "147030"
+      }, {
+        "item" : "2017",
+        "count" : "146575"
+      }, {
+        "item" : "2018",
+        "count" : "146510"
+      }, {
+        "item" : "2013",
+        "count" : "146445"
+      }, {
+        "item" : "2019",
+        "count" : "146445"
+      }, {
+        "item" : "2012",
+        "count" : "144950"
+      }, {
+        "item" : "2011",
+        "count" : "139734"
+      }, {
+        "item" : "2008",
+        "count" : "137982"
+      }, {
+        "item" : "2009",
+        "count" : "136518"
+      }, {
+        "item" : "2010",
+        "count" : "135664"
+      } ],
+      "smallest" : "2008",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : { }
+  }, {
+    "id" : 609206048,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148515461,
+    "cachedContents" : {
+      "non_null" : "2815705",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "150102"
+      }, {
+        "item" : "02810000",
+        "count" : "73440"
+      }, {
+        "item" : "03480000",
+        "count" : "58070"
+      }, {
+        "item" : "01490000",
+        "count" : "35865"
+      }, {
+        "item" : "01630000",
+        "count" : "33717"
+      }, {
+        "item" : "02010000",
+        "count" : "33088"
+      }, {
+        "item" : "01600000",
+        "count" : "32668"
+      }, {
+        "item" : "00440000",
+        "count" : "30536"
+      }, {
+        "item" : "02070000",
+        "count" : "28911"
+      }, {
+        "item" : "02430000",
+        "count" : "24700"
+      }, {
+        "item" : "00950000",
+        "count" : "23208"
+      }, {
+        "item" : "00490000",
+        "count" : "21310"
+      }, {
+        "item" : "01280000",
+        "count" : "21263"
+      }, {
+        "item" : "00610000",
+        "count" : "20112"
+      }, {
+        "item" : "01000000",
+        "count" : "18414"
+      }, {
+        "item" : "02930000",
+        "count" : "17819"
+      }, {
+        "item" : "02390000",
+        "count" : "17661"
+      }, {
+        "item" : "07750000",
+        "count" : "17352"
+      }, {
+        "item" : "02360000",
+        "count" : "17264"
+      }, {
+        "item" : "01530000",
+        "count" : "16114"
+      } ],
+      "smallest" : "00000000",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : { }
+  }, {
+    "id" : 609206049,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148515462,
+    "cachedContents" : {
+      "non_null" : "2815705",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "150102"
+      }, {
+        "item" : "Springfield",
+        "count" : "73440"
+      }, {
+        "item" : "Worcester",
+        "count" : "58070"
+      }, {
+        "item" : "Lawrence",
+        "count" : "35865"
+      }, {
+        "item" : "Lynn",
+        "count" : "33717"
+      }, {
+        "item" : "New Bedford",
+        "count" : "33088"
+      }, {
+        "item" : "Lowell",
+        "count" : "32668"
+      }, {
+        "item" : "Brockton",
+        "count" : "30536"
+      }, {
+        "item" : "Newton",
+        "count" : "28911"
+      }, {
+        "item" : "Quincy",
+        "count" : "24700"
+      }, {
+        "item" : "Fall River",
+        "count" : "23208"
+      }, {
+        "item" : "Cambridge",
+        "count" : "21310"
+      }, {
+        "item" : "Haverhill",
+        "count" : "21263"
+      }, {
+        "item" : "Chicopee",
+        "count" : "20112"
+      }, {
+        "item" : "Framingham",
+        "count" : "18414"
+      }, {
+        "item" : "Taunton",
+        "count" : "17819"
+      }, {
+        "item" : "Plymouth",
+        "count" : "17661"
+      }, {
+        "item" : "Wachusett",
+        "count" : "17352"
+      }, {
+        "item" : "Pittsfield",
+        "count" : "17264"
+      }, {
+        "item" : "Leominster",
+        "count" : "16114"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : { }
+  }, {
+    "id" : 609206050,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148515463,
+    "cachedContents" : {
+      "non_null" : "2815705",
+      "largest" : "39020900",
+      "null" : "0",
+      "top" : [ {
+        "item" : "09150000",
+        "count" : "1260"
+      }, {
+        "item" : "08100000",
+        "count" : "1258"
+      }, {
+        "item" : "00440000",
+        "count" : "1258"
+      }, {
+        "item" : "02580505",
+        "count" : "1258"
+      }, {
+        "item" : "07600000",
+        "count" : "1258"
+      }, {
+        "item" : "08060605",
+        "count" : "1258"
+      }, {
+        "item" : "00960000",
+        "count" : "1258"
+      }, {
+        "item" : "02290510",
+        "count" : "1258"
+      }, {
+        "item" : "02430000",
+        "count" : "1258"
+      }, {
+        "item" : "02580000",
+        "count" : "1258"
+      }, {
+        "item" : "02930505",
+        "count" : "1258"
+      }, {
+        "item" : "03080000",
+        "count" : "1258"
+      }, {
+        "item" : "07600505",
+        "count" : "1258"
+      }, {
+        "item" : "08060000",
+        "count" : "1258"
+      }, {
+        "item" : "02390000",
+        "count" : "1258"
+      }, {
+        "item" : "00440505",
+        "count" : "1258"
+      }, {
+        "item" : "00960505",
+        "count" : "1258"
+      }, {
+        "item" : "02290000",
+        "count" : "1258"
+      }, {
+        "item" : "02390515",
+        "count" : "1258"
+      }, {
+        "item" : "02930000",
+        "count" : "1258"
+      } ],
+      "smallest" : "00000000",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : { }
+  }, {
+    "id" : 609206051,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148515464,
+    "cachedContents" : {
+      "non_null" : "2815705",
+      "largest" : "Zervas",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Memorial",
+        "count" : "7542"
+      }, {
+        "item" : "John F Kennedy",
+        "count" : "6285"
+      }, {
+        "item" : "Early Childhood Center",
+        "count" : "5670"
+      }, {
+        "item" : "South Elementary",
+        "count" : "5028"
+      }, {
+        "item" : "Franklin",
+        "count" : "3832"
+      }, {
+        "item" : "Center",
+        "count" : "3832"
+      }, {
+        "item" : "Abraham Lincoln",
+        "count" : "3771"
+      }, {
+        "item" : "Winthrop",
+        "count" : "3771"
+      }, {
+        "item" : "Lincoln",
+        "count" : "3771"
+      }, {
+        "item" : "Lawrence",
+        "count" : "3771"
+      }, {
+        "item" : "Horace Mann",
+        "count" : "3699"
+      }, {
+        "item" : "Center School",
+        "count" : "3449"
+      }, {
+        "item" : "South",
+        "count" : "3150"
+      }, {
+        "item" : "Norfolk County Agricultural",
+        "count" : "2517"
+      }, {
+        "item" : "Blue Hills Regional Vocational Technical",
+        "count" : "2516"
+      }, {
+        "item" : "Peabody",
+        "count" : "2515"
+      }, {
+        "item" : "East Middle School",
+        "count" : "2514"
+      }, {
+        "item" : "Downey",
+        "count" : "2514"
+      }, {
+        "item" : "Hancock",
+        "count" : "2514"
+      }, {
+        "item" : "John F Kennedy Middle School",
+        "count" : "2514"
+      } ],
+      "smallest" : "1 LT Charles W. Whitcomb School",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : { }
+  }, {
+    "id" : 609206052,
+    "name" : "ORG_TYPE",
+    "dataTypeName" : "text",
+    "description" : "Organization Type",
+    "fieldName" : "org_type",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148515465,
+    "cachedContents" : {
+      "non_null" : "2815705",
+      "largest" : "State",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School",
+        "count" : "2311778"
+      }, {
+        "item" : "District",
+        "count" : "502673"
+      }, {
+        "item" : "State",
+        "count" : "1254"
+      } ],
+      "smallest" : "District",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : { }
+  }, {
+    "id" : 609206053,
+    "name" : "JOBCLASS_CAT",
+    "dataTypeName" : "text",
+    "description" : "Job Classification Category",
+    "fieldName" : "jobclass_cat",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148515466,
+    "cachedContents" : {
+      "non_null" : "2815705",
+      "largest" : "Special Education Related Staff",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Administrators",
+        "count" : "1081954"
+      }, {
+        "item" : "Instructional Support Staff",
+        "count" : "429872"
+      }, {
+        "item" : "Instructional Staff",
+        "count" : "273389"
+      }, {
+        "item" : "Special Education Related Staff",
+        "count" : "255419"
+      }, {
+        "item" : "Office/Clerical/Administrative Support",
+        "count" : "255411"
+      }, {
+        "item" : "Instructional Support and Special Education Shared Staff",
+        "count" : "255410"
+      }, {
+        "item" : "Medical/Health Services",
+        "count" : "179096"
+      }, {
+        "item" : "All",
+        "count" : "42580"
+      }, {
+        "item" : "Paraprofessional",
+        "count" : "42574"
+      } ],
+      "smallest" : "Administrators",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : { }
+  }, {
+    "id" : 609206054,
+    "name" : "JOBCLASS",
+    "dataTypeName" : "text",
+    "description" : "Job Classification",
+    "fieldName" : "jobclass",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148515467,
+    "cachedContents" : {
+      "non_null" : "2815705",
+      "largest" : "Work Study Coordinator",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Principal/headmaster/headmistress/head of school",
+        "count" : "42580"
+      }, {
+        "item" : "All",
+        "count" : "42580"
+      }, {
+        "item" : "Teacher - support content instruction",
+        "count" : "42575"
+      }, {
+        "item" : "Paraprofessional",
+        "count" : "42574"
+      }, {
+        "item" : "Administrative Clerks and Secretaries",
+        "count" : "42573"
+      }, {
+        "item" : "Teacher",
+        "count" : "42573"
+      }, {
+        "item" : "Other Related Special Education Staff",
+        "count" : "42572"
+      }, {
+        "item" : "School Nurse -- Non-Special Education",
+        "count" : "42572"
+      }, {
+        "item" : "Instructional Coach",
+        "count" : "42571"
+      }, {
+        "item" : "Speech Pathologist",
+        "count" : "42571"
+      }, {
+        "item" : "Occupational Therapist",
+        "count" : "42571"
+      }, {
+        "item" : "School Counselor",
+        "count" : "42571"
+      }, {
+        "item" : "Other School Administrator/Coordinator",
+        "count" : "42571"
+      }, {
+        "item" : "Deputy/Associate/Vice-/Assistant Principal",
+        "count" : "42570"
+      }, {
+        "item" : "School Adjustment Counselor -- Special Education",
+        "count" : "42570"
+      }, {
+        "item" : "Tutor",
+        "count" : "42570"
+      }, {
+        "item" : "Physical Therapist",
+        "count" : "42570"
+      }, {
+        "item" : "Librarians and Media Center Directors",
+        "count" : "42570"
+      }, {
+        "item" : "Other Administrative Support Personnel",
+        "count" : "42569"
+      }, {
+        "item" : "School Adjustment Counselor -- Non-Special Education",
+        "count" : "42569"
+      } ],
+      "smallest" : "Administrative Aides",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : { }
+  }, {
+    "id" : 609206055,
+    "name" : "FTE_TOTAL",
+    "dataTypeName" : "number",
+    "description" : "Full Time Equivalent Total",
+    "fieldName" : "fte_total",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515468,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "148237.7",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2079611"
+      }, {
+        "item" : "1.0",
+        "count" : "225471"
+      }, {
+        "item" : "2.0",
+        "count" : "54189"
+      }, {
+        "item" : "0.5",
+        "count" : "42275"
+      }, {
+        "item" : "3.0",
+        "count" : "23065"
+      }, {
+        "item" : "0.3",
+        "count" : "20095"
+      }, {
+        "item" : "0.2",
+        "count" : "19448"
+      }, {
+        "item" : "0.8",
+        "count" : "14660"
+      }, {
+        "item" : "0.4",
+        "count" : "14237"
+      }, {
+        "item" : "4.0",
+        "count" : "13848"
+      }, {
+        "item" : "0.1",
+        "count" : "12579"
+      }, {
+        "item" : "0.6",
+        "count" : "11542"
+      }, {
+        "item" : "1.5",
+        "count" : "10384"
+      }, {
+        "item" : "5.0",
+        "count" : "9334"
+      }, {
+        "item" : "6.0",
+        "count" : "6923"
+      }, {
+        "item" : "0.9",
+        "count" : "5777"
+      }, {
+        "item" : "7.0",
+        "count" : "5400"
+      }, {
+        "item" : "0.7",
+        "count" : "5070"
+      }, {
+        "item" : "8.0",
+        "count" : "4453"
+      }, {
+        "item" : "1.8",
+        "count" : "4402"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206062,
+    "name" : "AIAN_CNT",
+    "dataTypeName" : "number",
+    "description" : "American Indian or Alaska Native Staff Count",
+    "fieldName" : "aian_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515477,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "170.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2798297"
+      }, {
+        "item" : "1.0",
+        "count" : "6018"
+      }, {
+        "item" : "2.0",
+        "count" : "622"
+      }, {
+        "item" : "0.5",
+        "count" : "301"
+      }, {
+        "item" : "0.8",
+        "count" : "218"
+      }, {
+        "item" : "0.6",
+        "count" : "152"
+      }, {
+        "item" : "3.0",
+        "count" : "134"
+      }, {
+        "item" : "0.3",
+        "count" : "130"
+      }, {
+        "item" : "0.9",
+        "count" : "109"
+      }, {
+        "item" : "0.1",
+        "count" : "100"
+      }, {
+        "item" : "4.0",
+        "count" : "77"
+      }, {
+        "item" : "0.7",
+        "count" : "77"
+      }, {
+        "item" : "0.4",
+        "count" : "77"
+      }, {
+        "item" : "0.2",
+        "count" : "74"
+      }, {
+        "item" : "1.1",
+        "count" : "40"
+      }, {
+        "item" : "5.0",
+        "count" : "31"
+      }, {
+        "item" : "1.8",
+        "count" : "28"
+      }, {
+        "item" : "6.0",
+        "count" : "25"
+      }, {
+        "item" : "1.5",
+        "count" : "25"
+      }, {
+        "item" : "1.2",
+        "count" : "19"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206063,
+    "name" : "AIAN_PCT",
+    "dataTypeName" : "number",
+    "description" : "American Indian or Alaska Native Staff Percent",
+    "fieldName" : "aian_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515479,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2798290"
+      }, {
+        "item" : "0.001",
+        "count" : "588"
+      }, {
+        "item" : "0.002",
+        "count" : "575"
+      }, {
+        "item" : "0.003",
+        "count" : "467"
+      }, {
+        "item" : "0.004",
+        "count" : "362"
+      }, {
+        "item" : "1.0",
+        "count" : "302"
+      }, {
+        "item" : "0.009",
+        "count" : "295"
+      }, {
+        "item" : "0.005",
+        "count" : "288"
+      }, {
+        "item" : "0.008",
+        "count" : "263"
+      }, {
+        "item" : "0.007",
+        "count" : "262"
+      }, {
+        "item" : "0.01",
+        "count" : "260"
+      }, {
+        "item" : "0.006",
+        "count" : "255"
+      }, {
+        "item" : "0.011",
+        "count" : "241"
+      }, {
+        "item" : "0.012",
+        "count" : "222"
+      }, {
+        "item" : "0.013",
+        "count" : "208"
+      }, {
+        "item" : "0.015",
+        "count" : "187"
+      }, {
+        "item" : "0.014",
+        "count" : "180"
+      }, {
+        "item" : "0.016",
+        "count" : "140"
+      }, {
+        "item" : "0.017",
+        "count" : "139"
+      }, {
+        "item" : "0.019",
+        "count" : "132"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206058,
+    "name" : "AS_CNT",
+    "dataTypeName" : "number",
+    "description" : "Asian Staff Count",
+    "fieldName" : "as_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515471,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "3441.4",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2747283"
+      }, {
+        "item" : "1.0",
+        "count" : "26712"
+      }, {
+        "item" : "2.0",
+        "count" : "6048"
+      }, {
+        "item" : "0.5",
+        "count" : "2840"
+      }, {
+        "item" : "3.0",
+        "count" : "2635"
+      }, {
+        "item" : "0.8",
+        "count" : "1384"
+      }, {
+        "item" : "4.0",
+        "count" : "1307"
+      }, {
+        "item" : "0.2",
+        "count" : "1188"
+      }, {
+        "item" : "0.3",
+        "count" : "998"
+      }, {
+        "item" : "0.6",
+        "count" : "897"
+      }, {
+        "item" : "0.1",
+        "count" : "831"
+      }, {
+        "item" : "0.4",
+        "count" : "796"
+      }, {
+        "item" : "5.0",
+        "count" : "767"
+      }, {
+        "item" : "1.5",
+        "count" : "702"
+      }, {
+        "item" : "0.9",
+        "count" : "659"
+      }, {
+        "item" : "1.8",
+        "count" : "562"
+      }, {
+        "item" : "0.7",
+        "count" : "500"
+      }, {
+        "item" : "6.0",
+        "count" : "485"
+      }, {
+        "item" : "2.5",
+        "count" : "400"
+      }, {
+        "item" : "1.6",
+        "count" : "379"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206059,
+    "name" : "AS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Asian Staff Percent",
+    "fieldName" : "as_pct",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515472,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2747195"
+      }, {
+        "item" : "1.0",
+        "count" : "3749"
+      }, {
+        "item" : "0.5",
+        "count" : "1253"
+      }, {
+        "item" : "0.012",
+        "count" : "1175"
+      }, {
+        "item" : "0.013",
+        "count" : "1133"
+      }, {
+        "item" : "0.014",
+        "count" : "1112"
+      }, {
+        "item" : "0.01",
+        "count" : "1103"
+      }, {
+        "item" : "0.011",
+        "count" : "1094"
+      }, {
+        "item" : "0.009",
+        "count" : "1077"
+      }, {
+        "item" : "0.015",
+        "count" : "1044"
+      }, {
+        "item" : "0.016",
+        "count" : "1032"
+      }, {
+        "item" : "0.008",
+        "count" : "993"
+      }, {
+        "item" : "0.017",
+        "count" : "972"
+      }, {
+        "item" : "0.019",
+        "count" : "885"
+      }, {
+        "item" : "0.018",
+        "count" : "869"
+      }, {
+        "item" : "0.006",
+        "count" : "865"
+      }, {
+        "item" : "0.007",
+        "count" : "860"
+      }, {
+        "item" : "0.02",
+        "count" : "856"
+      }, {
+        "item" : "0.005",
+        "count" : "851"
+      }, {
+        "item" : "0.021",
+        "count" : "848"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206056,
+    "name" : "BAA_CNT",
+    "dataTypeName" : "number",
+    "description" : "Black or African American Staff Count",
+    "fieldName" : "baa_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515469,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "8217.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2717126"
+      }, {
+        "item" : "1.0",
+        "count" : "38736"
+      }, {
+        "item" : "2.0",
+        "count" : "9204"
+      }, {
+        "item" : "3.0",
+        "count" : "4058"
+      }, {
+        "item" : "0.5",
+        "count" : "3590"
+      }, {
+        "item" : "4.0",
+        "count" : "2370"
+      }, {
+        "item" : "5.0",
+        "count" : "1641"
+      }, {
+        "item" : "0.8",
+        "count" : "1619"
+      }, {
+        "item" : "0.2",
+        "count" : "1440"
+      }, {
+        "item" : "0.3",
+        "count" : "1360"
+      }, {
+        "item" : "0.1",
+        "count" : "1262"
+      }, {
+        "item" : "6.0",
+        "count" : "1046"
+      }, {
+        "item" : "0.9",
+        "count" : "985"
+      }, {
+        "item" : "0.4",
+        "count" : "975"
+      }, {
+        "item" : "1.5",
+        "count" : "921"
+      }, {
+        "item" : "0.6",
+        "count" : "797"
+      }, {
+        "item" : "7.0",
+        "count" : "753"
+      }, {
+        "item" : "8.0",
+        "count" : "594"
+      }, {
+        "item" : "1.8",
+        "count" : "552"
+      }, {
+        "item" : "9.0",
+        "count" : "526"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206057,
+    "name" : "BAA_PCT",
+    "dataTypeName" : "number",
+    "description" : "Black or African American Staff Percent",
+    "fieldName" : "baa_pct",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515470,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2717012"
+      }, {
+        "item" : "1.0",
+        "count" : "12850"
+      }, {
+        "item" : "0.5",
+        "count" : "4460"
+      }, {
+        "item" : "0.333",
+        "count" : "2637"
+      }, {
+        "item" : "0.25",
+        "count" : "1623"
+      }, {
+        "item" : "0.2",
+        "count" : "1055"
+      }, {
+        "item" : "0.009",
+        "count" : "982"
+      }, {
+        "item" : "0.013",
+        "count" : "916"
+      }, {
+        "item" : "0.012",
+        "count" : "911"
+      }, {
+        "item" : "0.167",
+        "count" : "906"
+      }, {
+        "item" : "0.015",
+        "count" : "902"
+      }, {
+        "item" : "0.014",
+        "count" : "874"
+      }, {
+        "item" : "0.017",
+        "count" : "873"
+      }, {
+        "item" : "0.016",
+        "count" : "868"
+      }, {
+        "item" : "0.008",
+        "count" : "834"
+      }, {
+        "item" : "0.01",
+        "count" : "832"
+      }, {
+        "item" : "0.667",
+        "count" : "817"
+      }, {
+        "item" : "0.011",
+        "count" : "798"
+      }, {
+        "item" : "0.018",
+        "count" : "771"
+      }, {
+        "item" : "0.005",
+        "count" : "761"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206060,
+    "name" : "HL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Hispanic or Latino Staff Count",
+    "fieldName" : "hl_cnt",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515473,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "10652.4",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2700433"
+      }, {
+        "item" : "1.0",
+        "count" : "43348"
+      }, {
+        "item" : "2.0",
+        "count" : "11883"
+      }, {
+        "item" : "3.0",
+        "count" : "5701"
+      }, {
+        "item" : "0.5",
+        "count" : "4082"
+      }, {
+        "item" : "4.0",
+        "count" : "3344"
+      }, {
+        "item" : "5.0",
+        "count" : "2103"
+      }, {
+        "item" : "0.8",
+        "count" : "1850"
+      }, {
+        "item" : "0.2",
+        "count" : "1648"
+      }, {
+        "item" : "0.3",
+        "count" : "1615"
+      }, {
+        "item" : "6.0",
+        "count" : "1482"
+      }, {
+        "item" : "0.1",
+        "count" : "1322"
+      }, {
+        "item" : "0.4",
+        "count" : "1180"
+      }, {
+        "item" : "7.0",
+        "count" : "1120"
+      }, {
+        "item" : "1.5",
+        "count" : "1120"
+      }, {
+        "item" : "0.6",
+        "count" : "1019"
+      }, {
+        "item" : "8.0",
+        "count" : "888"
+      }, {
+        "item" : "0.9",
+        "count" : "864"
+      }, {
+        "item" : "1.8",
+        "count" : "705"
+      }, {
+        "item" : "2.5",
+        "count" : "647"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206061,
+    "name" : "HL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Hispanic or Latino Staff Percent",
+    "fieldName" : "hl_pct",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515474,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2699696"
+      }, {
+        "item" : "1.0",
+        "count" : "13350"
+      }, {
+        "item" : "0.5",
+        "count" : "4957"
+      }, {
+        "item" : "0.333",
+        "count" : "2693"
+      }, {
+        "item" : "0.25",
+        "count" : "1747"
+      }, {
+        "item" : "0.2",
+        "count" : "1447"
+      }, {
+        "item" : "0.167",
+        "count" : "1230"
+      }, {
+        "item" : "0.012",
+        "count" : "1059"
+      }, {
+        "item" : "0.016",
+        "count" : "1048"
+      }, {
+        "item" : "0.014",
+        "count" : "1031"
+      }, {
+        "item" : "0.013",
+        "count" : "1028"
+      }, {
+        "item" : "0.018",
+        "count" : "1011"
+      }, {
+        "item" : "0.015",
+        "count" : "1009"
+      }, {
+        "item" : "0.017",
+        "count" : "1003"
+      }, {
+        "item" : "0.011",
+        "count" : "962"
+      }, {
+        "item" : "0.019",
+        "count" : "960"
+      }, {
+        "item" : "0.143",
+        "count" : "950"
+      }, {
+        "item" : "0.111",
+        "count" : "891"
+      }, {
+        "item" : "0.01",
+        "count" : "889"
+      }, {
+        "item" : "0.025",
+        "count" : "886"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206066,
+    "name" : "MNHL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Multi-Race, Not Hispanic or Latino Staff Count",
+    "fieldName" : "mnhl_cnt",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515487,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1080.7",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2774282"
+      }, {
+        "item" : "1.0",
+        "count" : "17384"
+      }, {
+        "item" : "2.0",
+        "count" : "3483"
+      }, {
+        "item" : "0.5",
+        "count" : "1208"
+      }, {
+        "item" : "3.0",
+        "count" : "1140"
+      }, {
+        "item" : "0.8",
+        "count" : "830"
+      }, {
+        "item" : "0.3",
+        "count" : "772"
+      }, {
+        "item" : "0.2",
+        "count" : "742"
+      }, {
+        "item" : "0.1",
+        "count" : "562"
+      }, {
+        "item" : "0.4",
+        "count" : "547"
+      }, {
+        "item" : "4.0",
+        "count" : "473"
+      }, {
+        "item" : "0.9",
+        "count" : "438"
+      }, {
+        "item" : "0.6",
+        "count" : "370"
+      }, {
+        "item" : "0.7",
+        "count" : "306"
+      }, {
+        "item" : "1.8",
+        "count" : "258"
+      }, {
+        "item" : "5.0",
+        "count" : "253"
+      }, {
+        "item" : "1.5",
+        "count" : "220"
+      }, {
+        "item" : "1.2",
+        "count" : "181"
+      }, {
+        "item" : "1.3",
+        "count" : "173"
+      }, {
+        "item" : "1.6",
+        "count" : "168"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206067,
+    "name" : "MNHL_PCT",
+    "dataTypeName" : "number",
+    "description" : "Multi-Race, Not Hispanic or Latino Staff Percent",
+    "fieldName" : "mnhl_pct",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515488,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2774262"
+      }, {
+        "item" : "1.0",
+        "count" : "1548"
+      }, {
+        "item" : "0.005",
+        "count" : "902"
+      }, {
+        "item" : "0.004",
+        "count" : "895"
+      }, {
+        "item" : "0.014",
+        "count" : "866"
+      }, {
+        "item" : "0.012",
+        "count" : "864"
+      }, {
+        "item" : "0.009",
+        "count" : "854"
+      }, {
+        "item" : "0.006",
+        "count" : "827"
+      }, {
+        "item" : "0.01",
+        "count" : "827"
+      }, {
+        "item" : "0.007",
+        "count" : "826"
+      }, {
+        "item" : "0.011",
+        "count" : "809"
+      }, {
+        "item" : "0.013",
+        "count" : "777"
+      }, {
+        "item" : "0.008",
+        "count" : "776"
+      }, {
+        "item" : "0.003",
+        "count" : "729"
+      }, {
+        "item" : "0.015",
+        "count" : "717"
+      }, {
+        "item" : "0.016",
+        "count" : "672"
+      }, {
+        "item" : "0.002",
+        "count" : "626"
+      }, {
+        "item" : "0.5",
+        "count" : "613"
+      }, {
+        "item" : "0.017",
+        "count" : "613"
+      }, {
+        "item" : "0.018",
+        "count" : "609"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206064,
+    "name" : "NHPI_CNT",
+    "dataTypeName" : "number",
+    "description" : "Native Hawaiian or Other Pacific Islander Staff Count",
+    "fieldName" : "nhpi_cnt",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515481,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "120.9",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2800994"
+      }, {
+        "item" : "1.0",
+        "count" : "4175"
+      }, {
+        "item" : "0.5",
+        "count" : "360"
+      }, {
+        "item" : "2.0",
+        "count" : "299"
+      }, {
+        "item" : "0.6",
+        "count" : "131"
+      }, {
+        "item" : "0.8",
+        "count" : "105"
+      }, {
+        "item" : "0.9",
+        "count" : "86"
+      }, {
+        "item" : "0.3",
+        "count" : "77"
+      }, {
+        "item" : "0.4",
+        "count" : "75"
+      }, {
+        "item" : "3.0",
+        "count" : "74"
+      }, {
+        "item" : "0.2",
+        "count" : "55"
+      }, {
+        "item" : "0.7",
+        "count" : "41"
+      }, {
+        "item" : "1.5",
+        "count" : "41"
+      }, {
+        "item" : "4.0",
+        "count" : "29"
+      }, {
+        "item" : "0.1",
+        "count" : "28"
+      }, {
+        "item" : "1.1",
+        "count" : "20"
+      }, {
+        "item" : "1.6",
+        "count" : "16"
+      }, {
+        "item" : "5.0",
+        "count" : "15"
+      }, {
+        "item" : "6.0",
+        "count" : "14"
+      }, {
+        "item" : "2.5",
+        "count" : "13"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206065,
+    "name" : "NHPI_PCT",
+    "dataTypeName" : "number",
+    "description" : "Native Hawaiian or Other Pacific Islander Staff Percent",
+    "fieldName" : "nhpi_pct",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515484,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2801130"
+      }, {
+        "item" : "0.001",
+        "count" : "538"
+      }, {
+        "item" : "0.002",
+        "count" : "391"
+      }, {
+        "item" : "0.003",
+        "count" : "281"
+      }, {
+        "item" : "0.004",
+        "count" : "265"
+      }, {
+        "item" : "0.005",
+        "count" : "261"
+      }, {
+        "item" : "0.009",
+        "count" : "229"
+      }, {
+        "item" : "0.006",
+        "count" : "226"
+      }, {
+        "item" : "1.0",
+        "count" : "202"
+      }, {
+        "item" : "0.007",
+        "count" : "172"
+      }, {
+        "item" : "0.01",
+        "count" : "150"
+      }, {
+        "item" : "0.008",
+        "count" : "148"
+      }, {
+        "item" : "0.012",
+        "count" : "145"
+      }, {
+        "item" : "0.013",
+        "count" : "135"
+      }, {
+        "item" : "0.015",
+        "count" : "133"
+      }, {
+        "item" : "0.011",
+        "count" : "132"
+      }, {
+        "item" : "0.017",
+        "count" : "99"
+      }, {
+        "item" : "0.014",
+        "count" : "98"
+      }, {
+        "item" : "0.018",
+        "count" : "87"
+      }, {
+        "item" : "0.5",
+        "count" : "84"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206068,
+    "name" : "WH_CNT",
+    "dataTypeName" : "number",
+    "description" : "White Staff Count",
+    "fieldName" : "wh_cnt",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515475,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "125714.4",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2113340"
+      }, {
+        "item" : "1.0",
+        "count" : "214882"
+      }, {
+        "item" : "2.0",
+        "count" : "50436"
+      }, {
+        "item" : "0.5",
+        "count" : "40409"
+      }, {
+        "item" : "3.0",
+        "count" : "21914"
+      }, {
+        "item" : "0.3",
+        "count" : "19686"
+      }, {
+        "item" : "0.2",
+        "count" : "19044"
+      }, {
+        "item" : "0.8",
+        "count" : "14302"
+      }, {
+        "item" : "0.4",
+        "count" : "13793"
+      }, {
+        "item" : "4.0",
+        "count" : "13030"
+      }, {
+        "item" : "0.1",
+        "count" : "12305"
+      }, {
+        "item" : "0.6",
+        "count" : "11346"
+      }, {
+        "item" : "1.5",
+        "count" : "9659"
+      }, {
+        "item" : "5.0",
+        "count" : "9084"
+      }, {
+        "item" : "6.0",
+        "count" : "6502"
+      }, {
+        "item" : "0.9",
+        "count" : "5611"
+      }, {
+        "item" : "7.0",
+        "count" : "5329"
+      }, {
+        "item" : "0.7",
+        "count" : "4936"
+      }, {
+        "item" : "8.0",
+        "count" : "4342"
+      }, {
+        "item" : "1.8",
+        "count" : "4198"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206069,
+    "name" : "WH_PCT",
+    "dataTypeName" : "number",
+    "description" : "White Staff Percent",
+    "fieldName" : "wh_pct",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515476,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2111512"
+      }, {
+        "item" : "1.0",
+        "count" : "549910"
+      }, {
+        "item" : "0.5",
+        "count" : "9851"
+      }, {
+        "item" : "0.667",
+        "count" : "5054"
+      }, {
+        "item" : "0.75",
+        "count" : "2954"
+      }, {
+        "item" : "0.8",
+        "count" : "2247"
+      }, {
+        "item" : "0.333",
+        "count" : "2061"
+      }, {
+        "item" : "0.833",
+        "count" : "1879"
+      }, {
+        "item" : "0.857",
+        "count" : "1447"
+      }, {
+        "item" : "0.875",
+        "count" : "1309"
+      }, {
+        "item" : "0.889",
+        "count" : "1230"
+      }, {
+        "item" : "0.6",
+        "count" : "1104"
+      }, {
+        "item" : "0.9",
+        "count" : "1023"
+      }, {
+        "item" : "0.909",
+        "count" : "1009"
+      }, {
+        "item" : "0.714",
+        "count" : "963"
+      }, {
+        "item" : "0.971",
+        "count" : "951"
+      }, {
+        "item" : "0.984",
+        "count" : "926"
+      }, {
+        "item" : "0.969",
+        "count" : "913"
+      }, {
+        "item" : "0.973",
+        "count" : "910"
+      }, {
+        "item" : "0.975",
+        "count" : "909"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206070,
+    "name" : "FE_CNT",
+    "dataTypeName" : "number",
+    "description" : "Female Staff Count",
+    "fieldName" : "fe_cnt",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515491,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "117133.1",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2159123"
+      }, {
+        "item" : "1.0",
+        "count" : "196204"
+      }, {
+        "item" : "2.0",
+        "count" : "48428"
+      }, {
+        "item" : "0.5",
+        "count" : "37194"
+      }, {
+        "item" : "3.0",
+        "count" : "20251"
+      }, {
+        "item" : "0.3",
+        "count" : "17409"
+      }, {
+        "item" : "0.2",
+        "count" : "16679"
+      }, {
+        "item" : "0.8",
+        "count" : "13343"
+      }, {
+        "item" : "0.4",
+        "count" : "12167"
+      }, {
+        "item" : "4.0",
+        "count" : "11656"
+      }, {
+        "item" : "0.1",
+        "count" : "11141"
+      }, {
+        "item" : "0.6",
+        "count" : "10299"
+      }, {
+        "item" : "1.5",
+        "count" : "9466"
+      }, {
+        "item" : "5.0",
+        "count" : "8143"
+      }, {
+        "item" : "6.0",
+        "count" : "6003"
+      }, {
+        "item" : "0.9",
+        "count" : "5167"
+      }, {
+        "item" : "7.0",
+        "count" : "5048"
+      }, {
+        "item" : "0.7",
+        "count" : "4510"
+      }, {
+        "item" : "8.0",
+        "count" : "3980"
+      }, {
+        "item" : "1.8",
+        "count" : "3978"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206071,
+    "name" : "FE_PCT",
+    "dataTypeName" : "number",
+    "description" : "Female Staff Percent",
+    "fieldName" : "fe_pct",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515492,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2157280"
+      }, {
+        "item" : "1.0",
+        "count" : "443276"
+      }, {
+        "item" : "0.5",
+        "count" : "17233"
+      }, {
+        "item" : "0.667",
+        "count" : "8769"
+      }, {
+        "item" : "0.75",
+        "count" : "4629"
+      }, {
+        "item" : "0.333",
+        "count" : "3999"
+      }, {
+        "item" : "0.8",
+        "count" : "3350"
+      }, {
+        "item" : "0.833",
+        "count" : "2684"
+      }, {
+        "item" : "0.6",
+        "count" : "2351"
+      }, {
+        "item" : "0.857",
+        "count" : "2018"
+      }, {
+        "item" : "0.714",
+        "count" : "1801"
+      }, {
+        "item" : "0.875",
+        "count" : "1676"
+      }, {
+        "item" : "0.889",
+        "count" : "1468"
+      }, {
+        "item" : "0.9",
+        "count" : "1309"
+      }, {
+        "item" : "0.909",
+        "count" : "1309"
+      }, {
+        "item" : "0.4",
+        "count" : "1194"
+      }, {
+        "item" : "0.25",
+        "count" : "1179"
+      }, {
+        "item" : "0.917",
+        "count" : "1110"
+      }, {
+        "item" : "0.778",
+        "count" : "1058"
+      }, {
+        "item" : "0.923",
+        "count" : "949"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206072,
+    "name" : "MA_CNT",
+    "dataTypeName" : "number",
+    "description" : "Male Staff Count",
+    "fieldName" : "ma_cnt",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515489,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "30967.1",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2521738"
+      }, {
+        "item" : "1.0",
+        "count" : "98905"
+      }, {
+        "item" : "2.0",
+        "count" : "23620"
+      }, {
+        "item" : "0.5",
+        "count" : "12647"
+      }, {
+        "item" : "3.0",
+        "count" : "11264"
+      }, {
+        "item" : "0.2",
+        "count" : "7049"
+      }, {
+        "item" : "4.0",
+        "count" : "6427"
+      }, {
+        "item" : "0.3",
+        "count" : "6334"
+      }, {
+        "item" : "0.8",
+        "count" : "4811"
+      }, {
+        "item" : "0.1",
+        "count" : "4768"
+      }, {
+        "item" : "0.4",
+        "count" : "4716"
+      }, {
+        "item" : "5.0",
+        "count" : "4015"
+      }, {
+        "item" : "0.6",
+        "count" : "3620"
+      }, {
+        "item" : "1.5",
+        "count" : "2975"
+      }, {
+        "item" : "0.9",
+        "count" : "2665"
+      }, {
+        "item" : "6.0",
+        "count" : "2593"
+      }, {
+        "item" : "7.0",
+        "count" : "1843"
+      }, {
+        "item" : "0.7",
+        "count" : "1838"
+      }, {
+        "item" : "1.8",
+        "count" : "1801"
+      }, {
+        "item" : "2.5",
+        "count" : "1631"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precision" : "1"
+    }
+  }, {
+    "id" : 609206073,
+    "name" : "MA_PCT",
+    "dataTypeName" : "number",
+    "description" : "Male Staff Percent",
+    "fieldName" : "ma_pct",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148515490,
+    "cachedContents" : {
+      "non_null" : "2806845",
+      "largest" : "1.0",
+      "null" : "8860",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2520747"
+      }, {
+        "item" : "1.0",
+        "count" : "79896"
+      }, {
+        "item" : "0.5",
+        "count" : "17223"
+      }, {
+        "item" : "0.333",
+        "count" : "8771"
+      }, {
+        "item" : "0.25",
+        "count" : "4625"
+      }, {
+        "item" : "0.667",
+        "count" : "3993"
+      }, {
+        "item" : "0.2",
+        "count" : "3340"
+      }, {
+        "item" : "0.167",
+        "count" : "2691"
+      }, {
+        "item" : "0.4",
+        "count" : "2348"
+      }, {
+        "item" : "0.143",
+        "count" : "2018"
+      }, {
+        "item" : "0.286",
+        "count" : "1806"
+      }, {
+        "item" : "0.125",
+        "count" : "1686"
+      }, {
+        "item" : "0.111",
+        "count" : "1469"
+      }, {
+        "item" : "0.1",
+        "count" : "1309"
+      }, {
+        "item" : "0.091",
+        "count" : "1308"
+      }, {
+        "item" : "0.6",
+        "count" : "1192"
+      }, {
+        "item" : "0.75",
+        "count" : "1177"
+      }, {
+        "item" : "0.083",
+        "count" : "1110"
+      }, {
+        "item" : "0.222",
+        "count" : "1055"
+      }, {
+        "item" : "0.077",
+        "count" : "946"
+      } ],
+      "smallest" : "0.0",
+      "count" : "2815705",
+      "cardinality" : "2815705"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "precision" : "1"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "demographics", "ethnicity", "race", "gender", "job", "labor", "employment", "part-time employment", "teachers" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

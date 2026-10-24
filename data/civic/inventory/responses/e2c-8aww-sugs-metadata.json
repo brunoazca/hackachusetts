@@ -1,0 +1,676 @@
+{
+  "id" : "8aww-sugs",
+  "name" : "Students Moving In and Out of Special Education Services",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1717438746,
+  "description" : "This dataset contains data about students identified for special education services or no longer receiving special education services by grade since 2018. It contains multiple rows for each district, with rows for different years and grades, and columns indicating the number and percentage of students moving in and out of services. For details on how students are identified as receiving services or moving off of services, please visit the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">RADAR Special Education Dashboard</a>.\n\nResource Allocation and District Action Reports (RADAR) enable district leaders to compare their staffing, class size, special education services, school performance, and per-pupil spending data with similar districts. They are intended to support districts in making effective strategic decisions as they develop district plans and budgets.\n\nThis dataset is one of five containing the same data that is also published in the <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiZjRjOGUyNDAtOGMzMi00NzY2LWFhMzQtMDQwZmJmYjEyZTBjIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\" target=\"_blank\" rel=\"noreferrer noopener\">RADAR Special Education Dashboard</a>:\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Program-Characteristics-and-Stud/n62c-bx65/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Program Characteristics and Student Demographics</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Placement-Trajectory/92x3-2qj9/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Placement Trajectory</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Students-Moving-In-and-Out-of-Special-Education-Se/8aww-sugs/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Students Moving In and Out of Special Education Services</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Indicators/yamx-769q/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Indicators</a>\n<a href=\"https://educationtocareer.data.mass.gov/Assessment-and-Accountability/Special-Education-Student-Progression-from-High-Sc/cdfp-645n/about_data\" target=\"_blank\" rel=\"noreferrer noopener\">Special Education Student Progression from High School through Postsecondary Education</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 624,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 41521423,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1755031739,
+  "publicationGroup" : 19538083,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1774027160,
+  "rowsUpdatedBy" : "j5zf-igkg",
+  "tableId" : 20011898,
+  "totalTimesRated" : 0,
+  "viewCount" : 1047,
+  "viewLastModified" : 1774027154,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1725978698,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7031650,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1725978550,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1725978698,
+      "failureCount" : 0,
+      "startedAt" : 1725978698,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 615756659,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152824135,
+    "cachedContents" : {
+      "non_null" : "30868",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "4429"
+      }, {
+        "item" : "2021",
+        "count" : "4420"
+      }, {
+        "item" : "2024",
+        "count" : "4414"
+      }, {
+        "item" : "2022",
+        "count" : "4413"
+      }, {
+        "item" : "2020",
+        "count" : "4403"
+      }, {
+        "item" : "2023",
+        "count" : "4398"
+      }, {
+        "item" : "2019",
+        "count" : "4391"
+      } ],
+      "smallest" : "2019",
+      "count" : "30868",
+      "cardinality" : "30868"
+    },
+    "format" : { }
+  }, {
+    "id" : 615756660,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152824136,
+    "cachedContents" : {
+      "non_null" : "30868",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00490000",
+        "count" : "98"
+      }, {
+        "item" : "01860000",
+        "count" : "98"
+      }, {
+        "item" : "00050000",
+        "count" : "98"
+      }, {
+        "item" : "06250000",
+        "count" : "98"
+      }, {
+        "item" : "01600000",
+        "count" : "98"
+      }, {
+        "item" : "01550000",
+        "count" : "98"
+      }, {
+        "item" : "07120000",
+        "count" : "98"
+      }, {
+        "item" : "07730000",
+        "count" : "98"
+      }, {
+        "item" : "00610000",
+        "count" : "98"
+      }, {
+        "item" : "02070000",
+        "count" : "98"
+      }, {
+        "item" : "01310000",
+        "count" : "98"
+      }, {
+        "item" : "02190000",
+        "count" : "98"
+      }, {
+        "item" : "02170000",
+        "count" : "98"
+      }, {
+        "item" : "03320000",
+        "count" : "98"
+      }, {
+        "item" : "02650000",
+        "count" : "98"
+      }, {
+        "item" : "02180000",
+        "count" : "98"
+      }, {
+        "item" : "02110000",
+        "count" : "98"
+      }, {
+        "item" : "03080000",
+        "count" : "98"
+      }, {
+        "item" : "00070000",
+        "count" : "98"
+      }, {
+        "item" : "03440000",
+        "count" : "98"
+      } ],
+      "smallest" : "00000000",
+      "count" : "30868",
+      "cardinality" : "30868"
+    },
+    "format" : { }
+  }, {
+    "id" : 615756661,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152824137,
+    "cachedContents" : {
+      "non_null" : "30868",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Bridgewater-Raynham",
+        "count" : "98"
+      }, {
+        "item" : "Northbridge",
+        "count" : "98"
+      }, {
+        "item" : "Watertown",
+        "count" : "98"
+      }, {
+        "item" : "New Bedford",
+        "count" : "98"
+      }, {
+        "item" : "Stoughton",
+        "count" : "98"
+      }, {
+        "item" : "Cambridge",
+        "count" : "98"
+      }, {
+        "item" : "Ashburnham-Westminster",
+        "count" : "98"
+      }, {
+        "item" : "Littleton",
+        "count" : "98"
+      }, {
+        "item" : "Norwood",
+        "count" : "98"
+      }, {
+        "item" : "Springfield",
+        "count" : "98"
+      }, {
+        "item" : "North Middlesex",
+        "count" : "98"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "98"
+      }, {
+        "item" : "Southern Berkshire",
+        "count" : "98"
+      }, {
+        "item" : "Marshfield",
+        "count" : "98"
+      }, {
+        "item" : "Bellingham",
+        "count" : "98"
+      }, {
+        "item" : "Woburn",
+        "count" : "98"
+      }, {
+        "item" : "Bourne",
+        "count" : "98"
+      }, {
+        "item" : "Dighton-Rehoboth",
+        "count" : "98"
+      }, {
+        "item" : "Stoneham",
+        "count" : "98"
+      }, {
+        "item" : "Webster",
+        "count" : "98"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter",
+      "count" : "30868",
+      "cardinality" : "30868"
+    },
+    "format" : { }
+  }, {
+    "id" : 615756662,
+    "name" : "GRADES",
+    "dataTypeName" : "text",
+    "description" : "Grades",
+    "fieldName" : "grades",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152824138,
+    "cachedContents" : {
+      "non_null" : "30868",
+      "largest" : "Kindergarten",
+      "null" : "0",
+      "top" : [ {
+        "item" : "K-12",
+        "count" : "2767"
+      }, {
+        "item" : "Grade 6",
+        "count" : "2290"
+      }, {
+        "item" : "Grade 5",
+        "count" : "2247"
+      }, {
+        "item" : "Grade 4",
+        "count" : "2193"
+      }, {
+        "item" : "Grade 2",
+        "count" : "2190"
+      }, {
+        "item" : "Grade 1",
+        "count" : "2190"
+      }, {
+        "item" : "Kindergarten",
+        "count" : "2190"
+      }, {
+        "item" : "Grade 3",
+        "count" : "2189"
+      }, {
+        "item" : "Grade 10",
+        "count" : "2182"
+      }, {
+        "item" : "Grade 9",
+        "count" : "2172"
+      }, {
+        "item" : "Grade 11",
+        "count" : "2169"
+      }, {
+        "item" : "Grade 7",
+        "count" : "2115"
+      }, {
+        "item" : "Grade 8",
+        "count" : "2114"
+      }, {
+        "item" : "Grade 12",
+        "count" : "1860"
+      } ],
+      "smallest" : "Grade 1",
+      "count" : "30868",
+      "cardinality" : "30868"
+    },
+    "format" : { }
+  }, {
+    "id" : 615756663,
+    "name" : "TOT",
+    "dataTypeName" : "number",
+    "description" : "Total Students",
+    "fieldName" : "tot",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152824139,
+    "cachedContents" : {
+      "non_null" : "30868",
+      "largest" : "860418",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "337"
+      }, {
+        "item" : "2",
+        "count" : "262"
+      }, {
+        "item" : "5",
+        "count" : "205"
+      }, {
+        "item" : "4",
+        "count" : "198"
+      }, {
+        "item" : "3",
+        "count" : "198"
+      }, {
+        "item" : "6",
+        "count" : "195"
+      }, {
+        "item" : "15",
+        "count" : "167"
+      }, {
+        "item" : "14",
+        "count" : "163"
+      }, {
+        "item" : "17",
+        "count" : "162"
+      }, {
+        "item" : "9",
+        "count" : "153"
+      }, {
+        "item" : "18",
+        "count" : "140"
+      }, {
+        "item" : "12",
+        "count" : "136"
+      }, {
+        "item" : "93",
+        "count" : "135"
+      }, {
+        "item" : "7",
+        "count" : "134"
+      }, {
+        "item" : "10",
+        "count" : "133"
+      }, {
+        "item" : "11",
+        "count" : "129"
+      }, {
+        "item" : "88",
+        "count" : "129"
+      }, {
+        "item" : "62",
+        "count" : "128"
+      }, {
+        "item" : "13",
+        "count" : "126"
+      }, {
+        "item" : "84",
+        "count" : "125"
+      } ],
+      "smallest" : "1",
+      "count" : "30868",
+      "cardinality" : "30868"
+    },
+    "format" : { }
+  }, {
+    "id" : 615756664,
+    "name" : "SPED_TOT",
+    "dataTypeName" : "number",
+    "description" : "Total Students with Disabilities",
+    "fieldName" : "sped_tot",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152824140,
+    "cachedContents" : {
+      "non_null" : "30864",
+      "largest" : "169858",
+      "null" : "4",
+      "top" : [ {
+        "item" : "3",
+        "count" : "755"
+      }, {
+        "item" : "1",
+        "count" : "745"
+      }, {
+        "item" : "2",
+        "count" : "719"
+      }, {
+        "item" : "4",
+        "count" : "711"
+      }, {
+        "item" : "6",
+        "count" : "684"
+      }, {
+        "item" : "5",
+        "count" : "646"
+      }, {
+        "item" : "7",
+        "count" : "624"
+      }, {
+        "item" : "15",
+        "count" : "621"
+      }, {
+        "item" : "13",
+        "count" : "619"
+      }, {
+        "item" : "12",
+        "count" : "616"
+      }, {
+        "item" : "11",
+        "count" : "608"
+      }, {
+        "item" : "10",
+        "count" : "603"
+      }, {
+        "item" : "16",
+        "count" : "581"
+      }, {
+        "item" : "9",
+        "count" : "581"
+      }, {
+        "item" : "8",
+        "count" : "570"
+      }, {
+        "item" : "19",
+        "count" : "555"
+      }, {
+        "item" : "18",
+        "count" : "550"
+      }, {
+        "item" : "14",
+        "count" : "548"
+      }, {
+        "item" : "17",
+        "count" : "547"
+      }, {
+        "item" : "21",
+        "count" : "531"
+      } ],
+      "smallest" : "0",
+      "count" : "30868",
+      "cardinality" : "30868"
+    },
+    "format" : { }
+  }, {
+    "id" : 615756665,
+    "name" : "MOVEIN_CNT",
+    "dataTypeName" : "number",
+    "description" : "Move In Count",
+    "fieldName" : "movein_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152824141,
+    "cachedContents" : {
+      "non_null" : "30842",
+      "largest" : "22016",
+      "null" : "26",
+      "top" : [ {
+        "item" : "0",
+        "count" : "6662"
+      }, {
+        "item" : "1",
+        "count" : "4576"
+      }, {
+        "item" : "2",
+        "count" : "3544"
+      }, {
+        "item" : "3",
+        "count" : "2767"
+      }, {
+        "item" : "4",
+        "count" : "2090"
+      }, {
+        "item" : "5",
+        "count" : "1651"
+      }, {
+        "item" : "6",
+        "count" : "1311"
+      }, {
+        "item" : "7",
+        "count" : "1043"
+      }, {
+        "item" : "8",
+        "count" : "844"
+      }, {
+        "item" : "9",
+        "count" : "735"
+      }, {
+        "item" : "10",
+        "count" : "515"
+      }, {
+        "item" : "11",
+        "count" : "442"
+      }, {
+        "item" : "12",
+        "count" : "402"
+      }, {
+        "item" : "13",
+        "count" : "345"
+      }, {
+        "item" : "14",
+        "count" : "274"
+      }, {
+        "item" : "15",
+        "count" : "240"
+      }, {
+        "item" : "16",
+        "count" : "216"
+      }, {
+        "item" : "17",
+        "count" : "176"
+      }, {
+        "item" : "18",
+        "count" : "173"
+      }, {
+        "item" : "19",
+        "count" : "141"
+      } ],
+      "smallest" : "0",
+      "count" : "30868",
+      "cardinality" : "30868"
+    },
+    "format" : { }
+  }, {
+    "id" : 615756666,
+    "name" : "MOVEOUT_CNT",
+    "dataTypeName" : "number",
+    "description" : "Move Out Count",
+    "fieldName" : "moveout_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152824142,
+    "cachedContents" : {
+      "non_null" : "30842",
+      "largest" : "11998",
+      "null" : "26",
+      "top" : [ {
+        "item" : "0",
+        "count" : "9120"
+      }, {
+        "item" : "1",
+        "count" : "5843"
+      }, {
+        "item" : "2",
+        "count" : "4128"
+      }, {
+        "item" : "3",
+        "count" : "2869"
+      }, {
+        "item" : "4",
+        "count" : "1948"
+      }, {
+        "item" : "5",
+        "count" : "1316"
+      }, {
+        "item" : "6",
+        "count" : "991"
+      }, {
+        "item" : "7",
+        "count" : "708"
+      }, {
+        "item" : "8",
+        "count" : "511"
+      }, {
+        "item" : "9",
+        "count" : "376"
+      }, {
+        "item" : "10",
+        "count" : "320"
+      }, {
+        "item" : "11",
+        "count" : "251"
+      }, {
+        "item" : "13",
+        "count" : "207"
+      }, {
+        "item" : "12",
+        "count" : "194"
+      }, {
+        "item" : "14",
+        "count" : "143"
+      }, {
+        "item" : "15",
+        "count" : "132"
+      }, {
+        "item" : "16",
+        "count" : "123"
+      }, {
+        "item" : "17",
+        "count" : "93"
+      }, {
+        "item" : "19",
+        "count" : "81"
+      }, {
+        "item" : "18",
+        "count" : "75"
+      } ],
+      "smallest" : "0",
+      "count" : "30868",
+      "cardinality" : "30868"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "special eduation", "disability", "special population", "sped", "students with disabilities", "grade", "radar" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

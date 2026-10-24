@@ -1,0 +1,43 @@
+TUITION_SNAPSHOT_DATE,SUBSIDY_REGION,PROGRAM_TYPE,DCR_AGE_GROUP,PROVIDER_COUNT,MEDIAN_DAILY_RATE,MEDIAN_MONTHLY_RATE,MEDIAN_YEARLY_RATE
+08/01/2026 12:00:00 AM,Statewide,Center-based Care,Infant,1070,114,2477,29721
+08/01/2026 12:00:00 AM,Statewide,Center-based Care,Toddler,1341,104,2250,27001
+08/01/2026 12:00:00 AM,Statewide,Center-based Care,Preschool,1743,76,1645,19745
+08/01/2026 12:00:00 AM,Statewide,Family Child Care,Infant,2922,60,1299,15588
+08/01/2026 12:00:00 AM,Statewide,Family Child Care,Toddler,4064,56,1210,14520
+08/01/2026 12:00:00 AM,Statewide,Family Child Care,Preschool,3389,51,1096,13156
+08/01/2026 12:00:00 AM,Central,Center-based Care,Infant,116,87,1884,22603
+08/01/2026 12:00:00 AM,Central,Center-based Care,Toddler,129,80,1732,20784
+08/01/2026 12:00:00 AM,Central,Center-based Care,Preschool,170,64,1386,16627
+08/01/2026 12:00:00 AM,Central,Family Child Care,Infant,491,60,1299,15588
+08/01/2026 12:00:00 AM,Central,Family Child Care,Toddler,701,55,1191,14289
+08/01/2026 12:00:00 AM,Central,Family Child Care,Preschool,584,50,1086,13032
+08/01/2026 12:00:00 AM,Metro,Center-based Care,Infant,355,132,2849,34190
+08/01/2026 12:00:00 AM,Metro,Center-based Care,Toddler,462,123,2663,31955
+08/01/2026 12:00:00 AM,Metro,Center-based Care,Preschool,617,98,2126,25512
+08/01/2026 12:00:00 AM,Metro,Family Child Care,Infant,521,80,1732,20784
+08/01/2026 12:00:00 AM,Metro,Family Child Care,Toddler,679,70,1516,18186
+08/01/2026 12:00:00 AM,Metro,Family Child Care,Preschool,558,65,1407,16887
+08/01/2026 12:00:00 AM,Metro Boston,Center-based Care,Infant,119,133,2879,34553
+08/01/2026 12:00:00 AM,Metro Boston,Center-based Care,Toddler,163,120,2598,31176
+08/01/2026 12:00:00 AM,Metro Boston,Center-based Care,Preschool,196,83,1797,21563
+08/01/2026 12:00:00 AM,Metro Boston,Family Child Care,Infant,421,86,1864,22369
+08/01/2026 12:00:00 AM,Metro Boston,Family Child Care,Toddler,568,70,1516,18186
+08/01/2026 12:00:00 AM,Metro Boston,Family Child Care,Preschool,467,60,1299,15588
+08/01/2026 12:00:00 AM,Northeast,Center-based Care,Infant,176,110,2390,28682
+08/01/2026 12:00:00 AM,Northeast,Center-based Care,Toddler,208,100,2158,25899
+08/01/2026 12:00:00 AM,Northeast,Center-based Care,Preschool,264,73,1570,18836
+08/01/2026 12:00:00 AM,Northeast,Family Child Care,Infant,674,60,1298,15572
+08/01/2026 12:00:00 AM,Northeast,Family Child Care,Toddler,1001,50,1083,12990
+08/01/2026 12:00:00 AM,Northeast,Family Child Care,Preschool,856,48,1039,12470
+08/01/2026 12:00:00 AM,Southeast,Center-based Care,Infant,224,91,1974,23694
+08/01/2026 12:00:00 AM,Southeast,Center-based Care,Toddler,258,80,1732,20784
+08/01/2026 12:00:00 AM,Southeast,Center-based Care,Preschool,322,60,1299,15588
+08/01/2026 12:00:00 AM,Southeast,Family Child Care,Infant,350,60,1299,15588
+08/01/2026 12:00:00 AM,Southeast,Family Child Care,Toddler,501,60,1299,15588
+08/01/2026 12:00:00 AM,Southeast,Family Child Care,Preschool,417,56,1212,14549
+08/01/2026 12:00:00 AM,Western,Center-based Care,Infant,80,83,1797,21563
+08/01/2026 12:00:00 AM,Western,Center-based Care,Toddler,121,74,1602,19225
+08/01/2026 12:00:00 AM,Western,Center-based Care,Preschool,174,58,1263,15157
+08/01/2026 12:00:00 AM,Western,Family Child Care,Infant,465,59,1278,15336
+08/01/2026 12:00:00 AM,Western,Family Child Care,Toddler,614,50,1083,12990
+08/01/2026 12:00:00 AM,Western,Family Child Care,Preschool,507,50,1083,12990

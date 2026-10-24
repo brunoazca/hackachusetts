@@ -1,0 +1,1839 @@
+{
+  "id" : "cbbr-jpy4",
+  "name" : "Non-Public School Enrollment",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1705957017,
+  "description" : "This dataset provides enrollment counts by grade for non-public schools in Massachusetts since 2002.\n\nThis dataset contains the same data that is also published on our DESE Profiles site:\n<a href=\"https://profiles.doe.mass.edu/statereport/nonpublicschoolreport.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">Non-Public School Report</a>",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 514,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40382399,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1705957234,
+  "publicationGroup" : 19437935,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1780423184,
+  "rowsUpdatedBy" : "d278-w6kz",
+  "tableId" : 19437935,
+  "totalTimesRated" : 0,
+  "viewCount" : 2143,
+  "viewLastModified" : 1786392861,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1729087984,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6583936,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1729087974,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1729087984,
+      "failureCount" : 0,
+      "startedAt" : 1729087984,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 588618384,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151050862,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2006",
+        "count" : "640"
+      }, {
+        "item" : "2004",
+        "count" : "635"
+      }, {
+        "item" : "2007",
+        "count" : "635"
+      }, {
+        "item" : "2003",
+        "count" : "631"
+      }, {
+        "item" : "2008",
+        "count" : "627"
+      }, {
+        "item" : "2005",
+        "count" : "624"
+      }, {
+        "item" : "2002",
+        "count" : "622"
+      }, {
+        "item" : "2010",
+        "count" : "577"
+      }, {
+        "item" : "2009",
+        "count" : "563"
+      }, {
+        "item" : "2011",
+        "count" : "560"
+      }, {
+        "item" : "2014",
+        "count" : "559"
+      }, {
+        "item" : "2012",
+        "count" : "548"
+      }, {
+        "item" : "2017",
+        "count" : "547"
+      }, {
+        "item" : "2015",
+        "count" : "546"
+      }, {
+        "item" : "2001",
+        "count" : "544"
+      }, {
+        "item" : "2013",
+        "count" : "542"
+      }, {
+        "item" : "2016",
+        "count" : "517"
+      }, {
+        "item" : "2018",
+        "count" : "482"
+      }, {
+        "item" : "2019",
+        "count" : "452"
+      }, {
+        "item" : "2026",
+        "count" : "402"
+      } ],
+      "smallest" : "2001",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618385,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "District Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151050863,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "07780000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00350000",
+        "count" : "1177"
+      }, {
+        "item" : "03480000",
+        "count" : "407"
+      }, {
+        "item" : "02070000",
+        "count" : "389"
+      }, {
+        "item" : "00950000",
+        "count" : "281"
+      }, {
+        "item" : "00300000",
+        "count" : "277"
+      }, {
+        "item" : "00490000",
+        "count" : "270"
+      }, {
+        "item" : "02810000",
+        "count" : "256"
+      }, {
+        "item" : "01600000",
+        "count" : "242"
+      }, {
+        "item" : "00460000",
+        "count" : "231"
+      }, {
+        "item" : "02010000",
+        "count" : "208"
+      }, {
+        "item" : "01000000",
+        "count" : "198"
+      }, {
+        "item" : "00400000",
+        "count" : "172"
+      }, {
+        "item" : "00100000",
+        "count" : "169"
+      }, {
+        "item" : "01370000",
+        "count" : "168"
+      }, {
+        "item" : "01550000",
+        "count" : "157"
+      }, {
+        "item" : "00200000",
+        "count" : "142"
+      }, {
+        "item" : "01890000",
+        "count" : "141"
+      }, {
+        "item" : "00090000",
+        "count" : "140"
+      }, {
+        "item" : "01490000",
+        "count" : "136"
+      }, {
+        "item" : "03080000",
+        "count" : "135"
+      } ],
+      "smallest" : "00000000",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618386,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151050864,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "Worthington",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Boston",
+        "count" : "1177"
+      }, {
+        "item" : "Worcester",
+        "count" : "407"
+      }, {
+        "item" : "Newton",
+        "count" : "389"
+      }, {
+        "item" : "Fall River",
+        "count" : "281"
+      }, {
+        "item" : "Beverly",
+        "count" : "277"
+      }, {
+        "item" : "Cambridge",
+        "count" : "270"
+      }, {
+        "item" : "Springfield",
+        "count" : "256"
+      }, {
+        "item" : "Lowell",
+        "count" : "242"
+      }, {
+        "item" : "Brookline",
+        "count" : "231"
+      }, {
+        "item" : "New Bedford",
+        "count" : "208"
+      }, {
+        "item" : "Framingham",
+        "count" : "198"
+      }, {
+        "item" : "Braintree",
+        "count" : "172"
+      }, {
+        "item" : "Arlington",
+        "count" : "169"
+      }, {
+        "item" : "Holyoke",
+        "count" : "168"
+      }, {
+        "item" : "Lexington",
+        "count" : "157"
+      }, {
+        "item" : "Barnstable",
+        "count" : "142"
+      }, {
+        "item" : "Milton",
+        "count" : "141"
+      }, {
+        "item" : "Andover",
+        "count" : "140"
+      }, {
+        "item" : "Lawrence",
+        "count" : "136"
+      }, {
+        "item" : "Waltham",
+        "count" : "135"
+      } ],
+      "smallest" : "Abington",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618387,
+    "name" : "ORG_CODE",
+    "dataTypeName" : "text",
+    "description" : "Organization Code",
+    "fieldName" : "org_code",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151050865,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "03520805",
+      "null" : "0",
+      "top" : [ {
+        "item" : "00960805",
+        "count" : "26"
+      }, {
+        "item" : "01030810",
+        "count" : "26"
+      }, {
+        "item" : "00490815",
+        "count" : "26"
+      }, {
+        "item" : "01550806",
+        "count" : "26"
+      }, {
+        "item" : "01660805",
+        "count" : "26"
+      }, {
+        "item" : "02030805",
+        "count" : "26"
+      }, {
+        "item" : "01990820",
+        "count" : "26"
+      }, {
+        "item" : "00780805",
+        "count" : "26"
+      }, {
+        "item" : "00970840",
+        "count" : "26"
+      }, {
+        "item" : "01990810",
+        "count" : "26"
+      }, {
+        "item" : "01500805",
+        "count" : "26"
+      }, {
+        "item" : "00670850",
+        "count" : "26"
+      }, {
+        "item" : "02200805",
+        "count" : "26"
+      }, {
+        "item" : "02070867",
+        "count" : "26"
+      }, {
+        "item" : "01470810",
+        "count" : "26"
+      }, {
+        "item" : "03410890",
+        "count" : "26"
+      }, {
+        "item" : "02810855",
+        "count" : "26"
+      }, {
+        "item" : "02070801",
+        "count" : "26"
+      }, {
+        "item" : "01470830",
+        "count" : "26"
+      }, {
+        "item" : "00300815",
+        "count" : "26"
+      } ],
+      "smallest" : "00000000",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618388,
+    "name" : "ORG_NAME",
+    "dataTypeName" : "text",
+    "description" : "Organization Name",
+    "fieldName" : "org_name",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151050866,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "Youth Opportunities Upheld School",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Sacred Heart Elementary",
+        "count" : "94"
+      }, {
+        "item" : "St Mary",
+        "count" : "78"
+      }, {
+        "item" : "Immaculate Conception",
+        "count" : "74"
+      }, {
+        "item" : "St Joseph Elementary",
+        "count" : "72"
+      }, {
+        "item" : "St Joseph",
+        "count" : "60"
+      }, {
+        "item" : "St Patrick Elementary",
+        "count" : "53"
+      }, {
+        "item" : "St Francis Xavier",
+        "count" : "51"
+      }, {
+        "item" : "St Stanislaus",
+        "count" : "50"
+      }, {
+        "item" : "St Michael Elementary",
+        "count" : "48"
+      }, {
+        "item" : "Notre Dame Academy",
+        "count" : "45"
+      }, {
+        "item" : "Holy Name",
+        "count" : "44"
+      }, {
+        "item" : "Trinity Catholic Academy",
+        "count" : "43"
+      }, {
+        "item" : "Nativity Prep School",
+        "count" : "42"
+      }, {
+        "item" : "Cathedral High",
+        "count" : "41"
+      }, {
+        "item" : "St Paul Elementary",
+        "count" : "40"
+      }, {
+        "item" : "Al-Noor Academy",
+        "count" : "36"
+      }, {
+        "item" : "Our Lady Of Lourdes",
+        "count" : "32"
+      }, {
+        "item" : "St Mary Elementary",
+        "count" : "31"
+      }, {
+        "item" : "South Shore Christian",
+        "count" : "28"
+      }, {
+        "item" : "Immaculate Conception Elementary",
+        "count" : "27"
+      } ],
+      "smallest" : "Abundant Life Chr School",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618405,
+    "name" : "GRD_TOTAL_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Enrolled Count",
+    "fieldName" : "grd_total_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050883,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "134827",
+      "null" : "0",
+      "top" : [ {
+        "item" : "26",
+        "count" : "96"
+      }, {
+        "item" : "24",
+        "count" : "87"
+      }, {
+        "item" : "23",
+        "count" : "84"
+      }, {
+        "item" : "25",
+        "count" : "81"
+      }, {
+        "item" : "28",
+        "count" : "79"
+      }, {
+        "item" : "31",
+        "count" : "76"
+      }, {
+        "item" : "22",
+        "count" : "75"
+      }, {
+        "item" : "50",
+        "count" : "71"
+      }, {
+        "item" : "20",
+        "count" : "70"
+      }, {
+        "item" : "60",
+        "count" : "69"
+      }, {
+        "item" : "27",
+        "count" : "68"
+      }, {
+        "item" : "12",
+        "count" : "68"
+      }, {
+        "item" : "21",
+        "count" : "68"
+      }, {
+        "item" : "43",
+        "count" : "67"
+      }, {
+        "item" : "42",
+        "count" : "64"
+      }, {
+        "item" : "34",
+        "count" : "63"
+      }, {
+        "item" : "30",
+        "count" : "63"
+      }, {
+        "item" : "36",
+        "count" : "63"
+      }, {
+        "item" : "29",
+        "count" : "63"
+      }, {
+        "item" : "53",
+        "count" : "62"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618389,
+    "name" : "GPK_CNT",
+    "dataTypeName" : "number",
+    "description" : "Pre-K Enrollment Count",
+    "fieldName" : "gpk_cnt",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050867,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "9611",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "6619"
+      }, {
+        "item" : "20",
+        "count" : "236"
+      }, {
+        "item" : "18",
+        "count" : "221"
+      }, {
+        "item" : "16",
+        "count" : "188"
+      }, {
+        "item" : "19",
+        "count" : "173"
+      }, {
+        "item" : "15",
+        "count" : "161"
+      }, {
+        "item" : "24",
+        "count" : "156"
+      }, {
+        "item" : "12",
+        "count" : "152"
+      }, {
+        "item" : "21",
+        "count" : "145"
+      }, {
+        "item" : "17",
+        "count" : "144"
+      }, {
+        "item" : "22",
+        "count" : "140"
+      }, {
+        "item" : "14",
+        "count" : "134"
+      }, {
+        "item" : "28",
+        "count" : "133"
+      }, {
+        "item" : "1",
+        "count" : "133"
+      }, {
+        "item" : "13",
+        "count" : "130"
+      }, {
+        "item" : "30",
+        "count" : "127"
+      }, {
+        "item" : "32",
+        "count" : "126"
+      }, {
+        "item" : "9",
+        "count" : "122"
+      }, {
+        "item" : "25",
+        "count" : "120"
+      }, {
+        "item" : "27",
+        "count" : "116"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618390,
+    "name" : "GK_CNT",
+    "dataTypeName" : "number",
+    "description" : "Kindergarten Enrollment Count",
+    "fieldName" : "gk_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050868,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "9772",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5475"
+      }, {
+        "item" : "24",
+        "count" : "273"
+      }, {
+        "item" : "25",
+        "count" : "254"
+      }, {
+        "item" : "22",
+        "count" : "254"
+      }, {
+        "item" : "1",
+        "count" : "248"
+      }, {
+        "item" : "18",
+        "count" : "244"
+      }, {
+        "item" : "19",
+        "count" : "243"
+      }, {
+        "item" : "20",
+        "count" : "237"
+      }, {
+        "item" : "15",
+        "count" : "231"
+      }, {
+        "item" : "13",
+        "count" : "226"
+      }, {
+        "item" : "16",
+        "count" : "225"
+      }, {
+        "item" : "17",
+        "count" : "214"
+      }, {
+        "item" : "23",
+        "count" : "213"
+      }, {
+        "item" : "12",
+        "count" : "204"
+      }, {
+        "item" : "30",
+        "count" : "203"
+      }, {
+        "item" : "11",
+        "count" : "202"
+      }, {
+        "item" : "10",
+        "count" : "198"
+      }, {
+        "item" : "26",
+        "count" : "195"
+      }, {
+        "item" : "9",
+        "count" : "194"
+      }, {
+        "item" : "2",
+        "count" : "178"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618391,
+    "name" : "G01_CNT",
+    "dataTypeName" : "number",
+    "description" : "1st Grade Enrollment Count",
+    "fieldName" : "g01_cnt",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050869,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "9196",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5245"
+      }, {
+        "item" : "1",
+        "count" : "353"
+      }, {
+        "item" : "2",
+        "count" : "280"
+      }, {
+        "item" : "18",
+        "count" : "254"
+      }, {
+        "item" : "20",
+        "count" : "248"
+      }, {
+        "item" : "3",
+        "count" : "239"
+      }, {
+        "item" : "16",
+        "count" : "235"
+      }, {
+        "item" : "15",
+        "count" : "233"
+      }, {
+        "item" : "17",
+        "count" : "231"
+      }, {
+        "item" : "24",
+        "count" : "228"
+      }, {
+        "item" : "7",
+        "count" : "226"
+      }, {
+        "item" : "5",
+        "count" : "225"
+      }, {
+        "item" : "25",
+        "count" : "224"
+      }, {
+        "item" : "13",
+        "count" : "224"
+      }, {
+        "item" : "4",
+        "count" : "223"
+      }, {
+        "item" : "23",
+        "count" : "220"
+      }, {
+        "item" : "8",
+        "count" : "218"
+      }, {
+        "item" : "14",
+        "count" : "216"
+      }, {
+        "item" : "9",
+        "count" : "215"
+      }, {
+        "item" : "12",
+        "count" : "209"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618392,
+    "name" : "G02_CNT",
+    "dataTypeName" : "number",
+    "description" : "2nd Grade Enrollment Count",
+    "fieldName" : "g02_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050870,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "8987",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5017"
+      }, {
+        "item" : "1",
+        "count" : "409"
+      }, {
+        "item" : "2",
+        "count" : "371"
+      }, {
+        "item" : "3",
+        "count" : "300"
+      }, {
+        "item" : "4",
+        "count" : "263"
+      }, {
+        "item" : "16",
+        "count" : "260"
+      }, {
+        "item" : "5",
+        "count" : "257"
+      }, {
+        "item" : "18",
+        "count" : "249"
+      }, {
+        "item" : "12",
+        "count" : "236"
+      }, {
+        "item" : "7",
+        "count" : "236"
+      }, {
+        "item" : "24",
+        "count" : "235"
+      }, {
+        "item" : "17",
+        "count" : "231"
+      }, {
+        "item" : "14",
+        "count" : "230"
+      }, {
+        "item" : "10",
+        "count" : "225"
+      }, {
+        "item" : "25",
+        "count" : "222"
+      }, {
+        "item" : "6",
+        "count" : "221"
+      }, {
+        "item" : "22",
+        "count" : "219"
+      }, {
+        "item" : "23",
+        "count" : "217"
+      }, {
+        "item" : "8",
+        "count" : "215"
+      }, {
+        "item" : "15",
+        "count" : "211"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618393,
+    "name" : "G03_CNT",
+    "dataTypeName" : "number",
+    "description" : "3rd Grade Enrollment Count",
+    "fieldName" : "g03_cnt",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050871,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "8702",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "4826"
+      }, {
+        "item" : "1",
+        "count" : "469"
+      }, {
+        "item" : "2",
+        "count" : "368"
+      }, {
+        "item" : "3",
+        "count" : "337"
+      }, {
+        "item" : "5",
+        "count" : "312"
+      }, {
+        "item" : "4",
+        "count" : "294"
+      }, {
+        "item" : "6",
+        "count" : "252"
+      }, {
+        "item" : "7",
+        "count" : "249"
+      }, {
+        "item" : "15",
+        "count" : "244"
+      }, {
+        "item" : "16",
+        "count" : "237"
+      }, {
+        "item" : "8",
+        "count" : "236"
+      }, {
+        "item" : "9",
+        "count" : "226"
+      }, {
+        "item" : "21",
+        "count" : "225"
+      }, {
+        "item" : "10",
+        "count" : "222"
+      }, {
+        "item" : "20",
+        "count" : "220"
+      }, {
+        "item" : "13",
+        "count" : "219"
+      }, {
+        "item" : "24",
+        "count" : "218"
+      }, {
+        "item" : "11",
+        "count" : "216"
+      }, {
+        "item" : "18",
+        "count" : "215"
+      }, {
+        "item" : "14",
+        "count" : "211"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618394,
+    "name" : "G04_CNT",
+    "dataTypeName" : "number",
+    "description" : "4th Grade Enrollment Count",
+    "fieldName" : "g04_cnt",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050872,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "8670",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "4636"
+      }, {
+        "item" : "1",
+        "count" : "480"
+      }, {
+        "item" : "2",
+        "count" : "417"
+      }, {
+        "item" : "3",
+        "count" : "372"
+      }, {
+        "item" : "4",
+        "count" : "313"
+      }, {
+        "item" : "5",
+        "count" : "271"
+      }, {
+        "item" : "8",
+        "count" : "270"
+      }, {
+        "item" : "6",
+        "count" : "263"
+      }, {
+        "item" : "9",
+        "count" : "256"
+      }, {
+        "item" : "16",
+        "count" : "254"
+      }, {
+        "item" : "10",
+        "count" : "251"
+      }, {
+        "item" : "7",
+        "count" : "236"
+      }, {
+        "item" : "12",
+        "count" : "235"
+      }, {
+        "item" : "17",
+        "count" : "233"
+      }, {
+        "item" : "11",
+        "count" : "232"
+      }, {
+        "item" : "13",
+        "count" : "223"
+      }, {
+        "item" : "20",
+        "count" : "220"
+      }, {
+        "item" : "24",
+        "count" : "213"
+      }, {
+        "item" : "15",
+        "count" : "212"
+      }, {
+        "item" : "18",
+        "count" : "210"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618395,
+    "name" : "G05_CNT",
+    "dataTypeName" : "number",
+    "description" : "5th Grade Enrollment Count",
+    "fieldName" : "g05_cnt",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050873,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "8785",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "4265"
+      }, {
+        "item" : "1",
+        "count" : "495"
+      }, {
+        "item" : "2",
+        "count" : "425"
+      }, {
+        "item" : "3",
+        "count" : "419"
+      }, {
+        "item" : "4",
+        "count" : "337"
+      }, {
+        "item" : "5",
+        "count" : "312"
+      }, {
+        "item" : "15",
+        "count" : "280"
+      }, {
+        "item" : "8",
+        "count" : "274"
+      }, {
+        "item" : "6",
+        "count" : "270"
+      }, {
+        "item" : "9",
+        "count" : "261"
+      }, {
+        "item" : "7",
+        "count" : "257"
+      }, {
+        "item" : "14",
+        "count" : "257"
+      }, {
+        "item" : "10",
+        "count" : "254"
+      }, {
+        "item" : "12",
+        "count" : "254"
+      }, {
+        "item" : "13",
+        "count" : "247"
+      }, {
+        "item" : "11",
+        "count" : "245"
+      }, {
+        "item" : "20",
+        "count" : "241"
+      }, {
+        "item" : "18",
+        "count" : "231"
+      }, {
+        "item" : "17",
+        "count" : "227"
+      }, {
+        "item" : "16",
+        "count" : "224"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618396,
+    "name" : "G06_CNT",
+    "dataTypeName" : "number",
+    "description" : "6th Grade Enrollment Count",
+    "fieldName" : "g06_cnt",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050874,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "9383",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3937"
+      }, {
+        "item" : "1",
+        "count" : "508"
+      }, {
+        "item" : "2",
+        "count" : "475"
+      }, {
+        "item" : "3",
+        "count" : "407"
+      }, {
+        "item" : "4",
+        "count" : "389"
+      }, {
+        "item" : "6",
+        "count" : "329"
+      }, {
+        "item" : "5",
+        "count" : "320"
+      }, {
+        "item" : "8",
+        "count" : "283"
+      }, {
+        "item" : "11",
+        "count" : "261"
+      }, {
+        "item" : "14",
+        "count" : "260"
+      }, {
+        "item" : "9",
+        "count" : "251"
+      }, {
+        "item" : "15",
+        "count" : "248"
+      }, {
+        "item" : "7",
+        "count" : "247"
+      }, {
+        "item" : "12",
+        "count" : "246"
+      }, {
+        "item" : "20",
+        "count" : "240"
+      }, {
+        "item" : "17",
+        "count" : "239"
+      }, {
+        "item" : "13",
+        "count" : "238"
+      }, {
+        "item" : "16",
+        "count" : "233"
+      }, {
+        "item" : "10",
+        "count" : "230"
+      }, {
+        "item" : "24",
+        "count" : "211"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618397,
+    "name" : "G07_CNT",
+    "dataTypeName" : "number",
+    "description" : "7th Grade Enrollment Count",
+    "fieldName" : "g07_cnt",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050875,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "9705",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3988"
+      }, {
+        "item" : "1",
+        "count" : "513"
+      }, {
+        "item" : "2",
+        "count" : "467"
+      }, {
+        "item" : "3",
+        "count" : "464"
+      }, {
+        "item" : "4",
+        "count" : "356"
+      }, {
+        "item" : "5",
+        "count" : "302"
+      }, {
+        "item" : "6",
+        "count" : "289"
+      }, {
+        "item" : "10",
+        "count" : "277"
+      }, {
+        "item" : "8",
+        "count" : "276"
+      }, {
+        "item" : "16",
+        "count" : "265"
+      }, {
+        "item" : "15",
+        "count" : "257"
+      }, {
+        "item" : "12",
+        "count" : "255"
+      }, {
+        "item" : "7",
+        "count" : "249"
+      }, {
+        "item" : "9",
+        "count" : "245"
+      }, {
+        "item" : "14",
+        "count" : "241"
+      }, {
+        "item" : "11",
+        "count" : "238"
+      }, {
+        "item" : "13",
+        "count" : "227"
+      }, {
+        "item" : "17",
+        "count" : "217"
+      }, {
+        "item" : "18",
+        "count" : "213"
+      }, {
+        "item" : "24",
+        "count" : "200"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618398,
+    "name" : "G08_CNT",
+    "dataTypeName" : "number",
+    "description" : "8th Grade Enrollment Count",
+    "fieldName" : "g08_cnt",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050876,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "9793",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3736"
+      }, {
+        "item" : "1",
+        "count" : "471"
+      }, {
+        "item" : "2",
+        "count" : "471"
+      }, {
+        "item" : "3",
+        "count" : "440"
+      }, {
+        "item" : "4",
+        "count" : "425"
+      }, {
+        "item" : "5",
+        "count" : "336"
+      }, {
+        "item" : "6",
+        "count" : "324"
+      }, {
+        "item" : "7",
+        "count" : "301"
+      }, {
+        "item" : "9",
+        "count" : "298"
+      }, {
+        "item" : "8",
+        "count" : "284"
+      }, {
+        "item" : "13",
+        "count" : "268"
+      }, {
+        "item" : "12",
+        "count" : "268"
+      }, {
+        "item" : "11",
+        "count" : "262"
+      }, {
+        "item" : "10",
+        "count" : "254"
+      }, {
+        "item" : "14",
+        "count" : "251"
+      }, {
+        "item" : "17",
+        "count" : "238"
+      }, {
+        "item" : "15",
+        "count" : "226"
+      }, {
+        "item" : "18",
+        "count" : "217"
+      }, {
+        "item" : "19",
+        "count" : "216"
+      }, {
+        "item" : "21",
+        "count" : "216"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618399,
+    "name" : "G09_CNT",
+    "dataTypeName" : "number",
+    "description" : "9th Grade Enrollment Count",
+    "fieldName" : "g09_cnt",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050877,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "11585",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "7254"
+      }, {
+        "item" : "1",
+        "count" : "324"
+      }, {
+        "item" : "3",
+        "count" : "323"
+      }, {
+        "item" : "2",
+        "count" : "277"
+      }, {
+        "item" : "4",
+        "count" : "277"
+      }, {
+        "item" : "5",
+        "count" : "266"
+      }, {
+        "item" : "6",
+        "count" : "246"
+      }, {
+        "item" : "8",
+        "count" : "205"
+      }, {
+        "item" : "7",
+        "count" : "200"
+      }, {
+        "item" : "9",
+        "count" : "192"
+      }, {
+        "item" : "10",
+        "count" : "163"
+      }, {
+        "item" : "11",
+        "count" : "145"
+      }, {
+        "item" : "13",
+        "count" : "139"
+      }, {
+        "item" : "12",
+        "count" : "136"
+      }, {
+        "item" : "14",
+        "count" : "89"
+      }, {
+        "item" : "15",
+        "count" : "82"
+      }, {
+        "item" : "17",
+        "count" : "82"
+      }, {
+        "item" : "16",
+        "count" : "73"
+      }, {
+        "item" : "18",
+        "count" : "71"
+      }, {
+        "item" : "20",
+        "count" : "58"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618400,
+    "name" : "G10_CNT",
+    "dataTypeName" : "number",
+    "description" : "10th Grade Enrollment Count",
+    "fieldName" : "g10_cnt",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050878,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "11604",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "7599"
+      }, {
+        "item" : "3",
+        "count" : "284"
+      }, {
+        "item" : "2",
+        "count" : "271"
+      }, {
+        "item" : "5",
+        "count" : "255"
+      }, {
+        "item" : "1",
+        "count" : "246"
+      }, {
+        "item" : "4",
+        "count" : "236"
+      }, {
+        "item" : "6",
+        "count" : "229"
+      }, {
+        "item" : "7",
+        "count" : "211"
+      }, {
+        "item" : "8",
+        "count" : "203"
+      }, {
+        "item" : "9",
+        "count" : "170"
+      }, {
+        "item" : "10",
+        "count" : "160"
+      }, {
+        "item" : "11",
+        "count" : "142"
+      }, {
+        "item" : "12",
+        "count" : "132"
+      }, {
+        "item" : "13",
+        "count" : "101"
+      }, {
+        "item" : "14",
+        "count" : "98"
+      }, {
+        "item" : "16",
+        "count" : "77"
+      }, {
+        "item" : "15",
+        "count" : "74"
+      }, {
+        "item" : "18",
+        "count" : "73"
+      }, {
+        "item" : "17",
+        "count" : "70"
+      }, {
+        "item" : "19",
+        "count" : "63"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618401,
+    "name" : "G11_CNT",
+    "dataTypeName" : "number",
+    "description" : "11th Grade Enrollment Count",
+    "fieldName" : "g11_cnt",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050879,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "11447",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "7729"
+      }, {
+        "item" : "4",
+        "count" : "276"
+      }, {
+        "item" : "3",
+        "count" : "261"
+      }, {
+        "item" : "2",
+        "count" : "259"
+      }, {
+        "item" : "6",
+        "count" : "256"
+      }, {
+        "item" : "1",
+        "count" : "246"
+      }, {
+        "item" : "5",
+        "count" : "226"
+      }, {
+        "item" : "7",
+        "count" : "212"
+      }, {
+        "item" : "8",
+        "count" : "179"
+      }, {
+        "item" : "9",
+        "count" : "157"
+      }, {
+        "item" : "10",
+        "count" : "140"
+      }, {
+        "item" : "11",
+        "count" : "132"
+      }, {
+        "item" : "12",
+        "count" : "115"
+      }, {
+        "item" : "14",
+        "count" : "88"
+      }, {
+        "item" : "13",
+        "count" : "81"
+      }, {
+        "item" : "15",
+        "count" : "72"
+      }, {
+        "item" : "17",
+        "count" : "68"
+      }, {
+        "item" : "18",
+        "count" : "67"
+      }, {
+        "item" : "19",
+        "count" : "65"
+      }, {
+        "item" : "16",
+        "count" : "63"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618402,
+    "name" : "G12_CNT",
+    "dataTypeName" : "number",
+    "description" : "12th Grade Enrollment Count",
+    "fieldName" : "g12_cnt",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050880,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "11110",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "7882"
+      }, {
+        "item" : "2",
+        "count" : "290"
+      }, {
+        "item" : "1",
+        "count" : "270"
+      }, {
+        "item" : "3",
+        "count" : "236"
+      }, {
+        "item" : "4",
+        "count" : "236"
+      }, {
+        "item" : "7",
+        "count" : "224"
+      }, {
+        "item" : "5",
+        "count" : "206"
+      }, {
+        "item" : "8",
+        "count" : "190"
+      }, {
+        "item" : "6",
+        "count" : "180"
+      }, {
+        "item" : "9",
+        "count" : "135"
+      }, {
+        "item" : "10",
+        "count" : "132"
+      }, {
+        "item" : "11",
+        "count" : "120"
+      }, {
+        "item" : "14",
+        "count" : "95"
+      }, {
+        "item" : "12",
+        "count" : "93"
+      }, {
+        "item" : "13",
+        "count" : "69"
+      }, {
+        "item" : "16",
+        "count" : "69"
+      }, {
+        "item" : "18",
+        "count" : "68"
+      }, {
+        "item" : "20",
+        "count" : "62"
+      }, {
+        "item" : "15",
+        "count" : "62"
+      }, {
+        "item" : "17",
+        "count" : "59"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618403,
+    "name" : "G13_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students Enrolled in Postgraduate Program beyond Grade 12 Count",
+    "fieldName" : "g13_cnt",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050881,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "599",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12707"
+      }, {
+        "item" : "1",
+        "count" : "90"
+      }, {
+        "item" : "2",
+        "count" : "58"
+      }, {
+        "item" : "3",
+        "count" : "34"
+      }, {
+        "item" : "5",
+        "count" : "26"
+      }, {
+        "item" : "4",
+        "count" : "22"
+      }, {
+        "item" : "8",
+        "count" : "22"
+      }, {
+        "item" : "10",
+        "count" : "20"
+      }, {
+        "item" : "6",
+        "count" : "19"
+      }, {
+        "item" : "14",
+        "count" : "18"
+      }, {
+        "item" : "13",
+        "count" : "18"
+      }, {
+        "item" : "7",
+        "count" : "15"
+      }, {
+        "item" : "20",
+        "count" : "13"
+      }, {
+        "item" : "15",
+        "count" : "13"
+      }, {
+        "item" : "23",
+        "count" : "12"
+      }, {
+        "item" : "11",
+        "count" : "12"
+      }, {
+        "item" : "9",
+        "count" : "12"
+      }, {
+        "item" : "12",
+        "count" : "11"
+      }, {
+        "item" : "19",
+        "count" : "11"
+      }, {
+        "item" : "29",
+        "count" : "10"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  }, {
+    "id" : 588618404,
+    "name" : "GRD_SP_CNT",
+    "dataTypeName" : "number",
+    "description" : "Students Receiving Special Education beyond Grade 12 Count",
+    "fieldName" : "grd_sp_cnt",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151050882,
+    "cachedContents" : {
+      "non_null" : "13266",
+      "largest" : "1016",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12164"
+      }, {
+        "item" : "1",
+        "count" : "107"
+      }, {
+        "item" : "2",
+        "count" : "89"
+      }, {
+        "item" : "3",
+        "count" : "65"
+      }, {
+        "item" : "4",
+        "count" : "62"
+      }, {
+        "item" : "5",
+        "count" : "54"
+      }, {
+        "item" : "6",
+        "count" : "49"
+      }, {
+        "item" : "7",
+        "count" : "47"
+      }, {
+        "item" : "9",
+        "count" : "42"
+      }, {
+        "item" : "8",
+        "count" : "36"
+      }, {
+        "item" : "12",
+        "count" : "34"
+      }, {
+        "item" : "10",
+        "count" : "33"
+      }, {
+        "item" : "11",
+        "count" : "30"
+      }, {
+        "item" : "14",
+        "count" : "28"
+      }, {
+        "item" : "16",
+        "count" : "25"
+      }, {
+        "item" : "15",
+        "count" : "24"
+      }, {
+        "item" : "13",
+        "count" : "22"
+      }, {
+        "item" : "18",
+        "count" : "21"
+      }, {
+        "item" : "19",
+        "count" : "17"
+      }, {
+        "item" : "20",
+        "count" : "16"
+      } ],
+      "smallest" : "0",
+      "count" : "13266",
+      "cardinality" : "13266"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Geospatial Details" : {
+        "Coverage" : "Statewide"
+      },
+      "Update" : {
+        "Update Frequency" : "Annually"
+      },
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "local", "academic", "private", "parochial", "enrollment", "grade" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

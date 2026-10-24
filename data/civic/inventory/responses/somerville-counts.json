@@ -1,0 +1,100 @@
+[{"year":"2025","location_name":"Foley St and Great River Rd","latitude":"42.3934","longitude":"-71.0775","am_pm":"PM","mode":"Ped","count":"622"}
+,{"year":"2025","location_name":"Foley St and Great River Rd","latitude":"42.3934","longitude":"-71.0775","am_pm":"PM","mode":"Bike","count":"25"}
+,{"year":"2025","location_name":"Foley St and Great River Rd","latitude":"42.3934","longitude":"-71.0775","am_pm":"AM","mode":"Ped","count":"377"}
+,{"year":"2025","location_name":"Foley St and Great River Rd","latitude":"42.3934","longitude":"-71.0775","am_pm":"AM","mode":"Bike","count":"23"}
+,{"year":"2025","location_name":"School St and Medford St","latitude":"42.3891","longitude":"-71.0972","am_pm":"PM","mode":"Ped","count":"339"}
+,{"year":"2025","location_name":"School St and Medford St","latitude":"42.3891","longitude":"-71.0972","am_pm":"PM","mode":"Bike","count":"73"}
+,{"year":"2025","location_name":"School St and Medford St","latitude":"42.3891","longitude":"-71.0972","am_pm":"AM","mode":"Ped","count":"255"}
+,{"year":"2025","location_name":"School St and Medford St","latitude":"42.3891","longitude":"-71.0972","am_pm":"AM","mode":"Bike","count":"62"}
+,{"year":"2025","location_name":"Central St and Somerville Junction Park","latitude":"42.3903","longitude":"-71.1021","am_pm":"PM","mode":"Ped","count":"407"}
+,{"year":"2025","location_name":"Central St and Somerville Junction Park","latitude":"42.3903","longitude":"-71.1021","am_pm":"PM","mode":"Bike","count":"467"}
+,{"year":"2025","location_name":"Central St and Somerville Junction Park","latitude":"42.3903","longitude":"-71.1021","am_pm":"AM","mode":"Ped","count":"252"}
+,{"year":"2025","location_name":"Central St and Somerville Junction Park","latitude":"42.3903","longitude":"-71.1021","am_pm":"AM","mode":"Bike","count":"564"}
+,{"year":"2025","location_name":"Somerville Ave and Medford St","latitude":"42.3773","longitude":"-71.0893","am_pm":"PM","mode":"Ped","count":"251"}
+,{"year":"2025","location_name":"Somerville Ave and Medford St","latitude":"42.3773","longitude":"-71.0893","am_pm":"PM","mode":"Bike","count":"183"}
+,{"year":"2025","location_name":"Somerville Ave and Medford St","latitude":"42.3773","longitude":"-71.0893","am_pm":"AM","mode":"Ped","count":"108"}
+,{"year":"2025","location_name":"Somerville Ave and Medford St","latitude":"42.3773","longitude":"-71.0893","am_pm":"AM","mode":"Bike","count":"105"}
+,{"year":"2025","location_name":"Park St and Somerville Ave","latitude":"42.3832","longitude":"-71.1063","am_pm":"PM","mode":"Ped","count":"265"}
+,{"year":"2025","location_name":"Park St and Somerville Ave","latitude":"42.3832","longitude":"-71.1063","am_pm":"PM","mode":"Bike","count":"264"}
+,{"year":"2025","location_name":"Park St and Somerville Ave","latitude":"42.3832","longitude":"-71.1063","am_pm":"AM","mode":"Ped","count":"254"}
+,{"year":"2025","location_name":"Park St and Somerville Ave","latitude":"42.3832","longitude":"-71.1063","am_pm":"AM","mode":"Bike","count":"222"}
+,{"year":"2025","location_name":"Community Path and Lowell St","latitude":"42.3928","longitude":"-71.1062","am_pm":"PM","mode":"Ped","count":"305"}
+,{"year":"2025","location_name":"Community Path and Lowell St","latitude":"42.3928","longitude":"-71.1062","am_pm":"PM","mode":"Bike","count":"50"}
+,{"year":"2025","location_name":"Community Path and Lowell St","latitude":"42.3928","longitude":"-71.1062","am_pm":"AM","mode":"Ped","count":"302"}
+,{"year":"2025","location_name":"Community Path and Lowell St","latitude":"42.3928","longitude":"-71.1062","am_pm":"AM","mode":"Bike","count":"38"}
+,{"year":"2025","location_name":"Boston Ave & Alewife Brook Pkwy","latitude":"42.4146","longitude":"-71.1313","am_pm":"PM","mode":"Ped","count":"157"}
+,{"year":"2025","location_name":"Boston Ave & Alewife Brook Pkwy","latitude":"42.4146","longitude":"-71.1313","am_pm":"PM","mode":"Bike","count":"50"}
+,{"year":"2025","location_name":"Boston Ave & Alewife Brook Pkwy","latitude":"42.4146","longitude":"-71.1313","am_pm":"AM","mode":"Ped","count":"103"}
+,{"year":"2025","location_name":"Boston Ave & Alewife Brook Pkwy","latitude":"42.4146","longitude":"-71.1313","am_pm":"AM","mode":"Bike","count":"38"}
+,{"year":"2025","location_name":"Mossland St & Somerville Ave","latitude":"42.3873","longitude":"-71.1168","am_pm":"PM","mode":"Ped","count":"407"}
+,{"year":"2025","location_name":"Mossland St & Somerville Ave","latitude":"42.3873","longitude":"-71.1168","am_pm":"PM","mode":"Bike","count":"367"}
+,{"year":"2025","location_name":"Mossland St & Somerville Ave","latitude":"42.3873","longitude":"-71.1168","am_pm":"AM","mode":"Ped","count":"354"}
+,{"year":"2025","location_name":"Mossland St & Somerville Ave","latitude":"42.3873","longitude":"-71.1168","am_pm":"AM","mode":"Bike","count":"501"}
+,{"year":"2025","location_name":"Cross St & Pearl St","latitude":"42.3857","longitude":"-71.0878","am_pm":"PM","mode":"Ped","count":"90"}
+,{"year":"2025","location_name":"Cross St & Pearl St","latitude":"42.3857","longitude":"-71.0878","am_pm":"PM","mode":"Bike","count":"75"}
+,{"year":"2025","location_name":"Cross St & Pearl St","latitude":"42.3857","longitude":"-71.0878","am_pm":"AM","mode":"Ped","count":"378"}
+,{"year":"2025","location_name":"Cross St & Pearl St","latitude":"42.3857","longitude":"-71.0878","am_pm":"AM","mode":"Bike","count":"95"}
+,{"year":"2025","location_name":"Temple St & Broadway","latitude":"42.3926","longitude":"-71.0933","am_pm":"PM","mode":"Ped"}
+,{"year":"2025","location_name":"Temple St & Broadway","latitude":"42.3926","longitude":"-71.0933","am_pm":"PM","mode":"Bike"}
+,{"year":"2025","location_name":"Temple St & Broadway","latitude":"42.3926","longitude":"-71.0933","am_pm":"AM","mode":"Ped","count":"195"}
+,{"year":"2025","location_name":"Temple St & Broadway","latitude":"42.3926","longitude":"-71.0933","am_pm":"AM","mode":"Bike","count":"48"}
+,{"year":"2025","location_name":"Summer St & School St","latitude":"42.3844","longitude":"-71.1004","am_pm":"PM","mode":"Ped","count":"260"}
+,{"year":"2025","location_name":"Summer St & School St","latitude":"42.3844","longitude":"-71.1004","am_pm":"PM","mode":"Bike","count":"67"}
+,{"year":"2025","location_name":"Summer St & School St","latitude":"42.3844","longitude":"-71.1004","am_pm":"AM","mode":"Ped","count":"155"}
+,{"year":"2025","location_name":"Summer St & School St","latitude":"42.3844","longitude":"-71.1004","am_pm":"AM","mode":"Bike","count":"57"}
+,{"year":"2025","location_name":"Foley St & Middlesex Ave","latitude":"42.3926","longitude":"-71.083","am_pm":"PM","mode":"Ped","count":"137"}
+,{"year":"2025","location_name":"Foley St & Middlesex Ave","latitude":"42.3926","longitude":"-71.083","am_pm":"PM","mode":"Bike","count":"32"}
+,{"year":"2025","location_name":"Foley St & Middlesex Ave","latitude":"42.3926","longitude":"-71.083","am_pm":"AM","mode":"Ped","count":"169"}
+,{"year":"2025","location_name":"Foley St & Middlesex Ave","latitude":"42.3926","longitude":"-71.083","am_pm":"AM","mode":"Bike","count":"6"}
+,{"year":"2025","location_name":"Dane St & Somerville Ave","latitude":"42.3825","longitude":"-71.1034","am_pm":"PM","mode":"Ped","count":"307"}
+,{"year":"2025","location_name":"Dane St & Somerville Ave","latitude":"42.3825","longitude":"-71.1034","am_pm":"PM","mode":"Bike","count":"126"}
+,{"year":"2025","location_name":"Dane St & Somerville Ave","latitude":"42.3825","longitude":"-71.1034","am_pm":"AM","mode":"Ped","count":"193"}
+,{"year":"2025","location_name":"Dane St & Somerville Ave","latitude":"42.3825","longitude":"-71.1034","am_pm":"AM","mode":"Bike","count":"131"}
+,{"year":"2025","location_name":"Broadway & Alewife Brook Pkwy","latitude":"42.4069","longitude":"-71.1336","am_pm":"PM","mode":"Ped","count":"125"}
+,{"year":"2025","location_name":"Broadway & Alewife Brook Pkwy","latitude":"42.4069","longitude":"-71.1336","am_pm":"PM","mode":"Bike","count":"117"}
+,{"year":"2025","location_name":"Broadway & Alewife Brook Pkwy","latitude":"42.4069","longitude":"-71.1336","am_pm":"AM","mode":"Ped","count":"97"}
+,{"year":"2025","location_name":"Broadway & Alewife Brook Pkwy","latitude":"42.4069","longitude":"-71.1336","am_pm":"AM","mode":"Bike","count":"81"}
+,{"year":"2025","location_name":"Broadway & Holland St","latitude":"42.403","longitude":"-71.127","am_pm":"PM","mode":"Ped","count":"457"}
+,{"year":"2025","location_name":"Broadway & Holland St","latitude":"42.403","longitude":"-71.127","am_pm":"PM","mode":"Bike","count":"82"}
+,{"year":"2025","location_name":"Broadway & Holland St","latitude":"42.403","longitude":"-71.127","am_pm":"AM","mode":"Ped","count":"298"}
+,{"year":"2025","location_name":"Broadway & Holland St","latitude":"42.403","longitude":"-71.127","am_pm":"AM","mode":"Bike","count":"99"}
+,{"year":"2025","location_name":"Broadway & Boston Ave","latitude":"42.3997","longitude":"-71.1115","am_pm":"PM","mode":"Ped","count":"389"}
+,{"year":"2025","location_name":"Broadway & Boston Ave","latitude":"42.3997","longitude":"-71.1115","am_pm":"PM","mode":"Bike","count":"114"}
+,{"year":"2025","location_name":"Broadway & Boston Ave","latitude":"42.3997","longitude":"-71.1115","am_pm":"AM","mode":"Ped","count":"339"}
+,{"year":"2025","location_name":"Broadway & Boston Ave","latitude":"42.3997","longitude":"-71.1115","am_pm":"AM","mode":"Bike","count":"57"}
+,{"year":"2025","location_name":"Broadway & Lombardi Way","latitude":"42.3862","longitude":"-71.0788","am_pm":"PM","mode":"Ped","count":"302"}
+,{"year":"2025","location_name":"Broadway & Lombardi Way","latitude":"42.3862","longitude":"-71.0788","am_pm":"PM","mode":"Bike","count":"61"}
+,{"year":"2025","location_name":"Broadway & Lombardi Way","latitude":"42.3862","longitude":"-71.0788","am_pm":"AM","mode":"Ped","count":"234"}
+,{"year":"2025","location_name":"Broadway & Lombardi Way","latitude":"42.3862","longitude":"-71.0788","am_pm":"AM","mode":"Bike","count":"46"}
+,{"year":"2025","location_name":"Highland Ave & Lowell St","latitude":"42.3902","longitude":"-71.108","am_pm":"PM","mode":"Ped","count":"277"}
+,{"year":"2025","location_name":"Highland Ave & Lowell St","latitude":"42.3902","longitude":"-71.108","am_pm":"PM","mode":"Bike","count":"35"}
+,{"year":"2025","location_name":"Highland Ave & Lowell St","latitude":"42.3902","longitude":"-71.108","am_pm":"AM","mode":"Ped","count":"223"}
+,{"year":"2025","location_name":"Highland Ave & Lowell St","latitude":"42.3902","longitude":"-71.108","am_pm":"AM","mode":"Bike","count":"21"}
+,{"year":"2025","location_name":"Joy St & Washington St","latitude":"42.3807","longitude":"-71.0886","am_pm":"PM","mode":"Ped","count":"189"}
+,{"year":"2025","location_name":"Joy St & Washington St","latitude":"42.3807","longitude":"-71.0886","am_pm":"PM","mode":"Bike","count":"255"}
+,{"year":"2025","location_name":"Joy St & Washington St","latitude":"42.3807","longitude":"-71.0886","am_pm":"AM","mode":"Ped","count":"126"}
+,{"year":"2025","location_name":"Joy St & Washington St","latitude":"42.3807","longitude":"-71.0886","am_pm":"AM","mode":"Bike","count":"137"}
+,{"year":"2025","location_name":"Medford St & South St","latitude":"42.3742","longitude":"-71.0881","am_pm":"PM","mode":"Ped","count":"200"}
+,{"year":"2025","location_name":"Medford St & South St","latitude":"42.3742","longitude":"-71.0881","am_pm":"PM","mode":"Bike","count":"100"}
+,{"year":"2025","location_name":"Medford St & South St","latitude":"42.3742","longitude":"-71.0881","am_pm":"AM","mode":"Ped","count":"76"}
+,{"year":"2025","location_name":"Medford St & South St","latitude":"42.3742","longitude":"-71.0881","am_pm":"AM","mode":"Bike","count":"89"}
+,{"year":"2025","location_name":"Powder House Blvd & North St","latitude":"42.4074","longitude":"-71.1303","am_pm":"PM","mode":"Ped","count":"119"}
+,{"year":"2025","location_name":"Powder House Blvd & North St","latitude":"42.4074","longitude":"-71.1303","am_pm":"PM","mode":"Bike","count":"39"}
+,{"year":"2025","location_name":"Powder House Blvd & North St","latitude":"42.4074","longitude":"-71.1303","am_pm":"AM","mode":"Ped","count":"112"}
+,{"year":"2025","location_name":"Powder House Blvd & North St","latitude":"42.4074","longitude":"-71.1303","am_pm":"AM","mode":"Bike","count":"18"}
+,{"year":"2025","location_name":"Rt. 28 Bridge & Shore Dr","latitude":"42.3983","longitude":"-71.0845","am_pm":"PM","mode":"Ped","count":"361"}
+,{"year":"2025","location_name":"Rt. 28 Bridge & Shore Dr","latitude":"42.3983","longitude":"-71.0845","am_pm":"PM","mode":"Bike","count":"56"}
+,{"year":"2025","location_name":"Rt. 28 Bridge & Shore Dr","latitude":"42.3983","longitude":"-71.0845","am_pm":"AM","mode":"Ped","count":"126"}
+,{"year":"2025","location_name":"Rt. 28 Bridge & Shore Dr","latitude":"42.3983","longitude":"-71.0845","am_pm":"AM","mode":"Bike","count":"36"}
+,{"year":"2025","location_name":"Highland Ave & Walnut St","latitude":"42.3851","longitude":"-71.0942","am_pm":"PM","mode":"Ped","count":"184"}
+,{"year":"2025","location_name":"Highland Ave & Walnut St","latitude":"42.3851","longitude":"-71.0942","am_pm":"PM","mode":"Bike","count":"37"}
+,{"year":"2025","location_name":"Highland Ave & Walnut St","latitude":"42.3851","longitude":"-71.0942","am_pm":"AM","mode":"Ped","count":"197"}
+,{"year":"2025","location_name":"Highland Ave & Walnut St","latitude":"42.3851","longitude":"-71.0942","am_pm":"AM","mode":"Bike","count":"22"}
+,{"year":"2025","location_name":"Washington St & Inner Belt Rd","latitude":"42.382","longitude":"-71.0815","am_pm":"PM","mode":"Ped","count":"213"}
+,{"year":"2025","location_name":"Washington St & Inner Belt Rd","latitude":"42.382","longitude":"-71.0815","am_pm":"PM","mode":"Bike","count":"110"}
+,{"year":"2025","location_name":"Washington St & Inner Belt Rd","latitude":"42.382","longitude":"-71.0815","am_pm":"AM","mode":"Ped","count":"161"}
+,{"year":"2025","location_name":"Washington St & Inner Belt Rd","latitude":"42.382","longitude":"-71.0815","am_pm":"AM","mode":"Bike","count":"83"}
+,{"year":"2025","location_name":"Cedar St & Summer St","latitude":"42.3905","longitude":"-71.1136","am_pm":"PM","mode":"Ped","count":"228"}
+,{"year":"2025","location_name":"Cedar St & Summer St","latitude":"42.3905","longitude":"-71.1136","am_pm":"PM","mode":"Bike","count":"75"}
+,{"year":"2025","location_name":"Cedar St & Summer St","latitude":"42.3905","longitude":"-71.1136","am_pm":"AM","mode":"Ped","count":"314"}
+,{"year":"2025","location_name":"Cedar St & Summer St","latitude":"42.3905","longitude":"-71.1136","am_pm":"AM","mode":"Bike","count":"118"}]

@@ -1,0 +1,862 @@
+{
+  "id" : "fz9c-2g33",
+  "name" : "Total Educators, Retention, and New Hires by Race/Ethnicity",
+  "assetType" : "dataset",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1695249594,
+  "description" : "This dataset displays state and district level educator data by race and ethnicity for each district, with rows for different years, different educator job groups, and a wide range of \nindicators. It was created as part of a dashboard supporting the Massachusetts Department of Elementary and Secondary Education's commitment to provide all students with a racially diverse and culturally responsive educator workforce.<BR>\n<B>Total Educators:</B> This displays the annual number and percent of distinct educators who self-reported/identified as the selected Race/Ethnicity as of the first weekday in October of each school year. Data are further disaggregated by job classification group.<BR>\n<B>Educator Retention:</B> This displays the number and percent of educators who were working in the same position from one school year to the next (via consecutive October EPIMS collections).<BR>\n<B>New Hires:</B> This displays the annual number and percent of new hires in the selected Race/Ethnicities. It counts teachers who were reported as \"working\" in the annual October EPIMS collection who were hired on or after June 1 of the prior school year.<BR>\nThis dataset contains the same data that is also published in the Total Educators, Educator Retention, and New Hires tables on our <a href=\"https://app.powerbigov.us/view?r=eyJrIjoiNGQ2NmM5ZGItZjgyNS00ZjEyLWEyYmMtZDBkZGQxMWJiMTFlIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9\"target=\"_blank\" rel=\"noopener noreferrer\">Educator Dashboard</a>.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 936,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 40002781,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1695757187,
+  "publicationGroup" : 19296511,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1708097189,
+  "tableId" : 19302213,
+  "totalTimesRated" : 0,
+  "viewCount" : 1838,
+  "viewLastModified" : 1772577051,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1695929930,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 5803031,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1695929904,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1695929930,
+      "failureCount" : 0,
+      "startedAt" : 1695929930,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "d278-w6kz",
+      "displayName" : "Andrew Quang"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 581704480,
+    "name" : "SY",
+    "dataTypeName" : "text",
+    "description" : "School Year",
+    "fieldName" : "sy",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148562452,
+    "cachedContents" : {
+      "non_null" : "48120",
+      "largest" : "2023",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023",
+        "count" : "16040"
+      }, {
+        "item" : "2022",
+        "count" : "16040"
+      }, {
+        "item" : "2021",
+        "count" : "16040"
+      } ],
+      "smallest" : "2021",
+      "count" : "48120",
+      "cardinality" : "3"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581704481,
+    "name" : "DIST_CODE",
+    "dataTypeName" : "text",
+    "description" : "Distict Code",
+    "fieldName" : "dist_code",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148562442,
+    "cachedContents" : {
+      "non_null" : "48120",
+      "largest" : "39020000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "02170000",
+        "count" : "120"
+      }, {
+        "item" : "02070000",
+        "count" : "120"
+      }, {
+        "item" : "01600000",
+        "count" : "120"
+      }, {
+        "item" : "07120000",
+        "count" : "120"
+      }, {
+        "item" : "00070000",
+        "count" : "120"
+      }, {
+        "item" : "08280000",
+        "count" : "120"
+      }, {
+        "item" : "00010000",
+        "count" : "120"
+      }, {
+        "item" : "02180000",
+        "count" : "120"
+      }, {
+        "item" : "03080000",
+        "count" : "120"
+      }, {
+        "item" : "08530000",
+        "count" : "120"
+      }, {
+        "item" : "07300000",
+        "count" : "120"
+      }, {
+        "item" : "01310000",
+        "count" : "120"
+      }, {
+        "item" : "02190000",
+        "count" : "120"
+      }, {
+        "item" : "04170000",
+        "count" : "120"
+      }, {
+        "item" : "03320000",
+        "count" : "120"
+      }, {
+        "item" : "02650000",
+        "count" : "120"
+      }, {
+        "item" : "00430000",
+        "count" : "120"
+      }, {
+        "item" : "02110000",
+        "count" : "120"
+      }, {
+        "item" : "03180000",
+        "count" : "120"
+      }, {
+        "item" : "04380000",
+        "count" : "120"
+      } ],
+      "smallest" : "00000000",
+      "count" : "48120",
+      "cardinality" : "401"
+    },
+    "format" : {
+      "displayStyle" : "normal",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581704482,
+    "name" : "DIST_NAME",
+    "dataTypeName" : "text",
+    "description" : "District Name",
+    "fieldName" : "dist_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148562443,
+    "cachedContents" : {
+      "non_null" : "48120",
+      "largest" : "Wrentham",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Benjamin Banneker Charter Public (District)",
+        "count" : "120"
+      }, {
+        "item" : "Boxford",
+        "count" : "120"
+      }, {
+        "item" : "Norfolk",
+        "count" : "120"
+      }, {
+        "item" : "Hawlemont",
+        "count" : "120"
+      }, {
+        "item" : "Andover",
+        "count" : "120"
+      }, {
+        "item" : "Acton-Boxborough",
+        "count" : "120"
+      }, {
+        "item" : "New Bedford",
+        "count" : "120"
+      }, {
+        "item" : "Helen Y. Davis Leadership Academy Charter Public (District)",
+        "count" : "120"
+      }, {
+        "item" : "Hill View Montessori Charter Public (District)",
+        "count" : "120"
+      }, {
+        "item" : "Advanced Math and Science Academy Charter (District)",
+        "count" : "120"
+      }, {
+        "item" : "Littleton",
+        "count" : "120"
+      }, {
+        "item" : "Norwood",
+        "count" : "120"
+      }, {
+        "item" : "Springfield",
+        "count" : "120"
+      }, {
+        "item" : "Brimfield",
+        "count" : "120"
+      }, {
+        "item" : "Sturgis Charter Public (District)",
+        "count" : "120"
+      }, {
+        "item" : "North Middlesex",
+        "count" : "120"
+      }, {
+        "item" : "Haverhill",
+        "count" : "120"
+      }, {
+        "item" : "Lynnfield",
+        "count" : "120"
+      }, {
+        "item" : "Truro",
+        "count" : "120"
+      }, {
+        "item" : "Needham",
+        "count" : "120"
+      } ],
+      "smallest" : "Abby Kelley Foster Charter Public (District)",
+      "count" : "48120",
+      "cardinality" : "401"
+    },
+    "format" : { }
+  }, {
+    "id" : 581704483,
+    "name" : "RACE_ETH",
+    "dataTypeName" : "text",
+    "description" : "Race and Ethnicity",
+    "fieldName" : "race_eth",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148562444,
+    "cachedContents" : {
+      "non_null" : "48120",
+      "largest" : "White",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Afr. Amer./Black",
+        "count" : "6015"
+      }, {
+        "item" : "All Educators",
+        "count" : "6015"
+      }, {
+        "item" : "Amer. Ind. or Alaska Nat.",
+        "count" : "6015"
+      }, {
+        "item" : "Asian",
+        "count" : "6015"
+      }, {
+        "item" : "Hispanic/Latino",
+        "count" : "6015"
+      }, {
+        "item" : "Multi-race, Non-Hisp./Lat.",
+        "count" : "6015"
+      }, {
+        "item" : "Nat. Haw. or Pacif. Isl.",
+        "count" : "6015"
+      }, {
+        "item" : "White",
+        "count" : "6015"
+      } ],
+      "smallest" : "Afr. Amer./Black",
+      "count" : "48120",
+      "cardinality" : "8"
+    },
+    "format" : { }
+  }, {
+    "id" : 581704484,
+    "name" : "JOB_CLASS_GRP",
+    "dataTypeName" : "text",
+    "description" : "Job Class Group",
+    "fieldName" : "job_class_grp",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 148562445,
+    "cachedContents" : {
+      "non_null" : "48120",
+      "largest" : "Teacher",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Administrator",
+        "count" : "9624"
+      }, {
+        "item" : "Other - Licensed",
+        "count" : "9624"
+      }, {
+        "item" : "Other - Non-Licensed",
+        "count" : "9624"
+      }, {
+        "item" : "Paraprofessional",
+        "count" : "9624"
+      }, {
+        "item" : "Teacher",
+        "count" : "9624"
+      } ],
+      "smallest" : "Administrator",
+      "count" : "48120",
+      "cardinality" : "5"
+    },
+    "format" : { }
+  }, {
+    "id" : 581704485,
+    "name" : "EDUCATORS_CNT",
+    "dataTypeName" : "number",
+    "description" : "Total Educators Count",
+    "fieldName" : "educators_cnt",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148562446,
+    "cachedContents" : {
+      "non_null" : "43032",
+      "largest" : "78198",
+      "null" : "5088",
+      "top" : [ {
+        "item" : "0",
+        "count" : "23440"
+      }, {
+        "item" : "1",
+        "count" : "4037"
+      }, {
+        "item" : "2",
+        "count" : "1609"
+      }, {
+        "item" : "3",
+        "count" : "863"
+      }, {
+        "item" : "4",
+        "count" : "525"
+      }, {
+        "item" : "6",
+        "count" : "524"
+      }, {
+        "item" : "9",
+        "count" : "463"
+      }, {
+        "item" : "7",
+        "count" : "436"
+      }, {
+        "item" : "8",
+        "count" : "426"
+      }, {
+        "item" : "10",
+        "count" : "378"
+      }, {
+        "item" : "5",
+        "count" : "376"
+      }, {
+        "item" : "11",
+        "count" : "327"
+      }, {
+        "item" : "12",
+        "count" : "324"
+      }, {
+        "item" : "13",
+        "count" : "289"
+      }, {
+        "item" : "15",
+        "count" : "259"
+      }, {
+        "item" : "14",
+        "count" : "250"
+      }, {
+        "item" : "17",
+        "count" : "237"
+      }, {
+        "item" : "22",
+        "count" : "219"
+      }, {
+        "item" : "16",
+        "count" : "219"
+      }, {
+        "item" : "19",
+        "count" : "213"
+      } ],
+      "smallest" : "0",
+      "count" : "48120",
+      "cardinality" : "674"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581704486,
+    "name" : "EDUCATORS_PCT",
+    "dataTypeName" : "number",
+    "description" : "Total Educators Percent",
+    "fieldName" : "educators_pct",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148562450,
+    "cachedContents" : {
+      "non_null" : "43032",
+      "largest" : "1",
+      "null" : "5088",
+      "top" : [ {
+        "item" : "0",
+        "count" : "23442"
+      }, {
+        "item" : "1",
+        "count" : "6921"
+      }, {
+        "item" : "0.008",
+        "count" : "213"
+      }, {
+        "item" : "0.016",
+        "count" : "201"
+      }, {
+        "item" : "0.007",
+        "count" : "200"
+      }, {
+        "item" : "0.005",
+        "count" : "198"
+      }, {
+        "item" : "0.011",
+        "count" : "188"
+      }, {
+        "item" : "0.009",
+        "count" : "185"
+      }, {
+        "item" : "0.004",
+        "count" : "180"
+      }, {
+        "item" : "0.013",
+        "count" : "180"
+      }, {
+        "item" : "0.015",
+        "count" : "177"
+      }, {
+        "item" : "0.01",
+        "count" : "177"
+      }, {
+        "item" : "0.012",
+        "count" : "175"
+      }, {
+        "item" : "0.014",
+        "count" : "175"
+      }, {
+        "item" : "0.017",
+        "count" : "171"
+      }, {
+        "item" : "0.019",
+        "count" : "161"
+      }, {
+        "item" : "0.02",
+        "count" : "159"
+      }, {
+        "item" : "0.018",
+        "count" : "155"
+      }, {
+        "item" : "0.006",
+        "count" : "153"
+      }, {
+        "item" : "0.029",
+        "count" : "146"
+      } ],
+      "smallest" : "0",
+      "count" : "48120",
+      "cardinality" : "786"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581704487,
+    "name" : "HIRES_CNT",
+    "dataTypeName" : "number",
+    "description" : "New Hires Count",
+    "fieldName" : "hires_cnt",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148562447,
+    "cachedContents" : {
+      "non_null" : "15824",
+      "largest" : "7891",
+      "null" : "32296",
+      "top" : [ {
+        "item" : "0",
+        "count" : "9419"
+      }, {
+        "item" : "1",
+        "count" : "1344"
+      }, {
+        "item" : "6",
+        "count" : "554"
+      }, {
+        "item" : "2",
+        "count" : "464"
+      }, {
+        "item" : "7",
+        "count" : "449"
+      }, {
+        "item" : "8",
+        "count" : "328"
+      }, {
+        "item" : "9",
+        "count" : "289"
+      }, {
+        "item" : "3",
+        "count" : "238"
+      }, {
+        "item" : "10",
+        "count" : "238"
+      }, {
+        "item" : "11",
+        "count" : "212"
+      }, {
+        "item" : "5",
+        "count" : "198"
+      }, {
+        "item" : "13",
+        "count" : "161"
+      }, {
+        "item" : "4",
+        "count" : "160"
+      }, {
+        "item" : "14",
+        "count" : "152"
+      }, {
+        "item" : "12",
+        "count" : "147"
+      }, {
+        "item" : "16",
+        "count" : "132"
+      }, {
+        "item" : "15",
+        "count" : "125"
+      }, {
+        "item" : "17",
+        "count" : "89"
+      }, {
+        "item" : "18",
+        "count" : "89"
+      }, {
+        "item" : "20",
+        "count" : "87"
+      } ],
+      "smallest" : "0",
+      "count" : "48120",
+      "cardinality" : "172"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581704488,
+    "name" : "HIRES_PCT",
+    "dataTypeName" : "number",
+    "description" : "New Hires Percent",
+    "fieldName" : "hires_pct",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148562449,
+    "cachedContents" : {
+      "non_null" : "15824",
+      "largest" : "1",
+      "null" : "32296",
+      "top" : [ {
+        "item" : "0",
+        "count" : "9420"
+      }, {
+        "item" : "1",
+        "count" : "2668"
+      }, {
+        "item" : "0.143",
+        "count" : "145"
+      }, {
+        "item" : "0.167",
+        "count" : "130"
+      }, {
+        "item" : "0.111",
+        "count" : "120"
+      }, {
+        "item" : "0.125",
+        "count" : "119"
+      }, {
+        "item" : "0.091",
+        "count" : "97"
+      }, {
+        "item" : "0.833",
+        "count" : "81"
+      }, {
+        "item" : "0.1",
+        "count" : "75"
+      }, {
+        "item" : "0.063",
+        "count" : "74"
+      }, {
+        "item" : "0.857",
+        "count" : "71"
+      }, {
+        "item" : "0.077",
+        "count" : "70"
+      }, {
+        "item" : "0.083",
+        "count" : "67"
+      }, {
+        "item" : "0.333",
+        "count" : "60"
+      }, {
+        "item" : "0.067",
+        "count" : "58"
+      }, {
+        "item" : "0.889",
+        "count" : "57"
+      }, {
+        "item" : "0.875",
+        "count" : "57"
+      }, {
+        "item" : "0.048",
+        "count" : "46"
+      }, {
+        "item" : "0.071",
+        "count" : "46"
+      }, {
+        "item" : "0.667",
+        "count" : "46"
+      } ],
+      "smallest" : "0",
+      "count" : "48120",
+      "cardinality" : "473"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581704489,
+    "name" : "RETAINED_CNT",
+    "dataTypeName" : "number",
+    "description" : "Educators Retained Count",
+    "fieldName" : "retained_cnt",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148562448,
+    "cachedContents" : {
+      "non_null" : "12013",
+      "largest" : "68779",
+      "null" : "36107",
+      "top" : [ {
+        "item" : "6",
+        "count" : "500"
+      }, {
+        "item" : "7",
+        "count" : "468"
+      }, {
+        "item" : "8",
+        "count" : "450"
+      }, {
+        "item" : "9",
+        "count" : "425"
+      }, {
+        "item" : "5",
+        "count" : "401"
+      }, {
+        "item" : "10",
+        "count" : "310"
+      }, {
+        "item" : "12",
+        "count" : "309"
+      }, {
+        "item" : "11",
+        "count" : "290"
+      }, {
+        "item" : "13",
+        "count" : "279"
+      }, {
+        "item" : "14",
+        "count" : "260"
+      }, {
+        "item" : "16",
+        "count" : "258"
+      }, {
+        "item" : "15",
+        "count" : "242"
+      }, {
+        "item" : "18",
+        "count" : "229"
+      }, {
+        "item" : "4",
+        "count" : "229"
+      }, {
+        "item" : "17",
+        "count" : "225"
+      }, {
+        "item" : "20",
+        "count" : "213"
+      }, {
+        "item" : "19",
+        "count" : "197"
+      }, {
+        "item" : "21",
+        "count" : "177"
+      }, {
+        "item" : "22",
+        "count" : "163"
+      }, {
+        "item" : "28",
+        "count" : "158"
+      } ],
+      "smallest" : "0",
+      "count" : "48120",
+      "cardinality" : "611"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 581704490,
+    "name" : "RETAINED_PCT",
+    "dataTypeName" : "number",
+    "description" : "Educators Retained Percent",
+    "fieldName" : "retained_pct",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 148562451,
+    "cachedContents" : {
+      "non_null" : "12013",
+      "largest" : "1",
+      "null" : "36107",
+      "top" : [ {
+        "item" : "1",
+        "count" : "746"
+      }, {
+        "item" : "0.833",
+        "count" : "331"
+      }, {
+        "item" : "0.667",
+        "count" : "325"
+      }, {
+        "item" : "0.857",
+        "count" : "292"
+      }, {
+        "item" : "0.8",
+        "count" : "273"
+      }, {
+        "item" : "0.75",
+        "count" : "264"
+      }, {
+        "item" : "0.875",
+        "count" : "245"
+      }, {
+        "item" : "0.889",
+        "count" : "234"
+      }, {
+        "item" : "0.778",
+        "count" : "186"
+      }, {
+        "item" : "0.714",
+        "count" : "179"
+      }, {
+        "item" : "0.9",
+        "count" : "171"
+      }, {
+        "item" : "0.818",
+        "count" : "162"
+      }, {
+        "item" : "0.909",
+        "count" : "124"
+      }, {
+        "item" : "0.5",
+        "count" : "118"
+      }, {
+        "item" : "0.917",
+        "count" : "115"
+      }, {
+        "item" : "0.923",
+        "count" : "104"
+      }, {
+        "item" : "0.846",
+        "count" : "100"
+      }, {
+        "item" : "0.867",
+        "count" : "96"
+      }, {
+        "item" : "0.727",
+        "count" : "93"
+      }, {
+        "item" : "0.929",
+        "count" : "90"
+      } ],
+      "smallest" : "0",
+      "count" : "48120",
+      "cardinality" : "509"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "administrators", "accountability", "demographic", "employment", "ethnicity", "full-time employment", "race", "retention", "teachers", "paraprofessionals", "educators", "educator data dashboard", "job classification" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

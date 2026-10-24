@@ -1,0 +1,98 @@
+{
+  "id" : "ga7v-un9v",
+  "name" : "Digital Literacy and Computer Science (DLCS) Course Taking Dashboard",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1712949539,
+  "description" : "This dashboard displays data about students completing at least one Digital Literacy or Computer Science (DLCS) course in a given school or district.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40519121,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1712950193,
+  "publicationGroup" : 19499059,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1712949539,
+  "tableId" : 19499059,
+  "totalTimesRated" : 0,
+  "viewCount" : 5738,
+  "viewLastModified" : 1765913080,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1714057518,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6289209,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1714057482,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1714057518,
+      "failureCount" : 0,
+      "startedAt" : 1714057518,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "tileConfig" : {
+      "description" : "This dashboard displays the number or percentage of students completing at least one Digital Literacy or Computer Science course in grades K-12. ",
+      "title" : "Digital Literacy and Computer Science Dashboard"
+    },
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

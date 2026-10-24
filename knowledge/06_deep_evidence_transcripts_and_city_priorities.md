@@ -24,9 +24,11 @@ These items supplement the October 19–21 announcements in document 04. “Late
 
 **Additional community signal:** the [Community Clean Air Grant announcement][R6] has an October 15 dateline and October 16 news listing. It names six funded organizations/projects. Dudley Street Neighborhood Initiative is using the Common Senses sensor network with local businesses and residents; Chinatown Community Land Trust combines monitoring with bilingual engagement. The useful lesson is that community partners help define interventions and interpret data. The starter EJ table does not contain air-quality measurements, and the Numina movement sensors are a different dataset.
 
-### A promising but incompletely verified hearing lead
+### Rodent hearing: initial lead and subsequent verification
 
-An [OpenTowns AI-generated summary/transcript listing][R7] exists for the October 23 rodent hearing. It describes resident frustration with closed 311 tickets and coordination, but explicitly warns that its AI summaries can be wrong. The full transcript could not be retrieved reliably in this pass; the underlying official recording was not reviewed. **Treat these details as interview questions to investigate, not established findings or quotes.** The [official notice][R2] is the reliable source for docket, sponsors, and announced subject. Do not repeat sensitive personal health anecdotes from an unverified automated summary.
+An [OpenTowns AI-generated summary/transcript listing][R7] exists for the October 23 rodent hearing. The initial pass could not reliably retrieve its full transcript or review the underlying recording. Its claims remain unverified by that summary alone. The [official notice][R2] establishes docket, sponsors and announced subject.
+
+**Subsequent October 24 research:** the [rodent playbook](12_rodent_control_creative_playbook.md#four-inspected-hearing-passages) identifies the official Boston City Council recording and four inspected caption windows: coordination/existing tools, baseline/comparison-site evaluation, resident concerns about overnight waste exposure, and contractor feasibility. This is selected caption review, not a complete hearing or independent audio transcription. The associated provenance audit records hashes and intervals. It does not verify every claim in the automated summary or establish the hearing's final decisions.
 
 This is still a useful product hypothesis: distinguish a case's administrative closure from a resident-confirmed resolution. The supplied CSV cannot establish the latter. A demo can show that limitation and prepare questions; it cannot diagnose municipal performance from a ten-day slice.
 

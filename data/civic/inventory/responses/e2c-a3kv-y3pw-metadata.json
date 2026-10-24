@@ -1,0 +1,95 @@
+{
+  "id" : "a3kv-y3pw",
+  "name" : "Reimagining high school with College and Career Pathways",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1755100003,
+  "description" : "Massachusetts is expanding opportunities for high schoolers to explore career paths and get a jump on learning skills and earning credits that will prepare them for life after graduation. This data story looks at where Pathways students are graduating, the careers or industries they are exploring, and how these programs are growing.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 41521931,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1755100118,
+  "publicationGroup" : 20012216,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1755100003,
+  "tableId" : 20012216,
+  "totalTimesRated" : 0,
+  "viewCount" : 8722,
+  "viewLastModified" : 1765913390,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1761080402,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7167018,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1761080388,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1761080402,
+      "failureCount" : 0,
+      "startedAt" : 1761080402,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "j5zf-igkg",
+    "displayName" : "David Bogojevich",
+    "screenName" : "David Bogojevich",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "j5zf-igkg",
+    "displayName" : "David Bogojevich",
+    "screenName" : "David Bogojevich",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "college and career pathways", "early college", "cte", "career technical education", "chapter 74", "innovation career pathways", "icp", "career connections", "n74" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

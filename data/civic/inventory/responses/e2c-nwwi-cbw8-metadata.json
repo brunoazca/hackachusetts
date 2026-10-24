@@ -1,0 +1,102 @@
+{
+  "id" : "nwwi-cbw8",
+  "name" : "Educator Data: Dashboard",
+  "assetType" : "href",
+  "attribution" : "Department of Elementary and Secondary Education",
+  "averageRating" : 0,
+  "category" : "Students and Teachers",
+  "createdAt" : 1698802591,
+  "description" : "This dashboard displays state and district level educator data by race and ethnicity. It was created to support the Massachusetts Department of Elementary and Secondary Education's commitment to provide all students with a racially diverse and culturally responsive educator workforce.\n\nThe Employed Educators Report provides the most recent three years of data for educators employed in Massachusetts public schools. Total educators, new hires, retention, experienced educators, and in-field data are displayed by job classification.\n\nThis dashboard contains the same data that is also published in the following datasets in the E2C Hub:\n<a href=\" https://educationtocareer.data.mass.gov/Students-and-Teachers/Educator-Dashboard-MTEL/qjx9-arjj\" target=\"_blank\" rel=\"noopener noreferrer\">Educator Dashboard: MTEL</a>\n<a href=\" https://educationtocareer.data.mass.gov/Students-and-Teachers/Educator-Dashboard-Licensure/ky22-vsgr\" target=\"_blank\" rel=\"noopener noreferrer\">Educator Dashboard: Licensure</a>\n<a href=\" https://educationtocareer.data.mass.gov/Students-and-Teachers/Educator-Dashboard-Educator-Preparation/t375-4q57\" target=\"_blank\" rel=\"noopener noreferrer\">Educator Dashboard: Educator Preparation</a>\n<a href=\"https://educationtocareer.data.mass.gov/Students-and-Teachers/Educator-Dashboard-Teacher-Indicators/b99t-n6jh\" target=\"_blank\" rel=\"noopener noreferrer\">Educator Dashboard: Teacher Indicators</a>\n<a href=\"https://educationtocareer.data.mass.gov/Students-and-Teachers/Educator-Dashboard-Total-Educators-Retention-and-N/fz9c-2g33\" target=\"_blank\" rel=\"noopener noreferrer\">Educator Dashboard: Total Educators, Retention, and New Hires</a>",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 40125733,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1698802613,
+  "publicationGroup" : 19346870,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1698802591,
+  "tableId" : 19346870,
+  "totalTimesRated" : 0,
+  "viewCount" : 1304,
+  "viewLastModified" : 1718915976,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1718915933,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6357026,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1718915327,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1718915933,
+      "failureCount" : 0,
+      "startedAt" : 1718915933,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "j5zf-igkg",
+      "displayName" : "David Bogojevich"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "Power BI" : "https://app.powerbigov.us/view?r=eyJrIjoiNGQ2NmM5ZGItZjgyNS00ZjEyLWEyYmMtZDBkZGQxMWJiMTFlIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+      }
+    } ],
+    "custom_fields" : {
+      "Agency Information" : {
+        "Agency Link" : "https://www.doe.mass.edu"
+      }
+    },
+    "accessPoints" : {
+      "Power BI" : "https://app.powerbigov.us/view?r=eyJrIjoiNGQ2NmM5ZGItZjgyNS00ZjEyLWEyYmMtZDBkZGQxMWJiMTFlIiwidCI6IjNlODYxZDE2LTQ4YjctNGEwZS05ODA2LThjMDRkODFiN2IyYSJ9"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "m5tk-n3hd",
+    "displayName" : "E2C Hub",
+    "screenName" : "E2C Hub",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "administrators", "demographic", "employment", "ethnicity", "full-time employment", "race", "ed prep", "educator preparation", "educator pipeline", "paraprofessionals", "demographics", "teachers", "licensure", "retention", "in field experience", "experience" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

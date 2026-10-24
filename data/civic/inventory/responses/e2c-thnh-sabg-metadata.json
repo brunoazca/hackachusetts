@@ -1,0 +1,95 @@
+{
+  "id" : "thnh-sabg",
+  "name" : "College-Going Data Trends",
+  "assetType" : "story",
+  "averageRating" : 0,
+  "category" : "Data Stories",
+  "createdAt" : 1781100126,
+  "description" : "By matching data on Massachusetts public high school graduates with national college and university enrollment, we can track trends and gaps in student outcomes. These charts show 10 years of data on the number and percentage of students enrolled at an institution of higher education the March following their high school graduation.",
+  "diciBackend" : false,
+  "displayType" : "story",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 42206170,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1781100287,
+  "publicationGroup" : 20416723,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1781100126,
+  "tableId" : 20416723,
+  "totalTimesRated" : 0,
+  "viewCount" : 622,
+  "viewLastModified" : 1786645165,
+  "viewType" : "story",
+  "approvals" : [ {
+    "reviewedAt" : 1786645259,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 7620842,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1786645176,
+    "targetAudience" : "public",
+    "workflowId" : 3564,
+    "reviewer" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    },
+    "submissionDetails" : {
+      "permissionType" : "read"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1786645259,
+      "failureCount" : 0,
+      "startedAt" : 1786645259,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "epzt-45wh",
+      "displayName" : "Danielle Kane"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "isStorytellerAsset" : true,
+    "initialized" : false,
+    "availableDisplayTypes" : [ "story" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "story" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "wbyv-4s23",
+    "displayName" : "NJ Rees",
+    "screenName" : "NJ Rees",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "college-going", "higher education", "college", "university", "postsecondary", "student outcomes", "enrollment", "attendance", "post-graduate", "post-graduation", "graduation", "graduates", "high school graduates", "national student clearinghouse" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
