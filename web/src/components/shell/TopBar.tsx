@@ -43,7 +43,7 @@ export default function TopBar() {
   return (
     <header className="flex h-12 shrink-0 items-center gap-3 border-b border-neutral-200 bg-white px-4">
       <h1 className="text-base font-semibold tracking-tight">
-        Rat Audit <span className="font-normal text-neutral-500">· Boston, Cambridge, Somerville</span>
+        Rat Audit <span className="font-normal text-neutral-700">· Boston, Cambridge, Somerville</span>
       </h1>
       <div className="ml-auto flex items-center gap-2 text-sm">
         <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-emerald-800">
@@ -59,7 +59,7 @@ export default function TopBar() {
           {busy ? "Refreshing…" : "Refresh"}
         </button>
         <span className="sr-only" aria-live="polite">{msg}</span>
-        {msg && <span className="text-xs text-neutral-500">{msg}</span>}
+        {msg && <span className="text-xs text-neutral-700">{msg}</span>}
       </div>
     </header>
   );

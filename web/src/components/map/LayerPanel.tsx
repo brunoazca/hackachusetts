@@ -1,6 +1,7 @@
 "use client";
 import categories from "@/lib/categories.json";
 import { useMap } from "@/lib/map-store";
+import { markerDataUrl } from "./icons";
 
 // Floating layer + date controls for the draft map.
 
@@ -38,16 +39,16 @@ export default function LayerPanel({ enabled, onChange, count, loading }: Props)
   const span = Math.round((Date.parse(filters.until) - Date.parse(filters.since)) / 86400000);
 
   return (
-    <div className="absolute left-3 top-3 max-h-[calc(100%-1.5rem)] w-64 overflow-y-auto rounded-lg border border-neutral-200 bg-white/95 p-3 text-sm shadow-lg backdrop-blur">
+    <div className="absolute left-3 top-3 max-h-[calc(100%-1.5rem)] w-72 overflow-y-auto rounded-lg border border-neutral-200 bg-white/95 p-3 text-sm shadow-lg backdrop-blur">
       <div className="mb-2 flex items-center justify-between">
         <h2 className="font-semibold">Layers</h2>
-        <span className="text-xs text-neutral-500" aria-live="polite">
+        <span className="text-xs text-neutral-700" aria-live="polite">
           {loading ? "Loading…" : `${count.toLocaleString()} in view`}
         </span>
       </div>
 
       <fieldset className="mb-3">
-        <legend className="mb-1 text-xs font-medium uppercase tracking-wide text-neutral-500">Period</legend>
+        <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">Period</legend>
         <div className="flex gap-1">
           {PRESETS.map((p) => (
             <button
@@ -70,7 +71,7 @@ export default function LayerPanel({ enabled, onChange, count, loading }: Props)
         if (!ids.length) return null;
         return (
           <fieldset key={g.id} className="mb-2">
-            <legend className="mb-1 text-xs font-medium uppercase tracking-wide text-neutral-500">{g.label}</legend>
+            <legend className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">{g.label}</legend>
             {ids.map(([id, c]) => (
               <label key={id} className="flex cursor-pointer items-center gap-2 rounded px-1 py-0.5 hover:bg-neutral-50">
                 <input
@@ -79,14 +80,15 @@ export default function LayerPanel({ enabled, onChange, count, loading }: Props)
                   onChange={(e) => onChange({ ...enabled, [id]: e.target.checked })}
                   className="accent-neutral-900"
                 />
-                <span aria-hidden className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: c.color }} />
-                <span className="truncate">{c.label}</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={markerDataUrl(id)} alt="" aria-hidden className="h-5 w-5 shrink-0" />
+                <span className="truncate text-neutral-900">{c.label}</span>
               </label>
             ))}
           </fieldset>
         );
       })}
-      <p className="mt-2 text-xs text-neutral-500">Bright = open · faded = closed. Somerville points are block centroids.</p>
+      <p className="mt-2 text-xs text-neutral-700">Each layer clusters on its own. Solid icon = open, faded = closed. Somerville points are block centroids.</p>
     </div>
   );
 }

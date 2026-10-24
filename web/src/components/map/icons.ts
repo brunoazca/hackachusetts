@@ -1,6 +1,5 @@
 import {
-  Binoculars, Bug, Building2, CalendarX, ClipboardList, Clock, Construction, Container, Fence, Gavel, Leaf,
-  PackageX, Rat, Skull, Sofa, Sprout, Trash, Trash2, TriangleAlert, Truck, Utensils,
+  Binoculars, Bug, Building2, CalendarX, ClipboardList, Clock, Construction, Container, Fence, Gavel, PackageX, Rat, Skull, Sofa, Sprout, Trash, Trash2, TriangleAlert, Truck, Utensils,
 } from "lucide-static";
 import type { Map as MlMap } from "maplibre-gl";
 import categories from "@/lib/categories.json";
@@ -29,7 +28,7 @@ const GLYPH: Record<string, string> = {
   ce_overfill: Gavel,
   ce_dumping: Gavel,
   ce_dumpster: Gavel,
-  ce_weeds: Gavel,
+  ce_weeds: Sprout,
   vacant_lot: Fence,
   abandoned_building: Building2,
   weeds: Sprout,
@@ -47,8 +46,6 @@ export function markerSvg(category: string, size = 28): string {
     .replace(/width="24"/, 'width="16"')
     .replace(/height="24"/, 'height="16"')
     .replace("<svg", '<svg x="6" y="6"');
-  const leaf = category === "ce_weeds" ? Leaf : ""; // unused today; kept so ce_* can get their own glyph later
-  void leaf;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 28 28">
     <circle cx="14" cy="14" r="12.5" fill="${color}" stroke="#ffffff" stroke-width="2"/>
     ${glyph}
