@@ -882,28 +882,12 @@ export default function MapView() {
       {/* Keyboard twin of the map (R2.11 / R9.1). In Act, the Places queue is already the list
           twin, so this only appears in Assess/Map mode. Reachable by Tab and by the "L" shortcut. */}
       {appMode !== "act" && listOpen && <FeatureList onClose={() => setListOpen(false)} />}
-      {/* Bottom-left stack: the List button sits ABOVE the map key so the two can never overlap,
-          whatever the key's width. While the list panel is open (384 px wide, bottom-3 left-3) the
-          stack slides right of it and the button is hidden. */}
+      {/* Bottom-left map key, offset right of the 384 px left panel. */}
       {appMode !== "act" && (
         <div
           className="absolute z-20 flex flex-col items-start gap-2 transition-[left,bottom] duration-300 ease-[var(--ease-spring)]"
           style={{ left: 12 + 384 + 8, bottom: "calc(var(--ctrl-bottom, 4px) + 72px)" }}
         >
-          {!listOpen && (
-            <button
-              type="button"
-              onClick={() => setListOpen(true)}
-              aria-label="Show features in view as a list"
-              title="Features in view, as a list · L"
-              className="glass flex h-10 shrink-0 items-center gap-2 rounded-lg px-3 text-[13px] font-semibold text-fg transition-colors hover:bg-card-hover focus-visible:outline-2 focus-visible:outline-accent"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden>
-                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
-              </svg>
-              List
-            </button>
-          )}
           <MapLegend mode={viewMode} causes={causes} zoom={zoom} priority={priorityFull} />
         </div>
       )}

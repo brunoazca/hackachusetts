@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 19:16 — Removed the List button from the map's bottom-left stack
+- Teammate: Bruno
+- Agent: —
+- Did: Removed the List button from the map's bottom-left stack
+- Why: Left panel already lists what is on the map; the button was redundant clutter
+- Where: web/src/components/map/MapView.tsx
+- Idea: —
+
 ### 2026-10-24 19:16 — 3D map opens less tilted: pitch 52 → 35
 - Teammate: Bruno
 - Agent: —
