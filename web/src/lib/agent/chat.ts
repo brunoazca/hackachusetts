@@ -6,6 +6,7 @@ import { clientTools } from "./tools/client";
 import { createServerTools } from "./tools/server";
 import { createSupabaseData, supabaseConfigured } from "./data/supabase";
 import type { AgentData } from "./data/types";
+import { lookupPlace } from "./geocoder";
 
 // /api/chat handler (task 4.2). Dependencies are injected so the fake-model
 // test drives exactly the code the route runs.
@@ -18,7 +19,7 @@ export type ChatDeps = {
 };
 
 export function createTools(data: AgentData | null, now?: () => Date) {
-  return { ...createServerTools({ data, now }), ...clientTools };
+  return { ...createServerTools({ data, now, lookupPlace }), ...clientTools };
 }
 
 export function nyDate(d: Date): string {

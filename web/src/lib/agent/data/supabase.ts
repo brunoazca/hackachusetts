@@ -232,6 +232,16 @@ export function createSupabaseData(env: Env = process.env, now: () => Date = () 
 
     siteSource,
 
+    async placesByText(text: string, limit: number) {
+      const query = safeText(text);
+      if (!query) return [];
+      const { data, error } = await db.from("places").select(PLACE_COLS)
+        .ilike("name", `%${query}%`).not("lat", "is", null).not("lon", "is", null)
+        .order("name").limit(limit);
+      fail("places", error);
+      return (data ?? []) as PlaceRow[];
+    },
+
     async sites(q: SiteQuery) {
       if ((await siteSource()) === "draft") {
         return draftSites(q);

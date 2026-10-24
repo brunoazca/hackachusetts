@@ -59,6 +59,9 @@ export function createMemoryData(t: MemoryTables): AgentData {
         .sort((a, b) => q.due ? b.recurrence_count - a.recurrence_count || a.id.localeCompare(b.id) : (b.score ?? 0) - (a.score ?? 0))
         .slice(0, q.limit);
     },
+    async placesByText(text, limit) {
+      return (t.places ?? []).filter(r => located(r) && has(r.name, text)).slice(0, limit);
+    },
     async site(id) {
       return sites.find((s) => s.id === id) ?? null;
     },

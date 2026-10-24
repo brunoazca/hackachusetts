@@ -2,6 +2,7 @@ import { tool } from "ai";
 import { z } from "zod";
 import categories from "../../categories.json";
 import { bboxAround, bboxOf, distanceM, stripHouseNumber } from "../geo";
+import { placeQuery, type PlaceLookup } from "../geocoder";
 import type { FeatureRef, SourceRef, ToolFailure, ToolResult } from "../types";
 import { DataUnavailableError, type AgentData, type FailureReason, type IncidentRow, type SiteRow } from "../data/types";
 
@@ -52,6 +53,7 @@ export type ServerToolOptions = {
   /** null when Supabase is not configured: every tool then reports that, never fixture data. */
   data: AgentData | null;
   now?: () => Date;
+  lookupPlace?: PlaceLookup;
 };
 
 type Out<T> = ToolResult<T> | ToolFailure;
@@ -130,16 +132,16 @@ function siteSourceIds(s: SiteRow): string[] {
   return ids;
 }
 
-export function createServerTools({ data, now = () => new Date() }: ServerToolOptions) {
+export function createServerTools({ data, now = () => new Date(), lookupPlace }: ServerToolOptions) {
   const daysAgo = (n: number) => new Date(now().getTime() - n * 86400000).toISOString().slice(0, 10);
 
-  type Body = { data: unknown; features: FeatureRef[]; caveats: string[]; sourceIds: string[] };
+  type Body = { data: unknown; features: FeatureRef[]; caveats: string[]; sourceIds: string[]; locationSources?: SourceRef[] };
   async function run<B extends Body>(fn: (d: AgentData) => Promise<B>): Promise<Out<B["data"]>> {
     if (!data) return { ok: false, reason: "not_configured", error: "Live data is not configured on this deployment, so I can't look that up." };
     try {
-      const { data: out, features, caveats, sourceIds } = await fn(data);
+      const { data: out, features, caveats, sourceIds, locationSources = [] } = await fn(data);
       const sources: SourceRef[] = await data.sources(sourceIds);
-      return { ok: true, data: out, sources, features, caveats };
+      return { ok: true, data: out, sources: [...sources, ...locationSources], features, caveats };
     } catch (e) {
       if (e instanceof DataUnavailableError) {
         const error = e.reason === "analytics_not_computed" ? e.message : `Data lookup failed (${FAILURE_TEXT[e.reason]}: ${e.message}).`;
@@ -164,13 +166,37 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
   return {
     geocode: tool({
       description:
-        "Find where a street, block, neighborhood or ZIP is, using only places present in the data (311 reports and chronic sites). Returns matches with coordinates and a bounding box. Use it before moving the map to a named place.",
-      inputSchema: z.object({ query: z.string().min(2).describe("e.g. 'Normandy St', 'Dorchester', '02121'") }),
+        "Locate a named place, campus, landmark, street, neighborhood or ZIP in Greater Boston. Searches named places and reports, then a geographic directory when needed. Use this for MIT or other landmarks BEFORE searching incidents. Move the map to the chosen match and search incidents near its coordinates, WITHOUT the landmark name as a text filter. A location match is not an incident count.",
+      inputSchema: z.object({ query: z.string().min(2).max(160).describe("Place name only, e.g. 'MIT', 'Harvard University', 'Normandy St', 'Dorchester'") }),
       execute: ({ query }) =>
         run(async (d) => {
+          const named = await d.placesByText(placeQuery(query), 5);
+          if (named.length) {
+            return {
+              data: { query, found: true, matches: named.map(p => ({ label: p.name, lat: p.lat, lon: p.lon, kind: "place" })), sites: [],
+                bbox: bboxOf(named as { lat: number; lon: number }[]), suggested_radius_m: 500 },
+              features: named.map(p => ({ kind: "place" as const, id: p.id, label: p.name ?? "Place", lat: p.lat, lon: p.lon })),
+              caveats: ["Place locations are not incident counts. Search nearby reports by coordinates; omit the place name from the incident text filter."],
+              sourceIds: named.map(p => p.source_id),
+            };
+          }
+          const locationCaveats: string[] = [];
+          if (lookupPlace) {
+            try {
+              const places = await lookupPlace(query);
+              if (places.length) return {
+                data: { query, found: true, matches: places.map(p => ({ label: p.label, lat: p.lat, lon: p.lon, kind: "landmark" })),
+                  sites: [], bbox: null, suggested_radius_m: 500 },
+                features: [], locationSources: places.map(p => p.source), sourceIds: [],
+                caveats: ["Geographic matches from OpenStreetMap via Photon, not evidence of rodent activity. Choose the matching place, move the map, then search nearby reports by coordinates without a name filter. State the search radius; it is not a campus boundary."],
+              };
+            } catch {
+              locationCaveats.push("The geographic directory is temporarily unavailable. This does not mean there are no nearby reports.");
+            }
+          }
           const [sites, inc] = await Promise.all([
-            d.sitesByText(query, 5),
-            d.incidents({ text: query, since: daysAgo(3 * 365), limit: 500 }),
+            d.sitesByText(placeQuery(query), 5),
+            d.incidents({ text: placeQuery(query), since: daysAgo(3 * 365), limit: 500 }),
           ]);
           const groups = new Map<string, { label: string; neighborhood: string | null; pts: { lat: number; lon: number }[] }>();
           for (const r of inc.rows) {
@@ -193,7 +219,7 @@ export function createServerTools({ data, now = () => new Date() }: ServerToolOp
           const all = inc.rows.filter((r) => r.lat != null && r.lon != null) as { lat: number; lon: number }[];
           const located = sites.filter((s) => s.lat != null && s.lon != null) as { lat: number; lon: number }[];
           const bbox = bboxOf([...all, ...located]);
-          const caveats = ["Locations come from reports in the data, not a street geocoder."];
+          const caveats = ["These street locations are estimated from reports in the data.", ...locationCaveats];
           if (!matches.length && !sites.length) caveats.push(`Nothing in the data matches "${query}".`);
           if (inc.rows.length >= 500) caveats.push("Many matches; only the newest 500 reports were used.");
           return {

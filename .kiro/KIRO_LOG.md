@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:52 — Resolve named landmarks in chat and search nearby reports
+- Teammate: Carol
+- Agent: Codex
+- Did: Resolve named landmarks in chat and search nearby reports
+- Why: MIT was searched as a report address; the chat must locate the campus and move the map
+- Where: web/src/lib/agent/geocoder.ts; data adapters; tools/server.ts; chat.ts; prompt.ts; geocoder tests
+- Idea: Use local place records then cached bounded Photon geocoding; geographic lookup is separate from incident evidence. Verified actual MIT query, map movement and nearby report. Adopt concurrently published regional Insights cards instead of duplicating them.
+
 ### 2026-10-24 17:45 — Added per-site return chance as the third severity term (...
 - Teammate: Bruno
 - Agent: —

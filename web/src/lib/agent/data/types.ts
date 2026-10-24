@@ -99,6 +99,7 @@ export interface AgentData {
   /** Incidents by primary key (public columns), any order. */
   incidentsByIds(ids: string[]): Promise<IncidentRow[]>;
   places(q: PlaceQuery): Promise<PlaceRow[]>;
+  placesByText(text: string, limit: number): Promise<PlaceRow[]>;
   sites(q: SiteQuery): Promise<SiteRow[]>;
   site(id: string): Promise<SiteRow | null>;
   /** Sites whose address_block / neighborhood / zip contains text. */
