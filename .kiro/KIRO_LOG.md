@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 13:44 — Added Supabase MCP (local scope, project rat-audit) and l...
+- Teammate: Bruno
+- Agent: —
+- Did: Added Supabase MCP (local scope, project rat-audit) and linked Supabase CLI to the rat-audit project
+- Why: Let agents query schema/data and run migrations against rat-audit directly
+- Where: ~/.claude.json (local scope), supabase/.temp
+- Idea: —
+
 ### 2026-10-24 13:42 — Audited Supabase usage (410 MB: incidents 210, private de...
 - Teammate: Bruno
 - Agent: —
