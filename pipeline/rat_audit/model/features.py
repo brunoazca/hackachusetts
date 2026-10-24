@@ -80,6 +80,11 @@ LABELS: dict[str, str] = {
     "permit_active_m4": "Active demolition/construction permits, last 4 weeks (avg)",
     "permit_active_m12": "Active demolition/construction permits, last 12 weeks (avg)",
     "inat_rat_s52": "iNaturalist rat sightings, last year",
+    "precip_l1": "Rain last week (inches)",
+    "precip_s12": "Rain, last 12 weeks (inches)",
+    "heavy_rain_s4": "Heavy-rain days (≥ 0.5 in), last 4 weeks",
+    "hot_days_s4": "Hot days (≥ 85 °F), last 4 weeks",
+    "freeze_days_s12": "Hard-freeze nights (≤ 20 °F), last 12 weeks",
 }
 for _k, _v in SIGNALS.items():
     LABELS[f"{_k}_s4"] = f"{_v}, last 4 weeks"
@@ -107,9 +112,13 @@ CANDIDATE_GROUPS = {
     "city_lots": ["place_city_lot"],
     "inat": ["inat_rat_s52"],
     "ring_more": [f"ring_{k}_s4" for k in RING_CANDIDATE],
+    "weather_more": ["precip_s4", "snow_s4", "precip_l1", "precip_s12", "heavy_rain_s4", "hot_days_s4",
+                     "freeze_days_s12"],
 }
-CANDIDATE = (["precip_s4", "snow_s4", "events_s4"] + [f"place_{k}" for k in PLACE_KINDS if k != "city_lot"]
-             + [f for g in CANDIDATE_GROUPS.values() for f in g])
+CANDIDATE = list(dict.fromkeys(
+    ["precip_s4", "snow_s4", "events_s4"] + [f"place_{k}" for k in PLACE_KINDS if k != "city_lot"]
+    + [f for g in CANDIDATE_GROUPS.values() for f in g]
+))
 
 
 def label(feature: str) -> str:
@@ -222,14 +231,18 @@ def _static(conn: psycopg.Connection, cell_pos: dict) -> pd.DataFrame:
 
 
 def _weather(conn: psycopg.Connection, weeks: pd.DatetimeIndex) -> pd.DataFrame:
-    rows = conn.execute("select day, precip_in, snow_in, tmax_f from weather_daily").fetchall()
-    w = pd.DataFrame(rows, columns=["day", "precip_in", "snow_in", "tmax_f"])
+    rows = conn.execute("select day, precip_in, snow_in, tmax_f, tmin_f from weather_daily").fetchall()
+    w = pd.DataFrame(rows, columns=["day", "precip_in", "snow_in", "tmax_f", "tmin_f"])
     w["day"] = pd.to_datetime(w["day"])
     w["week"] = w["day"] - pd.to_timedelta(w["day"].dt.weekday, unit="D")
-    wk = w.groupby("week").agg(precip=("precip_in", "sum"), snow=("snow_in", "sum"), tmax=("tmax_f", "mean"))
+    w["heavy"] = (w["precip_in"] >= 0.5).astype(float)
+    w["hot"] = (w["tmax_f"] >= 85).astype(float)
+    w["freeze"] = (w["tmin_f"] <= 20).astype(float)
+    wk = w.groupby("week").agg(precip=("precip_in", "sum"), snow=("snow_in", "sum"), tmax=("tmax_f", "mean"),
+                               heavy=("heavy", "sum"), hot=("hot", "sum"), freeze=("freeze", "sum"))
     wk = wk.reindex(weeks)
     wk["tmax"] = wk["tmax"].interpolate(limit_direction="both")
-    return wk.fillna({"precip": 0.0, "snow": 0.0})
+    return wk.fillna({"precip": 0.0, "snow": 0.0, "heavy": 0.0, "hot": 0.0, "freeze": 0.0})
 
 
 def _future_tmax_m4(tmax: pd.Series, last_obs: pd.Timestamp, week: pd.Timestamp) -> float:
@@ -424,12 +437,22 @@ def build_panel(
     n_all = len(all_weeks)
     t = np.arange(n_all)
     hi, lo = np.clip(t, 0, n_all), np.clip(t - 4, 0, n_all)
+
+    def wsum(col, b):  # sum of weekly `col` over weeks t-b..t-1
+        cum = np.concatenate([[0.0], np.cumsum(wx[col].values)])
+        return cum[t] - cum[np.clip(t - b, 0, n_all)]
+
     week_feats = pd.DataFrame(
         {
             "week_start": all_weeks,
             "precip_s4": pre[hi] - pre[lo],
             "snow_s4": sno[hi] - sno[lo],
             "tmax_m4": (tmx[hi] - tmx[lo]) / np.maximum(hi - lo, 1),
+            "precip_l1": wsum("precip", 1),
+            "precip_s12": wsum("precip", 12),
+            "heavy_rain_s4": wsum("heavy", 4),
+            "hot_days_s4": wsum("hot", 4),
+            "freeze_days_s12": wsum("freeze", 12),
         }
     )
 
