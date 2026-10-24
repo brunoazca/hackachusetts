@@ -2,8 +2,43 @@
 
 Owns `web/src/components/insights/**`. Requirements: R5.1/R5.4, R6.2–3/R6.6,
 R7.4–5. The database writers, shared shell, map and migrations belong to other
-fronts. The existing work remains on `feat/rat-audit-insights`, based on
-`1af6bcd947dfe2e8dd93bd9ba9e067192edfd684`; no commit was created during this handoff.
+fronts. Work started on `feat/rat-audit-insights` at `1af6bcd`. It is now committed
+and rebased on local `main` (`3d73243`); see the latest verification below.
+
+## Rebase verification — 2026-10-24
+
+At Carol's explicit request, committed the preserved implementation as `76135ce`,
+then rebased over the 58 commits on local `main` (`3d73243`). The rebased implementation
+is `471a2a5`. The actual conflict was only `.kiro/KIRO_LOG.md`, not InsightsPanel:
+all 131 main log entries and 19 added Insights entries were retained. Main's historical
+log corrections were also kept. InsightsPanel kept its client boundary and new component
+imports; all main changes outside this front came through the rebase unchanged.
+
+Executed **all five files in `__tests__/`**, from `web/`, with the real env and local
+read-only export loaded. Node reported **62 entries: 58 passed, 4 skipped, 0 failed**:
+
+- 49 synthetic/mocked adapter and SSR tests passed.
+- 5 tests against persisted real local analytics/source rows passed.
+- 3 shared-database checks passed: unavailable endpoint handling and stored GBM/baseline
+  score adaptation/SSR. The four RPC comparisons (findings, costs, forecast, citations)
+  skipped because `insights_summary()` still returns 404/PGRST202.
+- The remaining successful entry is loading `fixtures.ts`; it is not another assertion
+  or another real-data validation. There are four test files plus that fixture module.
+
+**`pnpm build` passed after the rebase.** The pnpm wrapper installed the one dependency
+already added by main (`lucide-static`), then ran main's worker-copy prebuild and Next
+production compilation/typecheck successfully. Insights added no dependency or lockfile
+change. Public correlations and price_impact still have zero rows.
+
+The full proposal SQL was sent, as Carol requested, to the existing **A - ANALYTICS**
+chat (`01a16f49-47a6-7991-b4e9-ad8f9387287e`) for analytics to prepare/review the migration.
+The handoff explicitly preserves the read-only/no-migration-application restriction.
+No RPC or migration was created or applied by this front; unavailable is still correct.
+
+Evidence: `/private/tmp/insights-rebase-20261024/` contains the pre-rebase backup,
+three log versions, `tests-after-rebase.log` and `build-after-rebase.log`.
+No push, merge into main or deploy was performed. Earlier sections below record earlier
+checks and should not be read as the latest Git status.
 
 ## Current scope audit — 2026-10-24
 

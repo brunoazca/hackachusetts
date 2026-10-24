@@ -39,6 +39,18 @@ If the agent does not know the teammate's name, it asks before logging.
 - Where: web/next.config.ts
 - Idea: —
 
+### 2026-10-24 15:46 — 2.8: commit, rebase on main, five-file suite and analytics RPC handoff
+- Teammate: Carol
+- Agent:
+- Did: Followed Carol's order: committed the preserved Insights work (`76135ce`), rebased on local main `3d73243` (58 commits), then ran all five files in `web/src/components/insights/__tests__/` and `pnpm build`. Rebased implementation: `471a2a5`.
+- Why: Prepare the Insights branch for integration while leaving RPC ownership with analytics.
+- Where: `web/src/components/insights/**`, `.kiro/KIRO_LOG.md`; main changes inherited through rebase.
+- Evidence: Actual conflict was only the log; InsightsPanel applied cleanly with use-client and new imports. Preserved all 131 main entries plus 19 Insights entries and main's historical corrections. A preservation assertion initially stopped the log rewrite; final resolution was checked for every entry and conflict markers before amending the unpublished local commit. Final implementation files match the pre-rebase version.
+- Evidence: Five-file runner: 62 entries, 58 pass, 4 SKIP, 0 fail. Breakdown: 49 synthetic/mock/SSR + 5 real-local-export tests + 3 shared public-read availability/model checks; fixtures.ts accounts for one module-load success. Four integrations blocked by RPC 404/PGRST202; correlations=0, price_impact=0. pnpm build passed including prebuild and typecheck.
+- Evidence: pnpm installed main's already-declared lucide-static dependency; no Insights package/lockfile change. Secret checks passed before the implementation commit. Backup and outputs: `/private/tmp/insights-rebase-20261024/`.
+- Did: Sent the full SQL from RPC_PROPOSAL.md to the existing A - ANALYTICS chat, explicitly authorized by Carol, for analytics to prepare/review its migration. No RPC/migration created here; no database writes, migration application, push, merge into main or deploy.
+- Idea: Until analytics/integrator supplies the endpoint, keep the unavailable state. Rerun the four real integration comparisons once it exists.
+
 ### 2026-10-24 15:45 — Ran a read-only Kiro monitor loop (~2h, 21 cycles) over w...
 - Teammate: Carol
 - Agent: —
