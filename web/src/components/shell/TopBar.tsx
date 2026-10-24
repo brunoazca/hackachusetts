@@ -101,8 +101,8 @@ export default function TopBar() {
       </div>
 
       <div className="glass pointer-events-auto flex h-11 items-center gap-1 rounded-lg pl-3 pr-1">
-        <span className="text-[13px] text-fg-2" aria-live="polite">
-          {busy ? "Checking for new reports…" : msg ?? <>Updated {ago(updatedAt)}</>}
+        <span className="text-[13px] text-fg-2" aria-live="polite" title="Latest successful import from any source. Sources update independently; each evidence section shows its own freshness.">
+          {busy ? "Checking for new reports…" : msg ?? (updatedAt ? <>Latest import {ago(updatedAt)}</> : "Import time unknown")}
         </span>
         <button
           type="button"

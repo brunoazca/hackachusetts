@@ -49,7 +49,7 @@ export default function SiteQueue() {
           Select a place to review its reports and recorded responses.
         </p>
         <p className="mt-1 text-xs text-fg-3">
-          Review suggested: closed in the last 60 days, with an earlier report after closure. A review flag, not an inspection deadline. Flagged places first, then most reports after closure.
+          Review suggested: closed in the last 60 days, with an earlier report after closure. Flagged places first, then most return days. Counts are distinct dates; multiple records on one date count once.
         </p>
         <label className="mt-2 flex items-center gap-2 text-xs text-neutral-800">
           Neighborhood
@@ -85,10 +85,10 @@ export default function SiteQueue() {
                   <span className="block truncate text-xs text-neutral-700">
                     {r.neighborhood ?? r.city} · last closed {r.days_since_close ?? "—"} d ago
                   </span>
-                  <span className="mt-0.5 flex gap-3 text-xs text-neutral-800">
-                    <span><b>{r.reports}</b> reports</span>
-                    <span title="Reports within 60 days after an earlier closure"><b>{r.returns}</b> after closure</span>
-                    <span><b>{r.closures}</b> closures</span>
+                  <span className="mt-0.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-neutral-800">
+                    <span><b>{r.reports}</b> report days</span>
+                    <span title="Report dates more than 1 day and no more than 60 days after an earlier closure"><b>{r.returns}</b> return days</span>
+                    <span><b>{r.closures}</b> closure days</span>
                   </span>
                   {r.due && <span className="mt-1 inline-block rounded bg-return/15 px-1.5 py-0.5 text-xs font-semibold text-return">Review suggested</span>}
                 </span>

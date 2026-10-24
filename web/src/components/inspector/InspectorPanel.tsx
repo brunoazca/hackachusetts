@@ -7,36 +7,30 @@ import { markerDataUrl } from "@/components/map/icons";
 import SiteCase from "./SiteCase";
 import ParcelCard from "./ParcelCard";
 import CellCard from "./CellCard";
+import { formatDate as fmt } from "@/lib/dates";
+import SourceList from "@/components/evidence/SourceList";
 
 // Draft inspector: details of a selected report + other reports at the same address.
 // Owner: map/inspector track — replace with the full site card later.
 
 const CATS = categories.incident_categories as Record<string, { label: string; color: string }>;
-const MODE_LABEL = { live: "Live", daily: "Daily", static: "Static" } as const;
-
-function fmt(d: string | null) {
-  return d ? new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) : "—";
-}
-
 export default function InspectorPanel() {
   const selection = useMap((s) => s.selection);
   const id = selection?.kind === "incident" ? selection.id : null;
-  const [detail, setDetail] = useState<IncidentDetail | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [result, setResult] = useState<{ id: string; detail?: IncidentDetail | null; error?: string } | null>(null);
 
   useEffect(() => {
     if (!id) return;
     let live = true;
-    setDetail(null);
     fetchIncidentDetail(id)
-      .then((d) => live && (setDetail(d), setError(null)))
-      .catch((e) => live && setError(String(e)));
+      .then((detail) => live && setResult({ id, detail }))
+      .catch((e) => live && setResult({ id, error: String(e) }));
     return () => { live = false; };
   }, [id]);
 
   if (selection?.kind === "site") return <SiteCase key={selection.id} id={selection.id} />;
   if (selection?.kind === "cell") return <CellCard id={selection.id} />;
-  if (selection?.kind === "place" && selection.id.startsWith("parcel:")) return <ParcelCard pid={selection.id.slice(7)} />;
+  if (selection?.kind === "place" && selection.id.startsWith("parcel:")) return <ParcelCard key={selection.id} pid={selection.id.slice(7)} />;
   if (!id) {
     return (
       <div className="p-4 text-sm text-neutral-800">
@@ -45,7 +39,9 @@ export default function InspectorPanel() {
       </div>
     );
   }
-  if (error) return <p role="alert" className="p-4 text-sm text-red-700">Could not load this report: {error}</p>;
+  if (result?.id === id && result.error) return <p role="alert" className="p-4 text-sm text-red-700">Could not load this report: {result.error}</p>;
+  const detail = result?.id === id ? result.detail : undefined;
+  if (detail === null) return <p className="p-4 text-sm text-fg-3">This report is no longer available.</p>;
   if (!detail) return <p className="p-4 text-sm text-neutral-700" aria-live="polite">Loading…</p>;
 
   const i = detail.incident;
@@ -80,6 +76,7 @@ export default function InspectorPanel() {
         <section>
           <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-700">What the city noted</h3>
           <p className="rounded-md bg-neutral-50 p-2 text-neutral-800">{i.closure_note}</p>
+          <SourceList sources={[detail.source]} />
         </section>
       )}
 
@@ -93,21 +90,18 @@ export default function InspectorPanel() {
               <li key={o.id} className="rounded border border-neutral-100 p-2">
                 <div className="flex justify-between text-xs">
                   <span className="font-medium">{CATS[o.category]?.label ?? o.category}</span>
-                  <span className="text-neutral-700">{o.opened}{o.closed ? ` → ${o.closed}` : " · open"}</span>
+                  <span className="text-neutral-700">{fmt(o.opened)}{o.closed ? ` → ${fmt(o.closed)}` : " · open"}</span>
                 </div>
                 {o.note && <p className="mt-0.5 line-clamp-2 text-xs text-neutral-800">{o.note}</p>}
               </li>
             ))}
           </ol>
+          <SourceList sources={detail.same_address_sources ?? []} unavailable={!detail.same_address_sources?.length} />
         </section>
       )}
 
       <footer className="border-t border-neutral-100 pt-2 text-xs text-neutral-700">
-        Source:{" "}
-        <a href={detail.source.url} target="_blank" rel="noreferrer" className="underline">{detail.source.name}</a>
-        {" · "}
-        <span className="font-medium">{MODE_LABEL[detail.source.update_mode]}</span>
-        {detail.source.update_note ? ` — ${detail.source.update_note}` : ""}
+        <SourceList sources={[detail.source]} />
       </footer>
     </article>
   );
