@@ -31,6 +31,14 @@ If the agent does not know the teammate's name, it asks before logging.
 
 ## Log
 
+### 2026-10-24 17:50 — Model report: merged the 'Why the model predicts what it ...
+- Teammate: Bruno
+- Agent: —
+- Did: Model report: merged the 'Why the model predicts what it does' section (importance, partial dependence, training-data table) into the template; page and artifact now on the current run
+- Why: Another session added interpretability to the page; keep it and use current data everywhere
+- Where: docs/rat-audit/model-report/template.html, index.html
+- Idea: —
+
 ### 2026-10-24 17:48 — Model report: long backtest rerun on current model (Jan 2...
 - Teammate: Bruno
 - Agent: —

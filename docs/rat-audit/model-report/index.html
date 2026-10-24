@@ -81,6 +81,15 @@ table.t th, table.t td { text-align: right; padding: 4px 6px; border-bottom: 1px
 table.t th:first-child, table.t td:first-child { text-align: left; }
 table.t th { font-weight: 600; color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
 .scroll { overflow-x: auto; }
+
+.why { display: grid; gap: 16px; margin-top: 8px; padding-top: 18px; border-top: 1px solid var(--line); }
+.whyh { font-size: 1.25rem; line-height: 1.25; margin: 0; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+.whygrid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 880px) { .whygrid { grid-template-columns: minmax(0, 1fr); } }
+.pdgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px 16px; margin-top: 6px; }
+.pd { margin: 0; min-width: 0; display: grid; gap: 2px; }
+.pd figcaption { font-size: 0.8rem; color: var(--fg); font-weight: 500; }
+table.t tr.live td { font-weight: 600; }
 </style>
 
 <div class="wrap">
@@ -157,6 +166,31 @@ table.t th { font-weight: 600; color: var(--muted); font-size: 0.75rem; text-tra
           <p class="m">All block-weeks grouped by what the model predicted. If it's well calibrated, the actual average matches the prediction.</p>
           <div class="scroll"><table class="t" id="acal"></table></div></div>
       </div>
+    </div>
+  
+    <!-- Why the model predicts what it does (interpretability, live model run) -->
+    <div class="why" id="why">
+      <div class="whyhead">
+        <h2 class="whyh">Why the model predicts what it does</h2>
+        <p class="lede">Numbers from the live model, run <span class="num" id="wrun"></span>, trained through <span id="wthrough"></span> on Boston 311 since 2017 (Mar 2020 to Jun 2021 left out of training). Measured on the last 26 observed weeks, <span id="wwin"></span>.</p>
+      </div>
+      <div class="whygrid">
+        <div class="card"><h2>Which factors matter most</h2>
+          <p class="m">Shuffle one factor across blocks and weeks, keep everything else, and measure how much worse the forecast gets. A bigger bar means the model leans on that factor more. Bars show the loss in fit (Poisson deviance); the number on the right is how many points of the top-10% capture are lost. The final model was trained on these weeks, so this shows what it relies on; the out-of-sample accuracy is in the charts above.</p>
+          <p>The two biggest factors describe <b>where people file 311 reports at all</b> and <b>how dense the housing is</b>, not rodent activity itself. Rodent reports here and next door come third and fourth. Part of what the model learns is who reports, which is why it forecasts reports and not rats.</p>
+          <div class="keyrow"><span><i style="border-color:var(--model);border-top-width:8px"></i>Loss in fit when shuffled</span><span class="num">−pts = capture lost</span></div>
+          <svg class="chart" id="wimp" role="img" aria-label="Grouped permutation importance"></svg></div>
+        <div class="card"><h2>What tips a block into high risk</h2>
+          <p class="m">For the <span class="num" id="wnhi"></span> blocks rated high or very high for <span id="wweek"></span>: the factor that adds the most to each block's forecast.</p>
+          <ul class="drivers" id="wtop"></ul>
+          <p class="m" style="margin-top:10px">The same breakdown is on every block in the Next 4 weeks tab, under "Why".</p></div>
+      </div>
+      <div class="card"><h2>How each factor moves the forecast</h2>
+        <p class="m">Partial dependence: take 20,000 recent block-weeks, set one factor to each value on the x-axis, keep the rest as they were, and average the forecast. The y-axis is expected rodent reports per block per week. These curves describe the model, not cause and effect.</p>
+        <div class="pdgrid" id="wpd"></div></div>
+      <div class="card"><h2>What the training data choice changed</h2>
+        <p class="m">Same 26 test weeks (Apr 20 – Oct 12, 2026), each config retrained every 4 weeks on earlier data only. Capture = share of the week's reports inside the model's top 10% of blocks.</p>
+        <div class="scroll"><table class="t" id="wabl"></table></div></div>
     </div>
   </section>
 
@@ -446,6 +480,64 @@ const pillHtml = b => `<span class="pill" style="background:var(${BAND_VAR[b]});
     `<li><span>${l}</span><span class="num" style="color:${dir === "up" ? "var(--b3)" : "var(--model)"}">${dir === "up" ? "raises" : "lowers"}</span></li>`).join("");
   const first = Object.entries(R.cells).sort((a, b) => b[1][1] - a[1][1])[0];
   if (first && byId.get(first[0])) { map.sel = byId.get(first[0]); detail(map.sel); }
+})();
+
+const WHY = {"run":"risk-v1-20261024T210943","through":"2026-10-12","base_cap":0.6958568738229756,"window":["2026-04-20","2026-10-12"],"importance":[{"group":"reporting_volume","label":"Overall 311 reporting here","features":["vol_311_52"],"dev_pct":26.77,"cap_drop":8.19},{"group":"buildings","label":"Buildings (count, age, units)","features":["parcels","yr_built_med","units"],"dev_pct":18.72,"cap_drop":6.53},{"group":"rodent_history","label":"Recent rodent reports here","features":["rodent_l1","rodent_m4","rodent_m12"],"dev_pct":12.96,"cap_drop":5.0},{"group":"neighbours","label":"Rodent reports in neighbouring blocks","features":["ring_rodent_m4","ring_rodent_m12"],"dev_pct":7.67,"cap_drop":3.58},{"group":"pest","label":"Indoor pest reports","features":["pest_s4","pest_s12","ring_pest_s4"],"dev_pct":2.83,"cap_drop":1.65},{"group":"season","label":"Time of year","features":["woy_sin","woy_cos","move_out"],"dev_pct":2.72,"cap_drop":1.13},{"group":"dead_animal","label":"Dead animal reports","features":["dead_animal_s4","dead_animal_s12","ring_dead_animal_s4"],"dev_pct":2.57,"cap_drop":1.34},{"group":"trash_storage","label":"Improper trash storage reports","features":["trash_storage_s4","trash_storage_s12","ring_trash_storage_s4"],"dev_pct":2.29,"cap_drop":0.82},{"group":"temperature","label":"Recent temperatures","features":["tmax_m4"],"dev_pct":1.03,"cap_drop":0.39},{"group":"litter","label":"Litter reports","features":["litter_s4","litter_s12"],"dev_pct":0.92,"cap_drop":0.27},{"group":"dumping","label":"Illegal dumping reports","features":["dumping_s4","dumping_s12"],"dev_pct":0.58,"cap_drop":0.27},{"group":"weeds","label":"Overgrown weeds reports","features":["weeds_s4","weeds_s12"],"dev_pct":0.35,"cap_drop":0.02},{"group":"rodent_last_year","label":"Rodent reports this week last year","features":["rodent_ly"],"dev_pct":0.29,"cap_drop":0.4},{"group":"trash_early","label":"Trash out early reports","features":["trash_early_s4","trash_early_s12"],"dev_pct":0.29,"cap_drop":0.13},{"group":"move_in_trash","label":"Move-in trash reports","features":["move_in_trash_s4","move_in_trash_s12"],"dev_pct":0.09,"cap_drop":0.06}],"pdp":{"rodent_m12":{"x":"Rodent reports here, last 12 weeks","pts":[[0,0.0284],[1,0.0431],[2,0.04995],[3,0.06108],[4,0.06328],[5,0.06487],[6,0.066],[7,0.07831],[8,0.07989],[9,0.08135],[10,0.08192],[11,0.08166],[12,0.08173]]},"ring_rodent_m12":{"x":"Rodent reports in the 8 neighbouring blocks, last 12 weeks","pts":[[0,0.03372],[2,0.03713],[4,0.03945],[6,0.04248],[8,0.04401],[10,0.0447],[12,0.04497],[14,0.04563],[16,0.04602],[18,0.04799],[20,0.04767],[22,0.04969],[24,0.04987],[26,0.05211],[28,0.05224],[30,0.05343]]},"vol_311_52":{"x":"All other 311 reports here, last year","pts":[[0.0,0.01329],[5.0,0.03143],[10.0,0.03436],[20.0,0.0366],[40.0,0.0442],[60.0,0.04846],[80.0,0.04976],[120.0,0.05854],[160.0,0.05835],[200.0,0.06247],[300.0,0.06364],[400.0,0.06364]]},"parcels":{"x":"Parcels in the block","pts":[[0.0,0.01597],[10.0,0.03719],[25.0,0.04516],[50.0,0.04165],[75.0,0.04165],[100.0,0.04337],[150.0,0.04291],[200.0,0.04426],[250.0,0.04428],[300.0,0.04489]]},"yr_built_med":{"x":"Median year built","pts":[[1880.0,0.03514],[1890.0,0.04978],[1900.0,0.0442],[1910.0,0.04571],[1920.0,0.04435],[1930.0,0.04327],[1950.0,0.04072],[1970.0,0.0441],[1990.0,0.03947],[2010.0,0.03041]]},"tmax_m4":{"x":"Average daily high, last 4 weeks (\u00b0F)","pts":[[30.0,0.03125],[40.0,0.04805],[50.0,0.04119],[60.0,0.04352],[70.0,0.0436],[75.0,0.04384],[80.0,0.04514],[85.0,0.04627],[90.0,0.04789]]},"trash_storage_s12":{"x":"Improper trash storage reports here, last 12 weeks","pts":[[0.0,0.0434],[1.0,0.04465],[2.0,0.0445],[4.0,0.04415],[6.0,0.04433],[8.0,0.04412],[12.0,0.04295],[16.0,0.04238],[20.0,0.04237]]},"dead_animal_s12":{"x":"Dead animal reports here, last 12 weeks","pts":[[0.0,0.04107],[1.0,0.04232],[2.0,0.04317],[3.0,0.04441],[4.0,0.04623],[6.0,0.04717],[8.0,0.04786]]},"pest_s12":{"x":"Indoor pest reports here, last 12 weeks","pts":[[0.0,0.04143],[1.0,0.04711],[2.0,0.04898],[3.0,0.05118],[4.0,0.0483],[6.0,0.0479]]},"season":{"x":"Week of the year","pts":[[1,0.02796],[2,0.02794],[3,0.02777],[4,0.02748],[5,0.02735],[6,0.02765],[7,0.02791],[8,0.02972],[9,0.03481],[10,0.03687],[11,0.03894],[12,0.04105],[13,0.04526],[14,0.04766],[15,0.04812],[16,0.04875],[17,0.04992],[18,0.05212],[19,0.04553],[20,0.0458],[21,0.0461],[22,0.04628],[23,0.04818],[24,0.04976],[25,0.04316],[26,0.04497],[27,0.0383],[28,0.04856],[29,0.0497],[30,0.04841],[31,0.04679],[32,0.04635],[33,0.04618],[34,0.04437],[35,0.04161],[36,0.04157],[37,0.04083],[38,0.0398],[39,0.03963],[40,0.03409],[41,0.03309],[42,0.03298],[43,0.03052],[44,0.02959],[45,0.02979],[46,0.02766],[47,0.02746],[48,0.0275],[49,0.02762],[50,0.0277],[51,0.02738],[52,0.02424]]}},"top_driver":[["Buildings (count, age, units)",214],["Overall 311 reporting here",175],["Recent rodent reports here",74],["Rodent reports in neighbouring blocks",54]],"n_high":517,"forecast_week":"2026-10-26","ablation":[{"name":"2023 on (previous model)","cap":0.6429,"mae":0.07518},{"name":"2021 H2 on","cap":0.6412,"mae":0.07466},{"name":"2017 on, pandemic included","cap":0.6434,"mae":0.07419},{"name":"2017 on, pandemic left out","cap":0.6509,"mae":0.07398},{"name":"2017 on, pandemic left out, no code-enforcement tickets","cap":0.6497,"mae":0.07336,"live":true},{"name":"4-week average (no model)","cap":0.5433,"mae":0.07132}]};
+
+/* ---------- Actual tab: why the model predicts what it does ---------- */
+(function () {
+  const X = WHY;
+  document.getElementById("wrun").textContent = X.run;
+  document.getElementById("wthrough").textContent = fmtDateY(X.through);
+  document.getElementById("wwin").textContent = `${fmtDateY(X.window[0])} – ${fmtDateY(X.window[1])}`;
+  document.getElementById("wnhi").textContent = X.n_high.toLocaleString();
+  document.getElementById("wweek").textContent = "the week of " + fmtDate(X.forecast_week);
+
+  // Grouped permutation importance: horizontal bars to one scale.
+  const imp = X.importance.filter(d => d.dev_pct > 0.05);
+  const W = 640, L = 250, R = 70, rowH = 24, T = 6, H = T + imp.length * rowH + 22;
+  const mx = Math.max(...imp.map(d => d.dev_pct)), step = mx > 40 ? 20 : mx > 20 ? 10 : 5, top = Math.ceil(mx / step) * step;
+  const Xs = v => L + (v / top) * (W - L - R);
+  const svg = document.getElementById("wimp"); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  let g = "";
+  for (let v = 0; v <= top; v += step) g += `<line class="grid" x1="${Xs(v)}" x2="${Xs(v)}" y1="${T}" y2="${H - 20}"/><text x="${Xs(v)}" y="${H - 6}" text-anchor="middle">${v}%</text>`;
+  imp.forEach((d, i) => { const y = T + i * rowH;
+    g += `<text x="${L - 8}" y="${y + 16}" text-anchor="end" style="fill:var(--fg)">${d.label}</text>
+      <rect x="${L}" y="${y + 5}" width="${Math.max(1, Xs(d.dev_pct) - L)}" height="${rowH - 10}" rx="2" fill="var(--model)"/>
+      <text x="${W - 4}" y="${y + 16}" text-anchor="end" class="num">${d.cap_drop > 0.05 ? "−" + d.cap_drop.toFixed(1) : "0"} pts</text>`; });
+  svg.innerHTML = g;
+
+  // Top driver among high-risk blocks.
+  const tot = X.top_driver.reduce((a, d) => a + d[1], 0);
+  document.getElementById("wtop").innerHTML = X.top_driver.slice(0, 8).map(([l, n]) =>
+    `<li><span>${l}</span><span class="num">${n} <span style="color:var(--muted)">(${pct(n / tot)})</span></span></li>`).join("");
+
+  // Partial dependence small multiples.
+  const order = ["rodent_m12", "ring_rodent_m12", "vol_311_52", "parcels", "season", "tmax_m4", "yr_built_med", "trash_storage_s12", "dead_animal_s12", "pest_s12"];
+  const pd = document.getElementById("wpd");
+  pd.innerHTML = order.filter(k => X.pdp[k]).map(k => `<figure class="pd"><figcaption>${X.pdp[k].x}</figcaption><svg class="chart" id="wpd-${k}" viewBox="0 0 300 150" role="img" aria-label="${X.pdp[k].x}"></svg></figure>`).join("");
+  const nice = v => v >= 1 ? v.toFixed(1) : v >= 0.1 ? v.toFixed(2) : v.toFixed(3);
+  const MONTHS = ["Jan", "Apr", "Jul", "Oct"], MWK = [1, 14, 27, 40];
+  for (const k of order) {
+    const P = X.pdp[k]; if (!P) continue;
+    const pts = P.pts, xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+    const x0 = Math.min(...xs), x1 = Math.max(...xs), y1 = Math.max(...ys) * 1.12;
+    const Lp = 42, Rp = 10, Tp = 8, Bp = 24, iw = 300 - Lp - Rp, ih = 150 - Tp - Bp;
+    const PX = v => Lp + ((v - x0) / (x1 - x0 || 1)) * iw, PY = v => Tp + ih - (v / y1) * ih;
+    let s = "";
+    [0, 0.5, 1].forEach(f => { const v = y1 * f; s += `<line class="grid" x1="${Lp}" x2="${300 - Rp}" y1="${PY(v)}" y2="${PY(v)}"/><text x="${Lp - 5}" y="${PY(v) + 4}" text-anchor="end">${nice(v)}</text>`; });
+    const ticks = k === "season" ? MWK.map((w, i) => [w, MONTHS[i]]) : [x0, (x0 + x1) / 2, x1].map(v => [v, Number.isInteger(v) ? v : +v.toFixed(0)]);
+    ticks.forEach(([v, lab], i) => s += `<text x="${PX(v)}" y="${150 - 7}" text-anchor="${i === 0 && k !== "season" ? "start" : i === ticks.length - 1 && k !== "season" ? "end" : "middle"}">${lab}</text>`);
+    const d = pts.map((p, i) => `${i ? "L" : "M"}${PX(p[0]).toFixed(1)},${PY(p[1]).toFixed(1)}`).join("");
+    s += `<path d="${d} L${PX(x1).toFixed(1)},${PY(0)} L${PX(x0).toFixed(1)},${PY(0)} Z" fill="var(--model)" opacity=".12"/>`;
+    s += `<path d="${d}" fill="none" stroke="var(--model)" stroke-width="2" stroke-linejoin="round"/>`;
+    const li = pts.length - 1; s += `<circle cx="${PX(xs[li])}" cy="${PY(ys[li])}" r="3" fill="var(--model)"/>`;
+    document.getElementById("wpd-" + k).innerHTML = s;
+  }
+
+  // Training-data ablation table.
+  document.getElementById("wabl").innerHTML = `<tr><th>Training data</th><th>Capture</th><th>MAE</th></tr>` +
+    X.ablation.map(r => `<tr${r.live ? ' class="live"' : ""}><td>${r.name}${r.live ? ' <span class="pill" style="background:var(--model);color:var(--panel)">live</span>' : ""}</td><td>${(r.cap * 100).toFixed(1)}%</td><td>${r.mae.toFixed(4)}</td></tr>`).join("");
 })();
 
 /* ---------- tabs ---------- */
