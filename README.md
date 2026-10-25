@@ -2,6 +2,8 @@
 
 Piper helps Boston rodent inspectors review places with repeated 311 reports, read recorded responses, and examine nearby records before deciding where to investigate. It counts **reports**, not rats, and does not infer that a closed case solved a problem.
 
+**[Explore the live app →](https://piper-app.vercel.app/)**
+
 ## Working product
 
 The app opens in **Places to visit**. Choose an address to see its report timeline, closure notes, reports after earlier closures, and nearby records. Switch to **Map** to explore available Boston, Cambridge, and Somerville layers and the four-week Boston report forecast. The Insights panel presents a dated research snapshot, not a live treatment-effect estimate.
